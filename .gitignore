@@ -5,4 +5,4 @@
 !/tmp/.keep
 .byebug_history
 .DS_Store
-
+/vendor/gems
