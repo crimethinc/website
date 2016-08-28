@@ -9,13 +9,13 @@ cd "$(dirname "$0")/.."
 
 script/bootstrap
 
-echo "===> Setting up DB..."
+echo "==> Setting up DB..."
 # reset database to a fresh state.
 bin/rake db:create
 bin/rake db:reset
 bin/rake db:seed
 
-echo "===> Clearing logs and tmp cache..."
+echo "==> Clearing logs and tmp cache..."
 # clears old logs and tmp files
 bin/rake log:clear
 bin/rake tmp:clear
