@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160828172710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.text     "title"
+    t.text     "subtitle"
+    t.text     "content"
+    t.string   "year"
+    t.string   "month"
+    t.string   "day"
+    t.string   "slug"
+    t.string   "code"
+    t.string   "status",       default: "draft"
+    t.datetime "published_at"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
 
 end
