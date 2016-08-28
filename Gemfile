@@ -9,6 +9,7 @@ gem 'pg'
 
 # webserver
 gem 'puma'
+gem 'foreman'
 
 # assets
 gem 'sass-rails'
