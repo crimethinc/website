@@ -1,0 +1,39 @@
+{
+  "name": "Magazine, A CrimethInc. Production",
+  "description": "Rails app to power an #indieweb friendly magazine publishing platform.",
+  "keywords": [
+    "indieweb",
+    "magazine",
+    "publishing",
+    "rubyonrails",
+    "rails"
+  ],
+
+  "website": "http://crimethinc.com",
+  "repository": "https://github.com/CrimethincDotCom/magazine",
+  "logo": "https://avatars0.githubusercontent.com/u/21285375",
+
+  "success_url": "/",
+
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate && bundle exec rake db:seed"
+  },
+
+  "env": {
+    "RAILS_ENV": "production",
+
+    "SECRET_KEY_BASE": {
+      "description": "This gets generated",
+      "generator":   "secret"
+    },
+
+    "MIN_THREADS": "1",
+    "MAX_THREADS": "1"
+  },
+
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+
+  "image": "heroku/cedar"
+}
