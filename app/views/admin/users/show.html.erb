@@ -1,0 +1,9 @@
+<%= render "admin/page_header", thing: @user %>
+
+<h2><%= @user.name %></h2>
+
+<p><%= mail_to @user.email, @user.email %></p>
+
+<% if @user.avatar.present? %>
+  <%= image_tag @user.avatar %>
+<% end %>

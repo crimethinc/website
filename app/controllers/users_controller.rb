@@ -1,15 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  # GET /users
-  def index
-    @users = User.all
-  end
-
-  # GET /users/1
-  def show
-  end
-
   # /signup
   def new
     if signed_in?
@@ -30,7 +21,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # /profile
+  # /settings
   def edit
   end
 
@@ -41,11 +32,6 @@ class UsersController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def destroy
-    @user.destroy
-    redirect_to root_url, notice: 'User was successfully destroyed.'
   end
 
   private

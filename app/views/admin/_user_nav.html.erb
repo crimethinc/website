@@ -1,7 +1,7 @@
 <% if signed_in? %>
-  <nav class="admin">
-    <%= link_to "Profile",  profile_path %>
-    <%= link_to "Settings", settings_path %>
+  <nav class="admin container">
+    <%= link_to "Site", root_path %>
+    <%= link_to "Admin", admin_path %>
     <%= link_to "Sign out", signout_path %>
   </div>
 <% end %>

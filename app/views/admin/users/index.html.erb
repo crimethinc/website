@@ -1,0 +1,25 @@
+<%= render "admin/page_header", thing: @users %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, user], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to_unless user.avatar.blank?, user.avatar, [:admin, user] %></td>
+        <td><%= link_to_unless user.name.blank?, user.name, [:admin, user] %></td>
+        <td><%= mail_to user.email, user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
