@@ -1,10 +1,10 @@
 class Auth::UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # /signup
   def new
     if signed_in?
-      redirect_to root_url
+      redirect_to admin_url
     else
       @user = User.new
     end
@@ -19,6 +19,9 @@ class Auth::UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
   end
 
   # /settings

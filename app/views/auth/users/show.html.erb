@@ -1,8 +1,10 @@
-<%= render "admin/page_header", thing: @user %>
+<h1>Profile</h1>
 
-<h2><%= @user.name %></h2>
+<% if @user.name.present? %>
+  <h2><%= @user.name %></h2>
+<% end %>
 
-<p><%= mail_to @user.email, @user.email %></p>
+<h3><%= mail_to @user.email, @user.email %></h3>
 
 <% if @user.avatar.present? %>
   <%= image_tag @user.avatar %>

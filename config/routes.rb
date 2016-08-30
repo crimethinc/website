@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   # Admin Dashboard
   get 'admin', to: redirect('/admin/users'), as: 'admin'
   namespace :admin do
+    # User management
     resources :users
   end
 
 
-  # Users + Auth
+  # Auth + User signup
   namespace :auth do
     resources :users,    only: [:create, :update, :destroy]
     resources :sessions, only: [:create]

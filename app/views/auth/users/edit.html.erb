@@ -1,6 +1,6 @@
-<%= render "admin/page_header", thing: @user %>
+<h1>Settings</h1>
 
-<%= form_for [:admin, @user] do |f| %>
+<%= form_for [:auth, @user] do |f| %>
   <%= render "admin/form_errors", thing: @user %>
 
   <div class="form-group">
@@ -40,5 +40,5 @@
     </div>
   </fieldset>
 
-  <%= render "admin/form_actions", f: f, cancel_url: [:admin, :user], button_text: "Save" %>
+  <%= render "admin/form_actions", f: f, cancel_url: profile_url, button_text: "Save" %>
 <% end %>
