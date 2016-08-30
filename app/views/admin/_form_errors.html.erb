@@ -1,0 +1,7 @@
+<% if thing.errors.any? %>
+  <% thing.errors.full_messages.uniq.each do |message| %>
+    <div class="alert alert-danger" role="alert">
+      <%= message %>.
+    </div>
+  <% end %>
+<% end %>
