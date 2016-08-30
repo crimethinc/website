@@ -7,6 +7,8 @@ Ruby on Rails app that powers http://crimethinc.com
 
 ### tl;dr
 
+[Strap your computer](https://osx-strap.herokuapp.com), first.
+
 ```
 git clone https://github.com/CrimethIncDotCom/magazine.git
 cd magazine
@@ -15,7 +17,7 @@ cd magazine
 ./script/server
 ```
 
-## Development Scripts
+## Scripts to Rule Them All
 
 Magazine uses the [Scripts to Rule Them All](http://githubengineering.com/scripts-to-rule-them-all) pattern.
 See also: https://github.com/github/scripts-to-rule-them-all
@@ -23,10 +25,14 @@ See also: https://github.com/github/scripts-to-rule-them-all
 `/script` is a collection of scripts for development on an OS X / macOS computer.
 Development setup on a Windows or Linux computer may vary.
 
-All of the scripts assume that you already have installed:
+## Development Scripts
+
+The rest of these instructions assume that you've [strapped your computer](https://osx-strap.herokuapp.com) already. If you haven't, you'll need to install somethings manually. (But really, you're better off using [Strap](https://osx-strap.herokuapp.com).)
 
 - [Homebrew](http://brew.sh)
+- Homebrew taps and extensions
 - Xcode command line tools
+- Postgres launchctl (for `setup` script)
 
 ### Bootstrap script
 
