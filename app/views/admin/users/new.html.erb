@@ -1,6 +1,6 @@
 <%= render "admin/page_header", thing: @users %>
 
-<%= form_for @user do |f| %>
+<%= form_for [:admin, @user] do |f| %>
   <%= render "admin/form_errors", thing: @user %>
 
   <div class="form-group">

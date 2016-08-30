@@ -2,7 +2,7 @@
   <h1>Sign Up</h1>
 </div>
 
-<%= form_for @user do |f| %>
+<%= form_for [:auth, @user] do |f| %>
   <%= render "admin/form_errors", thing: @user %>
 
   <div class="form-group">

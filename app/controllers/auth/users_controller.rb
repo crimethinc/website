@@ -1,5 +1,5 @@
-class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+class Auth::UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :destroy]
 
   # /signup
   def new
@@ -42,9 +42,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:avatar,
-      :email,
-      :password,
-      :password_confirmation,
-      :name)
+    :email,
+    :password,
+    :password_confirmation,
+    :name)
   end
 end

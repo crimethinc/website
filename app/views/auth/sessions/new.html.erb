@@ -2,7 +2,7 @@
   <h1>Sign In</h1>
 </div>
 
-<%= form_tag sessions_path do %>
+<%= form_tag [:auth, :sessions] do %>
   <div class="form-group">
     <%= label_tag :email, "Email", class: "sr-only" %>
     <%= email_field_tag :email, params[:email], autofocus: true, class: "form-control input-lg", placeholder: "Email" %>
