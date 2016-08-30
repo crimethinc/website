@@ -68,6 +68,31 @@ The `server` script starts the Rails server on port `3000`
 ./script/setup
 ```
 
+#### Postgres database not running error
+
+Postgres must already be running for the `setup` script to wrok.
+If it's not, you'll get an error that looks something like.
+
+<details>
+  <summary>Could not connect to server: No such file or directory</summary>
+  ```
+  could not connect to server: No such file or directory
+          Is the server running locally and accepting
+          connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+  Couldn't create database for {"adapter"=>"postgresql", "encoding"=>"unicode", "pool"=>5, "database"=>"magazine_development"}
+  rake aborted!
+  PG::ConnectionBad: could not connect to server: No such file or directory
+          Is the server running locally and accepting
+          connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+  ```
+</details>
+
+You can run this command (assuming you installed Postgres via the `bootstrap` script which uses the `Brewfile`) to re/start it.
+
+```
+brew services restart postgresql
+```
+
 ### Update script
 
 Periodically, you can run the `update` script to check for new versions of dependencies and to update the database schema. If you ever get a `PendingMigrationError`, run this script to migrate your database.
