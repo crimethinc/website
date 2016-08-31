@@ -1,4 +1,4 @@
-class Auth::UsersController < ApplicationController
+class Auth::UsersController < Admin::AdminController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # /signup

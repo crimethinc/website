@@ -1,6 +1,2 @@
-<h1>Editing Article</h1>
-
-<%= render 'form', article: @article %>
-
-<%= link_to 'Show', [:admin, @article] %> |
-<%= link_to 'Back', [:admin, :articles] %>
+<%= render "admin/page_header", thing: @article %>
+<%= render 'form' %>

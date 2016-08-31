@@ -1,0 +1,5 @@
+<time>
+  <%= link_to @article.path do %>
+    Published on <b><%= @article.published_at.strftime("%Y-%m-%d") %></b>
+  <% end %>
+</time>

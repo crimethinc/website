@@ -1,42 +1,40 @@
-<%= form_for [:admin, article] do |f| %>
-  <%= render "admin/form_errors", thing: article %>
+<%= form_for [:admin, @article] do |f| %>
+  <%= render "admin/form_errors", thing: @article %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control input-lg" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :subtitle %>
-    <%= f.text_area :subtitle %>
+    <%= f.text_field :subtitle, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, class: "form-control", rows: 10 %>
   </div>
 
-  <div class="field">
-    <%= f.label :slug %>
-    <%= f.text_field :slug %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :slug %>
+        <%= f.text_field :slug, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :status %>
+        <%= f.text_field :status, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :code %>
-    <%= f.text_field :code %>
-  </div>
-
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.text_field :status %>
-  </div>
-
-  <div class="field">
-    <%= f.label :published_at %>
-    <%= f.datetime_select :published_at %>
-  </div>
+  <%= render "admin/datetime_group", f: f, article: @article %>
 
   <div class="actions">
-    <%= f.submit %>
+    <button type="submit" class="btn btn-primary btn-lg">Save</button>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
 <article>
   <h1>
-    <%= link_to @article.path do %>
+    <%= link_to @article.path, class: "p-name" do %>
       <span class="title"><%= @article.title %></span><br>
       <span class="subtitle"><%= @article.subtitle %></span>
     <% end %>

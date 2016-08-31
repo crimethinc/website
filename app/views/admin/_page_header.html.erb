@@ -1,24 +1,25 @@
 <h1>
-  <small><%= link_to 'Admin', [:admin] %></small><br>
-  <%= link_to thing_type(thing).pluralize, [:admin, thing_type(thing).pluralize.downcase] %>
+  <%= link_to_unless_current thing_type(thing).pluralize, [:admin, thing_type(thing).pluralize.downcase] %>
+</h1>
 
+<p>
   <% if listing? %>
     <%= link_to 'NEW', [:new, :admin, thing_type(thing).downcase], class: 'btn btn-primary btn-xs' %>
   <% elsif showing? %>
     <%= link_to 'EDIT', [:edit, :admin, thing], class: 'btn btn-primary btn-xs' %>
   <% end %>
+</p>
 
-  <% if editing? %>
-    <h2>
-      Editing
-      <%= link_to thing_type(thing), [:admin, thing] %>
-    </h2>
-  <% end %>
+<% if editing? %>
+  <h2>
+    Editing
+    <%= link_to thing_type(thing), [:admin, thing] %>
+  </h2>
+<% end %>
 
-  <% if creating? %>
-    <h2>
-      New
-      <%= thing_type(thing) %>
-    </h2>
-  <% end %>
-</h1>
+<% if creating? %>
+  <h2>
+    New
+    <%= thing_type(thing) %>
+  </h2>
+<% end %>

@@ -1,45 +1,35 @@
-<p id="notice"><%= notice %></p>
+<%= render "admin/page_header", thing: @articles %>
 
-<h1>Articles</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
+      <th>&nbsp;</th>
       <th>Title</th>
       <th>Subtitle</th>
-      <th>Content</th>
-      <th>Year</th>
-      <th>Month</th>
-      <th>Day</th>
       <th>Slug</th>
       <th>Code</th>
       <th>Status</th>
-      <th>Published at</th>
-      <th colspan="3"></th>
+      <th>Published Date</th>
+      <th>&nbsp;</th>
     </tr>
   </thead>
 
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= article.title %></td>
-        <td><%= article.subtitle %></td>
-        <td><%= article.content %></td>
-        <td><%= article.year %></td>
-        <td><%= article.month %></td>
-        <td><%= article.day %></td>
-        <td><%= article.slug %></td>
-        <td><%= article.code %></td>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to article.title, [:admin, article] %></td>
+        <td><%= link_to article.subtitle, [:admin, article] %></td>
+        <td><%= link_to article.slug, [:admin, article] %></td>
+        <td><%= link_to article.code, [:admin, article] %></td>
         <td><%= article.status %></td>
-        <td><%= article.published_at %></td>
-        <td><%= link_to 'Show', [:admin, article] %></td>
-        <td><%= link_to 'Edit', [:edit, :admin, article] %></td>
-        <td><%= link_to 'Destroy', [:admin, article], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to article.published_at.strftime("%Y-%m-%d"), [:admin, article] %></td>
+        <td>
+          <%= link_to 'DELETE', [:admin, article], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Article', [:new, :admin, :article] %>

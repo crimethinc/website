@@ -1,39 +1,29 @@
-<p id="notice"><%= notice %></p>
+<%= render "admin/page_header", thing: @article %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @article.subtitle %>
-</p>
+<article>
+  <header>
+    <h1>
+      <%= link_to @article.path, class: "p-name" do %>
+        <span class="h1 title"><%= @article.title %></span><br>
+        <span class="h2 subtitle"><%= @article.subtitle %></span>
+      <% end %>
+    </h1>
+  </header>
 
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
+  <hr>
+  <p><%= render "published_on" %></p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @article.slug %>
-</p>
+  <p>Draft URL: <b>/drafts/<%= @article.code %></b></p>
+  <p>Publication Status: <b><%= @article.status.upcase %></b></p>
+  <hr>
 
-<p>
-  <strong>Code:</strong>
-  <%= @article.code %>
-</p>
+  <div class="e-content">
+    <%= simple_format @article.content %>
+  </div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @article.status %>
-</p>
-
-<p>
-  <strong>Published at:</strong>
-  <%= @article.published_at %>
-</p>
-
-<%= link_to 'Edit', [:edit, :admin, @article] %>
-<%= link_to 'Back', [:admin, :articles] %>
+  <hr>
+  <footer>
+    <%= render "published_on" %>
+  </footer>
+</article>
