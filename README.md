@@ -10,7 +10,7 @@ Ruby on Rails app that powers http://crimethinc.com
 [Strap your computer](https://osx-strap.herokuapp.com), first.
 
 ```
-git clone https://github.com/CrimethIncDotCom/magazine.git
+git clone https://github.com/crimethinc/magazine.git
 cd magazine
 ./script/bootstrap
 ./script/setup
@@ -43,7 +43,7 @@ It will install the proper Ruby and Postgresql database versions.
 Clone this repo.
 
 ```
-git clone https://github.com/CrimethIncDotCom/magazine.git
+git clone https://github.com/crimethinc/magazine.git
 cd magazine
 ```
 
@@ -53,7 +53,7 @@ Then run the `bootstrap` script.
 ./script/bootstrap
 ```
 
-If that fails for you, [file an issue](https://github.com/CrimethIncDotCom/magazine/issues)
+If that fails for you, [file an issue](https://github.com/crimethinc/magazine/issues)
 with as much detail about your setup and any errors you got from the script.
 
 ### Setup script
@@ -159,16 +159,16 @@ Click this button to easily deploy to Heroku. (You must have a Heroku account.)
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/CrimethIncDotCom/magazine/blob/master/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/crimethinc/magazine/blob/master/CONTRIBUTING.md).
 
 If you find bugs, have feature requests or questions, please
-[file an issue](https://github.com/CrimethIncDotCom/magazine/issues).
+[file an issue](https://github.com/crimethinc/magazine/issues).
 
 
 ## Code of Conduct
 
 Everyone interacting in the CrimethInc.'s project's codebases, issue trackers, chat rooms, and mailing lists is expected to follow the
-[CrimethInc. development code of conduct](https://github.com/CrimethIncDotCom/magazine/blob/master/CODE_OF_CONDUCT.md).
+[CrimethInc. development code of conduct](https://github.com/crimethinc/magazine/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
