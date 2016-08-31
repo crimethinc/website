@@ -10,9 +10,9 @@ class ArticlesController < ApplicationController
 
   # /2016/08/31
   def show
-    @article = Article.find_by(year: params[:year],
+    @article = Article.find_by(year:  params[:year],
                                month: params[:month],
-                               day: params[:day],
-                               slug: params[:slug])
+                               day:   params[:day],
+                               slug:  params[:slug])
   end
 end
