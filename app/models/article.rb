@@ -16,6 +16,7 @@ class Article < ApplicationRecord
   scope :published,   -> { where(status: "published") }
 
   before_validation :generate_slug, on: [:create, :update]
+  before_validation :generate_published_dates, on: [:create, :update]
   validates_with SlugValidator
 
   def path
@@ -59,6 +60,12 @@ class Article < ApplicationRecord
         clean_slug!(self.slug + "-#{n}")
       end
     end
+  end
+
+  def generate_published_dates
+    self.year  = published_at.year
+    self.month = published_at.month.to_s.rjust(2, "0")
+    self.day   = published_at.day.to_s.rjust(2, "0")
   end
 
 end
