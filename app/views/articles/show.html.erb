@@ -1,54 +1,20 @@
-<p id="notice"><%= notice %></p>
+<article>
+  <h1>
+    <%= link_to @article.path do %>
+      <span class="title"><%= @article.title %></span><br>
+      <span class="subtitle"><%= @article.subtitle %></span>
+    <% end %>
+  </h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+  <div>
+    <%= simple_format @article.content %>
+  </div>
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @article.subtitle %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @article.year %>
-</p>
-
-<p>
-  <strong>Month:</strong>
-  <%= @article.month %>
-</p>
-
-<p>
-  <strong>Day:</strong>
-  <%= @article.day %>
-</p>
-
-<p>
-  <strong>Slug:</strong>
-  <%= @article.slug %>
-</p>
-
-<p>
-  <strong>Code:</strong>
-  <%= @article.code %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @article.status %>
-</p>
-
-<p>
-  <strong>Published at:</strong>
-  <%= @article.published_at %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+  <footer>
+    <time>
+      <%= link_to @article.path do %>
+        Published on <%= @article.published_at.strftime("%Y-%m-%d") %>
+      <% end %>
+    </time>
+  </footer>
+</article>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @article.subtitle %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @article.content %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @article.year %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @article.month %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @article.day %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @article.slug %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @article.code %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @article.status %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @article.published_at %>
+</p>
+
+<%= link_to 'Edit', [:edit, :admin, @article] %>
+<%= link_to 'Back', [:admin, :articles] %>

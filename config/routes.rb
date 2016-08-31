@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
   # Public Site
   root to: 'articles#index'
-  resources :articles
+
+  # Articles
+  # Article listings by year, optional month, optional day
+  get "(/:year)(/:month)(/:day)",
+      to:          "articles#index",
+      constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
+      as:          :articles
+
+  # Article permalinks
+  get ":year/:month/:day/:slug",
+      to:          "articles#show",
+      constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
+      as:          :article
+
+
 
 
   # Admin Dashboard
@@ -9,6 +23,7 @@ Rails.application.routes.draw do
   namespace :admin do
     # User management
     resources :users
+    resources :articles
   end
 
 
