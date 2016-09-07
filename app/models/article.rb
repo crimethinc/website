@@ -9,6 +9,8 @@ end
 class Article < ApplicationRecord
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
+  has_many :categorizations, dependent: :destroy
+  has_many :categories, through: :categorizations
 
   default_scope { order("published_at DESC") }
   scope :on,      lambda { |date| where("published_at BETWEEN ? AND ?", date.beginning_of_day, date.end_of_day) }
