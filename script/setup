@@ -11,14 +11,14 @@ script/bootstrap
 
 echo "==> Setting up DB..."
 # reset database to a fresh state.
-bin/rake db:create
-bin/rake db:reset
-bin/rake db:seed
+bin/rails db:create
+bin/rails db:reset
+bin/rails db:seed
 
 echo "==> Clearing logs and tmp cache..."
 # clears old logs and tmp files
-bin/rake log:clear
-bin/rake tmp:clear
+bin/rails log:clear
+bin/rails tmp:clear
 
 if [ -z "$RAILS_ENV" ] && [ -z "$RACK_ENV" ]; then
   # Only things for a development environment will run inside here
