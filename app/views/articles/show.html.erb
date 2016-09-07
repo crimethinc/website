@@ -16,5 +16,16 @@
         Published on <%= @article.published_at.strftime("%Y-%m-%d") %>
       <% end %>
     </time>
+
+    <% if @article.tags.present? %>
+      <p>
+        <b>Tags:</b>
+        <ul>
+          <% @article.tags.each do |tag| %>
+            <li><%= link_to tag.name, tag.slug %></li>
+          <% end %>
+        </ul>
+      </p>
+    <% end %>
   </footer>
 </article>

@@ -1,0 +1,27 @@
+PATH
+  remote: .
+  specs:
+    sterile (1.0.3)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    ZenTest (4.5.0)
+    autotest (4.4.6)
+      ZenTest (>= 4.4.1)
+    awesome_print (0.4.0)
+    minitest (2.2.2)
+    purdytest (1.0.0)
+      minitest (~> 2.2)
+    rake (0.8.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  autotest
+  awesome_print
+  minitest
+  purdytest
+  rake (= 0.8.7)
+  sterile!

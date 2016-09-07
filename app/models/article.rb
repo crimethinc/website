@@ -7,6 +7,9 @@ class SlugValidator < ActiveModel::Validator
 end
 
 class Article < ApplicationRecord
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
+
   default_scope { order("published_at DESC") }
   scope :on,      lambda { |date| where("published_at BETWEEN ? AND ?", date.beginning_of_day, date.end_of_day) }
   scope :draft,       -> { where(status: "draft") }
@@ -37,27 +40,15 @@ class Article < ApplicationRecord
 
   private
 
-  def clean_slug!(slug)
-    blank     = ""
-    separator = "-"
-    self.slug = slug.downcase
-      .gsub(/\(|\)|\[|\]\.|'|"|“|”|‘|’/, blank)
-      .gsub(/&amp;/,         blank)
-      .gsub(/\W|_|\s|-+/,    separator)
-      .gsub(/^-+/,           blank)
-      .gsub(/-+$/,           blank)
-      .gsub(/-+/,            separator)
-  end
-
   def generate_slug
     if self.new_record? || self.slug_changed?
       n = 0
-      self.slug = name if self.slug.blank?
-      clean_slug!(self.slug)
+      self.slug = self.name.to_slug
+
       while slug_exists?
         self.slug = name
         n += 1
-        clean_slug!(self.slug + "-#{n}")
+        "#{self.slug} #{n}".to_slug
       end
     end
   end
@@ -67,5 +58,4 @@ class Article < ApplicationRecord
     self.month = published_at.month.to_s.rjust(2, "0")
     self.day   = published_at.day.to_s.rjust(2, "0")
   end
-
 end

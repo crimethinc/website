@@ -18,6 +18,9 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+# text utilities
+gem 'sterile'
+
 # auth
 gem 'bcrypt', '~> 3.1.7'
 
