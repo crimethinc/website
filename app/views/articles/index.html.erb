@@ -15,8 +15,8 @@
 
         <footer>
           <time>
-            <%= link_to article.path do %>
-              Published on <%= article.published_at.strftime("%Y-%m-%d") %>
+            <%= link_to_if article.dated?, article.path do %>
+              Published on <%= display_date article.published_at %>
             <% end %>
           </time>
         </footer>

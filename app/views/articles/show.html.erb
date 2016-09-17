@@ -12,8 +12,8 @@
 
   <footer>
     <time>
-      <%= link_to @article.path do %>
-        Published on <%= @article.published_at.strftime("%Y-%m-%d") %>
+      <%= link_to_unless @article.published_at.nil?, @article.path do %>
+        Published on <%= display_date @article.published_at %>
       <% end %>
     </time>
 
