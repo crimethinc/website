@@ -13,7 +13,10 @@ echo "==> Setting up DB..."
 # reset database to a fresh state.
 bin/rails db:create
 bin/rails db:reset
-bin/rails db:seed
+echo ""
+echo "  If you need to seed your DB with intial data, run:"
+echo "  bin/rails db:seed"
+echo ""
 
 echo "==> Clearing logs and tmp cache..."
 # clears old logs and tmp files
