@@ -1,4 +1,5 @@
 class Admin::ArticlesController < Admin::AdminController
+  before_action :authorize
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # # /admin/articles
@@ -24,6 +25,8 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.new(article_params)
 
     if @article.save
+      # @article.save_tags!(params)
+      # @article.save_categories!(params)
       redirect_to [:admin, @article], notice: 'Article was successfully created.'
     else
       render :new
@@ -61,6 +64,8 @@ class Admin::ArticlesController < Admin::AdminController
                                     :slug,
                                     :code,
                                     :status,
-                                    :published_at)
+                                    :published_at,
+                                    :tags,
+                                    :categories)
   end
 end
