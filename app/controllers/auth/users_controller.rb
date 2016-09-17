@@ -1,12 +1,15 @@
 class Auth::UsersController < Admin::AdminController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  layout "auth"
 
   # /signup
   def new
     if signed_in?
-      redirect_to admin_url
-    else
+      return redirect_to(admin_url)
+    elsif User.count.zero?
       @user = User.new
+    else
+      return redirect_to(signin_path)
     end
   end
 

@@ -1,4 +1,6 @@
-class Auth::SessionsController < ApplicationController
+class Auth::SessionsController < Admin::AdminController
+  layout "auth"
+
   # /signin
   def new
     @page_title = "Sign In"
