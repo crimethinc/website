@@ -13,19 +13,24 @@ class Article < ApplicationRecord
   has_many :categories, through: :categorizations
 
   default_scope { order("published_at DESC") }
-  scope :on,      lambda { |date| where("published_at BETWEEN ? AND ?", date.beginning_of_day, date.end_of_day) }
+  scope :on,      lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
   scope :draft,       -> { where(status: "draft") }
   scope :edited,      -> { where(status: "edited") }
   scope :designed,    -> { where(status: "designed") }
   scope :publishable, -> { where(status: "publishable") }
   scope :published,   -> { where(status: "published") }
 
-  before_validation :generate_slug, on: [:create, :update]
+  before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
+  before_validation :generate_draft_code,      on: [:create, :update]
   validates_with SlugValidator
 
   def path
-    published_at.strftime("/%Y/%m/%d/#{slug}")
+    if published?
+      published_at.strftime("/%Y/%m/%d/#{slug}")
+    else
+      "/drafts/#{self.code}"
+    end
   end
 
   def name
@@ -38,6 +43,38 @@ class Article < ApplicationRecord
 
   def slug_exists?
     Article.on(published_at).where(slug: slug).exists?
+  end
+
+  # def save_categories!(categories)
+  # end
+
+  # article states through the process from creation to publishing
+  def draft?
+    status == "draft"
+  end
+
+  def edited?
+    status == "edited"
+  end
+
+  def designed?
+    status == "designed"
+  end
+
+  def publishable?
+    status == "publishable"
+  end
+
+  def published?
+    status == "published"
+  end
+
+  def dated?
+    if published_at.present?
+      published_at.year.present? &&
+      published_at.month.present? &&
+      published_at.day.present?
+    end
   end
 
   private
@@ -56,8 +93,14 @@ class Article < ApplicationRecord
   end
 
   def generate_published_dates
-    self.year  = published_at.year
-    self.month = published_at.month.to_s.rjust(2, "0")
-    self.day   = published_at.day.to_s.rjust(2, "0")
+    if published_at.present?
+      self.year  = published_at.year                     if published_at.year.present?
+      self.month = published_at.month.to_s.rjust(2, "0") if published_at.month.present?
+      self.day   = published_at.day.to_s.rjust(2, "0")   if published_at.day.present?
+    end
+  end
+
+  def generate_draft_code
+    self.code ||= SecureRandom.hex
   end
 end
