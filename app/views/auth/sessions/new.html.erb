@@ -12,7 +12,5 @@
     <%= password_field_tag :password, nil, class: "form-control input-lg", placeholder: "Password" %>
   </div>
 
-  <div class="actions">
-    <button type="submit" class="btn btn-primary btn-lg pull-right">Sign In</button>
-  </div>
+  <%= render "admin/form_actions", cancel_url: root_url, button_text: "Sign In" %>
 <% end %>
