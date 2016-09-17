@@ -14,7 +14,7 @@
   <hr>
   <p><%= render "published_on" %></p>
 
-  <p>Draft URL: <b>/drafts/<%= @article.code %></b></p>
+  <p>URL: <b><%= link_to @article.path, @article.path %></b></p>
   <p>Publication Status: <b><%= @article.status.upcase %></b></p>
   <hr>
 
