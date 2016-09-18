@@ -13,7 +13,7 @@
   <hr>
   <p>URL: <b><%= link_to @article.path, @article.path %></b></p>
   <p>Publication Status: <b><%= @article.status.upcase %></b></p>
-  <p><%= render "published_on" %></p>
+  <p><%= render "/articles/published_on", article: @article %></p>
 
   <% if @article.categories.present? %>
     <p>
@@ -45,6 +45,6 @@
 
   <hr>
   <footer>
-    <%= render "published_on" %>
+    <%= render "/articles/published_on", article: @article %>
   </footer>
 </article>

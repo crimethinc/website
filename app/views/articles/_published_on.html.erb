@@ -1,0 +1,10 @@
+<time>
+  <% if article.dated? %>
+    <em>Publication date not yet set.</em>
+  <% else %>
+    Published on
+    <%= link_to article.path do %>
+      <b><%= display_date article.published_at %></b>
+    <% end %>
+  <% end %>
+</time>

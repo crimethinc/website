@@ -14,11 +14,7 @@
         </div>
 
         <footer>
-          <time>
-            <%= link_to_if article.dated?, article.path do %>
-              Published on <%= display_date article.published_at %>
-            <% end %>
-          </time>
+          <%= render "/articles/published_on", article: article %>
 
           <% if article.categories.present? %>
             <p>
