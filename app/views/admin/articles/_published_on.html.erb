@@ -1,7 +1,10 @@
 <time>
-  <% unless @article.published_at.nil? %>
+  <% if @article.published_at.nil? %>
+    <em>Publication date not yet set.</em>
+  <% else %>
+    Published on
     <%= link_to @article.published_at do %>
-      Published on <b><%= display_date @article.published_at %></b>
+      <b><%= display_date @article.published_at %></b>
     <% end %>
   <% end %>
 </time>

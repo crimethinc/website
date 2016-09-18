@@ -1,6 +1,5 @@
 <%= render "admin/page_header", thing: @article %>
 
-
 <article>
   <header>
     <h1>
@@ -12,10 +11,32 @@
   </header>
 
   <hr>
-  <p><%= render "published_on" %></p>
-
   <p>URL: <b><%= link_to @article.path, @article.path %></b></p>
   <p>Publication Status: <b><%= @article.status.upcase %></b></p>
+  <p><%= render "published_on" %></p>
+
+  <% if @article.categories.present? %>
+    <p>
+      <b>Categories:</b>
+      <ul>
+        <% @article.categories.each do |category| %>
+          <li><%= link_to category.name, category.slug %></li>
+        <% end %>
+      </ul>
+    </p>
+  <% end %>
+
+  <% if @article.tags.present? %>
+    <p>
+      <b>Tags:</b>
+      <ul>
+        <% @article.tags.each do |tag| %>
+          <li><%= link_to tag.name, tag.slug %></li>
+        <% end %>
+      </ul>
+    </p>
+  <% end %>
+
   <hr>
 
   <div class="e-content">

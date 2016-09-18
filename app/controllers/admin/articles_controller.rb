@@ -1,6 +1,7 @@
 class Admin::ArticlesController < Admin::AdminController
   before_action :authorize
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article,      only: [:show, :edit, :update, :destroy]
+  after_action  :organize_article, only: [:create, :update]
 
   # # /admin/articles
   def index
@@ -25,8 +26,6 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.new(article_params)
 
     if @article.save
-      # @article.save_tags!(params)
-      # @article.save_categories!(params)
       redirect_to [:admin, @article], notice: 'Article was successfully created.'
     else
       render :new
@@ -52,6 +51,11 @@ class Admin::ArticlesController < Admin::AdminController
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def organize_article
+    @article.save_tags!(params[:tags])
+    @article.save_categories!(params[:categories])
   end
 
   def article_params
