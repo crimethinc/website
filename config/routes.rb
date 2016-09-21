@@ -9,14 +9,14 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :articles
 
-  # Article permalinks
+  # Article permalink
   get ":year/:month/:day/:slug",
       to:          "articles#show",
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
 
-
-
+  # Draft Article
+  get "drafts/:code", to: "articles#show", as: :draft
 
   # Admin Dashboard
   get 'admin', to: redirect('/admin/users'), as: 'admin'

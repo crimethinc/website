@@ -70,6 +70,7 @@ class Admin::ArticlesController < Admin::AdminController
                                     :status,
                                     :published_at,
                                     :tags,
-                                    :categories)
+                                    :categories,
+                                    :css)
   end
 end

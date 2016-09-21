@@ -1,4 +1,5 @@
 class Admin::UsersController < Admin::AdminController
+  before_action :authorize
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # /admin/users

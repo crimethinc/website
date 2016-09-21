@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160907015107) do
     t.text     "title"
     t.text     "subtitle"
     t.text     "content"
+    t.text     "css"
     t.string   "year"
     t.string   "month"
     t.string   "day"
@@ -61,11 +62,9 @@ ActiveRecord::Schema.define(version: 20160907015107) do
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "name"
-    t.string   "phone"
     t.string   "password"
     t.string   "password_digest"
     t.text     "avatar"
-    t.text     "url"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

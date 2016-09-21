@@ -1,4 +1,4 @@
-<time>
+<time datetime="<%= display_date article.published_at if article.dated? %>">
   <% if article.dated? %>
     <em>Publication date not yet set.</em>
   <% else %>
