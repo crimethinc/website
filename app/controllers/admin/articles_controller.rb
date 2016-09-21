@@ -71,6 +71,7 @@ class Admin::ArticlesController < Admin::AdminController
                                     :published_at,
                                     :tags,
                                     :categories,
-                                    :css)
+                                    :css,
+                                    :pinned)
   end
 end

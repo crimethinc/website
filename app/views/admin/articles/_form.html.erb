@@ -51,15 +51,23 @@
     </div>
   </div>
 
-  <div class="actions">
-    <button type="submit" class="btn btn-primary btn-lg">Save</button>
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :pinned %>
+        <%= f.check_box :pinned %>
+        <p class="help-block">A <i>Pinned Article</i> will remain at the top of the homepage until it&rsquo;s unpinned.</p>
+      </div>
+    </div>
   </div>
 
   <% if action_name == "edit" %>
     <div class="form-group">
       <%= f.label :css, "Article Specific CSS" %>
       <%= f.text_area :css, class: "form-control", rows: 10 %>
-      <p>Prefix your CSS selectors with <code>#article-<%= @article.id %></code> to scope your styles to just this article.</p>
+      <p class="help-block">Prefix your CSS selectors with <code>#article-<%= @article.id %></code> to scope your styles to just this article.</p>
     </div>
   <% end %>
 <% end %>

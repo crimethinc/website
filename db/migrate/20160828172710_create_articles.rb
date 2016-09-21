@@ -5,6 +5,7 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.string   :year, :month, :day, :slug, :code
       t.string   :status, default: "draft"
       t.datetime :published_at
+      t.boolean  :pinned, default: false
 
       t.timestamps
     end

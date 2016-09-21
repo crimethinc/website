@@ -7,7 +7,8 @@ class ArticlesController < ApplicationController
     @articles_month = params[:month]
     @articles_day   = params[:day]
 
-    @articles = Article.all#.published.paginate(per_page: 5, page: params[:page])
+    @articles = Article.unpinned.all
+    #.published.paginate(per_page: 5, page: params[:page])
     @articles = @articles.where(year:  params[:year])  if params[:year]
     @articles = @articles.where(month: params[:month]) if params[:month]
     @articles = @articles.where(day:   params[:day])   if params[:day]
@@ -15,6 +16,8 @@ class ArticlesController < ApplicationController
     if @articles.length == 1
       return redirect_to @articles.first.path
     end
+
+    @pinned_article = Article.pinned.first
   end
 
   def show

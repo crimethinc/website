@@ -13,12 +13,15 @@ class Article < ApplicationRecord
   has_many :categories, through: :categorizations
 
   default_scope { order("published_at DESC") }
+
   scope :on,      lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
   scope :draft,       -> { where(status: "draft") }
   scope :edited,      -> { where(status: "edited") }
   scope :designed,    -> { where(status: "designed") }
   scope :publishable, -> { where(status: "publishable") }
   scope :published,   -> { where(status: "published") }
+  scope :unpinned,    -> { where(pinned: false) }
+  scope :pinned,      -> { where(pinned: true) }
 
   before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]

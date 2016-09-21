@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160907015107) do
     t.string   "code"
     t.string   "status",       default: "draft"
     t.datetime "published_at"
+    t.boolean  "pinned",       default: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
