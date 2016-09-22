@@ -92,11 +92,10 @@ class Article < ApplicationRecord
   end
 
   def dated?
-    if published_at.present?
-      published_at.year.present? &&
-      published_at.month.present? &&
-      published_at.day.present?
-    end
+    published_at.present? &&
+    published_at.year.present? &&
+    published_at.month.present? &&
+    published_at.day.present?
   end
 
   private
