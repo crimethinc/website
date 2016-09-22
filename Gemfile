@@ -12,6 +12,7 @@ gem 'puma'
 gem 'foreman'
 
 # assets
+gem 'bootstrap-sass', '3.3.7'
 gem 'sass-rails'
 gem 'autoprefixer-rails'
 gem 'uglifier'
