@@ -21,25 +21,25 @@
           <%= render "/articles/published_on", article: article %>
 
           <% if article.categories.present? %>
-            <p>
+            <div class="categories">
               <b>Categories:</b>
               <ul>
                 <% article.categories.each do |category| %>
                   <li><%= link_to category.name, category.slug, rel: "tag", class: "p-category" %></li>
                 <% end %>
               </ul>
-            </p>
+            </div>
           <% end %>
 
           <% if article.tags.present? %>
-            <p>
+            <div class="tags">
               <b>Tags:</b>
               <ul>
                 <% article.tags.each do |tag| %>
                   <li><%= link_to tag.name, tag.slug, rel: "tag", class: "p-category" %></li>
                 <% end %>
               </ul>
-            </p>
+            </div>
           <% end %>
         </footer>
       </article>
