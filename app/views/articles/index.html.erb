@@ -5,7 +5,7 @@
 <ol>
   <% @articles.each do |article| %>
     <li>
-      <article>
+      <article class="h-entry" style="background-image: url(<%= article.image %>)">
         <h1>
           <%= link_to article.path, class: "p-name" do %>
             <span class="p-x-title"><%= article.title %></span><br>
