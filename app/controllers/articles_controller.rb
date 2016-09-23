@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     @articles_month = params[:month]
     @articles_day   = params[:day]
 
-    @articles = Article.published.unpinned.limit(5).all
+    @articles = Article.unpinned.published.feed.limit(5).all
     @articles = @articles.where(year:  params[:year])  if params[:year]
     @articles = @articles.where(month: params[:month]) if params[:month]
     @articles = @articles.where(day:   params[:day])   if params[:day]

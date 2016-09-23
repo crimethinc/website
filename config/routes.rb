@@ -18,8 +18,9 @@ Rails.application.routes.draw do
   # Draft Article
   get "drafts/:code", to: "articles#show", as: :draft
 
+
   # Admin Dashboard
-  get 'admin', to: redirect('/admin/users'), as: 'admin'
+  get :admin, to: redirect('/admin/users'), as: 'admin'
   namespace :admin do
     # User management
     resources :users
@@ -43,4 +44,7 @@ Rails.application.routes.draw do
   get 'wp-admin.php', to: redirect('/admin')
   get 'wp-login.php', to: redirect('/signin')
   get 'wp-login.php?action=logout&_wpnonce=:nonce', to: redirect('/signout')
+
+  # Pages
+  get "*path", to: "pages#show", as: :page, via: :all
 end

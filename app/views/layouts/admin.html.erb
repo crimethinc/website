@@ -22,18 +22,16 @@
   <![endif]-->
   <%# / For Bootstrap %>
 
-  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
-
+  <%= stylesheet_link_tag    'admin',       media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'admin',       'data-turbolinks-track': 'reload' %>
 </head>
+
 <body>
   <%= render 'admin/nav' %>
-
   <div class='container'>
     <main>
       <%= yield %>
     </main>
   </div>
-
 </body>
 </html>

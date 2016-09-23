@@ -68,10 +68,19 @@ if Rails.env.development?
 
   unpublished_article = Article.create!(
     title: "Something for the Future",
-    subtitle: "Still Being Writted, Edited, etc",
+    subtitle: "Still Being Written, Edited, etc",
     content: "Only after an article is dated and marked published does it go out. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     status: "draft",
     published_at: 2.days.ago,
     slug: "unpublished-article"
+  )
+
+  page = Article.create!(
+    title: "About Us",
+    content: "This should NOT show up in the articles feed.",
+    status: "published",
+    published_at: 10.days.ago,
+    page: true,
+    page_path: "about/us"
   )
 end

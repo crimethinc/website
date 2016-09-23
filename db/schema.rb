@@ -25,9 +25,13 @@ ActiveRecord::Schema.define(version: 20160907015107) do
     t.string   "day"
     t.string   "slug"
     t.string   "code"
+    t.string   "page_path"
     t.string   "status",       default: "draft"
     t.datetime "published_at"
     t.boolean  "pinned",       default: false
+    t.boolean  "page",         default: false
+    t.boolean  "hide_header",  default: false
+    t.boolean  "hide_footer",  default: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end

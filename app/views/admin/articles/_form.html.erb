@@ -16,58 +16,123 @@
     <%= f.text_area :content, class: "form-control", rows: 10 %>
   </div>
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <div class="form-group">
-        <%= f.label :slug %>
-        <%= f.text_field :slug, class: "form-control" %>
+  <fieldset id="meta">
+    <legend>Meta</legend>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+          <%= f.label :slug, "URL Slug" %>
+          <%= f.text_field :slug, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+          <%= f.label :categories %>
+          <%= text_field_tag :categories, @article.categories.map{ |c| c.name }.join(", "), class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+          <%= f.label :tags %>
+          <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control" %>
+          <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
+        </div>
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6">
-      <div class="form-group">
-        <%= f.label :status %>
-        <%= f.text_field :status, class: "form-control" %>
+    <%= render "admin/datetime_group", f: f, article: @article %>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :status, "Publication Status" %>
+          <%= f.text_field :status, class: "form-control" %>
+        </div>
       </div>
     </div>
-  </div>
+  </fieldset>
 
-  <%= render "admin/datetime_group", f: f, article: @article %>
+  <fieldset id="page">
+    <legend>Page</legend>
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <div class="form-group">
-        <%= f.label :categories %>
-        <%= text_field_tag :categories, @article.categories.map{ |c| c.name }.join(", "), class: "form-control" %>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :page, "Make This a Page?" %>
+          <%= f.check_box :page %>
+          <p class="help-block">
+            A <i>Page</i>&rsquo;s URL path is set by its <code>slug</code>.
+            It does not include <code>/YEAR/MONTH/DAY</code> in its URL.
+            For example, you might create a Page called <i>About Us</i> with the slug of &ldquo;<i>about</i>&rdquo;. That Page&rsquo;s URL path would be <code>/about</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+          <%= f.label :page_path, "URL Path for Pages" %>
+          <%= f.text_field :page_path, class: "form-control" %>
+          <p class="help-block">
+            This is similar to a slug but it can have <code>/</code>s in it.
+            For example, <code>about/us</code>.
+          </p>
+        </div>
       </div>
     </div>
-
-    <div class="col-xs-12 col-sm-6">
-      <div class="form-group">
-        <%= f.label :tags %>
-        <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control" %>
-        <p class="help-block">Comma separated. <em>E.g., police, tactics, etc</em></p>
-      </div>
-    </div>
-  </div>
+  </fieldset>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <div class="form-group">
-        <%= f.label :pinned %>
-        <%= f.check_box :pinned %>
-        <p class="help-block">A <i>Pinned Article</i> will remain at the top of the homepage until it&rsquo;s unpinned.</p>
-      </div>
-    </div>
-  </div>
+  <fieldset id="appearance">
+    <legend>Appearance</legend>
 
-  <% if action_name == "edit" %>
-    <div class="form-group">
-      <%= f.label :css, "Article Specific CSS" %>
-      <%= f.text_area :css, class: "form-control", rows: 10 %>
-      <p class="help-block">Prefix your CSS selectors with <code>#article-<%= @article.id %></code> to scope your styles to just this article.</p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 col-sm-push-9">
+        <div class="form-group">
+          <br class="hidden-xs">
+          <%= f.label :pinned, "Pin This Article?" %>
+          <%= f.check_box :pinned %>
+          <p class="help-block">
+            A <i>Pinned Article</i> will remain at the top of the homepage until it&rsquo;s unpinned
+            or until a newer article is pinned.
+          </p>
+        </div>
+
+
+        <div class="form-group">
+          <%= f.label :hide_header, "Hide the Site Header?" %>
+          <%= f.check_box :hide_header %>
+          <p class="help-block">
+            This will remove the site header/<wbr>nav/<wbr>search/<wbr>etc from this Article only.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :hide_footer, "Hide the Site Footer?" %>
+          <%= f.check_box :hide_footer %>
+          <p class="help-block">
+            This will remove the site footer from this Article only.
+          </p>
+        </div>
+      </div>
+
+      <% if action_name == "edit" %>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+          <div class="form-group">
+            <%= f.label :css, "Article Specific CSS" %>
+            <%= f.text_area :css, class: "form-control", rows: 20 %>
+            <p class="help-block">
+              Prefix your CSS selectors with <code>#article-<%= @article.id %></code> to scope your styles to just this article.
+              <br class="hidden-xs">
+              For example, <code>#article-<%= @article.id %> b { background: green }</code>.
+            </p>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </fieldset>
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+
 <% end %>

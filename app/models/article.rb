@@ -15,15 +15,18 @@ class Article < ApplicationRecord
   default_scope { order("published_at DESC") }
 
   scope :on,      lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
+  scope :unpinned,    -> { where(pinned: false) }
+  scope :pinned,      -> { where(pinned: true) }
+  scope :page,        -> { where(page: true) }
+  scope :feed,        -> { where(page: false) }
+
   scope :draft,       -> { where(status: "draft") }
   scope :edited,      -> { where(status: "edited") }
   scope :designed,    -> { where(status: "designed") }
-  scope :publishable, -> { where(status: "publishable") }
   scope :published,   -> { where(status: "published") }
-  scope :unpinned,    -> { where(pinned: false) }
-  scope :pinned,      -> { where(pinned: true) }
 
   before_validation :generate_slug,            on: [:create, :update]
+  before_validation :generate_page_path,       on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :generate_draft_code,      on: [:create, :update]
   validates_with SlugValidator
@@ -83,10 +86,6 @@ class Article < ApplicationRecord
     status == "designed"
   end
 
-  def publishable?
-    status == "publishable"
-  end
-
   def published?
     status == "published"
   end
@@ -101,9 +100,12 @@ class Article < ApplicationRecord
   private
 
   def generate_slug
-    if self.new_record? || self.slug_changed?
+    if self.new_record? || self.slug_changed? || self.slug.blank?
       n = 0
-      self.slug = self.name.to_slug
+
+      if slug.blank?
+        self.slug = self.name.to_slug
+      end
 
       while slug_exists?
         self.slug = name
@@ -111,6 +113,8 @@ class Article < ApplicationRecord
         "#{self.slug} #{n}".to_slug
       end
     end
+
+    self.slug = self.slug.to_slug
   end
 
   def generate_published_dates
@@ -123,5 +127,17 @@ class Article < ApplicationRecord
 
   def generate_draft_code
     self.code ||= SecureRandom.hex
+  end
+
+  def generate_page_path
+    if self.page_path.blank?
+      self.page_path = self.slug
+    end
+
+    puts "in generate_page_path"
+    path_pieces = self.page_path.split("/").reject{ |p| p.blank? }
+    self.page_path = path_pieces.map{ |piece| piece.to_slug }.join("/")
+    puts "self.page_path: #{self.page_path}"
+    self.page_path
   end
 end

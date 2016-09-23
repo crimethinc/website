@@ -72,6 +72,10 @@ class Admin::ArticlesController < Admin::AdminController
                                     :tags,
                                     :categories,
                                     :css,
-                                    :pinned)
+                                    :pinned,
+                                    :page,
+                                    :hide_header,
+                                    :hide_footer,
+                                    :page_path)
   end
 end
