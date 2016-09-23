@@ -2,8 +2,8 @@ body {
   margin-bottom: 10rem;
 }
 
-label + input[type=hidden] + input[type=checkbox] {
-  margin-left: .5rem;
+input[type=checkbox] {
+  margin-right: .5rem;
 }
 
 .datetime-select {

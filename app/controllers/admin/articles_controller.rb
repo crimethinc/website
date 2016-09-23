@@ -77,6 +77,8 @@ class Admin::ArticlesController < Admin::AdminController
                                     :page,
                                     :hide_header,
                                     :hide_footer,
-                                    :page_path)
+                                    :page_path,
+                                    :image,
+                                    :image_description)
   end
 end

@@ -2,7 +2,11 @@
   <%= @article.css %>
 </style>
 
-<article id="article-<%= @article.id %>">
+<article id="article-<%= @article.id %>" class="h-entry">
+  <% if @article.image.present? %>
+    <%= image_tag @article.image, alt: @article.image_description, class: "u-photo" %>
+  <% end %>
+
   <h1>
     <%= link_to @article.path, class: "p-name" do %>
       <span class="title"><%= @article.title %></span><br>

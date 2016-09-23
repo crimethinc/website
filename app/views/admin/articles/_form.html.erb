@@ -90,7 +90,43 @@
     <legend>Appearance</legend>
 
     <div class="row">
-      <div class="col-xs-12 col-sm-3 col-sm-push-9">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.label :image, "Hero Image" %>
+        <%= f.text_field :image, class: "form-control input-lg" %>
+        <p class="help-block">
+          This is the large image that will be front and center on the article page,
+          on the homepage and when syndicated to other sites. Minimum size: <code>1400x1000</code> pixels.
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :image_description, "Hero Image Description" %>
+          <%= f.text_field :image_description, class: "form-control input-lg" %>
+          <p class="help-block">
+            This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <% if action_name == "edit" %>
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <%= f.label :css, "Article Specific CSS" %>
+            <%= f.text_area :css, class: "form-control", rows: 20 %>
+            <p class="help-block">
+              Prefix your CSS selectors with <code>#article-<%= @article.id %></code> to scope your styles to just this article.
+              For example, <code>#article-<%= @article.id %> b { background: green }</code>.
+            </p>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="col-xs-12 col-sm-6">
         <div class="form-group">
           <br class="hidden-xs">
           <%= f.check_box :pinned_to_top %>
@@ -102,7 +138,6 @@
         </div>
 
         <div class="form-group">
-          <br class="hidden-xs">
           <%= f.check_box :pinned_to_bottom %>
           <%= f.label :pinned_to_bottom, "Pin to Bottom of Homepage?" %>
           <p class="help-block">
@@ -127,20 +162,6 @@
           </p>
         </div>
       </div>
-
-      <% if action_name == "edit" %>
-        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-          <div class="form-group">
-            <%= f.label :css, "Article Specific CSS" %>
-            <%= f.text_area :css, class: "form-control", rows: 20 %>
-            <p class="help-block">
-              Prefix your CSS selectors with <code>#article-<%= @article.id %></code> to scope your styles to just this article.
-              <br class="hidden-xs">
-              For example, <code>#article-<%= @article.id %> b { background: green }</code>.
-            </p>
-          </div>
-        </div>
-      <% end %>
     </div>
   </fieldset>
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>

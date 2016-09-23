@@ -20,21 +20,23 @@ ActiveRecord::Schema.define(version: 20160907015107) do
     t.text     "subtitle"
     t.text     "content"
     t.text     "css"
+    t.text     "image"
+    t.text     "image_description"
     t.string   "year"
     t.string   "month"
     t.string   "day"
     t.string   "slug"
     t.string   "code"
     t.string   "page_path"
-    t.string   "status",           default: "draft"
+    t.string   "status",            default: "draft"
     t.datetime "published_at"
-    t.boolean  "pinned_to_top",    default: false
-    t.boolean  "pinned_to_bottom", default: false
-    t.boolean  "page",             default: false
-    t.boolean  "hide_header",      default: false
-    t.boolean  "hide_footer",      default: false
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.boolean  "pinned_to_top",     default: false
+    t.boolean  "pinned_to_bottom",  default: false
+    t.boolean  "page",              default: false
+    t.boolean  "hide_header",       default: false
+    t.boolean  "hide_footer",       default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "categories", force: :cascade do |t|
