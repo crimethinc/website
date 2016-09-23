@@ -16,7 +16,9 @@ class ArticlesController < ApplicationController
       return redirect_to @articles.first.path
     end
 
-    @pinned_article = Article.pinned.first
+    # pinned articles
+    @pinned_to_top    = Article.pinned_to_top.first
+    @pinned_to_bottom = Article.pinned_to_bottom.first
   end
 
   def show

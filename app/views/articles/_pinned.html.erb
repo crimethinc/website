@@ -1,0 +1,14 @@
+<div class="pinned">
+  <article>
+    <h1>
+      <%= link_to article.path do %>
+        <span class="title"><%= article.title %></span><br>
+        <span class="subtitle"><%= article.subtitle %></span>
+      <% end %>
+    </h1>
+
+    <div class="e-content">
+      <%= simple_format article.content %>
+    </div>
+  </article>
+</div>

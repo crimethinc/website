@@ -60,10 +60,11 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :page, "Make This a Page?" %>
           <%= f.check_box :page %>
+          <%= f.label :page, "Make This a Page?" %>
           <p class="help-block">
-            A <i>Page</i>&rsquo;s URL path is set by its <code>slug</code>.
+            A <i>Page</i> will not appear in the <i>Articles</i> feed.
+            Its URL path is set by its <code>page_path</code>.
             It does not include <code>/YEAR/MONTH/DAY</code> in its URL.
             For example, you might create a Page called <i>About Us</i> with the slug of &ldquo;<i>about</i>&rdquo;. That Page&rsquo;s URL path would be <code>/about</code>.
           </p>
@@ -75,7 +76,7 @@
           <%= f.label :page_path, "URL Path for Pages" %>
           <%= f.text_field :page_path, class: "form-control" %>
           <p class="help-block">
-            This is similar to a slug but it can have <code>/</code>s in it.
+            A <code>page_path</code> is similar to a slug but it can have <code>/</code>s in it.
             For example, <code>about/us</code>.
           </p>
         </div>
@@ -92,26 +93,35 @@
       <div class="col-xs-12 col-sm-3 col-sm-push-9">
         <div class="form-group">
           <br class="hidden-xs">
-          <%= f.label :pinned, "Pin This Article?" %>
-          <%= f.check_box :pinned %>
+          <%= f.check_box :pinned_to_top %>
+          <%= f.label :pinned_to_top, "Pin to Top of Homepage?" %>
           <p class="help-block">
-            A <i>Pinned Article</i> will remain at the top of the homepage until it&rsquo;s unpinned
+            This <i>Pinned Article</i> will remain at the top of the homepage until it&rsquo;s unpinned
             or until a newer article is pinned.
           </p>
         </div>
 
+        <div class="form-group">
+          <br class="hidden-xs">
+          <%= f.check_box :pinned_to_bottom %>
+          <%= f.label :pinned_to_bottom, "Pin to Bottom of Homepage?" %>
+          <p class="help-block">
+            This <i>Pinned Article</i> will remain at the bottom of the homepage until it&rsquo;s unpinned
+            or until a newer article is pinned.
+          </p>
+        </div>
 
         <div class="form-group">
-          <%= f.label :hide_header, "Hide the Site Header?" %>
           <%= f.check_box :hide_header %>
+          <%= f.label :hide_header, "Hide the Site Header?" %>
           <p class="help-block">
             This will remove the site header/<wbr>nav/<wbr>search/<wbr>etc from this Article only.
           </p>
         </div>
 
         <div class="form-group">
-          <%= f.label :hide_footer, "Hide the Site Footer?" %>
           <%= f.check_box :hide_footer %>
+          <%= f.label :hide_footer, "Hide the Site Footer?" %>
           <p class="help-block">
             This will remove the site footer from this Article only.
           </p>

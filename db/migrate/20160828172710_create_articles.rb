@@ -5,7 +5,8 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.string   :year, :month, :day, :slug, :code, :page_path
       t.string   :status, default: "draft"
       t.datetime :published_at
-      t.boolean  :pinned, default: false
+      t.boolean  :pinned_to_top,    default: false
+      t.boolean  :pinned_to_bottom, default: false
       t.boolean  :page, default: false
       t.boolean  :hide_header, default: false
       t.boolean  :hide_footer, default: false

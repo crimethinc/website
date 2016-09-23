@@ -15,10 +15,13 @@ class Article < ApplicationRecord
   default_scope { order("published_at DESC") }
 
   scope :on,      lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
-  scope :unpinned,    -> { where(pinned: false) }
-  scope :pinned,      -> { where(pinned: true) }
-  scope :page,        -> { where(page: true) }
-  scope :feed,        -> { where(page: false) }
+
+  scope :unpinned,         -> { where(pinned_to_top: false, pinned_to_bottom: false) }
+  scope :pinned_to_top,    -> { where(pinned_to_top: true) }
+  scope :pinned_to_bottom, -> { where(pinned_to_bottom: true) }
+
+  scope :page, -> { where(page: true) }
+  scope :feed, -> { where(page: false) }
 
   scope :draft,       -> { where(status: "draft") }
   scope :edited,      -> { where(status: "edited") }
@@ -134,10 +137,7 @@ class Article < ApplicationRecord
       self.page_path = self.slug
     end
 
-    puts "in generate_page_path"
     path_pieces = self.page_path.split("/").reject{ |p| p.blank? }
     self.page_path = path_pieces.map{ |piece| piece.to_slug }.join("/")
-    puts "self.page_path: #{self.page_path}"
-    self.page_path
   end
 end
