@@ -7,6 +7,7 @@ class SlugValidator < ActiveModel::Validator
 end
 
 class Article < ApplicationRecord
+  belongs_to :user
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
@@ -14,7 +15,7 @@ class Article < ApplicationRecord
 
   default_scope { order("published_at DESC") }
 
-  scope :on,      lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
+  scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
 
   scope :unpinned,         -> { where(pinned_to_top: false, pinned_to_bottom: false) }
   scope :pinned_to_top,    -> { where(pinned_to_top: true) }

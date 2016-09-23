@@ -16,6 +16,7 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Articles", [:admin, :articles] %></li>
         <li><%= link_to "Users",    [:admin, :users] %></li>
+        <li><%= link_to "Links",    [:admin, :links] %></li>
       </ul>
 
 
@@ -27,6 +28,7 @@
           <ul class="dropdown-menu">
             <li><%= link_to "Article", [:new, :admin, :article] %></li>
             <li><%= link_to "User", [:new, :admin, :user] %></li>
+            <li><%= link_to "Link", [:new, :admin, :link] %></li>
           </ul>
         </li>
 

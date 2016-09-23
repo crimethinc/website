@@ -20,11 +20,11 @@ Rails.application.routes.draw do
 
 
   # Admin Dashboard
-  get :admin, to: redirect('/admin/users'), as: 'admin'
+  get :admin, to: redirect('/admin/articles'), as: 'admin'
   namespace :admin do
-    # User management
-    resources :users
-    resources :articles
+    resources :users    # User management
+    resources :articles # Article creation
+    resources :links    # Social links for site and users
   end
 
 

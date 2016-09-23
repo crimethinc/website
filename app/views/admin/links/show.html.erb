@@ -1,0 +1,17 @@
+<%= render "admin/page_header", thing: @link %>
+
+<article>
+  <header>
+    <h1 class="p-name">
+      <span class="h1"><%= @link.name %></span><br>
+      <%= link_to @link.url, @link.url, class: "h2" %>
+    </h1>
+  </header>
+
+  <div>
+    <p>
+      Displayed link:<br>
+      <%= link_to @link.name, @link.url %>
+    </p>
+  </div>
+</article>
