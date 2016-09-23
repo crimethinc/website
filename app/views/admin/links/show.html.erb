@@ -8,10 +8,19 @@
     </h1>
   </header>
 
-  <div>
+  <hr>
+  <% if @link.user.present? %>
     <p>
-      Displayed link:<br>
-      <%= link_to @link.name, @link.url %>
+      User:
+      <b><%= @link.user.username %></b>
+      <b>(<%= @link.user.name %>)</b>
+    </p>
+  <% end %>
+
+  <div class="e-content">
+    <p>
+      Displayed link:
+      <b><%= link_to @link.name, @link.url %></b>
     </p>
   </div>
 </article>

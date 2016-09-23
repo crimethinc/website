@@ -52,6 +52,6 @@ class Admin::LinksController < Admin::AdminController
   end
 
   def link_params
-    params.require(:link).permit(:name, :url)
+    params.require(:link).permit(:name, :url, :user_id)
   end
 end
