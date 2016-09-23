@@ -1,8 +1,10 @@
 if Rails.env.development?
-  User.create!(email: "test@example.com",
-               password: "test",
-               password_confirmation: "test")
-
+  test_user = User.new(username: "tester",
+               name: "A Tester Account",
+               email: "test@example.com",
+               password: "a long passphrase to meet the minimum length",
+               password_confirmation: "a long passphrase to meet the minimum length")
+  test_user.save!(validate: false)
 
   Article.create!(
     title: "Published Article for Testing",

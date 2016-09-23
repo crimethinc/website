@@ -1,5 +1,7 @@
 <%= render "admin/page_header", thing: @user %>
 
+<h1>Settings for @<%= @user.username %></h1>
+
 <%= form_for [:admin, @user] do |f| %>
   <%= render "admin/form_errors", thing: @user %>
 

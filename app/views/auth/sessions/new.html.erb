@@ -4,8 +4,8 @@
 
 <%= form_tag [:auth, :sessions] do %>
   <div class="form-group">
-    <%= label_tag :email, "Email", class: "sr-only" %>
-    <%= email_field_tag :email, params[:email], autofocus: true, class: "form-control input-lg", placeholder: "Email" %>
+    <%= label_tag :username, "Username", class: "sr-only" %>
+    <%= text_field_tag :username, params[:username], autofocus: true, class: "form-control input-lg", placeholder: "Username" %>
   </div>
   <div class="form-group">
     <%= label_tag :password, nil, class: "sr-only" %>

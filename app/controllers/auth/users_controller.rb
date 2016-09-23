@@ -48,9 +48,10 @@ class Auth::UsersController < Admin::AdminController
 
   def user_params
     params.require(:user).permit(:avatar,
-    :email,
-    :password,
-    :password_confirmation,
-    :name)
+                                 :username,
+                                 :email,
+                                 :password,
+                                 :password_confirmation,
+                                 :name)
   end
 end

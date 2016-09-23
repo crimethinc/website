@@ -6,18 +6,25 @@
   <%= render "admin/form_errors", thing: @user %>
 
   <div class="form-group">
-    <%= f.label :email %>
-    <%= f.text_field :email, class: "form-control input-lg" %>
+    <%= f.label :username %>
+    <%= f.text_field :username, class: "form-control input-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :password %>
     <%= f.password_field :password, class: "form-control input-lg" %>
+    <p class="help-block">Passwords must be <b>at least 30 characters</b> long.</p>
   </div>
 
   <div class="form-group">
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: "form-control input-lg" %>
+    <p class="help-block">
+      Pro Tip: Use a password manager like
+      <a href="https://1password.com">1Password</a>,
+      and/or try a passphrase like <code>mickey fickie fire cracker soap on a rope</code>
+      for length plus memorability.
+    </p>
   </div>
 
   <div class="actions">

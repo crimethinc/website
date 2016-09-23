@@ -53,6 +53,7 @@ class Admin::UsersController < Admin::AdminController
 
   def user_params
     params.require(:user).permit(:avatar,
+                                 :username,
                                  :email,
                                  :password,
                                  :password_confirmation,

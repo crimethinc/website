@@ -1,5 +1,14 @@
 class User < ActiveRecord::Base
   has_secure_password
-  validates :password, presence: :true, on: :create
-  validates :email,    presence: :true, uniqueness: true, on: [:create, :update]
+  validates :username, presence: :true, uniqueness: true, on: [:create, :update]
+  validates :password,
+            presence: :true,
+            on: :create,
+            length: { minimum: 30 }
+
+  validates :password,
+            exclusion: {
+              in: ["mickey fickie fire cracker soap on a rope", "a long passphrase to meet the minimum length"],
+              message: "The passphrase '%{value}' is prohibited."
+            }
 end
