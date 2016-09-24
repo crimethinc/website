@@ -7,7 +7,7 @@ class SlugValidator < ActiveModel::Validator
 end
 
 class Article < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
@@ -36,7 +36,9 @@ class Article < ApplicationRecord
   validates_with SlugValidator
 
   def path
-    if published?
+    if page?
+      page_path
+    elsif published?
       published_at.strftime("/%Y/%m/%d/#{slug}")
     else
       "/drafts/#{self.code}"

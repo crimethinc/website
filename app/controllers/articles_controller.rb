@@ -39,11 +39,21 @@ class ArticlesController < ApplicationController
                        ).where(slug:  params[:slug]).first
     end
 
-    # no articles found, go to /articles feed
+    # no article found, go to /articles feed
     if @article.nil?
       return redirect_to articles_path
     else
       @title = @article.name
+    end
+
+    # article is a page
+    if @article.page?
+      return redirect_to @article.page_path
+    end
+
+    # no layout
+    if @article.hide_layout?
+      render text: @article.content, layout: false
     end
   end
 end

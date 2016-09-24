@@ -59,26 +59,12 @@ class Admin::ArticlesController < Admin::AdminController
   end
 
   def article_params
-    params.require(:article).permit(:title,
-                                    :subtitle,
-                                    :content,
-                                    :year,
-                                    :month,
-                                    :day,
-                                    :slug,
-                                    :code,
-                                    :status,
-                                    :published_at,
-                                    :tags,
-                                    :categories,
-                                    :css,
-                                    :pinned_to_top,
-                                    :pinned_to_bottom,
-                                    :page,
-                                    :hide_header,
-                                    :hide_footer,
-                                    :page_path,
-                                    :image,
-                                    :image_description)
+    params.require(:article).permit(:title, :subtitle, :content,
+                                    :year, :month, :day,
+                                    :slug, :code, :status, :published_at,
+                                    :page_path, :page, :tags, :categories,
+                                    :image, :image_description, :css,
+                                    :pinned_to_top, :pinned_to_bottom,
+                                    :hide_header, :hide_footer, :hide_layout)
   end
 end

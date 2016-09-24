@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160923203625) do
     t.boolean  "page",              default: false
     t.boolean  "hide_header",       default: false
     t.boolean  "hide_footer",       default: false
+    t.boolean  "hide_layout",       default: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

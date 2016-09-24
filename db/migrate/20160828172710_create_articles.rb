@@ -11,6 +11,7 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.boolean  :page, default: false
       t.boolean  :hide_header, default: false
       t.boolean  :hide_footer, default: false
+      t.boolean  :hide_layout, default: false
 
       t.timestamps
     end
