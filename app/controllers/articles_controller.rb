@@ -7,7 +7,10 @@ class ArticlesController < ApplicationController
     @articles_month = params[:month]
     @articles_day   = params[:day]
 
-    @articles = Article.unpinned.published.feed.limit(5).all
+    @articles = Article.unpinned.published.feed.all
+    #TODO add this after pagination setup:
+    # .paginate(per_page: 5, page: params[:page])
+
     @articles = @articles.where(year:  params[:year])  if params[:year]
     @articles = @articles.where(month: params[:month]) if params[:month]
     @articles = @articles.where(day:   params[:day])   if params[:day]
@@ -15,10 +18,6 @@ class ArticlesController < ApplicationController
     if @articles.length == 1
       return redirect_to @articles.first.path
     end
-
-    # pinned articles
-    @pinned_to_top    = Article.pinned_to_top.first
-    @pinned_to_bottom = Article.pinned_to_bottom.first
   end
 
   def show

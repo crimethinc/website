@@ -1,22 +1,26 @@
 Rails.application.routes.draw do
-  # Public Site
-  root to: 'articles#index'
+  # Homepage
+  root to: 'archives#home'
+
+  # Archives
+  get 'archives', to: 'archives#index', as: :archives
+  get 'archive',  to: redirect('/archives')
 
   # Articles
-  # Article listings by year, optional month, optional day
-  get "(/:year)(/:month)(/:day)",
-      to:          "articles#index",
-      constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
-      as:          :articles
-
   # Article permalink
-  get ":year/:month/:day/:slug",
-      to:          "articles#show",
+  get ':year/:month/:day/:slug',
+      to:          'articles#show',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
 
+  # Article listings by year, optional month, optional day
+  get '(/:year)(/:month)(/:day)',
+      to:          'articles#index',
+      constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
+      as:          :articles
+
   # Draft Article
-  get "drafts/:code", to: "articles#show", as: :draft
+  get 'drafts/:code', to: 'articles#show', as: :draft
 
 
   # Admin Dashboard
@@ -46,5 +50,5 @@ Rails.application.routes.draw do
   get 'wp-login.php?action=logout&_wpnonce=:nonce', to: redirect('/signout')
 
   # Pages
-  get "*path", to: "pages#show", as: :page, via: :all
+  get '*path', to: 'pages#show', as: :page, via: :all
 end

@@ -1,0 +1,52 @@
+<% if @pinned_to_top.present? %>
+  <%= render "articles/pinned", article: @pinned_to_top %>
+<% end %>
+
+<ol class="h-feed">
+  <% @articles.each do |article| %>
+    <li>
+      <article class="h-entry" style="background-image: url(<%= article.image %>)">
+        <h1>
+          <%= link_to article.path, class: "p-name" do %>
+            <span class="p-x-title"><%= article.title %></span><br>
+            <span class="p-x-subtitle"><%= article.subtitle %></span>
+          <% end %>
+        </h1>
+
+        <div class="e-content">
+          <%= simple_format article.content %>
+        </div>
+
+        <footer>
+          <%= render "/articles/published_on", article: article %>
+
+          <% if article.categories.present? %>
+            <div class="categories">
+              <b>Categories:</b>
+              <ul>
+                <% article.categories.each do |category| %>
+                  <li><%= link_to category.name, category.slug, rel: "tag", class: "p-category" %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <% if article.tags.present? %>
+            <div class="tags">
+              <b>Tags:</b>
+              <ul>
+                <% article.tags.each do |tag| %>
+                  <li><%= link_to tag.name, tag.slug, rel: "tag", class: "p-category" %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+        </footer>
+      </article>
+    </li>
+  <% end %>
+</ol>
+
+<% if @pinned_to_bottom.present? %>
+  <%= render "articles/pinned", article: @pinned_to_bottom %>
+<% end %>

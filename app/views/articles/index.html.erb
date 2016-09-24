@@ -1,52 +1,26 @@
-<% if @pinned_to_top.present? %>
-  <%= render "articles/pinned", article: @pinned_to_top %>
-<% end %>
+<header>
+  <h1>
+    <%= link_to "Archives", archives_path %>
+    <time>
+      <%= link_to_dates(year: @articles_year, month: @articles_month, day: @articles_day) %>
+    </time>
+  </h1>
+</header>
 
-<ol>
-  <% @articles.each do |article| %>
-    <li>
-      <article class="h-entry" style="background-image: url(<%= article.image %>)">
-        <h1>
-          <%= link_to article.path, class: "p-name" do %>
-            <span class="p-x-title"><%= article.title %></span><br>
-            <span class="p-x-subtitle"><%= article.subtitle %></span>
+<% if @articles.nil? %>
+  <h2>No archives for this time period.</h2>
+<% else %>
+  <ol class="h-feed">
+    <% @articles.each do |article| %>
+      <li>
+        <article class="h-entry">
+          <%= link_to article.path do %>
+            <span class="h2"><%= link_to article.title, article.path %></span><br>
+            <span class="h3"><%= link_to article.subtitle, article.path %></span>
           <% end %>
-        </h1>
-
-        <div class="e-content">
-          <%= simple_format article.content %>
-        </div>
-
-        <footer>
-          <%= render "/articles/published_on", article: article %>
-
-          <% if article.categories.present? %>
-            <div class="categories">
-              <b>Categories:</b>
-              <ul>
-                <% article.categories.each do |category| %>
-                  <li><%= link_to category.name, category.slug, rel: "tag", class: "p-category" %></li>
-                <% end %>
-              </ul>
-            </div>
-          <% end %>
-
-          <% if article.tags.present? %>
-            <div class="tags">
-              <b>Tags:</b>
-              <ul>
-                <% article.tags.each do |tag| %>
-                  <li><%= link_to tag.name, tag.slug, rel: "tag", class: "p-category" %></li>
-                <% end %>
-              </ul>
-            </div>
-          <% end %>
-        </footer>
-      </article>
-    </li>
-  <% end %>
-</ol>
-
-<% if @pinned_to_bottom.present? %>
-  <%= render "articles/pinned", article: @pinned_to_bottom %>
+          <p><%= render "articles/published_on", article: article %></p>
+        </article>
+      </li>
+    <% end %>
+  </ol>
 <% end %>
