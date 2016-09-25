@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   # Homepage
   root to: 'archives#home'
 
+
   # Archives
   get 'archives', to: 'archives#index', as: :archives
   get 'archive',  to: redirect('/archives')
+
 
   # Articles
   # Article permalink
@@ -29,6 +31,7 @@ Rails.application.routes.draw do
     resources :users    # User management
     resources :articles # Article creation
     resources :links    # Social links for site and users
+    resources :settings # Site wide settings
   end
 
 
@@ -48,6 +51,7 @@ Rails.application.routes.draw do
   get 'wp-admin.php', to: redirect('/admin')
   get 'wp-login.php', to: redirect('/signin')
   get 'wp-login.php?action=logout&_wpnonce=:nonce', to: redirect('/signout')
+
 
   # Pages
   get '*path', to: 'pages#show', as: :page, via: :all

@@ -1,0 +1,21 @@
+<%= render "admin/page_header", thing: @setting %>
+
+<article>
+  <header>
+    <h1 class="p-name">
+      <span class="h1"><%= @setting.name %></span><br>
+    </h1>
+  </header>
+
+  <div class="e-content">
+    <p>
+      <b>Content:</b><br>
+      <%= @setting.saved_content %></b>
+    </p>
+
+    <p>
+      <b>Fallback Content:</b><br>
+      <%= @setting.fallback %></b>
+    </p>
+  </div>
+</article>

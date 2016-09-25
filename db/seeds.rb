@@ -1,6 +1,6 @@
 if Rails.env.development?
   test_user = User.new(username: "tester",
-               name: "A Tester Account",
+               display_name: "A Tester Account",
                email: "test@example.com",
                password: "a long passphrase to meet the minimum length",
                password_confirmation: "a long passphrase to meet the minimum length")
@@ -104,3 +104,6 @@ if Rails.env.development?
     image: "https://http.cat/502.jpg"
   )
 end
+
+# Settings necessary for all deployments
+Setting.create!(name: "Site Name", fallback: "A Magazine")

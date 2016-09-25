@@ -15,6 +15,11 @@ class ApplicationController < ActionController::Base
     redirect_to signin_url, alert: "You need to sign in to view that page." unless signed_in?
   end
 
+  def setting(slug)
+    Setting.find_by(slug: slug).try(:content)
+  end
+  helper_method :setting
+
   def listing?
     action_name == "index"
   end

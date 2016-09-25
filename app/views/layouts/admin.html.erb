@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html dir='ltr'
       lang='en-US'
-      prefix='og: http://ogp.me/ns#'
-      id='<%= @slug %>'>
+      prefix='og: http://ogp.me/ns#'>
 
 <head>
   <meta charset='utf-8'>
@@ -26,7 +25,7 @@
   <%= javascript_include_tag 'admin',       'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
+<body id='<%= @slug %>'>
   <%= render 'admin/nav' %>
   <div class='container'>
     <main>

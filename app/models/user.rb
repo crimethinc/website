@@ -21,4 +21,8 @@ class User < ActiveRecord::Base
       User.all.map { |u| ["@#{u.username} (#{u.name})", u.id] }
     end
   end
+
+  def name
+    display_name || username
+  end
 end

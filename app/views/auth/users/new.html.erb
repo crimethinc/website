@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Sign Up</h1>
+  <h2>Sign Up</h2>
 </div>
 
 <%= form_for [:auth, @user] do |f| %>
@@ -27,7 +27,10 @@
     </p>
   </div>
 
-  <div class="actions">
-    <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
-  </div>
+  <%= render "admin/form_actions", cancel_url: root_url, button_text: "Sign Up" %>
 <% end %>
+
+<p class="alert alert-info">
+  Already have an account? You can
+  <%= link_to "sign in", signin_path, class: "alert-link" %> instead.
+</p>

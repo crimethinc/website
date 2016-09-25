@@ -1,0 +1,23 @@
+<%= render 'admin/page_header', thing: @settings %>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Name</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @settings.each do |setting| %>
+      <tr>
+        <td>
+          <%= link_to 'EDIT', [:edit, :admin, setting], class: 'btn btn-primary btn-xs' %>
+        </td>
+        <td><%= link_to setting.name,     [:admin, setting] %></td>
+        <td><%= setting.content %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
