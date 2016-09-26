@@ -1,0 +1,54 @@
+<%= render "admin/page_header", thing: @page %>
+
+<article>
+  <header>
+    <h1>
+      <%= link_to @page.path, class: "p-name" do %>
+        <span class="h1 title"><%= @page.title %></span><br>
+        <span class="h2 subtitle"><%= @page.subtitle %></span>
+      <% end %>
+    </h1>
+  </header>
+
+  <hr>
+  <p>URL: <b><%= link_to @page.path, @page.path %></b></p>
+  <p>Publication Status: <b><%= @page.status.upcase %></b></p>
+  <p><%= render "/articles/published_on", article: @page %></p>
+  <p>Hero Image: <%= link_to_if @page.image.present?, @page.image, @page.image %></p>
+  <p>Hero Image Description: <%= @page.image_description %></p>
+
+  <%# TODO %>
+  <% if false && @page.categories.present? %>
+    <p>
+      <b>Categories:</b>
+      <ul>
+        <% @page.categories.each do |category| %>
+          <li><%= link_to category.name, category.slug %></li>
+        <% end %>
+      </ul>
+    </p>
+  <% end %>
+
+  <%# TODO %>
+  <% if false && @page.tags.present? %>
+    <p>
+      <b>Tags:</b>
+      <ul>
+        <% @page.tags.each do |tag| %>
+          <li><%= link_to tag.name, tag.slug %></li>
+        <% end %>
+      </ul>
+    </p>
+  <% end %>
+
+  <hr>
+
+  <div class="e-content">
+    <%= simple_format @page.content %>
+  </div>
+
+  <hr>
+  <footer>
+    <%= render "/articles/published_on", article: @page %>
+  </footer>
+</article>

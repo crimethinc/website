@@ -64,25 +64,25 @@ if Rails.env.development?
     image: "https://http.cat/401.jpg"
   )
 
-  top_pinned_article = Article.create!(
-    title: "BREAKING NEWS",
-    subtitle: "This article is pinned",
-    content: "Technically, there's nothing stopping more than one article from being pinned. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    status: "published",
-    published_at: 2.days.ago,
-    slug: "breaking-news",
-    pinned_to_top: true
-  )
+  # top_pinned_article = Article.create!(
+  #   title: "BREAKING NEWS",
+  #   subtitle: "This article is pinned",
+  #   content: "Technically, there's nothing stopping more than one article from being pinned. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  #   status: "published",
+  #   published_at: 2.days.ago,
+  #   slug: "breaking-news",
+  #   pinned_to_top: true
+  # )
 
-  bottom_pinned_article = Article.create!(
-    title: "Featured Project",
-    subtitle: "Underneath The Feed",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    status: "published",
-    published_at: 1.days.ago,
-    slug: "featured-project",
-    pinned_to_bottom: true
-  )
+  # bottom_pinned_article = Article.create!(
+  #   title: "Featured Project",
+  #   subtitle: "Underneath The Feed",
+  #   content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  #   status: "published",
+  #   published_at: 1.days.ago,
+  #   slug: "featured-project",
+  #   pinned_to_bottom: true
+  # )
 
   unpublished_article = Article.create!(
     title: "Something for the Future",
@@ -94,16 +94,15 @@ if Rails.env.development?
     image: "https://http.cat/404.jpg"
   )
 
-  page = Article.create!(
+  page = Page.create!(
     title: "About Us",
     content: "This should NOT show up in the articles feed.",
     status: "published",
     published_at: 10.days.ago,
-    page: true,
-    page_path: "about/us",
+    slug: "about/us",
     image: "https://http.cat/502.jpg"
   )
 end
 
 # Settings necessary for all deployments
-Setting.create!(name: "Site Name",   fallback: "A Magazine")
+Setting.create!(name: "Site Name", fallback: "A Magazine")

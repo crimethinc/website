@@ -7,7 +7,7 @@
       <th>Title</th>
       <th>Subtitle</th>
       <th>Slug</th>
-      <th>Code</th>
+      <th>Draft Code</th>
       <th>Status</th>
       <th>Published Date</th>
       <th>&nbsp;</th>
@@ -20,14 +20,13 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-primary btn-xs" %>
         </td>
-        <td><%= link_to article.title, [:admin, article] %></td>
-        <td><%= link_to article.subtitle, [:admin, article] %></td>
-        <td><%= link_to article.slug, [:admin, article] %></td>
-        <td><%= link_to article.code, [:admin, article] %></td>
+        <td><%= link_to article.title,      [:admin, article] %></td>
+        <td><%= link_to article.subtitle,   [:admin, article] %></td>
+        <td><%= link_to article.slug,       [:admin, article] %></td>
+        <td><%= link_to article.draft_code, [:admin, article] %></td>
         <td><%= article.status %></td>
         <td>
-          <%= link_to article.dated? ? display_date(article.published_at) : "Unpublished",
-                      [:admin, article] %>
+          <%= link_to article.dated? ? display_date(article.published_at) : "Unpublished", [:admin, article] %>
         </td>
         <td>
           <%= link_to 'DELETE', [:admin, article], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>

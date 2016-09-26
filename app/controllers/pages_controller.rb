@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def show
-    @article = Article.page.find_by(page_path: params[:path])
+    @article = Page.find_by(slug: params[:path])
 
     # no layout
     if @article.hide_layout?

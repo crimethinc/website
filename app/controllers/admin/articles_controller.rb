@@ -3,7 +3,7 @@ class Admin::ArticlesController < Admin::AdminController
   before_action :set_article,      only: [:show, :edit, :update, :destroy]
   after_action  :organize_article, only: [:create, :update]
 
-  # # /admin/articles
+  # /admin/articles
   def index
     @articles = Article.all
   end
@@ -61,10 +61,8 @@ class Admin::ArticlesController < Admin::AdminController
   def article_params
     params.require(:article).permit(:title, :subtitle, :content,
                                     :year, :month, :day,
-                                    :slug, :code, :status, :published_at,
-                                    :page_path, :page, :tags, :categories,
-                                    :image, :image_description, :css,
-                                    :pinned_to_top, :pinned_to_bottom,
-                                    :hide_header, :hide_footer, :hide_layout)
+                                    :slug, :draft_code, :status,
+                                    :published_at, :tags, :categories,
+                                    :image, :image_description, :css)
   end
 end

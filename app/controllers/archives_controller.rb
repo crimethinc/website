@@ -3,11 +3,11 @@ class ArchivesController < ApplicationController
     @slug = "home"
 
     # feed
-    @articles = Article.unpinned.published.feed.limit(5).all
+    @articles = Article.published.limit(5).all
 
     # pinned articles
-    @pinned_to_top    = Article.pinned_to_top.first
-    @pinned_to_bottom = Article.pinned_to_bottom.first
+    # @pinned_to_top    = Article.pinned_to_top.first
+    # @pinned_to_bottom = Article.pinned_to_bottom.first
   end
 
   def index

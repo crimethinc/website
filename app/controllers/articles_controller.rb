@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     @articles_month = params[:month]
     @articles_day   = params[:day]
 
-    @articles = Article.unpinned.published.feed.all
+    @articles = Article.published.all
     #TODO add this after pagination setup:
     # .paginate(per_page: 5, page: params[:page])
 
@@ -43,16 +43,6 @@ class ArticlesController < ApplicationController
       return redirect_to articles_path
     else
       @title = @article.name
-    end
-
-    # article is a page
-    if @article.page?
-      return redirect_to @article.page_path
-    end
-
-    # no layout
-    if @article.hide_layout?
-      render text: @article.content, layout: false
     end
   end
 end

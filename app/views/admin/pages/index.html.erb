@@ -1,0 +1,37 @@
+<%= render "admin/page_header", thing: @pages %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Slug</th>
+      <th>Draft Code</th>
+      <th>Status</th>
+      <th>Published Date</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, page], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to page.title,      [:admin, page] %></td>
+        <td><%= link_to page.subtitle,   [:admin, page] %></td>
+        <td><%= link_to page.slug,       [:admin, page] %></td>
+        <td><%= link_to page.draft_code, [:admin, page] %></td>
+        <td><%= page.status %></td>
+        <td>
+          <%= page.published_at %>
+        </td>
+        <td>
+          <%= link_to 'DELETE', [:admin, page], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

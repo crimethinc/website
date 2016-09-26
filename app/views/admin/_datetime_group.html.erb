@@ -3,44 +3,44 @@
 
   <div class="row">
     <div class="col-xs-12 col-sm-4">
-      <%= select_year article.published_at,
+      <%= select_year post.published_at,
             { prompt: true },
-            name:  "article[published_at(1i)]",
-            id:    "article_published_at_1i",
+            name:  "#{type}[published_at(1i)]",
+            id:    "#{type}_published_at_1i",
             class: "form-control datetime-select" %>
     </div>
 
     <div class="col-xs-12 col-sm-4">
-      <%= select_month article.published_at,
+      <%= select_month post.published_at,
             { prompt: true },
-            name:  "article[published_at(2i)]",
-            id:    "article_published_at_2i",
+            name:  "#{type}[published_at(2i)]",
+            id:    "#{type}_published_at_2i",
             class: "form-control datetime-select" %>
     </div>
 
     <div class="col-xs-12 col-sm-4">
-      <%= select_day article.published_at,
+      <%= select_day post.published_at,
             { prompt: true },
-            name:  "article[published_at(3i)]",
-            id:    "article_published_at_3i",
+            name:  "#{type}[published_at(3i)]",
+            id:    "#{type}_published_at_3i",
             class: "form-control datetime-select" %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-xs-6">
-      <%= select_hour article.published_at,
+      <%= select_hour post.published_at,
             { prompt: true },
-            name:  "article[published_at(4i)]",
-            id:    "article_published_at_4i",
+            name:  "#{type}[published_at(4i)]",
+            id:    "#{type}_published_at_4i",
             class: "form-control datetime-select" %>
     </div>
 
     <div class="col-xs-6">
-      <%= select_minute article.published_at,
+      <%= select_minute post.published_at,
             { prompt: true },
-            name:  "article[published_at(5i)]",
-            id:    "article_published_at_5i",
+            name:  "#{type}[published_at(5i)]",
+            id:    "#{type}_published_at_5i",
             class: "form-control datetime-select" %>
     </div>
   </div>

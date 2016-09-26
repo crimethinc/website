@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160925180932) do
+ActiveRecord::Schema.define(version: 20160926205029) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,20 +22,13 @@ ActiveRecord::Schema.define(version: 20160925180932) do
     t.text     "css"
     t.text     "image"
     t.text     "image_description"
+    t.string   "slug"
+    t.string   "draft_code"
+    t.string   "status",            default: "draft"
+    t.datetime "published_at"
     t.string   "year"
     t.string   "month"
     t.string   "day"
-    t.string   "slug"
-    t.string   "code"
-    t.string   "page_path"
-    t.string   "status",            default: "draft"
-    t.datetime "published_at"
-    t.boolean  "pinned_to_top",     default: false
-    t.boolean  "pinned_to_bottom",  default: false
-    t.boolean  "page",              default: false
-    t.boolean  "hide_header",       default: false
-    t.boolean  "hide_footer",       default: false
-    t.boolean  "hide_layout",       default: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -61,6 +54,24 @@ ActiveRecord::Schema.define(version: 20160925180932) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_links_on_user_id", using: :btree
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.text     "title"
+    t.text     "subtitle"
+    t.text     "content"
+    t.text     "css"
+    t.text     "image"
+    t.text     "image_description"
+    t.string   "slug"
+    t.string   "draft_code"
+    t.string   "status",            default: "draft"
+    t.datetime "published_at"
+    t.boolean  "hide_header",       default: false
+    t.boolean  "hide_footer",       default: false
+    t.boolean  "hide_layout",       default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "settings", force: :cascade do |t|

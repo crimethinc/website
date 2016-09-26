@@ -17,31 +17,21 @@ class Article < ApplicationRecord
 
   scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
 
-  scope :unpinned,         -> { where(pinned_to_top: false, pinned_to_bottom: false) }
-  scope :pinned_to_top,    -> { where(pinned_to_top: true) }
-  scope :pinned_to_bottom, -> { where(pinned_to_bottom: true) }
-
-  scope :page, -> { where(page: true) }
-  scope :feed, -> { where(page: false) }
-
   scope :draft,       -> { where(status: "draft") }
   scope :edited,      -> { where(status: "edited") }
   scope :designed,    -> { where(status: "designed") }
   scope :published,   -> { where(status: "published") }
 
   before_validation :generate_slug,            on: [:create, :update]
-  before_validation :generate_page_path,       on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :generate_draft_code,      on: [:create, :update]
   validates_with SlugValidator
 
   def path
-    if page?
-      page_path
-    elsif published?
+    if published?
       published_at.strftime("/%Y/%m/%d/#{slug}")
     else
-      "/drafts/#{self.code}"
+      "/drafts/#{self.draft_code}"
     end
   end
 
@@ -97,10 +87,7 @@ class Article < ApplicationRecord
   end
 
   def dated?
-    published_at.present? &&
-    published_at.year.present? &&
-    published_at.month.present? &&
-    published_at.day.present?
+    published_at.present?
   end
 
   private
@@ -132,15 +119,6 @@ class Article < ApplicationRecord
   end
 
   def generate_draft_code
-    self.code ||= SecureRandom.hex
-  end
-
-  def generate_page_path
-    if self.page_path.blank?
-      self.page_path = self.slug
-    end
-
-    path_pieces = self.page_path.split("/").reject{ |p| p.blank? }
-    self.page_path = path_pieces.map{ |piece| piece.to_slug }.join("/")
+    self.draft_code ||= SecureRandom.hex
   end
 end

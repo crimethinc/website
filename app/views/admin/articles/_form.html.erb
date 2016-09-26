@@ -44,45 +44,13 @@
       </div>
     </div>
 
-    <%= render "admin/datetime_group", f: f, article: @article %>
+    <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
 
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
           <%= f.label :status, "Publication Status" %>
           <%= f.text_field :status, class: "form-control" %>
-        </div>
-      </div>
-    </div>
-  </fieldset>
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
-
-  <fieldset id="page">
-    <legend>Page</legend>
-
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-          <%= f.check_box :page %>
-          <%= f.label :page, "Make This a Page?" %>
-          <p class="help-block">
-            A <i>Page</i> will not appear in the <i>Articles</i> feed.
-            Its URL path is set by its <code>page_path</code> (URL Path for Pages).
-            It does not include <code>/YEAR/MONTH/DAY</code> in its URL.
-            For example, you might create a <i>Page</i> called <i>About Us</i> with the slug of &ldquo;<i>about</i>&rdquo;. That <i>Page</i>&rsquo;s URL path would be <code>/about</code>.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-4">
-        <div class="form-group">
-          <%= f.label :page_path, "URL Path for Pages" %>
-          <%= f.text_field :page_path, class: "form-control" %>
-          <p class="help-block">
-            A <code>page_path</code> is similar to a slug but it can have <code>/</code>s in it.
-            For example, <code>about/us</code>.
-          </p>
         </div>
       </div>
     </div>
@@ -116,72 +84,17 @@
 
     <hr>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :css, "Article Specific CSS" %>
-          <%= f.text_area :css, class: "form-control", rows: 20 %>
-          <p class="help-block">
-            <% if @article.new_record? %>
-              After you save this
-            <% else %>
-              Prefix your CSS selectors with <b><code>#article-<%= @article.id %></code></b> to scope your styles to just this <i>Article</i>.
-              For example, <code>#article-<%= @article.id %> b { background: green }</code>.
-            <% end %>
-          </p>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-          <br class="hidden-xs">
-          <%= f.check_box :pinned_to_top %>
-          <%= f.label :pinned_to_top, "Pin to Top of Homepage?" %>
-          <p class="help-block">
-            This <i>Pinned Article</i> will remain at the top of the homepage until it&rsquo;s unpinned
-            or until a newer article is pinned.
-          </p>
-        </div>
-
-        <div class="form-group">
-          <%= f.check_box :pinned_to_bottom %>
-          <%= f.label :pinned_to_bottom, "Pin to Bottom of Homepage?" %>
-          <p class="help-block">
-            This <i>Pinned Article</i> will remain at the bottom of the homepage until it&rsquo;s unpinned
-            or until a newer <i>Article</i> is pinned.
-          </p>
-        </div>
-
-        <div class="form-group">
-          <%= f.check_box :hide_header %>
-          <%= f.label :hide_header, "Hide the Site Header?" %>
-          <p class="help-block">
-            This will remove the site header/<wbr>nav/<wbr>search/<wbr>etc from this <i>Article</i> only.
-          </p>
-        </div>
-
-        <div class="form-group">
-          <%= f.check_box :hide_footer %>
-          <%= f.label :hide_footer, "Hide the Site Footer?" %>
-          <p class="help-block">
-            This will remove the site footer from this <i>Article</i> only.
-          </p>
-        </div>
-
-        <div class="form-group">
-          <%= f.check_box :hide_layout %>
-          <%= f.label :hide_layout, "Hide the Site Layout?" %>
-          <p class="help-block">
-            <b class="text-danger">Danger Zone&trade; &mdash; exercise caution with this option.</b>
-            The will remove all of the wrapper layout.
-            This <i>Page</i> will be responsible for <i>all</i> of its HTML,
-            including <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,
-            <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code> tags etc.
-            Any <code>CSS</code> will have to be included in the
-            <code>Content</code>, not the <code>Article Specific CSS</code>.
-          </p>
-        </div>
-      </div>
+    <div class="form-group">
+      <%= f.label :css, "Article Specific CSS" %>
+      <%= f.text_area :css, class: "form-control", rows: 20 %>
+      <p class="help-block">
+        <% if @article.new_record? %>
+          After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
+        <% else %>
+          Prefix your CSS selectors with <b><code>#article-<%= @article.id %></code></b> to scope your styles to just this <i>Article</i>.
+          For example, <code>#article-<%= @article.id %> b { background: green }</code>.
+        <% end %>
+      </p>
     </div>
   </fieldset>
 
