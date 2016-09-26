@@ -22,16 +22,4 @@ module ApplicationHelper
     links.join("-").html_safe
   end
 
-  def year_month(year, month)
-    "#{year}-#{month.to_s.rjust(2, "0")}"
-  end
-
-  def now_year_month
-    year_month(Time.now.year, Time.now.month)
-  end
-
-  def start_year_month
-    # TODO year_month(setting(:start_year), setting(:start_month))
-    year_month(2016, 01)
-  end
 end

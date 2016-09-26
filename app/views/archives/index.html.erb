@@ -1,39 +1,37 @@
 <header>
-  <h1> Archives </h1>
+  <h1>Archives</h1>
 </header>
 
 <div class="h-feed">
-  <%# TODO setting(:start_year).to_i %>
-  <% Time.now.year.downto(2016).each do |year| %>
+  <% @articles.sort.reverse.each do |year, months| %>
+    <h1><%= link_to_dates(year: year) %></h1>
 
-    <h1 class="year-section"><%= link_to_dates(year: year) %></h1>
+    <% months.sort.reverse.each do |month, articles| %>
+      <h2><%= link_to_dates(year: year, month: month) %></h2>
 
-    <% 12.downto(1).each do |month| %>
-      <% if year_month(year, month) >= start_year_month &&
-            year_month(year, month) <= now_year_month %>
+      <ol>
+        <% articles.each do |article| %>
+          <li>
 
-        <h2 class="month-section"><%= link_to_dates(year: year, month: month) %></h2>
+            <article class="h-entry">
+              <header>
+                <h1>
+                  <%= link_to article.path, class: "p-name" do %>
+                    <span class="p-x-title"><%= article.title %></span><br>
+                    <span class="p-x-subtitle"><%= article.subtitle %></span>
+                  <% end %>
+                </h1>
+              </header>
 
-        <ol>
-        <% @articles.each do |article| %>
-          <% if article.published_at.strftime("%Y-%m") == year_month(year, month) %>
+              <footer>
+                <%= render "/articles/published_on", article: article %>
+              </footer>
+            </article>
 
-            <li>
-              <article class="h-entry" role="article">
-                <time class="dt-published.screen-reader-only"><%= article.published_at.strftime("%Y-%m-%d") %></time>
-
-                <div class="p-name.u-url.u-uid">
-                  <%= link_to article.title,    article.path, class: "p-x-title"    %>
-                  <%= link_to article.subtitle, article.path, class: "p-x-subtitle" %>
-                </div>
-              </article>
-            </li>
-          <% end %>
+          </li>
         <% end %>
-        </ol>
+      </ol>
 
-      <% end %>
     <% end %>
-
   <% end %>
 </div>

@@ -106,4 +106,4 @@ if Rails.env.development?
 end
 
 # Settings necessary for all deployments
-Setting.create!(name: "Site Name", fallback: "A Magazine")
+Setting.create!(name: "Site Name",   fallback: "A Magazine")
