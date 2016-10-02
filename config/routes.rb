@@ -22,7 +22,7 @@ Rails.application.routes.draw do
       as:          :articles
 
   # Draft Article
-  get 'drafts/:code', to: 'articles#show', as: :draft
+  get 'drafts/:draft_code', to: 'articles#show', as: :draft
 
 
   # Admin Dashboard

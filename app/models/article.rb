@@ -1,45 +1,37 @@
-class SlugValidator < ActiveModel::Validator
-  def validate(record)
-    if record.new_record? && record.slug_exists?
-      record.errors[:slug] << "needs to be unique on the published date"
-    end
-  end
-end
-
 class Article < ApplicationRecord
   belongs_to :user, optional: true
+  belongs_to :status
+
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
 
-  default_scope { order("published_at DESC") }
-
-  scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
-
-  scope :draft,       -> { where(status: "draft") }
-  scope :edited,      -> { where(status: "edited") }
-  scope :designed,    -> { where(status: "designed") }
-  scope :published,   -> { where(status: "published") }
+  scope :draft,       -> { where(status: Status.find_by(name: "draft")) }
+  scope :edited,      -> { where(status: Status.find_by(name: "edited")) }
+  scope :designed,    -> { where(status: Status.find_by(name: "designed")) }
+  scope :published,   -> { where(status: Status.find_by(name: "published")) }
 
   before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :generate_draft_code,      on: [:create, :update]
-  validates_with SlugValidator
 
-  def path
-    if published?
-      published_at.strftime("/%Y/%m/%d/#{slug}")
-    else
-      "/drafts/#{self.draft_code}"
-    end
-  end
+  default_scope { order("published_at DESC") }
+  scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
 
   def name
     if title.present? && subtitle.present?
       "#{title} : #{subtitle}"
     else
       title
+    end
+  end
+
+  def path
+    if published?
+      published_at.strftime("/%Y/%m/%d/#{slug}")
+    else
+      "/drafts/#{self.draft_code}"
     end
   end
 

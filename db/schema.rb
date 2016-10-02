@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160926205029) do
+ActiveRecord::Schema.define(version: 20161002000947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "status_id"
     t.text     "title"
     t.text     "subtitle"
     t.text     "content"
@@ -24,13 +26,14 @@ ActiveRecord::Schema.define(version: 20160926205029) do
     t.text     "image_description"
     t.string   "slug"
     t.string   "draft_code"
-    t.string   "status",            default: "draft"
     t.datetime "published_at"
     t.string   "year"
     t.string   "month"
     t.string   "day"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["status_id"], name: "index_articles_on_status_id", using: :btree
+    t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
   end
 
   create_table "categories", force: :cascade do |t|
@@ -57,6 +60,8 @@ ActiveRecord::Schema.define(version: 20160926205029) do
   end
 
   create_table "pages", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "status_id"
     t.text     "title"
     t.text     "subtitle"
     t.text     "content"
@@ -65,13 +70,14 @@ ActiveRecord::Schema.define(version: 20160926205029) do
     t.text     "image_description"
     t.string   "slug"
     t.string   "draft_code"
-    t.string   "status",            default: "draft"
     t.datetime "published_at"
     t.boolean  "hide_header",       default: false
     t.boolean  "hide_footer",       default: false
     t.boolean  "hide_layout",       default: false
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["status_id"], name: "index_pages_on_status_id", using: :btree
+    t.index ["user_id"], name: "index_pages_on_user_id", using: :btree
   end
 
   create_table "settings", force: :cascade do |t|
@@ -83,6 +89,12 @@ ActiveRecord::Schema.define(version: 20160926205029) do
     t.text     "fallback"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "taggings", force: :cascade do |t|

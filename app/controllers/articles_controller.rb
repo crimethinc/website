@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
 
     # get the article
     if request.path =~ /^\/drafts/
-      @article = Article.find_by(code: params[:code])
+      @article = Article.find_by(draft_code: params[:draft_code])
 
       if @article.published?
         return redirect_to(@article.path)

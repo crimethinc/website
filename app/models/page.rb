@@ -1,11 +1,19 @@
 class Page < ApplicationRecord
   belongs_to :user, optional: true
-  scope :draft,       -> { where(status: "draft") }
-  scope :edited,      -> { where(status: "edited") }
-  scope :designed,    -> { where(status: "designed") }
-  scope :published,   -> { where(status: "published") }
+  belongs_to :status
+
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
+  has_many :categorizations, dependent: :destroy
+  has_many :categories, through: :categorizations
+
+  scope :draft,       -> { where(status: Status.find_by(name: "draft")) }
+  scope :edited,      -> { where(status: Status.find_by(name: "edited")) }
+  scope :designed,    -> { where(status: Status.find_by(name: "designed")) }
+  scope :published,   -> { where(status: Status.find_by(name: "published")) }
 
   before_validation :generate_slug,            on: [:create, :update]
+  before_validation :generate_published_dates, on: [:create, :update]
   before_validation :generate_draft_code,      on: [:create, :update]
 
   def name
@@ -22,6 +30,10 @@ class Page < ApplicationRecord
     else
       "/drafts/#{self.draft_code}"
     end
+  end
+
+  def slug_exists?
+    Page.where(slug: slug).exists?
   end
 
   # page states through the process from creation to publishing
@@ -62,8 +74,15 @@ class Page < ApplicationRecord
       end
     end
 
-    path_pieces = self.slug.split("/").reject{ |p| p.blank? }
-    self.slug = path_pieces.map{ |piece| piece.to_slug }.join("/")
+    self.slug = self.slug.to_slug
+  end
+
+  def generate_published_dates
+    if published_at.present?
+      self.year  = published_at.year                     if published_at.year.present?
+      self.month = published_at.month.to_s.rjust(2, "0") if published_at.month.present?
+      self.day   = published_at.day.to_s.rjust(2, "0")   if published_at.day.present?
+    end
   end
 
   def generate_draft_code

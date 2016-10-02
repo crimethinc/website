@@ -50,7 +50,13 @@
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
           <%= f.label :status, "Publication Status" %>
-          <%= f.text_field :status, class: "form-control" %>
+          <%= f.select :status,
+                Status.options_for_select,
+                { selected: @article.status.try(:id) },
+                name:  "article[status_id]",
+                id:    "article_status_id",
+                class: "form-control" %>
+
         </div>
       </div>
     </div>
