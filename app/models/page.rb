@@ -1,5 +1,8 @@
 class Page < ApplicationRecord
   belongs_to :user, optional: true
+
+  scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
+
   scope :draft,       -> { where(status: "draft") }
   scope :edited,      -> { where(status: "edited") }
   scope :designed,    -> { where(status: "designed") }
@@ -46,6 +49,10 @@ class Page < ApplicationRecord
   end
 
   private
+
+  def slug_exists?
+    Page.on(published_at).where(slug: slug).exists?
+  end
 
   def generate_slug
     if self.new_record? || self.slug_changed? || self.slug.blank?
