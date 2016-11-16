@@ -1,0 +1,18 @@
+html,
+body {
+  font-size: 62.5%;
+}
+
+body {
+  color: $color-black;
+  font: {
+    size: $base-font-size;
+    family: $font-body;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

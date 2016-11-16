@@ -1,5 +1,11 @@
 @import "lib/reset";
 
+@import "base/variables/colors";
+@import "base/variables/typography";
+@import "base/elements";
+
+@import "components/feed";
+
 @import "views/articles";
 @import "views/home";
 
