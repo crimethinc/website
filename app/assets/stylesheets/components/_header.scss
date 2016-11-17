@@ -1,0 +1,43 @@
+.sitewide-header {
+  align-items: center;
+  background-color: $color-true-black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem 0.5rem;
+
+  label {
+    @include hide-text();
+    display: inherit;
+    position: relative;
+
+    &::after {
+      bottom: -2.2rem;
+      color: $color-black;
+      content: '\1F50D';
+      font-size: 2rem;
+      position: absolute;
+      right: 1rem;
+    }
+  }
+}
+
+.header-logo {
+  @include image-replacement-graphic('/assets/images/crimethinc-header-logo.png', '/assets/images/crimethinc-header-logo@2x.png', 12rem, 3rem);
+  margin-bottom: 0.8rem;
+  max-width: 32rem;
+}
+
+.header-search-form {
+  width: 100%;
+}
+
+.search-input {
+  border: none {
+    radius: 3px;
+  }
+  box-shadow: inset 0 1px 2px 0 transparentize(#333, 0.15);
+  font-size: 1.5rem;
+  padding: 1rem 0.8rem;
+  width: 100%;
+}
