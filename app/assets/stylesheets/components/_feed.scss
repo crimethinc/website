@@ -1,0 +1,75 @@
+.h-feed {
+  color: $color-white;
+
+  li {
+    margin-bottom: 1px;
+
+    &:first-child {
+      margin-bottom: 1rem;
+
+      .p-name {
+        font-size: 2.8rem;
+        padding: 8rem 1.5rem;
+      }
+
+      .p-x-title {
+        font: {
+          family: $font-headings;
+          style: italic;
+        }
+      }
+    }
+  }
+
+  .h-entry {
+    background: {
+      color: $color-true-black;
+      position: 50% 50%;
+      size: cover;
+    }
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .e-content,
+    footer {
+      display: none;
+    }
+
+    a {
+      color: $color-white;
+    }
+  }
+
+  .p-name {
+    display: block;
+    font-size: 2rem;
+    line-height: 0.95;
+    overflow: hidden;
+    padding: 3rem 1rem;
+    text-decoration: none;
+  }
+
+  .p-x-title,
+  .p-x-subtitle {
+    transition: background-color 250ms;
+
+    &:hover {
+      background-color: $color-true-black;
+    }
+  }
+
+  .p-x-title {
+    background-color: transparentize($color-black, 0.2);
+    font-weight: 700;
+  }
+
+  .p-x-subtitle {
+    background-color: transparentize($color-black, 0.3);
+    font: {
+      size: 0.7em;
+      weight: 100;
+    }
+  }
+}

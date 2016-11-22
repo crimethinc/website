@@ -59,6 +59,10 @@ class Page < ApplicationRecord
 
   private
 
+  def slug_exists?
+    Page.on(published_at).where(slug: slug).exists?
+  end
+
   def generate_slug
     if self.new_record? || self.slug_changed? || self.slug.blank?
       n = 0
