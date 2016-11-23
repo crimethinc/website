@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 1rem 0.5rem;
+  padding: 4px 1rem 0.8rem;
 
   label {
     @include hide-text();
@@ -23,8 +23,8 @@
 }
 
 .header-logo {
-  @include image-replacement-graphic('/assets/images/crimethinc-header-logo.png', '/assets/images/crimethinc-header-logo@2x.png', 12rem, 3rem);
-  margin-bottom: 0.8rem;
+  @include image-replacement-graphic('crimethinc-header-logo.png', 'crimethinc-header-logo@2x.png', 12rem, 3rem);
+  margin-bottom: 4px;
   max-width: 32rem;
 }
 

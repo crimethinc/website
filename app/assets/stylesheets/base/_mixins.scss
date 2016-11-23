@@ -10,21 +10,21 @@
   white-space: nowrap;
 }
 
-@mixin image-replacement-graphic($url, $retinaUrl, $width, $height) {
+@mixin image-replacement-graphic($url, $retina-url, $width, $height) {
   background: {
     position: center center;
     repeat: no-repeat;
-    size: cover;
+    size: contain;
   }
 
   @include size($width, $height);
   @include image-replacement();
 
   @media screen and #{$standard-def} {
-    background-image: url($url);
+    background-image: url(asset-path($url));
   }
   @media screen and #{$retina} {
-    background-image: url($retinaUrl);
+    background-image: url(asset-path($retina-url));
   }
 }
 
