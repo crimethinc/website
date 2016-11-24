@@ -13,8 +13,9 @@ class Page < ApplicationRecord
   scope :published,   -> { where(status: Status.find_by(name: "published")) }
 
   before_validation :generate_slug,            on: [:create, :update]
-  before_validation :generate_published_dates, on: [:create, :update]
   before_validation :generate_draft_code,      on: [:create, :update]
+
+  default_scope { order("published_at DESC") }
 
   def name
     if title.present? && subtitle.present?
@@ -60,7 +61,7 @@ class Page < ApplicationRecord
   private
 
   def slug_exists?
-    Page.on(published_at).where(slug: slug).exists?
+    Page.where(slug: slug).exists?
   end
 
   def generate_slug
@@ -79,14 +80,6 @@ class Page < ApplicationRecord
     end
 
     self.slug = self.slug.to_slug
-  end
-
-  def generate_published_dates
-    if published_at.present?
-      self.year  = published_at.year                     if published_at.year.present?
-      self.month = published_at.month.to_s.rjust(2, "0") if published_at.month.present?
-      self.day   = published_at.day.to_s.rjust(2, "0")   if published_at.day.present?
-    end
   end
 
   def generate_draft_code
