@@ -7,11 +7,11 @@
   <title>Magazine</title>
   <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
 </head>
 
-<body id='<%= @slug %>'>
+<body id="<%= @slug %>">
   <header class="sitewide-header">
     <h1 class="header-logo">CrimethInc.</h1>
     <a href="#" class="button-like-link support-link">
@@ -26,11 +26,10 @@
   </header>
   <nav>
     <ul class="header-navigation">
-    <%-# FIXME: these need to be link_to -%>
-      <li class="nav-link"><a href="#">Read</a></li>
-      <li class="nav-link"><a href="#">Watch</a></li>
-      <li class="nav-link"><a href="#">Listen</a></li>
-      <li class="nav-link"><a href="#">Shop</a></li>
+      <li class="nav-link"><%= link_to "Read",   "#" %></li>
+      <li class="nav-link"><%= link_to "Watch",  "#" %></li>
+      <li class="nav-link"><%= link_to "Listen", "#" %></li>
+      <li class="nav-link"><%= link_to "Shop",   "#" %></li>
     </ul>
   </nav>
   <main>
