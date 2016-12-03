@@ -23,7 +23,7 @@
 }
 
 .header-logo {
-  @include image-replacement-graphic('crimethinc-header-logo.png', 'crimethinc-header-logo@2x.png', 12rem, 3rem);
+  @include image-replacement-graphic('crimethinc-logo-type-white.svg', 'crimethinc-logo-type-white.svg', 12rem, 3rem);
   margin-bottom: 4px;
   max-width: 32rem;
 }
