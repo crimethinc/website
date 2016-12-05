@@ -7,11 +7,31 @@
   <title>Magazine</title>
   <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
 </head>
 
-<body id='<%= @slug %>'>
+<body id="<%= @slug %>">
+  <header class="sitewide-header">
+    <h1 class="header-logo">CrimethInc.</h1>
+    <a href="#" class="button-like-link support-link">
+      Support this site
+    </a>
+    <form action="#" class="header-search-form">
+      <label for="search-archives">
+        Search Archives&hellip;
+      </label>
+      <input type="search" id="search-archives" placeholder="Search Archives…" class="search-input"/>
+    </form>
+  </header>
+  <nav>
+    <ul class="header-navigation">
+      <li class="nav-link"><%= link_to "Read",   "#" %></li>
+      <li class="nav-link"><%= link_to "Watch",  "#" %></li>
+      <li class="nav-link"><%= link_to "Listen", "#" %></li>
+      <li class="nav-link"><%= link_to "Shop",   "#" %></li>
+    </ul>
+  </nav>
   <main>
     <%= yield %>
   </main>

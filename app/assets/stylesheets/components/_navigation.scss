@@ -1,0 +1,29 @@
+.header-navigation {
+  border-bottom: $color-black solid 1px;
+  display: flex;
+}
+
+.nav-link {
+  font-size: 1.7rem;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  width: 25%;
+
+  a {
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    transition: background-color 250ms;
+
+    &:link, &:visited {
+      color: $color-black;
+    }
+
+    &:hover, &:active {
+      background-color: transparentize($color-black, 0.75);
+      color: $color-true-black;
+    }
+  }
+}
