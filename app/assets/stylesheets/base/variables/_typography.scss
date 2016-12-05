@@ -1,7 +1,6 @@
 $base-font-size: 1.6rem;
 
-$font-serif: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-$font-sans-serif: "Century Gothic", "Gill Sans", CenturyGothic, "Gill Sans MT", Calibri, AppleGothic, sans-serif;
+$family-system:	-apple-system, BlinkMacSystemFont, ‘Segoe UI’, Roboto, Oxygen, Ubuntu, Cantarell, ‘Open Sans’, ‘Helvetica Neue’, sans-serif;
 
-$font-headings: $font-serif;
-$font-body: $font-sans-serif;
+$font-headings: $family-system;
+$font-body:     $family-system;
