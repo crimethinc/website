@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html dir="ltr"
-      lang="en-US"
+      lang="<%= lang %>"
       prefix="og: http://ogp.me/ns#">
 
 <head>
-  <title><%= page_title %></title>
-  <%= csrf_meta_tags %>
   <%= render "shared/head" %>
-
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
 </head>

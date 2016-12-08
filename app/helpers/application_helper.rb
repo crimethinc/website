@@ -26,4 +26,9 @@ module ApplicationHelper
   def page_title
     t(:site_name)
   end
+
+  def lang
+    # TODO
+    "en"
+  end
 end
