@@ -1,6 +1,6 @@
 # Magazine, A CrimethInc. production
 
-Ruby on Rails app that powers http://crimethinc.com
+Ruby on Rails app that powers https://crimethinc.com
 
 
 ## Development
