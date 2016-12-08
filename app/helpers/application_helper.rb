@@ -46,4 +46,18 @@ module ApplicationHelper
   def twitter_user_id
     "14884161"
   end
+
+  def apple_touch_icon_link_tags
+    output = []
+
+    # square pixel sizes
+    sizes = [57, 60, 72, 76, 114, 120, 144, 152, 180]
+    sizes.each do |size|
+      dimensions = "#{size}x#{size}"
+      href = setting("touch_icon_url_#{dimensions}")
+      output << tag(:link, rel: "apple-touch-icon", sizes: dimensions, href: href)
+    end
+
+    output.join("\n").html_safe
+  end
 end
