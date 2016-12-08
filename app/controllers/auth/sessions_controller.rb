@@ -1,5 +1,5 @@
 class Auth::SessionsController < Admin::AdminController
-  layout "auth"
+  layout "admin"
 
   # /signin
   def new

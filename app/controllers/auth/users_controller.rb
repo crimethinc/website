@@ -1,6 +1,6 @@
 class Auth::UsersController < Admin::AdminController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  layout "auth"
+  layout "admin"
 
   # /signup
   def new
