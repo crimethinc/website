@@ -22,7 +22,6 @@ module ApplicationHelper
     links.join("-").html_safe
   end
 
-
   def page_title
     t(:site_name)
   end
@@ -34,5 +33,17 @@ module ApplicationHelper
 
   def author
     t(:site_name)
+  end
+
+  def og_type
+    "website"
+  end
+
+  def twitter_username
+    "@crimethinc"
+  end
+
+  def twitter_user_id
+    "14884161"
   end
 end
