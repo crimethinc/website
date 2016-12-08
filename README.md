@@ -2,7 +2,6 @@
 
 Ruby on Rails app that powers https://crimethinc.com
 
-
 ## Development
 
 ### tl;dr
