@@ -1,0 +1,12 @@
+<% if setting(:google_site_verification).present? %>
+  <!-- Google Site Verification for WebMaster tools -->
+  <meta name="google-site-verification" content="<%= setting :google_site_verification %>" />
+<% end %>
+
+<!-- Backward compatibility: Twitter Cards and Facebook (Open Graph) -->
+<meta name="twitter:card"                                  content="summary">
+<meta name="twitter:site"                                  content="@crimethinc">
+<meta name="twitter:url"         property="og:url"         content="<%#= TODO canonical_url @post %>">
+<meta name="twitter:title"       property="og:title"       content="<%= page_title %>">
+<meta name="twitter:description" property="og:description" content="<%#= TODO page_description %>">
+<meta name="twitter:image"       property="og:image"       content="<%#= TODO %>">

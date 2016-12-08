@@ -1,7 +1,3 @@
-<style>
-  <%= @article.css %>
-</style>
-
 <article id="article-<%= @article.id %>" class="h-entry">
   <% if @article.image.present? %>
     <%= image_tag @article.image, alt: @article.image_description, class: "u-photo" %>

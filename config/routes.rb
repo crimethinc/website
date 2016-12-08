@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   # Draft Article
   get 'drafts/:draft_code', to: 'articles#show', as: :draft
 
+  # Articles Atom Feed
+  get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
+
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/articles'), as: 'admin'

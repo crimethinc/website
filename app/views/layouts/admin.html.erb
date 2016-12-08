@@ -2,7 +2,12 @@
 <html dir="ltr" lang="<%= lang %>" prefix="og: http://ogp.me/ns#" id="<%= @slug %>">
 
 <head>
-  <%= render "shared/bootstrap_head" %>
+  <title><%= page_title %></title>
+  <%= render "shared/meta_tags" %>
+  <%= render "shared/backward_compatibility_meta_tags" %>
+  <%= render "shared/fav_and_touch_icons" %>
+  <%= render "shared/backward_ie_compatibility" %>
+
   <%= stylesheet_link_tag    "admin", media: "all" %>
   <%= javascript_include_tag "admin" %>
 </head>
