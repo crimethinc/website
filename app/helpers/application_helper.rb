@@ -31,4 +31,8 @@ module ApplicationHelper
     # TODO
     "en"
   end
+
+  def author
+    t(:site_name)
+  end
 end
