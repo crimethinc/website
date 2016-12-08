@@ -4,6 +4,8 @@ body {
 }
 
 body {
+  margin-bottom: 10rem;
+  background: $color-white;
   color: $color-black;
   font: {
     size: $base-font-size;
@@ -19,4 +21,15 @@ h1, h2, h3, h4, h5, h6, p, a, span {
 
 strong {
   font-weight: 600;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+}
+
+main {
+  clear: both;
+  margin: 10px auto;
+  width: 100%;
+  max-width: $large-desktop;
 }

@@ -1,3 +1,8 @@
+@mixin bold() {
+  font-weight: bold;
+  font-weight: 500;
+}
+
 @mixin inline() {
   display: inline;
   margin: 0;

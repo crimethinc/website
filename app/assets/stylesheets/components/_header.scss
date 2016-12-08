@@ -1,10 +1,10 @@
-.sitewide-header {
+.site-header {
   align-items: center;
   background-color: $color-true-black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 4px 1rem 0.8rem;
+  padding: 10px 10px;
 
   label {
     @include hide-text();
@@ -14,7 +14,7 @@
     &::after {
       bottom: -2.2rem;
       color: $color-black;
-      content: '\1F50D';
+      content: "\1F50D";
       font-size: 2rem;
       position: absolute;
       right: 1rem;
@@ -22,22 +22,14 @@
   }
 }
 
-.header-logo {
-  @include image-replacement-graphic('crimethinc-logo-type-white.svg', 'crimethinc-logo-type-white.svg', 12rem, 3rem);
-  margin-bottom: 4px;
-  max-width: 32rem;
+.header-logo a {
+  @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 15rem, 3rem);
+  @include size(15rem, 3rem);
+  display: block;
 }
 
-.header-search-form {
-  width: 100%;
-}
-
-.search-input {
-  border: none {
-    radius: 3px;
-  }
-  box-shadow: inset 0 1px 2px 0 transparentize(#333, 0.15);
-  font-size: 1.5rem;
-  padding: 1rem 0.8rem;
-  width: 100%;
+.support-link.button {
+  background: $color-green-500;
+  font-weight: bold;
+  font-weight: 500;
 }

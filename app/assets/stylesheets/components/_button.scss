@@ -1,0 +1,10 @@
+.button {
+  display: inline-block;
+  background: $color-true-black;
+  background: $color-true-gray;
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-white;
+  outline: 1px solid $color-true-black;
+}

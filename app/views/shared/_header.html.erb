@@ -1,0 +1,7 @@
+<header class="site-header">
+  <h1 class="header-logo"><%= link_to t("site_name"), root_path %></h1>
+
+  <%= render "shared/nav" %>
+
+  <%= link_to t("header.donate_button_text"), "/support", class: "support-link button" %>
+</header>

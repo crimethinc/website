@@ -1,15 +1,16 @@
-.header-navigation {
-  border-bottom: $color-black solid 1px;
+// nav
+.primary-navigation {
   display: flex;
 }
 
 .nav-link {
+  background-color: $color-true-black;
   font-size: 1.7rem;
   text: {
     align: center;
     transform: uppercase;
   }
-  width: 25%;
+  width: 20%;
 
   a {
     display: block;
@@ -18,12 +19,86 @@
     transition: background-color 250ms;
 
     &:link, &:visited {
-      color: $color-black;
+      color: $color-white;
     }
 
     &:hover, &:active {
-      background-color: transparentize($color-black, 0.75);
+      background-color: $color-white;
       color: $color-true-black;
     }
+  }
+}
+
+
+// subnav
+.search-field {
+  border-radius: 0;
+  font: {
+    weight: normal;
+    weight: 100;
+    size: 1.5rem;
+  };
+
+  padding: 10px;
+  width: 66%;
+  text-transform: uppercase;
+  border: 1px solid #eee;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.secondary-navigation {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+
+  .header-search-form {
+    display: inline-block;
+    width: 50%;
+  }
+
+  .starter-link {
+    display: inline-block;
+    width: 50%;
+    @include bold();
+    font-size: 1.5rem;
+    text: {
+      align: right;
+      transform: uppercase;
+      decoration: underline;
+    }
+
+    a {
+      color: $color-true-black;
+
+      &:link, &:visited {
+        color: $color-true-black;
+      }
+    }
+  }
+}
+
+
+// small viewports
+.site-header nav[role=navigation],
+.secondary-navigation {
+  display: none;
+}
+
+// larger than $large-phone viewport
+@media screen and (min-width: #{$small-tablet}) {
+  .site-header + nav[role=navigation] {
+    display: none;
+  }
+
+  .site-header nav[role=navigation],
+  .secondary-navigation {
+    display: flex;
+  }
+
+  .site-header .nav-link a {
+    padding: 1rem;
   }
 }

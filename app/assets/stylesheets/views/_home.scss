@@ -1,23 +1,2 @@
 #home {
-
-}
-
-.starter-link {
-  display: block;
-  font-size: 1.7rem;
-  padding: 1em 0;
-  text: {
-    align: center;
-    transform: uppercase;
-  }
-  transition: background-color 250ms;
-
-  &:link, &:visited {
-    color: $color-black;
-  }
-
-  &:hover, &:active {
-    background-color: transparentize($color-black, 0.75);
-    color: $color-true-black;
-  }
 }

@@ -22,4 +22,8 @@ module ApplicationHelper
     links.join("-").html_safe
   end
 
+
+  def page_title
+    t(:site_name)
+  end
 end
