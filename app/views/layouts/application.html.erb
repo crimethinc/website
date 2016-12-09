@@ -1,15 +1,8 @@
 <!DOCTYPE html>
-<html dir="ltr"
-      lang="en-US"
-      prefix="og: http://ogp.me/ns#">
+<html dir="ltr" lang="<%= lang %>" prefix="og: http://ogp.me/ns#" id="<%= @slug %>">
 
 <head>
-  <title><%= page_title %></title>
-  <%= csrf_meta_tags %>
   <%= render "shared/head" %>
-
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
 </head>
 
 <body id="<%= @slug %>">

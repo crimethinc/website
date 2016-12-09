@@ -1,0 +1,23 @@
+<!-- Backward compatibility: RSS/Atom -->
+<%= auto_discovery_link_tag(:atom, feed_path, title: setting(:page_title)) %>
+
+<!-- Canonical URLs -->
+<%#= TODO rel_canonical_link_tag @post %>
+<%#= TODO shorturl_link_tag      @post %>
+
+<!-- Google's AMP: Accelerated Mobile Pages -->
+<link rel="alternate amphtml" type="text/html" href="<%#= TODO rel_canonical + amp %>" />
+
+<!-- BIO -->
+<link rel="me"     href="mailto:help@crimethinc.com" />
+<link rel="author" href="/about" title="About <%= t(:site_name) %>" />
+
+<!-- Site search -->
+<link rel="search" type="application/opensearchdescription+xml" href="https://crimethinc.com/opensearch.xml" title="<%= t(:site_name) %>" />
+
+<!-- Sitemap -->
+<link rel="home"  href="https://crimethinc.com" />
+<link rel="index" href="https://crimethinc.com/sitemap" />
+
+<!-- Browser hints -->
+<link rel="dns-prefetch" href="https://assets.crimethinc.com" />

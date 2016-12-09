@@ -1,0 +1,9 @@
+<!-- CSS -->
+<%= stylesheet_link_tag "application", media: "all" %>
+
+<% if @article.present? %>
+  <!-- Custom CSS -->
+  <style>
+    <%= @article.css %>
+  </style>
+<% end %>
