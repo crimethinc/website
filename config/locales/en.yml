@@ -1,8 +1,8 @@
 en:
-  site_name: "CrimethInc."
+  site_name: CrimethInc.
 
   header:
-    donate_button_text: "Support this site"
+    donate_button_text: Support this site
 
     read: Read
     watch: Watch
@@ -11,4 +11,7 @@ en:
     share: Share
 
     first_time: First Time? Start Here
-    search_form_placeholder: Search Archives…
+    search_form_placeholder: Search Archives&hellip;
+
+  footer:
+    newsletter_signup_form_placeholder: What&rsquo;s your email address?

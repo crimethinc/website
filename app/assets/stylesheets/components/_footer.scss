@@ -19,9 +19,10 @@ footer[role=contentinfo] {
   .archives-search-form {
     margin-top: 2rem;
   }
-  
-  .search-field {
+
+  .simple-field {
     width: 100%;
+    border-color: $color-dark-gray;
   }
 
   .license {
