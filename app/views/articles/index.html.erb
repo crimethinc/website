@@ -13,7 +13,7 @@
   <ol class="h-feed">
     <% @articles.each do |article| %>
       <li>
-        <article class="h-entry">
+        <article class="h-entry" role="article">
           <%= link_to article.path do %>
             <span class="h2"><%= link_to article.title, article.path %></span><br>
             <span class="h3"><%= link_to article.subtitle, article.path %></span>

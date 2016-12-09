@@ -63,6 +63,10 @@ Rails.application.routes.draw do
   get "opensearch.xml", to: "misc#opensearch_xml"
 
 
+  # Redirects
+  get "store", to: redirect("http://store.crimethinc.com")
+
+
   # Pages
   get "*path", to: "pages#show", as: :page, via: :all
 end

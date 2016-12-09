@@ -1,4 +1,4 @@
-<article id="article-<%= @article.id %>" class="h-entry">
+<article id="article-<%= @article.id %>" class="h-entry" role="article">
   <% if @article.image.present? %>
     <%= image_tag @article.image, alt: @article.image_description, class: "u-photo" %>
   <% end %>
