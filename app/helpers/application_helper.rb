@@ -47,15 +47,18 @@ module ApplicationHelper
     "14884161"
   end
 
+  def icon_sizes
+    [57, 60, 70, 72, 76, 114, 120, 144, 150, 152, 180, 192, 200, 300, 310, 500, 600]
+  end
+
   def apple_touch_icon_link_tags
     output = []
 
     # square pixel sizes
-    sizes = [57, 60, 72, 76, 114, 120, 144, 152, 180]
-    sizes.each do |size|
+    icon_sizes.each do |size|
       dimensions = "#{size}x#{size}"
       href = setting("icon_#{dimensions}")
-      output << tag(:link, rel: "apple-touch-icon", sizes: dimensions, href: href)
+      output << tag(:link, rel: "apple-touch-icon icon", sizes: dimensions, href: href)
     end
 
     output.join("\n").html_safe
