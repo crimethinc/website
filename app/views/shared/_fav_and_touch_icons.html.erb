@@ -1,7 +1,11 @@
 <!-- Fav and touch icons -->
-<link rel="shortcut icon" href="<%= setting :favicon_url_16x16_or_32x32 %>" />
+<link rel="shortcut icon" href="<%= setting :favicon %>" type="image/x-icon" />
 <%= apple_touch_icon_link_tags %>
-<link rel="icon" sizes="192x192" href="<%= setting :touch_icon_url_192x192 %>" />
+<link rel="icon" sizes="192x192" href="<%= setting :icon_192x192 %>" />
+
+<meta name="msapplication-TileImage" content="<%= setting :ms_application_tile_image %>" />
+<meta name="msapplication-TileColor" content="<%= setting :ms_application_tile_color %>" />
+<link rel="mask-icon" sizes="any" href="<%= setting :mask_icon_svg %>" color="#55acee" />
 
 <!-- Icons and stuff for more browsers via manifest.json -->
 <link rel="manifest" href="/manifest.json" />

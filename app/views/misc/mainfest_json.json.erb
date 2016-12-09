@@ -4,36 +4,14 @@
   "name": "<%= t(:site_name) %>",
 
   "icons": [
-    {
-      "src": "TODO /images/photo-150.jpg",
-      "sizes": "150x150",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "TODO /images/photo-200.jpg",
-      "sizes": "200x200",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "TODO /images/photo-300.jpg",
-      "sizes": "300x300",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "TODO /images/photo-500.jpg",
-      "sizes": "500x500",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "TODO /images/photo-600.jpg",
-      "sizes": "600x600",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "TODO /apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    }
+    <% %w(57 60 72 76 114 120 144 150 152 180 200 300 500 600).each do |size| %>
+      {
+        "src": "<%= setting "icon_#{size}x#{size}" %>",
+        "sizes": "<%= size %>x<%= size %>",
+        "type": "image/png"
+      }<%= "," unless size == "600" %>
+      <%# 600 is the last in the list of sizes, so should not get a comma after the hash %>
+    <% end %>
   ],
 
   "start_url": "/",
