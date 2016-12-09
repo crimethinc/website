@@ -1,0 +1,16 @@
+<article id="page-<%= @page.id %>" class="h-entry">
+  <% if @page.image.present? %>
+    <%= image_tag @page.image, alt: @page.image_description, class: "u-photo" %>
+  <% end %>
+
+  <h1>
+    <%= link_to @page.path, class: "p-name" do %>
+      <span class="title"><%= @page.title %></span><br>
+      <span class="subtitle"><%= @page.subtitle %></span>
+    <% end %>
+  </h1>
+
+  <div class="e-content">
+    <%= simple_format @page.content %>
+  </div>
+</article>

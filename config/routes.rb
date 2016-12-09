@@ -21,8 +21,9 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :articles
 
-  # Draft Article
-  get "drafts/:draft_code", to: "articles#show", as: :draft
+  # Draft Articles and Pages
+  get "drafts/articles/:draft_code", to: "articles#show", as: :article_draft
+  get "drafts/pages/:draft_code",    to: "pages#show",    as: :page_draft
 
   # Articles Atom Feed
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed

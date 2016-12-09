@@ -6,8 +6,15 @@ class ArchivesController < ApplicationController
     @articles = Article.published.limit(5).all
 
     # pinned articles
-    # @pinned_to_top    = Article.pinned_to_top.first
-    # @pinned_to_bottom = Article.pinned_to_bottom.first
+    pinned_to_top_page_id    = setting(:pinned_to_top_page_id)
+    pinned_to_bottom_page_id = setting(:pinned_to_bottom_page_id)
+
+    if pinned_to_top_page_id.present?
+      @pinned_to_top    = Page.find(pinned_to_top_page_id)
+    end
+    if pinned_to_bottom_page_id.present?
+      @pinned_to_bottom = Page.find(pinned_to_bottom_page_id)
+    end
   end
 
   def index

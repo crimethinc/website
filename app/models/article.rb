@@ -31,7 +31,7 @@ class Article < ApplicationRecord
     if published?
       published_at.strftime("/%Y/%m/%d/#{slug}")
     else
-      "/drafts/#{self.draft_code}"
+      "/drafts/articles/#{self.draft_code}"
     end
   end
 

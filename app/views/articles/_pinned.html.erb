@@ -1,14 +1,12 @@
-<div class="pinned">
-  <article>
-    <h1>
-      <%= link_to article.path do %>
-        <span class="title"><%= article.title %></span><br>
-        <span class="subtitle"><%= article.subtitle %></span>
-      <% end %>
-    </h1>
+<section class="pinned-page pinned-page-<%= position %>">
+  <article class="h-entry">
+    <header class="p-name">
+      <h1 class="dm-title"><%= article.title %></h1>
+      <h2 class="dm-subtitle"><%= article.subtitle %></h2>
+    </header>
 
     <div class="e-content">
       <%= simple_format article.content %>
     </div>
   </article>
-</div>
+</section>

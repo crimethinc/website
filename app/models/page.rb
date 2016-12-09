@@ -29,7 +29,7 @@ class Page < ApplicationRecord
     if published?
       slug
     else
-      "/drafts/#{self.draft_code}"
+      "/drafts/pages/#{self.draft_code}"
     end
   end
 

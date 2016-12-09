@@ -50,7 +50,11 @@ class Admin::PagesController < Admin::AdminController
   private
 
   def set_page
-    @page = Page.find(params[:id])
+    if params[:draft_code].present?
+      @page = Page.find_by(draft_code: params[:draft_code])
+    else
+      @page = Page.find(params[:id])
+    end
   end
 
   def organize_page
@@ -62,7 +66,7 @@ class Admin::PagesController < Admin::AdminController
   def page_params
     params.require(:page).permit(:title, :subtitle, :content,
                                  :year, :month, :day,
-                                 :slug, :draft_code, :status,
+                                 :slug, :draft_code, :status_id,
                                  :published_at, :tags, :categories,
                                  :image, :image_description, :css,
                                  :hide_header, :hide_footer, :hide_layout)

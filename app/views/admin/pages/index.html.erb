@@ -20,16 +20,28 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, page], class: "btn btn-primary btn-xs" %>
         </td>
-        <td><%= link_to page.title,      [:admin, page] %></td>
-        <td><%= link_to page.subtitle,   [:admin, page] %></td>
-        <td><%= link_to page.slug,       [:admin, page] %></td>
+        <td>
+          <% if page.title.present? %>
+            <%= link_to page.title,      [:admin, page] %>
+          <% end %>
+        </td>
+        <td>
+          <% if page.subtitle.present? %>
+            <%= link_to page.subtitle,   [:admin, page] %>
+          <% end %>
+        </td>
+        <td>
+          <% if page.slug.present? %>
+            <%= link_to page.slug,       [:admin, page] %>
+          <% end %>
+        </td>
         <td><%= link_to page.draft_code, [:admin, page] %></td>
-        <td><%= page.status %></td>
+        <td><%= page.status.name %></td>
         <td>
           <%= page.published_at %>
         </td>
         <td>
-          <%= link_to 'DELETE', [:admin, page], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, page], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
         </td>
       </tr>
     <% end %>

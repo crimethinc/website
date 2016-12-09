@@ -5,7 +5,7 @@ class Admin::SettingsController < Admin::AdminController
   # /admin/settings
   def index
     @slug = "settings"
-    @settings = Setting.all
+    @settings = Setting.order("name ASC").all
   end
 
   # /admin/settings/1
