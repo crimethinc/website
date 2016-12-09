@@ -1,7 +1,3 @@
-<header class="site-header"role="banner">
-  <h1 class="header-logo"><%= link_to t("site_name"), root_path %></h1>
-
-  <%= render "shared/nav" %>
-
-  <%= link_to t("header.donate_button_text"), "/support", class: "support-link button" %>
-</header>
+<%= render "shared/header/masthead" %>
+<%= render "shared/header/nav" %>
+<%= render "shared/header/sub_nav" %>

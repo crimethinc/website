@@ -1,0 +1,24 @@
+footer[role=contentinfo] {
+  padding: 40px 0;
+  background-color: $color-light-gray;
+
+  .footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+  }
+
+  .footer-section {
+    width: 33.33333333%;
+  }
+
+  .footer-section-container {
+    padding: 40px;
+  }
+
+  .license {
+    text-align: center;
+    font-style: italic;
+    margin-top: 40px;
+  }
+}
