@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :set_social_links
 
   def signed_in?
     current_user
@@ -39,4 +40,8 @@ class ApplicationController < ActionController::Base
     action_name == "new"
   end
   helper_method :creating?
+
+  def set_social_links
+    @social_links = Link.where(user: nil).all
+  end
 end
