@@ -11,6 +11,10 @@
     margin-bottom: 1rem;
   }
 
+  p {
+    line-height: 1.25em;
+  }
+
   &.pinned-page-top {
     .dm-title {
       font: {
@@ -43,7 +47,7 @@
   }
 
   &.pinned-page-bottom {
-    margin-top: 40px;
+    margin: 40px auto;
 
     .dm-title {
       font: {
