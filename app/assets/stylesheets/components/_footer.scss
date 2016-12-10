@@ -9,7 +9,9 @@ footer[role=contentinfo] {
   }
 
   .footer-section {
-    width: 33.33333333%;
+    @media screen and (min-width: #{$small-tablet}) {
+      width: 33.33333333%;
+    }
   }
 
   .footer-section-container {
@@ -30,5 +32,36 @@ footer[role=contentinfo] {
     font-style: italic;
     margin-top: 40px;
   }
-}
 
+  .footer-section.footer-section-nav {
+    a {
+      color: $color-true-black;
+      text-decoration: none;
+      line-height: 1.5em;
+
+      &:hover, &:active {
+        border-bottom: 1px solid black;
+      }
+    }
+
+    dl {
+      font-size: 2rem;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      font-weight: normal;
+      font-weight: 300;
+    }
+
+    .nav-label-podcast + dd,
+    .nav-label-podcast,
+    .nav-label-journal + dd,
+    .nav-label-journal {
+      display: inline-block;
+    }
+  }
+}

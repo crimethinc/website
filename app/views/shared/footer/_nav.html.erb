@@ -1,8 +1,8 @@
-<nav role="navigation" class="footer-section">
+<nav role="navigation" class="footer-section footer-section-nav">
   <div class="footer-section-container">
 
     <dl>
-      <dt><%= link_to t("footer.nav.articles.label"), "/archives" %></dt>
+      <dt class="nav-label nav-label-articles"><%= link_to t("footer.nav.articles.label"), "/archives" %></dt>
     	<dd>
         <%= link_to t("footer.nav.articles.arts"),       "/arts"       %>,
         <%= link_to t("footer.nav.articles.technology"), "/technology" %>,
@@ -11,7 +11,7 @@
         <%= link_to t("footer.nav.articles.social"),     "/social"     %>,
       </dd>
 
-      <dt><%= link_to t("footer.nav.books.label"), "/books" %></dt>
+      <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), "/books" %></dt>
       <dd>
         <%= link_to t("footer.nav.books.work"),                       "/books/work" %>,
         <%= link_to t("footer.nav.books.contradictionary"),           "/books/contradictionary" %>,
@@ -20,20 +20,20 @@
         <%= link_to t("footer.nav.books.days_of_war_nights_of_love"), "/books/days-of-war-nights-of-love" %>,
       </dd>
 
-      <dt><%= link_to t("footer.nav.podcast.label"), "/podcast" %></dt>
+      <dt class="nav-label nav-label-podcast"><%= link_to t("footer.nav.podcast.label"), "/podcast" %></dt>
       <dd>
         <%= link_to t("footer.nav.podcast.the_ex_worker"), "/podcast" %>
       </dd>
 
-      <dt><%= link_to t("footer.nav.journal.label"), "/rolling-thunder" %></dt>
+      <dt class="nav-label nav-label-videos"><%= link_to t("footer.nav.videos.label"), "/videos" %></dt>
+
+      <dt class="nav-label nav-label-journal"><%= link_to t("footer.nav.journal.label"), "/rolling-thunder" %></dt>
 
       <dd>
         <%= link_to t("footer.nav.journal.rolling_thunder"), "/rolling-thunder" %>
       </dd>
 
-      <dt><%= link_to t("footer.nav.videos.label"), "/videos" %></dt>
-
-      <dt><%= link_to t("footer.nav.tools.label"), "/tools" %></dt>
+      <dt class="nav-label nav-label-tools"><%= link_to t("footer.nav.tools.label"), "/tools" %></dt>
       <dd>
         <%= link_to t("footer.nav.tools.downloads"), "/tools/downloads" %>,
         <%= link_to t("footer.nav.tools.posters"),   "/tools/posters" %>,
@@ -42,7 +42,7 @@
         <%= link_to t("footer.nav.tools.videos"),    "/tools/video" %>
       </dd>
 
-      <dt><%= link_to t("footer.nav.stores.label"), "/store" %></dt>
+      <dt class="nav-label nav-label-store"><%= link_to t("footer.nav.store.label"), "/store" %></dt>
     </dl>
 
     <%= render "shared/archives_search" %>
