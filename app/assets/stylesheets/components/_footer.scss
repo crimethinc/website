@@ -23,6 +23,11 @@ footer[role=contentinfo] {
     }
   }
 
+  .footer-section-about .footer-section-container {
+    background: $color-true-black;
+    color: $color-white;
+  }
+
   .simple-field {
     width: 100%;
     border-color: $color-dark-gray;
@@ -52,7 +57,7 @@ footer[role=contentinfo] {
       line-height: 1.5em;
 
       &:hover, &:active {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $color-true-black;
       }
     }
 
@@ -82,8 +87,8 @@ footer[role=contentinfo] {
     .first-time-link a,
     .about-us-link a {
       @extend .button;
-      background: $color-true-black;
-      color: $color-white;
+      background: $color-white;
+      color: $color-true-black;
       text-decoration: none;
       text-align: right;
       display: block;
