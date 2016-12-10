@@ -1,6 +1,8 @@
 footer[role=contentinfo] {
   padding: 40px 0;
   background-color: $color-light-gray;
+  line-height: 1.25em;
+
 
   .footer-sections {
     display: flex;
@@ -8,23 +10,24 @@ footer[role=contentinfo] {
     align-items: top;
   }
 
-  .footer-section {
-    @media screen and (min-width: #{$small-tablet}) {
+  @media screen and (min-width: #{$small-tablet}) {
+    .footer-section {
       width: 33.33333333%;
     }
   }
 
   .footer-section-container {
-    padding: 40px;
-  }
+    padding: 40px 10px;
 
-  .archives-search-form {
-    margin-top: 2rem;
+    @media screen and (min-width: #{$small-tablet}) {
+      padding: 40px;
+    }
   }
 
   .simple-field {
     width: 100%;
     border-color: $color-dark-gray;
+    margin: 1rem 0;
   }
 
   .license {
@@ -32,6 +35,15 @@ footer[role=contentinfo] {
     font-style: italic;
     margin-top: 40px;
   }
+
+  h1 {
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1em;
+  }
+
 
   .footer-section.footer-section-nav {
     a {
@@ -64,4 +76,43 @@ footer[role=contentinfo] {
       display: inline-block;
     }
   }
+
+
+  .footer-section.footer-section-about {
+    .first-time-link a,
+    .about-us-link a {
+      @extend .button;
+      background: $color-true-black;
+      color: $color-white;
+      text-decoration: none;
+      text-align: right;
+      display: block;
+    }
+
+
+    .first-time {
+      text-transform: uppercase;
+      margin: 3rem 0;
+
+      .first-time-description {
+        font-weight: bold;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .about-us {
+      .about-us-description p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+
+  .footer-section.footer-section-contact {
+    .social {
+      margin-top: 4rem;
+    }
+  }
+
 }
