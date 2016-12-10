@@ -36,6 +36,26 @@
       margin-bottom: 1em;
     }
 
+    @media screen and (min-width: #{$small-tablet}) {
+      .pinned-page-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .u-photo {
+        width: 33%;
+        height: 0%;
+        display: inline-block;
+      }
+
+      .e-content {
+        width: 67%;
+        display: inline-block;
+        padding-left: 20px;
+      }
+    }
+
     .e-content {
       font-size:   1.75rem;
       line-height: 1.25em;
