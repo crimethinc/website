@@ -3,7 +3,7 @@ class ArchivesController < ApplicationController
     @slug = "home"
 
     # feed
-    @articles = Article.published.limit(5).all
+    @articles = Article.published.limit(5).all.to_a
 
     # pinned articles
     pinned_to_top_page_id    = setting(:pinned_to_top_page_id)

@@ -1,0 +1,10 @@
+<header>
+  <div class="p-name">
+    <h1 class="dm-title">   <%= link_to article.title,    article.path %></h1>
+    <h2 class="dm-subtitle"><%= link_to article.subtitle, article.path %></h2>
+  </div>
+
+  <%= render "articles/published_on", article: article %>
+</header>
+
+<%= link_to "Read More...", article.path, class: "read-more" %>

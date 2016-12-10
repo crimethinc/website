@@ -29,7 +29,11 @@ input[type=search] {
 
 main {
   clear: both;
-  margin: 10px auto;
+  margin: 0 auto;
   width: 100%;
   max-width: $large-desktop;
+}
+
+a {
+  color: black;
 }

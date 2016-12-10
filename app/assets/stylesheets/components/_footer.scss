@@ -1,6 +1,7 @@
 footer[role=contentinfo] {
-  padding: 40px 0;
   background-color: $color-light-gray;
+  line-height: 1.25em;
+
 
   .footer-sections {
     display: flex;
@@ -8,27 +9,149 @@ footer[role=contentinfo] {
     align-items: top;
   }
 
-  .footer-section {
-    width: 33.33333333%;
+  @media screen and (min-width: #{$small-tablet}) {
+    .footer-section {
+      width: 33.33333333%;
+    }
   }
 
   .footer-section-container {
-    padding: 40px;
+    padding: 20px;
+
+    @media screen and (min-width: #{$small-tablet}) {
+      padding: 40px;
+    }
   }
 
-  .archives-search-form {
-    margin-top: 2rem;
+  .footer-section-about .footer-section-container {
+    background: $color-true-black;
+    color: $color-white;
   }
 
   .simple-field {
     width: 100%;
     border-color: $color-dark-gray;
+    margin: 1rem 0;
   }
 
   .license {
     text-align: center;
     font-style: italic;
     margin-top: 40px;
+    padding-bottom: 4rem;
   }
-}
 
+  h1 {
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    line-height: 1em;
+  }
+
+
+  .footer-section.footer-section-nav {
+    a {
+      color: $color-true-black;
+      text-decoration: none;
+      line-height: 1.5em;
+
+      &:hover, &:active {
+        border-bottom: 1px solid $color-true-black;
+      }
+    }
+
+    dl {
+      font-size: 2rem;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      font-weight: normal;
+      font-weight: 300;
+    }
+
+    .nav-label-podcast + dd,
+    .nav-label-podcast,
+    .nav-label-journal + dd,
+    .nav-label-journal {
+      display: inline-block;
+    }
+  }
+
+
+  .footer-section.footer-section-about {
+    .first-time-link a,
+    .about-us-link a {
+      @extend .button;
+      background: $color-white;
+      color: $color-true-black;
+      text-decoration: none;
+      text-align: right;
+      display: block;
+    }
+
+
+    .first-time {
+      text-transform: uppercase;
+      margin: 3rem 0;
+
+      .first-time-description {
+        font-weight: bold;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .about-us {
+      .about-us-description p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+
+  .footer-section.footer-section-contact {
+    .newsletter-signup-form button {
+      @extend .button;
+      font-size: 1.5rem;
+      float: right;
+      background: $color-blue;
+    }
+
+    .social {
+      margin-top: 4rem;
+      clear: both;
+    }
+
+    .social-links {
+      margin-top: 2rem;
+
+      .social-link {
+        display: inline-block;
+
+        a {
+          display: inline-block;
+          @include square(40px);
+          @include social-icon("rss");
+          margin: 0 5px 5px 0;
+        }
+
+        .link-domain-facebook  { @include social-icon("facebook"); }
+        .link-domain-instagram { @include social-icon("instagram"); }
+        .link-domain-medium    { @include social-icon("medium"); }
+        .link-domain-periscope { @include social-icon("periscope"); }
+        .link-domain-snapchat  { @include social-icon("snapchat"); }
+        .link-domain-tumblr    { @include social-icon("tumblr"); }
+        .link-domain-twitter   { @include social-icon("twitter"); }
+        .link-domain-vimeo     { @include social-icon("vimeo"); }
+        .link-domain-wordpress { @include social-icon("wordpress"); }
+        .link-domain-youtube   { @include social-icon("youtube"); }
+      }
+    }
+  }
+
+}

@@ -1,10 +1,16 @@
-<time datetime="<%= display_date article.published_at if article.dated? %>">
-  <% if article.dated? %>
-    Published on
-    <%= link_to article.path do %>
-      <b><%= display_date article.published_at %></b>
+<p class="screen-reader-only">
+  <time class="dt-published" datetime="<%= display_date article.published_at if article.dated? %>">
+
+    <% if article.draft? %>
+      <%= link_to article.path do %>
+        <b><%= display_date article.published_at %></b>
+      <% end %>
+    <% elsif article.dated? %>
+      Published on
+      <%= link_to_dates year: article.year, month: article.month, day: article.day %>
+    <% else %>
+      <em>Publication date not yet set.</em>
     <% end %>
-  <% else %>
-    <em>Publication date not yet set.</em>
-  <% end %>
-</time>
+
+  </time>
+</p>

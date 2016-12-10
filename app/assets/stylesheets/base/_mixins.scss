@@ -11,7 +11,7 @@
 
 @mixin image-replacement() {
   overflow: hidden;
-  text-indent: -200%;
+  text-indent: -10000%;
   white-space: nowrap;
 }
 
@@ -31,6 +31,13 @@
   @media screen and #{$retina} {
     background-image: url(asset-path($retina-url));
   }
+}
+
+@mixin social-icon($domain) {
+  @include image-replacement-graphic("social-icons/#{$domain}.svg",
+                                     "social-icons/#{$domain}.svg",
+                                     40px,
+                                     40px);
 }
 
 @mixin size($w, $h) {

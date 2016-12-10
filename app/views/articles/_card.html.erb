@@ -1,0 +1,20 @@
+<% unless article.blank? %>
+  <article class="h-entry" style="background-image: url(<%= article.image %>)" role="article">
+    <%= render "articles/header", article: article %>
+
+    <!--
+    <footer>
+      <% if article.categories.present? %>
+        <div class="categories">
+          <b>Categories:</b>
+          <ul>
+            <% article.categories.each do |category| %>
+              <li><%= link_to category.name, category.slug, rel: "tag", class: "p-category" %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </footer>
+    -->
+  </article>
+<% end %>
