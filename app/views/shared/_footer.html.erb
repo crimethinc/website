@@ -1,47 +1,11 @@
 <footer role="contentinfo">
-  <nav role="navigation">
-    <dl>
-      <dt><%= link_to "Articles", "/archives" %></dt>
-    	<dd>
-        <%= link_to "Arts",       "/arts"       %>,
-        <%= link_to "Technology", "/technology" %>,
-        <%= link_to "Politics",   "/politics"   %>,
-        <%= link_to "History",    "/history"    %>,
-        <%= link_to "Social",     "/social"     %>,
-      </dd>
+  <div class="footer-sections">
+    <%= render "shared/footer/nav" %>
+    <%= render "shared/footer/about" %>
+    <%= render "shared/footer/contact" %>
+  </div>
 
-      <dt><%= link_to "Books", "/books" %></dt>
-      <dd>
-      	<%= link_to "Work",                       "/books/work" %>,
-        <%= link_to "Contradictionary",           "/books/contradictionary" %>,
-        <%= link_to "Expect Resistance",          "/books/expect-resistance" %>,
-      	<%= link_to "Recipes for Disaster",       "/books/recipes-for-disaster" %>,
-        <%= link_to "Days of War Nights of Love", "/books/days-of-war-nights-of-love" %>,
-      </dd>
-
-      <dt><%= link_to "Podcast", "/podcast" %></dt>
-      <dd>
-        <%= link_to "The Ex-Worker", "/podcast" %>
-      </dd>
-
-      <dt><%= link_to "Journal", "/rolling-thunder" %></dt>
-
-      <dd>
-        <%= link_to "Rolling Thunder", "/rolling-thunder" %>
-      </dd>
-
-      <dt><%= link_to "Videos", "/videos" %></dt>
-
-      <dt><%= link_to "Tools", "/tools" %></dt>
-      <dd>
-      	<%= link_to "Downloads", "/tools/downloads" %>,
-        <%= link_to "Posters",   "/tools/posters" %>,
-        <%= link_to "Guides",    "/tools/guides" %>,
-      	<%= link_to "Stickers",  "/tools/stickers" %>,
-        <%= link_to "Videos",    "/tools/video" %>
-      </dd>
-
-      <dt><%= link_to "Store", "/store" %></dt>
-    </dl>
-  </nav>
+  <div rel="license" class="license">
+    <p><%= t("footer.license") %></p>
+  </div>
 </footer>

@@ -1,0 +1,16 @@
+<div class="footer-section">
+  <div class="footer-section-container">
+
+    <div class="first-time">
+      <p><%= t("footer.about.first_time_text") %></p>
+      <p><%= link_to t("footer.about.first_time_link"), "/start" %></p>
+    </div>
+
+    <div class="about-us">
+      <h1><%= t("footer.about.heading") %></h1>
+      <%= br_to_p(t("footer.about.description")) %>
+      <p><%= link_to t("footer.about.more_link"), "/about", class: "more-about" %></p>
+    </div>
+
+  </div>
+</div>

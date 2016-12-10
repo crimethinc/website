@@ -30,36 +30,17 @@
 }
 
 
-// subnav
-.search-field {
-  border-radius: 0;
-  font: {
-    weight: normal;
-    weight: 100;
-    size: 1.5rem;
-  };
-
-  padding: 10px;
-  width: 66%;
-  text-transform: uppercase;
-  border: 1px solid #eee;
-
-  &:focus {
-    outline: none;
-  }
-}
-
 .secondary-navigation {
   display: flex;
   align-items: center;
   margin: 10px;
 
-  .header-search-form {
+  .archives-search-form {
     display: inline-block;
     width: 50%;
   }
 
-  .starter-link {
+  .start-link {
     display: inline-block;
     width: 50%;
     @include bold();

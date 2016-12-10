@@ -1,0 +1,10 @@
+<div class="social">
+  <h1><%= t("footer.contact.social.heading") %></h1>
+  <p><%= t("footer.contact.social.description") %></p>
+
+  <ul class="social-links">
+    <% @social_links.each do |link| %>
+      <li><%= link_to link.name, link.url, class: social_link_classes(link) %></li>
+    <% end %>
+  </ul>
+</div>

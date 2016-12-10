@@ -1,8 +1,9 @@
 en:
-  site_name: "CrimethInc."
+  language_direction: ltr
+  site_name: CrimethInc.
 
   header:
-    donate_button_text: "Support this site"
+    donate_button_text: Support this site
 
     read: Read
     watch: Watch
@@ -11,4 +12,66 @@ en:
     share: Share
 
     first_time: First Time? Start Here
+    search_form_placeholder: Search Archives…
+
+  footer:
+    nav:
+      articles:
+        label: Articles
+        arts: Arts
+        technology: Technology
+        politics: Politics
+        history: History
+        social: Social
+
+      books:
+        label: Books
+        work: Work
+        contradictionary: Contradictionary
+        expect_resistance: Expect Resistance
+        recipes_for_disaster: Recipes for Disaster
+        days_of_war_nights_of_love: Days of War Nights of Love
+
+      podcast:
+        label: Podcast
+        the_ex_worker: "The Ex-Worker"
+
+      journal:
+        label: Journal
+        rolling_thunder: Rolling Thunder
+
+      videos:
+        label: Videos
+
+      tools:
+        label: Tools
+        downloads: Downloads
+        posters: Posters
+        guides: Guides
+        stickers: Stickers
+        videos: Videos
+
+    about:
+      first_time_text: Is this your first time hearing about CrimethInc.?
+      first_time_link: Start here.
+      heading: About CrimethInc.
+      description:
+        CrimethInc. is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      more_link: More about CrimethInc.
+
+    contact:
+      newsletter:
+        heading: Email Updates
+        description: CrimethInc. is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        signup_form_placeholder: What’s your email address?
+      social:
+        heading: Find CrimethInc. Elsewhere
+        description: CrimethInc. is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+    license: Your heart is as free as the air you breathe. The ground you stand on is liberated territory.
+
+  form:
     search_form_placeholder: Search Archives…

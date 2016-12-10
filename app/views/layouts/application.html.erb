@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="<%= lang %>" prefix="og: http://ogp.me/ns#" id="<%= @slug %>">
+<html dir="<%= t(:language_direction) %>" lang="<%= lang %>" prefix="og: http://ogp.me/ns#" id="<%= @slug %>">
 
 <head>
   <%= render "shared/head" %>
@@ -7,8 +7,6 @@
 
 <body id="<%= @slug %>">
   <%= render "shared/header" %>
-  <%= render "shared/nav" %>
-  <%= render "shared/sub_nav" %>
 
   <main role="main">
     <%= yield %>

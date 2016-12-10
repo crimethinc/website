@@ -8,10 +8,12 @@
 
 @import "base/elements";
 
-@import "components/header";
-@import "components/feed";
-@import "components/navigation";
 @import "components/button";
+@import "components/feed";
+@import "components/footer";
+@import "components/form";
+@import "components/header";
+@import "components/navigation";
 
 @import "views/articles";
 @import "views/home";
