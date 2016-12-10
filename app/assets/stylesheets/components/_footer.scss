@@ -130,8 +130,9 @@ footer[role=contentinfo] {
 
         a {
           display: inline-block;
-          @include square(30px);
+          @include square(40px);
           @include social-icon("rss");
+          margin: 0 5px 5px 0;
         }
 
         .link-domain-facebook  { @include social-icon("facebook"); }
