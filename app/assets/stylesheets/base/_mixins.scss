@@ -34,7 +34,10 @@
 }
 
 @mixin social-icon($domain) {
-  @include image-replacement-graphic("social-icons/#{$domain}.svg", "social-icons/#{$domain}.svg", 30px, 30px);
+  @include image-replacement-graphic("social-icons/#{$domain}.svg",
+                                     "social-icons/#{$domain}.svg",
+                                     40px,
+                                     40px);
 }
 
 @mixin size($w, $h) {
