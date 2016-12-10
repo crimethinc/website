@@ -65,7 +65,7 @@ module ApplicationHelper
   end
 
   def br_to_p(html)
-    simple_format(html).gsub("\n<br />", "</p><p>").html_safe
+    simple_format(html, {}, sanitize: false).gsub("\n<br />", "</p><p>").html_safe
   end
 
 end
