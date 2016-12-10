@@ -39,7 +39,7 @@ footer[role=contentinfo] {
   h1 {
     font-weight: bold;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.75rem;
     margin-bottom: 1rem;
     line-height: 1em;
   }
@@ -110,8 +110,41 @@ footer[role=contentinfo] {
 
 
   .footer-section.footer-section-contact {
+    .newsletter-signup-form button {
+      @extend .button;
+      font-size: 1.5rem;
+      float: right;
+      background: $color-blue;
+    }
+
     .social {
       margin-top: 4rem;
+      clear: both;
+    }
+
+    .social-links {
+      margin-top: 2rem;
+
+      .social-link {
+        display: inline-block;
+
+        a {
+          display: inline-block;
+          @include square(30px);
+          @include social-icon("rss");
+        }
+
+        .link-domain-facebook  { @include social-icon("facebook"); }
+        .link-domain-instagram { @include social-icon("instagram"); }
+        .link-domain-medium    { @include social-icon("medium"); }
+        .link-domain-periscope { @include social-icon("periscope"); }
+        .link-domain-snapchat  { @include social-icon("snapchat"); }
+        .link-domain-tumblr    { @include social-icon("tumblr"); }
+        .link-domain-twitter   { @include social-icon("twitter"); }
+        .link-domain-vimeo     { @include social-icon("vimeo"); }
+        .link-domain-wordpress { @include social-icon("wordpress"); }
+        .link-domain-youtube   { @include social-icon("youtube"); }
+      }
     }
   }
 
