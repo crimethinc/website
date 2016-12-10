@@ -1,15 +1,13 @@
 <% if @pinned_to_top.present? %>
-  <%= render "articles/pinned", page: @pinned_to_top, position: "top" %>
+  <%= render "pages/pinned", page: @pinned_to_top, position: "top" %>
 <% end %>
 
 <div class="h-feed">
-  <div class="featured">
-    <%= render "articles/card", article: @articles.pop %>
-  </div>
+  <%= render "articles/card", article: @articles.shift %>
 
-  <% @articles.in_groups_of(2).each do |articles| %>
+  <% @articles.in_groups_of(2).each do |row| %>
     <div class="row">
-      <% articles.each do |article| %>
+      <% row.each do |article| %>
         <%= render "articles/card", article: article %>
       <% end %>
     </div>
@@ -17,5 +15,5 @@
 </div>
 
 <% if @pinned_to_bottom.present? %>
-  <%= render "articles/pinned", page: @pinned_to_bottom, position: "bottom" %>
+  <%= render "pages/pinned", page: @pinned_to_bottom, position: "bottom" %>
 <% end %>
