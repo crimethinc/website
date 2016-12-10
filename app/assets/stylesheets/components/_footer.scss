@@ -1,5 +1,4 @@
 footer[role=contentinfo] {
-  padding: 40px 0;
   background-color: $color-light-gray;
   line-height: 1.25em;
 
@@ -17,7 +16,7 @@ footer[role=contentinfo] {
   }
 
   .footer-section-container {
-    padding: 40px 10px;
+    padding: 20px;
 
     @media screen and (min-width: #{$small-tablet}) {
       padding: 40px;
@@ -34,6 +33,7 @@ footer[role=contentinfo] {
     text-align: center;
     font-style: italic;
     margin-top: 40px;
+    padding-bottom: 4rem;
   }
 
   h1 {
