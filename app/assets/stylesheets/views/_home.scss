@@ -1,2 +1,97 @@
+
+
 #home {
+
+  .h-feed {
+    color: $color-white;
+
+    @media screen and (min-width: #{$small-tablet}) {
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+
+    .featured  .h-entry {
+      margin: 10px 0;
+      width: 100%;
+
+      .p-name {
+        padding: 8rem 1.5rem;
+        font-family: $font-headings;
+      }
+
+      .p-x-title {
+        font-size: 8rem;
+        line-height: 1.15em;
+      }
+
+      .p-x-subtitle {
+        font-size: 4rem;
+        margin: 0;
+        line-height: 1em;
+      }
+    }
+
+
+    .h-entry {
+      margin-bottom: 1px;
+      width: 100%;
+      display: inline-block;
+      background: {
+        color: $color-true-black;
+        position: 50% 50%;
+        size: cover;
+      }
+      color: $color-white;
+      justify-content: space-between;
+
+      // larger than $large-phone viewport
+      @media screen and (min-width: #{$small-tablet}) {
+        width: 50%;
+      }
+
+      .e-content,
+      footer {
+        display: none;
+      }
+
+      a {
+        color: $color-white;
+      }
+    }
+
+    .p-name {
+      display: block;
+      font-size: 2rem;
+      line-height: 0.95;
+      overflow: hidden;
+      padding: 3rem 1rem;
+      text-decoration: none;
+    }
+
+    .p-x-title,
+    .p-x-subtitle {
+      transition: background-color 250ms;
+
+      &:hover {
+        background-color: $color-true-black;
+      }
+    }
+
+    .p-x-title {
+      background-color: transparentize($color-black, 0.2);
+      font-weight: 700;
+    }
+
+    .p-x-subtitle {
+      background-color: transparentize($color-black, 0.3);
+      font: {
+        size: 0.7em;
+        weight: 100;
+      }
+    }
+  }
+
 }
