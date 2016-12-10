@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  http_basic_authenticate_with name: "secret", password: "superdupersecretsauce", except: :index
+
   protect_from_forgery with: :exception
   before_action :set_social_links
 
