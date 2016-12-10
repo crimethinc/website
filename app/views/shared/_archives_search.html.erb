@@ -1,4 +1,4 @@
 <%= form_tag "/search", class: "archives-search-form", role: "search" do %>
-  <%= label_tag        "search-archives",                   t("header.search_form_placeholder").html_safe, class: "screen-reader-only" %>
-  <%= search_field_tag "search-archives", nil, placeholder: t("header.search_form_placeholder").html_safe, class: "simple-field" %>
+  <%= label_tag        "search-archives",                   t("form.search_form_placeholder"), class: "screen-reader-only" %>
+  <%= search_field_tag "search-archives", nil, placeholder: t("form.search_form_placeholder"), class: "simple-field" %>
 <% end %>

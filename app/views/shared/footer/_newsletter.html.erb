@@ -1,13 +1,9 @@
 <div class="newsletter-signup">
-  <h1>Email Updates</h1>
-
-  <p>
-    CrimethInc is lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore.
-  </p>
+  <h1><%= t("footer.contact.newsletter.heading") %></h1>
+  <p><%= t("footer.contact.newsletter.description") %></p>
 
   <%= form_tag "/newsletter/signup", class: "newsletter-signup-form", role: "search" do %>
-    <%= label_tag       "newsletter-email",                   t("footer.newsletter_signup_form_placeholder").html_safe, class: "screen-reader-only" %>
-    <%= email_field_tag "newsletter-email", nil, placeholder: t("footer.newsletter_signup_form_placeholder").html_safe, class: "simple-field" %>
+    <%= label_tag       "newsletter-email",                   t("footer.contact.newsletter.signup_form_placeholder"), class: "screen-reader-only" %>
+    <%= email_field_tag "newsletter-email", nil, placeholder: t("footer.contact.newsletter.signup_form_placeholder"), class: "simple-field" %>
   <% end %>
 </div>

@@ -2,47 +2,47 @@
   <div class="footer-section-container">
 
     <dl>
-      <dt><%= link_to "Articles", "/archives" %></dt>
+      <dt><%= link_to t("footer.nav.articles.label"), "/archives" %></dt>
     	<dd>
-        <%= link_to "Arts",       "/arts"       %>,
-        <%= link_to "Technology", "/technology" %>,
-        <%= link_to "Politics",   "/politics"   %>,
-        <%= link_to "History",    "/history"    %>,
-        <%= link_to "Social",     "/social"     %>,
+        <%= link_to t("footer.nav.articles.arts"),       "/arts"       %>,
+        <%= link_to t("footer.nav.articles.technology"), "/technology" %>,
+        <%= link_to t("footer.nav.articles.politics"),   "/politics"   %>,
+        <%= link_to t("footer.nav.articles.history"),    "/history"    %>,
+        <%= link_to t("footer.nav.articles.social"),     "/social"     %>,
       </dd>
 
-      <dt><%= link_to "Books", "/books" %></dt>
+      <dt><%= link_to t("footer.nav.books.label"), "/books" %></dt>
       <dd>
-      	<%= link_to "Work",                       "/books/work" %>,
-        <%= link_to "Contradictionary",           "/books/contradictionary" %>,
-        <%= link_to "Expect Resistance",          "/books/expect-resistance" %>,
-      	<%= link_to "Recipes for Disaster",       "/books/recipes-for-disaster" %>,
-        <%= link_to "Days of War Nights of Love", "/books/days-of-war-nights-of-love" %>,
+        <%= link_to t("footer.nav.books.work"),                       "/books/work" %>,
+        <%= link_to t("footer.nav.books.contradictionary"),           "/books/contradictionary" %>,
+        <%= link_to t("footer.nav.books.expect_resistance"),          "/books/expect-resistance" %>,
+        <%= link_to t("footer.nav.books.recipes_for_disaster"),       "/books/recipes-for-disaster" %>,
+        <%= link_to t("footer.nav.books.days_of_war_nights_of_love"), "/books/days-of-war-nights-of-love" %>,
       </dd>
 
-      <dt><%= link_to "Podcast", "/podcast" %></dt>
+      <dt><%= link_to t("footer.nav.podcast.label"), "/podcast" %></dt>
       <dd>
-        <%= link_to "The Ex-Worker", "/podcast" %>
+        <%= link_to t("footer.nav.podcast.the_ex_worker"), "/podcast" %>
       </dd>
 
-      <dt><%= link_to "Journal", "/rolling-thunder" %></dt>
+      <dt><%= link_to t("footer.nav.journal.label"), "/rolling-thunder" %></dt>
 
       <dd>
-        <%= link_to "Rolling Thunder", "/rolling-thunder" %>
+        <%= link_to t("footer.nav.journal.rolling_thunder"), "/rolling-thunder" %>
       </dd>
 
-      <dt><%= link_to "Videos", "/videos" %></dt>
+      <dt><%= link_to t("footer.nav.videos.label"), "/videos" %></dt>
 
-      <dt><%= link_to "Tools", "/tools" %></dt>
+      <dt><%= link_to t("footer.nav.tools.label"), "/tools" %></dt>
       <dd>
-      	<%= link_to "Downloads", "/tools/downloads" %>,
-        <%= link_to "Posters",   "/tools/posters" %>,
-        <%= link_to "Guides",    "/tools/guides" %>,
-      	<%= link_to "Stickers",  "/tools/stickers" %>,
-        <%= link_to "Videos",    "/tools/video" %>
+        <%= link_to t("footer.nav.tools.downloads"), "/tools/downloads" %>,
+        <%= link_to t("footer.nav.tools.posters"),   "/tools/posters" %>,
+        <%= link_to t("footer.nav.tools.guides"),    "/tools/guides" %>,
+        <%= link_to t("footer.nav.tools.stickers"),  "/tools/stickers" %>,
+        <%= link_to t("footer.nav.tools.videos"),    "/tools/video" %>
       </dd>
 
-      <dt><%= link_to "Store", "/store" %></dt>
+      <dt><%= link_to t("footer.nav.stores.label"), "/store" %></dt>
     </dl>
 
     <%= render "shared/archives_search" %>
