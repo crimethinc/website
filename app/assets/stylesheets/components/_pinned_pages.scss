@@ -36,6 +36,22 @@
       margin-bottom: 1em;
     }
 
+    .e-content {
+      font-size:   1.75rem;
+      line-height: 1.25em;
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      p:last-child a {
+        font-weight: bolder;
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px solid $color-white;
+      }
+    }
+
     @media screen and (min-width: #{$small-tablet}) {
       .pinned-page-content {
         display: flex;
@@ -56,19 +72,19 @@
       }
     }
 
-    .e-content {
-      font-size:   1.75rem;
-      line-height: 1.25em;
-
-      p {
-        margin-bottom: 1rem;
+    @media screen and (min-width: #{$large-tablet}) {
+      .e-content {
+        font-size: 1.25em;
       }
+    }
 
-      p:last-child a {
-        font-weight: bolder;
-        font-weight: 500;
-        text-decoration: none;
-        border-bottom: 1px solid $color-white;
+    @media screen and (min-width: #{$small-laptop}) {
+      .e-content {
+        font-size: 1.5em;
+
+        p {
+          line-height: 1.5em;
+        }
       }
     }
   }
