@@ -9,12 +9,14 @@
       <h2 class="dm-subtitle"><%= page.subtitle %></h2>
     </header>
 
-    <% if page.image.present? %>
-      <%= image_tag page.image, alt: page.image_description, class: "u-photo" %>
-    <% end %>
+    <div class="pinned-page-content">
+      <% if page.image.present? %>
+        <%= image_tag page.image, alt: page.image_description, class: "u-photo" %>
+      <% end %>
 
-    <div class="e-content">
-      <%= br_to_p(page.content) %>
+      <div class="e-content">
+        <%= br_to_p(page.content) %>
+      </div>
     </div>
   </article>
 </section>
