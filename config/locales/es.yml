@@ -1,4 +1,4 @@
-en:
+es:
   language_direction: ltr
   site_name: CrimethInc.
 
@@ -50,6 +50,9 @@ en:
         guides: Guides
         stickers: Stickers
         videos: Videos
+
+      store:
+        label: Store
 
     about:
       first_time_text: Is this your first time hearing about CrimethInc.?

@@ -51,6 +51,9 @@ en:
         stickers: Stickers
         videos: Videos
 
+      store:
+        label: Store
+
     about:
       first_time_text: Is this your first time hearing about CrimethInc.?
       first_time_link: Start here.
