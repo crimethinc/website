@@ -1,5 +1,5 @@
 <% if @pinned_to_top.present? %>
-  <%= render "articles/pinned", article: @pinned_to_top, position: "top" %>
+  <%= render "articles/pinned", page: @pinned_to_top, position: "top" %>
 <% end %>
 
 <div class="h-feed">
@@ -17,5 +17,5 @@
 </div>
 
 <% if @pinned_to_bottom.present? %>
-  <%= render "articles/pinned", article: @pinned_to_bottom, position: "bottom" %>
+  <%= render "articles/pinned", page: @pinned_to_bottom, position: "bottom" %>
 <% end %>

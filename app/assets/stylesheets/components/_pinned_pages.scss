@@ -1,0 +1,41 @@
+.pinned-page {
+  margin-top: 10px;
+  padding: 20px;
+  color: black;
+
+  img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &.pinned-page-top {
+    .dm-title {
+      font: {
+        size: 2.5rem;
+        weight: lighter;
+        weight: 300;
+      }
+    }
+
+    .dm-subtitle {
+      font: {
+        size: 3rem;
+        weight: bold;
+      }
+    }
+
+    .p-name {
+      margin-bottom: 1em;
+    }
+
+    .e-content {
+      font-size:   1.75rem;
+      line-height: 1.25em;
+    }
+  }
+
+  &.pinned-page-bottom {
+    margin-top: 40px;
+    background: red;
+  }
+}
