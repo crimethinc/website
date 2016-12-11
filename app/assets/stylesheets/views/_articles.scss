@@ -1,0 +1,332 @@
+#article {
+  .h-entry {
+
+    header {
+      position: relative;
+      border-top: 1pt solid white;
+      color: white;
+      margin-bottom: 1em;
+
+      /* for vertically aligning sub/title */
+      transform-style: preserve-3d;
+
+      .u-photo {
+        background: black;
+        width: 100%;
+      }
+
+      .meta {
+        text-align: center;
+        padding: 10pt;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        /* for vertically aligning sub/title */
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h1 {
+        font-size: 2em;
+        font-weight: 900;
+        letter-spacing: -.01em;
+        line-height: 1em;
+        line-height: 1em;
+        margin-bottom: .1em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        line-height: 1.25em;
+      }
+
+      a {
+        color: white;
+      }
+
+      .contributors {
+        font-size: .5em;
+        display: inline-block;
+        margin: 0 auto;
+        font-weight: lighter;
+        font-weight: 300;
+
+        th {
+          text-align: right;
+          padding-right: .25em;
+          font-weight: lighter;
+          font-weight: 300;
+          font-style: italic;
+        }
+
+        td {
+          text-align: left;
+          font-weight: normal;
+        }
+      } /* .contributors */
+    } /* header */
+
+
+    .e-content {
+      color: #444;
+      padding: 0 5pt;
+      font-size: 1.25em;
+      font-weight: lighter;
+      font-weight: 300;
+      letter-spacing: .02em;
+
+      > :first-child {
+        font-size: 1.25em;
+        line-height: 1.3em;
+        margin-bottom: 1em;
+      }
+
+      a {
+        color: #666;
+        text-decoration: underline;
+        font-weight: bold;
+        font-weight: 700;
+      }
+
+      a:hover {
+        color: black;
+        text-decoration: underline;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+        font-weight: 700;
+        line-height: 1em;
+        margin-bottom: 1em;
+      }
+
+      h1 { font-size: 2em    ; margin: 1em 0 .25em 0; }
+      h2 { font-size: 1.8em  ; margin: 1em 0 .25em 0; }
+      h3 { font-size: 1.75em ; margin: 1em 0 .25em 0; }
+      h4 { font-size: 1.5em  ; margin: 1em 0 .25em 0; }
+      h5 { font-size: 1.25em ; margin: 1em 0 .25em 0; }
+      h6 { font-size: 1.1em  ; margin: 1em 0 .25em 0; }
+
+      p {
+        line-height: 1.5em;
+        margin-bottom: 1em;
+      }
+
+      i, cite, em, var, address, dfn {
+        font-style: italic;
+        font-weight: lighter;
+        font-weight: 300;
+      }
+
+      dt, b, strong {
+        font-weight: bold;
+        font-weight: 700;
+      }
+
+      blockquote {
+        width: 80%;
+        margin: 2em auto;
+        font-weight: lighter;
+        font-weight: 300;
+        font-size: 1.25em;
+        line-height: 1.3em;
+      }
+
+      dd {
+        margin-left: 20px;
+        margin-start: 20px;
+      }
+
+      hr {
+        border: none;
+        border-bottom: 1pt solid #ccc;
+        margin: 3em auto;
+        width: 50%;
+        display: block;
+      }
+
+      caption {
+        font-weight: bold;
+        font-weight: 700;
+        padding: .5em;
+      }
+
+      th {
+        font-weight: bold;
+        font-weight: 700;
+        text-align: left;
+        background: #eee;
+        border-bottom: 1px solid white;
+      }
+
+      th, td {
+        padding: .5em;
+      }
+
+      /* for single images */
+      img {
+        display: block;
+        margin: 2em auto;
+        max-width: 100%;
+      }
+
+      /* for groups of images */
+      .images,
+      .images-group {
+        text-align: center;
+        margin: 2em auto;
+
+        img {
+          display: inline-block;
+          margin: 0;
+        }
+
+        /* narrower desktop browser window in between phone and tablet */
+        @media screen and (min-width: #{$small-tablet}) {
+          figure + figure,
+          img + img {
+            margin-left: 1em;
+          }
+        }
+
+        figure {
+          display: inline-block;
+          margin: 0;
+          max-width: 50%;
+        }
+      }
+
+      .images-group {
+        figure {
+          max-width: 100%;
+        }
+      }
+
+      table,
+      figure {
+        text-align: center;
+        margin: 4em auto;
+      }
+
+      figcaption {
+        font-weight: lighter;
+        font-weight: 300;
+        max-width: 80%;
+        margin: 1em auto;
+      }
+
+      th {
+        text-align: left;
+        padding-right: .25em;
+        font-weight: normal;
+        font-weight: 500;
+      }
+
+      td {
+        text-align: left;
+        font-weight: lighter;
+        font-weight: 300;
+      }
+    }
+
+    footer {
+      text-align: center;
+
+      p {
+        display: inline-block;
+        margin:  20pt 0;
+        padding: 20pt;
+        border-top: 1pt solid #ccc;
+        font-weight: lighter;
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+
+  } /* .h-entry */
+} /* #article */
+
+/* narrower desktop browser window in between phone and tablet */
+@media screen and (min-width: #{$small-tablet}) {
+  #article {
+    .h-entry {
+
+      header {
+        .meta {
+          padding: 25pt;
+        }
+
+        h1 {
+          font-size: 2em;
+          letter-spacing: -.01em;
+          line-height: 1em;
+        }
+
+        h2 {
+          font-size: 1.5em;
+          letter-spacing: -.01em;
+        }
+
+        .contributors {
+          font-size: 1em;
+        }
+      }
+
+      .e-content {
+        padding: 0 10pt;
+        font-size: 1.5em;
+
+        > :first-child {
+          font-size: 1.5em;
+          line-height: 1.5em;
+          margin-bottom: 1em;
+        }
+      }
+
+      footer {
+        p {
+          margin:  50pt 0;
+          padding: 50pt;
+        }
+      }
+
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #article {
+    .h-entry {
+
+      header {
+        .meta {
+          padding: 100pt 50pt;
+          margin-bottom: 2em;
+        }
+
+        h1 {
+          font-size: 4em;
+          letter-spacing: -.01em;
+          line-height: 1em;
+        }
+
+        h2 {
+          font-size: 2em;
+        }
+      }
+
+      .e-content {
+        padding: 0 50pt;
+      }
+
+      footer {
+        p {
+          margin:  50pt 0;
+          padding: 50pt;
+        }
+      }
+
+    }
+  }
+}

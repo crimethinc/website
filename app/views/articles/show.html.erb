@@ -1,44 +1,45 @@
 <article id="article-<%= @article.id %>" class="h-entry" role="article">
-  <% if @article.image.present? %>
-    <%= image_tag @article.image, alt: @article.image_description, class: "u-photo" %>
-  <% end %>
-
-  <h1>
-    <%= link_to @article.path, class: "p-name" do %>
-      <span class="title"><%= @article.title %></span><br>
-      <span class="subtitle"><%= @article.subtitle %></span>
+  <header>
+    <% if @article.image.present? %>
+      <%= image_tag @article.image, class: "u-photo", alt: "" %>
     <% end %>
-  </h1>
+
+    <div class="meta">
+      <div class="p-name">
+        <h1 class="p-x-title">   <%= @article.title    %></h1>
+        <h2 class="p-x-subtitle"><%= @article.subtitle %></h2>
+      </div>
+    </div>
+  </header>
 
   <div class="e-content">
-    <%= simple_format @article.content %>
+    <%= raw @article.content %>
   </div>
 
   <footer>
-    <%= render "/articles/published_on", article: @article %>
+    <%= render "articles/published_on", article: @article %>
 
-    <% unless @article.is_a?(Page) %>
-      <% if @article.categories.present? %>
-        <p>
-          <b>Categories:</b>
-          <ul>
-            <% @article.categories.each do |category| %>
-              <li><%= link_to category.name, category.slug, class: "p-category" %></li>
-            <% end %>
-          </ul>
-        </p>
-      <% end %>
+    <% if @article.categories.present? %>
+      <p>
+        <b>Categories:</b>
+        <ul>
+          <% @article.categories.each do |category| %>
+            <li><%= link_to category.name, category.slug, class: "p-category" %></li>
+          <% end %>
+        </ul>
+      </p>
+    <% end %>
 
-      <% if @article.tags.present? %>
-        <p>
-          <b>Tags:</b>
-          <ul>
-            <% @article.tags.each do |tag| %>
-              <li><%= link_to tag.name, tag.slug, rel: "tag", class: "p-category" %></li>
-            <% end %>
-          </ul>
-        </p>
-      <% end %>
+    <% if @article.tags.present? %>
+      <p>
+        <b>Tags:</b>
+        <ul>
+          <% @article.tags.each do |tag| %>
+            <li><%= link_to tag.name, tag.slug, rel: "tag", class: "p-category" %></li>
+          <% end %>
+        </ul>
+      </p>
     <% end %>
   </footer>
 </article>
+
