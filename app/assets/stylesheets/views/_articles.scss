@@ -17,7 +17,6 @@
 
       .meta {
         text-align: center;
-        padding: 10pt;
         position: absolute;
         top: 0;
         width: 100%;
@@ -25,6 +24,10 @@
         /* for vertically aligning sub/title */
         top: 50%;
         transform: translateY(-50%);
+
+        .p-name {
+          padding: 10pt;
+        }
       }
 
       h1 {
@@ -253,7 +256,7 @@
     .h-entry {
 
       header {
-        .meta {
+        .meta .p-name {
           padding: 25pt;
         }
 
@@ -295,12 +298,12 @@
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: $small-tablet) {
   #article {
     .h-entry {
 
       header {
-        .meta {
+        .meta .p-name {
           padding: 100pt 50pt;
           margin-bottom: 2em;
         }
