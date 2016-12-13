@@ -22,8 +22,11 @@
         width: 100%;
 
         /* for vertically aligning sub/title */
-        top: 50%;
         transform: translateY(-50%);
+        top: 50%;
+
+        @media screen and (min-width: #{$large-tablet}) { top: 33%; }
+        @media screen and (min-width: #{$small-laptop}) { top: 25%; }
 
         .p-name {
           padding: 10pt;
