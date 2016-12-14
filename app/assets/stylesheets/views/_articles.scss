@@ -16,7 +16,7 @@
       }
 
       .meta {
-        text-align: center;
+        text-align: left;
         position: absolute;
         top: 0;
         width: 100%;
@@ -25,8 +25,8 @@
         transform: translateY(-50%);
         top: 50%;
 
-        @media screen and (min-width: #{$large-tablet}) { top: 33%; }
-        @media screen and (min-width: #{$small-laptop}) { top: 25%; }
+        @media screen and (min-width: #{$large-tablet}) { top: 33%; font-size: 1.25em; }
+        @media screen and (min-width: #{$small-laptop}) { top: 33%; font-size:  1.5em; }
 
         .p-name {
           padding: 10pt;
@@ -37,7 +37,6 @@
         font-size: 2em;
         font-weight: 900;
         letter-spacing: -.01em;
-        line-height: 1em;
         line-height: 1em;
         margin-bottom: .1em;
       }
