@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   http_basic_authenticate_with name: "secret", password: "superdupersecretsauce", except: :index
 
   protect_from_forgery with: :exception
+  before_action :check_for_redirection
   before_action :set_social_links
 
   def signed_in?
@@ -45,5 +46,12 @@ class ApplicationController < ActionController::Base
 
   def set_social_links
     @social_links = Link.where(user: nil).all
+  end
+
+  def check_for_redirection
+    redirect = Redirect.where(source_path: request.path).last
+    if redirect.present?
+      return redirect_to redirect.target_path, status: redirect.temporary? ? 302 : 301
+    end
   end
 end
