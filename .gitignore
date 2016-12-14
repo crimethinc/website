@@ -6,3 +6,5 @@
 .byebug_history
 .DS_Store
 ISSUES.md
+db/seeds
+production.seeds.rb
