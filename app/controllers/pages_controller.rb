@@ -2,6 +2,10 @@ class PagesController < ApplicationController
   before_action :set_page, only: [:show]
 
   def show
+    if @page.nil?
+      return redirect_to root_path
+    end
+
     # no layout
     if @page.hide_layout?
       render text: @page.content, layout: false

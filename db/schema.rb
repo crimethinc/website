@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209043834) do
+ActiveRecord::Schema.define(version: 20161214180847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 20161209043834) do
     t.string   "year"
     t.string   "month"
     t.string   "day"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "header_background_color"
+    t.string   "header_text_color"
     t.index ["status_id"], name: "index_articles_on_status_id", using: :btree
     t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
   end

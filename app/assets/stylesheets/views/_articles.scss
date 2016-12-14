@@ -259,7 +259,7 @@
 
       header {
         .meta .p-name {
-          padding: 25pt;
+          padding: 50pt;
         }
 
         h1 {
@@ -305,10 +305,6 @@
     .h-entry {
 
       header {
-        .meta .p-name {
-          margin-bottom: 2em;
-        }
-
         h1 {
           font-size: 4em;
           letter-spacing: -.01em;
@@ -331,6 +327,15 @@
         }
       }
 
+    }
+  }
+}
+
+#article {
+  .h-entry {
+    &.article-with-no-header-image header .meta {
+      position: relative;
+      transform: none;
     }
   }
 }

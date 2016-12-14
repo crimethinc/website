@@ -1,20 +1,18 @@
-<%# Embiggen Article titles when there's no subtitle %>
-<% if @article.subtitle.blank? %>
-  <style> #article .h-entry header .meta { font-size: 1.5em; } </style>
-<% end %>
+<%= render "articles/css", article: @article, featured: false %>
 
-
-
-<article id="article-<%= @article.id %>" class="h-entry" role="article">
+<article id="article-<%= @article.id %>" class="h-entry <%= 'article-with-no-header-image' if @article.image.blank? %>" role="article">
   <header>
     <% if @article.image.present? %>
       <%= image_tag @article.image, class: "u-photo", alt: "" %>
+    <% else %>
     <% end %>
 
     <div class="meta">
       <div class="p-name">
-        <h1 class="p-x-title">   <%= @article.title    %></h1>
-        <h2 class="p-x-subtitle"><%= @article.subtitle %></h2>
+        <h1 class="p-dm-title">   <%= @article.title    %></h1>
+        <% if @article.subtitle.present? %>
+          <h2 class="p-dm-subtitle"><%= @article.subtitle %></h2>
+        <% end %>
       </div>
     </div>
   </header>

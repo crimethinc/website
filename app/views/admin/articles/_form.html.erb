@@ -67,12 +67,14 @@
 
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <%= f.label :image, "Hero Image" %>
-        <%= f.text_field :image, class: "form-control input-lg" %>
-        <p class="help-block">
-          This is the large image that will be front and center on the <i>Article</i> page,
-          on the homepage and when syndicated to other sites. Minimum size: <code>1400x1000</code> pixels.
-        </p>
+        <div class="form-group">
+          <%= f.label :image, "Hero Image" %>
+          <%= f.text_field :image, class: "form-control input-lg" %>
+          <p class="help-block">
+            This is the large image that will be front and center on the <i>Article</i> page,
+            on the homepage and when syndicated to other sites. Minimum size: <code>1400x1000</code> pixels.
+          </p>
+        </div>
       </div>
 
       <div class="col-xs-12 col-sm-6">
@@ -88,17 +90,49 @@
 
     <hr>
 
-    <div class="form-group">
-      <%= f.label :css, "Article Specific CSS" %>
-      <%= f.text_area :css, class: "form-control", rows: 20 %>
-      <p class="help-block">
-        <% if @article.new_record? %>
-          After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
-        <% else %>
-          Prefix your CSS selectors with <b><code>#article-<%= @article.id %></code></b> to scope your styles to just this <i>Article</i>.
-          For example, <code>#article-<%= @article.id %> b { background: green }</code>.
-        <% end %>
-      </p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <div class="form-group">
+          <%= f.label :css, "Article Specific CSS" %>
+          <%= f.text_area :css, class: "form-control", rows: 20 %>
+          <p class="help-block">
+            <% if @article.new_record? %>
+            After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
+            <% else %>
+            Prefix your CSS selectors with <b><code>#article-<%= @article.id %></code></b> to scope your styles to just this <i>Article</i>.
+            For example, <code>#article-<%= @article.id %> b { background: green }</code>.
+            <% end %>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+          <%= f.label :header_background_color, "Header Background Color" %>
+          <%= f.text_field :header_background_color, class: "form-control input-lg" %>
+          <p class="help-block">
+            This can be any valid CSS color value:
+            <code>#f00</code>,
+            <code>#efefef</code>,
+            <code>rgba(0,255,255,.25)</code>,
+            <code>pink</code>,
+            etc.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :header_text_color, "Header Text Color" %>
+          <%= f.text_field :header_text_color, class: "form-control input-lg" %>
+          <p class="help-block">
+            This can be any valid CSS color value:
+            <code>#f00</code>,
+            <code>#efefef</code>,
+            <code>rgba(0,255,255,.25)</code>,
+            <code>pink</code>,
+            etc.
+          </p>
+        </div>
+      </div>
     </div>
   </fieldset>
 
