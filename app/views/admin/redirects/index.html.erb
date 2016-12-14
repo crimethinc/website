@@ -1,0 +1,29 @@
+<%= render "admin/page_header", thing: @redirects %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Source Path</th>
+      <th>Target Path</th>
+      <th>HTTP Status</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @redirects.each do |redirect| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, redirect], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to redirect.source_path, [:admin, redirect] %></td>
+        <td><%= link_to redirect.target_path, [:admin, redirect] %></td>
+        <td><%= redirect_http_status_code(redirect) %></td>
+        <td>
+          <%= link_to "DELETE", [:admin, redirect], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

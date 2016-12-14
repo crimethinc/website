@@ -1,0 +1,38 @@
+<%= form_for [:admin, redirect] do |f| %>
+  <%= render "admin/form_errors", thing: redirect %>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :source_path, "Source Path" %>
+        <%= f.text_field :source_path, class: "form-control input-lg" %>
+      </div>
+
+      <p class="help-block">The URL <b>path</b> to redirect <b>from</b></p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :target_path, "Target Path" %>
+        <%= f.text_field :target_path, class: "form-control input-lg" %>
+      </div>
+
+      <p class="help-block">The URL <b>path</b> to redirect <b>to</b></p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="form-group">
+    <%= f.check_box :temporary %>
+    <%= f.label :temporary %>
+    <p class="help-block">
+      By default, all Redirects are saved as a permanent redirect,
+      <a href="https://http.cat/301"><code>301</code></a>.<br>
+      By choosing <code>temporary</code>, it&rsquo;ll be served as a temporary redirect
+      <a href="https://http.cat/302"><code>302</code></a>.
+    </p>
+  </div>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :redirects] %>
+<% end %>

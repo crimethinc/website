@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     resources :articles
     resources :pages
     resources :links
+    resources :redirects
     resources :settings
   end
 
