@@ -110,3 +110,26 @@ end
 
 # Settings necessary for all deployments
 Setting.create!(name: "Site Name", fallback: "A Magazine")
+
+
+
+# Seed post types on multiple threads
+threads  = []
+
+puts "Trying dev seeds for each post-type..."
+%w(dev.seeds activities articles bookmarks events notes photos sounds videos pages links).each do |posttype|
+  filepath = File.expand_path("../seeds/#{posttype}.rb", __FILE__)
+
+  puts "  Trying: #{posttype}"
+  puts
+  if File.exist?(filepath)
+    puts "  Found: #{posttype}"
+    eval(File.open(filepath).read)
+    puts
+    puts "...done"
+    puts
+  end
+end
+
+# Sync up post seeds threads before proceeding
+threads.each { |t| t.join }
