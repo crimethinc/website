@@ -3,11 +3,21 @@
 <% end %>
 
 <div class="h-feed">
-  <%= render "articles/card", article: @articles.shift %>
+  <%= render "articles/card", article: article = @articles.shift %>
+  <%# Embiggen Article titles when there's no subtitle %>
+  <% if article.subtitle.blank? %>
+    <style> #home #article-<%= article.id %> header { font-size: 1.75em; } </style>
+  <% end %>
+
 
   <% @articles.in_groups_of(2).each do |row| %>
     <div class="row">
       <% row.each do |article| %>
+        <%# Embiggen Article titles when there's no subtitle %>
+        <% if article.subtitle.blank? %>
+          <style> #home #article-<%= article.id %> header { font-size: 1.5em; } </style>
+        <% end %>
+
         <%= render "articles/card", article: article %>
       <% end %>
     </div>
