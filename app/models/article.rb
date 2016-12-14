@@ -63,19 +63,19 @@ class Article < ApplicationRecord
 
   # article states through the process from creation to publishing
   def draft?
-    status == "draft"
+    status.name == "draft"
   end
 
   def edited?
-    status == "edited"
+    status.name == "edited"
   end
 
   def designed?
-    status == "designed"
+    status.name == "designed"
   end
 
   def published?
-    status == "published"
+    status.name == "published"
   end
 
   def dated?
