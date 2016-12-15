@@ -1,14 +1,3 @@
-# TODO
-redirects={}
-DATA.each do |line|
-  unless line.nil?
-    source_path, target_path = line.chomp.split
-    redirects[source_path] = target_path
-  end
-end
-
-puts redirects.inspect
-__END__
 /obsolete-page /new-page
 /b /c
 d e

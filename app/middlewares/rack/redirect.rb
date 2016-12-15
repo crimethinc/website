@@ -1,3 +1,5 @@
+require 'fileutils'
+
 module Rack
   class Redirect
     def initialize(app)
@@ -15,11 +17,20 @@ module Rack
     def call(env)
       redirects = {}
 
-      filepath = ::File.expand_path("redirects.txt", __FILE__)
+      filepath = ::File.expand_path("../redirects.txt", __FILE__)
 
       if ::File.exist?(filepath)
-        ::File.open(filepath).read.each do |line|
+        ::File.open(filepath).each do |line|
           source_path, target_path = line.chomp.split
+
+          unless source_path =~ /^\//
+            source_path = "/#{source_path}"
+          end
+
+          unless target_path =~ /^\//
+            target_path = "/#{target_path}"
+          end
+
           redirects[source_path] = target_path
         end
       end
