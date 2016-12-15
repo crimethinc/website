@@ -1,0 +1,3 @@
+/obsolete-page /new-page
+/b /c
+d e
