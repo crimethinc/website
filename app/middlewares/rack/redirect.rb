@@ -1,5 +1,3 @@
-require 'fileutils'
-
 module Rack
   class Redirect
     def initialize(app)
