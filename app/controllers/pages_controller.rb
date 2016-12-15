@@ -17,11 +17,6 @@ class PagesController < ApplicationController
   private
 
   def set_page
-    puts "*"*80
-    puts params[:draft_code]
-    puts params[:draft_code].present?
-    puts "*"*80
-
     if params[:draft_code].present?
       @page = Page.find_by(draft_code: params[:draft_code])
     else
