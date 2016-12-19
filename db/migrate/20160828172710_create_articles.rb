@@ -5,6 +5,8 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.references :status
 
       t.text       :title, :subtitle, :content, :css, :image, :image_description
+      t.string     :header_background_color, :header_text_color
+
       t.string     :slug, :draft_code
       t.datetime   :published_at
 
