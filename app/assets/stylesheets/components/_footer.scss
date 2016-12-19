@@ -22,10 +22,10 @@ footer[role=contentinfo] {
   }
 
   .footer-section-container {
-    padding: 20px;
+    padding: $border-size-large;
 
     @media screen and (min-width: #{$small-tablet}) {
-      padding: 40px;
+      padding: $border-size-xlarge;
     }
   }
 
@@ -43,7 +43,7 @@ footer[role=contentinfo] {
   .license {
     text-align: center;
     font-style: italic;
-    margin-top: 40px;
+    margin-top: $border-size-xlarge;
     padding-bottom: 4rem;
   }
 
@@ -63,7 +63,7 @@ footer[role=contentinfo] {
       line-height: 1.5em;
 
       &:hover, &:active {
-        border-bottom: 1px solid $color-true-black;
+        border-bottom: $border-size-xsmall solid $color-true-black;
       }
     }
 
@@ -148,7 +148,7 @@ footer[role=contentinfo] {
           display: inline-block;
           @include square(40px);
           @include social-icon("rss");
-          margin: 0 5px 5px 0;
+          margin: 0 $border-size-small $border-size-small 0;
         }
 
         .link-domain-facebook  { @include social-icon("facebook"); }

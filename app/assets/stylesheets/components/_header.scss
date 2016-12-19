@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10px 10px;
+  padding: $border-size-medium $border-size-medium;
 
   label {
     @include hide-text();

@@ -6,10 +6,10 @@
     size: 1.5rem;
   };
 
-  padding: 10px;
+  padding: $border-size-medium;
   width: 66%;
   text-transform: uppercase;
-  border: 1px solid #eee;
+  border: $border-size-xsmall solid #eee;
 
   &:focus {
     outline: none;

@@ -3,7 +3,7 @@
 
     header {
       position: relative;
-      border-top: 1pt solid white;
+      border-top: $border-size-xsmall solid white;
       color: white;
       margin-bottom: 1em;
 
@@ -75,7 +75,7 @@
 
     .e-content {
       color: #444;
-      padding: 0 5pt;
+      padding: 0 $border-size-small;
       font-size: 1.25em;
       font-weight: lighter;
       font-weight: 300;
@@ -139,13 +139,13 @@
       }
 
       dd {
-        margin-left: 20px;
-        margin-start: 20px;
+        margin-left: $border-size-large;
+        margin-start: $border-size-large;
       }
 
       hr {
         border: none;
-        border-bottom: 1pt solid #ccc;
+        border-bottom: $border-size-xsmall solid #ccc;
         margin: 3em auto;
         width: 50%;
         display: block;
@@ -162,7 +162,7 @@
         font-weight: 700;
         text-align: left;
         background: #eee;
-        border-bottom: 1px solid white;
+        border-bottom: $border-size-xsmall solid white;
       }
 
       th, td {
@@ -240,9 +240,9 @@
 
       p {
         display: inline-block;
-        margin:  20pt 0;
-        padding: 20pt;
-        border-top: 1pt solid #ccc;
+        margin:  $border-size-large 0;
+        padding: $border-size-large;
+        border-top: $border-size-xsmall solid #ccc;
         font-weight: lighter;
         font-weight: 300;
         font-style: italic;

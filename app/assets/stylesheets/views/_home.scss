@@ -1,7 +1,7 @@
 #home {
 
   .h-feed {
-    margin:  0 0 50pt 0;
+    margin:  0 0 $border-size-xlarge 0;
     padding: 0;
     list-style: none;
   }
@@ -20,11 +20,11 @@
   // all entries in the feed (including first/featured)
   .h-entry {
     *zoom: 1;
-    background-color:    black;
+    background-color:    $color-true-black;
     background-position: center;
     background-size:     cover;
-    border-top: 1pt solid white;
-    color: white;
+    border-bottom: $border-size-medium solid $color-white;
+    color: $color-white;
     margin:  0;
     padding: 0;
     position: relative;
@@ -40,7 +40,7 @@
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      margin: 0 5pt;
+      margin: 0 $border-size-small;
       z-index: 10;
       overflow: hidden;
     }
@@ -65,7 +65,7 @@
     }
 
     a {
-      color: white;
+      color: $color-white;
       text-decoration: none;
     }
 
@@ -109,7 +109,7 @@
       height: 300pt;
 
       header {
-        margin: 0 20pt;
+        margin: 0 $border-size-large;
       }
 
       h1 {
@@ -161,8 +161,8 @@
       }
     } /* .h-entry */
 
-    .row .h-entry:first-child {
-      border-right: 1px solid white;
+    .row .h-entry:first-of-type {
+      border-right: $border-size-medium solid $color-white;
     }
 
     .row .h-entry {
