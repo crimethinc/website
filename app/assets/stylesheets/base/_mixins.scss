@@ -1,3 +1,8 @@
+@mixin out() {
+  // for development and debugging only
+  outline: 1px solid red;
+}
+
 @mixin bold() {
   font-weight: bold;
   font-weight: 500;

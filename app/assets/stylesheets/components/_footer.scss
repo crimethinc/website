@@ -1,10 +1,10 @@
 footer[role=contentinfo] {
-  background-color: $color-light-gray;
+  background-color: $color-gray-light;
   line-height: 1.25em;
 
 
   .support-link.button {
-    background: $color-green-500;
+    background: $color-green;
     font-weight: bold;
     font-weight: 500;
   }
@@ -36,7 +36,7 @@ footer[role=contentinfo] {
 
   .simple-field {
     width: 100%;
-    border-color: $color-dark-gray;
+    border-color: $color-gray-dark;
     margin: 1rem 0;
   }
 

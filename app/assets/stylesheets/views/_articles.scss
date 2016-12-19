@@ -34,8 +34,10 @@
       }
 
       h1 {
-        font-size: 2em;
-        font-weight: 900;
+        font: {
+          size: 2em;
+          weight: 900;
+        }
         letter-spacing: -.01em;
         line-height: 1em;
         margin-bottom: .1em;
@@ -60,9 +62,11 @@
         th {
           text-align: right;
           padding-right: .25em;
-          font-weight: lighter;
-          font-weight: 300;
-          font-style: italic;
+          font: {
+            weight: lighter;
+            weight: 300;
+            style: italic;
+          }
         }
 
         td {
@@ -72,26 +76,35 @@
       } /* .contributors */
     } /* header */
 
-
     .e-content {
-      color: #444;
+      color: $color-black;
       padding: 0 $border-size-small;
-      font-size: 1.25em;
-      font-weight: lighter;
-      font-weight: 300;
+      font: {
+        size: 1.25em;
+        weight: lighter;
+        weight: 300;
+      }
       letter-spacing: .02em;
 
+      * {
+        margin: 0 auto;
+        max-width: $large-tablet - 200px;
+      }
+
       > :first-child {
+        max-width: $large-tablet;
         font-size: 1.25em;
         line-height: 1.3em;
         margin-bottom: 1em;
       }
 
       a {
-        color: #666;
+        color: $color-gray-medium;
         text-decoration: underline;
-        font-weight: bold;
-        font-weight: 700;
+        font: {
+          weight: bold;
+          weight: 700;
+        }
       }
 
       a:hover {
@@ -100,18 +113,21 @@
       }
 
       h1, h2, h3, h4, h5, h6 {
-        font-weight: bold;
-        font-weight: 700;
-        line-height: 1em;
+        font: {
+          weight: bold;
+          weight: 700;
+        }
+        line-height:   1em;
+        margin-top:    1em;
         margin-bottom: 1em;
       }
 
-      h1 { font-size: 2em    ; margin: 1em 0 .25em 0; }
-      h2 { font-size: 1.8em  ; margin: 1em 0 .25em 0; }
-      h3 { font-size: 1.75em ; margin: 1em 0 .25em 0; }
-      h4 { font-size: 1.5em  ; margin: 1em 0 .25em 0; }
-      h5 { font-size: 1.25em ; margin: 1em 0 .25em 0; }
-      h6 { font-size: 1.1em  ; margin: 1em 0 .25em 0; }
+      h1 { font-size: 2em   ; }
+      h2 { font-size: 1.8em ; }
+      h3 { font-size: 1.75em; }
+      h4 { font-size: 1.5em ; }
+      h5 { font-size: 1.25em; }
+      h6 { font-size: 1.1em ; }
 
       p {
         line-height: 1.5em;
@@ -119,28 +135,43 @@
       }
 
       i, cite, em, var, address, dfn {
-        font-style: italic;
-        font-weight: lighter;
-        font-weight: 300;
+        font: {
+          style: italic;
+          weight: lighter;
+          weight: 300;
+        }
       }
 
       dt, b, strong {
-        font-weight: bold;
-        font-weight: 700;
+        font: {
+          weight: bold;
+          weight: 700;
+        }
       }
 
       blockquote {
         width: 80%;
         margin: 2em auto;
-        font-weight: lighter;
-        font-weight: 300;
-        font-size: 1.25em;
+        font: {
+          weight: lighter;
+          weight: 300;
+          size: 1.25em;
+          style: italic;
+        }
         line-height: 1.3em;
+
+        strong,
+        b {
+          font-style: normal;
+          color: red;
+        }
       }
 
       dd {
-        margin-left: $border-size-large;
-        margin-start: $border-size-large;
+        margin: {
+          left:  $border-size-large;
+          start: $border-size-large;
+        }
       }
 
       hr {
@@ -158,8 +189,10 @@
       }
 
       th {
-        font-weight: bold;
-        font-weight: 700;
+        font: {
+          weight: bold;
+          weight: 700;
+        }
         text-align: left;
         background: #eee;
         border-bottom: $border-size-xsmall solid white;
@@ -169,11 +202,24 @@
         padding: .5em;
       }
 
+      // TODO dev only
+      .bigimage {
+        max-width: 100%;
+      }
+
       /* for single images */
       img {
         display: block;
-        margin: 2em auto;
         max-width: 100%;
+      }
+
+      figure > figcaption,
+      img + .bigimagecaption p {
+        margin-top: .5em;
+        font: {
+          size: .8em;
+          weight: normal;
+        }
       }
 
       /* for groups of images */
@@ -233,7 +279,7 @@
         font-weight: lighter;
         font-weight: 300;
       }
-    }
+    }  /* .e-content */
 
     footer {
       text-align: center;
@@ -247,7 +293,7 @@
         font-weight: 300;
         font-style: italic;
       }
-    }
+    } /* footer */
 
   } /* .h-entry */
 } /* #article */
