@@ -84,6 +84,11 @@ footer[role=contentinfo] {
 
 
   .footer-section.footer-section-about {
+
+    .about-us-heading {
+      @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 16rem, 3.2rem);
+    }
+
     .first-time-link a,
     .about-us-link a {
       @extend .button;
