@@ -1,9 +1,15 @@
 class ApplicationController < ActionController::Base
-  http_basic_authenticate_with name: "secret", password: "superdupersecretsauce", except: :index
-
   protect_from_forgery with: :exception
   before_action :check_for_redirection
   before_action :set_social_links
+
+  before_action :http_basic_authenticate
+
+  def http_basic_authenticate
+    unless Rails.env.development?
+      ApplicationController.http_basic_authenticate_with name: "secret", password: "superdupersecretsauce"
+    end
+  end
 
   def signed_in?
     current_user
