@@ -28,8 +28,8 @@
   display: block;
 }
 
-.support-link.button {
-  background: $color-green-500;
-  font-weight: bold;
-  font-weight: 500;
+.bulb-and-bones-logo {
+  @include image-replacement-graphic("icons/icon-120x120.png", "icons/icon-120x120.png", 3rem, 3rem);
+  @include size(3rem, 3rem);
+  display: block;
 }

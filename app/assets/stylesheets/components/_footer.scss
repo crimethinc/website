@@ -3,6 +3,12 @@ footer[role=contentinfo] {
   line-height: 1.25em;
 
 
+  .support-link.button {
+    background: $color-green-500;
+    font-weight: bold;
+    font-weight: 500;
+  }
+
   .footer-sections {
     display: flex;
     flex-wrap: wrap;
