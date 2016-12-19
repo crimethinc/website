@@ -31,6 +31,10 @@ module ApplicationHelper
     "en"
   end
 
+  def slug
+    @slug
+  end
+
   def author
     t(:site_name)
   end
@@ -57,7 +61,7 @@ module ApplicationHelper
     # square pixel sizes
     icon_sizes.each do |size|
       dimensions = "#{size}x#{size}"
-      href = setting("icon_#{dimensions}")
+      href = asset_path("icons/icon-#{dimensions}.png")
       output << tag(:link, rel: "apple-touch-icon icon", sizes: dimensions, href: href)
     end
 

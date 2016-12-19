@@ -1,17 +1,17 @@
 <!-- Fav and touch icons -->
-<link rel="shortcut icon" href="<%= setting :favicon %>" type="image/x-icon" />
+<link rel="shortcut icon" href="<%= "icons/favicon.ico" %>" type="image/x-icon" />
 <%= apple_touch_icon_link_tags %>
 
-<link rel="mask-icon" sizes="any" href="<%= setting :mask_icon_svg %>" color="<%= setting :mask_icon_color %>" />
+<link rel="mask-icon" sizes="any" href="<%#= TODO asset_path "icons/icon.svg" %>" color="#000000" />
 
 <!-- Windows, IE and Edge -->
-<meta name="msapplication-TileImage" content="<%= setting :ms_application_tile_image %>" />
-<meta name="msapplication-TileColor" content="<%= setting :ms_application_tile_color %>" />
+<meta name="msapplication-TileImage" content="<%= asset_path "icons/icon-144x144.png" %>" />
+<meta name="msapplication-TileColor" content="#000000" />
 
-<meta name="msapplication-square70x70logo"   content="<%= setting :icon_150x150 %>" />
-<meta name="msapplication-square150x150logo" content="<%= setting :icon_70x70   %>" />
-<meta name="msapplication-wide310x150logo"   content="<%= setting :icon_310x150 %>" />
-<meta name="msapplication-square310x310logo" content="<%= setting :icon_310x310 %>" />
+<meta name="msapplication-square70x70logo"   content="<%= asset_path "icons/icon-150x150.png" %>" />
+<meta name="msapplication-square150x150logo" content="<%= asset_path "icons/icon-70x70.png"   %>" />
+<meta name="msapplication-wide310x150logo"   content="<%= asset_path "icons/icon-310x150.png" %>" />
+<meta name="msapplication-square310x310logo" content="<%= asset_path "icons/icon-310x310.png" %>" />
 
 <!-- Icons and stuff for more browsers via manifest.json -->
 <link rel="manifest" href="/manifest.json" />

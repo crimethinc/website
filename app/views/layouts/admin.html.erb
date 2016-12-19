@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="<%= lang %>" prefix="og: http://ogp.me/ns#" id="<%= @slug %>">
+<html dir="ltr" lang="<%= lang %>" prefix="og: http://ogp.me/ns#" id="<%= slug %>">
 
 <head>
   <title><%= page_title %></title>
@@ -19,7 +19,7 @@
     <% if signed_in? %>
       <header>
         <div class="page-header">
-          <h1><%= setting :site_name %></h1>
+          <h1><%= t(:site_name) %></h1>
         </div>
       </header>
     <% end %>

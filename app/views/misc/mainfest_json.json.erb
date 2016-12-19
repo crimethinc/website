@@ -1,21 +1,21 @@
 {
-  "lang": "en",
+  "lang":       "en",
   "short_name": "<%= t(:site_name) %>",
-  "name": "<%= t(:site_name) %>",
+  "name":       "<%= t(:site_name) %>",
 
   "icons": [
     <% icon_sizes.each do |size| %>
       {
-        "src": "<%= setting "icon_#{size}x#{size}" %>",
+        "src":   "<%= asset_url "icons/icon-#{size}x#{size}" %>",
         "sizes": "<%= size %>x<%= size %>",
-        "type": "image/png"
+        "type":  "image/png"
       }<%= "," unless size == "600" %>
       <%# 600 is the last in the list of sizes, so should not get a comma after the hash %>
     <% end %>
   ],
 
-  "start_url": "/",
-  "display": "minimal-ui",
+  "start_url":        "/",
+  "display":          "minimal-ui",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  "theme_color":      "#ffffff"
 }
