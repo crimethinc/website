@@ -1,3 +1,9 @@
+<% if notice.present? %>
+  <div class="alert alert-notice">
+    <%= notice %>
+  </div>
+<% end %>
+
 <% if @pinned_to_top.present? %>
   <%= render "pages/pinned", page: @pinned_to_top, position: "top" %>
 <% end %>

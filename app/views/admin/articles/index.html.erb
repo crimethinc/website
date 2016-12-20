@@ -29,7 +29,7 @@
           <%= link_to article.dated? ? display_date(article.published_at) : "Unpublished", [:admin, article] %>
         </td>
         <td>
-          <%= link_to 'DELETE', [:admin, article], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, article], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
         </td>
       </tr>
     <% end %>

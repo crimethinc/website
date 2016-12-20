@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'subscribers/create'
+
   # Homepage
   root to: "archives#home"
 
@@ -29,6 +31,10 @@ Rails.application.routes.draw do
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
 
 
+  # Email newsletter signup
+  resources :subscribers, only: [:create]
+
+
   # Admin Dashboard
   get :admin, to: redirect("/admin/articles"), as: "admin"
   namespace :admin do
@@ -38,6 +44,7 @@ Rails.application.routes.draw do
     resources :links
     resources :redirects
     resources :settings
+    resources :subscribers
   end
 
 

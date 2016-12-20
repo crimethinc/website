@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :check_for_redirection
   before_action :set_social_links
+  before_action :set_new_subscriber
 
   before_action :http_basic_authenticate
 
@@ -52,6 +53,10 @@ class ApplicationController < ActionController::Base
 
   def set_social_links
     @social_links = Link.where(user: nil).all
+  end
+
+  def set_new_subscriber
+    @subscriber = Subscriber.new
   end
 
   def check_for_redirection
