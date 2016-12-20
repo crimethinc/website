@@ -248,11 +248,6 @@
         margin: 2em auto;
       }
 
-      img.half-size {
-        width: 50%;
-        max-width: 50%;
-      }
-
       img.auto-size {
         width: auto;
         max-width: auto;
@@ -386,6 +381,11 @@
       .e-content {
         padding: 0 10pt;
         font-size: 1.5em;
+
+        img.half-size {
+          width: 50%;
+          max-width: 50%;
+        }
       }
 
       footer {

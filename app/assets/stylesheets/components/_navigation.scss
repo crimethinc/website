@@ -79,7 +79,11 @@
     display: flex;
   }
 
-  .site-header .nav-link a {
-    padding: 1rem;
+  .site-header .nav-link {
+    width: auto;
+
+    a {
+      padding: 1rem;
+    }
   }
 }

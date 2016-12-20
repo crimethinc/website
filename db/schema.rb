@@ -71,14 +71,17 @@ ActiveRecord::Schema.define(version: 20161214191116) do
     t.text     "css"
     t.text     "image"
     t.text     "image_description"
+    t.string   "header_background_color"
+    t.string   "header_text_color"
+    t.string   "content_format",          default: "kramdown"
     t.string   "slug"
     t.string   "draft_code"
     t.datetime "published_at"
-    t.boolean  "hide_header",       default: false
-    t.boolean  "hide_footer",       default: false
-    t.boolean  "hide_layout",       default: false
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.boolean  "hide_header",             default: false
+    t.boolean  "hide_footer",             default: false
+    t.boolean  "hide_layout",             default: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["status_id"], name: "index_pages_on_status_id", using: :btree
     t.index ["user_id"], name: "index_pages_on_user_id", using: :btree
   end

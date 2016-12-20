@@ -43,8 +43,7 @@ footer[role=contentinfo] {
   .license {
     text-align: center;
     font-style: italic;
-    margin-top: $border-size-xlarge;
-    padding-bottom: 4rem;
+    padding: $border-size-xlarge $border-size-large;
   }
 
   h1 {
