@@ -39,7 +39,6 @@ class Article < ApplicationRecord
     Kramdown::Document.new(
       content,
       input: content_format == "html" ? :html : :kramdown,
-      header_offset: 1,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
       html_to_native: true
