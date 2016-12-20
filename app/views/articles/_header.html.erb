@@ -1,10 +1,8 @@
 <header>
-  <div class="p-name">
-    <h1 class="p-dm-title">   <%= link_to article.title,    article.path %></h1>
-    <h2 class="p-dm-subtitle"><%= link_to article.subtitle, article.path %></h2>
-  </div>
-
+  <%= render "articles/titles",       article: article %>
   <%= render "articles/published_on", article: article %>
-</header>
 
-<%= link_to "Read More...", article.path, class: "read-more" %>
+  <% if homepage? %>
+    <%= link_to "Read More...", article.path, class: "screen-reader-only" %>
+  <% end %>
+</header>

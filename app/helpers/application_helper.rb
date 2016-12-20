@@ -72,4 +72,7 @@ module ApplicationHelper
     simple_format(html, {}, sanitize: false).gsub("\n<br />", "</p><p>").html_safe
   end
 
+  def homepage?
+    @homepage = true
+  end
 end

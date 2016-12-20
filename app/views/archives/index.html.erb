@@ -15,16 +15,13 @@
 
             <article class="h-entry" role="article">
               <header>
-                <h1>
-                  <%= link_to article.path, class: "p-name" do %>
-                    <span class="p-dm-title"><%= article.title %></span><br>
-                    <span class="p-dm-subtitle"><%= article.subtitle %></span>
-                  <% end %>
-                </h1>
+                <%= render "articles/titles", article: @article %>
               </header>
 
               <footer>
-                <%= render "/articles/published_on", article: article %>
+                <%= render "articles/published_on", article: article %>
+                <%= render "articles/categories",   article: @article %>
+                <%= render "articles/tags",         article: @article %>
               </footer>
             </article>
 

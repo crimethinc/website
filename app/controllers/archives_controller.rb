@@ -1,6 +1,7 @@
 class ArchivesController < ApplicationController
   def home
     @slug = "home"
+    @homepage = true
 
     # feed
     @articles = Article.published.limit(5).all.to_a

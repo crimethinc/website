@@ -6,17 +6,6 @@
     list-style: none;
   }
 
-  a.read-more {
-    text-indent: -999em;
-    z-index: 1;
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-
   // all entries in the feed (including first/featured)
   .h-entry {
     *zoom: 1;

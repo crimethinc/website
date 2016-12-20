@@ -1,20 +1,16 @@
-<%= render "articles/css", article: @article, featured: false %>
+<%= render "articles/css", article: @article %>
 
 <article id="article-<%= @article.id %>" class="h-entry <%= 'article-with-no-header-image' if @article.image.blank? %>" role="article">
   <header>
     <% if @article.image.present? %>
       <%= image_tag @article.image, class: "u-photo", alt: "" %>
-    <% else %>
     <% end %>
 
     <div class="meta">
-      <div class="p-name">
-        <h1 class="p-dm-title">   <%= @article.title    %></h1>
-        <% if @article.subtitle.present? %>
-          <h2 class="p-dm-subtitle"><%= @article.subtitle %></h2>
-        <% end %>
-      </div>
+      <%= render "articles/titles", article: @article %>
     </div>
+
+    <%= render "articles/categories",   article: @article %>
   </header>
 
   <div class="e-content">
@@ -23,28 +19,7 @@
 
   <footer>
     <%= render "articles/published_on", article: @article %>
-
-    <% if @article.categories.present? %>
-      <p>
-        <b>Categories:</b>
-        <ul>
-          <% @article.categories.each do |category| %>
-            <li><%= link_to category.name, category.slug, class: "p-category" %></li>
-          <% end %>
-        </ul>
-      </p>
-    <% end %>
-
-    <% if @article.tags.present? %>
-      <p>
-        <b>Tags:</b>
-        <ul>
-          <% @article.tags.each do |tag| %>
-            <li><%= link_to tag.name, tag.slug, rel: "tag", class: "p-category" %></li>
-          <% end %>
-        </ul>
-      </p>
-    <% end %>
+    <%= render "articles/categories",   article: @article %>
+    <%= render "articles/tags",         article: @article %>
   </footer>
 </article>
-

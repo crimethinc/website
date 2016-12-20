@@ -1,0 +1,10 @@
+<% if article.tags.present? %>
+  <div class="tags">
+    <b class="label">Tags:</b>
+    <ul>
+      <% article.tags.each do |tag| %>
+        <li><%= link_to tag.name, tag.slug, rel: "tag", class: "p-category" %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

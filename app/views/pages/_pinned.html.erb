@@ -5,10 +5,7 @@
 
   <section class="pinned-page pinned-page-<%= position %>" role="region">
     <article class="h-x-page" role="article">
-      <header class="p-name">
-        <h1 class="p-dm-title"><%= page.title %></h1>
-        <h2 class="p-dm-subtitle"><%= page.subtitle %></h2>
-      </header>
+      <%= render "articles/titles", article: page %>
 
       <div class="pinned-page-content">
         <% if page.image.present? %>
