@@ -2,5 +2,7 @@
   <article class="h-entry" id="article-<%= article.id %>" style="background-image: url(<%= article.image %>)" role="article">
     <%= render "articles/header",     article: article %>
     <%= render "articles/categories", article: article %>
+
+    <%= link_to "Read More...", article.path, class: "read-more" %>
   </article>
 <% end %>

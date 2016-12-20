@@ -1,8 +1,4 @@
 <header>
   <%= render "articles/titles",       article: article %>
   <%= render "articles/published_on", article: article %>
-
-  <% if homepage? %>
-    <%= link_to "Read More...", article.path, class: "screen-reader-only" %>
-  <% end %>
 </header>
