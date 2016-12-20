@@ -21,7 +21,7 @@ class Admin::LinksController < Admin::AdminController
     @link = Link.new(link_params)
 
     if @link.save
-      redirect_to [:admin, :links], notice: 'Link was successfully created.'
+      redirect_to [:admin, :links], notice: "Link was successfully created."
     else
       render :new
     end
@@ -34,7 +34,7 @@ class Admin::LinksController < Admin::AdminController
   # /admin/links/edit/1
   def update
     if @link.update(link_params)
-      redirect_to [:admin, :links], notice: 'Link was successfully updated.'
+      redirect_to [:admin, :links], notice: "Link was successfully updated."
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class Admin::LinksController < Admin::AdminController
 
   def destroy
     @link.destroy
-    redirect_to [:admin, :links], notice: 'Link was successfully destroyed.'
+    redirect_to [:admin, :links], notice: "Link was successfully destroyed."
   end
 
   private

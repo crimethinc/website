@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'subscribers/create'
-
   # Homepage
   root to: "archives#home"
 
@@ -45,6 +43,7 @@ Rails.application.routes.draw do
     resources :redirects
     resources :settings
     resources :subscribers
+    resources :themes
   end
 
 

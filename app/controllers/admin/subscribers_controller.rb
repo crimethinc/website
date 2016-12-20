@@ -1,4 +1,5 @@
 class Admin::SubscribersController < Admin::AdminController
+  before_action :authorize
   before_action :set_subscriber, only: [:show, :edit, :update, :destroy]
 
   # /admin/subscribers
