@@ -19,7 +19,9 @@ gem "uglifier"
 gem "jquery-rails"
 
 # text utilities
-gem "sterile"
+gem "sterile"  # for slugs
+gem "kramdown" # for Markdown processing
+gem "stringex" # for Markdown header IDs processing
 
 # auth
 gem "bcrypt", "~> 3.1.7"

@@ -35,6 +35,17 @@ class Article < ApplicationRecord
     end
   end
 
+  def content_rendered
+    Kramdown::Document.new(
+      content,
+      input: content_format == "html" ? :html : :kramdown,
+      header_offset: 1,
+      remove_block_html_tags: false,
+      transliterated_header_ids: true,
+      html_to_native: true
+    ).to_html.html_safe
+  end
+
   def slug_exists?
     Article.on(published_at).where(slug: slug).exists?
   end

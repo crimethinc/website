@@ -26,14 +26,15 @@ ActiveRecord::Schema.define(version: 20161214191116) do
     t.text     "image_description"
     t.string   "header_background_color"
     t.string   "header_text_color"
+    t.string   "content_format",          default: "kramdown"
     t.string   "slug"
     t.string   "draft_code"
     t.datetime "published_at"
     t.string   "year"
     t.string   "month"
     t.string   "day"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["status_id"], name: "index_articles_on_status_id", using: :btree
     t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
   end

@@ -4,13 +4,16 @@ class CreatePages < ActiveRecord::Migration[5.0]
       t.references :user
       t.references :status
 
-      t.text     :title, :subtitle, :content, :css, :image, :image_description
-      t.string   :slug, :draft_code
-      t.datetime :published_at
+      t.text       :title, :subtitle, :content, :css, :image, :image_description
+      t.string     :header_background_color, :header_text_color
+      t.string     :content_format, default: "kramdown"
 
-      t.boolean  :hide_header, default: false
-      t.boolean  :hide_footer, default: false
-      t.boolean  :hide_layout, default: false
+      t.string     :slug, :draft_code
+      t.datetime   :published_at
+
+      t.boolean    :hide_header, default: false
+      t.boolean    :hide_footer, default: false
+      t.boolean    :hide_layout, default: false
 
       t.timestamps
     end
