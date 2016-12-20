@@ -1,11 +1,11 @@
 <div class="p-name">
   <h1 class="p-dm-title">
-    <%= link_to_unless_current article.title, article.path %>
+    <%= link_to_if linked, article.title, article.path %>
   </h1>
 
   <% if article.subtitle.present? %>
     <h2 class="p-dm-subtitle">
-      <%= link_to_unless_current article.subtitle, article.path %>
+      <%= link_to_if linked, article.subtitle, article.path %>
     </h2>
   <% end %>
 </div>

@@ -9,6 +9,12 @@
   <%= render "shared/header" %>
 
   <main role="main">
+    <%= render "shared/alerts" %>
+
+    <% if @pinned_to_site_top.present? %>
+      <%= render "pages/pinned", page: @pinned_to_site_top, position: "site-top" %>
+    <% end %>
+
     <%= yield %>
   </main>
 

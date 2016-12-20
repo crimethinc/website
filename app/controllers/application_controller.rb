@@ -1,10 +1,30 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :http_basic_authenticate
+
   before_action :check_for_redirection
   before_action :set_social_links
   before_action :set_new_subscriber
+  before_action :set_pinned_pages
 
-  before_action :http_basic_authenticate
+  def set_pinned_pages
+    # pinned article
+    pinned_to_site_top_page_id      = setting(:pinned_to_site_top_page_id)
+    pinned_to_footer_top_page_id    = setting(:pinned_to_footer_top_page_id)
+    pinned_to_footer_bottom_page_id = setting(:pinned_to_footer_bottom_page_id)
+
+    if pinned_to_site_top_page_id.present?
+      @pinned_to_site_top = Page.find(pinned_to_site_top_page_id)
+    end
+
+    if pinned_to_footer_top_page_id.present?
+      @pinned_to_footer_top = Page.find(pinned_to_footer_top_page_id)
+    end
+
+    if pinned_to_footer_bottom_page_id.present?
+      @pinned_to_footer_bottom = Page.find(pinned_to_footer_bottom_page_id)
+    end
+  end
 
   def http_basic_authenticate
     unless Rails.env.development?

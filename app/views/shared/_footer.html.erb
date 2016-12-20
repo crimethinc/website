@@ -1,9 +1,17 @@
 <footer role="contentinfo">
+  <% if @pinned_to_footer_top.present? %>
+    <%= render "pages/pinned", page: @pinned_to_footer_top, position: "footer-top" %>
+  <% end %>
+
   <div class="footer-sections">
     <%= render "shared/footer/nav" %>
     <%= render "shared/footer/about" %>
     <%= render "shared/footer/contact" %>
   </div>
+
+  <% if @pinned_to_footer_bottom.present? %>
+    <%= render "pages/pinned", page: @pinned_to_footer_bottom, position: "footer-bottom" %>
+  <% end %>
 
   <div rel="license" class="license">
     <p><%= t("footer.license") %></p>

@@ -15,7 +15,7 @@
     line-height: 1.25em;
   }
 
-  &.pinned-page-top {
+  &.pinned-page-site-top {
     .dm-title {
       font: {
         size: 2.5rem;
@@ -89,7 +89,7 @@
     }
   }
 
-  &.pinned-page-bottom {
+  &.pinned-page-home-bottom {
     margin: $border-size-xlarge auto;
 
     .dm-title {

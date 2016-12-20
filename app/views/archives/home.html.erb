@@ -1,13 +1,3 @@
-<% if notice.present? %>
-  <div class="alert alert-notice">
-    <%= notice %>
-  </div>
-<% end %>
-
-<% if @pinned_to_top.present? %>
-  <%= render "pages/pinned", page: @pinned_to_top, position: "top" %>
-<% end %>
-
 <div class="h-feed">
   <%= render "archives/card_css", article: @articles.first, featured: false %>
   <%= render "archives/card",     article: @articles.first %>
@@ -22,6 +12,6 @@
   <% end %>
 </div>
 
-<% if @pinned_to_bottom.present? %>
-  <%= render "pages/pinned", page: @pinned_to_bottom, position: "bottom" %>
+<% if @pinned_to_home_bottom.present? %>
+  <%= render "pages/pinned", page: @pinned_to_home_bottom, position: "home-bottom" %>
 <% end %>
