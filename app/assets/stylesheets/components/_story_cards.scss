@@ -4,13 +4,17 @@
     display: none;
   }
 
-  background: $color-true-black;
   position: absolute;
   bottom:  10px;
   right:   10px;
-  padding: $border-size-medium;
   text-transform: uppercase;
   z-index: 20;
+
+  li {
+    display: inline-block;
+    padding: $border-size-medium;
+    background: $color-true-black;
+  }
 
   a {
     text-decoration: none;
