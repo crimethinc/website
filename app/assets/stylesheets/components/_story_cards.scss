@@ -5,8 +5,8 @@
   }
 
   position: absolute;
-  bottom:  10px;
-  right:   10px;
+  bottom:  $border-size-medium;
+  right:   $border-size-medium;
   text-transform: uppercase;
   z-index: 20;
 
@@ -18,5 +18,31 @@
 
   a {
     text-decoration: none;
+  }
+}
+
+#home           .theme,
+#article header .theme {
+  position: absolute;
+  top:     $border-size-medium;
+  right:   $border-size-medium;
+  z-index: 20;
+  display: inline-block;
+  padding: $border-size-medium;
+  background: $color-true-black;
+  text-align: right;
+  line-height: 1.25em;
+
+  a {
+    text-decoration: none;
+  }
+
+  .label {
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .name {
+    font-style: italic;
   }
 }

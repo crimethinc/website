@@ -1,4 +1,5 @@
 class Theme < ApplicationRecord
+  has_many :articles
   before_validation :generate_slug, on: [:create, :update]
 
   private

@@ -1,6 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :user, optional: true
   belongs_to :status
+  belongs_to :theme
 
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings

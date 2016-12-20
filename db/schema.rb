@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20161220085019) do
   create_table "articles", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "status_id"
+    t.integer  "theme_id"
     t.text     "title"
     t.text     "subtitle"
     t.text     "content"
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20161220085019) do
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
     t.index ["status_id"], name: "index_articles_on_status_id", using: :btree
+    t.index ["theme_id"], name: "index_articles_on_theme_id", using: :btree
     t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
   end
 

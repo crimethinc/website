@@ -1,0 +1,10 @@
+<% if article.theme.present? %>
+  <div class="theme">
+    <p>
+      <%= link_to article.theme.slug do %>
+        <b class="label">Theme</b>
+        <i class="name"><%= article.theme.name %></i>
+      <% end %>
+    </p>
+  </div>
+<% end %>
