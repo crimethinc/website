@@ -9,10 +9,10 @@
 <% end %>
 
 <div class="h-feed">
-  <%= render "archives/card_css", article: article = @articles.shift, featured: false %>
-  <%= render "archives/card",     article: article %>
+  <%= render "archives/card_css", article: @articles.first, featured: false %>
+  <%= render "archives/card",     article: @articles.first %>
 
-  <% @articles.in_groups_of(2).each do |row| %>
+  <% @articles[1..5].in_groups_of(2).each do |row| %>
     <div class="row">
       <% row.each do |article| %>
         <%= render "archives/card_css", article: article, featured: false %>
