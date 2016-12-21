@@ -1,0 +1,39 @@
+<%= render "admin/page_header", thing: @episodes %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Image</th>
+      <th>Content</th>
+      <th>Audio url</th>
+      <th>Audio length</th>
+      <th>Audio type</th>
+      <th>Tags</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @episodes.each do |episode| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, episode], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to episode.title, [:admin, episode] %></td>
+        <td><%= link_to episode.subtitle, [:admin, episode] %></td>
+        <td><%= episode.image %></td>
+        <td><%= episode.content %></td>
+        <td><%= episode.audio_url %></td>
+        <td><%= episode.audio_length %></td>
+        <td><%= episode.audio_type %></td>
+        <td><%= episode.tags %></td>
+        <td>
+          <%= link_to "DELETE", [:admin, episode], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

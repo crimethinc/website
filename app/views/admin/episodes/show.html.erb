@@ -1,0 +1,52 @@
+<%= render "admin/page_header", thing: @episode %>
+
+<article>
+  <header>
+    <div class="p-name">
+      <h1><%= @episode.title %></h1>
+      <h2><%= @episode.subtitle %></h2>
+    </div>
+  </header>
+
+  <div class="e-content">
+    <p>
+      <strong>Title:</strong>
+      <%= @episode.title %>
+    </p>
+
+    <p>
+      <strong>Subtitle:</strong>
+      <%= @episode.subtitle %>
+    </p>
+
+    <p>
+      <strong>Image:</strong>
+      <%= @episode.image %>
+    </p>
+
+    <p>
+      <strong>Content:</strong>
+      <%= @episode.content %>
+    </p>
+
+    <p>
+      <strong>Audio url:</strong>
+      <%= @episode.audio_url %>
+    </p>
+
+    <p>
+      <strong>Audio length:</strong>
+      <%= @episode.audio_length %>
+    </p>
+
+    <p>
+      <strong>Audio type:</strong>
+      <%= @episode.audio_type %>
+    </p>
+
+    <p>
+      <strong>Tags:</strong>
+      <%= @episode.tags %>
+    </p>
+  </div>
+</article>

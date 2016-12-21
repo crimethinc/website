@@ -1,0 +1,53 @@
+<%= render "admin/page_header", thing: @podcasts %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Slug</th>
+      <th>Language</th>
+      <th>Copyright</th>
+      <th>Image</th>
+      <th>Content</th>
+      <th>iTunes author</th>
+      <th>iTunes categories</th>
+      <th>iTunes email</th>
+      <th>iTunes explicit</th>
+      <th>iTunes keywords</th>
+      <th>iTunes name</th>
+      <th>iTunes summary</th>
+      <th>iTunes url</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @podcasts.each do |podcast| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, podcast], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to podcast.title, [:admin, podcast] %></td>
+        <td><%= link_to podcast.subtitle, [:admin, podcast] %></td>
+        <td><%= podcast.slug %></td>
+        <td><%= podcast.language %></td>
+        <td><%= podcast.copyright %></td>
+        <td><%= podcast.image %></td>
+        <td><%= podcast.content %></td>
+        <td><%= podcast.itunes_author %></td>
+        <td><%= podcast.itunes_categories %></td>
+        <td><%= podcast.itunes_owner_email %></td>
+        <td><%= podcast.itunes_explicit %></td>
+        <td><%= podcast.tags %></td>
+        <td><%= podcast.itunes_owner_name %></td>
+        <td><%= podcast.itunes_summary %></td>
+        <td><%= podcast.itunes_url %></td>
+        <td>
+          <%= link_to "DELETE", [:admin, podcast], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161220085019) do
+ActiveRecord::Schema.define(version: 20161221015941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,21 @@ ActiveRecord::Schema.define(version: 20161220085019) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "episodes", force: :cascade do |t|
+    t.integer  "podcast_id"
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "image"
+    t.string   "content"
+    t.text     "audio_url"
+    t.string   "audio_length"
+    t.string   "audio_type",   default: "audio/mpeg"
+    t.string   "tags"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["podcast_id"], name: "index_episodes_on_podcast_id", using: :btree
+  end
+
   create_table "links", force: :cascade do |t|
     t.string   "name"
     t.text     "url"
@@ -86,6 +101,26 @@ ActiveRecord::Schema.define(version: 20161220085019) do
     t.datetime "updated_at",                                   null: false
     t.index ["status_id"], name: "index_pages_on_status_id", using: :btree
     t.index ["user_id"], name: "index_pages_on_user_id", using: :btree
+  end
+
+  create_table "podcasts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "slug"
+    t.string   "language"
+    t.string   "copyright"
+    t.text     "image"
+    t.text     "content"
+    t.string   "itunes_author"
+    t.string   "itunes_categories"
+    t.boolean  "itunes_explicit",    default: true
+    t.string   "tags"
+    t.string   "itunes_summary"
+    t.string   "itunes_owner_name"
+    t.string   "itunes_owner_email"
+    t.text     "itunes_url"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "redirects", force: :cascade do |t|

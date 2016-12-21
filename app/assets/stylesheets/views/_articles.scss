@@ -1,6 +1,10 @@
 #article {
-  .h-entry {
+  main {
+    padding: 0;
+    margin: 0 auto;
+  }
 
+  .h-entry {
     header {
       position: relative;
       border-top: $border-size-xsmall solid white;

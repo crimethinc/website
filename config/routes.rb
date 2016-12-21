@@ -28,8 +28,20 @@ Rails.application.routes.draw do
   # Articles Atom Feed
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
 
+  # Pages
+  get "read",   to: "about#read",   as: :read
+  get "watch",  to: "about#watch",  as: :watch
+  get "listen", to: redirect("podcast"), as: :listen_redirect # TEMP TODO
+  get "listen", to: "about#listen", as: :listen
 
-  # Email newsletter signup
+  # Podcast
+  get "podcast",     to: "podcast#index",  as: :podcast
+  get "podcast/:id", to: "podcast#show",   as: :episode
+
+
+
+
+  # Email newsletter signup, used on homepage
   resources :subscribers, only: [:create]
 
 
@@ -39,6 +51,8 @@ Rails.application.routes.draw do
     resources :users
     resources :articles
     resources :pages
+    resources :podcasts
+    resources :episodes
     resources :links
     resources :redirects
     resources :settings
@@ -58,12 +72,6 @@ Rails.application.routes.draw do
   get "signup",   to: "auth/users#new",        as: :signup
   get "signin",   to: "auth/sessions#new",     as: :signin
   get "signout",  to: "auth/sessions#destroy", as: :signout
-
-
-  # Pages
-  get "read",   to: "about#read",   as: :read
-  get "watch",  to: "about#watch",  as: :watch
-  get "listen", to: "about#listen", as: :listen
 
 
   # Misc plumbing infrastructure

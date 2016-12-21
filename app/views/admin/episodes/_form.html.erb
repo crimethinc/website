@@ -1,0 +1,50 @@
+<%= form_for [:admin, @episode] do |f| %>
+  <%= render "admin/form_errors", thing: @episode %>
+
+  <%= f.hidden_field :podcast_id, value: 1 %>
+
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_area :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :audio_url %>
+    <%= f.text_area :audio_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :audio_length %>
+    <%= f.text_field :audio_length %>
+  </div>
+
+  <div class="field">
+    <%= f.label :audio_type %>
+    <%= f.text_field :audio_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tags %>
+    <%= f.text_field :tags %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
