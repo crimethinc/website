@@ -33,11 +33,13 @@ Rails.application.routes.draw do
   get "watch",  to: "about#watch",  as: :watch
   get "listen", to: redirect("podcast"), as: :listen_redirect # TEMP TODO
   get "listen", to: "about#listen", as: :listen
+  get "buy",    to: redirect("http://store.crimethinc.com"), as: :buy_redirect # TEMP TODO
+  get "buy",    to: "about#buy",    as: :buy
 
   # Podcast
-  get "podcast/feed", to: redirect("http://exworker.libsyn.com/rss"), as: :podcast_feed # TEMP TODO
+  get "podcast/feed", to: redirect("http://exworker.libsyn.com/rss"), as: :podcast_feed_redirect # TEMP TODO
+  get "podcast/feed", to: "podcast#feed",   as: :podcast_feed
   get "podcast",      to: "podcast#index",  as: :podcast
-  # get "podcast/feed", to: "podcast#feed",   as: :podcast_feed
   get "podcast/:id",  to: "podcast#show",   as: :episode
   get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
 
