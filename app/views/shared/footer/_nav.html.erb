@@ -6,11 +6,13 @@
     <dl>
       <dt class="nav-label nav-label-articles"><%= link_to t("footer.nav.articles.label"), "/archives" %></dt>
     	<dd>
+        <%= link_to t("footer.nav.articles.adventure"),  "/adventure"  %>,
+        <%= link_to t("footer.nav.articles.analysis"),   "/analysis"   %>,
         <%= link_to t("footer.nav.articles.arts"),       "/arts"       %>,
-        <%= link_to t("footer.nav.articles.technology"), "/technology" %>,
-        <%= link_to t("footer.nav.articles.politics"),   "/politics"   %>,
+        <%= link_to t("footer.nav.articles.geography"),  "/geography"  %>,
         <%= link_to t("footer.nav.articles.history"),    "/history"    %>,
-        <%= link_to t("footer.nav.articles.social"),     "/social"     %>,
+        <%= link_to t("footer.nav.articles.news"),       "/news"       %>,
+        <%= link_to t("footer.nav.articles.technology"), "/technology" %>
       </dd>
 
       <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), "/books" %></dt>
@@ -27,14 +29,6 @@
         <%= link_to t("footer.nav.podcast.the_ex_worker"), "/podcast" %>
       </dd>
 
-      <dt class="nav-label nav-label-videos"><%= link_to t("footer.nav.videos.label"), "/videos" %></dt>
-
-      <dt class="nav-label nav-label-journal"><%= link_to t("footer.nav.journal.label"), "/rolling-thunder" %></dt>
-
-      <dd>
-        <%= link_to t("footer.nav.journal.rolling_thunder"), "/rolling-thunder" %>
-      </dd>
-
       <dt class="nav-label nav-label-tools"><%= link_to t("footer.nav.tools.label"), "/tools" %></dt>
       <dd>
         <%= link_to t("footer.nav.tools.downloads"), "/tools/downloads" %>,
@@ -42,6 +36,13 @@
         <%= link_to t("footer.nav.tools.guides"),    "/tools/guides" %>,
         <%= link_to t("footer.nav.tools.stickers"),  "/tools/stickers" %>,
         <%= link_to t("footer.nav.tools.videos"),    "/tools/video" %>
+      </dd>
+
+
+      <dt class="nav-label nav-label-journal"><%= link_to t("footer.nav.journal.label"), "/rolling-thunder" %></dt>
+
+      <dd>
+        <%= link_to t("footer.nav.journal.rolling_thunder"), "/rolling-thunder" %>
       </dd>
 
       <dt class="nav-label nav-label-store"><%= link_to t("footer.nav.store.label"), "/store" %></dt>

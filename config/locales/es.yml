@@ -1,4 +1,4 @@
-en:
+es:
   language_direction: ltr
   site_name: CrimethInc.
 
@@ -15,12 +15,13 @@ en:
   footer:
     nav:
       articles:
-        label: Articles
+        adventure: Adventure
+        analysis: Analysis
         arts: Arts
-        technology: Technology
-        politics: Politics
+        geography: Geography
         history: History
-        social: Social
+        news: News
+        technology: Technology
 
       books:
         label: Books
