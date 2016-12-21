@@ -63,8 +63,10 @@ ActiveRecord::Schema.define(version: 20161221015941) do
     t.string   "content"
     t.text     "audio_url"
     t.string   "audio_length"
+    t.string   "duration"
     t.string   "audio_type",   default: "audio/mpeg"
     t.string   "tags"
+    t.datetime "published_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id", using: :btree

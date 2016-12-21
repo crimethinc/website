@@ -29,6 +29,7 @@ gem "bcrypt", "~> 3.1.7"
 # dev and testing
 group :development, :test do
   gem "byebug", platform: :mri
+  gem "nokogiri"
 end
 
 # dev

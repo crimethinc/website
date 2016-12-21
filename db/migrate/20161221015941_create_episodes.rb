@@ -8,8 +8,10 @@ class CreateEpisodes < ActiveRecord::Migration[5.0]
       t.string :content
       t.text :audio_url
       t.string :audio_length
+      t.string :duration
       t.string :audio_type, default: "audio/mpeg"
       t.string :tags
+      t.datetime :published_at
 
       t.timestamps
     end

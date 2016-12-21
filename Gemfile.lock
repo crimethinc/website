@@ -160,6 +160,7 @@ DEPENDENCIES
   jquery-rails
   kramdown
   listen (~> 3.0.5)
+  nokogiri
   pg
   puma
   rails (~> 5.0.0, >= 5.0.0.1)
