@@ -1,6 +1,7 @@
 html,
 body {
   font-size: 62.5%;
+  max-width: $large-desktop;
 }
 
 body {
@@ -31,7 +32,6 @@ main {
   clear: both;
   margin: 0 auto;
   width: 100%;
-  max-width: $large-desktop;
 }
 
 a {
