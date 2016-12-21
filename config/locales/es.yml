@@ -15,6 +15,7 @@ es:
   footer:
     nav:
       articles:
+        label: Articles
         adventure: Adventure
         analysis: Analysis
         arts: Arts
