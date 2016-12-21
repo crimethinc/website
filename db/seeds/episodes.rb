@@ -1,709 +1,89 @@
 require "nokogiri"
 
-podcast_xml = %q{
-<channel>
-  <item>
-    <title>#52: An Ex-Voter's Guide to the 2016 Presidential Election</title>
-    <pubDate>Mon, 07 Nov 2016 19:38:58 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[79d4b78dbe901d4c5ade6b796ca84944]]></guid>
-    <link><![CDATA[http://www.crimethinc.com/podcast/52/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/0/6/3/5/06352d50d737456f/ep52-1400.jpg" />
-    <description><![CDATA[<p>We know you’ve been on the edge of your seat, waiting for see which candidate will receive the Ex-Worker’s endorsement for president this year. In <a href= "http://crimethinc.com/podcast/52">Episode 52</a>, we offer an Ex-Voter’s guide to the 2016 election, including an analysis of the risks we anticipate in its aftermath titled <a href= "http://www.crimethinc.com/texts/r/reaction/">After the Election, the Reaction</a>. There’s lots of listener feedback to discuss, including advice for a young anarchist on less illegal or risky forms of anarchist action, updates about conflict between the Turkish state and the forces of Rojava, and a nuanced discussion of what “solidarity” really means, or should mean, in concrete terms. On the Chopping Block, we undertake a work of fiction for the first time, Nanni Balestrini’s <em>Vogliamo Tutto</em>, or <a href= "https://www.versobooks.com/books/2114-we-want-everything">We Want Everything</a>. There’s also an announcement about some upcoming CrimethInc. developments, along with <a href= "https://nycabc.wordpress.com/pppow-birthday-calendar/">prisoner birthdays</a> and more. We released this episode in tandem with an audio zine exploring anarchist critiques of voting, elections, and representative democracy, which you can download as <a href= "http://crimethinc.com/podcast/51">Episode 51</a>. {November 7, 2016}</p> <p> </p> <p>-------SHOW NOTES------</p> <p> </p> <ul> <li>Our discussion of the 2016 Presidential election and its likely aftermath centered around <a href= "http://www.crimethinc.com/texts/r/reaction/">After the Election, the Reaction</a>, the recently published text from the CrimethInc. blog. It also included clips from <a href= "https://www.youtube.com/watch?v=foWx42_1Loc">Wavy Gravy</a>, <a href="https://www.youtube.com/watch?v=xIraCchPDhk">George Carlin</a>, <a href= "https://www.youtube.com/watch?v=hyLOfJpObjI">the Las Vegas Trump/Clinton debate</a>, <a href= "http://www.breitbart.com/milo/2016/07/29/roger-stone-milo-show-trump-can-fight-voter-fraud/"> Trump’s advisor Roger Stone</a>, and <a href= "https://www.youtube.com/watch?v=JM3es9UQH6A&list=PL7_creJTRlKkKxH6e4TEV_1WRqE7ZzuvF"> Public Enemy</a>.</li> <li>On the Chopping Block, we reviewed <em>Vogliamo Tutto</em>, or <a href= "https://www.versobooks.com/books/2114-we-want-everything">We Want Everything</a>, by Nanni Balestrini.</li> <li>In our listener feedback discussions, we mentioned a wide range of less-risky ways to get involved, including <a href= "http://www.crimethinc.com/texts/atoz/reallyreally.php">organizing Really Really Free Markets</a>, helping start a <a href= "https://www.sproutdistro.com/catalog/zines/organizing/build-your-own-solidarity-network/"> Solidarity Network</a>, researching polluters and <a href= "https://prisondivest.com">prison profiteers</a> like <a href= "https://twitter.com/hashtag/stopcca">CCA</a>, <a href= "https://dropgeo.wordpress.com/">the Geo Group</a>, Enbridge, and <a href= "http://zad.nadir.org/spip.php?rubrique62&lang=en">VINCI</a>, learning about <a href="https://ssd.eff.org/">electronic security and encryption and how to beat surveillance</a>, screening video from <a href="http://submedia.tv">SubMedia</a>, raising money for <a href= "https://denverabc.wordpress.com/prisoners-dabc-supports/">political prisoners</a>, <a href="http://www.supportrojava.org/">solidarity groups in Rojava</a>, or the <a href= "http://nodaplsolidarity.org/">occupation resisting the Dakota Access Pipeline</a>, and lots more.</li> <li>We also referred to writings by anarchist people of color and writings about black anarchism, such as the work of <a href= "http://www.anarchistpanther.net/">Ashanti Alston</a>, <a href= "http://tucsonabc.org/wp-content/uploads/2016/04/Black-Anarchism-A-Reader.pdf"> Black Anarchism: A Reader</a>, <a href= "https://theanarchistlibrary.org/library/lorenzo-kom-boa-ervin-anarchism-and-the-black-revolution"> Anarchism and the Black Revolution</a> by Lorenzo Kom’boa Ervin, <a href= "https://theanarchistlibrary.org/library/kuwasi-balagoon-anarchy-can-t-fight-alone"> Anarchy Can’t Fight Alone</a> and other writings by <a href= "https://theanarchistlibrary.org/category/author/kuwasi-balagoon">Kuwasi Balagoon</a>, <a>African Anarchism</a> by Sam Mbah](https://theanarchistlibrary.org/library/march–2012-interview-with-sam-mbah), <a href="https://www.facebook.com/AnarchistPeopleOfColor">Anarchist People of Color</a> (APOC), and the zine <a href= "http://tucsonabc.org/wp-content/uploads/2016/04/ocor_book_1.pdf">Our Culture, Our Resistance</a>.</li> <li>In our discussion of Turkey and Rojava, we mentioned <a href= "http://i.imgur.com/hHl5Tov.jpg">this grim picture of the city of Nusaybin from occupied northern Kurdistan</a>. The Noam Chomsky excerpt came from the 2001 CD “An American Addiction.”</li> <li>In our discussion of solidarity, we referred to Gabriel Kuhn’s book <a href= "https://www.leftwingbooks.net/book/content/turning-money-rebellion-unlikely-story-denmark%E2%80%99s-revolutionary-bank-robbers"> Turning Money into Rebellion</a> on solidarity-motivated Danish communist bank robbers - also check out the interview with Gabriel about the book on the Stand Up Fight Back podcast (their website is down, but you can find it via iTunes). We also mentioned our discussion of radical martyrs and martyrdom in <a href= "http://crimethinc.com/podcast/50">Episode 50</a>, <a href= "http://www.supportrojava.org/">Rojava Solidarity NYC</a>, <a href= "https://en.wikipedia.org/wiki/Weather_Underground">the Weather Underground</a>, <a href= "https://en.wikipedia.org/wiki/George_Jackson_Brigade">the George Jackson Brigade</a>, <a href= "https://theanarchistlibrary.org/library/luciano-tortuga-pitronello-letters"> Luciano “Tortuga” Pitronello’s prison letters</a> - we reviewed them in <a href="http://crimethinc.com/podcast/5">Episode 5</a>, and interviewed Tortuga in <a href= "http://crimethinc.com/podcast/30">Episode 30</a> - <a href= "https://freeosoblanco.blogspot.com/">Oso Blanco</a>, and <a href= "https://325.nostate.net/tag/phoenix-project/">the Phoenix Project</a>.</li> <li>Prisoner birthdays last month:</li> <li><a href= "http://denverabc.wordpress.com/prisoners-dabc-supports/political-prisoners-database/justin-solondz/"> Justin Solondz</a> #98291–011<br /> FCI Oakdale I<br /> Post Office Box 5000<br /> Oakdale, Louisiana 71463<br /> {October 3rd}<br /> <br /> <a href= "http://www.cleveland4solidarity.org/content/joshua-skelly-stafford"> Joshua Stafford</a> #57976–060<br /> USP Tucson<br /> P.O. BOX 24550<br /> Tucson, AZ 85734<br /> <em>Please address card/letter to Skelly, envelope to Joshua Stafford</em><br /> {October 3rd}<br /> <br /> <a href="http://www.imamjamilactionnetwork.org/">Jamil Abdullah Al-Amin</a> #99974–555<br /> USP Tuscon<br /> Post Office Box 24550<br /> Tuscon, Arizona 85734<br /> {October 4th}<br /> <br /> <a href= "http://www.kersplebedeb.com/mystuff/profiles/gilbert.html">David Gilbert</a> #83-A–6158<br /> Auburn Correctional Facility<br /> Post Office Box 618<br /> Auburn, New York 13021<br /> {October 6th}<br /> <br /> <a href="http://move9parole.blogspot.com">Michael Davis Africa</a> #AM–4973<br /> SCI Graterford<br /> Post Office Box 244<br /> Graterford, Pennsylvania 19426–0244<br /> {October 6th}<br /> <br /> Meral Smith<br /> Seguro Correctional Center<br /> 1252 East Arica Road<br /> Eloy, Arizona 85131<br /> <em>Please address card/letter to Malik, envelope to Meral Smith</em><br /> {October 8th}<br /> <br /> <a href= "http://www.thejerichomovement.com/profile/hayes-robert-seth">Robert Seth Hayes</a> #74-A–2280 Sullivan Correctional Facility<br /> P.O. Box 116<br /> Fallsburg, NY 12733–0116<br /> {October 15th}<br /> <br /> <a href="http://freejalil.com/">Anthony J. Bottom</a> #77A4283<br /> Attica C.F.<br /> P.O. Box 149<br /> Attica, NY 14011–0149<br /> <em>Please address card/letter to Jalil, envelope to Anthony Bottom</em><br /> {October 18th}<br /> <br /> <a href= "https://denverabc.wordpress.com/prisoners-dabc-supports/political-prisoners-database/edward-goodman-africa/"> Edward Goodman Africa</a> #AM–4974<br /> SCI Mahonoy<br /> 301 Morea Road<br /> Frackville, PA 17932<br /> {October 31st}</li> </ul> <p> </p>]]></description>
-    <enclosure length="36437383" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/52_An-Ex-Voters-Guide-to-the-2016-Presidential-Election.mp3?dest-id=139038" />
-    <itunes:duration>01:14:39</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[We know you’ve been on the edge of your seat, waiting for see which candidate will receive the Ex-Worker’s endorsement for president this year. In Episode 52, we offer an Ex-Voter’s guide to the 2016 election, including an analysis of the risks...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#51: Anarchism, Voting, and Direct Action: An Audio Zine</title>
-    <pubDate>Mon, 07 Nov 2016 19:38:31 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[25dd08a37b67ee50bdcf66d780c3b71f]]></guid>
-    <link><![CDATA[http://www.crimethinc.com/podcast/51/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/b/c/c/0/bcc0b4ac119ea466/ep51-1400.jpg" />
-    <description><![CDATA[<p>Do anarchists vote? If not, how do we express our voice and participate in changing society? What’s the problem with elections and representative democracy? In this special Election Day audio zine,we describe why electing representatives robs us of our power, refute common arguments made to convince us of the value of voting, explain direct action as an alternative approach for making change without politicians and parties, and lay out our vision for a free world beyond electoral politics. We begin by surveying anarchist responses to elections from the 19th century to the present day, and include excerpts from CrimethInc. interventions against the last few presidential elections, including <a href= "http://crimethinc.com/tools/downloads/zines.html">“Don’t Just Vote, Get Active: A Community Non-Partisan Voters’ Guide”</a> (2004), <a href= "http://crimethinc.com/tools/downloads/zines.html">“Voting vs. Direct Action”</a> (c. 2004), <a href= "https://s3.amazonaws.com/thecloud.crimethinc.com/pdfs/falsehopevsrealchange.pdf"> “False Hope vs. Real Change”</a> (2008), <a href= "https://s3.amazonaws.com/thecloud.crimethinc.com/pdfs/democracy_reading.pdf"> “The Party’s Over”</a> (c. 2009), and the <a href= "http://www.crimethinc.com/tools/vote/">“Democracy is Bankrupt”</a> website (2012). This audio zine provides background for our discussion of the 2016 presidential campaign and its likely aftermath, which appears in <a href= "http://crimethinc.com/podcast/52">Episode 52</a>. Whoever they vote for, we are ungovernable! {November 7, 2016}</p> <p>-------SHOW NOTES------</p> <ul> <li>This audio zine draws on several previously published CrimethInc. texts that address voting, elections, democracy, and direct action, including <a href= "http://crimethinc.com/tools/downloads/zines.html">“Don’t Just Vote, Get Active: A Community Non-Partisan Voters’ Guide”</a> (2004), <a href= "http://crimethinc.com/tools/downloads/zines.html">“Voting vs. Direct Action”</a> (c. 2004), <a href= "https://s3.amazonaws.com/thecloud.crimethinc.com/pdfs/falsehopevsrealchange.pdf"> “False Hope vs. Real Change”</a> (2008), <a href= "https://s3.amazonaws.com/thecloud.crimethinc.com/pdfs/democracy_reading.pdf"> The Party’s Over"</a> (c. 2009), and the <a href= "http://www.crimethinc.com/tools/vote/">“Democracy is Bankrupt”</a> website (2012).</li> <li>In the introduction, we quoted a variety of historical anarchist critiques of elections, voting, and representative democracy, including: Mikhail Bakunin, <a href= "https://theanarchistlibrary.org/library/michail-bakunin-on-representative-government-and-universal-suffrage"> "On Representative Government and</a> ; Peter Kropotkin, <a href= "https://theanarchistlibrary.org/library/petr-kropotkin-revolutionary-government"> “Revolutionary Government”</a>; Elisee Reclus, <a href= "https://theanarchistlibrary.org/library/elisee-reclus-why-anarchists-don-t-vote"> “Why Anarchists Don’t Vote”</a>; Henry David Thoreau, <a href= "http://thoreau.eserver.org/civil.html">“Civil Disobedience”</a>; Emma Goldman, <a href= "https://theanarchistlibrary.org/library/emma-goldman-anarchism-and-other-essays#toc11"> “Woman Suffrage”</a>; Zo d’Axa, <a href= "https://theanarchistlibrary.org/library/zo-d-axa-he-is-elected">“He Is Elected”</a>; and <a href= "https://www.youtube.com/watch?v=LHecHglKjHQ">the Yippies’ nomination of Pigasus</a>. You can find many more anarchist critiques on these themes <a href= "https://theanarchistlibrary.org/category/topic/anti-voting">via The Anarchist Library</a>.</li> </ul> <p> </p> <p> </p>]]></description>
-    <enclosure length="23357490" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/51_Anarchism-Voting-and-Direct-Action-An-Audio-Zine.mp3?dest-id=139038" />
-    <itunes:duration>47:42</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Do anarchists vote? If not, how do we express our voice and participate in changing society? What’s the problem with elections and representative democracy? In this special Election Day audio zine,we describe why electing representatives robs us of...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#50: The History and Future of Prison Strikes and Solidarity</title>
-    <pubDate>Wed, 07 Sep 2016 16:43:37 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[9c4a964e2dc78c8b26195990befd6023]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/50/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/8/7/a/9/87a98120ae1b3c49/ep50-1400.jpg" />
-    <description><![CDATA[<p>As we build momentum towards the <a href= "http://supportprisonerresistance.net">September 9th national prison strike</a>, we want to reflect on lessons learned from past generations of prison rebels, as well as how we can maintain energy on September 10th and beyond. In <a href= "http://crimethinc.com/podcast/50">Episode 50 of the Ex-Worker</a>, solidarity organizer <a href="http://insurgenttheatre.org/">Ben Turk</a> fills us in on some history of prisoner organizing in recent decades, recaps some of the <a href= "https://itsgoingdown.org/spreading-strike-solidarity-actions-across-north-america-september-9th/"> solidarity actions that have taken place leading up to this year’s historic strike</a>, and offers perspective on continuing and deepening our resistance to prison society. We commemorate <a href= "https://itsgoingdown.org/salute-jordan-mactaggart-anarchists-new-york/"> the death of Jordan MacTaggart</a>, an American anarchist killed on the front lines in battle with the YPG against the Islamic State, and discuss international solidarity and the politics of martyrdom with <a href="http://www.supportrojava.org">Rojava Solidarity NYC</a>. The <a href= "http://www.crimethinc.com/blog/2016/08/30/a-fitting-end-the-death-of-john-timoney/"> death of John Timoney</a>, former police chief and notorious foe of anarchists, prompts both glee and a somber reflection on the misery he inflicted on us. A member of <a href= "http://anarsistfaaliyet.org/">Revolutionary Anarchist Action</a> (DAF) in Istanbul <a href= "http://radiostudent.si/dru%C5%BEba/%C4%8Drna-luknja/sodobno-anarhisti%C4%8Dno-organiziranje-v-tur%C4%8Diji"> discusses the background to the recent failed military coup</a> as well as recent waves of anti-anarchist repression. A <a href= "https://itsgoingdown.org/defend-zad-call-international-solidarity/"> call for solidarity from la ZAD</a>, news, events, and <a href= "https://nycabc.wordpress.com/pppow-birthday-calendar/">prisoner birthdays</a> round out this packed episode. {September 7, 2016}</p> <p>-------SHOW NOTES------</p> <ul> <li><a href= "https://itsgoingdown.org/spreading-strike-solidarity-actions-across-north-america-september-9th/"> Find a demonstration or event about the September 9th prison strike near you, or post it here if you’re organizing one</a>.</li> <li>We interview <a href="http://insurgenttheatre.org/">Ben Turk</a> about the struggle against US prisons, including the upcoming September 9th strike and beyond. Wanna read more about some of the prison rebel history he mentioned? Learn more about <a href= "https://libcom.org/history/1971-the-attica-prison-uprising">the Attica uprising</a>, <a href= "http://nvdatabase.swarthmore.edu/content/us-prisoners-take-control-walpole-prison-1973"> Walpole</a> and <a href= "https://earfulofqueer.wordpress.com/2011/04/11/ed-mead-and-men-against-sexism/"> Men Against Sexism in Walla Walla</a>, and especially <a href= "http://lucasvilleamnesty.org">the Lucasville Uprising of 1993</a>, plus more recent upheavals including <a href= "http://www.motherjones.com/politics/2013/08/50-days-california-prisons-hunger-strike-explainer"> the Pelican Bay hunger strike against solitary confinement</a> - which we covered as it was happening in <a href= "http://crimethinc.com/podcast/9/">Episode 9</a> - as well as the <a href= "http://www.huffingtonpost.com/michelle-chen/georgia-prison-strike-a-h_b_798928.html"> Georgia prisoner strike</a>, the <a href= "https://freealabamamovement.wordpress.com/">Free Alabama Movement</a>, the <a href= "https://archive.org/details/afm-final-straw-02022014">Menard, Illinois hunger strike</a>, the recent <a href= "https://itsgoingdown.org/final-straw-bend-bars-conference/">Bend the Bars Conference</a> in Columbus, Ohio, and the <a href= "https://solitarytorture.blogspot.com/">Dying to Live hunger strike movement in Waupon, WI</a>.</li> <li>Repressive cop extraordinaire John Timoney has shuffled off his mortal coil. Check out this <a href= "http://www.crimethinc.com/blog/2016/08/30/a-fitting-end-the-death-of-john-timoney/"> commemoration of his miserable life by some anarchist comrades</a>. Good fucking riddance, asshole!</li> <li>We discussed <a href= "https://www.facebook.com/jordan.mactaggart">the recent death of American anarchist Jordan MacTaggart</a>. Check out <a href= "https://itsgoingdown.org/salute-jordan-mactaggart-anarchists-new-york/"> the send-off video produced as a tribute</a> by <a href= "http://www.supportrojava.org/">Rojava Solidarity NYC</a>. Also check out <a href= "http://www.boulderweekly.com/news/born-dead/">this lengthy article written last winter in which Jordan shares stories about his experiences</a> fighting on the front lines. To learn more about the revolution in Rojava, listen to our previous coverage in <a href="http://crimethinc.com/podcast/36/">Episode 36</a> and <a href="http://crimethinc.com/podcast/39/">Episode 39</a>, and check out <a href="http://www.supportrojava.org/">Rojava Solidarity NYC</a>’s book <a href= "http://www.combustionbooks.org/products-page/non-fiction/a-small-key-can-open-a-large-door-the-rojava-revolution/"> “A Small Key Can Open A Large Door: The Rojava Revolution”</a>.</li> <li>We shared an excerpt from an <a href= "http://radiostudent.si/dru%C5%BEba/%C4%8Drna-luknja/sodobno-anarhisti%C4%8Dno-organiziranje-v-tur%C4%8Diji"> interview with Devrimci Anarşist Faaliyet (DAF), or Revolutionary Anarchist Action</a>, an anarchist organization based in Istanbul, Turkey. Thanks to our friends at <a href= "http://radiostudent.si/dru%C5%BEba/%C4%8Drna-luknja">Crna Luknja</a> in Ljubljana, Slovenia for sharing it with us. Learn more about DAF via <a href="http://anarsistfaaliyet.org/">their website</a> or their <a href= "https://www.facebook.com/anarsistfaaliyetorg">Facebook page</a>.</li> <li>The US “Justice” Department <a href= "https://www.washingtonpost.com/news/wonk/wp/2016/08/18/private-prison-stocks-collapse-after-justice-department-promises-to-phase-them-out/"> recently announced its intention to phase out the use of private prisons</a>. Good news, right? Well… <a href= "https://itsgoingdown.org/bloc-party-claim-no-easy-victories/">these anarchists don’t necessarily think so</a>. Either way, it’s unquestionable that prison privatization has horrible consequences for the incarcerated; if you weren’t already convinced, check out <a href= "http://www.motherjones.com/politics/2016/06/cca-private-prisons-corrections-corporation-inmates-investigation-bauer"> this massive expose by Mother Jones magazine about the corruption and brutality of private prison industry</a>, written by an undercover reporter who actually got a job as a guard in a CCA prison; it’s fascinating, horrifying reading. But the question is whether this reform will serve to weaken or strengthen mass incarceration in the long run. As Ben Turk mentions in his interview, the so-called “prison reform movement” led by such luminaries as Hillary Clinton and Newt Gingrich exists not to abolish prisons, but to generalize carceral logics across all of society.</li> <li>Check out the <a href= "https://itsgoingdown.org/defend-zad-call-international-solidarity/"> call for solidarity on October 8th with la ZAD</a>, the anti-airport occupation in western France. Listen to our <a href= "http://crimethinc.com/podcast/14">Episode 14 on squatting</a> for an interview with a resident of la ZAD.</li> <li>Other upcoming events include <a href= "http://www.abcf.net/blog/running-down-the-walls-2016/">Running Down the Walls</a>, an annual 5 K run that benefits political prisoners and prisoners of war, on September 4th in New York City and on September 11th in Denver, the <a href= "http://anarchistnews.org/content/fighting-future-prisons-tour-england"> Fighting Future Prisons tour</a> in Northern England, and the <a href="https://nodaplsolidarity.org/">Red Warrior Camp’s global weeks of solidarity to support the indigenous-led movement to stop the Dakota Access Pipeline</a>, from September 3rd to 17th.</li> <li>Upcoming prisoner birthdays:<br /> <br /> <a href= "http://earthfirstjournal.org/newswire/2014/02/11/brian-vaillancourt-gets-9-years-for-alf-arson/"> Brian Vaillancourt</a> M42889<br /> Robinson Correctional Center<br /> 13423 East 1150th Avenue<br /> Robinson, Illinois 62454<br /> {September 5th}<br /> <br /> <a href= "https://antistatestl.noblogs.org/ferguson-related-prisoners/">Alexander Irwin</a> #2016012934<br /> St. Louis County Jail<br /> P.O. Box 16060<br /> Clayton, MO 63105<br /> {September 5th}<br /> <em>Please note that Alexander is pre-trial. Do not write about illegal activity and assume that any charges from the state are alleged and falsely accused.</em><br /> <br /> <a href="http://whoisleonardpeltier.info">Leonard Peltier</a> #89637–132<br /> USP Coleman I<br /> Post Office Box 1033<br /> Coleman, Florida 33521<br /> {September 12th}<br /> <br /> <a href="http://seanswain.org">Sean Swain</a> #243–205<br /> Warren CI<br /> P.O. Box 120<br /> 5787 State Route 63<br /> Lebanon, OH 45036<br /> {September 12th}<br /> <br /> <a href= "https://antistatestl.noblogs.org/ferguson-related-prisoners/">Steven Martin</a> #2015017284<br /> St. Louis County Jail<br /> P.O. Box 16060<br /> Clayton, MO 63105<br /> {September 22nd}<br /> <em>Please note that Steven is pre-trial. Do not write about illegal activity and assume that any charges from the state are alleged and falsely accused.</em><br /> <br /> <a href="http://lucasvilleamnesty.org">Greg Curry</a> #213–159<br /> Ohio State Penitentiary<br /> 878 Coitsville-Hubbard Rd<br /> Youngstown OH 44505–4635<br /> {September 26th}<br /> <br /> Brian McCarvill #11037967<br /> Snake River CI<br /> 777 Stanton Blvd<br /> Ontario, OR 97914–8335<br /> {September 27th}<br /> <br /> Jorge P. Cornell #28152–057<br /> FCI Petersburg Medium<br /> P.O. Box 1000<br /> Petersburg, VA 23804<br /> {September 29}</li> </ul> <p> </p>]]></description>
-    <enclosure length="42966308" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/50_The-History-and-Future-of-Prison-Strikes-and-Solidarity.mp3?dest-id=139038" />
-    <itunes:duration>01:25:51</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[As we build momentum towards the September 9th national prison strike, we want to reflect on lessons learned from past generations of prison rebels, as well as how we can maintain energy on September 10th and beyond. In Episode 50 of the Ex-Worker,...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#49: September 9th National Prison Strike</title>
-    <pubDate>Wed, 24 Aug 2016 18:00:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[00b0029144ab09f83914925eef228a99]]></guid>
-    <link><![CDATA[http://www.crimethinc.com/podcast/49]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/9/3/5/8/9358fbb1864d71f3/ep49-1400.jpg" />
-    <description><![CDATA[<p><a href="http://crimethinc.com/podcast">The Ex-Worker</a> is back! And just in time, because a potentially historic national prisoner strike is just around the corner. In <a href= "http://crimethinc.com/podcast/49">our 49th episode</a>, we discuss the upcoming <a href= "http://insurgenttheatre.org/sprdocs/strikepamphlet_notlocal.pdf">September 9th strike to end prison slavery</a>, with an interview with the <a href="http://iwoc.noblogs.org">Incarcerated Workers Organizing Committee</a>. You’ll also hear a review of Dan Berger’s book <a href= "http://www.uncpress.unc.edu/browse/book_detail?title_id=3550">Captive Nation: Black Prison Organizing in the Civil Rights Era</a>; an interview with an anarchist from the UK about the Brexit vote; listener feedback on Spanish revolutionary militias, Comintern, and parallels with <a href= "http://crimethinc.com/podcast/39">Rojava</a>; updates on <a href= "https://freekarawild.org/">Kara Wild</a>, a trans anarchist incarcerated in Paris; a letter from trans anarchist prisoner <a href="https://babygirlgann.noblogs.org/">Jennifer Gann</a>; plus news, prisoner birthdays, event announcements, and plenty more. {August 24, 2016}</p> <p>-------SHOW NOTES------</p> <ul> <li>The <a href= "http://insurgenttheatre.org/sprdocs/strikepamphlet_notlocal.pdf">September 9th National Prison Strike</a> is coming up! To learn more, check out the <a href= "https://supportprisonerresistance.noblogs.org/">Support Prisoner Resistance</a> site, in particular the zines <a href= "http://insurgenttheatre.org/theory/letthecropsrot.pdf">Let the Crops Rot in the Fields</a> by the <a href= "https://freealabamamovement.wordpress.com/">Free Alabama Movement</a>, <a href= "https://supportprisonerresistance.noblogs.org/post/2015/07/19/end-prison-slavery-zine/"> End Prison Slavery</a> with several articles about emerging prisoner movements, and <a href= "http://unityandstruggle.org/wp-content/uploads/2016/05/IWOC_pamphlet_print-1.pdf"> Incarcerated Workers Take the Lead</a> by Houston IWOC.</li> <li>In our interview with Azzurra from the <a href= "https://iwoc.noblogs.org/">Incarcerated Workers Organizing Committee</a>, she referred to several texts, campaigns, and other resources, including: <a href= "http://unityandstruggle.org/wp-content/uploads/2016/05/IWOC_pamphlet_print-1.pdf"> the Houston IWOC zine about the history of prisoner rebellion since 2008</a>, <a href= "https://libcom.org/history/1971-the-attica-prison-uprising">the Attica Rebellion</a>, <a href= "https://mxgm.org/blackaugust/blackaugust-history/">Black August</a>, the <a href= "https://www.flikshop.com/#overview">Flikshop app</a> for sending postcards to prisoners easily and cheaply, Chicano anarchist political prisoner <a href="http://freealvaro.net/">Xinachtli Alvaro Luna Hernandez</a> and <a href= "https://twitter.com/freealvaronow">his Twitter account</a>, <a href= "http://www.prisonradio.org/sites/default/files/letters/pdf/Fact%20Sheet-%20Mumia%20Abu-Jamal%20and%20Hepatitis%20C%20%281%29.pdf"> Mumia Abu Jamal’s struggle for Hepatits C treatment</a>, Rashid Johnson’s article <a href="http://rashidmod.com/?p=288">“On the Questions of Race and Racism: Revolutionary National Liberation and Building the United Front Against Imperialism”</a>, checking the <a href="iwoc.noblogs.org">IWOC website</a> for ongoing updates, <a href="https://freejeremy.net/">Jeremy’s Hammond</a>’s recent trip to solitary confinement for “encouraging rebellion and criminal activities,” and criminologist Nils Christie’s article <a href= "http://bjc.oxfordjournals.org/content/17/1/1.full.pdf+html">Conflicts as Property</a> about how the state has appropriated our conflicts.</li> <li>On the Chopping Block, we reviewed Dan Berger’s book <a href= "http://www.uncpress.unc.edu/browse/book_detail?title_id=3550">Captive Nation: Black Prison Organizing in the Civil Rights Era</a>. It discusses, among many other things, the life, death, and legacy of George Jackson, whose books <a href= "http://historyisaweapon.com/defcon1/soledadbro.html">Soledad Brother</a> and <a href= "https://archive.org/details/GeorgeJacksonBloodInMyEye">Blood in My Eye</a> can be read in full online.</li> <li>We interviewed Jon Active from <a href= "http://www.activedistribution.org/">Active Distribution</a> in the UK about the Brexit vote. If you want to read more anarchist perspectives on it, check out these articles: <a href= "https://rabble.org.uk/anti-raids-building-an-anti-fascist-culture-post-brexit/"> “Building an anti-fascist culture post-Brexit”</a> by some folks from the <a href="https://network23.org/antiraids/">Anti-Raids Network</a>, <a href= "http://www.anarchistnews.org/content/void-network-tragic-and-farcical-british-referendum"> “On the tragic and the farcical of the British referendum”</a> by the <a href="https://voidnetwork.blogspot.com">Void Network</a>, and <a href= "https://www.reddit.com/r/Anarchism/search?q=brexit&restrict_sr=on&sort=relevance&t=all"> anarchist reflections on Brexit on Reddit</a>.</li> <li>Please support <a href="https://freekarawild.org/">Kara Wild</a>, a trans anarchist from the US imprisoned in France in connection with recent militant protests in Paris. <a href= "https://www.youtube.com/watch?feature=player_embedded&v=rlUWVCCh6pQ"> Here’s a video of her in her former dwelling that she built and squatted in in Chicago</a>. We’ll post more updates on how to direct support her way as soon as we get them.</li> <li>In our listener feedback section, we shared a message from Jennifer Gann, a radical trans prisoner in California, who is requesting support. <a href= "https://babygirlgann.noblogs.org/">Check out her website to learn more about her case</a>, or write to her at:<br /> <br /> <br /> J. Gann #E23852<br /> KVSP-D1–209U<br /> P.O. Box 5103<br /> Delano, CA 93216</li> <li>We also referenced some other queer and/or trans prisoner solidarity links, including <a href= "http://www.blackandpink.org/">Black and Pink</a>, the <a href= "https://transprisoners.net/about/">Trans Prisoner Day of Action and Solidarity</a>, and a publication focusing on the writings of incarcerated women and trans and gender variant prisoners called <a href= "https://unstoppable.noblogs.org/publication-archive/">Unstoppable</a>.</li> <li>Another listener suggested that folks interested in the struggles in Rojava, and their potential parallels with the Spanish Revolution & Civil War, check out these articles titled <a href="http://theanarchistlibrary.org/library/fifth-estate-collective-the-international-brigades-and-the-social-revolution-in-spain-1936-1939"> “The International Brigades and the social revolution in Spain, 1936–1939”</a> and <a href= "http://theanarchistlibrary.org/library/various-authors-news-of-the-spanish-revolution"> “News of the Spanish Revolution: Anti-authoritarian Perspectives on the Events</a>.”</li> <li>And if you’re feeling down, just remember that in Phenix City, Alabama, <a href= "http://www.cnn.com/2016/07/18/us/deputies-refused-service-taco-bell-trnd/index.html"> an unnamed Taco Bell employee refused to serve four cops</a> who came in to order food - because they were cops. That’s what we mean by <em>Fight where you stand!</em></li> <li>Prisoner birthdays this month:<br /> <br /> <a href="https://supportericking.org">Eric King</a> # 27090045<br /> FCI Englewood<br /> Federal Correctional Institution<br /> 9595 West Quincy Avenue<br /> Littleton, CO 80123<br /> {August 2nd}<br /> <br /> <a href="http://www.abcf.net/abc/pdfs/dunne.pdf">Bill Dunne</a> #10916–086<br /> USP Lompoc<br /> 3901 Klein Boulevard<br /> Lompoc, California 93436<br /> {August 3rd}<br /> <br /> <a href="http://onamove.com/">Debbie Sims Africa</a> #006307<br /> SCI Cambridge Springs<br /> 451 Fullerton Avenue<br /> Cambridge Springs, Pennsylvania 16403<br /> {August 4th}<br /> <br /> <a href="http://mutulushakur.com/site/">Dr. Mutulu Shakur</a> #83205–012<br /> USP Victorville<br /> Post Office Box 3900<br /> Adelanto, California 92301<br /> {August 8th}<br /> <br /> <a href="https://freebarrettbrown.org">Barrett Brown</a> #45047–177<br /> FCI Three Rivers<br /> Federal Correctional Institution<br /> P.O. Box 4200<br /> Three Rivers, TX 78071<br /> {August 14th}<br /> <br /> <a href="http://virginislands3.yolasite.com/">Hanif Shabazz Bey</a> (Beaumont Gereau) #5161331<br /> Seguro Correctional Center<br /> 1252 East Arica Road<br /> Eloy, Arizona 85131<br /> {August 16th}<br /> <em>Address envelope to Beaumont Gereau, address card to Hanif</em><br /> <br /> <a href="http://www.abcf.net/prisoners/latine.htm">Maliki Shakur Latine</a> # 81-A–4469<br /> Shawangunk Correctional Facility<br /> Post Office Box 700<br /> Wallkill, New York 12589<br /> {August 23rd}<br /> <br /> <a href="http://russellmaroonshoats.wordpress.com/">Russell Maroon Shoatz</a> #AF–3855<br /> SCI Graterford<br /> P.O. Box 244<br /> Graterford , PA 19426<br /> {August 23rd}<br /> <br /> <a href= "http://denverabc.wordpress.com/prisoners-dabc-supports/political-prisoners-database/ronald-reed/"> Ronald Reed</a> #2195311<br /> Minnesota Correctional Facility-Oak Park Heights<br /> 5329 Osgood Avenue North<br /> Stillwater, Minnesota 55082–1117<br /> {August 31st}</li> </ul> <p> </p>]]></description>
-    <enclosure length="45569100" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/49_September-9th-National-Prison-Strike.mp3?dest-id=139038" />
-    <itunes:duration>01:46:48</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[The Ex-Worker is back! And just in time, because a potentially historic national prisoner strike is just around the corner. In our 49th episode, we discuss the upcoming September 9th strike to end prison slavery, with an interview with the...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#48: From Democracy to Freedom Audio Zine</title>
-    <pubDate>Tue, 26 Apr 2016 19:17:52 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[83a28106c49fbe85a7073f4a53fb343d]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/48]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/8/c/7/d/8c7ddf6fb402f2ec/ep48-1400.jpg" />
-    <description><![CDATA[<p>Welcome back to the Ex-worker! We’re eschewing our typical format once again to bring you our second audio zine, a production of Crimethinc.’s new text <a href= "http://crimethinc.com/texts/r/democracy/"><em>From Democracy to Freedom</em></a>. This release coincides with the announcement of an online platform for participating in decentralized <a href= "http://www.crimethinc.com/blog/2016/04/19/anarchy-and-democracy-reading-groups/"> reading groups</a> and online discussions on this text as well as the others in <a href= "http://www.crimethinc.com/blog/2016/03/16/series-the-anarchist-critique-of-democracy/"> the series</a> exploring questions around democracy, and how we relate to it as anarchists. <em>{April 26th, 2016}</em></p> <p>-------SHOW NOTES------</p> <ul> <li>The <a href="http://crimethinc.com/texts/r/democracy/">full text is available here</a> for reading online or <a href= "http://www.crimethinc.com/blog/2016/04/19/anarchy-and-democracy-reading-groups/"> here for printing</a>.</li> <li>Original music and sounds courtesy of <a href= "https://soundcloud.com/counterfeitsound">Counterfeit</a>.</li> </ul>]]></description>
-    <enclosure length="42739803" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/48_From-Democracy-to-Freedom-Audio-Zine.mp3?dest-id=139038" />
-    <itunes:duration>01:38:51</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Welcome back to the Ex-worker! We’re eschewing our typical format once again to bring you our second audio zine, a production of Crimethinc.’s new text From Democracy to Freedom. This release coincides with the announcement of an online platform...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#47: Introducing the Anarchist Critique of Democracy</title>
-    <pubDate>Wed, 16 Mar 2016 16:57:23 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[b011e923a35918471550fe663d9928de]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/47]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/f/3/d/f/f3df48a26ea9fd39/ep47-1400.jpg" />
-    <description><![CDATA[<p><em>Is Democracy what we’re fighting for, as anarchists?</em> In episode 47 of the <em>Ex-Worker Podcast</em>, a contentious debate between Clara and Alanis on this topic sets the stage for an upcoming, in-depth engagement with the topic of Democracy. In addition, we clean out our backlog of listener feedback, clarifying our trash-talking of both the Bay Area and Adbusters in past episodes, as well as hearing from a listener in Australia about <a href="http://slackbastard.anarchobase.com/">various</a> <a href="https://blackrosenewtown.wordpress.com/">online</a> <a href="https://disaccords.wordpress.com/">resources</a> for finding out what’s happening with anarchist and anti-fascists in the land down under. <a href="http://nycabc.wordpress.com">NYC Anarchist Black Cross</a> provides us with thorough political prisoner updates, and we share a review of the book <em>Huye Hombre Huye</em>, <a href="http://littleblackcart.com/books/anarchy/huye-hombre-huye.-diary-of-a-maximum-security-prisoner./">available from Little Black Cart</a>. As always, the episode is bookended with global news updates, plus <a href="https://nycabc.wordpress.com/pppow-birthday-calendar/">prisoner birthdays</a>, a whole slew of upcoming anarchist bookfairs and other events and more. <em>{March 16, 2016}</em></p> <p>-------SHOW NOTES------</p> <ul> <li>New York Anarchist Black Cross (NYC ABC) is doing a fantastic job of keeping us updated on political prisoners and prisoners of war. If you’re looking for a comprehensive overview of political prisoners in the US, you can check out their new <a href="https://nycabc.files.wordpress.com/2016/02/nycabc_polprisonerlisting_11-1feb2016.pdf">Illustrated Guide to Political Prisoners</a>. It’s got detailed info on all their cases including up to date mailing addresses plus tips on writing to prisoners; it’s a great overview if you want to support radical prisoners but aren’t sure where to start.</li> <li>Dr. Mutulu Shakur, a longtime black liberation prisoner who helped Assata Shakur escape to freedom, was supposed to be released from prison in February… but his release was denied at the last minute. He’ll be facing the parole board later this spring. Here’s a link to <a href="http://mutulushakur.com/site/2016/02/2016-denial-of-release/">a statement he wrote explaining the situation with more info on how to show support</a>. Supporters have also launched a new website at <a href="http://mutuluiswelcomehere.com/">MutuluIsWelcomeHere.com</a> to gather stories describing his the positive impacts he has made and to organize solidarity events leading up to his parole hearing.</li> <li>Former Black Panther Maliki Shakur Latine will also be heading to the parole board in April, and he’s collecting parole letters; check out <a href="http://justiceformaliki.org/2016/02/13/call-for-letters-of-support-for-maliki-latines-release-on-parole/">justiceformaliki.org</a> for details.</li> <li>Supporters of Brandon Baxter (one of the Cleveland Four, anarchists active in the Occupy movement who were entrapped in an FBI plot) are doing <a href="https://fundrazr.com/campaigns/bwdEe/ab/746Ym0">a small fundraising campaign right now to help with costs to get him some visitors</a> in his new digs at FCI Terre Haute in Indiana. Brandon hasn’t received any visitors since his sentencing, and he’s never had a in person visit since his arrest. He’s about 11 hours away from his supporters who plan to visit and they need to raise some money for a car rental. They’re only a couple of hundred bucks short, so even if you can throw in a few dollars it’ll make a difference. Any donations not used for this trip will go into the general fund to support the Cleveland Four getting visitors. To learn more about their case, check out cleveland4solidarity.org or listen to <a href="http://crimethinc.com/podcast/17">Episode 17</a> on Conspiracy.</li> <li>Eric King, an anarchist from Kansas City accused of an alleged attack on a politician’s office, has accepted a non-cooperating plea deal for a ten year prison sentence; after time served, he’s got eight and a half years left to go. On top of this, the facility where he’s locked up CCA is now on lock-down, and <a href="https://supportericking.wordpress.com/2016/02/25/eric-has-been-placed-back-in-segregation/">Eric has been put in solitary confinement</a>. Please take a few minutes to send Eric a postcard or letter to remind him that folks are thinking of him. <br /><br /> Eric King 27090045<br /> CCA Leavenworth<br /> 100 Highway Terrace<br /> Leavenworth, KS 66048</li> <li>Former earth liberation prisoner Daniel McGowan will be in court on <a href="https://ccrjustice.org/home/get-involved/events/oral-arguments-aref-v-holder-cmu-case">March 15th in Washington, DC to support the Center for Constitutional Rights’ case against the Federal Bureau of Prisons’ “Communication Management Units.”</a> The CMUs are experimental prison units that impose severe restrictions on prisoners’ communications, both within the prison and with the outside world. If you’re in the DC area and you want to show some solidarity against a particularly vicious form of repression - one that has primarily targeted Muslims and political radicals - you can find the info on our website.</li> <li>On March 23, <a href="https://www.facebook.com/events/1559139881065937/">Tyler Lang has his sentencing hearing</a> for his charges under the Animal Enterprise Terrorism Act for releasing thousands of animals from a fur farm. If you can be in Chicago, please attend the hearing to show support for Tyler. It is important that on this difficult day for Tyler that he feel surrounded by love and solidarity, and that the judge see that Tyler is part of a community that is there for him. His co-defendant Kevin Olliff was sentenced to three years, which with time serve means he’s only got about three months left to go!</li> <li>J ay Chase of the NATO 3 has one more pretrial hearing in Chicago on March 23rd - actually at the same time as Tyler Lang’s sentencing hearing, though in a different courtroom, before he goes to trial on April 11th. Supporters ask anyone to come out who’s able and to continue sending Jay support through letters or mailing softcover books. Stay posted on updates at <a href="http://freethenato3.wordpress.com">freethenato3.wordpress.com</a>.</li> <li>Solecast, the excellent anarchist podcast we mentioned at the end of the listener feedback, can be found <a href="http://soleone.org/solecast">on it’s website here</a> and on iTunes. We highly recommend that you check it out!</li> <li>As we mentioned, anarchist in Belgium are facing repression and prison time for alleged property destruction related to <a href="https://en-contrainfo.espiv.net/2015/07/13/zine-the-struggle-against-the-maxi-prison-in-brussels-a-chronology-of-attack-antagonism/">a long struggle against the construction of a Maxi-Prison in Haren</a>. A little more information about the struggle and information about how to send money or otherwise show solidarity can be found <a href="https://en-contrainfo.espiv.net/2016/01/21/brussels-call-out-for-solidarity-with-four-people-charged-over-the-destruction-of-the-maxi-prison-model/">here</a>.</li> <li>Our listener Cut Snake wrote in response to our request to send us a list of blogs and websites that publish news of interest to anarchists and antifascists from Australia. This should keep us all busy for a while:<br /> <a href="https://disaccords.wordpress.com/">DISACCORDS</a><br /> <a href="http://www.anarchistaffinity.org/">ANARCHIST AFFINITY</a><br /> <a href="https://melbourneantifascists.wordpress.com/">MELBOURNE ANTIFASCISTS</a><br /> <a href="http://rezzantifa.blogspot.com.au/">REZZA ANTIFA</a> <a href="http://slackbastard.anarchobase.com/">SLACKBASTARD</a><br /> <a href="http://mac.anarchobase.com/">MELBOURNE ANARCHIST CLUB</a><br /> <a href="https://ftpzine.wordpress.com/">FTP ZINE</a><br /> <a href="https://melbacg.wordpress.com/">MELBOURNE ANARCHIST COMMUNIST GROUP</a><br /> <a href="https://blackrosenewtown.wordpress.com/">BLACK ROSE</a><br /> <a href="http://jura.org.au/about">JURA BOOKS</a><br /> <a href="http://mutinyzine.blog.com/">MUTINY ZINE</a></li> <li>Huye Hombre Huye, the book we reviewed on today’s chopping block, is available <a href="http://littleblackcart.com/books/anarchy/huye-hombre-huye.-diary-of-a-maximum-security-prisoner./">from little black cart on their website</a>.</li> <li>The material from our theme segment today was inspired by the new 10-part Crimethinc. Feature critiquing democracy. It’s not posted yet, but when it is it’ll be up at <a href="http://crimethinc.com">crimethinc.com</a>. And don’t forget to stay tuned to the podcast for our upcoming audio version, plus more information about how to plug into reading groups.</li> <li>The theme segment also mentioned and quoted from another piece called <a href="http://www.crimethinc.com/texts/atoz/breakwith.php">‘Breaking with Consensus Reality,’</a> from the zine <a href="http://www.crimethinc.com/blog/2012/04/08/into-the-unknownterror-incognita/">Terror Incognita</a>, released in the U.S. around the time of the Occupy movement.</li> <li>From March 18th to 20th in Athens, Ohio, <a href="https://www.facebook.com/events/1002880579758778/">Appalachia Resist! will host an action camp in to connect environmental justice and social justice efforts in the Appalachian region</a>. Here’s how they describe themselves: <em>Appalachia Resist! is a small group of rural activists who use direct action as a tactic to resist the fracking industry in our region. We work and live in a rural working class community that is predominant white. We see that struggles for environmental justice and the ongoing fight for racial justice are linked. We want to articulate that link and find concrete ways to work together to push back against a system that brutalizes and sees as disposable the bodies of low income rural people, people of color, gender nonconforming people, women, native, and undocumented people. Mentioning all these people together should not be a way of erasing difference (this is not “all lives matter”) but a way of seeking actual solidarity based on mutual liberation. This is a monumental task, and we are definitely not experts. But we think it’s important and necessary.</em> They’re encouraging regional activists working on racial justice, anti-rape culture, prison solidarity and prison abolition, environmental justice and anti-extraction, and other struggles to take part.</li> <li>In Seoul, South Korea, the <a href="http://blog.jinbo.net/attach/6956/1172280669.jpg">Anarchist Film Festival of Hannam-dong</a> will open March 24th through 26th at “Take Out Drawing”, an art space standing in defiance of gentrification in downtown Seoul.</li> <li>On April 23rd at Stone Mountain, outside Atlanta, Georgia, there’s a big white supremacist rally planned, and anti-fascists around the region are gearing up to shut it down. Check out the website <a href="https://alloutatl.com/">alloutatl.com</a> for more info on the mobilization; it articulates some shared principles that address some of the nuances of diverse anti-racist mobilizations in a particularly thoughtful way.</li> <li>The anarchist book fair season kicks off in earnest in April, with book fairs in <a href="http://www.ask-zagreb.org/engleski.htm">Zagreb, Croatia</a> on the 8th through 10th; <a href="http://www.wsm.ie/c/dublin-anarchist-bookfair-latest">Dublin, Ireland</a> on the 15th and 16th; <a href="https://sheffieldbookfair.org.uk/">Sheffield, UK</a> on the 23rd, <a href="https://www.facebook.com/events/1674009279509210/">Oakland, California</a> on the 26th, and <a href="http://www.bristolanarchistbookfair.org/">Bristol, UK</a> on the 30th, followed by <a href="http://buechermesse.ch/?lang=en">Bern, Switzerland</a> on May 6th and 7th.</li> <li><a href="https://nycabc.wordpress.com/pppow-birthday-calendar/">Prisoner birthdays</a> this Month: <br /><br /> <a href="http://letlukego.wordpress.com">Luke O’Donovan</a> #1001372271<br /> Washington State Prison<br /> P.O. Box 206<br /> Davisboro, GA 31018<br /> (March 2nd) <br /><br /> <a href="http://freejoypowell.org">Reverend Joy Powell</a> #07G0632<br /> Bedford Hills Correctional Facility<br /> P.O. Box 1000<br /> Bedford Hills, NY 10507–2499<br /> (March 5) <br /><br /> <a href="https://denverabc.wordpress.com/prisoners-dabc-supports/political-prisoners-database/ruchell-cinque-magee/">Ruchell Cinque Magee</a> #A92051<br /> Calif. State Prison, D–5 #1, P.O. Box 4670<br /> Los Angeles County, Lancaster, CA 93539<br /> (March 17) <br /><br /> <a href="http://freejaan.blogspot.com">Jaan Laaman</a> #10372–016<br /> USP Tucson<br /> P.O. Box 24550<br /> Tucson, AZ 85734<br /> (March 21) <br /><br /> <a href="http://supportkevinandtyler.com">Kevin Olliff</a><br /> KEVIN JOHNSON 47353–424<br /> MCC Chicago<br /> Metropolitan Correctional Center<br /> 71 West Van Buren Street<br /> Chicago, IL 60605<br /> (March 27) <br /><br /> <a href="http://onamove.com/">Delbert Orr Africa</a> #AM4985<br /> SCI Dallas<br /> 1000 Follies Road<br /> Dallas, PA 18612<br /> (April 2) <br /><br /> <a href="http://onamove.com/">Charles Sims Africa</a> #AM4975<br /> SCI Dallas<br /> 1000 Follies Rd.<br /> Dallas, PA 18612<br /> (April 2)</li> </ul>]]></description>
-    <enclosure length="41075223" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/47_Introducing-the-Anarchist-Critique-of-Democracy.mp3?dest-id=139038" />
-    <itunes:duration>01:35:14</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Is Democracy what we’re fighting for, as anarchists? In episode 47 of the Ex-Worker Podcast, a contentious debate between Clara and Alanis on this topic sets the stage for an upcoming, in-depth engagement with the topic of Democracy. In...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#46: International Anarchist Reflections on the New Year</title>
-    <pubDate>Thu, 11 Feb 2016 17:57:18 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[d53b70eefebcb571673ef24c2bfa5ec6]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/46/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/0/c/a/b/0cabd51b04b49d98/ep46-1400.jpg" />
-    <description><![CDATA[<p>What do anarchists around the world think is in store for the new year? In <a href="http://crimethinc.com/podcast/45">Episode 45</a>, we began our 2015 year in review, focusing on the US. In this episode, we share reflections on developments in 2015 and from anarchists in <a href="http://crimethinc.com/podcast/30">Chile</a>, <a href="http://crimethinc.com/podcast/42">Finland</a>, <a href="http://crimethinc.com/podcast/25">Brazil</a>, <a href="http://www.crimethinc.com/blog/2015/08/25/report-from-south-korea/">Korea</a>, <a href="http://www.crimethinc.com/texts/atoz/colombia.php">Colombia</a>, <a href="https://antifenix.noblogs.org/">Czech Republic</a>, and <a href="http://www.crimethinc.com/blog/2015/10/22/from-germany-to-bakur/">Rojava</a>. There are also discussions about developments in <a href="http://crimethinc.com/podcast/11">fascism and anti-fascism</a>, with reports from the UK and Australia, and an analysis by Gulf Coast anarchists of the <a href="http://sierraclub.org/sierra/2015-6-november-december/green-life/keystone-xl-victory-win-fight-you-have-pick-one">environmental movement’s supposed "victory" over the Keystone XL pipeline</a> in November. On the Chopping Block, we review the latest issue of <a href="http://anarchiststudies.org/perspectives/">Perspectives on Anarchist Theory</a>, the journal of the <a href="http://anarchiststudies.org/">Institute for Anarchist Studies</a>, on the theme of "Justice." Long term black liberation political prisoner <a href="http://freehermanbell.org">Herman Bell</a> discusses <a href="http://freehermanbell.org/ParoleEfforts.html">his upcoming parole hearing</a>, and we share plenty of news, including some reflection on <a href="http://www.middleeasteye.net/news/tunisia-imposes-curfew-following-nationwide-demonstrations-182725904#sthash.kAmI6eP7.dpuf">a new round of revolts in Tunisia</a>, plus <a href="https://nycabc.wordpress.com/pppow-birthday-calendar/">prisoner birthdays</a>, events, listener feedback, and more. {February 11, 2016}</p> <p>-------SHOW NOTES------</p> <ul> <li>On the Chopping Block, we reviewed the latest issue (Number 28, on "Justice") of <a href="http://anarchiststudies.org/perspectives/">Perspectives on Anarchist Theory</a>, the journal published by the <a href="http://anarchiststudies.org">Institute for Anarchist Studies</a>. You can order it through <a href="https://www.akpress.org/perspectivesonanarchisttheorymagazine.html">AK Press</a>; you can also <a href="https://www.facebook.com/perspectivesonanarchisttheory/">find them on Facebook</a>, though <a href="http://venturebeat.com/2014/05/15/how-the-nsa-fbi-made-facebook-the-perfect-mass-surveillance-tool/">you know how we feel about that</a>.</li> <li>Our friends at the North American anarchist news website <a href="http://itsgoingdown.org">It's Going Down</a> have <a href="https://itsgoingdown.org/help-launch-going-magazine/">announced plans to produce a print magazine!</a> Check out <a href="https://www.kickstarter.com/projects/1914483069/its-going-down-magazine?ref=project_link">their Kickstarter page</a> if you want to show them some support.</li> <li>Former Black Panther and long term political prisoner <a href="http://freehermanbell.org/">Herman Bell</a> is up for parole in February. Please check out <a href="http://freehermanbell.org/ParoleEfforts.html">this info from his support site about how to help with his parole hearing</a>, including an <a href="http://www.thepetitionsite.com/677/086/596/in-support-of-parole-for-herman-bell-79c0262/">online petition</a>.</li> <li>Here's <a href="http://www.latimes.com/opinion/op-ed/la-oe-1126-greenwald-snowden-paris-encryption-20151126-story.html">Glenn Greenwald's editorial critiquing the notion that internet encryption is responsible for the Paris terror attacks by the Islamic State</a>.</li> <li>The report we shared on Rojava came to us from a group of anarchists and internationalists from Central Europe working for liberation in Kurdistan. If you're interested in reading more, CrimethInc. previously published a longer interview piece from this group titled <a href="http://www.crimethinc.com/blog/2015/10/22/from-germany-to-bakur/">"From Germany to Bakur: European Anarchists on the Kurdish Struggle"</a>.</li> <li>To learn more about the Guarani resistance in the state of Sao Paulo, mentioned in the report on 2015 resistance in Brazil, visit <a href="www.yvyrupa.org.br/">yvyrupa.org.br</a>.</li> <li>Our friends who reported on the so-called "victory" over the Keystone XL pipeline sent links to some of the ongoing ecological resistance happening along the Gulf Coast, including folks fighting a massive 42" LNG export pipeline whose route from West Texas to Mexico cuts through Big Bend National Park - visit <a href="http://defendbigbend.org/">Defend Big Bend</a> and the <a href="http://bigbendconservationalliance.org">Big Bend Conservation Alliance</a>; and the environmental justice group in Mobile, AL called <a href="https://mejac.wordpress.com/">MEJAC</a> that is fighting an oil storage tank farm that would directly impact the historic community of Africa Town.</li> <li>In terms of ecological resistance coming up this year, there's the <a href="http://nationinside.org/campaign/prison-ecology/">Prison Ecology Project</a>'s gathering coming up June 11-13 in the Washington D.C. area, focused on building around the intersection of incarceration and the environment. There's also a struggle brewing against a <a href="http://www.earthisland.org/journal/index.php/elist/eListRead/mass_incarceration_vs._rural_appalachia/">new federal prison slated to be built on a former mountaintop removal site in Eastern Kentucky</a>. And the <a href="http://earthfirstjournal.org/newswire/2016/01/06/announcing-the-2016-earth-first-winter-organizers-conference-chumash-territory-near-santa-barbara-ca-feb-10-15/">Earth First! Winter Organizer's Conference</a> is taking place February 10th-15th on Chumash territory outside Santa Barbara, California.</li> <li>Please take a moment to support Jared "Jay" Chase of the NATO 3! You can attend his <a href="https://www.facebook.com/events/1653651321550163/">court date on February 18th in Chicago</a>, follow his case on <a href="https://twitter.com/FreeNATO3">Twitter</a>, <a href="https://www.facebook.com/Free-the-NATO-3-172345546229824">Facebook</a>, or the <a href="https://freethenato3.wordpress.com/">NATO 3 support page</a>. You can also write to Jay at:<br /> <br /> Jared Chase M44710<br /> P.O. Box 99<br /> Pontiac, IL 61764<br /> <br /> Here's an announcement from supporters about the court date:<br /> <em>Pack the court for Jay Chase<br /> Thursday, February 18, 9 AM<br /> Cook County Criminal Courthouse<br /> 2600 S California Ave, Chicago, Illinois 60623</em><br /> <br /> <em>The presiding Judge had a sick day on 2.3 so Jared "Jay" Chase now has a pre-trial hearing on February 18th at 26th and California in Room 303. He is being targeted by the same prosecutor (Anita Alvarez) he faced during the NATO 3 trial for alleged assault charges pinned on him by guards while he awaited trial for two years back in 2012-2014. These same guards were allowed to testify against him during the NATO 3 sentencing in a somewhat successful attempt to bring a harsher sentence and now they will likely testify against him in this case . . . This trial is not just about a few extra years being tacked on to his current sentence which is coming to an end in May. The State has made it very clear through this obviously vindictive prosecution that they want to ensure Jay lives out his days in their cage.</em><br /> <br /> <em>Please be there and show the State that we stand with Jay and let Jay know that we have not forgotten him or his struggle. He needs our love and support as he stands in defiance of this ongoing persecution.</em></li> <li>Upcoming prisoner birthdays: <a href="http://www.veronza.org/">Veronza Bowers, Jr.</a> 35316-136<br /> USP Atlanta<br /> Post Office Box 150160<br /> Atlanta, Georgia 30315<br /> <em>{February 4th}</em><br /> <br /> <a href="http://freekamau.com/">Kamau Sadiki</a> (Freddie Hilton) #0001150688<br /> Augusta State Medical Prison, Building 13A-2 E7<br /> 3001 Gordon Highway<br /> Grovetown, Georgia 30813<br /> <em>Address envelope to Freddie Hilton, address card to Kamau</em><br /> <em>{February 19th}</em><br /> <br /> <a href="http://angola3.org/">Shaka Cinque</a> (Albert Woodfox) #72148<br /> West Feliciana Parish Detention Center<br /> Post Office Box 2727<br /> St. Francisville, Louisiana 70775<br /> <em>Address envelope to Albert Woodfox, address card to Shaka</em><br /> <em>{February 19th}</em></li> </ul>]]></description>
-    <enclosure length="49698060" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/46_International-Anarchist-Reflections-on-the-New-Year.mp3?dest-id=139038" />
-    <itunes:duration>01:55:38</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[What do anarchists around the world think is in store for the new year? In Episode 45, we began our 2015 year in review, focusing on the US. In this episode, we share reflections on developments in 2015 and from anarchists in Chile, Finland, Brazil,...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#45: 2015 Year in Review!</title>
-    <pubDate>Fri, 08 Jan 2016 19:13:07 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[26aedfb6fba972bc6c17337182f91853]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/45]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/5/9/4/6/59469367648e52ff/ep45-1400.jpg" />
-    <description><![CDATA[<p>In our first episode of the new year, the Ex-Worker looks back over 2015 and its highlights, lowlights, and everything in between. We summarize some of the year’s key news developments, including tech developments and struggles around gender, anarchist publishing and media, a hilarious look at mass media coverage of anarchism, and our reflections on the last year of the podcast itself and our new year’s resolutions. You’ll also hear some analysis of some of the important themes within anarchism and revolutionary struggles in 2015, including an extended discussion on identity and solidarity, a review of the AK Press anthology “Taking Sides”, and reflections on our relationship to mass movements. The anarchist news website “It’s Going Down” contributes their end of year thoughts, a new project called “The Spaces Between” sets out to document US anarchism outside of its major urban hotspots, and a supporter offers an important update on NATO 3 prisoner Jared “Jay” Chase. We also received a number of detailed and inspiring year in review reports from anarchists around the world … but we’ll save those for our next episode.</p>]]></description>
-    <enclosure length="42654093" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/45_2015-Year-in-Review.mp3?dest-id=139038" />
-    <itunes:duration>01:39:33</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In our first episode of the new year, the Ex-Worker looks back over 2015 and its highlights, lowlights, and everything in between. We summarize some of the year’s key news developments, including tech developments and struggles around gender,...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#44: To Change Everything - International Panel Discussion</title>
-    <pubDate>Sun, 27 Dec 2015 22:47:07 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[1e0de72ab6ab6bf4cd524257d23fc8fc]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/44/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/c/0/1/8/c018479b2343218f/ep44-1400.jpg" />
-    <description><![CDATA[<p>In our 44th episode of the Ex-worker, and our final episode of 2015, we bring you a live audio recording from the last stop of the recently wrapped-up To Change Everything tour, an international panel discussion featuring stories and lessons from participants in some of the better and lesser known uprisings of the last few years. In two months and just over 50 stops, the featured speakers—hailing from Slovenia, Brazil, the Czech Republic and the U.S.—presented their perspectives on topics ranging from the common pitfalls of making demands, the rise of nationalism and fascism, and the importance of solidarity in the face of state repression. Stay tuned to the end of the episode where we propose some ideas for maintaining some of these valuable, face-to-face connections that have been made while on the tour. In addition, we’re releasing this episode in conjunction with the full tour report-back, so make sure you check that out as well.</p>]]></description>
-    <enclosure length="41814473" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/44_To-Change-Everything_International-Panel-Discussion.mp3?dest-id=139038" />
-    <itunes:duration>01:38:13</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In our 44th episode of the Ex-worker, and our final episode of 2015, we bring you a live audio recording from the last stop of the recently wrapped-up To Change Everything tour, an international panel discussion featuring stories and lessons from...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#43: Borders and Migration, Part I: Europe's "Refugee Crisis"</title>
-    <pubDate>Mon, 07 Dec 2015 06:56:05 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[3cfb3b629117bec3721b485fc5089aa2]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/43]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/d/0/a/7/d0a738495e2a8b98/ep43-1400.jpg" />
-    <description><![CDATA[<p>One of the major news stories of 2015 has been the flow of hundreds of thousands of migrants from Syria and beyond into Europe, and the social and political crises this has precipitated. In this episode, we'll take a look at Europe's so-called refugee crisis from an anarchist perspective. To do that, we adopt a "mix tape" format, pasting together excerpts from a variety of sources to offer an impressionistic look at how and why people move across the world, the barriers thrown up by states to impede and control them, and popular resistance against the system of national borders. We begin with reflections on borders from the CrimethInc. Contradictionary, To Change Everything, and past Ex-Worker episodes, and continue with excerpts from interviews with No One Is Illegal activist Harsha Walia, author Vijay Prashad, and a Swiss anarchist active in migrant solidarity struggles in Europe, as well as essays from an activist convergence against climate change, Calais Migrant Solidarity, and Mask Magazine; and conclude with reflections on the Islamic State attacks in Paris from the CrimethInc. blog. You'll also hear updates on anti-anarchist repression in Spain and anti-government demonstrations in South Korea, a report-back from the Rebel! Rebuild! Rewild! action camp in eastern Canada, and an announcement for a new prisoner publication, plus news, upcoming events, and more.</p>]]></description>
-    <enclosure length="53440911" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/43_Borders-and-Migration_Part-I__Europes-Refugee-Crisis.mp3?dest-id=139038" />
-    <itunes:duration>02:04:49</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[One of the major news stories of 2015 has been the flow of hundreds of thousands of migrants from Syria and beyond into Europe, and the social and political crises this has precipitated. In this episode, we'll take a look at Europe's so-called refugee...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#42: Anarchism in Finland, Global Updates</title>
-    <pubDate>Mon, 16 Nov 2015 06:55:22 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[8bf7942a66cd2f8f97dc46b356423a33]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/42]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/a/e/b/3/aeb35c785e00d896/ep42-1400.jpg" />
-    <description><![CDATA[<p>In this episode of the Ex-worker, we take another spin around the world, bringing you several short features focusing on various aspects of the global struggle against domination. We'll share an interview with a Finnish anarchist, who tells us about an anti-nuclear struggle, a university occupation in Helsinki, and the response to refugees in Finland, and how anarchists have taken part in all of these. We'll also hear statements from two Turkish anarchist collectives about the recent massacre of peace demonstrators in Ankara, Turkey. There's also an update on repression from the Hambacher Forest occupation, a text from the streets of Santiago analyzing last month's demonstrations against the anniversary of the coup by dictator Augusto Pinochet, and a report on the hunger strike of anarchist prisoner Evi Statiri in Greece—along with plenty of news, upcoming events, and more.</p>]]></description>
-    <enclosure length="24988141" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/42_Anarchism-in-Finland-Global-Updates.mp3?dest-id=139038" />
-    <itunes:duration>58:10</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In this episode of the Ex-worker, we take another spin around the world, bringing you several short features focusing on various aspects of the global struggle against domination. We'll share an interview with a Finnish anarchist, who tells us about...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#41: Anarchism in Belarus, Czech Republic, Korea, and Beyond</title>
-    <pubDate>Tue, 15 Sep 2015 17:39:14 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[97ce92abe2d2c849e4ff4033b6ed4ab6]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/41]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/2/6/9/5/2695a6ad10237cc7/ep41-1400.jpg" />
-    <description><![CDATA[<p>In this episode, the Ex-Worker explores connections between anarchism, repression and resistance across the world in countries that rarely appear in the radical limelight. We share an interview with an Anarchist Black Cross chapter in Belarus, discussing the president's recent release of anarchist political prisoners; interview a Czech anarchist about "Operation Fenix" and recent entrapment cases and terrorism charges leveled at anarchists there; and provide more context to last episode's call to flag-burning action from South Korean anarchists by examining the historical and political contexts of the flag for Korean radicals. We also discuss the Suruc massacre and developments among Kurdish struggles in Turkey and Syria, and expand our ongoing discussion of the concept of "terrorism" through the lens of a court ruling about gangs in El Salvador. Listener thoughts on Zeitgeist, conspiracy theories, and small-town anarchism, debunking the myth of "cops under attack" since the emergence of Black Lives Matter, and an announcement of the CrimethInc. "To Change Everything" US tour top off our usual collection of global news updates, prisoner birthdays, event announcements, and more. {September 15, 2015}</p>]]></description>
-    <enclosure length="35339374" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/41_Anarchism-in-Belarus-Czech-Republic-Korea-and-Beyond.mp3?dest-id=139038" />
-    <itunes:duration>01:22:16</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In this episode, the Ex-Worker explores connections between anarchism, repression and resistance across the world in countries that rarely appear in the radical limelight. We share an interview with an Anarchist Black Cross chapter in Belarus,...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#40: Struggles Against White Supremacy and Police Since Ferguson</title>
-    <pubDate>Thu, 03 Sep 2015 18:28:53 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[f04045168f799c53c4e5625aa97d7af4]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/40]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/0/e/4/8/0e48a0c29be22a6f/ep40-1400.jpg" />
-    <description><![CDATA[<p>It's been a year since rage over Michael Brown's murder catalyzed an anti-racist and anti-police rebellion that spread from Ferguson around the country. How can anarchists interpret the trajectory of the struggles against white supremacy that have unfolded over the last year? In Episode 40, we discuss the current state of police violence and both institutional and autonomous white supremacy, alongside an analysis of how anti-racist and anti-police resistance developed from Ferguson to Baltimore to South Carolina. A listener weighs in on the risks of militarism, from the Iron Column in the Spanish Civil War to the militias in Rojava today. Comrades from Korea share updates on state repression and issue an exciting call for international solidarity, and Clara and Alanis discuss the politics of the term ''terrorism'' and how to undertake assertive resistance to state repression without resorting to sports metaphors. {September 3, 2015}</p>]]></description>
-    <enclosure length="30700133" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/40_Struggles-Against-White-Supremacy-and-Police-Since-Ferguson.mp3?dest-id=139038" />
-    <itunes:duration>01:10:53</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[It's been a year since rage over Michael Brown's murder catalyzed an anti-racist and anti-police rebellion that spread from Ferguson around the country. How can anarchists interpret the trajectory of the struggles against white supremacy that have...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#39: The Rojava Revolution, Part II</title>
-    <pubDate>Wed, 29 Jul 2015 17:54:40 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[51a740f4c32ea54f64a547a19f947b08]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/39]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/4/d/2/7/4d275a8270568889/ep39-1400.jpg" />
-    <description><![CDATA[<p>In the latest episode of the Ex-Worker, we continue our discussion of the unfolding social revolution in the autonomous Kurdish territories of Rojava. Building on our coverage in Episode 36, we share two interviews themed around international solidarity with the struggle for autonomy and the fight against ISIS. In the first, a member of Rojava Solidarity NYC, the group of American anarchists that produced the book "A Small Key Can Open a Large Door", discusses democratic confederalism and the council system in the cantons, compares and contrasts the Zapatista uprising with the Rojava revolution, and describes the solidarity projects they've undertaken and what's at stake for anarchists in our response to the events in Kurdistan. In the second, a member of the Turkish anarchist group Social Insurrection discusses his experience fighting with the United Freedom Forces militia. We address some critiques of the revolutionary structures in Rojava as well as our coverage of them and trace the emergence of international solidarity brigades. A member of Antifa International announces the formation of an International Anti-fascist Defense Fund, and we share info about several recently released anarchist publications. Our discussion of the news takes on Obama's sudden transformation into a prison reform advocate, indigenous resistance to profiteering off alcoholism, and the outing of a corporate infiltrator into the animal rights movement, while our indignant coverage of Syriza's entirely predictable betrayal of Greek social movements in their EU bailout austerity proposal concludes with a helpful diagnosis of "The Five Stages of Leftism". {July 27, 2015}</p>]]></description>
-    <enclosure length="32607101" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/39_The-Rojava-Revolution-Part-II.mp3?dest-id=139038" />
-    <itunes:duration>01:15:45</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In the latest episode of the Ex-Worker, we continue our discussion of the unfolding social revolution in the autonomous Kurdish territories of Rojava. Building on our coverage in Episode 36, we share two interviews themed around international...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#38: Anarchism in Lake Worth, Florida</title>
-    <pubDate>Wed, 01 Jul 2015 18:49:57 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[dfae15aeb5ba6c5f271b8269d5d10dc2]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/38]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/4/2/d/1/42d12e6e51495c0a/ep38-1400.jpg" />
-    <description><![CDATA[<p>How do anarchists organize outside of major cities? In Episode 38 of the Ex-Worker, we offer a profile of anarchism in Lake Worth, a small coastal town in southern Florida with a surprisingly active and vibrant culture of resistance. Participants in the Everglades Earth First!, the Earth First! Journal, the South Florida Prison Books Project, the former Night Heron Infoshop, and Prison Legal News discuss the many radical projects that operate out of Lake Worth. We even hear from a former anarchist elected official discussing the contradictions and possibilities of that position! The episode also includes a CrimethInc. tour announcement, feedback from listeners about online crypto-anarchism, appeals for solidarity, plenty of news from all over the world, and more.</p>]]></description>
-    <enclosure length="45959843" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/38_Anarchism-in-Lake-Worth-Florida.mp3?dest-id=139038" />
-    <itunes:duration>01:47:05</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[How do anarchists organize outside of major cities? In Episode 38 of the Ex-Worker, we offer a profile of anarchism in Lake Worth, a small coastal town in southern Florida with a surprisingly active and vibrant culture of resistance. Participants in...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#37: The Hambacher Forest Occupation</title>
-    <pubDate>Mon, 15 Jun 2015 05:30:11 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[bf688d999cba7e7d92c04f2b0f2aa1d4]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/37/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/d/8/e/9/d8e99940b9e560d1/ep37-1400.jpg" />
-    <description><![CDATA[<p>In this episode, the Ex-Worker offers an in-depth profile of the struggle to defend the Hambacher Forest. In the Rhineland coal country of western Germany, a group of angry locals, environmentalists, anarchists and squatters have converged to challenge the destruction of one of the region's oldest forests by the energy giant RWE's brown coal mining. In these moving interviews recorded live in the Hambacher Forest in spring 2014, Clara gets a tour of the occupation and discusses the recent history of actions and broader political context. Through insightful and often hilarious informal conversations, the occupiers point out distinctive features of the forest, show the gritty and frequently comical day to day realities of squatter life, discuss their personal motivations for resisting the destruction of the forest, and offer poignant insight into the logic of resistance as a way of life. The episode concludes with recent updates from the occupation, ways to participate and show solidarity, and reflections on its significance for radicals across the world.</p>]]></description>
-    <enclosure length="41610445" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/37_The-Hambacher-Forest-Occupation.mp3?dest-id=139038" />
-    <itunes:duration>01:37:01</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In this episode, the Ex-Worker offers an in-depth profile of the struggle to defend the Hambacher Forest. In the Rhineland coal country of western Germany, a group of angry locals, environmentalists, anarchists and squatters have converged to...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#36: The Rojava Revolution</title>
-    <pubDate>Mon, 18 May 2015 18:03:01 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[7cdfbed73d6a6ae45a354d71db5bcd00]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/36]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/6/f/d/b/6fdb9ea582da34ea/ep36-1400.jpg" />
-    <description><![CDATA[<p>The Ex-Worker is back! We may have taken a break, but social struggles and resistance across the world have not. In this episode, we focus on the unfolding social revolution in Rojava or western Kurdistan, where an ambitious set of political, economic, and military experiments are transforming the lives of hundreds of thousands of people. In the borderlands of Turkey and Syria, self-organized militias have successfully opposed the Islamic State while challenging gender oppression and securing autonomy for an emerging stateless society. Interviews with supporters from the Turkish group "Revolutionary Anarchist Action" (DAF) set the stage, complemented by a Kurdish refugee and activist's reflections on the role of women's resistance to patriarchy. We also review "A Small Key Can Unlock a Large Door," a recently released anthology of texts describing the Rojava revolution, and continue our yearly tradition of a lively report of May Day actions across the globe. We also respond to a variety of listener feedback, with discussions of the Ross Ulbricht case, anarchist parenting, and how even spambots are impacted by recent revolutionary struggles!</p>]]></description>
-    <enclosure length="39045275" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/36_The-Rojava-Revolution.mp3?dest-id=139038" />
-    <itunes:duration>01:31:04</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[The Ex-Worker is back! We may have taken a break, but social struggles and resistance across the world have not. In this episode, we focus on the unfolding social revolution in Rojava or western Kurdistan, where an ambitious set of political,...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#35: To Change Everything Audio Zine</title>
-    <pubDate>Mon, 04 May 2015 16:16:06 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[4e9e2513e585d988dd07da38588a4344]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/35]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/1/9/d/4/19d4e5ad27e5f5f9/ep35-1400.jpg" />
-    <description><![CDATA[<p>Welcome back to the Ex-Worker! In celebration of the second anniversary of the podcast, and the resistance unfolding around the world from Baltimore to Milan and beyond, we’re releasing our first audio zine! CrimethInc.’s ambitious new anarchist outreach project To Change Everything is “a primer for the curious, a polemic for the entrenched, a point of departure for everyone who longs for another world.” So we at the Ex-Worker podcast are contributing an audio version to support the print and video versions circulating across the world. We’ll be back soon with our next regular episode, exploring the unfolding social revolution in Rojava, so stay tuned!</p>]]></description>
-    <enclosure length="38954401" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/35_To-Change-Everything-Audio-Zine.mp3?dest-id=139038" />
-    <itunes:duration>40:17</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Welcome back to the Ex-Worker! In celebration of the second anniversary of the podcast, and the resistance unfolding around the world from Baltimore to Milan and beyond, we’re releasing our first audio zine! CrimethInc.’s ambitious new...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#34: Staying Safe So We Can Be Dangerous Together</title>
-    <pubDate>Thu, 12 Feb 2015 17:04:17 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[ccba5620bb0ea273801060f4c41441a6]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/34]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/b/b/c/c/bbcc8e5395c41d93/ep34-1400.jpg" />
-    <description><![CDATA[<p>In our 34th episode, we follow themes of repression, security, and resistance through several different short features. In celebration of former Green Scare prisoner Eric McDavid's release after nine years inside, we reflect on the lessons of his case for our efforts to resist today. We share part of a recent CrimethInc. essay that assesses the possibilities and limits of whistleblowing, as well as an inspiring statement by Jason Hammond (sibling of incarcerated hacktivist Jeremy Hammond) as he heads to prison for his role in an anti-fascist action. Ramona Africa speaks to us about the MOVE 9 case and the life and death of Phil Africa, and an anarchist from Barcelona gives a report about the recent wave of repression by the Spanish state in Operation Pandora. Listeners weigh in on cable access TV, iTunes, and an insider view on security and entrapment strategies. We conclude with reflections on the lessons to be learned from these various cases and recent events on staying safe in order to be truly dangerous to authority. Plus as usual there are a lot of global news reports, event announcements, prisoner birthdays, and plenty more.</p>]]></description>
-    <enclosure length="49525858" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/34_Staying-Safe-So-We-Can-Be-Dangerous-Together.mp3?dest-id=139038" />
-    <itunes:duration>01:55:40</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In our 34th episode, we follow themes of repression, security, and resistance through several different short features. In celebration of former Green Scare prisoner Eric McDavid's release after nine years inside, we reflect on the lessons of his case...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#33: The Ex-Worker's 2014 Year in Review</title>
-    <pubDate>Tue, 20 Jan 2015 20:09:32 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[d4f9925017ffef48a251b76a3b9651d9]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/33]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/1/4/c/6/14c6bf2e05ea0007/ep33-1400.jpg" />
-    <description><![CDATA[<p>From the Ukrainian revolution and war with Russia to the Bosnian uprisings, ISIS/Rojava/Kobane conflicts, the Brazilian World Cup protests, anti-police riots in Ferguson and beyond … 2014 was one hell of a depressing, inspiring, roller coaster of a year! For our year in review, we wrote to anarchists around the world to ask them what they thought were the most significant events of the last year and what they anticipate in 2015. Responses came in from correspondents as far off as Brazil, Russia, Columbia, Slovenia, Finland, and Germany, as well as across North America, with reports about 2014 and analysis of the possibilities for resistance in the upcoming year. We also stop to take stock of the last year of the Ex-Worker, and reveal some schemes and dreams for our next year of anarchist podcasting. And as if that wasn't enough, we share an exclusive report on squatting, eviction, and resistance in Prague, an analysis of recent anti-police rioting in Oakland, and discussions on listener feedback about Agency's Ebola article and the police in relation to the state, along with plenty of news, prisoner birthdays, and more. {January 20th, 2015}</p>]]></description>
-    <enclosure length="51405867" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/33_The-Ex-Workers-2014-Year-in-Review.mp3?dest-id=139038" />
-    <itunes:duration>01:59:41</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[From the Ukrainian revolution and war with Russia to the Bosnian uprisings, ISIS/Rojava/Kobane conflicts, the Brazilian World Cup protests, anti-police riots in Ferguson and beyond … 2014 was one hell of a depressing, inspiring, roller coaster...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#32: White Supremacy and Capitalism, From 1492 to Ferguson</title>
-    <pubDate>Thu, 18 Dec 2014 14:42:16 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[2cdfa65a6191177ae1afdd774c278f2b]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/32]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/8/2/b/f/82bf3dc6a8e2f40c/ep32-1400.jpg" />
-    <description><![CDATA[<p>Rebellion has erupted around the country in the aftermath of grand jury decisions to allow the murderers of Mike Brown in Ferguson and Eric Garner in New York to go free without legal charges. Why did this happen, when authorities knew that this would spark furious protests and international condemnation? To try to understand the persistence of racist police violence, Clara and Alanis delve into the historical roots of capitalism and white supremacy from the origins of European conquest and colonization of the Americas. Along with a survey of resistance and backlash since the grand jury announcements, we share excerpts from the recent feature "The Thin Blue Line is a Burning Fuse," tracing the role of anti-police anger in catalyzing nearly all recent major social upheavals around the globe. Agency, a new anarchist media project, shares an excerpt from an article analyzing the Ebola outbreak and anarchist perspectives on public health. We run through a wide range of news, discuss listener comments on transcripts and international coverage, and even offer a radical holiday song!</p>]]></description>
-    <enclosure length="42026574" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/32_White-Supremacy-and-Capitalism_From-1492-to-Ferguson.mp3?dest-id=139038" />
-    <itunes:duration>01:38:15</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Rebellion has erupted around the country in the aftermath of grand jury decisions to allow the murderers of Mike Brown in Ferguson and Eric Garner in New York to go free without legal charges. Why did this happen, when authorities knew that this would...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#31: Live from the Carrboro Anarchist Book Fair!</title>
-    <pubDate>Sat, 29 Nov 2014 18:26:40 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[cc93cd4a8baab5bae9476d0126329efc]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/31]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/2/5/6/a/256a59de768df36d/ep31-1400.jpg" />
-    <description><![CDATA[<p>Clara and Alanis attended the Carrboro Anarchist Book Fair on November 22nd, 2014, and decided to try an experiment: recording an episode of the Ex-Worker in front of a live anarchist audience! We started off with our usual Hot Wire news, and then interviewed a wide range of participants from the book fair about workshops or presentations they did or projects they represented. Interviewees spoke about a writing project on southern insurrectionary history; the Can Vries eviction and riots in Barcelona, Spain; rethinking prisoner support based on experiences with anti-authoritarian queer and transgender prisoners; a moving letter by Luke O'Donovan sent from prison specifically to be shared at the book fair; an update about an anarchist injured and arrested at a Philadelphia solidarity demonstration; and participants from the New York City Anarchist Black Cross, the Inside/Outside Alliance, and the UNControllables, an anarchist student group.</p>]]></description>
-    <enclosure length="21725511" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/31_Live-from-the-Carrboro-Anarchist-Book-Fair.mp3?dest-id=139038" />
-    <itunes:duration>51:13</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Clara and Alanis attended the Carrboro Anarchist Book Fair on November 22nd, 2014, and decided to try an experiment: recording an episode of the Ex-Worker in front of a live anarchist audience! We started off with our usual Hot Wire news, and then...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#30: Anarchism in Chile, Part II</title>
-    <pubDate>Tue, 11 Nov 2014 20:38:18 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[550308c334327042793bc8dbc418bb56]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/30]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/8/4/d/d/84dd0089d8a32e8e/ep30-1400.jpg" />
-    <description><![CDATA[<p>The Ex-Worker keeps our eyes to the south as we continue our in-depth exploration of anarchism in Chile. While our last episode sought to provide context and history, this episode delves into two recent cases of repression by the Chilean State against anarchists and discusses the important of prisoner support in the anarchist movement. We interview Victor Montoya, an anarchist who was framed up and spent 16 months in pretrial detention, as well as Luciano "Tortuga" Pitronello, a comrade who faced terrorism charges after a bomb he was carrying prematurely detonated. While Tortuga's body was damaged in the course of this ordeal, his spirit remains resilient, and he shares inspiring stories and sage advice over vegan sandwiches at the autonomous library Sante Geronimo Caserio in Santiago. We'll offer a review of the Chicago Conspiracy, a documentary film which illustrates some of Chile's radical history and present through music, celebration, memory and riot, tackle some thoughtful listener feedback about democracy and anarchy, and top it all off with news from struggles around the globe.</p>]]></description>
-    <enclosure length="39445194" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/30_Anarchism-in-Chile_Part-II.mp3?dest-id=139038" />
-    <itunes:duration>01:32:26</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[The Ex-Worker keeps our eyes to the south as we continue our in-depth exploration of anarchism in Chile. While our last episode sought to provide context and history, this episode delves into two recent cases of repression by the Chilean State against...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#29: Anarchism in Chile, Part I: From Popular Power to Social War</title>
-    <pubDate>Thu, 09 Oct 2014 07:25:24 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[df7436b966cb654d69947578064f80b0]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/29]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/d/0/e/f/d0ef280d36453f1a/ep29-1400.jpg" />
-    <description><![CDATA[<p>On September 11th, while patriotic Americans waved flags and listened to speeches, a few thousand miles south, Chileans massed in the streets and clashed with police on the anniversary of the 1973 military coup. Our 29th episode begins a two-episode series on anarchism in Chile: From popular power and militant resistance to the Pinochet dictatorship to today's clashes between <em>encapuchados</em> and <em>Carabineros</em> across burning barricades, we explore the history and background context necessary to understand the distinctive and militant anarchist struggles of contemporary Chile. From the recent anarchist book and propaganda fair in Santiago, several anarchists speak with us about the importance of radical neighborhoods, the evolution of public anarchist organizing, and political imprisonment in Chile. Attendees of the marches and actions during the recent Climate Convergence in New York City report on their experiences and reflect on how anarchists connect to broader environmental movements. Listeners weigh in on historical dates, pronunciation mistakes, and mind-controlled drones, alongside news, announcements, and prisoner birthdays.</p>]]></description>
-    <enclosure length="35211779" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/29_Anarchism-in-Chile-Part-I_From-Popular-Power-to-Social-War.mp3?dest-id=139038" />
-    <itunes:duration>01:23:09</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[On September 11th, while patriotic Americans waved flags and listened to speeches, a few thousand miles south, Chileans massed in the streets and clashed with police on the anniversary of the 1973 military coup. Our 29th episode begins a two-episode...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#28: Anarcha-Feminism, Part II: Early Critiques and Visions</title>
-    <pubDate>Mon, 15 Sep 2014 01:59:14 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[8e02967586b0875d1b0d50adb0aae933]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/28]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/8/d/6/1/8d618d9da519fde3/ep28-1400.jpg" />
-    <description><![CDATA[<p>In Episode 26, we shared a panorama of dramatic stories from the lives and struggles of 19th and early 20th century anarchist women... but we didn't focus much on their ideas. In the second episode of our three-part series on anarcha-feminism, the Ex-Worker returns to the first generations of rebels who brought together anarchist and feminist currents, this time to explore their distinctive revolutionary visions. We survey the context of early revolutionary and feminist ideas, and the distinct perspectives of early anarcha-feminists on marriage, sexuality, economic and bodily autonomy, suffrage, revolutionary sexism, and strategies for women's emancipation. The Chopping Block discusses Free Women of Spain, the classic study of the Spanish anarcha-feminist group Mujeres Libres. Listeners weigh in on sports, a special guest contributor offers a correction about indigenous resistance to fracking, and we begin a fascinating conversation on solidarity actions and anonymity amidst the news, event announcements, statements from political prisoners, and more. </p>]]></description>
-    <enclosure length="40950797" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/28_Anarcha-Feminism-Part-II_Early-Critiques-and-Visions.mp3?dest-id=139038" />
-    <itunes:duration>01:36:52</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In Episode 26, we shared a panorama of dramatic stories from the lives and struggles of 19th and early 20th century anarchist women... but we didn't focus much on their ideas. In the second episode of our three-part series on anarcha-feminism, the...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#27: Anti-Police Riots in Ferguson</title>
-    <pubDate>Mon, 25 Aug 2014 00:14:55 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[dcfa2791e5eb67184b47dca9ff0643b9]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/27/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/8/c/b/f/8cbfe676d23b70b3/ep27-1400.jpg" />
-    <description><![CDATA[<p>Since the murder of Mike Brown by police on August 9th, Ferguson, Missouri has been the site of intense riots, looting, and clashes with police. In this episode, we share accounts from participants and reflections on the rebellion, as well as an analysis which unpacks the designation of "outside agitators." Two texts discussing other recent anti-police uprisings appear on the Chopping Block, while supporters of Luke O'Donovan update us on his trial and how to show solidarity. Clara and Alanis share a slew of listener feedback, exploring the origins of the term feminism, correcting some mistakes about the IWW, and getting into a testy debate over the politics of sports. News, prisoner birthdays, Contradictionary terms, and upcoming events round out another packed episode.</p>]]></description>
-    <enclosure length="27993843" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/27_Anti-Police-Riots-in-Ferguson.mp3?dest-id=139038" />
-    <itunes:duration>01:06:06</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Since the murder of Mike Brown by police on August 9th, Ferguson, Missouri has been the site of intense riots, looting, and clashes with police. In this episode, we share accounts from participants and reflections on the rebellion, as well as an...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#26: Anarcha-Feminism, Part I: Introduction and Herstory</title>
-    <pubDate>Thu, 07 Aug 2014 04:07:20 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[b545ceb3cad5cf01056ebbf6c8b7c186]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/26]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/8/a/4/f/8a4fc0194c17ad64/ep26-1400.jpg" />
-    <description><![CDATA[<p>What is anarcha-feminism, and what contribution has it made to both feminism and anarchism? In this episode we kick off a series exploring anarcha-feminism in the past and present. After framing the issue and dealing with some thorny questions around definitions of feminism and gender, we take a whirlwind tour through the history--or herstory, if you like--of anarchist women from the barricades of the Paris Commune to the front lines of the Spanish Civil War. In addition to Louise Michel, Lucy Parsons, Emma Goldman, and a few other big names, we'll share stories of Russian nihilists, Puerto Rican tobacco workers, Japanese journalists, Mexican guerrillas, and many other unsung heroines of late 19th and early 20th century anarchist struggles. The anthology Quiet Rumors: An Anarcha-Feminist Reader appears on the Chopping Block, and a member of the Revolutionary Anarcha-Feminist Group from Dublin, Ireland joins us for an interview. Clara and Alanis even take issue with a term from the Contradictionary, along with a packed calendar of upcoming events, news, and more.</p>]]></description>
-    <enclosure length="45471954" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/26_Anarcha-Feminism-Part-I_Introduction-and-Herstory.mp3?dest-id=139038" />
-    <itunes:duration>01:51:38</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[What is anarcha-feminism, and what contribution has it made to both feminism and anarchism? In this episode we kick off a series exploring anarcha-feminism in the past and present. After framing the issue and dealing with some thorny questions around...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#25: The Brazil World Cup Protests</title>
-    <pubDate>Thu, 17 Jul 2014 00:44:08 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[eeab3fba14e6d285eca781b52adf4454]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/25]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/c/d/0/7/cd074c0944060bdb/ep25-1400.jpg" />
-    <description><![CDATA[<p>The recent World Cup prompted widespread protests across Brazil. In our 25th episode, we discuss why these protests took place, who participated, and how they connected to the uprisings of the last year. We share an audio collage of protest voices, an interview with Brazilian anarchists, and a Situationist-inspired critique of mass sports spectacles. The new green anarchist journal Black Seed appears on the Chopping Block, while a Ukrainian anarchist offers perspective on why things may not be so bleak there for anarchists as we thought. And there's hooliganism, a June 11th rundown, prisoner updates, reflections on the "global village," and Juggalos to boot!</p>]]></description>
-    <enclosure length="30015311" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/25_The-Brazil-World-Cup-Protests.mp3?dest-id=139038" />
-    <itunes:duration>01:12:07</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[The recent World Cup prompted widespread protests across Brazil. In our 25th episode, we discuss why these protests took place, who participated, and how they connected to the uprisings of the last year. We share an audio collage of protest voices, an...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#24: Communization</title>
-    <pubDate>Tue, 01 Jul 2014 19:42:52 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[7a6ca325d588e6e315c2a0fa614ad033]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/24]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/1/7/6/d/176d20c9b9d9e273/ep24-1400.jpg" />
-    <description><![CDATA[<p>From the incendiary writings of The Invisible Committee prompting arrests on charges of rail line sabotage in France, to the calculated analysis of Theorie Communiste and Aufheben, we may have skipped a few things in our previous two episodes about communism. The current known as communization emerged out of the struggles of May '68 in France, and to this day the question remains: can we enact communism ourselves, here and now? In this episode of the Ex-worker, we'll take another angle on communism, away from the backstabbing, newspaper-hocking, withering-state-types profiled in Episodes 20 and 21, instead focusing on those who share our dream of breaking with the misery of our conditions and dismantling this world (even if they still talk like Marxists.) In this episode we experiment with different ways of breaking through some of the heavy theoretical language and ideas, including a reportback from a rather unusual Endnotes reading group, and transmit a theme segment from an autonomous, anonymous podcasting cell. We'll travel to North and South Korea in our listener feedback section, hear an interview from Anarchist prisoner Michael Kimble about prison struggle in Alabama and the importance of supporting long-term prisoners, and round it out with news and prisoner birthdays.</p>]]></description>
-    <enclosure length="28050433" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/24_Communization.mp3?dest-id=139038" />
-    <itunes:duration>01:06:29</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[From the incendiary writings of The Invisible Committee prompting arrests on charges of rail line sabotage in France, to the calculated analysis of Theorie Communiste and Aufheben, we may have skipped a few things in our previous two episodes about...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#23: May '68 and the Situationist International</title>
-    <pubDate>Sun, 01 Jun 2014 04:31:32 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[3fc682399f8698b90c2e6d1cea3fc929]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/23]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/0/2/2/1/022165a616f8911f/ep23-1400.jpg" />
-    <description><![CDATA[<p>Another May Day come and gone! After we catch up on how radicals around the world celebrated it in the streets this year, we'll turn back the clock a few decades to a particularly notorious May: Paris in 1968. The strikes and riots that nearly toppled the French state—as well as the Situationist International, those Marxist-influenced art radicals whose theories influenced the uprising—are the topic of our main feature for this episode. One of the key texts coming from the Situationist tradition, Raoul Vaneigem's The Revolution of Everyday Life, appears on the Chopping Block. Listeners weigh in on future episodes, "Uncle Ted," and the Ukraine episode and anarchist strategy. And of course there's more news, events, prisoner birthdays, and other goodies.</p>]]></description>
-    <enclosure length="23907506" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/23_May-68-and-the-Situationist-International.mp3?dest-id=139038" />
-    <itunes:duration>55:29</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Another May Day come and gone! After we catch up on how radicals around the world celebrated it in the streets this year, we'll turn back the clock a few decades to a particularly notorious May: Paris in 1968. The strikes and riots that nearly toppled...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#22: Ukraine</title>
-    <pubDate>Wed, 23 Apr 2014 17:51:19 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[db66e6a1843c2def1cf1cd1a8baf04c0]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/22]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/a/6/2/6/a626e508840dd3a1/ep22-1400.jpg" />
-    <description><![CDATA[<p>This week on the Ex-worker, we're responding to a few listener requests and presenting an analysis of the situation in Ukraine, largely borrowed from our recent feature The Ukrainian Revolution and the Future of Social Movements. We'll also hear an interview with a member of Belarus Anarchist Black Cross about repression in Belarus and Ukraine, courtesy of our comrades at A-Radio Berlin, as well as our recommendations for which insurrectionary journals you should take if you get stranded on a desert island.  The episode is rounded out with news, and lots of upcoming events and prisoner birthdays.</p>]]></description>
-    <enclosure length="26675571" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/22_Ukraine.mp3?dest-id=139038" />
-    <itunes:duration>01:01:53</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[This week on the Ex-worker, we're responding to a few listener requests and presenting an analysis of the situation in Ukraine, largely borrowed from our recent feature The Ukrainian Revolution and the Future of Social Movements. We'll also hear an...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#21: Communism and Socialism, pt.2</title>
-    <pubDate>Thu, 10 Apr 2014 21:46:53 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[f1c640ce46be54a3fa5fbd396bb91858]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/21]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/c/b/f/7/cbf74174783b6611/ep21-1400.jpg" />
-    <description><![CDATA[<p>We're back with the second installment of our exploration of anarchism's complicated relationship with communism.  Ex-worker's Russia correspondents Misha and Anastasia come to us through the fuzzy airwaves of history, reporting live from the Russian revolution and what the anarchists are up to . . . we'll see how that goes.  We'll also hear some more feedback from everyone's favorite gubernatorial candidate, anarchist prisoner Sean Swain, as well as extensive coverage of eco- and animal-liberation actions and prisoner rebellions from around the world.</p>]]></description>
-    <enclosure length="22306570" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/21_Communism-and_Socialism-pt2.mp3?dest-id=139038" />
-    <itunes:duration>52:33</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[We're back with the second installment of our exploration of anarchism's complicated relationship with communism.  Ex-worker's Russia correspondents Misha and Anastasia come to us through the fuzzy airwaves of history, reporting live from the...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#20: Communism and Socialism, pt.1</title>
-    <pubDate>Wed, 26 Mar 2014 16:53:44 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[843d8d0a39f0f94b99737736e45e5635]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/20]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/c/c/7/6/cc76e4238dbd06af/ep20-1400.jpg" />
-    <description><![CDATA[<p>It turns out we have a lot to say about our relationship to communism, so we're breaking this theme segment up into a two-parter.  We'll start off our gargantuan exploration by covering some basic  definitions of communism and socialism, and dive headlong into some heated historical splits between Marx and Bakunin.  We'll hear statements from Jeremy Hammond, Marshall "Eddie" Conway, and anarchists holding it down in Ukraine, as well as an interview with Anarcho-communist Wayne Price. </p>]]></description>
-    <enclosure length="29409582" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/20_Communism-and-Socialism-pt1.mp3?dest-id=139038" />
-    <itunes:duration>01:00:18</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[It turns out we have a lot to say about our relationship to communism, so we're breaking this theme segment up into a two-parter.  We'll start off our gargantuan exploration by covering some basic  definitions of communism and socialism, and...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#19: Anarchists In Revolt, From Bosnia to Peru</title>
-    <pubDate>Tue, 04 Mar 2014 20:18:49 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[cd128da6bf68e95deb4117750bca44a5]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/19]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/0/e/7/d/0e7d07fcc9d0e065/ep19-1400.jpg" />
-    <description><![CDATA[<p>Our discussion of communism will have to wait … because post-socialist Bosnia is erupting in rebellion! In this episode, we share two interviews with anarchists from the Balkans reflecting on the current uprisings, along with recent updates and a Bosnian hip hop artist's protest anthem. An Ex-Worker travels to Lima, Peru and sends back a report on a recent anarchist book and propaganda fair, including a group shout-out from a workshop about the podcast, live interviews and musical recordings. Listeners critique our treatment of market anarchism, an eco-defense prisoner explains police tactics, and news on state repression, prisoner strikes, and anti-extraction struggles round out our exploration of resistance to authority around the globe.</p>]]></description>
-    <enclosure length="29029326" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/19_Anarchists-In-Revolt-From-Bosnia-to-Peru.mp3?dest-id=139038" />
-    <itunes:duration>01:10:38</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Our discussion of communism will have to wait … because post-socialist Bosnia is erupting in rebellion! In this episode, we share two interviews with anarchists from the Balkans reflecting on the current uprisings, along with recent updates and...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#18: What Anarchism Isn't, Pt 1: Libertarianism and Anarcho-Capitalism</title>
-    <pubDate>Thu, 13 Feb 2014 06:49:20 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[aa04693103b19bbe2e4b59e24095d671]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/18]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/5/d/3/8/5d3810ecf92d8554/ep18-1400.jpg" />
-    <description><![CDATA[<p>Anarchism ain't what it used to be … if you search iTunes or Youtube these days, you'll find defenders of capitalism and private property claiming the A word more than ever. In our 18th installment of the Ex-Worker, we kick off a two episode series discussing what anarchism <em>isn't</em>, as Clara and Alanis step in to debunk anarcho-capitalism. Surveying the range of libertarian ideologies in the US, we assess the similarities and differences between these opponents of the state and anti-capitalist anarchists, while clarifying how their free market fantasies fall short of a genuinely anarchist vision of freedom. Our critiques of private property and the free market conclude with a hilarious interview with an anarchist graphic designer about their misadventures laying out a book on "market anarchism." We also hear from recently released grand jury resister Jerry Koch about the insight he's gained into the importance of prisoner solidarity to anarchist struggle, while his lawyer explains how grand juries are used as tools of political repression and how we can resist them. Listeners offer corrections, suggestions, and updates on prisoner struggles, while plenty of news updates and announcements round out our longest episode yet!</p>]]></description>
-    <enclosure length="34301010" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/18_Libertarianism-and-Anarcho-Capitalism.mp3?dest-id=139038" />
-    <itunes:duration>01:24:22</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Anarchism ain't what it used to be … if you search iTunes or Youtube these days, you'll find defenders of capitalism and private property claiming the A word more than ever. In our 18th installment of the Ex-Worker, we kick off a two episode...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#17: Conspiracy! State Repression Strategies and Anarchist Resistance</title>
-    <pubDate>Sat, 25 Jan 2014 06:34:22 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[740c1212ad4db125a486dbeffec5e910]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/17]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/d/f/2/8/df280b7bf9dfdb47/ep17-1400.jpg" />
-    <description><![CDATA[<p>As we complete this episode, trial is about to begin for the NATO 3, Chicago anarchists facing domestic terrorism charges after being entrapped by informants during a 2012 protest summit. To understand the case and its context, the Ex-Worker explores the state's strategy to repress anarchists and social movements through the use of conspiracy charges and entrapment. We interview three activists from the front lines of anti-repression work: a member of the NATO 3 support team, a volunteer with the animal liberation counter-information collective Bite Back, and an anarchist supporter of the Almighty Latin King and Queen Nation. Our review on the Chopping Block examines Green is the New Red: An Insider's Account of a Social Movement Under Siege while more listeners write in to share what anarchism means to them. News across the world includes anarchist typhoon relief efforts, Indiana prisoner resistance, and Christian anarchists striking back against sexism. A brief discussion by political prisoner Veronza Bowers, Jr. about repression against the Black Panther Party and an announcement from an organizer with Everglades Earth First! round out one of our most action-packed episodes to date.</p>]]></description>
-    <enclosure length="27666663" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/17_Conspiracy-State-Repression-Strategies-and-Anarchist-Resistance.mp3?dest-id=139038" />
-    <itunes:duration>01:06:20</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[As we complete this episode, trial is about to begin for the NATO 3, Chicago anarchists facing domestic terrorism charges after being entrapped by informants during a 2012 protest summit. To understand the case and its context, the Ex-Worker explores...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#16: Back to Black</title>
-    <pubDate>Mon, 13 Jan 2014 04:41:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[be4ed621d2f89daa32913fdba6256973]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/16]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/e/b/e/9/ebe9981fa13922bc/ep16-1400.jpg" />
-    <description><![CDATA[<p>It's a new year and a new episode of the Ex-Worker! In our sixteenth installment, we backtrack a little to cover our biggest topic ever: what is anarchism? What pathways led today's rebels to embrace anarchy, and what does it mean to them? We'll hear from historical and contemporary anarchists in a collage weaving together first person experiences and definitions. Also, listeners write in to elaborate on the situation in Ukraine we reported on in our last episode, and to share a provocative perspective on the relationship between religion and anarchism. We've also got our usual news, upcoming events, and prisoner birthdays. Tune in to hear the poignant stories of an anarchist generation.</p>]]></description>
-    <enclosure length="19386330" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/16_Back-to-Black.mp3?dest-id=139038" />
-    <itunes:duration>45:13</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[It's a new year and a new episode of the Ex-Worker! In our sixteenth installment, we backtrack a little to cover our biggest topic ever: what is anarchism? What pathways led today's rebels to embrace anarchy, and what does it mean to them? We'll hear...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#15: The Ex-Worker Holiday Special</title>
-    <pubDate>Tue, 17 Dec 2013 05:19:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[85fd8d9f2486dabbbbd404e83c1c8d2a]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/15]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/3/b/4/1/3b41a67b45389218/ep15-1400.jpg" />
-    <description><![CDATA[<p>In our first-ever holiday special, Clara and Alanis take a whirlwind tour through two hundred years of blistering anarchist critiques of religion and morality. From romantic poets to guillotined dynamite artists, from Enlightenment philosophers to punk rockers, anarchists have never been so fiery as when they've denied the gods and affirmed our right to determine our own values. The discussion touches on direct actions against religion, the shifting politics of atheism, and the contradictions of Christian anarchism. Prison rebel Sean Swain responds to our episode on fascism, a murderous police department receives some crime stopping tips, and we offer anarchist reflections on Nelson Mandela's legacy, decapitated Lenin statues, and Finnish hockey riots. As the Greeks say: Merry Crisis and Happy New Fear!</p>]]></description>
-    <enclosure length="26159239" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/15_The-Ex-Worker-Holiday-Special.mp3?dest-id=139038" />
-    <itunes:duration>01:05:30</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In our first-ever holiday special, Clara and Alanis take a whirlwind tour through two hundred years of blistering anarchist critiques of religion and morality. From romantic poets to guillotined dynamite artists, from Enlightenment philosophers to...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#14: Squat the World!</title>
-    <pubDate>Sun, 01 Dec 2013 22:51:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[868cc7e7cf5c197a1079f7beab0ebaf8]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/14]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/f/1/1/d/f11d0af71c1db7ed/ep14-1400.jpg" />
-    <description><![CDATA[<p>In this episode, Alanis and Clara allegedly break into an abandoned building to begin a conversation about squatting--and why it's so important to anarchists. This episode includes two interviews--one with participants in a squatted social center in the United States, and one from an anti-infrastructure land occupation project in France. We'll also hear the soothing sounds of listener feedback, regarding our last episode and some further clarifications about technology, a review of Hannah Dobbz's "Nine-tenths of the Law: Property and resistance in the United States," news, upcoming events, and prisoner birthdays.</p>]]></description>
-    <enclosure length="24729705" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/14_Squat-the-World.mp3?dest-id=139038" />
-    <itunes:duration>58:20</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In this episode, Alanis and Clara allegedly break into an abandoned building to begin a conversation about squatting--and why it's so important to anarchists. This episode includes two interviews--one with participants in a squatted social center in...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#13: Ones and Zeroes, Scoundrels and Heroes</title>
-    <pubDate>Tue, 19 Nov 2013 06:31:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[f85897999ac1cff8055bff54ed590ff8]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/13]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/0/9/5/3/095310a455092ee0/ep13-1400.jpg" />
-    <description><![CDATA[<p>Some radicals believe the internet prefigures a decentralized utopia; others foresee a new digital feudalism of total management and surveillance. In this episode, Clara and Alanis take on the recent CrimethInc. feature "Deserting the Digital Utopia," teasing out some of the limitations and possibilities of resistance that engages with digital technologies. A supporter of imprisoned radical hacker Jeremy Hammond discusses his case. Listeners lambast us on our grievous gaffe from last episode, sketchy cops and masked marchers populate the news, and we announce an anarchist primer competition (even if we can't agree on how to pronounce it).</p>]]></description>
-    <enclosure length="22431967" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/13_Ones-and-Zeroes-Scoundrels-and-Heroes.mp3?dest-id=139038" />
-    <itunes:duration>53:30</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Some radicals believe the internet prefigures a decentralized utopia; others foresee a new digital feudalism of total management and surveillance. In this episode, Clara and Alanis take on the recent CrimethInc. feature "Deserting the Digital Utopia,"...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#12: Remembering Means Fighting</title>
-    <pubDate>Thu, 24 Oct 2013 21:55:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[d6d1ee2895b601b354370aac83957ba0]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/12]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/d/7/a/0/d7a0772aa489ca5b/ep12-1400.jpg" />
-    <description><![CDATA[<p>Anarchist resistance to fascism has a long and colorful history. Our second episode on anti-fascism looks into how anarchists fought against Franco in the Spanish Revolution and beyond. We share an exciting interview with Occupied London about fascism and resistance in Greece, as well as a Free Speech FAQ to help anti-fascists circumvent civil libertarian defenses of fascist organizing. A special guest contributor chips in with a set of lively anti-fascist movie reviews. Listeners offer more antifa updates and crucial ways to get involved, alongside news of riots, blockades, and so much more.</p>]]></description>
-    <enclosure length="28257517" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/12_Remembering-Means-Fighting.mp3?dest-id=139038" />
-    <itunes:duration>01:09:51</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Anarchist resistance to fascism has a long and colorful history. Our second episode on anti-fascism looks into how anarchists fought against Franco in the Spanish Revolution and beyond. We share an exciting interview with Occupied London about fascism...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#11: Never Forgive and Never Forget</title>
-    <pubDate>Tue, 08 Oct 2013 20:13:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[e237e5f7fffa558ed75237d21c2be7f5]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/11]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/7/3/e/e/73ee5d1595071c95/ep11-1400.jpg" />
-    <description><![CDATA[<p>Recently murdered Greek anti-fascist rapper Killah P is just the latest casualty in a worldwide surge of fascist violence. In this episode, we analyze contemporary fascism and the resistance anarchists have mounted to it, including the history of Anti-Racist Action. Interviews with the One People's Project and New York City Anarchist Black Cross discuss the extreme right in the US today, tactics for fighting fascists, and the Tinley Park case. We also clear up a listener's question about "National Anarchism," roll out more Contradictionary terms, and share a ton of news and upcoming events.</p>]]></description>
-    <enclosure length="30510589" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/11_Never-Forgive-and-Never-Forget.mp3?dest-id=139038" />
-    <itunes:duration>01:10:05</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Recently murdered Greek anti-fascist rapper Killah P is just the latest casualty in a worldwide surge of fascist violence. In this episode, we analyze contemporary fascism and the resistance anarchists have mounted to it, including the history of...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#10: Are The Issues The Issue?</title>
-    <pubDate>Thu, 19 Sep 2013 07:05:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[c150cd25ce8e22db209dddb8e7642930]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/10]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/7/7/0/6/77060e5dfe6dce64/ep10-1400.jpg" />
-    <description><![CDATA[<p>Building on our previous exploration of insurrectionary anarchism, our tenth episode examines how these ideas apply to environmental struggles today, as we share excerpts from a debate about "The Issues Are Not The Issue," a critical discussion of tactics and strategy in eco-defense movements. We also take a look at Desert, an anarchist analysis of climate change and the possibilities for resistance in a world of ecological disaster, as well as sharing updates from prisoners, news from global uprisings, more reading recommendations, and more.</p>]]></description>
-    <enclosure length="22861338" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/10_Are-The-Issues-The_Issue.mp3?dest-id=139038" />
-    <itunes:duration>54:37</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[Building on our previous exploration of insurrectionary anarchism, our tenth episode examines how these ideas apply to environmental struggles today, as we share excerpts from a debate about "The Issues Are Not The Issue," a critical discussion of...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#9: No Time to Wait</title>
-    <pubDate>Tue, 03 Sep 2013 21:13:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[53c6a507558209c4f31a917cf4c3d5fb]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/9]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/7/e/9/6/7e967e5a2ceb320a/ep9-1400.jpg" />
-    <description><![CDATA[<p>We've thrown around the term insurrectionary anarchism in recent discussions, so in our ninth episode we seize the moment and dive headlong into this tendency, exploring where it came from and what it looks like today. We also review the classic Italian insurrectionary text Armed Joy; look back over a summer's worth of animal liberation actions; interview a supporter of the California Prison Hunger Strike, as it enters its 55th day; share some more listener feedback on nihilism, and plenty more. Tune in--the time to act is now!</p>]]></description>
-    <enclosure length="22923928" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/9_No-Time-to-Wait.mp3?dest-id=139038" />
-    <itunes:duration>51:50</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[We've thrown around the term insurrectionary anarchism in recent discussions, so in our ninth episode we seize the moment and dive headlong into this tendency, exploring where it came from and what it looks like today. We also review the classic...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#8: Prison Abolition and Community Accountability</title>
-    <pubDate>Sun, 25 Aug 2013 23:11:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[4850c560ab30bea96de7f070d11bd6b1]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/8]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/e/7/8/1/e78176cc3ee4db9f/ep8-1400.jpg" />
-    <description><![CDATA[<p>To conclude our series focusing on prisons and police, our eighth episode looks into strategies to dismantle the prison industrial complex and to hold each other accountable without the state. We interview members of Critical Resistance and Support New York, discuss a new collection of writings from political prisoner Russell Maroon Shoats, respond to listener feedback and anarchist perspectives on gun control, and share a letter from revolutionary Tom Manning about his transfer from solitary confinement--not to mention news, event announcements, Contradictionary terms, and more.</p>]]></description>
-    <enclosure length="29369858" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/8_Prison-Abolition-and-Community-Accountability.mp3?dest-id=139038" />
-    <itunes:duration>01:07:42</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[To conclude our series focusing on prisons and police, our eighth episode looks into strategies to dismantle the prison industrial complex and to hold each other accountable without the state. We interview members of Critical Resistance and Support...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#7: The June 2013 Rebellions in Brazil</title>
-    <pubDate>Mon, 05 Aug 2013 04:47:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[18e02bddcae89b0b48e02070546fc45e]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/7]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/5/1/f/b/51fbef943041bc55/ep7-1400.jpg" />
-    <description><![CDATA[<p>In our seventh episode of the Ex-Worker, we turn south to focus on the massive rebellions that broke out across Brazil in June. We share excerpts from the in-depth report we published from Brazilian anarchist comrades that traces a timeline of the demonstrations and analyzes their politics, tactics, and influences. There's also a review of the nihilist journal Attentat, tips on writing to prisoners, feedback from listeners on Guy Fawkes masks and small-town anarchy, and more. </p>]]></description>
-    <enclosure length="18705746" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/7_The-June-2013-Rebellions-in-Brazil.mp3?dest-id=139038" />
-    <itunes:duration>41:44</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In our seventh episode of the Ex-Worker, we turn south to focus on the massive rebellions that broke out across Brazil in June. We share excerpts from the in-depth report we published from Brazilian anarchist comrades that traces a timeline of the...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#6: Making Police Obsolete</title>
-    <pubDate>Sun, 21 Jul 2013 18:48:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[437d123e6034a6943e6dc0a6f86f8c5b]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/6]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/6/2/3/f/623f9f0bcb90b4ef/ep6-1400.jpg" />
-    <description><![CDATA[<p>So we're still not lovin' the cops—but how do we live without them? In our sixth installment of the Ex-Worker, we follow up on our last two episodes about prisons and police with a discussion of how to stay safe without the state. We also hear a Croatan Earth First! organizer report back on the Round River Rendezvous, review the latest issue of Fifth Estate Magazine, respond to some listener feedback, and share plenty of news and events.</p>]]></description>
-    <enclosure length="21388624" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/6__Making-Police-Obsolete.mp3?dest-id=139038" />
-    <itunes:duration>48:03</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[So we're still not lovin' the cops—but how do we live without them? In our sixth installment of the Ex-Worker, we follow up on our last two episodes about prisons and police with a discussion of how to stay safe without the state. We also hear a...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#5: Still Not Lovin' the Police</title>
-    <pubDate>Wed, 10 Jul 2013 22:38:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[8a2764f2540bfdc684172663211fa78b]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/5]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/7/c/d/b/7cdba86736db9bd2/ep5-1400.jpg" />
-    <description><![CDATA[<p>In this episode, the Ex-Worker takes a crack at the police; we speak with <span class="s1">Kristian Williams</span>, the author of <span class="s1"><i>Our Enemies in Blue</i></span>, and members of <span class="s1">East Atlanta Copwatch</span>. Join us for news from around the world and a review of <span class="s1">To the Indomitable Hearts: The Prison Letters of Luciano 'Tortuga' Pitronello.</span> Also, comrades from Turkey and from Atlanta give us the digs on their respective anti-police riots!</p>]]></description>
-    <enclosure length="24941784" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/5_Still-Not-Lovin-the_Police.mp3?dest-id=139038" />
-    <itunes:duration>01:01:09</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In this episode, the Ex-Worker takes a crack at the police; we speak with Kristian Williams, the author of Our Enemies in Blue, and members of East Atlanta Copwatch. Join us for news from around the world and a review of To the Indomitable Hearts: The...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#4: Prisoners of the World Unite</title>
-    <pubDate>Mon, 17 Jun 2013 04:34:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[b150b82e03fad792ce4d521ebe53e941]]></guid>
-    <link><![CDATA[http://www.crimethinc.com/podcast/4/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/4/b/8/4/4b84479bcc70d2f8/ep4-1400.jpg" />
-    <description><![CDATA[<p>In this episode, we at the Ex-Worker's Collective steal enough hours from our jobs to discuss the state of the US prison system, the prison abolition movement, and the destruction of prisons. A comrade from supermax lock up and Midwest Pages to Prisoners Zine Distro join us! News and a review of <em>Between Predicates, War</em> by the Institute for Experimental Freedom round out the episode asking us to wonder where dat file, what's the fastest way outta this prison society!</p>]]></description>
-    <enclosure length="22057405" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/4_Prisoners-of-the-World-Unite.mp3?dest-id=139038" />
-    <itunes:duration>52:34</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords />
-    <itunes:subtitle><![CDATA[In this episode, we at the Ex-Worker's Collective steal enough hours from our jobs to discuss the state of the US prison system, the prison abolition movement, and the destruction of prisons. A comrade from supermax lock up and Midwest Pages to...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#3: Luddites and Lockdowns and Lugals Oh My!</title>
-    <pubDate>Tue, 04 Jun 2013 05:24:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[9a5ee873b9239bf960bac1050b90b47a]]></guid>
-    <link><![CDATA[http://www.crimethinc.com/podcast/3]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/4/3/e/1/43e1aebc9b6f2839/ep3-1400.jpg" />
-    <description><![CDATA[<p>A short radio play about the Luddites kicks off our theme segment for this episode of the Ex-Worker, launching us into an exploration of the vibrant history and ideology of Green Anarchism. Alanis and Clara also bring us word from an activist fresh off the Tar Sands Blockade, a review of Fredy Perlman's seminal book <em>Against His-Story, Against Leviathan!</em>, and more international news than you can shake a stick at.<em>{June 2, 2013}</em></p>
-    <div></div>]]></description>
-    <enclosure length="19430606" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/3_Luddites-and-Lockdowns-and-Lugals-Oh-My.mp3?dest-id=139038" />
-    <itunes:duration>44:51</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords>green,sands,perlman,anarchist,leviathan,tar,lockdown,crimethinc,blockade,luddite,fredy,hisstory</itunes:keywords>
-    <itunes:subtitle><![CDATA[A short radio play about the Luddites kicks off our theme segment for this episode of the Ex-Worker, launching us into an exploration of the vibrant history and ideology of Green Anarchism. Alanis and Clara also bring us word from an activist fresh...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#2: Work and the Anarchist Critique of Capitalism</title>
-    <pubDate>Sun, 19 May 2013 17:28:00 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[22717b0195b758eb9d039574cf5fd1a8]]></guid>
-    <link><![CDATA[http://www.crimethinc.com/podcast/2/]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/5/7/1/c/571c1231f36485c8/ep2-1400.jpg" />
-    <description><![CDATA[<p>Why is this podcast called "the Ex-Worker"? In this episode, hosts Alanis and Clara discuss work and how it works with a friend in a cafe, in the first installment of our series exploring anarchist critiques of capitalism. Episode two also features a special report on Mayday actions around the world, a review of Silvia Federici's "Caliban and the Witch," an interview and reportback from a Canadian anarcha-feminist conference, and plenty more.</p>]]></description>
-    <enclosure length="15939505" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/2_Work-and-the-Anarchist-Critique-of-Capitalism.mp3?dest-id=139038" />
-    <itunes:duration>37:19</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords>work,action,capitalism,mayday,critique,anarchist,anarchafeminist</itunes:keywords>
-    <itunes:subtitle><![CDATA[Why is this podcast called "the Ex-Worker"? In this episode, hosts Alanis and Clara discuss work and how it works with a friend in a cafe, in the first installment of our series exploring anarchist critiques of capitalism. Episode two also features a...]]></itunes:subtitle>
-  </item>
-  <item>
-    <title>#1: Haymarket and the History of Mayday</title>
-    <pubDate>Tue, 30 Apr 2013 15:54:13 +0000</pubDate>
-    <guid isPermaLink="false"><![CDATA[4c469789ab6b038d6a3fc52f30bf3d30]]></guid>
-    <link><![CDATA[http://crimethinc.com/podcast/1]]></link>
-    <itunes:image href="http://static.libsyn.com/p/assets/6/0/b/e/60bef23cc2b6f706/ep1-1400.jpg" />
-    <description><![CDATA[<p>In this first episode, hosts Alanis and Clara explore the 1886 Haymarket affair and the anarchist roots of Mayday. Also includes news from resistance around the world, a profile of the Lucy Parsons Center in Boston, a review of the journal <em>Modern Slavery</em>, upcoming events, and more.</p>]]></description>
-    <enclosure length="18957072" type="audio/mpeg" url="http://traffic.libsyn.com/exworker/1_Haymarket-and-the-History-of-Mayday.mp3?dest-id=139038" />
-    <itunes:duration>42:25</itunes:duration>
-    <itunes:explicit>yes</itunes:explicit>
-    <itunes:keywords>news,slavery,modern,events,day,may,lucy,parsons,anarchist,crimethinc,haymarket</itunes:keywords>
-    <itunes:subtitle><![CDATA[In this first episode, hosts Alanis and Clara explore the 1886 Haymarket affair and the anarchist roots of Mayday. Also includes news from resistance around the world, a profile of the Lucy Parsons Center in Boston, a review of the journal Modern...]]></itunes:subtitle>
-  </item>
-</channel>
-}
-
 podcast = Podcast.find_by(title: "The Ex-Worker")
 
-xml_doc = Nokogiri::XML(podcast_xml.gsub("itunes:", ""))
+filepath = File.expand_path("../db/seeds/episodes/episodes.rss", __FILE__)
+xml_doc  = File.open(filepath) { |f| Nokogiri::XML(f) }
 
 xml_doc.css("item").reverse.each do |episode|
-  title        = episode.css("title").text
-  published_at = Time.parse(episode.css("pubDate").text)
-  image        = episode.css("image").attr("href")
-  content      = episode.css("description").text
-  audio_url    = episode.css("enclosure").attr("url")
-  audio_length = episode.css("enclosure").attr("length")
-  tags         = episode.css("keywords").text
-  duration     = episode.css("duration").text
+  title         = episode.css("title").text
+  published_at  = Time.parse(episode.css("pubDate").text)
+  image         = episode.css("image").attr("href")
+  content       = episode.css("description").text
+  audio_mp3_url = episode.css("enclosure").attr("url")
+  audio_ogg_url = ""
+  audio_length  = episode.css("enclosure").attr("length")
+  tags          = episode.css("keywords").text
+  duration      = episode.css("duration").text
 
   podcast.episodes.create!(
-    title:        title,
-    published_at: published_at,
-    image:        image,
-    content:      content,
-    audio_url:    audio_url,
-    audio_length: audio_length,
-    duration:     duration,
-    tags:         tags
+    title:         title,
+    published_at:  published_at,
+    image:         image,
+    content:       content,
+    audio_mp3_url: audio_mp3_url,
+    audio_ogg_url: audio_ogg_url,
+    audio_length:  audio_length,
+    duration:      duration,
+    tags:          tags
   )
+end
+
+
+filepath = File.expand_path("../db/seeds/episodes/episodes.html", __FILE__)
+html_doc = File.open(filepath) { |f| Nokogiri::HTML(f) }
+
+titles    = html_doc.css(".podmain h4").map(&:text)
+subtitles = html_doc.css(".podmain h5").map(&:text)
+
+title_and_subtitles = titles.zip(subtitles).to_h
+
+title_and_subtitles.each do |title, subtitle|
+  episode          = Episode.find(title.strip.match(/^#(\d+)/)[1])
+  episode.subtitle = subtitle
+  episode.save!
+end
+
+
+filepath = File.expand_path("../db/seeds/episodes/", __FILE__)
+
+Dir.glob("#{filepath}/*").each do |f|
+  filename = f.strip.split('/').last
+
+  unless filename =~ /.DS_Store|episodes.rss|episodes.html|transcripts/
+    doc = File.open(f) { |f| Nokogiri::HTML(f) }
+
+    episode_id = doc.css("title").text.split("#").last.to_i
+
+    items = []
+    doc.css(".podmain h2 + ul li")[2..-1].each do |item|
+      items << item.to_s
+    end
+
+    episode            = Episode.find(episode_id)
+    episode.show_notes = "<ul>#{items.join}</ul>"
+    episode.save!
+  end
+end
+
+
+filepath = File.expand_path("../db/seeds/episodes/transcripts/", __FILE__)
+
+Dir.glob("#{filepath}/*").each do |f|
+  filename = f.strip.split('/').last
+
+  unless filename =~ /.DS_Store/
+    doc = File.open(f) { |f| Nokogiri::HTML(f) }
+
+    episode_id = doc.css("title").text.split("#").last.to_i
+
+    transcript = doc.css(".podmain")
+    transcript.css("h4").first.remove
+    transcript.css("h1").first.remove
+    transcript.css("h4").first.remove
+
+    episode            = Episode.find(episode_id)
+    episode.transcript = transcript
+    episode.save!
+  end
 end

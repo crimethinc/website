@@ -35,9 +35,11 @@ Rails.application.routes.draw do
   get "listen", to: "about#listen", as: :listen
 
   # Podcast
-  get "podcast",     to: "podcast#index",  as: :podcast
-  get "podcast/:id", to: "podcast#show",   as: :episode
-
+  get "podcast/feed", to: redirect("http://exworker.libsyn.com/rss"), as: :podcast_feed # TEMP TODO
+  get "podcast",      to: "podcast#index",  as: :podcast
+  # get "podcast/feed", to: "podcast#feed",   as: :podcast_feed
+  get "podcast/:id",  to: "podcast#show",   as: :episode
+  get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
 
 
 

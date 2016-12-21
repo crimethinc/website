@@ -1,2 +1,21 @@
-<h1>Podcast#index</h1>
-<p>Find me in app/views/podcast/index.html.erb</p>
+<header>
+  <h1><%= @podcast.title %></h1>
+  <h2><%= @podcast.subtitle %></h2>
+</header>
+
+<%= image_tag @podcast.image, style: "max-width: 400px" %>
+
+<p><%= link_to "Podcast Feed URL",    @podcast_feed_url %></p>
+<p><%= link_to "Subscribe in iTunes", @podcast.itunes_url %></p>
+
+<h3>Episodes</h3>
+<ul class="h-feed">
+  <% @podcast.episodes.sort_by{|e| e.published_at }.reverse.each do |episode| %>
+    <li>
+      <article class="h-entry">
+        <h1><%= link_to episode.title, episode, class: "p-name u-url" %></h1>
+        <p class="content"><%= episode.subtitle %></p>
+      </article>
+    </li>
+  <% end %>
+</ul>

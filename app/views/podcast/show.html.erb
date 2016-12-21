@@ -1,2 +1,35 @@
-<h1>Podcast#show</h1>
-<p>Find me in app/views/podcast/show.html.erb</p>
+<article class="h-entry">
+  <header>
+    <h1 class="p-name"><%= @episode.title %></h1>
+    <h2><%= @episode.subtitle %></h2>
+  </header>
+
+  <audio controls src="<%= @episode.audio_mp3_url %>" class="u-audio"></audio>
+
+  <%= image_tag @episode.image, style: "max-width: 400px" %>
+
+  <p>
+    <%= link_to @episode.audio_mp3_url do %>
+      Download MP3
+      (<%= @episode.audio_mp3_file_size %>)
+    <% end %>
+  </p>
+  <p>
+    <%= link_to @episode.audio_ogg_url do %>
+      Download OGG
+      (<%= @episode.audio_ogg_file_size %>)
+    <% end %>
+  </p>
+
+  <p><%= link_to "Full Episode Transcript", episode_transcript_url(@episode) %></p>
+
+  <h3>Summary</h3>
+  <div class="summary">
+    <%= raw @episode.content %>
+  </div>
+
+  <h3>Notes and Links</h3>
+  <div class="summary">
+    <%= raw @episode.show_notes %>
+  </div>
+</article>
