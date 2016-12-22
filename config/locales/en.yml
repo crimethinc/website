@@ -68,14 +68,20 @@ en:
     contact:
       newsletter:
         heading: Email Updates
-        description: CrimethInc. is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        description: Sign up here to receive regular email updates.
         signup_form_placeholder: What’s your email address?
       social:
         heading: Find CrimethInc. Elsewhere
         description: CrimethInc. is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-
-    license: Your heart is as free as the air you breathe. The ground you stand on is liberated territory.
+    mantra:
+      - If your heart is free, the ground you stand on is liberated territory. Defend it.
+      - Only those prepared to go too far will learn how far they can go.
+      - Desperate measures are long overdue.
+      - Cradle the seed, even in the volcano’s mouth.
+      - The future is in chains within you — set it free.
+      - A spark for every powder keg.
+      - Esperanza no espera.
 
   form:
     search_form_placeholder: Search Archives…
