@@ -1,4 +1,4 @@
-es:
+en:
   language_direction: ltr
   site_name: CrimethInc.
 
@@ -85,3 +85,14 @@ es:
 
   form:
     search_form_placeholder: Search Archives…
+
+  podcast:
+    latest_episode: Latest Episode
+    other_episodes: Other Episodes
+    listen: Listen to the Episode
+    download: Download
+    summary: Summary
+    show_notes: Show Notes
+    transcript: Transcript
+    notes_and_links: Notes and Links
+    full_episode_transcript: Full Episode Transcript

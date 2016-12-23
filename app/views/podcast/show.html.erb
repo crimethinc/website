@@ -16,7 +16,7 @@
       <div class="h-feed">
 
         <h3>
-          Listen to the Episode
+          <%= t("podcast.listen") %>
           <small>
             <%= @episode.duration %>
             <abbr title="minutes">min</abbr>
@@ -27,7 +27,7 @@
         <div class="episode-info">
           <div class="buttons">
             <%= link_to @episode.audio_mp3_url, class: "button" do %>
-              Download MP3
+              <%= t("podcast.download") %> MP3
               <small>
                 <%= @episode.audio_mp3_file_size %>
                 <abbr title="megabytes">MB</abbr>
@@ -35,30 +35,30 @@
             <% end %>
 
             <%= link_to @episode.audio_ogg_url, class: "button" do %>
-              Download OGG
+              <%= t("podcast.download") %> OGG
               <small>
                 <%= @episode.audio_ogg_file_size %>
                 <abbr title="megabytes">MB</abbr>
               </small>
             <% end %>
 
-            <p><%= link_to "Full Episode Transcript", episode_transcript_url(@episode) %></p>
+            <p><%= link_to t("podcast.full_episode_transcript"), episode_transcript_url(@episode) %></p>
           </div>
 
           <% if action_name == "transcript" %>
-            <h3>Transcript</h3>
+            <h3><%= t("podcast.transcript") %></h3>
             <div class="transcript">
               <%= raw @episode.transcript %>
             </div>
           <% else %>
-            <h3>Summary</h3>
+            <h3><%= t("podcast.summary") %></h3>
             <div class="summary">
               <%= raw @episode.content.
-                gsub("-------SHOW NOTES------", "<h3>Show Notes</h3>").
+                gsub("-------SHOW NOTES------", "<h3>#{t('podcast.show_notes')}</h3>").
                 gsub("<p> </p>", "").html_safe %>
             </div>
 
-            <h3>Notes and Links</h3>
+            <h3><%= t("podcast.notes_and_links") %></h3>
             <div class="notes">
               <%= raw @episode.show_notes %>
             </div>
