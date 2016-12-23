@@ -1,0 +1,4 @@
+<div class="subscribe">
+  <%# All links are on one line to avoid the browsers default little spacing that comes with a source linebreak %>
+  <%= link_to "Subscribe to RSS", podcast_feed_url, class: "u-url podcast-subscribe-rss" %><%= link_to "Subscribe in iTunes", podcast.itunes_url, class: "u-url podcast-subscribe-itunes" %><br /><%= link_to "Subscribe in Overcast", podcast.overcast_url, class: "u-url podcast-subscribe-overcast" %><%= link_to "Subscribe in Pocket Casts", podcast.pocketcasts_url, class: "u-url podcast-subscribe-pocketcasts" %>
+</div>

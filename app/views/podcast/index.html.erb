@@ -4,15 +4,11 @@
 
 <div class="row">
   <div class="column meta">
-
     <%= image_tag @podcast.image, class: "u-photo" %>
 
-    <div class="subscribe">
-      <%# All links are on one line to avoid the browsers default little spacing that comes with a source linebreak %>
-      <%= link_to "Subscribe to RSS", podcast_feed_url, class: "u-url podcast-subscribe-rss" %><%= link_to "Subscribe in iTunes", @podcast.itunes_url, class: "u-url podcast-subscribe-itunes" %><%= link_to "Subscribe in Overcast", @podcast.overcast_url, class: "u-url podcast-subscribe-overcast" %><%= link_to "Subscribe in Pocket Casts", @podcast.pocketcasts_url, class: "u-url podcast-subscribe-pocketcasts" %>
-    </div>
-
+    <%= render "podcast/subscribe_buttons", podcast: @podcast %>
   </div> <!-- .column -->
+
   <div class="column">
     <div class="h-feed">
 
