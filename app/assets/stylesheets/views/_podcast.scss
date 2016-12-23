@@ -19,7 +19,7 @@
         font: {
           weight: normal;
           weight: 300;
-          size: 3rem;
+          size: 2rem;
         }
         line-height: 1.25em;
       }
@@ -197,6 +197,11 @@
           text-align: right;
         }
       }
+
+      header h2 {
+        font-size: 3rem;
+      }
+
 
       .subscribe {
         margin: $border-size-small auto;

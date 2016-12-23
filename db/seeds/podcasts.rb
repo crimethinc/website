@@ -1,6 +1,6 @@
 Podcast.create!(
   title:               "The Ex-Worker",
-  subtitle:            "A Podcast of Anarchist Ideas and Action for Everyone Who Dreams of a Life Off the Clock",
+  subtitle:            "A Podcast of Anarchist Ideas and Action\nFor Everyone Who Dreams of a Life Off the Clock",
   slug:                "the-ex-worker",
   language:            "en",
   copyright:           "No Copyright",
