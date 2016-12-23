@@ -1,0 +1,135 @@
+#podcast {
+  main {
+    margin: $border-size-xlarge auto;
+    max-width: $large-tablet;
+
+    header {
+      margin-bottom: $border-size-large;
+
+      h1 {
+        font: {
+          weight: bold;
+          weight: 800;
+          size: 6rem;
+        }
+        line-height: 1.25em;
+      }
+
+      h2 {
+        font: {
+          weight: normal;
+          weight: 300;
+          size: 3rem;
+        }
+        line-height: 1.25em;
+      }
+    }
+
+    .meta {
+      text-align: right;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .subscribe {
+      margin: $border-size-xlarge auto;
+      text-align: center;
+
+      a {
+        display: inline-block;
+        margin: 0 0 $border-size-small $border-size-small;
+
+        // WHY is this necessary? :(
+        text-indent: 9999em !important;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .podcast-subscribe-rss         { @include podcast-subscribe-button("rss"); }
+      .podcast-subscribe-itunes      { @include podcast-subscribe-button("itunes"); }
+      .podcast-subscribe-overcast    { @include podcast-subscribe-button("overcast"); }
+      .podcast-subscribe-pocketcasts { @include podcast-subscribe-button("pocketcasts"); }
+    }
+
+    h3 {
+      font: {
+        weight: lighter;
+        weight: 300;
+        size: 2.5rem;
+      }
+
+      line-height: 1.25em;
+      margin-bottom: $border-size-small;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    .latest-episode {
+      margin: (2 * $border-size-xlarge) auto;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: $border-size-medium;
+      }
+    }
+
+    .h-feed {
+      article {
+        margin-bottom: $border-size-xlarge;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: $border-size-medium;
+      }
+
+      .e-content {
+        margin-bottom: $border-size-large;
+      }
+    }
+
+
+    @media screen and (min-width: #{$small-tablet}) {
+      .row {
+        display: flex;
+      }
+
+      .column {
+        padding-right: $border-size-large;
+      }
+
+      .column:first-child {
+        width: 33%;
+      }
+
+      .column:last-child {
+        width: 67%;
+      }
+
+      .subscribe {
+        margin: $border-size-small auto;
+        text-align: right;
+
+        a {
+          margin: 0 0 $border-size-small $border-size-small;
+          // WHY is this necessary? :(
+          text-indent: 9999em !important;
+        }
+      }
+
+      .latest-episode {
+        margin-top: 0;
+      }
+    }
+
+  }
+}
+

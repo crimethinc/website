@@ -45,6 +45,13 @@
                                      40px);
 }
 
+@mixin podcast-subscribe-button($domain) {
+  @include image-replacement-graphic("podcast-subscribe-buttons/#{$domain}.png",
+                                     "podcast-subscribe-buttons/#{$domain}.png",
+                                     110px,
+                                      40px);
+}
+
 @mixin size($w, $h) {
   height: $h;
   width: $w;

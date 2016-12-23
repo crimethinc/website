@@ -33,7 +33,8 @@
 .secondary-navigation {
   display: flex;
   align-items: center;
-  margin: $border-size-medium;
+  padding: $border-size-medium;
+  border-bottom: 1px solid $color-gray-light;
 
   .archives-search-form {
     display: inline-block;

@@ -1,21 +1,45 @@
 <header>
-  <h1><%= @podcast.title %></h1>
-  <h2><%= @podcast.subtitle %></h2>
+  <%= render "articles/titles", header: @podcast, linked: false %>
 </header>
 
-<%= image_tag @podcast.image, style: "max-width: 400px" %>
+<div class="row">
+  <div class="column meta">
 
-<p><%= link_to "Podcast Feed URL",    podcast_feed_url %></p>
-<p><%= link_to "Subscribe in iTunes", @podcast.itunes_url %></p>
+    <%= image_tag @podcast.image, class: "u-photo" %>
 
-<h3>Episodes</h3>
-<ul class="h-feed">
-  <% @podcast.episodes.sort_by{|e| e.published_at }.reverse.each do |episode| %>
-    <li>
-      <article class="h-entry">
-        <h1><%= link_to episode.title, episode, class: "p-name u-url" %></h1>
-        <p class="content"><%= episode.subtitle %></p>
-      </article>
-    </li>
-  <% end %>
-</ul>
+    <div class="subscribe">
+      <%# All links are on one line to avoid the browsers default little spacing that comes with a source linebreak %>
+      <%= link_to "Subscribe to RSS", podcast_feed_url, class: "u-url podcast-subscribe-rss" %><%= link_to "Subscribe in iTunes", @podcast.itunes_url, class: "u-url podcast-subscribe-itunes" %><%= link_to "Subscribe in Overcast", @podcast.overcast_url, class: "u-url podcast-subscribe-overcast" %><%= link_to "Subscribe in Pocket Casts", @podcast.pocketcasts_url, class: "u-url podcast-subscribe-pocketcasts" %>
+    </div>
+
+  </div> <!-- .column -->
+  <div class="column">
+    <div class="h-feed">
+
+      <div class="latest-episode">
+        <h3>Latest Episode</h3>
+        <article class="h-entry" id="episode-<%= @latest_episode.id %>">
+          <h1><%= link_to @latest_episode.title, @latest_episode, class: "p-name u-url" %></h1>
+          <p class="e-content"><%= @latest_episode.subtitle %></p>
+
+          <%= render "podcast/player", episode: @latest_episode %>
+        </article>
+      </div> <!-- .latest-episodes -->
+
+      <div class="other-episodes">
+        <h3>Other Episodes</h3>
+        <ul>
+          <% @episodes.each do |episode| %>
+            <li>
+              <article class="h-entry" id="episode-<%= episode.id %>">
+                <h1><%= link_to episode.title, episode, class: "p-name u-url" %></h1>
+                <p class="e-content"><%= episode.subtitle %></p>
+              </article>
+            </li>
+          <% end %>
+        </ul>
+      </div> <!-- .other-episodes -->
+
+    </div> <!-- .h-feed -->
+  </div> <!-- .column -->
+</div> <!-- .row -->

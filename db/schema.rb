@@ -126,6 +126,8 @@ ActiveRecord::Schema.define(version: 20161221015941) do
     t.string   "itunes_owner_name"
     t.string   "itunes_owner_email"
     t.text     "itunes_url"
+    t.text     "overcast_url"
+    t.text     "pocketcasts_url"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
   end

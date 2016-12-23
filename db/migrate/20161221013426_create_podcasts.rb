@@ -16,6 +16,8 @@ class CreatePodcasts < ActiveRecord::Migration[5.0]
       t.string :itunes_owner_name
       t.string :itunes_owner_email
       t.text :itunes_url
+      t.text :overcast_url
+      t.text :pocketcasts_url
 
       t.timestamps
     end

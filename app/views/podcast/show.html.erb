@@ -1,12 +1,11 @@
 <article class="h-entry">
   <header>
-    <h1 class="p-name"><%= @episode.title %></h1>
-    <h2><%= @episode.subtitle %></h2>
+    <%= render "articles/titles", header: @episode, linked: false %>
   </header>
 
-  <audio controls src="<%= @episode.audio_mp3_url %>" class="u-audio"></audio>
+  <%= render "podcast/player", episode: @episode %>
 
-  <%= image_tag @episode.image, style: "max-width: 400px" %>
+  <%= image_tag @episode.image, class: "u-photo" %>
 
   <p>
     <%= link_to @episode.audio_mp3_url do %>

@@ -1,11 +1,11 @@
 <div class="p-name">
-  <h1 class="p-dm-title">
-    <%= link_to_if linked, RubyPants.new(article.title).to_html.html_safe, article.path %>
+  <h1 class="p-x-title">
+    <%= link_to_if linked, RubyPants.new(header.title).to_html.html_safe, header.path %>
   </h1>
 
-  <% if article.subtitle.present? %>
-    <h2 class="p-dm-subtitle">
-      <%= link_to_if linked, RubyPants.new(article.subtitle).to_html.html_safe, article.path %>
+  <% if header.subtitle.present? %>
+    <h2 class="p-x-subtitle">
+      <%= link_to_if linked, RubyPants.new(header.subtitle).to_html.html_safe, header.path %>
     </h2>
   <% end %>
 </div>
