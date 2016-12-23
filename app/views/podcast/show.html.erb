@@ -33,17 +33,24 @@
             <p><%= link_to "Full Episode Transcript", episode_transcript_url(@episode) %></p>
           </div>
 
-          <h3>Summary</h3>
-          <div class="summary">
-            <%= raw @episode.content.
-              gsub("-------SHOW NOTES------", "<h3>Show Notes</h3>").
-              gsub("<p> </p>", "").html_safe %>
-          </div>
+          <% if action_name == "transcript" %>
+            <h3>Transcript</h3>
+            <div class="transcript">
+              <%= raw @episode.transcript %>
+            </div>
+          <% else %>
+            <h3>Summary</h3>
+            <div class="summary">
+              <%= raw @episode.content.
+                gsub("-------SHOW NOTES------", "<h3>Show Notes</h3>").
+                gsub("<p> </p>", "").html_safe %>
+            </div>
 
-          <h3>Notes and Links</h3>
-          <div class="summary">
-            <%= raw @episode.show_notes %>
-          </div>
+            <h3>Notes and Links</h3>
+            <div class="notes">
+              <%= raw @episode.show_notes %>
+            </div>
+          <% end %>
         </div>
 
       </div> <!-- .h-feed -->

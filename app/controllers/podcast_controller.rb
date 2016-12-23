@@ -15,6 +15,7 @@ class PodcastController < ApplicationController
   def transcript
     @slug = "podcast"
     @episode = Episode.find(params[:id])
+    render "podcast/show"
   end
 
   def feed
