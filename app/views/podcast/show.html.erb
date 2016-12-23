@@ -15,19 +15,31 @@
     <div class="column">
       <div class="h-feed">
 
-        <h3>Listen to the Episode</h3>
+        <h3>
+          Listen to the Episode
+          <small>
+            <%= @episode.duration %>
+            <abbr title="minutes">min</abbr>
+          </small>
+        </h3>
         <%= render "podcast/player", episode: @episode %>
 
         <div class="episode-info">
           <div class="buttons">
             <%= link_to @episode.audio_mp3_url, class: "button" do %>
               Download MP3
-              (<%= @episode.audio_mp3_file_size %>)
+              <small>
+                <%= @episode.audio_mp3_file_size %>
+                <abbr title="megabytes">MB</abbr>
+              </small>
             <% end %>
 
             <%= link_to @episode.audio_ogg_url, class: "button" do %>
               Download OGG
-              (<%= @episode.audio_ogg_file_size %>)
+              <small>
+                <%= @episode.audio_ogg_file_size %>
+                <abbr title="megabytes">MB</abbr>
+              </small>
             <% end %>
 
             <p><%= link_to "Full Episode Transcript", episode_transcript_url(@episode) %></p>

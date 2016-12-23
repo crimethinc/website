@@ -54,14 +54,29 @@ Dir.glob("#{filepath}/*").each do |f|
     doc = File.open(f) { |f| Nokogiri::HTML(f) }
 
     episode_id = doc.css("title").text.split("#").last.to_i
+    list_items = doc.css(".podmain h2 + ul li")
 
     items = []
-    doc.css(".podmain h2 + ul li")[2..-1].each do |item|
+    list_items[2..-1].each do |item|
       items << item.to_s
     end
 
-    episode            = Episode.find(episode_id)
-    episode.show_notes = "<ul>#{items.join}</ul>"
+    download_info = list_items.first
+    audio_mp3_url = download_info.css("a").first.attr("href")
+    audio_ogg_url = download_info.css("a").last.attr("href")
+
+    download_pieces     = download_info.text.match(/Download MP3 \((\d+) Min; (\d+)MB\), Download OGG \((\d+)MB\)/)
+    duration            = download_pieces[1]
+    audio_mp3_file_size = download_pieces[2]
+    audio_ogg_file_size = download_pieces[3]
+
+    episode                     = Episode.find(episode_id)
+    episode.show_notes          = "<ul>#{items.join}</ul>"
+    episode.audio_mp3_url       = audio_mp3_url
+    episode.audio_ogg_url       = audio_ogg_url
+    episode.duration            = duration
+    episode.audio_mp3_file_size = audio_mp3_file_size
+    episode.audio_ogg_file_size = audio_ogg_file_size
     episode.save!
   end
 end
