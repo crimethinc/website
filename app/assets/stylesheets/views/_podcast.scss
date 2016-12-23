@@ -10,7 +10,7 @@
         font: {
           weight: bold;
           weight: 800;
-          size: 6rem;
+          size: 4rem;
         }
         line-height: 1.25em;
       }
@@ -30,6 +30,25 @@
 
       img {
         max-width: 100%;
+      }
+
+      .p-name {
+        margin-bottom: $border-size-large;
+        text-align: left;
+      }
+
+      h1 {
+        font: {
+          weight: bold;
+          weight: 800;
+          size: 2rem;
+        }
+        line-height: 1.25em;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.5em;
       }
     }
 
@@ -64,10 +83,16 @@
 
       line-height: 1.25em;
       margin-bottom: $border-size-small;
+      border-bottom: $border-size-xsmall solid $color-gray-light;
+
+      &:first-child {
+        border: none;
+      }
     }
 
     audio {
       width: 100%;
+      margin-bottom: $border-size-large;
     }
 
     .latest-episode {
@@ -77,6 +102,59 @@
         font-size: 3rem;
         margin-bottom: $border-size-medium;
       }
+    }
+
+    .buttons {
+      margin-bottom: $border-size-xlarge;
+
+      .button {
+        margin: 0 $border-size-small $border-size-medium 0;
+      }
+    }
+
+    .episode-info {
+      p,
+      li {
+        font-size: 1.75rem;
+        line-height: 1.5em;
+        text-rendering: optimizeLegibility;
+        margin-bottom: $border-size-large;
+      }
+
+
+      ul,
+      ol {
+        margin-bottom: 1em;
+      }
+
+      li ul,
+      li ol {
+        margin-top: .5em;
+      }
+
+      ol {
+        list-style-type: square;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      dd,
+      dt,
+      li {
+        line-height: 1.5em;
+      }
+
+      li {
+        margin: 0 0 .5em 0;
+      }
+
+      li li {
+        margin: 0 0 .5em 1.5em;
+      }
+
+
     }
 
     .h-feed {
@@ -112,6 +190,12 @@
 
       .column:last-child {
         width: 67%;
+      }
+
+      .meta {
+        .p-name {
+          text-align: right;
+        }
       }
 
       .subscribe {

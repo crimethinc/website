@@ -1,34 +1,57 @@
-<article class="h-entry">
+<article class="h-entry" id="episode-<%= @episode.id %>">
   <header>
     <%= render "articles/titles", header: @episode, linked: false %>
   </header>
 
-  <%= render "podcast/player", episode: @episode %>
+  <div class="row">
+    <div class="column meta">
+      <%= image_tag @episode.image, class: "u-photo" %>
 
-  <%= image_tag @episode.image, class: "u-photo" %>
+      <%= render "articles/titles", header: @episode.podcast, linked: true %>
 
-  <p>
-    <%= link_to @episode.audio_mp3_url do %>
-      Download MP3
-      (<%= @episode.audio_mp3_file_size %>)
-    <% end %>
-  </p>
-  <p>
-    <%= link_to @episode.audio_ogg_url do %>
-      Download OGG
-      (<%= @episode.audio_ogg_file_size %>)
-    <% end %>
-  </p>
+      <div class="subscribe">
+        <%# All links are on one line to avoid the browsers default little spacing that comes with a source linebreak %>
+        <%= link_to "Subscribe to RSS", podcast_feed_url, class: "u-url podcast-subscribe-rss" %><%= link_to "Subscribe in iTunes", @episode.podcast.itunes_url, class: "u-url podcast-subscribe-itunes" %><%= link_to "Subscribe in Overcast", @episode.podcast.overcast_url, class: "u-url podcast-subscribe-overcast" %><%= link_to "Subscribe in Pocket Casts", @episode.podcast.pocketcasts_url, class: "u-url podcast-subscribe-pocketcasts" %>
+      </div>
 
-  <p><%= link_to "Full Episode Transcript", episode_transcript_url(@episode) %></p>
+    </div> <!-- .column -->
+    <div class="column">
+      <div class="h-feed">
 
-  <h3>Summary</h3>
-  <div class="summary">
-    <%= raw @episode.content %>
-  </div>
+        <h3>Listen to the Episode</h3>
+        <%= render "podcast/player", episode: @episode %>
 
-  <h3>Notes and Links</h3>
-  <div class="summary">
-    <%= raw @episode.show_notes %>
-  </div>
+        <div class="episode-info">
+          <div class="buttons">
+            <%= link_to @episode.audio_mp3_url, class: "button" do %>
+              Download MP3
+              (<%= @episode.audio_mp3_file_size %>)
+            <% end %>
+
+            <%= link_to @episode.audio_ogg_url, class: "button" do %>
+              Download OGG
+              (<%= @episode.audio_ogg_file_size %>)
+            <% end %>
+
+            <p><%= link_to "Full Episode Transcript", episode_transcript_url(@episode) %></p>
+          </div>
+
+
+          <h3>Summary</h3>
+          <div class="summary">
+            <%= raw @episode.content.
+              gsub("-------SHOW NOTES------", "<h3>Show Notes</h3>").
+              gsub("<p> </p>", "").html_safe %>
+          </div>
+
+          <h3>Notes and Links</h3>
+          <div class="summary">
+            <%= raw @episode.show_notes %>
+          </div>
+        </div>
+
+      </div> <!-- .h-feed -->
+    </div> <!-- .column -->
+  </div> <!-- .row -->
+
 </article>
