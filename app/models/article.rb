@@ -13,6 +13,8 @@ class Article < ApplicationRecord
   scope :designed,    -> { where(status: Status.find_by(name: "designed")) }
   scope :published,   -> { where(status: Status.find_by(name: "published")) }
 
+  scope :live,        -> { where("published_at < ?", Time.now) }
+
   before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :generate_draft_code,      on: [:create, :update]

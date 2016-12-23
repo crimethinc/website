@@ -5,8 +5,10 @@
   <% @articles[1..5].in_groups_of(2).each do |row| %>
     <div class="row">
       <% row.each do |article| %>
-        <%= render "archives/card_css", article: article, featured: false %>
-        <%= render "archives/card",     article: article %>
+      <% unless article.blank? %>
+          <%= render "archives/card_css", article: article, featured: false %>
+          <%= render "archives/card",     article: article %>
+        <% end %>
       <% end %>
     </div>
   <% end %>
