@@ -1,4 +1,4 @@
-en:
+es:
   language_direction: ltr
   site_name: CrimethInc.
 
@@ -6,7 +6,7 @@ en:
     read: Read
     watch: Watch
     listen: Listen
-    buy: Buy
+    buy: Get
     share: Share
 
     first_time: First Time? Start Here →
