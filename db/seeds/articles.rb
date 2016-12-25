@@ -26,7 +26,8 @@ html_doc.css(".h-entry").each do |entry|
   article = Article.create!(title:        title,
                             published_at: published_at,
                             content:      content,
-                            status_id:    status_id)
+                            status_id:    status_id,
+                            header_background_color: "#444")
 
   # Add the Article to its Category and Theme
   category.articles << article
