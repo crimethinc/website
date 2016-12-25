@@ -1,7 +1,49 @@
-theme = Theme.create!(name: "Field Reports")
+require "nokogiri"
 
 # Clear out all testing Articles first
 Article.destroy_all
+
+
+# Site News Archive from pre- 3.0 of the site (pre Wordpress?)
+filepath = File.expand_path("../db/seeds/articles/site-news-archive.html", __FILE__)
+html_doc = File.open(filepath) { |f| Nokogiri::HTML(f) }
+
+# And create a new Category for "Site News Archive"
+category = Category.find_or_create_by! name: "Site News Archive"
+
+# Find the "published" Status
+published_status = Status.find_by(name: "published")
+
+html_doc.css(".h-entry").each do |entry|
+  title        = entry.css(".p-name").text
+
+  published_at = Time.parse(entry.css(".dt-published").text)
+  content      = entry.css(".e-content").inner_html
+  content      = content.gsub("\n", "").gsub(/\s{2,}/, " ").gsub("<p>", "").gsub("</p>", "\n\n").gsub(" \n\n ", "\n\n")
+  status_id    = published_status.id
+
+  # Save the Article
+  article = Article.create!(title:        title,
+                            published_at: published_at,
+                            content:      content,
+                            status_id:    status_id)
+
+  # Add the Article to its Category and Theme
+  category.articles << article
+end
+
+
+
+
+
+
+
+
+
+
+# New feature style Articles
+
+theme = Theme.create!(name: "Field Reports")
 
 # Collect the articles together
 articles = []
@@ -1891,7 +1933,7 @@ articles.each_with_index do |article_params, index|
 
   # Delete Category from params before creating Article
   # And create a new Category
-  category = Category.create! name: article_params.delete(:category)
+  category = Category.find_or_create_by! name: article_params.delete(:category)
 
   # Delete Theme from params before creating Article
   theme = article_params.delete(:theme)
@@ -1910,6 +1952,6 @@ articles.each_with_index do |article_params, index|
   # Add the Article to its Category and Theme
   category.articles << article
   if theme.present?
-    theme.articles    << article
+    theme.articles << article
   end
 end
