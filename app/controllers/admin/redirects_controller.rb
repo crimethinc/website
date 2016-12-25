@@ -4,7 +4,7 @@ class Admin::RedirectsController < Admin::AdminController
 
   # /admin/redirects
   def index
-    @redirects = Redirect.all
+    @redirects = Redirect.order(:target_path).all
   end
 
   # /admin/redirects/1
