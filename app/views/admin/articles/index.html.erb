@@ -21,7 +21,11 @@
           <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-primary btn-xs" %>
         </td>
         <td><%= link_to article.title,      [:admin, article] %></td>
-        <td><%= link_to article.subtitle,   [:admin, article] %></td>
+        <td>
+          <% if article.subtitle.present? %>
+            <%= link_to article.subtitle,   [:admin, article] %>
+          <% end %>
+        </td>
         <td><%= link_to article.slug,       [:admin, article] %></td>
         <td><%= link_to article.draft_code, [:admin, article] %></td>
         <td><%= article.status.name.capitalize %></td>

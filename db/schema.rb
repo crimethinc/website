@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20161221015941) do
     t.text     "image_description"
     t.string   "header_background_color"
     t.string   "header_text_color"
+    t.string   "download_url"
     t.string   "content_format",          default: "kramdown"
     t.string   "slug"
     t.string   "draft_code"

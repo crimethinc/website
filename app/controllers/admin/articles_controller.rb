@@ -60,7 +60,7 @@ class Admin::ArticlesController < Admin::AdminController
 
   def article_params
     params.require(:article).permit(:title, :subtitle, :content, :content_format,
-                                    :year, :month, :day,
+                                    :year, :month, :day, :download_url,
                                     :slug, :draft_code, :status_id,
                                     :published_at, :tags, :categories,
                                     :image, :image_description, :css,

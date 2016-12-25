@@ -62,6 +62,22 @@
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
+  <fieldset id="alternates">
+    <legend>Alternates</legend>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <%= f.label :download_url, "PDF Download URL" %>
+          <%= f.url_field :download_url, class: "form-control input-lg" %>
+          <p class="help-block">
+            This is the URL of a downloadable / printable PDF of this Article.
+          </p>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
   <fieldset id="appearance">
     <legend>Appearance</legend>
 
