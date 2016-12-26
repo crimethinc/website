@@ -12,7 +12,8 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.string     :slug, :draft_code
       t.datetime   :published_at
 
-      t.string   :year, :month, :day
+      t.string     :year, :month, :day
+      t.boolean    :hide_layout, default: false
 
       t.timestamps
     end

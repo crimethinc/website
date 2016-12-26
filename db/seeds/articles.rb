@@ -3,49 +3,107 @@ require "nokogiri"
 # Clear out all testing Articles first
 Article.destroy_all
 
+# Find the "published" Status
+published_status = Status.find_by(name: "published")
 
-# TODO For future use when Features get rolled into the Articles feed
+
+
 # These timestamps were pulled from the cwc.im admin site since
 # the Feature HTML doesn't have any publishication datetime
-{
-  "agitators"                    => Time.parse("2014-08-20 09:30:00 -0700"),
-  "battle"                       => Time.parse("2016-11-01 09:19:00 -0700"),
-  "begin"                        => Time.parse("2016-09-28 08:11:00 -0700"),
-  "bluefuse"                     => Time.parse("2014-11-25 12:00:00 -0800"),
-  "bosnia"                       => Time.parse("2016-05-13 09:10:00 -0700"),
-  "demands"                      => Time.parse("2015-05-05 10:52:00 -0700"),
-  "democracy"                    => Time.parse("2012-04-29 12:20:00 -0700"),
-  "destination"                  => Time.parse("2016-04-07 09:49:00 -0700"),
-  "digital-utopia"               => Time.parse("2013-10-04 06:45:00 -0700"),
-  "empezar"                      => Time.parse("2016-09-28 08:10:00 -0700"),
-  "ferguson"                     => Time.parse("2014-08-18 10:32:00 -0700"),
-  "ferguson-reflections"         => Time.parse("2015-08-10 10:23:00 -0700"),
-  "french911"                    => Time.parse("2015-12-14 00:22:00 -0800"),
-  "from-ferguson-to-the-bay"     => Time.parse("2014-12-12 11:31:00 -0800"),
-  "kobane"                       => Time.parse("2015-02-03 16:47:00 -0800"),
-  "kurdish"                      => Time.parse("2015-09-23 14:07:00 -0700"),
-  "next-time-it-explodes"        => Time.parse("2015-08-13 11:59:00 -0700"),
-  "partys-over"                  => Time.parse("2016-03-16 08:06:00 -0700"),
-  "podemos"                      => Time.parse("2016-04-05 09:37:00 -0700"),
-  "protect"                      => Time.parse("2015-11-17 01:52:00 -0800"),
-  "reaction"                     => Time.parse("2016-10-24 09:10:00 -0700"),
-  "slovenia"                     => Time.parse("2016-05-11 09:09:00 -0700"),
-  "syriza"                       => Time.parse("2015-01-28 01:12:00 -0800"),
-  "trump"                        => Time.parse("2016-12-13 10:45:00 -0800"),
-  "worldcupbrazil"               => Time.parse("2014-06-12 05:16:00 -0700"),
+features_timestamps          = {
+  "agitators"                => Time.parse("2014-08-20 09:30:00 -0700"),
+  "battle"                   => Time.parse("2016-11-01 09:19:00 -0700"),
+  "begin"                    => Time.parse("2016-09-28 08:11:00 -0700"),
+  "bluefuse"                 => Time.parse("2014-11-25 12:00:00 -0800"),
+  "bosnia"                   => Time.parse("2016-05-13 09:10:00 -0700"),
+  "demands"                  => Time.parse("2015-05-05 10:52:00 -0700"),
+  "democracy"                => Time.parse("2012-04-29 12:20:00 -0700"),
+  "destination"              => Time.parse("2016-04-07 09:49:00 -0700"),
+  "digital-utopia"           => Time.parse("2013-10-04 06:45:00 -0700"),
+  "empezar"                  => Time.parse("2016-09-28 08:10:00 -0700"),
+  "ferguson"                 => Time.parse("2014-08-18 10:32:00 -0700"),
+  "ferguson-reflections"     => Time.parse("2015-08-10 10:23:00 -0700"),
+  "french911"                => Time.parse("2015-12-14 00:22:00 -0800"),
+  "from-ferguson-to-the-bay" => Time.parse("2014-12-12 11:31:00 -0800"),
+  "kobane"                   => Time.parse("2015-02-03 16:47:00 -0800"),
+  "kurdish"                  => Time.parse("2015-09-23 14:07:00 -0700"),
+  "next-time-it-explodes"    => Time.parse("2015-08-13 11:59:00 -0700"),
+  "partys-over"              => Time.parse("2016-03-16 08:06:00 -0700"),
+  "podemos"                  => Time.parse("2016-04-05 09:37:00 -0700"),
+  "policemyths"              => Time.parse("2015-08-22 21:04:00 -0700"),
+  "protect"                  => Time.parse("2015-11-17 01:52:00 -0800"),
+  "reaction"                 => Time.parse("2016-10-24 09:10:00 -0700"),
+  "slovenia"                 => Time.parse("2016-05-11 09:09:00 -0700"),
+  "syriza"                   => Time.parse("2015-01-28 01:12:00 -0800"),
+  "trump"                    => Time.parse("2016-12-13 10:45:00 -0800"),
+  "ukraine"                  => Time.parse("2014-03-16 20:37:00 -0700"),
+  "worldcupbrazil"           => Time.parse("2014-06-12 05:16:00 -0700"),
 }
 
 
 
 
-# Find the "published" Status
-published_status = Status.find_by(name: "published")
 
-# Wordpres posts
+
+# Features as Articles
+filepath = File.expand_path("../db/seeds/articles/features/", __FILE__)
+
+# Create the Category for Features
+category = Category.find_or_create_by name: "Features"
+
+Dir.glob("#{filepath}/*/").each do |f|
+  path_pieces = f.strip.split("/")
+  filename    = path_pieces.last
+
+  unless filename =~ /.DS_Store/
+    doc   = File.open(f + "/index.html") { |f| Nokogiri::HTML(f) }
+
+    slug         = path_pieces[-1]
+    title        = doc.css("title").text.gsub(" / CrimethInc. Ex-Workers' Collective", "")
+    published_at = features_timestamps[slug]
+    content      = ""
+    content      = File.open(f + "/index.html").map { |line| line }
+    image        = doc.css("meta[name='twitter:image:src']").attribute("content").value
+
+    # Save the Article
+    article = Article.create!(
+      title:          title,
+      content:        content,
+      published_at:   published_at,
+      slug:           slug,
+      image:          image,
+      status_id:      published_status.id,
+      content_format: "html"
+    )
+
+    # Add the Article to its Category and Theme
+    category.articles << article
+
+    # Redirect from old site Feature URLs to new site Article URLs
+
+    if slug == "ukraine"
+      namespace = "ux"
+    elsif slug == "worldcupbrazil"
+      namespace = "fx"
+    elsif slug == "digital-utopia"
+      namespace = "ex"
+    else
+      namespace = "r"
+    end
+
+    ["/texts/#{namespace}/#{slug}", "/texts/#{namespace}/#{slug}/", "/texts/#{namespace}/#{slug}/.index.html"].each do |source_path|
+      Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+    end
+ end
+end
+
+
+
+# Wordpress posts
 filepath = File.expand_path("../db/seeds/articles/posts/", __FILE__)
 
 Dir.glob("#{filepath}/*").each do |f|
-  filename = f.strip.split('/').last
+  filename = f.strip.split("/").last
 
   unless filename =~ /.DS_Store/
     doc = File.open(f) { |f| Nokogiri::XML(f) }

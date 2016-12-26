@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20161221015941) do
     t.string   "year"
     t.string   "month"
     t.string   "day"
+    t.boolean  "hide_layout",             default: false
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
     t.index ["status_id"], name: "index_articles_on_status_id", using: :btree

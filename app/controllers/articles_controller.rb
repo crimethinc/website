@@ -44,5 +44,11 @@ class ArticlesController < ApplicationController
     else
       @title = @article.name
     end
+
+    if @article.hide_layout?
+      render text: @article.content, layout: false
+    else
+      render "articles/show"
+    end
   end
 end

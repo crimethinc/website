@@ -72,7 +72,7 @@
         <%= f.label :image, "Hero Image" %>
         <%= f.text_field :image, class: "form-control input-lg" %>
         <p class="help-block">
-          This is the large image that will be front and center on the <i>Article</i> page,
+          This is the large image that will be front and center on the <i>Page</i> page,
           on the homepage and when syndicated to other sites. Minimum size: <code>1400x1000</code> pixels.
         </p>
       </div>
@@ -93,13 +93,13 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :css, "Article Specific CSS" %>
+          <%= f.label :css, "Page Specific CSS" %>
           <%= f.text_area :css, class: "form-control", rows: 20 %>
           <p class="help-block">
             <% if @page.new_record? %>
               After you save this
             <% else %>
-              Prefix your CSS selectors with <b><code>#page-<%= @page.id %></code></b> to scope your styles to just this <i>Article</i>.
+              Prefix your CSS selectors with <b><code>#page-<%= @page.id %></code></b> to scope your styles to just this <i>Page</i>.
               For example, <code>#page-<%= @page.id %> b { background: green }</code>.
             <% end %>
           </p>
@@ -111,7 +111,7 @@
           <%= f.check_box :hide_header %>
           <%= f.label :hide_header, "Hide the Site Header?" %>
           <p class="help-block">
-            This will remove the site header/<wbr>nav/<wbr>search/<wbr>etc from this <i>Article</i> only.
+            This will remove the site header/<wbr>nav/<wbr>search/<wbr>etc from this <i>Page</i> only.
           </p>
         </div>
 
@@ -119,7 +119,7 @@
           <%= f.check_box :hide_footer %>
           <%= f.label :hide_footer, "Hide the Site Footer?" %>
           <p class="help-block">
-            This will remove the site footer from this <i>Article</i> only.
+            This will remove the site footer from this <i>Page</i> only.
           </p>
         </div>
 
@@ -133,7 +133,7 @@
             including <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,
             <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code> tags etc.
             Any <code>CSS</code> will have to be included in the
-            <code>Content</code>, not the <code>Article Specific CSS</code>.
+            <code>Content</code>, not the <code>Page Specific CSS</code>.
           </p>
         </div>
       </div>
