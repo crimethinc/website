@@ -41,10 +41,6 @@ features_timestamps          = {
 }
 
 
-
-
-
-
 # Features as Articles
 filepath = File.expand_path("../db/seeds/articles/features/", __FILE__)
 
@@ -69,7 +65,6 @@ Dir.glob("#{filepath}/*/").each do |f|
       title:          title,
       content:        content,
       published_at:   published_at,
-      slug:           slug,
       image:          image,
       status_id:      published_status.id,
       content_format: "html",
