@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
     end
 
     if @article.hide_layout?
-      render text: @article.content, layout: false
+      render html: @article.content.html_safe, layout: false
     else
       render "articles/show"
     end

@@ -8,7 +8,7 @@ class PagesController < ApplicationController
 
     # no layout
     if @page.hide_layout?
-      render text: @page.content, layout: false
+      render html: @page.content.html_safe, layout: false
     else
       render "pages/show"
     end
