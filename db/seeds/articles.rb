@@ -4,6 +4,96 @@ require "nokogiri"
 Article.destroy_all
 
 
+
+# Find the "published" Status
+published_status = Status.find_by(name: "published")
+
+# Wordpres posts
+filepath = File.expand_path("../db/seeds/articles/posts/", __FILE__)
+
+Dir.glob("#{filepath}/*").each do |f|
+  filename = f.strip.split('/').last
+
+  unless filename =~ /.DS_Store/
+    doc = File.open(f) { |f| Nokogiri::XML(f) }
+
+    title   = doc.css("title").text
+    content = doc.css("content_encoded").text
+
+    # Published At timestamps
+    published_at = Time.parse(doc.css("wp_post_date_gmt").text) # GMT
+    published_at = Time.parse(doc.css("wp_post_date").text)     # PST # Seems to map to URLs more accurately
+
+
+    # Old permalinks to support by creating Redirects to the new Article path
+    redirect_paths = []
+    redirect_paths << doc.css("link").text
+    redirect_paths << doc.css("guid").text
+    redirect_paths << "http://www.crimethinc.com/blog/?p=#{doc.css("wp_post_id").text}"
+
+    # Short URL
+    doc.css("wp_postmeta").each do |wp_postmeta|
+      if wp_postmeta.css("wp_meta_key").text == "shorturl"
+        redirect_paths << wp_postmeta.css("wp_meta_value").text
+      end
+
+      # Old permalinks to support by creating Redirects to the new Article path
+      if wp_postmeta.css("wp_meta_key").text == "_wp_old_slug" && wp_postmeta.css("wp_meta_value").text.present?
+        redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month}/#{published_at.day}/#{wp_postmeta.css("wp_meta_value").text}"
+      end
+    end
+
+    # Remove duplicate Redirects
+    redirect_paths = redirect_paths.uniq
+
+
+    # Image and Header color
+    image = ""
+    header_background_color = ""
+    doc.css("wp_postmeta").each do |wp_postmeta|
+      if wp_postmeta.css("wp_meta_key").text == "jumbo"
+        image = wp_postmeta.css("wp_meta_value").text
+      end
+    end
+
+    if image.blank?
+      header_background_color = "#000000"
+    end
+
+    # Find existing or create a new Contributor of words
+    author_name = doc.css("dc_creator").text
+
+    # Article slug
+    slug = doc.css("wp_post_name").text
+
+    # Category aka Desk
+    category_name = doc.css("category[domain=category]").text
+
+
+    # Save the Article
+    article = Article.create!(
+      title: title,
+      content: content,
+      published_at: published_at,
+      slug: slug,
+      header_background_color: header_background_color,
+      image: image,
+      status_id: published_status.id,
+      content_format: "html"
+    )
+
+    # Add the Article to its Category and Theme
+    category = Category.find_or_create_by name: category_name
+    category.articles << article
+
+    redirect_paths.each do |source_path|
+      Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+    end
+  end
+end
+
+
+
 # Site News Archive from pre- 3.0 of the site (pre Wordpress?)
 filepath = File.expand_path("../db/seeds/articles/site-news-archive.html", __FILE__)
 html_doc = File.open(filepath) { |f| Nokogiri::HTML(f) }
@@ -42,8 +132,11 @@ end
 
 
 
-# New feature style Articles
 
+
+
+# New feature style Articles
+# TODO
 theme = Theme.create!(name: "Field Reports")
 
 # Collect the articles together
