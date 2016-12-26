@@ -4,6 +4,39 @@ require "nokogiri"
 Article.destroy_all
 
 
+# TODO For future use when Features get rolled into the Articles feed
+# These timestamps were pulled from the cwc.im admin site since
+# the Feature HTML doesn't have any publishication datetime
+{
+  "agitators"                    => Time.parse("2014-08-20 09:30:00 -0700"),
+  "battle"                       => Time.parse("2016-11-01 09:19:00 -0700"),
+  "begin"                        => Time.parse("2016-09-28 08:11:00 -0700"),
+  "bluefuse"                     => Time.parse("2014-11-25 12:00:00 -0800"),
+  "bosnia"                       => Time.parse("2016-05-13 09:10:00 -0700"),
+  "demands"                      => Time.parse("2015-05-05 10:52:00 -0700"),
+  "democracy"                    => Time.parse("2012-04-29 12:20:00 -0700"),
+  "destination"                  => Time.parse("2016-04-07 09:49:00 -0700"),
+  "digital-utopia"               => Time.parse("2013-10-04 06:45:00 -0700"),
+  "empezar"                      => Time.parse("2016-09-28 08:10:00 -0700"),
+  "ferguson"                     => Time.parse("2014-08-18 10:32:00 -0700"),
+  "ferguson-reflections"         => Time.parse("2015-08-10 10:23:00 -0700"),
+  "french911"                    => Time.parse("2015-12-14 00:22:00 -0800"),
+  "from-ferguson-to-the-bay"     => Time.parse("2014-12-12 11:31:00 -0800"),
+  "kobane"                       => Time.parse("2015-02-03 16:47:00 -0800"),
+  "kurdish"                      => Time.parse("2015-09-23 14:07:00 -0700"),
+  "next-time-it-explodes"        => Time.parse("2015-08-13 11:59:00 -0700"),
+  "partys-over"                  => Time.parse("2016-03-16 08:06:00 -0700"),
+  "podemos"                      => Time.parse("2016-04-05 09:37:00 -0700"),
+  "protect"                      => Time.parse("2015-11-17 01:52:00 -0800"),
+  "reaction"                     => Time.parse("2016-10-24 09:10:00 -0700"),
+  "slovenia"                     => Time.parse("2016-05-11 09:09:00 -0700"),
+  "syriza"                       => Time.parse("2015-01-28 01:12:00 -0800"),
+  "trump"                        => Time.parse("2016-12-13 10:45:00 -0800"),
+  "worldcupbrazil"               => Time.parse("2014-06-12 05:16:00 -0700"),
+}
+
+
+
 
 # Find the "published" Status
 published_status = Status.find_by(name: "published")

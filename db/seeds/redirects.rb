@@ -11,6 +11,7 @@ html_doc.css("#main_table tbody tr").each do |table_row|
     Redirect.create! source_path: source_path, target_path: target_path, temporary: false
 
     # TODO use later to give old features a published_at timestamp
-    published_at = Time.parse(table_row.css(".timestamp").text)
+    # published_at = Time.parse(table_row.css(".timestamp").text)
+    # puts "#{target_path} : #{source_path} : #{published_at}"
   end
 end
