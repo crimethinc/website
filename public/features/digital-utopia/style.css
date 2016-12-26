@@ -1,0 +1,197 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+
+
+
+h1 {
+	color: #F7F7F7;
+	text-align: center;
+	text-shadow: -1px 1px 1px #000000;
+	font: 700 6vw/.85em "quatro-slab",serif;
+}
+
+h2 {
+	color: #8E8E93;
+	text-align: left;
+	font: 700 40px/1.75em "quatro-slab",serif;
+	margin: 20px 0 10px 0;
+}
+
+h3 {
+	font-family: "quatro-slab",serif;
+	font-weight: 900;	
+	font-size: 55px;
+	line-height: .85em;
+	color: #FF2A68;
+}
+
+h4 {
+	color: #F7F7F7;
+	text-align: center;
+	/*text-shadow: -1px 1px 1px #000000;*/
+	font: 400 1.75vw/.85em "quatro-slab",serif;
+	margin: 2% 0 0 15%;
+	text-transform: uppercase;
+	letter-spacing: .4em;
+}
+
+p {
+  font: 400 18px/1.5em "pt-sans",sans-serif;
+  text-indent: 30px;
+  }
+
+.noindent {
+  text-indent: 0px;
+  }
+
+.bigimage {
+	width: 1370px;
+	margin-left: -700px;
+	margin-top: 20px;
+	background: grey;
+	line-height: 0;
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+}
+
+.bigimage img {
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border: 0px solid #000000;
+}
+
+.bigimagecaption {
+	width: 1370px;
+	margin-top: -35px;
+	height: 35px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	color: white;
+	position: absolute;
+	border-radius: 0px 0px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 0px 0px 7px 7px;
+	text-align: right;
+}
+
+.bigimagecaption p {
+  font: 400 15px/1.5em "pt-sans",sans-serif;
+  text-indent: 0px;
+  margin: 7px 15px 0 0;
+  }
+
+.grandwrapper {
+	width: 100%;
+}
+
+.header {
+	position: absolute;
+    top: 0; left: 0;
+	width: 100%;
+	padding-top: 6%;
+}
+
+.headerwrapper {
+	width: 100%;
+	background-image: url('http://thecloud.crimethinc.com/assets/features/digital-utopia/lcd2560.jpg');
+	background-size: 100%;
+	padding-bottom: 17%;
+}
+
+.content {
+	width: 1670px;
+	margin:  0 auto;
+	clear: both;
+}
+
+.text {
+	width: 670px;
+	margin: 50px 0px 20px 725px;
+	position: absolute;
+}
+
+.sidebar {
+	width: 650px;
+	margin-left: -700px;
+	position: absolute;
+	text-align: right;
+}
+
+small {
+	width: 185px;
+	position: absolute;
+	left: 740px;
+	font: 400 14px/1.2em "pt-sans",sans-serif;
+	text-indent: -15px;
+	margin-top: 5px;
+	color: #8E8E93;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition:all .1s ease-in;
+}
+
+a:link, a:visited {
+	color:#34AADC;
+}    
+
+a:hover, a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #34AADC;
+}
+
+a:active {
+	color:black;
+} 
+
+small a:hover, small a:active {
+	color: #8E8E93;
+}
+
+.textfade a:link, .textfade a:visited {
+	color: #FF2A68;
+	text-shadow: none;
+	text-decoration: underline;
+}
+
+.textfade a:hover, .textfade a:active {
+	color: #8E8E93;
+	text-shadow: none;
+}
+
+.refnumber {
+	color: #FF2D55;
+	vertical-align: top; 
+	position: relative; 
+	top: -0.3em;
+	font-size: 0.85em;
+	font-weight: 700;
+}
+
+.fnumber {
+	color: #FF2D55;
+	font-weight: 700;
+}
+
+.footlink {
+	display: none;
+}
+
+
+.textfadepink {
+  background:
+  -webkit-linear-gradient(top, #FF2A68 0%,#FF5E3A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.textfadeblue {
+  background:
+  -webkit-linear-gradient(top, #1AD6FD 0%,#1D62F0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

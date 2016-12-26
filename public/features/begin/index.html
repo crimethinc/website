@@ -4,20 +4,22 @@
 		<title>The Secret Is to Begin: Getting Started, Further Resources, & Frequently Asked Questions / CrimethInc. Ex-Workers' Collective</title>
 		<meta charset="utf-8" />
  		<!-- <script src="/mint/?js"></script> -->
-		<link rel="stylesheet" href="/features/resources/master.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="/features/begin/custom.css" type="text/css" media="screen">
+		<link href="/features/resources/master.css" media="screen">
+		<link href="/features/begin/custom.css" media="screen">
 
  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script src="//use.typekit.net/oyv4ukj.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
-		<script src="http://thecloud.crimethinc.com/assets/features/resources/js/redraw.js"></script>
+
 		<script>
+		$(window).resize(function() {
+      $("h1,h2,h4,blockquote").css("z-index", 1);
+		});
+
 		function toggleDiv(navlinks) {
 		   $("#"+navlinks).toggle();
 		}
-		</script>
 
-		<script>
 		function toggleDiv(search) {
 		   $("#"+search).toggle();
 		}
@@ -25,7 +27,7 @@
 
 		<meta name="viewport" content="initial-scale=1">
 
-		<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6895132/779666/css/fonts.css" />
+		<link href="//cloud.typography.com/6895132/779666/css/fonts.css" />
 
 	</head>
 	<body>

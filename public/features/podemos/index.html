@@ -4,22 +4,24 @@
 		<title>From 15M to Podemos: The Regeneration of Spanish Democracy and the Maligned Promise of Chaos / CrimethInc. Ex-Workers' Collective</title>
 		<meta charset="utf-8" />
  		<!-- <script src="/mint/?js"></script> -->
-		<link rel="stylesheet" href="/features/resources/master.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="/features/podemos/custom.css" type="text/css" media="screen">
+		<link href="/features/resources/master.css" media="screen">
+		<link href="/features/podemos/custom.css" media="screen">
 
  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script src="//use.typekit.net/oyv4ukj.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
 		<script src="https://use.typekit.net/lyc8xqb.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-		<script src="http://thecloud.crimethinc.com/assets/features/resources/js/redraw.js"></script>
+
 		<script>
+		$(window).resize(function() {
+      $("h1,h2,h4,blockquote").css("z-index", 1);
+		});
+
 		function toggleDiv(navlinks) {
 		   $("#"+navlinks).toggle();
 		}
-		</script>
 
-		<script>
 		function toggleDiv(search) {
 		   $("#"+search).toggle();
 		}
