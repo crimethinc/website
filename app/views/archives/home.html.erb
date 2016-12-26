@@ -2,7 +2,7 @@
   <%= render "archives/card_css", article: @articles.first, featured: false %>
   <%= render "archives/card",     article: @articles.first %>
 
-  <% @articles[1..5].in_groups_of(2).each do |row| %>
+  <% @articles[1..-1].in_groups_of(2).each do |row| %>
     <div class="row">
       <% row.each do |article| %>
       <% unless article.blank? %>

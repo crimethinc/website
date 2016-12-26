@@ -61,8 +61,7 @@ Dir.glob("#{filepath}/*/").each do |f|
     slug         = path_pieces[-1]
     title        = doc.css("title").text.gsub(" / CrimethInc. Ex-Workers' Collective", "")
     published_at = features_timestamps[slug]
-    content      = ""
-    content      = File.open(f + "/index.html").map { |line| line }
+    content      = File.read(f + "/index.html")
     image        = doc.css("meta[name='twitter:image:src']").attribute("content").value
 
     # Save the Article
@@ -73,14 +72,14 @@ Dir.glob("#{filepath}/*/").each do |f|
       slug:           slug,
       image:          image,
       status_id:      published_status.id,
-      content_format: "html"
+      content_format: "html",
+      hide_layout:    true
     )
 
     # Add the Article to its Category and Theme
     category.articles << article
 
     # Redirect from old site Feature URLs to new site Article URLs
-
     if slug == "ukraine"
       namespace = "ux"
     elsif slug == "worldcupbrazil"
@@ -148,7 +147,7 @@ Dir.glob("#{filepath}/*").each do |f|
     end
 
     if image.blank?
-      header_background_color = "#000000"
+      header_background_color = "#444444"
     end
 
     # Find existing or create a new Contributor of words
