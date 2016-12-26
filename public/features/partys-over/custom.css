@@ -1,0 +1,579 @@
+/*-----------------------------------------------------------------*/
+/*-------------APPLY TO ALL VERSIONS-------------------------------*/
+/*-----------------------------------------------------------------*/
+
+
+h1, h2, h3, h4, h5 {
+	font-family: "quatro-slab",serif;
+}
+
+h1 {
+	color: white;
+	text-align: left;
+	text-shadow: none;
+	line-height: .85em;
+}
+
+h2 {
+	color: #676160;
+	text-align: left;
+	line-height: 1.05em;
+}
+
+h3 {
+	color: #002776;
+	text-align: left;
+	line-height: 1.05em;
+}
+
+h4 {
+	color: black;
+	text-align: left;
+	/* text-shadow: -1px 1px 1px #000000; */
+	line-height: 1em;
+	font-weight: 600;
+	/* text-transform: uppercase; */
+	/* letter-spacing: .2em; */
+}
+
+h5 {
+	color: white;
+	text-align: left;
+	text-shadow: none;
+	line-height: .85em;
+}
+
+/*------------ACCENT COLORS, INCLUDING LINKS----------------*/
+.accent {
+  color: #948582;
+}
+
+.accent a:link, .accent a:visited {
+	color:#009a3a;
+}    
+
+.accent a:hover, .accent a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #009a3a;
+}
+
+.accent a:active {
+	color:black;
+} 
+
+
+/*------------------GENERIC LINKS----------------------------------*/
+
+a {
+	text-decoration: none;
+	-webkit-transition:all .1s ease-in;
+}
+
+a:link, a:visited {
+	color:#34AADC;
+}    
+
+a:hover, a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #34AADC;
+}
+
+a:active {
+	color:black;
+} 
+
+small a:hover, small a:active {
+	color: #8E8E93;
+}
+
+
+/*-----------------FOOTNOTE COLORS------------------------*/
+
+.refnumber, .fnumber {
+	color: #FF2D55;
+}
+
+.footlink {
+	color: #FF2D55;
+}
+
+.footlink a:link, .footlink a:visited {
+	color: #FF2D55;
+}    
+
+.footlink a:hover, .footlink a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #FF2D55;
+}
+
+.footref {
+	color: #FF2D55;
+}
+
+.footnote a:link, .footnote a:visited {
+	color: black;
+	text-decoration: underline;
+}    
+
+.footnote a:hover, .footnote a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #8E8E93;
+}
+
+.footreturn a:link, .footreturn a:visited {
+	color: #FF2D55;
+	text-decoration: none;
+}    
+
+.footreturn a:hover, .footreturn a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #FF2D55;
+}
+
+.specialquote {
+	background: none !important;
+}
+
+.specialquote h5 {
+	z-index: -100;
+	position: absolute;
+	text-align: center;
+	color: white;
+}
+
+.specialquote img {
+	position: relative;
+	top: 0;
+	left: 0;
+	border: 0px solid #000000;
+	width: 100%;
+	z-index: -101;
+}
+
+
+/*----------------------------------------------------------*/
+/*-------------RESPONSIVE CODE STARTS HERE------------------*/
+/*----------------------------------------------------------*/
+	
+	
+	
+/*-------------PHONE CSS------------------*/
+@media (min-device-width:200px) and (max-width:599px) {
+	
+	.headerwrapper {
+		float: left;
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/partys-over/images/header1200.jpg');
+		background-size: 100%;
+		padding-bottom: 0;
+		margin-bottom: -15px;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 555px;
+		font-size: 25vw;
+		margin-left: 2%;
+		margin-top: -5%;
+	}
+	
+	@media (min-width:320px) and (max-width:359px) {
+		h1 {
+			font-size: 80px;
+			font-size: 25vw;
+		}
+		}
+	
+	@media (min-width: 360px) and (max-width:379px) {
+		h1 {
+			font-size: 90px;
+			font-size: 25vw;
+		}
+		
+		}
+	
+	@media (min-width: 384px) and (max-width:399px) {
+		h1 {
+			font-size: 96px;
+			font-size: 25vw;
+		}
+		
+		}
+	
+	@media (min-width: 400px) and (max-width:599px) {
+		h1 {
+			font-size: 100px;
+			font-size: 25vw;
+		}
+		
+		}
+		
+	.h1body {
+		width: 90%;
+		 margin-top: 25px; 
+		font-size: 35px;
+		text-align: right;
+		color: black;
+	}
+	
+	h2 {
+		font-size: 20px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+		padding: 0 5% 0 7%
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 7vw;
+		margin: 8% 0 9% 12%;
+	}
+	
+	aside blockquote {
+			font-size: 25px;
+	}
+	
+	.text {
+			padding-top: 30px;
+	}
+	
+	.first h5 {
+		margin: 13% 0 0 1.5%;
+		font-size: 48px;
+		font-size: 8vw;
+		width: 98%;
+	}
+	
+	.second h5 {
+		margin: 40% 0 0 1.5%;
+		font-size: 18px;
+		font-size: 9vw;
+		width: 98%;
+	}
+	
+	.third h5 {
+		margin: 20% 0 0 1.5%;
+		font-size: 54px;
+		font-size: 9vw;
+		width: 98%;
+	}
+	
+	.fourth h5 {
+		margin: 35% 0 0 1.5%;
+		font-size: 39px;
+		font-size: 6.5vw;
+		width: 98%;
+	}
+}
+
+
+
+/*-------------TABLET CSS------------------*/
+@media (min-width:600px) and (max-width:1023px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/partys-over/images/header2000.jpg');
+		background-size: 100%;
+		padding-bottom: 58%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 9vw;
+		margin-left: 5%;
+		margin-top: 4.2%;
+	}
+	
+	.h1body {
+		width: 90%;
+		/* margin-left: -113px; */
+		font-size: 85px;
+		text-align: right;
+		color: black;
+	}
+	
+	h2 {
+		font-size: 45px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+		padding: 0 10% 0 11%;
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 30px;
+		font-size: 4vw;
+		margin: 24% 0 0 45%;
+		width: 45%;
+	}
+	
+	aside blockquote {
+		font-size: 60px;
+	}
+	
+	.first h5 {
+		margin: 13% 0 0 1.5%;
+		font-size: 48px;
+		font-size: 8vw;
+		width: 98%;
+	}
+	
+	.second h5 {
+		margin: 40% 0 0 1.5%;
+		font-size: 54px;
+		font-size: 9vw;
+		width: 98%;
+	}
+	
+	.third h5 {
+		margin: 20% 0 0 1.5%;
+		font-size: 54px;
+		font-size: 9vw;
+		width: 98%;
+	}
+	
+	.fourth h5 {
+		margin: 35% 0 0 1.5%;
+		font-size: 39px;
+		font-size: 6.5vw;
+		width: 98%;
+	}
+}
+
+
+/*-------------DESKTOP TINY CSS------------------*/
+@media (min-width:1024px) and (max-width:1249px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/partys-over/images/header2000.jpg');
+		background-size: 100%;
+		padding-bottom: 58%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 9vw;
+		margin-left: 4%;
+		margin-top: 3%;
+	}
+	
+	.h1body {
+		width: 1000px;
+		margin-left: -113px;
+		font-size: 110px;
+		text-align: right;
+		color: black;
+	}
+	
+	h2 {
+		font-size: 40px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 30px;
+		font-size: 4vw;
+		margin: 20% 0 0 45%;
+		width: 45%;
+	}
+	
+	aside blockquote {
+		font-size: 55px;
+	}
+	
+	.first h5 {
+		margin: 130px 0px 0px 45px;
+		font-size: 80px;
+		width: 900px;
+	}
+	
+	.second h5 {
+		margin: 370px 0 0 0;
+		font-size: 52px;
+		width: 1000px;
+	}
+	
+	.third h5 {
+		margin: 215px 0 0 10px;
+		font-size: 60px;
+		width: 980px;
+	}
+	
+	.fourth h5 {
+		margin: 345px 0 0 10px;
+		font-size: 60px;
+		width: 980px;
+	}
+}
+
+
+
+/*-------------DESKTOP SMALL CSS------------------*/
+@media (min-width:1250px) and (max-width:1669px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/partys-over/images/header2000.jpg');
+		background-size: 100%;
+		padding-bottom: 58%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 9vw;
+		margin-left: 5%;
+		margin-top: 3%;
+	}
+	
+	.h1body {
+		width: 1230px;
+		margin-left: -505px;
+		font-size: 110px;
+		text-align: right;
+		color: black;
+	}
+	
+	h2 {
+		font-size: 34px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 30px;
+		font-size: 4vw;
+		margin: 23% 0 0 45%;
+		width: 45%;
+	}
+	
+	aside blockquote {
+		font-size: 50px;
+	}
+	
+	.first h5 {
+		margin: 160px 0px 0px 60px;
+		font-size: 90px;
+		width: 1100px;
+	}
+	
+	.second h5 {
+		margin: 450px 0 0 0;
+		font-size: 65px;
+		width: 1230px;
+	}
+	
+	.third h5 {
+		margin: 275px 0 0 20px;
+		font-size: 70px;
+		width: 1200px;
+	}
+	
+	.fourth h5 {
+		margin: 275px 0 0 20px;
+		font-size: 70px;
+		width: 1200px;
+	}
+}
+
+
+
+/*-------------DESKTOP BIG CSS------------------*/
+@media (min-width:1670px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/partys-over/images/header2560.jpg');
+		background-size: 100%;
+		padding-bottom: 58%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 9vw;
+		margin-left: 5%;
+		margin-top: 3%;
+	}
+	
+	.h1body {
+		width: 1370px;
+		margin-left: -700px;
+		font-size: 130px;
+		text-align: right;
+		color: black;
+	}
+	
+	h2 {
+		font-size: 40px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 30px;
+		font-size: 4vw;
+		margin: 23% 0 0 45%;
+		width: 45%;
+	}
+	
+	aside blockquote {
+		font-size: 70px;
+	}
+	
+	.first h5 {
+		margin: 180px 80px 80px 120px;
+		font-size: 100px;
+	}
+	
+	.second h5 {
+		margin: 550px 0 0 40px;
+		font-size: 70px;
+		width: 1300px;
+	}
+	
+	.third h5 {
+		margin: 295px 0 0 40px;
+		font-size: 80px;
+		width: 1300px;
+	}
+	
+	.fourth h5 {
+		margin: 495px 0 0 40px;
+		font-size: 80px;
+		width: 1300px;
+	}
+}

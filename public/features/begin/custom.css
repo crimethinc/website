@@ -1,0 +1,580 @@
+/*-----------------------------------------------------------------*/
+/*-------------APPLY TO ALL VERSIONS-------------------------------*/
+/*-----------------------------------------------------------------*/
+
+
+h1, h2, h3, h4 {
+	font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-style: normal;
+}
+
+aside blockquote {
+	font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-style: normal;
+	letter-spacing: -.04em;
+	font-weight: 300;
+}
+
+h1 {
+	color: white;
+	text-align: left;
+	text-shadow: none;
+	line-height: .85em;
+	letter-spacing: -.04em;
+}
+
+h2 {
+	color: black;
+	text-align: left;
+	line-height: .85em;
+	letter-spacing: -.04em;
+}
+
+h3 {
+	color: #666565;
+	text-align: left;
+	line-height: 1.05em;
+}
+
+h4 {
+	color: #F7F7F7;
+	text-align: center;
+	/*text-shadow: -1px 1px 20px white;*/
+	line-height: .85em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: .4em;
+}
+
+h4 a:link, h4 a:visited {
+	color: black;
+}    
+
+h4 a:hover, h4 a:active {
+	color: white;
+	text-shadow: none;
+}
+
+.text h3+p {
+	text-indent: 0px;
+}
+
+/*------------ACCENT COLORS, INCLUDING LINKS----------------*/
+.accent {
+  color: #d62d34;
+}
+
+.accent a:link, .accent a:visited {
+	color:#d62d34;
+}    
+
+.accent a:hover, .accent a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #d62d34;
+}
+
+.accent a:active {
+	color:black;
+} 
+
+.green, .green a {
+	color: #9ac149;
+}
+
+.blue, .blue a {
+	color: #3cbce9;
+}
+
+.pink, .pink a {
+	color: #d62d34;
+}
+
+
+/*------------------GENERIC LINKS----------------------------------*/
+
+a {
+	text-decoration: none;
+	-webkit-transition:all .1s ease-in;
+}
+
+a:link, a:visited {
+	color:#d62d34;
+}    
+
+a:hover, a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #d62d34;
+}
+
+a:active {
+	color:black;
+} 
+
+small a:hover, small a:active {
+	color: #8E8E93;
+}
+
+
+/*-----------------FOOTNOTE COLORS------------------------*/
+
+.refnumber, .fnumber {
+	color: #FF2D55;
+}
+
+.footlink {
+	color: #FF2D55;
+}
+
+.footlink a:link, .footlink a:visited {
+	color: #FF2D55;
+}    
+
+.footlink a:hover, .footlink a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #FF2D55;
+}
+
+.footreturn a:link, .footreturn a:visited {
+	color: #FF2D55;
+	text-decoration: none;
+}    
+
+.footreturn a:hover, .footreturn a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #FF2D55;
+}
+
+.footref {
+	color: #FF2D55;
+}
+
+.footnote a:link, .footnote a:visited {
+	color: black;
+	text-decoration: underline;
+}    
+
+.footnote a:hover, .footnote a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #8E8E93;
+}
+
+.specialquote {
+	background: none !important;
+}
+
+.specialquote h5 {
+	z-index: -100;
+	position: absolute;
+	text-align: center;
+	color: white;
+}
+
+.specialquote img {
+	position: relative;
+	top: 0;
+	left: 0;
+	border: 0px solid #000000;
+	width: 100%;
+	z-index: -101;
+}
+
+
+/*----------------------------------------------------------*/
+/*-------------RESPONSIVE CODE STARTS HERE------------------*/
+/*----------------------------------------------------------*/
+	
+	
+	
+/*-------------PHONE CSS------------------*/
+/*@media (min-device-width:200px) and (max-device-width:599px) OR  (max-width:599px) ORIGINAL COMBINED {*/
+@media (min-device-width:200px) and (max-width:599px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://crimethinc.com/tce/images/takeflight-phone@2x.jpg');
+		background-size: 100%;
+		padding-bottom: 177%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 80px;
+		font-size: 25vw;
+		margin-left: 9%;
+		margin-top: 18%;
+		width: 80%;
+	}
+	
+	@media (min-width:320px) and (max-width:359px) {
+		h1 {
+			font-size: 80px;
+			font-size: 25vw;
+		}
+		}
+	
+	@media (min-width: 360px) and (max-width:379px) {
+		h1 {
+			font-size: 90px;
+			font-size: 25vw;
+		}
+		
+		}
+	
+	@media (min-width: 384px) and (max-width:399px) {
+		h1 {
+			font-size: 96px;
+			font-size: 25vw;
+		}
+		
+		}
+	
+	@media (min-width: 400px) and (max-width:599px) {
+		h1 {
+			font-size: 100px;
+			font-size: 25vw;
+		}
+		
+		}
+	
+	h2 {
+		font-size: 35px;
+		font-size: 11vw;
+		margin: 7% 0 5% 0;
+		letter-spacing: -.04em;
+		width: 88%;
+		padding: 0 5% 0 7%;
+	}
+	
+	h2#gs {
+		margin-bottom: 0;
+	}
+	
+	h3 {
+		font-size: 16px;
+		font-size: 5vw;
+		margin: 50px 0 20px 0;
+		width: 79%;
+		padding: 0 5% 0 7%;
+	}
+	
+	h4 {
+		font-size: 10px;
+		font-size: 3.1vw;
+		margin: -104.2% 0 0 7%;
+		line-height: 1.7em;
+		text-align: left;
+		font-weight: 800;
+	}
+	
+	h4 a:link, h4 a:visited {
+		color: white;
+	}    
+	
+	h4 a:hover, h4 a:active {
+		color: black;
+		text-shadow: none;
+	}
+	
+	.text {
+		padding-top: 0;
+	}
+	
+	aside blockquote {
+		font-size: 22px;
+		font-size: 7vw;
+	}
+	
+	.cols {
+		overflow: hidden;
+	}
+	
+	.col2 {
+		width: 88%;
+		padding: 0 5% 0 7%
+	}
+	
+	.col1 {
+		width: 88%;
+		padding: 0 5% 0 7%
+	}
+	
+	.gone {
+		display: none;
+	}
+	
+	li p {
+		padding: 0 10% 0 2% !important;
+	}
+}
+
+
+
+/*-------------TABLET CSS------------------*/
+@media (min-width:600px) and (max-width:1023px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://crimethinc.com/tce/images/takeflight-large.jpg');
+		background-size: 100%;
+		padding-bottom: 55%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 72px;
+		font-size: 12vw;
+		margin-left: 20%;
+		margin-top: 0%;
+		width: 45%;
+	}
+	
+	h2 {
+		font-size: 70px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+		letter-spacing: -.04em;
+		width: 79%;
+		padding: 0 10% 0 11%;
+	}
+	
+	h2#gs {
+		margin-bottom: 0;
+	}
+	
+	h3 {
+		font-size: 30px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+		width: 79%;
+		padding: 0 10% 0 11%;
+	}
+	
+	h4 {
+		font-size: 11px;
+		font-size: 1.8vw;
+		margin: -38.2% 0 0 45%;
+		line-height: 1.4em;
+		text-align: left;
+		font-weight: 800;
+	}
+	
+	h4 a:link, h4 a:visited {
+		color: white;
+	}    
+	
+	h4 a:hover, h4 a:active {
+		color: black;
+		text-shadow: none;
+	}
+	
+	aside blockquote {
+		font-size: 52px;
+	}
+	
+	.cols {
+		overflow: hidden;
+	}
+	
+	.col2 {
+		width: 55%;
+		float: left;
+	}
+	
+	.col1 {
+		padding-right: 0%;
+		padding-left: 7%;
+		width: 35%;
+		float: left;
+	}
+	
+	.gone {
+		display: none;
+	}
+	
+	li p {
+		padding: 0 10% 0 2% !important;
+	}
+}
+
+
+
+/*-------------DESKTOP TINY CSS------------------*/
+@media (min-width:1024px) and (max-width:1249px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://crimethinc.com/tce/images/takeflight-large.jpg');
+		background-size: 100%;
+		padding-bottom: 49%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 102px;
+		font-size: 10vw;
+		margin-left: 17%;
+		margin-top: 0%;
+		width: 25%;
+	}
+	
+	h2 {
+		font-size: 70px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+		letter-spacing: -.04em;
+	}
+	
+	h3 {
+		font-size: 30px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 18px;
+		font-size: 1.75vw;
+		margin: -6.2% 0 0 47%;
+		line-height: 1.15em;
+		text-align: left;
+	}
+	
+	aside blockquote {
+		font-size: 52px;
+	}
+	
+	.cols {
+		overflow: hidden;
+	}
+	
+	.col1, .col2 {
+		width: 45%;
+		float: left;
+	}
+	
+	.col1 {
+		padding-right: 10%;
+	}
+	
+	.gone {
+		display: none;
+	}
+}
+
+
+
+/*-------------DESKTOP SMALL CSS------------------*/
+@media (min-width:1250px) and (max-width:1669px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://crimethinc.com/tce/images/takeflight-large.jpg');
+		background-size: 100%;
+		padding-bottom: 39%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 8vw;
+		margin-left: 25%;
+		margin-top: 0%;
+		width: 20%;
+	}
+	
+	h2 {
+		font-size: 70px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+		letter-spacing: -.04em;
+	}
+	
+	h3 {
+		font-size: 30px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 30px;
+		font-size: 1.55vw;
+		margin: -5.25% 0 0 49%;
+		line-height: 1.1em;
+		text-align: left;
+	}
+	
+	aside blockquote {
+		font-size: 52px;
+	}
+	
+	.cols {
+		overflow: hidden;
+	}
+	
+	.col1, .col2 {
+		width: 45%;
+		float: left;
+	}
+	
+	.col1 {
+		padding-right: 10%;
+	}
+	
+}
+
+
+
+/*-------------DESKTOP BIG CSS------------------*/
+@media (min-width:1670px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://crimethinc.com/tce/images/takeflight-large.jpg');
+		background-size: 100%;
+		padding-bottom: 39%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 8vw;
+		margin-left: 25%;
+		margin-top: 0%;
+		width: 20%;
+	}
+	
+	h2 {
+		font-size: 80px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+		letter-spacing: -.04em;
+	}
+	
+	h3 {
+		font-size: 35px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 30px;
+		font-size: 1.55vw;
+		margin: -5.25% 0 0 49%;
+		line-height: 1.1em;
+		text-align: left;
+	}
+	
+	aside blockquote {
+		font-size: 60px;
+	}
+	
+	.cols {
+		overflow: hidden;
+	}
+	
+	.col1, .col2 {
+		width: 45%;
+		float: left;
+	}
+	
+	.col1 {
+		padding-right: 10%;
+	}
+}

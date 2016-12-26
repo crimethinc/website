@@ -1,0 +1,491 @@
+/*-----------------------------------------------------------------*/
+/*-------------APPLY TO ALL VERSIONS-------------------------------*/
+/*-----------------------------------------------------------------*/
+
+
+h1, h2, h3, h4 {
+	font-family: 'Tungsten A', 'Tungsten B', sans-serif;
+}
+
+
+h1 {
+	color: white;
+	text-align: left;
+	text-shadow: none;
+	line-height: .85em;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: #5b5757;
+	text-align: left;
+	line-height: 1.05em;
+}
+
+h3 {
+	color: #002776;
+	text-align: left;
+	line-height: 1.05em;
+}
+
+h4 {
+	color: #F7F7F7;
+	text-align: left;
+	/* text-shadow: -1px 1px 1px #000000; */
+	line-height: 1em;
+	font-weight: 400;
+	/* text-transform: uppercase; */
+	letter-spacing: .1em;
+}
+
+small {
+	text-indent: 0px;
+}
+
+aside blockquote {
+	font-family: 'Tungsten A', 'Tungsten B', sans-serif;
+	font-weight: 400;
+}
+
+.inlinequote {
+	color: #c20101;
+	text-indent: 0px;
+	text-align: right;
+}
+
+
+/*------------ACCENT COLORS, INCLUDING LINKS----------------*/
+.accent {
+  color: #868080;
+}
+
+.accent a:link, .accent a:visited {
+	color:#009a3a;
+}    
+
+.accent a:hover, .accent a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #009a3a;
+}
+
+.accent a:active {
+	color:black;
+} 
+
+
+/*------------------GENERIC LINKS----------------------------------*/
+
+a {
+	text-decoration: none;
+	-webkit-transition:all .1s ease-in;
+}
+
+a:link, a:visited {
+	color:#34AADC;
+}    
+
+a:hover, a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #34AADC;
+}
+
+a:active {
+	color:black;
+} 
+
+small a:hover, small a:active {
+	color: #8E8E93;
+}
+
+
+/*-----------------FOOTNOTE COLORS------------------------*/
+
+.refnumber, .fnumber {
+	color: #FF2D55;
+}
+
+.footlink {
+	color: #FF2D55;
+}
+
+.footlink a:link, .footlink a:visited {
+	color: #FF2D55;
+}    
+
+.footlink a:hover, .footlink a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #FF2D55;
+}
+
+.footreturn a:link, .footreturn a:visited {
+	color: #FF2D55;
+	text-decoration: none;
+}    
+
+.footreturn a:hover, .footreturn a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #FF2D55;
+}
+
+.footref {
+	color: #FF2D55;
+}
+
+.footnote a:link, .footnote a:visited {
+	color: black;
+	text-decoration: underline;
+}    
+
+.footnote a:hover, .footnote a:active {
+	color: black;
+	text-shadow: 0px 0px 20px #8E8E93;
+}
+
+.specialquote {
+	background: none !important;
+}
+
+.specialquote h5 {
+	z-index: -100;
+	position: absolute;
+	text-align: center;
+	color: white;
+}
+
+.specialquote img {
+	position: relative;
+	top: 0;
+	left: 0;
+	border: 0px solid #000000;
+	width: 100%;
+	z-index: -101;
+}
+
+
+/*----------------------------------------------------------*/
+/*-------------RESPONSIVE CODE STARTS HERE------------------*/
+/*----------------------------------------------------------*/
+	
+	
+	
+/*-------------PHONE CSS------------------*/
+@media (min-device-width:200px) and (max-width:599px) {
+	
+	.headerwrapper {
+		float: left;
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header1200.jpg');
+		background-size: 100%;
+		padding-bottom: 0;
+		margin-bottom: -15px;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 555px;
+		font-size: 25vw;
+		margin-left: 0%;
+		margin-top: 28%;
+		text-align: center !important;
+	}
+	
+	@media (min-width:320px) and (max-width:359px) {
+		h1 {
+			font-size: 80px;
+			font-size: 25vw;
+		}
+		}
+	
+	@media (min-width: 360px) and (max-width:379px) {
+		h1 {
+			font-size: 90px;
+			font-size: 25vw;
+		}
+		
+		}
+	
+	@media (min-width: 384px) and (max-width:399px) {
+		h1 {
+			font-size: 96px;
+			font-size: 25vw;
+		}
+		
+		}
+	
+	@media (min-width: 400px) and (max-width:599px) {
+		h1 {
+			font-size: 100px;
+			font-size: 25vw;
+		}
+		
+		}
+	
+	h2 {
+		font-size: 27px;
+		font-size: 8.4vw;
+		margin: 50px 0 20px 0;
+		padding: 0 5% 0 7%
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 25px;
+		font-size: 7.75vw;
+		margin: 2% 0 4% 0;
+		text-align: center !important;
+	}
+	
+	.specialquote h5 {
+		font-size: 24px;
+		font: 900 7.5vw/.85em "quatro-slab",serif;
+		padding-top: 5%;
+		text-shadow: -3px 3px 9px #000000;
+		line-height: 1.1em;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	
+	.alttitlecolor {
+		color: white !important;
+	}
+	
+	aside blockquote {
+		font-size: 29px;
+		font-size: 9vw;
+	}
+	
+	.text {
+		padding-top: 30px;
+	}
+	
+}
+
+
+
+/*-------------TABLET CSS------------------*/
+@media (min-width:600px) and (max-width:1023px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header2000.jpg');
+		background-size: 100%;
+		padding-bottom: 52%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 75px;
+		font-size: 12.5vw;
+		margin-left: 0%;
+		margin-top: 23%;
+		width: 50%;
+		text-align: right
+	}
+	
+	h2 {
+		font-size: 45px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+		padding: 0 10% 0 11%;
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 23px;
+		font-size: 3.75vw;
+		margin: -9% 0 0 52%;
+	}
+		
+	.specialquote h5 {
+		font-size: 45px;
+		font: 900 7.5vw/.85em "quatro-slab",serif;
+		padding-top: 5%;
+		text-shadow: -3px 3px 9px #000000;
+		line-height: 1.1em;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	
+	.alttitlecolor {
+		color: white !important;
+	}
+	
+	aside blockquote {
+		font-size: 41px;
+		font-size: 6.9vw;
+	}
+	
+}
+
+
+
+/*-------------DESKTOP TINY CSS------------------*/
+@media (min-width:1024px) and (max-width:1249px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header2000.jpg');
+		background-size: 100%;
+		padding-bottom: 52%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 12.5vw;
+		margin-left: 0%;
+		margin-top: 18%;
+		width: 50%;
+		text-align: right
+	}
+	
+	h2 {
+		font-size: 50px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 3.75vw;
+		margin: -9% 0 0 52%;
+	}
+	
+	.specialquote h5 {
+		font: 900 100px/.85em "quatro-slab",serif;
+		padding-top: 13%;
+		text-shadow: -3px 3px 9px #000000;
+		line-height: 1.2em;
+	}
+	
+	.alttitlecolor {
+		color: white !important;
+	}
+	
+	aside blockquote {
+		font-size: 70px;
+	}
+}
+
+
+
+/*-------------DESKTOP SMALL CSS------------------*/
+@media (min-width:1250px) and (max-width:1669px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header2000.jpg');
+		background-size: 100%;
+		padding-bottom: 52%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 12.5vw;
+		margin-left: 1%;
+		margin-top: 33.55%;
+		width: 50%
+	}
+	
+	h2 {
+		font-size: 50px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 3.75vw;
+		margin: -19.5% 0 0 52%;
+	}
+	
+	.specialquote h5 {
+		font: 900 100px/.85em "quatro-slab",serif;
+		padding-top: 13%;
+		text-shadow: -3px 3px 9px #000000;
+		line-height: 1.2em;
+	}
+	
+	.alttitlecolor {
+		color: black !important;
+	}
+	
+	aside blockquote {
+		font-size: 70px;
+	}
+}
+
+
+
+/*-------------DESKTOP BIG CSS------------------*/
+@media (min-width:1670px) {
+	
+	.headerwrapper {
+		width: 100%;
+		background-image: url('http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header2560.jpg');
+		background-size: 100%;
+		padding-bottom: 52%;
+		background-position:center top;
+	}
+	
+	h1 {
+		font-size: 200px;
+		font-size: 13vw;
+		margin-left: 1%;
+		margin-top: 34.2%;
+		width: 50%
+	}
+	
+	h2 {
+		font-size: 65px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h3 {
+		font-size: 15px;
+		/*font-size: 33vw;*/
+		margin: 50px 0 20px 0;
+	}
+	
+	h4 {
+		font-size: 3.75vw;
+		margin: -20.5% 0 0 52%;
+	}
+	
+	.specialquote h5 {
+		font: 900 100px/.85em "quatro-slab",serif;
+		padding-top: 13%;
+		text-shadow: -3px 3px 9px #000000;
+		line-height: 1.2em;
+	}
+	
+	.alttitlecolor {
+		color: black !important;
+	}
+	
+	aside blockquote {
+		font-size: 100px;
+	}
+}
