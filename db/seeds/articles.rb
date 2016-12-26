@@ -71,6 +71,10 @@ Dir.glob("#{filepath}/*/").each do |f|
       hide_layout:    true
     )
 
+    # Prefix slug with "feature-" to avoid collision with blog post with the same title on that day
+    article.slug = "feature-#{article.slug}"
+    article.save!
+
     # Add the Article to its Category and Theme
     category.articles << article
 
@@ -153,7 +157,6 @@ Dir.glob("#{filepath}/*").each do |f|
 
     # Category aka Desk
     category_name = doc.css("category[domain=category]").text
-
 
     # Save the Article
     article = Article.create!(
