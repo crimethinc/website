@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :http_basic_authenticate
 
   before_action :check_for_redirection
   before_action :set_social_links
@@ -23,12 +22,6 @@ class ApplicationController < ActionController::Base
 
     if pinned_to_footer_bottom_page_id.present?
       @pinned_to_footer_bottom = Page.find(pinned_to_footer_bottom_page_id)
-    end
-  end
-
-  def http_basic_authenticate
-    unless Rails.env.development?
-      ApplicationController.http_basic_authenticate_with name: "secret", password: "superdupersecretsauce"
     end
   end
 
