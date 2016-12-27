@@ -56,6 +56,14 @@ Dir.glob("#{filepath}/*/").each do |f|
 
     slug         = path_pieces[-1]
     title        = doc.css("title").text.gsub(" / CrimethInc. Ex-Workers' Collective", "")
+    subtitle     = ""
+
+    title_pieces = title.split(":")
+    if title_pieces.length > 1
+      title        = title_pieces.first.strip
+      subtitle     = title_pieces.last.strip
+    end
+
     published_at = features_timestamps[slug]
     content      = File.read(f + "/index.html")
     image        = doc.css("meta[name='twitter:image:src']").attribute("content").value
@@ -63,6 +71,7 @@ Dir.glob("#{filepath}/*/").each do |f|
     # Save the Article
     article = Article.create!(
       title:          title,
+      subtitle:       subtitle,
       content:        content,
       published_at:   published_at,
       image:          image,
