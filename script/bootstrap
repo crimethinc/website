@@ -27,7 +27,14 @@ fi
 
 if [ -f "Gemfile" ]; then
   echo "==> Installing gem dependencies..."
-  bundle check --path vendor/gems >/dev/null 2>&1  || {
-    bundle install --path vendor/gems --quiet --without production
+  bundle check  || {
+    bundle install --quiet --without production
   }
 fi
+
+# DELETES all pg databases / software and starts from scratch
+# brew services stop postgresql
+# brew uninstall postgresql
+# rm -rf /usr/local/var/postgres/
+# brew install postgresql
+# brew services start postgresql

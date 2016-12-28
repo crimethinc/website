@@ -6,3 +6,4 @@
 .byebug_history
 .DS_Store
 ISSUES.md
+/vendor/gems
