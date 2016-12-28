@@ -35,7 +35,7 @@ features_timestamps          = {
   "reaction"                 => Time.parse("2016-10-24 09:10:00 -0700"),
   "slovenia"                 => Time.parse("2016-05-11 09:09:00 -0700"),
   "syriza"                   => Time.parse("2015-01-28 01:12:00 -0800"),
-  "trump"                    => Time.parse("2016-12-13 10:45:00 -0800"),
+  "trump"                    => Time.parse("2016-12-13 12:45:00 -0800"),
   "ukraine"                  => Time.parse("2014-03-16 20:37:00 -0700"),
   "worldcupbrazil"           => Time.parse("2014-06-12 05:16:00 -0700"),
 }
