@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @slug       = "articles"
+    @body_id    = "articles"
     @page_title = "Articles"
 
     @articles_year  = params[:year]
@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @slug = "article"
+    @body_id = "article"
 
     # get the article
     if request.path =~ /^\/drafts/
@@ -39,16 +39,25 @@ class ArticlesController < ApplicationController
     end
 
     # no article found, go to /articles feed
-    if @article.nil?
-      return redirect_to articles_path
-    else
-      @title = @article.name
-    end
+    article_redirects
+
+
+    @title = @article.name
 
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false
     else
       render "articles/show"
+    end
+  end
+
+  def article_redirects
+    if @article.nil?
+      return redirect_to root_path
+    end
+
+    if @article.published? && params[:draft_code].present?
+      return redirect_to @article.path
     end
   end
 end

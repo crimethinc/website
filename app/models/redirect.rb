@@ -2,8 +2,11 @@ class Redirect < ApplicationRecord
   validates :source_path, presence: true
   validates :target_path, presence: true
 
-  before_save :strip_leading_domain, on: [:create, :update]
-  before_save :add_leading_slash,    on: [:create, :update]
+  before_save :strip_leading_domain,    on: [:create, :update]
+  before_save :add_leading_slash,       on: [:create, :update]
+
+  after_save :delete_duplicates,        on: [:create, :update]
+  after_save :delete_cirular_redirects, on: [:create, :update]
 
   def name
     "#{source_path} to #{target_path}"
@@ -31,4 +34,26 @@ class Redirect < ApplicationRecord
       self.target_path = path
     end
   end
+
+  private
+
+  def delete_duplicates
+    previous_redirect = Redirect.where(source_path: self.source_path, target_path: self.target_path).where.not(id: self.id)
+    if previous_redirect.present?
+      self.destroy
+    end
+  end
+
+  def delete_cirular_redirects
+    redirects = Redirect.where(source_path: self.source_path, target_path: self.source_path)
+    if redirects.present?
+      redirects.destroy_all
+    end
+
+    redirects = Redirect.where(source_path: self.target_path, target_path: self.target_path)
+    if redirects.present?
+      redirects.destroy_all
+    end
+  end
+
 end

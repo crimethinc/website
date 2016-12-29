@@ -28,13 +28,13 @@ Rails.application.routes.draw do
   # Articles Atom Feed
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
 
-  # Pages
+  # Pages (linked in header/nav)
   get "read",   to: "about#read",   as: :read
   get "watch",  to: "about#watch",  as: :watch
   get "listen", to: redirect("podcast"), as: :listen_redirect # TEMP TODO
-  get "listen", to: "about#listen", as: :listen
+  # get "listen", to: "about#listen", as: :listen
   get "buy",    to: redirect("http://store.crimethinc.com"), as: :buy_redirect # TEMP TODO
-  get "buy",    to: "about#buy",    as: :buy
+  # get "buy",    to: "about#buy",    as: :buy
 
   # Podcast
   get "podcast/feed", to: redirect("http://exworker.libsyn.com/rss"), as: :podcast_feed_redirect # TEMP TODO

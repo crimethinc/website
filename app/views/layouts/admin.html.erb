@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="<%= lang %>" prefix="og: http://ogp.me/ns#" id="<%= slug %>">
+<html dir="ltr" lang="<%= lang %>" prefix="og: http://ogp.me/ns#" id="<%= html_id %>">
 
 <head>
   <title><%= page_title %></title>
@@ -12,7 +12,7 @@
   <%= javascript_include_tag "admin" %>
 </head>
 
-<body>
+<body id="<%= body_id %>">
   <%= render "admin/nav" %>
 
   <div class="container">

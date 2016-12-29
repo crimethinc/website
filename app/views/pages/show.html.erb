@@ -1,16 +1,13 @@
 <article id="page-<%= @page.id %>" class="h-entry" role="article">
-  <% if @page.image.present? %>
-    <%= image_tag @page.image, alt: @page.image_description, class: "u-photo" %>
-  <% end %>
+  <header>
+    <%= render "articles/titles", header: @page, linked: false %>
 
-  <h1>
-    <%= link_to @page.path, class: "p-name" do %>
-      <span class="title"><%= @page.title %></span><br>
-      <span class="subtitle"><%= @page.subtitle %></span>
+    <% if @page.image.present? %>
+      <%= image_tag @page.image, alt: @page.image_description, class: "u-photo" %>
     <% end %>
-  </h1>
+  </header>
 
   <div class="e-content">
-    <%= simple_format @page.content %>
+    <%= @page.content_rendered %>
   </div>
 </article>

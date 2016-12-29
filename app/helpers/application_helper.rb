@@ -31,8 +31,12 @@ module ApplicationHelper
     "en"
   end
 
-  def slug
-    @slug
+  def html_id
+    @html_id
+  end
+
+  def body_id
+    @body_id
   end
 
   def author

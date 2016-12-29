@@ -1,6 +1,7 @@
 class PodcastController < ApplicationController
   def index
-    @slug = "podcast"
+    @html_id = "page"
+    @body_id = "podcast"
     @podcast = Podcast.find_by(title: "The Ex-Worker")
 
     @episodes = @podcast.episodes.sort_by{|e| e.published_at }.reverse
@@ -8,12 +9,14 @@ class PodcastController < ApplicationController
   end
 
   def show
-    @slug = "podcast"
+    @html_id = "page"
+    @body_id = "podcast"
     @episode = Episode.find(params[:id])
   end
 
   def transcript
-    @slug = "podcast"
+    @html_id = "page"
+    @body_id = "podcast"
     @episode = Episode.find(params[:id])
     render "podcast/show"
   end

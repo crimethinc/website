@@ -4,7 +4,7 @@ class Admin::SettingsController < Admin::AdminController
 
   # /admin/settings
   def index
-    @slug = "settings"
+    @body_id = "settings"
     @settings = Setting.order("name ASC").all
   end
 

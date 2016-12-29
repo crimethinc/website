@@ -26,8 +26,8 @@ class Page < ApplicationRecord
   end
 
   def path
-    if published?
-      slug
+    if self.published?
+      "/#{self.slug}"
     else
       "/drafts/pages/#{self.draft_code}"
     end
@@ -49,19 +49,19 @@ class Page < ApplicationRecord
 
   # page states through the process from creation to publishing
   def draft?
-    status == "draft"
+    status.name == "draft"
   end
 
   def edited?
-    status == "edited"
+    status.name == "edited"
   end
 
   def designed?
-    status == "designed"
+    status.name == "designed"
   end
 
   def published?
-    status == "published"
+    status.name == "published"
   end
 
   def dated?

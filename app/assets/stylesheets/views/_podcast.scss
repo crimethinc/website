@@ -1,27 +1,12 @@
 #podcast {
   main {
-    margin: $border-size-xlarge auto;
-    max-width: $large-tablet;
 
-    header {
-      margin-bottom: $border-size-large;
+    .latest-episode {
+      margin: (2 * $border-size-xlarge) auto;
 
       h1 {
-        font: {
-          weight: bold;
-          weight: 800;
-          size: 3rem;
-        }
-        line-height: 1.25em;
-      }
-
-      h2 {
-        font: {
-          weight: normal;
-          weight: 300;
-          size: 2rem;
-        }
-        line-height: 1.25em;
+        font-size: 3rem;
+        margin-bottom: $border-size-medium;
       }
     }
 
@@ -68,147 +53,31 @@
         }
       }
 
+      .h-feed {
+        article {
+          margin-bottom: $border-size-xlarge;
+        }
+
+        h1 {
+          font-weight: bold;
+          font-weight: 700;
+          font-size: 2rem;
+          margin-bottom: $border-size-medium;
+        }
+
+        .e-content {
+          margin-bottom: $border-size-large;
+        }
+      }
+
       .podcast-subscribe-rss         { @include podcast-subscribe-button("rss"); }
       .podcast-subscribe-itunes      { @include podcast-subscribe-button("itunes"); }
       .podcast-subscribe-overcast    { @include podcast-subscribe-button("overcast"); }
       .podcast-subscribe-pocketcasts { @include podcast-subscribe-button("pocketcasts"); }
     }
 
-    h3 {
-      font: {
-        weight: lighter;
-        weight: 300;
-        size: 2.5rem;
-      }
-
-      line-height: 1.25em;
-      margin-bottom: $border-size-small;
-      border-bottom: $border-size-xsmall solid $color-gray-light;
-
-      &:first-child {
-        border: none;
-      }
-    }
-
-    audio {
-      width: 100%;
-      margin-bottom: $border-size-large;
-    }
-
-    .latest-episode {
-      margin: (2 * $border-size-xlarge) auto;
-
-      h1 {
-        font-size: 3rem;
-        margin-bottom: $border-size-medium;
-      }
-    }
-
-    .buttons {
-      margin-bottom: $border-size-xlarge;
-
-      .button {
-        margin: 0 $border-size-small $border-size-medium 0;
-      }
-    }
-
-    .episode-info {
-      p,
-      li {
-        font-size: 1.75rem;
-        line-height: 1.5em;
-        text-rendering: optimizeLegibility;
-        margin-bottom: $border-size-large;
-      }
-
-
-      ul,
-      ol {
-        margin-bottom: 1em;
-      }
-
-      li ul,
-      li ol {
-        margin-top: .5em;
-      }
-
-      ol {
-        list-style-type: square;
-      }
-
-      ul {
-        list-style-type: square;
-      }
-
-      dd,
-      dt,
-      li {
-        line-height: 1.5em;
-      }
-
-      li {
-        margin: 0 0 .5em 0;
-      }
-
-      li li {
-        margin: 0 0 .5em 1.5em;
-      }
-
-
-    }
-
-    .h-feed {
-      article {
-        margin-bottom: $border-size-xlarge;
-      }
-
-      h1 {
-        font-weight: bold;
-        font-weight: 700;
-        font-size: 2rem;
-        margin-bottom: $border-size-medium;
-      }
-
-      .e-content {
-        margin-bottom: $border-size-large;
-      }
-    }
-
 
     @media screen and (min-width: #{$small-tablet}) {
-      .row {
-        display: flex;
-      }
-
-      .column {
-        padding-right: $border-size-large;
-      }
-
-      .column:first-child {
-        width: 33%;
-      }
-
-      .column:last-child {
-        width: 67%;
-      }
-
-      .meta {
-        .p-name {
-          text-align: right;
-        }
-      }
-
-      header {
-      h1 {
-        font-size: 4rem;
-      }
-
-      h2 {
-        font-size: 3rem;
-      }
-      }
-
-
       .subscribe {
         margin: $border-size-small auto;
         text-align: right;
@@ -225,6 +94,6 @@
       }
     }
 
+
   }
 }
-

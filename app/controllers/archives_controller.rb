@@ -1,6 +1,6 @@
 class ArchivesController < ApplicationController
   def home
-    @slug = "home"
+    @body_id = "home"
     @homepage = true
 
     # feed
@@ -14,7 +14,7 @@ class ArchivesController < ApplicationController
   end
 
   def index
-    @slug     = "archives"
+    @body_id     = "archives"
     @articles = {}
 
     Article.unpinned.published.feed.all.each do |article|

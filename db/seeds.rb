@@ -18,7 +18,7 @@ end
 threads  = []
 
 puts "Trying dev seeds for each post-type..."
-%w(articles links podcasts episodes redirects).each do |posttype|
+%w(articles pages links podcasts episodes redirects).each do |posttype|
   filepath = File.expand_path("../seeds/#{posttype}.rb", __FILE__)
 
   puts "  Trying: #{posttype}"
