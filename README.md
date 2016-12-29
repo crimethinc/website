@@ -66,6 +66,15 @@ The `setup` setups the Rails environment (creates, migrates and seeds databases,
 ./script/setup
 ```
 
+#### Can't Load Gem from /vendor Error
+
+If you get an error that some gem can't be loaded, like `bcrypt_ext`, follow these steps to rebuild this repo's dev setup. From the root directory of this repo:
+
+```
+rm -rf vendor/gems
+./script/setup
+```
+
 ### Server script
 
 The `server` script starts the Rails server on port `3000`
@@ -73,6 +82,21 @@ The `server` script starts the Rails server on port `3000`
 
 ```
 ./script/setup
+```
+
+#### Can't Find Posgresql Error
+
+If you get an error when starting the server that Rails can't connect to the Posgresql server, you can fix it with these steps. (Assuming, you're on a Mac and use [Homebrew](http://brew.sh)).
+
+**WARNING:** These step will DELETE all Posgresql databases / software and re-install Posgresql from scratch.
+If you have data in your local Posgresql database that you can't re-create after deleting it, you'll want to run some backups first. (That's an exercise for the reader.)
+
+```
+brew services stop postgresql
+brew uninstall postgresql
+rm -rf /usr/local/var/postgres/
+brew install postgresql
+brew services start postgresql
 ```
 
 ### Update script
