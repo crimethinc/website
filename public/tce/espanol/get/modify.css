@@ -1,0 +1,184 @@
+/*-----------------------------------------------------------------*/
+/*-------------APPLY TO ALL VERSIONS-------------------------------*/
+/*-----------------------------------------------------------------*/
+
+
+/*------------ACCENT COLORS, INCLUDING LINKS----------------*/
+
+
+/*------------------GENERIC LINKS----------------------------------*/
+
+
+/*-----------------FOOTNOTE COLORS------------------------*/
+
+
+
+/*----------------------------------------------------------*/
+/*-------------RESPONSIVE CODE STARTS HERE------------------*/
+/*----------------------------------------------------------*/
+
+
+
+/*-------------PHONE CSS------------------*/
+@media (min-device-width:200px) and (max-width:599px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/espanol/get/images/header1080.jpg');
+  }
+
+  h2 {
+    font-size: 30px;
+    font-size: 9.4vw;
+    margin: 20px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 25px;
+    font-size: 8vw;
+    margin: 7% 0 8% 0;
+  }
+
+  h3 img {
+    width: 10%;
+    margin: 0 2% -1% 5%;
+  }
+}
+
+
+
+/*-------------TABLET CSS------------------*/
+@media (min-width:600px) and (max-width:1023px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/espanol/get/images/header2560.jpg');
+  }
+
+  h2 {
+    font-size: 57px;
+    font-size: 9.4vw;
+    margin: 20px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 48px;
+    font-size: 8vw;
+    margin: 7% 0 8% 0;
+  }
+
+  h3 img {
+    width: 10%;
+    margin: 0 2% -1% 5%;
+  }
+
+}
+
+
+
+/*-------------DESKTOP TINY CSS------------------*/
+@media (min-width:1024px) and (max-width:1249px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/espanol/get/images/header2560.jpg');
+  }
+
+  #pdfs h2 {
+    font-size: 69px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  #order h2 {
+    font-size: 54px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 40px;
+    /*font-size: 33vw;*/
+    margin: 7% 0 8% 0;
+  }
+
+  h3 img {
+    margin: 0 20px -10px 0px;
+  }
+
+}
+
+
+
+/*-------------DESKTOP SMALL CSS------------------*/
+@media (min-width:1250px) and (max-width:1669px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/espanol/get/images/header2560.jpg');
+  }
+
+
+  #pdfs h2 {
+    font-size: 85px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  #order h2 {
+    font-size: 68px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 53px;
+    /*font-size: 33vw;*/
+    margin: 7% 0 8% 0;
+  }
+
+  h3 img {
+    margin: 0 20px -10px 0px;
+  }
+
+}
+
+
+
+/*-------------DESKTOP BIG CSS------------------*/
+@media (min-width:1670px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/espanol/get/images/header2560.jpg');
+  }
+
+  #pdfs h2 {
+    font-size: 110px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  #order h2 {
+    font-size: 88px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 70px;
+    /*font-size: 33vw;*/
+    margin: 7% 0 8% 0;
+  }
+
+  h3 img {
+    margin: 0 20px -10px 0px;
+  }
+
+}
+
+/*--------RETINA HEADERS---------------*/
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
+(min-resolution: 192dpi) and (min-width:1670px) {
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/espanol/get/images/header5120.jpg');
+  }
+
+}

@@ -1,0 +1,144 @@
+/*-----------------------------------------------------------------*/
+/*-------------APPLY TO ALL VERSIONS-------------------------------*/
+/*-----------------------------------------------------------------*/
+
+
+/*------------ACCENT COLORS, INCLUDING LINKS----------------*/
+
+
+/*------------------GENERIC LINKS----------------------------------*/
+
+
+/*-----------------FOOTNOTE COLORS------------------------*/
+
+
+
+/*----------------------------------------------------------*/
+/*-------------RESPONSIVE CODE STARTS HERE------------------*/
+/*----------------------------------------------------------*/
+
+
+
+/*-------------PHONE CSS------------------*/
+@media (min-device-width:200px) and (max-width:599px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/quebecois/get/images/header1080.jpg');
+  }
+
+  h2 {
+    font-size: 30px;
+    font-size: 9.4vw;
+    margin: 20px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-size: 10vw;
+    margin: 7% 0 8% 0;
+  }
+}
+
+
+
+/*-------------TABLET CSS------------------*/
+@media (min-width:600px) and (max-width:1023px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/quebecois/get/images/header2560.jpg');
+  }
+
+  h2 {
+    font-size: 57px;
+    font-size: 9.4vw;
+    margin: 20px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 60px;
+    font-size: 10vw;
+    margin: 7% 0 8% 0;
+  }
+
+}
+
+
+
+/*-------------DESKTOP TINY CSS------------------*/
+@media (min-width:1024px) and (max-width:1249px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/quebecois/get/images/header2560.jpg');
+  }
+
+  h2 {
+    font-size: 61px;
+    /*font-size: 33vw;*/
+    margin: 20px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 55px;
+    /*font-size: 33vw;*/
+    margin: 7% 0 8% 0;
+  }
+
+}
+
+
+
+/*-------------DESKTOP SMALL CSS------------------*/
+@media (min-width:1250px) and (max-width:1669px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/quebecois/get/images/header2560.jpg');
+  }
+
+
+  h2 {
+    font-size: 75px;
+    /*font-size: 33vw;*/
+    margin: 40px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 75px;
+    /*font-size: 33vw;*/
+    margin: 7% 0 8% 0;
+  }
+
+}
+
+
+
+/*-------------DESKTOP BIG CSS------------------*/
+@media (min-width:1670px) {
+
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/quebecois/get/images/header2560.jpg');
+  }
+
+  h2 {
+    font-size: 98px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 75px;
+    /*font-size: 33vw;*/
+    margin: 7% 0 8% 0;
+  }
+
+}
+
+/*--------RETINA HEADERS---------------*/
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
+(min-resolution: 192dpi) and (min-width:1670px) {
+  .headerwrapper {
+    background-image: url('http://thecloud.crimethinc.com/assets/tce/quebecois/get/images/header5120.jpg');
+  }
+
+}

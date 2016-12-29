@@ -1,0 +1,4027 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+
+
+/*-----------------------------------------------------------------*/
+/*-------------APPLY TO ALL VERSIONS-------------------------------*/
+/*-----------------------------------------------------------------*/
+
+.grandwrapper {
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'tcesymbols';
+  src: url('http://thecloud.crimethinc.com/assets/tce/css/tcefont/tcesymbols.eot?77890001');
+  src: url('http://thecloud.crimethinc.com/assets/tce/css/tcefont/tcesymbols.eot?77890001#iefix') format('embedded-opentype'),
+       url('http://thecloud.crimethinc.com/assets/tce/css/tcefont/tcesymbols.woff?77890001') format('woff'),
+       url('http://thecloud.crimethinc.com/assets/tce/css/tcefont/tcesymbols.ttf?77890001') format('truetype'),
+       url('http://thecloud.crimethinc.com/assets/tce/css/tcefont/tcesymbols.svg?77890001#tcesymbols') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*------------------NAV LINKS----------------------------------*/
+
+
+
+/*------------------MORE TEXTS LINKS--------------------------*/
+
+
+
+
+/*------------------FOOTER----------------------------------*/
+
+
+
+/*------------------RESPONSIVE VIDEO EMBED------------------*/
+
+#video-container {
+  width: 96%;
+    position: relative;
+    padding-bottom: 52%;
+    margin: 2%;
+    padding-top: 2%;
+    overflow: hidden;
+    display: none;
+}
+
+#video-container iframe,
+#video-container object,
+#video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.green, .green a {
+  color: #9ac149;
+}
+
+.blue, .blue a {
+  color: #3cbce9;
+}
+
+.pink, .pink a {
+  color: #d62d34;
+}
+
+.semi {
+  font-weight: 600;
+}
+
+.black {
+  font-weight: 800;
+}
+
+.inactive a {
+  color: #9b9b9b !important;
+  text-decoration:none;
+}
+
+.inactive a:hover, .inactive a:active {
+  color: #9b9b9b !important;
+  text-decoration:none;
+}
+
+.b-lazy {
+     -webkit-transition: opacity 500ms ease-in-out;
+        -moz-transition: opacity 500ms ease-in-out;
+          -o-transition: opacity 500ms ease-in-out;
+             transition: opacity 500ms ease-in-out;
+              max-width: 100%;
+                opacity: 0;
+ }
+ .b-lazy.b-loaded {
+                opacity: 1;
+ }
+
+
+
+/*----------------------------------------------------------*/
+/*-------------RESPONSIVE CODE STARTS HERE------------------*/
+/*----------------------------------------------------------*/
+
+
+
+/*-------------PHONE CSS------------------*/
+/*@media (min-device-width:200px) and (max-device-width:600px) OR  (max-width:600px) ORIGINAL COMBINED {*/
+@media (min-device-width:200px) and (max-width:600px) {
+  .cover {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-phone.jpg');
+      background-size: 100%;
+      padding-bottom: 110%;
+      background-position:center top;
+      position: relative;
+      background-repeat: no-repeat;
+    }
+
+    .spread {
+      width: 100%;
+      clear: both;
+    }
+
+    .title {
+      position: relative;
+      width: 95%;
+      padding-left: 5%;
+      padding-top: 15%;
+      float: left;
+    }
+
+    .title h1 {
+      position: absolute;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
+      font-size: 14.5vw;
+      line-height: 12vw;
+      color: white;
+      letter-spacing: -.03em;
+    }
+
+    .title h4 {
+      position: relative;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      width: 85%;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 5.5vw;
+      line-height: 5vw;
+      color: white;
+    padding: 30% 0 0 11%;
+    }
+
+    #videopdf {
+      position: relative;
+      width: 92%;
+      padding-left: 8%;
+      margin-top: 12%;
+      padding-bottom: 2%;
+      padding-top: 3%;
+      float: left;
+      background-color: rgba(255, 255, 255, 0.6)
+    }
+
+    #video {
+      width: 50%;
+      float: left;
+    }
+
+    #video a:hover {
+      color: #9ac149;
+      text-decoration:none;
+    }
+
+    #video img {
+       width: 51%;
+       padding-left: 17.5%;
+    }
+
+    #pdf {
+      width: 50%;
+      height: 8%;
+      float: left;
+    }
+
+    #pdf img {
+       width: 100%;
+       margin-top: -2%;
+    }
+
+    #pdfleft {
+      width: 36%;
+      float: left;
+    }
+
+    #pdfright {
+      float: left;
+    }
+
+    #videopdf p {
+      position: absolute;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 800;
+      font-style: normal;
+      font-size: 4vw;
+      line-height: 4.5vw;
+      color: black;
+      padding: .5% 0 0 7.5%;
+    }
+
+    #pdfright p {
+      padding: 14% 0 0 .5%;
+    }
+
+    #pdf a:hover {
+      color: #3cbce9;
+      text-decoration:none;
+    }
+
+    .left {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+      background-color: grey;
+      float: left;
+    }
+
+    .right {
+      position: relative;
+      width: 100%;
+      float: left;
+    }
+
+    .left img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+    }
+
+    .left h2 {
+      position: absolute;
+      top: 0; left: 0;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
+      font-size: 9vw;
+      line-height: 8.5vw;
+      color: black;
+      letter-spacing: -.03em;
+    }
+
+    .bold {
+      font-weight: 800;
+    }
+
+    .lefttext {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 85%;
+      padding: 8% 7% 0% 8%;
+    }
+
+    .righttext {
+      position: relative;
+      width: 88%;
+      padding: 7% 5% 7% 7%;
+    }
+
+    .right h3 {
+      position: absolute;
+      top: 0; left: 0;
+      width: 50%;
+    }
+
+    .right p {
+      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 500; font-style: normal;
+      font-size: 14px;
+      line-height: 20px;
+      text-indent: 20px;
+    }
+
+    .right p:first-of-type {
+      text-indent: 0px;
+      }
+
+
+    .leftintro {
+      position: relative;
+      width: 100%;
+      float: left;
+    }
+
+    .leftintro p {
+      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+      font-size: 4vw;
+      line-height: 5.5vw;
+      text-indent: 4vw;    }
+
+    .leftintro p:first-of-type {
+      text-indent: 0px;
+      }
+
+    .rightintro {
+      position: relative;
+      width: 100%;
+      float: left;
+    }
+
+    .rightintro h3 {
+      text-align: right;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 95%;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 500;
+      font-style: normal;
+      font-size: 15vw;
+      line-height: 14vw;
+      color: white;
+      letter-spacing: -.03em;
+      padding: 16% 5% 0% 0%;
+    }
+
+    #intro {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-large.gif');
+      background-size: 100%;
+      padding-bottom: 200%;
+      background-position:center top;
+      position: relative;
+    }
+
+    #outro {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-large.jpg');
+      background-size: 100%;
+      padding-bottom: 200%;
+      background-position:center top;
+      position: relative;
+    }
+
+    #outro .leftintro p {
+      font-size: 4.5vw;
+      line-height: 6vw;
+      text-indent: 0vw;
+      color: white;
+    }
+
+    #outro h3 {
+      color: black;
+    }
+
+    #takeflight {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-phone-large.jpg');
+      background-size: 100%;
+      padding-bottom: 177%;
+      background-position:center top;
+      position: relative;
+    }
+
+    #takeflight h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 99%;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 800;
+      font-style: normal;
+      font-size: 25.5vw;
+      line-height: 20vw;
+      color: white;
+      letter-spacing: -.05em;
+      text-transform: uppercase;
+      padding: 55% 0 0 1%;
+    }
+
+    .inlinequote {
+      padding: 1% 5% 1% 5%;
+      text-indent: 0px !important;
+    }
+
+    #self h2 {
+      padding: 6% 0 0 10%;
+    }
+
+
+    #answering h2 {
+      padding: 5% 0 0 33%;
+      color: white;
+    }
+
+    #power h2 {
+      padding: 6% 0 0 5%;
+    }
+
+    #relationships h2 {
+      padding: 7% 0 0 15%;
+      color: white;
+    }
+
+    #reconciling h2 {
+      padding: 7% 0 0 19%;
+      color: white;
+    }
+
+    #liberation h2 {
+      padding: 4% 0 0 32%;
+    }
+
+    #revolt h2 {
+      padding: 10% 0 0 12%;
+    }
+
+    #control h2 {
+      padding: 10% 0 0 25%;
+    }
+
+    #hierarchy h2 {
+      padding: 10% 0 0 23%;
+      color: white;
+      text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+    }
+
+    #borders h2 {
+      padding: 7% 0 0 17%;
+      color: white;
+    }
+
+    #representation h2 {
+      padding: 10% 0 0 13%;
+      color: white;
+      text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+    }
+
+    #leaders h2 {
+      padding: 6% 0 0 27%;
+      color: white;
+    }
+
+    #government h2 {
+      padding: 10% 0 0 21%;
+    }
+
+    #profit h2 {
+      padding: 10% 0 0 25%;
+    }
+
+    #property h2 {
+      padding: 4% 0 0 20%;
+    }
+
+    #lastcrime h2 {
+      padding: 8% 0 0 10%;
+      color: white;
+    }
+
+    #anarchy {
+      width: 100%;
+      clear: both;
+      background-color: black;
+      overflow: auto;
+      padding-top: 3%;
+    }
+
+    #anarchy p {
+      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      text-indent: 22px;
+      color: white;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased;
+    }
+
+    #anarchy img {
+      width: 50%;
+      padding: 9% 0 0 24%;
+    }
+
+    #anarchy p:first-of-type {
+      text-indent: 0px;
+      }
+
+    #anarchy .black {
+      font-weight: 800;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    .first {
+      position: relative;
+      width: 85%;
+      padding: 5% 7% 5% 8%;
+      float: left;
+    }
+
+    .second {
+      position: relative;
+      width: 85%;
+      padding: 1% 7% 5% 8%;
+      float: left;
+    }
+
+    .third {
+      position: relative;
+      width: 85%;
+      padding: 1% 7% 7% 8%;
+      float: left;
+    }
+
+    #next h1 {
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 300;
+      font-style: normal;
+      font-size: 5.7vw;
+      line-height: 2vw;
+      color: #d62d34;
+      text-align: center;
+      padding: 90% 10% 90% 10% !important;
+    }
+
+    #next h1 a:link, #next h1 a:visited {
+      color: #d62d34;
+      text-decoration: none;
+
+    }
+
+    #next h1 a:hover, #next h1 a:active {
+      color: black;
+      text-shadow: 0px 0px 20px #d62d34;
+      text-decoration: none;
+
+    }
+
+
+  /*---------------NAV--------------------*/
+
+    nav {
+      width: 100%;
+      padding-top: 10%;
+      margin-bottom: 10%;
+      background-color: rgba(0, 0, 0, 0.79);
+      z-index: 10;
+      position: relative;
+    }
+
+    .label {
+      display: none;
+    }
+
+    /*#cwclabel {
+      display: none;
+    }*/
+
+    #navwrapper {
+      margin: -10% 0 0 0;
+      position: relative;
+      width: 100%;
+      overflow: visible;
+      padding-bottom: 0px;
+    }
+
+    #cwc {
+      float: left;
+      margin-left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    #cwclogo {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/cwclogo130.png');
+      background-size: 100%;
+      width: 9%;
+      background-position:center top;
+      float: left;
+      background-repeat: no-repeat;
+      margin: 1% 1% 0 2%;
+      padding-top: 9%;
+      position: relative;
+    }
+
+    #cwclabel {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/cwcword50.png');
+      background-size: 100%;
+      width: 30%;
+      background-position:center top;
+      float: left;
+      background-repeat: no-repeat;
+      margin: 3.25% 0 0 0%;
+      padding-top: 7%;
+      position: relative;
+    }
+
+    #menus {
+      float: right;
+      /*margin-bottom: -.5%;*/
+      margin-top: 2.1%;
+    }
+
+    nav ul
+    {
+      list-style:none;
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+    }
+
+    nav ul a {
+      color:white;
+      text-decoration:none;
+      font-weight:300;
+      font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif
+    }
+
+    nav ul li {
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+    }
+
+    #toc a, #language a, #share a {
+      display:block;
+      color:white;
+      text-decoration:none;
+      font-weight:300;
+      font-size:24px;
+      line-height:32px;
+      padding: 4px 15px 0px 35px;
+      font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+      width: 465px;
+    }
+
+    #toc a,  {
+      width: 465px;
+    }
+
+    #language a,  {
+      width: 220px;
+    }
+
+    #share a,  {
+      width: 200px;
+    }
+
+    #toc a:hover {
+      color: #9ac149;
+      text-decoration:none;
+    }
+
+    #language a:hover {
+      color:#d62d34;
+      text-decoration:none;
+    }
+
+    #share a:hover {
+      color: #3cbce9;
+      text-decoration:none;
+    }
+
+    ul#toc, ul#language, ul#share {
+      padding-top: 20px;
+      padding-bottom: 22px;
+      border-radius: 0px 0px 15px 15px;
+      -moz-border-radius: 0px 0px 15px 15px;
+      -webkit-border-radius: 0px 0px 15px 15px;
+      border: 0px solid #000000;
+      background-color: rgba(23, 22, 22, 0.98);
+    }
+
+    ul#toc {
+      width: 515px;
+    }
+
+    ul#language {
+      width: 270px;
+    }
+
+    ul#share {
+      width: 250px;
+    }
+
+    nav ul li.current-menu-item  {
+      background:#ddd
+    }
+
+    nav ul li:hover  {
+      /*background-color: rgba(52, 52, 52, 0.89);*/
+    }
+
+    nav ul ul {
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      background-color: rgba(23, 22, 22, 0.98);
+      padding:0
+    }
+
+    nav ul ul li {
+      float:none;
+      width:200px
+    }
+
+    nav ul ul a  {
+      line-height:120%;
+      padding:10px 15px
+    }
+
+    nav ul ul ul {
+      top:0;
+      left:100%
+    }
+
+    /*nav ul li:hover > ul {
+      display:block;
+      z-index: 10;
+    }*/
+
+    .pink .icon {
+      margin: 0 45% 0 0;
+    }
+
+    .icon {
+      font-size:6vw;
+      line-height:6vw;
+      font-family:'tcesymbols',Helvetica,Arial,sans-serif;
+      margin: 0 50% 0 0;
+    }
+
+    #tocdiv {
+      display: none;
+      list-style:none;
+      color: white;
+      text-decoration:none;
+      font-weight:300;
+      font-size: 4vw;
+      line-height: 4vw;
+      padding: 3% 5% 7% 5%;
+      font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+      width: 90%;
+      overflow: hidden;
+      margin-bottom: -10%;
+      text-indent: -5vw
+    }
+
+    #languagediv {
+      display: none;
+      list-style:none;
+      color: white;
+      text-decoration:none;
+      font-weight:300;
+      font-size: 6vw;
+      line-height: 6vw;
+      padding: 3% 5% 10% 12%;
+      font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+      width: 83%;
+      overflow: hidden;
+      margin-bottom: -10%;
+      text-indent: -5vw
+    }
+
+    #sharediv {
+      display: none;
+      list-style:none;
+      color: white;
+      text-decoration:none;
+      font-weight:300;
+      font-size: 6vw;
+      line-height: 6vw;
+      padding: 7% 5% 10% 30%;
+      font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+      width: 65%;
+      overflow: hidden;
+      margin-bottom: -10%;
+    }
+
+    #tocdiv h1 {
+      color: #9ac149;
+      text-decoration:none;
+      font-weight:300;
+      font-size: 5vw;
+      line-height: 12vw;
+      font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+      text-align: center;
+    }
+
+    #tocdiv a {
+      color:white;
+      text-decoration:none;
+    }
+
+    #tocdiv a:hover, #tocdiv a:active {
+      color: #9ac149;
+      text-decoration:none;
+    }
+
+    #toc1 {
+      width: 50%;
+      margin: 0 10% 0 7%;
+      float: left;
+      position: relative;
+    }
+
+    #toc2 {
+      width: 28%;
+      margin: 0 0 0 5%;
+      float: left;
+      position: relative;
+    }
+
+    #toc1 li {
+      padding-top: 6%;
+    }
+
+    #toc2 li {
+      padding-top: 9.25%;
+    }
+
+    #languagediv a {
+      color:white;
+      text-decoration:none;
+    }
+
+    .check {
+      font-family:'tcesymbols',Helvetica,Arial,sans-serif;
+    }
+
+    li.selected a:link, li.selected a:visited {
+      color: #d62d34 !important;
+    }
+
+    #languagediv a:hover, #languagediv a:active {
+      color: #d62d34;
+      text-decoration:none;
+    }
+
+    #lang1 {
+      width: 43%;
+      margin: 0 0 0 7%;
+      float: left;
+      position: relative;
+    }
+
+    #lang2 {
+      width: 43%;
+      margin: 0 0 0 7%;
+      float: left;
+      position: relative;
+    }
+
+    #lang1 li {
+      padding-top: 7%;
+    }
+
+    #lang2 li {
+      padding-top: 7%;
+    }
+
+    #sharediv .icon {
+      margin: 0;
+      color: #3cbce9;
+    }
+
+    #sharediv a {
+      color:white;
+      text-decoration:none;
+    }
+
+    #sharediv h1 {
+      color: #3cbce9;
+      text-decoration:none;
+      font-weight:300;
+    }
+
+    #sharediv li {
+      padding-top: 5%;
+  }
+
+}
+
+/*-------------TABLET CSS------------------*/
+@media (min-width:601px) and (max-width:1023px) {
+
+  .cover {
+        width: 100%;
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-tablet.jpg');
+        background-size: 100%;
+        padding-bottom: 78%;
+        background-position:center center;
+        position: relative;
+        background-repeat: no-repeat;
+      }
+
+      .spread {
+        width: 100%;
+        clear: both;
+      }
+
+      .title {
+        position: relative;
+        width: 96%;
+        padding-left: 4%;
+        padding-top: 5%;
+        float: left;
+      }
+
+      .title h1 {
+        position: absolute;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
+        font-size: 14.5vw;
+        line-height: 12vw;
+        color: white;
+        letter-spacing: -.03em;
+      }
+
+      .title h4 {
+        position: relative;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+        width: 85%;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 5.5vw;
+        line-height: 5vw;
+        color: white;
+      padding: 30% 0 0 11%;
+      }
+
+      #videopdf {
+        position: relative;
+        width: 56%;
+        /* padding-left: 8%; */
+        margin-top: 9.3%;
+        margin-left: 22%;
+        margin-right: 22%;
+        padding-bottom: 1%;
+        padding-top: 2%;
+        float: left;
+        background-color: rgba(255, 255, 255, .9);
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -webkit-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+      }
+
+      #video {
+        width: 45%;
+        float: left;
+      }
+
+      #video a:hover {
+        color: #9ac149;
+        text-decoration:none;
+      }
+
+      #video img {
+         width: 60%;
+         padding-left: 19.5%;
+      }
+
+      #pdf {
+        width: 52%;
+        height: 8%;
+        padding-left: 3%;
+        float: left;
+      }
+
+      #pdf img {
+         width: 100%;
+         margin-top: -2%;
+      }
+
+      #pdfleft {
+        width: 37%;
+        float: left;
+      }
+
+      #pdfright {
+        float: left;
+      }
+
+      #videopdf p {
+        position: absolute;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+        font-weight: 800;
+        font-style: normal;
+        font-size: 3vw;
+        line-height: 3.5vw;
+        color: black;
+        padding: .5% 0 0 4.5%;
+      }
+
+      #pdfright p {
+        padding: 12% 0 0 .5%;
+      }
+
+      #pdf a:hover {
+        color: #3cbce9;
+        text-decoration:none;
+      }
+
+      .left {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        background-color: grey;
+        float: left;
+      }
+
+      .right {
+        position: relative;
+        width: 100%;
+        float: left;
+      }
+
+      .left img {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+      }
+
+      .left h2 {
+        position: absolute;
+        top: 0; left: 0;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
+        font-size: 9vw;
+        line-height: 8.5vw;
+        color: black;
+        letter-spacing: -.03em;
+      }
+
+      .bold {
+        font-weight: 800;
+      }
+
+      .lefttext {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 85%;
+        padding: 8% 7% 0% 8%;
+      }
+
+      .righttext {
+        position: relative;
+        width: 81%;
+        padding: 7% 9% 7% 10%;
+      }
+
+      .right h3 {
+        position: absolute;
+        top: 0; left: 0;
+        width: 50%;
+      }
+
+      .right p {
+        font-family: 'Whitney SSm A', 'Whitney SSm B';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 26px;
+        text-indent: 30px;
+      }
+
+      .right p:first-of-type {
+        text-indent: 0px;
+        }
+
+
+      .leftintro {
+        position: relative;
+        width: 100%;
+        float: left;
+      }
+
+      .leftintro p {
+        font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+        font-size: 4vw;
+        line-height: 5.5vw;
+        text-indent: 4vw;    }
+
+      .leftintro p:first-of-type {
+        text-indent: 0px;
+        }
+
+      .rightintro {
+        position: relative;
+        width: 100%;
+        float: left;
+      }
+
+      .rightintro h3 {
+        text-align: right;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 95%;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 15vw;
+        line-height: 14vw;
+        color: white;
+        letter-spacing: -.03em;
+        padding: 16% 5% 0% 0%;
+      }
+
+      #intro {
+        width: 100%;
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-large.gif');
+        background-size: 100%;
+        padding-bottom: 200%;
+        background-position:center top;
+        position: relative;
+      }
+
+      #outro {
+        width: 100%;
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-large.jpg');
+        background-size: 100%;
+        padding-bottom: 200%;
+        background-position:center top;
+        position: relative;
+      }
+
+      #outro .leftintro p {
+        font-size: 4.5vw;
+        line-height: 6vw;
+        text-indent: 0vw;
+        color: white;
+      }
+
+      #outro h3 {
+        color: black;
+      }
+
+      #takeflight {
+        width: 100%;
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-phone-large.jpg');
+        background-size: 100%;
+        padding-bottom: 177%;
+        background-position:center top;
+        position: relative;
+      }
+
+      #takeflight h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99%;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+        font-weight: 800;
+        font-style: normal;
+        font-size: 25.5vw;
+        line-height: 20vw;
+        color: white;
+        letter-spacing: -.05em;
+        text-transform: uppercase;
+        padding: 55% 0 0 1%;
+      }
+
+      .inlinequote {
+        padding: 1% 5% 1% 5%;
+        text-indent: 0px !important;
+      }
+
+      #self h2 {
+        padding: 6% 0 0 10%;
+      }
+
+
+      #answering h2 {
+        padding: 5% 0 0 33%;
+        color: white;
+      }
+
+      #power h2 {
+        padding: 6% 0 0 5%;
+      }
+
+      #relationships h2 {
+        padding: 7% 0 0 15%;
+        color: white;
+      }
+
+      #reconciling h2 {
+        padding: 7% 0 0 19%;
+        color: white;
+      }
+
+      #liberation h2 {
+        padding: 4% 0 0 32%;
+      }
+
+      #revolt h2 {
+        padding: 10% 0 0 12%;
+      }
+
+      #control h2 {
+        padding: 10% 0 0 25%;
+      }
+
+      #hierarchy h2 {
+        padding: 10% 0 0 23%;
+        color: white;
+        text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+      }
+
+      #borders h2 {
+        padding: 7% 0 0 17%;
+        color: white;
+      }
+
+      #representation h2 {
+        padding: 10% 0 0 13%;
+        color: white;
+        text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+      }
+
+      #leaders h2 {
+        padding: 6% 0 0 27%;
+        color: white;
+      }
+
+      #government h2 {
+        padding: 10% 0 0 21%;
+      }
+
+      #profit h2 {
+        padding: 10% 0 0 25%;
+      }
+
+      #property h2 {
+        padding: 4% 0 0 20%;
+      }
+
+      #lastcrime h2 {
+        padding: 8% 0 0 10%;
+        color: white;
+      }
+
+      #anarchy {
+        width: 100%;
+        clear: both;
+        background-color: black;
+        overflow: auto;
+        padding-top: 3%;
+      }
+
+      #anarchy p {
+        font-family: 'Whitney SSm A', 'Whitney SSm B';
+        font-weight: 600;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 32px;
+        text-indent: 32px;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+      }
+
+      #anarchy img {
+        width: 50%;
+        padding: 9% 0 0 24%;
+      }
+
+      #anarchy p:first-of-type {
+        text-indent: 0px;
+        }
+
+      #anarchy .black {
+        font-weight: 800;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+
+      .first {
+        position: relative;
+        width: 81%;
+        padding: 7% 9% 7% 10%;
+        float: left;
+      }
+
+      .second {
+        position: relative;
+        width: 81%;
+        padding: 2% 9% 7% 10%;
+        float: left;
+      }
+
+      .third {
+        position: relative;
+        width: 81%;
+        padding: 2% 9% 7% 10%;
+        float: left;
+      }
+
+      #next h1 {
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+        font-weight: 300;
+        font-style: normal;
+        font-size: 3.7vw;
+        line-height: 2vw;
+        color: #d62d34;
+        text-align: center;
+        padding: 30% 10% 30% 10% !important;
+      }
+
+      #next h1 a:link, #next h1 a:visited {
+        color: #d62d34;
+        text-decoration: none;
+
+      }
+
+      #next h1 a:hover, #next h1 a:active {
+        color: black;
+        text-shadow: 0px 0px 20px #d62d34;
+        text-decoration: none;
+
+      }
+
+
+    /*---------------NAV--------------------*/
+
+      nav {
+        width: 100%;
+        padding-top: 5%;
+        margin-bottom: 10%;
+        background-color: rgba(0, 0, 0, 0.79);
+        z-index: 10;
+        position: relative;
+      }
+
+      .label {
+        display: inline;
+        font-size: 3vw;
+        line-height: 3vw;
+      }
+
+      /*#cwclabel {
+        display: none;
+      }*/
+
+      #navwrapper {
+        margin: -10% 0 0 0;
+        position: relative;
+        width: 100%;
+        overflow: visible;
+        padding-bottom: 0px;
+      }
+
+      #cwc {
+        float: left;
+        margin-left: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      #cwclogo {
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/cwclogo130.png');
+        background-size: 100%;
+        width: 4.5%;
+        background-position:center top;
+        float: left;
+        background-repeat: no-repeat;
+        margin: 5.5% .5% 0 1%;
+        padding-top: 10%;
+        position: relative;
+      }
+
+      #cwclabel {
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/cwcword50.png');
+        background-size: 100%;
+        width: 17%;
+        background-position:center top;
+        float: left;
+        background-repeat: no-repeat;
+        margin: 6.3% 0 0 0%;
+        padding-top: 7%;
+        position: relative;
+      }
+
+      #menus {
+        float: right;
+        /*margin-bottom: -.5%;*/
+        margin-top: 6%;
+        width: 72%;
+      }
+
+      nav ul
+      {
+        list-style:none;
+        position:relative;
+        float:left;
+        margin:0;
+        padding:0;
+        width: 100%;
+      }
+
+      nav ul a {
+        color:white;
+        text-decoration:none;
+        font-weight:300;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif
+      }
+
+      nav ul li {
+        position:relative;
+        float:left;
+        margin:0;
+        padding:0;
+        padding-left: 5%;
+      }
+
+      #toc a, #language a, #share a {
+        display:block;
+        color:white;
+        text-decoration:none;
+        font-weight:300;
+        font-size:24px;
+        line-height:32px;
+        padding: 4px 15px 0px 35px;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        width: 465px;
+      }
+
+      #toc a,  {
+        width: 465px;
+      }
+
+      #language a,  {
+        width: 220px;
+      }
+
+      #share a,  {
+        width: 200px;
+      }
+
+      #toc a:hover {
+        color: #9ac149;
+        text-decoration:none;
+      }
+
+      #language a:hover {
+        color:#d62d34;
+        text-decoration:none;
+      }
+
+      #share a:hover {
+        color: #3cbce9;
+        text-decoration:none;
+      }
+
+      ul#toc, ul#language, ul#share {
+        padding-top: 20px;
+        padding-bottom: 22px;
+        border-radius: 0px 0px 15px 15px;
+        -moz-border-radius: 0px 0px 15px 15px;
+        -webkit-border-radius: 0px 0px 15px 15px;
+        border: 0px solid #000000;
+        background-color: rgba(23, 22, 22, 0.98);
+      }
+
+      ul#toc {
+        width: 515px;
+      }
+
+      ul#language {
+        width: 270px;
+      }
+
+      ul#share {
+        width: 250px;
+      }
+
+      nav ul li.current-menu-item  {
+        background:#ddd
+      }
+
+      nav ul li:hover  {
+        /*background-color: rgba(52, 52, 52, 0.89);*/
+      }
+
+      nav ul ul {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        background-color: rgba(23, 22, 22, 0.98);
+        padding:0
+      }
+
+      nav ul ul li {
+        float:none;
+        width:200px
+      }
+
+      nav ul ul a  {
+        line-height:120%;
+        padding:10px 15px
+      }
+
+      nav ul ul ul {
+        top:0;
+        left:100%
+      }
+
+      /*nav ul li:hover > ul {
+        display:block;
+        z-index: 10;
+      }*/
+
+      .pink .icon {
+        /*margin: 0 45% 0 0;*/
+      }
+
+      .icon {
+        font-size:3vw;
+        line-height:3vw;
+        font-family:'tcesymbols',Helvetica,Arial,sans-serif;
+        /*margin: 0 50% 0 0;  */
+      }
+
+      #tocdiv {
+        display: none;
+        list-style:none;
+        color: white;
+        text-decoration:none;
+        font-weight:300;
+        font-size: 4vw;
+        line-height: 4vw;
+        padding: 3% 5% 7% 5%;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        width: 90%;
+        overflow: hidden;
+        margin-bottom: -10%;
+        text-indent: -5vw
+      }
+
+      #languagediv {
+        display: none;
+        list-style:none;
+        color: white;
+        text-decoration:none;
+        font-weight:300;
+        font-size: 4vw;
+        line-height: 4vw;
+        padding: 3% 5% 10% 12%;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        width: 83%;
+        overflow: hidden;
+        margin-bottom: -10%;
+        text-indent: -5vw
+      }
+
+      #sharediv {
+        display: none;
+        list-style:none;
+        color: white;
+        text-decoration:none;
+        font-weight:300;
+        font-size: 4vw;
+        line-height: 4vw;
+        padding: 7% 5% 10% 30%;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        width: 65%;
+        overflow: hidden;
+        margin-bottom: -10%;
+      }
+
+      #tocdiv h1 {
+        color: #9ac149;
+        text-decoration:none;
+        font-weight:300;
+        font-size: 5vw;
+        line-height: 12vw;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        text-align: center;
+      }
+
+      #tocdiv a {
+        color:white;
+        text-decoration:none;
+      }
+
+      #tocdiv a:hover, #tocdiv a:active {
+        color: #9ac149;
+        text-decoration:none;
+      }
+
+      #toc1 {
+        width: 50%;
+        margin: 0 10% 0 7%;
+        float: left;
+        position: relative;
+      }
+
+      #toc2 {
+        width: 28%;
+        margin: 0 0 0 5%;
+        float: left;
+        position: relative;
+      }
+
+      #toc1 li {
+        padding-top: 6%;
+      }
+
+      #toc2 li {
+        padding-top: 9.25%;
+      }
+
+      #languagediv a {
+        color:white;
+        text-decoration:none;
+      }
+
+      .check {
+        font-family:'tcesymbols',Helvetica,Arial,sans-serif;
+      }
+
+      li.selected a:link, li.selected a:visited {
+        color: #d62d34 !important;
+      }
+
+      #languagediv a:hover, #languagediv a:active {
+        color: #d62d34;
+        text-decoration:none;
+      }
+
+      #lang1 {
+        width: 43%;
+        margin: 0 0 0 7%;
+        float: left;
+        position: relative;
+      }
+
+      #lang2 {
+        width: 43%;
+        margin: 0 0 0 7%;
+        float: left;
+        position: relative;
+      }
+
+      #lang1 li {
+        padding-top: 7%;
+      }
+
+      #lang2 li {
+        padding-top: 7%;
+      }
+
+      #sharediv .icon {
+        margin: 0;
+        color: #3cbce9;
+      }
+
+      #sharediv a {
+        color:white;
+        text-decoration:none;
+      }
+
+      #sharediv h1 {
+        color: #3cbce9;
+        text-decoration:none;
+        font-weight:300;
+      }
+
+      #sharediv li {
+        padding-top: 5%;
+    }
+}
+
+
+
+/*-------------TABLET LANDSCAPE------------------*/
+@media (min-width:1024px) and (max-width:1200px) {
+
+  .cover {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-tiny.jpg');
+      background-size: 100%;
+      padding-bottom: 39.5%;
+      background-position:center top;
+      position: relative;
+    }
+
+    .spread {
+      width: 100%;
+      clear: both;
+    }
+
+    .title {
+      position: relative;
+      width: 83%;
+      padding-left: 17%;
+      padding-top: 6%;
+      float: left;
+    }
+
+    .title h1 {
+      position: absolute;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
+      font-size: 11vw;
+      line-height: 9vw;
+      color: white;
+      letter-spacing: -.03em;
+    }
+
+    .title h4 {
+      position: absolute;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 300;
+      font-style: normal;
+      font-size: 2.5vw;
+      line-height: 2vw;
+      color: white;
+      padding: 22% 0 0 36.5%;
+    }
+
+    #videopdf {
+      position: relative;
+      width: 64%;
+      padding-left: 36%;
+      padding-top: 24%;
+      float: left;
+    }
+
+    #video {
+      width: 25%;
+      float: left;
+      margin-right: 2%;
+    }
+
+    #video a:hover {
+      color: #9ac149;
+      text-decoration:none;
+    }
+
+    #video img {
+       width: 51%;
+       padding-left: 12.75%;
+    }
+
+    #pdf {
+      width: 24%;
+      float: left;
+    }
+
+    #pdf img {
+       width: 100%;
+       margin-top: -2%;
+    }
+
+    #pdfleft {
+      width: 36%;
+      float: left;
+    }
+
+    #pdfright {
+      float: left;
+    }
+
+    #videopdf p {
+      position: absolute;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 500;
+      font-style: normal;
+      font-size: 1.4vw;
+      line-height: 1.4vw;
+      color: white;
+      padding: .5% 0 0 2.6%;
+    }
+
+    #pdfright p {
+      padding: 6.6% 0 0 .5%;
+    }
+
+    #pdf a:hover {
+      color: #3cbce9;
+      text-decoration:none;
+    }
+
+      .left {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        background-color: grey;
+        float: left;
+      }
+
+      .right {
+        position: relative;
+        width: 100%;
+        float: left;
+      }
+
+      .left img {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+      }
+
+      .left h2 {
+        position: absolute;
+        top: 0; left: 0;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
+        font-size: 9vw;
+        line-height: 8.5vw;
+        color: black;
+        letter-spacing: -.03em;
+      }
+
+      .bold {
+        font-weight: 800;
+      }
+
+      .lefttext {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 85%;
+        padding: 8% 7% 0% 8%;
+      }
+
+      .righttext {
+        position: relative;
+        width: 81%;
+        padding: 7% 9% 7% 10%;
+      }
+
+      .right h3 {
+        position: absolute;
+        top: 0; left: 0;
+        width: 50%;
+      }
+
+      .right p {
+        font-family: 'Whitney SSm A', 'Whitney SSm B';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 26px;
+        text-indent: 30px;
+      }
+
+      .right p:first-of-type {
+        text-indent: 0px;
+        }
+
+
+      .leftintro {
+        position: relative;
+        width: 100%;
+        float: left;
+      }
+
+      .leftintro p {
+        font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+        font-size: 4vw;
+        line-height: 5.5vw;
+        text-indent: 4vw;    }
+
+      .leftintro p:first-of-type {
+        text-indent: 0px;
+        }
+
+      .rightintro {
+        position: relative;
+        width: 100%;
+        float: left;
+      }
+
+      .rightintro h3 {
+        text-align: right;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 95%;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 15vw;
+        line-height: 14vw;
+        color: white;
+        letter-spacing: -.03em;
+        padding: 16% 5% 0% 0%;
+      }
+
+      #intro {
+        width: 100%;
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-tablet.jpg');
+        background-size: 100%;
+        padding-bottom: 200%;
+        background-position:center top;
+        position: relative;
+      }
+
+      #outro {
+        width: 100%;
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-tablet.jpg');
+        background-size: 100%;
+        padding-bottom: 200%;
+        background-position:center top;
+        position: relative;
+      }
+
+      #outro .leftintro p {
+        font-size: 4.5vw;
+        line-height: 6vw;
+        text-indent: 0vw;
+        color: white;
+      }
+
+      #outro h3 {
+        color: black;
+      }
+
+      #takeflight {
+        width: 100%;
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-tablet.jpg');
+        background-size: 100%;
+        padding-bottom: 177%;
+        background-position:center top;
+        position: relative;
+      }
+
+      #takeflight h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99%;
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+        font-weight: 800;
+        font-style: normal;
+        font-size: 25.5vw;
+        line-height: 20vw;
+        color: white;
+        letter-spacing: -.05em;
+        text-transform: uppercase;
+        padding: 55% 0 0 1%;
+      }
+
+      .inlinequote {
+        padding: 1% 5% 1% 5%;
+        text-indent: 0px !important;
+      }
+
+      #self h2 {
+        padding: 6% 0 0 10%;
+      }
+
+
+      #answering h2 {
+        padding: 5% 0 0 33%;
+        color: white;
+      }
+
+      #power h2 {
+        padding: 6% 0 0 5%;
+      }
+
+      #relationships h2 {
+        padding: 7% 0 0 15%;
+        color: white;
+      }
+
+      #reconciling h2 {
+        padding: 7% 0 0 19%;
+        color: white;
+      }
+
+      #liberation h2 {
+        padding: 4% 0 0 32%;
+      }
+
+      #revolt h2 {
+        padding: 10% 0 0 12%;
+      }
+
+      #control h2 {
+        padding: 10% 0 0 25%;
+      }
+
+      #hierarchy h2 {
+        padding: 10% 0 0 23%;
+        color: white;
+        text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+      }
+
+      #borders h2 {
+        padding: 7% 0 0 17%;
+        color: white;
+      }
+
+      #representation h2 {
+        padding: 10% 0 0 13%;
+        color: white;
+        text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+      }
+
+      #leaders h2 {
+        padding: 6% 0 0 27%;
+        color: white;
+      }
+
+      #government h2 {
+        padding: 10% 0 0 21%;
+      }
+
+      #profit h2 {
+        padding: 10% 0 0 25%;
+      }
+
+      #property h2 {
+        padding: 4% 0 0 20%;
+      }
+
+      #lastcrime h2 {
+        padding: 8% 0 0 10%;
+        color: white;
+      }
+
+      #anarchy {
+        width: 100%;
+        clear: both;
+        background-color: black;
+        overflow: auto;
+        padding-top: 3%;
+      }
+
+      #anarchy p {
+        font-family: 'Whitney SSm A', 'Whitney SSm B';
+        font-weight: 600;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 32px;
+        text-indent: 32px;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+      }
+
+      #anarchy img {
+        width: 50%;
+        padding: 9% 0 0 24%;
+      }
+
+      #anarchy p:first-of-type {
+        text-indent: 0px;
+        }
+
+      #anarchy .black {
+        font-weight: 800;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+
+      .first {
+        position: relative;
+        width: 81%;
+        padding: 7% 9% 7% 10%;
+        float: left;
+      }
+
+      .second {
+        position: relative;
+        width: 81%;
+        padding: 2% 9% 7% 10%;
+        float: left;
+      }
+
+      .third {
+        position: relative;
+        width: 81%;
+        padding: 2% 9% 7% 10%;
+        float: left;
+      }
+
+      #next h1 {
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+        font-weight: 300;
+        font-style: normal;
+        font-size: 3.7vw;
+        line-height: 2vw;
+        color: #d62d34;
+        text-align: center;
+        padding: 30% 10% 30% 10% !important;
+      }
+
+      #next h1 a:link, #next h1 a:visited {
+        color: #d62d34;
+        text-decoration: none;
+
+      }
+
+      #next h1 a:hover, #next h1 a:active {
+        color: black;
+        text-shadow: 0px 0px 20px #d62d34;
+        text-decoration: none;
+
+      }
+
+
+    /*---------------NAV--------------------*/
+
+      nav {
+        width: 100%;
+        padding-top: 3.2%;
+        margin-bottom: 10%;
+        background-color: rgba(0, 0, 0, 0.79);
+        z-index: 10;
+        position: relative;
+      }
+
+      .label {
+        display: inline;
+        font-size: 2vw;
+        line-height: 2vw;
+      }
+
+      /*#cwclabel {
+        display: none;
+      }*/
+
+      #navwrapper {
+        margin: -10% 0 0 0;
+        position: relative;
+        width: 100%;
+        overflow: visible;
+        padding-bottom: 0px;
+        z-index: 10;
+      }
+
+      #cwc {
+        float: left;
+        margin-left: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      #cwclogo {
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/cwclogo130.png');
+        background-size: 100%;
+        width: 2.75%;
+        background-position:center top;
+        float: left;
+        background-repeat: no-repeat;
+        margin: 7.3% .5% 0 1%;
+        padding-top: 3%;
+        position: relative;
+      }
+
+      #cwclabel {
+        background-image: url('http://cloudfront.crimethinc.com/tce/images/cwcword50.png');
+        background-size: 100%;
+        width: 13%;
+        background-position:center top;
+        float: left;
+        background-repeat: no-repeat;
+        margin: 7.4% 0 0 0%;
+        padding-top: 2%;
+        position: relative;
+      }
+
+      #menus {
+        float: right;
+        /*margin-bottom: -.5%;*/
+        margin-top: 7.5%;
+        width: 60%;
+      }
+
+      nav ul
+      {
+        list-style:none;
+        position:relative;
+        float:left;
+        margin:0;
+        padding:0;
+        width: 100%;
+      }
+
+      nav ul a {
+        color:white;
+        text-decoration:none;
+        font-weight:300;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif
+      }
+
+      nav ul li {
+        position:relative;
+        float:left;
+        margin:0;
+        padding:0;
+        padding-left: 10%;
+      }
+
+      #toc a, #language a, #share a {
+        display:block;
+        color:white;
+        text-decoration:none;
+        font-weight:300;
+        font-size:24px;
+        line-height:32px;
+        padding: 4px 15px 0px 35px;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        width: 465px;
+      }
+
+      #toc a,  {
+        width: 465px;
+      }
+
+      #language a,  {
+        width: 220px;
+      }
+
+      #share a,  {
+        width: 200px;
+      }
+
+      #toc a:hover {
+        color: #9ac149;
+        text-decoration:none;
+      }
+
+      #language a:hover {
+        color:#d62d34;
+        text-decoration:none;
+      }
+
+      #share a:hover {
+        color: #3cbce9;
+        text-decoration:none;
+      }
+
+      ul#toc, ul#language, ul#share {
+        padding-top: 20px;
+        padding-bottom: 22px;
+        border-radius: 0px 0px 15px 15px;
+        -moz-border-radius: 0px 0px 15px 15px;
+        -webkit-border-radius: 0px 0px 15px 15px;
+        border: 0px solid #000000;
+        background-color: rgba(23, 22, 22, 0.98);
+      }
+
+      ul#toc {
+        width: 515px;
+      }
+
+      ul#language {
+        width: 270px;
+      }
+
+      ul#share {
+        width: 250px;
+      }
+
+      nav ul li.current-menu-item  {
+        background:#ddd
+      }
+
+      nav ul li:hover  {
+        /*background-color: rgba(52, 52, 52, 0.89);*/
+      }
+
+      nav ul ul {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        background-color: rgba(23, 22, 22, 0.98);
+        padding:0
+      }
+
+      nav ul ul li {
+        float:none;
+        width:200px
+      }
+
+      nav ul ul a  {
+        line-height:120%;
+        padding:10px 15px
+      }
+
+      nav ul ul ul {
+        top:0;
+        left:100%
+      }
+
+      /*nav ul li:hover > ul {
+        display:block;
+        z-index: 10;
+      }*/
+
+      .pink .icon {
+        /*margin: 0 45% 0 0;*/
+      }
+
+      .icon {
+        font-size:2vw;
+        line-height:2vw;
+        font-family:'tcesymbols',Helvetica,Arial,sans-serif;
+        /*margin: 0 50% 0 0;  */
+      }
+
+      #tocdiv {
+        display: none;
+        list-style:none;
+        color: white;
+        text-decoration:none;
+        font-weight:300;
+        font-size: 2vw;
+        line-height: 2vw;
+        padding: 9% 2% 5% 7%;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        width: 50%;
+        /* overflow: visible; */
+        margin-bottom: -10%;
+        text-indent: -5vw;
+        float:left;
+        position: absolute;
+        top: 4.15%;
+        background-color: #353535;
+      }
+
+      #languagediv {
+        display: none;
+        list-style:none;
+        color: white;
+        text-decoration:none;
+        font-weight:300;
+        font-size: 2vw;
+        line-height: 2vw;
+        padding: 9% 5% 7.75% 6%;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        width: 30%;
+        overflow: hidden;
+        margin-bottom: -10%;
+        text-indent: -5vw;
+        float: right;
+        position: absolute;
+        left: 59%;
+        top: 4.15%;
+        background-color: #353535;
+      }
+
+      #sharediv {
+        display: none;
+        list-style:none;
+        color: white;
+        text-decoration:none;
+        font-weight:300;
+        font-size: 2vw;
+        line-height: 2vw;
+        padding: 8% 0% 2% 10%;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        width: 90%;
+        overflow: hidden;
+        /* margin-bottom: -10%; */
+        z-index: 9;
+        position:absolute;
+        background-color: #353535;
+      }
+
+      #tocdiv h1 {
+        display: none;
+        /*color: #9ac149;
+        text-decoration:none;
+        font-weight:300;
+        font-size: 5vw;
+        line-height: 12vw;
+        font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+        text-align: center;*/
+      }
+
+      #tocdiv a {
+        color:white;
+        text-decoration:none;
+      }
+
+      #tocdiv a:hover, #tocdiv a:active {
+        color: #9ac149;
+        text-decoration:none;
+      }
+
+      #toc1 {
+        width: 37%;
+        margin: 0 10% 0 15%;
+        float: left;
+        position: relative;
+      }
+
+      #toc2 {
+        width: 28%;
+        margin: 0 0 0 5%;
+        float: left;
+        position: relative;
+      }
+
+      #toc1 li {
+        padding-top: 6%;
+      }
+
+      #toc2 li {
+        padding-top: 7%;
+      }
+
+      #languagediv a {
+        color:white;
+        text-decoration:none;
+      }
+
+      .check {
+        font-family:'tcesymbols',Helvetica,Arial,sans-serif;
+      }
+
+      li.selected a:link, li.selected a:visited {
+        color: #d62d34 !important;
+      }
+
+      #languagediv a:hover, #languagediv a:active {
+        color: #d62d34;
+        text-decoration:none;
+      }
+
+      #lang1 {
+        width: 59%;
+        margin: 0 0 0 7%;
+        float: left;
+        position: relative;
+      }
+
+      #lang2 {
+        width: 27%;
+        margin: 0 0 0 7%;
+        float: left;
+        position: relative;
+      }
+
+      #lang1 li {
+        padding-top: 7%;
+      }
+
+      #lang2 li {
+        padding-top: 15%;
+      }
+
+      #sharediv .icon {
+        margin: 0;
+        color: #3cbce9;
+      }
+
+      #sharediv a {
+        color:white;
+        text-decoration:none;
+      }
+
+      #sharediv h1 {
+        color: #3cbce9;
+        text-decoration:none;
+        font-weight:300;
+      }
+
+      #sharediv li {
+        float: left;
+        padding-top: 5%;
+        padding-right:5.7%;
+    }
+
+}
+
+
+
+/*-------------DESKTOP SMALL CSS------------------*/
+@media (min-width:1201px) and (max-width:1670px) {
+
+  .cover {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-small.jpg');
+      background-size: 100%;
+      padding-bottom: 39.5%;
+      background-position:center top;
+      position: relative;
+    }
+
+    .spread {
+      width: 100%;
+      clear: both;
+    }
+
+    .title {
+      position: relative;
+      width: 83%;
+      padding-left: 17%;
+      padding-top: 6%;
+      float: left;
+    }
+
+    .title h1 {
+      position: absolute;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
+      font-size: 11vw;
+      line-height: 9vw;
+      color: white;
+      letter-spacing: -.03em;
+    }
+
+    .title h4 {
+      position: absolute;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 300;
+      font-style: normal;
+      font-size: 2.5vw;
+      line-height: 2vw;
+      color: white;
+      padding: 22% 0 0 36.5%;
+    }
+
+    #videopdf {
+      position: relative;
+      width: 64%;
+      padding-left: 36%;
+      padding-top: 24%;
+      float: left;
+    }
+
+    #video {
+      width: 25%;
+      float: left;
+      margin-right: 2%;
+    }
+
+    #video a:hover {
+      color: #9ac149;
+      text-decoration:none;
+    }
+
+    #video img {
+       width: 51%;
+       padding-left: 12.75%;
+    }
+
+    #pdf {
+      width: 24%;
+      float: left;
+    }
+
+    #pdf img {
+       width: 100%;
+       margin-top: -2%;
+    }
+
+    #pdfleft {
+      width: 36%;
+      float: left;
+    }
+
+    #pdfright {
+      float: left;
+    }
+
+    #videopdf p {
+      position: absolute;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 500;
+      font-style: normal;
+      font-size: 1.4vw;
+      line-height: 1.4vw;
+      color: white;
+      padding: .5% 0 0 2.6%;
+    }
+
+    #pdfright p {
+      padding: 6.6% 0 0 .5%;
+    }
+
+    #pdf a:hover {
+      color: #3cbce9;
+      text-decoration:none;
+    }
+
+    .left {
+      position: relative;
+      width: 50%;
+      padding-top: 50%;
+      background-color: grey;
+      float: left;
+    }
+
+    .right {
+      position: relative;
+      width: 50%;
+      padding-top: 50%;
+      float: left;
+    }
+
+    .left img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+    }
+
+    .left h2 {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
+      font-size: 4.5vw;
+      line-height: 4.25vw;
+      color: black;
+      letter-spacing: -.03em;
+    }
+
+    .bold {
+      font-weight: 800;
+    }
+
+    .lefttext {
+      position: absolute;
+      top: 0; left: 0;
+      width: 65%;
+      padding: 8% 20% 0% 15%;
+    }
+
+    .righttext {
+      position: absolute;
+      top: 0; left: 0;
+      width: 78%;
+      padding: 8% 12% 0% 10%;
+    }
+
+    .right h3 {
+      position: absolute;
+      top: 0; left: 0;
+      width: 50%;
+    }
+
+    .right p {
+      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 500; font-style: normal;
+      font-size: 1vw;
+      line-height: 1.6vw;
+      text-indent: 1.3vw;
+    }
+
+    .right p:first-of-type {
+      text-indent: 0px;
+      }
+
+
+    .leftintro {
+      position: relative;
+      width: 50%;
+      float: left;
+    }
+
+    .leftintro p {
+      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+      font-size: 1.55vw;
+      line-height: 2vw;
+      text-indent: 2vw;
+    }
+
+    .leftintro p:first-of-type {
+      text-indent: 0px;
+      }
+
+    .rightintro {
+      position: relative;
+      width: 50%;
+      float: right;
+    }
+
+    .rightintro h3 {
+      text-align: right;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 500;
+      font-style: normal;
+      font-size: 6vw;
+      line-height: 5.25vw;
+      color: white;
+      letter-spacing: -.03em;
+      padding: 12% 10% 0% 0%;
+    }
+
+    #intro {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-small.gif');
+      background-size: 100%;
+      padding-bottom: 39.5%;
+      background-position:center top;
+      position: relative;
+    }
+
+    #outro {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-small.jpg');
+      background-size: 100%;
+      padding-bottom: 39.5%;
+      background-position:center top;
+      position: relative;
+    }
+
+    #outro .leftintro p {
+      font-size: 1.7vw;
+      line-height: 2.3vw;
+      text-indent: 0vw;
+    }
+
+    #outro .lefttext {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 66%;
+      padding: 8% 19% 0% 15%;
+    }
+
+    #takeflight {
+      width: 100%;
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-small.jpg');
+      background-size: 100%;
+      padding-bottom: 55%;
+      background-position:center top;
+      position: relative;
+    }
+
+    #takeflight h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 99%;
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
+      font-size: 15vw;
+      line-height: 12.75vw;
+      color: white;
+      letter-spacing: -.03em;
+      text-transform: uppercase;
+      padding: 3% 0 0 1%;
+    }
+
+    .inlinequote {
+      padding: 1% 5% 1% 5%;
+      text-indent: 0px !important;
+    }
+
+    #self h2 {
+      padding: 6% 0 0 10%;
+    }
+
+    #self .righttext {
+      width: 75%;
+      padding: 13% 15% 0% 10%;
+    }
+
+    #answering h2 {
+      padding: 5% 0 0 33%;
+      color: white;
+    }
+
+    #answering .righttext {
+      width: 72%;
+      padding: 15% 18% 0% 10%;
+    }
+
+    #power h2 {
+      padding: 6% 0 0 5%;
+    }
+
+    #power .righttext {
+      width: 76%;
+      padding: 7% 14% 0% 10%;
+    }
+
+    #relationships h2 {
+      padding: 7% 0 0 15%;
+      color: white;
+    }
+
+    #relationships .righttext {
+      width: 70%;
+      padding: 15% 20% 0% 10%;
+    }
+
+    #reconciling .left {
+      padding-top: 57%;
+    }
+
+    #reconciling h2 {
+      padding: 7% 0 0 19%;
+      color: white;
+    }
+
+    #reconciling .righttext {
+      width: 78%;
+      padding: 5% 12% 0% 10%;
+    }
+
+    #liberation h2 {
+      padding: 4% 0 0 32%;
+    }
+
+    #liberation .righttext {
+      width: 70%;
+      padding: 15% 20% 0% 10%;
+    }
+
+    #revolt h2 {
+      padding: 10% 0 0 12%;
+    }
+
+    #revolt .righttext {
+      width: 79%;
+      padding: 5% 11% 0% 10%;
+    }
+
+    #control h2 {
+      padding: 10% 0 0 25%;
+    }
+
+    #control .righttext {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    #hierarchy h2 {
+      padding: 10% 0 0 23%;
+      color: white;
+      text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+    }
+
+    #hierarchy .righttext {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    #borders h2 {
+      padding: 7% 0 0 17%;
+      color: white;
+    }
+
+    #borders .righttext {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    #representation h2 {
+      padding: 10% 0 0 13%;
+      color: white;
+      text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+    }
+
+    #representation .righttext {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    #leaders h2 {
+      padding: 6% 0 0 27%;
+      color: white;
+    }
+
+    #leaders .righttext {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    #government h2 {
+      padding: 15% 0 0 16%;
+    }
+
+    #government .righttext {
+      width: 80%;
+      padding: 8% 10% 0% 10%;
+    }
+
+    #government .left {
+      padding-top: 78%;
+    }
+
+    #profit h2 {
+      padding: 10% 0 0 25%;
+    }
+
+    #profit .righttext {
+      width: 78%;
+      padding: 8% 12% 0% 10%;
+    }
+
+    #property h2 {
+      padding: 12% 0 0 20%;
+    }
+
+    #property .righttext {
+      width: 76%;
+      padding: 8% 12% 0% 10%;
+    }
+
+    #property .left {
+      padding-top: 62%;
+    }
+
+    #lastcrime h2 {
+      padding: 8% 0 0 10%;
+      color: white;
+    }
+
+    #lastcrime .righttext {
+      width: 72%;
+      padding: 12% 18% 0% 10%;
+    }
+
+    #anarchy {
+      width: 100%;
+      clear: both;
+      background-color: black;
+      overflow: auto;
+    }
+
+    #anarchy p {
+      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+      font-size: 1.2vw;
+      line-height: 1.7vw;
+      text-indent: 1.3vw;
+      color: white;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased;
+    }
+
+    #anarchy img {
+      width: 50%;
+      padding: 15% 0 0 20%;
+    }
+
+    #anarchy p:first-of-type {
+      text-indent: 0px;
+      }
+
+    .first {
+      position: relative;
+      width: 23%;
+      padding: 5% 7% 5% 8%;
+      float: left;
+    }
+
+    .second {
+      position: relative;
+      width: 25.5%;
+      padding: 5% 7.5% 5% 0%;
+      float: left;
+    }
+
+    .third {
+      position: relative;
+      width: 22%;
+      padding: 5% 7% 5% 0%;
+      float: left;
+    }
+
+    #next h1 {
+      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+      font-weight: 300;
+      font-style: normal;
+      font-size: 3.7vw;
+      line-height: 2vw;
+      color: #d62d34;
+      text-align: center;
+      padding: 30% 10% 30% 10% !important;
+    }
+
+    #next h1 a:link, #next h1 a:visited {
+      color: #d62d34;
+      text-decoration: none;
+
+    }
+
+    #next h1 a:hover, #next h1 a:active {
+      color: black;
+      text-shadow: 0px 0px 20px #d62d34;
+      text-decoration: none;
+
+    }
+
+
+  /*---------------NAV--------------------*/
+
+    nav {
+      width: 100%;
+      background-color: rgba(52, 52, 52, 0.79);
+      z-index: 10;
+      position: absolute;
+    }
+
+    #navwrapper {
+      margin: 0 auto;
+      position: relative;
+      width: 700px;
+    }
+
+    #cwc {
+      float: left;
+      margin-left: 0;
+    }
+
+    #cwclogo {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/cwclogo130.png');
+      background-size: 100%;
+      height: 30px;
+      width: 30px;
+      background-position:center top;
+      float: left;
+      background-repeat: no-repeat;
+      margin-top: 5px;
+      margin-right: 4px
+    }
+
+    #cwclabel {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/cwcword50.png');
+      background-size: 100%;
+      height: 25px;
+      width: 140px;
+      background-position:center top;
+      background-repeat: no-repeat;
+      float: left;
+      margin-top: 7px;
+      margin-right: 15px;
+    }
+
+    nav ul
+    {
+      list-style:none;
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+    }
+
+    nav ul a {
+      display:block;
+      color:white;
+      text-decoration:none;
+      font-weight:300;
+      font-size:18px;
+      line-height:32px;
+      padding: 4px 15px 0px 35px;
+      font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif
+    }
+
+    nav ul li {
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+    }
+
+    #toc a, #language a, #share a {
+      display:block;
+      color:white;
+      text-decoration:none;
+      font-weight:300;
+      font-size:18px;
+      line-height:26px;
+      padding: 4px 15px 0px 35px;
+      font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+      width: 465px;
+    }
+
+    #toc a,  {
+      width: 345px;
+    }
+
+    #language a,  {
+      width: 180px;
+    }
+
+    #share a,  {
+      width: 160px;
+    }
+
+    #toc a:hover {
+      color: #9ac149;
+      text-decoration:none;
+    }
+
+    #language a:hover {
+      color:#d62d34;
+      text-decoration:none;
+    }
+
+    #share a:hover {
+      color: #3cbce9;
+      text-decoration:none;
+    }
+
+    ul#toc, ul#language, ul#share {
+      padding-top: 20px;
+      padding-bottom: 22px;
+      border-radius: 0px 0px 15px 15px;
+      -moz-border-radius: 0px 0px 15px 15px;
+      -webkit-border-radius: 0px 0px 15px 15px;
+      border: 0px solid #000000;
+      background-color: rgba(23, 22, 22, 0.98);
+    }
+
+    ul#toc {
+      width: 395px;
+    }
+
+    ul#language {
+      width: 230px;
+    }
+
+    ul#share {
+      width: 210px;
+    }
+
+    nav ul li.current-menu-item  {
+      background:#ddd
+    }
+
+    nav ul li:hover  {
+      /*background-color: rgba(52, 52, 52, 0.89);*/
+    }
+
+    nav ul ul {
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      background-color: rgba(23, 22, 22, 0.98);
+      padding:0
+    }
+
+    nav ul ul li {
+      float:none;
+      width:200px
+    }
+
+    nav ul ul a  {
+      line-height:120%;
+      padding:10px 15px
+    }
+
+    nav ul ul ul {
+      top:0;
+      left:100%
+    }
+
+    nav ul li:hover > ul {
+      display:block;
+      z-index: 10;
+    }
+
+    .icon {
+      font-size:18px;
+      line-height:32px;
+      font-family:'tcesymbols',Helvetica,Arial,sans-serif;
+      padding-right: 5px;
+    }
+
+    #tocdiv {
+      display: none;
+      position: fixed;
+      top: -10000px;
+      left: -10000px;
+    }
+
+    #languagediv {
+      display: none;
+      position: fixed;
+      top: -10000px;
+      left: -10000px;}
+
+    #sharediv {
+      display: none;
+      position: fixed;
+      top: -10000px;
+      left: -10000px;
+    }
+
+}
+
+
+/*-------------DESKTOP BIG CSS------------------*/
+@media (min-width:1671px) {
+
+  .cover {
+    width: 100%;
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-large.gif');
+    background-size: 100%;
+    padding-bottom: 39.5%;
+    background-position:center top;
+    position: relative;
+  }
+
+  .spread {
+    width: 100%;
+    clear: both;
+  }
+
+  .title {
+    position: relative;
+    width: 77%;
+    padding-left: 23%;
+    padding-top: 5%;
+    float: left;
+  }
+
+  .title h1 {
+    position: absolute;
+    font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
+    font-size: 8.5vw;
+    line-height: 6.75vw;
+    color: white;
+    letter-spacing: -.03em;
+  }
+
+  .title h4 {
+    position: absolute;
+    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.7vw;
+    line-height: 2vw;
+    color: white;
+    padding: 18% 0 0 32%;
+  }
+
+  #videopdf {
+    position: relative;
+    width: 62%;
+    padding-left: 38%;
+    padding-top: 21%;
+    float: left;
+  }
+
+  #video {
+    width: 17.8%;
+    float: left;
+    margin-right: 2%;
+  }
+
+  #video a:hover {
+    color: #9ac149;
+    text-decoration:none;
+  }
+
+  #video img {
+     width: 51%;
+     padding-left: 17.5%;
+  }
+
+  #pdf {
+    width: 17.8%;
+    height: 8%;
+    float: left;
+  }
+
+  #pdf img {
+     width: 100%;
+     margin-top: -2%;
+  }
+
+  #pdfleft {
+    width: 36%;
+    float: left;
+  }
+
+  #pdfright {
+    float: left;
+  }
+
+  #videopdf p {
+    position: absolute;
+    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1vw;
+    line-height: 1vw;
+    color: white;
+    padding: .5% 0 0 2.5%;
+  }
+
+  #pdfright p {
+    padding: 4% 0 0 .5%;
+  }
+
+  #pdf a:hover {
+    color: #3cbce9;
+    text-decoration:none;
+  }
+
+  .left {
+    position: relative;
+    width: 50%;
+    padding-top: 50%;
+    background-color: grey;
+    float: left;
+  }
+
+  .right {
+    position: relative;
+    width: 50%;
+    padding-top: 50%;
+    float: left;
+  }
+
+  .left img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+  }
+
+  .left h2 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
+    font-size: 4.5vw;
+    line-height: 4.25vw;
+    color: black;
+    letter-spacing: -.03em;
+  }
+
+  .bold {
+    font-weight: 800;
+  }
+
+  .lefttext {
+    position: absolute;
+    top: 0; left: 0;
+    width: 65%;
+    padding: 8% 20% 0% 15%;
+  }
+
+  .righttext {
+    position: absolute;
+    top: 0; left: 0;
+    width: 65%;
+    padding: 8% 20% 0% 15%;
+  }
+
+  .right h3 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50%;
+  }
+
+  .right p {
+    font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 500; font-style: normal;
+    font-size: .88vw;
+    line-height: 1.5vw;
+    text-indent: 1.3vw;
+  }
+
+  .right p:first-of-type {
+    text-indent: 0px;
+    }
+
+
+  .leftintro {
+    position: relative;
+    width: 50%;
+    float: left;
+  }
+
+  .leftintro p {
+    font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+    font-size: 1.55vw;
+    line-height: 2vw;
+    text-indent: 2vw;
+  }
+
+  .leftintro p:first-of-type {
+    text-indent: 0px;
+    }
+
+  .rightintro {
+    position: relative;
+    width: 50%;
+    float: right;
+  }
+
+  .rightintro h3 {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 6vw;
+    line-height: 5.25vw;
+    color: white;
+    letter-spacing: -.03em;
+    padding: 12% 10% 0% 0%;
+  }
+
+  #intro {
+    width: 100%;
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-large.gif');
+    background-size: 100%;
+    padding-bottom: 39.5%;
+    background-position:center top;
+    position: relative;
+  }
+
+  #outro {
+    width: 100%;
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-large.jpg');
+    background-size: 100%;
+    padding-bottom: 39.5%;
+    background-position:center top;
+    position: relative;
+  }
+
+  #outro .leftintro p {
+    font-size: 1.7vw;
+    line-height: 2.3vw;
+    text-indent: 0vw;
+  }
+
+  #takeflight {
+    width: 100%;
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-large.jpg');
+    background-size: 100%;
+    padding-bottom: 55%;
+    background-position:center top;
+    position: relative;
+  }
+
+  #takeflight h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
+    font-size: 15vw;
+    line-height: 12.75vw;
+    color: white;
+    letter-spacing: -.03em;
+    text-transform: uppercase;
+    padding: 3% 0 0 1%;
+  }
+
+  .inlinequote {
+    padding: 1% 5% 1% 5%;
+    text-indent: 0px !important;
+  }
+
+  #self h2 {
+    padding: 6% 0 0 10%;
+  }
+
+  #self .righttext {
+    width: 65%;
+    padding: 15% 20% 0% 15%;
+  }
+
+  #answering h2 {
+    padding: 5% 0 0 33%;
+    color: white;
+  }
+
+  #answering .righttext {
+    width: 60%;
+    padding: 15% 25% 0% 15%;
+  }
+
+  #power h2 {
+    padding: 6% 0 0 5%;
+  }
+
+  #relationships h2 {
+    padding: 7% 0 0 15%;
+    color: white;
+  }
+
+  #relationships .righttext {
+    width: 60%;
+    padding: 15% 25% 0% 15%;
+  }
+
+  #reconciling h2 {
+    padding: 7% 0 0 19%;
+    color: white;
+  }
+
+  #reconciling .righttext {
+    width: 70%;
+    padding: 5% 15% 0% 15%;
+  }
+
+  #liberation h2 {
+    padding: 4% 0 0 32%;
+  }
+
+  #liberation .righttext {
+    width: 60%;
+    padding: 15% 25% 0% 15%;
+  }
+
+  #revolt h2 {
+    padding: 10% 0 0 12%;
+  }
+
+  #revolt .righttext {
+    width: 68%;
+    padding: 8% 17% 0% 15%;
+  }
+
+  #control h2 {
+    padding: 10% 0 0 25%;
+  }
+
+  #hierarchy h2 {
+    padding: 10% 0 0 23%;
+    color: white;
+    text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+  }
+
+  #hierarchy .righttext {
+    width: 65%;
+    padding: 15% 20% 0% 15%;
+  }
+
+  #borders h2 {
+    padding: 7% 0 0 17%;
+    color: white;
+  }
+
+  #borders .righttext {
+    width: 60%;
+    padding: 15% 25% 0% 15%;
+  }
+
+  #representation h2 {
+    padding: 10% 0 0 13%;
+    color: white;
+    text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
+  }
+
+  #representation .righttext {
+    width: 60%;
+    padding: 15% 25% 0% 15%;
+  }
+
+  #leaders h2 {
+    padding: 6% 0 0 27%;
+    color: white;
+  }
+
+  #leaders .righttext {
+    width: 60%;
+    padding: 15% 25% 0% 15%;
+  }
+
+  #government h2 {
+    padding: 20% 0 0 21%;
+  }
+
+  #government .righttext {
+    width: 70%;
+    padding: 5% 15% 0% 15%;
+  }
+
+  #government .left {
+    padding-top: 69%;
+  }
+
+  #profit h2 {
+    padding: 10% 0 0 25%;
+  }
+
+  #property h2 {
+    padding: 4% 0 0 20%;
+  }
+
+  #property .righttext {
+    width: 75%;
+    padding: 5% 10% 0% 15%;
+  }
+
+  #lastcrime h2 {
+    padding: 8% 0 0 10%;
+    color: white;
+  }
+
+  #lastcrime .righttext {
+    width: 58%;
+    padding: 15% 27% 0% 15%;
+  }
+
+  #anarchy {
+    width: 100%;
+    clear: both;
+    background-color: black;
+    overflow: auto;
+  }
+
+  #anarchy p {
+    font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+    font-size: 1.2vw;
+    line-height: 1.7vw;
+    text-indent: 1.3vw;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+  }
+
+  #anarchy img {
+    width: 50%;
+    padding: 15% 0 0 20%;
+  }
+
+  #anarchy p:first-of-type {
+    text-indent: 0px;
+    }
+
+  .first {
+    position: relative;
+    width: 23%;
+    padding: 5% 7% 5% 8%;
+    float: left;
+  }
+
+  .second {
+    position: relative;
+    width: 26%;
+    padding: 5% 7% 5% 0%;
+    float: left;
+  }
+
+  .third {
+    position: relative;
+    width: 22%;
+    padding: 5% 7% 5% 0%;
+    float: left;
+  }
+
+  #next h1 {
+    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.7vw;
+    line-height: 2vw;
+    color: #d62d34;
+    text-align: center;
+    padding: 30% 10% 30% 10% !important;
+  }
+
+  #next h1 a:link, #next h1 a:visited {
+    color: #d62d34;
+    text-decoration: none;
+
+  }
+
+  #next h1 a:hover, #next h1 a:active {
+    color: black;
+    text-shadow: 0px 0px 20px #d62d34;
+    text-decoration: none;
+
+  }
+
+
+/*---------------NAV--------------------*/
+
+  nav {
+    width: 100%;
+    background-color: rgba(52, 52, 52, 0.79);
+    z-index: 10;
+    position: absolute;
+  }
+
+  #navwrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 700px;
+  }
+
+  #cwc {
+    float: left;
+    margin-left: 0;
+  }
+
+  #cwclogo {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cwclogo130.png');
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    background-position:center top;
+    float: left;
+    background-repeat: no-repeat;
+    margin-top: 5px;
+    margin-right: 4px
+  }
+
+  #cwclabel {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cwcword50.png');
+    background-size: 100%;
+    height: 25px;
+    width: 140px;
+    background-position:center top;
+    background-repeat: no-repeat;
+    float: left;
+    margin-top: 7px;
+    margin-right: 15px;
+  }
+
+  nav ul
+  {
+    list-style:none;
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
+  }
+
+  nav ul a {
+    display:block;
+    color:white;
+    text-decoration:none;
+    font-weight:300;
+    font-size:18px;
+    line-height:32px;
+    padding: 4px 15px 0px 35px;
+    font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif
+  }
+
+  nav ul li {
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
+  }
+
+  #toc a, #language a, #share a {
+    display:block;
+    color:white;
+    text-decoration:none;
+    font-weight:300;
+    font-size:24px;
+    line-height:32px;
+    padding: 4px 15px 0px 35px;
+    font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
+    width: 465px;
+  }
+
+  #toc a,  {
+    width: 465px;
+  }
+
+  #language a,  {
+    width: 220px;
+  }
+
+  #share a,  {
+    width: 200px;
+  }
+
+  #toc a:hover {
+    color: #9ac149;
+    text-decoration:none;
+  }
+
+  #language a:hover {
+    color:#d62d34;
+    text-decoration:none;
+  }
+
+  #share a:hover {
+    color: #3cbce9;
+    text-decoration:none;
+  }
+
+  ul#toc, ul#language, ul#share {
+    padding-top: 20px;
+    padding-bottom: 22px;
+    border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    border: 0px solid #000000;
+    background-color: rgba(23, 22, 22, 0.98);
+  }
+
+  ul#toc {
+    width: 515px;
+  }
+
+  ul#language {
+    width: 270px;
+  }
+
+  ul#share {
+    width: 250px;
+  }
+
+  nav ul li.current-menu-item  {
+    background:#ddd
+  }
+
+  nav ul li:hover  {
+    /*background-color: rgba(52, 52, 52, 0.89);*/
+  }
+
+  nav ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background-color: rgba(23, 22, 22, 0.98);
+    padding:0
+  }
+
+  nav ul ul li {
+    float:none;
+    width:200px
+  }
+
+  nav ul ul a  {
+    line-height:120%;
+    padding:10px 15px
+  }
+
+  nav ul ul ul {
+    top:0;
+    left:100%
+  }
+
+  nav ul li:hover > ul {
+    display:block;
+    z-index: 10;
+  }
+
+  .icon {
+    font-size:18px;
+    line-height:32px;
+    font-family:'tcesymbols',Helvetica,Arial,sans-serif;
+    padding-right: 5px;
+  }
+
+  #tocdiv {
+    display: none;
+    position: fixed;
+    top: -10000px;
+    left: -10000px;
+  }
+
+  #languagediv {
+    display: none;
+    position: fixed;
+    top: -10000px;
+    left: -10000px;}
+
+  #sharediv {
+    display: none;
+    position: fixed;
+    top: -10000px;
+    left: -10000px;
+  }
+
+}
+
+
+/*---------------RETINA BACKGROUNDS----------------*/
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-width:200px),
+(min-resolution: 192dpi) and (min-width:200px) {
+  .cover {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-phonesmall@2x.jpg');
+  }
+
+    #intro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-phonesmall@2x.jpg');
+    }
+
+    #outro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-phonesmall@2x.jpg');
+    }
+
+    #takeflight {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-phonesmall@2x.jpg');
+    }
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-width:321px),
+(min-resolution: 192dpi) and (min-width:321px) {
+  .cover {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-phone@2x.jpg');
+  }
+
+    #intro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-phone@2x.jpg');
+    }
+
+    #outro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-phone@2x.jpg');
+    }
+
+    #takeflight {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-phone@2x.jpg');
+    }
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-width:601px),
+(min-resolution: 192dpi) and (min-width:601px) {
+  .cover {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-tablet@2x.jpg');
+  }
+
+    #intro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-tablet@2x.jpg');
+    }
+
+    #outro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-tablet@2x.jpg');
+    }
+
+    #takeflight {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-tablet@2x.jpg');
+    }
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-width:1024px),
+(min-resolution: 192dpi) and (min-width:1024px) {
+  .cover {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-tiny@2x.jpg');
+  }
+
+  #intro {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-tablet@2x.jpg');
+  }
+
+  #outro {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-tablet@2x.jpg');
+  }
+
+  #takeflight {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-tablet@2x.jpg');
+  }
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-width:1201px),
+(min-resolution: 192dpi) and (min-width:1201px) {
+  .cover {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-small@2x.jpg');
+  }
+
+    #intro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-small@2x.gif');
+    }
+
+    #outro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-small@2x.jpg');
+    }
+
+    #takeflight {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-small@2x.jpg');
+    }
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
+(min-resolution: 192dpi) and (min-width:1670px) {
+  .cover {
+    background-image: url('http://cloudfront.crimethinc.com/tce/images/cover-large@2x.jpg');
+  }
+
+    #intro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/intro-large@2x.gif');
+    }
+
+    #outro {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/outro-large@2x.jpg');
+    }
+
+    #takeflight {
+      background-image: url('http://cloudfront.crimethinc.com/tce/images/takeflight-large.jpg');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
