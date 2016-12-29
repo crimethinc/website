@@ -2,7 +2,6 @@
   Status.create!(name: status)
 end
 
-
 if Rails.env.development?
   test_user = User.new(
                 username:              "tester",
@@ -12,10 +11,6 @@ if Rails.env.development?
                 password_confirmation: "a long passphrase to meet the minimum length")
   test_user.save!(validate: false)
 end
-
-
-# Seed post types on multiple threads
-threads  = []
 
 puts "Trying dev seeds for each post-type..."
 %w(articles pages links podcasts episodes redirects).each do |posttype|
@@ -32,5 +27,3 @@ puts "Trying dev seeds for each post-type..."
   end
 end
 
-# Sync up post seeds threads before proceeding
-threads.each { |t| t.join }
