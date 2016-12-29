@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# script/seed: Drop the database, rebuild it, and fill it with seed data
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+echo "==> Dropping DB..."
+bin/rails db:drop
+
+echo "==> Creating DB..."
+bin/rails db:create
+
+echo "==> Migrating DB..."
+bin/rails db:migrate
+
+echo "==> Seeding DB..."
+bin/rails db:seed
+
+echo "==> DB is now ready to go!"

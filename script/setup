@@ -11,8 +11,9 @@ script/bootstrap
 
 echo "==> Setting up DB..."
 # reset database to a fresh state.
+bin/rails db:drop
 bin/rails db:create
-bin/rails db:reset
+bin/rails db:migrate
 echo ""
 echo "  If you need to seed your DB with intial data, run:"
 echo "  bin/rails db:seed"

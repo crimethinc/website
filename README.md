@@ -72,6 +72,7 @@ If you get an error that some gem can't be loaded, like `bcrypt_ext`, follow the
 
 ```
 rm -rf vendor/gems
+rm -rf .bundle
 ./script/setup
 ```
 
@@ -141,6 +142,14 @@ Setup environment for CI to run tests. This is primarily designed to run on the 
 
 ```
 ./script/cibuild
+```
+
+### Database seed script
+
+Drop the database, rebuild it, and fill it with seed data.
+
+```
+./script/seed
 ```
 
 
