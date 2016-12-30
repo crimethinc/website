@@ -1,6 +1,8 @@
 <%= form_for [:admin, @article] do |f| %>
   <%= render "admin/form_errors", thing: @article %>
 
+  <%= f.hidden_field :parent_id, value: @collection.id if @collection %>
+
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control input-lg" %>

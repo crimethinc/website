@@ -8,6 +8,8 @@ class Article < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
   has_many :contributions, dependent: :destroy
+  has_many :articles, foreign_key: :parent_id
+  belongs_to :collection, foreign_key: :parent_id, class_name: :Article
 
   accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
@@ -52,6 +54,35 @@ class Article < ApplicationRecord
         self.categories << category
       end
     end
+  end
+
+  # article states through the process from creation to publishing
+  def draft?
+    status.name == "draft"
+  end
+
+  def edited?
+    status.name == "edited"
+  end
+
+  def designed?
+    status.name == "designed"
+  end
+
+  def published?
+    status.name == "published"
+  end
+
+  def dated?
+    published_at.present?
+  end
+
+  def collection_root?
+    articles.any?
+  end
+
+  def in_collection?
+    collection.present?
   end
 
   private

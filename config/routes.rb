@@ -102,7 +102,12 @@ Rails.application.routes.draw do
       get "(page/:page)", action: :index, on: :collection, as: ""
     end
 
-    resources :articles, concerns: :paginatable
+    resources :articles, concerns: :paginatable do
+      member do
+        get "new", as: :new_child
+      end
+    end
+
     resources :books, concerns: :paginatable
     resources :contributors, concerns: :paginatable
     resources :episodes, concerns: :paginatable
