@@ -13,6 +13,9 @@ class Article < ApplicationRecord
 
   accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
+  scope :chronological, -> { order(published_at: :desc) }
+
+  before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
 

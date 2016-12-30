@@ -14,6 +14,7 @@
 
   <div class="e-content">
     <%= render_content @article %>
+    <%= render partial: "child_article", collection: @child_articles, as: :article if @article.collection_root? %>
   </div>
 
   <footer>
