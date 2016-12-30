@@ -1,5 +1,15 @@
 module ApplicationHelper
 
+  def render_content(post)
+    Kramdown::Document.new(
+      post.content,
+      input: post.content_format == "html" ? :html : :kramdown,
+      remove_block_html_tags: false,
+      transliterated_header_ids: true,
+      html_to_native: true
+    ).to_html.html_safe
+  end
+
   def link_to_dates(year: nil, month: nil, day: nil, show_year: true, show_month: true, show_day: true)
     show_month = false if month.nil?
     show_day   = false if day.nil?
