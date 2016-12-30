@@ -19,17 +19,19 @@ module Rack
 
       if ::File.exist?(filepath)
         ::File.open(filepath).each do |line|
-          source_path, target_path = line.chomp.split
+          unless line.blank?
+            source_path, target_path = line.chomp.split
 
-          unless source_path =~ /^\//
-            source_path = "/#{source_path}"
+            unless source_path =~ /^\//
+              source_path = "/#{source_path}"
+            end
+
+            unless target_path =~ /^\//
+              target_path = "/#{target_path}"
+            end
+
+            redirects[source_path] = target_path
           end
-
-          unless target_path =~ /^\//
-            target_path = "/#{target_path}"
-          end
-
-          redirects[source_path] = target_path
         end
       end
 
