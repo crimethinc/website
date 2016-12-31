@@ -70,6 +70,7 @@ en:
         heading: Email Updates
         description: Sign up here to receive regular email updates.
         signup_form_placeholder: What’s your email address?
+        signup_button_text: Sign Up
       social:
         heading: Find CrimethInc. Elsewhere
         description: CrimethInc. is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

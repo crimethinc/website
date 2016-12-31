@@ -1,11 +1,11 @@
 <div class="newsletter-signup">
-  <h1><%= t("footer.contact.newsletter.heading") %></h1>
-  <p><%= t("footer.contact.newsletter.description") %></p>
+  <h1 class="newsletter-signup-label"><%= t("footer.contact.newsletter.heading") %></h1>
+  <div class="newsletter-signup-description"><%= render_markdown t("footer.contact.newsletter.description") %></div>
 
   <%= form_for @subscriber, html: { class: "newsletter-signup-form" } do |f| %>
     <%= f.label       :email,              t("footer.contact.newsletter.signup_form_placeholder"), class: "screen-reader-only" %>
     <%= f.email_field :email, placeholder: t("footer.contact.newsletter.signup_form_placeholder"), class: "simple-field" %>
-    <%= button_tag    "Sign Up" %>
+    <%= button_tag    t("footer.contact.newsletter.signup_button_text") %>
   <% end %>
 
   <!-- TODO get rid of these and fix the float/clear --> <br /> <br />
