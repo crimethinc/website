@@ -114,6 +114,14 @@ Run the test suite using the `test` script.
 ./script/test
 ```
 
+### Test server script
+
+To run a process which runs tests on file change
+
+```
+./script/test_server
+```
+
 ### Console script
 
 If you need to use the app's console (in any environment), use the `console` script.
