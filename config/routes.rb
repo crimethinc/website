@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get "watch",  to: "about#watch",  as: :watch
   get "listen", to: redirect("podcast"), as: :listen_redirect # TEMP TODO
   # get "listen", to: "about#listen", as: :listen
-  get "buy",    to: redirect("http://store.crimethinc.com"), as: :buy_redirect # TEMP TODO
+  get "get",    to: redirect("http://store.crimethinc.com"), as: :get_redirect # TEMP TODO
   # get "buy",    to: "about#buy",    as: :buy
 
   # Podcast
