@@ -194,7 +194,6 @@ ActiveRecord::Schema.define(version: 20161221015941) do
     t.string   "username"
     t.string   "email"
     t.string   "display_name"
-    t.string   "password"
     t.string   "password_digest"
     t.text     "avatar"
     t.datetime "created_at",      null: false
