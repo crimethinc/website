@@ -63,6 +63,22 @@
   </div>
 
   <hr>
+
+  <% if @article.collection_root? %>
+    <div id="collection">
+      <h3>Collection</h3>
+      <%= render "table", articles: @article.articles %>
+    </div>
+  <% end %>
+
+  <% if @article.in_collection? %>
+    Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
+  <% else %>
+    <%= link_to "Add to Collection", new_child_admin_article_path(@article), class: "btn btn-primary" %>
+  <% end %>
+
+  <hr>
+
   <footer>
     <%= render "/articles/published_on", article: @article %>
   </footer>

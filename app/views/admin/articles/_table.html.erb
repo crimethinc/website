@@ -1,0 +1,43 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Status</th>
+      <th>Title / Subtitle</th>
+      <th>Published Date</th>
+      <th>Collection</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td>
+          <%= render "/admin/articles/publication_status", article: article %>
+        </td>
+        <td>
+          <%= link_to article.title,      [:admin, article] %><br>
+          <% if article.subtitle.present? %>
+            <%= link_to article.subtitle,   [:admin, article] %>
+          <% end %>
+        </td>
+        <td>
+          <%= display_date(article.published_at) %><br>
+          <%= display_time(article.published_at) %>
+        </td>
+        <td class="text-center"><%= article.collection_root? ? link_to(article.articles.count, admin_article_path(article, anchor: "collection")) : "-" %></td>
+        <td>
+          <%= link_to "DELETE", [:admin, article], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= paginate @articles, views_prefix: "admin" %>
+</div>
