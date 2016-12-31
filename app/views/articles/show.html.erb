@@ -2,9 +2,7 @@
 
 <article id="article-<%= @article.id %>" class="h-entry <%= 'article-with-no-header-image' if @article.image.blank? %>" role="article">
   <header>
-    <% if @article.image.present? %>
-      <%= image_tag @article.image, class: "u-photo", alt: "" %>
-    <% end %>
+    <%= render "articles/image", article: @article, linked: false %>
 
     <div class="meta">
       <%= render "articles/titles", header: @article, linked: false %>

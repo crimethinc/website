@@ -6,8 +6,8 @@
         <b><%= display_date article.published_at %></b>
       <% end %>
     <% elsif article.dated? %>
-      Published on
-      <%= link_to_dates year: article.year, month: article.month, day: article.day %>
+      <b class="label">Published</b>
+      <%= display_date article.published_at %>
     <% else %>
       <em>Publication date not yet set.</em>
     <% end %>

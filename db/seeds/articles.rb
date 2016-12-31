@@ -210,10 +210,11 @@ html_doc.css(".h-entry").each do |entry|
   status_id    = published_status.id
 
   # Save the Article
-  article = Article.create!(title:        title,
-                            published_at: published_at,
-                            content:      content,
-                            status_id:    status_id,
+  article = Article.create!(title:          title,
+                            published_at:   published_at,
+                            content:        content,
+                            content_format: "html",
+                            status_id:      status_id,
                             header_background_color: "#444")
 
   # Add the Article to its Category and Theme

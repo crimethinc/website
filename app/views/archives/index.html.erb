@@ -1,30 +1,46 @@
 <header>
-  <h1>Archives</h1>
+  <h1>
+    <%= link_to "Archives", [:read] %>
+  </h1>
+
+  <h2>
+    <time>
+      <%= link_to_dates(year: @articles_year, month: @articles_month, day: @articles_day) %>
+    </time>
+  </h2>
 </header>
 
 <div class="h-feed">
   <% @articles.sort.reverse.each do |year, months| %>
-    <h1><%= link_to_dates(year: year) %></h1>
-
     <% months.sort.reverse.each do |month, articles| %>
-      <h2><%= link_to_dates(year: year, month: month) %></h2>
+
+      <% unless @articles_day.present? or @articles_month.present? %>
+        <h1 class="year-month"><%= link_to_dates(year: year, month: month) %></h1>
+      <% end %>
 
       <ol>
         <% articles.each do |article| %>
+
           <li>
-
             <article class="h-entry" role="article">
-              <header>
-                <%= render "articles/titles", header: @article, linked: false %>
-              </header>
+              <div class="row">
+                <div class="<%= "column" if article.image.present? %>">
+                  <%= render "articles/image", article: article, linked: true %>
+                </div>
 
-              <footer>
-                <%= render "articles/published_on", article: article %>
-                <%= render "articles/categories",   article: @article %>
-                <%= render "articles/tags",         article: @article %>
-              </footer>
+                <div class="<%= "column" if article.image.present? %>">
+                  <header>
+                    <%= render "articles/categories", article: article %>
+                    <%= render "articles/titles", header: article, linked: true %>
+                    <%= render "articles/published_on", article: article %>
+                  </header>
+
+                  <footer>
+                    <%= render "articles/tags",       article: article %>
+                  </footer>
+                </div>
+              </div>
             </article>
-
           </li>
         <% end %>
       </ol>

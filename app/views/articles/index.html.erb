@@ -1,6 +1,7 @@
+<%# TODO delete this view %>
 <header>
   <h1>
-    <%= link_to "Archives", archives_path %>
+    <%= link_to "Archives", [:read] %> :
     <time>
       <%= link_to_dates(year: @articles_year, month: @articles_month, day: @articles_day) %>
     </time>
@@ -14,11 +15,15 @@
     <% @articles.each do |article| %>
       <li>
         <article class="h-entry" role="article">
-          <%= link_to article.path do %>
-            <span class="h2"><%= link_to article.title, article.path %></span><br>
-            <span class="h3"><%= link_to article.subtitle, article.path %></span>
-          <% end %>
-          <p><%= render "articles/published_on", article: article %></p>
+          <header>
+            <%= render "articles/titles", header: article, linked: true %>
+          </header>
+
+          <footer>
+            <%= render "articles/published_on", article: article %>
+            <%= render "articles/categories",   article: article %>
+            <%= render "articles/tags",         article: article %>
+          </footer>
         </article>
       </li>
     <% end %>

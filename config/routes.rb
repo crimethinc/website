@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   # Homepage
-  root to: "archives#home"
-
-
-  # Archives
-  get "archives", to: "archives#index", as: :archives
-  get "archive",  to: redirect("/archives")
+  root to: "home#index"
 
 
   # Articles
@@ -17,9 +12,9 @@ Rails.application.routes.draw do
 
   # Article listings by year, optional month, optional day
   get "(/:year)(/:month)(/:day)",
-      to:          "articles#index",
+      to:          "archives#index",
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
-      as:          :articles
+      as:          :archives
 
   # Draft Articles and Pages
   get "drafts/articles/:draft_code", to: "articles#show", as: :article_draft
