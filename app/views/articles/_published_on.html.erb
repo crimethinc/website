@@ -1,3 +1,5 @@
+<% linked ||= false %>
+
 <p class="screen-reader-only">
   <time class="dt-published" datetime="<%= display_date article.published_at if article.dated? %>">
 
@@ -7,7 +9,11 @@
       <% end %>
     <% elsif article.dated? %>
       <b class="label">Published</b>
-      <%= display_date article.published_at %>
+      <% if linked %>
+        <%= link_to_dates(year: article.published_at.year, month: article.published_at.month, day: article.published_at.day) %>
+      <% else %>
+        <%= display_date article.published_at %>
+      <% end %>
     <% else %>
       <em>Publication date not yet set.</em>
     <% end %>

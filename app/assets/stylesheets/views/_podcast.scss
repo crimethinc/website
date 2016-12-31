@@ -77,7 +77,7 @@
     }
 
 
-    @media screen and (min-width: #{$small-tablet}) {
+    @media screen and (min-width: $small-tablet) {
       .subscribe {
         margin: $border-size-small auto;
         text-align: right;

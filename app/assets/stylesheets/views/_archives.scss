@@ -43,31 +43,6 @@
         h2 {
           font-size: 2.5rem;
         }
-
-        .tags,
-        .categories,
-        .dt-published {
-          ul,
-          li {
-            display: inline-block;
-          }
-
-          .label { font-weight: bold; }
-        }
-
-        .dt-published {
-          display: inline-block;
-          margin-top: .5em;
-        }
-
-        .categories {
-          margin-bottom: .5em;
-          text-transform: uppercase;
-
-          .label {
-            display: none;
-          }
-        }
       } // .h-entry
 
     } // .h-feed

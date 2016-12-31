@@ -5,6 +5,11 @@
   }
 
   .h-entry {
+    &.article-with-no-header-image header .meta {
+      position: relative;
+      transform: none;
+    }
+
     header {
       position: relative;
       border-top: $border-size-xsmall solid white;
@@ -285,7 +290,7 @@
         }
 
         /* narrower desktop browser window in between phone and tablet */
-        @media screen and (min-width: #{$small-tablet}) {
+        @media screen and (min-width: $small-tablet) {
           figure + figure,
           img + img {
             // TODO
@@ -343,8 +348,8 @@
 
       p {
         display: inline-block;
-        margin:  $border-size-large 0;
-        padding: $border-size-large;
+        margin:  $border-size-medium 0;
+        padding: $border-size-medium;
         border-top: $border-size-xsmall solid #ccc;
         font-weight: lighter;
         font-weight: 300;
@@ -355,8 +360,7 @@
   } /* .h-entry */
 } /* #article */
 
-/* narrower desktop browser window in between phone and tablet */
-@media screen and (min-width: #{$small-tablet}) {
+@media screen and (min-width: $small-tablet) {
   #article {
     .h-entry {
 
@@ -366,13 +370,13 @@
         }
 
         h1 {
-          font-size: 2em;
+          font-size: 4em;
           letter-spacing: -.01em;
           line-height: 1em;
         }
 
         h2 {
-          font-size: 1.5em;
+          font-size: 2em;
           letter-spacing: -.01em;
         }
 
@@ -382,7 +386,7 @@
       }
 
       .e-content {
-        padding: 0 10pt;
+        padding: 0 50pt;
         font-size: 1.5em;
 
         img.half-size {
@@ -392,52 +396,10 @@
       }
 
       footer {
-        p {
-          margin:  50pt 0;
-          padding: 50pt;
-        }
+        margin:  50pt 0;
+        padding: 50pt;
       }
 
-    }
-  }
-}
-
-@media screen and (min-width: $small-tablet) {
-  #article {
-    .h-entry {
-
-      header {
-        h1 {
-          font-size: 4em;
-          letter-spacing: -.01em;
-          line-height: 1em;
-        }
-
-        h2 {
-          font-size: 2em;
-        }
-      }
-
-      .e-content {
-        padding: 0 50pt;
-      }
-
-      footer {
-        p {
-          margin:  50pt 0;
-          padding: 50pt;
-        }
-      }
-
-    }
-  }
-}
-
-#article {
-  .h-entry {
-    &.article-with-no-header-image header .meta {
-      position: relative;
-      transform: none;
     }
   }
 }

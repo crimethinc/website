@@ -52,7 +52,7 @@
       }
     }
 
-    @media screen and (min-width: #{$small-tablet}) {
+    @media screen and (min-width: $small-tablet) {
       .pinned-page-content {
         display: flex;
         justify-content: space-between;
