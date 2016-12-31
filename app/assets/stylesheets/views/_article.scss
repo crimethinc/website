@@ -355,7 +355,6 @@
   } /* .h-entry */
 } /* #article */
 
-/* narrower desktop browser window in between phone and tablet */
 @media screen and (min-width: #{$small-tablet}) {
   #article {
     .h-entry {
@@ -392,10 +391,8 @@
       }
 
       footer {
-        p {
-          margin:  50pt 0;
-          padding: 50pt;
-        }
+        margin:  50pt 0;
+        padding: 50pt;
       }
 
     }
@@ -423,10 +420,8 @@
       }
 
       footer {
-        p {
-          margin:  50pt 0;
-          padding: 50pt;
-        }
+        margin:  50pt 0;
+        padding: 50pt;
       }
 
     }
