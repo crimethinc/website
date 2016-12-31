@@ -23,7 +23,7 @@
 
     <% if @article.download_url.present? %>
       <div id="download-pdf">
-        <%= link_to "Download PDF", @article.download_url %>
+        <%= link_to "Download PDF", @article.download_url, class: "button" %>
       </div>
     <% end %>
   </footer>
