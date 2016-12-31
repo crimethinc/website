@@ -5,6 +5,11 @@
   }
 
   .h-entry {
+    &.article-with-no-header-image header .meta {
+      position: relative;
+      transform: none;
+    }
+
     header {
       position: relative;
       border-top: $border-size-xsmall solid white;
@@ -424,15 +429,6 @@
         padding: 50pt;
       }
 
-    }
-  }
-}
-
-#article {
-  .h-entry {
-    &.article-with-no-header-image header .meta {
-      position: relative;
-      transform: none;
     }
   }
 }
