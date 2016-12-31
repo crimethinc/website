@@ -15,7 +15,7 @@ footer[role=contentinfo] {
     align-items: top;
   }
 
-  @media screen and (min-width: #{$small-tablet}) {
+  @media screen and (min-width: $small-tablet) {
     .footer-section {
       width: 33.33333333%;
     }
@@ -24,7 +24,7 @@ footer[role=contentinfo] {
   .footer-section-container {
     padding: $border-size-large;
 
-    @media screen and (min-width: #{$small-tablet}) {
+    @media screen and (min-width: $small-tablet) {
       padding: $border-size-xlarge;
     }
   }

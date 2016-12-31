@@ -70,7 +70,7 @@
 }
 
 // larger than $large-phone viewport
-@media screen and (min-width: #{$small-tablet}) {
+@media screen and (min-width: $small-tablet) {
   .site-header + nav[role=navigation] {
     display: none;
   }

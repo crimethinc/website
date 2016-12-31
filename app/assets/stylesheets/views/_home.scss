@@ -127,7 +127,7 @@
   }
 
 
-  @media screen and (min-width: #{$small-tablet}) {
+  @media screen and (min-width: $small-tablet) {
     .row {
       display: flex;
     }

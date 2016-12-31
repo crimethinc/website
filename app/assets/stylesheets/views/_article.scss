@@ -285,7 +285,7 @@
         }
 
         /* narrower desktop browser window in between phone and tablet */
-        @media screen and (min-width: #{$small-tablet}) {
+        @media screen and (min-width: $small-tablet) {
           figure + figure,
           img + img {
             // TODO
@@ -355,7 +355,7 @@
   } /* .h-entry */
 } /* #article */
 
-@media screen and (min-width: #{$small-tablet}) {
+@media screen and (min-width: $small-tablet) {
   #article {
     .h-entry {
 
