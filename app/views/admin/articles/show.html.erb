@@ -66,15 +66,15 @@
 
   <% if @article.collection_root? %>
     <div id="collection">
-      <h3>Collection</h3>
-      <%= render "table", articles: @article.articles %>
+      <h3>Collection Posts</h3>
+      <%= render "table", articles: @article.collection_posts %>
     </div>
   <% end %>
 
   <% if @article.in_collection? %>
     Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
   <% else %>
-    <%= link_to "Add to Collection", new_child_admin_article_path(@article), class: "btn btn-primary" %>
+    <%= link_to "Add Post to Article Collection", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-xs" %>
   <% end %>
 
   <hr>

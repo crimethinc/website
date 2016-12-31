@@ -104,7 +104,7 @@ Rails.application.routes.draw do
 
     resources :articles, concerns: :paginatable do
       member do
-        get "new", as: :new_child
+        get "new", as: :new_collection_post
       end
     end
 

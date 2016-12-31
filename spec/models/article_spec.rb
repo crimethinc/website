@@ -1,25 +1,25 @@
 require 'rails_helper'
 
 describe Article do
-  describe "#articles" do
-    it "finds related articles by parent_id" do
+  describe "#collection_posts" do
+    it "finds related collection_posts by collection_id" do
       collection = Article.create(title: 'test')
-      article = Article.create(title: 'test', parent_id: collection.id)
+      article = Article.create(title: 'test', collection_id: collection.id)
 
-      expect(collection.articles).to include article
+      expect(collection.collection_posts).to include article
     end
   end
 
   describe "collection_root?" do
-    context "when #articles exists" do
+    context "when #collection_posts exists" do
       it "returns true" do
         collection = Article.create(title: 'test')
-        article = Article.create(title: 'test', parent_id: collection.id)
+        article = Article.create(title: 'test', collection_id: collection.id)
 
         expect(collection.collection_root?).to eq true
       end
     end
-    context "when zero #articles exist" do
+    context "when zero #collection_posts exist" do
       it "returns false" do
         article = Article.create(title: 'test')
 
@@ -29,17 +29,17 @@ describe Article do
   end
 
   describe "in_collection?" do
-    context "when it has a parent_id" do
+    context "when it has a collection_id" do
       it "returns true" do
         collection = Article.create(title: 'test')
-        article = Article.create(title: 'test', parent_id: collection.id)
+        article = Article.create(title: 'test', collection_id: collection.id)
 
         expect(article.in_collection?).to eq true
       end
     end
-    context "when parent_id is nil" do
+    context "when collection_id is nil" do
       it "returns false" do
-        article = Article.create(title: 'test', parent_id: nil)
+        article = Article.create(title: 'test', collection_id: nil)
 
         expect(article.in_collection?).to eq false
       end
