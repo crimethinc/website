@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20161221015941) do
     t.text     "title"
     t.text     "subtitle"
     t.text     "content"
+    t.text     "summary"
     t.text     "css"
     t.text     "image"
     t.text     "image_description"
