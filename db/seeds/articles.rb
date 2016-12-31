@@ -122,7 +122,6 @@ Dir.glob("#{filepath}/*").each do |f|
     published_at = Time.parse(doc.css("wp_post_date_gmt").text) # GMT
     published_at = Time.parse(doc.css("wp_post_date").text)     # PST # Seems to map to URLs more accurately
 
-
     # Old permalinks to support by creating Redirects to the new Article path
     redirect_paths = []
     redirect_paths << doc.css("link").text
