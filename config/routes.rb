@@ -16,6 +16,8 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :archives
 
+  get "archives", to: redirect("/read"), as: :archives_redirect
+
   # Draft Articles and Pages
   get "drafts/articles/:draft_code", to: "articles#show", as: :article_draft
   get "drafts/pages/:draft_code",    to: "pages#show",    as: :page_draft
