@@ -370,13 +370,13 @@
         }
 
         h1 {
-          font-size: 2em;
+          font-size: 4em;
           letter-spacing: -.01em;
           line-height: 1em;
         }
 
         h2 {
-          font-size: 1.5em;
+          font-size: 2em;
           letter-spacing: -.01em;
         }
 
@@ -395,34 +395,11 @@
         }
       }
 
-      footer {
-        margin:  50pt 0;
-        padding: 50pt;
-      }
-
-    }
-  }
-}
-
-@media screen and (min-width: $small-tablet) {
-  #article {
-    .h-entry {
-
-      header {
-        h1 {
-          font-size: 4em;
-          letter-spacing: -.01em;
-          line-height: 1em;
-        }
-
-        h2 {
-          font-size: 2em;
-        }
-      }
 
       .e-content {
         padding: 0 50pt;
       }
+
 
       footer {
         margin:  50pt 0;
