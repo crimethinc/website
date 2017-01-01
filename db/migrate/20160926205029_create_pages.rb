@@ -4,7 +4,7 @@ class CreatePages < ActiveRecord::Migration[5.0]
       t.references :user
       t.references :status
 
-      t.text       :title, :subtitle, :content, :css, :image, :image_description
+      t.text       :title, :subtitle, :content, :summary, :css, :image, :image_description
       t.string     :header_background_color, :header_text_color
       t.string     :content_format, default: "kramdown"
 

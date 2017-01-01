@@ -85,6 +85,10 @@ class Article < ApplicationRecord
     published_at.present?
   end
 
+  def meta_description
+    summary || content.truncate(200)
+  end
+
   private
 
   def generate_slug
