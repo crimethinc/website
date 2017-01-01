@@ -19,7 +19,7 @@
         margin-left: 2rem;
       }
 
-      li:first-child {
+      .section li:first-child {
         font: {
           weight: bold;
           weight: 700;
@@ -28,6 +28,14 @@
 
         line-height: 1.2em;
         list-style-type: none;
+      }
+
+      #years {
+        a {
+          font-weight: bold;
+          display: inline-block;
+          margin-right: .25em;
+        }
       }
 
 

@@ -21,10 +21,10 @@
     </div>
 
     <div class="row">
-      <div class="column column-half">
+      <div class="column column-half section">
         <h2 id="current-events">Current Events</h2>
 
-        <%= image_tag @featured_current_events.image,        alt: @featured_current_events.image_description %>
+        <%= image_tag @featured_current_events.image, alt: @featured_current_events.image_description %>
 
         <ul>
           <li><a href="/texts/r/battle">Reportback from the Battle for Sacred Ground</a></li>
@@ -37,7 +37,7 @@
         </ul>
       </div>
 
-      <div class="column column-half">
+      <div class="column column-half section">
         <h2 id="strategy-and-analysis">Strategy and Analysis</h2>
 
         <%= image_tag @featured_strategy_and_analysis.image, alt: @featured_strategy_and_analysis.image_description %>
@@ -60,10 +60,10 @@
     </div> <!-- .row -->
 
     <div class="row">
-      <div class="column column-half">
+      <div class="column column-half section">
         <h2 id="theory-and-critique">Theory and Critique</h2>
 
-        <%= image_tag @featured_theory_and_critique.image,   alt: @featured_theory_and_critique.image_description %>
+        <%= image_tag @featured_theory_and_critique.image, alt: @featured_theory_and_critique.image_description %>
 
         <ul>
           <li><a href="/texts/r/democracy">From Democracy to Freedom</a></li>
@@ -79,10 +79,10 @@
         </ul>
       </div>
 
-      <div class="column column-half">
+      <div class="column column-half section">
         <h2 id="classics">Classics</h2>
 
-        <%= image_tag @featured_classics.image,              alt: @featured_classics.image_description %>
+        <%= image_tag @featured_classics.image, alt: @featured_classics.image_description %>
 
         <ul>
           <li><a href="/texts/selected/difference.php">There Is a Difference between Life and Survival</a></li>
@@ -93,5 +93,23 @@
         </ul>
       </div>
     </div> <!-- .row -->
+
+
+    <div id="years">
+      <h2>Chronologically</h2>
+
+      <p>
+        You can also explore everything by year.
+      </p>
+
+      <p>
+        <% Time.now.year.downto(2000).each do |year| %>
+          <%= link_to year, archives_path(year: year) %>
+        <% end %>
+      </p>
+
+    </div>
+
+
   </div> <!-- .e-content -->
 </div>

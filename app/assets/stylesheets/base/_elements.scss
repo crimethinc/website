@@ -25,8 +25,14 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   text-rendering: optimizeLegibility;
 }
 
+b,
 strong {
   font-weight: 600;
+}
+
+i,
+em {
+  font-style: italic;
 }
 
 input[type=search] {
