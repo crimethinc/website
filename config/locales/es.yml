@@ -6,7 +6,7 @@ es:
     read: Read
     watch: Watch
     listen: Listen
-    buy: Obtain
+    buy: Get
     share: Share
 
     first_time: First Time? Start Here →
@@ -73,7 +73,7 @@ es:
         signup_button_text: Sign Up
       social:
         heading: Find CrimethInc. Elsewhere
-        description: CrimethInc. is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        description: "Keep up with our activities on the following additional platforms:"
 
     mantra:
       - If your heart is free, the ground you stand on is liberated territory. Defend it.
