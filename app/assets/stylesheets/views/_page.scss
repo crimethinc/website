@@ -23,13 +23,20 @@
         }
         line-height: 1.25em;
       }
-
-      img {
-        max-width: 100%;
-      }
     }
 
     .e-content {
+      h2 {
+        font: {
+          weight: normal;
+          weight: 500;
+          size: 3rem;
+        }
+
+        line-height: 1.25em;
+        margin-bottom: $border-size-small;
+      }
+
       h3 {
         font: {
           weight: lighter;
@@ -114,13 +121,11 @@
         padding-right: $border-size-large;
       }
 
-      .column:first-child {
-        width: 33%;
-      }
+      .column:first-child { width: 33%; }
+      .column:last-child  { width: 67%; }
 
-      .column:last-child {
-        width: 67%;
-      }
+      .column.column-half:first-child { width: 50%; }
+      .column.column-half:last-child  { width: 50%; }
 
       .meta {
         .p-name {
@@ -141,4 +146,3 @@
 
   }
 }
-
