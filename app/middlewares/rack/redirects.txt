@@ -1672,3 +1672,5 @@ http://cwc.im/presscheck /2007/11/27/expect-resistance-press-check
 /chicago /movies/chicago.html
 /chicago-espanol /movies/chicago_espanol.html
 /movies /movies/index.html
+red read
+rad read
