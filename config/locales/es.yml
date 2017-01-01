@@ -3,8 +3,8 @@ es:
   site_name: CrimethInc.
 
   head:
-    meta_title: Default title for links on social media when no title is given # TODO
-    meta_image_url: https://http.cat/502.jpg
+    meta_title: "CrimethInc. ex-Workers' Collective: Your ticket to a world free of charge"
+    meta_image_url: http://thecloud.crimethinc.com/assets/share/crimethinc-site-share.png
     meta_description: Default description for links on social media when no description is given. # TODO
 
   header:
