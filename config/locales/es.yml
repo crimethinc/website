@@ -2,13 +2,17 @@ es:
   language_direction: ltr
   site_name: CrimethInc.
 
+  head:
+    meta_title: Default title for links on social media when no title is given # TODO
+    meta_image_url: https://http.cat/502.jpg
+    meta_description: Default description for links on social media when no description is given. # TODO
+
   header:
     read: Read
     watch: Watch
     listen: Listen
     buy: Get
     share: Share
-
     first_time: First Time? Start Here →
     search_form_placeholder: Search Archives…
 

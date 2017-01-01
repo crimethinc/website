@@ -18,9 +18,9 @@ module MetaHelper
 
   def meta_image(thing)
     if thing.present?
-      thing.image || "https://http.cat/502.jpg" # TODO
+      thing.image || t("head.meta_image_url") # TODO
     else
-      "https://http.cat/502.jpg" # TODO
+      t("head.meta_image_url") # TODO
     end
   end
 end

@@ -4,6 +4,7 @@ en:
 
   head:
     meta_title: Default title for links on social media when no title is given # TODO
+    meta_image_url: https://http.cat/502.jpg
     meta_description: Default description for links on social media when no description is given. # TODO
 
   header:
