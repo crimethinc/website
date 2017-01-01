@@ -7,9 +7,9 @@
 <meta name="twitter:site:id"                               content="<%= twitter_user_id %>" />
 <meta name="twitter:creator"                               content="<%= twitter_username %>" />
 <meta name="twitter:creator:id"                            content="<%= twitter_user_id %>" />
-<meta name="twitter:url"         property="og:url"         content="<%#= TODO canonical_url @post %>" />
-<meta name="twitter:title"       property="og:title"       content="<%= page_title %>" />
-<meta name="twitter:description" property="og:description" content="<%#= TODO page_description %>" />
-<meta name="twitter:image"       property="og:image"       content="<%#= TODO %>" />
-<meta property="og:site_name"                              content="<%= t(:site_name) %>">
-<meta property="og:type"                                   content="<%= og_type %>">
+<meta name="twitter:url"         property="og:url"         content="<%= request.url %>" />
+<meta name="twitter:title"       property="og:title"       content="<%= meta_title(find_the_thing) %>" />
+<meta name="twitter:description" property="og:description" content="<%= meta_description(find_the_thing) %>" />
+<meta name="twitter:image"       property="og:image"       content="<%= meta_image(find_the_thing) %>" />
+<meta property="og:site_name"                              content="<%= t(:site_name) %>" />
+<meta property="og:type"                                   content="<%= meta_type(find_the_thing) %>" />

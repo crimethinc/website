@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   before_action :set_new_subscriber
   before_action :set_pinned_pages
 
+  helper :meta
+
   def set_pinned_pages
     # pinned article
     pinned_to_site_top_page_id      = setting(:pinned_to_site_top_page_id)
