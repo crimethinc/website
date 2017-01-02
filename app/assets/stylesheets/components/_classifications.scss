@@ -16,8 +16,13 @@
   }
 
   .categories {
-    margin-bottom: .5em;
-    text-transform: uppercase;
+    display: none;
+
+    @media screen and (min-width: $small-tablet) {
+      display: inline-block;
+      margin-bottom: .5em;
+      text-transform: uppercase;
+    }
 
     .label {
       display: none;
