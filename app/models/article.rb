@@ -86,7 +86,7 @@ class Article < ApplicationRecord
   end
 
   def meta_description
-    summary || content.truncate(200)
+    summary.blank? ? content.truncate(200) : summary
   end
 
   private
