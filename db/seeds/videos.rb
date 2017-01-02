@@ -40,9 +40,9 @@ Dir.glob("#{filepath}/*").each do |f|
       content_format: "html"
     )
 
-    # TODO
-    # ["/texts/#{namespace}/#{slug}", "/texts/#{namespace}/#{slug}/", "/texts/#{namespace}/#{slug}/.index.html"].each do |source_path|
-    #   Redirect.create! source_path: source_path, target_path: article.path, temporary: false
-    # end
+    Redirect.create! source_path: "movies/#{filename}", target_path: "watch", temporary: false
+    # TODO change Redirect.target_path to "movies/slug" after #178 is done
  end
+
+ Redirect.create! source_path: "movies", target_path: "watch", temporary: false
 end
