@@ -84,7 +84,7 @@ Dir.glob("#{filepath}/*/").each do |f|
     article.slug = "feature-#{article.slug}"
     article.save!
 
-    # Add the Article to its Category and Theme
+    # Add the Article to its Category
     category.articles << article
 
     # Redirect from old site Feature URLs to new site Article URLs
@@ -178,7 +178,7 @@ Dir.glob("#{filepath}/*").each do |f|
       content_format: "html"
     )
 
-    # Add the Article to its Category and Theme
+    # Add the Article to its Category
     category = Category.find_or_create_by name: category_name
     category.articles << article
 
@@ -216,21 +216,18 @@ html_doc.css(".h-entry").each do |entry|
                             status_id:      status_id,
                             header_background_color: "#444")
 
-  # Add the Article to its Category and Theme
+  # Add the Article to its Category
   category.articles << article
 end
 
 
 
 # New feature style Articles
-theme = Theme.create!(name: "Launch")
-
 # Collect the articles together
 articles = [
   {
     url: "http://www.crimethinc.com/texts/r/demands/",
     category: "Features",
-    theme: theme,
     title: "Why We Don't Make Demands",
     published_at: Time.parse("2016-12-31T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/demands/images/header2560.jpg",
@@ -238,7 +235,6 @@ articles = [
   {
     url: "http://www.crimethinc.com/texts/r/democracy/",
     category: "Features",
-    theme: theme,
     title: "From Democracy to Freedom",
     published_at: Time.parse("2016-12-30T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/democracy/images/header2000.jpg",
@@ -246,7 +242,6 @@ articles = [
   {
     url: "http://www.crimethinc.com/texts/r/kurdish/",
     category: "Features",
-    theme: theme,
     title: "Understanding the Kurdish Resistance",
     subtitle: "Historical Overview & Eyewitness Report",
     published_at: Time.parse("2016-12-29T10:00 -0800"),
@@ -255,7 +250,6 @@ articles = [
   {
     url: "http://www.crimethinc.com/texts/r/next-time-it-explodes/",
     category: "Features",
-    theme: theme,
     title: "Next Time It Explodes",
     subtitle: "Revolt, Repression, and Backlash since the Ferguson Uprising",
     published_at: Time.parse("2016-12-28T10:00 -0800"),
@@ -264,7 +258,6 @@ articles = [
   {
     url: "http://www.crimethinc.com/texts/r/battle/",
     category: "Features",
-    theme: theme,
     title: "Report Back from the Battle for Sacred Ground",
     published_at: Time.parse("2016-12-27T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/battle/images/header2000.jpg",
@@ -285,9 +278,6 @@ articles.each_with_index do |article_params, index|
   # And create a new Category
   category = Category.find_or_create_by! name: article_params.delete(:category)
 
-  # Delete Theme from params before creating Article
-  theme = article_params.delete(:theme)
-
   # Back date articles to the past 5 days for development
   # days_offset  = index + 1
   # published_at = Time.current - days_offset.days
@@ -306,11 +296,8 @@ articles.each_with_index do |article_params, index|
   # Create Redirect
   Redirect.create source_path: article.path, target_path: feature.path, temporary: false
 
-  # Add the Article to its Category and Theme
+  # Add the Article to its Category
   category.articles << article
-  if theme.present?
-    theme.articles << article
-  end
 end
 
 
@@ -390,7 +377,7 @@ Dir.glob("#{filepath}/*").each do |f|
       header_background_color: header_background_color
     )
 
-    # Add the Article to its Category and Theme
+    # Add the Article to its Category
     category.articles << article
 
     # TODO
