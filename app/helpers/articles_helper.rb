@@ -1,5 +1,12 @@
 module ArticlesHelper
 
+  def article_tag(article, &block)
+    klasses = ["h-entry"]
+    klasses << "article-with-no-header-image" if article.image.blank?
+
+    content_tag "article", id: "article-#{article.id}", class: klasses.join(" "), role: "article", &block
+  end
+
   def display_date(datetime=nil)
     unless datetime.nil?
       datetime.strftime("%Y-%m-%d")

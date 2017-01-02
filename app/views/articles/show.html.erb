@@ -1,6 +1,6 @@
 <%= render "articles/css", article: @article %>
 
-<article id="article-<%= @article.id %>" class="h-entry <%= 'article-with-no-header-image' if @article.image.blank? %>" role="article">
+<%= article_tag @article do %>
   <header>
     <%= render "articles/image", article: @article, linked: false %>
 
@@ -29,4 +29,4 @@
       </div>
     <% end %>
   </footer>
-</article>
+<% end %>

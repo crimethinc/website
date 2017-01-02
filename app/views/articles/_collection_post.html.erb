@@ -1,4 +1,4 @@
-<article>
+<%= article_tag article do %>
   <% if article.image.present? %>
     <%= image_tag article.image, class: "u-photo", alt: "" %>
   <% end %>
@@ -11,4 +11,4 @@
     <%= render "articles/categories",   article: article %>
     <%= render "articles/tags",         article: article %>
   </footer>
-</article>
+<% end %>
