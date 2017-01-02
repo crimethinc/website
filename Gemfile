@@ -41,5 +41,8 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
+# execption notifier
+gem "bugsnag"
+
 # windows dev
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
