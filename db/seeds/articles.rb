@@ -367,7 +367,7 @@ Dir.glob("#{filepath}/*").each do |f|
 
 
     title                   = doc.css("h1").first.try(:text)
-    subtitle                = doc.css("h2").first.try(:text)
+    subtitle                = nil
     content                 = File.read(f)
     image                   = nil
     header_background_color = "#444444"
