@@ -37,7 +37,8 @@ module ApplicationHelper
   end
 
   def author
-    t(:site_name)
+    t(:site_author)
+    # TODO make this article author aware
   end
 
   def og_type
