@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   # Articles Atom Feed
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
 
+
   # Pages (linked in header/nav)
   get "read",   to: "about#read",   as: :read
   get "watch",  to: "about#watch",  as: :watch
@@ -33,6 +34,7 @@ Rails.application.routes.draw do
   get "get",    to: redirect("http://store.crimethinc.com"), as: :get_redirect # TEMP TODO
   # get "buy",    to: "about#buy",    as: :buy
 
+
   # Podcast
   get "podcast/feed", to: redirect("http://exworker.libsyn.com/rss"), as: :podcast_feed_redirect # TEMP TODO
   get "podcast/feed", to: "podcast#feed",   as: :podcast_feed
@@ -40,6 +42,9 @@ Rails.application.routes.draw do
   get "podcast/:id",  to: "podcast#show",   as: :episode
   get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
 
+
+  # Site search
+  get "search", to: "search#index"
 
 
   # Email newsletter signup, used on homepage
