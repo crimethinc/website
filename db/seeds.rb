@@ -25,4 +25,3 @@ puts "Trying dev seeds for each post-type..."
     puts
   end
 end
-

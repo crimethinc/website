@@ -222,16 +222,6 @@ end
 
 
 
-
-
-
-
-
-
-
-
-
-
 # New feature style Articles
 theme = Theme.create!(name: "Launch")
 
@@ -315,5 +305,92 @@ articles.each_with_index do |article_params, index|
   category.articles << article
   if theme.present?
     theme.articles << article
+  end
+end
+
+
+
+
+# Texts as Articles
+
+# Find the "published" Status
+published_status = Status.find_by(name: "published")
+
+# Text collections
+inside_front               = %w(permanentvacation selling situationists veganism workethic)
+rolling_thunder            = %w(antinationalist demonstrating fineart greenscared insurrection irrepressible reallyreally rncdnc rncdncdocs rnclegal shac tenyear)
+harbinger                  = %w(adultery beyonddemocracy definition divided h4intro indulge infighting manifesto72 onedimensional practical secretworld ultimatum warning)
+days_of_war_nights_of_love = %w(alienation alive asfuck bourgeoisie concealment contents deadhand difference domestication forward invitation joinresistance nogods nomasters product reconsideringtv seduced shoplifting system taskforce69 unabomber washing)
+
+filepath = File.expand_path("../db/seeds/articles/texts/texts/", __FILE__)
+
+Dir.glob("#{filepath}/*").each do |f|
+  path_pieces = f.strip.split("/")
+  filename    = path_pieces.last
+
+  unless filename =~ /.DS_Store/
+    doc   = File.open(f) { |f| Nokogiri::HTML(f) }
+
+    # Create the Category for Text
+    filename_slug = filename.gsub(".php", "")
+
+    # Set the right published_at date
+    published_at_date = nil
+    if %w(workethic selling situationists permanentvacation).include?(filename_slug)
+      published_at_date = "January 1, 1996"
+    elsif %w(practical).include?(filename_slug)
+      published_at_date = "May 1, 1997"
+    elsif %w(secretworld warning veganism adultery beyonddemocracy manifesto72 divided onedimensional ultimatum).include?(filename_slug)
+      published_at_date = "September 11, 2000"
+    elsif %w(h4intro indulge definition infighting).include?(filename_slug)
+      published_at_date = "November 1, 2001"
+    elsif %w(alienation alive asfuck bourgeoisie concealment contents deadhand difference domestication forward invitation joinresistance nogods nomasters product reconsideringtv seduced shoplifting system taskforce69 unabomber washing).include?(filename_slug)
+      published_at_date = "September 11, 2000"
+    else
+      published_at_date = "September 11, 1900"
+    end
+    published_at = Time.parse(published_at_date)
+
+    # Set the right Category
+    if inside_front.include?(filename_slug)
+      category_name = "Inside Front"
+    elsif rolling_thunder.include?(filename_slug)
+      category_name = "Rolling Thunder"
+    elsif harbinger.include?(filename_slug)
+      category_name = "Harbinger"
+    elsif days_of_war_nights_of_love.include?(filename_slug)
+      category_name = "Days of War, Nights of Love"
+    else
+      category_name = "Texts"
+    end
+    category = Category.find_or_create_by name: category_name
+
+
+    title                   = doc.css("h1").first.try(:text)
+    subtitle                = doc.css("h2").first.try(:text)
+    content                 = File.read(f)
+    image                   = nil
+    header_background_color = "#444444"
+
+    # Save the Article
+    article = Article.create!(
+      title:          title || filename_slug,
+      subtitle:       subtitle,
+      content:        content,
+      published_at:   published_at,
+      image:          image,
+      status_id:      published_status.id,
+      content_format: "html",
+      hide_layout:    false,
+      header_background_color: header_background_color
+    )
+
+    # Add the Article to its Category and Theme
+    category.articles << article
+
+    # TODO
+    # ["/texts/#{namespace}/#{slug}", "/texts/#{namespace}/#{slug}/", "/texts/#{namespace}/#{slug}/.index.html"].each do |source_path|
+    #   Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+    # end
   end
 end
