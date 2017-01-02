@@ -143,7 +143,7 @@
 The end of obedience!</p>
 <p align="center"><a href="http://cloudfront.crimethinc.com/images/rosefire/21b.jpg" rel="lightbox[rosefire]"><img src="http://cloudfront.crimethinc.com/images/rosefire/21a.jpg" width="500" height="708"/></a></p>
 <h2>For Further Reference</h2>
-<iframe src="http://player.vimeo.com/video/40106570?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe src="//player.vimeo.com/video/40106570?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 <p><em>Documentary: Barcelona March 29 General Strike</em></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

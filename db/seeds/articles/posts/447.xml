@@ -53,7 +53,7 @@
 </div>
 
 <div name="tagalogvideo" id="tagalogvideo" style="width: 480px; display: block; float: left; clear: both; margin: 10px;">
-<iframe src="https://player.vimeo.com/video/183690104?title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/183690104?title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
 <div name="espanol" id="espanol" style="width: 480px; display: block; float: left; clear: both; margin: 10px;">
@@ -112,7 +112,7 @@
 </div>
 
 <div name="serbocroatianvideo" id="serbocroatianvideo" style="width: 480px; display: block; float: left; clear: both; margin: 10px;">
-<iframe src="https://player.vimeo.com/video/183690103?title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/183690103?title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
 <h2>Slovenčina / Slovak</h2>

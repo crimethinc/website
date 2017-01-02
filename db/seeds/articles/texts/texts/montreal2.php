@@ -84,7 +84,7 @@
 <em>On the 100th night of night demos: “<a href="http://en.wikipedia.org/wiki/Villeray,_Montreal" target="_blank">Villeray</a> disobeys.”</em></p>
 <p align="center"><a href="http://cloudfront.crimethinc.com/images/montreal/77b.jpg" rel="lightbox[montreal]"><img src="http://cloudfront.crimethinc.com/images/montreal/77a.jpg" width="500" height="333" style="margin-bottom: 5px"/></a>
 <em>The neighborhood contingents approaching Berri Square on August 1.</em></p>
-<p align="center"><iframe src="http://player.vimeo.com/video/47366428?byline=0&amp;portrait=0&amp;color=898900" width="500" height="369" frameborder="0" style="margin-bottom: 5px" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<p align="center"><iframe src="//player.vimeo.com/video/47366428?byline=0&amp;portrait=0&amp;color=898900" width="500" height="369" frameborder="0" style="margin-bottom: 5px" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 <em>After a passive summer, things are heating up again.</em></p>
 <p>There were clashes with police. Bank windows were smashed out and dumpsters dragged into the streets. The police deployed their usual weapons: batons, pepper spray, flashbang grenades. A total of 15 people were arrested. The struggle continues.</p>
 <h2>Further Reading</h2>
