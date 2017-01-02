@@ -24,6 +24,7 @@ class Article < ApplicationRecord
   default_scope { order("published_at DESC") }
   scope :live,        -> { where("published_at < ?", Time.now) }
   scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
+  scope :recent,      -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days, Time.now) }
 
   def path
     if published?
