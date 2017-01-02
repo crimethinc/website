@@ -18,6 +18,8 @@ class AboutController < ApplicationController
   def watch
     @html_id = "page"
     @body_id = "watch"
+
+    @videos  = Video.all
   end
 
   def listen

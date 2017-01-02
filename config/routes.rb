@@ -59,6 +59,7 @@ Rails.application.routes.draw do
     resources :settings
     resources :subscribers
     resources :themes
+    resources :videos
   end
 
 

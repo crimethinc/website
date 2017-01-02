@@ -1,0 +1,107 @@
+<%= form_for(video) do |f| %>
+  <% if video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_area :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_area :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tweet %>
+    <%= f.text_area :tweet %>
+  </div>
+
+  <div class="field">
+    <%= f.label :summary %>
+    <%= f.text_area :summary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tweet %>
+    <%= f.text_area :tweet %>
+  </div>
+
+  <div class="field">
+    <%= f.label :summary %>
+    <%= f.text_area :summary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_area :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_description %>
+    <%= f.text_area :image_description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content_format %>
+    <%= f.text_field :content_format %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quality %>
+    <%= f.text_field :quality %>
+  </div>
+
+  <div class="field">
+    <%= f.label :slug %>
+    <%= f.text_field :slug %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= f.label :month %>
+    <%= f.text_field :month %>
+  </div>
+
+  <div class="field">
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duration %>
+    <%= f.text_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= f.label :published_at %>
+    <%= f.datetime_select :published_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vimeo_id %>
+    <%= f.text_field :vimeo_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

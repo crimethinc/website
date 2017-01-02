@@ -1,2 +1,39 @@
-<h1>About#watch</h1>
-<p>Find me in app/views/about/watch.html.erb</p>
+<div>
+  <header>
+    <h1>Emergency Broadcast System</h1>
+    <h2>A Selection of Videos from CrimethInc. Perpetual Motion Pictures</h2>
+  </header>
+
+  <div>
+    <% @videos.in_groups_of(2).each do |row| %>
+
+      <div class="row">
+        <% row.each do |video| %>
+          <div class="column column-half section h-entry">
+            <% unless video.blank? %>
+              <%#= image_tag video.image, alt: video.image_description, class: "u-url" %>
+              <h1 class="p-name"><%= video.title %></h1>
+
+              <div class="embed embed-vimeo">
+                <iframe src="http://player.vimeo.com/video/<%= video.vimeo_id %>?title=0&amp;byline=0&amp;portrait=0&amp;color=b7effd"
+                         frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="e-content">
+                <p class="video-info">
+                  <span class="video-quality"><%= video.quality %></span>
+                  <span class="video-duration"><%= video.duration %></span>
+                </p>
+
+                <%= simple_format render_content(video) %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+      </div> <!-- .row -->
+    <% end %>
+
+  </div> <!-- .e-content -->
+</div>

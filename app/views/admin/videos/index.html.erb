@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Videos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Content</th>
+      <th>Tweet</th>
+      <th>Summary</th>
+      <th>Tweet</th>
+      <th>Summary</th>
+      <th>Image</th>
+      <th>Image description</th>
+      <th>Content format</th>
+      <th>Quality</th>
+      <th>Slug</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Day</th>
+      <th>Duration</th>
+      <th>Published at</th>
+      <th>Vimeo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @videos.each do |video| %>
+      <tr>
+        <td><%= video.title %></td>
+        <td><%= video.subtitle %></td>
+        <td><%= video.content %></td>
+        <td><%= video.tweet %></td>
+        <td><%= video.summary %></td>
+        <td><%= video.tweet %></td>
+        <td><%= video.summary %></td>
+        <td><%= video.image %></td>
+        <td><%= video.image_description %></td>
+        <td><%= video.content_format %></td>
+        <td><%= video.quality %></td>
+        <td><%= video.slug %></td>
+        <td><%= video.year %></td>
+        <td><%= video.month %></td>
+        <td><%= video.day %></td>
+        <td><%= video.duration %></td>
+        <td><%= video.published_at %></td>
+        <td><%= video.vimeo_id %></td>
+        <td><%= link_to 'Show', video %></td>
+        <td><%= link_to 'Edit', edit_video_path(video) %></td>
+        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Video', new_video_path %>

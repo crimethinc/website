@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161221015941) do
+ActiveRecord::Schema.define(version: 20170101234106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -199,6 +199,27 @@ ActiveRecord::Schema.define(version: 20161221015941) do
     t.text     "avatar"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.text     "title"
+    t.text     "subtitle"
+    t.text     "content"
+    t.text     "tweet"
+    t.text     "summary"
+    t.text     "image"
+    t.text     "image_description"
+    t.string   "content_format",    default: "kramdown"
+    t.string   "slug"
+    t.string   "quality"
+    t.string   "duration"
+    t.string   "vimeo_id"
+    t.datetime "published_at"
+    t.string   "year"
+    t.string   "month"
+    t.string   "day"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   add_foreign_key "links", "users"
