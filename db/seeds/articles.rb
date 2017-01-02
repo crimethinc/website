@@ -232,6 +232,7 @@ articles = [
     category: "Features",
     theme: theme,
     title: "Why We Don't Make Demands",
+    published_at: Time.parse("2016-12-31T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/demands/images/header2560.jpg",
   },
   {
@@ -239,6 +240,7 @@ articles = [
     category: "Features",
     theme: theme,
     title: "From Democracy to Freedom",
+    published_at: Time.parse("2016-12-30T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/democracy/images/header2000.jpg",
   },
   {
@@ -247,6 +249,7 @@ articles = [
     theme: theme,
     title: "Understanding the Kurdish Resistance",
     subtitle: "Historical Overview & Eyewitness Report",
+    published_at: Time.parse("2016-12-29T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/kurdish/images/header2000.jpg",
   },
   {
@@ -255,6 +258,7 @@ articles = [
     theme: theme,
     title: "Next Time It Explodes",
     subtitle: "Revolt, Repression, and Backlash since the Ferguson Uprising",
+    published_at: Time.parse("2016-12-28T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header2000.jpg",
   },
   {
@@ -262,6 +266,7 @@ articles = [
     category: "Features",
     theme: theme,
     title: "Report Back from the Battle for Sacred Ground",
+    published_at: Time.parse("2016-12-27T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/battle/images/header2000.jpg",
   }
 ]
@@ -284,10 +289,10 @@ articles.each_with_index do |article_params, index|
   theme = article_params.delete(:theme)
 
   # Back date articles to the past 5 days for development
-  days_offset  = index + 1
-  published_at = Time.current - days_offset.days
+  # days_offset  = index + 1
+  # published_at = Time.current - days_offset.days
 
-  article_params[:published_at]   = published_at
+  # article_params[:published_at]   = published_at
   article_params[:status_id]      = published_status.id
   article_params[:content_format] = "html"
 
