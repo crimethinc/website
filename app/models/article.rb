@@ -86,7 +86,19 @@ class Article < ApplicationRecord
   end
 
   def meta_description
-    summary.blank? ? content.truncate(200) : summary
+    if summary.blank?
+      html = Kramdown::Document.new(
+        content,
+        input: :kramdown,
+        remove_block_html_tags: false,
+        transliterated_header_ids: true
+      ).to_html.to_s
+
+      doc = Nokogiri::HTML(html)
+      doc.css("body").text.truncate(200)
+    else
+      summary
+    end
   end
 
   private

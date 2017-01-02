@@ -1,24 +1,5 @@
 module ApplicationHelper
 
-  def render_markdown(text)
-    Kramdown::Document.new(
-      text,
-      input: :kramdown,
-      remove_block_html_tags: false,
-      transliterated_header_ids: true
-    ).to_html.html_safe
-  end
-
-  def render_content(post)
-    Kramdown::Document.new(
-      post.content,
-      input: post.content_format == "html" ? :html : :kramdown,
-      remove_block_html_tags: false,
-      transliterated_header_ids: true,
-      html_to_native: true
-    ).to_html.html_safe
-  end
-
   def page_title
     t(:site_name)
   end
