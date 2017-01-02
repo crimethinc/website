@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2013 by original authors @ fontello.com</metadata>
+<defs>
+<font id="cwcex" horiz-adv-x="1000" >
+<font-face font-family="cwcex" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="search" unicode="&#xe800;" d="m772 78q30-34 6-62l-46-46q-36-32-68 0l-190 190q-74-42-156-42q-128 0-223 95t-95 223t90 219t218 91t224-95t96-223q0-88-46-162z m-678 358q0-88 68-156t156-68t151 63t63 153q0 88-68 155t-156 67t-151-63t-63-151z" horiz-adv-x="789" />
+<glyph glyph-name="menu" unicode="&#xe801;" d="m650 400q22 0 36-15t14-35t-15-35t-35-15l-600 0q-20 0-35 15t-15 35t14 35t36 15l600 0z m-600 100q-20 0-35 15t-15 35t14 35t36 15l600 0q22 0 36-15t14-35t-15-35t-35-15l-600 0z m600-300q22 0 36-15t14-35t-15-35t-35-15l-600 0q-20 0-35 15t-15 35t14 35t36 15l600 0z" horiz-adv-x="700" />
+</font>
+</defs>
+</svg>

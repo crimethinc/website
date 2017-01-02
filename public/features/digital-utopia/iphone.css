@@ -108,7 +108,7 @@ aside {
 
 aside blockquote {
 	font-family: "quatro-slab",serif;
-	font-weight: 900;	
+	font-weight: 900;
 	font-size: 6vw;
 	line-height: .85em;
 	color: #FF2A68;
@@ -125,7 +125,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -134,7 +134,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -162,11 +162,11 @@ small a:hover, small a:active {
   font: 400 14px/1.5em "pt-sans",sans-serif;
   text-indent: 0px;
   }
-  
+
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -184,8 +184,8 @@ small a:hover, small a:active {
 
 .footlink {
 	color: #FF2D55;
-	vertical-align: top; 
-	position: relative; 
+	vertical-align: top;
+	position: relative;
 	top: -0.3em;
 	font-size: 0.85em;
 	font-weight: 700;
@@ -193,7 +193,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -203,7 +203,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -211,7 +211,7 @@ small a:hover, small a:active {
 }
 
 .footreturn {
-	position: relative; 
+	position: relative;
 	top: .1em;
 }
 
@@ -269,7 +269,7 @@ small a:hover, small a:active {
 	letter-spacing: .05em;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 	float: left;
 	padding: 3px 0 10px 0;
 	text-align: center;
@@ -281,7 +281,7 @@ small a:hover, small a:active {
 
 #navlinks a:link, #navlinks a:visited {
 	color: white;
-}    
+}
 
 #navlinks a:hover, #navlinks a:active {
 	color: #34AADC;
@@ -300,7 +300,7 @@ small a:hover, small a:active {
 	letter-spacing: .05em;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 	float: left;
 	padding: 0;
 	text-align: center;
@@ -318,7 +318,7 @@ small a:hover, small a:active {
 	color: white;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 	letter-spacing: .05em;
 	height: 30px;
 	width: 91%;
@@ -332,11 +332,11 @@ small a:hover, small a:active {
 
 @font-face {
   font-family: 'cwcex';
-  src: url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.eot?45502484');
-  src: url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.eot?45502484#iefix') format('embedded-opentype'),
-       url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.woff?45502484') format('woff'),
-       url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.ttf?45502484') format('truetype'),
-       url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.svg?45502484#cwcex') format('svg');
+  src: url('/features/resources/fonts/cwcex.eot?45502484');
+  src: url('/features/resources/fonts/cwcex.eot?45502484#iefix') format('embedded-opentype'),
+       url('/features/resources/fonts/cwcex.woff?45502484') format('woff'),
+       url('/features/resources/fonts/cwcex.ttf?45502484') format('truetype'),
+       url('/features/resources/fonts/cwcex.svg?45502484#cwcex') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -347,7 +347,7 @@ small a:hover, small a:active {
 	color: white;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 }
 
 .menusearch {
@@ -365,13 +365,13 @@ small a:hover, small a:active {
 
 .searchglass {
 	padding: 0 12px 0 0;
-	position: relative; 
+	position: relative;
 	top: -0.075em;
 }
 
 .menusearch a:link, .menusearch a:visited {
 	color: white;
-}    
+}
 
 .menusearch a:hover, .menusearch a:active {
 	color: white;

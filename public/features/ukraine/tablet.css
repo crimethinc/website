@@ -418,11 +418,11 @@ display: none;
 
 @font-face {
   font-family: 'cwcex';
-  src: url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.eot?45502484');
-  src: url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.eot?45502484#iefix') format('embedded-opentype'),
-       url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.woff?45502484') format('woff'),
-       url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.ttf?45502484') format('truetype'),
-       url('http://thecloud.crimethinc.com/assets/features/resources/fonts/cwcex.svg?45502484#cwcex') format('svg');
+  src: url('/features/resources/fonts/cwcex.eot?45502484');
+  src: url('/features/resources/fonts/cwcex.eot?45502484#iefix') format('embedded-opentype'),
+       url('/features/resources/fonts/cwcex.woff?45502484') format('woff'),
+       url('/features/resources/fonts/cwcex.ttf?45502484') format('truetype'),
+       url('/features/resources/fonts/cwcex.svg?45502484#cwcex') format('svg');
   font-weight: normal;
   font-style: normal;
 }
