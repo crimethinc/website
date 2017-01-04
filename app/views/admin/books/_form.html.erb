@@ -1,0 +1,107 @@
+<%= form_for [:admin, @book] do |f| %>
+  <%= render "admin/form_errors", thing: @book %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :slug %>
+    <%= f.text_field :slug %>
+  </div>
+
+  <div class="field">
+    <%= f.label :download_url %>
+    <%= f.text_area :download_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price_in_cents %>
+    <%= f.number_field :price_in_cents %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tweet %>
+    <%= f.text_field :tweet %>
+  </div>
+
+  <div class="field">
+    <%= f.label :summary %>
+    <%= f.text_area :summary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pages %>
+    <%= f.text_field :pages %>
+  </div>
+
+  <div class="field">
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= f.label :width %>
+    <%= f.text_field :width %>
+  </div>
+
+  <div class="field">
+    <%= f.label :depth %>
+    <%= f.text_field :depth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weight %>
+    <%= f.text_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :words %>
+    <%= f.text_field :words %>
+  </div>
+
+  <div class="field">
+    <%= f.label :illustrations %>
+    <%= f.text_field :illustrations %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photographs %>
+    <%= f.text_field :photographs %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cover_style %>
+    <%= f.text_area :cover_style %>
+  </div>
+
+  <div class="field">
+    <%= f.label :binding_style %>
+    <%= f.text_area :binding_style %>
+  </div>
+
+  <div class="field">
+    <%= f.label :table_of_contents %>
+    <%= f.text_area :table_of_contents %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
