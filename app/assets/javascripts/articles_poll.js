@@ -33,8 +33,8 @@ function handleErrorOrNoResults(err) {
 }
 
 function startPoller(article) {
-  // Poll every 2 minutes (milliseconds * seconds * minutes)
-  var refreshInterval = 1000 * 60 * 2;
+  // Poll every 1 minute (milliseconds * seconds * minutes)
+  var refreshInterval = 1000 * 60 * 1;
 
   var articleId = article.data('id');
   var collectionPost = article.find('article:first')
