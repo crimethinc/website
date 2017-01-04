@@ -4,9 +4,9 @@
 
 <p>
   <% if listing? %>
-    <%= link_to 'NEW', [:new, :admin, thing_type(thing).downcase], class: 'btn btn-primary btn-xs action-new' %>
+    <%= link_to "NEW", [:new, :admin, thing_type(thing).downcase], class: "btn btn-primary btn-xs action-new" %>
   <% elsif showing? %>
-    <%= link_to 'EDIT', [:edit, :admin, thing], class: 'btn btn-primary btn-xs action-edit' %>
+    <%= link_to "EDIT", [:edit, :admin, thing], class: "btn btn-primary btn-xs action-edit" %>
   <% end %>
 </p>
 

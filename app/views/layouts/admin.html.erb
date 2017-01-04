@@ -15,16 +15,9 @@
   <%= render "admin/nav" %>
 
   <div class="container">
-    <% if signed_in? %>
-      <header>
-        <div class="page-header">
-          <h1><%= link_to t(:site_name), admin_path %></h1>
-        </div>
-      </header>
-    <% end %>
-
     <main>
       <%= render "shared/alerts" %>
+
       <%= yield %>
     </main>
   </div>
