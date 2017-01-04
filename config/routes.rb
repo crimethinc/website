@@ -43,6 +43,12 @@ Rails.application.routes.draw do
   get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
 
 
+  # Books
+  get "books",                   to: "books#index",  as: :books
+  get "books/:slug",             to: "books#show",   as: :book
+  get "books/:slug/transcript",  to: "books#extras", as: :book_extras
+
+
   # Site search
   get "search", to: "search#index"
 
@@ -54,16 +60,17 @@ Rails.application.routes.draw do
   # Admin Dashboard
   get :admin, to: redirect("/admin/articles"), as: "admin"
   namespace :admin do
-    resources :users
     resources :articles
-    resources :pages
-    resources :podcasts
+    resources :books
     resources :episodes
     resources :links
+    resources :pages
+    resources :podcasts
     resources :redirects
     resources :settings
     resources :subscribers
     resources :themes
+    resources :users
     resources :videos
   end
 
