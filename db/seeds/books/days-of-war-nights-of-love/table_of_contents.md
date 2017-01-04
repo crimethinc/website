@@ -1,0 +1,23 @@
+- Preface: What is a "CrimethInc."?
+- Foreword by NietzsChe Guevara
+- I. A Short History of the CrimethInc. Workers' Collective
+- II. Important Documents: A CrimethInc. Contra-diction-ary
+  - A is for Anarchy
+  - B is for the Bourgeoisie
+  - C is for Capitalism, and for Culture
+  - D is for Death, and for Domestication
+  - F is for Freedom
+  - G is for Gender
+  - H is for History, for Hygiene, and for Hypocrisy
+  - I is for Identity, for Ideology, and for Image
+  - L is for Love
+  - M is for their Media, for Movement, and for Myth
+  - P is for Plagiarism, for Politics, and for Production
+  - S id for Sex, and for Space
+  - T is for Technology, and for Theft; and finally,
+  - W is for Work
+- III. Conclusion: Anywhere Out of This World
+- Afterwor(l)d by Gloria Cubana
+- Bibliography
+- Index
+- About the Authors

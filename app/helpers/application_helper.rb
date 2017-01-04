@@ -1,7 +1,11 @@
 module ApplicationHelper
 
   def page_title
-    t(:site_name)
+    if @title.present?
+      t(:site_name) + " : " + @title
+    else
+      t(:site_name)
+    end
   end
 
   def lang

@@ -4,15 +4,15 @@
   </header>
 
   <div class="row">
-    <div class="column meta">
+    <div class="column column-one-third meta">
       <%= image_tag @episode.image, class: "u-photo" %>
 
       <%= render "articles/titles", header: @episode.podcast, linked: true %>
 
-    <%= render "podcast/subscribe_buttons", podcast: @episode.podcast %>
+      <%= render "podcast/subscribe_buttons", podcast: @episode.podcast %>
 
     </div> <!-- .column -->
-    <div class="column">
+    <div class="column column-two-third">
       <div class="e-content">
 
         <h3>
