@@ -1,0 +1,13 @@
+<div class="book" id="<%= book.slug %>">
+  <%= render "articles/titles", header: book, linked: true %>
+
+  <div class="e-content">
+    <div class="book-cover">
+      <%= link_to image_tag(book.image, alt: book.image_description, class: "u-image"), book.path %>
+    </div>
+
+    <div class="p-summary">
+      <%= render_markdown(book.summary) %>
+    </div>
+  </div>
+</div>

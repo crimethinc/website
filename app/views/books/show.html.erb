@@ -5,15 +5,49 @@
   </header>
 
   <div class="row">
-    <div class="column column-one-third section h-entry">
-      <div class="book-photo">
+    <div class="column column-one-third section meta">
+      <div class="book-cover">
         <%= image_tag @book.image, alt: @book.image_description, class: "u-image" %>
+      </div> <!-- .book-cover -->
+
+      <div id="buy-now">
+        <%= link_to @book.buy_url, "Buy Now #{number_to_currency @book.price_in_cents / 100}", class: "buy-now button" %>
       </div>
 
       <div class="book-specs">
+        <ol>
+          <li>
+            <b>Size</b>
+            <span>
+              <%= @book.width %>
+              x
+              <%= @book.height %>
+              x
+              <%= @book.depth %>
+            </span>
+          </li>
 
-      </div>
+          <% %w(weight pages words illustrations photographs printing ink definitions recipes cover_style binding_style).each do |spec| %>
+            <% if @book.send(spec).present? %>
+              <li>
+                <b><%= spec.titleize %></b>
+                <span><%= render_markdown(@book.send(spec)).gsub("<p>", "").gsub("</p>", "").html_safe %></span>
+              </li>
+            <% end %>
+          <% end %>
+
+          <% if @book.has_index? %>
+            <li>
+              <b>Index</b>
+              <span>Yes</span>
+            </li>
+          <% end %>
+        </ol>
+      </div> <!-- .book-specs -->
+
+      <%= render "books/table_of_contents", book: @book %>
     </div>
+
 
     <div class="column column-two-third section h-entry">
       <div class="e-content">
@@ -21,11 +55,13 @@
           <%= render_markdown(@book.description) %>
         </div>
 
-        <hr />
+        <% if @book.content.present? %>
+          <div class="book-content">
+            <%= render_markdown(@book.content) %>
+          </div>
+        <% end %>
 
-        <div class="book-content">
-          <%= render_markdown(@book.content) %>
-        </div>
+        <%= render "books/table_of_contents", book: @book %>
       </div>
     </div>
 

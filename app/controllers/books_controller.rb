@@ -6,7 +6,8 @@ class BooksController < ApplicationController
     @body_id = "books"
     @title   = "Books"
 
-    @books   = Book.all
+    @bullet_books  = Book.where(series: "bullet").shuffle
+    @letters_books = Book.all.shuffle[1..4]
   end
 
   def show

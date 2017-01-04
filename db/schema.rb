@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20170104053747) do
     t.text     "description"
     t.string   "content_format",    default: "kramdown"
     t.string   "slug"
+    t.string   "series"
     t.datetime "published_at"
     t.integer  "price_in_cents"
     t.string   "height"

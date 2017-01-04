@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration[5.0]
       t.text       :title, :subtitle, :content, :tweet, :summary
       t.text       :download_url, :buy_url, :description
       t.string     :content_format, default: "kramdown"
-      t.string     :slug
+      t.string     :slug, :series
       t.datetime   :published_at
       t.integer    :price_in_cents
       t.string     :height, :width, :depth, :weight
