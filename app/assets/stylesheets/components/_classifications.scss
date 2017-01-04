@@ -19,7 +19,7 @@
     display: none;
 
     @media screen and (min-width: $small-tablet) {
-      display: inline-block;
+      display: block;
       margin-bottom: .5em;
       text-transform: uppercase;
     }
