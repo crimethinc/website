@@ -3,8 +3,10 @@ module ArticlesHelper
   def article_tag(article, &block)
     klasses = ["h-entry"]
     klasses << "article-with-no-header-image" if article.image.blank?
-    data = {id: article.id}
-    data[:listen] = true if article.published_at > 6.hours.ago || article.collection_posts.recent.any?
+
+    # Data attributes are used to determine how the article should be polled for updates
+    data = {id: article.id, published_at: Time.now.to_i}
+    data[:listen] = true if article.collection_posts.recent.any?
 
     content_tag "article", id: "article-#{article.id}", class: klasses.join(" "), role: "article", data: data, &block
   end

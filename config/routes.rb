@@ -39,6 +39,8 @@ Rails.application.routes.draw do
   # Articles Atom Feed
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
 
+  # Articles - Collection Items
+  get "articles/:id/collection_posts", to: "collection_posts#index"
 
   # Categories
   get "categories/:slug/page(/1)", to: redirect { |path_params, req|
@@ -54,7 +56,6 @@ Rails.application.routes.draw do
   }
   get "tags/:slug(/page/:page)", to: "tags#show", as: :tag
   get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
-
 
   # Pages (linked in header/nav)
   get "read",               to: "about#read",        as: :read
