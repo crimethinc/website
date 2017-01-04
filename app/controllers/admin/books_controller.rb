@@ -34,7 +34,7 @@ class Admin::BooksController < Admin::AdminController
   # /admin/books/1
   def update
     if @book.update(book_params)
-      redirect_to @book, notice: "Book was successfully updated."
+      redirect_to [:admin, @book], notice: "Book was successfully updated."
     else
       render :edit
     end

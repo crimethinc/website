@@ -10,4 +10,12 @@ class Book < ApplicationRecord
       title
     end
   end
+
+  def image
+    "//thecloud.crimethinc.com/assets/books/#{slug}/photo.jpg"
+  end
+
+  def image_description
+    "Photo of '#{title}' book"
+  end
 end

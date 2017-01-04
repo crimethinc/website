@@ -1,2 +1,23 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<div>
+  <header>
+    <h1>Books</h1>
+  </header>
+
+  <div>
+    <% @books.in_groups_of(2).each do |row| %>
+
+    <div class="row">
+      <% row.each do |book| %>
+        <div class="column column-half section h-entry">
+          <% unless book.blank? %>
+            <%= render "articles/titles", header: book, linked: true %>
+
+            <%= link_to image_tag(book.image, alt: book.image_description, class: "u-image"), book.path %>
+          <% end %>
+        </div>
+      <% end %>
+    </div> <!-- .row -->
+
+    <% end %>
+  </div>
+</div>

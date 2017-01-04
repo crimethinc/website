@@ -121,17 +121,19 @@
         padding-right: $border-size-large;
       }
 
-      .column:first-child { width: 33%; }
-      .column:last-child  { width: 67%; }
+      .column:last-child {
+        padding-right: 0;
+      }
+
+      .column.column-one-third        { width: 33%; }
+      .column.column-two-third        { width: 67%; }
+
+      .column.column-one-quarter      { width: 25%; }
+      .column.column-two-quarter      { width: 50%; }
+      .column.column-three-quarter    { width: 75%; }
 
       .column.column-half:first-child { width: 50%; }
       .column.column-half:last-child  { width: 50%; }
-
-      .meta {
-        .p-name {
-          text-align: right;
-        }
-      }
 
       header {
         h1 {

@@ -1,2 +1,33 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div class="h-entry">
+  <header>
+    <small><%= link_to "Books", [:books] %></small>
+    <%= render "articles/titles", header: @book, linked: true %>
+  </header>
+
+  <div class="row">
+    <div class="column column-one-third section h-entry">
+      <div class="book-photo">
+        <%= image_tag @book.image, alt: @book.image_description, class: "u-image" %>
+      </div>
+
+      <div class="book-specs">
+
+      </div>
+    </div>
+
+    <div class="column column-two-third section h-entry">
+      <div class="e-content">
+        <div class="book-description">
+          <%= render_markdown(@book.description) %>
+        </div>
+
+        <hr />
+
+        <div class="book-content">
+          <%= render_markdown(@book.content) %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
