@@ -1,107 +1,191 @@
 <%= form_for [:admin, @book] do |f| %>
   <%= render "admin/form_errors", thing: @book %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control input-lg" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
+    <%= f.text_field :subtitle, class: "form-control input-lg" %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control", rows: 8 %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control", rows: 8 %>
+      </div>
+    </div>
+  </div> <!-- .row -->
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <%= f.label :slug %>
+        <%= f.text_field :slug, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-xs-6">
+      <div class="form-group">
+        <%= f.label :price_in_cents, "Price (in USD cents)" %>
+        <%= f.text_field :price_in_cents, class: "form-control" %>
+      </div>
+    </div>
+  </div> <!-- .row -->
+
+
+  <div class="form-group">
+    <%= f.label :download_url, "Download URL" %>
+    <%= f.url_field :download_url, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
+  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
 
-  <div class="field">
-    <%= f.label :slug %>
-    <%= f.text_field :slug %>
-  </div>
+  <fieldset id="syndication">
+    <legend>Syndication</legend>
+    <div class="row">
 
-  <div class="field">
-    <%= f.label :download_url %>
-    <%= f.text_area :download_url %>
-  </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :tweet %>
+          <%= f.text_area :tweet, class: "form-control" %>
+          <p class="help-block">
+            Maximum 115 characters to leave room for the `t.co` short URL that Twitter creates.
+            Used for syndicated tweet for this Article.
+          </p>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :price_in_cents %>
-    <%= f.number_field :price_in_cents %>
-  </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :summary %>
+          <%= f.text_area :summary, class: "form-control" %>
+          <p class="help-block">
+            Maximum 200 characters.
+            Used for page description and previews in story cards on other sites.
+          </p>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :tweet %>
-    <%= f.text_field :tweet %>
-  </div>
+    </div> <!-- .row -->
+  </fieldset>
 
-  <div class="field">
-    <%= f.label :summary %>
-    <%= f.text_area :summary %>
-  </div>
+  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
 
-  <div class="field">
-    <%= f.label :pages %>
-    <%= f.text_field :pages %>
-  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <fieldset id="table-of-contents">
+        <legend>Table of Contents</legend>
 
-  <div class="field">
-    <%= f.label :height %>
-    <%= f.text_field :height %>
-  </div>
+        <div class="form-group">
+          <%= f.label :table_of_contents %>
+          <%= f.text_area :table_of_contents, class: "form-control", rows: 10 %>
+        </div>
+      </fieldset>
+    </div>
 
-  <div class="field">
-    <%= f.label :width %>
-    <%= f.text_field :width %>
-  </div>
+    <div class="col-xs-12 col-sm-6">
+      <fieldset id="specs">
+        <legend>Specs</legend>
 
-  <div class="field">
-    <%= f.label :depth %>
-    <%= f.text_field :depth %>
-  </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :height %>
+              <%= f.text_field :height, class: "form-control" %>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :weight %>
-    <%= f.text_field :weight %>
-  </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :width %>
+              <%= f.text_field :width, class: "form-control" %>
+            </div>
+          </div>
+        </div>
 
-  <div class="field">
-    <%= f.label :words %>
-    <%= f.text_field :words %>
-  </div>
 
-  <div class="field">
-    <%= f.label :illustrations %>
-    <%= f.text_field :illustrations %>
-  </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :depth %>
+              <%= f.text_field :depth, class: "form-control" %>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :photographs %>
-    <%= f.text_field :photographs %>
-  </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :weight %>
+              <%= f.text_field :weight, class: "form-control" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
 
-  <div class="field">
-    <%= f.label :cover_style %>
-    <%= f.text_area :cover_style %>
-  </div>
 
-  <div class="field">
-    <%= f.label :binding_style %>
-    <%= f.text_area :binding_style %>
-  </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :pages %>
+              <%= f.text_field :pages, class: "form-control" %>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :table_of_contents %>
-    <%= f.text_area :table_of_contents %>
-  </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :words %>
+              <%= f.text_field :words, class: "form-control" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :illustrations %>
+              <%= f.text_field :illustrations, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :photographs %>
+              <%= f.text_field :photographs, class: "form-control" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
+
+
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :cover_style, "Cover Style" %>
+              <%= f.text_field :cover_style, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :binding_style, "Binding Style" %>
+              <%= f.text_field :binding_style, class: "form-control" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
+
+      </fieldset> <!-- #specs -->
+    </div>
+  </div> <!-- .row -->
+
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
 <% end %>

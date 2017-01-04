@@ -1,58 +1,26 @@
 <%= render "admin/page_header", thing: @books %>
 
-<table>
+<table class="table">
   <thead>
     <tr>
+      <th>&nbsp;</th>
       <th>Title</th>
       <th>Subtitle</th>
-      <th>Description</th>
-      <th>Content</th>
-      <th>Slug</th>
-      <th>Download url</th>
-      <th>Price in cents</th>
-      <th>Tweet</th>
-      <th>Summary</th>
-      <th>Pages</th>
-      <th>Height</th>
-      <th>Width</th>
-      <th>Depth</th>
-      <th>Weight</th>
-      <th>Words</th>
-      <th>Illustrations</th>
-      <th>Photographs</th>
-      <th>Cover Style</th>
-      <th>Binding Style</th>
-      <th>Table of contents</th>
-      <th colspan="3"></th>
+      <th>&nbsp;</th>
     </tr>
   </thead>
 
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td><%= book.title %></td>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, book], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to book.title, [:admin, book] %></td>
         <td><%= book.subtitle %></td>
-        <td><%= book.description %></td>
-        <td><%= book.content %></td>
-        <td><%= book.slug %></td>
-        <td><%= book.download_url %></td>
-        <td><%= book.price_in_cents %></td>
-        <td><%= book.tweet %></td>
-        <td><%= book.summary %></td>
-        <td><%= book.pages %></td>
-        <td><%= book.height %></td>
-        <td><%= book.width %></td>
-        <td><%= book.depth %></td>
-        <td><%= book.weight %></td>
-        <td><%= book.words %></td>
-        <td><%= book.illustrations %></td>
-        <td><%= book.photographs %></td>
-        <td><%= book.cover_style %></td>
-        <td><%= book.binding_style %></td>
-        <td><%= book.table_of_contents %></td>
-        <td><%= link_to "Show", [:admin, book] %></td>
-        <td><%= link_to "Edit", [:edit, :admin, book] %></td>
-        <td><%= link_to "Destroy", [:admin, book], method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <td>
+          <%= link_to "DELETE", [:admin, book], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
