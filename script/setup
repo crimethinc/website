@@ -14,10 +14,9 @@ echo "==> Setting up DB..."
 bin/rails db:drop
 bin/rails db:create
 bin/rails db:migrate
-echo ""
-echo "  If you need to seed your DB with intial data, run:"
-echo "  bin/rails db:seed"
-echo ""
+
+echo "==> Seed your DB with intial data..."
+bin/rails db:seed
 
 echo "==> Clearing logs and tmp cache..."
 # clears old logs and tmp files
