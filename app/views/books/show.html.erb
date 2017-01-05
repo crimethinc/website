@@ -11,7 +11,7 @@
       </div> <!-- .book-cover -->
 
       <div id="buy-now">
-        <%= link_to @book.buy_url, "Buy Now #{number_to_currency @book.price_in_cents / 100}", class: "buy-now button" %>
+        <%= render "books/buy_button", book: @book %>
       </div>
 
       <div class="book-specs">

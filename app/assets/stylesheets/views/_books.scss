@@ -20,14 +20,27 @@
     }
 
     .book {
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
 
       .p-name {
         margin-bottom: 2rem;
-        font-size:   2rem;
+        font-size:   2.5rem;
         line-height: 1.25em;
       }
     }
+
+
+    .book-series {
+      .u-image {
+        margin-bottom: 1rem;
+      }
+
+      .buy-now.button {
+        display: block;
+        text-align: center;
+      }
+    }
+
 
     .book-cover {
       margin-bottom: 2rem;
@@ -82,7 +95,7 @@
     }
 
     .book-content {
-      padding-top:  2rem;
+      padding-top: 2rem;
       border-top:  $border-size-xsmall solid $color-gray-light;
 
       h1 {
@@ -102,23 +115,29 @@
     }
 
     @media screen and (min-width: $small-tablet) {
-      #featured {
+      .book-series-bullet {
         margin-bottom: 4rem;
 
-        .p-name {
-          font-size: 4rem;
+        .book:first-child {
+          .p-name {
+            font-size: 4rem;
+          }
+
+          .e-content .p-summary p {
+            font-size: 1.5em;
+          }
         }
 
         .e-content {
           display: flex;
 
           .book-cover {
-            width: 25%;
+            width: 33%;
             padding-right: $border-size-large;
           }
 
           .p-summary  {
-            width: 75%;
+            width: 67%;
           }
         }
       }

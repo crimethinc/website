@@ -4,6 +4,8 @@
   <div class="e-content">
     <div class="book-cover">
       <%= link_to image_tag(book.image, alt: book.image_description, class: "u-image"), book.path %>
+
+      <%= render "books/buy_button", book: book %>
     </div>
 
     <div class="p-summary">
