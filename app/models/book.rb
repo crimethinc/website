@@ -12,7 +12,7 @@ class Book < ApplicationRecord
   end
 
   def image
-    "//thecloud.crimethinc.com/assets/books/#{slug}/photo.jpg"
+    "http://thecloud.crimethinc.com/assets/books/#{slug}/photo.jpg"
   end
 
   def image_description
