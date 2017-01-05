@@ -21,13 +21,13 @@
 
 ### _CrimethInc. Launches New Offensive_ with the Publication of _Expect Resistance_
 
-They called us bourgeois for urging people to abandon bourgeois culture.
-They called us anti-worker for refusing complicity in exploitation.
-They dismissed our advocacy of plagiarism as unoriginal.
-They mocked us for producing paper bullets,
+They called us bourgeois for urging people to abandon bourgeois culture.<br>
+They called us anti-worker for refusing complicity in exploitation.<br>
+They dismissed our advocacy of plagiarism as unoriginal.<br>
+They mocked us for producing paper bullets,<br>
 Then cried foul play when those projectiles hit their targets.
 
-When we subsisted on crusts of bread, they insisted it was the upper crusts;
+When we subsisted on crusts of bread, they insisted it was the upper crusts;<br>
 When we discovered cornucopias of abundance, they preferred their sour grapes.
 
 We’ve been branded militants and dilettantes, black bloc and bête noire, primus inter pariahs.
