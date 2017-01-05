@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170101234106) do
+ActiveRecord::Schema.define(version: 20170104053747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,40 @@ ActiveRecord::Schema.define(version: 20170101234106) do
     t.index ["status_id"], name: "index_articles_on_status_id", using: :btree
     t.index ["theme_id"], name: "index_articles_on_theme_id", using: :btree
     t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.text     "title"
+    t.text     "subtitle"
+    t.text     "content"
+    t.text     "tweet"
+    t.text     "summary"
+    t.text     "download_url"
+    t.text     "buy_url"
+    t.text     "description"
+    t.string   "content_format",    default: "kramdown"
+    t.string   "slug"
+    t.string   "series"
+    t.datetime "published_at"
+    t.integer  "price_in_cents"
+    t.string   "height"
+    t.string   "width"
+    t.string   "depth"
+    t.string   "weight"
+    t.string   "pages"
+    t.string   "words"
+    t.string   "illustrations"
+    t.string   "photographs"
+    t.string   "printing"
+    t.string   "ink"
+    t.string   "definitions"
+    t.string   "recipes"
+    t.boolean  "has_index"
+    t.text     "cover_style"
+    t.text     "binding_style"
+    t.text     "table_of_contents"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   create_table "categories", force: :cascade do |t|

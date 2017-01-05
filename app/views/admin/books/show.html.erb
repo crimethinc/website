@@ -1,0 +1,113 @@
+<%= render "admin/page_header", thing: @book %>
+
+<article>
+  <header>
+    <h1>
+      <%= link_to [:admin, @book], class: "p-name" do %>
+        <span class="h1 title"><%= @book.title %></span><br>
+        <span class="h2 subtitle"><%= @book.subtitle %></span>
+      <% end %>
+    </h1>
+  </header>
+
+  <hr>
+  <p>
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </p>
+
+  <p>
+    <strong>Subtitle:</strong>
+    <%= @book.subtitle %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @book.description %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= @book.content %>
+  </p>
+
+  <p>
+    <strong>Slug:</strong>
+    <%= @book.slug %>
+  </p>
+
+  <p>
+    <strong>Download url:</strong>
+    <%= @book.download_url %>
+  </p>
+
+  <p>
+    <strong>Price in cents:</strong>
+    <%= @book.price_in_cents %>
+  </p>
+
+  <p>
+    <strong>Tweet:</strong>
+    <%= @book.tweet %>
+  </p>
+
+  <p>
+    <strong>Summary:</strong>
+    <%= @book.summary %>
+  </p>
+
+  <p>
+    <strong>Pages:</strong>
+    <%= @book.pages %>
+  </p>
+
+  <p>
+    <strong>Height:</strong>
+    <%= @book.height %>
+  </p>
+
+  <p>
+    <strong>Width:</strong>
+    <%= @book.width %>
+  </p>
+
+  <p>
+    <strong>Depth:</strong>
+    <%= @book.depth %>
+  </p>
+
+  <p>
+    <strong>Weight:</strong>
+    <%= @book.weight %>
+  </p>
+
+  <p>
+    <strong>Words:</strong>
+    <%= @book.words %>
+  </p>
+
+  <p>
+    <strong>Illustrations:</strong>
+    <%= @book.illustrations %>
+  </p>
+
+  <p>
+    <strong>Photographs:</strong>
+    <%= @book.photographs %>
+  </p>
+
+  <p>
+    <strong>Cover style:</strong>
+    <%= @book.cover_style %>
+  </p>
+
+  <p>
+    <strong>Binding Style:</strong>
+    <%= @book.binding_style %>
+  </p>
+
+  <p>
+    <strong>Table of contents:</strong>
+    <%= @book.table_of_contents %>
+  </p>
+</article>

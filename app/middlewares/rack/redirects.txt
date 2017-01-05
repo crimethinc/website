@@ -1562,7 +1562,6 @@ http://cwc.im/presscheck /2007/11/27/expect-resistance-press-check
 /catharsisdownload https://www.buyolympia.com/download/
 /inaug13 /blog/2013/01/11/festival-of-resistance-in-dc-january-20/
 /afterend /blog/2012/12/21/after-the-end-of-the-world-film-and-text/
-/books /books/
 /catharsispreorder /blog/2012/12/17/catharsis-discography-and-reunion-shows
 /nestar /blog/2012/12/03/european-speaking-tour-reportback/
 /matar /blog/2012/11/26/designed-to-kill-en-espanol/

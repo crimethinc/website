@@ -8,3 +8,10 @@
   outline: $border-size-xsmall solid $color-true-black;
   border: none;
 }
+
+.buy-now.button,
+.support-site.button {
+  background: $color-green;
+  font-weight: bold;
+  font-weight: 500;
+}

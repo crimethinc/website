@@ -71,10 +71,17 @@
         }
       }
 
-      p,
-      li {
+      li,
+      p {
         font-size: 1.75rem;
         line-height: 1.5em;
+        text-rendering: optimizeLegibility;
+        margin-bottom: $border-size-large;
+      }
+    }
+
+    .list {
+      li {
         text-rendering: optimizeLegibility;
         margin-bottom: $border-size-large;
       }
@@ -100,7 +107,7 @@
       dd,
       dt,
       li {
-        line-height: 1.5em;
+        line-height: 1em;
       }
 
       li {
@@ -108,11 +115,12 @@
       }
 
       li li {
-        margin: 0 0 .5em 1.5em;
+        margin: 0 0 0 1.5em;
+        line-height: 1.5em;
       }
     }
 
-    @media screen and (min-width: $small-tablet) {
+    @media screen and (min-width: $large-phone) {
       .row {
         display: flex;
       }
@@ -121,18 +129,22 @@
         padding-right: $border-size-large;
       }
 
-      .column:first-child { width: 33%; }
-      .column:last-child  { width: 67%; }
+      .column:last-child {
+        padding-right: 0;
+      }
+
+      .column.column-one-third        { width: 33%; }
+      .column.column-two-third        { width: 67%; }
+
+      .column.column-one-quarter      { width: 25%; }
+      .column.column-two-quarter      { width: 50%; }
+      .column.column-three-quarter    { width: 75%; }
 
       .column.column-half:first-child { width: 50%; }
       .column.column-half:last-child  { width: 50%; }
+    }
 
-      .meta {
-        .p-name {
-          text-align: right;
-        }
-      }
-
+    @media screen and (min-width: $small-tablet) {
       header {
         h1 {
           font-size: 4rem;

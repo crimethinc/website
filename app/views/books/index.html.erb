@@ -1,0 +1,31 @@
+<article>
+  <header>
+    <h1>Books</h1>
+  </header>
+
+  <div class="book-series book-series-bullet">
+    <% @bullet_books.each do |book| %>
+      <%= render "books/book", book: book %>
+    <% end %>
+  </div> <!-- .book-series-bullet -->
+</article>
+
+<!--
+<article>
+  <div class="book-series book-series-letters">
+  <header>
+    <h2>Letters Series</h2>
+  </header>
+
+  <div class="row">
+    <% @letters_books.each do |book| %>
+      <div class="column column-quarter h-entry">
+        <%= render book %>
+      </div>
+    <% end %>
+  </div>
+-->
+
+  <!-- </div> -->
+   <!-- .book-series-letters -->
+<!-- </article> -->

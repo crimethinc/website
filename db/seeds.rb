@@ -13,7 +13,8 @@ if Rails.env.development?
 end
 
 puts "Trying dev seeds for each post-type..."
-%w(articles pages links podcasts episodes redirects videos).each do |posttype|
+%w(books).each do |posttype|
+# %w(books articles pages links podcasts episodes redirects videos).each do |posttype|
   filepath = File.expand_path("../seeds/#{posttype}.rb", __FILE__)
 
   puts "  Trying: #{posttype}"
