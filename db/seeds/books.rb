@@ -108,7 +108,7 @@ books << {
   photographs:    "39",
   cover_style:    "French Flaps",
   ink:            "Five colors on cover and two colors (black and red) w/ full bleeds throughout.",
-  price_in_cents: 0000,
+  price_in_cents: 1000,
   has_index:      false,
 }
 
