@@ -20,6 +20,7 @@ books << {
   ink:            "",
   price_in_cents: 1000,
   has_index:      false,
+  buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=work&Dest=books"
 }
 
 books << {
@@ -42,6 +43,7 @@ books << {
   ink:            "Full-color on cover and black w/ full bleeds throughout.",
   price_in_cents: 1000,
   has_index:      true,
+  buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=days&Dest=books"
 }
 
 books << {
@@ -65,6 +67,7 @@ books << {
   ink:            "",
   price_in_cents: 800,
   has_index:      false,
+  buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=contra&Dest=books"
 }
 
 books << {
@@ -88,6 +91,7 @@ books << {
   ink:            "Full-color on cover and inside cover, two colors throughout text (black + rust)",
   price_in_cents: 1200,
   has_index:      true,
+  buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=rfd&Dest=books"
 }
 
 books << {
@@ -110,6 +114,7 @@ books << {
   ink:            "Five colors on cover and two colors (black and red) w/ full bleeds throughout.",
   price_in_cents: 1000,
   has_index:      false,
+  buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=er&Dest=books"
 }
 
 
