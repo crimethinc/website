@@ -1,6 +1,6 @@
 <article class="h-entry" id="episode-<%= @episode.id %>">
   <header>
-    <%= render "articles/titles", header: @episode, linked: false %>
+    <%= render "articles/titles", header: @episode, linked: action_name == "transcript" %>
   </header>
 
   <div class="row">
@@ -42,7 +42,11 @@
               </small>
             <% end %>
 
-            <p><%= link_to t("podcast.full_episode_transcript"), episode_transcript_url(@episode) %></p>
+            <% unless action_name == "transcript" %>
+              <p>
+                <%= link_to t("podcast.full_episode_transcript"), episode_transcript_url(@episode) %>
+              </p>
+            <% end %>
           </div>
 
           <% if action_name == "transcript" %>
