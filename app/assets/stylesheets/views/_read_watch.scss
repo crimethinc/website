@@ -22,6 +22,10 @@
 
       img {
         margin-top: 1rem;
+
+        @media screen and (min-width: $small-tablet) {
+          height: 300px;
+        }
       }
 
       ul {
@@ -51,17 +55,6 @@
       .video-info {
         font-style: italic;
         color: $color-gray;
-      }
-
-
-      @media screen and (min-width: $small-tablet) {
-        .intro p {
-          font-size: 5em;
-        }
-
-        img {
-          height: 300px;
-        }
       }
 
     } // .h-entry

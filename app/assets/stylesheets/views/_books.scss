@@ -16,7 +16,7 @@
     }
 
     .book-series {
-      margin-bottom: 4rem;
+      margin: 8rem 0 4rem 0;
     }
 
     .book {
@@ -30,6 +30,10 @@
         a {
           text-decoration: none;
         }
+      }
+
+      .book-cover img {
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
       }
     }
 
@@ -120,16 +124,6 @@
     @media screen and (min-width: $small-tablet) {
       .book-series-bullet {
         margin-bottom: 4rem;
-
-        .book:first-child {
-          .p-name {
-            font-size: 4rem;
-          }
-
-          .e-content .p-summary p {
-            font-size: 1.5em;
-          }
-        }
 
         .e-content {
           display: flex;

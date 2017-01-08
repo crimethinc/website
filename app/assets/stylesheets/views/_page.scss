@@ -144,7 +144,13 @@
       .column.column-half:last-child  { width: 50%; }
     }
 
+
     @media screen and (min-width: $small-tablet) {
+      .intro p {
+        font-size: 2.25rem;
+        line-height: 1.5em;
+      }
+
       header {
         h1 {
           font-size: 4rem;
