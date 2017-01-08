@@ -1,15 +1,23 @@
 <div class="book" id="<%= book.slug %>">
-  <%= render "articles/titles", header: book, linked: true %>
+  <header>
+    <%= render "articles/titles", header: book, linked: true %>
+  </header>
 
-  <div class="e-content">
-    <div class="book-cover">
+  <div class="e-content row">
+    <div class="book-cover column column-one-third">
       <%= link_to image_tag(book.image, alt: book.image_description, class: "u-image"), book.path %>
 
-      <%= render "books/buy_button", book: book %>
+      <div><%= render "books/buy_button", book: book %></div>
     </div>
 
-    <div class="p-summary">
-      <%= render_markdown(book.summary) %>
+    <div class="book-main column column-two-third">
+      <header>
+        <%= render "articles/titles", header: book, linked: true %>
+      </header>
+
+      <div class="p-summary">
+        <%= render_markdown(book.summary) %>
+      </div>
     </div>
   </div>
 </div>

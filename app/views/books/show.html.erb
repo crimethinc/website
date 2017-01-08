@@ -1,10 +1,10 @@
-<div class="h-entry">
+<div class="h-entry book">
   <header>
     <small><%= link_to "Books", [:books] %></small>
     <%= render "articles/titles", header: @book, linked: true %>
   </header>
 
-  <div class="row book">
+  <div class="row">
     <div class="column column-one-third section meta">
       <div class="book-cover">
         <%= image_tag @book.image, alt: @book.image_description, class: "u-image" %>
@@ -48,8 +48,11 @@
       <%= render "books/table_of_contents", book: @book %>
     </div>
 
+    <div class="column column-two-third section book-main">
+      <header>
+        <%= render "articles/titles", header: @book, linked: true %>
+      </header>
 
-    <div class="column column-two-third section h-entry">
       <div class="e-content">
         <div class="book-description">
           <%= render_markdown(@book.description) %>

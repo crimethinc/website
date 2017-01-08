@@ -32,8 +32,13 @@
         }
       }
 
-      .book-cover img {
-        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+      .book-cover {
+        margin-bottom: 2rem;
+
+        img {
+          box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+          height: 180px;
+        }
       }
     }
 
@@ -45,16 +50,8 @@
     }
 
     .buy-now.button {
-      display: block;
+      display: inline-block;
       text-align: center;
-    }
-
-    .book-cover {
-      margin-bottom: 2rem;
-
-      img {
-        width: 100%;
-      }
     }
 
     #buy-now {
@@ -97,6 +94,7 @@
       }
     }
 
+    .book-main header,
     .meta .table-of-contents {
       display: none;
     }
@@ -124,25 +122,14 @@
     @media screen and (min-width: $small-tablet) {
       .book-series-bullet {
         margin-bottom: 4rem;
-
-        .e-content {
-          display: flex;
-
-          .book-cover {
-            width: 33%;
-            padding-right: $border-size-large;
-          }
-
-          .p-summary  {
-            width: 67%;
-          }
-        }
       }
 
+      .book-main header,
       .meta .table-of-contents {
         display: block;
       }
 
+      .book > header,
       .h-entry .e-content .table-of-contents {
         display: none;
       }
