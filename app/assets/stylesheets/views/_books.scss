@@ -208,10 +208,6 @@
         font-size: 1rem;
         }
 
-        .column:last-child {
-          padding-right: 20px;
-        }
-
         a {
           display: block;
           text-align: center;
@@ -255,6 +251,10 @@
         .book > header,
         .h-entry .e-content .table-of-contents {
           display: none;
+        }
+
+        .column:last-child {
+          padding-right: 20px;
         }
       }
 
