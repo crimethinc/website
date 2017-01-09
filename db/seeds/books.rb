@@ -153,6 +153,7 @@ books.each do |book_params|
   book_params[:content]            = File.read(filepath + "/content.md")
   book_params[:table_of_contents]  = File.read(filepath + "/table_of_contents.md")
   book_params[:binding_style]      = File.read(filepath + "/binding_style.md")
+  book_params[:buy_info]           = File.read(filepath + "/buy_info.md")
 
   Book.create! book_params
 end

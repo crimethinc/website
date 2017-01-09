@@ -3,6 +3,15 @@
     margin: $border-size-xlarge auto;
     max-width: $large-tablet;
 
+    .crumbtrail {
+      text-transform: uppercase;
+      color: $color-gray;
+
+      a {
+        color: $color-gray;
+      }
+    }
+
     header {
       margin-bottom: $border-size-large;
 

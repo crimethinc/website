@@ -2,7 +2,7 @@ class CreateBooks < ActiveRecord::Migration[5.0]
   def change
     create_table :books do |t|
       t.text       :title, :subtitle, :content, :tweet, :summary
-      t.text       :download_url, :buy_url, :description
+      t.text       :download_url, :description, :buy_url, :buy_info
       t.string     :content_format, default: "kramdown"
       t.string     :slug, :series
       t.datetime   :published_at

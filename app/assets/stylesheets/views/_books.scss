@@ -59,13 +59,29 @@
       }
     }
 
+    #buy-now {
+      margin-bottom: 2rem;
+    }
+
     .buy-now.button {
       display: inline-block;
       text-align: center;
     }
 
-    #buy-now {
-      margin-bottom: 2rem;
+    .buy-info {
+      background: $color-gray-light;
+      margin: 2rem 0;
+      padding: 1rem;
+
+      p {
+        color: $color-true-black;
+        line-height: 1.5em;
+        font-size: 1.2rem;
+      }
+
+      p + p {
+        margin-top: 1rem;
+      }
     }
 
     .book-specs {

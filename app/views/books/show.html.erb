@@ -1,6 +1,6 @@
 <div class="h-entry book">
   <header>
-    <small><%= link_to "Books", [:books] %></small>
+    <nav class="crumbtrail"><%= link_to "Books", [:books] %></nav>
     <%= render "articles/titles", header: @book, linked: true %>
   </header>
 
@@ -12,6 +12,10 @@
 
       <div id="buy-now">
         <%= render "books/buy_button", book: @book %>
+      </div>
+
+      <div class="buy-info">
+        <%= render_markdown @book.buy_info %>
       </div>
 
       <div class="book-specs">
@@ -50,17 +54,18 @@
 
     <div class="column column-two-third section book-main">
       <header>
+        <nav class="crumbtrail"><%= link_to "Books", [:books] %></nav>
         <%= render "articles/titles", header: @book, linked: true %>
       </header>
 
       <div class="e-content">
         <div class="book-description">
-          <%= render_markdown(@book.description) %>
+          <%= render_markdown @book.description %>
         </div>
 
         <% if @book.content.present? %>
           <div class="book-content">
-            <%= render_markdown(@book.content) %>
+            <%= render_markdown @book.content %>
           </div>
         <% end %>
 
