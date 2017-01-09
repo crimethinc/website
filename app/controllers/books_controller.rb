@@ -6,8 +6,15 @@ class BooksController < ApplicationController
     @body_id = "books"
     @title   = "Books"
 
-    @bullet_books  = Book.where(series: "bullet").shuffle
-    @letters_books = Book.all.shuffle[1..4]
+    @bullet_books = []
+    %w(contradictionary work expect-resistance days-of-war-nights-of-love recipes-for-disaster).each do |slug|
+      @bullet_books << Book.find_by(slug: slug)
+    end
+
+    @letters_books = []
+    %w(off-the-map).each do |slug|
+      @letters_books << Book.find_by(slug: slug)
+    end
   end
 
   def show

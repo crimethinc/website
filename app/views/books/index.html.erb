@@ -1,4 +1,8 @@
 <article>
+  <div class="book-spines">
+    <%= image_tag "books/spines-lg.jpg", alt: "All of the CrimethInc. books' spines" %>
+  </div>
+
   <header>
     <h1>We love making books.</h1>
   </header>
@@ -19,23 +23,3 @@
     <% end %>
   </div> <!-- .book-series-bullet -->
 </article>
-
-<!--
-<article>
-  <div class="book-series book-series-letters">
-  <header>
-    <h2>Letters Series</h2>
-  </header>
-
-  <div class="row">
-    <% @letters_books.each do |book| %>
-      <div class="column column-quarter h-entry">
-        <%= render book %>
-      </div>
-    <% end %>
-  </div>
--->
-
-  <!-- </div> -->
-   <!-- .book-series-letters -->
-<!-- </article> -->

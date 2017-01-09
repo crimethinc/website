@@ -15,9 +15,20 @@
       font-weight: 300;
     }
 
+    .book-spines {
+      margin-bottom: 2rem;
+    }
+
     .book-series {
       margin: 8rem 0 4rem 0;
     }
+
+    #contradictionary           { width: 100%; }
+    #work                       { width: 100%; }
+    #expect-resistance          { width: 100%; }
+    #days-of-war-nights-of-love { width: 100%; }
+    #recipes-for-disaster       { width: 100%; }
+
 
     .book {
       margin-bottom: 4rem;
@@ -37,7 +48,6 @@
 
         img {
           box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
-          height: 180px;
         }
       }
     }
