@@ -62,7 +62,6 @@
     .buy-now.button {
       display: inline-block;
       text-align: center;
-      border-color: red;
     }
 
     #buy-now {
@@ -109,6 +108,14 @@
     .meta .table-of-contents {
       display: none;
     }
+
+    .book-main header {
+      h2 {
+        font-weight: lighter;
+        font-weight: 300;
+      }
+    }
+
 
     .book-content {
       padding-top: 2rem;
