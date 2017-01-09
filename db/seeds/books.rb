@@ -49,7 +49,7 @@ books << {
 
 books << {
   title:          "Contradictionary",
-  subtitle:       "",
+  subtitle:       "There is a War in Every Word",
   slug:           "contradictionary",
   download_url:   "",
   tweet:          "",

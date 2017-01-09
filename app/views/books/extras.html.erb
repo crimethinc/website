@@ -1,2 +1,25 @@
-<h1>Books#extras</h1>
-<p>Find me in app/views/books/extras.html.erb</p>
+<div class="h-entry">
+  <header>
+    <nav class="crumbtrail">
+      <%= link_to "Books", [:books] %> :
+      <%= link_to @book.title, book_path(@book.slug) %>
+    </nav>
+
+    <div class="p-name">
+      <h1 class="p-x-title">
+        <%= @book.title %> :
+        Extras
+      </h1>
+    </div>
+  </header>
+
+  <div class="row e-content">
+    <div class="column column-two-third main">
+      <%= render "books/#{@book.slug}/main" %>
+    </div>
+
+    <div class="column column-one-third aside">
+      <%= render "books/#{@book.slug}/aside" %>
+    </div>
+  </div>
+</div>

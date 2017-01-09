@@ -48,7 +48,7 @@ Rails.application.routes.draw do
   get "books/into-libraries",    to: "books#into_libraries",  as: :books_into_libraries
   get "books",                   to: "books#index",           as: :books
   get "books/:slug",             to: "books#show",            as: :book
-  get "books/:slug/transcript",  to: "books#extras",          as: :book_extras
+  get "books/:slug/extras",      to: "books#extras",          as: :book_extras
 
 
   # Site search
