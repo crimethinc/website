@@ -1,5 +1,6 @@
 books = []
 
+# bullet books
 books << {
   title:          "Work",
   subtitle:       "capitalism . economics . resistance",
@@ -117,6 +118,30 @@ books << {
   buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=er&Dest=books"
 }
 
+
+# letters books
+books << {
+  title:          "Off the Map",
+  subtitle:       "",
+  slug:           "off-the-map",
+  download_url:   "",
+  tweet:          "",
+  series:         "letters",
+  summary:        "A punk rock vision quest told in the tradition of the anarchist travel story, _Off the Map_ is narrated by two young women as they discard their maps, fears, and anything resembling a plan, and set off on the winds of the world. Without the smug cynicism that seems to permeate most modern radical tales, this story is told with genuine hope, and a voice that never loses its connection with the mysteries of life, even in the midst of everyday tragedies. Wandering across Europe, the dozens of vignettes are the details of the whole—a squatted castle surrounded by tourists on the Spanish coast, a philosophizing businessman on the highways of France, a _plaça_ full of _los crustos_ in Barcelona, a diseased foot in a Belgian train squat, a glow bug on the dew-covered grass of anywhere—a magical, novel-like folktale for the end of the world.",
+  pages:          "144 + cover",
+  words:          "38,975",
+  width:          '4.75"',
+  height:         '7.5"',
+  depth:          '.375"',
+  weight:         "5.5 ounces",
+  illustrations:  "48",
+  photographs:    "16",
+  cover_style:    "",
+  ink:            "Two-color on cover and black throughout.",
+  price_in_cents: 400,
+  has_index:      false,
+  buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=otm&Dest=books"
+}
 
 
 books.each do |book_params|

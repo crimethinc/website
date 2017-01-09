@@ -22,4 +22,10 @@
       <%= render "books/book", book: book %>
     <% end %>
   </div> <!-- .book-series-bullet -->
+
+  <div class="book-series book-series-bullet">
+    <% @letters_books.each do |book| %>
+      <%= render "books/book", book: book %>
+    <% end %>
+  </div> <!-- .letters-series-bullet -->
 </article>
