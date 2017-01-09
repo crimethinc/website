@@ -12,6 +12,8 @@
 .buy-now.button,
 .support-site.button {
   background: $color-green;
+  background: green;
+  outline-color: darken($color-green, 20%);
   font-weight: bold;
   font-weight: 500;
 }

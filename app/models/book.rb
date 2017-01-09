@@ -12,7 +12,8 @@ class Book < ApplicationRecord
   end
 
   def image
-    "http://thecloud.crimethinc.com/assets/books/#{slug}/photo.jpg"
+    extension = slug == "contradictionary" ? "png" : "jpg"
+    "http://thecloud.crimethinc.com/assets/books/#{slug}/photo.#{extension}"
   end
 
   def image_description
