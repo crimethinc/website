@@ -23,11 +23,11 @@
       margin: 8rem 0 4rem 0;
     }
 
-    #contradictionary           { width: 100%; }
-    #work                       { width: 100%; }
-    #expect-resistance          { width: 100%; }
-    #days-of-war-nights-of-love { width: 100%; }
-    #recipes-for-disaster       { width: 100%; }
+    #contradictionary           .book-cover img { width:  60%; }
+    #work                       .book-cover img { width:  69%; }
+    #expect-resistance          .book-cover img { width:  79%; }
+    #days-of-war-nights-of-love .book-cover img { width:  79%; }
+    #recipes-for-disaster       .book-cover img { width: 100%; }
 
 
     .book {
