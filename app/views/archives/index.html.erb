@@ -24,11 +24,11 @@
           <li>
             <article class="h-entry" role="article">
               <div class="row">
-                <div class="<%= "column" if article.image.present? %>">
+                <div class="<%= "column" if article.image.present? %> column-one-third">
                   <%= render "articles/image", article: article, linked: true %>
                 </div>
 
-                <div class="<%= "column" if article.image.present? %>">
+                <div class="<%= "column" if article.image.present? %> column-two-third">
                   <header>
                     <%= render "articles/categories", article: article %>
                     <%= render "articles/titles", header: article, linked: true %>
