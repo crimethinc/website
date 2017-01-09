@@ -283,10 +283,6 @@ articles.each_with_index do |article_params, index|
   # And create a new Category
   category = Category.find_or_create_by! name: article_params.delete(:category)
 
-  # Back date articles to the past 5 days for development
-  # days_offset  = index + 1
-  # published_at = Time.current - days_offset.days
-
   # article_params[:published_at]   = published_at
   article_params[:status_id]      = published_status.id
   article_params[:content_format] = "html"
@@ -391,3 +387,64 @@ Dir.glob("#{filepath}/*").each do |f|
     # end
   end
 end
+
+
+#####
+# First new style Article on new site
+
+content = %q{
+  As 2017 opens, we face new challenges in an increasingly volatile world. Since last summer, we’ve been hard at work expanding our networks and updating our infrastructure to prepare for the global situation that is now unfolding. Over the next month, we’ll be announcing several ambitious new projects.
+
+  The first of these is this website itself. We’ve assembled several new editorial groups and are in the process of overhauling the web design.
+
+  Effective immediately, we’ll be publishing at least four new articles a week, extending our coverage to a much wider range of topics and formats. We’re not just proposing a subculture or a particular methodology of protest, but a total way of living. Accordingly, in addition to current events and analysis, we’ve established separate CrimethInc. cells to focus on technology, history, the arts, and more. Over the next two weeks, each of these groups will introduce itself here and outline its goals for this new phase of activity.
+
+  Meanwhile, we have completely rebuilt this website. The design is now responsive, meaning that it will work equally well on your phone, tablet, laptop, and big screen.
+
+  The complete archives of everything that has appeared online under the CrimethInc. insignia are now all in one place, [the feed](/). For now, you can [explore the feed](/read) chronologically; soon, we’ll have it organized categorically and topically as well.
+
+  Along with overhauling this website, we're also expanding our social media presence. You can find and share CrimethInc. articles on a wide variety of networks and platforms. [Links to all of our profiles](#social) are in the website footer. You can also [join our new email list](#subscribe) to receive a forthcoming newsletter.
+
+  We’ll be putting the finishing touches on the redesign over the next two weeks. If you notice a problem or want to offer your input, please [drop us a line](mailto:rollingthunder@crimethinc.com).
+
+  The website is powered by an app built with [Ruby on Rails](http://rubyonrails.org).
+  If you're a designer, a developer, or an adventurous explorer and want to help us build a better world, [send up a signal flare](https://github.com/crimethinc/website/issues)—we'll be waiting for you. There's still plenty of work to do (and always will be until we finally destroy empire). Front end HTML and CSS—backend Ruby and Rails—UI/UX design—copyediting—language translation. There's something for everyone.
+
+  And we've only just begun. Stay tuned for several more surprises.
+}
+
+
+articles = [
+  {
+    category: "Technology",
+    title: "Under No Management",
+    subtitle: "The NEW crimethinc.com",
+    content: content,
+    published_at: Time.parse("2017-01-09T01:00 -0500"),
+    tweet: "Under No Management: Announcing the crimethinc.com overhaul and a new wave of projects for 2017",
+    summary: "We have completely rebuilt crimethinc.com for 2017. Here is a broad overview of the changes and a teaser the new projects we have in store for you.",
+    image: "http://thecloud.crimethinc.com/assets/articles/2017/01/09/plant-floor.jpg",
+    slug: "under-no-management",
+  }
+]
+
+
+# Find the "published" Status id once for reuse on each test Article
+published_status = Status.find_by(name: "published")
+
+# Loop through and create the articles
+articles.each_with_index do |article_params, index|
+  # Delete Category from params before creating Article
+  # And create a new Category
+  category = Category.find_or_create_by! name: article_params.delete(:category)
+
+  # published
+  article_params[:status_id] = published_status.id
+
+  # Save the Article
+  article = Article.create!(article_params)
+
+  # Add the Article to its Category
+  category.articles << article
+end
+
