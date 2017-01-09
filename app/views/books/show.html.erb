@@ -11,7 +11,7 @@
       </div> <!-- .book-cover -->
 
       <div id="buy-now">
-        <%= render "books/buy_button", book: @book %>
+        <%= render "books/buy_button", price: @book.price_in_cents, url: @book.buy_url %>
       </div>
 
       <div class="buy-info">

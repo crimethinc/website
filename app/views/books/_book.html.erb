@@ -7,7 +7,7 @@
     <div class="book-cover column column-one-quarter">
       <%= link_to image_tag(book.image, alt: book.image_description, class: "u-image"), book.path %>
 
-      <div><%= render "books/buy_button", book: book %></div>
+      <div><%= render "books/buy_button", price: book.price_in_cents, url: book.buy_url %></div>
     </div>
 
     <div class="book-main column column-three-quarter">

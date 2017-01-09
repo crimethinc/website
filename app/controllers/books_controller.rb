@@ -32,14 +32,14 @@ class BooksController < ApplicationController
   def lit_kit
     @html_id = "page"
     @body_id = "books"
+    @title   = "Books : Literature Distribution Kit"
   end
 
   def into_libraries
     @html_id = "page"
     @body_id = "books"
+    @title   = "Books : CrimethInc. Into Libraries"
   end
-
-
 
   private
 

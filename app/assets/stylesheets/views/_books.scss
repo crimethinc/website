@@ -1,202 +1,215 @@
-#books {
-  main{
+#page {
+  #books {
+    main{
 
-    img {
-      max-width: 100%;
-    }
-
-    h1 {
-      font-weight: bold;
-      font-weight: 700;
-    }
-
-    h2 {
-      font-weight: lighter;
-      font-weight: 300;
-    }
-
-    .book-spines {
-      margin-bottom: 2rem;
-    }
-
-    .book-series {
-      margin: 8rem 0 4rem 0;
-
-      .u-image {
-        margin-bottom: 1rem;
-      }
-    }
-
-    #contradictionary           .book-cover img { width:  60%; }
-    #work                       .book-cover img { width:  68%; }
-    #expect-resistance          .book-cover img { width:  79%; }
-    #days-of-war-nights-of-love .book-cover img { width:  79%; }
-    #recipes-for-disaster       .book-cover img { width: 100%; }
-    #off-the-map                .book-cover img { width:  68%; }
-
-    .book {
-      margin-bottom: 4rem;
-
-      .p-name {
-        margin-bottom: 2rem;
-        font-size:   2.5rem;
-        line-height: 1.25em;
-
-        a {
-          text-decoration: none;
-        }
-      }
-
-      .book-cover {
-        margin-bottom: 2rem;
-
-        img {
-          box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
-        }
-      }
-    }
-
-    #extra {
-      margin-top: 2rem;
-      padding-top: 4rem;
-      border-top: 1px solid $color-gray-light;
-    }
-
-    #into-libraries,
-    #lit-kit {
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    .isbns {
-      h1 {
-        margin: .5rem 0 1.5rem 0;
-      }
-
-      p {
-        font-size: 1.25rem !important;
-      }
-    }
-
-    #buy-now {
-      margin-bottom: 2rem;
-    }
-
-    .buy-now.button {
-      display: inline-block;
-      text-align: center;
-    }
-
-    .buy-info {
-      background: $color-gray-light;
-      margin: 2rem 0;
-      padding: 1rem;
-
-      p {
-        color: $color-true-black;
-        line-height: 1.5em;
-        font-size: 1.2rem;
-      }
-
-      p + p {
-        margin-top: 1rem;
-      }
-    }
-
-    .book-specs {
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: $border-size-xsmall solid $color-gray-light;
-
-      @media screen and (min-width: $large-phone) {
-        padding-bottom: 0;
-        border-bottom:  none;
-      }
-
-      li {
-        margin-bottom: .5em;
-      }
-
-      b {
-        padding-right: .25em;
-      }
-    }
-
-    .h-entry .e-content .table-of-contents,
-    .table-of-contents {
-      padding-top:  2rem;
-      border-top:  $border-size-xsmall solid $color-gray-light;
-
-      * {
-        font-size: 1rem;
+      img {
+        max-width: 100%;
       }
 
       h1 {
         font-weight: bold;
         font-weight: 700;
-        font-size:   1.5rem;
-        margin-bottom: 1rem;
       }
 
-      ul + h1 {
-        margin-top: 2rem;
-      }
-
-      p {
-        margin-bottom: 1rem;
-      }
-    }
-
-    .book-main header,
-    .meta .table-of-contents {
-      display: none;
-    }
-
-    .book-main header {
       h2 {
         font-weight: lighter;
         font-weight: 300;
       }
-    }
 
-
-    .book-content {
-      padding-top: 2rem;
-      border-top:  $border-size-xsmall solid $color-gray-light;
-
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
+      .book-spines {
+        margin-bottom: 2rem;
       }
 
-      blockquote {
-        background: $color-gray-light;
-        padding: 1em 1em 1em 1em;
-        margin-bottom: 1rem;
+      .book-series {
+        margin: 8rem 0 4rem 0;
 
-        p:last-child {
-          margin-bottom: 0;
+        .u-image {
+          margin-bottom: 1rem;
         }
       }
-    }
 
-    @media screen and (min-width: $small-tablet) {
-      .book-series-bullet {
+      #contradictionary           .book-cover img { width:  60%; }
+      #work                       .book-cover img { width:  68%; }
+      #expect-resistance          .book-cover img { width:  79%; }
+      #days-of-war-nights-of-love .book-cover img { width:  79%; }
+      #recipes-for-disaster       .book-cover img { width: 100%; }
+      #off-the-map                .book-cover img { width:  68%; }
+
+      .book {
         margin-bottom: 4rem;
+
+        .p-name {
+          margin-bottom: 2rem;
+          font-size:   2.5rem;
+          line-height: 1.25em;
+
+          a {
+            text-decoration: none;
+          }
+        }
+
+        .book-cover {
+          margin-bottom: 2rem;
+
+          img {
+            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+
+      #extra {
+        margin-top: 2rem;
+        padding-top: 4rem;
+        border-top: 1px solid $color-gray-light;
+      }
+
+      #into-libraries,
+      #lit-kit {
+        h1 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .isbns {
+        h1 {
+          margin: .5rem 0 1.5rem 0;
+        }
+
+        p {
+          font-size: 1.25rem !important;
+        }
+      }
+
+      #buy-now {
+        margin-bottom: 2rem;
+      }
+
+      .buy-now.button {
+        display: inline-block;
+        text-align: center;
+      }
+
+      .buy-info {
+        background: $color-gray-light;
+        margin: 2rem 0;
+        padding: 1rem;
+
+        p {
+          color: $color-true-black;
+          line-height: 1.5em;
+          font-size: 1.2rem;
+          margin-bottom: 0;
+        }
+
+        p + p {
+          margin-top: 1rem;
+        }
+      }
+
+      .book-specs {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: $border-size-xsmall solid $color-gray-light;
+
+        @media screen and (min-width: $large-phone) {
+          padding-bottom: 0;
+          border-bottom:  none;
+        }
+
+        li {
+          margin-bottom: .5em;
+        }
+
+        b {
+          padding-right: .25em;
+        }
+      }
+
+      .h-entry .e-content .table-of-contents,
+      .table-of-contents {
+        padding-top:  2rem;
+        border-top:  $border-size-xsmall solid $color-gray-light;
+
+        * {
+          font-size: 1rem;
+        }
+
+        h1 {
+          font-weight: bold;
+          font-weight: 700;
+          font-size:   1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        ul + h1 {
+          margin-top: 2rem;
+        }
+
+        p {
+          margin-bottom: 1rem;
+        }
       }
 
       .book-main header,
       .meta .table-of-contents {
-        display: block;
-      }
-
-      .book > header,
-      .h-entry .e-content .table-of-contents {
         display: none;
       }
-    }
 
+      .book-main header {
+        h2 {
+          font-weight: lighter;
+          font-weight: 300;
+        }
+      }
+
+
+      .book-content {
+        padding-top: 2rem;
+        border-top:  $border-size-xsmall solid $color-gray-light;
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+
+        blockquote {
+          background: $color-gray-light;
+          padding: 1em 1em 1em 1em;
+          margin-bottom: 1rem;
+
+          p:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .list {
+        margin: 2rem 0;
+      }
+
+      .kit-photos {
+        img {
+          width: 100%;
+        }
+      }
+
+      @media screen and (min-width: $small-tablet) {
+        .book-series-bullet {
+          margin-bottom: 4rem;
+        }
+
+        .book-main header,
+        .meta .table-of-contents {
+          display: block;
+        }
+
+        .book > header,
+        .h-entry .e-content .table-of-contents {
+          display: none;
+        }
+      }
+
+    }
   }
 }
