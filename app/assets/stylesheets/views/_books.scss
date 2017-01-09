@@ -21,6 +21,10 @@
 
     .book-series {
       margin: 8rem 0 4rem 0;
+
+      .u-image {
+        margin-bottom: 1rem;
+      }
     }
 
     #contradictionary           .book-cover img { width:  60%; }
@@ -52,9 +56,16 @@
       }
     }
 
+    #extra {
+      margin-top: 2rem;
+      padding-top: 4rem;
+      border-top: 1px solid $color-gray-light;
+    }
 
-    .book-series {
-      .u-image {
+    #into-libraries,
+    #lit-kit {
+      h1 {
+        font-size: 2.5rem;
         margin-bottom: 1rem;
       }
     }
