@@ -238,10 +238,17 @@ end
 
 articles = [
   {
+    url: "http://www.crimethinc.com/texts/r/demands/",
+    category: "Features",
+    title: "Why We Don't Make Demands",
+    published_at: Time.parse("2017-01-07T10:00 -0800"),
+    image: "http://thecloud.crimethinc.com/assets/features/demands/images/header2560.jpg",
+  },
+  {
     url: "http://www.crimethinc.com/texts/r/democracy/",
     category: "Features",
     title: "From Democracy to Freedom",
-    published_at: Time.parse("2017-01-07T10:00 -0800"),
+    published_at: Time.parse("2017-01-06T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/democracy/images/header2000.jpg",
   },
   {
@@ -249,7 +256,7 @@ articles = [
     category: "Features",
     title: "Understanding the Kurdish Resistance",
     subtitle: "Historical Overview & Eyewitness Report",
-    published_at: Time.parse("2017-01-06T10:00 -0800"),
+    published_at: Time.parse("2017-01-05T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/kurdish/images/header2000.jpg",
   },
   {
@@ -257,14 +264,14 @@ articles = [
     category: "Features",
     title: "Next Time It Explodes",
     subtitle: "Revolt, Repression, and Backlash since the Ferguson Uprising",
-    published_at: Time.parse("2017-01-05T10:00 -0800"),
+    published_at: Time.parse("2017-01-04T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header2000.jpg",
   },
   {
     url: "http://www.crimethinc.com/texts/r/battle/",
     category: "Features",
     title: "Report Back from the Battle for Sacred Ground",
-    published_at: Time.parse("2017-01-04T10:00 -0800"),
+    published_at: Time.parse("2017-01-03T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/battle/images/header2000.jpg",
   }
 ]
