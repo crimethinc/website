@@ -2,8 +2,15 @@
 <%= stylesheet_link_tag "application", media: "all" %>
 
 <% if @article.present? %>
-  <!-- Custom CSS -->
+  <!-- Custom Article CSS -->
   <style>
     <%= @article.css %>
+  </style>
+<% end %>
+
+<% if @page.present? %>
+  <!-- Custom Page CSS -->
+  <style>
+    <%= @page.css %>
   </style>
 <% end %>
