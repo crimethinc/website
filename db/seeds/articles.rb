@@ -224,31 +224,20 @@ end
 
 # New feature style Articles
 # Collect the articles together
-# TODO integrate this when podcast post goes up
-{
-  url: "http://www.crimethinc.com/podcast/53",
-  category: "Podcast",
-  title: '"Anti-Globalization" Walking Tour of Washington, D.C',
-  subtitle: "Stories &amp; Lessons from 1999-2003 Wave of Mass Actions Against Global Capitalism",
-  published_at: Time.parse("2017-01-08T10:00 -0800"),
-  image: "http://thecloud.crimethinc.com/assets/features/democracy/images/header2000.jpg",
-
-  summary: %q{Our first walking tour! Protesters descending on Washington, D.C. to [#DisruptJ20](http://www.disruptj20.org/) are stepping into a long history of resistance in the belly of the beast. One of the most innovative and powerful cycles of protest in the nation’s capital was [the movement against corporate globalization](http://www.infoshop.org/Anti-Capitalist-Movements) in the late 1990s and early 2000s. Most tours of D.C. take you around the monuments and museums downtown, but we want to show you another side of the city—the neighborhoods and [DIY spaces](http://www.anarchistagency.com/in-the-news/the-verge-4chan-trolls-want-to-quell-anti-trump-dissent-by-shutting-down-diy-venues-and-art-spaces/) from which anarchists launched attacks on capital and where seeds were planted for a new world to take its place. Through historic sites, interviews, and a scrapbook of anti-capitalist mementos, we hope to pass on some of the lessons and inspiration that the anti-globalization movement can offer, especially as a new wave of struggle begins under Trump.}
-}
 
 articles = [
   {
     url: "http://www.crimethinc.com/texts/r/demands/",
     category: "Features",
     title: "Why We Don't Make Demands",
-    published_at: Time.parse("2017-01-07T10:00 -0800"),
+    published_at: Time.parse("2017-01-06T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/demands/images/header2560.jpg",
   },
   {
     url: "http://www.crimethinc.com/texts/r/democracy/",
     category: "Features",
     title: "From Democracy to Freedom",
-    published_at: Time.parse("2017-01-06T10:00 -0800"),
+    published_at: Time.parse("2017-01-05T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/democracy/images/header2000.jpg",
   },
   {
@@ -256,7 +245,7 @@ articles = [
     category: "Features",
     title: "Understanding the Kurdish Resistance",
     subtitle: "Historical Overview & Eyewitness Report",
-    published_at: Time.parse("2017-01-05T10:00 -0800"),
+    published_at: Time.parse("2017-01-04T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/kurdish/images/header2000.jpg",
   },
   {
@@ -264,14 +253,14 @@ articles = [
     category: "Features",
     title: "Next Time It Explodes",
     subtitle: "Revolt, Repression, and Backlash since the Ferguson Uprising",
-    published_at: Time.parse("2017-01-04T10:00 -0800"),
+    published_at: Time.parse("2017-01-03T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header2000.jpg",
   },
   {
     url: "http://www.crimethinc.com/texts/r/battle/",
     category: "Features",
     title: "Report Back from the Battle for Sacred Ground",
-    published_at: Time.parse("2017-01-03T10:00 -0800"),
+    published_at: Time.parse("2017-01-02T10:00 -0800"),
     image: "http://thecloud.crimethinc.com/assets/features/battle/images/header2000.jpg",
   }
 ]
@@ -435,6 +424,42 @@ articles = [
   }
 ]
 
+
+# Find the "published" Status id once for reuse on each test Article
+published_status = Status.find_by(name: "published")
+
+# Loop through and create the articles
+articles.each_with_index do |article_params, index|
+  # Delete Category from params before creating Article
+  # And create a new Category
+  category = Category.find_or_create_by! name: article_params.delete(:category)
+
+  # published
+  article_params[:status_id] = published_status.id
+
+  # Save the Article
+  article = Article.create!(article_params)
+
+  # Add the Article to its Category
+  category.articles << article
+end
+
+
+
+##### Podcast Episode #53 post
+articles = [
+  {
+    category: "Podcast",
+    title: "#53: “Anti-Globalization” Walking Tour of Washington, D.C.",
+    subtitle: "Stories and Lessons from the 1999-2003 Wave of the Mass Actions Against Global Capitalism",
+    content: %{Our first walking tour! Protesters descending on Washington, D.C. to [#DisruptJ20](http://www.disruptj20.org "Schedule of Events #DisruptJ20") are stepping into a long history of resistance in the belly of the beast. One of the most innovative and powerful cycles of protest in the nation’s capital was [the movement against corporate globalization](http://www.infoshop.org/Anti-Capitalist-Movements "Anti-Capitalist and Anti-Globalization Movements") in the late 1990s and early 2000s. Most tours of D.C. take you around the monuments and museums downtown, but we want to show you another side of the city—the neighborhoods and [DIY spaces](http://www.anarchistagency.com/in-the-news/the-verge-4chan-trolls-want-to-quell-anti-trump-dissent-by-shutting-down-diy-venues-and-art-spaces/) from which anarchists launched attacks on capital and where seeds were planted for a new world to take its place. Through historic sites, interviews, and a scrapbook of anti-capitalist mementos, we hope to pass on some of the lessons and inspiration that the anti-globalization movement can offer, especially as a new wave of struggle begins under Trump. [Listen to the episode here.](/podcast/53)},
+    published_at: Time.parse("2017-01-08T01:00 -0500"),
+    tweet:   "The Ex-Worker #53: Walking Tour of Washington, D.C. with stories from the mass actions against global capitalism.",
+    summary: "Stories and lessons from 1999-2003 wave of the mass actions against global capitalism.",
+    image: "http://thecloud.crimethinc.com/assets/articles/2017/01/08/a16-march.jpg",
+    slug: "podcast-episode-53",
+  }
+]
 
 # Find the "published" Status id once for reuse on each test Article
 published_status = Status.find_by(name: "published")
