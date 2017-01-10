@@ -451,11 +451,11 @@ articles = [
   {
     category: "Podcast",
     title: "#53: “Anti-Globalization” Walking Tour of Washington, D.C.",
-    subtitle: "Stories and Lessons from the 1999-2003 Wave of the Mass Actions Against Global Capitalism",
+    subtitle: "Stories and Lessons from the 1999-2003 Wave of Mass Actions Against Global Capitalism",
     content: %{Our first walking tour! Protesters descending on Washington, D.C. to [#DisruptJ20](http://www.disruptj20.org "Schedule of Events #DisruptJ20") are stepping into a long history of resistance in the belly of the beast. One of the most innovative and powerful cycles of protest in the nation’s capital was [the movement against corporate globalization](http://www.infoshop.org/Anti-Capitalist-Movements "Anti-Capitalist and Anti-Globalization Movements") in the late 1990s and early 2000s. Most tours of D.C. take you around the monuments and museums downtown, but we want to show you another side of the city—the neighborhoods and [DIY spaces](http://www.anarchistagency.com/in-the-news/the-verge-4chan-trolls-want-to-quell-anti-trump-dissent-by-shutting-down-diy-venues-and-art-spaces/) from which anarchists launched attacks on capital and where seeds were planted for a new world to take its place. Through historic sites, interviews, and a scrapbook of anti-capitalist mementos, we hope to pass on some of the lessons and inspiration that the anti-globalization movement can offer, especially as a new wave of struggle begins under Trump. [Listen to the episode here.](/podcast/53)},
     published_at: Time.parse("2017-01-08T01:00 -0500"),
     tweet:   "The Ex-Worker #53: Walking Tour of Washington, D.C. with stories from the mass actions against global capitalism.",
-    summary: "Stories and lessons from 1999-2003 wave of the mass actions against global capitalism.",
+    summary: "Stories and lessons from 1999-2003 Wave of Mass Actions against global capitalism.",
     image: "http://thecloud.crimethinc.com/assets/articles/2017/01/08/a16-march.jpg",
     slug: "podcast-episode-53",
   }
