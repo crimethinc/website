@@ -4,7 +4,7 @@ class Admin::EpisodesController < Admin::AdminController
 
   # /admin/episodes
   def index
-    @episodes = Episode.all
+    @episodes = Episode.all.order("id DESC")
   end
 
   # /admin/episodes/1

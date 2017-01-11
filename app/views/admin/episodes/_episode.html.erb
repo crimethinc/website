@@ -1,0 +1,66 @@
+<article>
+  <header>
+    <div class="p-name">
+      <h1><%= link_to_unless_current episode.title, [:admin, episode] %></h1>
+      <h2><%= link_to_unless_current episode.subtitle, [:admin, episode] %></h2>
+    </div>
+  </header>
+
+  <div class="e-content">
+    <dl class="dl-horizontal">
+      <dt>Image</dt>
+      <dd><%= link_to(image_tag(episode.image, style: "width: 200px"), episode.image) %></dd>
+
+      <dt>Podcast</dt>
+      <dd><%= link_to episode.podcast.name, [:admin, episode.podcast] %></dd>
+
+      <dt>Title</dt>
+      <dd><%= episode.title %></dd>
+
+      <dt>Subtitle</dt>
+      <dd><%= episode.subtitle %></dd>
+
+      <dt>MP3 URL</dt>
+      <dd><%= link_to episode.audio_mp3_url, episode.audio_mp3_url %></dd>
+
+      <dt>MP3 File Size</dt>
+      <dd><%= episode.audio_mp3_file_size %></dd>
+
+      <dt>OGG URL</dt>
+      <dd><%= link_to episode.audio_ogg_url, episode.audio_ogg_url %></dd>
+
+      <dt>OGG File Size</dt>
+      <dd><%= episode.audio_ogg_file_size %></dd>
+
+      <dt>Audio Length</dt>
+      <dd><%= episode.audio_length %></dd>
+
+      <dt>Duration</dt>
+      <dd><%= episode.duration %></dd>
+
+      <dt>Audio Type</dt>
+      <dd><%= episode.audio_type %></dd>
+
+      <dt>Tags</dt>
+      <dd><%= episode.tags %></dd>
+    </dl>
+
+    <hr>
+
+    <% unless action_name == "index" %>
+      <dl class="dl-horizontal">
+        <dt>Published At</dt>
+        <dd><%= episode.published_at %></dd>
+
+        <dt>Content</dt>
+        <dd><%= episode.content %></dd>
+
+        <dt>Show Notes</dt>
+        <dd><%= episode.show_notes %></dd>
+
+        <dt>Transcript</dt>
+        <dd><%= episode.transcript %></dd>
+      </dl>
+    <% end %>
+  </div>
+</article>
