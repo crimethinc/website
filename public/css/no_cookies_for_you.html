@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>CrimethInc. Ex-Workers' Collective : No Cookies For You!</title>
+<script src="/mint/?js" type="text/javascript"></script>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feed" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie8.css"/>
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="/css/ie7.css"/>
+<![endif]-->
+
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="/css/ie6.css"/>
+<![endif]-->
+
+
+<script type="text/javascript" src="/css/js/prototype.js"></script>
+<script type="text/javascript" src="/css/js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="/css/js/lightbox.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="header"><div id="headerleft"><a href="/"><img src="/css/header.gif" alt="CrimethInc. Ex-Workers' Collective" width="640" height="76" border="0" /></a></div>
+<div id="headerright"><table border="0">
+  <tr>
+    <td class="headercart">
+<?php
+
+$cartAmount = 0;
+if(isset($_COOKIE["cartAmount"]))
+{
+	$cartAmount = $_COOKIE["cartAmount"];
+}
+if ($cartAmount > 0) {
+?>
+
+<a href="http://store.crimethinc.com/x/">
+<img src="/css/cart-black.gif" alt="cart" width="20" height="15" border="0" style="margin-bottom: -2px" />
+<strong>$<?php echo $cartAmount; ?></strong>
+</a>
+<?php } ?>
+</td>
+    <form action="/search/search.php" method="get">
+    <td><input name="image" type="image" class="sp2_btn" src="/css/black_spotlight_icon.gif" alt="Search" border="0" /></td>
+    <td><input class="sp2_field" name="zoom_query" type="text" value="" maxlength="255" size="13" /></td>
+  </form></tr>
+</table></div>
+<div id="nav">
+<a href="/rss.html"><img src="/css/rss.png" alt="RSS Feed" border="0" id="rssicon"/></a>
+ <!--ZOOMSTOP-->
+<span class="nav">
+<a href="/books">books</a> | 
+<a href="/rt">journal</a> | 
+<a href="/texts">texts</a> | 
+<a href="/tools">tools</a> |
+<a href="/movies">movies</a> |
+<a href="http://store.crimethinc.com/x/">store</a> |
+<a href="/blog">blog</a> | 
+<a href="/about">about</a></span></div><!--ZOOMRESTART-->
+</div>
+
+
+
+<div id="main">
+<div id="primeleftwrapper">
+ <div class="prime1top">
+  <h2>No cookies for you.</h2>
+  <p>For some craaaaaaazy reason you have cookies turned off in your browser. Congratulations on being in the one-tenth of a percent of cookie-less users of our site. If you want to remain cookieless, that's ok with us, but you won't be able to use our online store at all&mdash;that's all there is to it. You can turn them on temporarily to use the store, if you want to.</p>
+  <p><a href="http://www.google.com/cookies.html" target="_blank">Click here to read Google's instructions on how to enable cookies for various browsers.</a></p>
+  <p>&nbsp;</p>
+  <p><strong>Want to explore?</strong> We'd recommend our <strong><a href="site_guide.html">Site Guide</a></strong> and <a href="faq.html"><strong>F.A.Q.</strong></a>, or if you just want to dive in, our <a href="/texts/selected/" target="_blank"><strong>Selected Primary Texts</strong></a> page has some good stuff. <a href="/books"><strong>We also have some books.</strong></a></p>
+ </div>
+  
+  </div>
+<div id="primerightwrapper">
+  
+    
+  <div class="prime2top">
+    <h1><a href="faq.html">F.A.Q.</a></h1>
+	<p><strong> Q: Is there a place on the site where you answer frequently asked questions? Like a, um, F.A.Q.?</strong></p>
+	<p>A: <a href="faq.html">Yes there is! Click here for our exciting F.A.Q.</a>!<br />
+	  </p>
+  </div>
+  
+  <div class="prime2">
+    <h1><a href="site_guide.html">site guide</a></h1>
+	
+<p>Everything you need to become an expert user of our site, including a site-map, feature walk-throughs,
+<!--[if gte IE 6]> a desperate plea for you to stop using Internet Explorer,<![endif]-->
+and insight into our ambitions for this website. <a href="site_guide.html">Click here.</a><br />
+      </p>
+	</div>
+    
+    <div class="prime2">
+    <h1><a href="contact.html">contact</a></h1>
+	
+								<p> <strong>Mail:</strong><br />
+								  CrimethInc. Far East<br />
+							      PO Box 13998<br />
+        Salem OR 97309-1998</p>
+								<p><strong>E-Mail:</strong><br />
+							    <a href="mailto:help@crimethinc.com">help@crimethinc.com</a></p>
+								<p>In addition to the above general addresses, we have  detailed contact information on our <a href="contact.html">Contact page</a>.<br />
+	    </p>
+  </div>
+      
+     
+
+    </div>
+ 
+</div>
+<?php include("footer.php"); ?>
+</body>
+</html>

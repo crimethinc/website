@@ -1,0 +1,167 @@
+.subtitle h2 {
+	font-family: 'Monda', sans-serif;
+	text-align: right;
+	text-transform: none;
+	font-size: 18px;
+	color: white;
+	letter-spacing: -.05em;
+	line-height: 1.1em;
+	font-weight: normal;
+	padding: 15px 0px;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.subtitle h3 {
+	font-family: 'Monda', sans-serif;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: white;
+	letter-spacing: -.05em;
+	line-height: 1.1em;
+	font-weight: normal;
+	padding: 10px 0px 2px 0px;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.subtitle a {
+	color: white !important;
+	-webkit-transition:all .1s ease-in;
+	text-decoration: none;
+	border-bottom:1px dotted;
+}
+
+.subtitle a:hover, .subtitle a:active {
+	text-shadow: 0px 0px 10px grey;
+	color: lightblue !important;
+	text-shadow: 0px 0px 10px grey;
+	border-bottom:1px solid lightblue;
+}
+
+.podmain {
+	float:  left;
+	width:  480px;
+	padding: 15px 0px;
+	margin: 0px;
+
+}
+
+.podmain p, .podmain ul {
+	font-family: 'Monda', sans-serif;
+	text-align: left;
+	text-transform: none;
+	font-size: 14px;
+	color: white;
+	letter-spacing: -.05em;
+	line-height: 2em;
+	font-weight: normal;
+	padding: 0px 0px 15px 0px;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.podmain li {
+	padding: 0px 0px 5px 0px;
+	margin: 0px 0px 0px 20px;
+}
+
+.podmain h1 {
+	font-family: 'Monda', sans-serif;
+	text-align: left;
+	font-size: 40px;
+	color: white;
+	letter-spacing: -.05em;
+	line-height: 1.1em;
+	font-weight: normal;
+	padding: 0px 0px 25px 0px;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.podmain h2 {
+	font-family: 'Monda', sans-serif;
+	text-align: left;
+	text-transform: none;
+	font-size: 16px;
+	color: white;
+	letter-spacing: -.05em;
+	line-height: 1.0em;
+	font-weight: 700;
+	padding: 30px 0px 12px 0px;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.podmain h3 {
+	font-family: 'Monda', sans-serif;
+	text-align: left;
+	font-size: 40px;
+	color: white;
+	letter-spacing: -.05em;
+	line-height: 1.1em;
+	font-weight: normal;
+	padding: 0px 0px 5px 0px;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.podmain h4 {
+	font-family: 'Monda', sans-serif;
+	text-align: left;
+	text-transform: none;
+	font-size: 18px;
+	color: white;
+	letter-spacing: -.05em;
+	line-height: 1.0em;
+	font-weight: 700;
+	padding: 20px 0px 12px 0px;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.podmain h5 {
+	font-family: 'Monda', sans-serif;
+	text-align: left;
+	text-transform: none;
+	font-size: 12px;
+	color: white;
+	letter-spacing: -.05em;
+	line-height: 1.1em;
+	font-weight: normal;
+	padding: 0px 0px;
+	margin: 0px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.podmain a {
+	font-weight: 700;
+	color: white !important;
+	-webkit-transition:all .1s ease-in;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+.podmain a:hover, .podmain a:active {
+	font-weight: 700;
+	color: lightblue !important;
+	text-shadow: 0px 0px 10px grey;
+	border-bottom:1px solid lightblue;
+}
