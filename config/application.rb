@@ -13,5 +13,13 @@ module Magazine
     # -- all .rb files in that directory are automatically loaded.
 
     config.middleware.use "Rack::Redirect"
+
+    # Monitor database
+    NewRelicPing.configure do |c|
+      c.monitor("database") do
+        ActiveRecord::Base.connection.execute("select count(*) from schema_migrations")
+      end
+    end
+
   end
 end

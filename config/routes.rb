@@ -102,6 +102,8 @@ Rails.application.routes.draw do
   # Redirects
   get "store", to: redirect("http://store.crimethinc.com")
 
+  # Ping and Health monitoring
+  mount NewRelicPing::Engine, at: "/status"
 
   # Pages
   get "*path", to: "pages#show", as: :page, via: :all
