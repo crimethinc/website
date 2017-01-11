@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :check_for_redirection
+  before_action :strip_file_extension
   before_action :set_social_links
   before_action :set_new_subscriber
   before_action :set_pinned_pages
@@ -83,6 +84,12 @@ class ApplicationController < ActionController::Base
 
     if redirect.present?
       return redirect_to redirect.target_path, status: redirect.temporary? ? 302 : 301
+    end
+  end
+
+  def strip_file_extension
+    if request.path =~ /\.html/
+      return redirect_to request.path.sub(/\.html/, "")
     end
   end
 
