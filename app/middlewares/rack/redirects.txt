@@ -63,7 +63,6 @@
 /workbook /books/work_abridged.html
 /workbook/ /books/work_abridged.html
 http://thecloud.crimethinc.com/images/egypt/9b.gif /blog/2011/02/02/egypt-today-tomorrow-the-world/#map
-
 /texts/r/agitators /2014/08/20/feature-the-making-of-outside-agitators
 /texts/r/agitators/ /2014/08/20/feature-the-making-of-outside-agitators
 /texts/r/agitators/.index.html /2014/08/20/feature-the-making-of-outside-agitators
