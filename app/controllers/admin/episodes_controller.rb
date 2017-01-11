@@ -53,6 +53,9 @@ class Admin::EpisodesController < Admin::AdminController
   end
 
   def episode_params
-    params.require(:episode).permit(:title, :subtitle, :image, :content, :audio_url, :audio_length, :audio_type, :tags)
+    params.require(:podcast_id, :title, :subtitle, :image, :content,
+      :audio_mp3_url, :audio_mp3_file_size, :audio_ogg_url,
+      :audio_ogg_file_size, :show_notes, :transcript, :audio_length,
+      :duration, :audio_type, :tags, :published_at)
   end
 end
