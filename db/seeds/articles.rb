@@ -98,8 +98,14 @@ Dir.glob("#{filepath}/*/").each do |f|
       namespace = "r"
     end
 
-    ["/texts/#{namespace}/#{slug}", "/texts/#{namespace}/#{slug}/", "/texts/#{namespace}/#{slug}/index.html"].each do |source_path|
-      Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+    [
+      "/texts/#{namespace}/#{slug}",
+      "/texts/#{namespace}/#{slug}/",
+      "/texts/#{namespace}/#{slug}/index.html",
+      "/texts/#{namespace}/#{slug}.html"
+    ].each do |source_path|
+      # Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+      # puts "#{source_path} #{article.path}"
     end
  end
 end
@@ -203,7 +209,7 @@ Dir.glob("#{filepath}/*").each do |f|
 
     redirect_paths.each do |source_path|
       # Redirect.create! source_path: source_path, target_path: article.path, temporary: false
-      puts "#{source_path} #{article.path}"
+      # puts "#{source_path} #{article.path}"
     end
   end
 end
@@ -404,10 +410,12 @@ Dir.glob("#{filepath}/*").each do |f|
         "/texts/#{namespace}/#{filename_slug}",
         "/texts/#{namespace}/#{filename_slug}/",
         "/texts/#{namespace}/#{filename_slug}/index.html",
-        "/texts/#{namespace}/#{filename_slug}/index.php"
+        "/texts/#{namespace}/#{filename_slug}/index.php",
+        "/texts/#{namespace}/#{filename_slug}.html",
+        "/texts/#{namespace}/#{filename_slug}.php"
       ].each do |source_path|
-        puts "#{source_path} #{article.path}"
         # Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+        # puts "#{source_path} #{article.path}"
       end
     end
 
