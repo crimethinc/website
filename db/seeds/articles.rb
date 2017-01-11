@@ -98,7 +98,7 @@ Dir.glob("#{filepath}/*/").each do |f|
       namespace = "r"
     end
 
-    ["/texts/#{namespace}/#{slug}", "/texts/#{namespace}/#{slug}/", "/texts/#{namespace}/#{slug}/.index.html"].each do |source_path|
+    ["/texts/#{namespace}/#{slug}", "/texts/#{namespace}/#{slug}/", "/texts/#{namespace}/#{slug}/index.html"].each do |source_path|
       Redirect.create! source_path: source_path, target_path: article.path, temporary: false
     end
  end
@@ -122,11 +122,25 @@ Dir.glob("#{filepath}/*").each do |f|
     published_at = Time.parse(doc.css("wp_post_date_gmt").text) # GMT
     published_at = Time.parse(doc.css("wp_post_date").text)     # PST # Seems to map to URLs more accurately
 
+    # Wordpress post slug
+    slug = doc.css("guid").text.split("/").compact.last
+
     # Old permalinks to support by creating Redirects to the new Article path
     redirect_paths = []
     redirect_paths << doc.css("link").text
     redirect_paths << doc.css("guid").text
     redirect_paths << "http://www.crimethinc.com/blog/?p=#{doc.css("wp_post_id").text}"
+    redirect_paths << "http://www.crimethinc.com/blog?p=#{doc.css("wp_post_id").text}"
+
+    # Redirects for leading and non-leading zero months and days
+    redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month}/#{published_at.day}/#{slug}"
+    redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month.to_s.sub(/^0/, "")}/#{published_at.day}/#{slug}"
+    redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month}/#{published_at.day.to_s.sub(/^0/, "")}/#{slug}"
+    redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month.to_s.sub(/^0/, "")}/#{published_at.day.to_s.sub(/^0/, "")}/#{slug}"
+    redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month.to_s.rjust(2, "0")}/#{published_at.day}/#{slug}"
+    redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month}/#{published_at.day.to_s.rjust(2, "0")}/#{slug}"
+    redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month.to_s.rjust(2, "0")}/#{published_at.day.to_s.rjust(2, "0")}/#{slug}"
+
 
     # Short URL
     doc.css("wp_postmeta").each do |wp_postmeta|
@@ -137,12 +151,14 @@ Dir.glob("#{filepath}/*").each do |f|
       # Old permalinks to support by creating Redirects to the new Article path
       if wp_postmeta.css("wp_meta_key").text == "_wp_old_slug" && wp_postmeta.css("wp_meta_value").text.present?
         redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month}/#{published_at.day}/#{wp_postmeta.css("wp_meta_value").text}"
+        redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month.to_s.sub(/^0/, "")}/#{published_at.day}/#{wp_postmeta.css("wp_meta_value").text}"
+        redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month}/#{published_at.day.to_s.sub(/^0/, "")}/#{wp_postmeta.css("wp_meta_value").text}"
+        redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month.to_s.sub(/^0/, "")}/#{published_at.day.to_s.sub(/^0/, "")}/#{wp_postmeta.css("wp_meta_value").text}"
+        redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month.to_s.rjust(2, "0")}/#{published_at.day}/#{wp_postmeta.css("wp_meta_value").text}"
+        redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month}/#{published_at.day.to_s.rjust(2, "0")}/#{wp_postmeta.css("wp_meta_value").text}"
+        redirect_paths << "http://www.crimethinc.com/blog/#{published_at.year}/#{published_at.month.to_s.rjust(2, "0")}/#{published_at.day.to_s.rjust(2, "0")}/#{wp_postmeta.css("wp_meta_value").text}"
       end
     end
-
-    # Remove duplicate Redirects
-    redirect_paths = redirect_paths.uniq
-
 
     # Image and Header color
     image = ""
@@ -182,8 +198,12 @@ Dir.glob("#{filepath}/*").each do |f|
     category = Category.find_or_create_by name: category_name
     category.articles << article
 
+    # Remove duplicate Redirects
+    redirect_paths = redirect_paths.uniq
+
     redirect_paths.each do |source_path|
-      Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+      # Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+      puts "#{source_path} #{article.path}"
     end
   end
 end
@@ -291,6 +311,7 @@ articles.each_with_index do |article_params, index|
   article.content = "Redirect to Feature in feed: #{feature.path}"
 
   # Create Redirect
+  puts "#{article.path} #{feature.path}"
   Redirect.create source_path: article.path, target_path: feature.path, temporary: false
 
   # Add the Article to its Category
@@ -378,9 +399,18 @@ Dir.glob("#{filepath}/*").each do |f|
     category.articles << article
 
     # TODO
-    # ["/texts/#{namespace}/#{slug}", "/texts/#{namespace}/#{slug}/", "/texts/#{namespace}/#{slug}/.index.html"].each do |source_path|
-    #   Redirect.create! source_path: source_path, target_path: article.path, temporary: false
-    # end
+    %w(recentfeatures rollingthunder selected atoz days harbinger insidefront mostrecent pastfeatures).each do |namespace|
+      [
+        "/texts/#{namespace}/#{filename_slug}",
+        "/texts/#{namespace}/#{filename_slug}/",
+        "/texts/#{namespace}/#{filename_slug}/index.html",
+        "/texts/#{namespace}/#{filename_slug}/index.php"
+      ].each do |source_path|
+        puts "#{source_path} #{article.path}"
+        # Redirect.create! source_path: source_path, target_path: article.path, temporary: false
+      end
+    end
+
   end
 end
 
