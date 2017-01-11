@@ -1,0 +1,32 @@
+# For full documentation of agent configuration options, please refer to
+# https://docs.newrelic.com/docs/agents/ruby-agent/installation-configuration/ruby-agent-configuration
+
+common: &default_settings
+  # To disable the agent regardless of other settings, uncomment the following:
+  # agent_enabled: false
+
+  # Required license key associated with your New Relic account.
+  license_key: 8eefd8698aa963b1f1259df444c0ea369c61af6f
+  app_name: Crimethinc
+  log_level: info
+
+development:
+  <<: *default_settings
+  app_name: Crimethinc (Development)
+
+  # NOTE: There is substantial overhead when running in developer mode.
+  # Do not use for production or load testing.
+  developer_mode: true
+
+test:
+  <<: *default_settings
+  # It doesn't make sense to report to New Relic from automated test runs.
+  monitor_mode: false
+
+staging:
+  <<: *default_settings
+  app_name: Crimethinc (Staging)
+
+production:
+  <<: *default_settings
+  app_name: Crimethinc (Production)

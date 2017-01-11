@@ -43,7 +43,7 @@ end
 
 # monitoring
 gem "newrelic_rpm"
-gem 'new_relic_ping'
+gem "new_relic_ping"
 gem "bugsnag"
 
 # windows dev
