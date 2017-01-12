@@ -18,32 +18,7 @@
         <h1 class="year-month"><%= link_to_dates(year: year, month: month) %></h1>
       <% end %>
 
-      <ol>
-        <% articles.each do |article| %>
-
-          <li>
-            <article class="h-entry" role="article">
-              <div class="row">
-                <div class="<%= "column" if article.image.present? %> column-one-third">
-                  <%= render "articles/image", article: article, linked: true %>
-                </div>
-
-                <div class="<%= "column" if article.image.present? %> column-two-third">
-                  <header>
-                    <%= render "articles/categories", article: article %>
-                    <%= render "articles/titles", header: article, linked: true %>
-                    <%= render "articles/published_on", article: article %>
-                  </header>
-
-                  <footer>
-                    <%= render "articles/tags",       article: article %>
-                  </footer>
-                </div>
-              </div>
-            </article>
-          </li>
-        <% end %>
-      </ol>
+      <%= render "articles/list", articles: articles %>
 
     <% end %>
   <% end %>

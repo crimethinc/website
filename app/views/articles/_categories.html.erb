@@ -3,9 +3,7 @@
     <b class="label">Categories:</b>
     <ul>
       <% article.categories.each do |category| %>
-        <%# TODO enable when /category pages work %>
-        <!-- <li><%#= link_to category.name, "/category/#{category.slug}", rel: "tag", class: "p-category" %></li> -->
-        <li><%= category.name %></li>
+        <li><%= link_to category.name, category_path(category.slug), rel: "tag", class: "p-category" %></li>
       <% end %>
     </ul>
   </div>

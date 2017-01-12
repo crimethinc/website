@@ -31,6 +31,10 @@ Rails.application.routes.draw do
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
 
 
+  # Categories
+  get "categories/:slug", to: "categories#show", as: :category
+
+
   # Pages (linked in header/nav)
   get "read",   to: "about#read",   as: :read
   get "watch",  to: "about#watch",  as: :watch
