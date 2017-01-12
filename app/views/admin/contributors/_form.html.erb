@@ -1,0 +1,20 @@
+<%= form_for [:admin, @contributor] do |f| %>
+  <%= render "admin/form_errors", thing: @contributor %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control input-lg" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :photo, "Photo URL" %>
+    <%= f.url_field :photo, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :bio %>
+    <%= f.text_area :bio, class: "form-control", rows: 10 %>
+  </div>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :contributors] %>
+<% end %>

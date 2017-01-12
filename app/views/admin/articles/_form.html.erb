@@ -18,6 +18,20 @@
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
+  <fieldset id="contributions">
+    <legend>Contributions</legend>
+
+    <%= f.fields_for :contributions do |contribution| %>
+      <%= render "contribution_fields", f: contribution %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association "Add Contribution", f, :contributions, class: "btn btn-primary" %>
+    </div>
+  </fieldset>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+
   <fieldset id="syndication">
     <legend>Syndication</legend>
     <div class="row">
