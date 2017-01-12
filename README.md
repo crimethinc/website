@@ -10,7 +10,7 @@ Ruby on Rails app that powers https://crimethinc.com
 
 ```
 git clone https://github.com/crimethinc/website.git
-cd magazine
+cd website
 ./script/bootstrap
 ./script/setup
 ./script/server
@@ -43,7 +43,7 @@ Clone this repo.
 
 ```
 git clone https://github.com/crimethinc/website.git
-cd magazine
+cd website
 ```
 
 Then run the `bootstrap` script.
