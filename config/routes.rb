@@ -35,6 +35,10 @@ Rails.application.routes.draw do
   get "categories/:slug", to: "categories#show", as: :category
 
 
+  # Tags
+  get "tags/:slug", to: "tags#show", as: :tag
+
+
   # Pages (linked in header/nav)
   get "read",   to: "about#read",   as: :read
   get "watch",  to: "about#watch",  as: :watch
