@@ -4,7 +4,7 @@ class Admin::ThemesController < Admin::AdminController
 
   # /admin/themes
   def index
-    @themes = Theme.all
+    @themes = Theme.page(params[:page])
   end
 
   # /admin/themes/1
