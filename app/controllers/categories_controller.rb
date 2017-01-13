@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
 
   def show
-    @category = Category.find_by!(slug: params["slug"])
-    @articles = @category.articles
+    @category = Category.find_by!(slug: params[:slug])
+    @articles = @category.articles.page(params[:page]).per(5)
 
     @html_id  = "page"
     @body_id  = "category"
