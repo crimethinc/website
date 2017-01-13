@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     @homepage = true
 
     # feed
-    @articles = Article.live.published.limit(9).all.to_a
+    @articles = Article.live.published.limit(8).all.to_a
     # TODO delete this next line, after first week
     @articles = @articles.reject{|a| a.categories.first.name.downcase =~ /calling all anarchists|read all about it/}
 

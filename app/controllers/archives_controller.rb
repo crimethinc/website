@@ -1,5 +1,4 @@
 class ArchivesController < ApplicationController
-
   def index
     @html_id    = "page"
     @body_id    = "archives"
@@ -10,8 +9,6 @@ class ArchivesController < ApplicationController
     @articles_day   = params[:day]
 
     articles = Article.published.all
-    #TODO add this after pagination setup:
-    # .paginate(per_page: 5, page: params[:page])
 
     articles = articles.where(year:  params[:year])  if params[:year].present?
     articles = articles.where(month: params[:month]) if params[:month].present?
@@ -30,17 +27,7 @@ class ArchivesController < ApplicationController
       end
     end
 
-    # Build year/month hash for view
-    @articles = {}
-    articles.each do |article|
-      year  = article.published_at.year
-      month = article.published_at.month
-
-      @articles[year]        = {} if @articles[year].nil?
-      @articles[year][month] = [] if @articles[year][month].nil?
-
-      @articles[year][month] << article
-    end
+    articles = articles.page(params[:page]).per(5)
+    @archive = Archive.new(articles)
   end
-
 end

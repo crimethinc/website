@@ -6,7 +6,7 @@ class Admin::ArticlesController < Admin::AdminController
 
   # /admin/articles
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page])
   end
 
   # /admin/articles/1

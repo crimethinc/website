@@ -4,7 +4,7 @@ class Admin::LinksController < Admin::AdminController
 
   # /admin/links
   def index
-    @links = Link.all
+    @links = Link.page(params[:page])
   end
 
   # /admin/links/1
