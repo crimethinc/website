@@ -77,11 +77,13 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :articles
     resources :books
+    resources :contributors
     resources :episodes
     resources :links
     resources :pages
     resources :podcasts
     resources :redirects
+    resources :roles
     resources :settings
     resources :subscribers
     resources :themes

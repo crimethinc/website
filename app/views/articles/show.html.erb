@@ -18,6 +18,7 @@
 
   <footer>
     <%= render "articles/published_on", article: @article, linked: true %>
+    <%= render "articles/contributions", article: @article %>
     <%= render "articles/categories",   article: @article %>
     <%= render "articles/tags",         article: @article %>
 

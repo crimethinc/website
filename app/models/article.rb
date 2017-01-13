@@ -7,6 +7,9 @@ class Article < ApplicationRecord
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
+  has_many :contributions, dependent: :destroy
+
+  accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
   scope :draft,       -> { where(status: Status.find_by(name: "draft")) }
   scope :edited,      -> { where(status: Status.find_by(name: "edited")) }

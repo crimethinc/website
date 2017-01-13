@@ -1,0 +1,11 @@
+<%= render "admin/page_header", thing: @contributor %>
+
+<h2><%= @contributor.name %></h2><br>
+
+<hr>
+
+<p>Photo: <%= link_to_if @contributor.photo.present?, @contributor.photo, @contributor.photo %></p>
+
+<div class="e-content">
+  <%= simple_format @contributor.bio %>
+</div>

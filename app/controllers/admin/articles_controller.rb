@@ -1,7 +1,8 @@
 class Admin::ArticlesController < Admin::AdminController
   before_action :authorize
-  before_action :set_article,      only: [:show, :edit, :update, :destroy]
-  after_action  :organize_article, only: [:create, :update]
+  before_action :set_article,              only: [:show, :edit, :update, :destroy]
+  before_action :set_contribution_options, only: [:new, :edit]
+  after_action  :organize_article,         only: [:create, :update]
 
   # /admin/articles
   def index
@@ -53,6 +54,11 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.find(params[:id])
   end
 
+  def set_contribution_options
+    @contributors = Contributor.order(:name)
+    @roles        = Role.order(:name)
+  end
+
   def organize_article
     @article.save_tags!(params[:tags])
     @article.save_categories!(params[:categories])
@@ -64,6 +70,9 @@ class Admin::ArticlesController < Admin::AdminController
                                     :slug, :draft_code, :status_id, :summary,
                                     :published_at, :tags, :categories,
                                     :image, :image_description, :css, :hide_layout,
-                                    :header_background_color, :header_text_color)
+                                    :header_background_color, :header_text_color,
+                                    contributions_attributes: [
+                                      :id, :contributor_id, :role_id,:_destroy
+                                    ])
   end
 end

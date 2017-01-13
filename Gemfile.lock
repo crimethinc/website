@@ -48,6 +48,7 @@ GEM
     bugsnag (5.0.1)
     builder (3.2.2)
     byebug (9.0.6)
+    cocoon (1.2.9)
     concurrent-ruby (1.0.4)
     debug_inspector (0.0.2)
     erubis (2.7.0)
@@ -174,6 +175,7 @@ DEPENDENCIES
   bootstrap-sass (= 3.3.7)
   bugsnag
   byebug
+  cocoon (~> 1.2.9)
   foreman
   jquery-rails
   kaminari

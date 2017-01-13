@@ -1,0 +1,25 @@
+<div class="nested-fields">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :role_id, "Role" %>
+        <%= f.collection_select :role_id, @roles, :id, :name, {prompt: true}, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :contributor_id, "Contributor" %>
+        <%= f.collection_select :contributor_id, @contributors, :id, :name, {prompt: true}, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%= link_to_remove_association "Remove Contribution", f, class: "btn btn-danger" %>
+    </div>
+  </div>
+
+  <hr>
+</div>
