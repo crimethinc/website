@@ -31,10 +31,10 @@
   @include image-replacement();
 
   @media screen and #{$standard-def} {
-    background-image: url(asset-path($url));
+    background-image: asset-data-url($url);
   }
   @media screen and #{$retina} {
-    background-image: url(asset-path($retina-url));
+    background-image: asset-data-url($retina-url);
   }
 }
 
