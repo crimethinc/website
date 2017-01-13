@@ -4,7 +4,7 @@ class Admin::SubscribersController < Admin::AdminController
 
   # /admin/subscribers
   def index
-    @subscribers = Subscriber.all
+    @subscribers = Subscriber.page(params[:page])
   end
 
   # /admin/subscribers/1

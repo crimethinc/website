@@ -59,3 +59,7 @@
 <br>
 
 <%= link_to 'New Video', new_video_path %>
+
+<div class="text-center">
+  <%= paginate @videos, views_prefix: "admin" %>
+</div>

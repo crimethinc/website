@@ -5,7 +5,7 @@ class Admin::PagesController < Admin::AdminController
 
   # /admin/pages
   def index
-    @pages = Page.all
+    @pages = Page.page(params[:page])
   end
 
   # /admin/pages/1
