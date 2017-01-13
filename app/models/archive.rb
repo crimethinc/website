@@ -3,7 +3,6 @@ class Archive
   include Enumerable
 
   delegate [:current_page, :total_pages, :limit_value] => :articles
-  delegate each: :calendar
 
   attr_reader :articles, :calendar
 
@@ -20,5 +19,9 @@ class Archive
 
       @calendar[year][month] << article
     end
+  end
+
+  def each(&block)
+    calendar.sort.reverse.each(&block)
   end
 end

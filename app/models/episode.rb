@@ -1,6 +1,8 @@
 class Episode < ApplicationRecord
   belongs_to :podcast
 
+  default_scope { order("id DESC") }
+
   def name
     if title.present? && subtitle.present?
       "#{title} : #{subtitle}"

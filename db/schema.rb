@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112043825) do
+ActiveRecord::Schema.define(version: 20170104053747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,27 +92,6 @@ ActiveRecord::Schema.define(version: 20170112043825) do
     t.integer  "article_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "contributions", force: :cascade do |t|
-    t.integer  "article_id"
-    t.integer  "contributor_id"
-    t.integer  "role_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["article_id"], name: "index_contributions_on_article_id", using: :btree
-    t.index ["contributor_id"], name: "index_contributions_on_contributor_id", using: :btree
-    t.index ["role_id"], name: "index_contributions_on_role_id", using: :btree
-  end
-
-  create_table "contributors", force: :cascade do |t|
-    t.string   "name"
-    t.string   "photo"
-    t.text     "bio"
-    t.string   "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["slug"], name: "index_contributors_on_slug", unique: true, using: :btree
   end
 
   create_table "episodes", force: :cascade do |t|
@@ -202,13 +181,6 @@ ActiveRecord::Schema.define(version: 20170112043825) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "roles", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_roles_on_name", unique: true, using: :btree
-  end
-
   create_table "settings", force: :cascade do |t|
     t.string   "name"
     t.string   "slug"
@@ -286,8 +258,5 @@ ActiveRecord::Schema.define(version: 20170112043825) do
     t.datetime "updated_at",                             null: false
   end
 
-  add_foreign_key "contributions", "articles"
-  add_foreign_key "contributions", "contributors"
-  add_foreign_key "contributions", "roles"
   add_foreign_key "links", "users"
 end

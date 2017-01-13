@@ -11,7 +11,7 @@
 </header>
 
 <div class="h-feed">
-  <% @archive.sort.reverse.each do |year, months| %>
+  <% @archive.each do |year, months| %>
     <% months.sort.reverse.each do |month, articles| %>
 
       <% unless @articles_day.present? or @articles_month.present? %>
