@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       as:          :article
 
   # Article listings by year, optional month, optional day
-  get "(/:year)(/:month)(/:day)",
+  get "(/:year)(/:month)(/:day)(/page/:page)",
       to:          "archives#index",
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :archives
@@ -32,11 +32,17 @@ Rails.application.routes.draw do
 
 
   # Categories
-  get "categories/:slug", to: "categories#show", as: :category
+  get "categories/:slug/page(/1)", to: redirect { |path_params, req|
+    "/categories/#{path_params[:slug]}"
+  }
+  get "categories/:slug(/page/:page)", to: "categories#show", as: :category
 
 
   # Tags
-  get "tags/:slug", to: "tags#show", as: :tag
+  get "tags/:slug/page(/1)", to: redirect { |path_params, req|
+    "/tags/#{path_params[:slug]}"
+  }
+  get "tags/:slug(/page/:page)", to: "tags#show", as: :tag
 
 
   # Pages (linked in header/nav)
@@ -75,20 +81,27 @@ Rails.application.routes.draw do
   # Admin Dashboard
   get :admin, to: redirect("/admin/articles"), as: "admin"
   namespace :admin do
-    resources :articles
-    resources :books
-    resources :contributors
-    resources :episodes
-    resources :links
-    resources :pages
-    resources :podcasts
-    resources :redirects
-    resources :roles
-    resources :settings
-    resources :subscribers
-    resources :themes
-    resources :users
-    resources :videos
+    concern :paginatable do
+      get "page(/1)", on: :collection, to: redirect { |path_params, req|
+        req.path.split("page").first
+      }
+      get "(page/:page)", action: :index, on: :collection, as: ""
+    end
+
+    resources :articles, concerns: :paginatable
+    resources :books, concerns: :paginatable
+    resources :contributors, concerns: :paginatable
+    resources :episodes, concerns: :paginatable
+    resources :links, concerns: :paginatable
+    resources :pages, concerns: :paginatable
+    resources :podcasts, concerns: :paginatable
+    resources :redirects, concerns: :paginatable
+    resources :roles, concerns: :paginatable
+    resources :settings, concerns: :paginatable
+    resources :subscribers, concerns: :paginatable
+    resources :themes, concerns: :paginatable
+    resources :users, concerns: :paginatable
+    resources :videos, concerns: :paginatable
   end
 
 
