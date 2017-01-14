@@ -26,7 +26,7 @@
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cloudfront.crimethinc.com/blog/wp-content/uploads/2008/03/green_vinyl_big.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2008/03/green_vinyl_big.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>

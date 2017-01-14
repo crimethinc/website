@@ -2578,7 +2578,7 @@
 /newpodcast /2013/05/01/new-biweekly-podcast-the-ex-worker
 /oaklandvideo /2011/11/07/oakland-general-strike-footage
 /occupy /2011/10/08/dear-occupiers-a-letter-from-anarchists
-/occupy/dearoccupiers.pdf http://cloudfront.crimethinc.com/images/occupy/dearoccupiers.pdf
+/occupy/dearoccupiers.pdf https://cloudfront.crimethinc.com/images/occupy/dearoccupiers.pdf
 /occupych /2011/11/27/breaking-and-entering-a-new-world
 /occupytactics /2012/08/16/crimethinc-to-debate-chris-hedges-in-nyc
 /occupytactics /blog/2012/08/16/crimethinc-to-debate-chris-hedges-in-nyc/

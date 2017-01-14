@@ -23,7 +23,7 @@
 @media (min-device-width:200px) and (max-width:599px) {
 
   .headerwrapper {
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/slovensko/get/images/header1080.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/slovensko/get/images/header1080.jpg');
   }
 
   h2 {
@@ -45,7 +45,7 @@
 @media (min-width:600px) and (max-width:1023px) {
 
   .headerwrapper {
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/slovensko/get/images/header2560.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/slovensko/get/images/header2560.jpg');
   }
 
   h2 {
@@ -68,7 +68,7 @@
 @media (min-width:1024px) and (max-width:1249px) {
 
   .headerwrapper {
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/slovensko/get/images/header2560.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/slovensko/get/images/header2560.jpg');
   }
 
   h2 {
@@ -91,7 +91,7 @@
 @media (min-width:1250px) and (max-width:1669px) {
 
   .headerwrapper {
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/slovensko/get/images/header2560.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/slovensko/get/images/header2560.jpg');
   }
 
 
@@ -115,7 +115,7 @@
 @media (min-width:1670px) {
 
   .headerwrapper {
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/slovensko/get/images/header2560.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/slovensko/get/images/header2560.jpg');
   }
 
   h2 {
@@ -138,7 +138,7 @@
 (-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
 (min-resolution: 192dpi) and (min-width:1670px) {
   .headerwrapper {
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/slovensko/get/images/header5120.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/slovensko/get/images/header5120.jpg');
   }
 
 }

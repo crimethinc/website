@@ -11,8 +11,8 @@
 
 Just in time for the tour, we'll be co-releasing a 12" split between From the Depths and <a href="http://www.nextvictim.band.pl/index_en.php" target="_blank">Next Victim</a>, from Poland. We've been following Next Victim's eerie music with great excitement since some of the members were in Mind Pollution, another amazing band. It's an honor to get to collaborate with two bands that have been so inspiring for us!
 
-<strong><a href="http://thecloud.crimethinc.com/music/Last-Home.mp3" target="_blank">Plague Mass "Last Home" [7.9 MB MP3]</a>
-<a href="http://thecloud.crimethinc.com/music/nisza.mp3" target="_blank">Next Victim "Własna Nisza" [10.6 MB MP3]</a></strong>
+<strong><a href="https://cloudfront.crimethinc.com/music/Last-Home.mp3" target="_blank">Plague Mass "Last Home" [7.9 MB MP3]</a>
+<a href="https://cloudfront.crimethinc.com/music/nisza.mp3" target="_blank">Next Victim "Własna Nisza" [10.6 MB MP3]</a></strong>
 
 <!--more Tour schedule after the jump.-->
 
@@ -57,14 +57,14 @@ Sat 5 San Francisco, CA
 		<category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[enclosure]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/music/nisza.mp3
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/music/nisza.mp3
 10567680
 audio/mpeg
 ]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[enclosure]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/music/Last-Home.mp3
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/music/Last-Home.mp3
 7927396
 audio/mpeg
 ]]></wp_meta_value>

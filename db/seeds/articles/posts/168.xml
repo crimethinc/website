@@ -34,7 +34,7 @@ We’ve also composed <a href="http://www.crimethinc.com/tools/downloads/posters
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/rt8/rt8_blog_800.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/rt8/rt8_blog_800.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>1109</wp_comment_id>

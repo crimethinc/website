@@ -1,4 +1,4 @@
-<p align="center"><a href="http://thecloud.crimethinc.com/images/ideology/2b.gif" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/ideology/2a.gif" width="500" height="737"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/ideology/2b.gif" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/ideology/2a.gif" width="500" height="737"></a></p>
 <h1 style="margin-bottom: 0px">Do You Have Ideas, <br />
 or Do Ideas Have You?</h1>
 <p>&nbsp;</p>

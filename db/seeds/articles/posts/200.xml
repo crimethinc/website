@@ -11,7 +11,7 @@ Since our regular prices are as low as they can be, we've never had a way to hav
 
 <!--more More details about the condition of the books after the break.-->
 
-All books are stamped with a <a href="http://thecloud.crimethinc.com/images/substandard/substandard2_a.jpg" rel="lightbox" >"SUBSTANDARD" </a>notice on an interior page towards the front of the book. This is just to ensure no one buys these books to turn around and sell them at full price to unsuspecting folks. The substandard nature of these books falls into one of three categories:
+All books are stamped with a <a href="https://cloudfront.crimethinc.com/images/substandard/substandard2_a.jpg" rel="lightbox" >"SUBSTANDARD" </a>notice on an interior page towards the front of the book. This is just to ensure no one buys these books to turn around and sell them at full price to unsuspecting folks. The substandard nature of these books falls into one of three categories:
 
 <strong>Imperfections</strong> – Occasionally we receive books from the printers that slipped past their quality control inspection and have cosmetic blemishes. These errors are almost always on the covers and do no effect the interior of the books. Examples of this include miss-registered color printing, misaligned spot gloss, lamination imperfections, folding errors, and particularly in the case of <em>Expect Resistance</em>, unevenly-folded cover flaps.
 
@@ -44,6 +44,6 @@ Overall the condition of the books varies wildly, some are pretty fucked up, and
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/substandard/substandard1_b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/substandard/substandard1_b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 	</item>

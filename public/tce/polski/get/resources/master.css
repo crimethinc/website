@@ -313,11 +313,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
   
   @font-face {
     font-family: 'cwcex';
-    src: url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.eot?45502484');
-    src: url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.eot?45502484#iefix') format('embedded-opentype'),
-         url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.woff?45502484') format('woff'),
-         url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.ttf?45502484') format('truetype'),
-         url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.svg?45502484#cwcex') format('svg');
+    src: url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.eot?45502484');
+    src: url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.eot?45502484#iefix') format('embedded-opentype'),
+         url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.woff?45502484') format('woff'),
+         url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.ttf?45502484') format('truetype'),
+         url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.svg?45502484#cwcex') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -697,11 +697,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
   
   @font-face {
     font-family: 'cwcex';
-    src: url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.eot?45502484');
-    src: url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.eot?45502484#iefix') format('embedded-opentype'),
-         url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.woff?45502484') format('woff'),
-         url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.ttf?45502484') format('truetype'),
-         url('http://thecloud.crimethinc.com/assets/tce/get/resources/fonts/cwcex.svg?45502484#cwcex') format('svg');
+    src: url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.eot?45502484');
+    src: url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.eot?45502484#iefix') format('embedded-opentype'),
+         url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.woff?45502484') format('woff'),
+         url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.ttf?45502484') format('truetype'),
+         url('https://cloudfront.crimethinc.com/assets/tce/get/resources/fonts/cwcex.svg?45502484#cwcex') format('svg');
     font-weight: normal;
     font-style: normal;
   }
