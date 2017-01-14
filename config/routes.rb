@@ -55,8 +55,7 @@ Rails.application.routes.draw do
 
 
   # Podcast
-  get "podcast/feed", to: redirect("http://exworker.libsyn.com/rss"), as: :podcast_feed_redirect # TEMP TODO
-  get "podcast/feed", to: "podcast#feed",   as: :podcast_feed
+  get "podcast/feed", to: "podcast#feed",   as: :podcast_feed, defaults: { format: "rss" }
   get "podcast",      to: "podcast#index",  as: :podcast
   get "podcast/:id",  to: "podcast#show",   as: :episode
   get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
