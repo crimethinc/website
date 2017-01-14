@@ -8856,3 +8856,4 @@ red read
 /movies/miamimodel.html /watch
 /movies/pickaxe.html /watch
 /movies/roses.html /watch
+/blog/feed /feed
