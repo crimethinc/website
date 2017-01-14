@@ -4,7 +4,7 @@ class PodcastController < ApplicationController
     @body_id = "podcast"
     @podcast = Podcast.find_by(title: "The Ex-Worker")
 
-    @episodes = @podcast.episodes.sort_by{|e| e.published_at }.reverse
+    @episodes = @podcast.episodes.to_a
     @latest_episode = @episodes.shift
   end
 
@@ -23,5 +23,6 @@ class PodcastController < ApplicationController
 
   def feed
     @podcast = Podcast.find_by(title: "The Ex-Worker")
+    @episodes = @podcast.episodes
   end
 end
