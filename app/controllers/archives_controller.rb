@@ -27,7 +27,7 @@ class ArchivesController < ApplicationController
       end
     end
 
-    articles = articles.page(params[:page]).per(5)
+    articles = articles.page(params[:page]).per(15)
     @archive = Archive.new(articles)
   end
 end
