@@ -36,8 +36,8 @@ xml.rss "version"      => "2.0",
     end
 
     # TODO: These are hardcoded for now.  Find a simple way to nest categories.
-    xml.tag!("itunes:category", text: "News &amp; Politics")
-    xml.tag!("itunes:category", text: "Society &amp; Culture") do
+    xml.tag!("itunes:category", text: "News & Politics")
+    xml.tag!("itunes:category", text: "Society & Culture") do
       xml.tag!("itunes:category", text: "Philosophy")
     end
     xml.tag!("itunes:category", text: "Arts")
