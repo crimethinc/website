@@ -35,9 +35,12 @@ xml.rss "version"      => "2.0",
       xml.text! @podcast.tags
     end
 
-    @podcast.itunes_categories.split(",").map(&:strip).each do |category|
-      xml.tag!("itunes:category", text: category)
+    # TODO: These are hardcoded for now.  Find a simple way to nest categories.
+    xml.tag!("itunes:category", text: "News &amp; Politics")
+    xml.tag!("itunes:category", text: "Society &amp; Culture") do
+      xml.tag!("itunes:category", text: "Philosophy")
     end
+    xml.tag!("itunes:category", text: "Arts")
 
     xml.tag!("itunes:image", href: @podcast.image)
 
