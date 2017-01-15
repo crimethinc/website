@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     "/categories/#{path_params[:slug]}"
   }
   get "categories/:slug(/page/:page)", to: "categories#show", as: :category
+  get "categories/:slug/feed",         to: "categories#feed", defaults: { format: "atom" }, as: :category_feed
 
 
   # Tags
@@ -43,6 +44,7 @@ Rails.application.routes.draw do
     "/tags/#{path_params[:slug]}"
   }
   get "tags/:slug(/page/:page)", to: "tags#show", as: :tag
+  get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
 
 
   # Pages (linked in header/nav)
