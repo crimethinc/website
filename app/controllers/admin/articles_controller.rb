@@ -6,8 +6,7 @@ class Admin::ArticlesController < Admin::AdminController
 
   # /admin/articles
   def index
-    @articles = Article.all.order("published_at DESC") #page(params[:page])
-    # TODO temp for quick find in browser
+    @articles = Article.page(params[:page])
   end
 
   # /admin/articles/1
