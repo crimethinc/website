@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  def index
+    @articles = Article.live.published.page(params[:page]).per(25)
+  end
+
   def show
     @body_id = "article"
 
