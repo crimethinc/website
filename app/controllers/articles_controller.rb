@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
     end
 
     # no article found, go to /articles feed
-    if @article.nil?
+    if @article.blank? || !@article.published?
       return redirect_to root_path
     end
 
