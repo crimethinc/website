@@ -21,7 +21,7 @@ class Admin::ArticlesController < Admin::AdminController
   # /admin/articles/1/edit
   def edit
     if request.path == "#{@article.path}/edit"
-      return redirect_to([:admin, @article])
+      return redirect_to([:edit, :admin, @article])
     end
   end
 
