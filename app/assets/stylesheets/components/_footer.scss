@@ -65,6 +65,14 @@ footer[role=contentinfo] {
 
     dt {
       font-weight: bold;
+
+      b {
+        font: {
+          weight: normal;
+          weight: 300;
+          size: .6em;
+        }
+      }
     }
 
     dd {
@@ -72,8 +80,6 @@ footer[role=contentinfo] {
       font-weight: 300;
     }
 
-    .nav-label-podcast + dd,
-    .nav-label-podcast,
     .nav-label-journal + dd,
     .nav-label-journal {
       display: inline-block;

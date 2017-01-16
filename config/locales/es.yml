@@ -21,9 +21,11 @@ es:
     nav:
       articles:
         label: Articles
+        feed: RSS
         adventure: Adventure
         analysis: Analysis
         arts: Arts
+        current_events: Current Events
         geography: Geography
         history: History
         news: News
@@ -40,6 +42,7 @@ es:
 
       podcast:
         label: Podcast
+        feed: RSS
         the_ex_worker: "The Ex-Worker"
 
       journal:

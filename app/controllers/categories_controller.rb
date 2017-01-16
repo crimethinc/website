@@ -1,7 +1,13 @@
 class CategoriesController < ApplicationController
 
   def show
-    @category = Category.find_by!(slug: params[:slug])
+    slug = params[:slug].gsub("_", "-")
+
+    if slug != params[:slug]
+      return redirect_to category_path(slug)
+    end
+
+    @category = Category.find_by!(slug: slug)
     @articles = @category.articles.live.published.page(params[:page]).per(15)
 
     @html_id  = "page"
