@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
 
+  # Article edit convenience route
   get ":year/:month/:day/:slug/edit",
       controller: "admin/articles",
       action:     "edit",
@@ -31,6 +32,9 @@ Rails.application.routes.draw do
   # Draft Articles and Pages
   get "drafts/articles/:draft_code", to: "articles#show", as: :article_draft
   get "drafts/pages/:draft_code",    to: "pages#show",    as: :page_draft
+
+  # Draft Articles and Pages /edit convenience routes
+  get "drafts/articles/:draft_code/edit", controller: "admin/articles", action: "edit"
 
   # Articles Atom Feed
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed

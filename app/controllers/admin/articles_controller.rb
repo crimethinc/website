@@ -20,9 +20,6 @@ class Admin::ArticlesController < Admin::AdminController
 
   # /admin/articles/1/edit
   def edit
-    if request.path == "#{@article.path}/edit"
-      return redirect_to([:edit, :admin, @article])
-    end
   end
 
   # /admin/articles
@@ -30,7 +27,7 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to [:admin, @article], notice: 'Article was successfully created.'
+      redirect_to [:admin, @article], notice: "Article was successfully created."
     else
       render :new
     end
@@ -39,7 +36,7 @@ class Admin::ArticlesController < Admin::AdminController
   # /admin/articles/1
   def update
     if @article.update(article_params)
-      redirect_to [:admin, @article], notice: 'Article was successfully updated.'
+      redirect_to [:admin, @article], notice: "Article was successfully updated."
     else
       render :edit
     end
@@ -48,7 +45,7 @@ class Admin::ArticlesController < Admin::AdminController
   # /admin/articles/1
   def destroy
     @article.destroy
-    redirect_to [:admin, :articles], notice: 'Article was successfully destroyed.'
+    redirect_to [:admin, :articles], notice: "Article was successfully destroyed."
   end
 
   private
@@ -59,6 +56,11 @@ class Admin::ArticlesController < Admin::AdminController
                        ).where(month: params[:month]
                        ).where(day:   params[:day]
                        ).where(slug:  params[:slug]).first
+
+      return redirect_to([:edit, :admin, @article])
+    elsif params[:draft_code].present?
+      @article = Article.find_by(draft_code: params[:draft_code])
+      return redirect_to([:edit, :admin, @article])
     else
       @article = Article.find(params[:id])
     end
