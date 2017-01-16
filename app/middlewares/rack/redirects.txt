@@ -8927,3 +8927,8 @@ red read
 /1900/09/11/g20-mobilization-preliminary-assessment /2009/10/07/g20-mobilization-preliminary-assessment
 /1900/09/11/g20-shut-doors-broken-windows /2010/07/01/g20-shut-doors-broken-windows
 /1900/09/11/march-4-anarchists-in-the-student-movement /2010/03/09/march-4-anarchists-in-the-student-movement
+/texts/images/green_scare_chart.pdf http://thecloud.crimethinc.com/assets/articles/2012/05/29/green_scare_chart.pdf
+/texts/atoz/security.php /2004/11/01/what-is-security-culture
+/texts/pastfeatures/security.php /2004/11/01/what-is-security-culture
+/texts/recentfeatures/security.php /2004/11/01/what-is-security-culture
+/j20resources /2017/01/15/resources-for-j20
