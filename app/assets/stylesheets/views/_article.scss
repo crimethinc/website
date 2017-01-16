@@ -259,8 +259,7 @@
         margin-bottom: 0;
       }
 
-      figure > figcaption,
-      img + .bigimagecaption p {
+      figure > figcaption {
         margin: .5em auto 1em auto;
         font: {
           size: .66em;
@@ -307,7 +306,11 @@
       figure {
         // TODO
         text-align: center;
-        margin: 4em auto;
+        margin: 1em auto;
+
+        img {
+          margin: 0;
+        }
       }
 
       figcaption {
