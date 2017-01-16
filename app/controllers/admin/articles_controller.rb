@@ -20,6 +20,9 @@ class Admin::ArticlesController < Admin::AdminController
 
   # /admin/articles/1/edit
   def edit
+    if request.path == "#{@article.path}/edit"
+      return redirect_to([:admin, @article])
+    end
   end
 
   # /admin/articles
@@ -51,7 +54,14 @@ class Admin::ArticlesController < Admin::AdminController
   private
 
   def set_article
-    @article = Article.find(params[:id])
+    if params[:year] && params[:slug]
+      @article = Article.where(year:  params[:year]
+                       ).where(month: params[:month]
+                       ).where(day:   params[:day]
+                       ).where(slug:  params[:slug]).first
+    else
+      @article = Article.find(params[:id])
+    end
   end
 
   def set_contribution_options

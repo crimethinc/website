@@ -15,6 +15,11 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
 
+  get ":year/:month/:day/:slug/edit",
+      controller: "admin/articles",
+      action:     "edit",
+      constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
+
   # Article listings by year, optional month, optional day
   get "(/:year)(/:month)(/:day)(/page/:page)",
       to:          "archives#index",
