@@ -80,6 +80,10 @@ Rails.application.routes.draw do
   get "books/:slug/extras",      to: "books#extras",          as: :book_extras
 
 
+  # Videos
+  get "watch/:slug", to: "videos#show", as: :video
+
+
   # Site search
   get "search", to: "search#index"
 

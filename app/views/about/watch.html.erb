@@ -12,22 +12,7 @@
           <div class="column column-half section h-entry">
             <% unless video.blank? %>
               <%#= image_tag video.image, alt: video.image_description, class: "u-image" %>
-              <h1 class="p-name"><%= video.title %></h1>
-
-              <div class="embed embed-vimeo">
-                <iframe src="//player.vimeo.com/video/<%= video.vimeo_id %>?title=0&amp;byline=0&amp;portrait=0&amp;color=b7effd"
-                         frameborder="0">
-                </iframe>
-              </div>
-
-              <div class="e-content">
-                <p class="video-info">
-                  <span class="video-quality"><%= video.quality %></span>
-                  <span class="video-duration"><%= video.duration %></span>
-                </p>
-
-                <%= simple_format render_content(video) %>
-              </div>
+              <%= render "videos/video", video: video, linked: true %>
             <% end %>
           </div>
         <% end %>
