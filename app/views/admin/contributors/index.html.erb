@@ -1,0 +1,27 @@
+<%= render "admin/page_header", thing: @contributors %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contributors.each do |contributor| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, contributor], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to contributor.name, [:admin, contributor] %></td>
+        <td><%= link_to contributor.slug, [:admin, contributor] %></td>
+        <td>
+          <%= link_to "DELETE", [:admin, contributor], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

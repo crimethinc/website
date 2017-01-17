@@ -4,19 +4,23 @@
     <h1>Site Map</h1>
 
     <dl>
-      <dt class="nav-label nav-label-articles"><%= link_to t("footer.nav.articles.label"), "/archives" %></dt>
+      <dt class="nav-label nav-label-articles">
+        <%= link_to t("footer.nav.articles.label"), "/archives" %>
+        <b><%= link_to t("footer.nav.articles.feed"), feed_path  %></b>
+      </dt>
 
-      <!--
     	<dd>
+      <!--
         <%= link_to t("footer.nav.articles.adventure"),  "/adventure"  %>,
         <%= link_to t("footer.nav.articles.analysis"),   "/analysis"   %>,
         <%= link_to t("footer.nav.articles.arts"),       "/arts"       %>,
         <%= link_to t("footer.nav.articles.geography"),  "/geography"  %>,
-        <%= link_to t("footer.nav.articles.history"),    "/history"    %>,
         <%= link_to t("footer.nav.articles.news"),       "/news"       %>,
-        <%= link_to t("footer.nav.articles.technology"), "/technology" %>
-      </dd>
       -->
+        <%= link_to t("footer.nav.articles.history"),        category_path(:history)        %>,
+        <%= link_to t("footer.nav.articles.technology"),     category_path(:technology)     %>,
+        <%= link_to t("footer.nav.articles.current_events"), category_path(:current_events) %>
+      </dd>
 
       <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), "/books" %></dt>
       <dd>
@@ -28,7 +32,10 @@
         <%= link_to t("footer.nav.books.off_the_map"),                "/books/off-the-map" %>
       </dd>
 
-      <dt class="nav-label nav-label-podcast"><%= link_to t("footer.nav.podcast.label"), "/podcast" %></dt>
+      <dt class="nav-label nav-label-podcast">
+        <%= link_to t("footer.nav.podcast.label"), "/podcast" %>
+        <b><%= link_to t("footer.nav.podcast.feed"), podcast_feed_path  %></b>
+      </dt>
       <dd>
         <%= link_to t("footer.nav.podcast.the_ex_worker"), "/podcast" %>
       </dd>

@@ -1,5 +1,9 @@
 <!-- Backward compatibility: RSS/Atom -->
-<%= auto_discovery_link_tag(:atom, feed_path, title: setting(:page_title)) %>
+<% if content_for?(:auto_discovery) %>
+  <%= yield :auto_discovery %>
+<% else %>
+  <%= auto_discovery_link_tag(:atom, feed_path, title: setting(:page_title)) %>
+<% end %>
 
 <!-- Canonical URLs -->
 <%#= TODO rel_canonical_link_tag @post %>

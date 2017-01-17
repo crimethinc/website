@@ -1,11 +1,12 @@
 class Admin::ArticlesController < Admin::AdminController
   before_action :authorize
-  before_action :set_article,      only: [:show, :edit, :update, :destroy]
-  after_action  :organize_article, only: [:create, :update]
+  before_action :set_article,              only: [:show, :edit, :update, :destroy]
+  before_action :set_contribution_options, only: [:new, :edit]
+  after_action  :organize_article,         only: [:create, :update]
 
   # /admin/articles
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page])
   end
 
   # /admin/articles/1
@@ -26,7 +27,7 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to [:admin, @article], notice: 'Article was successfully created.'
+      redirect_to [:admin, @article], notice: "Article was successfully created."
     else
       render :new
     end
@@ -35,7 +36,7 @@ class Admin::ArticlesController < Admin::AdminController
   # /admin/articles/1
   def update
     if @article.update(article_params)
-      redirect_to [:admin, @article], notice: 'Article was successfully updated.'
+      redirect_to [:admin, @article], notice: "Article was successfully updated."
     else
       render :edit
     end
@@ -44,13 +45,30 @@ class Admin::ArticlesController < Admin::AdminController
   # /admin/articles/1
   def destroy
     @article.destroy
-    redirect_to [:admin, :articles], notice: 'Article was successfully destroyed.'
+    redirect_to [:admin, :articles], notice: "Article was successfully destroyed."
   end
 
   private
 
   def set_article
-    @article = Article.find(params[:id])
+    if params[:year] && params[:slug]
+      @article = Article.where(year:  params[:year]
+                       ).where(month: params[:month]
+                       ).where(day:   params[:day]
+                       ).where(slug:  params[:slug]).first
+
+      return redirect_to([:edit, :admin, @article])
+    elsif params[:draft_code].present?
+      @article = Article.find_by(draft_code: params[:draft_code])
+      return redirect_to([:edit, :admin, @article])
+    else
+      @article = Article.find(params[:id])
+    end
+  end
+
+  def set_contribution_options
+    @contributors = Contributor.order(:name)
+    @roles        = Role.order(:name)
   end
 
   def organize_article
@@ -65,6 +83,9 @@ class Admin::ArticlesController < Admin::AdminController
                                     :published_at, :tags, :categories,
                                     :image, :image_description, :css, :hide_layout,
                                     :header_background_color, :header_text_color,
-                                    :short_path)
+									:short_path,
+                                    contributions_attributes: [
+                                      :id, :contributor_id, :role_id,:_destroy
+                                    ])
   end
 end

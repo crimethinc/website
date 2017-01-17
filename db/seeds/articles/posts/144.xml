@@ -36,7 +36,7 @@ Save the date, July 20-26, Pittsburgh, PA, and stay tuned for more details.]]></
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/savedate/savedate_b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/savedate/savedate_b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>835</wp_comment_id>

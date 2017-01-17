@@ -200,7 +200,7 @@ a:active {
 
   .headerwrapper {
     width: 100%;
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/get/images/header1080.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/get/images/header1080.jpg');
     background-size: 100%;
     padding-bottom: 71%;
     background-position:center top;
@@ -244,7 +244,7 @@ a:active {
 
   .headerwrapper {
     width: 100%;
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/get/images/header2560.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/get/images/header2560.jpg');
     background-size: 100%;
     padding-bottom: 39%;
     background-position:center top;
@@ -288,7 +288,7 @@ a:active {
 
   .headerwrapper {
     width: 100%;
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/get/images/header2560.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/get/images/header2560.jpg');
     background-size: 100%;
     padding-bottom: 39%;
     background-position:center top;
@@ -332,7 +332,7 @@ a:active {
 
   .headerwrapper {
     width: 100%;
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/get/images/header2560.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/get/images/header2560.jpg');
     background-size: 100%;
     padding-bottom: 39%;
     background-position:center top;
@@ -376,7 +376,7 @@ a:active {
 
   .headerwrapper {
     width: 100%;
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/get/images/header2560.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/get/images/header2560.jpg');
     background-size: 100%;
     padding-bottom: 39%;
     background-position:center top;
@@ -420,7 +420,7 @@ a:active {
 (-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
 (min-resolution: 192dpi) and (min-width:1670px) {
   .headerwrapper {
-    background-image: url('http://thecloud.crimethinc.com/assets/tce/get/images/header5120.jpg');
+    background-image: url('https://cloudfront.crimethinc.com/assets/tce/get/images/header5120.jpg');
   }
 
 }

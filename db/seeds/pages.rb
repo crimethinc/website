@@ -11,5 +11,5 @@ Page.create!(
   status: Status.find_by(name: "published"),
   published_at: Time.parse("2017-01-01"),
   slug: "start",
-  image: "http://thecloud.crimethinc.com/assets/pages/start/start-header.jpg",
+  image: "https://cloudfront.crimethinc.com/assets/pages/start/start-header.jpg",
 )

@@ -1,4 +1,4 @@
-<p align="center"><a href="http://thecloud.crimethinc.com/images/conspiracy/1b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/1a.jpg" width="500" height="365"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/conspiracy/1b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/1a.jpg" width="500" height="365"></a></p>
 <h1 style="margin-bottom: 0px">The Age of Conspiracy Charges</h1>
 <p>&nbsp;</p>
 <p>Looking back over the past decade, it appears that North American law enforcement agencies are increasingly utilizing conspiracy charges to target anarchists and others involved in radical communities. We&rsquo;ve composed <a href="#a">a review of recent conspiracy cases</a> in hopes of analyzing this.</p>
@@ -26,7 +26,7 @@ or the <a href="rnc8.org" target="_blank">RNC 8</a> because they are effective. 
 <p>Most of this work has yet to be done. If you are concerned about government repression, consider the ways you can approach others outside radical communities about this issue.</p>
 <p>When we talk about conspiracy charges and witch hunts, it&rsquo;s important to emphasize that we&rsquo;re talking about the state, which <em>exists</em> to carry out violent repression. As long as there are inequalities and injustices, there will be resistance, and those in power will attempt to repress it. If we take ourselves seriously as a revolutionary movement, we need to see ourselves in the larger context and histories of resistance movements and the repression they have faced; we would do well to learn both from the successes and the failures of the past. It&rsquo;s also important to remember that repression is a daily fact of life for countless people in communities on the wrong end of power and privilege; anarchists are far from exceptional in this regard.<br />
 </p>
-<p><p align="center"><a name="a" id="a"></a><a href="http://thecloud.crimethinc.com/images/conspiracy/2b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/2a.jpg" width="500" height="663"></a></p>
+<p><p align="center"><a name="a" id="a"></a><a href="https://cloudfront.crimethinc.com/images/conspiracy/2b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/2a.jpg" width="500" height="663"></a></p>
 <h2>Appendix: An Incomplete Review of Recent Conspiracy Cases</h2>
 <p>This is hardly a comprehensive survey of conspiracy charges pressed against anarchists and other radicals in recent history. However, it does cover some of the landmark cases that created the current context, as well as ongoing cases that will set important precedents.</p>
 <p>Altogether, this review encompasses charges pressed against nearly a hundred individuals. The cases themselves vary from fairly conventional uses of conspiracy charges to outright entrapment and examples that stretch the legal definition of conspiracy even by prosecutors&rsquo; standards.<br />
@@ -34,7 +34,7 @@ or the <a href="rnc8.org" target="_blank">RNC 8</a> because they are effective. 
 <h5>2004</h5>
 <h3><a href="http://shac7.com/" target="_blank">The SHAC 7</a></h3>
 <p>In the early days of the 21st century, although several hearings before Congress had brought governmental pressure to bear against the animal liberation movement, efforts to quash direct action organizing by capturing and prosecuting participants proved fruitless. Finally, a New Jersey federal grand jury indicted seven individuals and the organization <a href="http://www.crimethinc.com/texts/atoz/shac.php" target="_blank">Stop Huntingdon Animal Cruelty USA</a> on charges of animal enterprise terrorism under the <a href="http://abolishtheaeta.org/web/" target="_blank">Animal Enterprise Protection Act</a> on May 26, 2004. Charges of interstate stalking and conspiracy to use a telecommunications device to harass others were also included in the indictment. It has been said that the defendants were essentially targeted for running a website advocating direct action.</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/conspiracy/3b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/3a.jpg" width="500" height="331" style="margin-bottom: 2px"></a><em><br />
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/conspiracy/3b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/3a.jpg" width="500" height="331" style="margin-bottom: 2px"></a><em><br />
 The SHAC 7</em></p>
 <p>The SHAC 7 were convicted on March 2, 2006 under the AETA. Their conviction probably emboldened law enforcement agencies to utilize conspiracy charges to target radicals nationwide, especially in cases in which simple criminal charges could not be pressed convincingly or did not appear to offer enough of a deterrent.<br />
 </p>
@@ -49,7 +49,7 @@ The SHAC 7</em></p>
 <h5>2006</h5>
 <h3><a href="http://supporteric.org/" target="_blank">Eric McDavid</a></h3>
 <p>In January 2006, as a result of a separate investigation but widely reported as an extension of Operation Backfire, three more individuals&mdash;Eric McDavid, Zachary Jenson, and Lauren Weiner&mdash;were arrested in Auburn, California for conspiring to damage facilities &ldquo;by explosive or fire.&rdquo; Jenson and Weiner took cooperating plea bargains, selling out McDavid, who was convicted on all counts September 27, 2007 and was sentenced in May 2008 to nearly 20 years in prison.</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/conspiracy/4b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/4a.jpg" width="500" height="318" style="margin-bottom: 2px"></a><em><br />
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/conspiracy/4b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/4a.jpg" width="500" height="318" style="margin-bottom: 2px"></a><em><br />
 Eric McDavid</em></p>
 <p>The McDavid case is notable because of the role of a paid informant, &ldquo;Anna,&rdquo; who essentially entrapped the defendants by utilizing money and flirtation to lure them into discussions about illegal activity. It subsequently received <a href="http://www.crimethinc.com/blog/2008/04/22/elle-magazine-retraction-or-hoax/" target="_blank">coverage in Elle magazine</a> among other venues.<br />
 </p>
@@ -61,7 +61,7 @@ Eric McDavid</em></p>
 <h3><a href="http://www.freethesf8.org/" target="_blank">The San Francisco 8</a></h3>
 <p>Eight Black community activists, including former Black Panthers, were arrested January 23, 2007 on charges related to the 1971 killing of a San Francisco police officer. Similar charges were thrown out after it was revealed that police had used torture to extract confessions when some of the same men were arrested in New Orleans in 1973.</p>
 <p>Richard Brown, Richard O'Neal, Ray Boudreaux, and Hank Jones were arrested in California. Francisco Torres was arrested in Queens, New York. Harold Taylor was arrested in Florida. Herman Bell and Jalil Muntaqim&mdash;had already been held as political prisoners for over 30 years in New York State prisons. The men were charged with the murder of Sgt. John Young and conspiracy encompassing numerous acts between 1968 and 1973. Bail amounts were originally set between three and five million dollars each.</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/conspiracy/5b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/5a.jpg" width="500" height="375" style="margin-bottom: 2px"></a><em><br />
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/conspiracy/5b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/5a.jpg" width="500" height="375" style="margin-bottom: 2px"></a><em><br />
 San Francisco 8 members Francisco Torres, Ray Boudreaux, Richard Brown, Harold Taylor, and Hank Jones with supporters</em><br />
 </p>
 <p>Herman Bell and Jalil Muntaqim were sentenced to probation and time served, after Bell agreed to plead to voluntary manslaughter and Muntaqim to conspiracy to voluntary manslaughter. All charges were then dropped against Brown, Jones, Taylor, and Boudreaux, with the prosecution admitting it had &ldquo;insufficient evidence&rdquo; against them. Charges had already been dropped against O'Neal in 2008.</p>
@@ -71,7 +71,7 @@ San Francisco 8 members Francisco Torres, Ray Boudreaux, Richard Brown, Harold T
 <h3><a href="http://supportmariemason.org/" target="_blank">Marie Mason</a></h3>
 <p>In March 2008, Marie Mason, Frank Ambrose, Aren Burthwick, and Stephanie Lynne Fultz
 were <a href="http://www.foxnews.com/story/0,2933,336931,00.html" target="_blank">arrested and charged with conspiracy to commit arson</a>; Mason and Ambrose faced additional charges related to acts of property destruction that occurred in 1999 and 2000. It came out that Ambrose, Mason&rsquo;s ex-husband, had been assisting the FBI extensively in investigating environmental organizing since 2007; despite this, his plea bargain resulted in a <a href="http://news.infoshop.org/article.php?story=20081021200843765" target="_blank">nine year sentence</a>, two years more than the prosecutor had requested. Burthwick and Fultz also negotiated cooperating deals with the Justice Department, agreeing to help in the investigation of Mason. Mason was threatened with a&nbsp;life sentence before <a href="http://news.infoshop.org/article.php?story=20080914205631210" target="_blank">accepting a&nbsp;plea bargain in September 2008</a>, in which she also admitted involvement in 12 other acts totaling more than $2.5 million of property damage.</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/conspiracy/6b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/6a.jpg" width="500" height="355" style="margin-bottom: 2px"></a><em><br />
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/conspiracy/6b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/6a.jpg" width="500" height="355" style="margin-bottom: 2px"></a><em><br />
 Marie Mason</em><br />
 </p>
 <p>Mason was&nbsp; sentenced on February 5, 2009 in federal court in Lansing, Michigan. She received almost 22 years, the longest sentence of any <a href="http://www.greenisthenewred.com/blog/green-scare/" target="_blank">Green Scare</a> prisoner. The sentence is currently being appealed.<br />
@@ -83,7 +83,7 @@ Marie Mason</em><br />
 </p>
 <h3><a href="http://rnc8.org/" target="_blank">The RNC 8</a></h3>
 <p>In what was the first&nbsp;use of criminal charges under the 2002 Minnesota version of the Federal Patriot Act, Ramsey County prosecutors charged eight alleged organizers of protests against the <a href="http://www.crimethinc.com/texts/atoz/rncdnc.php" target="_blank">2008 Republican National Convention</a> with Conspiracy to Riot in Furtherance of Terrorism. The 8 faced up to seven and a half years in prison under the terrorism enhancement associated with the charge, which allows for a 50% increase in the maximum penalty. They later received more charges&mdash;conspiracy to commit property damage, conspiracy to commit property damage in furtherance of terrorism, conspiracy to riot, and the original charge.</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/conspiracy/7b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/7a.jpg" width="500" height="319" style="margin-bottom: 2px"></a><em><br />
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/conspiracy/7b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/7a.jpg" width="500" height="319" style="margin-bottom: 2px"></a><em><br />
 The RNC 8</em><br />
 </p>
 <p>In early April 2009, <a href="http://rnc8.org/2009/04/terrorism-dropped-conspiracy-remains/" target="_blank">county attorney Susan Gaertner dropped the charges</a> of Conspiracy to Commit Riot in Furtherance of Terrorism and Conspiracy to Commit Criminal Damage to Property in Furtherance of Terrorism. This occurred shortly after one of the defendants appeared on MSNBC and petitions to drop all the charges were delivered to Gaertner&rsquo;s office, including a resolution from the 17,000-member Duluth Central Labor Body in support of the RNC 8.</p>
@@ -97,7 +97,7 @@ The RNC 8</em><br />
 <p>A judge dismissed the case &ldquo;without prejudice&rdquo; in July 2010 on the grounds that the government didn&rsquo;t give enough specifics on the alleged criminal activity:</p>
 <h6>In order for an indictment to fulfill its constitutional purposes, it must allege facts that sufficiently inform each defendant of what it is that he or she is alleged to have done that constitutes a crime. This is particularly important where the species of behavior in question spans a wide spectrum from criminal conduct to constitutionally protected political protest. While &lsquo;true threats&rsquo; enjoy no First Amendment protection, picketing and political protest are at the very core of what is protected by the First Amendment.</h6>
 <p>Because the case was dismissed without prejudice, the government can re-indict the defendants; it is unclear whether this will occur.</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/conspiracy/8b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/8a.jpg" width="500" height="397" style="margin-bottom: 2px"></a><em><br />
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/conspiracy/8b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/8a.jpg" width="500" height="397" style="margin-bottom: 2px"></a><em><br />
 The AETA 4</em><br />
 </p>
 <p>
@@ -119,7 +119,7 @@ The AETA 4</em><br />
 </p>
 <h3><a href="http://www.counterpunch.org/gelderloos07072010.html" target="_blank">Toronto G20</a></h3>
 <p>Sixteen people were arrested and charged with conspiracy on account of the protests against the <a href="http://www.crimethinc.com/texts/recentfeatures/toronto2.php" target="_blank">G20 summit in Toronto, Canada</a>. Although this is occurring in Canada, the Canadian government is clearly hoping to utilize the conspiracy model pioneered in the SHAC 7 and RNC 8 cases to terrorize dissidents involved in laying the framework for the most intense protests Ontario has seen thus far this century. As of now, little information is available about the Toronto G20 charges; the government is not releasing any information, and lawyers appear to be advising the defendants to proceed extremely carefully.</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/conspiracy/9b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/conspiracy/9a.jpg" width="500" height="815" style="margin-bottom: 2px"></a><em><br />
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/conspiracy/9b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/conspiracy/9a.jpg" width="500" height="815" style="margin-bottom: 2px"></a><em><br />
 If you&rsquo;re going to fuck security culture, please use protection</em><br />
 </p>
 <p>&nbsp;</p>

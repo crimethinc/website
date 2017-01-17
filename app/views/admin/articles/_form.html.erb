@@ -18,6 +18,20 @@
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
+  <fieldset id="contributions">
+    <legend>Contributions</legend>
+
+    <%= f.fields_for :contributions do |contribution| %>
+      <%= render "contribution_fields", f: contribution %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association "Add Contribution", f, :contributions, class: "btn btn-primary" %>
+    </div>
+  </fieldset>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+
   <fieldset id="syndication">
     <legend>Syndication</legend>
     <div class="row">
@@ -88,10 +102,33 @@
                        Status.options_for_select,
                        { selected: @article.status.try(:id) },
                        class: "form-control" %>
-
         </div>
       </div>
-    </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :content_format, "Content Format" %>
+
+          <div class="radio">
+            <label>
+              <%= f.radio_button :content_format, "html" %>
+              HTML
+            </label>
+          </div>
+
+          <div class="radio">
+            <label>
+              <%= f.radio_button :content_format, "kramdown" %>
+              Markdown
+            </label>
+          </div>
+
+          <p class="help-block">
+            Defaults to <b>Markdown</b>. Only change to <b>HTML</b> if you know what you&rsquo;re doing.
+          </p>
+        </div>
+      </div>
+    </div> <!-- .row -->
   </fieldset>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>

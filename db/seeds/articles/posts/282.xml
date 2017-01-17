@@ -45,7 +45,7 @@ At nearly 30,000 words and almost 100 photos and videos, be warned that the page
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cloudfront.crimethinc.com/images/montreal/title1b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/montreal/title1b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[readability]]></wp_meta_key>

@@ -257,14 +257,14 @@ articles = [
     category: "Features",
     title: "Why We Don't Make Demands",
     published_at: Time.parse("2017-01-06T10:00 -0800"),
-    image: "http://thecloud.crimethinc.com/assets/features/demands/images/header2560.jpg",
+    image: "https://cloudfront.crimethinc.com/assets/features/demands/images/header2560.jpg",
   },
   {
     url: "http://www.crimethinc.com/texts/r/democracy/",
     category: "Features",
     title: "From Democracy to Freedom",
     published_at: Time.parse("2017-01-05T10:00 -0800"),
-    image: "http://thecloud.crimethinc.com/assets/features/democracy/images/header2000.jpg",
+    image: "https://cloudfront.crimethinc.com/assets/features/democracy/images/header2000.jpg",
   },
   {
     url: "http://www.crimethinc.com/texts/r/kurdish/",
@@ -272,7 +272,7 @@ articles = [
     title: "Understanding the Kurdish Resistance",
     subtitle: "Historical Overview & Eyewitness Report",
     published_at: Time.parse("2017-01-04T10:00 -0800"),
-    image: "http://thecloud.crimethinc.com/assets/features/kurdish/images/header2000.jpg",
+    image: "https://cloudfront.crimethinc.com/assets/features/kurdish/images/header2000.jpg",
   },
   {
     url: "http://www.crimethinc.com/texts/r/next-time-it-explodes/",
@@ -280,14 +280,14 @@ articles = [
     title: "Next Time It Explodes",
     subtitle: "Revolt, Repression, and Backlash since the Ferguson Uprising",
     published_at: Time.parse("2017-01-03T10:00 -0800"),
-    image: "http://thecloud.crimethinc.com/assets/features/next-time-it-explodes/images/header2000.jpg",
+    image: "https://cloudfront.crimethinc.com/assets/features/next-time-it-explodes/images/header2000.jpg",
   },
   {
     url: "http://www.crimethinc.com/texts/r/battle/",
     category: "Features",
     title: "Report Back from the Battle for Sacred Ground",
     published_at: Time.parse("2017-01-02T10:00 -0800"),
-    image: "http://thecloud.crimethinc.com/assets/features/battle/images/header2000.jpg",
+    image: "https://cloudfront.crimethinc.com/assets/features/battle/images/header2000.jpg",
   }
 ]
 
@@ -317,7 +317,7 @@ articles.each_with_index do |article_params, index|
   article.content = "Redirect to Feature in feed: #{feature.path}"
 
   # Create Redirect
-  puts "#{article.path} #{feature.path}"
+  # puts "#{article.path} #{feature.path}"
   Redirect.create source_path: article.path, target_path: feature.path, temporary: false
 
   # Add the Article to its Category
@@ -457,7 +457,7 @@ articles = [
     published_at: Time.parse("2017-01-09T01:00 -0500"),
     tweet: "Under No Management: Announcing the crimethinc.com overhaul and a new wave of projects for 2017",
     summary: "We have completely rebuilt crimethinc.com for 2017. Here is a broad overview of the changes and a teaser the new projects we have in store for you.",
-    image: "http://thecloud.crimethinc.com/assets/articles/2017/01/09/plant-floor.jpg",
+    image: "https://cloudfront.crimethinc.com/assets/articles/2017/01/09/plant-floor.jpg",
     slug: "under-no-management",
   }
 ]
@@ -494,7 +494,7 @@ articles = [
     published_at: Time.parse("2017-01-08T01:00 -0500"),
     tweet:   "The Ex-Worker #53: Walking Tour of Washington, D.C. with stories from the mass actions against global capitalism.",
     summary: "Stories and lessons from 1999-2003 Wave of Mass Actions against global capitalism.",
-    image: "http://thecloud.crimethinc.com/assets/articles/2017/01/08/a16-march.jpg",
+    image: "https://cloudfront.crimethinc.com/assets/articles/2017/01/08/a16-march.jpg",
     slug: "podcast-episode-53",
   }
 ]

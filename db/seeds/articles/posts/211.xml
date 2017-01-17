@@ -36,7 +36,7 @@ Towards that end, we present <a href="http://www.crimethinc.com/texts/atoz/terra
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/terrain/bannerb.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/terrain/bannerb.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>1849</wp_comment_id>

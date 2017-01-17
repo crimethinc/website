@@ -40,7 +40,7 @@ Interviews and other inquiries are welcome to <a href="mailto:stealfromworkday@g
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/sfw/sfw_b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/sfw/sfw_b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>1179</wp_comment_id>

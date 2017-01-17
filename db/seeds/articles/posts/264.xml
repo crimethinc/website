@@ -38,7 +38,7 @@ A print-ready pdf of this text is available <a href="http://ncpiececorps.files.w
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cloudfront.crimethinc.com/images/violence/1b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/violence/1b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>1617</wp_comment_id>

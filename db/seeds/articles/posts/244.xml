@@ -9,7 +9,7 @@
 
 <!--more Tour dates after the jump!-->
 
-<a href="http://cloudfront.crimethinc.com/images/mrpa/2b.jpg" rel="lightbox[mrpa]" class="legacyimage"><img src="http://cloudfront.crimethinc.com/images/mrpa/2a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/mrpa/2b.jpg" rel="lightbox[mrpa]" class="legacyimage"><img src="https://cloudfront.crimethinc.com/images/mrpa/2a.jpg" /></a><span class="invisible">-</span>
 
 Get updates and information about specific shows <a href="http://mrpuppetarmy.wordpress.com/" target="_blank">here</a>. Contact the puppeteers <a href="http://mrpuppetarmy.wordpress.com/contact-us/" target="_blank">here</a>.
 
@@ -76,7 +76,7 @@ Get updates and information about specific shows <a href="http://mrpuppetarmy.wo
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cloudfront.crimethinc.com/images/mrpa/1b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/mrpa/1b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>1515</wp_comment_id>

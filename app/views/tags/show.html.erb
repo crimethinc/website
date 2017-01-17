@@ -1,3 +1,7 @@
+<% content_for :auto_discovery do %>
+  <%= auto_discovery_link_tag(:atom, tag_feed_path(@tag.slug), title: setting(:page_title)) %>
+<% end %>
+
 <header>
   <h1>Tag</h1>
   <h2><%= @tag.name %></h2>
@@ -6,3 +10,5 @@
 <div class="h-feed">
   <%= render "articles/list", articles: @articles %>
 </div>
+
+<%= paginate @articles %>

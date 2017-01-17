@@ -42,7 +42,7 @@ The former, <a href="http://www.crimethinc.com/texts/recentfeatures/border.php">
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/border/0b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/border/0b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>1475</wp_comment_id>

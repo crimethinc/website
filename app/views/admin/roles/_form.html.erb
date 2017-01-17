@@ -1,0 +1,10 @@
+<%= form_for [:admin, @role] do |f| %>
+  <%= render "admin/form_errors", thing: @role %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control input-lg" %>
+  </div>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :roles] %>
+<% end %>

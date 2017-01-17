@@ -32,7 +32,7 @@ From the Depths just completed their <a href="http://www.fromthedepths.info/show
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/music/ftd_cd_center_900.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/music/ftd_cd_center_900.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>917</wp_comment_id>

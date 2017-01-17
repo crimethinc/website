@@ -19,6 +19,21 @@
   <p>Hero Image: <%= link_to_if @article.image.present?, @article.image, @article.image %></p>
   <p>Hero Image Description: <%= @article.image_description %></p>
 
+  <% if @article.contributions.present? %>
+    <p>
+      <b>Contributions:</b>
+      <ul>
+        <% @article.contributions.each do |contribution| %>
+          <li>
+            <%= link_to contribution.role.name.titleize, [:admin, contribution.role] %>
+            <span>by</span>
+            <%= link_to contribution.contributor.name, [:admin, contribution.contributor] %>
+          </li>
+        <% end %>
+      </ul>
+    </p>
+  <% end %>
+
   <% if @article.categories.present? %>
     <p>
       <b>Categories:</b>
@@ -43,6 +58,7 @@
 
   <hr>
 
+  <p><b>Content Format:</b> <%= @article.content_format %></p>
   <div class="e-content">
     <%= simple_format @article.content %>
   </div>

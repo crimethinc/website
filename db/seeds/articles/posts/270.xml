@@ -38,6 +38,6 @@
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cloudfront.crimethinc.com/images/rosefire/1d.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/rosefire/1d.jpg]]></wp_meta_value>
 		</wp_postmeta>
 	</item>

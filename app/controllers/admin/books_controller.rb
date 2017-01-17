@@ -4,7 +4,7 @@ class Admin::BooksController < Admin::AdminController
 
   # /admin/books
   def index
-    @books = Book.all
+    @books = Book.page(params[:page])
   end
 
   # /admin/books/1
