@@ -11,15 +11,16 @@
 
     	<dd>
       <!--
-        <%= link_to t("footer.nav.articles.adventure"),  "/adventure"  %>,
-        <%= link_to t("footer.nav.articles.analysis"),   "/analysis"   %>,
         <%= link_to t("footer.nav.articles.arts"),       "/arts"       %>,
         <%= link_to t("footer.nav.articles.geography"),  "/geography"  %>,
         <%= link_to t("footer.nav.articles.news"),       "/news"       %>,
       -->
+
+        <%= link_to t("footer.nav.articles.adventure"),      category_path(:adventure)      %>,
+        <%= link_to t("footer.nav.articles.analysis"),       category_path(:analysis)       %>,
+        <%= link_to t("footer.nav.articles.current_events"), category_path(:current_events) %>,
         <%= link_to t("footer.nav.articles.history"),        category_path(:history)        %>,
-        <%= link_to t("footer.nav.articles.technology"),     category_path(:technology)     %>,
-        <%= link_to t("footer.nav.articles.current_events"), category_path(:current_events) %>
+        <%= link_to t("footer.nav.articles.technology"),     category_path(:technology)     %>
       </dd>
 
       <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), "/books" %></dt>
