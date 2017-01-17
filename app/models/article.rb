@@ -7,6 +7,9 @@ class Article < ApplicationRecord
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
+  has_many :contributions, dependent: :destroy
+
+  accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
   scope :draft,       -> { where(status: Status.find_by(name: "draft")) }
   scope :edited,      -> { where(status: Status.find_by(name: "edited")) }
@@ -18,6 +21,7 @@ class Article < ApplicationRecord
   before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :generate_draft_code,      on: [:create, :update]
+  before_validation :downcase_content_format,  on: [:create, :update]
 
   default_scope { order("published_at DESC") }
   scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
@@ -131,5 +135,9 @@ class Article < ApplicationRecord
 
   def generate_draft_code
     self.draft_code ||= SecureRandom.hex
+  end
+
+  def downcase_content_format
+    self.content_format = self.content_format.downcase
   end
 end

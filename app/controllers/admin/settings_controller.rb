@@ -5,7 +5,7 @@ class Admin::SettingsController < Admin::AdminController
   # /admin/settings
   def index
     @body_id = "settings"
-    @settings = Setting.order("name ASC").all
+    @settings = Setting.order("name ASC").page(params[:page])
   end
 
   # /admin/settings/1

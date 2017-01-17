@@ -5,22 +5,22 @@
 		<dc_creator><![CDATA[pfm]]></dc_creator>
 		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=268</guid>
 		<description/>
-		<content_encoded><![CDATA[<div id="movieplayer" style="border: 1px solid #cccccc; padding: 5px; display: none; width: 440px; background-image: url(http://thecloud.crimethinc.com/images/genprint/gender_poster.jpg); background-repeat: no-repeat; background-position: center center;"><script type="text/javascript"><!-- Hide script from sad old browsers
-    QT_WriteOBJECT_XHTML('http://thecloud.crimethinc.com/video/gender_web.mov', '440', '265', '');
-// --></script></div><div id="trigger" style="display:block"><a onclick="javascript:document.getElementById('movieplayer').style.display='block';document.getElementById('trigger').style.display='none';return false" href="http://thecloud.crimethinc.com/video/gender_web.mov" target="_blank"><img style="padding: 5px; border: solid 1px #cccccc" src="http://thecloud.crimethinc.com/images/genprint/gender_poster.jpg" alt="Click to Play" width="440" height="264" /></a></div><span class="invisible">-</span>
+		<content_encoded><![CDATA[<div id="movieplayer" style="border: 1px solid #cccccc; padding: 5px; display: none; width: 440px; background-image: url(https://cloudfront.crimethinc.com/images/genprint/gender_poster.jpg); background-repeat: no-repeat; background-position: center center;"><script type="text/javascript"><!-- Hide script from sad old browsers
+    QT_WriteOBJECT_XHTML('https://cloudfront.crimethinc.com/video/gender_web.mov', '440', '265', '');
+// --></script></div><div id="trigger" style="display:block"><a onclick="javascript:document.getElementById('movieplayer').style.display='block';document.getElementById('trigger').style.display='none';return false" href="https://cloudfront.crimethinc.com/video/gender_web.mov" target="_blank"><img style="padding: 5px; border: solid 1px #cccccc" src="https://cloudfront.crimethinc.com/images/genprint/gender_poster.jpg" alt="Click to Play" width="440" height="264" /></a></div><span class="invisible">-</span>
 The 9th printing of the <a href="/tools/posters.html" target="_self">Gender Poster</a> was completed yesterday morning—which happens to be almost exactly the 5th anniversary of the <a href="/about/newsarchive.html#firstgender" target="_self">first printing of the Gender poster</a>. That's about 175,000 copies in 5 years, which we consider a pretty decent start, and worthy of celebrating with an over-the-top video.
 
 <!--more Incredibly excessive photo documentation after the jump.-->
 
-<a href="http://thecloud.crimethinc.com/images/genprint/6b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/6a.jpg" /></a><span class="invisible">-</span>
-<a href="http://thecloud.crimethinc.com/images/genprint/2b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/2a.jpg" /></a><span class="invisible">-</span>
-<a href="http://thecloud.crimethinc.com/images/genprint/4b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/4a.jpg" /></a><span class="invisible">-</span>
-<a href="http://thecloud.crimethinc.com/images/genprint/5b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/5a.jpg" /></a><span class="invisible">-</span>
-<a href="http://thecloud.crimethinc.com/images/genprint/7b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/7a.jpg" /></a><span class="invisible">-</span>
-<a href="http://thecloud.crimethinc.com/images/genprint/1b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/1a.jpg" /></a><span class="invisible">-</span>
-<a href="http://thecloud.crimethinc.com/images/genprint/3b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/3a.jpg" /></a><span class="invisible">-</span>
-<a href="http://thecloud.crimethinc.com/images/genprint/9b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/9a.jpg" /></a><span class="invisible">-</span>
-<a href="http://thecloud.crimethinc.com/images/genprint/8b.jpg" rel="lightbox[genprint]" ><img src="http://thecloud.crimethinc.com/images/genprint/8a.jpg" /></a><span class="invisible">-</span>]]></content_encoded>
+<a href="https://cloudfront.crimethinc.com/images/genprint/6b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/6a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/genprint/2b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/2a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/genprint/4b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/4a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/genprint/5b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/5a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/genprint/7b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/7a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/genprint/1b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/1a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/genprint/3b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/3a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/genprint/9b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/9a.jpg" /></a><span class="invisible">-</span>
+<a href="https://cloudfront.crimethinc.com/images/genprint/8b.jpg" rel="lightbox[genprint]" ><img src="https://cloudfront.crimethinc.com/images/genprint/8a.jpg" /></a><span class="invisible">-</span>]]></content_encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp_post_id>268</wp_post_id>
 		<wp_post_date><![CDATA[2008-08-07 09:45:06]]></wp_post_date>
@@ -41,7 +41,7 @@ The 9th printing of the <a href="/tools/posters.html" target="_self">Gender Post
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[enclosure]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/video/gender_web.mov
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/video/gender_web.mov
 6782815
 video/quicktime
 ]]></wp_meta_value>

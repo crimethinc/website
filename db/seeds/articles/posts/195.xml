@@ -32,7 +32,7 @@ Send stories to <a href="mailto:stealfromworkday@gmail.com">stealfromworkday@gma
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/ssfwd/gaspump_b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/ssfwd/gaspump_b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>1244</wp_comment_id>

@@ -1,4 +1,4 @@
-<p align="center"><a href="http://thecloud.crimethinc.com/images/ideology/1b.jpg" rel="lightbox[g20]"><img src="http://thecloud.crimethinc.com/images/ideology/1a.jpg" width="500" height="391"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/ideology/1b.jpg" rel="lightbox[g20]"><img src="https://cloudfront.crimethinc.com/images/ideology/1a.jpg" width="500" height="391"></a></p>
 <h1 style="margin-bottom: 0px">Against Ideology?</h1>
 <p></p>
 <h6 align="right" style="margin-right: 0px"><em>From notes for a panel discussion at the 2010 <a href="http://bfest.gr" target="_blank" >Babylonia festival</a> in Athens, Greece, at which a CrimethInc. agent was invited to speak about &ldquo;The End of Ideology and the Future Events&rdquo;</em></h6>
@@ -42,4 +42,4 @@ I am always doubtful about what I know.&rdquo; <br />
 <a href="/texts/atoz/onedimensional.php">One Dimensional Man in the Three Dimensional World</a></strong><a href="http://www.crimethinc.com/texts/atoz/onedimensional.php"></a></p>
 <p><br />
 </p>
-<p align="center"><img src="http://thecloud.crimethinc.com/images/ideology/3a.jpg" width="500" height="375"></a></p>
+<p align="center"><img src="https://cloudfront.crimethinc.com/images/ideology/3a.jpg" width="500" height="375"></a></p>

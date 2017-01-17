@@ -11,7 +11,7 @@ In possibly the first great anarchist mistake of the decade, the CrimethInc. Exp
 
 <!--more Your invitation is after the jump.-->
 
-<p><a href="http://thecloud.crimethinc.com/images/weare/weare2_b.jpg" rel="lightbox" class="legacyimage"><img src="http://thecloud.crimethinc.com/images/weare/weare2_a.jpg" /></a><span class="invisible">-</span>
+<p><a href="https://cloudfront.crimethinc.com/images/weare/weare2_b.jpg" rel="lightbox" class="legacyimage"><img src="https://cloudfront.crimethinc.com/images/weare/weare2_a.jpg" /></a><span class="invisible">-</span>
 You&rsquo;re being invited to participate in CrimethInc.&rsquo;s next big experiment: a <em>decentralized convergence.</em></p>   
 
 <h3>THE OBJECTIVES</h3>
@@ -165,7 +165,7 @@ You&rsquo;re being invited to participate in CrimethInc.&rsquo;s next big experi
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/weare/weare2_b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/weare/weare2_b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_comment>
 			<wp_comment_id>1263</wp_comment_id>

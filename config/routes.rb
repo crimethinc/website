@@ -15,8 +15,14 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
 
+  # Article edit convenience route
+  get ":year/:month/:day/:slug/edit",
+      controller: "admin/articles",
+      action:     "edit",
+      constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
+
   # Article listings by year, optional month, optional day
-  get "(/:year)(/:month)(/:day)",
+  get "(/:year)(/:month)(/:day)(/page/:page)",
       to:          "archives#index",
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :archives
@@ -27,16 +33,27 @@ Rails.application.routes.draw do
   get "drafts/articles/:draft_code", to: "articles#show", as: :article_draft
   get "drafts/pages/:draft_code",    to: "pages#show",    as: :page_draft
 
+  # Draft Articles and Pages /edit convenience routes
+  get "drafts/articles/:draft_code/edit", controller: "admin/articles", action: "edit"
+
   # Articles Atom Feed
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
 
 
   # Categories
-  get "categories/:slug", to: "categories#show", as: :category
+  get "categories/:slug/page(/1)", to: redirect { |path_params, req|
+    "/categories/#{path_params[:slug]}"
+  }
+  get "categories/:slug(/page/:page)", to: "categories#show", as: :category
+  get "categories/:slug/feed",         to: "categories#feed", defaults: { format: "atom" }, as: :category_feed
 
 
   # Tags
-  get "tags/:slug", to: "tags#show", as: :tag
+  get "tags/:slug/page(/1)", to: redirect { |path_params, req|
+    "/tags/#{path_params[:slug]}"
+  }
+  get "tags/:slug(/page/:page)", to: "tags#show", as: :tag
+  get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
 
 
   # Pages (linked in header/nav)
@@ -49,8 +66,7 @@ Rails.application.routes.draw do
 
 
   # Podcast
-  get "podcast/feed", to: redirect("http://exworker.libsyn.com/rss"), as: :podcast_feed_redirect # TEMP TODO
-  get "podcast/feed", to: "podcast#feed",   as: :podcast_feed
+  get "podcast/feed", to: "podcast#feed",   as: :podcast_feed, defaults: { format: "rss" }
   get "podcast",      to: "podcast#index",  as: :podcast
   get "podcast/:id",  to: "podcast#show",   as: :episode
   get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
@@ -75,18 +91,27 @@ Rails.application.routes.draw do
   # Admin Dashboard
   get :admin, to: redirect("/admin/articles"), as: "admin"
   namespace :admin do
-    resources :articles
-    resources :books
-    resources :episodes
-    resources :links
-    resources :pages
-    resources :podcasts
-    resources :redirects
-    resources :settings
-    resources :subscribers
-    resources :themes
-    resources :users
-    resources :videos
+    concern :paginatable do
+      get "page(/1)", on: :collection, to: redirect { |path_params, req|
+        req.path.split("page").first
+      }
+      get "(page/:page)", action: :index, on: :collection, as: ""
+    end
+
+    resources :articles, concerns: :paginatable
+    resources :books, concerns: :paginatable
+    resources :contributors, concerns: :paginatable
+    resources :episodes, concerns: :paginatable
+    resources :links, concerns: :paginatable
+    resources :pages, concerns: :paginatable
+    resources :podcasts, concerns: :paginatable
+    resources :redirects, concerns: :paginatable
+    resources :roles, concerns: :paginatable
+    resources :settings, concerns: :paginatable
+    resources :subscribers, concerns: :paginatable
+    resources :themes, concerns: :paginatable
+    resources :users, concerns: :paginatable
+    resources :videos, concerns: :paginatable
   end
 
 

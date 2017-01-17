@@ -1,4 +1,4 @@
-<p align="center"><img src="http://thecloud.crimethinc.com/images/love/1a.jpg" alt="Join the Resistance: Fall in Love" width="500" height="143"></p> 
+<p align="center"><img src="https://cloudfront.crimethinc.com/images/love/1a.jpg" alt="Join the Resistance: Fall in Love" width="500" height="143"></p> 
 <p> Falling in love is the ultimate act of revolution, of resistance to 
 today's tedious, socially restrictive, culturally constrictive, humanly 
 meaningless world. </p>
@@ -31,7 +31,7 @@ apathy or insecurity to sell the products that keep the economy running
 as it does will have no effect upon him. Entertainment designed for passive 
 consumption, which depends upon exhaustion or cynicism in the viewer, 
 will not interest him. </p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/love/2b.jpg" rel="lightbox[love]"><img src="http://thecloud.crimethinc.com/images/love/2a.gif" width="500" height="442"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/love/2b.jpg" rel="lightbox[love]"><img src="https://cloudfront.crimethinc.com/images/love/2a.gif" width="500" height="442"></a></p>
 <p> There is no place for the passionate, romantic lover in today's world, 
 business or private. For he can see that it might be more worthwhile to 
 hitchhike to Alaska (or to sit in the park and watch the clouds sail by) 
@@ -66,7 +66,7 @@ alone: the passion that makes the human heart beat faster. It disdains
 anything else, be it self-preservation, obedience, or shame. Love urges 
 men and women to heroism, and to antiheroism&#151;to indefensible acts that 
 need no defense for the one who loves. </p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/love/3b.gif" rel="lightbox[love]"><img src="http://thecloud.crimethinc.com/images/love/3a.gif" width="500" height="556"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/love/3b.gif" rel="lightbox[love]"><img src="https://cloudfront.crimethinc.com/images/love/3a.gif" width="500" height="556"></a></p>
 <p> For the lover speaks a different moral and emotional language than the 
 typical bourgeois man does. The average bourgeois man has no overwhelming, 
 smoldering desires. Sadly, all he knows is the silent despair that comes 
@@ -100,7 +100,7 @@ stakes high and live each day as if it were the last? Think what a place
 the world would be! Certainly it would be different than it is now&#151;and 
 it is quite a truism that people from the "mainstream," the simultaneous 
 keepers and victims of the status quo, fear change. </p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/love/4b.gif" rel="lightbox[love]"><img src="http://thecloud.crimethinc.com/images/love/4a.gif" width="500" height="415"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/love/4b.gif" rel="lightbox[love]"><img src="https://cloudfront.crimethinc.com/images/love/4a.gif" width="500" height="415"></a></p>
 <p> And so, despite the stereotyped images used in the media to sell toothpaste 
 and honeymoon suites, genuine passionate love is discouraged in our culture. 
 Being "carried away by your emotions" is frowned upon; instead we are 
@@ -133,7 +133,7 @@ master or doctrine that will tell us what to do and how to do it without
 ever giving us the satisfaction that self-determination does. So fall 
 in love today, with men, with women, with music, with ambition, with yourself. 
 . . with life! </p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/love/5b.gif" rel="lightbox[love]"><img src="http://thecloud.crimethinc.com/images/love/5a.gif" width="500" height="619"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/love/5b.gif" rel="lightbox[love]"><img src="https://cloudfront.crimethinc.com/images/love/5a.gif" width="500" height="619"></a></p>
 <p><em>One might say that it is ridiculous to implore others to fall in love&#151;one 
 either falls in love or one does not, it is not a choice that can be made 
 consciously. Emotions do not follow the instructions of the rational mind. 

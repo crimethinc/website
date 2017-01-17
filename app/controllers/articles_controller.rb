@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  def index
+    @articles = Article.live.published.page(params[:page]).per(25)
+  end
+
   def show
     @body_id = "article"
 
@@ -18,7 +22,7 @@ class ArticlesController < ApplicationController
     end
 
     # no article found, go to /articles feed
-    if @article.nil?
+    if @article.blank? || !@article.published?
       return redirect_to root_path
     end
 

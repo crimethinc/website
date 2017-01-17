@@ -140,7 +140,7 @@ Yugoslavia’s answer to Dada—THE ZENITHISTS!!!!!
 
 Tune in next time for the follow-up, “A User’s Guide to _Expect Resistance_”—in the meantime, here’s a preview:
 
-![](http://thecloud.crimethinc.com/assets/books/expect-resistance/images/expect-resistance-in-milwaukee.jpg)
+![](https://cloudfront.crimethinc.com/assets/books/expect-resistance/images/expect-resistance-in-milwaukee.jpg)
 
 ***
 

@@ -1,4 +1,4 @@
-<p align="center"><a href="http://thecloud.crimethinc.com/images/vortext/1b.jpg" rel="lightbox[border]"><img src="http://thecloud.crimethinc.com/images/vortext/1a.jpg" alt="Beware/Join the Experimentation Committee" width="500" height="270"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/vortext/1b.jpg" rel="lightbox[border]"><img src="https://cloudfront.crimethinc.com/images/vortext/1a.jpg" alt="Beware/Join the Experimentation Committee" width="500" height="270"></a></p>
 <h6 align="right" style="margin-right: 0px"><em>This manifesto appeared in <a href="http://www.crimethinc.com/blog/2012/04/08/outliers-to-the-front-presenting-vortext/"><strong>VORTEXT</strong></a>, organ of the Experimentation Committee.<br /> It is available in PDF form <a href="/blog/2012/07/04/new-feature-and-vortext-now-online/">here</a>.</em></h6>
 <h5>&ldquo;You need to know how to experience freedom in order to be free. You need to free yourself in order to experience freedom. Within the present social order, time and space prevent the <strong>experimentation of freedom</strong> because they suffocate the freedom to experiment. Only by upsetting the imperatives of time and social space will it be possible to imagine new relations and surroundings. The old philosopher said one can only desire on the basis of what one knows. Desires can only change if one changes the life that produces them.&rdquo;<br />
 &ndash;Anonymous, <em>At Daggers Drawn</em></h5>
@@ -20,7 +20,7 @@ The Experimentation Committee doesn&rsquo;t hold yearly conventions or award lau
 </p><p>The Experimentation Committee <strong>claims the death rattles of sacred cows as its national anthem</strong>. The Experimentation Committee <strong>strikes fear into the hearts of all who earnestly wish to succeed</strong>. The Experimentation Committee is an unquenchable fountain of youth, ceaselessly replenishing the world despite all our efforts to seal it up. Compose your last will and testament&mdash;double or nothing&mdash;and join up.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/vortext/2b.jpg" rel="lightbox[border]"><img src="http://thecloud.crimethinc.com/images/vortext/2a.jpg" alt="Comrades&mdash;urely It Is Too Late, but We Need You for the Experimentation Committee!" width="500" height="461"></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/vortext/2b.jpg" rel="lightbox[border]"><img src="https://cloudfront.crimethinc.com/images/vortext/2a.jpg" alt="Comrades&mdash;urely It Is Too Late, but We Need You for the Experimentation Committee!" width="500" height="461"></a></p>
 <p><em>To apply, mail one of the following to:</em></p>
 <p><em>V&Ouml;&Ouml;&Ouml;RTEXT</em> vortex[at]crimethinc.com
 <em>P.O. Box 494, </em>

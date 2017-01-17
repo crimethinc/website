@@ -33,7 +33,7 @@ We chose these posters as a fundraiser because in contrast to our <a href="http:
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://thecloud.crimethinc.com/images/random/deluxe_b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/random/deluxe_b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>

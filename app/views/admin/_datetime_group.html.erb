@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4">
       <%= select_year post.published_at,
-            { prompt: true },
+            { prompt: true, start_year: Time.now.year, end_year: 1900 },
             name:  "#{type}[published_at(1i)]",
             id:    "#{type}_published_at_1i",
             class: "form-control datetime-select" %>
@@ -12,7 +12,7 @@
 
     <div class="col-xs-12 col-sm-4">
       <%= select_month post.published_at,
-            { prompt: true },
+            { prompt: true, add_month_numbers: true },
             name:  "#{type}[published_at(2i)]",
             id:    "#{type}_published_at_2i",
             class: "form-control datetime-select" %>

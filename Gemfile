@@ -27,6 +27,12 @@ gem "stringex"  # for Markdown header IDs processing
 # auth
 gem "bcrypt", "~> 3.1.7"
 
+# forms
+gem "cocoon", "~> 1.2.9"
+
+# pagination
+gem "kaminari"
+
 # dev and testing
 group :development, :test do
   gem "byebug", platform: :mri

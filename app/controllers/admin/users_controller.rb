@@ -4,7 +4,7 @@ class Admin::UsersController < Admin::AdminController
 
   # /admin/users
   def index
-    @users = User.all
+    @users = User.page(params[:page])
   end
 
   # /admin/users/1

@@ -1,4 +1,4 @@
-<p align="center"><a href="http://thecloud.crimethinc.com/images/language/1b.jpg" rel="lightbox[breakwith]"><img src="http://thecloud.crimethinc.com/images/language/1a.jpg" width="500" height="300" title="Anarchism and the English Language, English and the Anarchists’ Language"/></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/language/1b.jpg" rel="lightbox[breakwith]"><img src="https://cloudfront.crimethinc.com/images/language/1a.jpg" width="500" height="300" title="Anarchism and the English Language, English and the Anarchists’ Language"/></a></p>
 <h6 align="right" style="margin-right: 0px"><em>This text is also available as a <a href="http://www.crimethinc.com/blog/2013/05/23/anarchism-and-the-english-language/">printable zine</a>.</em></h6>
 <p><em>An exchange between Kristian Williams and the CrimethInc. Writers’ Bloc</em></p>
 <h1>Anarchism and the<br />English Language</h1>
@@ -45,7 +45,7 @@
 <p>I don&#8217;t mean to suggest that the only thing standing in the way of revolution is bad prose. But it is possible that a great deal of the nonsense could be shaken out of anarchism if we commit ourselves to the clear expression of our ideas, and if we demand the same from the publications that we read. It is very difficult to write clearly unless one is also thinking clearly. And if a sentence cannot be translated from anarcho-english into plain English, there is a very good chance that it is meaningless.</p>
 <h3>Kristian Williams is the author of <em>Our Enemies in Blue: Police and Power in America</em>, <em>American Methods: Torture and the Logic of Domination</em>, and <em>Hurt: Notes on Torture in a Modern Democracy</em>. He is presently at work on a book about Oscar Wilde and anarchism.</h3>
 <p>&nbsp;</p>
-<p align="center"><a href="http://thecloud.crimethinc.com/images/language/2b.jpg" rel="lightbox[breakwith]"><img src="http://thecloud.crimethinc.com/images/language/2a.jpg" width="500" height="300" title="English and the Anarchists’ Language, Anarchism and the English Language"/></a></p>
+<p align="center"><a href="https://cloudfront.crimethinc.com/images/language/2b.jpg" rel="lightbox[breakwith]"><img src="https://cloudfront.crimethinc.com/images/language/2a.jpg" width="500" height="300" title="English and the Anarchists’ Language, Anarchism and the English Language"/></a></p>
 <h1>English and the<br />Anarchists’ Language</h1>
 <p><em>CrimethInc. Writers’ Bloc</em></p>
 <p>“The alchemists have a saying: <em>‘Tertium non data’</em>: the third is not given. That is, the transformation from one element to another, from waste matter into best gold, is a process that cannot be documented. It is fully mysterious.  No one really knows what effects change.” –Jeanette Winterson</p>

@@ -4,7 +4,7 @@ class Admin::PodcastsController < Admin::AdminController
 
   # /admin/podcasts
   def index
-    @podcasts = Podcast.all
+    @podcasts = Podcast.page(params[:page])
   end
 
   # /admin/podcasts/1

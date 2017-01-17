@@ -7,9 +7,9 @@
 		<description/>
 		<content_encoded><![CDATA[At long last, we’ve uploaded a pdf version of <a href="http://www.crimethinc.com/blog/2012/04/08/outliers-to-the-front-presenting-vortext/"><em>VORTEXT</em></a>, organ of the Experimentation Committee, to our <a href="http://www.crimethinc.com/tools/downloads/zines.html">downloads</a> page. Please print these out and share them freely—or, heaven help you, miserably slog through it online.
 
-<a href="http://cloudfront.crimethinc.com/images/vortext/4b.jpg" rel="lightbox[mrpa]" class="smallitem"><img src="http://cloudfront.crimethinc.com/images/vortext/4a.jpg" /></a><p><strong>VORTEXT:<br />ORGAN OF THE EXPERIMENTATION COMMITTEE</strong>
-<strong><a href="http://cloudfront.crimethinc.com/pdfs/vortext_imposed.pdf">PDF (35.4 MB) Imposed Zine Version (Legal Size)</a></strong>
-<strong><a href="http://cloudfront.crimethinc.com/pdfs/vortext_reading.pdf">PDF (36.1 MB) Online Reading Version</a></strong></p>
+<a href="https://cloudfront.crimethinc.com/images/vortext/4b.jpg" rel="lightbox[mrpa]" class="smallitem"><img src="https://cloudfront.crimethinc.com/images/vortext/4a.jpg" /></a><p><strong>VORTEXT:<br />ORGAN OF THE EXPERIMENTATION COMMITTEE</strong>
+<strong><a href="https://cloudfront.crimethinc.com/pdfs/vortext_imposed.pdf">PDF (35.4 MB) Imposed Zine Version (Legal Size)</a></strong>
+<strong><a href="https://cloudfront.crimethinc.com/pdfs/vortext_reading.pdf">PDF (36.1 MB) Online Reading Version</a></strong></p>
 
 <p>Therein, you may read about the hijinks and provocations of the Experimentation Committee; about the uses of black magic and self-destruction in the service of insurrection; about passionism, consonance, and <em>terrible freedom</em>; a philosophical inquiry into the relation between anarchy and friendship; and a great deal more. We’ve also added the manifesto of the Experimentation Committee to our reading library:</p>
 
@@ -44,7 +44,7 @@
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cloudfront.crimethinc.com/images/vortext/3b.jpg]]></wp_meta_value>
+			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/vortext/3b.jpg]]></wp_meta_value>
 		</wp_postmeta>
 		<wp_postmeta>
 			<wp_meta_key><![CDATA[readability]]></wp_meta_key>

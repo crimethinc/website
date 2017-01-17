@@ -5,7 +5,7 @@ en:
 
   head:
     meta_title: "CrimethInc. ex-Workers' Collective: Your ticket to a world free of charge"
-    meta_image_url: http://thecloud.crimethinc.com/assets/share/crimethinc-site-share.png
+    meta_image_url: https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png
     meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
   header:
@@ -21,9 +21,11 @@ en:
     nav:
       articles:
         label: Articles
+        feed: RSS
         adventure: Adventure
         analysis: Analysis
         arts: Arts
+        current_events: Current Events
         geography: Geography
         history: History
         news: News
@@ -40,6 +42,7 @@ en:
 
       podcast:
         label: Podcast
+        feed: RSS
         the_ex_worker: "The Ex-Worker"
 
       journal:
@@ -103,3 +106,24 @@ en:
     transcript: Transcript
     notes_and_links: Notes and Links
     full_episode_transcript: Full Episode Transcript
+
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      entry:
+        zero: "entries"
+        one: "entry"
+        other: "entries"
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
