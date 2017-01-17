@@ -51,7 +51,7 @@ class Article < ApplicationRecord
 
     tags_glob.split(",").each do |name|
       unless name.blank?
-        tag = Tag.find_or_create_by(name: name)
+        tag = Tag.find_or_create_by(name: name.strip)
         self.tags << tag
       end
     end
@@ -62,7 +62,7 @@ class Article < ApplicationRecord
 
     categories_glob.split(",").each do |name|
       unless name.blank?
-        category = Category.find_or_create_by(name: name)
+        category = Category.find_or_create_by(name: name.strip)
         self.categories << category
       end
     end
