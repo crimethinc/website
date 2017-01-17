@@ -44,10 +44,6 @@ class Article < ApplicationRecord
     end
   end
 
-  def to_params
-    binding.pry
-  end
-
   def slug_exists?
     Article.on(published_at).where(slug: slug).exists?
   end
