@@ -8932,4 +8932,6 @@ red read
 /texts/pastfeatures/security.php /2004/11/01/what-is-security-culture
 /texts/recentfeatures/security.php /2004/11/01/what-is-security-culture
 /j20resources /2017/01/15/resources-for-j20
-/ungovernable /2017/01/17/whoever-they-vote-for-we-are-ungovernable-a-history-of-anarchist-counter-inaugural-protest
+/ungovernable /2017/01/16/whoever-they-vote-for-we-are-ungovernable-a-history-of-anarchist-counter-inaugural-protest
+/2005inauguration /2017/01/17/no-more-presidents-a-narrative-from-the-2005-inauguration
+/2001inauguration /2017/01/17/five-principles-of-direct-action-what-we-can-learn-from-the-2001-inauguration-protests
