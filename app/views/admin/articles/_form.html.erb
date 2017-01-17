@@ -57,6 +57,13 @@
 
       <div class="col-xs-12 col-sm-4">
         <div class="form-group">
+          <%= f.label :short_path, "Short URL Path" %>
+          <%= f.text_field :short_path, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
           <%= f.label :categories %>
           <%= text_field_tag :categories, @article.categories.map{ |c| c.name }.join(", "), class: "form-control" %>
         </div>

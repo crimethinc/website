@@ -15,6 +15,10 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
 
+  get ":short_path",
+      to:         "articles#show",
+      as:         :article_short
+
   # Article listings by year, optional month, optional day
   get "(/:year)(/:month)(/:day)",
       to:          "archives#index",

@@ -31,11 +31,17 @@ class Article < ApplicationRecord
   end
 
   def path
-    if published?
+    if published? && short_path
+      short_path
+    elsif published?
       published_at.strftime("/%Y/%m/%d/#{slug}")
     else
       "/drafts/articles/#{self.draft_code}"
     end
+  end
+
+  def to_params
+    binding.pry
   end
 
   def slug_exists?

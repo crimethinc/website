@@ -64,6 +64,7 @@ class Admin::ArticlesController < Admin::AdminController
                                     :slug, :draft_code, :status_id, :summary,
                                     :published_at, :tags, :categories,
                                     :image, :image_description, :css, :hide_layout,
-                                    :header_background_color, :header_text_color)
+                                    :header_background_color, :header_text_color,
+                                    :short_path)
   end
 end
