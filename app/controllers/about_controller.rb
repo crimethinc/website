@@ -14,13 +14,6 @@ class AboutController < ApplicationController
     @featured_classics              = Article.find_by(slug: "why-we-dont-make-demands")
   end
 
-  def watch
-    @html_id = "page"
-    @body_id = "watch"
-
-    @videos  = Video.all
-  end
-
   def listen
     @html_id = "page"
     @body_id = "listen"
