@@ -1,94 +1,68 @@
-<p id="notice"><%= notice %></p>
+<%= render "admin/page_header", thing: @video %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @video.title %>
-</p>
+<article>
+  <header>
+    <h1>
+      <%= link_to [:admin, @video], class: "p-name" do %>
+        <span class="h1 title"><%= @video.title %></span><br>
+        <span class="h2 subtitle"><%= @video.subtitle %></span>
+      <% end %>
+    </h1>
+  </header>
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @video.subtitle %>
-</p>
+  <hr>
+  <p>
+    <strong>Title:</strong>
+    <%= @video.title %>
+  </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @video.content %>
-</p>
+  <p>
+    <strong>Subtitle:</strong>
+    <%= @video.subtitle %>
+  </p>
 
-<p>
-  <strong>Tweet:</strong>
-  <%= @video.tweet %>
-</p>
+  <p>
+    <strong>Content Format:</strong>
+    <%= simple_format(@video.content) %>
+  </p>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @video.summary %>
-</p>
+  <p>
+    <strong>Slug:</strong>
+    <%= @video.slug %>
+  </p>
 
-<p>
-  <strong>Tweet:</strong>
-  <%= @video.tweet %>
-</p>
+  <p>
+    <strong>Vimeo ID:</strong>
+    <%= @video.vimeo_id %>
+  </p>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @video.summary %>
-</p>
+  <p>
+    <strong>Image</strong>
+    <%= link_to_if @video.image.present?, @video.image, @video.image %>
+  </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @video.image %>
-</p>
+  <p>
+    <strong>Image Description:</strong>
+    <%= @video.image_description %>
+  </p>
 
-<p>
-  <strong>Image description:</strong>
-  <%= @video.image_description %>
-</p>
+  <p>
+    <strong>Tweet:</strong>
+    <%= @video.tweet %>
+  </p>
 
-<p>
-  <strong>Content format:</strong>
-  <%= @video.content_format %>
-</p>
+  <p>
+    <strong>Summary:</strong>
+    <%= @video.summary %>
+  </p>
 
-<p>
-  <strong>Quality:</strong>
-  <%= @video.quality %>
-</p>
+  <p>
+    <strong>Duration:</strong>
+    <%= @video.duration %>
+  </p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @video.slug %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @video.year %>
-</p>
-
-<p>
-  <strong>Month:</strong>
-  <%= @video.month %>
-</p>
-
-<p>
-  <strong>Day:</strong>
-  <%= @video.day %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @video.duration %>
-</p>
-
-<p>
-  <strong>Published at:</strong>
-  <%= @video.published_at %>
-</p>
-
-<p>
-  <strong>Vimeo:</strong>
-  <%= @video.vimeo_id %>
-</p>
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+  <p>
+    <strong>Quality:</strong>
+    <%= @video.quality %>
+  </p>
+</article>
