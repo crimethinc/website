@@ -87,7 +87,9 @@ xml.rss "version"      => "2.0",
         xml.tag!("itunes:image", href: episode.image)
 
         xml.description do
-          xml.cdata! episode.content
+          xml.cdata! episode.content +
+                     " <p> </p> <p> </p> <p>-------SHOW NOTES------</p> <p> </p> " +
+                     episode.show_notes
         end
 
         xml.enclosure(length: episode.audio_length, type: episode.audio_type, url: episode.audio_mp3_url)
