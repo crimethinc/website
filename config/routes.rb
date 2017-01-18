@@ -57,8 +57,8 @@ Rails.application.routes.draw do
 
 
   # Pages (linked in header/nav)
-  get "read",   to: "about#read",   as: :read
-  get "watch",  to: "about#watch",  as: :watch
+  get "read",   to: "about#read",        as: :read
+  get "watch",  to: redirect("videos"),  as: :watch_redirect
   get "listen", to: redirect("podcast"), as: :listen_redirect # TEMP TODO
   # get "listen", to: "about#listen", as: :listen
   get "get",    to: redirect("http://store.crimethinc.com"), as: :get_redirect # TEMP TODO
@@ -81,7 +81,9 @@ Rails.application.routes.draw do
 
 
   # Videos
-  get "watch/:slug", to: "videos#show", as: :video
+  get "videos/page(/1)", to: redirect { |path_params, req| "/videos" }
+  get "videos",       to: "videos#index", as: :videos
+  get "videos/:slug", to: "videos#show",  as: :video
 
 
   # Site search
