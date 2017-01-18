@@ -1,4 +1,4 @@
-module NameFromTitle
+module Name
   extend ActiveSupport::Concern
 
   def name

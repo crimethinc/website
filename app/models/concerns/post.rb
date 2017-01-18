@@ -1,7 +1,7 @@
 module Post
   extend ActiveSupport::Concern
 
-  include NameFromTitle
+  include Name
   include Slug
 
   included do

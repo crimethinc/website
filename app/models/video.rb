@@ -1,5 +1,5 @@
 class Video < ApplicationRecord
-  include NameFromTitle
+  include Name
 
   default_scope { order("published_at DESC") }
 

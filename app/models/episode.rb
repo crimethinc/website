@@ -1,5 +1,5 @@
 class Episode < ApplicationRecord
-  include NameFromTitle
+  include Name
 
   belongs_to :podcast
 

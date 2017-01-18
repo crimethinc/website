@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  include NameFromTitle
+  include Name
 
   def path
     "/books/#{slug}"
