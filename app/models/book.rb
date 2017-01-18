@@ -1,14 +1,8 @@
 class Book < ApplicationRecord
+  include NameFromTitle
+
   def path
     "/books/#{slug}"
-  end
-
-  def name
-    if title.present? && subtitle.present?
-      "#{title} : #{subtitle}"
-    else
-      title
-    end
   end
 
   def image

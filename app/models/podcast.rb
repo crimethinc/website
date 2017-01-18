@@ -1,13 +1,7 @@
 class Podcast < ApplicationRecord
-  has_many :episodes
+  include NameFromTitle
 
-  def name
-    if title.present? && subtitle.present?
-      "#{title} : #{subtitle}"
-    else
-      title
-    end
-  end
+  has_many :episodes
 
   def path
     "/podcast"

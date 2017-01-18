@@ -1,15 +1,9 @@
 class Episode < ApplicationRecord
+  include NameFromTitle
+
   belongs_to :podcast
 
   default_scope { order("id DESC") }
-
-  def name
-    if title.present? && subtitle.present?
-      "#{title} : #{subtitle}"
-    else
-      title
-    end
-  end
 
   def path
     "/podcast/#{to_param}"
