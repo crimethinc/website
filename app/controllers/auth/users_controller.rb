@@ -52,6 +52,6 @@ class Auth::UsersController < Admin::AdminController
                                  :email,
                                  :password,
                                  :password_confirmation,
-                                 :name)
+                                 :display_name)
   end
 end
