@@ -8949,3 +8949,4 @@ red read
 /journal /rolling-thunder
 /about/site_guide.html /about
 /about/faq.html /faq
+/about/contact.html /contact
