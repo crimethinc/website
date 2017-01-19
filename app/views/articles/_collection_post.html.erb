@@ -1,0 +1,14 @@
+<%= article_tag article do %>
+  <% if article.image.present? %>
+    <%= image_tag article.image, class: "u-photo", alt: "" %>
+  <% end %>
+  <div class="meta">
+    <%= render "articles/titles", header: article, linked: false %>
+  </div>
+  <%= render_content article %>
+  <footer>
+    <%= render "articles/published_on", article: article %>
+    <%= render "articles/categories",   article: article %>
+    <%= render "articles/tags",         article: article %>
+  </footer>
+<% end %>

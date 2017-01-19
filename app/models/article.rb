@@ -8,15 +8,23 @@ class Article < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
   has_many :contributions, dependent: :destroy
+  has_many :collection_posts, foreign_key: :collection_id, class_name: :Article
+  belongs_to :collection, foreign_key: :parent_id, class_name: :Article
 
   accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
+  scope :chronological, -> { order(published_at: :desc) }
+
+  scope :root, -> { where(collection_id: nil) }
+
+  before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
 
   default_scope { order("published_at DESC") }
   scope :live,        -> { where("published_at < ?", Time.now) }
   scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
+  scope :recent,      -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days, Time.now) }
 
   def path
     if published?
@@ -52,6 +60,35 @@ class Article < ApplicationRecord
         self.categories << category
       end
     end
+  end
+
+  # article states through the process from creation to publishing
+  def draft?
+    status.name == "draft"
+  end
+
+  def edited?
+    status.name == "edited"
+  end
+
+  def designed?
+    status.name == "designed"
+  end
+
+  def published?
+    status.name == "published"
+  end
+
+  def dated?
+    published_at.present?
+  end
+
+  def collection_root?
+    collection_posts.any?
+  end
+
+  def in_collection?
+    collection.present?
   end
 
   private

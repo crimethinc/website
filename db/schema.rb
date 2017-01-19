@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20170112043825) do
     t.boolean  "hide_layout",             default: false
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
+    t.integer  "collection_id"
+    t.index ["collection_id"], name: "index_articles_on_collection_id", using: :btree
     t.index ["status_id"], name: "index_articles_on_status_id", using: :btree
     t.index ["theme_id"], name: "index_articles_on_theme_id", using: :btree
     t.index ["user_id"], name: "index_articles_on_user_id", using: :btree

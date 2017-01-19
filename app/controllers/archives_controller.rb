@@ -8,7 +8,7 @@ class ArchivesController < ApplicationController
     @articles_month = params[:month]
     @articles_day   = params[:day]
 
-    articles = Article.published.all
+    articles = Article.published.root.all
 
     articles = articles.where(year:  params[:year])  if params[:year].present?
     articles = articles.where(month: params[:month]) if params[:month].present?

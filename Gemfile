@@ -37,6 +37,9 @@ gem "kaminari"
 group :development, :test do
   gem "byebug", platform: :mri
   gem "nokogiri"
+  gem "rspec-rails"
+  gem "guard-rspec"
+  gem "spring-commands-rspec"
 end
 
 # dev

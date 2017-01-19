@@ -32,7 +32,7 @@ echo "==> Running tests..."
 
 if [ -n "$1" ]; then
   # pass arguments to test call. This is useful for calling a single test.
-  bin/rails test "$1"
+  bundle exec bin/rspec "$1"
 else
-  bin/rails test
+  bundle exec bin/rspec
 fi
