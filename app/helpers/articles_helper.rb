@@ -6,6 +6,12 @@ module ArticlesHelper
     end
   end
 
+  def display_time(datetime=nil)
+    unless datetime.nil?
+      datetime.strftime("%l:%M&nbsp;%z").html_safe
+    end
+  end
+
   def link_to_dates(year: nil, month: nil, day: nil, show_year: true, show_month: true, show_day: true)
     show_month = false if month.nil?
     show_day   = false if day.nil?
