@@ -42,7 +42,7 @@ module Rack
           args = "?#{req.query_string}"
         end
 
-        return redirect(redirects[req.path] + args)
+        return redirect(redirects[req.path] + args.to_s)
       end
 
       @app.call(env)
