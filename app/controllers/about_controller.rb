@@ -1,9 +1,4 @@
 class AboutController < ApplicationController
-  def start
-    @html_id = "page"
-    @body_id = "start"
-  end
-
   def read
     @html_id = "page"
     @body_id = "read"
@@ -14,8 +9,10 @@ class AboutController < ApplicationController
     @featured_classics              = Article.find_by(slug: "why-we-dont-make-demands")
   end
 
-  def listen
+  def post_order_success
     @html_id = "page"
-    @body_id = "listen"
+    @body_id = "store"
+    @title   = "Post-Order Glow"
+    @order_id = params[:ordernum]
   end
 end

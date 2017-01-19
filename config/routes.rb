@@ -57,12 +57,10 @@ Rails.application.routes.draw do
 
 
   # Pages (linked in header/nav)
-  get "read",   to: "about#read",        as: :read
-  get "watch",  to: redirect("videos"),  as: :watch_redirect
-  get "listen", to: redirect("podcast"), as: :listen_redirect # TEMP TODO
-  # get "listen", to: "about#listen", as: :listen
-  get "get",    to: redirect("http://store.crimethinc.com"), as: :get_redirect # TEMP TODO
-  # get "buy",    to: "about#buy",    as: :buy
+  get "read",               to: "about#read",        as: :read
+  get "watch",              to: redirect("videos"),  as: :watch_redirect
+  get "listen",             to: redirect("podcast"), as: :listen_redirect
+  get "get",                to: redirect("http://store.crimethinc.com"), as: :get_redirect
 
 
   # Podcast
@@ -139,15 +137,16 @@ Rails.application.routes.draw do
   get "opensearch.xml", to: "misc#opensearch_xml"
 
   # Wordpress admin URL redirects
-  get "wp-admin.php", to: redirect("/admin")
+  get "wp-admin",     to: redirect("/admin")
   get "wp-login.php", to: redirect("/signin")
   get "wp-login.php?action=logout&_wpnonce=:nonce", to: redirect("/signout")
 
-  # Redirects
-  get "store", to: redirect("http://store.crimethinc.com")
-
   # Ping and Health monitoring
   mount NewRelicPing::Engine, at: "/status"
+
+  # Store Redirect and support page
+  get "store", to: redirect("https://store.crimethinc.com")
+  get "store/order-success", to: "about#post_order_success", as: :post_order_success
 
   # Pages
   get "*path", to: "pages#show", as: :page, via: :all
