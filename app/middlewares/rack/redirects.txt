@@ -8948,3 +8948,4 @@ red read
 /archives.html /rolling-thunder/archive
 /journal /rolling-thunder
 /about/site_guide.html /about
+/about/faq.html /faq
