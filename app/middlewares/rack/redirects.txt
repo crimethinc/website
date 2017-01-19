@@ -8950,3 +8950,5 @@ red read
 /about/site_guide.html /about
 /about/faq.html /faq
 /about/contact.html /contact
+/about/post-order.html /store/order-success
+/about/success.html /store/order-success
