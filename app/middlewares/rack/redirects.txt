@@ -8934,5 +8934,15 @@ http://thecloud.crimethinc.com/images/terrain/bannerb.jpg /2010/08/23/fighting-i
 http://thecloud.crimethinc.com/images/weare/weare2_b.jpg /2010/06/03/august-2010-we-are-everywhere
 rad read
 red read
-/rt /rolling-thunder
 /rt/rolling_thunder_1.pdf https://cloudfront.crimethinc.com/pdfs/rolling_thunder_1.pdf
+/rt /rolling-thunder
+/rt/index.html /rolling-thunder
+/rt/subscribe /rolling-thunder
+/rt/subscribe.html /rolling-thunder
+/rss /feed
+/rss.html /feed
+/texts /categories/texts
+/search/search.php /search
+/rt/archives /rolling-thunder/archive
+/rt/archives.html /rolling-thunder/archive
+/archives.html /rolling-thunder/archive
