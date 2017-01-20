@@ -8,7 +8,7 @@ module ArticlesHelper
     data = {id: article.id, published_at: Time.now.to_i}
     data[:listen] = true if article.collection_posts.recent.any?
 
-    content_tag "article", id: "article-#{article.id}", class: klasses.join(" "), role: "article", data: data, &block
+    content_tag "article", id: article.slug, class: klasses.join(" "), role: "article", data: data, &block
   end
 
   def display_date(datetime=nil)
