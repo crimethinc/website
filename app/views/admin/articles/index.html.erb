@@ -1,3 +1,7 @@
 <%= render "admin/page_header", thing: @articles %>
 
 <%= render "table", articles: @articles %>
+
+<div class="text-center">
+  <%= paginate @articles, views_prefix: "admin" %>
+</div>

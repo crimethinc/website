@@ -7,79 +7,87 @@
         <span class="h1 title"><%= @article.title %></span><br>
         <span class="h2 subtitle"><%= @article.subtitle %></span>
       <% end %>
+
     </h1>
+
+    <%= render "/admin/articles/publication_status", article: @article %>
   </header>
 
-  <hr>
-  <p>URL: <b><%= link_to @article.path, @article.path %></b></p>
-  <p>Download URL: <b><%= link_to_if @article.download_url.present?, @article.download_url, @article.download_url %></b></p>
-  <p>Publication Status: <b><%= @article.status.name.upcase %></b></p>
-  <p><%= render "/articles/published_on", article: @article %></p>
-  <p>Hero Image: <%= link_to_if @article.image.present?, @article.image, @article.image %></p>
-  <p>Hero Image Description: <%= @article.image_description %></p>
+  <p style="margin-top: 1rem">
+    <% if @article.in_collection? %>
+      Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
+    <% else %>
+      <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-lg" %>
+    <% end %>
+  </p>
 
-  <% if @article.contributions.present? %>
-    <p>
-      <b>Contributions:</b>
-      <ul>
-        <% @article.contributions.each do |contribution| %>
-          <li>
-            <%= link_to contribution.role.name.titleize, [:admin, contribution.role] %>
-            <span>by</span>
-            <%= link_to contribution.contributor.name, [:admin, contribution.contributor] %>
-          </li>
-        <% end %>
-      </ul>
-    </p>
-  <% end %>
-
-  <% if @article.categories.present? %>
-    <p>
-      <b>Categories:</b>
-      <ul>
-        <% @article.categories.each do |category| %>
-          <li><%= link_to category.name, category.slug %></li>
-        <% end %>
-      </ul>
-    </p>
-  <% end %>
-
-  <% if @article.tags.present? %>
-    <p>
-      <b>Tags:</b>
-      <ul>
-        <% @article.tags.each do |tag| %>
-          <li><%= link_to tag.name, tag.slug %></li>
-        <% end %>
-      </ul>
-    </p>
-  <% end %>
-
-  <hr>
-
-  <p><b>Content Format:</b> <%= @article.content_format %></p>
   <div class="e-content">
-    <%= simple_format @article.content %>
+    <%= render_content @article %>
   </div>
 
   <hr>
 
   <% if @article.collection_root? %>
-    <div id="collection">
-      <h3>Collection Posts</h3>
+    <div id="collection" style="margin-top: 6rem">
+      <h3>
+        Nested Articles
+        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-xs" %>
+      </h3>
+
+
       <%= render "table", articles: @article.collection_posts %>
     </div>
   <% end %>
 
-  <% if @article.in_collection? %>
-    Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
-  <% else %>
-    <%= link_to "Add Post to Article Collection", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-xs" %>
-  <% end %>
+
+
 
   <hr>
 
-  <footer>
-    <%= render "/articles/published_on", article: @article %>
+  <footer style="margin-top: 10rem">
+    <% if @article.contributions.present? %>
+      <p>
+        <b>Contributions:</b>
+        <ul>
+          <% @article.contributions.each do |contribution| %>
+            <li>
+              <%= link_to contribution.role.name.titleize, [:admin, contribution.role] %>
+              <span>by</span>
+              <%= link_to contribution.contributor.name, [:admin, contribution.contributor] %>
+            </li>
+          <% end %>
+        </ul>
+      </p>
+    <% end %>
+
+    <% if @article.categories.present? %>
+      <p>
+        <b>Categories:</b>
+        <ul class="list-inline">
+          <% @article.categories.each do |category| %>
+            <li><%= link_to category.name, category.slug %></li>
+          <% end %>
+        </ul>
+      </p>
+    <% end %>
+
+    <% if @article.tags.present? %>
+      <p>
+        <b>Tags:</b>
+        <ul class="list-inline">
+          <% @article.tags.each do |tag| %>
+            <li><%= link_to tag.name, tag.slug %></li>
+          <% end %>
+        </ul>
+      </p>
+    <% end %>
+
+    <p><b>Content Format:</b> <%= @article.content_format %></p>
+    <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
+    <p><b>Download URL:</b> <b><%= link_to_if @article.download_url.present?, @article.download_url, @article.download_url %></b></p>
+    <p><b>Publication Status:</b> <b><%= @article.status.name.upcase %></b></p>
+    <p><%= render "/articles/published_on", article: @article %></p>
+    <p><b>Hero Image:</b> <%= link_to_if @article.image.present?, @article.image, @article.image %></p>
+    <p><b>Hero Image Description:</b> <%= @article.image_description %></p>
   </footer>
 </article>

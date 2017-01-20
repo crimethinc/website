@@ -11,7 +11,7 @@
   </thead>
 
   <tbody>
-    <% @articles.each do |article| %>
+    <% articles.each do |article| %>
       <tr>
         <td>
           <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-primary btn-xs" %>
@@ -37,7 +37,3 @@
     <% end %>
   </tbody>
 </table>
-
-<div class="text-center">
-  <%= paginate @articles, views_prefix: "admin" %>
-</div>
