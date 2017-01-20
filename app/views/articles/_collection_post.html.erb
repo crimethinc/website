@@ -16,8 +16,17 @@
   <%= render_content article %>
 
   <footer>
-    <%= render "articles/published_on", article: article %>
+    <%#= render "articles/published_on", article: article %>
+
     <%#= render "articles/categories",   article: article %>
     <%#= render "articles/tags",         article: article %>
+
+    <%# TODO temp hack %>
+    <p>
+      <%= time_tag article.published_at, class: "dt-published" do %>
+        <%= article.published_at.advance(hours: -5).strftime("%l:%M") %>
+        EST
+      <% end %>
+    </p>
   </footer>
 <% end %>
