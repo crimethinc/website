@@ -10,6 +10,10 @@ class CategoriesController < ApplicationController
     @category = Category.find_by!(slug: slug)
     @articles = @category.articles.live.published.page(params[:page]).per(15)
 
+    if @articles.empty?
+      return redirect_to root_path
+    end
+
     @html_id  = "page"
     @body_id  = "category"
     @title    = @category.name
