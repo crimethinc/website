@@ -23,9 +23,11 @@
 
     <%# TODO temp hack %>
     <p>
-      <%= time_tag article.published_at, class: "dt-published" do %>
-        <%= article.published_at.advance(hours: -5).strftime("%l:%M") %>
-        EST
+      <%= link_to "#{@article.path}##{@article.slug}" do %>
+        <%= time_tag article.published_at, class: "dt-published" do %>
+          <%= article.published_at.advance(hours: -5).strftime("%l:%M") %>
+          EST
+        <% end %>
       <% end %>
     </p>
   </footer>
