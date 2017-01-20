@@ -88,7 +88,8 @@ class Article < ApplicationRecord
   end
 
   def in_collection?
-    collection.present?
+    # TODO this is a hack
+    collection_id.present?
   end
 
   private

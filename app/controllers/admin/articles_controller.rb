@@ -11,7 +11,10 @@ class Admin::ArticlesController < Admin::AdminController
 
   # /admin/articles/1
   def show
-    @collection = @article.collection
+    # TODO this is a hack
+    if @article.collection_id.present?
+      @collection = Article.find(@article.collection_id)
+    end
   end
 
   # /admin/articles/new

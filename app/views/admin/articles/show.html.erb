@@ -1,25 +1,28 @@
 <%= render "admin/page_header", thing: @article %>
 
+<br>
+
 <article>
   <header>
+    <%= render "/admin/articles/publication_status", article: @article %>
+
     <h1>
       <%= link_to @article.path, class: "p-name" do %>
         <span class="h1 title"><%= @article.title %></span><br>
         <span class="h2 subtitle"><%= @article.subtitle %></span>
       <% end %>
-
     </h1>
 
-    <%= render "/admin/articles/publication_status", article: @article %>
   </header>
 
-  <p style="margin-top: 1rem">
+  <h3 style="margin-top: 1rem">
     <% if @article.in_collection? %>
       Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
     <% else %>
       <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-lg" %>
     <% end %>
-  </p>
+  </h3>
+  <hr>
 
   <div class="e-content">
     <%= render_content @article %>

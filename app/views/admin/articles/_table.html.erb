@@ -29,7 +29,11 @@
           <%= display_date(article.published_at) %><br>
           <%= display_time(article.published_at) %>
         </td>
-        <td class="text-center"><%= article.collection_root? ? link_to(article.collection_posts.count, admin_article_path(article, anchor: "collection")) : "-" %></td>
+        <td>
+          <% if article.collection_root? %>
+            <%= link_to(article.collection_posts.count, admin_article_path(article, anchor: "collection")) %>
+          <% end %>
+        </td>
         <td>
           <%= link_to "DELETE", [:admin, article], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
         </td>
