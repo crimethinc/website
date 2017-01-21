@@ -67,6 +67,6 @@ module ApplicationHelper
   end
 
   def homepage?
-    @homepage = true
+    @homepage == true
   end
 end
