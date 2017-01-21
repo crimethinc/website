@@ -79,7 +79,7 @@ Rails.application.routes.draw do
 
 
   # Videos
-  get "videos/page(/1)", to: redirect { |path_params, req| "/videos" }
+  get "videos/page(/1)", to: redirect { |_, _| "/videos" }
   get "videos",       to: "videos#index", as: :videos
   get "videos/:slug", to: "videos#show",  as: :video
 
