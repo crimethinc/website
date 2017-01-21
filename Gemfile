@@ -40,6 +40,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "guard-rspec"
   gem "spring-commands-rspec"
+  gem 'simplecov', :require => false
 end
 
 # dev
