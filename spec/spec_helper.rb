@@ -1,6 +1,8 @@
 require "simplecov"
 
-SimpleCov.start
+SimpleCov.start do
+  add_filter "config/application.rb"
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
