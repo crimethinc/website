@@ -5,8 +5,6 @@ module Slug
     before_validation :generate_slug, on: [:create, :update]
   end
 
-  private
-
   def slug_exists?
     self.class.where(slug: slug).exists?
   end
