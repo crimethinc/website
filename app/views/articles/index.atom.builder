@@ -32,6 +32,7 @@ xml.feed "xmlns"     => "http://www.w3.org/2005/Atom",
       xml.link rel: "alternate", type: "text/html", href: request.base_url + article.path
 
       xml.title article.name
+      xml.summary article.summary
 
       article.categories.each do |category|
         xml.category scheme: category.name, term: category.name
@@ -52,4 +53,5 @@ xml.feed "xmlns"     => "http://www.w3.org/2005/Atom",
       end
     end
   end
+
 end

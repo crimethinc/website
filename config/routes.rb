@@ -39,6 +39,8 @@ Rails.application.routes.draw do
   # Articles Atom Feed
   get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
 
+  # Articles - Collection Items
+  get "articles/:id/collection_posts", to: "collection_posts#index"
 
   # Categories
   get "categories/:slug/page(/1)", to: redirect { |path_params, req|
@@ -55,14 +57,11 @@ Rails.application.routes.draw do
   get "tags/:slug(/page/:page)", to: "tags#show", as: :tag
   get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
 
-
   # Pages (linked in header/nav)
-  get "read",   to: "about#read",   as: :read
-  get "watch",  to: "about#watch",  as: :watch
-  get "listen", to: redirect("podcast"), as: :listen_redirect # TEMP TODO
-  # get "listen", to: "about#listen", as: :listen
-  get "get",    to: redirect("http://store.crimethinc.com"), as: :get_redirect # TEMP TODO
-  # get "buy",    to: "about#buy",    as: :buy
+  get "read",               to: "about#read",        as: :read
+  get "watch",              to: redirect("videos"),  as: :watch_redirect
+  get "listen",             to: redirect("podcast"), as: :listen_redirect
+  get "get",                to: redirect("http://store.crimethinc.com"), as: :get_redirect
 
 
   # Podcast
@@ -78,6 +77,12 @@ Rails.application.routes.draw do
   get "books",                   to: "books#index",           as: :books
   get "books/:slug",             to: "books#show",            as: :book
   get "books/:slug/extras",      to: "books#extras",          as: :book_extras
+
+
+  # Videos
+  get "videos/page(/1)", to: redirect { |path_params, req| "/videos" }
+  get "videos",       to: "videos#index", as: :videos
+  get "videos/:slug", to: "videos#show",  as: :video
 
 
   # Site search
@@ -98,7 +103,12 @@ Rails.application.routes.draw do
       get "(page/:page)", action: :index, on: :collection, as: ""
     end
 
-    resources :articles, concerns: :paginatable
+    resources :articles, concerns: :paginatable do
+      member do
+        get "new", as: :new_collection_post
+      end
+    end
+
     resources :books, concerns: :paginatable
     resources :contributors, concerns: :paginatable
     resources :episodes, concerns: :paginatable
@@ -133,15 +143,16 @@ Rails.application.routes.draw do
   get "opensearch.xml", to: "misc#opensearch_xml"
 
   # Wordpress admin URL redirects
-  get "wp-admin.php", to: redirect("/admin")
+  get "wp-admin",     to: redirect("/admin")
   get "wp-login.php", to: redirect("/signin")
   get "wp-login.php?action=logout&_wpnonce=:nonce", to: redirect("/signout")
 
-  # Redirects
-  get "store", to: redirect("http://store.crimethinc.com")
-
   # Ping and Health monitoring
   mount NewRelicPing::Engine, at: "/status"
+
+  # Store Redirect and support page
+  get "store", to: redirect("https://store.crimethinc.com")
+  get "store/order-success", to: "about#post_order_success", as: :post_order_success
 
   # Pages
   get "*path", to: "pages#show", as: :page, via: :all

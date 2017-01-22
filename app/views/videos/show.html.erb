@@ -1,0 +1,9 @@
+<header>
+  <nav class="crumbtrail"><%= link_to "Videos", [:videos] %></nav>
+
+  <%= render "articles/titles", header: @video, linked: true %>
+</header>
+
+<article class="h-entry" id="video-<%= @video.id %>">
+  <%= render @video %>
+</article>

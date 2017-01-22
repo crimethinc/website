@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  def index
+    @articles = Article.live.published.root.page(params[:page]).per(25)
+  end
+
   def show
     @body_id = "article"
 
@@ -10,15 +14,22 @@ class ArticlesController < ApplicationController
         return redirect_to(@article.path)
       end
 
+      if @article.present?
+        @collection_posts = @article.collection_posts.chronological
+      end
+
     else
       @article = Article.where(year:  params[:year]
                        ).where(month: params[:month]
                        ).where(day:   params[:day]
                        ).where(slug:  params[:slug]).first
+      if @article.present?
+        @collection_posts = @article.collection_posts.published.live.chronological
+      end
     end
 
     # no article found, go to /articles feed
-    if @article.nil?
+    if @article.blank? || !@article.published?
       return redirect_to root_path
     end
 
@@ -27,6 +38,7 @@ class ArticlesController < ApplicationController
     end
 
     @title = @article.name
+
 
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false

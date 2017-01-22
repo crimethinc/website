@@ -1,8 +1,7 @@
 class Article < ApplicationRecord
+  include Post
+  
   validates_with ArticleValidator
-
-  belongs_to :user, optional: true
-  belongs_to :status
   belongs_to :theme
 
   has_many :taggings, dependent: :destroy
@@ -10,33 +9,25 @@ class Article < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
   has_many :contributions, dependent: :destroy
+  has_many :collection_posts, foreign_key: :collection_id, class_name: :Article
+  belongs_to :collection, foreign_key: :parent_id, class_name: :Article
 
   accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
-  scope :draft,       -> { where(status: Status.find_by(name: "draft")) }
-  scope :edited,      -> { where(status: Status.find_by(name: "edited")) }
-  scope :designed,    -> { where(status: Status.find_by(name: "designed")) }
-  scope :published,   -> { where(status: Status.find_by(name: "published")) }
+  scope :chronological, -> { order(published_at: :desc) }
 
-  scope :live,        -> { where("published_at < ?", Time.now) }
+  scope :root, -> { where(collection_id: nil) }
 
   before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
-  before_validation :generate_draft_code,      on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
 
   after_save :create_redirect
 
   default_scope { order("published_at DESC") }
+  scope :live,        -> { where("published_at < ?", Time.now) }
   scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
-
-  def name
-    if title.present? && subtitle.present?
-      "#{title} : #{subtitle}"
-    else
-      title
-    end
-  end
+  scope :recent,      -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days, Time.now) }
 
   def path
     if published?
@@ -46,6 +37,8 @@ class Article < ApplicationRecord
     end
   end
 
+ # Overwrites slug_exists? from Slug.  We allow duplicate slugs on different
+ # published_at dates.
   def slug_exists?
     Article.on(published_at).where(slug: slug).exists?
   end
@@ -55,7 +48,7 @@ class Article < ApplicationRecord
 
     tags_glob.split(",").each do |name|
       unless name.blank?
-        tag = Tag.find_or_create_by(name: name)
+        tag = Tag.find_or_create_by(name: name.strip)
         self.tags << tag
       end
     end
@@ -66,7 +59,7 @@ class Article < ApplicationRecord
 
     categories_glob.split(",").each do |name|
       unless name.blank?
-        category = Category.find_or_create_by(name: name)
+        category = Category.find_or_create_by(name: name.strip)
         self.categories << category
       end
     end
@@ -93,41 +86,16 @@ class Article < ApplicationRecord
     published_at.present?
   end
 
-  def meta_description
-    if summary.blank?
-      html = Kramdown::Document.new(
-        content,
-        input: :kramdown,
-        remove_block_html_tags: false,
-        transliterated_header_ids: true
-      ).to_html.to_s
+  def collection_root?
+    collection_posts.any?
+  end
 
-      doc = Nokogiri::HTML(html)
-      doc.css("body").text.truncate(200)
-    else
-      summary
-    end
+  def in_collection?
+    # TODO this is a hack
+    collection_id.present?
   end
 
   private
-
-  def generate_slug
-    if self.new_record? || self.slug_changed? || self.slug.blank?
-      n = 0
-
-      if slug.blank?
-        self.slug = self.name.to_slug
-      end
-
-      while slug_exists?
-        self.slug = name
-        n += 1
-        "#{self.slug} #{n}".to_slug
-      end
-    end
-
-    self.slug = self.slug.to_slug
-  end
 
   def generate_published_dates
     if published_at.present?
@@ -135,10 +103,6 @@ class Article < ApplicationRecord
       self.month = published_at.month.to_s.rjust(2, "0") if published_at.month.present?
       self.day   = published_at.day.to_s.rjust(2, "0")   if published_at.day.present?
     end
-  end
-
-  def generate_draft_code
-    self.draft_code ||= SecureRandom.hex
   end
 
   def downcase_content_format

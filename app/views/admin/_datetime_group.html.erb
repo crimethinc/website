@@ -3,24 +3,24 @@
 
   <div class="row">
     <div class="col-xs-12 col-sm-4">
-      <%= select_year post.published_at,
-            { prompt: true, start_year: Time.now.year, end_year: 1900 },
+      <%= select_year post.published_at || Time.now.utc,
+            { prompt: false, start_year: Time.now.year, end_year: 1900 },
             name:  "#{type}[published_at(1i)]",
             id:    "#{type}_published_at_1i",
             class: "form-control datetime-select" %>
     </div>
 
     <div class="col-xs-12 col-sm-4">
-      <%= select_month post.published_at,
-            { prompt: true, add_month_numbers: true },
+      <%= select_month post.published_at || Time.now.utc,
+            { prompt: false, add_month_numbers: true },
             name:  "#{type}[published_at(2i)]",
             id:    "#{type}_published_at_2i",
             class: "form-control datetime-select" %>
     </div>
 
     <div class="col-xs-12 col-sm-4">
-      <%= select_day post.published_at,
-            { prompt: true },
+      <%= select_day post.published_at || Time.now.utc,
+            { prompt: false },
             name:  "#{type}[published_at(3i)]",
             id:    "#{type}_published_at_3i",
             class: "form-control datetime-select" %>
@@ -29,20 +29,25 @@
 
   <div class="row">
     <div class="col-xs-6">
-      <%= select_hour post.published_at,
-            { prompt: true },
+      <%= select_hour post.published_at || Time.now.utc,
+            { prompt: false },
             name:  "#{type}[published_at(4i)]",
             id:    "#{type}_published_at_4i",
             class: "form-control datetime-select" %>
     </div>
 
     <div class="col-xs-6">
-      <%= select_minute post.published_at,
-            { prompt: true },
+      <%= select_minute post.published_at || Time.now.utc,
+            { prompt: false },
             name:  "#{type}[published_at(5i)]",
             id:    "#{type}_published_at_5i",
             class: "form-control datetime-select" %>
     </div>
   </div>
-</div>
 
+  <p class="help-block">
+    Timezones are in UTC (or GMT or Zulu).
+    EST is offset by -05:00.
+    PST is offset by -08:00.
+  </p>
+</div>

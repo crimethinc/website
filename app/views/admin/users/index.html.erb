@@ -6,6 +6,7 @@
       <th>&nbsp;</th>
       <th>Avatar</th>
       <th>Name</th>
+      <th>Username</th>
       <th>Email</th>
     </tr>
   </thead>
@@ -16,8 +17,13 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, user], class: "btn btn-primary btn-xs" %>
         </td>
-        <td><%= link_to_unless user.avatar.blank?, user.avatar, [:admin, user] %></td>
+        <td>
+          <% if user.avatar.present? %>
+            <%= link_to image_tag(user.avatar, style: "max-width: 20px"), [:admin, user] %>
+          <% end %>
+        </td>
         <td><%= link_to_unless user.name.blank?, user.name, [:admin, user] %></td>
+        <td><%= link_to_unless user.username.blank?, user.username, [:admin, user] %></td>
         <td><%= mail_to user.email, user.email %></td>
       </tr>
     <% end %>

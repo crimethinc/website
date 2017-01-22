@@ -6,20 +6,26 @@ class Admin::ArticlesController < Admin::AdminController
 
   # /admin/articles
   def index
-    @articles = Article.page(params[:page])
+    @articles = Article.root.includes(:collection_posts).page(params[:page])
   end
 
   # /admin/articles/1
   def show
+    # TODO this is a hack
+    if @article.collection_id.present?
+      @collection = Article.find(@article.collection_id)
+    end
   end
 
   # /admin/articles/new
   def new
+    @collection = Article.find(params[:id]) if params[:id]
     @article = Article.new
   end
 
   # /admin/articles/1/edit
   def edit
+    @collection = Article.find(@article.collection_id) if @article.in_collection?
   end
 
   # /admin/articles
@@ -85,6 +91,7 @@ class Admin::ArticlesController < Admin::AdminController
                                     :header_background_color, :header_text_color,
 									                  :short_path,
                                     contributions_attributes: [
+                                    :collection_id, contributions_attributes: [
                                       :id, :contributor_id, :role_id,:_destroy
                                     ])
   end
