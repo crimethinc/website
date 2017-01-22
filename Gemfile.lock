@@ -124,6 +124,8 @@ GEM
       slop (~> 3.4)
     puma (3.6.2)
     rack (2.0.1)
+    rack-attack (5.0.1)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.1)
@@ -153,6 +155,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    redis (3.3.2)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -238,7 +241,9 @@ DEPENDENCIES
   nokogiri
   pg
   puma
+  rack-attack
   rails (~> 5.0.1)
+  redis
   rspec-rails
   rubypants
   sass-rails

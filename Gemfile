@@ -55,5 +55,9 @@ gem "newrelic_rpm"
 gem "new_relic_ping"
 gem "bugsnag"
 
+# DDOS protection
+gem "rack-attack"
+gem "redis"
+
 # windows dev
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
