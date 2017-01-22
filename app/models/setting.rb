@@ -7,8 +7,6 @@ class Setting < ApplicationRecord
     saved_content.blank? ? fallback : saved_content
   end
 
-  private
-
   def generate_slug
     self.slug = super.gsub("-", "_")
   end
