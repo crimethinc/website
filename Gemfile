@@ -38,6 +38,7 @@ group :development, :test do
   gem "byebug", platform: :mri
   gem "nokogiri"
   gem "rspec-rails"
+  gem "rails-controller-testing"
   gem "guard-rspec"
   gem "spring-commands-rspec"
   gem 'simplecov', :require => false
