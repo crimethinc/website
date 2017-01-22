@@ -5,5 +5,5 @@
 <p><%= mail_to @user.email, @user.email %></p>
 
 <% if @user.avatar.present? %>
-  <%= image_tag @user.avatar %>
+  <%= image_tag @user.avatar, style: "max-width: 200px" %>
 <% end %>

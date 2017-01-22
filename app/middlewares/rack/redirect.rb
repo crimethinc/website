@@ -36,7 +36,15 @@ module Rack
       end
 
       req = Rack::Request.new(env)
-      return redirect(redirects[req.path]) if redirects.include?(req.path)
+
+      if redirects.include?(req.path)
+        if req.query_string.present?
+          args = "?#{req.query_string}"
+        end
+
+        return redirect(redirects[req.path] + args.to_s)
+      end
+
       @app.call(env)
     end
   end

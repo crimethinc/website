@@ -1,0 +1,14 @@
+<div class="embed embed-vimeo">
+  <iframe src="//player.vimeo.com/video/<%= video.vimeo_id %>?title=0&amp;byline=0&amp;portrait=0&amp;color=b7effd"
+           frameborder="0">
+  </iframe>
+</div>
+
+<div class="e-content">
+  <p class="video-info">
+    <span class="video-quality"><%= video.quality %></span>
+    <span class="video-duration"><%= video.duration %></span>
+  </p>
+
+  <%= simple_format render_content(video) %>
+</div>

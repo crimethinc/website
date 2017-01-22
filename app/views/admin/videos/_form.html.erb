@@ -1,107 +1,120 @@
-<%= form_for(video) do |f| %>
-  <% if video.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+<%= form_for [:admin, @video] do |f| %>
+  <%= render "admin/form_errors", thing: @video %>
 
-      <ul>
-      <% video.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_area :title %>
+    <%= f.text_field :title, class: "form-control input-lg" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :subtitle %>
-    <%= f.text_area :subtitle %>
+    <%= f.text_field :subtitle, class: "form-control input-lg" %>
   </div>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control", rows: 8 %>
+      </div>
+    </div>
+  </div> <!-- .row -->
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <%= f.label :slug %>
+        <%= f.text_field :slug, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-xs-6">
+      <div class="form-group">
+        <%= f.label :vimeo_id, "Vimeo ID" %>
+        <%= f.text_field :vimeo_id, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :tweet %>
-    <%= f.text_area :tweet %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :image, "Image" %>
+        <%= f.text_field :image, class: "form-control input-lg" %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :image_description, "Image Description" %>
+        <%= f.text_field :image_description, class: "form-control input-lg" %>
+        <p class="help-block">
+          This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :summary %>
-    <%= f.text_area :summary %>
-  </div>
+  <%= render "admin/datetime_group", f: f, post: @video, type: :video %>
 
-  <div class="field">
-    <%= f.label :tweet %>
-    <%= f.text_area :tweet %>
-  </div>
+  <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
 
-  <div class="field">
-    <%= f.label :summary %>
-    <%= f.text_area :summary %>
-  </div>
+  <fieldset id="syndication">
+    <legend>Syndication</legend>
+    <div class="row">
 
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.text_area :image %>
-  </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :tweet %>
+          <%= f.text_area :tweet, class: "form-control" %>
+          <p class="help-block">
+            Maximum 115 characters to leave room for the `t.co` short URL that Twitter creates.
+            Used for syndicated tweet for this Video.
+          </p>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :image_description %>
-    <%= f.text_area :image_description %>
-  </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :summary %>
+          <%= f.text_area :summary, class: "form-control" %>
+          <p class="help-block">
+            Maximum 200 characters.
+            Used for video description and previews in story cards on other sites.
+          </p>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :content_format %>
-    <%= f.text_field :content_format %>
-  </div>
+    </div> <!-- .row -->
+  </fieldset>
 
-  <div class="field">
-    <%= f.label :quality %>
-    <%= f.text_field :quality %>
-  </div>
+  <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
 
-  <div class="field">
-    <%= f.label :slug %>
-    <%= f.text_field :slug %>
-  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <fieldset id="specs">
+        <legend>Specs</legend>
 
-  <div class="field">
-    <%= f.label :year %>
-    <%= f.text_field :year %>
-  </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :quality, "Quality" %>
+              <%= f.text_field :quality, class: "form-control" %>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :month %>
-    <%= f.text_field :month %>
-  </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :duration, "Duration" %>
+              <%= f.text_field :duration, class: "form-control" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
 
-  <div class="field">
-    <%= f.label :day %>
-    <%= f.text_field :day %>
-  </div>
+      </fieldset> <!-- #specs -->
+    </div>
+  </div> <!-- .row -->
 
-  <div class="field">
-    <%= f.label :duration %>
-    <%= f.text_field :duration %>
-  </div>
 
-  <div class="field">
-    <%= f.label :published_at %>
-    <%= f.datetime_select :published_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :vimeo_id %>
-    <%= f.text_field :vimeo_id %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
 <% end %>

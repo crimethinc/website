@@ -1,6 +1,6 @@
 <%= render "articles/css", article: @article %>
 
-<article id="article-<%= @article.id %>" class="h-entry <%= 'article-with-no-header-image' if @article.image.blank? %>" role="article">
+<%= article_tag @article do %>
   <header>
     <%= render "articles/image", article: @article, linked: false %>
 
@@ -14,6 +14,7 @@
 
   <div class="e-content">
     <%= render_content @article %>
+    <%= render partial: "collection_post", collection: @collection_posts, as: :article if @article.collection_root? %>
   </div>
 
   <footer>
@@ -28,4 +29,4 @@
       </div>
     <% end %>
   </footer>
-</article>
+<% end %>

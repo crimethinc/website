@@ -14,6 +14,8 @@ module Magazine
 
     config.middleware.use "Rack::Redirect"
 
+    config.middleware.use Rack::Attack
+
     # Monitor database
     NewRelicPing.configure do |c|
       c.monitor("database") do

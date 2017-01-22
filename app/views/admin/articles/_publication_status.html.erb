@@ -1,0 +1,19 @@
+<%
+label_klass = case article.status.name.downcase
+when "draft"
+  "danger"
+when "edited"
+  "warning"
+when "designed"
+  "info"
+when "published"
+  "success"
+else
+  "default"
+end
+%>
+
+
+<b class="label label-<%= label_klass %>">
+  <%= article.status.name.upcase %>
+</b>

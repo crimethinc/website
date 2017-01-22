@@ -46,7 +46,7 @@ h4 {
 
 h4 a:link, h4 a:visited {
 	color: black;
-}    
+}
 
 h4 a:hover, h4 a:active {
 	color: white;
@@ -64,7 +64,7 @@ h4 a:hover, h4 a:active {
 
 .accent a:link, .accent a:visited {
 	color:#d62d34;
-}    
+}
 
 .accent a:hover, .accent a:active {
 	color: black;
@@ -73,7 +73,7 @@ h4 a:hover, h4 a:active {
 
 .accent a:active {
 	color:black;
-} 
+}
 
 .green, .green a {
 	color: #9ac149;
@@ -97,7 +97,7 @@ a {
 
 a:link, a:visited {
 	color:#d62d34;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -106,7 +106,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -125,7 +125,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -135,7 +135,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -149,7 +149,7 @@ small a:hover, small a:active {
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -180,13 +180,13 @@ small a:hover, small a:active {
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 /*@media (min-device-width:200px) and (max-device-width:599px) OR  (max-width:599px) ORIGINAL COMBINED {*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('http://crimethinc.com/tce/images/takeflight-phone@2x.jpg');
@@ -194,7 +194,7 @@ small a:hover, small a:active {
 		padding-bottom: 177%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 80px;
 		font-size: 21vw;
@@ -202,38 +202,38 @@ small a:hover, small a:active {
 		margin-top: 18%;
 		width: 80%;
 	}
-	
+
 	@media (min-width:320px) and (max-width:359px) {
 		h1 {
 			font-size: 67px;
 			font-size: 21vw;
 		}
 		}
-	
+
 	@media (min-width: 360px) and (max-width:379px) {
 		h1 {
 			font-size: 75px;
 			font-size: 21vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 384px) and (max-width:399px) {
 		h1 {
 			font-size: 80px;
 			font-size: 21vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 400px) and (max-width:599px) {
 		h1 {
 			font-size: 84px;
 			font-size: 21vw;
 		}
-		
+
 		}
-	
+
 	h2 {
 		font-size: 35px;
 		font-size: 11vw;
@@ -242,11 +242,11 @@ small a:hover, small a:active {
 		width: 88%;
 		padding: 0 5% 0 7%;
 	}
-	
+
 	h2#gs {
 		margin-bottom: 0;
 	}
-	
+
 	h3 {
 		font-size: 16px;
 		font-size: 5vw;
@@ -254,7 +254,7 @@ small a:hover, small a:active {
 		width: 79%;
 		padding: 0 5% 0 7%;
 	}
-	
+
 	h4 {
 		font-size: 10px;
 		font-size: 3.1vw;
@@ -263,43 +263,43 @@ small a:hover, small a:active {
 		text-align: left;
 		font-weight: 800;
 	}
-	
+
 	h4 a:link, h4 a:visited {
 		color: white;
-	}    
-	
+	}
+
 	h4 a:hover, h4 a:active {
 		color: black;
 		text-shadow: none;
 	}
-	
+
 	.text {
 		padding-top: 0;
 	}
-	
+
 	aside blockquote {
 		font-size: 22px;
 		font-size: 7vw;
 	}
-	
+
 	.cols {
 		overflow: hidden;
 	}
-	
+
 	.col2 {
 		width: 88%;
 		padding: 0 5% 0 7%
 	}
-	
+
 	.col1 {
 		width: 88%;
 		padding: 0 5% 0 7%
 	}
-	
+
 	.gone {
 		display: none;
 	}
-	
+
 	li p {
 		padding: 0 10% 0 2% !important;
 	}
@@ -309,15 +309,15 @@ small a:hover, small a:active {
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
+
 	.headerwrapper {
 		width: 100%;
-		background-image: url('http://crimethinc.com/tce/images/takeflight-large.jpg');
+		background-image: url('https://cloudfront.crimethinc.com/assets/features/begin/images/takeflight-large.jpg');
 		background-size: 100%;
 		padding-bottom: 55%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 72px;
 		font-size: 12vw;
@@ -325,7 +325,7 @@ small a:hover, small a:active {
 		margin-top: 5%;
 		width: 45%;
 	}
-	
+
 	h2 {
 		font-size: 70px;
 		/*font-size: 33vw;*/
@@ -334,11 +334,11 @@ small a:hover, small a:active {
 		width: 79%;
 		padding: 0 10% 0 11%;
 	}
-	
+
 	h2#gs {
 		margin-bottom: 0;
 	}
-	
+
 	h3 {
 		font-size: 30px;
 		/*font-size: 33vw;*/
@@ -346,7 +346,7 @@ small a:hover, small a:active {
 		width: 79%;
 		padding: 0 10% 0 11%;
 	}
-	
+
 	h4 {
 		font-size: 11px;
 		font-size: 1.8vw;
@@ -355,40 +355,40 @@ small a:hover, small a:active {
 		text-align: left;
 		font-weight: 800;
 	}
-	
+
 	h4 a:link, h4 a:visited {
 		color: white;
-	}    
-	
+	}
+
 	h4 a:hover, h4 a:active {
 		color: black;
 		text-shadow: none;
 	}
-	
+
 	aside blockquote {
 		font-size: 52px;
 	}
-	
+
 	.cols {
 		overflow: hidden;
 	}
-	
+
 	.col2 {
 		width: 55%;
 		float: left;
 	}
-	
+
 	.col1 {
 		padding-right: 0%;
 		padding-left: 7%;
 		width: 35%;
 		float: left;
 	}
-	
+
 	.gone {
 		display: none;
 	}
-	
+
 	li p {
 		padding: 0 10% 0 2% !important;
 	}
@@ -398,15 +398,15 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP TINY CSS------------------*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
+
 	.headerwrapper {
 		width: 100%;
-		background-image: url('http://crimethinc.com/tce/images/takeflight-large.jpg');
+		background-image: url('https://cloudfront.crimethinc.com/assets/features/begin/images/takeflight-large.jpg');
 		background-size: 100%;
 		padding-bottom: 49%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 102px;
 		font-size: 10vw;
@@ -414,20 +414,20 @@ small a:hover, small a:active {
 		margin-top: 0%;
 		width: 25%;
 	}
-	
+
 	h2 {
 		font-size: 70px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		letter-spacing: -.04em;
 	}
-	
+
 	h3 {
 		font-size: 30px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 18px;
 		font-size: 1.75vw;
@@ -435,24 +435,24 @@ small a:hover, small a:active {
 		line-height: 1.15em;
 		text-align: left;
 	}
-	
+
 	aside blockquote {
 		font-size: 52px;
 	}
-	
+
 	.cols {
 		overflow: hidden;
 	}
-	
+
 	.col1, .col2 {
 		width: 45%;
 		float: left;
 	}
-	
+
 	.col1 {
 		padding-right: 10%;
 	}
-	
+
 	.gone {
 		display: none;
 	}
@@ -462,15 +462,15 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
+
 	.headerwrapper {
 		width: 100%;
-		background-image: url('http://crimethinc.com/tce/images/takeflight-large.jpg');
+		background-image: url('https://cloudfront.crimethinc.com/assets/features/begin/images/takeflight-large.jpg');
 		background-size: 100%;
 		padding-bottom: 39%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 8vw;
@@ -478,20 +478,20 @@ small a:hover, small a:active {
 		margin-top: 0%;
 		width: 20%;
 	}
-	
+
 	h2 {
 		font-size: 70px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		letter-spacing: -.04em;
 	}
-	
+
 	h3 {
 		font-size: 30px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 1.55vw;
@@ -499,39 +499,39 @@ small a:hover, small a:active {
 		line-height: 1.1em;
 		text-align: left;
 	}
-	
+
 	aside blockquote {
 		font-size: 52px;
 	}
-	
+
 	.cols {
 		overflow: hidden;
 	}
-	
+
 	.col1, .col2 {
 		width: 45%;
 		float: left;
 	}
-	
+
 	.col1 {
 		padding-right: 10%;
 	}
-	
+
 }
 
 
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
+
 	.headerwrapper {
 		width: 100%;
-		background-image: url('http://crimethinc.com/tce/images/takeflight-large.jpg');
+		background-image: url('https://cloudfront.crimethinc.com/assets/features/begin/images/takeflight-large.jpg');
 		background-size: 100%;
 		padding-bottom: 39%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 8vw;
@@ -539,20 +539,20 @@ small a:hover, small a:active {
 		margin-top: 0%;
 		width: 20%;
 	}
-	
+
 	h2 {
 		font-size: 80px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		letter-spacing: -.04em;
 	}
-	
+
 	h3 {
 		font-size: 35px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 1.55vw;
@@ -560,20 +560,20 @@ small a:hover, small a:active {
 		line-height: 1.1em;
 		text-align: left;
 	}
-	
+
 	aside blockquote {
 		font-size: 60px;
 	}
-	
+
 	.cols {
 		overflow: hidden;
 	}
-	
+
 	.col1, .col2 {
 		width: 45%;
 		float: left;
 	}
-	
+
 	.col1 {
 		padding-right: 10%;
 	}

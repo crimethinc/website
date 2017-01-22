@@ -8,7 +8,7 @@
         <b><%= display_date article.published_at %></b>
       <% end %>
     <% elsif article.dated? %>
-      <b class="label">Published</b>
+      <b>Published</b>
       <% if linked %>
         <%= link_to_dates(year: article.published_at.year, month: article.published_at.month, day: article.published_at.day) %>
       <% else %>

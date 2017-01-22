@@ -1,2 +1,11 @@
-<%= render "admin/page_header", thing: @article %>
+<% if @collection %>
+  <h1>
+    <%= link_to thing_type(@collection).pluralize, [:admin, thing_type(@collection).pluralize.downcase] %>
+  </h1>
+  <h2>
+    Add to the <%= link_to @collection.title, [:admin, @collection] %> Collection
+  </h2>
+<% else %>
+  <%= render 'admin/page_header', thing: @article %>
+<% end %>
 <%= render "form" %>

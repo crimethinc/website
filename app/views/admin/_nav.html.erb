@@ -24,6 +24,7 @@
               <li><%= link_to "Pages",     [:admin, :pages] %></li>
               <li><%= link_to "Podcasts",  [:admin, :podcasts] %></li>
               <li><%= link_to "Podcast Episodes",    [:admin, :episodes] %></li>
+              <li><%= link_to "Videos",    [:admin, :videos] %></li>
             </ul>
           </li>
 
@@ -66,8 +67,9 @@
             <% end %>
             <ul class="dropdown-menu">
               <li><%= link_to "Article", [:new, :admin, :article] %></li>
+              <li><%= link_to "Page",    [:new, :admin, :page] %></li>
+              <li role="separator" class="divider"></li>
               <li><%= link_to "User",    [:new, :admin, :user] %></li>
-              <li><%= link_to "Link",    [:new, :admin, :link] %></li>
             </ul>
           </li>
 

@@ -35,6 +35,26 @@
         font-size: 1.5rem;
         line-height: 1.5em;
       }
+
+      .podcast-contact-info {
+        line-height: 1.25em;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        text-align: left;
+        word-break: keep-all;
+
+        i {
+          -webkit-hyphens: none;
+             -moz-hyphens: none;
+                  hyphens: none;
+        }
+
+        a {
+          text-indent: 0 !important;
+          margin: 0;
+        }
+      }
     }
 
     .subscribe {
@@ -103,9 +123,12 @@
         .p-name {
           text-align: right;
         }
+
+        .podcast-contact-info {
+          text-align: right;
+        }
       }
     }
-
 
   }
 }

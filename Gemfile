@@ -37,6 +37,9 @@ gem "kaminari"
 group :development, :test do
   gem "byebug", platform: :mri
   gem "nokogiri"
+  gem "rspec-rails"
+  gem "guard-rspec"
+  gem "spring-commands-rspec"
 end
 
 # dev
@@ -51,6 +54,10 @@ end
 gem "newrelic_rpm"
 gem "new_relic_ping"
 gem "bugsnag"
+
+# DDOS protection
+gem "rack-attack"
+gem "redis"
 
 # windows dev
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
