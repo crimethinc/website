@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+  validates_with ArticleValidator
+
   belongs_to :user, optional: true
   belongs_to :status
   belongs_to :theme
@@ -23,6 +25,8 @@ class Article < ApplicationRecord
   before_validation :generate_draft_code,      on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
 
+  after_save :create_redirect
+
   default_scope { order("published_at DESC") }
   scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
 
@@ -35,9 +39,7 @@ class Article < ApplicationRecord
   end
 
   def path
-    if published? && short_path
-      short_path
-    elsif published?
+    if published?
       published_at.strftime("/%Y/%m/%d/#{slug}")
     else
       "/drafts/articles/#{self.draft_code}"
@@ -141,5 +143,11 @@ class Article < ApplicationRecord
 
   def downcase_content_format
     self.content_format = self.content_format.downcase
+  end
+
+  def create_redirect
+    unless Redirect.where(source_path: short_path, target_path: path).present?
+      Redirect.create(source_path: short_path, target_path: path)
+    end
   end
 end

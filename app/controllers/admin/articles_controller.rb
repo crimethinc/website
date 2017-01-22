@@ -1,7 +1,7 @@
 class Admin::ArticlesController < Admin::AdminController
   before_action :authorize
   before_action :set_article,              only: [:show, :edit, :update, :destroy]
-  before_action :set_contribution_options, only: [:new, :edit]
+  before_action :set_contribution_options, only: [:new, :edit, :update]
   after_action  :organize_article,         only: [:create, :update]
 
   # /admin/articles
@@ -83,7 +83,7 @@ class Admin::ArticlesController < Admin::AdminController
                                     :published_at, :tags, :categories,
                                     :image, :image_description, :css, :hide_layout,
                                     :header_background_color, :header_text_color,
-									:short_path,
+									                  :short_path,
                                     contributions_attributes: [
                                       :id, :contributor_id, :role_id,:_destroy
                                     ])

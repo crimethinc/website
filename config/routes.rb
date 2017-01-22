@@ -15,10 +15,6 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
 
-  get ":short_path",
-      to:         "articles#show",
-      as:         :article_short
-
   # Article edit convenience route
   get ":year/:month/:day/:slug/edit",
       controller: "admin/articles",
