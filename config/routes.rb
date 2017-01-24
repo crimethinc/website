@@ -42,13 +42,18 @@ Rails.application.routes.draw do
   # Articles - Collection Items
   get "articles/:id/collection_posts", to: "collection_posts#index"
 
+
+  # Static pages
+  get "arts/submission", to: "about#arts_submission_guidelines"
+
+
+
   # Categories
   get "categories/:slug/page(/1)", to: redirect { |path_params, req|
     "/categories/#{path_params[:slug]}"
   }
   get "categories/:slug(/page/:page)", to: "categories#show", as: :category
   get "categories/:slug/feed",         to: "categories#feed", defaults: { format: "atom" }, as: :category_feed
-
 
   # Tags
   get "tags/:slug/page(/1)", to: redirect { |path_params, req|
@@ -136,6 +141,7 @@ Rails.application.routes.draw do
   get "signup",   to: "auth/users#new",        as: :signup
   get "signin",   to: "auth/sessions#new",     as: :signin
   get "signout",  to: "auth/sessions#destroy", as: :signout
+
 
 
   # Misc plumbing infrastructure
