@@ -3,15 +3,7 @@
     <%= render "articles/titles", header: article, linked: false %>
   </div>
 
-  <% if article.image.present? %>
-    <figure>
-      <%= image_tag article.image, class: "u-photo", alt: "" %>
-
-      <% if article.image_description.present? %>
-        <figcaption><%= article.image_description %></figcaption>
-      <% end %>
-    </figure>
-  <% end %>
+  <%= figure_image_with_caption_tag article %>
 
   <%= render_content article %>
 
