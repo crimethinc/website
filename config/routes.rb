@@ -44,8 +44,7 @@ Rails.application.routes.draw do
 
 
   # Static pages
-  get "arts/submission", to: "about#arts_submission_guidelines"
-
+  get "arts/submission-guidelines", to: "about#arts_submission_guidelines"
 
 
   # Categories
