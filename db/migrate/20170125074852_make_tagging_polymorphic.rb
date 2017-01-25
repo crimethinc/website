@@ -12,7 +12,7 @@ class MakeTaggingPolymorphic < ActiveRecord::Migration[5.0]
   def down
     change_table :taggings do |t|
       t.rename :taggable_id, :article_id
-      t.remove :taggabale_type
+      t.remove :taggable_type
     end
   end
 end
