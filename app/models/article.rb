@@ -3,7 +3,7 @@ class Article < ApplicationRecord
 
   belongs_to :theme
 
-  has_many :taggings, dependent: :destroy
+  has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
