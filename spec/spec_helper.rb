@@ -3,6 +3,7 @@ require "simplecov"
 SimpleCov.start do
   add_filter "config/application.rb"
   add_filter "config/initializers/rack-attack.rb"
+  add_filter "/spec/"
 end
 
 RSpec.configure do |config|
