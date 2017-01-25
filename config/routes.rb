@@ -136,7 +136,7 @@ Rails.application.routes.draw do
 
 
   # Misc plumbing infrastructure
-  get "manifest.json",  to: "misc#mainfest_json"
+  get "manifest.json",  to: "misc#manifest_json"
   get "opensearch.xml", to: "misc#opensearch_xml"
 
   # Wordpress admin URL redirects
