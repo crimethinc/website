@@ -9,6 +9,15 @@ Rails.application.routes.draw do
 
 
   # Articles
+  # Article listings by year, optional month, optional day
+  get "(/:year)(/:month)(/:day)/page(/1)", to: redirect { |_, req|
+    req.path.split("page").first
+  }
+  get "(/:year)(/:month)(/:day)(/page/:page)",
+      to:          "archives#index",
+      constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
+      as:          :archives
+
   # Article permalink
   get ":year/:month/:day/:slug",
       to:          "articles#show",
@@ -20,12 +29,6 @@ Rails.application.routes.draw do
       controller: "admin/articles",
       action:     "edit",
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
-
-  # Article listings by year, optional month, optional day
-  get "(/:year)(/:month)(/:day)(/page/:page)",
-      to:          "archives#index",
-      constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
-      as:          :archives
 
   get "archives", to: redirect("/read"), as: :archives_redirect
 
@@ -48,16 +51,12 @@ Rails.application.routes.draw do
 
 
   # Categories
-  get "categories/:slug/page(/1)", to: redirect { |path_params, req|
-    "/categories/#{path_params[:slug]}"
-  }
+  get "categories/:slug/page(/1)", to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
   get "categories/:slug(/page/:page)", to: "categories#show", as: :category
   get "categories/:slug/feed",         to: "categories#feed", defaults: { format: "atom" }, as: :category_feed
 
   # Tags
-  get "tags/:slug/page(/1)", to: redirect { |path_params, req|
-    "/tags/#{path_params[:slug]}"
-  }
+  get "tags/:slug/page(/1)", to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
   get "tags/:slug(/page/:page)", to: "tags#show", as: :tag
   get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
 
@@ -84,7 +83,7 @@ Rails.application.routes.draw do
 
 
   # Videos
-  get "videos/page(/1)", to: redirect { |path_params, req| "/videos" }
+  get "videos/page(/1)", to: redirect { |_, _| "/videos" }
   get "videos",       to: "videos#index", as: :videos
   get "videos/:slug", to: "videos#show",  as: :video
 
@@ -101,9 +100,7 @@ Rails.application.routes.draw do
   get :admin, to: redirect("/admin/articles"), as: "admin"
   namespace :admin do
     concern :paginatable do
-      get "page(/1)", on: :collection, to: redirect { |path_params, req|
-        req.path.split("page").first
-      }
+      get "page(/1)", on: :collection, to: redirect { |_, req| req.path.split("page").first }
       get "(page/:page)", action: :index, on: :collection, as: ""
     end
 
@@ -144,7 +141,7 @@ Rails.application.routes.draw do
 
 
   # Misc plumbing infrastructure
-  get "manifest.json",  to: "misc#mainfest_json"
+  get "manifest.json",  to: "misc#manifest_json"
   get "opensearch.xml", to: "misc#opensearch_xml"
 
   # Wordpress admin URL redirects

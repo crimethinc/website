@@ -1,6 +1,6 @@
 <% if @collection %>
   <h1>
-    <%= link_to thing_type(@collection).pluralize, [:admin, thing_type(@collection).pluralize.downcase] %>
+    <%= link_to current_resource_name.pluralize, [:admin, current_resource_name.pluralize.downcase] %>
   </h1>
   <h2>
     Add to the <%= link_to @collection.title, [:admin, @collection] %> Collection

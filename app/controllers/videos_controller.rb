@@ -7,7 +7,7 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.find_by(slug: params[:slug])
+    @video = Video.find_by!(slug: params[:slug])
 
     @html_id  = "page"
     @body_id  = "video"

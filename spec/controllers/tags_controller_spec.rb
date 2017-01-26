@@ -22,4 +22,15 @@ RSpec.describe TagsController, type: :controller do
     end
   end
 
+  describe "GET #feed" do
+    it "renders on a tag with articles" do
+      article = Article.create(title: "Test", published_at: 1.day.ago)
+      article.save_tags!("Test Tag")
+      tag = Tag.last
+
+      get :feed, params: {slug: tag.slug}
+
+      expect(response).to have_http_status(:success)
+    end
+  end
 end

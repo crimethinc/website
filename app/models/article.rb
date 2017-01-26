@@ -62,27 +62,6 @@ class Article < ApplicationRecord
     end
   end
 
-  # article states through the process from creation to publishing
-  def draft?
-    status.name == "draft"
-  end
-
-  def edited?
-    status.name == "edited"
-  end
-
-  def designed?
-    status.name == "designed"
-  end
-
-  def published?
-    status.name == "published"
-  end
-
-  def dated?
-    published_at.present?
-  end
-
   def collection_root?
     collection_posts.any?
   end
