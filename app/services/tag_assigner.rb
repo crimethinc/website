@@ -1,17 +1,17 @@
 class TagAssigner
   def self.parse_glob(glob)
-    new(*glob.split(","))
+    names = glob.split(",").reject(&:blank?)
+    tags = names.map { |name| Tag.find_or_initialize_by(name: name.strip) }
+    new(*tags)
   end
 
-  def initialize(*names)
-    @tags = names.map { |name| Tag.find_or_initialize_by(name: name.strip) }
+  def initialize(*tags)
+    @tags = tags
   end
 
   attr_accessor :tags
 
   def assign_tags_to!(taggable)
-    @tags.each do |tag|
-      Tagging.create!(tag: tag, taggable: taggable)
-    end
+    @tags.each { |tag| tag.assign_to!(taggable) }
   end
 end

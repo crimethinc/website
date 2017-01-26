@@ -13,4 +13,9 @@ class Tag < ApplicationRecord
   def strip_whitespace
     self.name = name.strip
   end
+
+  def assign_to!(taggable)
+    save! if new_record?
+    taggings.create!(taggable: taggable)
+  end
 end
