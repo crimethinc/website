@@ -8,6 +8,8 @@ class Tag < ApplicationRecord
 
   before_validation :strip_whitespace, on: [:create, :update]
 
+  validates :name, uniqueness: true
+
   def strip_whitespace
     self.name = name.strip
   end
