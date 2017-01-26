@@ -1,5 +1,5 @@
 module AdminHelper
-  def thing_type(_thing)
+  def current_resource_name
     request.path.split("admin/").last.split("/").first.capitalize.singularize
   end
 end

@@ -22,19 +22,4 @@ RSpec.describe ApplicationHelper, type: :helper do
 
     it { is_expected.to match("icons/icon-600x600") }
   end
-
-  describe "#homepage" do
-    subject { helper.homepage? }
-
-    context "with homepage set" do
-      before { assign(:homepage, true) }
-
-      it { is_expected.to eq(true) }
-    end
-
-    context "without homepage set" do
-      it { is_expected.to eq(false) }
-    end
-  end
 end
-
