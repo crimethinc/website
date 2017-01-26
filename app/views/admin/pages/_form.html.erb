@@ -55,23 +55,13 @@
         </div>
       </div>
 
-      <%# TODO %>
-      <!--
       <div class="col-xs-12 col-sm-4">
         <div class="form-group">
-          <%#= f.label :categories %>
-          <%#= text_field_tag :categories, @page.categories.map{ |c| c.name }.join(", "), class: "form-control" %>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-4">
-        <div class="form-group">
-          <%#= f.label :tags %>
-          <%#= text_field_tag :tags, @page.tags.map{ |t| t.name }.join(", "), class: "form-control" %>
+          <%= f.label :tags %>
+          <%= text_field_tag :tags, @page.tags.map{ |t| t.name }.join(", "), class: "form-control" %>
           <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
         </div>
       </div>
-      -->
     </div>
 
     <%= render "admin/datetime_group", f: f, post: @page, type: :page %>

@@ -40,17 +40,6 @@ class Article < ApplicationRecord
     Article.on(published_at).where(slug: slug).exists?
   end
 
-  def save_tags!(tags_glob)
-    self.taggings.destroy_all
-
-    tags_glob.split(",").each do |name|
-      unless name.blank?
-        tag = Tag.find_or_create_by(name: name.strip)
-        self.tags << tag
-      end
-    end
-  end
-
   def save_categories!(categories_glob)
     self.categorizations.destroy_all
 
