@@ -8965,3 +8965,10 @@ rad read
 red read
 /deluge /2017/01/24/dedans-nous-le-deluge-the-flood-within-towards-an-aesthetics-of-risk
 /sisyphus /2017/01/25/gravity-a-fable
+/books/days-of-war-nights-of-love/extras /books/days-of-war-nights-of-love
+/books/contradictionary/extras /books/contradictionary
+/books/recipes-for-disaster/extras /books/recipes-for-disaster
+/books/expect-resistance/extras /books/expect-resistance
+/books/off-the-map/extras /books/off-the-map
+/freespeech /2017/01/26/this-is-not-a-dialogue-not-just-free-speech-but-freedom-itself
+/trumpphilly /2017/01/26/any-time-any-place-welcoming-trump-to-philadelphia
