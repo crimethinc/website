@@ -21,14 +21,20 @@ describe TagAssigner do
   end
 
   describe 'assign_tags_to!' do
-    subject { described_class.new(tag1, tag2) }
+    subject { described_class.new(tag1, tag2, tag3) }
     let(:tag1) { double }
     let(:tag2) { double }
+    let(:tag3) { double }
     let(:taggable) { double }
 
-    it 'assigns tags' do
+    it 'assigns tags which have not been assigned' do
+      allow(tag1).to receive(:assigned_to?).with(taggable) { false }
+      allow(tag2).to receive(:assigned_to?).with(taggable) { true }
+      allow(tag3).to receive(:assigned_to?).with(taggable) { false }
+
       expect(tag1).to receive(:assign_to!).with(taggable)
-      expect(tag2).to receive(:assign_to!).with(taggable)
+      expect(tag2).not_to receive(:assign_to!).with(taggable)
+      expect(tag3).to receive(:assign_to!).with(taggable)
       subject.assign_tags_to!(taggable)
     end
   end

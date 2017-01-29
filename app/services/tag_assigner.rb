@@ -12,6 +12,8 @@ class TagAssigner
   attr_accessor :tags
 
   def assign_tags_to!(taggable)
-    @tags.each { |tag| tag.assign_to!(taggable) }
+    @tags.each do |tag|
+      tag.assign_to!(taggable) unless tag.assigned_to?(taggable)
+    end
   end
 end
