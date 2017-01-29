@@ -3,7 +3,7 @@ class Article < ApplicationRecord
 
   belongs_to :theme
 
-  has_many :taggings, dependent: :destroy
+  has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
@@ -38,17 +38,6 @@ class Article < ApplicationRecord
  # published_at dates.
   def slug_exists?
     Article.on(published_at).where(slug: slug).exists?
-  end
-
-  def save_tags!(tags_glob)
-    self.taggings.destroy_all
-
-    tags_glob.split(",").each do |name|
-      unless name.blank?
-        tag = Tag.find_or_create_by(name: name.strip)
-        self.tags << tag
-      end
-    end
   end
 
   def save_categories!(categories_glob)
