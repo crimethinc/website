@@ -2,7 +2,6 @@ class Tag < ApplicationRecord
   include Slug
 
   has_many :taggings, dependent: :destroy
-  has_many :taggables, through: :taggings
   has_many :articles, through: :taggings, source: :taggable, source_type: Tagging::ARTICLE
   has_many :pages, through: :taggings, source: :taggable, source_type: Tagging::PAGE
 
@@ -12,6 +11,10 @@ class Tag < ApplicationRecord
 
   def strip_whitespace
     self.name = name.strip
+  end
+
+  def assigned_to?(taggable)
+    in? taggable.tags
   end
 
   def assign_to!(taggable)
