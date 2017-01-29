@@ -1,0 +1,4 @@
+language: ruby
+sudo: false
+script: ./script/cibuild
+
