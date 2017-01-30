@@ -8972,3 +8972,5 @@ red read
 /books/off-the-map/extras /books/off-the-map
 /freespeech /2017/01/26/this-is-not-a-dialogue-not-just-free-speech-but-freedom-itself
 /trumpphilly /2017/01/26/any-time-any-place-welcoming-trump-to-philadelphia
+/kettle /2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests
+/airportblockades /2017/01/29/dont-see-what-happens-be-what-happens-continuous-updates-from-the-airport-blockades
