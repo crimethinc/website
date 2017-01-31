@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4">
       <%= select_year post.published_at || Time.now.utc,
-            { prompt: false, start_year: Time.now.year, end_year: 1900 },
+            { prompt: false, start_year: Time.now.year + 1, end_year: 1900 },
             name:  "#{type}[published_at(1i)]",
             id:    "#{type}_published_at_1i",
             class: "form-control datetime-select" %>
