@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe MiscController, type: :controller do
   # get "manifest.json",  to: "misc#mainfest_json"

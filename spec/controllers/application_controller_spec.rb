@@ -29,7 +29,7 @@ RSpec.describe ApplicationController, type: :controller do
 
   describe "#set_pinned_pages" do
     context "with all pinned" do
-      let(:site_top) { Page.create(title: "site top") }
+      let(:site_top) { Page.create(title: "Site Top") }
       let(:footer_top) { Page.create(title: "footer top") }
       let(:footer_bottom) { Page.create(title: "footer bottom") }
 

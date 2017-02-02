@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Archive, type: :model do
   describe "it sorts the articles correctly" do

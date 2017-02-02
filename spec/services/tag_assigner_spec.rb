@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe TagAssigner do
   describe 'parse_glob' do

@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Theme, type: :model do
   describe "#strip_whitespace" do

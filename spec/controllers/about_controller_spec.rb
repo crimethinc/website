@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe AboutController, type: :controller do
   describe "GET #read" do

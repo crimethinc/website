@@ -6,11 +6,10 @@ class Book < ApplicationRecord
   end
 
   def image
-    extension = slug == "contradictionary" ? "png" : "jpg"
-    "https://cloudfront.crimethinc.com/assets/books/#{slug}/photo.#{extension}"
+    "https://cloudfront.crimethinc.com/assets/books/#{slug}/photo.jpg"
   end
 
   def image_description
-    "Photo of '#{title}' book"
+    "Photo of '#{title}' book cover"
   end
 end

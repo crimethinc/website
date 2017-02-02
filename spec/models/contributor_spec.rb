@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Contributor, type: :model do
   describe "#bio_rendered" do

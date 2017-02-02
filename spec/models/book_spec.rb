@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Book, type: :model do
   describe "#name" do
@@ -28,17 +28,9 @@ RSpec.describe Book, type: :model do
   describe "#image" do
     subject { book.image }
 
-    context "when slug is 'contradictionary'" do
-      let(:book) { Book.new(slug: "contradictionary") }
+    let(:book) { Book.new(slug: "slug") }
 
-      it { is_expected.to eq("https://cloudfront.crimethinc.com/assets/books/contradictionary/photo.png") }
-    end
-
-    context "when slug isn't 'contradictionary'" do
-      let(:book) { Book.new(slug: "slug") }
-
-      it { is_expected.to eq("https://cloudfront.crimethinc.com/assets/books/slug/photo.jpg") }
-    end
+    it { is_expected.to eq("https://cloudfront.crimethinc.com/assets/books/slug/photo.jpg") }
   end
 
   describe "#image_description" do
@@ -46,6 +38,6 @@ RSpec.describe Book, type: :model do
 
     let(:book) { Book.new(title: "Contradictionary") }
 
-    it { is_expected.to eq("Photo of 'Contradictionary' book") }
+    it { is_expected.to eq("Photo of 'Contradictionary' book cover") }
     end
 end
