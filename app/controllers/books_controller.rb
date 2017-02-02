@@ -7,8 +7,8 @@ class BooksController < ApplicationController
     @title   = "Books"
 
     @bullet_books = []
-    %w(contradictionary
-       no-wall-they-can-build
+    %w(no-wall-they-can-build
+       contradictionary
        work
        expect-resistance
        days-of-war-nights-of-love

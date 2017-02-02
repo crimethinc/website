@@ -1,5 +1,6 @@
 class Book < ApplicationRecord
   include Name
+  include Slug
 
   def path
     "/books/#{slug}"
