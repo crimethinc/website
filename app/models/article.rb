@@ -21,6 +21,10 @@ class Article < ApplicationRecord
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
 
+  validates :short_path, uniqueness: true
+
+  before_save :create_redirect
+
   default_scope { order("published_at DESC") }
   scope :live,        -> { where("published_at < ?", Time.now) }
   scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
@@ -72,5 +76,11 @@ class Article < ApplicationRecord
 
   def downcase_content_format
     self.content_format = self.content_format.downcase
+  end
+
+  def create_redirect
+    unless Redirect.exists?(source_path: short_path, target_path: path)
+      Redirect.create(source_path: short_path, target_path: path)
+    end
   end
 end
