@@ -58,15 +58,14 @@ class Admin::PagesController < Admin::AdminController
   end
 
   def organize_page
-    # TODO
-    # @page.save_tags!(params[:tags])
-    # @page.save_categories!(params[:categories])
+    tag_assigner = TagAssigner.parse_glob(params[:tags])
+    tag_assigner.assign_tags_to!(@page)
   end
 
   def page_params
     params.require(:page).permit(:title, :subtitle, :content,
                                  :year, :month, :day,
-                                 :slug, :draft_code, :status_id,
+                                 :slug, :tags, :draft_code, :status_id,
                                  :published_at, :tags, :categories,
                                  :image, :image_description, :css,
                                  :hide_header, :hide_footer, :hide_layout)

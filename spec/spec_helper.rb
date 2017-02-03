@@ -1,3 +1,14 @@
+require "simplecov"
+
+SimpleCov.start do
+  add_filter "config/application.rb"
+  add_filter "config/initializers/rack-attack.rb"
+  add_filter "/app/channels/"
+  add_filter "/spec/"
+
+  track_files "app/**/*.rb"
+end
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

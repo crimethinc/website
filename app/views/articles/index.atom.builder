@@ -43,7 +43,10 @@ xml.feed "xmlns"     => "http://www.w3.org/2005/Atom",
       end
 
       xml.content type: "html" do
-        xml.text! render_content(article)
+        xml.text! [
+          figure_image_with_caption_tag(article),
+          render_content(article)
+        ].join("\n\n")
       end
 
       article.contributions.each do |contribution|

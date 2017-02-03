@@ -1,10 +1,10 @@
 <h1>
-  <%= link_to_unless_current thing_type(thing).pluralize, [:admin, thing_type(thing).pluralize.downcase] %>
+  <%= link_to_unless_current current_resource_name.pluralize, [:admin, current_resource_name.pluralize.downcase] %>
 </h1>
 
 <p>
   <% if listing? %>
-    <%= link_to "NEW", [:new, :admin, thing_type(thing).downcase], class: "btn btn-primary btn-xs action-new" %>
+    <%= link_to "NEW", [:new, :admin, current_resource_name.downcase], class: "btn btn-primary btn-xs action-new" %>
   <% elsif showing? %>
     <%= link_to "EDIT", [:edit, :admin, thing], class: "btn btn-primary btn-xs action-edit" %>
   <% end %>
@@ -14,7 +14,7 @@
   <h2>
     Editing
     <%= link_to [:admin, thing] do %>
-      <%= thing_type(thing) %> &mdash;
+      <%= current_resource_name %> &mdash;
       <%= thing.name %>
     <% end %>
   </h2>
@@ -23,6 +23,6 @@
 <% if creating? %>
   <h2>
     New
-    <%= thing_type(thing) %>
+    <%= current_resource_name %>
   </h2>
 <% end %>

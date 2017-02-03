@@ -15,4 +15,10 @@ class AboutController < ApplicationController
     @title   = "Post-Order Glow"
     @order_id = params[:ordernum]
   end
+
+  def arts_submission_guidelines
+    @html_id = "page"
+    @body_id = "read"
+    @title   = "Arts Desk : Submission Guidelines"
+  end
 end

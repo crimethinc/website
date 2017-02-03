@@ -6,7 +6,14 @@ class HomeController < ApplicationController
     # feed
     @articles = Article.live.published.root.limit(7).all.to_a
 
-    # pinned article
+    # pinned articles
+    # pinned: site top
+    pinned_to_site_top_page_id = setting(:pinned_to_site_top_page_id)
+    if pinned_to_site_top_page_id.present?
+      @pinned_to_site_top = Page.find(pinned_to_site_top_page_id)
+    end
+
+    # pinned: home bottom
     pinned_to_home_bottom_page_id = setting(:pinned_to_home_bottom_page_id)
     if pinned_to_home_bottom_page_id.present?
       @pinned_to_home_bottom = Page.find(pinned_to_home_bottom_page_id)

@@ -3,6 +3,9 @@ class Page < ApplicationRecord
 
   default_scope { order("published_at DESC") }
 
+  has_many :taggings, dependent: :destroy, as: :taggable
+  has_many :tags, through: :taggings
+
   def path
     if self.published?
       "/#{self.slug}"

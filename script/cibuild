@@ -12,7 +12,7 @@ date "+%H:%M:%S"
 
 # GC customizations
 export RUBY_GC_MALLOC_LIMIT=79000000
-export RUBY_HEAP_MIN_SLOTS=800000
+export RUBY_GC_HEAP_INIT_SLOTS=800000
 export RUBY_HEAP_FREE_MIN=100000
 export RUBY_HEAP_SLOTS_INCREMENT=400000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
@@ -24,16 +24,12 @@ export RAILS_ENV="test"
 export RACK_ROOT="$RAILS_ROOT"
 export RACK_ENV="$RAILS_ENV"
 
-test -d "/usr/share/rbenv/shims" && {
-  export PATH=/usr/share/rbenv/shims:$PATH
-}
-export RBENV_VERSION="2.3.1"
-
 export PATH="$RACK_ROOT/bin:$PATH"
+
+echo "==> Setting up DB..."
+bin/rails db:create
 
 # run tests
 echo "Running tests ..."
 date "+%H:%M:%S"
-
-# run tests.
-script/test
+bundle exec bin/rspec

@@ -12,6 +12,7 @@
       }
     }
 
+    .h-entry header,
     header {
       margin-bottom: $border-size-large;
 
@@ -31,6 +32,14 @@
           size: 2rem;
         }
         line-height: 1.25em;
+      }
+    }
+
+    .meta {
+      img {
+        // TODO refactor away
+        width: 100% !important;
+        height: auto !important;
       }
     }
 
@@ -64,6 +73,7 @@
 
       audio {
         width: 100%;
+        margin-top: $border-size-xlarge;
         margin-bottom: $border-size-large;
       }
 

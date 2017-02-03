@@ -1,5 +1,17 @@
 module ArticlesHelper
 
+  def figure_image_with_caption_tag(article)
+    if article.image.present?
+      img = image_tag article.image, class: "u-photo", alt: ""
+
+      if article.image_description.present?
+        figcaption = content_tag(:figcaption, article.image_description)
+      end
+
+      content_tag :figure, img + figcaption.to_s
+    end
+  end
+
   def article_tag(article, &block)
     klasses = ["h-entry"]
     klasses << "article-with-no-header-image" if article.image.blank?
