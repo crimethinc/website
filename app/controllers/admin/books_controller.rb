@@ -53,6 +53,9 @@ class Admin::BooksController < Admin::AdminController
   end
 
   def book_params
-    params.require(:book).permit(:title, :subtitle, :description, :content, :slug, :download_url, :price_in_cents, :tweet, :summary, :pages, :height, :width, :depth, :weight, :words, :illustrations, :photographs, :cover_style, :binding_style, :table_of_contents)
+    params.require(:book).permit(:title, :subtitle, :description, :content,
+      :slug, :download_url, :price_in_cents, :tweet, :summary, :pages,
+      :height, :width, :depth, :weight, :words, :illustrations, :photographs,
+      :cover_style, :binding_style, :table_of_contents, :buy_url)
   end
 end

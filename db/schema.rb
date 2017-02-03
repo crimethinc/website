@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112043825) do
+ActiveRecord::Schema.define(version: 20170125074852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "pg_stat_statements"
 
   create_table "articles", force: :cascade do |t|
     t.integer  "user_id"
@@ -238,9 +237,10 @@ ActiveRecord::Schema.define(version: 20170112043825) do
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "taggable_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "taggable_type"
   end
 
   create_table "tags", force: :cascade do |t|

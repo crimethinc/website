@@ -18,6 +18,7 @@
         </td>
         <td>
           <%= render "/admin/articles/publication_status", article: article %>
+          <%= render "/admin/articles/content_format",     article: article %>
         </td>
         <td>
           <%= link_to article.title,      [:admin, article] %><br>

@@ -33,12 +33,14 @@ es:
 
       books:
         label: Books
-        work: Work
         contradictionary: Contradictionary
-        expect_resistance: Expect Resistance
-        recipes_for_disaster: Recipes for Disaster
         days_of_war_nights_of_love: Days of War Nights of Love
+        expect_resistance: Expect Resistance
+        from_democracy_to_freedom: From Democracy to Freedom
+        no_wall_they_can_build: No Wall They Can Build
         off_the_map: Off the Map
+        recipes_for_disaster: Recipes for Disaster
+        work: Work
 
       podcast:
         label: Podcast
@@ -62,6 +64,10 @@ es:
 
       store:
         label: Store
+
+      projects:
+        label: Projects
+        kickstarter: Kickstarter
 
     about:
       first_time_text: Is this your first time hearing about CrimethInc.?

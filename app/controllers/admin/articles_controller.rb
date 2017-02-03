@@ -78,7 +78,9 @@ class Admin::ArticlesController < Admin::AdminController
   end
 
   def organize_article
-    @article.save_tags!(params[:tags])
+    tag_assigner = TagAssigner.parse_glob(params[:tags])
+    tag_assigner.assign_tags_to!(@article)
+
     @article.save_categories!(params[:categories])
   end
 

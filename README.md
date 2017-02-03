@@ -37,7 +37,7 @@ The rest of these instructions assume that you've [strapped your computer](https
 
 The `bootstrap` script is the first time development environment configuration for this app.
 You should only need to run this script once.
-It will install the proper Ruby and Postgresql database versions.
+It will install the proper Ruby and PostgreSQL database versions.
 
 Clone this repo.
 
@@ -130,7 +130,7 @@ If you need to use the app's console (in any environment), use the `console` scr
 ./script/console
 ```
 
-If you need to use the console on a remote instance fo the app, specific its enviorment name as the first argument.
+If you need to use the console on a remote instance of the app, specific its environment name as the first argument.
 
 ```
 ./script/console production

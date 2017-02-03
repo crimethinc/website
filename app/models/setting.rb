@@ -1,15 +1,12 @@
 class Setting < ApplicationRecord
-  include Slug
-
   validates :name, presence: true, uniqueness: true
+  before_save :generate_slug
 
   def content
     saved_content.blank? ? fallback : saved_content
   end
 
-  private
-
   def generate_slug
-    self.slug = super.gsub("-", "_")
+    self.slug = name.to_slug.gsub("-", "_")
   end
 end

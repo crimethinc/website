@@ -3,7 +3,7 @@ class Article < ApplicationRecord
 
   belongs_to :theme
 
-  has_many :taggings, dependent: :destroy
+  has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
@@ -40,17 +40,6 @@ class Article < ApplicationRecord
     Article.on(published_at).where(slug: slug).exists?
   end
 
-  def save_tags!(tags_glob)
-    self.taggings.destroy_all
-
-    tags_glob.split(",").each do |name|
-      unless name.blank?
-        tag = Tag.find_or_create_by(name: name.strip)
-        self.tags << tag
-      end
-    end
-  end
-
   def save_categories!(categories_glob)
     self.categorizations.destroy_all
 
@@ -60,27 +49,6 @@ class Article < ApplicationRecord
         self.categories << category
       end
     end
-  end
-
-  # article states through the process from creation to publishing
-  def draft?
-    status.name == "draft"
-  end
-
-  def edited?
-    status.name == "edited"
-  end
-
-  def designed?
-    status.name == "designed"
-  end
-
-  def published?
-    status.name == "published"
-  end
-
-  def dated?
-    published_at.present?
   end
 
   def collection_root?
