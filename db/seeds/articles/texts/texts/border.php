@@ -1,4 +1,12 @@
-the lives of those who risk death to cross the border, read <a href="/texts/recentfeatures/borderstories.php">Four Stories from the Border</a>.</em></h6>
+As a preview of the forthcoming tenth issue of <a href="http://www.crimethinc.com/rt"><em>Rolling Thunder</em></a>, we present two texts about US border policy and policing:
+
+<ul>
+<strong>•<a href="http://www.crimethinc.com/texts/recentfeatures/border.php"> Designed to Kill: Border Policy and How to Change It</a>
+•<a href="http://www.crimethinc.com/texts/recentfeatures/borderstories.php"> Four Stories from the Border</a></strong></ul>
+
+The former, <a href="http://www.crimethinc.com/texts/recentfeatures/border.php">Designed to Kill</a>, analyzes US border control policy, exploring how its actual effects and objectives differ from its ostensible purpose. The conclusions are based on several years of firsthand observation of both sides of the border by a participant in <a href="http://www.nomoredeaths.org/">No More Deaths</a>. For additional context, <a href="http://www.crimethinc.com/texts/recentfeatures/borderstories.php">Four Stories from the Border</a> offers glimpses into the lives of those who risk death to cross the border.
+
+Four Stories from the Border offers glimpses into the lives of those who risk death to cross the border, read <a href="/texts/recentfeatures/borderstories.php">Four Stories from the Border</a>.</em></h6>
 <p align="center"><a href="https://cloudfront.crimethinc.com/images/border/0b.jpg" rel="lightbox[border]"><img src="https://cloudfront.crimethinc.com/images/border/0a.jpg" alt="Designed to Kill: Border Policy &amp; How to Change It" width="500" height="254"></a></p>
 <h4 align="right" style="margin-right: 0px"><em>for everyone who didn&rsquo;t make it, and for everyone who did</em></h4>
 <p>&nbsp;</p>
