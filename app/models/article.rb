@@ -110,7 +110,7 @@ class Article < ApplicationRecord
   end
 
   def create_redirect
-    unless Redirect.where(source_path: short_path, target_path: path).present?
+    unless Redirect.exists?(source_path: short_path, target_path: path)
       Redirect.create(source_path: short_path, target_path: path)
     end
   end
