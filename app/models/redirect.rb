@@ -1,5 +1,5 @@
 class Redirect < ApplicationRecord
-  validates :source_path, presence: true
+  validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
 
   before_save :strip_leading_domain,    on: [:create, :update]

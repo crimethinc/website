@@ -1,7 +1,7 @@
 class Admin::ArticlesController < Admin::AdminController
   before_action :authorize
   before_action :set_article,              only: [:show, :edit, :update, :destroy]
-  before_action :set_contribution_options, only: [:new, :edit, :update]
+  before_action :set_contribution_options, only: [:new, :edit]
   after_action  :organize_article,         only: [:create, :update]
 
   # /admin/articles
@@ -44,6 +44,7 @@ class Admin::ArticlesController < Admin::AdminController
     if @article.update(article_params)
       redirect_to [:admin, @article], notice: "Article was successfully updated."
     else
+      set_contribution_options
       render :edit
     end
   end
@@ -90,8 +91,8 @@ class Admin::ArticlesController < Admin::AdminController
                                     :image, :image_description, :css, :hide_layout,
                                     :header_background_color, :header_text_color,
 									                  :short_path,
+                                    :collection_id,
                                     contributions_attributes: [
-                                    :collection_id, contributions_attributes: [
                                       :id, :contributor_id, :role_id,:_destroy
                                     ])
   end

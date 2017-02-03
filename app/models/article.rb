@@ -1,7 +1,5 @@
 class Article < ApplicationRecord
   include Post
-  
-  validates_with ArticleValidator
   belongs_to :theme
 
   has_many :taggings, dependent: :destroy
@@ -22,7 +20,9 @@ class Article < ApplicationRecord
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
 
-  after_save :create_redirect
+  validates :short_path, uniqueness: true
+
+  before_save :create_redirect
 
   default_scope { order("published_at DESC") }
   scope :live,        -> { where("published_at < ?", Time.now) }
