@@ -44,6 +44,7 @@ class Admin::ArticlesController < Admin::AdminController
     if @article.update(article_params)
       redirect_to [:admin, @article], notice: "Article was successfully updated."
     else
+      set_contribution_options
       render :edit
     end
   end
@@ -91,7 +92,8 @@ class Admin::ArticlesController < Admin::AdminController
                                     :published_at, :tags, :categories,
                                     :image, :image_description, :css, :hide_layout,
                                     :header_background_color, :header_text_color,
-                                    :collection_id, contributions_attributes: [
+                                    :collection_id, :short_path,
+                                    contributions_attributes: [
                                       :id, :contributor_id, :role_id,:_destroy
                                     ])
   end
