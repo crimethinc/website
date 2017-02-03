@@ -1,5 +1,5 @@
 class Redirect < ApplicationRecord
-  validates :source_path, presence: true
+  validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
 
   validate :noncircular_redirect
