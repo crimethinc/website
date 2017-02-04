@@ -94,7 +94,7 @@
       }
       letter-spacing: .02em;
 
-      * {
+      > :not(.video-container):not(:first-child) {
         margin: 0 auto;
         max-width: $large-tablet - 200px;
       }
@@ -105,237 +105,239 @@
         line-height: 1.5em;
         margin-bottom: 1em;
       }
+    }  /* .e-content */
 
-      a {
-        color: $color-gray-medium;
-        text-decoration: underline;
-        font: {
-          weight: bold;
-          weight: 700;
-        }
+    a {
+      color: $color-gray-medium;
+      text-decoration: underline;
+      font: {
+        weight: bold;
+        weight: 700;
       }
 
-      a:hover {
+      &:hover {
         color: black;
         text-decoration: underline;
       }
+    }
 
-      h1, h2, h3, h4, h5, h6 {
-        font-weight: bold;
-        line-height: 1em;
-        margin: 1em auto .5em auto;
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: bold;
+      line-height: 1em;
+      margin: 1em auto .5em auto;
+    }
+
+    h1 { font-size: 2em   ; font-weight: 700; }
+    h2 { font-size: 1.5em ; font-weight: 700; }
+    h3 { font-size: 1.33em; font-weight: 600; }
+    h4 { font-size: 1.25em; font-weight: 600; }
+    h5 { font-size: 1.2em;  font-weight: 500; }
+    h6 { font-size: 1.1em ; font-weight: 500; }
+
+    h1 + h2 { font-weight: 400; margin-top: -.5em; }
+
+    p {
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    i, cite, em, var, address, dfn, blockquote {
+      font: {
+        style: italic;
+        weight: lighter;
+        weight: 300;
       }
+    }
 
-      h1 { font-size: 2em   ; font-weight: 700; }
-      h2 { font-size: 1.5em ; font-weight: 700; }
-      h3 { font-size: 1.33em; font-weight: 600; }
-      h4 { font-size: 1.25em; font-weight: 600; }
-      h5 { font-size: 1.2em;  font-weight: 500; }
-      h6 { font-size: 1.1em ; font-weight: 500; }
-
-      h1 + h2 { font-weight: 400; margin-top: -.5em; }
-
-      p {
-        line-height: 1.5em;
-        margin-bottom: 1em;
+    dt, b, strong {
+      font: {
+        weight: bold;
+        weight: 700;
       }
+    }
 
-      i, cite, em, var, address, dfn, blockquote {
-        font: {
-          style: italic;
-          weight: lighter;
-          weight: 300;
-        }
+    blockquote {
+      width: 80%;
+      margin: 2em auto;
+      font-size: 1.25em;
+      line-height: 1.3em;
+
+      strong,
+      b {
+        font-style: normal;
       }
+    }
 
-      dt, b, strong {
-        font: {
-          weight: bold;
-          weight: 700;
-        }
+    dl {
+      margin-bottom: 1em;
+    }
+
+    dd {
+      margin: {
+        left:  $border-size-large;
+        start: $border-size-large;
       }
+    }
 
-      blockquote {
-        width: 80%;
-        margin: 2em auto;
-        font-size: 1.25em;
-        line-height: 1.3em;
+    ul,
+    ol {
+      margin-bottom: 1em;
+    }
 
-        strong,
-        b {
-          font-style: normal;
-        }
+    li ul,
+    li ol {
+      margin-top: .5em;
+    }
+
+    ol {
+      list-style-type: decimal;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    dd,
+    dt,
+    li {
+      line-height: 1.5em;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    li li {
+      margin: 0 0 0 1.5em;
+    }
+
+    hr {
+      border: none;
+      border-bottom: $border-size-xsmall solid #ccc;
+      margin: 3em auto;
+      width: 50%;
+      display: block;
+    }
+
+    caption {
+      // TODO
+      font-weight: bold;
+      font-weight: 700;
+      padding: .5em;
+    }
+
+    th {
+      // TODO
+      font: {
+        weight: bold;
+        weight: 700;
       }
+      text-align: left;
+      background: #eee;
+      border-bottom: $border-size-xsmall solid white;
+    }
 
-      dl {
-        margin-bottom: 1em;
-      }
+    th, td {
+      // TODO
+      padding: .5em;
+    }
 
-      dd {
-        margin: {
-          left:  $border-size-large;
-          start: $border-size-large;
-        }
-      }
+    /* for single images */
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 2em auto;
 
-      ul,
-      ol {
-        margin-bottom: 1em;
-      }
-
-      li ul,
-      li ol {
-        margin-top: .5em;
-      }
-
-      ol {
-        list-style-type: decimal;
-      }
-
-      ul {
-        list-style-type: square;
-      }
-
-      dd,
-      dt,
-      li {
-        line-height: 1.5em;
-      }
-
-      li {
-        margin: 0;
-      }
-
-      li li {
-        margin: 0 0 0 1.5em;
-      }
-
-      hr {
-        border: none;
-        border-bottom: $border-size-xsmall solid #ccc;
-        margin: 3em auto;
-        width: 50%;
-        display: block;
-      }
-
-      caption {
-        // TODO
-        font-weight: bold;
-        font-weight: 700;
-        padding: .5em;
-      }
-
-      th {
-        // TODO
-        font: {
-          weight: bold;
-          weight: 700;
-        }
-        text-align: left;
-        background: #eee;
-        border-bottom: $border-size-xsmall solid white;
-      }
-
-      th, td {
-        // TODO
-        padding: .5em;
-      }
-
-      /* for single images */
-      img {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        margin: 2em auto;
-      }
-
-      img.auto-size {
+      &.auto-size {
         width: auto;
-        max-width: auto;
+        max-width: 100%;
       }
+    }
 
-      // For figures (photo/video + caption)
-      figure img {
+    // For figures (photo/video + caption)
+    figure {
+      img {
         margin-bottom: 0;
       }
 
-      figure > figcaption {
+      > figcaption {
         margin: .5em auto 1em auto;
         font: {
           size: .66em;
           weight: normal;
         }
       }
+    }
 
-      /* for groups of images */
-      // TODO
-      .images,
-      .images-group {
-        text-align: center;
-        margin: 0 auto 2em auto;
+    /* for groups of images */
+    // TODO
+    .images,
+    .images-group {
+      text-align: center;
+      margin: 0 auto 2em auto;
 
-        img {
-          display: inline-block;
-          margin: 0;
-        }
+      img {
+        display: inline-block;
+        margin: 0;
+      }
 
-        /* narrower desktop browser window in between phone and tablet */
-        @media screen and (min-width: $small-tablet) {
-          figure + figure,
-          img + img {
-            // TODO
-            margin-left: 1em;
-          }
-        }
-
-        figure {
+      /* narrower desktop browser window in between phone and tablet */
+      @media screen and (min-width: $small-tablet) {
+        figure + figure,
+        img + img {
           // TODO
-          display: inline-block;
-          margin: 0;
-          max-width: 50%;
+          margin-left: 1em;
         }
       }
 
-      .images-group {
-        figure {
-          max-width: 100%;
-        }
-      }
-
-      table,
       figure {
         // TODO
-        text-align: center;
-        margin: 1em auto;
-
-        img {
-          margin: 0;
-        }
+        display: inline-block;
+        margin: 0;
+        max-width: 50%;
       }
+    }
 
-      figcaption {
-        // TODO
-        font-weight: lighter;
-        font-weight: 300;
-        max-width: 80%;
-        margin: 1em auto;
+    .images-group {
+      figure {
+        max-width: 100%;
       }
+    }
 
-      th {
-        // TODO
-        text-align: left;
-        padding-right: .25em;
-        font-weight: normal;
-        font-weight: 500;
-      }
+    table,
+    figure {
+      // TODO
+      text-align: center;
+      margin: 1em auto;
 
-      td {
-        // TODO
-        text-align: left;
-        font-weight: lighter;
-        font-weight: 300;
+      img {
+        margin: 0;
       }
-    }  /* .e-content */
+    }
+
+    figcaption {
+      // TODO
+      font-weight: lighter;
+      font-weight: 300;
+      max-width: 80%;
+      margin: 1em auto;
+    }
+
+    th {
+      // TODO
+      text-align: left;
+      padding-right: .25em;
+      font-weight: normal;
+      font-weight: 500;
+    }
+
+    td {
+      // TODO
+      text-align: left;
+      font-weight: lighter;
+      font-weight: 300;
+    }
 
     footer {
       text-align: center;
