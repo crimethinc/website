@@ -19,6 +19,9 @@ SitemapGenerator::Sitemap.create do
   #
   # add article_path, :priority => 0.7, :changefreq => 'daily'
 
+  add_to_index '/feed'
+  add_to_index '/podcast/feed'
+
   static_paths = [
       "/rt/", "/rt/archives/",
       "/store/", "/store/audio/", "/store/added/",
