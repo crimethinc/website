@@ -94,8 +94,11 @@
       }
       letter-spacing: .02em;
 
-      > :not(.video-container):not(:first-child) {
+      > * {
         margin: 0 auto;
+      }
+
+      > :not(.video-container):not(:first-child) {
         max-width: $large-tablet - 200px;
       }
 
