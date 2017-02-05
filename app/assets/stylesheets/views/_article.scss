@@ -84,28 +84,46 @@
       } /* .contributors */
     } /* header */
 
-    .e-content {
-      color: $color-black;
-      padding: 0 $border-size-medium;
-      font: {
-        size: 1.25em;
-        weight: lighter;
-        weight: 300;
-      }
-      letter-spacing: .02em;
+    footer {
+      text-align: center;
 
-      > :not(.video-container):not(:first-child) {
-        margin: 0 auto;
-        max-width: $large-tablet - 200px;
+      p {
+        display: inline-block;
+        margin:  $border-size-medium 0;
+        padding: $border-size-medium;
+        border-top: $border-size-xsmall solid #ccc;
+        font-weight: lighter;
+        font-weight: 300;
+        font-style: italic;
       }
+    } /* footer */
 
-      > :first-child {
-        max-width: $large-tablet;
-        font-size: 1.25em;
-        line-height: 1.5em;
-        margin-bottom: 1em;
-      }
-    }  /* .e-content */
+  } /* .h-entry */
+
+  .e-content {
+    color: $color-black;
+    padding: 0 $border-size-medium;
+    font: {
+      size: 1.25em;
+      weight: lighter;
+      weight: 300;
+    }
+    letter-spacing: .02em;
+
+    > * {
+      margin: 0 auto;
+    }
+
+    > :not(.video-container):not(:first-child) {
+      max-width: $large-tablet - 200px;
+    }
+
+    > :first-child {
+      max-width: $large-tablet;
+      font-size: 1.25em;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
 
     a {
       color: $color-gray-medium;
@@ -338,27 +356,12 @@
       font-weight: lighter;
       font-weight: 300;
     }
-
-    footer {
-      text-align: center;
-
-      p {
-        display: inline-block;
-        margin:  $border-size-medium 0;
-        padding: $border-size-medium;
-        border-top: $border-size-xsmall solid #ccc;
-        font-weight: lighter;
-        font-weight: 300;
-        font-style: italic;
-      }
-    } /* footer */
-
-  } /* .h-entry */
+  }  /* .e-content */
 
   .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    margin: 10px 0;
+    margin-bottom: 1em;
     height: 0;
     overflow: hidden;
 
