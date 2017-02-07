@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get "books/evasion",      to: redirect("http://evasionbook.com"), status: 301
   get "books/evasion.html", to: redirect("http://evasionbook.com"), status: 301
 
+  # Store Redirect and support page
+  get "store", to: redirect("https://store.crimethinc.com")
+  get "store/order-success", to: "about#post_order_success", as: :post_order_success
+
 
   # Homepage
   root to: "home#index"
@@ -64,7 +68,7 @@ Rails.application.routes.draw do
   get "read",               to: "about#read",        as: :read
   get "watch",              to: redirect("videos"),  as: :watch_redirect
   get "listen",             to: redirect("podcast"), as: :listen_redirect
-  get "get",                to: redirect("http://store.crimethinc.com"), as: :get_redirect
+  get "get",                to: redirect("store"),   as: :get_redirect
 
 
   # Podcast
@@ -151,10 +155,6 @@ Rails.application.routes.draw do
 
   # Ping and Health monitoring
   mount NewRelicPing::Engine, at: "/status"
-
-  # Store Redirect and support page
-  get "store", to: redirect("https://store.crimethinc.com")
-  get "store/order-success", to: "about#post_order_success", as: :post_order_success
 
   # Pages
   get "*path", to: "pages#show", as: :page, via: :all
