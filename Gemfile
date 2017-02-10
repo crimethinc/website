@@ -17,6 +17,7 @@ gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"
 gem "jquery-rails"
+gem "sitemap_generator" # generates compliant xml sitemap
 
 # text utilities
 gem "rubypants" # for smart quotes
