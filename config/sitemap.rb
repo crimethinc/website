@@ -17,11 +17,19 @@ SitemapGenerator::Sitemap.create(default_host: "https://crimethinc.com", compres
   #
   # add article_path, :priority => 0.7, :changefreq => 'daily'
 
+  add_to_index "/feed/", changefreq: "daily", lastmod: Time.now
+  add_to_index "/podcast/feed/", changefreq: "weekly", lastmod: Time.now
+
+  Category.find_each do |category|
+    add_to_index "/categories/#{category.slug}/feed/"
+  end
+
   static_paths = [
       "/about/",
       "/arts/submission-guidelines",
       "/books/into-libraries/", "/books/lit-kit/",
       "/categories/",
+      "/faq/",
       "/get/",
       "/kickstarter/2017/",
       "/listen/",
@@ -40,13 +48,6 @@ SitemapGenerator::Sitemap.create(default_host: "https://crimethinc.com", compres
 
   static_paths.each do |path|
     add path, changefreq: "monthly", lastmod: "2017-01-01"
-  end
-
-  add_to_index "/feed/", changefreq: "daily", lastmod: Time.now
-  add_to_index "/podcast/feed/", changefreq: "weekly", lastmod: Time.now
-
-  Category.find_each do |category|
-    add_to_index "/categories/#{category.slug}/feed/"
   end
 
   Article.live.published.find_each do |page|
