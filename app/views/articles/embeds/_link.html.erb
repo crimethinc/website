@@ -1,1 +1,1 @@
-[<%= embed_id.to_s.sub(/^https*:\/\//, "").sub(/\/$/, "") %>](<%= embed_id %>)
+<%= link_to embed_id.to_s.sub(/^https*:\/\//, "").sub(/\/$/, ""), embed_id.to_s %>
