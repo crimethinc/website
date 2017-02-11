@@ -1,0 +1,12 @@
+<% if caption.present? %>
+
+  <figure>
+    <img src="<%= embed_id %>" />
+    <figcaption><%= render_markdown caption %></figcaption>
+  </figure>
+
+<% else %>
+
+  ![](<%= embed_id %>)
+
+<% end %>

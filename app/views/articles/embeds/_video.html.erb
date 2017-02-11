@@ -1,0 +1,7 @@
+<div class="video-container">
+  <video src="<%= embed_id %>" controls />
+</div>
+
+<% if caption.present? %>
+  <p class="caption video-caption"><%= render_markdown caption %></p>
+<% end %>

@@ -1,3 +1,6 @@
+require "open-uri"
+require "json"
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
@@ -114,7 +117,7 @@ class ApplicationController < ActionController::Base
 
   def render_content(post)
     Kramdown::Document.new(
-      post.content,
+      expanded_embeds(post).content,
       input: post.content_format == "html" ? :html : :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
@@ -122,4 +125,70 @@ class ApplicationController < ActionController::Base
     ).to_html.html_safe
   end
   helper_method :render_content
+
+  def expanded_embeds(post)
+    embed_regex = /\[\[(.*)\]\]/
+
+    output_content = post.content.gsub(embed_regex) do |match|
+      embed_tag = $1
+
+      if embed_tag.present?
+        embed_tag_pieces = embed_tag.split(" ")
+
+        url     = embed_tag_pieces.shift
+        caption = embed_tag_pieces.join(" ")
+
+        expanded_embed(url, caption)
+      end
+    end
+
+    post.content = output_content
+    post
+  end
+  helper_method :expanded_embeds
+
+  def expanded_embed(url, caption=nil)
+    url  = URI.parse(url)
+
+    case url.host
+    when /youtube.com/
+      slug     = "youtube"
+      embed_id = nil
+
+      url.query.split("&").each do |key_value_pair|
+        argument, value = key_value_pair.split("=")
+        if argument == "v"
+          embed_id = value
+        end
+      end
+
+    when "youtu.be"
+      slug     = "youtube"
+      embed_id = url.path.split("/").map{ |path_piece| path_piece unless path_piece.blank? }.compact.first
+
+    when "vimeo.com"
+      slug     = "vimeo"
+      embed_id = url.path.split("/").map{ |path_piece| path_piece unless path_piece.blank? }.compact.first
+
+    when "twitter.com"
+      slug     = "twitter"
+
+    else
+      slug = case url.path
+
+      when /mp3|aac|wav|ogg|oga|m4a/
+        "audio"
+      when /mp4|avi|mov|ogv|webm|m4v|3gp|m3u8/
+        "video"
+      when /png|jpeg|jpg|gif|svg/
+        "image"
+      else
+        "link"
+      end
+    end
+
+    render_to_string partial: "articles/embeds/#{slug}", locals: { embed_id: embed_id || url, caption: caption }
+  end
+  helper_method :expanded_embed
+
 end
