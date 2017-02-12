@@ -176,11 +176,11 @@ class ApplicationController < ActionController::Base
     else
       slug = case url.path
 
-      when /mp3|aac|wav|ogg|oga|m4a/
+      when /\.mp3|\.aac|\.wav|\.ogg|\.oga|\.m4a/
         "audio"
-      when /mp4|avi|mov|ogv|webm|m4v|3gp|m3u8/
+      when /\.mp4|\.avi|\.mov|\.ogv|\.webm|\.m4v|\.3gp|\.m3u8/
         "video"
-      when /png|jpeg|jpg|gif|svg/
+      when /\.png|\.jpeg|\.jpg|\.gif|\.svg/
         "image"
       else
         "link"
