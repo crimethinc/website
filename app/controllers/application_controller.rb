@@ -127,7 +127,7 @@ class ApplicationController < ActionController::Base
   helper_method :render_content
 
   def expanded_embeds(post)
-    embed_regex = /\[\[(.*)\]\]/
+    embed_regex = /\[\[(http[^\]\s]+(?:\s.+)?)\]\]/
 
     output_content = post.content.gsub(embed_regex) do |match|
       embed_tag = $1
