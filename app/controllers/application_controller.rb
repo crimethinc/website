@@ -127,7 +127,7 @@ class ApplicationController < ActionController::Base
   helper_method :render_content
 
   def expanded_embeds(post)
-    embed_regex = /\[\[(http[^\]\s]+(?:\s.+)?)\]\]/
+    embed_regex = /\[\[\s*(http[^\]\s]+(?:\s.+)?)\s*\]\]/
 
     output_content = post.content.gsub(embed_regex) do |match|
       embed_tag = $1
@@ -187,7 +187,7 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    render_to_string partial: "articles/embeds/#{slug}", locals: { embed_id: embed_id || url, caption: caption }
+    render_to_string partial: "/articles/embeds/#{slug}.html.erb", locals: { embed_id: embed_id || url, caption: caption }
   end
   helper_method :expanded_embed
 
