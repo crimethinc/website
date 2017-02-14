@@ -56,6 +56,11 @@ GEM
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_girl (4.8.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.8.0)
+      factory_girl (~> 4.8.0)
+      railties (>= 3.0.0)
     ffi (1.9.17)
     foreman (0.83.0)
       thor (~> 0.19.1)
@@ -243,6 +248,7 @@ DEPENDENCIES
   bugsnag
   byebug
   cocoon (~> 1.2.9)
+  factory_girl_rails
   foreman
   guard-rspec
   jquery-rails
