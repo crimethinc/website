@@ -1,0 +1,31 @@
+<%= render "admin/page_header", thing: @categories %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, category], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td><%= link_to category.name, [:admin, category] %></td>
+        <td><%= category.slug %></td>
+        <td>
+          <%= link_to "DELETE", [:admin, category], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= paginate @categories, views_prefix: "admin" %>
+</div>

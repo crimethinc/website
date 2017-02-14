@@ -1,0 +1,22 @@
+<%= render "admin/page_header", thing: @category %>
+
+<article>
+  <header>
+    <h1>
+      <%= link_to [:admin, @category], class: "p-name" do %>
+        <span class="h1 name"><%= @category.name %></span>
+      <% end %>
+    </h1>
+  </header>
+
+  <hr>
+  <p>
+    <strong>Name:</strong>
+    <%= @category.name %>
+  </p>
+
+  <p>
+    <strong>Slug:</strong>
+    <%= @category.slug %>
+  </p>
+</article>

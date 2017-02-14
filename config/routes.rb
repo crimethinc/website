@@ -115,6 +115,7 @@ Rails.application.routes.draw do
     end
 
     resources :books, concerns: :paginatable
+    resources :categories, concerns: :paginatable
     resources :contributors, concerns: :paginatable
     resources :episodes, concerns: :paginatable
     resources :links, concerns: :paginatable
