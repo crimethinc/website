@@ -64,24 +64,6 @@ describe Article do
   #   end
   # end
 
-  describe "#save_categories!" do
-    it "creates Categories and adds categorizations" do
-      categories = ["Tag 1", "Tag 2"]
-
-      article = Article.create(title: 'test')
-      article.save_categories!(categories.join(", "))
-
-      expect(article.categories.map(&:name)).to match_array(categories)
-    end
-
-    it "deletes old categorizations" do
-      article = Article.create(title: 'test')
-      article.save_categories!("")
-
-      expect(article.categories).to be_empty
-    end
-  end
-
   describe "#collection_posts" do
     it "finds related collection_posts by collection_id" do
       collection = Article.create(title: 'test')

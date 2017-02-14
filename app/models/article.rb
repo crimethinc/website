@@ -40,17 +40,6 @@ class Article < ApplicationRecord
     Article.on(published_at).where(slug: slug).exists?
   end
 
-  def save_categories!(categories_glob)
-    self.categorizations.destroy_all
-
-    categories_glob.split(",").each do |name|
-      unless name.blank?
-        category = Category.find_or_create_by(name: name.strip)
-        self.categories << category
-      end
-    end
-  end
-
   def collection_root?
     collection_posts.any?
   end

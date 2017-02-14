@@ -13,8 +13,8 @@ RSpec.describe CategoriesController, type: :controller do
     end
 
     it "renders on a category with articles" do
-      article = Article.create(title: "Test", published_at: 1.day.ago)
-      article.save_categories!("Test Category")
+      category = Category.create(name: "Test Category")
+      article = Article.create(title: "Test", published_at: 1.day.ago, category_ids: [category.id])
       category = Category.last
 
       get :show, params: {slug: category.slug}
@@ -33,8 +33,8 @@ RSpec.describe CategoriesController, type: :controller do
 
   describe "GET #feed" do
     it "renders on a category with articles" do
-      article = Article.create(title: "Test", published_at: 1.day.ago)
-      article.save_categories!("Test Category")
+      category = Category.create(name: "Test Category")
+      article = Article.create(title: "Test", published_at: 1.day.ago, category_ids: [category.id])
       category = Category.last
 
       get :feed, params: {slug: category.slug}
