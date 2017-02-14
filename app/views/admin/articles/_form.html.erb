@@ -36,6 +36,25 @@
   </fieldset>
   -->
 
+  <fieldset id="categories">
+    <legend>Categories</legend>
+
+    <div class="col-xs-12 col-sm-12">
+      <div class="form-group">
+        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "checkbox" do |b| %>
+          <div class="checkbox">
+            <%= b.label do %>
+              <%= b.check_box %>
+              <%= b.text %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </fieldset>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+
   <fieldset id="meta">
     <legend>Meta</legend>
     <div class="row">
@@ -50,14 +69,6 @@
         <div class="form-group">
           <%= f.label :short_path, "Short URL Path" %>
           <%= f.text_field :short_path, class: "form-control" %>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-4">
-        <div class="form-group">
-          <%= f.label :categories %>
-          <%= text_field_tag :categories, @article.categories.map{ |c| c.name }.join(", "), class: "form-control" %>
-          <p class="help-block">Comma separated. Adventure, Analysis, Arts, Current Events, Geography, History, News, Technology.</p>
         </div>
       </div>
 
