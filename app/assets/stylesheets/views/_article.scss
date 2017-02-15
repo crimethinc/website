@@ -111,7 +111,9 @@
     letter-spacing: .02em;
 
     > * {
-      margin: 0 auto;
+      margin-right: auto;
+      margin-left: auto;
+
     }
 
     > :not(.video-container):not(:first-child) {
