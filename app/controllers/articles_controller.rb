@@ -39,6 +39,8 @@ class ArticlesController < ApplicationController
 
     @title = @article.name
 
+    @previous_article = Article.previous(@article).first
+    @next_article     = Article.next(@article).first
 
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false
