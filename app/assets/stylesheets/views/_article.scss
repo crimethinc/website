@@ -125,20 +125,6 @@
       margin-bottom: 1em;
     }
 
-    a {
-      color: $color-gray-medium;
-      text-decoration: underline;
-      font: {
-        weight: bold;
-        weight: 700;
-      }
-
-      &:hover {
-        color: black;
-        text-decoration: underline;
-      }
-    }
-
     h1, h2, h3, h4, h5, h6 {
       font-weight: bold;
       line-height: 1em;
