@@ -22,9 +22,11 @@ class Article < ApplicationRecord
   before_validation :downcase_content_format,  on: [:create, :update]
 
   default_scope { order("published_at DESC") }
-  scope :live,        -> { where("published_at < ?", Time.now) }
-  scope :on, lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
-  scope :recent,      -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days, Time.now) }
+  scope :live,     -> { where("published_at < ?", Time.now) }
+  scope :on,       lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
+  scope :recent,   -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days, Time.now) }
+  scope :next,     lambda { |article| where("published_at > ?", article.published_at).live.published.order(published_at: :asc).limit(1) }
+  scope :previous, lambda { |article| where("published_at < ?", article.published_at).live.published.chronological.limit(1) }
 
   def path
     if published?

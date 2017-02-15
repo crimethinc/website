@@ -29,5 +29,19 @@
         <%= link_to "Download PDF", @article.download_url, class: "button" %>
       </div>
     <% end %>
+
+    <ul class="pagination">
+      <% if @previous_article.present? %>
+        <li class="page">
+          <%= link_to t("views.pagination.previous_article", title: @previous_article.title).html_safe, @previous_article.path %>
+        </li>
+      <% end %>
+
+      <% if @next_article.present? %>
+        <li class="page">
+          <%= link_to t("views.pagination.next_article", title: @next_article.title).html_safe, @next_article.path %>
+        </li>
+      <% end %>
+    </ul>
   </footer>
 <% end %>

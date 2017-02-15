@@ -120,6 +120,8 @@ en:
       previous: "&lsaquo;"
       next: "&rsaquo;"
       truncate: "&hellip;"
+      next_article: "%{title}: Next &rsaquo;"
+      previous_article: "&lsaquo; Previous: %{title}"
   helpers:
     page_entries_info:
       entry:
