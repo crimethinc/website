@@ -24,6 +24,6 @@ class Auth::SessionsController < Admin::AdminController
   # /signout
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: "Signed out!"
+    redirect_to signin_url, notice: "Signed out!"
   end
 end
