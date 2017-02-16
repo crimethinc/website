@@ -88,3 +88,12 @@ sup {
     }
   }
 }
+
+audio {
+  display: block;
+  margin: {
+    top: $border-size-large;
+    bottom: $border-size-xlarge;
+  }
+  min-height: $border-size-xlarge;
+}
