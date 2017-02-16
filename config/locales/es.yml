@@ -122,6 +122,11 @@ es:
       truncate: "&hellip;"
       next_article: "%{title}: Next &rsaquo;"
       previous_article: "&lsaquo; Previous: %{title}"
+      next_month: "&lsaquo; Next Month (%{month})"
+      previous_month: "(%{month}) Previous Month &rsaquo;"
+      next_year: "&lsaquo; Next Year (%{year})"
+      previous_year: "(%{year}) Previous Year &rsaquo;"
+
   helpers:
     page_entries_info:
       entry:

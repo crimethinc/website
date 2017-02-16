@@ -4,30 +4,19 @@ class ArchivesController < ApplicationController
     @body_id    = "archives"
     @page_title = "Articles"
 
-    @articles_year  = params[:year]
-    @articles_month = params[:month]
-    @articles_day   = params[:day]
-
-    articles = Article.published.root.all
-
-    articles = articles.where(year:  params[:year])  if params[:year].present?
-    articles = articles.where(month: params[:month]) if params[:month].present?
-    articles = articles.where(day:   params[:day])   if params[:day].present?
+    @archive = Archive.new(year: params[:year], month: params[:month], day: params[:day], page: params[:page])
 
     # Redirect if showing this result set isn't useful
-    if articles.length == 1
-      return redirect_to articles.first.path
-    elsif articles.length.zero?
-      if    params[:day].present?
-        return redirect_to archives_path(params[:year], params[:month])
-      elsif params[:month].present?
-        return redirect_to archives_path(params[:year])
-      elsif params[:year].present?
+    if @archive.articles.length == 1 && @archive.day.present?
+      return redirect_to @archive.articles.first.path
+    elsif @archive.articles.length.zero?
+      if    @archive.day.present?
+        return redirect_to archives_path(@archive.year, @archive.month)
+      elsif @archive.month.present?
+        return redirect_to archives_path(@archive.year)
+      elsif @archive.year.present?
         return redirect_to [:read]
       end
     end
-
-    articles = articles.page(params[:page]).per(15)
-    @archive = Archive.new(articles)
   end
 end
