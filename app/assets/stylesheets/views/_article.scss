@@ -346,6 +346,34 @@
     }
   }  /* .e-content */
 
+  .footnotes {
+    border-top: solid 1px $color-gray-light;
+    margin-top: 3rem;
+    padding: 3rem 1rem 0;
+
+    ol {
+      list-style-position: inside;
+    }
+
+    p {
+      display: inline;
+    }
+
+    .reversefootnote {
+      &:link, &:visited, &:hover, &:active {
+        display: inline-block;
+        text-decoration: none;
+        font: {
+          size: 0.625em;
+          weight: 500;
+        }
+        position: relative;
+        top: -0.625em;
+        left: -0.125em;
+      }
+    }
+  }
+
   .video-container {
     position: relative;
     padding-bottom: 56.25%;
