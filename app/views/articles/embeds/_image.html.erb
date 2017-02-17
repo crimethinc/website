@@ -1,12 +1,19 @@
 <% if caption.present? %>
 
   <figure>
-    <img src="<%= embed_id %>" />
+    <% if link.present? %>
+      <a href="<%= link %>">
+        <img src="<%= embed_id %>" />
+      </a>
+    <% else %>
+      <img src="<%= embed_id %>" />
+    <% end %>
+
     <figcaption><%= render_markdown caption %></figcaption>
   </figure>
 
 <% else %>
 
-  <%= image_tag embed_id %>
+  <%= link_to_if link.present?, image_tag(embed_id), link %>
 
 <% end %>
