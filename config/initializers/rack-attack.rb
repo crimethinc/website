@@ -5,7 +5,7 @@ if ENV["REDIS_URL"]
 end
 
 class Rack::Attack
-  throttle('limit requests per IP', limit: 60, period: 1.minute) do |req|
-    req.ip unless req.path.start_with?('/assets')
+  throttle("limit requests per IP", limit: 60, period: 1.minute) do |req|
+    req.ip unless req.path.start_with?("/assets")
   end
 end
