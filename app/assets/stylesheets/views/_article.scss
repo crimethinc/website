@@ -162,18 +162,6 @@
       }
     }
 
-    blockquote {
-      width: 80%;
-      margin: 2em auto;
-      font-size: 1.25em;
-      line-height: 1.3em;
-
-      strong,
-      b {
-        font-style: normal;
-      }
-    }
-
     dl {
       margin-bottom: 1em;
     }
@@ -273,6 +261,26 @@
           size: .66em;
           weight: normal;
         }
+      }
+    }
+
+    blockquote {
+      border-left: solid $color-gray-light 0.6rem;
+      margin: 1.5em auto;
+      padding: 0.2em 0 0.3em 0.75em;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      strong,
+      b {
+        font-style: normal;
+      }
+
+      @media screen and (min-width: $small-tablet) {
+        position: relative;
+        left: -0.75em;
       }
     }
 
