@@ -49,7 +49,7 @@ es:
       podcast:
         label: Podcast
         feed: RSS
-        the_ex_worker: "The Ex-Worker"
+        the_ex_worker: The Ex-Worker
 
       journal:
         label: Journal
@@ -92,7 +92,7 @@ es:
         signup_button_text: Sign Up
       social:
         heading: Find Us Elsewhere
-        description: "Keep up with our activities on the following additional platforms:"
+        description: Keep up with our activities on the following additional platforms.
 
     mantra:
       - If your heart is free, the ground you stand on is liberated territory. Defend it.
@@ -134,9 +134,9 @@ es:
   helpers:
     page_entries_info:
       entry:
-        zero: "entries"
-        one: "entry"
-        other: "entries"
+        zero: entries
+        one: entry
+        other: entries
       one_page:
         display_entries:
           zero: "No %{entry_name} found"
