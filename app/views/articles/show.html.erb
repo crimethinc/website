@@ -2,11 +2,7 @@
 
 <%= article_tag @article do %>
   <header>
-    <%= render "articles/image", article: @article, linked: false %>
-
-    <div class="meta">
-      <%= render "articles/titles", header: @article, linked: false %>
-    </div>
+    <%= render "articles/titles", header: @article, linked: false %>
 
     <%= render "articles/theme",      article: @article %>
     <%= render "articles/categories", article: @article %>
