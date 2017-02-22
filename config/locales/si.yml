@@ -1,0 +1,146 @@
+si:
+  language_direction: ltr
+  site_name: CrimethInc.
+  site_author: CrimethInc. Ex-Workers Collective
+
+  head:
+    meta_title: "CrimethInc. ex-Workers' Collective: Your ticket to a world free of charge"
+    meta_image_url: https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png
+    meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+
+  header:
+    read: Read
+    watch: Watch
+    listen: Listen
+    buy: Get
+    share: Share
+    first_time: First Time? Start Here →
+    search_form_placeholder: Search Archives…
+
+  footer:
+    nav:
+      articles:
+        label: Articles
+        feed: RSS
+        adventure: Adventure
+        analysis: Analysis
+        arts: Arts
+        current_events: Current Events
+        geography: Geography
+        history: History
+        news: News
+        technology: Technology
+
+      projects:
+        label: Projects
+        technology: Kickstarter campaign for books about Borders and Democracy
+
+      books:
+        label: Books
+        contradictionary: Contradictionary
+        days_of_war_nights_of_love: Days of War Nights of Love
+        expect_resistance: Expect Resistance
+        from_democracy_to_freedom: From Democracy to Freedom
+        no_wall_they_can_build: No Wall They Can Build
+        off_the_map: Off the Map
+        recipes_for_disaster: Recipes for Disaster
+        work: Work
+
+      podcast:
+        label: Podcast
+        feed: RSS
+        the_ex_worker: "The Ex-Worker"
+
+      journal:
+        label: Journal
+        rolling_thunder: Rolling Thunder
+
+      videos:
+        label: Videos
+
+      tools:
+        label: Tools
+        downloads: Downloads
+        posters: Posters
+        guides: Guides
+        stickers: Stickers
+        videos: Videos
+
+      store:
+        label: Store
+
+      projects:
+        label: Projects
+        kickstarter: Kickstarter
+
+    about:
+      first_time_text: Is this your first time hearing about CrimethInc.?
+      first_time_link: Start here. →
+      heading: About CrimethInc.
+      description:
+        "CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+
+        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, *let’s do something about it.*"
+      more_link: More about CrimethInc. →
+      donate_button_text: Support this site
+
+    contact:
+      newsletter:
+        heading: Email Updates
+        description: Sign up here to receive regular email updates.
+        signup_form_placeholder: What’s your email address?
+        signup_button_text: Sign Up
+      social:
+        heading: Find Us Elsewhere
+        description: "Keep up with our activities on the following additional platforms:"
+
+    mantra:
+      - If your heart is free, the ground you stand on is liberated territory. Defend it.
+      - Only those prepared to go too far will learn how far they can go.
+      - Desperate measures are long overdue.
+      - Cradle the seed, even in the volcano’s mouth.
+      - The future is in chains within you — set it free.
+      - A spark for every powder keg.
+      - Esperanza no espera.
+
+  form:
+    search_form_placeholder: Search Archives…
+
+  podcast:
+    latest_episode: Latest Episode
+    other_episodes: Other Episodes
+    listen: Listen to the Episode
+    download: Download
+    summary: Summary
+    show_notes: Show Notes
+    transcript: Transcript
+    notes_and_links: Notes and Links
+    full_episode_transcript: Full Episode Transcript
+
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"
+      next_article: "%{title}: Next &rsaquo;"
+      previous_article: "&lsaquo; Previous: %{title}"
+      next_month: "&lsaquo; Next Month (%{month})"
+      previous_month: "(%{month}) Previous Month &rsaquo;"
+      next_year: "&lsaquo; Next Year (%{year})"
+      previous_year: "(%{year}) Previous Year &rsaquo;"
+
+  helpers:
+    page_entries_info:
+      entry:
+        zero: "entries"
+        one: "entry"
+        other: "entries"
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
