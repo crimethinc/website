@@ -136,9 +136,10 @@ class ApplicationController < ActionController::Base
         embed_tag_pieces = embed_tag.split(" ")
 
         url     = embed_tag_pieces.shift
+        link    = embed_tag_pieces.pop if url_or_path?(embed_tag_pieces.last)
         caption = embed_tag_pieces.join(" ")
 
-        expanded_embed(url, caption)
+        expanded_embed(url, caption: caption, link: link)
       end
     end
 
@@ -147,7 +148,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :expanded_embeds
 
-  def expanded_embed(url, caption=nil)
+  def expanded_embed(url, caption: nil, link: nil)
     url  = URI.parse(url)
 
     case url.host
@@ -187,8 +188,11 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    render_to_string partial: "/articles/embeds/#{slug}.html.erb", locals: { embed_id: embed_id || url, caption: caption }
+    render_to_string partial: "/articles/embeds/#{slug}.html.erb", locals: { embed_id: embed_id || url, caption: caption, link: link }
   end
   helper_method :expanded_embed
 
+  def url_or_path?(string)
+    string.match?(/^(http|\/)\S+/)
+  end
 end
