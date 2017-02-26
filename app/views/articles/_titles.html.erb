@@ -1,7 +1,6 @@
-<div class="meta p-name">
-  <% unless controller_name == 'home' %>
-  <%= render "articles/image", article: @article, linked: false %>
-  <% end %>
+<div class="meta p-name" <% unless controller_name == 'home' %>
+     style="background-image: url(<%= @article.image %>)"
+<% end %>>
   <h1 class="p-x-title">
     <%= link_to_if linked, RubyPants.new(header.title).to_html.html_safe, header.path %>
   </h1>
