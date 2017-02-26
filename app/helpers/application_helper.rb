@@ -49,19 +49,6 @@ module ApplicationHelper
     asset_url("icons/icon-#{dimensions}.png")
   end
 
-  def apple_touch_icon_link_tags
-    output = []
-
-    # square pixel sizes
-    icon_sizes.each do |size|
-      dimensions = "#{size}x#{size}"
-      href = asset_path("icons/icon-#{dimensions}.png")
-      output << tag(:link, rel: "apple-touch-icon icon", sizes: dimensions, href: href)
-    end
-
-    output.join("\n").html_safe
-  end
-
   def br_to_p(html)
     simple_format(html, {}, sanitize: false).gsub("\n<br />", "</p><p>").html_safe
   end
