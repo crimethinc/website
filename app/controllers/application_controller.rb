@@ -136,7 +136,9 @@ class ApplicationController < ActionController::Base
         embed_tag_pieces = embed_tag.split(" ")
 
         url     = embed_tag_pieces.shift
-        link    = embed_tag_pieces.pop if url_or_path?(embed_tag_pieces.last)
+        link    = if embed_tag_pieces.present?
+          embed_tag_pieces.pop if url_or_path?(embed_tag_pieces.last)
+        end
         caption = embed_tag_pieces.join(" ")
 
         expanded_embed(url, caption: caption, link: link)
