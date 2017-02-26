@@ -13,60 +13,61 @@
       a {
         color: $color-white;
       }
+
+      h1, h2 {
+        line-height: 1.2;
+        position: relative;
+        text-shadow: 0 0 2rem $color-black;
+
+        @media screen and (min-width: #{$small-tablet}) {
+          letter-spacing: -0.01em;
+        }
+
+        @media screen and (min-width: #{$large-phone}) {
+          line-height: 1;
+        }
+      }
+
+      h1 {
+        font: {
+          size: 1.6em;
+          weight: 900;
+        }
+        letter-spacing: -.01em;
+        text-shadow: 0 0 1rem $color-black;
+
+        @media screen and (min-width: #{$small-phone}) {
+          font-size: 2em;
+        }
+
+        @media screen and (min-width: #{$large-phone}) {
+          font-size: 3em;
+        }
+
+        @media screen and (min-width: #{$small-tablet}) {
+          font-size: 4em;
+          margin-bottom: 4px;
+        }
+      }
+
+      h2 {
+        font-size: 1.4em;
+
+        @media screen and (min-width: #{$small-phone}) {
+          font-size: 1.75em;
+        }
+
+        @media screen and (min-width: #{$large-phone}) {
+          font-size: 2em;
+        }
+
+        @media screen and (min-width: #{$small-tablet}) {
+          font-size: 2.25em;
+        }
+      }
+
     }
     /* header */
-
-    h1, h2 {
-      line-height: 1.2;
-      position: relative;
-      text-shadow: 0 0 2rem $color-black;
-
-      @media screen and (min-width: #{$small-tablet}) {
-        letter-spacing: -0.01em;
-      }
-
-      @media screen and (min-width: #{$large-phone}) {
-        line-height: 1;
-      }
-    }
-
-    h1 {
-      font: {
-        size: 1.6em;
-        weight: 900;
-      }
-      letter-spacing: -.01em;
-      text-shadow: 0 0 1rem black;
-
-      @media screen and (min-width: #{$small-phone}) {
-        font-size: 2em;
-      }
-
-      @media screen and (min-width: #{$large-phone}) {
-        font-size: 3em;
-      }
-
-      @media screen and (min-width: #{$small-tablet}) {
-        font-size: 4em;
-        margin-bottom: 4px;
-      }
-    }
-
-    h2 {
-      font-size: 1.4em;
-
-      @media screen and (min-width: #{$small-phone}) {
-        font-size: 1.75em;
-      }
-
-      @media screen and (min-width: #{$large-phone}) {
-        font-size: 2em;
-      }
-
-      @media screen and (min-width: #{$small-tablet}) {
-        font-size: 2.25em;
-      }
-    }
 
     .meta {
       background-size: cover;
