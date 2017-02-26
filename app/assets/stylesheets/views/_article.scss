@@ -155,10 +155,9 @@
     > * {
       margin-right: auto;
       margin-left: auto;
-
     }
 
-    > :not(.video-container):not(:first-child) {
+    > :not(figure):not(:first-child) {
       max-width: $large-tablet - 200px;
     }
 
@@ -312,19 +311,8 @@
       }
     }
 
-    // For figures (photo/video + caption)
-    figure {
-      img {
-        margin-bottom: 0;
-      }
-
-      > figcaption {
-        margin: .5em auto 1em auto;
-        font: {
-          size: .66em;
-          weight: normal;
-        }
-      }
+    figure img {
+      margin: 0;
     }
 
     blockquote {
@@ -382,22 +370,9 @@
       }
     }
 
-    table,
-    figure {
+    table {
       // TODO
       text-align: center;
-      margin: 1em auto;
-
-      img {
-        margin: 0;
-      }
-    }
-
-    figcaption {
-      // TODO
-      font-weight: lighter;
-      font-weight: 300;
-      max-width: 80%;
       margin: 1em auto;
     }
 
@@ -441,23 +416,6 @@
       }
     }
   }
-
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    margin-bottom: 1em;
-    height: 0;
-    overflow: hidden;
-
-    iframe, object, embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
 }
 
 /* #article */
