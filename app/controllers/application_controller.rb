@@ -200,6 +200,8 @@ class ApplicationController < ActionController::Base
   end
 
   def remove_id(pieces)
+    return unless pieces.present?
+
     id_string = pieces.detect { |piece| piece =~ /id:\S+/ }
 
     if id_string
