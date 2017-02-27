@@ -4,6 +4,8 @@ Ruby on Rails app that powers https://crimethinc.com
 
 ## Development
 
+[![Build Status](https://travis-ci.org/crimethinc/website.svg?branch=master)](https://travis-ci.org/crimethinc/website)
+
 ### tl;dr
 
 [Strap your computer](https://osx-strap.herokuapp.com), first.

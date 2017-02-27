@@ -6,7 +6,9 @@
         <article class="h-entry" role="article">
           <div class="row">
             <div class="<%= "column" if article.image.present? %> column-one-third">
-              <%= render "articles/image", article: article, linked: true %>
+              <% if article.present? && article.image.present? %>
+                <%= link_to image_tag(article.image, class: "u-photo header-image", alt: article.image_description), article.path %>
+              <% end %>
             </div>
 
             <div class="<%= "column" if article.image.present? %> column-two-third">

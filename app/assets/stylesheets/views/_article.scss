@@ -10,9 +10,14 @@
       margin-bottom: 1em;
       position: relative;
 
+      a {
+        color: $color-white;
+      }
+
       h1, h2 {
         line-height: 1.2;
         position: relative;
+        text-shadow: 0 0 2rem $color-black;
 
         @media screen and (min-width: #{$small-tablet}) {
           letter-spacing: -0.01em;
@@ -29,6 +34,7 @@
           weight: 900;
         }
         letter-spacing: -.01em;
+        text-shadow: 0 0 1rem $color-black;
 
         @media screen and (min-width: #{$small-phone}) {
           font-size: 2em;
@@ -60,22 +66,11 @@
         }
       }
 
-      a {
-        color: $color-white;
-      }
     }
     /* header */
 
-    .header-image {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
     .meta {
+      background-size: cover;
       display: flex;
       flex-direction: column;
       justify-content: center;

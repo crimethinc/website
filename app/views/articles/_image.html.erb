@@ -1,6 +1,0 @@
-<%# TODO should need the first check, there should ALWAYS be an article %>
-<% if article.present? && article.image.present? %>
-    <%= link_to_if linked,
-                   image_tag(article.image, class: "u-photo header-image", alt: article.image_description),
-                   article.path %>
-<% end %>

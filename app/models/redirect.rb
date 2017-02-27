@@ -24,16 +24,29 @@ class Redirect < ApplicationRecord
   end
 
   def strip_leading_domain
-    url = URI.parse(self.target_path)
-    if url.respond_to?(:host) && url.host =~ /crimethinc|cwc\.im/
-      path = url.path
+    domains_regex = /crimethinc|cwc\.im/
 
-      if url.query.present?
-        path << "?#{url.query}"
+    [self.source_path, self.target_path].each_with_index do |path, index|
+      url = URI.parse(path.strip)
+      if url.respond_to?(:host) && url.host =~ domains_regex
+        new_path = url.path
+
+        if url.query.present?
+          new_path << "?#{url.query}"
+        end
+
+        if url.fragment.present?
+          new_path << "##{url.fragment}"
+        end
+
+        if index.zero?
+          self.source_path = new_path
+        else
+          self.target_path = new_path
+        end
       end
-
-      self.target_path = path
     end
+
   end
 
   private
