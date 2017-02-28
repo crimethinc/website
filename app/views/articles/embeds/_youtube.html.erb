@@ -1,7 +1,8 @@
-<div class="video-container" id="<%= id %>">
+<figure class="video-container" id="<%= id %>">
   <iframe src="https://www.youtube.com/embed/<%= embed_id %>" frameborder="0" allowfullscreen></iframe>
-</div>
-
 <% if caption.present? %>
-  <p class="caption video-caption video-caption-youtube"><%= render_markdown caption %></p>
+  <figcaption class="caption video-caption video-caption-youtube">
+    <%= render_markdown caption %>
+  </figcaption>
 <% end %>
+</figure>
