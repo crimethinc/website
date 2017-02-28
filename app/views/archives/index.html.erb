@@ -5,7 +5,7 @@
 
   <h2>
     <time>
-      <%= link_to_dates(year: @articles_year, month: @articles_month, day: @articles_day) %>
+      <%= link_to_dates(year: @archive.year, month: @archive.month, day: @archive.day) %>
     </time>
   </h2>
 </header>
@@ -14,7 +14,7 @@
   <% @archive.each do |year, months| %>
     <% months.sort.reverse.each do |month, articles| %>
 
-      <% unless @articles_day.present? or @articles_month.present? %>
+      <% unless @archive.day.present? or @archive.month.present? %>
         <h1 class="year-month"><%= link_to_dates(year: year, month: month) %></h1>
       <% end %>
 
@@ -25,3 +25,19 @@
 </div>
 
 <%= paginate @archive %>
+
+<div class="text-center">
+  <ul class="pagination">
+    <% if @archive.paginator.next? %>
+      <li class="page">
+        <%= link_to @archive.paginator.next_label, @archive.paginator.next_path %>
+      </li>
+    <% end %>
+
+    <% if @archive.paginator.previous? %>
+      <li class="page">
+        <%= link_to @archive.paginator.previous_label, @archive.paginator.previous_path %>
+      </li>
+    <% end %>
+  </ul>
+</div>

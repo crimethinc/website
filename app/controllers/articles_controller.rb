@@ -1,6 +1,11 @@
 class ArticlesController < ApplicationController
+  skip_before_action :set_social_links, only: :index
+  skip_before_action :set_new_subscriber, only: :index
+  skip_before_action :set_pinned_pages, only: :index
+  skip_before_action :check_for_redirection, only: :index
+
   def index
-    @articles = Article.live.published.root.page(params[:page]).per(25)
+    @articles = Article.includes(:tags, :categories, :contributions).live.published.root.page(params[:page]).per(10)
   end
 
   def show
@@ -39,6 +44,8 @@ class ArticlesController < ApplicationController
 
     @title = @article.name
 
+    @previous_article = Article.previous(@article).first
+    @next_article     = Article.next(@article).first
 
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false

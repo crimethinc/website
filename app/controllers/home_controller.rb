@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     @homepage = true
 
     # feed
-    @articles = Article.live.published.root.limit(7).all.to_a
+    @articles = Article.includes(:categories, :status).live.published.root.limit(7).all.to_a
 
     # pinned articles
     # pinned: site top

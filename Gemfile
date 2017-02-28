@@ -17,6 +17,7 @@ gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"
 gem "jquery-rails"
+gem "sitemap_generator" # generates compliant xml sitemap
 
 # text utilities
 gem "rubypants" # for smart quotes
@@ -41,7 +42,8 @@ group :development, :test do
   gem "rails-controller-testing"
   gem "guard-rspec"
   gem "spring-commands-rspec"
-  gem 'simplecov', :require => false
+  gem "simplecov", :require => false
+  gem "factory_girl_rails"
 end
 
 # dev

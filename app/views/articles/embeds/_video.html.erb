@@ -1,0 +1,11 @@
+<figure class="video-container" id="<%= id %>">
+  <video controls>
+    <source src="<%= embed_id %>" />
+  </video>
+
+<% if caption.present? %>
+  <figcaption class="caption video-caption">
+    <%= render_markdown caption %>
+  </figcaption>
+<% end %>
+</figure>

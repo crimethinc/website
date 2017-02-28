@@ -8,19 +8,21 @@
         <%= link_to t("footer.nav.articles.label"), "/archives" %>
         <b><%= link_to t("footer.nav.articles.feed"), feed_path  %></b>
       </dt>
-
-    	<dd>
-      <!--
-        <%= link_to t("footer.nav.articles.geography"),  "/geography"  %>,
-      -->
-
-        <%= link_to t("footer.nav.articles.arts"),       "/arts"       %>,
+      <dd>
+        <%= link_to t("footer.nav.articles.arts"),           category_path(:arts)           %>,
         <%= link_to t("footer.nav.articles.adventure"),      category_path(:adventure)      %>,
         <%= link_to t("footer.nav.articles.analysis"),       category_path(:analysis)       %>,
         <%= link_to t("footer.nav.articles.current_events"), category_path(:current_events) %>,
         <%= link_to t("footer.nav.articles.history"),        category_path(:history)        %>,
-        <%= link_to t("footer.nav.articles.news"),       "/news"       %>,
+        <%= link_to t("footer.nav.articles.news"),           category_path(:news)           %>,
         <%= link_to t("footer.nav.articles.technology"),     category_path(:technology)     %>
+      </dd>
+
+      <dt class="nav-label nav-label-articles">
+        <%= link_to t("footer.nav.projects.label"), category_path(:projects) %>
+      </dt>
+      <dd>
+        <%= link_to t("footer.nav.projects.kickstarter"), "/2017/01/31/help-us-publish-books-about-borders-and-democracy-no-wall-they-can-build-from-democracy-to-freedom" %>
       </dd>
 
       <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), "/books" %></dt>

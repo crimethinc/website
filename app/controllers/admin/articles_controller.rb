@@ -81,18 +81,16 @@ class Admin::ArticlesController < Admin::AdminController
   def organize_article
     tag_assigner = TagAssigner.parse_glob(params[:tags])
     tag_assigner.assign_tags_to!(@article)
-
-    @article.save_categories!(params[:categories])
   end
 
   def article_params
     params.require(:article).permit(:title, :subtitle, :content, :content_format,
                                     :year, :month, :day, :download_url, :tweet,
                                     :slug, :draft_code, :status_id, :summary,
-                                    :published_at, :tags, :categories,
+                                    :published_at, :tags, :collection_id, :short_path,
                                     :image, :image_description, :css, :hide_layout,
                                     :header_background_color, :header_text_color,
-                                    :collection_id, :short_path,
+                                    category_ids: [],
                                     contributions_attributes: [
                                       :id, :contributor_id, :role_id,:_destroy
                                     ])
