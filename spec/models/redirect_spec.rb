@@ -35,7 +35,7 @@ RSpec.describe Redirect, type: :model do
     subject { redirect.target_path }
 
     context "with leading domain" do
-      let(:redirect) { Redirect.new(target_path: "http://crimethinc.com/?query=true") }
+      let(:redirect) { Redirect.new(source_path: "source", target_path: "http://crimethinc.com/?query=true") }
 
       it { is_expected.to eq("/?query=true") }
     end

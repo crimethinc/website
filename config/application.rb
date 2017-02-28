@@ -15,7 +15,6 @@ module Magazine
     # -- all .rb files in that directory are automatically loaded.
 
     config.middleware.use Rack::Redirect
-
     config.middleware.use Rack::Attack
 
     # Monitor database

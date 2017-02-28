@@ -8,6 +8,8 @@ class Category < ApplicationRecord
 
   before_validation :strip_whitespace, on: [:create, :update]
 
+  default_scope { order("name ASC") }
+
   def strip_whitespace
     self.name = name.strip
   end

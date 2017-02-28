@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get "books/evasion",      to: redirect("http://evasionbook.com"), status: 301
   get "books/evasion.html", to: redirect("http://evasionbook.com"), status: 301
 
+  # Store Redirect and support page
+  get "store",               to: redirect("https://store.crimethinc.com")
+  get "store/order-success", to: "about#post_order_success", as: :post_order_success
+
 
   # Homepage
   root to: "home#index"
@@ -51,12 +55,12 @@ Rails.application.routes.draw do
 
 
   # Categories
-  get "categories/:slug/page(/1)", to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
+  get "categories/:slug/page(/1)",     to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
   get "categories/:slug(/page/:page)", to: "categories#show", as: :category
   get "categories/:slug/feed",         to: "categories#feed", defaults: { format: "atom" }, as: :category_feed
 
   # Tags
-  get "tags/:slug/page(/1)", to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
+  get "tags/:slug/page(/1)",     to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
   get "tags/:slug(/page/:page)", to: "tags#show", as: :tag
   get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
 
@@ -64,13 +68,13 @@ Rails.application.routes.draw do
   get "read",               to: "about#read",        as: :read
   get "watch",              to: redirect("videos"),  as: :watch_redirect
   get "listen",             to: redirect("podcast"), as: :listen_redirect
-  get "get",                to: redirect("http://store.crimethinc.com"), as: :get_redirect
+  get "get",                to: redirect("store"),   as: :get_redirect
 
 
   # Podcast
-  get "podcast/feed", to: "podcast#feed",   as: :podcast_feed, defaults: { format: "rss" }
-  get "podcast",      to: "podcast#index",  as: :podcast
-  get "podcast/:id",  to: "podcast#show",   as: :episode
+  get "podcast/feed",            to: "podcast#feed",   as: :podcast_feed, defaults: { format: "rss" }
+  get "podcast",                 to: "podcast#index",  as: :podcast
+  get "podcast/:id",             to: "podcast#show",   as: :episode
   get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
 
 
@@ -84,8 +88,8 @@ Rails.application.routes.draw do
 
   # Videos
   get "videos/page(/1)", to: redirect { |_, _| "/videos" }
-  get "videos",       to: "videos#index", as: :videos
-  get "videos/:slug", to: "videos#show",  as: :video
+  get "videos",          to: "videos#index", as: :videos
+  get "videos/:slug",    to: "videos#show",  as: :video
 
 
   # Site search
@@ -110,19 +114,20 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :books, concerns: :paginatable
+    resources :books,        concerns: :paginatable
+    resources :categories,   concerns: :paginatable
     resources :contributors, concerns: :paginatable
-    resources :episodes, concerns: :paginatable
-    resources :links, concerns: :paginatable
-    resources :pages, concerns: :paginatable
-    resources :podcasts, concerns: :paginatable
-    resources :redirects, concerns: :paginatable
-    resources :roles, concerns: :paginatable
-    resources :settings, concerns: :paginatable
-    resources :subscribers, concerns: :paginatable
-    resources :themes, concerns: :paginatable
-    resources :users, concerns: :paginatable
-    resources :videos, concerns: :paginatable
+    resources :episodes,     concerns: :paginatable
+    resources :links,        concerns: :paginatable
+    resources :pages,        concerns: :paginatable
+    resources :podcasts,     concerns: :paginatable
+    resources :redirects,    concerns: :paginatable
+    resources :roles,        concerns: :paginatable
+    resources :settings,     concerns: :paginatable
+    resources :subscribers,  concerns: :paginatable
+    resources :themes,       concerns: :paginatable
+    resources :users,        concerns: :paginatable
+    resources :videos,       concerns: :paginatable
   end
 
 
@@ -151,10 +156,6 @@ Rails.application.routes.draw do
 
   # Ping and Health monitoring
   mount NewRelicPing::Engine, at: "/status"
-
-  # Store Redirect and support page
-  get "store", to: redirect("https://store.crimethinc.com")
-  get "store/order-success", to: "about#post_order_success", as: :post_order_success
 
   # Pages
   get "*path", to: "pages#show", as: :page, via: :all

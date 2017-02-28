@@ -31,6 +31,10 @@ en:
         news: News
         technology: Technology
 
+      projects:
+        label: Projects
+        technology: Kickstarter campaign for books about Borders and Democracy
+
       books:
         label: Books
         contradictionary: Contradictionary
@@ -45,7 +49,7 @@ en:
       podcast:
         label: Podcast
         feed: RSS
-        the_ex_worker: "The Ex-Worker"
+        the_ex_worker: The Ex-Worker
 
       journal:
         label: Journal
@@ -88,7 +92,7 @@ en:
         signup_button_text: Sign Up
       social:
         heading: Find Us Elsewhere
-        description: "Keep up with our activities on the following additional platforms:"
+        description: Keep up with our activities on the following additional platforms.
 
     mantra:
       - If your heart is free, the ground you stand on is liberated territory. Defend it.
@@ -120,12 +124,19 @@ en:
       previous: "&lsaquo;"
       next: "&rsaquo;"
       truncate: "&hellip;"
+      next_article: "%{title}: Next &rsaquo;"
+      previous_article: "&lsaquo; Previous: %{title}"
+      next_month: "&lsaquo; Next Month (%{month})"
+      previous_month: "(%{month}) Previous Month &rsaquo;"
+      next_year: "&lsaquo; Next Year (%{year})"
+      previous_year: "(%{year}) Previous Year &rsaquo;"
+
   helpers:
     page_entries_info:
       entry:
-        zero: "entries"
-        one: "entry"
-        other: "entries"
+        zero: entries
+        one: entry
+        other: entries
       one_page:
         display_entries:
           zero: "No %{entry_name} found"

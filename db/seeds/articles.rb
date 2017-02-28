@@ -66,7 +66,8 @@ Dir.glob("#{filepath}/*/").each do |f|
 
     published_at = features_timestamps[slug]
     content      = File.read(f + "/index.html")
-    image        = doc.css("meta[name='twitter:image:src']").attribute("content").value
+    image        = doc.css("meta[name='twitter:image:src']").attribute("content").value rescue nil
+
 
     # Save the Article
     article = Article.create!(
