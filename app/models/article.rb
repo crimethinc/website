@@ -22,6 +22,7 @@ class Article < ApplicationRecord
   before_validation :downcase_content_format,  on: [:create, :update]
 
   validates :short_path, uniqueness: true
+  validate :redirect_source_path_unique
 
   before_save :create_redirect
 
@@ -79,8 +80,12 @@ class Article < ApplicationRecord
   end
 
   def create_redirect
-    unless Redirect.exists?(source_path: short_path, target_path: path)
+    unless Redirect.exists?(source_path: short_path, target_path: path) || short_path.blank?
       Redirect.create(source_path: short_path, target_path: path)
     end
+  end
+
+  def redirect_source_path_unique
+    errors.add('Short path is already defined by a redirect') if Redirect.where(source_path: self.short_path).exists? || Redirect.where(source_path: "/"+self.short_path).exists?
   end
 end
