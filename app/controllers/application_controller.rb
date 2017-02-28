@@ -136,12 +136,13 @@ class ApplicationController < ActionController::Base
         embed_tag_pieces = embed_tag.split(" ")
 
         url     = embed_tag_pieces.shift
+        id      = remove_id(embed_tag_pieces)
         link    = if embed_tag_pieces.present?
           embed_tag_pieces.pop if url_or_path?(embed_tag_pieces.last)
         end
         caption = embed_tag_pieces.join(" ")
 
-        expanded_embed(url, caption: caption, link: link)
+        expanded_embed(url, caption: caption, link: link, id: id)
       end
     end
 
@@ -150,7 +151,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :expanded_embeds
 
-  def expanded_embed(url, caption: nil, link: nil)
+  def expanded_embed(url, caption: nil, link: nil, id: nil)
     url  = URI.parse(url)
 
     case url.host
@@ -190,11 +191,24 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    render_to_string partial: "/articles/embeds/#{slug}.html.erb", locals: { embed_id: embed_id || url, caption: caption, link: link }
+    render_to_string partial: "/articles/embeds/#{slug}.html.erb", locals: { embed_id: embed_id || url, caption: caption, link: link, id: id }
   end
   helper_method :expanded_embed
 
   def url_or_path?(string)
     string.match?(/^(http|\/)\S+/)
+  end
+
+  def remove_id(pieces)
+    return unless pieces.present?
+
+    id_string = pieces.detect { |piece| piece =~ /id:\S+/ }
+
+    if id_string
+      id = id_string.split(":").last
+      pieces.delete(id_string)
+
+      id
+    end
   end
 end
