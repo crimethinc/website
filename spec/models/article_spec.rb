@@ -115,4 +115,23 @@ describe Article do
       end
     end
   end
+
+  describe "short_path_redirect_creation" do
+    let(:status)  { Status.new(name: "published") }
+    let(:published_at) { Date.current }
+    context "successfull creates a short_path redirect" do
+      it "returns true" do
+        article = Article.create(title: 'test', collection_id: nil, short_path: SecureRandom.hex, status: status, published_at: published_at)
+        expect(Redirect.last.source_path[/\w+/]).to eq article.short_path
+      end
+    end
+
+    context "doesn't create a short_path redirect if redirect exists" do
+      it "should raise error" do
+        redirect = Redirect.create!(source_path: "/tester", target_path: "/test/test")
+        article = Article.new(title: 'test', collection_id: nil, short_path: "tester", status: status, published_at: published_at)
+        expect{article.save!}.to raise_error
+      end
+    end
+  end
 end

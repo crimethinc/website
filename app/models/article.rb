@@ -77,6 +77,6 @@ class Article < ApplicationRecord
   end
 
   def redirect_source_path_unique
-    errors.add('Short path is already defined by a redirect') if Redirect.where(source_path: self.short_path).exists? || Redirect.where(source_path: "/"+self.short_path).exists?
+    errors.add(:short_path, ' is already defined by a redirect') if Redirect.where(source_path: "/"+self.short_path).exists?
   end
 end
