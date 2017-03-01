@@ -22,20 +22,19 @@ describe Article do
 
   describe "#slug_exists?" do
     Status.create!(name: "published")
-    let(:published_at) { Date.current }
-    let(:article) { Article.new(slug: "slug", published_at: date, short_path: SecureRandom.hex, status: Status.last, published_at: published_at) }
+    let(:article) { Article.new(slug: "slug", published_at: date, short_path: SecureRandom.hex, status: Status.last) }
     let(:date)    { Date.parse("2017-01-01") }
 
     subject { article.slug_exists? }
 
     context "with the same slug on the same date" do
-      before { Article.create(slug: "slug", published_at: date, short_path: SecureRandom.hex, status: Status.last, published_at: published_at) }
+      before { Article.create(slug: "slug", published_at: date, short_path: SecureRandom.hex, status: Status.last) }
 
       it { is_expected.to be true }
     end
 
     context "with the same slug on a different date" do
-      before { Article.create(slug: "slug", published_at: date + 1.day, short_path: SecureRandom.hex, status: Status.last, published_at: published_at) }
+      before { Article.create(slug: "slug", published_at: date + 1.day, short_path: SecureRandom.hex, status: Status.last) }
 
       it { is_expected.to be false }
     end
