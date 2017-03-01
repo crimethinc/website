@@ -58,4 +58,16 @@ RSpec.describe Redirect, type: :model do
 
     it { is_expected.to include("redirects to itself") }
   end
+
+  describe "#article_short_path_unique" do
+    let(:status)  { Status.new(name: "published") }
+    let(:published_at) { Date.current }
+    context "shouldnt create a redirect if short path exists" do
+      it "should raise error" do
+        article = Article.create!(title: 'test', collection_id: nil, short_path: "tester", status: status, published_at: published_at)
+        redirect = Redirect.new(source_path: "/tester", target_path: "/test/test")
+        expect{redirect.save!}.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Source path has already been taken, Source path is already taken by article short path')
+      end
+    end
+  end
 end
