@@ -3,6 +3,7 @@ require "rails_helper"
 RSpec.describe CategoriesController, type: :controller do
 
   describe "GET #show" do
+    let(:status)  { Status.new(name: "published") }
     it "redirects with a normalized slug" do
       slug = "underscored_slug"
       normalized_slug = slug.sub("_", "-")
@@ -14,7 +15,7 @@ RSpec.describe CategoriesController, type: :controller do
 
     it "renders on a category with articles" do
       category = Category.create(name: "Test Category")
-      article = Article.create(title: "Test", published_at: 1.day.ago, category_ids: [category.id])
+      article = Article.create(title: "Test", published_at: 1.day.ago, category_ids: [category.id], short_path: SecureRandom.hex, status: Status.last)
       category = Category.last
 
       get :show, params: {slug: category.slug}
@@ -32,9 +33,10 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   describe "GET #feed" do
+    let(:status)  { Status.new(name: "published") }
     it "renders on a category with articles" do
       category = Category.create(name: "Test Category")
-      article = Article.create(title: "Test", published_at: 1.day.ago, category_ids: [category.id])
+      article = Article.create(title: "Test", published_at: 1.day.ago, category_ids: [category.id], short_path: SecureRandom.hex, status: Status.last)
       category = Category.last
 
       get :feed, params: {slug: category.slug}
