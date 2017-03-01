@@ -79,7 +79,7 @@ Dir.glob("#{filepath}/*/").each do |f|
       status_id:      published_status.id,
       content_format: "html",
       hide_layout:    true,
-      short_path: (0...8).map { ('a'..'z').to_a[rand(26)] }.join
+      short_path: SecureRandom.hex
     )
 
     # Prefix slug with "feature-" to avoid collision with blog post with the same title on that day
@@ -200,7 +200,7 @@ Dir.glob("#{filepath}/*").each do |f|
       image: image,
       status_id: published_status.id,
       content_format: "html",
-      short_path: (0...8).map { ('a'..'z').to_a[rand(26)] }.join
+      short_path: SecureRandom.hex
     )
 
     # Add the Article to its Category
@@ -244,7 +244,7 @@ html_doc.css(".h-entry").each do |entry|
                             content_format: "html",
                             status_id:      status_id,
                             header_background_color: "#444",
-                            short_path: (0...8).map { ('a'..'z').to_a[rand(26)] }.join)
+                            short_path: SecureRandom.hex
 
   # Add the Article to its Category
   category.articles << article
@@ -312,7 +312,7 @@ articles.each_with_index do |article_params, index|
   # article_params[:published_at]   = published_at
   article_params[:status_id]      = published_status.id
   article_params[:content_format] = "html"
-  article_params[:short_path]     = (0...8).map { ('a'..'z').to_a[rand(26)] }.join
+  article_params[:short_path]     = SecureRandom.hex
 
   # Save the Article
   article = Article.create!(article_params)
@@ -404,7 +404,7 @@ Dir.glob("#{filepath}/*").each do |f|
       content_format: "html",
       hide_layout:    false,
       header_background_color: header_background_color,
-      short_path: (0...8).map { ('a'..'z').to_a[rand(26)] }.join
+      short_path: SecureRandom.hex
     )
 
     # Add the Article to its Category
@@ -480,7 +480,7 @@ articles.each_with_index do |article_params, index|
 
   # published
   article_params[:status_id] = published_status.id
-  article_params[:short_path] = (0...8).map { ('a'..'z').to_a[rand(26)] }.join
+  article_params[:short_path] = SecureRandom.hex
 
   # Save the Article
   article = Article.create!(article_params)

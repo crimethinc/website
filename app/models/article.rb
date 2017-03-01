@@ -71,7 +71,7 @@ class Article < ApplicationRecord
   end
 
   def create_redirect
-    unless Redirect.exists?(source_path: short_path, target_path: path) || short_path.blank?
+    unless Redirect.exists?(source_path: "/"+short_path, target_path: path) || short_path.blank?
       Redirect.create(source_path: short_path, target_path: path)
     end
   end

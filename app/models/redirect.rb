@@ -64,7 +64,7 @@ class Redirect < ApplicationRecord
   end
 
   def article_short_path_unique
-    errors.add(:source_path, 'is already taken') if Article.where(short_path: self.source_path).exists?
+    errors.add(:source_path, 'is already taken') if Article.where(short_path: self.source_paths.chomp("/")).exists?
   end
 
 end
