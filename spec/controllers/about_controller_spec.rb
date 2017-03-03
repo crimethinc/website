@@ -2,11 +2,11 @@ require "rails_helper"
 
 RSpec.describe AboutController, type: :controller do
   describe "GET #read" do
-    let(:status)  { Status.new(name: "published") }
-    let!(:featured_current_events) { Article.create!(slug: "feature-report-back-from-the-battle-for-sacred-ground", short_path: SecureRandom.hex, status: status, published_at: Date.current) }
-    let!(:featured_strategy_and_analysis) { Article.create!(slug: "feature-understanding-the-kurdish-resistance-historical-overview-eyewitness-report", short_path: SecureRandom.hex, status: status, published_at: Date.current) }
-    let!(:featured_theory_and_critique) { Article.create!(slug: "feature-from-democracy-to-freedom", short_path: SecureRandom.hex, status: status, published_at: Date.current) }
-    let!(:featured_classics) { Article.create!(slug: "why-we-dont-make-demands", short_path: SecureRandom.hex, status: status, published_at: Date.current) }
+    let(:status)  { FactoryGirl.create(:status) }
+    let!(:featured_current_events) { FactoryGirl.create(:article, slug:"feature-report-back-from-the-battle-for-sacred-ground", status: status, published_at: Date.current) }
+    let!(:featured_strategy_and_analysis) { FactoryGirl.create(:article, slug:"feature-understanding-the-kurdish-resistance-historical-overview-eyewitness-report", status: status, published_at: Date.current)}
+    let!(:featured_theory_and_critique) { FactoryGirl.create(:article, slug:"feature-from-democracy-to-freedom", status: status, published_at: Date.current) }
+    let!(:featured_classics) { FactoryGirl.create(:article, slug:"why-we-dont-make-demands", status: status, published_at: Date.current) }
 
     it "assigns all instance variables" do
       get :read

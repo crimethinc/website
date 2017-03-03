@@ -244,7 +244,7 @@ html_doc.css(".h-entry").each do |entry|
                             content_format: "html",
                             status_id:      status_id,
                             header_background_color: "#444",
-                            short_path: SecureRandom.hex
+                            short_path: SecureRandom.hex)
 
   # Add the Article to its Category
   category.articles << article
