@@ -5,9 +5,13 @@
   }
 
   .h-feed {
-    margin:  0 0 $border-size-xlarge 0;
+    margin:  0 0 $border-size-xsmall 0;
     padding: 0;
     list-style: none;
+  }
+
+  .pagination {
+    margin: 0 0 $border-size-xlarge 0;
   }
 
   // all entries in the feed (including first/featured)

@@ -124,6 +124,8 @@ en:
       previous: "&lsaquo;"
       next: "&rsaquo;"
       truncate: "&hellip;"
+      next_page: "Next &rsaquo;"
+      previous_page: "&lsaquo; Previous"
       next_article: "%{title}: Next &rsaquo;"
       previous_article: "&lsaquo; Previous: %{title}"
       next_month: "&lsaquo; Next Month (%{month})"
