@@ -4,23 +4,16 @@
     <h2>A Selection of Videos from CrimethInc. Perpetual Motion Pictures</h2>
   </header>
 
-  <div>
-    <% @videos.in_groups_of(2).each do |row| %>
-
-      <div class="row">
-        <% row.each do |video| %>
-          <div class="column column-half section h-entry">
-            <% unless video.blank? %>
-              <%#= image_tag video.image, alt: video.image_description, class: "u-image" %>
-              <h1 class="p-name"><%= link_to video.title, video_path(video.slug) %></h1>
-              <%= render video %>
-            <% end %>
-          </div>
+  <div class="video-flexbox-container">
+    <% @videos.each do |video| %>
+      <div class="column column-half section h-entry">
+        <% unless video.blank? %>
+          <%#= image_tag video.image, alt: video.image_description, class: "u-image" %>
+          <h1 class="p-name"><%= link_to video.title, video_path(video.slug) %></h1>
+          <%= render video %>
         <% end %>
-
-      </div> <!-- .row -->
+      </div>
     <% end %>
-
   </div> <!-- .e-content -->
 </div>
 
