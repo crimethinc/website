@@ -166,7 +166,7 @@
 
     }
 
-    > :not(figure):not(:first-child) {
+    > :not(.video-container):not(:first-child) {
       max-width: $large-tablet - 200px;
     }
 
