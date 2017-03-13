@@ -2,7 +2,7 @@ module ApplicationHelper
 
   def page_title
     if @title.present?
-      t(:site_name) + " : " + @title
+      t(:site_name) + prepend_admin_if_needed + @title
     else
       t(:site_name)
     end
@@ -51,5 +51,15 @@ module ApplicationHelper
 
   def br_to_p(html)
     simple_format(html, {}, sanitize: false).gsub("\n<br />", "</p><p>").html_safe
+  end
+
+  private
+
+  def prepend_admin_if_needed
+    if controller_path.match(/\Aadmin\/.*\z/).present?
+      " #{t('admin.title_prepend')} : "
+    else
+      ' : '
+    end
   end
 end

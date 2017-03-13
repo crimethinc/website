@@ -5,19 +5,23 @@ class Admin::RedirectsController < Admin::AdminController
   # /admin/redirects
   def index
     @redirects = Redirect.order(:source_path).page(params[:page])
+    @title = admin_title
   end
 
   # /admin/redirects/1
   def show
+    @title = admin_title(@redirect, [:source_path])
   end
 
   # /admin/redirects/new
   def new
     @redirect = Redirect.new
+    @title = admin_title
   end
 
   # /admin/redirects/1/edit
   def edit
+    @title = admin_title(@redirect, [:id, :source_path])
   end
 
   # /admin/redirects

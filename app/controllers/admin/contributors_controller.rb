@@ -5,19 +5,23 @@ class Admin::ContributorsController < Admin::AdminController
   # /admin/contributors
   def index
     @contributors = Contributor.all
+    @title = admin_title
   end
 
   # /admin/contributors/1
   def show
+    @title = admin_title(@contributor, [:name])
   end
 
   # /admin/contributors/new
   def new
     @contributor = Contributor.new
+    @title = admin_title
   end
 
   # /admin/contributors/1/edit
   def edit
+    @title = admin_title(@contributor, [:id, :name])
   end
 
   # /admin/contributors

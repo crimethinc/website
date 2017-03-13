@@ -6,19 +6,23 @@ class Admin::SettingsController < Admin::AdminController
   def index
     @body_id = "settings"
     @settings = Setting.order("name ASC").page(params[:page])
+    @title = admin_title
   end
 
   # /admin/settings/1
   def show
+    @title = admin_title(@setting, [:name])
   end
 
   # /admin/settings/new
   def new
     redirect_to [:admin, :settings]
+    @title = admin_title
   end
 
   # /admin/settings/1/edit
   def edit
+    @title = admin_title(@setting, [:id, :name])
   end
 
   # /admin/settings

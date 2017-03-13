@@ -5,15 +5,18 @@ class Admin::UsersController < Admin::AdminController
   # /admin/users
   def index
     @users = User.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/users/1
   def show
+    @title = admin_title(@user, [:name])
   end
 
   # /admin/users/new
   def new
     @user = User.new
+    @title = admin_title
   end
 
   # /admin/users/new
@@ -29,6 +32,7 @@ class Admin::UsersController < Admin::AdminController
 
   # /admin/users/edit/1
   def edit
+    @title = admin_title(@user, [:id, :name])
   end
 
   # /admin/users/edit/1

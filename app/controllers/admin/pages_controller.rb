@@ -6,19 +6,23 @@ class Admin::PagesController < Admin::AdminController
   # /admin/pages
   def index
     @pages = Page.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/pages/1
   def show
+    @title = admin_title(@page, [:title])
   end
 
   # /admin/pages/new
   def new
     @page = Page.new
+    @title = admin_title
   end
 
   # /admin/pages/1/edit
   def edit
+    @title = admin_title(@page, [:id, :title, :subtitle])
   end
 
   # /admin/pages
