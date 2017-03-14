@@ -1,6 +1,7 @@
 class Redirect < ApplicationRecord
-  validates :source_path, presence: true
+  validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
+  validate :article_short_path_unique
 
   validate :noncircular_redirect
 
@@ -60,6 +61,10 @@ class Redirect < ApplicationRecord
 
   def noncircular_redirect
     errors.add(:target_path, "redirects to itself") if source_path == target_path
+  end
+
+  def article_short_path_unique
+    errors.add(:source_path, 'is already taken by article short path') if Article.where(short_path: self.source_path[/\w+/]).exists?
   end
 
 end

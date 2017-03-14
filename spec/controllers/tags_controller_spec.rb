@@ -3,8 +3,9 @@ require "rails_helper"
 RSpec.describe TagsController, type: :controller do
 
   describe "GET #show" do
+    let(:status)  { FactoryGirl.create(:status) }
     it "renders on a tag with articles" do
-      article = Article.create(title: "Test", published_at: 1.day.ago)
+      article = FactoryGirl.create(:article, title: "Test", published_at: 1.day.ago, status: status)
       article.tags << Tag.new(name: "Test Tag")
       tag = Tag.last
 
