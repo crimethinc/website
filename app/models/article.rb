@@ -22,9 +22,9 @@ class Article < ApplicationRecord
   before_validation :downcase_content_format,  on: [:create, :update]
 
   validates :short_path, uniqueness: true
-  validate :redirect_source_path_unique
+  # validate :redirect_source_path_unique
 
-  before_save :create_redirect
+  # before_save :create_redirect
 
   default_scope { order("published_at DESC") }
   scope :live,     -> { where("published_at < ?", Time.now) }
