@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
       end
 
     else
-      @article = Article.where(year:  params[:year]
+      @article = Article.live.where(year:  params[:year]
                        ).where(month: params[:month]
                        ).where(day:   params[:day]
                        ).where(slug:  params[:slug]).first
@@ -38,6 +38,7 @@ class ArticlesController < ApplicationController
       return redirect_to root_path
     end
 
+    # redirect from draft URL to proper URL
     if @article.published? && params[:draft_code].present?
       return redirect_to @article.path
     end

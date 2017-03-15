@@ -15,7 +15,7 @@ class Archive
   def articles
     return @articles if defined?(@articles)
 
-    @articles = Article.published.root.all
+    @articles = Article.published.live.root.all
 
     @articles = @articles.where(year:  year)  if year.present?
     @articles = @articles.where(month: month) if month.present?
