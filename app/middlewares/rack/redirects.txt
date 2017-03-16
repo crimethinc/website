@@ -2093,6 +2093,7 @@
 /blog/?p=98 /2007/03/25/da-guide-goes-to-second-printing
 /blog/?p=986 /2009/10/29/let-the-dumpsters-roll
 /blog/feed /feed
+/blog/feed/rss /feed
 /blog?p=10 /2006/08/11/the-shape-of-punk-to-come
 /blog?p=1004 /2009/11/05/testament-kiss-me-through-the-phone
 /blog?p=101 /2007/03/28/crimethinc-coming-to-your-town-maybe
