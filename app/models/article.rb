@@ -21,7 +21,7 @@ class Article < ApplicationRecord
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
 
-  validates :short_path, uniqueness: true
+  validates :short_path, uniqueness: true, unless: "short_path.blank?"
   # validate :redirect_source_path_unique
 
   # before_save :create_redirect

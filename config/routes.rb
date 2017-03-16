@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   # Homepage
   root to: "home#index"
+
+
+
   get "page(/1)", to: redirect { |_, _| "/" }
   get "page/:page", to: "home#index"
 
