@@ -27,11 +27,19 @@
     position: relative;
     text-align: left;
     width: 100%;
-    height: 150pt;
     height: 300pt;
 
     /* for vertically aligning title/subtitle/contributors */
     transform-style: preserve-3d;
+
+    @media screen and (min-width: $small-phone) {
+      height: 300pt;
+    }
+
+    @media screen and (min-width: $small-tablet) {
+      height: 400pt;
+      text-align: left;
+    }
 
     a.read-more {
       text-indent: -9999em;
@@ -44,17 +52,33 @@
     }
 
     header {
+      margin: 0 $border-size-small;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      margin: 0 $border-size-small;
       z-index: 10;
       overflow: hidden;
+
+      @media screen and (min-width: $small-phone) {
+        margin: 0 $border-size-medium;
+      }
+
+      @media screen and (min-width: $large-tablet) {
+        margin: 0 50pt;
+      }
+    }
+
+    .p-name {
+      padding: $border-size-medium;
+
+      @media screen and (min-width: $small-phone) {
+        padding: $border-size-medium;
+      }
     }
 
     h1,
     h2 {
-      margin:  0;
+      margin: 0;
       padding: 0;
       text-shadow: 0 0 2rem $color-black;
     }
@@ -65,12 +89,29 @@
       letter-spacing: -.01em;
       line-height: 1em;
       margin-bottom: .1em;
+
+      @media screen and (min-width: $small-phone) {
+        font-size: 2em;
+        margin-bottom: 0.2em;
+      }
+
+      @media screen and (min-width: $small-tablet) {
+        font-size: 4em;
+      }
     }
 
     h2 {
       font-size: 1em;
       line-height: 1.25em;
       text-shadow: 0 0 1rem $color-black;
+
+      @media screen and (min-width: $small-phone) {
+        font-size: 1.25em;
+      }
+
+      @media screen and (min-width: $small-tablet) {
+        font-size: 1.5em;
+      }
     }
 
     a {
@@ -80,80 +121,8 @@
 
     .contributors {
       display: none;
-    }
-  } /* .h-entry */
 
-  // all entries in the feed except first/featured
-  .row .h-entry {
-    height: 100pt;
-    width: 100%;
-
-    h1 {
-      font-size: 1.25em;
-    }
-
-    h2 {
-      font-size: .8em;
-      font-weight: 600;
-    }
-  }
-
-  /* narrower desktop browser window in between phone and tablet */
-  @media screen and (min-width: 500px) {
-    .row .h-entry {
-      height: 200pt;
-      width: 100%;
-
-      h1 {
-        font-size: 1.5em;
-      }
-
-      h2 {
-        font-size: 1em;
-      }
-    }
-
-    .h-entry {
-      height: 300pt;
-
-      header {
-        margin: 0 $border-size-large;
-      }
-
-      h1 {
-        font-size: 2em;
-        margin-bottom: .2em;
-      }
-
-      h2 {
-        font-size: 1.25em;
-      }
-    }
-  }
-
-
-  @media screen and (min-width: $small-tablet) {
-    .row {
-      display: flex;
-    }
-
-    .h-entry {
-      height: 400pt;
-      text-align: left;
-
-      header {
-        margin: 0 50pt;
-      }
-
-      h1 {
-        font-size: 4em;
-      }
-
-      h2 {
-        font-size: 1.5em;
-      }
-
-      .contributors {
+      @media screen and (min-width: $small-tablet) {
         display: inline-block;
         margin: 0 auto;
 
@@ -167,24 +136,61 @@
           text-align: left;
         }
       }
-    } /* .h-entry */
+    }
+  } /* .h-entry */
 
-    .row .h-entry:first-of-type {
-      border-right: $border-size-medium solid $color-white;
+  // all entries in the feed except first/featured
+  .row {
+    @media screen and (min-width: $small-tablet) {
+      display: flex;
     }
 
-    .row .h-entry {
-      width: 50%;
-      height: 300pt;
+    .h-entry {
+      height: 100pt;
+      width: 100%;
+
+      &:first-of-type {
+        @media screen and (min-width: $small-tablet) {
+          border-right: $border-size-medium solid $color-white;
+        }
+      }
+
+      @media screen and (min-width: $small-phone) {
+        height: 200pt;
+        width: 100%;
+      }
+
+      @media screen and (min-width: $small-tablet) {
+        height: 300pt;
+        width: 50%;
+      }
 
       h1 {
-        font-size: 2em;
+        font-size: 1.25em;
+
+        @media screen and (min-width: $small-phone) {
+          font-size: 1.5em;
+        }
+
+        @media screen and (min-width: $small-tablet) {
+          font-size: 2em;
+        }
       }
 
       h2 {
-        font-size: 1.5em;
+        font: {
+          size: 0.8em;
+          weight: 600;
+        }
+
+        @media screen and (min-width: $small-phone) {
+          font-size: 1em;
+        }
+
+        @media screen and (min-width: $small-tablet) {
+          font-size: 1.5em;
+        }
       }
     }
   }
-
 } /* #home */
