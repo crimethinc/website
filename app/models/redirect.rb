@@ -1,17 +1,19 @@
 class Redirect < ApplicationRecord
+  before_validation :strip_leading_domain_from_source_path, on: [:create, :update]
+  before_validation :strip_leading_domain_from_target_path, on: [:create, :update]
+  before_validation :add_leading_slash,                     on: [:create, :update]
+
   validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
   # validate :article_short_path_unique
 
   validate :noncircular_redirect
 
-  before_validation :strip_leading_domain, on: [:create, :update]
-  before_validation :add_leading_slash,    on: [:create, :update]
-  after_save :delete_duplicates,           on: [:create, :update]
-
   def name
     "#{source_path} to #{target_path}"
   end
+
+  private
 
   def add_leading_slash
     unless self.source_path =~ /^\/|http/
@@ -23,38 +25,51 @@ class Redirect < ApplicationRecord
     end
   end
 
-  def strip_leading_domain
+  def strip_leading_domain_from_source_path
     domains_regex = /crimethinc|cwc\.im/
 
-    [self.source_path, self.target_path].each_with_index do |path, index|
-      url = URI.parse(path.strip)
-      if url.respond_to?(:host) && url.host =~ domains_regex
-        new_path = url.path
+    path = self.source_path.strip
+    path = path.gsub(/http:\/\//, "")
+    path = path.gsub(/https:\/\//, "")
+    path = "http://" + path
 
-        if url.query.present?
-          new_path << "?#{url.query}"
-        end
+    url = URI.parse(path)
+    if url.respond_to?(:host) && url.host =~ domains_regex
+      new_path = url.path
 
-        if url.fragment.present?
-          new_path << "##{url.fragment}"
-        end
-
-        if index.zero?
-          self.source_path = new_path
-        else
-          self.target_path = new_path
-        end
+      if url.query.present?
+        new_path << "?#{url.query}"
       end
-    end
 
+      if url.fragment.present?
+        new_path << "##{url.fragment}"
+      end
+
+      self.source_path = new_path
+    end
   end
 
-  private
+  def strip_leading_domain_from_target_path
+    domains_regex = /crimethinc|cwc\.im/
 
-  def delete_duplicates
-    previous_redirect = Redirect.where(source_path: self.source_path, target_path: self.target_path).where.not(id: self.id)
-    if previous_redirect.present?
-      self.destroy
+    path = self.target_path.strip
+    path = path.gsub(/http:\/\//, "")
+    path = path.gsub(/https:\/\//, "")
+    path = "http://" + path
+
+    url = URI.parse(path)
+    if url.respond_to?(:host) && url.host =~ domains_regex
+      new_path = url.path
+
+      if url.query.present?
+        new_path << "?#{url.query}"
+      end
+
+      if url.fragment.present?
+        new_path << "##{url.fragment}"
+      end
+
+      self.target_path = new_path
     end
   end
 
