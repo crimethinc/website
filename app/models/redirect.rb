@@ -5,10 +5,9 @@ class Redirect < ApplicationRecord
 
   validate :noncircular_redirect
 
-  before_save :strip_leading_domain,    on: [:create, :update]
-  before_save :add_leading_slash,       on: [:create, :update]
-
-  after_save :delete_duplicates,        on: [:create, :update]
+  before_validation :strip_leading_domain, on: [:create, :update]
+  before_validation :add_leading_slash,    on: [:create, :update]
+  after_save :delete_duplicates,           on: [:create, :update]
 
   def name
     "#{source_path} to #{target_path}"
