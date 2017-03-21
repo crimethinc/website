@@ -1,6 +1,40 @@
 require "rails_helper"
 
 describe Article do
+  describe 'validations' do
+    it 'validates tweet is less than 115 characters' do
+      invalid_article = build(:article, tweet: 'a' * 116)
+      valid_article   = build(:article, tweet: 'a' * 115)
+
+      expect(valid_article).to be_valid
+      expect(invalid_article).not_to be_valid
+    end
+
+    it 'validates summary is less than 200 characters' do
+      invalid_article = build(:article, summary: 'a' * 201)
+      valid_article   = build(:article, summary: 'a' * 200)
+
+      expect(valid_article).to be_valid
+      expect(invalid_article).not_to be_valid
+    end
+
+    it 'replace \r\n with \n in tweet and summary' do
+      new_article = build(
+        :article,
+        tweet: "ab\r\ncd" * 23,
+        summary: "a\r\nbc" * 50
+      )
+
+      expect(new_article).to be_valid
+      expect(new_article.tweet.length).to eq(115)
+
+      new_article.save!
+      expect(new_article.reload).to be_valid
+      expect(new_article.summary.length).to eq(200)
+      expect(new_article.tweet.length).to eq(115)
+    end
+  end
+
   describe "#path" do
     subject { article.path }
 
