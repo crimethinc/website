@@ -16,7 +16,7 @@ RSpec.describe Admin::AdminController, type: :controller do
 
     it 'creates title using keys passed in' do
       title = controller.admin_title(article, [:id, :title, :subtitle])
-      expect(title).to eq('Editing article 1 "title : sub"')
+      expect(title).to eq('Editing article 1 title : sub')
     end
 
     it 'logs error and does not blow up if invalid keys passed' do
@@ -29,7 +29,7 @@ RSpec.describe Admin::AdminController, type: :controller do
 
     it 'does not blow up if keys not in translation are passed in' do
       title = controller.admin_title(article, [:id, :title, :subtitle, :year])
-      expect(title).to eq('Editing article 1 "title : sub"')
+      expect(title).to eq('Editing article 1 title : sub')
     end
   end
 end
