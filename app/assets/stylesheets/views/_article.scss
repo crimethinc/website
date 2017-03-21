@@ -51,6 +51,15 @@
           @media screen and (min-width: $small-tablet) {
             padding: 50pt;
           }
+
+          &.shadowed {
+            h1 {
+              text-shadow: 0 0 1rem $color-black;
+            }
+            h2 {
+              text-shadow: 0 0 2rem $color-black;
+            }
+          }
         }
       }
 
@@ -62,7 +71,6 @@
         letter-spacing: -.01em;
         line-height: 1.2em;
         margin-bottom: .1em;
-        text-shadow: 0 0 1rem $color-black;
 
         @media screen and (min-width: $large-phone) {
           font-size: 4rem;
@@ -80,7 +88,6 @@
       h2 {
         font-size: 1em;
         line-height: 1.2em;
-        text-shadow: 0 0 2rem $color-black;
 
         @media screen and (min-width: $large-phone) {
           font-size: 2rem;
