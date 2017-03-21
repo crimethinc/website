@@ -5,19 +5,23 @@ class Admin::BooksController < Admin::AdminController
   # /admin/books
   def index
     @books = Book.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/books/1
   def show
+    @title = admin_title(@book, [:title, :subtitle])
   end
 
   # /admin/books/new
   def new
     @book = Book.new
+    @title = admin_title
   end
 
   # /admin/books/1/edit
   def edit
+    @title = admin_title(@book, [:id, :title, :subtitle])
   end
 
   # /admin/books

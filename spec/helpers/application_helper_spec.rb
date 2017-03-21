@@ -2,6 +2,17 @@ require "rails_helper"
 
 RSpec.describe ApplicationHelper, type: :helper do
   describe "#page_title" do
+
+    context "as admin" do
+      before do
+        assign(:title, "title")
+        controller.stub(:controller_path).and_return("admin/articles")
+      end
+
+      subject { helper.page_title }
+      it { is_expected.to eq("CrimethInc. Admin : title") }
+    end
+
     context "with title" do
       before { assign(:title, "title") }
 

@@ -5,19 +5,23 @@ class Admin::ThemesController < Admin::AdminController
   # /admin/themes
   def index
     @themes = Theme.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/themes/1
   def show
+    @title = admin_title(@theme, [:name])
   end
 
   # /admin/themes/new
   def new
     @theme = Theme.new
+    @title = admin_title
   end
 
   # /admin/themes/1/edit
   def edit
+    @title = admin_title(@theme, [:id, :name])
   end
 
   # /admin/themes

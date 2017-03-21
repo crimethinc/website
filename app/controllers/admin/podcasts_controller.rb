@@ -5,19 +5,23 @@ class Admin::PodcastsController < Admin::AdminController
   # /admin/podcasts
   def index
     @podcasts = Podcast.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/podcasts/1
   def show
+    @title = admin_title(@podcast, [:id, :title])
   end
 
   # /admin/podcasts/new
   def new
     @podcast = Podcast.new
+    @title = admin_title
   end
 
   # /admin/podcasts/1/edit
   def edit
+    @title = admin_title(@podcast, [:id, :title, :subtitle])
   end
 
   # /admin/podcasts

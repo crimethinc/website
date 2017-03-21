@@ -5,19 +5,23 @@ class Admin::SubscribersController < Admin::AdminController
   # /admin/subscribers
   def index
     @subscribers = Subscriber.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/subscribers/1
   def show
+    @title = admin_title(@subscriber, [:name])
   end
 
   # /admin/subscribers/new
   def new
     @subscriber = Subscriber.new
+    @title = admin_title
   end
 
   # /admin/subscribers/1/edit
   def edit
+    @title = admin_title(@subscriber, [:id, :name])
   end
 
   # /admin/subscribers

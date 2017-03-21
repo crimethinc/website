@@ -5,19 +5,23 @@ class Admin::RolesController < Admin::AdminController
   # /admin/roles
   def index
     @roles = Role.all
+    @title = admin_title
   end
 
   # /admin/roles/1
   def show
+    @title = admin_title(@role, [:name])
   end
 
   # /admin/roles/new
   def new
     @role = Role.new
+    @title = admin_title
   end
 
   # /admin/roles/1/edit
   def edit
+    @title = admin_title(@role, [:id, :name])
   end
 
   # /admin/roles
