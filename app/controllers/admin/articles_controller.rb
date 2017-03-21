@@ -94,6 +94,7 @@ class Admin::ArticlesController < Admin::AdminController
                                     :published_at, :tags, :collection_id, :short_path,
                                     :image, :image_description, :css, :hide_layout,
                                     :header_background_color, :header_text_color,
+                                    :header_shadow_text,
                                     category_ids: [],
                                     contributions_attributes: [
                                       :id, :contributor_id, :role_id,:_destroy

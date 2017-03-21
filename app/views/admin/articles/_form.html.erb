@@ -197,6 +197,16 @@
 
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
+          <%= f.check_box :header_shadow_text %>
+          <%= f.label :header_shadow_text, "Header Shadow Text" %>
+          <p class="help-block">
+            If selected, the title and subtile in the header will have a drop-shadow.
+            This is useful for images that are over light, or have some white spots
+            that make the title (in its default style) difficult to read.
+          </p>
+        </div>
+
+        <div class="form-group">
           <%= f.label :header_background_color, "Header Background Color" %>
           <%= f.text_field :header_background_color, class: "form-control input-lg" %>
           <p class="help-block">
