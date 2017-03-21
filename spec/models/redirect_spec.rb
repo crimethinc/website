@@ -29,8 +29,8 @@ RSpec.describe Redirect, type: :model do
     end
   end
 
-  describe "#strip_leading_domain" do
-    before { redirect.strip_leading_domain }
+  describe "#strip_leading_domain_from_target_path" do
+    before { redirect.strip_leading_domain_from_target_path }
 
     subject { redirect.target_path }
 

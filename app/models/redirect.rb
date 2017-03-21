@@ -13,8 +13,6 @@ class Redirect < ApplicationRecord
     "#{source_path} to #{target_path}"
   end
 
-  private
-
   def add_leading_slash
     unless self.source_path =~ /^\/|http/
       self.source_path = "/#{self.source_path}"
@@ -72,6 +70,8 @@ class Redirect < ApplicationRecord
       self.target_path = new_path
     end
   end
+
+  private
 
   def noncircular_redirect
     errors.add(:target_path, "redirects to itself") if source_path == target_path
