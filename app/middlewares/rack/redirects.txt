@@ -8986,3 +8986,7 @@ red read
 /twittershare /http://twitter.com/intent/tweet?text=Help%20%40crimethinc%20publish%20two%20ambitious%20new%20books%20about%20the%20issues%20of%20the%20hour%2C%20borders%20and%20democracy.%20http%3A%2F%2Fcwc.im%2Fkickstarter
 /facebookshare /https://www.facebook.com/dialog/feed?app_id=966242223397117&link=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2Fcrimethinc%2Fnew-books-about-borders-and-democracy-by-crimethin&picture=http%3A%2F%2Fcloudfront.crimethinc.com%2Fassets%2Fkickstarter%2FKS-project-image2048.jpg&name=Help%20Us%20Publish%20Books%20about%20Borders%20and%20Democracy&caption=%20&description=We%27re%20back%20with%20two%20ambitious%20books%20about%20the%20issues%20of%20the%20hour%2C%20borders%20and%20democracy.%20Please%20help%20us%20raise%20funds%20to%20publish%20*No%20Wall%20They%20Can%20Build*%C2%A0and%20*From%20Democracy%20to%20Freedom.*&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F&display=popup
 /j20live /2017/01/20/j20-live-updates
+http://www.crimethinc.com/about/newsarchive.html /1997
+/2009/05/05/rncdoc1html /2009/05/05/rnclegal
+/2009/05/05/rnclegal /2009/05/05/we-are-all-legal-workers-legal-support-at-the-rnc-and-after
+/2009/05/05/rncdoc0html /2009/05/05/rncdnc-2009-document-one
