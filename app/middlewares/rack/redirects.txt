@@ -9002,3 +9002,6 @@ http://www.crimethinc.com/about/newsarchive.html /1997
 /2012/08/14/montreal2 /2012/08/14/while-the-iron-is-hot-anarchist-analysis-of-the-revolt-in-quebec
 /2013/05/31/reconsidering-self-care /2013/05/31/for-all-we-care-reconsidering-self-care
 /2013/05/31/selfcare /2013/05/31/for-all-we-care-reconsidering-self-care
+/texts/recentfeatures/language.php /2013/05/23/anarchism-and-the-english-language-english-and-the-anarchists-language
+/2013/05/23/anarchism-and-the-english-language /2013/05/23/anarchism-and-the-english-language-english-and-the-anarchists-language
+/2013/05/23/anarchism-and-theenglish-language /2013/05/23/anarchism-and-the-english-language-english-and-the-anarchists-language
