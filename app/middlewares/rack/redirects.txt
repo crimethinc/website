@@ -9005,3 +9005,8 @@ http://www.crimethinc.com/about/newsarchive.html /1997
 /texts/recentfeatures/language.php /2013/05/23/anarchism-and-the-english-language-english-and-the-anarchists-language
 /2013/05/23/anarchism-and-the-english-language /2013/05/23/anarchism-and-the-english-language-english-and-the-anarchists-language
 /2013/05/23/anarchism-and-theenglish-language /2013/05/23/anarchism-and-the-english-language-english-and-the-anarchists-language
+/2013/04/17/accounting-for-ourselves /2013/04/17/accounting-for-ourselves-breaking-the-impasse-around-assault-and-abuse-in-anarchist-scenes
+/2013/04/23/breakwith /2013/04/23/breaking-with-consensus-reality-from-the-politics-of-consent-to-the-seduction-of-revolution
+/2012/04/09/into-the-unknownterror-incognita /2012/04/08/into-the-unknown-terror-incognita
+/2010/01/07/insurrection /2010/01/07/say-you-want-an-insurrection
+
