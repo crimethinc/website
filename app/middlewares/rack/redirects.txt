@@ -9000,3 +9000,5 @@ http://www.crimethinc.com/about/newsarchive.html /1997
 /2012/04/08/experimentation /2012/04/08/beware-join-the-experimentation-committee
 /2012/08/14/montreal1 /2012/08/14/while-the-iron-is-hot-student-strike-social-revolt-in-quebec-spring-2012
 /2012/08/14/montreal2 /2012/08/14/while-the-iron-is-hot-anarchist-analysis-of-the-revolt-in-quebec
+/2013/05/31/reconsidering-self-care /2013/05/31/for-all-we-care-reconsidering-self-care
+/2013/05/31/selfcare /2013/05/31/for-all-we-care-reconsidering-self-care
