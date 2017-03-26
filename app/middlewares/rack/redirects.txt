@@ -8990,3 +8990,4 @@ http://www.crimethinc.com/about/newsarchive.html /1997
 /2009/05/05/rncdoc1html /2009/05/05/rnclegal
 /2009/05/05/rnclegal /2009/05/05/we-are-all-legal-workers-legal-support-at-the-rnc-and-after
 /2009/05/05/rncdoc0html /2009/05/05/rncdnc-2009-document-one
+/2011/05/22/new-feature-on-the-us-mexico-border /2011/05/22/designed-to-kill-border-policy-and-how-to-change-it
