@@ -1,4 +1,3 @@
-<% if article.image.present? %>
 <div class="article-image">
   <img class="u-photo"
        alt="<%= article.image_description %>"
@@ -6,6 +5,5 @@
                <%= article.article_image.medium %> 640w,
                <%= article.article_image.small %>  320w"
                sizes="(min-width: 36em) 33.3vw,100vw"
-               src="<%= article.image %>">
+               src="<%= article.article_image %>">
 </div>
-<% end %>
