@@ -9017,3 +9017,5 @@ red read
 /2006/12/01/seattle-seven-years-later /2006/11/30/seattle-seven-years-later
 /2010/07/06/toronto-g20-eyewitness-report /2010/07/05/toronto-g20-eyewitness-report
 /2010/07/01/g20-shut-doors-broken-windows /2010/07/02/g20-shut-doors-broken-windows
+/2013/08/28/the-june-2013-uprisings-in-brazil-part-ii /2013/08/28/the-june-2013-uprisings-in-brazil-part-ii-giants-and-monsters
+/2013/08/28/brazilpt2 /2013/08/28/the-june-2013-uprisings-in-brazil-part-ii-giants-and-monsters
