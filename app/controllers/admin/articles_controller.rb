@@ -17,6 +17,7 @@ class Admin::ArticlesController < Admin::AdminController
       @collection = Article.find(@article.collection_id)
     end
     @title = admin_title(@article, [:title, :subtitle])
+    @html_id = "admin-article"
   end
 
   # /admin/articles/new
