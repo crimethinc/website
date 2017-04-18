@@ -2,7 +2,8 @@
   <audio controls>
     <source src="<%= embed_id %>" />
   </audio>
+
   <% if caption.present? %>
-      <figcaption class="caption audio-caption"><%= render_markdown caption %></figcaption>
+    <figcaption class="caption audio-caption"><%= render_markdown caption %></figcaption>
   <% end %>
 </figure>
