@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
     end
 
     # no article found, go to /articles feed
-    if @article.blank? || !@article.published?
+    if @article.blank?
       return redirect_to root_path
     end
 
