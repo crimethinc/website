@@ -40,6 +40,11 @@
 
   <div>
     <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
+
+    <% if @article.draft? %>
+     <%= link_to "Preview Draft", @article.path, class: "btn btn-success" %>
+    <% end %>
+
     <% if @article.download_url.present? %>
       <p><b>Download URL:</b> <b><%= link_to @article.download_url, @article.download_url %></b></p>
     <% end %>
