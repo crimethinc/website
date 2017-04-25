@@ -51,7 +51,7 @@ class ArticlesController < ApplicationController
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false
     else
-      render "articles/show"
+      render "/articles/show"
     end
   end
 end
