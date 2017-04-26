@@ -2,6 +2,6 @@
 
 <%= render "table", articles: @articles %>
 
-<div class="text-center">
+<div class="pagination-container">
   <%= paginate @articles, views_prefix: "admin" %>
 </div>

@@ -5,15 +5,18 @@ class Admin::LinksController < Admin::AdminController
   # /admin/links
   def index
     @links = Link.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/links/1
   def show
+    @title = admin_title(@link, [:name])
   end
 
   # /admin/links/new
   def new
     @link = Link.new
+    @title = admin_title
   end
 
   # /admin/links/new
@@ -29,6 +32,7 @@ class Admin::LinksController < Admin::AdminController
 
   # /admin/links/edit/1
   def edit
+    @title = admin_title(@link, [:id, :name])
   end
 
   # /admin/links/edit/1

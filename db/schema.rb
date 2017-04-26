@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170217050314) do
+ActiveRecord::Schema.define(version: 20170321023410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "articles", force: :cascade do |t|
     t.integer  "user_id"
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170217050314) do
     t.datetime "updated_at",                                   null: false
     t.integer  "collection_id"
     t.string   "short_path"
+    t.boolean  "header_shadow_text"
     t.index ["collection_id"], name: "index_articles_on_collection_id", using: :btree
     t.index ["status_id"], name: "index_articles_on_status_id", using: :btree
     t.index ["theme_id"], name: "index_articles_on_theme_id", using: :btree
@@ -95,7 +97,6 @@ ActiveRecord::Schema.define(version: 20170217050314) do
     t.integer  "article_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["article_id"], name: "index_categorizations_on_article_id", using: :btree
   end
 
   create_table "contributions", force: :cascade do |t|

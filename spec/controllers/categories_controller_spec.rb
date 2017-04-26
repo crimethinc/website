@@ -3,6 +3,8 @@ require "rails_helper"
 RSpec.describe CategoriesController, type: :controller do
 
   describe "GET #show" do
+    let(:status)  { FactoryGirl.create(:status) }
+    let(:category) { FactoryGirl.create(:category, name: "Test Category") }
     it "redirects with a normalized slug" do
       slug = "underscored_slug"
       normalized_slug = slug.sub("_", "-")
@@ -13,9 +15,7 @@ RSpec.describe CategoriesController, type: :controller do
     end
 
     it "renders on a category with articles" do
-      category = Category.create(name: "Test Category")
-      article = Article.create(title: "Test", published_at: 1.day.ago, category_ids: [category.id])
-      category = Category.last
+      article = FactoryGirl.create(:article, title: "Test", published_at: 1.day.ago, category_ids: [category.id], status: status)
 
       get :show, params: {slug: category.slug}
 
@@ -23,8 +23,6 @@ RSpec.describe CategoriesController, type: :controller do
     end
 
     it "redirects on an empty category" do
-      category = Category.create(name: "Test Category")
-
       get :show, params: {slug: category.slug}
 
       expect(response).to redirect_to(root_path)
@@ -32,10 +30,10 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   describe "GET #feed" do
+    let(:status)  { FactoryGirl.create(:status) }
+    let(:category) { FactoryGirl.create(:category, name: "Test Category") }
     it "renders on a category with articles" do
-      category = Category.create(name: "Test Category")
-      article = Article.create(title: "Test", published_at: 1.day.ago, category_ids: [category.id])
-      category = Category.last
+      article = FactoryGirl.create(:article, title: "Test", published_at: 1.day.ago, category_ids: [category.id], status: status)
 
       get :feed, params: {slug: category.slug}
 

@@ -20,6 +20,14 @@ class Article < ApplicationRecord
   before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
+  before_validation :normalize_newlines,       on: [:create, :update]
+
+  validates :short_path, uniqueness: true, unless: "short_path.blank?"
+  validates :tweet, length: { maximum: 115 }
+  validates :summary, length: { maximum: 200 }
+  # validate :redirect_source_path_unique
+
+  # before_save :create_redirect
 
   default_scope { order("published_at DESC") }
   scope :live,     -> { where("published_at < ?", Time.now) }
@@ -63,5 +71,20 @@ class Article < ApplicationRecord
 
   def downcase_content_format
     self.content_format = self.content_format.downcase
+  end
+
+  def create_redirect
+    unless Redirect.exists?(source_path: "/"+short_path, target_path: path) || short_path.blank?
+      Redirect.create(source_path: short_path, target_path: path)
+    end
+  end
+
+  def redirect_source_path_unique
+    errors.add(:short_path, ' is already defined by a redirect') if Redirect.where(source_path: "/"+self.short_path).exists?
+  end
+
+  def normalize_newlines
+    tweet.gsub!("\r\n", "\n") if tweet.present?
+    summary.gsub!("\r\n", "\n") if summary.present?
   end
 end

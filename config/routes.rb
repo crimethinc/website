@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   root to: "home#index"
 
 
+
+  get "page(/1)", to: redirect { |_, _| "/" }
+  get "page/:page", to: "home#index"
+
   # Articles
   # Article listings by year, optional month, optional day
   get "(/:year)(/:month)(/:day)/page(/1)", to: redirect { |_, req|

@@ -1,3 +1,11 @@
+.draft-preview-message {
+  background: red;
+  padding: 1em;
+  margin: 1em 0;
+  text-align: center;
+  font-weight: bold;
+}
+
 #article {
   main {
     padding: 0;
@@ -5,127 +13,140 @@
   }
 
   .h-entry {
+    &.article-with-no-header-image header .meta {
+      position: relative;
+      transform: none;
+    }
+
     header {
       color: $color-white;
       margin-bottom: 1em;
       position: relative;
 
-      a {
-        color: $color-white;
+      /* for vertically aligning sub/title */
+      transform-style: preserve-3d;
+
+      .u-photo {
+        background: $color-true-black;
+        width: 100%;
       }
 
-      h1, h2 {
-        line-height: 1.2;
-        position: relative;
-        text-shadow: 0 0 2rem $color-black;
+      .meta {
+        position: absolute;
+        text-align: left;
+        width: 100%;
 
-        @media screen and (min-width: #{$small-tablet}) {
-          letter-spacing: -0.01em;
-        }
+        /* for vertically aligning sub/title */
+        transform: translateY(-50%);
+        top: 50%;
 
         @media screen and (min-width: #{$large-phone}) {
-          line-height: 1;
+          font-size: 1.25em;
+        }
+
+        @media screen and (min-width: #{$large-tablet}) {
+          font-size: 1.25em;
+          top: 33%;
+        }
+
+        @media screen and (min-width: #{$small-laptop}) {
+          font-size: 1.25em;
+        }
+
+        .p-name {
+          padding: 10pt;
+
+          @media screen and (min-width: $small-tablet) {
+            padding: 50pt;
+          }
+
+          &.shadowed {
+            h1 {
+              text-shadow: 0 0 1rem $color-black;
+            }
+            h2 {
+              text-shadow: 0 0 2rem $color-black;
+            }
+          }
         }
       }
 
       h1 {
         font: {
-          size: 1.6em;
+          size: 1.25em;
           weight: 900;
         }
         letter-spacing: -.01em;
-        text-shadow: 0 0 1rem $color-black;
+        line-height: 1.2em;
+        margin-bottom: .1em;
 
-        @media screen and (min-width: #{$small-phone}) {
-          font-size: 2em;
+        @media screen and (min-width: $large-phone) {
+          font-size: 4rem;
+          letter-spacing: -0.01em;
+          line-height: 1em;
         }
 
-        @media screen and (min-width: #{$large-phone}) {
-          font-size: 3em;
-        }
-
-        @media screen and (min-width: #{$small-tablet}) {
+        @media screen and (min-width: $small-tablet) {
           font-size: 4em;
-          margin-bottom: 4px;
+          letter-spacing: -0.01em;
+          line-height: 1em;
         }
       }
 
       h2 {
-        font-size: 1.4em;
-
-        @media screen and (min-width: #{$small-phone}) {
-          font-size: 1.75em;
-        }
-
-        @media screen and (min-width: #{$large-phone}) {
-          font-size: 2em;
-        }
-
-        @media screen and (min-width: #{$small-tablet}) {
-          font-size: 2.25em;
-        }
-      }
-
-    }
-    /* header */
-
-    .meta {
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 66.7vw;
-      max-height: 80vh;
-      overflow: hidden;
-      padding: 10pt;
-      position: relative;
-
-      @media screen and (min-width: #{$small-tablet}) {
-        padding: 50pt;
-      }
-    }
-
-    &.article-with-no-header-image .meta {
-      background-color: $color-true-black;
-      height: auto;
-      max-height: 100%;
-      padding: 20pt 10pt;
-
-      @media screen and (min-width: #{$small-tablet}) {
-        padding: 50pt;
-      }
-    }
-
-    .contributors {
-      font-size: .5em;
-      display: inline-block;
-      margin: 0 auto;
-      font-weight: lighter;
-      font-weight: 300;
-
-      @media screen and (min-width: $small-tablet) {
         font-size: 1em;
-      }
+        line-height: 1.2em;
 
-      th {
-        text-align: right;
-        padding-right: .25em;
-        font: {
-          weight: lighter;
-          weight: 300;
-          style: italic;
+        @media screen and (min-width: $large-phone) {
+          font-size: 2rem;
+          letter-spacing: -0.01em;
+        }
+
+        @media screen and (min-width: $small-tablet) {
+          font-size: 2em;
+          letter-spacing: -0.01em;
         }
       }
 
-      td {
-        text-align: left;
-        font-weight: normal;
+      a {
+        color: $color-white;
       }
-    }
-    /* .contributors */
+
+      .contributors {
+        display: inline-block;
+        font: {
+          size: 0.5em;
+          weight: 300;
+        }
+        margin: 0 auto;
+
+        @media screen and (min-width: $small-tablet) {
+          font-size: 1em;
+        }
+
+        th {
+          font: {
+            weight: 300;
+            style: italic;
+          }
+          padding-right: 0.25em;
+          text-align: right;
+        }
+
+        td {
+          font-weight: normal;
+          text-align: left;
+        }
+      } /* .contributors */
+    } /* header */
 
     footer {
       text-align: center;
+
+      @media screen and (min-width: $small-tablet) {
+        margin: 50pt 0;
+        padding: 50pt;
+      }
 
       p {
         display: inline-block;
@@ -136,11 +157,8 @@
         font-weight: 300;
         font-style: italic;
       }
-    }
-    /* footer */
-
-  }
-  /* .h-entry */
+    } /* footer */
+  } /* .h-entry */
 
   .e-content {
     color: $color-black;
@@ -152,12 +170,18 @@
     }
     letter-spacing: .02em;
 
+    @media screen and (min-width: $small-tablet) {
+      font-size: 1.5em;
+      padding: 0 50pt;
+    }
+
     > * {
       margin-right: auto;
       margin-left: auto;
+
     }
 
-    > :not(figure):not(:first-child) {
+    > :not(.video-container):not(:first-child) {
       max-width: $large-tablet - 200px;
     }
 
@@ -231,7 +255,6 @@
     dd {
       margin: {
         left: $border-size-large;
-        start: $border-size-large;
       }
     }
 
@@ -309,10 +332,19 @@
         width: auto;
         max-width: 100%;
       }
+
+      &.half-size {
+        @media screen and (min-width: $small-tablet) {
+          width: 50%;
+          max-width: 50%;
+        }
+      }
     }
 
-    figure img {
-      margin: 0;
+    figure {
+      img {
+        margin: 0;
+      }
     }
 
     blockquote {
@@ -390,8 +422,7 @@
       font-weight: lighter;
       font-weight: 300;
     }
-  }
-  /* .e-content */
+  } /* .e-content */
 
   .footnotes {
     border-top: solid 1px $color-gray-light;
@@ -416,27 +447,4 @@
       }
     }
   }
-}
-
-/* #article */
-
-@media screen and (min-width: $small-tablet) {
-  #article {
-    .h-entry {
-      .e-content {
-        padding: 0 50pt;
-        font-size: 1.5em;
-
-        img.half-size {
-          width: 50%;
-          max-width: 50%;
-        }
-      }
-
-      footer {
-        margin: 50pt 0;
-        padding: 50pt;
-      }
-    }
-  }
-}
+} /* #article */

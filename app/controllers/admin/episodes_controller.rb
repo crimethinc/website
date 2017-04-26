@@ -5,19 +5,23 @@ class Admin::EpisodesController < Admin::AdminController
   # /admin/episodes
   def index
     @episodes = Episode.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/episodes/1
   def show
+    @title = admin_title(@episode, [:title, :subtitle])
   end
 
   # /admin/episodes/new
   def new
     @episode = Episode.new
+    @title = admin_title
   end
 
   # /admin/episodes/1/edit
   def edit
+    @title = admin_title(@episode, [:id, :title, :subtitle])
   end
 
   # /admin/episodes

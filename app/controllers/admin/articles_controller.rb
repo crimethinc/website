@@ -7,6 +7,7 @@ class Admin::ArticlesController < Admin::AdminController
   # /admin/articles
   def index
     @articles = Article.root.includes(:collection_posts).page(params[:page])
+    @title = admin_title
   end
 
   # /admin/articles/1
@@ -15,17 +16,21 @@ class Admin::ArticlesController < Admin::AdminController
     if @article.collection_id.present?
       @collection = Article.find(@article.collection_id)
     end
+    @title = admin_title(@article, [:title, :subtitle])
+    @html_id = "admin-article"
   end
 
   # /admin/articles/new
   def new
     @collection = Article.find(params[:id]) if params[:id]
     @article = Article.new
+    @title = admin_title
   end
 
   # /admin/articles/1/edit
   def edit
     @collection = Article.find(@article.collection_id) if @article.in_collection?
+    @title = admin_title(@article, [:id, :title, :subtitle])
   end
 
   # /admin/articles
@@ -90,6 +95,7 @@ class Admin::ArticlesController < Admin::AdminController
                                     :published_at, :tags, :collection_id, :short_path,
                                     :image, :image_description, :css, :hide_layout,
                                     :header_background_color, :header_text_color,
+                                    :header_shadow_text,
                                     category_ids: [],
                                     contributions_attributes: [
                                       :id, :contributor_id, :role_id,:_destroy

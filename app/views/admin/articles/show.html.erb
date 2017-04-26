@@ -1,17 +1,20 @@
-<%# TODO move this to a better place %>
-<style>
-.e-content img {
-  max-width: 100%;
-}
-</style>
-
 <%= render "admin/page_header", thing: @article %>
 
 <br>
 
 <article>
   <header>
-    <%= render "/admin/articles/publication_status", article: @article %>
+    <p>
+      <%= render "/admin/articles/publication_status", article: @article %>
+
+      <% if @article.content_format == "html" %>
+      &nbsp;
+      <b class="label label-warning">HTML</b>
+      <% end %>
+
+      &nbsp;
+      <%= render "articles/published_on_time_tag", article: @article %>
+    </p>
 
     <h1>
       <%= link_to @article.path, class: "p-name" do %>
@@ -19,62 +22,63 @@
         <span class="h2 subtitle"><%= @article.subtitle %></span>
       <% end %>
     </h1>
-  </header>
 
-  <div class="row">
-    <div class="col-xs-12 col-md-4">
-      <p><b>Content Format:</b> <%= @article.content_format %></p>
-      <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
-      <p><b>Download URL:</b> <b><%= link_to_if @article.download_url.present?, @article.download_url, @article.download_url %></b></p>
-      <p><b>Publication Status:</b> <b><%= @article.status.name.upcase %></b></p>
-      <p><%= render "/articles/published_on", article: @article %></p>
-      <p><b>Hero Image:</b> <%= link_to_if @article.image.present?, @article.image, @article.image %></p>
-      <p><b>Hero Image Description:</b> <%= @article.image_description %></p>
-
-
-      <% if @article.contributions.present? %>
-        <p>
-          <b>Contributions:</b>
-          <ul>
-            <% @article.contributions.each do |contribution| %>
-            <li>
-              <%= link_to contribution.role.name.titleize, [:admin, contribution.role] %>
-              <span>by</span>
-              <%= link_to contribution.contributor.name, [:admin, contribution.contributor] %>
-            </li>
-            <% end %>
-          </ul>
-        </p>
-      <% end %>
-
+    <p>
       <% if @article.categories.present? %>
-        <p>
-          <b>Categories:</b>
-          <ul class="list-inline">
-            <% @article.categories.each do |category| %>
-              <li><%= link_to category.name, category.slug %></li>
-            <% end %>
-          </ul>
-        </p>
+        <% @article.categories.each do |category| %>
+          <%= link_to category.name, category_path(category.slug), class: "label label-primary" %>
+        <% end %>
       <% end %>
 
       <% if @article.tags.present? %>
-        <p>
-          <b>Tags:</b>
-          <ul class="list-inline">
-            <% @article.tags.each do |tag| %>
-              <li><%= link_to tag.name, tag.slug %></li>
-            <% end %>
-          </ul>
-        </p>
+        <% @article.tags.each do |tag| %>
+          <%= link_to tag.name, tag_path(tag.slug), class: "label label-info" %>
+        <% end %>
       <% end %>
-    </div>
+    </p>
+  </header>
 
-    <div class="col-xs-12 col-md-8">
-      <div class="e-content">
-        <%= render_content @article %>
-      </div>
-    </div>
+  <div>
+    <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
+
+    <% if @article.draft? %>
+     <%= link_to "Preview Draft", @article.path, class: "btn btn-success" %>
+    <% end %>
+
+    <% if @article.download_url.present? %>
+      <p><b>Download URL:</b> <b><%= link_to @article.download_url, @article.download_url %></b></p>
+    <% end %>
+
+    <% if @article.contributions.present? %>
+      <p>
+        <b>Contributions:</b>
+        <% @article.contributions.each do |contribution| %>
+          <span class="badge badge-default">
+            <%= link_to contribution.role.name.titleize, [:admin, contribution.role] %>
+            <span>by</span>
+            <%= link_to contribution.contributor.name, [:admin, contribution.contributor] %>
+          </span>
+        <% end %>
+      </p>
+    <% end %>
+  </div>
+
+  <% if @article.image.present? %>
+    <%= image_tag @article.image %>
+  <% end %>
+
+  <% if @article.image_description.present? %>
+    <p><%= @article.image_description %></p>
+  <% end %>
+
+  <hr>
+
+  <div class="e-content">
+    <% if @article.content_format == "html" %>
+      <pre><%= @article.content %></pre>
+    <% else %>
+      <%= render_content @article %>
+    <% end %>
   </div>
 
   <hr>

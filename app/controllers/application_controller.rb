@@ -170,6 +170,10 @@ class ApplicationController < ActionController::Base
       slug     = "youtube"
       embed_id = url.path.split("/").map{ |path_piece| path_piece unless path_piece.blank? }.compact.first
 
+    when /dailymotion.com/
+      slug     = "dailymotion"
+      embed_id = url.path.split("/video/").map{ |path_piece| path_piece unless path_piece.blank? }.compact.first.split("_").first
+
     when "vimeo.com"
       slug     = "vimeo"
       embed_id = url.path.split("/").map{ |path_piece| path_piece unless path_piece.blank? }.compact.first

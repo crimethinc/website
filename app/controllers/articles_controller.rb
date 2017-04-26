@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
       end
 
     else
-      @article = Article.where(year:  params[:year]
+      @article = Article.live.where(year:  params[:year]
                        ).where(month: params[:month]
                        ).where(day:   params[:day]
                        ).where(slug:  params[:slug]).first
@@ -34,10 +34,11 @@ class ArticlesController < ApplicationController
     end
 
     # no article found, go to /articles feed
-    if @article.blank? || !@article.published?
+    if @article.blank?
       return redirect_to root_path
     end
 
+    # redirect from draft URL to proper URL
     if @article.published? && params[:draft_code].present?
       return redirect_to @article.path
     end
@@ -50,7 +51,7 @@ class ArticlesController < ApplicationController
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false
     else
-      render "articles/show"
+      render "/articles/show"
     end
   end
 end

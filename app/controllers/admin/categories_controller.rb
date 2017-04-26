@@ -5,19 +5,23 @@ class Admin::CategoriesController < Admin::AdminController
   # /admin/categories
   def index
     @categories = Category.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/categories/1
   def show
+    @title = admin_title(@category, [:name])
   end
 
   # /admin/categories/new
   def new
     @category = Category.new
+    @title = admin_title
   end
 
   # /admin/categories/1/edit
   def edit
+    @title = admin_title(@category, [:id, :name])
   end
 
   # /admin/categories

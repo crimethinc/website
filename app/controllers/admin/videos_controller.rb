@@ -5,19 +5,23 @@ class Admin::VideosController < Admin::AdminController
   # /admin/videos
   def index
     @videos = Video.page(params[:page])
+    @title = admin_title
   end
 
   # /admin/videos/1
   def show
+    @title = admin_title(@video, [:title])
   end
 
   # /admin/videos/new
   def new
     @video = Video.new
+    @title = admin_title
   end
 
   # /admin/videos/1/edit
   def edit
+    @title = admin_title(@video, [:id, :title, :subtitle])
   end
 
   # /admin/videos
