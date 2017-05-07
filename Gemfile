@@ -52,6 +52,17 @@ group :development do
   gem "listen", "~> 3.0.5"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+
+  # For measuring page/code performance
+  gem "rack-mini-profiler"
+
+  # For memory profiling
+  gem "memory_profiler"
+
+  # For call-stack profiling flamegraphs
+  gem "flamegraph"
+  gem "stackprof"
+  gem "fast_stack"
 end
 
 # monitoring

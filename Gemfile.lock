@@ -61,7 +61,9 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
+    fast_stack (0.2.0)
     ffi (1.9.17)
+    flamegraph (0.9.5)
     foreman (0.83.0)
       thor (~> 0.19.1)
     formatador (0.2.5)
@@ -108,6 +110,7 @@ GEM
     lumberjack (1.0.11)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    memory_profiler (0.9.8)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -133,6 +136,8 @@ GEM
     rack (2.0.1)
     rack-attack (5.0.1)
       rack
+    rack-mini-profiler (0.10.2)
+      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.1)
@@ -219,6 +224,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stackprof (0.2.10)
     sterile (1.0.5)
       nokogiri
     stringex (2.7.0)
@@ -249,18 +255,22 @@ DEPENDENCIES
   byebug
   cocoon (~> 1.2.9)
   factory_girl_rails
+  fast_stack
+  flamegraph
   foreman
   guard-rspec
   jquery-rails
   kaminari
   kramdown
   listen (~> 3.0.5)
+  memory_profiler
   new_relic_ping
   newrelic_rpm
   nokogiri
   pg
   puma
   rack-attack
+  rack-mini-profiler
   rails (~> 5.0.1)
   rails-controller-testing
   redis
@@ -272,6 +282,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
+  stackprof
   sterile
   stringex
   tzinfo-data
@@ -282,4 +293,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.14.3
+   1.14.5
