@@ -1,28 +1,27 @@
 class ArticleImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  storage :file
-  # switch to fog to upload images to cloud stuff
-  # storage :fog
+  storage :fog
 
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
+    # This will be the directory path in the CMS
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  # TODO: figure out how to use the old article#image as a fallback
   def default_url
     model.image
   end
 
   def extension_whitelist
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
 
-  # TODO: maybe the files should automatically be renamed to use the article title?
   def filename
-    model.title.downcase.tr(' ', '_') + File.extname(original_filename) if original_filename
+    # don't try changing the name if original_filename is missing
+    return unless original_filename
+
+    # This will be the filename for all the processed/uploaded images
+    model.title.downcase.tr(' ', '_') + File.extname(original_filename)
   end
 
   version :large do
