@@ -1,1 +1,1 @@
-<%= JSON.parse(open("https://publish.twitter.com/oembed?url=#{embed_id}").read)["html"].html_safe %>
+<%= embed_twitter embed_id %>
