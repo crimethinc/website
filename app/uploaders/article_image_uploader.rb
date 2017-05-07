@@ -1,8 +1,6 @@
 class ArticleImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  storage :fog
-
   def store_dir
     # This will be the directory path in the CMS
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
