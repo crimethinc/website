@@ -1,9 +1,12 @@
 <div class="article-image">
   <img class="u-photo"
        alt="<%= article.image_description %>"
-       srcset="<%= article.article_image.large %>  1024w,
-               <%= article.article_image.medium %> 640w,
-               <%= article.article_image.small %>  320w"
-               sizes="(min-width: 36em) 33.3vw,100vw"
-               src="<%= article.article_image %>">
+       src="<%= article.article_image.url || article.image %>"
+       <% if article.article_image.url.present? %>
+         sizes="(min-width: 36em) 33.3vw,100vw"
+         srcset="<%= article.article_image.large %>  1024w,
+                 <%= article.article_image.medium %> 640w,
+                 <%= article.article_image.small %>  320w"
+       <% end %>
+  >
 </div>

@@ -167,8 +167,11 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :image, "Header Image" %>
-          <%= f.text_field :remote_article_image_url, class: "form-control input-lg", value: @article.image %>
+          <p class="help-block">The article's header image is currently set to
+            <code>
+              <%= @article.article_image.url || @article.image %>
+            </code>
+          </p>
           <%= f.label :article_image, "Header Image Upload" %>
           <%= f.file_field :article_image, class: "form-control" %>
           <p>

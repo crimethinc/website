@@ -8,10 +8,6 @@ class ArticleImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  def default_url
-    model.image
-  end
-
   def extension_whitelist
     %w[jpg jpeg gif png]
   end
