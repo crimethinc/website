@@ -1,5 +1,7 @@
 # TODO: what happens if the ENVs are missing?
 # TODO: is ENV safe way to handle these credentials?
+return unless ENV['AWS_CARRIERWAVE_ACCESS_KEY_ID'] && ENV['AWS_CARRIERWAVE_ACCESS_KEY']
+
 CarrierWave.configure do |config|
   # required settings
   config.fog_provider = 'fog/aws'
