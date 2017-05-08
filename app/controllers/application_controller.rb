@@ -116,13 +116,15 @@ class ApplicationController < ActionController::Base
   helper_method :render_markdown
 
   def render_content(post)
-    Kramdown::Document.new(
-      expanded_embeds(post).content,
-      input: post.content_format == "html" ? :html : :kramdown,
-      remove_block_html_tags: false,
-      transliterated_header_ids: true,
-      html_to_native: true
-    ).to_html.html_safe
+    cache post do
+      Kramdown::Document.new(
+        expanded_embeds(post).content,
+        input: post.content_format == "html" ? :html : :kramdown,
+        remove_block_html_tags: false,
+        transliterated_header_ids: true,
+        html_to_native: true
+      ).to_html.html_safe
+    end
   end
   helper_method :render_content
 
