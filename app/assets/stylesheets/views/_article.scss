@@ -234,11 +234,7 @@
     }
 
     i, cite, em, var, address, dfn, blockquote {
-      font: {
-        style: italic;
-        weight: lighter;
-        weight: 300;
-      }
+      font-style: italic;
     }
 
     dt, b, strong {
