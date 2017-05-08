@@ -34,6 +34,9 @@ gem "cocoon", "~> 1.2.9"
 # pagination
 gem "kaminari"
 
+# memcache
+gem "dalli"
+
 # dev and testing
 group :development, :test do
   gem "byebug", platform: :mri
