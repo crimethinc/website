@@ -57,4 +57,18 @@ module ArticlesHelper
     links.join("-").html_safe
   end
 
+  XML_ENCODING = ::Encoding.find("utf-8")
+
+  require 'builder/xchar'
+  def xml_escape(text)
+    result = Builder::XChar.encode(text)
+    begin
+      result.encode(XML_ENCODING)
+    rescue
+      # if the encoding can't be supported, use numeric character references
+      result.
+        gsub(/[^\u0000-\u007F]/) {|c| "&##{c.ord};"}.
+        force_encoding('ascii')
+    end
+  end
 end
