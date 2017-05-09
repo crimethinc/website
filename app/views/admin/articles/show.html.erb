@@ -41,8 +41,10 @@
   <div>
     <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
 
-    <% if @article.draft? %>
-     <%= link_to "Preview Draft", @article.path, class: "btn btn-success" %>
+    <% unless @article.published? %>
+      <p>
+        <%= link_to "Preview Draft", @article.path, class: "btn btn-success" %>
+      </p>
     <% end %>
 
     <% if @article.download_url.present? %>
