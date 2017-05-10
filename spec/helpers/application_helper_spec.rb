@@ -6,7 +6,7 @@ RSpec.describe ApplicationHelper, type: :helper do
     context "as admin" do
       before do
         assign(:title, "title")
-        controller.stub(:controller_path).and_return("admin/articles")
+        expect(controller).to receive(:controller_path).and_return('admin/articles')
       end
 
       subject { helper.page_title }
