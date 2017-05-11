@@ -27,9 +27,9 @@
         <category scheme="<%= category.name %>" term="<%= category.name %>"/>
         <% end %>
         <content type="html">
-          <%= xml_escape figure_image_with_caption_tag(article) %>
+          <%= xml_escape(figure_image_with_caption_tag(article)).html_safe %>
 
-          <%= xml_escape render_content(article)  %>
+          <%= xml_escape(render_content(article)).html_safe  %>
         </content>
       </entry>
     <% end %>
