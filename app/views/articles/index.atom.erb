@@ -40,7 +40,7 @@
         <% end %>
 
         <content type="html">
-          <% if article.image? %>
+          <% if article.image.present? %>
             <%= xml_escape(figure_image_with_caption_tag(article)).html_safe %>
           <% end %>
 
