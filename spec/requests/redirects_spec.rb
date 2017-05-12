@@ -18,4 +18,10 @@ RSpec.describe "Rack::Redirect", type: :request do
 
     expect(response.status).to eq(200)
   end
+
+  it "redirects when the path starts with /blog/" do
+    get "/blog/2017/01/01/slug"
+
+    expect(response).to redirect_to("/2017/01/01/slug")
+  end
 end
