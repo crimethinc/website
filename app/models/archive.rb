@@ -10,12 +10,13 @@ class Archive
     @year  = year
     @month = month
     @page  = page
+    @day   = day
   end
 
   def articles
     return @articles if defined?(@articles)
 
-    @articles = Article.published.live.root.all
+    @articles = Article.published.live.root.order(title: :desc)
 
     @articles = @articles.where(year:  year)  if year.present?
     @articles = @articles.where(month: month) if month.present?
