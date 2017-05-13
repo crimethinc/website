@@ -1,3 +1,7 @@
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags(@articles) %>
+<% end %>
+
 <div class="h-feed">
   <% if @top_article.present? %>
     <%= render "archives/card_css", article: @top_article, featured: false %>
