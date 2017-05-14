@@ -111,6 +111,8 @@ GEM
     lumberjack (1.0.11)
     mail (2.6.5)
       mime-types (>= 1.16, < 4)
+    markdown_media (1.0.0)
+      kramdown
     memory_profiler (0.9.8)
     method_source (0.8.2)
     mime-types (3.1)
@@ -265,6 +267,7 @@ DEPENDENCIES
   kaminari
   kramdown
   listen (~> 3.0.5)
+  markdown_media
   memory_profiler
   new_relic_ping
   newrelic_rpm

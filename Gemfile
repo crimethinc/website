@@ -20,10 +20,11 @@ gem "jquery-rails"
 gem "sitemap_generator" # generates compliant xml sitemap
 
 # text utilities
-gem "rubypants" # for smart quotes
-gem "sterile"   # for slugs
-gem "kramdown"  # for Markdown processing
-gem "stringex"  # for Markdown header IDs processing
+gem "rubypants"      # for smart quotes
+gem "sterile"        # for slugs
+gem "kramdown"       # for Markdown processing
+gem "stringex"       # for Markdown header IDs processing
+gem "markdown_media" # for [[ media embeds ]]
 
 # auth
 gem "bcrypt", "~> 3.1.7"
