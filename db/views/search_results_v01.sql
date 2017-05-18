@@ -6,9 +6,9 @@ SELECT
 
   setweight(title, 'A') ||
   setweight(subtitle, 'B') ||
-  setweight(content, 'B') ||
-  setweight(array_to_tsvector(tag_names), 'C') ||
-  setweight(array_to_tsvector(category_names), 'C') ||
+  setweight(content, 'D') ||
+  setweight(array_to_tsvector(tag_names), 'D') ||
+  setweight(array_to_tsvector(category_names), 'D') ||
   setweight(array_to_tsvector(contributor_names), 'D') AS document
 
   FROM (

@@ -305,7 +305,7 @@ ActiveRecord::Schema.define(version: 20170517041238) do
       to_tsvector(array_to_string(a.tag_names, ' '::text)) AS tag,
       to_tsvector(array_to_string(a.category_names, ' '::text)) AS category,
       to_tsvector(array_to_string(a.contributor_names, ' '::text)) AS contributor,
-      (((((setweight(a.title, 'A'::"char") || setweight(a.subtitle, 'B'::"char")) || setweight(a.content, 'B'::"char")) || setweight(array_to_tsvector((a.tag_names)::text[]), 'C'::"char")) || setweight(array_to_tsvector((a.category_names)::text[]), 'C'::"char")) || setweight(array_to_tsvector((a.contributor_names)::text[]), 'D'::"char")) AS document
+      (((((setweight(a.title, 'A'::"char") || setweight(a.subtitle, 'B'::"char")) || setweight(a.content, 'D'::"char")) || setweight(array_to_tsvector((a.tag_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.category_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.contributor_names)::text[]), 'D'::"char")) AS document
      FROM ( SELECT articles.id AS searchable_id,
               'Article'::text AS searchable_type,
               to_tsvector(COALESCE(articles.title, ''::text)) AS title,

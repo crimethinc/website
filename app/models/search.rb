@@ -7,7 +7,7 @@ class Search
   def initialize(query)
     @filters = normalize_filters(query)
     @query   = query
-    @scope   = SearchResult
+    @scope   = SearchResult.select("search_results.*")
   end
 
   def perform
@@ -37,7 +37,10 @@ class Search
     term = strip_filters(query)
     return scope unless term.present?
 
-    self.scope = scope.where("document @@ to_tsquery(?)", term)
+    self.scope = scope
+                 .select("ts_rank(document, phraseto_tsquery('#{term}')) AS ranking")
+                 .where("document @@ phraseto_tsquery(?)", term)
+                 .order("ranking DESC")
   end
 
   def normalize_filters(query)
