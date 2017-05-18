@@ -98,6 +98,8 @@ Rails.application.routes.draw do
 
   # Site search
   get "search", to: "search#index"
+  get "search/advanced", to: "search#advanced", as: :advanced_search
+  post "search/advanced", to: "search#advanced_search", as: :advanced_searches
 
 
   # Email newsletter signup, used on homepage
