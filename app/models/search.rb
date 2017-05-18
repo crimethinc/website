@@ -5,16 +5,16 @@ class Search
   attr_reader :query
 
   def initialize(query)
-    @query   = normalize_query(query)
-    @scope   = SearchResult
     @filters = normalize_filters(query)
+    @query   = query
+    @scope   = SearchResult
   end
 
   def perform
     full_text_search
     apply_filters
 
-    scope.map(&:searchable)
+    scope
   end
 
   private
@@ -23,34 +23,33 @@ class Search
   attr_reader :filters
 
   def apply_filters
-    filters.each_pair do |filter, value|
-      self.scope = scope.where("#{filter} @@ to_tsquery(?)", value)
+    filters.each do |filter|
+      key   = filter.first
+      value = filter.last
+
+      self.scope = scope.where("#{key} @@ to_tsquery(?)", value)
     end
 
     scope
   end
 
   def full_text_search
-    return scope unless query.present?
+    term = strip_filters(query)
+    return scope unless term.present?
 
-    self.scope = scope.where("document @@ to_tsquery(?)", query)
+    self.scope = scope.where("document @@ to_tsquery(?)", term)
   end
 
   def normalize_filters(query)
     filters = query
               .scan(FILTER_REGEX)
               .map { |filter| filter.split(":") }
-              .to_h
-              .slice(*VALID_FILTERS)
-
-    %w[tag category contributor].each do |key|
-      filters["#{key}_names"] = filters.delete(key) if filters.has_key?(key)
-    end
+              .select { |filter| VALID_FILTERS.include?(filter.first) }
 
     filters
   end
 
-  def normalize_query(query)
+  def strip_filters(query)
     filters = query.scan(FILTER_REGEX)
 
     filters.inject(query) { |q, match| q.sub(match, "") }.strip

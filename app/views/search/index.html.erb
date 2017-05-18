@@ -1,0 +1,15 @@
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags(@results) %>
+<% end %>
+
+<div class="h-feed">
+  <div class="articles-list">
+    <ol>
+      <% @results.each do |result| %>
+        <%= render "result", result: result %>
+      <% end %>
+    </ol>
+  </div>
+</div>
+
+<%= paginate @results %>

@@ -302,9 +302,9 @@ ActiveRecord::Schema.define(version: 20170517041238) do
       a.title,
       a.subtitle,
       a.content,
-      to_tsvector(array_to_string(a.tag_names, ' '::text)) AS tag_names,
-      to_tsvector(array_to_string(a.category_names, ' '::text)) AS category_names,
-      to_tsvector(array_to_string(a.contributor_names, ' '::text)) AS contributor_names,
+      to_tsvector(array_to_string(a.tag_names, ' '::text)) AS tag,
+      to_tsvector(array_to_string(a.category_names, ' '::text)) AS category,
+      to_tsvector(array_to_string(a.contributor_names, ' '::text)) AS contributor,
       (((((setweight(a.title, 'A'::"char") || setweight(a.subtitle, 'B'::"char")) || setweight(a.content, 'B'::"char")) || setweight(array_to_tsvector((a.tag_names)::text[]), 'C'::"char")) || setweight(array_to_tsvector((a.category_names)::text[]), 'C'::"char")) || setweight(array_to_tsvector((a.contributor_names)::text[]), 'D'::"char")) AS document
      FROM ( SELECT articles.id AS searchable_id,
               'Article'::text AS searchable_type,
@@ -352,25 +352,25 @@ ActiveRecord::Schema.define(version: 20170517041238) do
             WHERE (pages.published_at < now())
             GROUP BY pages.id, 'Page'::text
           UNION
-           SELECT podcasts.id AS searchable_id,
-              'Podcast'::text AS searchable_type,
-              to_tsvector((COALESCE(podcasts.title, ''::character varying))::text) AS title,
-              to_tsvector((COALESCE(podcasts.subtitle, ''::character varying))::text) AS subtitle,
-              to_tsvector(COALESCE(podcasts.content, ''::text)) AS content,
+           SELECT episodes.id AS searchable_id,
+              'Episode'::text AS searchable_type,
+              to_tsvector((COALESCE(episodes.title, ''::character varying))::text) AS title,
+              to_tsvector((COALESCE(episodes.subtitle, ''::character varying))::text) AS subtitle,
+              to_tsvector((COALESCE(episodes.content, ''::character varying))::text) AS content,
               ARRAY[]::text[] AS tag_names,
               ARRAY[]::text[] AS category_names,
               ARRAY[]::text[] AS contributor_names
-             FROM podcasts
-            GROUP BY podcasts.id, 'Podcast'::text) a;
+             FROM episodes
+            GROUP BY episodes.id, 'Episode'::text) a;
   SQL
 
-  add_index "search_results", ["category_names"], name: "index_search_results_on_category_names", using: :gist
+  add_index "search_results", ["category"], name: "index_search_results_on_category", using: :gist
   add_index "search_results", ["content"], name: "index_search_results_on_content", using: :gist
-  add_index "search_results", ["contributor_names"], name: "index_search_results_on_contributor_names", using: :gist
+  add_index "search_results", ["contributor"], name: "index_search_results_on_contributor", using: :gist
   add_index "search_results", ["document"], name: "index_search_results_on_document", using: :gist
   add_index "search_results", ["searchable_id", "searchable_type"], name: "index_search_results_on_searchable_id_and_searchable_type", unique: true
   add_index "search_results", ["subtitle"], name: "index_search_results_on_subtitle", using: :gist
-  add_index "search_results", ["tag_names"], name: "index_search_results_on_tag_names", using: :gist
+  add_index "search_results", ["tag"], name: "index_search_results_on_tag", using: :gist
   add_index "search_results", ["title"], name: "index_search_results_on_title", using: :gist
 
 end

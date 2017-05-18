@@ -1,8 +1,8 @@
 SELECT
   searchable_id, searchable_type, title, subtitle, content,
-  to_tsvector(array_to_string(tag_names, ' ')) AS tag_names,
-  to_tsvector(array_to_string(category_names, ' ')) AS category_names,
-  to_tsvector(array_to_string(contributor_names, ' ')) AS contributor_names,
+  to_tsvector(array_to_string(tag_names, ' ')) AS tag,
+  to_tsvector(array_to_string(category_names, ' ')) AS category,
+  to_tsvector(array_to_string(contributor_names, ' ')) AS contributor,
 
   setweight(title, 'A') ||
   setweight(subtitle, 'B') ||
@@ -53,14 +53,14 @@ SELECT
     UNION
 
     SELECT
-      podcasts.id AS searchable_id,
-      'Podcast' AS searchable_type,
-      to_tsvector(coalesce(podcasts.title, '')) AS title,
-      to_tsvector(coalesce(podcasts.subtitle, '')) AS subtitle,
-      to_tsvector(coalesce(podcasts.content, '')) AS content,
+      episodes.id AS searchable_id,
+      'Episode' AS searchable_type,
+      to_tsvector(coalesce(episodes.title, '')) AS title,
+      to_tsvector(coalesce(episodes.subtitle, '')) AS subtitle,
+      to_tsvector(coalesce(episodes.content, '')) AS content,
       ARRAY[]::text[] AS tag_names,
       ARRAY[]::text[] AS category_names,
       ARRAY[]::text[] AS contributor_names
-    FROM podcasts
+    FROM episodes
     GROUP BY searchable_id, searchable_type
   ) AS a;
