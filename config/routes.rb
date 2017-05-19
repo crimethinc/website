@@ -48,7 +48,8 @@ Rails.application.routes.draw do
   get "drafts/articles/:draft_code/edit", controller: "admin/articles", action: "edit"
 
   # Articles Atom Feed
-  get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
+  get "feed.json", to: "articles#index", defaults: { format: "json" }, as: :json_feed
+  get "feed",      to: "articles#index", defaults: { format: "atom" }, as: :feed
 
   # Articles - Collection Items
   get "articles/:id/collection_posts", to: "collection_posts#index"

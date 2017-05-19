@@ -127,4 +127,38 @@ class ApplicationController < ActionController::Base
     end
   end
   helper_method :render_content
+
+  def meta_title(thing=nil)
+    thing.present? ? thing.title : t("head.meta_title")
+  end
+  helper_method :meta_title
+
+  def page_title
+    if @title.present?
+      t(:site_name) + prepend_admin_if_needed + @title
+    else
+      t(:site_name)
+    end
+  end
+  helper_method :page_title
+
+  def prepend_admin_if_needed
+    if controller_path.match(/\Aadmin\/.*\z/).present?
+      " #{t('admin.title_prepend')} : "
+    else
+      ' : '
+    end
+  end
+  helper_method :prepend_admin_if_needed
+
+  def author
+    t(:site_author)
+    # TODO make this article author aware
+  end
+  helper_method :author
+
+  def root_url
+    Rails.env.development? ? "http://localhost:3000" : "https://crimethinc.com"
+  end
+  helper_method :root_url
 end
