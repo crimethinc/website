@@ -3,6 +3,7 @@ require "rails_helper"
 RSpec.describe ApplicationController, type: :controller do
   controller do
     before_action :authorize, only: [:destroy]
+    before_action :set_title
 
     def index
       signed_in?
@@ -24,6 +25,32 @@ RSpec.describe ApplicationController, type: :controller do
 
     def destroy
       render plain: "authorized"
+    end
+
+    def set_title
+      @title = params[:title]
+    end
+  end
+
+  describe "#page_title" do
+    it "adds admin to the title in admin routes" do
+      expect(controller).to receive(:controller_path).and_return("admin/articles")
+
+      get :index, params: { title: "title" }
+
+      expect(controller.page_title).to eq("CrimethInc. Admin : title")
+    end
+
+    it "appends the set title" do
+      get :index, params: { title: "title" }
+
+      expect(controller.page_title).to eq("CrimethInc. : title")
+    end
+
+    it "has a default title" do
+      get :index
+
+      expect(controller.page_title).to eq("CrimethInc.")
     end
   end
 
