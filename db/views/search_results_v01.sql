@@ -1,12 +1,12 @@
 SELECT
   searchable_id, searchable_type, title, subtitle, content,
-  to_tsvector(array_to_string(tag_names, ' ')) AS tag,
-  to_tsvector(array_to_string(category_names, ' ')) AS category,
-  to_tsvector(array_to_string(contributor_names, ' ')) AS contributor,
+  tag_names AS tag,
+  category_names AS category,
+  contributor_names AS contributor,
 
   setweight(title, 'A') ||
   setweight(subtitle, 'B') ||
-  setweight(content, 'D') ||
+  setweight(content, 'C') ||
   setweight(array_to_tsvector(tag_names), 'D') ||
   setweight(array_to_tsvector(category_names), 'D') ||
   setweight(array_to_tsvector(contributor_names), 'D') AS document

@@ -1,5 +1,6 @@
 class Search
-  FILTER_REGEX  = /\w+:\w+/
+  ARRAY_FILTERS = %w[tag category contributor]
+  FILTER_REGEX  = /(\w+:(\w+|"[^"]+"))/
   VALID_FILTERS = %w[title subtitle content tag category contributor].freeze
 
   attr_reader :query
@@ -27,7 +28,11 @@ class Search
       key   = filter.first
       value = filter.last
 
-      self.scope = scope.where("#{key} @@ to_tsquery(?)", value)
+      if ARRAY_FILTERS.include?(key)
+        self.scope = scope.where("#{key}::text[] @> ARRAY[?]", value)
+      else
+        self.scope = scope.where("#{key} @@ plainto_tsquery(?)", value)
+      end
     end
 
     scope
@@ -46,14 +51,16 @@ class Search
   def normalize_filters(query)
     filters = query
               .scan(FILTER_REGEX)
+              .map(&:first)
               .map { |filter| filter.split(":") }
               .select { |filter| VALID_FILTERS.include?(filter.first) }
+              .map { |filter| [filter.first, filter.last.tr('"', "")] }
 
     filters
   end
 
   def strip_filters(query)
-    filters = query.scan(FILTER_REGEX)
+    filters = query.scan(FILTER_REGEX).map(&:first)
 
     filters.inject(query) { |q, match| q.sub(match, "") }.strip
   end

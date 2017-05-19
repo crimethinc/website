@@ -24,7 +24,7 @@ class AdvancedSearch
   end
 
   def category
-    filters.select { |filter| filter.first == "category" }.map(&:last).join(", ")
+    filters.select { |filter| filter.first == "category" }.map(&:last).map { |c| c.tr('"', "") }.join(", ")
   end
 
   def content=(content)
@@ -44,17 +44,21 @@ class AdvancedSearch
   end
 
   def contributor
-    filters.select { |filter| filter.first == "contributor" }.map(&:last).join(" ")
+    filters.select { |filter| filter.first == "contributor" }.map(&:last).map { |c| c.tr('"', "") }.join(" ")
   end
 
   def tag=(tags)
     tags.to_s.split(",").map(&:strip).each do |tag|
+      if tag.match?(/\s/)
+        tag = tag.inspect
+      end
+
       @query += "tag:#{tag}" + " "
     end
   end
 
   def tag
-    filters.select { |filter| filter.first == "tag" }.map(&:last).join(", ")
+    filters.select { |filter| filter.first == "tag" }.map(&:last).map { |c| c.tr('"', "") }.join(", ")
   end
 
   def term=(term)
@@ -92,6 +96,7 @@ class AdvancedSearch
 
     @filters = query
                .scan(Search::FILTER_REGEX)
+               .map(&:first)
                .map { |filter| filter.split(":") }
                .select { |filter| Search::VALID_FILTERS.include?(filter.first) }
 
@@ -99,7 +104,7 @@ class AdvancedSearch
   end
 
   def strip_filters(query)
-    filters = query.scan(Search::FILTER_REGEX)
+    filters = query.scan(Search::FILTER_REGEX).map(&:first)
 
     filters.inject(query) { |q, match| q.sub(match, "") }.strip
   end
