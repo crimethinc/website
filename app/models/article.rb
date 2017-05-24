@@ -88,8 +88,12 @@ class Article < ApplicationRecord
   end
 
   def update_redirect_short_paths
-    self.redirects.each do |redirect|
-      redirect.update_attribute(source_path: self.short_path)
+    if Redirect.where(source_path: "/"+self.short_path).exists?
+      errors.add(:short_path, ' is already defined by a redirect')
+    else
+      self.redirects.each do |redirect|
+        redirect.update_attribute(source_path: self.short_path)
+      end
     end
   end
 
