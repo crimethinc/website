@@ -76,7 +76,7 @@ class Article < ApplicationRecord
   end
 
   def create_redirect
-    unless short_path.blank? || Redirect.exists?(source_path: "/"+short_path, target_path: path)
+    unless short_path.blank? || Redirect.exists?(source_path: "/"+short_path, target_path: path) || redirects.present?
       Redirect.create(source_path: short_path, target_path: path, article_id: id)
     end
   end
@@ -91,8 +91,9 @@ class Article < ApplicationRecord
     if Redirect.where(source_path: "/"+self.short_path).exists?
       errors.add(:short_path, ' is already defined by a redirect')
     else
+      puts self.redirects.count
       self.redirects.each do |redirect|
-        redirect.update_attribute(source_path: self.short_path)
+        redirect.update_attribute(:source_path, self.short_path)
       end
     end
   end
