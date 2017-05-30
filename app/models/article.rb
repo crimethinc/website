@@ -9,7 +9,7 @@ class Article < ApplicationRecord
   has_many :categories, through: :categorizations
   has_many :contributions, dependent: :destroy
   has_many :collection_posts, foreign_key: :collection_id, class_name: :Article
-  has_many :redirects, dependent: :destroy
+  has_one :redirect, dependent: :destroy
   belongs_to :collection, foreign_key: :parent_id, class_name: :Article
 
   accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
@@ -26,10 +26,8 @@ class Article < ApplicationRecord
   validates :short_path, uniqueness: true, unless: "short_path.blank?"
   validates :tweet, length: { maximum: 115 }
   validates :summary, length: { maximum: 200 }
-  validate :redirect_source_path_unique, on: [:create]
-  validate :update_redirect_short_paths, if: :short_path_changed?
 
-  before_save :create_redirect
+  before_save :update_or_create_redirect
 
   default_scope { order("published_at DESC") }
   scope :live,     -> { where("published_at < ?", Time.now) }
@@ -75,25 +73,16 @@ class Article < ApplicationRecord
     self.content_format = self.content_format.downcase
   end
 
-  def create_redirect
-    unless short_path.blank? || Redirect.exists?(source_path: "/"+short_path, target_path: path) || redirects.present?
-      Redirect.create(source_path: short_path, target_path: path, article_id: id)
-    end
-  end
-
-  def redirect_source_path_unique
+  def update_or_create_redirect
     unless short_path.blank?
-      errors.add(:short_path, ' is already defined by a redirect') if Redirect.where(source_path: "/"+self.short_path).exists?
-    end
-  end
-
-  def update_redirect_short_paths
-    if Redirect.where(source_path: "/"+self.short_path).exists?
-      errors.add(:short_path, ' is already defined by a redirect')
-    else
-      puts self.redirects.count
-      self.redirects.each do |redirect|
-        redirect.update_attribute(:source_path, self.short_path)
+      if redirect.present?
+        if short_path_changed? || slug_changed? || published_at_changed?
+          redirect.update_attributes(source_path: self.short_path, target_path: self.path )
+        end
+      elsif Redirect.where(source_path: "/"+self.short_path).exists?
+        errors.add(:short_path, ' is a path that already points to a redirect.')
+      else
+        Redirect.create(source_path: short_path, target_path: path, article_id: id)
       end
     end
   end
