@@ -9,7 +9,6 @@ gem "pg"
 
 # webserver
 gem "puma"
-gem "foreman"
 
 # assets
 gem "bootstrap-sass", "3.3.7"
