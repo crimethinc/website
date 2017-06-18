@@ -5,15 +5,16 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $color-white;
-  outline: $border-size-xsmall solid $color-true-black;
-  border: none;
+  border: $border-size-xsmall solid $color-true-black;
+  border-radius: 2px;
 }
 
+.download.button,
 .buy-now.button,
 .support-site.button {
   background: $color-green;
-  background: green;
-  outline-color: darken($color-green, 20%);
+  border-color: darken($color-green, 10%);
   font-weight: bold;
   font-weight: 500;
+  color: $color-white;
 }

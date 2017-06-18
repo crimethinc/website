@@ -3,7 +3,7 @@ class BooksController < ApplicationController
 
   def index
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books"
 
     @bullet_books = []
@@ -25,25 +25,25 @@ class BooksController < ApplicationController
 
   def show
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books : #{@book.title}"
   end
 
   def extras
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books : #{@book.title} : Extras"
   end
 
   def lit_kit
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books : Literature Distribution Kit"
   end
 
   def into_libraries
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books : CrimethInc. Into Libraries"
   end
 

@@ -1,6 +1,9 @@
 <%= form_for [:admin, @book] do |f| %>
   <%= render "admin/form_errors", thing: @book %>
 
+  <%= f.hidden_field :book, value: @publication_type == "book" ? 1 : 0 %>
+  <%= f.hidden_field :zine, value: @publication_type == "zine" ? 1 : 0 %>
+
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control input-lg" %>
@@ -16,6 +19,7 @@
       <div class="form-group">
         <%= f.label :description %>
         <%= f.text_area :description, class: "form-control", rows: 8 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
       </div>
     </div>
 
@@ -23,6 +27,7 @@
       <div class="form-group">
         <%= f.label :content %>
         <%= f.text_area :content, class: "form-control", rows: 8 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
       </div>
     </div>
   </div> <!-- .row -->
@@ -47,8 +52,49 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6">
       <div class="form-group">
-        <%= f.label :download_url, "Download URL" %>
-        <%= f.url_field :download_url, class: "form-control" %>
+        <label for="downloads">Downloads</label>
+
+        <div class="checkbox">
+          <%= f.label :read_download_present do %>
+            <%= f.check_box :read_download_present %>
+            <b>Reading:</b>
+            Is there a PDF for on-screen reading uploaded?
+          <% end %>
+        </div>
+
+        <div class="checkbox">
+          <%= f.label :print_download_present do %>
+            <%= f.check_box :print_download_present %>
+            <b>Printing:</b>
+            Is there an imposed PDF uploaded?
+          <% end %>
+        </div>
+
+        <div class="checkbox">
+          <%= f.label :lite_download_present do %>
+            <%= f.check_box :lite_download_present %>
+            <b>Lo Res:</b>
+            Is there a low resolution / smaller file size PDF uploaded?
+          <% end %>
+        </div>
+
+        <p class="form-text text-muted">
+          PDFs must be uploaded to
+          <code>/assets/<%= @publication_type.pluralize %>/[slug]</code>
+          on S3/Cloudfront.<br>
+
+          PDFs must be named:
+          <% if @book.new_record? %>
+            <code>[slug].pdf</code>,
+            <code>[slug]__print.pdf</code>,
+            <code>[slug]__lite.pdf</code>
+          <% else %>
+            <code><%= @book.slug %>.pdf</code>,
+            <code><%= @book.slug %>__print.pdf</code>,
+            <code><%= @book.slug %>__lite.pdf</code>
+          <% end %>
+        </p>
+
       </div>
     </div>
 
@@ -61,7 +107,7 @@
   </div> <!-- .row -->
 
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 
   <fieldset id="syndication">
     <legend>Syndication</legend>
@@ -92,7 +138,7 @@
     </div> <!-- .row -->
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 
   <div class="row">
     <div class="col-xs-12 col-sm-6">
@@ -102,6 +148,7 @@
         <div class="form-group">
           <%= f.label :table_of_contents %>
           <%= f.text_area :table_of_contents, class: "form-control", rows: 10 %>
+          <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
         </div>
       </fieldset>
     </div>
@@ -198,6 +245,5 @@
     </div>
   </div> <!-- .row -->
 
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 <% end %>

@@ -97,6 +97,13 @@ Rails.application.routes.draw do
   get "videos/:slug",    to: "videos#show",  as: :video
 
 
+  # Tools
+  # TODO uncomment when tools is finished and populated
+  # get "tools/videos",      to: redirect("/videos")
+  # get "tools(/:type)",     to: "tools#index", as: :tools
+  # get "tools/:type/:slug", to: "tools#show",  as: :tool
+
+
   # Site search
   get "search", to: "search#index"
 
@@ -119,6 +126,7 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :zines,        concerns: :paginatable
     resources :books,        concerns: :paginatable
     resources :categories,   concerns: :paginatable
     resources :contributors, concerns: :paginatable

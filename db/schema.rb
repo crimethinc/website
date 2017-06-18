@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170321023410) do
+ActiveRecord::Schema.define(version: 20170618025625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "articles", id: :serial, force: :cascade do |t|
     t.integer "user_id"
@@ -55,7 +56,6 @@ ActiveRecord::Schema.define(version: 20170321023410) do
     t.text "content"
     t.text "tweet"
     t.text "summary"
-    t.text "download_url"
     t.text "description"
     t.text "buy_url"
     t.text "buy_info"
@@ -82,6 +82,12 @@ ActiveRecord::Schema.define(version: 20170321023410) do
     t.text "table_of_contents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "zine"
+    t.boolean "book"
+    t.boolean "back_image_present", default: false
+    t.boolean "read_download_present", default: false
+    t.boolean "print_download_present", default: false
+    t.boolean "lite_download_present", default: false
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|

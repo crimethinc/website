@@ -1,0 +1,7 @@
+<nav class="crumbtrail">
+  <%= link_to "Tools", [:tools] %>
+  <% unless @type == "tools" %>
+    :
+    <%= link_to @type.capitalize, [:tools, type: @type]  %>
+  <% end %>
+</nav>

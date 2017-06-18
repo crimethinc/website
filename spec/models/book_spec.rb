@@ -38,6 +38,6 @@ RSpec.describe Book, type: :model do
 
     let(:book) { Book.new(title: "Contradictionary") }
 
-    it { is_expected.to eq("Photo of 'Contradictionary' book cover") }
+    it { is_expected.to eq("Photo of 'Contradictionary' cover") }
     end
 end

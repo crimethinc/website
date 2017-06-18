@@ -1,18 +1,27 @@
 <div class="h-entry book">
-  <header>
-    <nav class="crumbtrail"><%= link_to "Books", [:books] %></nav>
-    <%= render "articles/titles", header: @book, linked: true %>
-  </header>
-
   <div class="row">
     <div class="column column-one-third section meta">
       <div class="book-cover">
-        <%= image_tag @book.image, alt: @book.image_description, class: "u-image" %>
+        <%= image_tag @book.front_image, alt: @book.front_image_description, class: "u-image" %>
       </div> <!-- .book-cover -->
 
-      <div id="buy-now">
-        <%= render "books/buy_button", price: @book.price_in_cents, url: @book.buy_url %>
-      </div>
+      <% if @book.back_image_present? %>
+        <div class="book-cover">
+          <%= image_tag @book.back_image,  alt: @book.back_image_description,  class: "u-image" %>
+        </div> <!-- .book-cover -->
+      <% end %>
+
+      <% if @book.price_in_cents.present? %>
+        <div id="buy-now">
+          <%= render "books/buy_button", price: @book.price_in_cents, url: @book.buy_url %>
+        </div>
+      <% end %>
+
+      <% if @book.download_url.present? %>
+        <div id="download">
+          <%= render "books/download_button", url: @book.download_url %>
+        </div>
+      <% end %>
 
       <div class="buy-info">
         <%= render_markdown @book.buy_info %>
@@ -26,8 +35,10 @@
               <%= @book.width %>
               x
               <%= @book.height %>
-              x
-              <%= @book.depth %>
+              <% if @book.depth.present? %>
+                x
+                <%= @book.depth %>
+              <% end %>
             </span>
           </li>
 
@@ -54,7 +65,13 @@
 
     <div class="column column-two-third section book-main">
       <header>
-        <nav class="crumbtrail"><%= link_to "Books", [:books] %></nav>
+        <% if @type.present? %>
+          <%= render "tools/nav" %>
+        <% else %>
+          <nav class="crumbtrail"><%= link_to "Books", [:books] %></nav>
+        <% end %>
+
+
         <%= render "articles/titles", header: @book, linked: true %>
       </header>
 

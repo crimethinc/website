@@ -105,6 +105,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_resource_name
+    request.path.split("admin/").last.split("/").first.capitalize.singularize
+  end
+  helper_method :current_resource_name
+
   def render_markdown(text)
     Kramdown::Document.new(
       MarkdownMedia.parse(text),

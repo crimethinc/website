@@ -1,0 +1,22 @@
+<div class="h-entry <%= @type.downcase %>">
+  <header>
+    <%= render "tools/nav" %>
+  </header>
+
+  <h1><%= @type.capitalize %></h1>
+
+  <br><br><br>
+
+  <% if @tools.present? %>
+    <%# render type specific collection and/or partial %>
+    <% @tools.each do |tool| %>
+      <%= link_to tool.name, tool.path %>
+      <hr>
+    <% end %>
+  <% else %>
+    <%# render types preview and nav %>
+    <%= link_to "Posters",  [:tools, type: :posters] %>
+    <%= link_to "Zines",    [:tools, type: :zines] %>
+    <%= link_to "Stickers", [:tools, type: :stickers] %>
+  <% end %>
+</div>

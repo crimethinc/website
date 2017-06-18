@@ -1,73 +1,76 @@
-class Admin::BooksController < Admin::AdminController
+class Admin::ZinesController < Admin::AdminController
   before_action :authorize
-  before_action :set_book,             only: [:show, :edit, :update, :destroy]
+  before_action :set_zine, only: [:show, :edit, :update, :destroy]
   before_action :set_publication_type, only: [:show, :edit, :new, :index]
 
-  # /admin/books
+  # /admin/zines
   def index
-    @books = Book.book.page(params[:page])
+    @books = Book.zine.page(params[:page])
     @title = admin_title
+    render "admin/books/index"
   end
 
-  # /admin/books/1
+  # /admin/zines/1
   def show
-    return redirect_to([nil, "admin", "zines", @book.id].join("/")) if @book.zine?
+    return redirect_to([nil, "admin", "books", @book.id].join("/")) if @book.book?
 
     @title = admin_title(@book, [:title, :subtitle])
+    render "admin/books/show"
   end
 
-  # /admin/books/new
+  # /admin/zines/new
   def new
-    @book = Book.new(book: true)
+    @book = Book.new(zine: true)
     @title = admin_title
+    render "admin/books/new"
   end
 
-  # /admin/books/1/edit
+  # /admin/zines/1/edit
   def edit
-    return redirect_to([nil, "admin", "zines", @book.id, "edit"].join("/")) if @book.zine?
+    return redirect_to([nil, "admin", "books", @book.id, "edit"].join("/")) if @book.book?
 
     @title = admin_title(@book, [:id, :title, :subtitle])
+    render "admin/books/edit"
   end
 
-  # /admin/books
+  # /admin/zines
   def create
-    @book      = Book.new(book_params)
-    @book.book = true
+    @book      = Book.new(zine_params)
+    @book.zine = true
 
     if @book.save
-      redirect_to [:admin, @book], notice: "Book was successfully created."
+      redirect_to [:admin, @book], notice: "Zine was successfully created."
     else
       render :new
     end
   end
 
-  # /admin/books/1
+  # /admin/zines/1
   def update
-    if @book.update(book_params)
-      redirect_to [:admin, @book], notice: "Book was successfully updated."
+    if @book.update(zine_params)
+      redirect_to [:admin, @book], notice: "Zine was successfully updated."
     else
       render :edit
     end
   end
 
-  # /admin/books/1
+  # /admin/zines/1
   def destroy
-    publication_type = @book.book? ? :books : :zines
     @book.destroy
-    redirect_to [:admin, publication_type], notice: "#{publication_type.to_s.capitalize.singularize} was successfully destroyed."
+    redirect_to [:admin, :zines], notice: "Zine was successfully destroyed."
   end
 
   private
 
-  def set_book
+  def set_zine
     @book = Book.find(params[:id])
   end
 
   def set_publication_type
-    @publication_type = "book"
+    @publication_type = "zine"
   end
 
-  def book_params
+  def zine_params
     params.require(:book).permit(:title, :subtitle, :content, :tweet, :summary,
       :description, :buy_url, :buy_info, :content_format, :slug, :series, :published_at,
       :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,
