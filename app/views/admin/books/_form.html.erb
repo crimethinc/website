@@ -86,12 +86,12 @@
           PDFs must be named:
           <% if @book.new_record? %>
             <code>[slug].pdf</code>,
-            <code>[slug]__print.pdf</code>,
-            <code>[slug]__lite.pdf</code>
+            <code>[slug]_print.pdf</code>,
+            <code>[slug]_lite.pdf</code>
           <% else %>
             <code><%= @book.slug %>.pdf</code>,
-            <code><%= @book.slug %>__print.pdf</code>,
-            <code><%= @book.slug %>__lite.pdf</code>
+            <code><%= @book.slug %>_print.pdf</code>,
+            <code><%= @book.slug %>_lite.pdf</code>
           <% end %>
         </p>
 

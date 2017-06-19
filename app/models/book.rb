@@ -46,7 +46,7 @@ class Book < ApplicationRecord
 
   def download_url(type=nil)
     filename = [slug]
-    filename << "__#{type.to_s}" if type.present?
+    filename << "_#{type.to_s}" if type.present?
     filename << ".pdf"
     filename = filename.join
     [ASSET_BASE_URL, slug, filename].join("/")
