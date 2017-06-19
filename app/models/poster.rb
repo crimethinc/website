@@ -1,43 +1,31 @@
-class Book < ApplicationRecord
+class Poster < ApplicationRecord
   include Name
   include Slug
 
-  scope :book, -> { where(zine: false) }
-  scope :zine, -> { where(zine: true)  }
+  scope :poster,  -> { where(sticker: false) }
+  scope :sticker, -> { where(sticker: true)  }
 
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
 
   def namespace
-    zine? ? "zines" : "books"
+    sticker? ? "stickers" : "posters"
   end
 
-  def book?
-    !zine?
-  end
-
-  def path
-    if zine?
-      "/zines/#{slug}"
-    else
-      "/books/#{slug}"
-    end
-  end
-
-  def image
-    [ASSET_BASE_URL, namespace, slug, "photo.jpg"].join("/")
+  def poster?
+    !sticker?
   end
 
   def image_description
-    "Photo of '#{title}' front cover"
+    "Photo of '#{title}' front side"
   end
   alias_method :front_image_description, :image_description
 
   def back_image_description
-    "Photo of '#{title}' back cover"
+    "Photo of '#{title}' back side"
   end
 
   def image_description
-    "Photo of '#{title}' cover"
+    "Photo of '#{title}' side"
   end
 
   def front_image

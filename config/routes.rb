@@ -126,7 +126,6 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :zines,        concerns: :paginatable
     resources :books,        concerns: :paginatable
     resources :categories,   concerns: :paginatable
     resources :contributors, concerns: :paginatable
@@ -134,13 +133,16 @@ Rails.application.routes.draw do
     resources :links,        concerns: :paginatable
     resources :pages,        concerns: :paginatable
     resources :podcasts,     concerns: :paginatable
+    resources :posters,      concerns: :paginatable
     resources :redirects,    concerns: :paginatable
     resources :roles,        concerns: :paginatable
     resources :settings,     concerns: :paginatable
+    resources :stickers,     concerns: :paginatable
     resources :subscribers,  concerns: :paginatable
     resources :themes,       concerns: :paginatable
     resources :users,        concerns: :paginatable
     resources :videos,       concerns: :paginatable
+    resources :zines,        concerns: :paginatable
   end
 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170619191053) do
+ActiveRecord::Schema.define(version: 20170619203618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -199,6 +199,29 @@ ActiveRecord::Schema.define(version: 20170619191053) do
     t.text "itunes_url"
     t.text "overcast_url"
     t.text "pocketcasts_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posters", force: :cascade do |t|
+    t.boolean "sticker"
+    t.text "title"
+    t.text "subtitle"
+    t.text "content"
+    t.string "content_format", default: "kramdown"
+    t.text "buy_info"
+    t.text "buy_url"
+    t.integer "price_in_cents"
+    t.text "summary"
+    t.text "description"
+    t.boolean "front_image_present", default: true
+    t.boolean "back_image_present", default: false
+    t.boolean "read_download_present", default: false
+    t.boolean "print_download_present", default: false
+    t.boolean "lite_download_present", default: false
+    t.text "slug"
+    t.string "height"
+    t.string "width"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

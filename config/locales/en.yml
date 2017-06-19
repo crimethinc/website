@@ -158,6 +158,21 @@ en:
       new_title: "New Books"
       show_title: "Books : %{title}"
       edit_title: "Editing book %{id} %{title} : %{subtitle}"
+    books:
+      index_title: "Zines"
+      new_title: "New Zines"
+      show_title: "Zines : %{title}"
+      edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+    posters:
+      index_title: "Posters"
+      new_title: "New Posters"
+      show_title: "Posters : %{title}"
+      edit_title: "Editing poster %{id} %{title} : %{subtitle}"
+    stickers:
+      index_title: "Stickers"
+      new_title: "New Stickers"
+      show_title: "Stickers : %{title}"
+      edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
     podcasts:
       index_title: "Podcasts"
       new_title: "New Podcasts"

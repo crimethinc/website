@@ -3,56 +3,50 @@ class Admin::BooksController < Admin::AdminController
   before_action :set_book,             only: [:show, :edit, :update, :destroy]
   before_action :set_publication_type, only: [:show, :edit, :new, :index]
 
-  # /admin/books
   def index
     @books = Book.book.page(params[:page])
     @title = admin_title
   end
 
-  # /admin/books/1
   def show
     return redirect_to([nil, "admin", "zines", @book.id].join("/")) if @book.zine?
 
     @title = admin_title(@book, [:title, :subtitle])
   end
 
-  # /admin/books/new
   def new
-    @book = Book.new(book: true)
+    @book = Book.new
     @title = admin_title
   end
 
-  # /admin/books/1/edit
   def edit
     return redirect_to([nil, "admin", "zines", @book.id, "edit"].join("/")) if @book.zine?
 
     @title = admin_title(@book, [:id, :title, :subtitle])
   end
 
-  # /admin/books
   def create
-    @book      = Book.new(book_params)
-    @book.book = true
+    @book = Book.new(book_params)
+    publication_type = @book.zine? ? :zines : :books
 
     if @book.save
-      redirect_to [:admin, @book], notice: "Book was successfully created."
+      redirect_to [:admin, @book], notice: "#{publication_type.to_s.capitalize.singularize} was successfully created."
     else
       render :new
     end
   end
 
-  # /admin/books/1
   def update
+    publication_type = @book.zine? ? :zines : :books
     if @book.update(book_params)
-      redirect_to [:admin, @book], notice: "Book was successfully updated."
+      redirect_to [:admin, @book], notice: "#{publication_type.to_s.capitalize.singularize} was successfully updated."
     else
       render :edit
     end
   end
 
-  # /admin/books/1
   def destroy
-    publication_type = @book.zine? ? :zines :  :books
+    publication_type = @book.zine? ? :zines : :books
     @book.destroy
     redirect_to [:admin, publication_type], notice: "#{publication_type.to_s.capitalize.singularize} was successfully destroyed."
   end
