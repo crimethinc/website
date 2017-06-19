@@ -17,7 +17,7 @@
         </div>
       <% end %>
 
-      <% if @book.download_url.present? %>
+      <% if @book.read_download_present? %>
         <div id="download">
           <%= render "books/download_button", url: @book.download_url %>
         </div>
