@@ -16,11 +16,7 @@ class Book < ApplicationRecord
   end
 
   def path
-    if zine?
-      "/zines/#{slug}"
-    else
-      "/books/#{slug}"
-    end
+    [nil, namespace, slug].join("/")
   end
 
   def image

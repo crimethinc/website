@@ -15,6 +15,10 @@ class Poster < ApplicationRecord
     !sticker?
   end
 
+  def path
+    [nil, namespace, slug].join("/")
+  end
+
   def image_description
     "Photo of '#{title}' front side"
   end
