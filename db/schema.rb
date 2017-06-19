@@ -82,8 +82,9 @@ ActiveRecord::Schema.define(version: 20170619203618) do
     t.text "table_of_contents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "zine"
+    t.boolean "zine", default: false
     t.boolean "back_image_present", default: false
+    t.boolean "front_image_present", default: false
     t.boolean "read_download_present", default: false
     t.boolean "print_download_present", default: false
     t.boolean "lite_download_present", default: false
