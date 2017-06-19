@@ -2,13 +2,17 @@ class Book < ApplicationRecord
   include Name
   include Slug
 
-  scope :book, -> { where(book: true) }
-  scope :zine, -> { where(zine: true) }
+  scope :book, -> { where(zine: false) }
+  scope :zine, -> { where(zine: true)  }
 
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
 
-  def type
+  def namespace
     zine? ? "zines" : "books"
+  end
+
+  def book?
+    !zine?
   end
 
   def path
@@ -20,7 +24,7 @@ class Book < ApplicationRecord
   end
 
   def image
-    [ASSET_BASE_URL, type, slug, "photo.jpg"].join("/")
+    [ASSET_BASE_URL, namespace, slug, "photo.jpg"].join("/")
   end
 
   def image_description
@@ -37,11 +41,11 @@ class Book < ApplicationRecord
   end
 
   def front_image
-    [ASSET_BASE_URL, type, slug, "front.jpg"].join("/")
+    [ASSET_BASE_URL, namespace, slug, "front.jpg"].join("/")
   end
 
   def back_image
-    [ASSET_BASE_URL, type, slug, "back.jpg"].join("/")
+    [ASSET_BASE_URL, namespace, slug, "back.jpg"].join("/")
   end
 
   def download_url(type=nil)
@@ -49,6 +53,6 @@ class Book < ApplicationRecord
     filename << "_#{type.to_s}" if type.present?
     filename << ".pdf"
     filename = filename.join
-    [ASSET_BASE_URL, slug, filename].join("/")
+    [ASSET_BASE_URL, namespace, slug, filename].join("/")
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618025625) do
+ActiveRecord::Schema.define(version: 20170619191053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,7 +83,6 @@ ActiveRecord::Schema.define(version: 20170618025625) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "zine"
-    t.boolean "book"
     t.boolean "back_image_present", default: false
     t.boolean "read_download_present", default: false
     t.boolean "print_download_present", default: false
