@@ -3,12 +3,12 @@
     <div class="column column-one-third section meta">
       <div class="book-cover">
         <%= image_tag @book.front_image, alt: @book.front_image_description, class: "u-image" %>
-      </div> <!-- .book-cover -->
+      </div>
 
       <% if @book.back_image_present? %>
         <div class="book-cover">
           <%= image_tag @book.back_image,  alt: @book.back_image_description,  class: "u-image" %>
-        </div> <!-- .book-cover -->
+        </div>
       <% end %>
 
       <% if @book.price_in_cents.present? %>
