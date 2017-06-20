@@ -1,3 +1,22 @@
+<!--
+# TODO add these attrs to view
+buy_url
+buy_info
+published_at
+
+printing
+ink
+definitions
+recipes
+has_index
+
+back_image_present
+front_image_present
+read_download_present
+print_download_present
+lite_download_present
+-->
+
 <%= render "admin/page_header", thing: @book %>
 
 <article>
@@ -11,15 +30,6 @@
   </header>
 
   <hr>
-  <p>
-    <strong>Title:</strong>
-    <%= @book.title %>
-  </p>
-
-  <p>
-    <strong>Subtitle:</strong>
-    <%= @book.subtitle %>
-  </p>
 
   <p>
     <strong>Description:</strong>
