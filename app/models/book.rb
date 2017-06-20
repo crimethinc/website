@@ -37,11 +37,11 @@ class Book < ApplicationRecord
   end
 
   def front_image
-    [ASSET_BASE_URL, namespace, slug, "front.jpg"].join("/")
+    [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join("/")
   end
 
   def back_image
-    [ASSET_BASE_URL, namespace, slug, "back.jpg"].join("/")
+    [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join("/")
   end
 
   def download_url(type=nil)
