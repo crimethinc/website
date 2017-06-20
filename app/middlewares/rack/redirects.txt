@@ -2608,8 +2608,8 @@
 /deutschbook /2012/10/03/new-crimethinc-collection-in-german
 /digitalutopiablog /2013/10/28/deserting-the-digital-utopia
 /doomed /2011/03/05/new-poster-capitalism-is-doomed
-/downloads /tools/downloads
-/downloads/ /tools/downloads
+/downloads /tools
+/downloads/ /tools
 /e /2011/02/02/from-the-depths-new-split-lp-and-tour
 /egypt /2012/01/25/egypts-ongoing-uprising
 /eightsteps /2012/02/09/eight-simple-steps-towards-revolution
