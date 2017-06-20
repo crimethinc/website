@@ -58,10 +58,13 @@
 
     <% if @poster.buy_url.present? %>
       <h2>Purchasing</h2>
-      <p>
-        <strong>Price in Cents:</strong>
-        <%= number_to_currency @poster.price_in_cents / 100 %>
-      </p>
+
+      <% if @poster.price_in_cents.present? %>
+        <p>
+          <strong>Price in Cents:</strong>
+          <%= number_to_currency @poster.price_in_cents / 100 %>
+        </p>
+      <% end %>
 
       <p>
         <strong>Buy info:</strong>
