@@ -60,26 +60,18 @@
         <label for="downloads">Downloads</label>
 
         <div class="checkbox">
-          <%= form.label :read_download_present do %>
-            <%= form.check_box :read_download_present, id: :poster_read_download_present %>
-            <b>Reading:</b>
-            Is there a PDF for on-screen reading uploaded?
+          <%= form.label :front_download_present do %>
+            <%= form.check_box :front_download_present, id: :poster_front_download_present %>
+            <b>Front Side</b>
+            Is there a PDF of the front of the poster uploaded?
           <% end %>
         </div>
 
         <div class="checkbox">
-          <%= form.label :print_download_present do %>
-            <%= form.check_box :print_download_present, id: :poster_print_download_present %>
-            <b>Printing:</b>
-            Is there an imposed PDF uploaded?
-          <% end %>
-        </div>
-
-        <div class="checkbox">
-          <%= form.label :lite_download_present do %>
-            <%= form.check_box :lite_download_present, id: :poster_lite_download_present %>
-            <b>Lo Res:</b>
-            Is there a low resolution / smaller file size PDF uploaded?
+          <%= form.label :back_download_present do %>
+            <%= form.check_box :back_download_present, id: :poster_back_download_present %>
+            <b>Back Side</b>
+            Is there a PDF of the back of the poster uploaded?
           <% end %>
         </div>
 
@@ -90,13 +82,11 @@
 
           PDFs must be named:
           <% if resource.new_record? %>
-            <code>[slug].pdf</code>,
-            <code>[slug]_print.pdf</code>,
-            <code>[slug]_lite.pdf</code>
+            <code>[slug]_front.pdf</code>,
+            <code>[slug]_back.pdf</code>,
           <% else %>
-            <code><%= resource.slug %>.pdf</code>,
-            <code><%= resource.slug %>_print.pdf</code>,
-            <code><%= resource.slug %>_lite.pdf</code>
+            <code><%= resource.slug %>_front.pdf</code>,
+            <code><%= resource.slug %>_back.pdf</code>
           <% end %>
         </p>
 
@@ -124,6 +114,8 @@
 
     </div>
   </div> <!-- .row -->
+
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 
   <fieldset id="purchasing">
     <legend>Purchasing</legend>
@@ -168,7 +160,6 @@
 
     </div> <!-- .row -->
   </fieldset>
-
 
   <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 <% end %>

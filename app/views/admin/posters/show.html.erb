@@ -4,97 +4,78 @@
   <header>
     <h1>
       <%= link_to [:admin, @poster], class: "p-name" do %>
-        <span class="h1 title"><%= @poster.title %></span><br>
-        <span class="h2 subtitle"><%= @poster.subtitle %></span>
+      <span class="h1 title"><%= @poster.title %></span><br>
+      <span class="h2 subtitle"><%= @poster.subtitle %></span>
       <% end %>
     </h1>
   </header>
 
-  <hr>
-  <p>
-    <strong>Title:</strong>
-    <%= @poster.title %>
-  </p>
+  <div>
+    <p>
+      <% if @poster.front_image_present? %>
+        <span class="badge badge-success">✔ Front Image</span>
+      <% end %>
 
-  <p>
-    <strong>Subtitle:</strong>
-    <%= @poster.subtitle %>
-  </p>
+      <% if @poster.back_image_present? %>
+        <span class="badge badge-danger">✔ Back Image</span>
+      <% end %>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @poster.description %>
-  </p>
+      <% if @poster.front_download_present? %>
+        <span class="badge badge-default">✔ Front Download</span>
+      <% end %>
 
-  <p>
-    <strong>Content:</strong>
-    <%= @poster.content %>
-  </p>
+      <% if @poster.back_download_present? %>
+        <span class="badge badge-default">✔ Back Download</span>
+      <% end %>
+    </p>
 
-  <p>
-    <strong>Slug:</strong>
-    <%= @poster.slug %>
-  </p>
+    <p><b>URL:</b> <b><%= link_to @poster.path, @poster.path %></b></p>
 
-  <p>
-    <strong>Download url:</strong>
-    <%= @poster.download_url %>
-  </p>
+    <p>
+      <strong>Size:</strong>
+      <%= @poster.width %>
+      x
+      <%= @poster.height %>
+    </p>
 
-  <p>
-    <strong>Price in cents:</strong>
-    <%= @poster.price_in_cents %>
-  </p>
+    <% if @poster.front_download_present? %>
+      <p><b>Front PDF Download URL:</b> <b><%= link_to @poster.download_url(:front), @poster.download_url(:front) %></b></p>
+    <% end %>
 
-  <p>
-    <strong>Summary:</strong>
-    <%= @poster.summary %>
-  </p>
+    <% if @poster.back_download_present? %>
+      <p><b>Back PDF Download URL:</b> <b><%= link_to @poster.download_url(:back), @poster.download_url(:back) %></b></p>
+    <% end %>
 
-  <p>
-    <strong>Height:</strong>
-    <%= @poster.height %>
-  </p>
+    <p>
+      <strong>Description:</strong>
+      <%= @poster.description %>
+    </p>
 
-  <p>
-    <strong>Width:</strong>
-    <%= @poster.width %>
-  </p>
+    <p>
+      <strong>Summary</strong> <span class="text-muted">(used for link previews in Facebook, Twitter, etc)</span>:<br>
+      <%= @poster.summary %>
+    </p>
+
+    <% if @poster.buy_url.present? %>
+      <h2>Purchasing</h2>
+      <p>
+        <strong>Price in Cents:</strong>
+        <%= number_to_currency @poster.price_in_cents / 100 %>
+      </p>
+
+      <p>
+        <strong>Buy info:</strong>
+        <%= @poster.buy_info %>
+      </p>
+
+      <p>
+        <strong>Buy URL:</strong>
+        <%= link_to @poster.buy_url, @poster.buy_url %>
+      </p>
+    <% end %>
+
+    <h2>Content</h2>
+
+    <%= render_markdown @poster.content %>
+  </div>
 </article>
-
-
-
-<p>
-  <strong>Buy info:</strong>
-  <%= @poster.buy_info %>
-</p>
-
-<p>
-  <strong>Buy url:</strong>
-  <%= @poster.buy_url %>
-</p>
-
-<p>
-  <strong>Front image present:</strong>
-  <%= @poster.front_image_present %>
-</p>
-
-<p>
-  <strong>Back image present:</strong>
-  <%= @poster.back_image_present %>
-</p>
-
-<p>
-  <strong>Read download present:</strong>
-  <%= @poster.read_download_present %>
-</p>
-
-<p>
-  <strong>Print download present:</strong>
-  <%= @poster.print_download_present %>
-</p>
-
-<p>
-  <strong>Lite download present:</strong>
-  <%= @poster.lite_download_present %>
-</p>
