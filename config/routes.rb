@@ -70,25 +70,24 @@ Rails.application.routes.draw do
   get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
 
   # Pages (linked in header/nav)
-  get "read",               to: "about#read",        as: :read
-  get "watch",              to: redirect("videos"),  as: :watch_redirect
-  get "listen",             to: redirect("podcast"), as: :listen_redirect
-  get "get",                to: redirect("store"),   as: :get_redirect
+  get "read",   to: "about#read",        as: :read
+  get "watch",  to: redirect("videos"),  as: :watch_redirect
+  get "listen", to: redirect("podcast"), as: :listen_redirect
+  get "get",    to: redirect("store"),   as: :get_redirect
 
 
   # Podcast
-  get "podcast/feed",            to: "podcast#feed",   as: :podcast_feed, defaults: { format: "rss" }
-  get "podcast",                 to: "podcast#index",  as: :podcast
-  get "podcast/:id",             to: "podcast#show",   as: :episode
-  get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
+  get "podcast/feed",           to: "podcast#feed",       as: :podcast_feed, defaults: { format: "rss" }
+  get "podcast",                to: "podcast#index",      as: :podcast
+  get "podcast/:id",            to: "podcast#show",       as: :episode
+  get "podcast/:id/transcript", to: "podcast#transcript", as: :episode_transcript
 
 
   # Books
-  get "books/lit-kit",           to: "books#lit_kit",         as: :books_lit_kit
-  get "books/into-libraries",    to: "books#into_libraries",  as: :books_into_libraries
-  get "books",                   to: "books#index",           as: :books
-  get "books/:slug",             to: "books#show",            as: :book
-  get "books/:slug/extras",      to: "books#extras",          as: :book_extras
+  get "books/lit-kit",        to: "books#lit_kit",        as: :books_lit_kit
+  get "books/into-libraries", to: "books#into_libraries", as: :books_into_libraries
+  get "books",                to: "books#index",          as: :books
+  get "books/:slug",          to: "books#show",           as: :book
 
 
   # Videos
@@ -97,11 +96,19 @@ Rails.application.routes.draw do
   get "videos/:slug",    to: "videos#show",  as: :video
 
 
+  # Posters
+  get "posters",       to: "posters#index", as: :posters
+  get "posters/:slug", to: "posters#show",  as: :poster
+
+
   # Tools
-  # TODO uncomment when tools is finished and populated
-  # get "tools/videos",      to: redirect("/videos")
-  # get "tools(/:type)",     to: "tools#index", as: :tools
-  # get "tools/:type/:slug", to: "tools#show",  as: :tool
+  get "tools/downloads", to: redirect("/logos")
+  get "tools/logos",     to: redirect("/logos")
+  get "tools/stickers",  to: redirect("/stickers")
+  get "tools/zines",     to: redirect("/zines")
+  get "tools/posters",   to: redirect("/posters")
+  get "tools/videos",    to: redirect("/videos")
+  get "tools",           to: "tools#index", as: :tools
 
 
   # Site search

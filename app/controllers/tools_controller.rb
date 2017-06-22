@@ -8,16 +8,7 @@ class ToolsController < ApplicationController
 
   def index
     @html_id = "page"
-    @body_id = @type.downcase
-  end
-
-  def show
-    @html_id = "page"
-    @body_id = "products"
-
-    # Re-use /books/show views
-    @book = @tool
-    render "books/show"
+    @body_id = "tools"
   end
 
   private

@@ -2,6 +2,6 @@
   <%= link_to "Tools", [:tools] %>
   <% unless @type == "tools" %>
     :
-    <%= link_to @type.capitalize, [:tools, type: @type]  %>
+    <%= link_to @type.capitalize, [:tools, @type]  %>
   <% end %>
 </nav>
