@@ -33,11 +33,11 @@ class Poster < ApplicationRecord
   end
 
   def front_image
-    [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join("/")
+    [ASSET_BASE_URL, namespace, slug, "#{slug}_front.#{front_image_format}"].join("/")
   end
 
   def back_image
-    [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join("/")
+    [ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join("/")
   end
 
   def download_url(type=nil)

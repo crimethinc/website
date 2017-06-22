@@ -61,7 +61,7 @@
 
         <div class="checkbox">
           <%= form.label :front_download_present do %>
-            <%= form.check_box :front_download_present, id: :poster_front_download_present %>
+            <%= form.check_box :front_download_present, id: :poster_front_download_present, class: "form-check-input" %>
             <b>Front Side</b>
             Is there a PDF of the front of the poster uploaded?
           <% end %>
@@ -69,7 +69,7 @@
 
         <div class="checkbox">
           <%= form.label :back_download_present do %>
-            <%= form.check_box :back_download_present, id: :poster_back_download_present %>
+            <%= form.check_box :back_download_present, id: :poster_back_download_present, class: "form-check-input" %>
             <b>Back Side</b>
             Is there a PDF of the back of the poster uploaded?
           <% end %>
@@ -91,7 +91,11 @@
         </p>
 
       </div>
+    </div>
+  </div> <!-- .row -->
 
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
       <div class="form-group">
         <label for="images">Images</label>
 
@@ -99,7 +103,7 @@
           <%= form.label :front_image_present do %>
             <%= form.check_box :front_image_present, id: :poster_front_image_present %>
             <b>Front:</b>
-            Is there a JPG of the front side uploaded?
+            Is there an image of the front side uploaded?
           <% end %>
         </div>
 
@@ -107,12 +111,72 @@
           <%= form.label :back_image_present do %>
             <%= form.check_box :back_image_present, id: :poster_back_image_present %>
             <b>Back:</b>
-            Is there a JPG of the back side uploaded?
+            Is there an image of the back side uploaded?
           <% end %>
         </div>
       </div>
-
     </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-group">
+        <label for="downloads">Preview Front Image Format</label>
+
+        <div class="checkbox">
+          <%= form.label :front_image_format_jpg, class: "form-check-label" do %>
+            <%= form.radio_button :front_image_format, :jpg, id: :poster_front_image_format_jpg, class: "form-check-input" %>
+            <b>JPG</b>
+            Is there a JPG of the front side uploaded?
+          <% end %>
+        </div>
+
+        <div class="checkbox">
+          <%= form.label :front_image_format_gif, class: "form-check-label" do %>
+            <%= form.radio_button :front_image_format, :gif, id: :poster_front_image_format_gif, class: "form-check-input" %>
+            <b>GIF</b>
+            Is there a GIF of the front of the poster uploaded?
+          <% end %>
+        </div>
+
+        <div class="checkbox">
+          <%= form.label :front_image_format_png, class: "form-check-label" do %>
+            <%= form.radio_button :front_image_format, :png, id: :poster_front_image_format_png, class: "form-check-input" %>
+            <b>PNG</b>
+            Is there a PNG of the front of the poster uploaded?
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-group">
+        <label for="downloads">Preview Back Image Format</label>
+
+        <div class="checkbox">
+          <%= form.label :back_image_format_jpg do %>
+            <%= form.radio_button :back_image_format, :jpg, id: :poster_back_image_format_jpg, class: "form-check-input" %>
+            <b>JPG</b>
+            Is there a JPG of the back side uploaded?
+          <% end %>
+        </div>
+
+        <div class="checkbox">
+          <%= form.label :back_image_format_gif do %>
+            <%= form.radio_button :back_image_format, :gif, id: :poster_back_image_format_gif, class: "form-check-input" %>
+            <b>GIF</b>
+            Is there a GIF of the back of the poster uploaded?
+          <% end %>
+        </div>
+
+        <div class="checkbox">
+          <%= form.label :back_image_format_png do %>
+            <%= form.radio_button :back_image_format, :png, id: :poster_back_image_format_png, class: "form-check-input" %>
+            <b>PNG</b>
+            Is there a PNG of the back of the poster uploaded?
+          <% end %>
+        </div>
+      </div>
+    </div>
+
   </div> <!-- .row -->
 
   <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>

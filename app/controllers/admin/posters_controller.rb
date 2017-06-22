@@ -65,6 +65,6 @@ class Admin::PostersController < Admin::AdminController
     params.require(:poster).permit(:sticker, :title, :subtitle, :content, :content_format,
       :buy_info, :buy_url, :price_in_cents, :summary, :description,
       :front_image_present, :back_image_present, :front_download_present, :back_download_present,
-      :slug, :height, :width)
+      :slug, :height, :width, :depth, :front_image_format, :back_image_format)
   end
 end

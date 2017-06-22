@@ -44,6 +44,11 @@
 
     <p>
       <strong>Size:</strong>
+      <% if @poster.depth.present? %>
+        <%= @poster.depth %>
+        on
+      <% end %>
+
       <%= @poster.width %>
       x
       <%= @poster.height %>
