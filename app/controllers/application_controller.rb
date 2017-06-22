@@ -111,12 +111,14 @@ class ApplicationController < ActionController::Base
   helper_method :current_resource_name
 
   def render_markdown(text)
-    Kramdown::Document.new(
-      MarkdownMedia.parse(text),
-      input: :kramdown,
-      remove_block_html_tags: false,
-      transliterated_header_ids: true
-    ).to_html.html_safe
+    unless text.blank?
+      Kramdown::Document.new(
+        MarkdownMedia.parse(text),
+        input: :kramdown,
+        remove_block_html_tags: false,
+        transliterated_header_ids: true
+      ).to_html.html_safe
+    end
   end
   helper_method :render_markdown
 
