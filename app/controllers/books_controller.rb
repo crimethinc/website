@@ -7,13 +7,13 @@ class BooksController < ApplicationController
     @title   = "Books"
 
     @bullet_books = []
-    %w(from-democracy-to-freedom
+    %w(no-wall-they-can-build
+       from-democracy-to-freedom
        contradictionary
        work
        expect-resistance
-       days-of-war-nights-of-love
        recipes-for-disaster
-       no-wall-they-can-build).each do |slug|
+       days-of-war-nights-of-love).each do |slug|
       @bullet_books << Book.find_by(slug: slug)
     end
 
