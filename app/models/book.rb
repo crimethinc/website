@@ -19,8 +19,19 @@ class Book < ApplicationRecord
     [nil, namespace, slug].join("/")
   end
 
-  def image
-    [ASSET_BASE_URL, namespace, slug, "photo.jpg"].join("/")
+  def image(type, count=0)
+    case type
+    when :front
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join("/")
+    when :back
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join("/")
+    when :gallery
+      [ASSET_BASE_URL, namespace, slug, "gallery", "#{slug}-#{count}.jpg"].join("/")
+    when :header
+      [ASSET_BASE_URL, namespace, slug, "gallery", "#{slug}_header.jpg"].join("/")
+    else
+      [ASSET_BASE_URL, namespace, slug, "photo.jpg"].join("/")
+    end
   end
 
   def image_description
@@ -37,11 +48,15 @@ class Book < ApplicationRecord
   end
 
   def front_image
-    [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join("/")
+    image :front
   end
 
   def back_image
-    [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join("/")
+    iamge :back
+  end
+
+  def header_image
+    image :header
   end
 
   def download_url(type=nil)

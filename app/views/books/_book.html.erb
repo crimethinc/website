@@ -5,7 +5,7 @@
 
   <div class="e-content row">
     <div class="book-cover column column-one-quarter">
-      <%= link_to image_tag(book.image, alt: book.image_description, class: "u-image"), book.path %>
+      <%= link_to image_tag(book.front_image, alt: book.front_image_description, class: "u-image"), book.path %>
 
       <div><%= render "books/buy_button", price: book.price_in_cents, url: book.buy_url %></div>
     </div>
@@ -16,7 +16,7 @@
       </header>
 
       <div class="p-summary">
-        <%= render_markdown(book.summary) %>
+        <%= render_markdown book.summary %>
       </div>
     </div>
   </div>

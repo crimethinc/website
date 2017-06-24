@@ -71,7 +71,6 @@
           <nav class="crumbtrail"><%= link_to "Books", [:books] %></nav>
         <% end %>
 
-
         <%= render "articles/titles", header: @book, linked: true %>
       </header>
 
@@ -80,11 +79,23 @@
           <%= render_markdown @book.description %>
         </div>
 
-        <% if @book.content.present? %>
-          <div class="book-content">
+        <div class="book-content">
+          <%= image_tag @book.header_image %>
+
+          <hr />
+
+          <% if @book.content.present? %>
             <%= render_markdown @book.content %>
-          </div>
-        <% end %>
+          <% end %>
+
+          <hr />
+
+          <% if @book.gallery_images_count.present? && @book.gallery_images_count > 0 %>
+            <% ("01"..@book.gallery_images_count.to_s.rjust(2, "0")).to_a.each do |photo_index| %>
+              <%= image_tag @book.image(:gallery, photo_index), alt: "Gallery image ##{photo_index} of #{@book.name}" %>
+            <% end %>
+          <% end %>
+        </div>
 
         <%= render "books/table_of_contents", book: @book %>
       </div>

@@ -66,7 +66,7 @@ class Admin::BooksController < Admin::AdminController
       :description, :buy_url, :buy_info, :content_format, :slug, :series, :published_at,
       :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,
       :photographs, :printing, :ink, :definitions, :recipes, :has_index, :cover_style,
-      :binding_style, :table_of_contents, :zine, :back_image_present,
+      :binding_style, :table_of_contents, :zine, :back_image_present, :gallery_images_count,
       :read_download_present, :print_download_present, :lite_download_present)
   end
 end

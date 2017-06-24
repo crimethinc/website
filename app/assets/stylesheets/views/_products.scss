@@ -2,6 +2,12 @@
   #products {
     main{
 
+      hr {
+        border: $border-size-xsmall solid $color-gray-light;
+        margin: 3rem auto;
+        width: 80%;
+      }
+
       img {
         max-width: 100%;
       }
