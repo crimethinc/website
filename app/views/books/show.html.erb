@@ -84,16 +84,18 @@
 
           <hr />
 
-          <% if @book.content.present? %>
-            <%= render_markdown @book.content %>
+          <% if @book.gallery_images_count.present? && @book.gallery_images_count > 0 %>
+            <% ("01"..@book.gallery_images_count.to_s.rjust(2, "0")).to_a.each do |photo_index| %>
+              <%= link_to image_tag(@book.image(:gallery, photo_index),
+                                    alt: "Gallery image ##{photo_index} of #{@book.name}"),
+                          @book.image(:gallery, photo_index) %>
+            <% end %>
           <% end %>
 
           <hr />
 
-          <% if @book.gallery_images_count.present? && @book.gallery_images_count > 0 %>
-            <% ("01"..@book.gallery_images_count.to_s.rjust(2, "0")).to_a.each do |photo_index| %>
-              <%= image_tag @book.image(:gallery, photo_index), alt: "Gallery image ##{photo_index} of #{@book.name}" %>
-            <% end %>
+          <% if @book.content.present? %>
+            <%= render_markdown @book.content %>
           <% end %>
         </div>
 
