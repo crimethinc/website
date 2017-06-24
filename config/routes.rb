@@ -86,6 +86,7 @@ Rails.application.routes.draw do
   # Books
   get "books/lit-kit",        to: "books#lit_kit",        as: :books_lit_kit
   get "books/into-libraries", to: "books#into_libraries", as: :books_into_libraries
+  get "books/:slug/extras",   to: "books#extras",         as: :books_extras
   get "books",                to: "books#index",          as: :books
   get "books/:slug",          to: "books#show",           as: :book
 

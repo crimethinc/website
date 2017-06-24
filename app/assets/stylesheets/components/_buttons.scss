@@ -4,7 +4,7 @@
   padding: 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: $color-white;
+  color: $color-white !important;
   border: $border-size-xsmall solid $color-true-black;
   border-radius: 2px;
 }
