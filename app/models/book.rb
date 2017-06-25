@@ -5,6 +5,8 @@ class Book < ApplicationRecord
   scope :book, -> { where(zine: false) }
   scope :zine, -> { where(zine: true)  }
 
+  default_scope { order("slug ASC") }
+
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
 
   def namespace
