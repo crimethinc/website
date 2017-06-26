@@ -5,6 +5,8 @@ class Poster < ApplicationRecord
   scope :poster,  -> { where(sticker: false) }
   scope :sticker, -> { where(sticker: true)  }
 
+  default_scope { order("slug ASC") }
+
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
 
   def namespace
