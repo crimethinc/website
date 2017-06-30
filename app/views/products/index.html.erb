@@ -2,7 +2,7 @@
   <header>
     <%= render "tools/nav" %>
 
-    <h1>Zines</h1>
+    <h1><%= @type.capitalize %></h1>
   </header>
 
   <div class="e-content intro">
@@ -15,16 +15,16 @@
     </p>
   </div>
 
-  <% @zines.in_groups_of(3).each do |row| %>
+  <% @products.in_groups_of(3).each do |row| %>
     <div class="row">
-      <% row.each do |zine| %>
+      <% row.each do |product| %>
         <div class="column column-one-third product">
-          <% unless zine.blank? %>
+          <% unless product.blank? %>
             <div class="product-front">
-              <%= link_to image_tag(zine.front_image), zine.path %>
+              <%= link_to image_tag(product.front_image), product.path %>
             </div>
 
-            <%= render "articles/titles", header: zine, linked: true, truncate_length: 60 %>
+            <%= render "articles/titles", header: product, linked: true, truncate_length: 60 %>
           <% end %>
         </div>
       <% end %>

@@ -1,9 +1,11 @@
 class ZinesController < ApplicationController
   def index
-    @html_id = "page"
-    @body_id = "products"
-    @type    = "zines"
-    @zines   = Book.zine.all
+    @html_id  = "page"
+    @body_id  = "products"
+    @type     = "zines"
+    @products = Book.zine.all
+
+    render "products/index"
   end
 
   def show
