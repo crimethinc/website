@@ -3,6 +3,7 @@ class ZinesController < ApplicationController
     @html_id = "page"
     @body_id = "products"
     @type    = "zines"
+    @zines   = Book.zine.all
   end
 
   def show
