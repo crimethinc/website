@@ -5,6 +5,7 @@ class BooksController < ApplicationController
     @html_id = "page"
     @body_id = "products"
     @title   = "Books"
+    @type    = "books"
 
     @bullet_books = []
     %w(no-wall-they-can-build
@@ -27,6 +28,7 @@ class BooksController < ApplicationController
     @html_id = "page"
     @body_id = "products"
     @title   = "Books : #{@book.title}"
+    @type    = "books"
   end
 
   def extras

@@ -1,11 +1,11 @@
 <nav class="crumbtrail">
-  <% if @type.present? %>
-    <%= link_to "Tools", [:tools] %>
-  <% else %>
+  <% if @type == "books" %>
     <%= link_to "Books", [:books] %>
-  <% end %>
+  <% else %>
+    <%= link_to "Tools", [:tools] %>
 
-  <% if @type %>
-    : <%= link_to @type.capitalize, [@type]  %>
+    <% if showing? %>
+      : <%= link_to @type.capitalize, [@type]  %>
+    <% end %>
   <% end %>
 </nav>
