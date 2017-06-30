@@ -1,33 +1,43 @@
-<div class="h-entry book">
+<div class="h-entry product">
   <div class="row">
     <div class="column column-one-third section meta">
-      <div class="book-cover">
+      <div class="product-front">
         <%= image_tag @book.front_image, alt: @book.front_image_description, class: "u-image" %>
       </div>
 
       <% if @book.back_image_present? %>
-        <div class="book-cover">
-          <%= image_tag @book.back_image,  alt: @book.back_image_description,  class: "u-image" %>
+        <div class="product-front">
+          <%= image_tag @book.back_image, alt: @book.back_image_description, class: "u-image" %>
         </div>
       <% end %>
 
       <% if @book.price_in_cents.present? %>
         <div id="buy-now">
-          <%= render "books/buy_button", price: @book.price_in_cents, url: @book.buy_url %>
+          <%= button_to_buy_now price: @book.price_in_cents, url: @book.buy_url %>
         </div>
       <% end %>
 
-      <% if @book.read_download_present? %>
-        <div id="download">
-          <%= render "books/download_button", url: @book.download_url %>
-        </div>
-      <% end %>
+      <div id="download">
+        <% if @book.read_download_present? %>
+          <%= link_to t("views.books.download_read_button_text"), @book.download_url,         class: "download button" %>
+        <% end %>
 
-      <div class="buy-info">
-        <%= render_markdown @book.buy_info %>
+        <% if @book.print_download_present? %>
+          <%= link_to t("views.books.download_print_button_text"), @book.download_url(:print), class: "download button" %>
+        <% end %>
+
+        <% if @book.lite_download_present? %>
+          <%= link_to t("views.books.download_lite_button_text"), @book.download_url(:lite),  class: "download button" %>
+        <% end %>
       </div>
 
-      <div class="book-specs">
+      <% if @book.buy_info.present? %>
+        <div class="buy-info">
+          <%= render_markdown @book.buy_info %>
+        </div>
+      <% end %>
+
+      <div class="product-specs">
         <ol>
           <li>
             <b>Size</b>
@@ -58,18 +68,14 @@
             </li>
           <% end %>
         </ol>
-      </div> <!-- .book-specs -->
+      </div> <!-- .product-specs -->
 
       <%= render "books/table_of_contents", book: @book %>
     </div>
 
-    <div class="column column-two-third section book-main">
+    <div class="column column-two-third section product-main">
       <header>
-        <% if @type.present? %>
-          <%= render "tools/nav" %>
-        <% else %>
-          <nav class="crumbtrail"><%= link_to "Books", [:books] %></nav>
-        <% end %>
+        <%= render "tools/nav" %>
 
         <%= render "articles/titles", header: @book, linked: true %>
       </header>
@@ -79,10 +85,12 @@
           <%= render_markdown @book.description %>
         </div>
 
-        <div class="book-content">
-          <%= image_tag @book.header_image %>
+        <div class="product-content">
+          <% if @book.book? %>
+            <%= image_tag @book.header_image %>
 
-          <hr />
+            <hr />
+          <% end %>
 
           <% if @book.gallery_images_count.present? && @book.gallery_images_count > 0 %>
             <% ("01"..@book.gallery_images_count.to_s.rjust(2, "0")).to_a.each do |photo_index| %>
@@ -90,9 +98,9 @@
                                     alt: "Gallery image ##{photo_index} of #{@book.name}"),
                           @book.image(:gallery, photo_index) %>
             <% end %>
-          <% end %>
 
-          <hr />
+            <hr />
+          <% end %>
 
           <% if @book.content.present? %>
             <%= render_markdown @book.content %>

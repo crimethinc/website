@@ -133,6 +133,12 @@ en:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
+    books:
+      buy_now_button_text: Buy Now
+      download_read_button_text:  Download PDF for Reading
+      download_print_button_text: Download PDF for Printing
+      download_lite_button_text:  Download Lo Res PDF
+
   helpers:
     page_entries_info:
       entry:
@@ -158,7 +164,7 @@ en:
       new_title: "New Books"
       show_title: "Books : %{title}"
       edit_title: "Editing book %{id} %{title} : %{subtitle}"
-    books:
+    zines:
       index_title: "Zines"
       new_title: "New Zines"
       show_title: "Zines : %{title}"

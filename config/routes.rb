@@ -97,9 +97,13 @@ Rails.application.routes.draw do
   get "videos/:slug",    to: "videos#show",  as: :video
 
 
-  # Posters
-  get "posters",       to: "posters#index", as: :posters
-  get "posters/:slug", to: "posters#show",  as: :poster
+  # Posters, Stickers, Zines
+  get "posters",        to: "posters#index",  as: :posters
+  get "posters/:slug",  to: "posters#show",   as: :poster
+  get "stickers",       to: "stickers#index", as: :stickers
+  get "stickers/:slug", to: "stickers#show",  as: :sticker
+  get "zines",          to: "zines#index",    as: :zines
+  get "zines/:slug",    to: "zines#show",     as: :zine
 
 
   # Tools

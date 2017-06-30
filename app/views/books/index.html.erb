@@ -17,17 +17,17 @@
     </p>
   </div>
 
-  <div class="book-series book-series-bullet">
+  <div class="product-series product-series-bullet">
     <% @bullet_books.each do |book| %>
       <%= render "books/book", book: book %>
     <% end %>
-  </div> <!-- .book-series-bullet -->
+  </div> <!-- .product-series-bullet -->
 
-  <div class="book-series book-series-bullet">
+  <div class="product-series product-series-bullet">
     <% @letters_books.each do |book| %>
       <%= render "books/book", book: book %>
     <% end %>
-  </div> <!-- .letters-series-bullet -->
+  </div> <!-- .product-series-letters -->
 
   <div class="row" id="extra">
     <div class="column column-half" id="into-libraries">

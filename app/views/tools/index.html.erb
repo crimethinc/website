@@ -1,22 +1,59 @@
-<div class="h-entry <%= @type.downcase %>">
+<article>
+
   <header>
     <%= render "tools/nav" %>
+
+    <h1>Tools, tools, tools.</h1>
   </header>
 
-  <h1><%= @type.capitalize %></h1>
+  <div class="e-content">
+    <div class="intro">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
 
-  <br><br><br>
+    <hr>
 
-  <% if @tools.present? %>
-    <%# render type specific collection and/or partial %>
-    <% @tools.each do |tool| %>
-      <%= link_to tool.name, tool.path %>
-      <hr>
-    <% end %>
-  <% else %>
-    <%# render types preview and nav %>
-    <%= link_to "Posters",  [:posters] %>
-    <%#= link_to "Zines",    [:zines] %>
-    <%#= link_to "Stickers", [:stickers] %>
-  <% end %>
-</div>
+    <div class="row">
+      <div class="column column-one-third product">
+        <h1 class="p-name"><%= link_to "Zines", [:zines] %></h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+
+        <%= link_to "Browse All Zines →", [:zines], class: "download button" %>
+      </div>
+
+      <div class="column column-one-third product">
+        <h1 class="p-name"><%= link_to "Posters", [:posters] %></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+
+        <%= link_to "Browse All Posters →", [:posters], class: "download button" %>
+      </div>
+
+      <div class="column column-one-third product">
+        <h1 class="p-name"><%= link_to "Stickers", [:stickers] %></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+
+        <%= link_to "Browse All Stickers →", [:stickers], class: "download button" %>
+      </div>
+    </div>
+
+  </div><!-- .e-content -->
+</article>
