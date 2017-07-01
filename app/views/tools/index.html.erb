@@ -1,57 +1,27 @@
 <article>
 
   <header>
-    <h1>Tools, tools, tools.</h1>
+    <h1><%= t("views.products.tools_heading_text") %></h1>
   </header>
 
   <div class="e-content">
     <div class="intro">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+      <%= render_markdown t("views.products.tools_intro_text") %>
     </div>
 
     <hr>
 
     <div class="row">
-      <div class="column column-one-third product">
-        <h1 class="p-name"><%= link_to "Zines", [:zines] %></h1>
+      <% [:zines, :posters, :stickers].each do |type| %>
+        <div class="column column-one-third product">
+          <h1 class="p-name"><%= link_to type.capitalize, [type] %></h1>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+          <%= render_markdown t("views.products.#{type}_intro_text") %>
 
-        <%= link_to "Browse All Zines →", [:zines], class: "download button" %>
-      </div>
-
-      <div class="column column-one-third product">
-        <h1 class="p-name"><%= link_to "Posters", [:posters] %></h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-
-        <%= link_to "Browse All Posters →", [:posters], class: "download button" %>
-      </div>
-
-      <div class="column column-one-third product">
-        <h1 class="p-name"><%= link_to "Stickers", [:stickers] %></h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-
-        <%= link_to "Browse All Stickers →", [:stickers], class: "download button" %>
-      </div>
-    </div>
+          <%= link_to "Browse All #{type.capitalize} →", [type], class: "download button" %>
+        </div>
+      <% end %>
+    </div><!-- .row -->
 
   </div><!-- .e-content -->
 </article>

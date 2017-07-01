@@ -4,17 +4,11 @@
   </div>
 
   <header>
-    <h1>We love making books.</h1>
+    <h1><%= t("views.products.books_heading_text") %></h1>
   </header>
 
   <div class="e-content intro">
-    <p>
-      From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We&rsquo;ve been at this for over a decade, and you&rsquo;ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
-    </p>
-
-    <p>
-      All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
-    </p>
+    <%= render_markdown t("views.products.books_intro_text") %>
   </div>
 
   <div class="product-series product-series-bullet">
@@ -31,22 +25,18 @@
 
   <div class="row" id="extra">
     <div class="column column-half" id="into-libraries">
-      <h1 class="p-name"><a href="/books/into-libraries">CrimethInc. Into Libraries</a></h1>
+      <h1 class="p-name"><%= link_to t("views.books.crimethinc_into_libraries_heading"), "/books/into-libraries" %></h1>
 
       <div class="e-content">
-        <p>
-          For those who don&rsquo;t have the extra resources with which to buy books or who just aren&rsquo;t excited about acquiring more possessions, we have good news for you&mdash;the <a href="/books/into-libraries">CrimethInc. Into Libraries program</a>. Our books are <a href="http://www.crimethinc.com/blog/2007/10/09/crimethinc-into-libraries-progress-report/"> in more libraries than you might guess</a>, and if not, you can probably get them onto the shelves, for free. <a href="/books/into-libraries">Find out how!</a>
-        </p>
+        <%= render_markdown t("views.books.crimethinc_into_libraries_intro") %>
       </div>
     </div>
 
-    <div class="column column-half" id="lit-kit">
-      <h1 class="p-name"><a href="/books/lit-kit">Literature Distro Kit</a></h1>
+    <div class  = "column column-half" id="lit-kit">
+      <h1 class = "p-name"><%= link_to t("views.books.literature_distro_kit_heading"), "/books/lit-kit" %></h1>
 
       <div class="e-content">
-        <p>
-          Our books are the cornerstone of our <a href="/books/lit-kit">Literature Distribution Kit</a>, an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
-        </p>
+        <%= render_markdown t("views.books.literature_distro_kit_intro") %>
       </div>
     </div>
   </div>

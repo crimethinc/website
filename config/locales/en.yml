@@ -142,6 +142,32 @@ en:
       download_front_button_text:  Download PDF of Front
       download_back_button_text:   Download PDF of Back
 
+      tools_intro_text:     #TODO
+      books_intro_text:
+        From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
+
+        All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
+
+      zines_intro_text:     #TODO
+      posters_intro_text:   #TODO
+      stickers_intro_text:  #TODO
+
+      tools_heading_text:    Tools
+      books_heading_text:    We love making books.
+      zines_heading_text:    Zines
+      posters_heading_text:  Posters
+      stickers_heading_text: Stickers
+
+    books:
+      crimethinc_into_libraries_heading: CrimethInc. Into Libraries
+      crimethinc_into_libraries_intro: For those who don’t have the extra resources with which to buy books or who just aren’t excited about acquiring more possessions, we have good news for you—the [CrimethInc. Into Libraries program](/books/into-libraries). Our books are [in more libraries than you might guess](/2007/10/09/crimethinc-into-libraries-progress-report), and if not, you can probably get them onto the shelves, for free. [Find out how!](/books/into-libraries)
+
+      literature_distro_kit_heading: Literature Distro Kit
+      literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
+
+
+
+
   helpers:
     page_entries_info:
       entry:

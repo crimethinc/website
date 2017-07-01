@@ -113,7 +113,7 @@ class ApplicationController < ActionController::Base
   def render_markdown(text)
     unless text.blank?
       Kramdown::Document.new(
-        MarkdownMedia.parse(text),
+        MarkdownMedia.parse(text.gsub("\n","\n\n")),
         input: :kramdown,
         remove_block_html_tags: false,
         transliterated_header_ids: true
