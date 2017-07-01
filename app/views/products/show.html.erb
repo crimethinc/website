@@ -19,11 +19,11 @@
 
       <div id="download">
         <% if @product.front_download_present? %>
-          <div><%= link_to t("views.products.download_front_button_text"), @product.download_url,         class: "download button" %></div>
+          <div><%= link_to t("views.products.download_front_button_text"), @product.download_url(:front), class: "download button" %></div>
         <% end %>
 
         <% if @product.back_download_present? %>
-          <div><%= link_to t("views.products.download_back_button_text"), @product.download_url(:print), class: "download button" %></div>
+          <div><%= link_to t("views.products.download_back_button_text"), @product.download_url(:back), class: "download button" %></div>
         <% end %>
       </div>
 
