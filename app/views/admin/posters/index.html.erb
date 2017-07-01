@@ -16,8 +16,11 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-primary btn-xs" %>
         </td>
-        <td><%= link_to poster.title, [:admin, poster] %></td>
-        <td><%= poster.subtitle %></td>
+        <td>
+          <b class="h3"><%= link_to poster.title, [:admin, poster] %></b>
+          <br>
+          <%= poster.subtitle %>
+        </td>
         <td>
           <%= link_to "DELETE", [:admin, poster], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
         </td>
