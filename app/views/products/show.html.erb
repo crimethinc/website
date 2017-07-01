@@ -1,2 +1,84 @@
-<h1>Posters/Stickers#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div class="h-entry product">
+  <div class="row">
+    <div class="column column-one-third section meta">
+      <div class="product-front">
+        <%= image_tag @product.front_image, alt: @product.front_image_description, class: "u-image" %>
+      </div>
+
+      <% if @product.back_image_present? %>
+        <div class="product-back">
+          <%= image_tag @product.back_image, alt: @product.back_image_description, class: "u-image" %>
+        </div>
+      <% end %>
+
+      <% if @product.price_in_cents.present? %>
+        <div id="buy-now">
+          <%= button_to_buy_now price: @product.price_in_cents, url: @product.buy_url %>
+        </div>
+      <% end %>
+
+      <div id="download">
+        <% if @product.front_download_present? %>
+          <div><%= link_to t("views.products.download_front_button_text"), @product.download_url,         class: "download button" %></div>
+        <% end %>
+
+        <% if @product.back_download_present? %>
+          <div><%= link_to t("views.products.download_back_button_text"), @product.download_url(:print), class: "download button" %></div>
+        <% end %>
+      </div>
+
+      <% if @product.buy_info.present? %>
+        <div class="buy-info">
+          <%= render_markdown @product.buy_info %>
+        </div>
+      <% end %>
+
+      <div class="product-specs">
+        <ol>
+          <li>
+            <b>Size</b>
+            <span>
+              <%= @product.width %>
+              x
+              <%= @product.height %>
+              <% if @product.depth.present? %>
+                x
+                <%= @product.depth %>
+              <% end %>
+            </span>
+          </li>
+
+          <% %w(weight pages words illustrations photographs printing ink definitions recipes cover_style binding_style).each do |spec| %>
+            <% if @product.respond_to?(spec) && @product.send(spec).present? %>
+              <li>
+                <b><%= spec.titleize %></b>
+                <span><%= render_markdown(@product.send(spec)).gsub("<p>", "").gsub("</p>", "").html_safe %></span>
+              </li>
+            <% end %>
+          <% end %>
+        </ol>
+      </div> <!-- .product-specs -->
+    </div>
+
+    <div class="column column-two-third section @product-main">
+      <header>
+        <%= render "tools/nav" %>
+
+        <%= render "articles/titles", header: @product, linked: true %>
+      </header>
+
+      <div class="e-content">
+        <div class="book-description">
+          <%= render_markdown @product.description %>
+        </div>
+
+        <div class="product-content">
+          <% if @product.content.present? %>
+            <%= render_markdown @product.content %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

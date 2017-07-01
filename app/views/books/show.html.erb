@@ -6,7 +6,7 @@
       </div>
 
       <% if @book.back_image_present? %>
-        <div class="product-front">
+        <div class="product-back">
           <%= image_tag @book.back_image, alt: @book.back_image_description, class: "u-image" %>
         </div>
       <% end %>

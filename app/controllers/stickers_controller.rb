@@ -3,6 +3,7 @@ class StickersController < ApplicationController
     @html_id  = "page"
     @body_id  = "products"
     @type     = "stickers"
+    @title    = "Stickers"
     @products = Poster.sticker.all
 
     render "products/index"
@@ -10,8 +11,10 @@ class StickersController < ApplicationController
 
   def show
     @html_id = "page"
-    @body_id = "tools"
+    @body_id = "products"
     @type    = "stickers"
+    @product = Poster.sticker.find_by(slug: params[:slug])
+    @title   = "Stickers : #{@product.name}"
 
     render "products/show"
   end
