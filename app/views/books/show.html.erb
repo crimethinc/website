@@ -19,15 +19,15 @@
 
       <div id="download">
         <% if @book.read_download_present? %>
-          <%= link_to t("views.books.download_read_button_text"), @book.download_url,         class: "download button" %>
+          <%= link_to t("views.products.download_read_button_text"), @book.download_url,         class: "download button" %>
         <% end %>
 
         <% if @book.print_download_present? %>
-          <%= link_to t("views.books.download_print_button_text"), @book.download_url(:print), class: "download button" %>
+          <%= link_to t("views.products.download_print_button_text"), @book.download_url(:print), class: "download button" %>
         <% end %>
 
         <% if @book.lite_download_present? %>
-          <%= link_to t("views.books.download_lite_button_text"), @book.download_url(:lite),  class: "download button" %>
+          <%= link_to t("views.products.download_lite_button_text"), @book.download_url(:lite),  class: "download button" %>
         <% end %>
       </div>
 

@@ -133,11 +133,14 @@ en:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
-    books:
+    products:
       buy_now_button_text: Buy Now
       download_read_button_text:  Download PDF for Reading
       download_print_button_text: Download PDF for Printing
       download_lite_button_text:  Download Lo Res PDF
+
+      download_front_button_text:  Download PDF of Front
+      download_back_button_text:   Download PDF of Back
 
   helpers:
     page_entries_info:

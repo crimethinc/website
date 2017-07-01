@@ -12,5 +12,7 @@ class StickersController < ApplicationController
     @html_id = "page"
     @body_id = "tools"
     @type    = "stickers"
+
+    render "products/show"
   end
 end

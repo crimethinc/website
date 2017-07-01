@@ -12,5 +12,7 @@ class PostersController < ApplicationController
     @html_id = "page"
     @body_id = "tools"
     @type    = "posters"
+
+    render "products/show"
   end
 end

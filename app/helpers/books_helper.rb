@@ -8,6 +8,6 @@ module BooksHelper
   end
 
   def button_to_buy_now(price: price, url: url)
-    link_to [t("views.books.buy_now_button_text"), (number_to_currency(price / 100.0))].join(" : "), url, class: "buy-now button"
+    link_to [t("views.products.buy_now_button_text"), (number_to_currency(price / 100.0))].join(" : "), url, class: "buy-now button"
   end
 end
