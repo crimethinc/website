@@ -107,13 +107,13 @@ Rails.application.routes.draw do
 
 
   # Tools
-  get "tools/downloads", to: redirect("/logos")
-  get "tools/logos",     to: redirect("/logos")
-  get "tools/stickers",  to: redirect("/stickers")
-  get "tools/zines",     to: redirect("/zines")
-  get "tools/posters",   to: redirect("/posters")
-  get "tools/videos",    to: redirect("/videos")
-  get "tools",           to: "tools#index", as: :tools
+  # get "tools/downloads", to: redirect("/logos")
+  # get "tools/logos",     to: redirect("/logos")
+  # get "tools/stickers",  to: redirect("/stickers")
+  # get "tools/zines",     to: redirect("/zines")
+  # get "tools/posters",   to: redirect("/posters")
+  # get "tools/videos",    to: redirect("/videos")
+  # get "tools",           to: "tools#index", as: :tools
 
 
   # Site search
