@@ -74,11 +74,11 @@
   <% end %>
 
   <% if @book.print_download_present? %>
-    <p><b>Read PDF Download URL:</b> <b><%= link_to @book.download_url(:print), @book.download_url(:print) %></b></p>
+    <p><b>Print PDF Download URL:</b> <b><%= link_to @book.download_url(:print), @book.download_url(:print) %></b></p>
   <% end %>
 
   <% if @book.lite_download_present? %>
-    <p><b>Read PDF Download URL:</b> <b><%= link_to @book.download_url(:lite), @book.download_url(:lite) %></b></p>
+    <p><b>Lite PDF Download URL:</b> <b><%= link_to @book.download_url(:lite), @book.download_url(:lite) %></b></p>
   <% end %>
 
   <p>
