@@ -4,8 +4,9 @@
   <thead>
     <tr>
       <th>&nbsp;</th>
-      <th>Title</th>
-      <th>Subtitle</th>
+      <th>Name</th>
+      <th>Front Download</th>
+      <th>Back Download</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -21,6 +22,10 @@
           <br>
           <%= poster.subtitle %>
         </td>
+
+        <td> <%= "✔️" if poster.front_download_present? %> </td>
+        <td> <%= "✔️" if poster.back_download_present? %> </td>
+
         <td>
           <%= link_to "DELETE", [:admin, poster], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
         </td>
