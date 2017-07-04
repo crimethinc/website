@@ -47,6 +47,10 @@ group :development, :test do
   gem "spring-commands-rspec"
   gem "simplecov", :require => false
   gem "factory_girl_rails"
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 
 # dev
