@@ -18,7 +18,11 @@ class ArticleImageUploader < CarrierWave::Uploader::Base
     model.title.downcase.tr(' ', '_') + File.extname(original_filename)
   end
 
-  version :large do
+  version :full_sized do
+    process create_sized_image: 2000
+  end
+
+  version :large , from_version: :full_sized do
     process create_sized_image: 1024
   end
 
