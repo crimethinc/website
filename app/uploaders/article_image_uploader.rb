@@ -3,7 +3,9 @@ class ArticleImageUploader < CarrierWave::Uploader::Base
 
   def store_dir
     # This will be the directory path in the CMS
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    # e.g. assets/articles/YYYY/MM/DD
+    date_path = model.path.gsub(model.slug,'')
+    "assets/articles/#{date_path}"
   end
 
   def extension_whitelist
@@ -15,7 +17,9 @@ class ArticleImageUploader < CarrierWave::Uploader::Base
     return unless original_filename
 
     # This will be the filename for all the processed/uploaded images
-    model.title.downcase.tr(' ', '_') + File.extname(original_filename)
+    # most of the time it will be 'header-1', if there are multiple
+    # articles published the same day the integer will increment.    
+    "header-#{published_count}"
   end
 
   version :full_sized do
@@ -53,5 +57,13 @@ class ArticleImageUploader < CarrierWave::Uploader::Base
       img = yield(img) if block_given?
       img
     end
+  end
+
+  private
+
+  def published_count
+    @published_article_count ||= Article.where(
+      published_at: model.published_at.beginning_of_day..model.published_at.end_of_day
+    ).count
   end
 end
