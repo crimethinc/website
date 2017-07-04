@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20170624193008) do
     t.integer "collection_id"
     t.string "short_path"
     t.boolean "header_shadow_text"
-    t.string "article_image"
+    t.text "article_image"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
     t.index ["status_id"], name: "index_articles_on_status_id"
     t.index ["theme_id"], name: "index_articles_on_theme_id"
