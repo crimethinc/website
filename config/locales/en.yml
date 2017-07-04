@@ -59,12 +59,11 @@ en:
         label: Videos
 
       tools:
-        label: Tools
-        downloads: Downloads
-        posters: Posters
-        guides: Guides
-        stickers: Stickers
-        videos: Videos
+        label:     Tools
+        zines:     Zines
+        posters:   Posters
+        stickers:  Stickers
+        videos:    Videos
 
       store:
         label: Store
