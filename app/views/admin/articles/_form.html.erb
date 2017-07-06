@@ -36,41 +36,47 @@
   </fieldset>
   -->
 
-  <fieldset id="categories">
-    <legend>Categories</legend>
+  <% unless @collection.present? %>
+    <fieldset id="categories">
+      <legend>Categories</legend>
 
-    <div class="col-xs-12 col-sm-12">
-      <div class="form-group">
-        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "checkbox" do |b| %>
-          <div class="checkbox">
-            <%= b.label do %>
-              <%= b.check_box %>
-              <%= b.text %>
-            <% end %>
-          </div>
-        <% end %>
+      <div class="col-xs-12 col-sm-12">
+        <div class="form-group">
+          <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "checkbox" do |b| %>
+            <div class="checkbox">
+              <%= b.label do %>
+                <%= b.check_box %>
+                <%= b.text %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-  </fieldset>
+    </fieldset>
+  <% end %>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+  <% unless @collection.present? %>
+    <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+  <% end %>
 
   <fieldset id="meta">
     <legend>Meta</legend>
     <div class="row">
-      <div class="col-xs-12 col-sm-4">
-        <div class="form-group">
-          <%= f.label :slug, "URL Slug" %>
-          <%= f.text_field :slug, class: "form-control" %>
+      <% unless @collection.present? %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="form-group">
+            <%= f.label :slug, "URL Slug" %>
+            <%= f.text_field :slug, class: "form-control" %>
+          </div>
         </div>
-      </div>
 
-      <div class="col-xs-12 col-sm-4">
-        <div class="form-group">
-          <%= f.label :short_path, "Short URL Path" %>
-          <%= f.text_field :short_path, class: "form-control" %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="form-group">
+            <%= f.label :short_path, "Short URL Path" %>
+            <%= f.text_field :short_path, class: "form-control" %>
+          </div>
         </div>
-      </div>
+      <% end %>
 
       <div class="col-xs-12 col-sm-4">
         <div class="form-group">
@@ -83,39 +89,41 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :tags %>
-          <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control" %>
-          <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :content_format, "Content Format" %>
-
-          <div class="radio">
-            <label>
-              <%= f.radio_button :content_format, "html" %>
-              HTML
-            </label>
+    <% unless @collection.present? %>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <%= f.label :tags %>
+            <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control" %>
+            <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
           </div>
-
-          <div class="radio">
-            <label>
-              <%= f.radio_button :content_format, "kramdown" %>
-              Markdown
-            </label>
-          </div>
-
-          <p class="help-block">
-            Defaults to <b>Markdown</b>. Only change to <b>HTML</b> if you know what you&rsquo;re doing.
-          </p>
         </div>
-      </div>
-    </div> <!-- .row -->
+
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <%= f.label :content_format, "Content Format" %>
+
+            <div class="radio">
+              <label>
+                <%= f.radio_button :content_format, "html" %>
+                HTML
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <%= f.radio_button :content_format, "kramdown" %>
+                Markdown
+              </label>
+            </div>
+
+            <p class="help-block">
+              Defaults to <b>Markdown</b>. Only change to <b>HTML</b> if you know what you&rsquo;re doing.
+            </p>
+          </div>
+        </div>
+      </div> <!-- .row -->
+    <% end %>
   </fieldset>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
@@ -149,7 +157,9 @@
     </div>
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+  <% unless @collection.present? %>
+    <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+  <% end %>
 
   <fieldset id="appearance">
     <legend>Appearance</legend>
@@ -177,94 +187,98 @@
       </div>
     </div>
 
-    <hr>
+    <% unless @collection.present? %>
+      <hr>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :css, "Article Specific CSS" %>
-          <%= f.text_area :css, class: "form-control", rows: 20 %>
-          <p class="help-block">
-            <% if @article.new_record? %>
-            After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
-            <% else %>
-            Prefix your CSS selectors with <b><code>#article-<%= @article.id %></code></b> to scope your styles to just this <i>Article</i>.
-            For example, <code>#article-<%= @article.id %> b { background: green }</code>.
-            <% end %>
-          </p>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <%= f.label :css, "Article Specific CSS" %>
+            <%= f.text_area :css, class: "form-control", rows: 20 %>
+            <p class="help-block">
+              <% if @article.new_record? %>
+              After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
+              <% else %>
+              Prefix your CSS selectors with <b><code>#article-<%= @article.id %></code></b> to scope your styles to just this <i>Article</i>.
+              For example, <code>#article-<%= @article.id %> b { background: green }</code>.
+              <% end %>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <%= f.check_box :header_shadow_text %>
+            <%= f.label :header_shadow_text, "Header Shadow Text" %>
+            <p class="help-block">
+              If selected, the title and subtile in the header will have a drop-shadow.
+              This is useful for images that are over light, or have some white spots
+              that make the title (in its default style) difficult to read.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :header_background_color, "Header Background Color" %>
+            <%= f.text_field :header_background_color, class: "form-control input-lg" %>
+            <p class="help-block">
+              This can be any valid CSS color value:
+              <code>#f00</code>,
+              <code>#efefef</code>,
+              <code>rgba(0,255,255,.25)</code>,
+              <code>pink</code>,
+              etc.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :header_text_color, "Header Text Color" %>
+            <%= f.text_field :header_text_color, class: "form-control input-lg" %>
+            <p class="help-block">
+              This can be any valid CSS color value:
+              <code>#f00</code>,
+              <code>#efefef</code>,
+              <code>rgba(0,255,255,.25)</code>,
+              <code>pink</code>,
+              etc.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <%= f.check_box :hide_layout %>
+            <%= f.label :hide_layout, "Hide the Site Layout?" %>
+            <p class="help-block">
+              <b class="text-danger">Danger Zone&trade; &mdash; exercise caution with this option.</b>
+              The will remove all of the wrapper layout.
+              This <i>Article</i> will be responsible for <i>all</i> of its HTML,
+              including <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,
+              <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code> tags etc.
+              Any <code>CSS</code> will have to be included in the
+              <code>Content</code>, not the <code>Article Specific CSS</code>.
+            </p>
+          </div>
+
         </div>
       </div>
-
-      <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-          <%= f.check_box :header_shadow_text %>
-          <%= f.label :header_shadow_text, "Header Shadow Text" %>
-          <p class="help-block">
-            If selected, the title and subtile in the header will have a drop-shadow.
-            This is useful for images that are over light, or have some white spots
-            that make the title (in its default style) difficult to read.
-          </p>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :header_background_color, "Header Background Color" %>
-          <%= f.text_field :header_background_color, class: "form-control input-lg" %>
-          <p class="help-block">
-            This can be any valid CSS color value:
-            <code>#f00</code>,
-            <code>#efefef</code>,
-            <code>rgba(0,255,255,.25)</code>,
-            <code>pink</code>,
-            etc.
-          </p>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :header_text_color, "Header Text Color" %>
-          <%= f.text_field :header_text_color, class: "form-control input-lg" %>
-          <p class="help-block">
-            This can be any valid CSS color value:
-            <code>#f00</code>,
-            <code>#efefef</code>,
-            <code>rgba(0,255,255,.25)</code>,
-            <code>pink</code>,
-            etc.
-          </p>
-        </div>
-
-        <div class="form-group">
-          <%= f.check_box :hide_layout %>
-          <%= f.label :hide_layout, "Hide the Site Layout?" %>
-          <p class="help-block">
-            <b class="text-danger">Danger Zone&trade; &mdash; exercise caution with this option.</b>
-            The will remove all of the wrapper layout.
-            This <i>Article</i> will be responsible for <i>all</i> of its HTML,
-            including <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,
-            <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code> tags etc.
-            Any <code>CSS</code> will have to be included in the
-            <code>Content</code>, not the <code>Article Specific CSS</code>.
-          </p>
-        </div>
-
-      </div>
-    </div>
+    <% end %>
   </fieldset>
 
-  <fieldset id="alternates">
-    <legend>Alternates</legend>
+  <% unless @collection.present? %>
+    <fieldset id="alternates">
+      <legend>Alternates</legend>
 
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="form-group">
-          <%= f.label :download_url, "PDF Download URL" %>
-          <%= f.url_field :download_url, class: "form-control input-lg" %>
-          <p class="help-block">
-            This is the URL of a downloadable / printable PDF of this Article.
-          </p>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <%= f.label :download_url, "PDF Download URL" %>
+            <%= f.url_field :download_url, class: "form-control input-lg" %>
+            <p class="help-block">
+              This is the URL of a downloadable / printable PDF of this Article.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </fieldset>
+    </fieldset>
+  <% end %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 <% end %>
