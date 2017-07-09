@@ -1,20 +1,20 @@
 require_relative "boot"
 
 require "rails/all"
-
 require_relative "../app/middlewares/rack/redirect"
+require_relative "../app/middlewares/rack/blog_redirect"
 
 # Require the gems listed in Gemfile, including any gems
-# you"ve limited to :test, :development, or :production.
+# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Magazine
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    # Initialize configuration defaults for originally generated Rails version.
+    # config.load_defaults 5.1
 
     config.middleware.use Rack::Redirect
+    config.middleware.use Rack::BlogRedirect
     config.middleware.use Rack::Attack
 
     # Monitor database
@@ -23,6 +23,5 @@ module Magazine
         ActiveRecord::Base.connection.execute("select count(*) from schema_migrations")
       end
     end
-
   end
 end

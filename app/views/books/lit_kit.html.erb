@@ -81,13 +81,13 @@
 
     <div class="column column-one-third">
       <div id="buy-now">
-        <%= render "books/buy_button", price: 14000, url: "http://store.crimethinc.com/x/AddToCart?Item=litkit&Dest=books" %>
+        <%= button_to_buy_now price: 14000, url: "http://store.crimethinc.com/x/AddToCart?Item=litkit&Dest=books" %>
       </div>
 
       <div class="buy-info">
         <p>Multiple kits are $135 each.</p>
 
-        <p>The Lit Kit has been modified since the above photos were taken; the list to the left represents the exact contents.</p>
+        <p>The Lit Kit has been modified since these photos were taken; the list to the left represents the exact contents.</p>
       </div>
 
       <div class="kit-photos">

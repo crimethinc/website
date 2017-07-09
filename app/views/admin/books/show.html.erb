@@ -11,15 +11,75 @@
   </header>
 
   <hr>
-  <p>
-    <strong>Title:</strong>
-    <%= @book.title %>
-  </p>
+
+  <div>
+    <p>
+      <% if @book.front_image_present? %>
+        <span class="badge badge-success">✔ Front Image</span>
+      <% end %>
+
+      <% if @book.back_image_present? %>
+        <span class="badge badge-danger">✔ Back Image</span>
+      <% end %>
+
+      <% if @book.read_download_present? %>
+        <span class="badge badge-default">✔ Read Download</span>
+      <% end %>
+
+      <% if @book.print_download_present? %>
+        <span class="badge badge-default">✔ Print Download</span>
+      <% end %>
+
+      <% if @book.lite_download_present? %>
+        <span class="badge badge-default">✔ Lite Download</span>
+      <% end %>
+    </p>
+
+    <p><b>URL:</b> <b><%= link_to @book.path, @book.path %></b></p>
+
+
+    <div class="row">
+      <div class="col-sm-6">
+        <%= image_tag @book.front_image if @book.front_image_present? %>
+      </div>
+      <div class="col-sm-6">
+        <%= image_tag @book.back_image  if @book.back_image_present? %>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <% if @book.description.present? %>
+    <h5>Description</h5>
+    <%= render_markdown @book.description %>
+  <% end %>
+
 
   <p>
-    <strong>Subtitle:</strong>
-    <%= @book.subtitle %>
+    <strong>Size:</strong>
+    <% if @book.depth.present? %>
+      <%= @book.depth %>
+      x
+    <% end %>
+
+    <%= @book.width %>
+    x
+    <%= @book.height %>
   </p>
+
+
+  <% if @book.read_download_present? %>
+    <p><b>Read PDF Download URL:</b> <b><%= link_to @book.download_url, @book.download_url %></b></p>
+  <% end %>
+
+  <% if @book.print_download_present? %>
+    <p><b>Print PDF Download URL:</b> <b><%= link_to @book.download_url(:print), @book.download_url(:print) %></b></p>
+  <% end %>
+
+  <% if @book.lite_download_present? %>
+    <p><b>Lite PDF Download URL:</b> <b><%= link_to @book.download_url(:lite), @book.download_url(:lite) %></b></p>
+  <% end %>
 
   <p>
     <strong>Description:</strong>
@@ -27,87 +87,107 @@
   </p>
 
   <p>
-    <strong>Content:</strong>
-    <%= @book.content %>
-  </p>
-
-  <p>
-    <strong>Slug:</strong>
-    <%= @book.slug %>
-  </p>
-
-  <p>
-    <strong>Download url:</strong>
-    <%= @book.download_url %>
-  </p>
-
-  <p>
-    <strong>Price in cents:</strong>
-    <%= @book.price_in_cents %>
-  </p>
-
-  <p>
-    <strong>Tweet:</strong>
-    <%= @book.tweet %>
-  </p>
-
-  <p>
-    <strong>Summary:</strong>
+    <strong>Summary</strong> <span class="text-muted">(used for link previews in Facebook, Twitter, etc)</span>:<br>
     <%= @book.summary %>
   </p>
+
+  <% if @book.buy_url.present? %>
+    <h2>Purchasing</h2>
+
+    <% if @book.price_in_cents.present? %>
+      <p>
+        <strong>Price in Cents:</strong>
+        <%= number_to_currency @book.price_in_cents / 100 %>
+      </p>
+    <% end %>
+
+    <p>
+      <strong>Buy info:</strong>
+      <%= @book.buy_info %>
+    </p>
+
+    <p>
+      <strong>Buy URL:</strong>
+      <%= link_to @book.buy_url, @book.buy_url %>
+    </p>
+  <% end %>
 
   <p>
     <strong>Pages:</strong>
     <%= @book.pages %>
   </p>
 
-  <p>
-    <strong>Height:</strong>
-    <%= @book.height %>
-  </p>
+  <% if @book.book? %>
+    <h2>Book Specs</h2>
 
-  <p>
-    <strong>Width:</strong>
-    <%= @book.width %>
-  </p>
+    <p>
+      <strong>Weight:</strong>
+      <%= @book.weight %>
+    </p>
 
-  <p>
-    <strong>Depth:</strong>
-    <%= @book.depth %>
-  </p>
+    <p>
+      <strong>Words:</strong>
+      <%= @book.words %>
+    </p>
 
-  <p>
-    <strong>Weight:</strong>
-    <%= @book.weight %>
-  </p>
+    <p>
+      <strong>Illustrations:</strong>
+      <%= @book.illustrations %>
+    </p>
 
-  <p>
-    <strong>Words:</strong>
-    <%= @book.words %>
-  </p>
+    <p>
+      <strong>Photographs:</strong>
+      <%= @book.photographs %>
+    </p>
 
-  <p>
-    <strong>Illustrations:</strong>
-    <%= @book.illustrations %>
-  </p>
+    <p>
+      <strong>Cover style:</strong>
+      <%= @book.cover_style %>
+    </p>
 
-  <p>
-    <strong>Photographs:</strong>
-    <%= @book.photographs %>
-  </p>
+    <p>
+      <strong>Binding Style:</strong>
+      <%= @book.binding_style %>
+    </p>
 
-  <p>
-    <strong>Cover style:</strong>
-    <%= @book.cover_style %>
-  </p>
+    <p>
+      <strong>Table of contents:</strong>
+      <%= @book.table_of_contents %>
+    </p>
 
-  <p>
-    <strong>Binding Style:</strong>
-    <%= @book.binding_style %>
-  </p>
 
-  <p>
-    <strong>Table of contents:</strong>
-    <%= @book.table_of_contents %>
-  </p>
+    <p>
+      <strong>Printing</strong>
+      <%= @book.printing %>
+    </p>
+
+    <p>
+      <strong>Ink</strong>
+      <%= @book.ink %>
+    </p>
+
+    <p>
+      <strong>Definitions</strong>
+      <%= @book.definitions %>
+    </p>
+
+    <p>
+      <strong>Recipes</strong>
+      <%= @book.recipes %>
+    </p>
+
+    <p>
+      <strong>Has an Index?</strong>
+      <%= @book.has_index %>
+    </p>
+
+
+  <% end %>
+
+
+  <% if @book.content.present? %>
+    <h2>Content</h2>
+
+    <%= render_markdown @book.content %>
+  <% end %>
 </article>

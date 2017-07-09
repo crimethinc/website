@@ -26,11 +26,11 @@ RSpec.describe Book, type: :model do
   end
 
   describe "#image" do
-    subject { book.image }
+    subject { book.image(:front) }
 
     let(:book) { Book.new(slug: "slug") }
 
-    it { is_expected.to eq("https://cloudfront.crimethinc.com/assets/books/slug/photo.jpg") }
+    it { is_expected.to eq("https://cloudfront.crimethinc.com/assets/books/slug/slug_front.jpg") }
   end
 
   describe "#image_description" do
@@ -38,6 +38,6 @@ RSpec.describe Book, type: :model do
 
     let(:book) { Book.new(title: "Contradictionary") }
 
-    it { is_expected.to eq("Photo of 'Contradictionary' book cover") }
+    it { is_expected.to eq("Photo of 'Contradictionary' cover") }
     end
 end

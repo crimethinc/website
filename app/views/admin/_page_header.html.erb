@@ -6,23 +6,15 @@
   <% if listing? %>
     <%= link_to "NEW", [:new, :admin, current_resource_name.downcase], class: "btn btn-primary btn-xs action-new" %>
   <% elsif showing? %>
+    <%# TODO %>
     <%= link_to "EDIT", [:edit, :admin, thing], class: "btn btn-primary btn-xs action-edit" %>
   <% end %>
 </p>
 
 <% if editing? %>
-  <h2>
-    Editing
-    <%= link_to [:admin, thing] do %>
-      <%= current_resource_name %> &mdash;
-      <%= thing.name %>
-    <% end %>
-  </h2>
+  <h2>Editing <%= link_to thing.name, [:admin, thing] %></h2>
 <% end %>
 
 <% if creating? %>
-  <h2>
-    New
-    <%= current_resource_name %>
-  </h2>
+  <h2>New <%= current_resource_name %></h2>
 <% end %>

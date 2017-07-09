@@ -1,3 +1,7 @@
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags(@archive.articles) %>
+<% end %>
+
 <header>
   <h1>
     <%= link_to "Archives", [:read] %>

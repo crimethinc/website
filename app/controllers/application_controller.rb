@@ -105,114 +105,67 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_resource_name
+    request.path.split("admin/").last.split("/").first.capitalize.singularize
+  end
+  helper_method :current_resource_name
+
   def render_markdown(text)
-    Kramdown::Document.new(
-      text,
-      input: :kramdown,
-      remove_block_html_tags: false,
-      transliterated_header_ids: true
-    ).to_html.html_safe
+    unless text.blank?
+      Kramdown::Document.new(
+        MarkdownMedia.parse(text.gsub("\n","\n\n")),
+        input: :kramdown,
+        remove_block_html_tags: false,
+        transliterated_header_ids: true
+      ).to_html.html_safe
+    end
   end
   helper_method :render_markdown
 
   def render_content(post)
-    Kramdown::Document.new(
-      expanded_embeds(post).content,
-      input: post.content_format == "html" ? :html : :kramdown,
-      remove_block_html_tags: false,
-      transliterated_header_ids: true,
-      html_to_native: true
-    ).to_html.html_safe
+    cache post do
+      Kramdown::Document.new(
+        MarkdownMedia.parse(post.content),
+        input: post.content_format == "html" ? :html : :kramdown,
+        remove_block_html_tags: false,
+        transliterated_header_ids: true,
+        html_to_native: true
+      ).to_html.html_safe
+    end
   end
   helper_method :render_content
 
-  def expanded_embeds(post)
-    embed_regex = /\[\[\s*(http[^\]\s]+(?:\s.+)?)\s*\]\]/
-
-    output_content = post.content.gsub(embed_regex) do |match|
-      embed_tag = $1
-
-      if embed_tag.present?
-        embed_tag_pieces = embed_tag.split(" ")
-
-        url     = embed_tag_pieces.shift
-        id      = remove_id(embed_tag_pieces)
-        link    = if embed_tag_pieces.present?
-          embed_tag_pieces.pop if url_or_path?(embed_tag_pieces.last)
-        end
-        caption = embed_tag_pieces.join(" ")
-
-        expanded_embed(url, caption: caption, link: link, id: id)
-      end
-    end
-
-    post.content = output_content
-    post
+  def meta_title(thing=nil)
+    thing.present? ? thing.title : t("head.meta_title")
   end
-  helper_method :expanded_embeds
+  helper_method :meta_title
 
-  def expanded_embed(url, caption: nil, link: nil, id: nil)
-    url  = URI.parse(url)
-
-    case url.host
-    when /youtube.com/
-      slug     = "youtube"
-      embed_id = nil
-
-      url.query.split("&").each do |key_value_pair|
-        argument, value = key_value_pair.split("=")
-        if argument == "v"
-          embed_id = value
-        end
-      end
-
-    when "youtu.be"
-      slug     = "youtube"
-      embed_id = url.path.split("/").map{ |path_piece| path_piece unless path_piece.blank? }.compact.first
-
-    when /dailymotion.com/
-      slug     = "dailymotion"
-      embed_id = url.path.split("/video/").map{ |path_piece| path_piece unless path_piece.blank? }.compact.first.split("_").first
-
-    when "vimeo.com"
-      slug     = "vimeo"
-      embed_id = url.path.split("/").map{ |path_piece| path_piece unless path_piece.blank? }.compact.first
-
-    when "twitter.com"
-      slug     = "twitter"
-
+  def page_title
+    if @title.present?
+      t(:site_name) + prepend_admin_if_needed + @title
     else
-      slug = case url.path
-
-      when /\.mp3|\.aac|\.wav|\.ogg|\.oga|\.m4a/
-        "audio"
-      when /\.mp4|\.avi|\.mov|\.ogv|\.webm|\.m4v|\.3gp|\.m3u8/
-        "video"
-      when /\.png|\.jpeg|\.jpg|\.gif|\.svg/
-        "image"
-      else
-        "link"
-      end
-    end
-
-    render_to_string partial: "/articles/embeds/#{slug}.html.erb", locals: { embed_id: embed_id || url, caption: caption, link: link, id: id }
-  end
-  helper_method :expanded_embed
-
-  def url_or_path?(string)
-    string.match?(/^(http|\/)\S+/)
-  end
-
-  def remove_id(pieces)
-    return unless pieces.present?
-
-    id_string = pieces.detect { |piece| piece =~ /id:\S+/ }
-
-    if id_string
-      id = id_string.split(":").last
-      pieces.delete(id_string)
-
-      id
+      t(:site_name)
     end
   end
+  helper_method :page_title
+
+  def prepend_admin_if_needed
+    if controller_path.match(/\Aadmin\/.*\z/).present?
+      " #{t('admin.title_prepend')} : "
+    else
+      ' : '
+    end
+  end
+  helper_method :prepend_admin_if_needed
+
+  def author
+    t(:site_author)
+    # TODO make this article author aware
+  end
+  helper_method :author
+
+  def root_url
+    Rails.env.development? ? "http://localhost:3000" : "https://crimethinc.com"
+  end
+  helper_method :root_url
 end

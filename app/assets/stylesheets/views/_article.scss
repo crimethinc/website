@@ -234,11 +234,7 @@
     }
 
     i, cite, em, var, address, dfn, blockquote {
-      font: {
-        style: italic;
-        weight: lighter;
-        weight: 300;
-      }
+      font-style: italic;
     }
 
     dt, b, strong {
@@ -332,13 +328,12 @@
         width: auto;
         max-width: 100%;
       }
+    }
 
-      &.half-size {
-        @media screen and (min-width: $small-tablet) {
-          width: 50%;
-          max-width: 50%;
-        }
-      }
+    .portrait {                                       width: 66%; max-width: 66%;
+      @media screen and (min-width: $large-phone)   { width: 50%; max-width: 50%; }
+      @media screen and (min-width: $medium-laptop) { width: 40%; max-width: 40%; }
+      @media screen and (min-width: $large-laptop)  { width: 33%; max-width: 33%; }
     }
 
     figure {

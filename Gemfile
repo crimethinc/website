@@ -1,15 +1,14 @@
 source "https://rubygems.org"
-ruby "2.4.0"
+ruby "~> 2.4.1"
 
 # app server
-gem "rails", "~> 5.0.1"
+gem "rails", "~> 5.1.1"
 
 # database
 gem "pg"
 
 # webserver
 gem "puma"
-gem "foreman"
 
 # assets
 gem "bootstrap-sass", "3.3.7"
@@ -20,10 +19,11 @@ gem "jquery-rails"
 gem "sitemap_generator" # generates compliant xml sitemap
 
 # text utilities
-gem "rubypants" # for smart quotes
-gem "sterile"   # for slugs
-gem "kramdown"  # for Markdown processing
-gem "stringex"  # for Markdown header IDs processing
+gem "rubypants"      # for smart quotes
+gem "sterile"        # for slugs
+gem "kramdown"       # for Markdown processing
+gem "stringex"       # for Markdown header IDs processing
+gem "markdown_media" # for [[ media embeds ]]
 
 # auth
 gem "bcrypt", "~> 3.1.7"
@@ -33,6 +33,9 @@ gem "cocoon", "~> 1.2.9"
 
 # pagination
 gem "kaminari"
+
+# memcache
+gem "dalli"
 
 # dev and testing
 group :development, :test do
@@ -52,6 +55,17 @@ group :development do
   gem "listen", "~> 3.0.5"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+
+  # For measuring page/code performance
+  gem "rack-mini-profiler"
+
+  # For memory profiling
+  gem "memory_profiler"
+
+  # For call-stack profiling flamegraphs
+  gem "flamegraph"
+  gem "stackprof"
+  gem "fast_stack"
 end
 
 # monitoring

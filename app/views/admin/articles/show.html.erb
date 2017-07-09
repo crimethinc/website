@@ -41,8 +41,16 @@
   <div>
     <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
 
-    <% if @article.draft? %>
-     <%= link_to "Preview Draft", @article.path, class: "btn btn-success" %>
+    <% unless @article.in_collection? %>
+      <br>
+      <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-danger btn-lg" %>
+      <br><br><br>
+    <% end %>
+
+    <% unless @article.published? %>
+      <p>
+        <%= link_to "Preview Draft", @article.path, class: "btn btn-success" %>
+      </p>
     <% end %>
 
     <% if @article.download_url.present? %>
@@ -91,16 +99,16 @@
     <% end %>
   </h3>
 
-      <% if @article.collection_root? %>
-        <div id="collection" style="margin-top: 6rem">
-          <h3>
-            Nested Articles
-            <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-xs" %>
-          </h3>
+  <% if @article.collection_root? %>
+    <div id="collection" style="margin-top: 6rem">
+      <h3>
+        Nested Articles
+        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-xs" %>
+      </h3>
 
-          <%= render "table", articles: @article.collection_posts %>
-        </div>
-      <% end %>
+      <%= render "table", articles: @article.collection_posts %>
+    </div>
+  <% end %>
 
   <hr>
 

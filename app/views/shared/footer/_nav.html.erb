@@ -18,11 +18,23 @@
         <%= link_to t("footer.nav.articles.technology"),     category_path(:technology)     %>
       </dd>
 
+      <!--
       <dt class="nav-label nav-label-articles">
         <%= link_to t("footer.nav.projects.label"), category_path(:projects) %>
       </dt>
       <dd>
         <%= link_to t("footer.nav.projects.kickstarter"), "/2017/01/31/help-us-publish-books-about-borders-and-democracy-no-wall-they-can-build-from-democracy-to-freedom" %>
+      </dd>
+      -->
+
+      <dt class="nav-label nav-label-articles">
+        <%= link_to t("footer.nav.tools.label"), [:tools] %>
+      </dt>
+      <dd>
+        <%= link_to t("footer.nav.tools.zines"),    [:zines] %>,
+        <%= link_to t("footer.nav.tools.posters"),  [:posters] %>,
+        <%= link_to t("footer.nav.tools.stickers"), [:stickers] %>,
+        <%= link_to t("footer.nav.tools.videos"),   [:videos] %>
       </dd>
 
       <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), "/books" %></dt>
