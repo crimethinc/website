@@ -235,6 +235,7 @@ ActiveRecord::Schema.define(version: 20170624193008) do
     t.boolean "temporary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "article_id"
   end
 
   create_table "roles", id: :serial, force: :cascade do |t|
