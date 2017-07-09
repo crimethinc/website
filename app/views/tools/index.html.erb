@@ -1,0 +1,27 @@
+<article>
+
+  <header>
+    <h1><%= t("views.products.tools_heading_text") %></h1>
+  </header>
+
+  <div class="e-content">
+    <div class="intro">
+      <%= render_markdown t("views.products.tools_intro_text") %>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <% [:zines, :posters, :stickers].each do |type| %>
+        <div class="column column-one-third product">
+          <h1 class="p-name"><%= link_to type.capitalize, [type] %></h1>
+
+          <%= render_markdown t("views.products.#{type}_intro_text") %>
+
+          <%= link_to "Browse All #{type.capitalize} →", [type], class: "download button" %>
+        </div>
+      <% end %>
+    </div><!-- .row -->
+
+  </div><!-- .e-content -->
+</article>

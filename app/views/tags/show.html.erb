@@ -1,3 +1,7 @@
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags(@articles) %>
+<% end %>
+
 <% content_for :auto_discovery do %>
   <%= auto_discovery_link_tag(:atom, tag_feed_path(@tag.slug), title: setting(:page_title)) %>
 <% end %>

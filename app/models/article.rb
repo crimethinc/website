@@ -23,7 +23,7 @@ class Article < ApplicationRecord
   before_validation :downcase_content_format,  on: [:create, :update]
   before_validation :normalize_newlines,       on: [:create, :update]
 
-  validates :short_path, uniqueness: true, unless: "short_path.blank?"
+  validates :short_path, uniqueness: true, unless: :short_path_blank?
   validates :tweet, length: { maximum: 115 }
   validates :summary, length: { maximum: 200 }
 
@@ -57,6 +57,10 @@ class Article < ApplicationRecord
   def in_collection?
     # TODO this is a hack
     collection_id.present?
+  end
+
+  def short_path_blank?
+    short_path.blank?
   end
 
   private

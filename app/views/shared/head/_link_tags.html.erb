@@ -2,7 +2,8 @@
 <% if content_for?(:auto_discovery) %>
   <%= yield :auto_discovery %>
 <% else %>
-  <%= auto_discovery_link_tag(:atom, feed_path, title: setting(:page_title)) %>
+  <%= auto_discovery_link_tag(:atom, feed_url,        title: page_title) %>
+  <%= auto_discovery_link_tag(nil,   json_feed_url, { title: page_title, type: "application/json" }) %>
 <% end %>
 
 <!-- Canonical URLs -->
@@ -10,7 +11,7 @@
 <%#= TODO shorturl_link_tag      @post %>
 
 <!-- Google's AMP: Accelerated Mobile Pages -->
-<link rel="alternate amphtml" type="text/html" href="<%#= TODO rel_canonical + amp %>" />
+<!-- <link rel="alternate amphtml" type="text/html" href="<%#= TODO rel_canonical + amp %>" /> -->
 
 <!-- BIO -->
 <link rel="me"     href="mailto:help@crimethinc.com" />
@@ -25,3 +26,5 @@
 
 <!-- Browser hints -->
 <link rel="dns-prefetch" href="https://assets.crimethinc.com" />
+
+<%= yield :head %>

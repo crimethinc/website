@@ -48,7 +48,8 @@ Rails.application.routes.draw do
   get "drafts/articles/:draft_code/edit", controller: "admin/articles", action: "edit"
 
   # Articles Atom Feed
-  get "feed", to: "articles#index", defaults: { format: "atom" }, as: :feed
+  get "feed.json", to: "articles#index", defaults: { format: "json" }, as: :json_feed
+  get "feed",      to: "articles#index", defaults: { format: "atom" }, as: :feed
 
   # Articles - Collection Items
   get "articles/:id/collection_posts", to: "collection_posts#index"
@@ -69,31 +70,50 @@ Rails.application.routes.draw do
   get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
 
   # Pages (linked in header/nav)
-  get "read",               to: "about#read",        as: :read
-  get "watch",              to: redirect("videos"),  as: :watch_redirect
-  get "listen",             to: redirect("podcast"), as: :listen_redirect
-  get "get",                to: redirect("store"),   as: :get_redirect
+  get "read",   to: "about#read",        as: :read
+  get "watch",  to: redirect("videos"),  as: :watch_redirect
+  get "listen", to: redirect("podcast"), as: :listen_redirect
+  get "get",    to: redirect("store"),   as: :get_redirect
 
 
   # Podcast
-  get "podcast/feed",            to: "podcast#feed",   as: :podcast_feed, defaults: { format: "rss" }
-  get "podcast",                 to: "podcast#index",  as: :podcast
-  get "podcast/:id",             to: "podcast#show",   as: :episode
-  get "podcast/:id/transcript",  to: "podcast#transcript", as: :episode_transcript
+  get "podcast/feed",           to: "podcast#feed",       as: :podcast_feed, defaults: { format: "rss" }
+  get "podcast",                to: "podcast#index",      as: :podcast
+  get "podcast/:id",            to: "podcast#show",       as: :episode
+  get "podcast/:id/transcript", to: "podcast#transcript", as: :episode_transcript
 
 
   # Books
-  get "books/lit-kit",           to: "books#lit_kit",         as: :books_lit_kit
-  get "books/into-libraries",    to: "books#into_libraries",  as: :books_into_libraries
-  get "books",                   to: "books#index",           as: :books
-  get "books/:slug",             to: "books#show",            as: :book
-  get "books/:slug/extras",      to: "books#extras",          as: :book_extras
+  get "books/lit-kit",        to: "books#lit_kit",        as: :books_lit_kit
+  get "books/into-libraries", to: "books#into_libraries", as: :books_into_libraries
+  get "books/:slug/extras",   to: "books#extras",         as: :books_extras
+  get "books",                to: "books#index",          as: :books
+  get "books/:slug",          to: "books#show",           as: :book
 
 
   # Videos
   get "videos/page(/1)", to: redirect { |_, _| "/videos" }
   get "videos",          to: "videos#index", as: :videos
   get "videos/:slug",    to: "videos#show",  as: :video
+
+
+  # Posters, Stickers, Zines
+  get "posters",        to: "posters#index",  as: :posters
+  get "posters/:slug",  to: "posters#show",   as: :poster
+  get "stickers",       to: "stickers#index", as: :stickers
+  get "stickers/:slug", to: "stickers#show",  as: :sticker
+  get "zines",          to: "zines#index",    as: :zines
+  get "zines/:slug",    to: "zines#show",     as: :zine
+
+
+  # Tools
+  get "tools/downloads", to: redirect("/logos")
+  get "tools/logos",     to: redirect("/logos")
+  get "tools/stickers",  to: redirect("/stickers")
+  get "tools/zines",     to: redirect("/zines")
+  get "tools/posters",   to: redirect("/posters")
+  get "tools/videos",    to: redirect("/videos")
+  get "tools",           to: "tools#index", as: :tools
 
 
   # Site search
@@ -125,13 +145,16 @@ Rails.application.routes.draw do
     resources :links,        concerns: :paginatable
     resources :pages,        concerns: :paginatable
     resources :podcasts,     concerns: :paginatable
+    resources :posters,      concerns: :paginatable
     resources :redirects,    concerns: :paginatable
     resources :roles,        concerns: :paginatable
     resources :settings,     concerns: :paginatable
+    resources :stickers,     concerns: :paginatable
     resources :subscribers,  concerns: :paginatable
     resources :themes,       concerns: :paginatable
     resources :users,        concerns: :paginatable
     resources :videos,       concerns: :paginatable
+    resources :zines,        concerns: :paginatable
   end
 
 

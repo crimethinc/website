@@ -2608,8 +2608,8 @@
 /deutschbook /2012/10/03/new-crimethinc-collection-in-german
 /digitalutopiablog /2013/10/28/deserting-the-digital-utopia
 /doomed /2011/03/05/new-poster-capitalism-is-doomed
-/downloads /tools/downloads
-/downloads/ /tools/downloads
+/downloads /tools
+/downloads/ /tools
 /e /2011/02/02/from-the-depths-new-split-lp-and-tour
 /egypt /2012/01/25/egypts-ongoing-uprising
 /eightsteps /2012/02/09/eight-simple-steps-towards-revolution
@@ -2742,8 +2742,6 @@
 /police/ /texts/atoz/fuckpolice.php
 /pos /2012/10/23/collaboration-with-p-o-s
 /postdebate /2012/09/18/post-debate-debrief-video-and-libretto
-/posters /tools/downloads/posters.html
-/posters/ /tools/downloads/posters.html
 /presscheck /2007/11/27/expect-resistance-press-check
 /prism /2013/06/10/prism-the-internet-as-new-enclosure
 /protectblog /2015/11/17/the-borders-wont-protect-you
