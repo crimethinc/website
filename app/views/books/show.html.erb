@@ -86,12 +86,6 @@
         </div>
 
         <div class="product-content">
-          <% if @book.book? %>
-            <%= image_tag @book.header_image %>
-
-            <hr />
-          <% end %>
-
           <% if @book.gallery_images_count.present? && @book.gallery_images_count > 0 %>
             <% ("01"..@book.gallery_images_count.to_s.rjust(2, "0")).to_a.each do |photo_index| %>
               <%= link_to image_tag(@book.image(:gallery, photo_index),
