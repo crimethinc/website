@@ -141,21 +141,20 @@ en:
       download_front_button_text:  Download PDF of Front
       download_back_button_text:   Download PDF of Back
 
-      tools_intro_text:     #TODO
+      tools_intro_text:     Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
+      zines_intro_text:     A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas.
+      posters_intro_text:   Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or wheatpaste to post these in public places.
+      stickers_intro_text:  Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
       books_intro_text:
         From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
 
         All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
 
-      zines_intro_text:     #TODO
-      posters_intro_text:   #TODO
-      stickers_intro_text:  #TODO
-
       tools_heading_text:    Tools
-      books_heading_text:    We love making books.
       zines_heading_text:    Zines
       posters_heading_text:  Posters
       stickers_heading_text: Stickers
+      books_heading_text:    We love making books.
 
     books:
       crimethinc_into_libraries_heading: CrimethInc. Into Libraries
