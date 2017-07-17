@@ -59,12 +59,11 @@ en:
         label: Videos
 
       tools:
-        label: Tools
-        downloads: Downloads
-        posters: Posters
-        guides: Guides
-        stickers: Stickers
-        videos: Videos
+        label:     Tools
+        zines:     Zines
+        posters:   Posters
+        stickers:  Stickers
+        videos:    Videos
 
       store:
         label: Store
@@ -133,6 +132,40 @@ en:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
+    products:
+      buy_now_button_text: Buy Now
+      download_read_button_text:  Download PDF for Reading
+      download_print_button_text: Download PDF for Printing
+      download_lite_button_text:  Download Lo Res PDF
+
+      download_front_button_text:  Download PDF of Front
+      download_back_button_text:   Download PDF of Back
+
+      tools_intro_text:     Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
+      zines_intro_text:     A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas.
+      posters_intro_text:   Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or wheatpaste to post these in public places.
+      stickers_intro_text:  Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
+      books_intro_text:
+        From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
+
+        All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
+
+      tools_heading_text:    Tools
+      zines_heading_text:    Zines
+      posters_heading_text:  Posters
+      stickers_heading_text: Stickers
+      books_heading_text:    We love making books.
+
+    books:
+      crimethinc_into_libraries_heading: CrimethInc. Into Libraries
+      crimethinc_into_libraries_intro: For those who don’t have the extra resources with which to buy books or who just aren’t excited about acquiring more possessions, we have good news for you—the [CrimethInc. Into Libraries program](/books/into-libraries). Our books are [in more libraries than you might guess](/2007/10/09/crimethinc-into-libraries-progress-report), and if not, you can probably get them onto the shelves, for free. [Find out how!](/books/into-libraries)
+
+      literature_distro_kit_heading: Literature Distro Kit
+      literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
+
+
+
+
   helpers:
     page_entries_info:
       entry:
@@ -158,6 +191,21 @@ en:
       new_title: "New Books"
       show_title: "Books : %{title}"
       edit_title: "Editing book %{id} %{title} : %{subtitle}"
+    zines:
+      index_title: "Zines"
+      new_title: "New Zines"
+      show_title: "Zines : %{title}"
+      edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+    posters:
+      index_title: "Posters"
+      new_title: "New Posters"
+      show_title: "Posters : %{title}"
+      edit_title: "Editing poster %{id} %{title} : %{subtitle}"
+    stickers:
+      index_title: "Stickers"
+      new_title: "New Stickers"
+      show_title: "Stickers : %{title}"
+      edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
     podcasts:
       index_title: "Podcasts"
       new_title: "New Podcasts"

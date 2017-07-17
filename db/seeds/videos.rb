@@ -40,9 +40,17 @@ Dir.glob("#{filepath}/*").each do |f|
       content_format: "html"
     )
 
-    Redirect.create! source_path: "movies/#{filename}", target_path: "watch", temporary: false
-    # TODO change Redirect.target_path to "movies/slug" after #178 is done
+    puts "movies/#{filename}"
+    puts "movies/#{slug}"
+    puts
+
+    unless Redirect.find_by(source_path: "/movies/#{filename}").present?
+      Redirect.create! source_path: "movies/#{filename}", target_path: "movies/#{slug}", temporary: false
+    end
  end
 
- Redirect.create! source_path: "movies", target_path: "watch", temporary: false
+end
+
+unless Redirect.find_by(source_path: "/movies").present?
+  Redirect.create! source_path: "movies", target_path: "watch", temporary: false
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517041238) do
+ActiveRecord::Schema.define(version: 20170624193008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 20170517041238) do
     t.text "content"
     t.text "tweet"
     t.text "summary"
-    t.text "download_url"
     t.text "description"
     t.text "buy_url"
     t.text "buy_info"
@@ -82,6 +81,13 @@ ActiveRecord::Schema.define(version: 20170517041238) do
     t.text "table_of_contents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "zine", default: false
+    t.boolean "back_image_present", default: false
+    t.boolean "front_image_present", default: false
+    t.boolean "read_download_present", default: false
+    t.boolean "print_download_present", default: false
+    t.boolean "lite_download_present", default: false
+    t.integer "gallery_images_count"
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|
@@ -196,6 +202,31 @@ ActiveRecord::Schema.define(version: 20170517041238) do
     t.text "pocketcasts_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "posters", force: :cascade do |t|
+    t.boolean "sticker"
+    t.text "title"
+    t.text "subtitle"
+    t.text "content"
+    t.string "content_format", default: "kramdown"
+    t.text "buy_info"
+    t.text "buy_url"
+    t.integer "price_in_cents"
+    t.text "summary"
+    t.text "description"
+    t.boolean "front_image_present", default: true
+    t.boolean "back_image_present", default: false
+    t.boolean "front_download_present", default: false
+    t.boolean "back_download_present", default: false
+    t.text "slug"
+    t.string "height"
+    t.string "width"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "depth"
+    t.string "front_image_format", default: "jpg"
+    t.string "back_image_format", default: "jpg"
   end
 
   create_table "redirects", id: :serial, force: :cascade do |t|

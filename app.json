@@ -20,13 +20,12 @@
   },
 
   "env": {
-    "RAILS_ENV": "production",
-
     "SECRET_KEY_BASE": {
       "description": "This gets generated",
       "generator":   "secret"
     },
 
+    "DISABLE_SPRING": "true",
     "MIN_THREADS": "1",
     "MAX_THREADS": "1"
   },

@@ -3,17 +3,18 @@ class BooksController < ApplicationController
 
   def index
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books"
+    @type    = "books"
 
     @bullet_books = []
-    %w(from-democracy-to-freedom
+    %w(no-wall-they-can-build
+       from-democracy-to-freedom
        contradictionary
        work
        expect-resistance
-       days-of-war-nights-of-love
        recipes-for-disaster
-       no-wall-they-can-build).each do |slug|
+       days-of-war-nights-of-love).each do |slug|
       @bullet_books << Book.find_by(slug: slug)
     end
 
@@ -25,25 +26,26 @@ class BooksController < ApplicationController
 
   def show
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books : #{@book.title}"
+    @type    = "books"
   end
 
   def extras
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books : #{@book.title} : Extras"
   end
 
   def lit_kit
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books : Literature Distribution Kit"
   end
 
   def into_libraries
     @html_id = "page"
-    @body_id = "books"
+    @body_id = "products"
     @title   = "Books : CrimethInc. Into Libraries"
   end
 

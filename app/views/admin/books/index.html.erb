@@ -4,8 +4,9 @@
   <thead>
     <tr>
       <th>&nbsp;</th>
-      <th>Title</th>
-      <th>Subtitle</th>
+      <th>Name</th>
+      <th>Read Download</th>
+      <th>Print Download</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -16,8 +17,15 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, book], class: "btn btn-primary btn-xs" %>
         </td>
-        <td><%= link_to book.title, [:admin, book] %></td>
-        <td><%= book.subtitle %></td>
+        <td>
+          <b class="h3"><%= link_to book.title, [:admin, book] %></b>
+          <br>
+          <%= book.subtitle %>
+        </td>
+
+        <td> <%= "✔️" if book.read_download_present? %> </td>
+        <td> <%= "✔️" if book.print_download_present? %> </td>
+
         <td>
           <%= link_to "DELETE", [:admin, book], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
         </td>

@@ -3,6 +3,12 @@
 <% end %>
 
 <div class="h-feed">
+  <span class="screen-reader-only">
+    <span class="p-name"><%= t("site_name") %></span>
+    <span>by</span>
+    <span class="p-author"><%= t("site_author") %></span>
+  </span>
+
   <% if @top_article.present? %>
     <%= render "archives/card_css", article: @top_article, featured: false %>
     <%= render "archives/card",     article: @top_article %>

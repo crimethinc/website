@@ -1,5 +1,7 @@
-<%= form_for [:admin, @book] do |f| %>
-  <%= render "admin/form_errors", thing: @book %>
+<%= form_for [:admin, resource] do |f| %>
+  <%= render "admin/form_errors", thing: resource %>
+
+  <%= f.hidden_field :zine, value: @publication_type == "zine" %>
 
   <div class="form-group">
     <%= f.label :title %>
@@ -16,6 +18,7 @@
       <div class="form-group">
         <%= f.label :description %>
         <%= f.text_area :description, class: "form-control", rows: 8 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
       </div>
     </div>
 
@@ -23,60 +26,104 @@
       <div class="form-group">
         <%= f.label :content %>
         <%= f.text_area :content, class: "form-control", rows: 8 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
       </div>
     </div>
   </div> <!-- .row -->
 
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-6">
       <div class="form-group">
         <%= f.label :slug %>
         <%= f.text_field :slug, class: "form-control" %>
       </div>
-    </div>
 
-    <div class="col-xs-6">
       <div class="form-group">
-        <%= f.label :price_in_cents, "Price (in USD cents)" %>
-        <%= f.text_field :price_in_cents, class: "form-control" %>
-      </div>
-    </div>
-  </div> <!-- .row -->
-
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <div class="form-group">
-        <%= f.label :download_url, "Download URL" %>
-        <%= f.url_field :download_url, class: "form-control" %>
+        <%= f.label :gallery_images_count %>
+        <%= f.text_field :gallery_images_count, class: "form-control" %>
+        <p class="form-text text-muted">The number of <code>.jpg</code> gallery images are uploaded?</p>
       </div>
     </div>
 
     <div class="col-xs-12 col-sm-6">
       <div class="form-group">
-        <%= f.label :buy_url, "Buy URL" %>
-        <%= f.url_field :buy_url, class: "form-control" %>
+        <label for="downloads">Downloads</label>
+
+        <div class="checkbox">
+          <%= f.label :read_download_present do %>
+            <%= f.check_box :read_download_present, id: :book_read_download_present %>
+            <b>Reading:</b>
+            Is there a PDF for on-screen reading uploaded?
+          <% end %>
+        </div>
+
+        <div class="checkbox">
+          <%= f.label :print_download_present do %>
+            <%= f.check_box :print_download_present, id: :book_print_download_present %>
+            <b>Printing:</b>
+            Is there an imposed PDF uploaded?
+          <% end %>
+        </div>
+
+        <div class="checkbox">
+          <%= f.label :lite_download_present do %>
+            <%= f.check_box :lite_download_present, id: :book_lite_download_present %>
+            <b>Lo Res:</b>
+            Is there a low resolution / smaller file size PDF uploaded?
+          <% end %>
+        </div>
+
+        <p class="form-text text-muted">
+          PDFs must be uploaded to
+          <code>/assets/<%= @publication_type.pluralize %>/<%= resource.new_record? ? "[slug]" : resource.slug %>/</code>
+          on S3/Cloudfront.<br>
+
+          PDFs must be named:
+          <% if resource.new_record? %>
+            <code>[slug].pdf</code>,
+            <code>[slug]_print.pdf</code>,
+            <code>[slug]_lite.pdf</code>
+          <% else %>
+            <code><%= resource.slug %>.pdf</code>,
+            <code><%= resource.slug %>_print.pdf</code>,
+            <code><%= resource.slug %>_lite.pdf</code>
+          <% end %>
+        </p>
+
       </div>
     </div>
   </div> <!-- .row -->
 
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
+  <fieldset id="purchasing">
+    <legend>Purchasing</legend>
+    <div class="row">
+      <div class="col-xs-6">
+        <%= f.label :buy_info, "Buying Info" %>
+        <%= f.text_area :buy_info, class: "form-control", rows: 8 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+      </div>
+
+      <div class="col-xs-6">
+        <div class="form-group">
+          <%= f.label :buy_url, "Buy URL" %>
+          <%= f.url_field :buy_url, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :price_in_cents, "Price (in USD cents)" %>
+          <%= f.text_field :price_in_cents, class: "form-control" %>
+        </div>
+      </div>
+    </div> <!-- .row -->
+  </fieldset>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 
   <fieldset id="syndication">
     <legend>Syndication</legend>
     <div class="row">
-
-      <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :tweet %>
-          <%= f.text_area :tweet, class: "form-control" %>
-          <p class="help-block">
-            Maximum 115 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
-            Used for syndicated tweet for this Article.
-          </p>
-        </div>
-      </div>
 
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
@@ -92,7 +139,7 @@
     </div> <!-- .row -->
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 
   <div class="row">
     <div class="col-xs-12 col-sm-6">
@@ -102,6 +149,7 @@
         <div class="form-group">
           <%= f.label :table_of_contents %>
           <%= f.text_area :table_of_contents, class: "form-control", rows: 10 %>
+          <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
         </div>
       </fieldset>
     </div>
@@ -113,15 +161,15 @@
         <div class="row">
           <div class="col-xs-6">
             <div class="form-group">
-              <%= f.label :height %>
-              <%= f.text_field :height, class: "form-control" %>
+              <%= f.label :width %>
+              <%= f.text_field :width, class: "form-control" %>
             </div>
           </div>
 
           <div class="col-xs-6">
             <div class="form-group">
-              <%= f.label :width %>
-              <%= f.text_field :width, class: "form-control" %>
+              <%= f.label :height %>
+              <%= f.text_field :height, class: "form-control" %>
             </div>
           </div>
         </div>
@@ -194,10 +242,16 @@
           </div>
         </div> <!-- .row -->
 
+
       </fieldset> <!-- #specs -->
+
     </div>
+
   </div> <!-- .row -->
 
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :books] %>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+
+
 <% end %>

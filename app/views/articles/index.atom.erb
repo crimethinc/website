@@ -15,7 +15,7 @@
   <logo><%= largest_touch_icon_url %></logo>
   <icon><%= asset_url("icons/favicon.ico") %></icon>
 
-  <updated><%= @articles.first.updated_at.xmlschema %></updated>
+  <updated><% @articles.present? ? @articles.first.updated_at.xmlschema : Time.now.xmlschema %></updated>
 
   <author>
     <name><%= author %></name>

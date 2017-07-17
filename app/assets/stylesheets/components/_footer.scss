@@ -97,7 +97,7 @@ footer[role=contentinfo] {
     .about-us-link a {
       @extend .button;
       background: $color-white;
-      color: $color-true-black;
+      color: $color-true-black !important;
       text-decoration: none;
       text-align: right;
       display: block;
