@@ -3,12 +3,13 @@ class Search
   FILTER_REGEX  = /(\w+:(\w+|"[^"]+"))/
   VALID_FILTERS = %w[title subtitle content tag category contributor].freeze
 
-  attr_reader :query
+  attr_reader :query, :term
 
   def initialize(query)
     @filters = normalize_filters(query)
     @query   = query
     @scope   = SearchResult.select("search_results.*")
+    @term    = strip_filters(query)
   end
 
   def perform
@@ -39,7 +40,6 @@ class Search
   end
 
   def full_text_search
-    term = strip_filters(query)
     return scope unless term.present?
 
     self.scope = scope

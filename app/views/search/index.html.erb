@@ -3,6 +3,11 @@
 <% end %>
 
 <div class="h-feed">
+
+  <header>
+    <h1>Search results for "<%= @search.query %>"</h1>
+  </header>
+
   <div class="articles-list">
     <ol>
       <% @results.each do |result| %>
