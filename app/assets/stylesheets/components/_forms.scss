@@ -15,3 +15,24 @@
     outline: none;
   }
 }
+
+form, fieldset {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+input[type="text"] {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.help-block,
+.help-inline {
+  color: #595959;
+}
+
+.help-block {
+  display: block;
+  margin-bottom: 10px;
+}

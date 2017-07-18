@@ -1,0 +1,14 @@
+.new_advanced_search {
+  input.button {
+    @extend .button;
+    font-size: 1.5rem;
+    float: right;
+    background: $color-blue;
+  }
+
+  .simple-field {
+    width: 100%;
+    border-color: $color-gray-dark;
+    margin: 1rem 0;
+  }
+}

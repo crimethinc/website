@@ -2,6 +2,7 @@ module Post
   extend ActiveSupport::Concern
 
   include Name
+  include Searchable
   include Slug
 
   included do

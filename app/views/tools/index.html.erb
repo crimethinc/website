@@ -1,4 +1,7 @@
 <article>
+  <div class="product-header-image">
+    <%= image_tag "https://cloudfront.crimethinc.com/assets/tools/images/header.jpg", alt: "CrimethInc. zines, posters, stickers" %>
+  </div>
 
   <header>
     <h1><%= t("views.products.tools_heading_text") %></h1>
@@ -16,9 +19,9 @@
         <div class="column column-one-third product">
           <h1 class="p-name"><%= link_to type.capitalize, [type] %></h1>
 
-          <%= render_markdown t("views.products.#{type}_intro_text") %>
+          <%= link_to "Browse All #{type.capitalize} →", [type], class: "download button" %><br><br>
 
-          <%= link_to "Browse All #{type.capitalize} →", [type], class: "download button" %>
+          <%= render_markdown t("views.products.#{type}_intro_text") %>
         </div>
       <% end %>
     </div><!-- .row -->

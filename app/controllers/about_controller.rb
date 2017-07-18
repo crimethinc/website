@@ -1,7 +1,7 @@
 class AboutController < ApplicationController
-  def read
+  def library
     @html_id = "page"
-    @body_id = "read"
+    @body_id = "library"
 
     @featured_current_events        = Article.find_by(slug: "feature-report-back-from-the-battle-for-sacred-ground")
     @featured_strategy_and_analysis = Article.find_by(slug: "feature-understanding-the-kurdish-resistance-historical-overview-eyewitness-report")
@@ -18,7 +18,7 @@ class AboutController < ApplicationController
 
   def arts_submission_guidelines
     @html_id = "page"
-    @body_id = "read"
+    @body_id = "library"
     @title   = "Arts Desk : Submission Guidelines"
   end
 end

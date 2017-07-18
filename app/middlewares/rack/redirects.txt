@@ -2646,8 +2646,6 @@
 /lettertoegypt /2013/02/10/letter-to-the-egyptian-black-bloc
 /lettertoegypt /blog/2013/02/09/letter-to-the-egyptian-black-bloc/
 /lettertoegypt/ /blog/2013/02/09/letter-to-the-egyptian-black-bloc/
-/library /texts
-/library/ /texts
 /livej20 /2017/01/20/j20-live-updates
 /livestream http://mobilebroadcastnews.com/NewsRoom/MBN-LIVE
 /livestream/ http://mobilebroadcastnews.com/NewsRoom/MBN-LIVE

@@ -6,6 +6,7 @@ gem "rails", "~> 5.1.1"
 
 # database
 gem "pg"
+gem "scenic", "~> 1.4"
 
 # webserver
 gem "puma"
