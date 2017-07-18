@@ -38,7 +38,7 @@ Rails.application.routes.draw do
       action:     "edit",
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
 
-  get "archives", to: redirect("/read"), as: :archives_redirect
+  get "archives", to: redirect("/library"), as: :archives_redirect
 
   # Draft Articles and Pages
   get "drafts/articles/:draft_code", to: "articles#show", as: :article_draft
@@ -70,10 +70,11 @@ Rails.application.routes.draw do
   get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
 
   # Pages (linked in header/nav)
-  get "read",   to: "about#read",        as: :read
-  get "watch",  to: redirect("videos"),  as: :watch_redirect
-  get "listen", to: redirect("podcast"), as: :listen_redirect
-  get "get",    to: redirect("store"),   as: :get_redirect
+  get "library", to: "about#library",     as: :library
+  get "read",    to: redirect("library"), as: :read_redirect
+  get "watch",   to: redirect("videos"),  as: :watch_redirect
+  get "listen",  to: redirect("podcast"), as: :listen_redirect
+  get "get",     to: redirect("store"),   as: :get_redirect
 
 
   # Podcast
