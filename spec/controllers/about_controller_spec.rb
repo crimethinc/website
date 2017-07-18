@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe AboutController, type: :controller do
-  describe "GET #read" do
+  describe "GET #library" do
     let(:status)  { FactoryGirl.create(:status) }
     let!(:featured_current_events) { FactoryGirl.create(:article, slug:"feature-report-back-from-the-battle-for-sacred-ground", status: status, published_at: Date.current) }
     let!(:featured_strategy_and_analysis) { FactoryGirl.create(:article, slug:"feature-understanding-the-kurdish-resistance-historical-overview-eyewitness-report", status: status, published_at: Date.current)}
@@ -9,7 +9,7 @@ RSpec.describe AboutController, type: :controller do
     let!(:featured_classics) { FactoryGirl.create(:article, slug:"why-we-dont-make-demands", status: status, published_at: Date.current) }
 
     it "assigns all instance variables" do
-      get :read
+      get :library
 
       expect(assigns[:featured_current_events]).to eq(featured_current_events)
       expect(assigns[:featured_strategy_and_analysis]).to eq(featured_strategy_and_analysis)
@@ -17,7 +17,7 @@ RSpec.describe AboutController, type: :controller do
       expect(assigns[:featured_classics]).to eq(featured_classics)
 
       expect(assigns[:html_id]).to eq("page")
-      expect(assigns[:body_id]).to eq("read")
+      expect(assigns[:body_id]).to eq("library")
     end
   end
 

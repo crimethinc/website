@@ -15,7 +15,7 @@ class ArchivesController < ApplicationController
       elsif @archive.month.present?
         return redirect_to archives_path(@archive.year)
       elsif @archive.year.present?
-        return redirect_to [:read]
+        return redirect_to [:library]
       end
     end
   end
