@@ -1,6 +1,7 @@
 // nav
 .primary-navigation {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-link {
@@ -10,8 +11,7 @@
     align: center;
     transform: uppercase;
   }
-  width: 20%;
-  width: 25%; // TODO TEMP until SHARE link comes back
+  width: 33.333333333333%;
 
   a {
     display: block;
