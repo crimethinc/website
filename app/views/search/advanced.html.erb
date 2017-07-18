@@ -1,0 +1,44 @@
+<h1>Advanced Search</h1>
+
+<%= form_for(@advanced_search) do |f| %>
+  <fieldset>
+    <%= f.label :term, "Search" %>
+    <%= f.text_field :term, class: "simple-field" %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "simple-field" %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle, class: "simple-field" %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :content %>
+    <%= f.text_field :content, class: "simple-field" %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :tag, "Tags" %>
+    <%= f.text_field :tag, class: "simple-field" %>
+
+    <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :category, "Categories" %>
+    <%= f.text_field :category, class: "simple-field" %>
+
+    <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
+  </fieldset>
+
+  <!-- <fieldset>
+    <%= f.label :contributor %>
+    <%= f.text_field :contributor %>
+  </fieldset> -->
+
+  <%= f.submit "Search", class: "button" %>
+<% end %>

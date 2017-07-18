@@ -1,0 +1,22 @@
+<li>
+  <article class="h-entry" role="article">
+    <div class="row">
+      <div class="<%= "column" if result.searchable.image.present? %> column-one-third">
+        <% if result.searchable.present? && result.searchable.image.present? %>
+          <%= link_to image_tag(result.searchable.image, class: "u-photo header-image", alt: result.searchable.image_description), result.searchable.path %>
+        <% end %>
+      </div>
+
+      <div class="<%= "column" if result.searchable.image.present? %> column-two-third">
+        <header>
+          <%= render "articles/titles", header: result.searchable, linked: true %>
+          <%= render "articles/published_on", article: result.searchable %>
+        </header>
+
+        <footer>
+          <%= render "articles/tags", article: result.searchable %>
+        </footer>
+      </div>
+    </div>
+  </article>
+</li>

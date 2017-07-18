@@ -40,6 +40,10 @@
   .archives-search-form {
     display: inline-block;
     width: 50%;
+
+    a.advanced-search-link {
+      color: $color-gray;
+    }
   }
 
   .start-link {

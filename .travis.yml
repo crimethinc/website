@@ -1,4 +1,7 @@
+dist: trusty
+sudo: false
 language: ruby
 sudo: false
 script: ./script/cibuild
-
+addons:
+  postgresql: "9.6"
