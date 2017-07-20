@@ -29,8 +29,11 @@
 }
 
 .bulb-and-bones-logo {
-  margin-left: 122px;
   @include image-replacement-graphic("icons/icon-120x120.png", "icons/icon-120x120.png", 3rem, 3rem);
   @include size(3rem, 3rem);
   display: block;
+
+  @media screen and (min-width: $small-tablet) {
+    margin-left: 122px;
+  }
 }

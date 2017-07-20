@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20170624193008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "articles", id: :serial, force: :cascade do |t|
     t.integer "user_id"
@@ -337,7 +338,7 @@ ActiveRecord::Schema.define(version: 20170624193008) do
       a.tag_names AS tag,
       a.category_names AS category,
       a.contributor_names AS contributor,
-      (((((setweight(a.title, 'A'::"char") || setweight(a.subtitle, 'B'::"char")) || setweight(a.content, 'D'::"char")) || setweight(array_to_tsvector((a.tag_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.category_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.contributor_names)::text[]), 'D'::"char")) AS document
+      (((((setweight(a.title, 'A'::"char") || setweight(a.subtitle, 'B'::"char")) || setweight(a.content, 'C'::"char")) || setweight(array_to_tsvector((a.tag_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.category_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.contributor_names)::text[]), 'D'::"char")) AS document
      FROM ( SELECT articles.id AS searchable_id,
               'Article'::text AS searchable_type,
               to_tsvector(COALESCE(articles.title, ''::text)) AS title,
