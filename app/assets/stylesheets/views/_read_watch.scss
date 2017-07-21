@@ -15,6 +15,7 @@
       border-right: 1px solid #ccc;
       padding-right: .75em;
       margin-right:  .5em;
+      font-weight: normal
     }
 
     #years a:last-child,
@@ -22,8 +23,10 @@
       border-right: none;
     }
 
-    #years {
-      margin-bottom: 3em;
+    #theme,
+    #years,
+    #samples {
+      margin-top: 3em;
     }
 
     .h-entry {
@@ -50,7 +53,6 @@
 
       ul {
         margin-top: 2rem;
-        margin-left: 2rem;
       }
 
       &.section li:first-child {
@@ -70,15 +72,6 @@
       }
 
     } // .h-entry
-
-
-    #years {
-      a {
-        font-weight: bold;
-        display: inline-block;
-        margin-right: .25em;
-      }
-    }
 
   } // main
 } // #page
