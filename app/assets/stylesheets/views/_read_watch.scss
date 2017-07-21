@@ -10,9 +10,26 @@
       margin-bottom: 1em;
     }
 
+    #years a,
+    #categroies a {
+      border-right: 1px solid #ccc;
+      padding-right: .75em;
+      margin-right:  .5em;
+    }
+
+    #years a:last-child,
+    #categroies a:last-child {
+      border-right: none;
+    }
+
+    #years {
+      margin-bottom: 3em;
+    }
+
     .h-entry {
+      margin-bottom: 2em;
+
       h1 {
-        margin-top: 1em;
         font: {
           weight: lighter;
           weight: 300;

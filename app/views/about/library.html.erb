@@ -1,140 +1,134 @@
 <div class="h-feed">
   <header>
-    <h1 id="books">Books</h1>
+    <h1>Online Reading Library</h1>
   </header>
 
   <div class="intro">
     <p>
-      Book publishing is the flagship of all our operations. Whether you’re looking for an
-      analysis of borders and migration, an
-      <a href="/books/work">overview of the global economy</a>, a
-      <a href="/books/recipes-for-disaster">handbook of direct action tactics</a>,
-      or our classic <a href="/books/days-of-war-nights-of-love">introduction to the anarchist adventure</a>,
-      we have you covered. <a href="/books">Proceed to our book page.</a>
+      This online archive collects more than twenty years of essays that have
+      appeared under the CrimethInc. insignia. It is by no means comprehensive.
+    </p>
+    <p>
+      Some of these texts and many others are available as PDFs in our
+      <a href="/tools">Downloads</a> section. You’ll find zines, magazines,
+      papers, and posters on a wide range of topics, ready to be printed
+      out and distributed to everyone in your path. You can also download
+      back issues of our journal, <a href="/rt">Rolling Thunder</a>.
     </p>
   </div>
 
   <header>
-    <h1>Online Reading Library</h1>
+    <h2><b>Navigate by Theme</b></h2>
   </header>
 
-  <div>
-    <div class="intro">
-      <p>
-        This online archive collects more than twenty years of essays that have appeared
-        under the CrimethInc. insignia. It is by no means comprehensive.
+  <div class="intro">
+    <p id="categroies">
+      <% Category.all.each do |category| %>
+        <%= link_to category.name, category_path(category.slug), style: "font-weight: normal" %>
+      <% end %>
+    </p>
+  </div>
+
+  <div id="years">
+    <header>
+      <h2><b>Navigate Chronologically</b></h2>
+    </header>
+
+    <div>
+      <div class="intro">
+      <p id="years">
+        <% [1996, 1997, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017].reverse.each do |year| %>
+          <%= link_to year, archives_path(year: year) %>
+        <% end %>
       </p>
+      </div>
+    </div> <!-- .e-content -->
+  </div>
 
-      <p>
-        Some of these texts and many others are available as PDFs in our
-        <a href="/zines">Downloads section</a>.
-        You&rsquo;ll find zines, magazines, papers, and posters on a wide range of topics,
-        ready to be printed out and distributed to everyone in your path.
-        You can also download back issues of our journal,
-        <a href="/rt/archives.html">Rolling Thunder</a>.
+  <header>
+    <h2><b>Sample Reading Lists</b></h2>
+  </header>
 
-        We have also published several <a href="/books">books</a> which are
-        <a href="http://store.crimethinc.com/x/books.html" title="CrimethInc. Ex-Workers' Collective : Store">available for order</a>.
-      </p>
-    </div>
-
-    <div class="row">
-      <div class="column column-half section h-entry">
-        <h1 id="current-events" class="p-name">Current Events</h1>
-
-        <div class="e-content">
-          <%= image_tag @featured_current_events.image, alt: @featured_current_events.image_description %>
-
-          <ul>
-            <li><a href="/texts/r/battle">Reportback from the Battle for Sacred Ground</a></li>
-            <li><a href="/texts/r/french911">The French 9/11: A Dialogue</a></li>
-            <li><a href="/texts/r/kobane">Turkish Anarchists on the Fight for Kobanê</a></li>
-            <li><a href="/texts/r/from-ferguson-to-the-bay">From Ferguson to Oakland: 17 Days of Riots and Revolt in the Bay Area</a></li>
-            <li><a href="/texts/recentfeatures/brazilpt1.php">The June 2013 Uprisings in Brazil, Part I: New Alliances, Age-Old Struggles</a></li>
-            <li><a href="/texts/recentfeatures/brazilpt2.php">The June 2013 Uprisings in Brazil, Part II: Giants and Monsters</a></li>
-            <li><a href="/texts/rollingthunder/rncdnc.php">Going It Alone: Anarchist Action at the 2008 Democratic and Republican National Conventions</a></li>
-          </ul>
-        </div> <!-- .e-content -->
-      </div> <!-- .h-entry -->
-
-      <div class="column column-half section h-entry">
-        <h1 id="strategy-and-analysis" class="p-name">Strategy and Analysis</h1>
-
-        <div class="e-content">
-          <%= image_tag @featured_strategy_and_analysis.image, alt: @featured_strategy_and_analysis.image_description %>
-
-          <ul>
-            <li><a href="/texts/r/kurdish">Understanding the Kurdish Resistance</a></li>
-            <li><a href="/texts/r/next-time-it-explodes">Next Time It Explodes: Revolt, Repression, and Backlash since the Ferguson Uprising</a></li>
-            <li><a href="/texts/r/syriza">Syriza Can’t Save Greece: Why There’s No Electoral Exit from the Crisis</a></li>
-            <li><a href="/texts/r/ferguson-reflections">Reflections on the Ferguson Uprising: An Interview with Participants</a></li>
-            <li><a href="/texts/ux/ukraine.html">The Ukrainian Revolution an the Future of Social Movements</a></li>
-            <li><a href="/texts/recentfeatures/atc-dust.php">After the Crest, Part I: What to Do While the Dust Is Settling</a></li>
-            <li><a href="/texts/recentfeatures/atc-oak.php">After the Crest, Part II: The Rise and Fall of the Oakland Commune</a></li>
-            <li><a href="/texts/recentfeatures/atc-barc.php">After the Crest, Part III: Barcelona Anarchists at Low Tide</a></li>
-            <li><a href="/texts/recentfeatures/atc-mont.php">After the Crest, Part IV: Montréal: Peaks and Precipices</a></li>
-            <li><a href="/texts/recentfeatures/breakwith.php">Breaking with Consensus Reality: From the Politics of Consent to the Seduction of Revolution</a></li>
-            <li><a href="/texts/recentfeatures/insurrection.php">Say You Want an Insurrection</a></li>
-            <li><a href="/texts/rollingthunder/shac.php">The SHAC Model: A Critical Assessment</a></li>
-          </ul>
-        </div> <!-- .e-content -->
-      </div> <!-- .h-entry -->
-    </div> <!-- .row -->
-
-    <div class="row">
-      <div class="column column-half section h-entry">
-        <h1 id="theory-and-critique" class="p-name">Theory and Critique</h1>
-
-        <div class="e-content">
-          <%= image_tag @featured_theory_and_critique.image, alt: @featured_theory_and_critique.image_description %>
-
-          <ul>
-            <li><a href="/texts/r/democracy">From Democracy to Freedom</a></li>
-            <li><a href="/texts/r/protect">The Borders Won’t Protect You but They Might Get You Killed</a></li>
-            <li><a href="/texts/r/bluefuse">The Thin Blue Line Is a Burning Fuse: Why Every Struggle Is Now a Struggle against the Police</a></li>
-            <li><a href="/texts/r/agitators">The Making of “Outside Agitators”</a></li>
-            <li><a href="/texts/r/ferguson">What They Mean when They Say Peace</a></li>
-            <li><a href="/texts/ex/digital-utopia.html">Deserting the Digital Utopia: Computers against Computing</a></li>
-            <li><a href="/texts/recentfeatures/selfcare.php">For All We Care: Reconsidering Self-Care</a></li>
-            <li><a href="/texts/recentfeatures/language.php">Anarchism and the English Language / English and the Anarchists’ Language</a></li>
-            <li><a href="/texts/recentfeatures/accounting.php">Accounting for Ourselves: Breaking the Impasse Around Assault and Abuse in Anarchist Scenes</a></li>
-            <li><a href="/texts/recentfeatures/ideology.php">Against Ideology?</a></li>
-          </ul>
-        </div> <!-- .e-content -->
-      </div> <!-- .h-entry -->
-
-      <div class="column column-half section h-entry">
-        <h1 id="classics" class="p-name">Classics</h1>
-
-        <div class="e-content">
-          <%= image_tag @featured_classics.image, alt: @featured_classics.image_description %>
-
-          <ul>
-            <li><a href="/texts/selected/difference.php">There Is a Difference between Life and Survival</a></li>
-            <li><a href="/texts/selected/ultimatum.php">Ultimatum</a></li>
-            <li><a href="/texts/selected/forward.php">Forward!</a></li>
-            <li><a href="/texts/selected/joinresistance.php">Join the Resistance: Fall in Love</a></li>
-            <li><a href="/texts/selected/secretworld.php">There is a Secret World Concealed Within this One</a></li>
-          </ul>
-        </div> <!-- .e-content -->
-      </div> <!-- .h-entry -->
-    </div> <!-- .row -->
-
-    <div id="years" class="h-entry">
-      <h1 class="p-name">Chronologically</h1>
+  <div class="row">
+    <div class="column column-half section h-entry">
+      <h1 id="current-events">Current Events</h1>
 
       <div class="e-content">
-        <p>
-          You can also explore everything by year.
-        </p>
+        <%= image_tag @featured_current_events.image, alt: @featured_current_events.image_description %>
 
-        <p>
-          <% [1996, 1997, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017].reverse.each do |year| %>
-            <%= link_to year, archives_path(year: year) %>
-          <% end %>
-        </p>
+        <ul>
+          <li><a href="/texts/r/battle">Reportback from the Battle for Sacred Ground</a></li>
+          <li><a href="/texts/r/french911">The French 9/11: A Dialogue</a></li>
+          <li><a href="/texts/r/kobane">Turkish Anarchists on the Fight for Kobanê</a></li>
+          <li><a href="/texts/r/from-ferguson-to-the-bay">From Ferguson to Oakland: 17 Days of Riots and Revolt in the Bay Area</a></li>
+          <li><a href="/texts/recentfeatures/brazilpt1.php">The June 2013 Uprisings in Brazil, Part I: New Alliances, Age-Old Struggles</a></li>
+          <li><a href="/texts/recentfeatures/brazilpt2.php">The June 2013 Uprisings in Brazil, Part II: Giants and Monsters</a></li>
+          <li><a href="/texts/rollingthunder/rncdnc.php">Going It Alone: Anarchist Action at the 2008 Democratic and Republican National Conventions</a></li>
+        </ul>
       </div> <!-- .e-content -->
-    </div>
+    </div> <!-- .h-entry -->
 
-  </div>
+    <div class="column column-half section h-entry">
+      <h1 id="strategy-and-analysis">Strategy and Analysis</h1>
+
+      <div class="e-content">
+        <%= image_tag @featured_strategy_and_analysis.image, alt: @featured_strategy_and_analysis.image_description %>
+
+        <ul>
+          <li><a href="/texts/r/kurdish">Understanding the Kurdish Resistance</a></li>
+          <li><a href="/texts/r/next-time-it-explodes">Next Time It Explodes: Revolt, Repression, and Backlash since the Ferguson Uprising</a></li>
+          <li><a href="/texts/r/syriza">Syriza Can’t Save Greece: Why There’s No Electoral Exit from the Crisis</a></li>
+          <li><a href="/texts/r/ferguson-reflections">Reflections on the Ferguson Uprising: An Interview with Participants</a></li>
+          <li><a href="/texts/ux/ukraine.html">The Ukrainian Revolution an the Future of Social Movements</a></li>
+          <li><a href="/texts/recentfeatures/atc-dust.php">After the Crest, Part I: What to Do While the Dust Is Settling</a></li>
+          <li><a href="/texts/recentfeatures/atc-oak.php">After the Crest, Part II: The Rise and Fall of the Oakland Commune</a></li>
+          <li><a href="/texts/recentfeatures/atc-barc.php">After the Crest, Part III: Barcelona Anarchists at Low Tide</a></li>
+          <li><a href="/texts/recentfeatures/atc-mont.php">After the Crest, Part IV: Montréal: Peaks and Precipices</a></li>
+          <li><a href="/texts/recentfeatures/breakwith.php">Breaking with Consensus Reality: From the Politics of Consent to the Seduction of Revolution</a></li>
+          <li><a href="/texts/recentfeatures/insurrection.php">Say You Want an Insurrection</a></li>
+          <li><a href="/texts/rollingthunder/shac.php">The SHAC Model: A Critical Assessment</a></li>
+        </ul>
+      </div> <!-- .e-content -->
+    </div> <!-- .h-entry -->
+  </div> <!-- .row -->
+
+  <div class="row">
+    <div class="column column-half section h-entry">
+      <h1 id="theory-and-critique">Theory and Critique</h1>
+
+      <div class="e-content">
+        <%= image_tag @featured_theory_and_critique.image, alt: @featured_theory_and_critique.image_description %>
+
+        <ul>
+          <li><a href="/texts/r/democracy">From Democracy to Freedom</a></li>
+          <li><a href="/texts/r/protect">The Borders Won’t Protect You but They Might Get You Killed</a></li>
+          <li><a href="/texts/r/bluefuse">The Thin Blue Line Is a Burning Fuse: Why Every Struggle Is Now a Struggle against the Police</a></li>
+          <li><a href="/texts/r/agitators">The Making of “Outside Agitators”</a></li>
+          <li><a href="/texts/r/ferguson">What They Mean when They Say Peace</a></li>
+          <li><a href="/texts/ex/digital-utopia.html">Deserting the Digital Utopia: Computers against Computing</a></li>
+          <li><a href="/texts/recentfeatures/selfcare.php">For All We Care: Reconsidering Self-Care</a></li>
+          <li><a href="/texts/recentfeatures/language.php">Anarchism and the English Language / English and the Anarchists’ Language</a></li>
+          <li><a href="/texts/recentfeatures/accounting.php">Accounting for Ourselves: Breaking the Impasse Around Assault and Abuse in Anarchist Scenes</a></li>
+          <li><a href="/texts/recentfeatures/ideology.php">Against Ideology?</a></li>
+        </ul>
+      </div> <!-- .e-content -->
+    </div> <!-- .h-entry -->
+
+    <div class="column column-half section h-entry">
+      <h1 id="classics">Classics</h1>
+
+      <div class="e-content">
+        <%= image_tag @featured_classics.image, alt: @featured_classics.image_description %>
+
+        <ul>
+          <li><a href="/texts/selected/difference.php">There Is a Difference between Life and Survival</a></li>
+          <li><a href="/texts/selected/ultimatum.php">Ultimatum</a></li>
+          <li><a href="/texts/selected/forward.php">Forward!</a></li>
+          <li><a href="/texts/selected/joinresistance.php">Join the Resistance: Fall in Love</a></li>
+          <li><a href="/texts/selected/secretworld.php">There is a Secret World Concealed Within this One</a></li>
+        </ul>
+      </div> <!-- .e-content -->
+    </div> <!-- .h-entry -->
+  </div> <!-- .row -->
+
 </div>
