@@ -32,5 +32,6 @@ if Rails.env.prod?
       # host:     's3.example.com',             # defaults to nil
       # endpoint: 'https://s3.example.com:8080' # defaults to nil
     }
+    config.asset_host = "https://cloudfront.crimethinc.com"
   end
 end
