@@ -7,7 +7,7 @@ feature "Adding an article header image" do
     create(:status, name: 'published')
   end
 
-  scenario "Adding a header to a new article", :js do
+  scenario "Adding a header to a new article" do
     sign_in_as_admin
     click_on 'NEW'
 
