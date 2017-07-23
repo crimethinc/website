@@ -95,9 +95,9 @@ class Admin::ArticlesController < Admin::AdminController
                                     :year, :month, :day, :download_url, :tweet,
                                     :slug, :draft_code, :status_id, :summary,
                                     :published_at, :tags, :collection_id, :short_path,
-                                    :image, :image_description, :css, :hide_layout,
-                                    :header_background_color, :header_text_color,
-                                    :header_shadow_text,
+                                    :image, :article_image, :image_description, :css,
+                                    :hide_layout, :header_background_color, :remove_article_image,
+                                    :header_text_color, :header_shadow_text,
                                     category_ids: [],
                                     contributions_attributes: [
                                       :id, :contributor_id, :role_id,:_destroy

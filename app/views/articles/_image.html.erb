@@ -1,7 +1,13 @@
-<% if article.image.present? %>
-  <div class="article-image">
-    <%= link_to_if linked,
-                   image_tag(article.image, class: "u-photo", alt: article.image_description),
-                   article.path %>
-  </div>
-<% end %>
+<div class="article-image">
+  <img class="u-photo"
+       alt="<%= article.image_description %>"
+       src="<%= article.article_image.url || article.image %>"
+       <% if article.article_image.url.present? %>
+         sizes="100vw"
+         srcset="<%= article.article_image.full_sized %>  2000w,
+                 <%= article.article_image.large %>  1024w,
+                 <%= article.article_image.medium %> 640w,
+                 <%= article.article_image.small %>  320w"
+       <% end %>
+  >
+</div>

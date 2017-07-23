@@ -164,11 +164,23 @@
   <fieldset id="appearance">
     <legend>Appearance</legend>
 
-    <div class="row">
+    <% if @article.published_at.present? %>
+    <div class="row" id="article-header-image-row">
       <div class="col-xs-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :image, "Header Image" %>
-          <%= f.text_field :image, class: "form-control input-lg" %>
+          <p class="help-block">The article's header image is currently set to
+            <code>
+              <%= @article.article_image.url || @article.image %>
+            </code>
+          </p>
+          <%= f.label :article_image, "Header Image Upload" %>
+          <%= f.file_field :article_image, class: "form-control" %>
+          <p>
+            <label>
+              <%= f.check_box :remove_article_image %>
+              Remove Uploaded Image
+            </label>
+          </p>
           <p class="help-block">
             This is the large image that will be front and center on the <i>Article</i> page,
             on the homepage and when syndicated to other sites. Minimum size: <code>1400x1000</code> pixels.
@@ -186,6 +198,7 @@
         </div>
       </div>
     </div>
+    <% end %>
 
     <% unless @collection.present? %>
       <hr>

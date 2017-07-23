@@ -17,7 +17,10 @@ gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"
 gem "jquery-rails"
-gem "sitemap_generator" # generates compliant xml sitemap
+gem "sitemap_generator"     # generates compliant xml sitemap
+gem 'carrierwave', '~> 1.0' # upload article header image
+gem "mini_magick"           # interface for imagemagick
+gem "fog-aws"
 
 # text utilities
 gem "rubypants"      # for smart quotes

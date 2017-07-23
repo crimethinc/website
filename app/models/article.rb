@@ -15,8 +15,9 @@ class Article < ApplicationRecord
   accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
   scope :chronological, -> { order(published_at: :desc) }
-
   scope :root, -> { where(collection_id: nil) }
+
+  mount_uploader :article_image, ArticleImageUploader
 
   before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
