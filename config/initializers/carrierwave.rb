@@ -1,14 +1,15 @@
-# TODO: what happens if the ENVs are missing?
-# TODO: is ENV safe way to handle these credentials?
-if Rails.env.test?
+if Rails.env.test? || Rails.env.development?
   CarrierWave.configure do |config|
     config.storage = :file
-    config.enable_processing = false
+    config.enable_processing = Rails.env.development? # true in develop, false in test
   end
 end
 
 # TODO: staging too?
 if Rails.env.prod?
+  raise unless ENV['AWS_CARRIERWAVE_ACCESS_KEY_ID'].present?
+  raise unless ENV['AWS_CARRIERWAVE_ACCESS_KEY'].present?
+
   CarrierWave.configure do |config|
     config.storage = :fog
     config.enable_processing = true
