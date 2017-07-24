@@ -9,7 +9,7 @@ module Rack
 
       if request.host.start_with?("www.")
         location = request.path.sub("www.", "")
-        return location
+        return redirect(location)
       end
 
       @app.call(env)
