@@ -4,7 +4,6 @@ require "json"
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  # before_action :strip_www
   before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :set_social_links
@@ -96,14 +95,6 @@ class ApplicationController < ActionController::Base
       return redirect_to request.path.sub(/\.html/, "")
     end
   end
-
-  # def strip_www
-  #   # TODO fix this with DNS instead in every request
-  #   if request.host =~ /www\.crimethinc/
-  #     url = request.protocol + request.host.sub(/www\./, "") + request.path
-  #     return redirect_to url
-  #   end
-  # end
 
   def current_resource_name
     request.path.split("admin/").last.split("/").first.capitalize.singularize
