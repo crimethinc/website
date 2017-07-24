@@ -8,7 +8,7 @@ module Rack
       request = Rack::Request.new(env)
 
       if request.host.start_with?("www.")
-        location = request.path.sub("www.", "")
+        location = request.host.sub("www.", "")
         return redirect(location)
       end
 
