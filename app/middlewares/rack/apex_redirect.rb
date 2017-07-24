@@ -1,5 +1,5 @@
 module Rack
-  class WwwRedirect
+  class ApexRedirect
     def initialize(app)
       @app = app
     end
