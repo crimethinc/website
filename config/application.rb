@@ -3,6 +3,7 @@ require_relative "boot"
 require "rails/all"
 require_relative "../app/middlewares/rack/redirect"
 require_relative "../app/middlewares/rack/blog_redirect"
+require_relative "../app/middlewares/rack/apex_redirect"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
