@@ -14,6 +14,7 @@ module Magazine
     # config.load_defaults 5.1
 
     config.middleware.use Rack::Redirect
+    config.middleware.use Rack::WWWRedirect
     config.middleware.use Rack::BlogRedirect
     config.middleware.use Rack::Attack
 
