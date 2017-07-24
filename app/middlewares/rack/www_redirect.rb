@@ -1,5 +1,5 @@
 module Rack
-  class BlogRedirect
+  class WWWRedirect
     def initialize(app)
       @app = app
     end
