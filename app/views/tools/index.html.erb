@@ -14,17 +14,13 @@
 
     <hr>
 
-    <div class="row">
       <% [:zines, :posters, :stickers].each do |type| %>
-        <div class="column column-one-third product">
+        <div class="product-section">
           <h1 class="p-name"><%= link_to type.capitalize, [type] %></h1>
-
-          <%= link_to "Browse All #{type.capitalize} →", [type], class: "download button" %><br><br>
-
           <%= render_markdown t("views.products.#{type}_intro_text") %>
-        </div>
+          <%= link_to "Browse All #{type.capitalize} →", [type], class: "download button" %><br><br>
+        </div><!-- .row -->
       <% end %>
-    </div><!-- .row -->
 
   </div><!-- .e-content -->
 </article>

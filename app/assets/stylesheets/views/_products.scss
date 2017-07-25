@@ -43,11 +43,19 @@
       #recipes-for-disaster       .product-front img { width: 100%; }
       #off-the-map                .product-front img { width:  68%; }
 
-      .masonry {
-        .product {
-          margin-bottom: 10rem;
+      .product-section {
+        margin-bottom: 3rem;
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+
+          a {
+            text-decoration: none;
+          }
         }
       }
+
 
       .product {
         margin-bottom: 4rem;
