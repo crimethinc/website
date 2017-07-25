@@ -9,11 +9,19 @@ si:
     meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
   header:
+    books: Books
+    library: Library
+    tools: Tools
+    audio: Audio
+    video: Video
+    store: Store
+
     read: Read
     watch: Watch
     listen: Listen
     buy: Get
     share: Share
+
     first_time: First Time? Start Here →
     search_form_placeholder: Search Archives…
 
@@ -59,12 +67,11 @@ si:
         label: Videos
 
       tools:
-        label: Tools
-        downloads: Downloads
-        posters: Posters
-        guides: Guides
-        stickers: Stickers
-        videos: Videos
+        label:     Tools
+        zines:     Zines
+        posters:   Posters
+        stickers:  Stickers
+        videos:    Videos
 
       store:
         label: Store
@@ -124,12 +131,48 @@ si:
       previous: "&lsaquo;"
       next: "&rsaquo;"
       truncate: "&hellip;"
+      next_page: "Next &rsaquo;"
+      previous_page: "&lsaquo; Previous"
       next_article: "%{title}: Next &rsaquo;"
       previous_article: "&lsaquo; Previous: %{title}"
       next_month: "&lsaquo; Next Month (%{month})"
       previous_month: "(%{month}) Previous Month &rsaquo;"
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
+
+    products:
+      buy_now_button_text: Buy Now
+      download_read_button_text:  Download PDF for Reading
+      download_print_button_text: Download PDF for Printing
+      download_lite_button_text:  Download Lo Res PDF
+
+      download_front_button_text:  Download PDF of Front
+      download_back_button_text:   Download PDF of Back
+
+      tools_intro_text:     Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
+      zines_intro_text:     A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also obtain full PDFs of *Rolling Thunder,* our acclaimed journal of analysis and direct action, [in the *Rolling Thunder* archives,](/rt/archives.html) and obtain pdfs of *To Change Everything,* our introduction to anarchism, in dozens of languages at the [*To Change Everything*](/tce/) site.
+      posters_intro_text:   Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
+      stickers_intro_text:  Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
+      books_intro_text:
+        From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
+
+        All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
+
+      tools_heading_text:    Tools
+      zines_heading_text:    Zines
+      posters_heading_text:  Posters
+      stickers_heading_text: Stickers
+      books_heading_text:    We love making books.
+
+    books:
+      crimethinc_into_libraries_heading: CrimethInc. Into Libraries
+      crimethinc_into_libraries_intro: For those who don’t have the extra resources with which to buy books or who just aren’t excited about acquiring more possessions, we have good news for you—the [CrimethInc. Into Libraries program](/books/into-libraries). Our books are [in more libraries than you might guess](/2007/10/09/crimethinc-into-libraries-progress-report), and if not, you can probably get them onto the shelves, for free. [Find out how!](/books/into-libraries)
+
+      literature_distro_kit_heading: Literature Distro Kit
+      literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
+
+
+
 
   helpers:
     page_entries_info:
@@ -144,3 +187,95 @@ si:
           other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
         display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+  admin:
+    title_prepend: "Admin"
+    articles:
+      index_title: "Articles"
+      new_title: "New Articles"
+      show_title: "Articles : %{title}"
+      edit_title: "Editing article %{id} %{title} : %{subtitle}"
+    books:
+      index_title: "Books"
+      new_title: "New Books"
+      show_title: "Books : %{title}"
+      edit_title: "Editing book %{id} %{title} : %{subtitle}"
+    zines:
+      index_title: "Zines"
+      new_title: "New Zines"
+      show_title: "Zines : %{title}"
+      edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+    posters:
+      index_title: "Posters"
+      new_title: "New Posters"
+      show_title: "Posters : %{title}"
+      edit_title: "Editing poster %{id} %{title} : %{subtitle}"
+    stickers:
+      index_title: "Stickers"
+      new_title: "New Stickers"
+      show_title: "Stickers : %{title}"
+      edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
+    podcasts:
+      index_title: "Podcasts"
+      new_title: "New Podcasts"
+      show_title: "Podcasts : %{title}"
+      edit_title: "Editing podcast %{id} %{title} : %{subtitle}"
+    videos:
+      index_title: "Videos"
+      new_title: "New Videos"
+      show_title: "Videos : %{title}"
+      edit_title: "Editing video %{id} %{title} : %{subtitle}"
+    categories:
+      index_title: "Categories"
+      new_title: "New Categories"
+      show_title: "Categories : %{name}"
+      edit_title: "Editing category %{id} %{name}"
+    episodes:
+      index_title: "Episodes"
+      new_title: "New Episodes"
+      show_title: "Episodes : %{title}"
+      edit_title: "Editing episode %{id} %{title}"
+    users:
+      index_title: "Users"
+      new_title: "New Users"
+      show_title: "Users : %{name}"
+      edit_title: "Editing user %{id} %{name}"
+    settings:
+      index_title: "Settings"
+      new_title: "New Settings"
+      show_title: "Settings : %{name}"
+      edit_title: "Editing settings %{id} %{name}"
+    subscribers:
+      index_title: "Subscribers"
+      new_title: "New Subscribers"
+      show_title: "Subscribers : %{name}"
+      edit_title: "Editing subscriber %{id} %{name}"
+    contributors:
+      index_title: "Contributors"
+      new_title: "New Contributors"
+      show_title: "Contributors : %{name}"
+      edit_title: "Editing contributor %{id} %{name}"
+    pages:
+      index_title: "Pages"
+      new_title: "New Pages"
+      show_title: "Pages : %{title}"
+      edit_title: "Editing page %{id} %{title} : %{subtitle}"
+    links:
+      index_title: "Links"
+      new_title: "New Links"
+      show_title: "Links : %{name}"
+      edit_title: "Editing link %{id} %{name}"
+    roles:
+      index_title: "Roles"
+      new_title: "New Roles"
+      show_title: "Roles : %{name}"
+      edit_title: "Editing role %{id} %{name}"
+    redirects:
+      index_title: "Redirects"
+      new_title: "New Redirects"
+      show_title: "Redirects : %{source_path}"
+      edit_title: "Editing redirect %{id} %{source_path}"
+    themes:
+      index_title: "Themes"
+      new_title: "New Themes"
+      show_title: "Themes : %{name}"
+      edit_title: "Editing theme %{id} %{name}"

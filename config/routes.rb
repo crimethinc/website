@@ -103,6 +103,8 @@ Rails.application.routes.draw do
   get "posters/:slug",  to: "posters#show",   as: :poster
   get "stickers",       to: "stickers#index", as: :stickers
   get "stickers/:slug", to: "stickers#show",  as: :sticker
+  get "logos",          to: "logos#index",    as: :logos
+  get "logos/:slug",    to: "logos#show",     as: :logo
   get "zines",          to: "zines#index",    as: :zines
   get "zines/:slug",    to: "zines#show",     as: :zine
 
@@ -146,6 +148,7 @@ Rails.application.routes.draw do
     resources :contributors, concerns: :paginatable
     resources :episodes,     concerns: :paginatable
     resources :links,        concerns: :paginatable
+    resources :logos,        concerns: :paginatable
     resources :pages,        concerns: :paginatable
     resources :podcasts,     concerns: :paginatable
     resources :posters,      concerns: :paginatable
