@@ -78,6 +78,10 @@
         <%= render "tools/nav" %>
 
         <%= render "articles/titles", header: @book, linked: true %>
+
+        <% if @book.published_at.present? %>
+          <time datetime="<%= @book.published_at.iso8601 %>"><%= @book.published_at.year %></time>
+        <% end %>
       </header>
 
       <div class="e-content">

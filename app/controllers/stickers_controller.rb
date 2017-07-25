@@ -4,7 +4,7 @@ class StickersController < ApplicationController
     @body_id  = "products"
     @type     = "stickers"
     @title    = "Stickers"
-    @products = Poster.sticker.all
+    @products = Poster.sticker.order("published_at desc").page(params[:page]).per(10)
 
     render "products/index"
   end

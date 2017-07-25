@@ -69,6 +69,14 @@
           img {
             box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
           }
+
+          time {
+            margin-top: .5em;
+            display: block;
+            text-align: right;
+            color: $color-gray;
+            padding-right: .25em;
+          }
         }
       }
 

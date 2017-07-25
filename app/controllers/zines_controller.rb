@@ -4,7 +4,7 @@ class ZinesController < ApplicationController
     @body_id  = "products"
     @type     = "zines"
     @title    = "Zines"
-    @products = Book.zine.all
+    @products = Book.zine.order("published_at desc").page(params[:page]).per(10)
 
     render "products/index"
   end

@@ -19,6 +19,10 @@
       <div class="e-content row">
         <div class="product-front column column-one-quarter">
           <%= link_to image_tag(product.front_image, alt: product.front_image_description, class: "u-image"), product.path %>
+
+          <% if product.published_at.present? %>
+            <time datetime="<%= product.published_at.iso8601 %>"><%= product.published_at.year %></time>
+          <% end %>
         </div>
 
         <div class="product-main column column-three-quarter">
@@ -69,3 +73,7 @@
     </div><!-- .product -->
   <% end %>
 </article>
+
+<div class="pagination-container">
+  <%= paginate @products %>
+</div>

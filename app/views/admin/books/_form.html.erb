@@ -136,6 +136,15 @@
         </div>
       </div>
 
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :published_at %>
+          <%= f.date_select :published_at,
+                            { start_year: Time.now.year, end_year: 1995, include_blank: true },
+                            class: "form-control" %>
+        </div>
+      </div>
+
     </div> <!-- .row -->
   </fieldset>
 
