@@ -1,0 +1,45 @@
+<div class="product" id="<%= product.slug %>">
+
+  <header>
+    <%= render "articles/titles", header: product, linked: true %>
+  </header>
+
+  <div class="e-content row">
+    <div class="product-main">
+      <header>
+        <%= render "articles/titles", header: product, linked: true %>
+      </header>
+
+      <div class="product-front">
+        <%= link_to image_tag(product.front_image, alt: product.front_image_description, class: "u-image"), product.path %>
+
+        <% if product.published_at.present? %>
+          <time datetime="<%= product.published_at.iso8601 %>"><%= product.published_at.year %></time>
+        <% end %>
+      </div>
+
+      <p>
+        <b>Size</b>
+        <span>
+          <%= product.width %>
+          x
+          <%= product.height %>
+        </span>
+      </p>
+
+      <div class="p-summary">
+        <%= render_markdown product.summary %>
+      </div>
+
+      <div class="buttons">
+        <% %w(jpg png pdf svg tif).each do |extension| %>
+          <% if product.send("#{extension}_url_present?") %>
+            <%= link_to "Download .#{extension.upcase}", product.image_url(extension), class: "download button" %>
+          <% end %>
+        <% end %>
+        <%= link_to "Download .ZIP", product.image_url(:zip), class: "download button" %>
+      </div><!-- .buttons -->
+    </div><!-- .product-main -->
+  </div><!-- .e-content -->
+
+</div><!-- .product -->

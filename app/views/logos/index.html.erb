@@ -1,0 +1,19 @@
+<article class="products-logos">
+  <header>
+    <%= render "tools/nav" %>
+
+    <h1><%= t("views.products.logos_heading_text") %></h1>
+  </header>
+
+  <div class="e-content intro">
+    <%= render_markdown t("views.products.logos_intro_text") %>
+  </div>
+
+  <% @products.each do |product| %>
+    <%= render "logos/logo", product: product %>
+  <% end %>
+</article>
+
+<div class="pagination-container">
+  <%= paginate @products %>
+</div>

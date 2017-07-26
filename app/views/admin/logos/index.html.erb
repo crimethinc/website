@@ -1,0 +1,46 @@
+<%= render "admin/page_header", thing: @logos %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Name</th>
+      <th>JPEG</th>
+      <th>PNG</th>
+      <th>PDF</th>
+      <th>SVG</th>
+      <th>TIF</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logos.each do |logo| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, logo], class: "btn btn-primary btn-xs" %>
+        </td>
+        <td>
+          <b class="h3"><%= link_to logo.title, [:admin, logo] %></b>
+          <% if logo.subtitle.present? %>
+            <br>
+            <%= logo.subtitle %>
+          <% end %>
+        </td>
+
+        <% %w(jpg png pdf svg tif).each do |extension| %>
+          <td> <%= "✔️" if logo.send"#{extension}_url_present?" %> </td>
+        <% end %>
+
+
+        <td>
+          <%= link_to "DELETE", [:admin, logo], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="pagination-container">
+  <%= paginate @logos, views_prefix: "admin" %>
+</div>

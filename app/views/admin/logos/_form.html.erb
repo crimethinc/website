@@ -1,0 +1,119 @@
+<%= form_with(model: [:admin, resource], local: true) do |form| %>
+  <%= render "admin/form_errors", thing: resource %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :poster_title, class: "form-control input-lg" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, id: :poster_subtitle, class: "form-control input-lg" %>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= form.label :description %>
+        <%= form.text_area :description, class: "form-control", rows: 8 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+      </div>
+    </div>
+  </div> <!-- .row -->
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <%= form.label :slug %>
+        <%= form.text_field :slug, id: :poster_slug, class: "form-control" %>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <%= form.label :width %>
+            <%= form.text_field :width, id: :poster_width, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <%= form.label :height %>
+            <%= form.text_field :height, id: :poster_height, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-group">
+        <label for="downloads">Downloads</label>
+
+        <% %w(jpg png pdf svg tif).each do |extension| %>
+          <div class="checkbox">
+            <%= form.label "#{extension}_url_present" do %>
+              <%= form.check_box "#{extension}_url_present", id: "logo_#{extension}_url_present", class: "form-check-input" %>
+              <b><%= extension.upcase %></b>
+              Is there a <%= extension %> of the logo uploaded?
+            <% end %>
+          </div>
+        <% end %>
+
+
+        <p class="form-text text-muted">
+          PDFs must be uploaded to
+          <code>/assets/logos/<%= resource.new_record? ? "[slug]" : resource.slug %>/</code>
+          on S3/Cloudfront.<br>
+
+          Files must be named:
+          <% if resource.new_record? %>
+            <code>[slug].jpg</code>,
+            <code>[slug].png</code>,
+            <code>[slug].pdf</code>,
+            <code>[slug].tif</code>,
+            <code>[slug].svg</code>.
+          <% else %>
+            <code><%= resource.slug %>.jpg</code>,
+            <code><%= resource.slug %>.png</code>,
+            <code><%= resource.slug %>.pdf</code>,
+            <code><%= resource.slug %>.svg</code>,
+            <code><%= resource.slug %>.tif</code>.
+          <% end %>
+        </p>
+
+      </div>
+    </div>
+  </div> <!-- .row -->
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :logos] %>
+
+
+  <fieldset id="syndication">
+    <legend>Syndication</legend>
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= form.label :summary %>
+          <%= form.text_area :summary, class: "form-control" %>
+          <p class="help-block">
+            Maximum 200 characters.
+            Used for page description and previews in story cards on other sites.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+          <%= form.label :published_at %>
+          <%= form.date_select :published_at,
+                            { start_year: Time.now.year, end_year: 1995, include_blank: true },
+                            class: "form-control" %>
+        </div>
+      </div>
+
+    </div> <!-- .row -->
+  </fieldset>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :logos] %>
+<% end %>

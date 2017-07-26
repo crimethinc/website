@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725154857) do
+ActiveRecord::Schema.define(version: 20170725212002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,25 @@ ActiveRecord::Schema.define(version: 20170725154857) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_links_on_user_id"
+  end
+
+  create_table "logos", force: :cascade do |t|
+    t.string "slug"
+    t.string "title"
+    t.string "subtitle"
+    t.text "description"
+    t.string "height"
+    t.string "width"
+    t.string "content_format"
+    t.boolean "jpg_url_present"
+    t.boolean "png_url_present"
+    t.boolean "pdf_url_present"
+    t.boolean "svg_url_present"
+    t.boolean "tif_url_present"
+    t.datetime "published_at"
+    t.text "summary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pages", id: :serial, force: :cascade do |t|

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'logos/index'
+
+  get 'logos/show'
+
   # External Redirects
   get "books/evasion",      to: redirect("http://evasionbook.com"), status: 301
   get "books/evasion.html", to: redirect("http://evasionbook.com"), status: 301
