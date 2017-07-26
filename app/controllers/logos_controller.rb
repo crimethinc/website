@@ -3,8 +3,8 @@ class LogosController < ApplicationController
     @html_id  = "page"
     @body_id  = "products"
     @type     = "logos"
-    @products = Logo.order("published_at desc").page(params[:page]).per(10)
     @title    = "logos"
+    @products = Logo.order("published_at desc").page(params[:page]).per(100)
   end
 
   def show

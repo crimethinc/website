@@ -3,8 +3,8 @@ class PostersController < ApplicationController
     @html_id  = "page"
     @body_id  = "products"
     @type     = "posters"
-    @products = Poster.poster.order("published_at desc").page(params[:page]).per(10)
     @title    = "Posters"
+    @products = Poster.poster.order("published_at desc").page(params[:page]).per(100)
 
     render "products/index"
   end
