@@ -142,9 +142,12 @@ en:
 
     products:
       buy_now_button_text: Buy Now
-      download_read_button_text:  Download PDF for Reading
-      download_print_button_text: Download PDF for Printing
-      download_lite_button_text:  Download Lo Res PDF
+      zine_download_read_button_text:  Download PDF for Reading
+      zine_download_print_button_text: Download PDF for Printing
+      zine_download_lite_button_text:  Download Lo Res PDF
+
+      book_download_read_button_text:  Download Two Page View PDF
+      book_download_lite_button_text:  Download Single Page View PDF
 
       download_front_button_text:  Download PDF of Front
       download_back_button_text:   Download PDF of Back
