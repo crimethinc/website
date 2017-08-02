@@ -252,6 +252,61 @@
         </div> <!-- .row -->
 
 
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :printing, "Printing" %>
+              <%= f.text_field :printing, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label :ink, "Ink" %>
+              <%= f.text_field :ink, class: "form-control" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
+
+
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.label :has_index, "Has Index?" %><br>
+
+            <span class="d-inline-block mr-3">
+              <%= f.label :has_index_true do %>
+                <%= f.radio_button :has_index, "true", id: :book_has_index_true %>
+                <b>Yes</b>
+              <% end %>
+            </span>
+
+            <span class="d-inline-block">
+              <%= f.label :has_index_false do %>
+                <%= f.radio_button :has_index, nil, id: :book_has_index_false %>
+                <b>No</b>
+              <% end %>
+            </span>
+          </div>
+
+          <div class="col-xs-6">
+            <% if @book.slug == "recipes-for-disaster" %>
+              <div class="form-group">
+                <%= f.label :recipes %>
+                <%= f.text_field :recipes, class: "form-control" %>
+              </div>
+            <% end %>
+
+            <% if @book.slug == "contradictionary" %>
+              <div class="form-group">
+                <%= f.label :definitions %>
+                <%= f.text_field :definitions, class: "form-control" %>
+              </div>
+            <% end %>
+          </div>
+
+        </div> <!-- .row -->
+
+
       </fieldset> <!-- #specs -->
 
     </div>
