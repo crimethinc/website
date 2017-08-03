@@ -2601,7 +2601,6 @@
 /d /2011/02/02/egypt-today-tomorrow-the-world
 /debut /2017/01/09/under-no-management
 /demands /2015/05/05/why-we-dont-make-demands
-/democracy /2012/04/30/poster-series-what-does-democracy-mean
 /democracyseries /2016/03/16/series-the-anarchist-critique-of-democracy
 /demoread /2016/04/19/anarchy-and-democracy-reading-groups
 /demtofree /2016/03/31/from-democracy-to-freedom
