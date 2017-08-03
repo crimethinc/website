@@ -9,16 +9,18 @@
   </header>
 
   <div class="video-flexbox-container">
-    <% @videos.each do |video| %>
+    <% @videos.sort_by{ |v| v.content.length }.each do |video| %>
+
       <div class="column column-half section h-entry">
         <% unless video.blank? %>
-          <%#= image_tag video.image, alt: video.image_description, class: "u-image" %>
           <h1 class="p-name"><%= link_to video.title, video_path(video.slug) %></h1>
+
           <%= render video %>
         <% end %>
       </div>
+
     <% end %>
-  </div> <!-- .e-content -->
+  </div>
 </div>
 
 <%= paginate @videos %>
