@@ -18,11 +18,7 @@ class Book < ApplicationRecord
   end
 
   def path
-    if slug == "no-wall-they-can-build" or slug == "from-democracy-to-freedom"
-      "https://www.kickstarter.com/projects/crimethinc/new-books-about-borders-and-democracy-by-crimethin"
-    else
-      [nil, namespace, slug].join("/")
-    end
+    [nil, namespace, slug].join("/")
   end
 
   def image(type, count=0)
