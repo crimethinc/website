@@ -4,7 +4,8 @@ class StickersController < ApplicationController
     @body_id  = "products"
     @type     = "stickers"
     @title    = "Stickers"
-    @products = Poster.sticker.order("published_at desc").page(params[:page]).per(100)
+    @featured_products = Poster.sticker.order("published_at desc").all.map{ |x| x if     x.buy_url.present? }.compact
+    @products          = Poster.sticker.order("published_at desc").all.map{ |x| x unless x.buy_url.present? }.compact
 
     render "products/index"
   end

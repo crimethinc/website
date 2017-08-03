@@ -1,0 +1,60 @@
+<div class="product" id="<%= product.slug %>">
+  <header>
+    <%= render "articles/titles", header: product, linked: true %>
+  </header>
+
+  <div class="e-content row">
+    <div class="product-front column column-one-quarter">
+      <%= link_to image_tag(product.front_image, alt: product.front_image_description, class: "u-image"), product.path %>
+
+      <% if product.published_at.present? %>
+        <time datetime="<%= product.published_at.iso8601 %>"><%= product.published_at.year %></time>
+      <% end %>
+    </div>
+
+    <div class="product-main column column-three-quarter">
+      <header>
+        <%= render "articles/titles", header: product, linked: true %>
+      </header>
+
+      <div class="p-summary">
+        <%= render_markdown product.summary %>
+      </div>
+
+      <div class="buttons">
+        <% if product.price_in_cents.present? %>
+          <div><%= button_to_buy_now price: product.price_in_cents, url: product.buy_url %></div>
+        <% end %>
+
+        <% if product.buy_info.present? %>
+          <%= render_markdown product.buy_info %>
+        <% end %>
+
+        <% if product.class == Book %>
+          <% if product.read_download_present? %>
+            <div><%= link_to product.zine? ? t("views.products.zine_download_read_button_text") : t("views.products.book_download_read_button_text"), product.download_url,         class: "download button" %></div>
+          <% end %>
+
+          <% if product.print_download_present? %>
+            <div><%= link_to t("views.products.zine_download_print_button_text"), product.download_url(:print), class: "download button" %></div>
+          <% end %>
+
+          <% if product.lite_download_present? %>
+            <div><%= link_to product.zine? ? t("views.products.zine_download_lite_button_text") : t("views.products.book_download_lite_button_text"), product.download_url(:lite),  class: "download button" %></div>
+          <% end %>
+        <% end %>
+
+        <% if product.class == Poster %>
+          <% if product.front_download_present? %>
+            <div><%= link_to t("views.products.download_front_button_text"), product.download_url(:front), class: "download button" %></div>
+          <% end %>
+
+          <% if product.back_download_present? %>
+            <div><%= link_to t("views.products.download_back_button_text"), product.download_url(:back), class: "download button" %></div>
+          <% end %>
+        <% end %>
+      </div><!-- .buttons -->
+    </div><!-- .product-main -->
+  </div><!-- .e-content -->
+
+</div><!-- .product -->

@@ -4,7 +4,8 @@ class ZinesController < ApplicationController
     @body_id  = "products"
     @type     = "zines"
     @title    = "Zines"
-    @products = Book.zine.order("published_at desc").page(params[:page]).per(100)
+    @featured_products = Book.zine.order("published_at desc").all.map{ |x| x if     x.buy_url.present? }.compact
+    @products          = Book.zine.order("published_at desc").all.map{ |x| x unless x.buy_url.present? }.compact
 
     render "products/index"
   end
