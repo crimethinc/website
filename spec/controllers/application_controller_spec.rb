@@ -188,15 +188,6 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-  describe "#strip_www" do
-    it "strips www" do
-      request.host = "www.crimethinc.com"
-
-      get :index
-
-      expect(response.status).to eq(302)
-    end
-  end
 
   describe "#render_markdown" do
     subject { controller.render_markdown("text").strip }
