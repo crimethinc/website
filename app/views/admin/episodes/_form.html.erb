@@ -5,77 +5,77 @@
 
   <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control input-lg" %>
+    <%= f.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :subtitle %>
-    <%= f.text_field :subtitle, class: "form-control input-lg" %>
+    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :image %>
-    <%= f.url_field :image, class: "form-control" %>
+    <%= f.url_field :image, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :content %>
-    <%= f.text_area :content, class: "form-control", rows: "5" %>
+    <%= f.text_area :content, class: "form-control form-control-lg", rows: "5" %>
   </div>
 
   <div class="form-group">
     <%= f.label :audio_mp3_url %>
-    <%= f.url_field :audio_mp3_url, class: "form-control" %>
+    <%= f.url_field :audio_mp3_url, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :audio_mp3_file_size %>
-    <%= f.text_field :audio_mp3_file_size, class: "form-control" %>
+    <%= f.text_field :audio_mp3_file_size, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :audio_ogg_url %>
-    <%= f.url_field :audio_ogg_url, class: "form-control" %>
+    <%= f.url_field :audio_ogg_url, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :audio_ogg_file_size %>
-    <%= f.text_field :audio_ogg_file_size, class: "form-control" %>
+    <%= f.text_field :audio_ogg_file_size, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :show_notes %>
-    <%= f.text_area :show_notes, class: "form-control", rows: "5" %>
+    <%= f.text_area :show_notes, class: "form-control form-control-lg", rows: "5" %>
   </div>
 
   <div class="form-group">
     <%= f.label :transcript %>
-    <%= f.text_area :transcript, class: "form-control", rows: "5" %>
+    <%= f.text_area :transcript, class: "form-control form-control-lg", rows: "5" %>
   </div>
 
   <div class="form-group">
     <%= f.label :audio_length %>
-    <%= f.text_field :audio_length, class: "form-control" %>
+    <%= f.text_field :audio_length, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :duration %>
-    <%= f.text_field :duration, class: "form-control" %>
+    <%= f.text_field :duration, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :audio_type %>
-    <%= f.text_field :audio_type, class: "form-control" %>
+    <%= f.text_field :audio_type, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :tags %>
-    <%= f.text_field :tags, class: "form-control" %>
+    <%= f.text_field :tags, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :published_at %>
-    <%= f.text_field :published_at, class: "form-control" %>
+    <%= f.text_field :published_at, class: "form-control form-control-lg" %>
   </div>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :episodes] %>

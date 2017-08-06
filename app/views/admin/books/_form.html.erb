@@ -5,47 +5,47 @@
 
     <div class="form-group">
       <%= f.label :title %>
-      <%= f.text_field :title, class: "form-control input-lg" %>
+      <%= f.text_field :title, class: "form-control form-control-lg" %>
     </div>
 
     <div class="form-group">
       <%= f.label :subtitle %>
-      <%= f.text_field :subtitle, class: "form-control input-lg" %>
+      <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
     </div>
 
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :description %>
-          <%= f.text_area :description, class: "form-control", rows: 8 %>
+          <%= f.text_area :description, class: "form-control form-control-lg", rows: 8 %>
           <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :content %>
-          <%= f.text_area :content, class: "form-control", rows: 8 %>
+          <%= f.text_area :content, class: "form-control form-control-lg", rows: 8 %>
           <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
         </div>
       </div>
     </div> <!-- .row -->
 
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :slug %>
-          <%= f.text_field :slug, class: "form-control" %>
+          <%= f.text_field :slug, class: "form-control form-control-lg" %>
         </div>
 
         <div class="form-group">
           <%= f.label :gallery_images_count %>
-          <%= f.text_field :gallery_images_count, class: "form-control" %>
+          <%= f.text_field :gallery_images_count, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">The number of <code>.jpg</code> gallery images are uploaded?</p>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <label for="downloads">Downloads</label>
 
@@ -100,23 +100,23 @@
     <fieldset id="purchasing">
       <legend>Purchasing</legend>
       <div class="row">
-        <div class="col-xs-6">
+        <div class="col-6">
           <div class="form-group">
             <%= f.label :buy_info, "Buying Info" %>
-            <%= f.text_area :buy_info, class: "form-control", rows: 8 %>
+            <%= f.text_area :buy_info, class: "form-control form-control-lg", rows: 8 %>
             <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
           </div>
         </div>
 
-        <div class="col-xs-6">
+        <div class="col-6">
           <div class="form-group">
             <%= f.label :buy_url, "Buy URL" %>
-            <%= f.url_field :buy_url, class: "form-control" %>
+            <%= f.url_field :buy_url, class: "form-control form-control-lg" %>
           </div>
 
           <div class="form-group">
             <%= f.label :price_in_cents, "Price (in USD cents)" %>
-            <%= f.text_field :price_in_cents, class: "form-control" %>
+            <%= f.text_field :price_in_cents, class: "form-control form-control-lg" %>
           </div>
         </div>
       </div> <!-- .row -->
@@ -128,10 +128,10 @@
       <legend>Syndication</legend>
       <div class="row">
 
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= f.label :summary %>
-            <%= f.text_area :summary, class: "form-control" %>
+            <%= f.text_area :summary, class: "form-control form-control-lg" %>
             <p class="help-block">
               Maximum 200 characters.
               Used for page description and previews in story cards on other sites.
@@ -139,12 +139,12 @@
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= f.label :published_at %>
             <%= f.date_select :published_at,
                               {start_year: Time.now.year, end_year: 1995, include_blank: true},
-                              class: "form-control" %>
+                              class: "form-control form-control-lg" %>
           </div>
         </div>
 
@@ -154,125 +154,125 @@
     <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <fieldset id="table-of-contents">
           <legend>Table of Contents</legend>
 
           <div class="form-group">
             <%= f.label :table_of_contents %>
-            <%= f.text_area :table_of_contents, class: "form-control", rows: 10 %>
+            <%= f.text_area :table_of_contents, class: "form-control form-control-lg", rows: 10 %>
             <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
           </div>
         </fieldset>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <fieldset id="specs">
           <legend>Specs</legend>
 
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :width %>
-                <%= f.text_field :width, class: "form-control" %>
+                <%= f.text_field :width, class: "form-control form-control-lg" %>
               </div>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :height %>
-                <%= f.text_field :height, class: "form-control" %>
+                <%= f.text_field :height, class: "form-control form-control-lg" %>
               </div>
             </div>
           </div>
 
 
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :depth %>
-                <%= f.text_field :depth, class: "form-control" %>
+                <%= f.text_field :depth, class: "form-control form-control-lg" %>
               </div>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :weight %>
-                <%= f.text_field :weight, class: "form-control" %>
+                <%= f.text_field :weight, class: "form-control form-control-lg" %>
               </div>
             </div>
           </div> <!-- .row -->
 
 
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :pages %>
-                <%= f.text_field :pages, class: "form-control" %>
+                <%= f.text_field :pages, class: "form-control form-control-lg" %>
               </div>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :words %>
-                <%= f.text_field :words, class: "form-control" %>
+                <%= f.text_field :words, class: "form-control form-control-lg" %>
               </div>
             </div>
           </div> <!-- .row -->
 
 
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :illustrations %>
-                <%= f.text_field :illustrations, class: "form-control" %>
+                <%= f.text_field :illustrations, class: "form-control form-control-lg" %>
               </div>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :photographs %>
-                <%= f.text_field :photographs, class: "form-control" %>
+                <%= f.text_field :photographs, class: "form-control form-control-lg" %>
               </div>
             </div>
           </div> <!-- .row -->
 
 
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :cover_style, "Cover Style" %>
-                <%= f.text_field :cover_style, class: "form-control" %>
+                <%= f.text_field :cover_style, class: "form-control form-control-lg" %>
               </div>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :binding_style, "Binding Style" %>
-                <%= f.text_field :binding_style, class: "form-control" %>
+                <%= f.text_field :binding_style, class: "form-control form-control-lg" %>
               </div>
             </div>
           </div> <!-- .row -->
 
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :printing, "Printing" %>
-                <%= f.text_field :printing, class: "form-control" %>
+                <%= f.text_field :printing, class: "form-control form-control-lg" %>
               </div>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-6">
               <div class="form-group">
                 <%= f.label :ink, "Ink" %>
-                <%= f.text_field :ink, class: "form-control" %>
+                <%= f.text_field :ink, class: "form-control form-control-lg" %>
               </div>
             </div>
           </div> <!-- .row -->
 
 
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-6">
               <%= f.label :has_index, "Has Index?" %><br>
 
               <span class="d-inline-block mr-3">
@@ -290,18 +290,18 @@
             </span>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-6">
               <% if @book.slug == "recipes-for-disaster" %>
                   <div class="form-group">
                     <%= f.label :recipes %>
-                    <%= f.text_field :recipes, class: "form-control" %>
+                    <%= f.text_field :recipes, class: "form-control form-control-lg" %>
                   </div>
               <% end %>
 
               <% if @book.slug == "contradictionary" %>
                   <div class="form-group">
                     <%= f.label :definitions %>
-                    <%= f.text_field :definitions, class: "form-control" %>
+                    <%= f.text_field :definitions, class: "form-control form-control-lg" %>
                   </div>
               <% end %>
             </div>

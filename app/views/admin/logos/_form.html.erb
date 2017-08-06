@@ -3,49 +3,49 @@
 
   <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :poster_title, class: "form-control input-lg" %>
+    <%= form.text_field :title, id: :poster_title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= form.label :subtitle %>
-    <%= form.text_field :subtitle, id: :poster_subtitle, class: "form-control input-lg" %>
+    <%= form.text_field :subtitle, id: :poster_subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= form.label :description %>
-        <%= form.text_area :description, class: "form-control", rows: 8 %>
+        <%= form.text_area :description, class: "form-control form-control-lg", rows: 8 %>
         <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
       </div>
     </div>
   </div> <!-- .row -->
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= form.label :slug %>
-        <%= form.text_field :slug, id: :poster_slug, class: "form-control" %>
+        <%= form.text_field :slug, id: :poster_slug, class: "form-control form-control-lg" %>
       </div>
 
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= form.label :width %>
-            <%= form.text_field :width, id: :poster_width, class: "form-control" %>
+            <%= form.text_field :width, id: :poster_width, class: "form-control form-control-lg" %>
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= form.label :height %>
-            <%= form.text_field :height, id: :poster_height, class: "form-control" %>
+            <%= form.text_field :height, id: :poster_height, class: "form-control form-control-lg" %>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <label for="downloads">Downloads</label>
 
@@ -92,10 +92,10 @@
     <legend>Syndication</legend>
     <div class="row">
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= form.label :summary %>
-          <%= form.text_area :summary, class: "form-control" %>
+          <%= form.text_area :summary, class: "form-control form-control-lg" %>
           <p class="help-block">
             Maximum 200 characters.
             Used for page description and previews in story cards on other sites.
@@ -103,12 +103,12 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= form.label :published_at %>
           <%= form.date_select :published_at,
                             { start_year: Time.now.year, end_year: 1995, include_blank: true },
-                            class: "form-control" %>
+                            class: "form-control form-control-lg" %>
         </div>
       </div>
 

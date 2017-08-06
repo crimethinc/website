@@ -2,19 +2,19 @@
   <%= render "admin/form_errors", thing: redirect %>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= f.label :source_path, "Source Path" %>
-        <%= f.text_field :source_path, class: "form-control input-lg" %>
+        <%= f.text_field :source_path, class: "form-control form-control-lg" %>
       </div>
 
       <p class="help-block">The URL <b>path</b> to redirect <b>from</b></p>
     </div>
 
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= f.label :target_path, "Target Path" %>
-        <%= f.text_field :target_path, class: "form-control input-lg" %>
+        <%= f.text_field :target_path, class: "form-control form-control-lg" %>
       </div>
 
       <p class="help-block">The URL <b>path</b> to redirect <b>to</b></p>

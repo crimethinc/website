@@ -5,16 +5,16 @@
 
   <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :poster_title, class: "form-control input-lg" %>
+    <%= form.text_field :title, id: :poster_title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= form.label :subtitle %>
-    <%= form.text_field :subtitle, id: :poster_subtitle, class: "form-control input-lg" %>
+    <%= form.text_field :subtitle, id: :poster_subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= form.label :description %>
         <%= form.text_area :description, class: "form-control", rows: 8 %>
@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= form.label :content %>
         <%= form.text_area :content, class: "form-control", rows: 8 %>
@@ -32,21 +32,21 @@
   </div> <!-- .row -->
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= form.label :slug %>
         <%= form.text_field :slug, id: :poster_slug, class: "form-control" %>
       </div>
 
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= form.label :width %>
             <%= form.text_field :width, id: :poster_width, class: "form-control" %>
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= form.label :height %>
             <%= form.text_field :height, id: :poster_height, class: "form-control" %>
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <label for="downloads">Downloads</label>
 
@@ -95,7 +95,7 @@
   </div> <!-- .row -->
 
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-12 col-sm-4">
       <div class="form-group">
         <label for="images">Images</label>
 
@@ -117,7 +117,7 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-12 col-sm-4">
       <div class="form-group">
         <label for="downloads">Preview Front Image Format</label>
 
@@ -147,7 +147,7 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-12 col-sm-4">
       <div class="form-group">
         <label for="downloads">Preview Back Image Format</label>
 
@@ -184,13 +184,13 @@
   <fieldset id="purchasing">
     <legend>Purchasing</legend>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-6">
         <%= form.label :buy_info, "Buying Info" %>
         <%= form.text_area :buy_info, class: "form-control", rows: 8 %>
         <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
       </div>
 
-      <div class="col-xs-6">
+      <div class="col-6">
         <div class="form-group">
           <%= form.label :buy_url, "Buy URL" %>
           <%= form.url_field :buy_url, class: "form-control" %>
@@ -211,7 +211,7 @@
     <legend>Syndication</legend>
     <div class="row">
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= form.label :summary %>
           <%= form.text_area :summary, class: "form-control" %>
@@ -223,7 +223,7 @@
       </div>
 
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= form.label :published_at %>
           <%= form.date_select :published_at,

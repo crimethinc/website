@@ -5,7 +5,7 @@
 
   <div class="form-group">
     <%= f.label :display_name, "Name" %>
-    <%= f.text_field :display_name, class: "form-control input-lg" %>
+    <%= f.text_field :display_name, class: "form-control form-control-lg" %>
     <p class="help-block">Visible by anyone in multiple places (post authorship, site footer, meta tags, etc)</p>
   </div>
 
@@ -23,7 +23,7 @@
     <legend>Change Your Password</legend>
 
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :password %>
           <%= f.password_field :password, class: "form-control" %>
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :password_confirmation, "Confirm Password" %>
           <%= f.password_field :password_confirmation, class: "form-control" %>

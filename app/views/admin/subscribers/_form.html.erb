@@ -2,20 +2,20 @@
   <%= render "admin/form_errors", thing: @subscriber %>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= f.label :email %>
-        <%= f.text_field :email, class: "form-control input-lg" %>
+        <%= f.text_field :email, class: "form-control form-control-lg" %>
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= f.label :frequency, "Publication Status" %>
         <%= f.select :frequency,
                      [["Daily", "daily"], ["Weekly", "weekly"], ["Monthly", "monthly"]],
                      { selected: @subscriber.try(:frequency) },
-                     class: "form-control input-lg" %>
+                     class: "form-control form-control-lg" %>
        </div>
     </div>
   </div>

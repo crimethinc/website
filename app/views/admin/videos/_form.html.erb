@@ -3,16 +3,16 @@
 
   <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control input-lg" %>
+    <%= f.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :subtitle %>
-    <%= f.text_field :subtitle, class: "form-control input-lg" %>
+    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= f.label :content %>
         <%= f.text_area :content, class: "form-control", rows: 8 %>
@@ -21,14 +21,14 @@
   </div> <!-- .row -->
 
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-6">
       <div class="form-group">
         <%= f.label :slug %>
         <%= f.text_field :slug, class: "form-control" %>
       </div>
     </div>
 
-    <div class="col-xs-6">
+    <div class="col-6">
       <div class="form-group">
         <%= f.label :vimeo_id, "Vimeo ID" %>
         <%= f.text_field :vimeo_id, class: "form-control" %>
@@ -37,17 +37,17 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= f.label :image, "Image" %>
-        <%= f.text_field :image, class: "form-control input-lg" %>
+        <%= f.text_field :image, class: "form-control form-control-lg" %>
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= f.label :image_description, "Image Description" %>
-        <%= f.text_field :image_description, class: "form-control input-lg" %>
+        <%= f.text_field :image_description, class: "form-control form-control-lg" %>
         <p class="help-block">
           This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
         </p>
@@ -63,7 +63,7 @@
     <legend>Syndication</legend>
     <div class="row">
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :tweet %>
           <%= f.text_area :tweet, class: "form-control" %>
@@ -74,7 +74,7 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :summary %>
           <%= f.text_area :summary, class: "form-control" %>
@@ -91,19 +91,19 @@
   <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <fieldset id="specs">
         <legend>Specs</legend>
 
         <div class="row">
-          <div class="col-xs-6">
+          <div class="col-6">
             <div class="form-group">
               <%= f.label :quality, "Quality" %>
               <%= f.text_field :quality, class: "form-control" %>
             </div>
           </div>
 
-          <div class="col-xs-6">
+          <div class="col-6">
             <div class="form-group">
               <%= f.label :duration, "Duration" %>
               <%= f.text_field :duration, class: "form-control" %>

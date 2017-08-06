@@ -27,7 +27,7 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-4">
+      <div class="col-4">
         <% %w(jpg png svg).each do |extension| %>
           <% if @logo.send("#{extension}_url_present?") %>
             <h2><%= extension.upcase %></h2>

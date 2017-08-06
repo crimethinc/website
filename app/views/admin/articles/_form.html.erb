@@ -5,17 +5,17 @@
 
   <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control input-lg" %>
+    <%= f.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :subtitle %>
-    <%= f.text_field :subtitle, class: "form-control" %>
+    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
     <%= f.label :content %>
-    <%= f.text_area :content, class: "form-control", rows: 10 %>
+    <%= f.text_area :content, class: "form-control form-control-lg", rows: 10 %>
   </div>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
@@ -40,7 +40,7 @@
     <fieldset id="categories">
       <legend>Categories</legend>
 
-      <div class="col-xs-12 col-sm-12">
+      <div class="col-12 col-sm-12">
         <div class="form-group">
           <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "checkbox" do |b| %>
             <div class="checkbox">
@@ -63,43 +63,43 @@
     <legend>Meta</legend>
     <div class="row">
       <% unless @collection.present? %>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-12 col-sm-4">
           <div class="form-group">
             <%= f.label :slug, "URL Slug" %>
-            <%= f.text_field :slug, class: "form-control" %>
+            <%= f.text_field :slug, class: "form-control form-control-lg" %>
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-12 col-sm-4">
           <div class="form-group">
             <%= f.label :short_path, "Short URL Path" %>
-            <%= f.text_field :short_path, class: "form-control" %>
+            <%= f.text_field :short_path, class: "form-control form-control-lg" %>
           </div>
         </div>
       <% end %>
 
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-12 col-sm-4">
         <div class="form-group">
           <%= f.label :status_id, "Publication Status" %>
           <%= f.select :status_id,
                        Status.options_for_select,
                        { selected: @article.status.try(:id) },
-                       class: "form-control" %>
+                       class: "form-control form-control-lg" %>
         </div>
       </div>
     </div>
 
     <% unless @collection.present? %>
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= f.label :tags %>
-            <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control" %>
+            <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
             <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= f.label :content_format, "Content Format" %>
 
@@ -131,10 +131,10 @@
   <fieldset id="syndication">
     <legend>Syndication</legend>
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :tweet %>
-          <%= f.text_area :tweet, class: "form-control", data: { 'max-length': '115', 'feedback-box': 'tweet-length' } %>
+          <%= f.text_area :tweet, class: "form-control form-control-lg", data: { 'max-length': '115', 'feedback-box': 'tweet-length' } %>
           <div id="tweet-length"></div>
           <p class="help-block">
             Maximum 115 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
@@ -143,10 +143,10 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :summary %>
-          <%= f.text_area :summary, class: "form-control", data: { 'max-length': '200', 'feedback-box': 'summary-length' } %>
+          <%= f.text_area :summary, class: "form-control form-control-lg", data: { 'max-length': '200', 'feedback-box': 'summary-length' } %>
           <div id="summary-length"></div>
           <p class="help-block">
             Maximum 200 characters.
@@ -165,10 +165,10 @@
     <legend>Appearance</legend>
 
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :image, "Header Image" %>
-          <%= f.text_field :image, class: "form-control input-lg" %>
+          <%= f.text_field :image, class: "form-control form-control-lg" %>
           <p class="help-block">
             This is the large image that will be front and center on the <i>Article</i> page,
             on the homepage and when syndicated to other sites. Minimum size: <code>1400x1000</code> pixels.
@@ -176,10 +176,10 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :image_description, "Header Image Description" %>
-          <%= f.text_field :image_description, class: "form-control input-lg" %>
+          <%= f.text_field :image_description, class: "form-control form-control-lg" %>
           <p class="help-block">
             This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
           </p>
@@ -191,10 +191,10 @@
       <hr>
 
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= f.label :css, "Article Specific CSS" %>
-            <%= f.text_area :css, class: "form-control", rows: 20 %>
+            <%= f.text_area :css, class: "form-control form-control-lg", rows: 20 %>
             <p class="help-block">
               <% if @article.new_record? %>
               After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
@@ -206,7 +206,7 @@
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= f.check_box :header_shadow_text %>
             <%= f.label :header_shadow_text, "Header Shadow Text" %>
@@ -219,7 +219,7 @@
 
           <div class="form-group">
             <%= f.label :header_background_color, "Header Background Color" %>
-            <%= f.text_field :header_background_color, class: "form-control input-lg" %>
+            <%= f.text_field :header_background_color, class: "form-control form-control-lg" %>
             <p class="help-block">
               This can be any valid CSS color value:
               <code>#f00</code>,
@@ -232,7 +232,7 @@
 
           <div class="form-group">
             <%= f.label :header_text_color, "Header Text Color" %>
-            <%= f.text_field :header_text_color, class: "form-control input-lg" %>
+            <%= f.text_field :header_text_color, class: "form-control form-control-lg" %>
             <p class="help-block">
               This can be any valid CSS color value:
               <code>#f00</code>,
@@ -267,10 +267,10 @@
       <legend>Alternates</legend>
 
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <div class="form-group">
             <%= f.label :download_url, "PDF Download URL" %>
-            <%= f.url_field :download_url, class: "form-control input-lg" %>
+            <%= f.url_field :download_url, class: "form-control form-control-lg" %>
             <p class="help-block">
               This is the URL of a downloadable / printable PDF of this Article.
             </p>
