@@ -30,7 +30,6 @@
   }
 }
 
-
 .secondary-navigation {
   display: flex;
   align-items: center;
@@ -67,7 +66,6 @@
   }
 }
 
-
 // small viewports
 .site-header nav[role=navigation],
 .secondary-navigation {
@@ -91,5 +89,12 @@
     a {
       padding: 1rem;
     }
+  }
+}
+
+// smaller or equal than $large-phone viewport
+@media screen and (max-width: $small-tablet) {
+  .nav-link-desktop {
+    display: none;
   }
 }
