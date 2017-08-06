@@ -8,4 +8,4 @@
 ISSUES.md
 /vendor/gems
 /coverage
-
+.idea/
