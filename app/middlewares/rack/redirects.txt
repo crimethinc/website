@@ -2770,7 +2770,7 @@
 /rt9pdfannounce /2016/01/19/rolling-thunder-9-full-pdf-now-available
 /rtnotes /2012/08/27/notes-on-the-delay-and-the-future-of-rt
 /sd /2011/12/17/self-destruction
-/search/search.php /search
+/search?utf8=✓& /search
 /seattlej20 /2017/01/21/seattle-after-j20
 /self-care /2013/05/31/reconsidering-self-care
 /selfasother /2013/09/06/new-zine-about-self-care-self-as-other

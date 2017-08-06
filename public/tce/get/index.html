@@ -64,20 +64,18 @@
   <div id="navlinks">
     <div id="linkwrapper">
     <a href="/books">books</a> &nbsp;
-    <a href="/rt">journal</a> &nbsp;
-    <a href="/texts">texts</a> &nbsp;
+    <a href="/library">library</a> &nbsp;
     <a href="/tools">tools</a> &nbsp;
-    <a href="/movies">movies</a> <br class="phonebreak"/>&nbsp;
+    <a href="/audio">audio</a> &nbsp;
+    <a href="/movies">video</a> <br class="phonebreak"/>&nbsp;
     <a href="/podcast">podcast</a> &nbsp;
-    <a href="http://store.crimethinc.com/x/">store</a> &nbsp;
-    <a href="/blog">blog</a> &nbsp;
-    <a href="/about">about</a>
-    </div>
+    <a href="/store">store</a> &nbsp;
+  </div>
   </div>
 
   <div id="search">
-    <form action="/search/search.php" method="get">
-      <input class="searchinput" name="zoom_query" type="text" value="search" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" />
+    <form action="/search?utf8=✓" method="get">
+      <input type="search" name="q" id="q" value="asdf" placeholder="Search Archives…" class="simple-field">
     </form>
   </div>
 
