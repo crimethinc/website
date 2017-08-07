@@ -2,10 +2,10 @@
 .primary-navigation {
   display: flex;
   flex-wrap: wrap;
+  background-color: $color-true-black;
 }
 
 .nav-link {
-  background-color: $color-true-black;
   font-size: 1.7rem;
   text: {
     align: center;
