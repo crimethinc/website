@@ -15,6 +15,7 @@ si:
     audio: Audio
     video: Video
     store: Store
+    subscribe: Subscribe
 
     read: Read
     watch: Watch
