@@ -3,13 +3,13 @@ require "rails_helper"
 RSpec.describe "Pagination Redirects", type: :request do
   describe "archives" do
     it "redirects on page 1" do
-      get "/2017/01/01/page/1"
+      get "http://example.com/2017/01/01/page/1"
 
       expect(response).to redirect_to("/2017/01/01/")
     end
 
     it "redirects when no page number given" do
-      get "/2017/01/01/page"
+      get "http://example.com/2017/01/01/page"
 
       expect(response).to redirect_to("/2017/01/01/")
     end
@@ -17,13 +17,13 @@ RSpec.describe "Pagination Redirects", type: :request do
 
   describe "categories" do
     it "redirects on page 1" do
-      get "/categories/slug/page/1"
+      get "http://example.com/categories/slug/page/1"
 
       expect(response).to redirect_to("/categories/slug/")
     end
 
     it "redirects when no page number given" do
-      get "/categories/slug/page"
+      get "http://example.com/categories/slug/page"
 
       expect(response).to redirect_to("/categories/slug/")
     end
@@ -31,13 +31,13 @@ RSpec.describe "Pagination Redirects", type: :request do
 
   describe "tags" do
     it "redirects on page 1" do
-      get "/tags/slug/page/1"
+      get "http://example.com/tags/slug/page/1"
 
       expect(response).to redirect_to("/tags/slug/")
     end
 
     it "redirects when no page number given" do
-      get "/tags/slug/page"
+      get "http://example.com/tags/slug/page"
 
       expect(response).to redirect_to("/tags/slug/")
     end
@@ -45,13 +45,13 @@ RSpec.describe "Pagination Redirects", type: :request do
 
   describe "videos" do
     it "redirects on page 1" do
-      get "/videos/page/1"
+      get "http://example.com/videos/page/1"
 
       expect(response).to redirect_to("/videos/")
     end
 
     it "redirects when no page number given" do
-      get "/videos/page"
+      get "http://example.com/videos/page"
 
       expect(response).to redirect_to("/videos/")
     end
@@ -59,13 +59,13 @@ RSpec.describe "Pagination Redirects", type: :request do
 
   describe "admin" do
     it "redirects on page 1" do
-      get "/admin/videos/page/1"
+      get "http://example.com/admin/videos/page/1"
 
       expect(response).to redirect_to("/admin/videos/")
     end
 
     it "redirects when no page number given" do
-      get "/admin/videos/page"
+      get "http://example.com/admin/videos/page"
 
       expect(response).to redirect_to("/admin/videos/")
     end
