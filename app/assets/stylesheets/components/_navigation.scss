@@ -91,10 +91,3 @@
     }
   }
 }
-
-// smaller or equal than $large-phone viewport
-@media screen and (max-width: $small-tablet) {
-  .nav-link-desktop {
-    display: none;
-  }
-}

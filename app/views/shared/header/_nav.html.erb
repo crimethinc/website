@@ -6,10 +6,6 @@
     <li class="nav-link"><%= link_to t("header.audio"), "/podcast" %></li>
     <li class="nav-link"><%= link_to t("header.video"), "/videos" %></li>
     <li class="nav-link"><%= link_to t("header.store"), "/store" %></li>
-    <% if current_page?(root_path) %>
-        <li class="nav-link nav-link-desktop"><%= link_to t("header.subscribe"), "#subscribe" %></li>
-    <% else %>
-        <li class="nav-link nav-link-desktop"><%= link_to t("header.subscribe"), "/#subscribe" %></li>
-    <% end %>
+    <li class="nav-link"><%= link_to t("header.subscribe"), "#subscribe" %></li>
   </ul>
 </nav>
