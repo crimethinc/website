@@ -146,9 +146,13 @@ es:
       zine_download_read_button_text:  Download PDF for Reading
       zine_download_print_button_text: Download PDF for Printing
       zine_download_lite_button_text:  Download Lo Res PDF
+      zine_download_epub_button_text:  Download ePub eBook
+      zine_download_mobi_button_text:  Download Mobi eBook
 
       book_download_read_button_text:  Download Two Page View PDF
       book_download_lite_button_text:  Download Single Page View PDF
+      book_download_epub_button_text:  Download ePub eBook
+      book_download_mobi_button_text:  Download Mobi eBook
 
       download_front_button_text:  Download PDF of Front
       download_back_button_text:   Download PDF of Back
@@ -158,7 +162,7 @@ es:
 
       logos_intro_text:     CrimethInc. for yourself! Logos for your own CrimethInc. projects.
       tools_intro_text:     Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
-      zines_intro_text:     A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also obtain full PDFs of *Rolling Thunder,* our acclaimed journal of analysis and direct action, [in the *Rolling Thunder* archives,](/rt/archives.html) and obtain pdfs of *To Change Everything,* our introduction to anarchism, in dozens of languages at the [*To Change Everything*](/tce/) site.
+      zines_intro_text:     A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also obtain full PDFs of *Rolling Thunder,* our acclaimed journal of analysis and direct action, [in the *Rolling Thunder* archives,](/rt/archives.html) and obtain PDFs of *To Change Everything,* our introduction to anarchism, in dozens of languages at the [*To Change Everything*](/tce/) site.
       posters_intro_text:   Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
       stickers_intro_text:  Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
       books_intro_text:

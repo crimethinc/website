@@ -5,8 +5,10 @@
     <tr>
       <th>&nbsp;</th>
       <th>Name</th>
-      <th>Read Download</th>
-      <th>Print Download</th>
+      <th>Read PDF</th>
+      <th>Print PDF</th>
+      <th>ePub</th>
+      <th>Mobi</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
@@ -25,6 +27,8 @@
 
         <td> <%= "✔️" if book.read_download_present? %> </td>
         <td> <%= "✔️" if book.print_download_present? %> </td>
+        <td> <%= "✔️" if book.epub_download_present? %> </td>
+        <td> <%= "✔️" if book.mobi_download_present? %> </td>
 
         <td>
           <%= link_to "DELETE", [:admin, book], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>

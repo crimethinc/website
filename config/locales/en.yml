@@ -146,9 +146,13 @@ en:
       zine_download_read_button_text:  Download PDF for Reading
       zine_download_print_button_text: Download PDF for Printing
       zine_download_lite_button_text:  Download Lo Res PDF
+      zine_download_epub_button_text:  Download ePub eBook
+      zine_download_mobi_button_text:  Download Mobi eBook
 
       book_download_read_button_text:  Download Two Page View PDF
       book_download_lite_button_text:  Download Single Page View PDF
+      book_download_epub_button_text:  Download ePub eBook
+      book_download_mobi_button_text:  Download Mobi eBook
 
       download_front_button_text:  Download PDF of Front
       download_back_button_text:   Download PDF of Back

@@ -61,10 +61,11 @@ class Book < ApplicationRecord
     image :header
   end
 
-  def download_url(type=nil)
+  def download_url(type=nil, extension:"pdf")
     filename = [slug]
     filename << "_#{type.to_s}" if type.present?
-    filename << ".pdf"
+    filename << "."
+    filename << extension
     filename = filename.join
     [ASSET_BASE_URL, namespace, slug, filename].join("/")
   end

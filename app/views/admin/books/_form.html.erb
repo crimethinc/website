@@ -73,21 +73,40 @@
             <% end %>
           </div>
 
+          <div class="checkbox">
+            <%= f.label :epub_download_present do %>
+                <%= f.check_box :epub_download_present, id: :book_epub_download_present %>
+                <b>ePub:</b>
+                Is there a <code>.epub</code> uploaded?
+            <% end %>
+          </div>
+
+          <div class="checkbox">
+            <%= f.label :mobi_download_present do %>
+                <%= f.check_box :mobi_download_present, id: :book_mobi_download_present %>
+                <b>Lo Res:</b>
+                Is there a <code>.mobi</code> uploaded?
+            <% end %>
+          </div>
+
           <p class="form-text text-muted">
-            PDFs must be uploaded to
-            <code>/assets/<%= @publication_type.pluralize %>/<%= resource.new_record? ? "[slug]" : resource.slug %>
-              /</code>
+            Downloads must be uploaded to
+            <code>/assets/<%= @publication_type.pluralize %>/<%= resource.new_record? ? "[slug]" : resource.slug %>/</code>
             on S3/Cloudfront.<br>
 
-            PDFs must be named:
+            Downloads must be named:
             <% if resource.new_record? %>
                 <code>[slug].pdf</code>,
                 <code>[slug]_print.pdf</code>,
-                <code>[slug]_lite.pdf</code>
+                <code>[slug]_lite.pdf</code>,
+                <code>[slug].epub</code>,
+                <code>[slug].mobi</code>
             <% else %>
                 <code><%= resource.slug %>.pdf</code>,
                 <code><%= resource.slug %>_print.pdf</code>,
-                <code><%= resource.slug %>_lite.pdf</code>
+                <code><%= resource.slug %>_lite.pdf</code>,
+                <code><%= resource.slug %>.epub</code>,
+                <code><%= resource.slug %>.mobi</code>
             <% end %>
           </p>
 

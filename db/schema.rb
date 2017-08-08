@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725212002) do
+ActiveRecord::Schema.define(version: 20170808171359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "articles", id: :serial, force: :cascade do |t|
     t.integer "user_id"
@@ -88,6 +89,8 @@ ActiveRecord::Schema.define(version: 20170725212002) do
     t.boolean "print_download_present", default: false
     t.boolean "lite_download_present", default: false
     t.integer "gallery_images_count"
+    t.boolean "epub_download_present"
+    t.boolean "mobi_download_present"
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|
