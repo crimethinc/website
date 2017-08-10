@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170810204149) do
+ActiveRecord::Schema.define(version: 20170810213241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,7 +129,7 @@ ActiveRecord::Schema.define(version: 20170810204149) do
   end
 
   create_table "episodes", id: :serial, force: :cascade do |t|
-    t.integer "podcast_id"
+    t.integer "podcast_id", default: 1
     t.string "title"
     t.string "subtitle"
     t.text "image"

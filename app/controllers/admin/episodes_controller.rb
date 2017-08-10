@@ -53,7 +53,7 @@ class Admin::EpisodesController < Admin::AdminController
   private
 
   def set_episode
-    @episode = Episode.find(params[:id])
+    @episode = Episode.find_by(slug: params[:id])
   end
 
   def episode_params

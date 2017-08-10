@@ -1,7 +1,18 @@
 <%= form_for [:admin, @episode] do |f| %>
   <%= render "admin/form_errors", thing: @episode %>
 
-  <%= f.hidden_field :podcast_id, value: 1 %>
+  <div class="form-group">
+    <%= f.label :podcast_id %>
+
+    <% Podcast.all.each do |podcast| %>
+      <div class="radio">
+        <label>
+          <%= f.radio_button :podcast_id, podcast.id %>
+          <%= podcast.title %>
+        </label>
+      </div>
+    <% end %>
+  </div>
 
   <div class="form-group">
     <%= f.label :title %>
