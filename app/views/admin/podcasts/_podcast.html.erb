@@ -1,49 +1,50 @@
 <article class="mb-5">
   <header>
     <div class="p-name">
+      <%= link_to "EDIT", [:edit, :admin, podcast], class: "btn btn-primary btn-xs" %>
       <h1><%= podcast.title %></h1>
       <h2><%= podcast.subtitle %></h2>
     </div>
   </header>
 
   <dl class="e-content dl-horizontal">
-      <dt>Slug</dt>
-      <dd><%= podcast.slug %></dd>
+    <dt>Slug</dt>
+    <dd><%= podcast.slug %></dd>
 
-      <dt>Language</dt>
-      <dd><%= podcast.language %></dd>
+    <dt>Language</dt>
+    <dd><%= podcast.language %></dd>
 
-      <dt>Copyright</dt>
-      <dd><%= podcast.copyright %></dd>
+    <dt>Copyright</dt>
+    <dd><%= podcast.copyright %></dd>
 
-      <dt>Image</dt>
-      <dd><%= podcast.image %></dd>
+    <dt>Image</dt>
+    <dd><%= podcast.image %></dd>
 
-      <dt>Content</dt>
-      <dd><%= podcast.content %></dd>
+    <dt>Content</dt>
+    <dd><%= podcast.content %></dd>
 
-      <dt>iTunes author</dt>
-      <dd><%= podcast.itunes_author %></dd>
+    <dt>iTunes author</dt>
+    <dd><%= podcast.itunes_author %></dd>
 
-      <dt>iTunes categories</dt>
-      <dd><%= podcast.itunes_categories %></dd>
+    <dt>iTunes categories</dt>
+    <dd><%= podcast.itunes_categories %></dd>
 
-      <dt>iTunes Owner email</dt>
-      <dd><%= podcast.itunes_owner_email %></dd>
+    <dt>iTunes Owner email</dt>
+    <dd><%= podcast.itunes_owner_email %></dd>
 
-      <dt>iTunes explicit</dt>
-      <dd><%= podcast.itunes_explicit %></dd>
+    <dt>iTunes explicit</dt>
+    <dd><%= podcast.itunes_explicit %></dd>
 
-      <dt>Tags</dt>
-      <dd><%= podcast.tags %></dd>
+    <dt>Tags</dt>
+    <dd><%= podcast.tags %></dd>
 
-      <dt>iTunes Owner name</dt>
-      <dd><%= podcast.itunes_owner_name %></dd>
+    <dt>iTunes Owner name</dt>
+    <dd><%= podcast.itunes_owner_name %></dd>
 
-      <dt>iTunes summary</dt>
-      <dd><%= podcast.itunes_summary %></dd>
+    <dt>iTunes summary</dt>
+    <dd><%= podcast.itunes_summary %></dd>
 
-      <dt>iTunes URL</dt>
-      <dd><%= podcast.itunes_url %></dd>
+    <dt>iTunes URL</dt>
+    <dd><%= podcast.itunes_url %></dd>
   </dl>
 </article>
