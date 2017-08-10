@@ -5,12 +5,28 @@ class Episode < ApplicationRecord
 
   default_scope { order("id DESC") }
 
+  after_create :generate_slug
+
   def path
     "/podcast/#{to_param}"
   end
 
+  def to_param
+    self.slug
+  end
+
+  def episode_id_in_podcast
+    podcast.episodes.reverse.find_index(self) + 1
+  end
+
+  def generate_slug
+    self.update slug: [podcast.episode_prefix, episode_id_in_podcast].reject(&:blank?).join("-")
+  end
+
   def meta_description
-    subtitle || content.truncate(200)
+    unless subtitle.blank? && content.blank?
+      subtitle || content.truncate(200)
+    end
   end
 
   def duration_string

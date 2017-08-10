@@ -2,14 +2,23 @@
   <header>
     <div class="p-name">
       <h1><%= link_to_unless_current episode.title, [:admin, episode] %></h1>
-      <h2><%= link_to_unless_current episode.subtitle, [:admin, episode] %></h2>
+      <% if episode.subtitle.present? %>
+        <h2><%= link_to_unless_current episode.subtitle, [:admin, episode] %></h2>
+      <% end %>
     </div>
   </header>
 
   <div class="e-content">
     <dl class="dl-horizontal">
+      <dt>Episode Path</dt>
+      <dd><%= link_to episode.path, episode.path %></dd>
+
       <dt>Image</dt>
-      <dd><%= link_to(image_tag(episode.image, style: "width: 200px"), episode.image) %></dd>
+      <dd>
+        <% if episode.image.present? %>
+          <%= link_to(image_tag(episode.image, style: "width: 200px"), episode.image) %>
+        <% end %>
+      </dd>
 
       <dt>Podcast</dt>
       <dd><%= link_to episode.podcast.name, [:admin, episode.podcast] %></dd>

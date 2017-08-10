@@ -60,6 +60,6 @@ class Admin::PodcastsController < Admin::AdminController
     params.require(:podcast).permit(:title, :slug, :language, :copyright,
       :image, :content, :itunes_author, :itunes_categories, :itunes_owner_email,
       :itunes_explicit, :tags, :itunes_owner_name, :subtitle,
-      :itunes_summary, :itunes_url)
+      :itunes_summary, :itunes_url, :episode_prefix)
   end
 end

@@ -5,7 +5,9 @@
 
   <div class="row">
     <div class="column column-one-third podcast-meta">
-      <%= image_tag @episode.image, class: "u-photo" %>
+      <% if @episode.image.present? %>
+        <%= image_tag @episode.image, class: "u-photo" %>
+      <% end %>
 
       <%= render "articles/titles", header: @episode.podcast, linked: true %>
 
@@ -17,30 +19,40 @@
 
         <h3 class="listen">
           <%= t("podcast.listen") %>
-          <small>
-            &mdash;
-            <%= @episode.duration %>
-            <abbr title="minutes">min</abbr>
-          </small>
+          <% if @episode.duration.present? %>
+            <small>
+              &mdash;
+              <%= @episode.duration %>
+              <abbr title="minutes">min</abbr>
+            </small>
+          <% end %>
         </h3>
         <%= render "podcast/player", episode: @episode %>
 
         <div class="episode-info">
           <div class="buttons">
-            <%= link_to @episode.audio_mp3_url, class: "button" do %>
-              <%= t("podcast.download") %> MP3
-              <small>
-                <%= @episode.audio_mp3_file_size %>
-                <abbr title="megabytes">MB</abbr>
-              </small>
+            <% if @episode.audio_mp3_url.present? %>
+              <%= link_to @episode.audio_mp3_url, class: "button" do %>
+                <%= t("podcast.download") %> MP3
+                <% if @episode.audio_mp3_file_size.present? %>
+                  <small>
+                    <%= @episode.audio_mp3_file_size %>
+                    <abbr title="megabytes">MB</abbr>
+                  </small>
+                <% end %>
+              <% end %>
             <% end %>
 
-            <%= link_to @episode.audio_ogg_url, class: "button" do %>
-              <%= t("podcast.download") %> OGG
-              <small>
-                <%= @episode.audio_ogg_file_size %>
-                <abbr title="megabytes">MB</abbr>
-              </small>
+            <% if @episode.audio_ogg_url.present? %>
+              <%= link_to @episode.audio_ogg_url, class: "button" do %>
+                <%= t("podcast.download") %> OGG
+                <% if @episode.audio_ogg_file_size.present? %>
+                  <small>
+                    <%= @episode.audio_ogg_file_size %>
+                    <abbr title="megabytes">MB</abbr>
+                  </small>
+                <% end %>
+              <% end %>
             <% end %>
 
             <% unless action_name == "transcript" %>
@@ -51,22 +63,28 @@
           </div>
 
           <% if action_name == "transcript" %>
-            <h3><%= t("podcast.transcript") %></h3>
-            <div class="transcript">
-              <%= raw @episode.transcript %>
-            </div>
+            <% if @episode.transcript.present? %>
+              <h3><%= t("podcast.transcript") %></h3>
+              <div class="transcript">
+                <%= raw @episode.transcript %>
+              </div>
+            <% end %>
           <% else %>
-            <h3><%= t("podcast.summary") %></h3>
-            <div class="summary">
-              <%= raw @episode.content.
-                gsub("-------SHOW NOTES------", "<h3>#{t('podcast.show_notes')}</h3>").
-                gsub("<p> </p>", "").html_safe %>
-            </div>
+            <% if @episode.content.present? %>
+              <h3><%= t("podcast.summary") %></h3>
+              <div class="summary">
+                <%= raw @episode.content.
+                  gsub("-------SHOW NOTES------", "<h3>#{t('podcast.show_notes')}</h3>").
+                  gsub("<p> </p>", "").html_safe %>
+              </div>
+            <% end %>
 
-            <h3><%= t("podcast.notes_and_links") %></h3>
-            <div class="notes">
-              <%= raw @episode.show_notes %>
-            </div>
+            <% if @episode.show_notes.present? %>
+              <h3><%= t("podcast.notes_and_links") %></h3>
+              <div class="notes">
+                <%= raw @episode.show_notes %>
+              </div>
+            <% end %>
           <% end %>
         </div>
 

@@ -9,6 +9,8 @@ class Podcast < ApplicationRecord
   end
 
   def meta_description
-    subtitle || content.truncate(200)
+    unless subtitle.blank? && content.blank?
+      subtitle || content.truncate(200)
+    end
   end
 end
