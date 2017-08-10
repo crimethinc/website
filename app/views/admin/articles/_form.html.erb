@@ -199,8 +199,8 @@
               <% if @article.new_record? %>
               After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
               <% else %>
-              Prefix your CSS selectors with <b><code>#article-<%= @article.id %></code></b> to scope your styles to just this <i>Article</i>.
-              For example, <code>#article-<%= @article.id %> b { background: green }</code>.
+              Prefix your CSS selectors with <b><code>#article-<%= @article.slug %></code></b> to scope your styles to just this <i>Article</i>.
+              For example, <code>#article-<%= @article.slug %> b { background: green }</code>.
               <% end %>
             </p>
           </div>
