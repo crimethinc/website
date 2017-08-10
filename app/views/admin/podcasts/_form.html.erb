@@ -1,87 +1,121 @@
 <%= form_for [:admin, @podcast] do |f| %>
   <%= render "admin/form_errors", thing: @podcast %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
-  <div class="field">
-    <%= f.label :slug %>
-    <%= f.text_field :slug %>
-  </div>
-
-  <div class="field">
-    <%= f.label :episode_prefix %>
-    <%= f.text_field :episode_prefix %>
-  </div>
-
-  <div class="field">
-    <%= f.label :language %>
-    <%= f.text_field :language %>
-  </div>
-
-  <div class="field">
-    <%= f.label :copyright %>
-    <%= f.text_field :copyright %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.text_area :image %>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= f.label :itunes_author %>
-    <%= f.text_field :itunes_author %>
-  </div>
-
-  <div class="field">
-    <%= f.label :itunes_categories %>
-    <%= f.text_field :itunes_categories %>
-  </div>
-
-  <div class="field">
-    <%= f.label :itunes_owner_email %>
-    <%= f.text_field :itunes_owner_email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :itunes_explicit %>
-    <%= f.check_box :itunes_explicit %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tags %>
-    <%= f.text_field :tags %>
-  </div>
-
-  <div class="field">
-    <%= f.label :itunes_owner_name %>
-    <%= f.text_field :itunes_owner_name %>
-  </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
+    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
-  <div class="field">
-    <%= f.label :itunes_summary %>
-    <%= f.text_field :itunes_summary %>
+
+  <div class="row">
+    <div class="col-12 col-sm-2">
+      <div class="form-group">
+        <%= f.label :language, "Language Code" %>
+        <%= f.text_field :language, class: "form-control form-control-lg" %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-5">
+      <div class="form-group">
+        <%= f.label :slug %>
+        <%= f.text_field :slug, class: "form-control form-control-lg" %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-5">
+      <div class="form-group">
+        <%= f.label :episode_prefix %>
+        <%= f.text_field :episode_prefix, class: "form-control form-control-lg" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :itunes_url %>
-    <%= f.text_area :itunes_url %>
+
+  <div class="row">
+    <div class="col-12 col-sm-3">
+      <div class="form-group">
+        <%= f.label :copyright %>
+        <%= f.text_field :copyright, class: "form-control form-control-lg" %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-9">
+      <div class="form-group">
+        <%= f.label :image %>
+        <%= f.url_field :image, class: "form-control form-control-lg" %>
+      </div>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "form-control form-control-lg", rows: 6 %>
   </div>
+
+  <div class="form-group">
+    <%= f.label :tags %>
+    <%= f.text_field :tags, class: "form-control form-control-lg" %>
+
+    <p class="form-text text-muted">
+      Comma separated.
+    </p>
+  </div>
+
+
+  <hr class="my-5">
+
+
+  <fieldset>
+    <legend>iTunes Information</legend>
+
+    <div class="row">
+      <div class="col-12 col-sm-9">
+        <div class="form-group">
+          <%= f.label :itunes_categories, "iTunes Categories" %>
+          <%= f.text_field :itunes_categories, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-3">
+        <div class="form-group">
+          <%= f.label :itunes_explicit, "iTunes Explicit?" %>
+          <%= f.check_box :itunes_explicit, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :itunes_owner_name, "iTunes Owner’s Name" %>
+          <%= f.text_field :itunes_owner_name, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :itunes_owner_email, "iTunes Owner’s Email" %>
+          <%= f.text_field :itunes_owner_email, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <%= f.label :itunes_url, "iTunes URL" %>
+      <%= f.url_field :itunes_url, class: "form-control form-control-lg" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :itunes_summary, "iTunes Summary" %>
+      <%= f.text_area :itunes_summary, class: "form-control form-control-lg", rows: 6 %>
+    </div>
+  </fieldset>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :podcasts] %>
 <% end %>

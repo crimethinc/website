@@ -29,65 +29,133 @@
     <%= f.url_field :image, class: "form-control form-control-lg" %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content, class: "form-control form-control-lg", rows: "5" %>
+  <fieldset class="my-5">
+    <legend>Audio</legend>
+    <div class="row">
+      <div class="col-12 col-sm-9">
+        <div class="form-group">
+          <%= f.label :audio_mp3_url, "MP3 URL" %>
+          <%= f.url_field :audio_mp3_url, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-3">
+        <div class="form-group">
+          <%= f.label :audio_mp3_file_size, "MP3 file size in MB" %>
+          <%= f.text_field :audio_mp3_file_size, class: "form-control form-control-lg" %>
+        </div>
+
+        <p class="form-text text-muted">
+          Just the number.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12 col-sm-9">
+        <div class="form-group">
+          <%= f.label :audio_ogg_url, "OGG URL" %>
+          <%= f.url_field :audio_ogg_url, class: "form-control form-control-lg" %>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-3">
+        <div class="form-group">
+          <%= f.label :audio_ogg_file_size, "OGG file size in MB" %>
+          <%= f.text_field :audio_ogg_file_size, class: "form-control form-control-lg" %>
+        </div>
+
+        <p class="form-text text-muted">
+          Just the number.
+        </p>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="row">
+    <div class="col-12 col-sm-4">
+      <div class="form-group">
+        <%= f.label :audio_length %>
+        <%= f.text_field :audio_length, class: "form-control form-control-lg" %>
+
+        <p class="form-text text-muted">
+          In seconds.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4">
+      <div class="form-group">
+        <%= f.label :duration %>
+        <%= f.text_field :duration, class: "form-control form-control-lg" %>
+
+        <p class="form-text text-muted">
+          In minutes, rounded.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4">
+      <div class="form-group">
+        <%= f.label :audio_type %>
+        <%= f.text_field :audio_type, class: "form-control form-control-lg" %>
+
+        <p class="form-text text-muted">
+          Defaults to MP3.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="form-group">
-    <%= f.label :audio_mp3_url %>
-    <%= f.url_field :audio_mp3_url, class: "form-control form-control-lg" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :audio_mp3_file_size %>
-    <%= f.text_field :audio_mp3_file_size, class: "form-control form-control-lg" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :audio_ogg_url %>
-    <%= f.url_field :audio_ogg_url, class: "form-control form-control-lg" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :audio_ogg_file_size %>
-    <%= f.text_field :audio_ogg_file_size, class: "form-control form-control-lg" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :show_notes %>
-    <%= f.text_area :show_notes, class: "form-control form-control-lg", rows: "5" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :transcript %>
-    <%= f.text_area :transcript, class: "form-control form-control-lg", rows: "5" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :audio_length %>
-    <%= f.text_field :audio_length, class: "form-control form-control-lg" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :duration %>
-    <%= f.text_field :duration, class: "form-control form-control-lg" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :audio_type %>
-    <%= f.text_field :audio_type, class: "form-control form-control-lg" %>
-  </div>
-
-  <div class="form-group">
+  <div class="form-group mb-5">
     <%= f.label :tags %>
     <%= f.text_field :tags, class: "form-control form-control-lg" %>
+
+    <p class="form-text text-muted">
+      Comma separated.
+    </p>
   </div>
 
-  <div class="form-group">
-    <%= f.label :published_at %>
-    <%= f.text_field :published_at, class: "form-control form-control-lg" %>
+  <%= render "admin/datetime_group", f: f, post: @episode, type: :episode %>
+
+
+  <div class="row mt-5">
+    <div class="col-12 col-sm-4">
+      <div class="form-group">
+        <%= f.label :content, "Description" %>
+        <%= f.text_area :content, class: "form-control form-control-lg", rows: "5" %>
+
+        <p class="form-text text-muted">
+          Formatted as HTML.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4">
+      <div class="form-group">
+        <%= f.label :show_notes %>
+        <%= f.text_area :show_notes, class: "form-control form-control-lg", rows: "5" %>
+
+        <p class="form-text text-muted">
+          Formatted as HTML.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4">
+      <div class="form-group">
+        <%= f.label :transcript %>
+        <%= f.text_area :transcript, class: "form-control form-control-lg", rows: "5" %>
+
+        <p class="form-text text-muted">
+          Formatted as HTML.
+        </p>
+      </div>
+    </div>
   </div>
+
 
   <%= render "admin/form_actions", cancel_url: [:admin, :episodes] %>
 <% end %>
