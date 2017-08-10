@@ -3,6 +3,6 @@ FactoryGirl.define do
     published_at { Time.now }
     sequence :title { |n| "Article #{n}" }
     short_path { SecureRandom.hex }
-    status
+    association :status
   end
 end
