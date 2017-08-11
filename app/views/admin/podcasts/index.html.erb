@@ -16,7 +16,6 @@
     <thead class="thead-inverse">
       <tr>
         <th></th>
-        <th>Slug</th>
         <th>Name</th>
         <th>Published At</th>
         <th>Path</th>
@@ -26,8 +25,7 @@
     <tbody>
       <% podcast.episodes.each do |episode| %>
         <tr>
-          <td><%= link_to "EDIT", [:edit, :admin, episode], class: "btn btn-light btn-sm" %></td>
-          <td><%= episode.slug %></td>
+          <td><%= link_to "EDIT", [:edit, :admin, episode], class: "btn btn-light border-secondary btn-sm" %></td>
           <td>
             <%= link_to [:admin, episode] do %>
               <b><%= episode.title %></b><br>

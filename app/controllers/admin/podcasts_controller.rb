@@ -2,29 +2,24 @@ class Admin::PodcastsController < Admin::AdminController
   before_action :authorize
   before_action :set_podcast, only: [:show, :edit, :update, :destroy]
 
-  # /admin/podcasts
   def index
-    @podcasts = Podcast.page(params[:page])
+    @podcasts = Podcast.all
     @title = admin_title
   end
 
-  # /admin/podcasts/1
   def show
     @title = admin_title(@podcast, [:id, :title])
   end
 
-  # /admin/podcasts/new
   def new
     @podcast = Podcast.new
     @title = admin_title
   end
 
-  # /admin/podcasts/1/edit
   def edit
     @title = admin_title(@podcast, [:id, :title, :subtitle])
   end
 
-  # /admin/podcasts
   def create
     @podcast = Podcast.new(podcast_params)
 
@@ -35,7 +30,6 @@ class Admin::PodcastsController < Admin::AdminController
     end
   end
 
-  # /admin/podcasts/1
   def update
     if @podcast.update(podcast_params)
       redirect_to [:admin, @podcast], notice: "Podcast was successfully updated."
@@ -44,7 +38,6 @@ class Admin::PodcastsController < Admin::AdminController
     end
   end
 
-  # /admin/podcasts/1
   def destroy
     @podcast.destroy
     redirect_to [:admin, :podcasts], notice: "Podcast was successfully destroyed."

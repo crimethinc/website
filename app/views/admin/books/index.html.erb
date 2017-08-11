@@ -1,15 +1,14 @@
 <%= render "admin/page_header", thing: @books %>
 
-<table class="table">
-  <thead>
+<table class="table table-striped table-sm mb-5 table-bordered">
+  <thead class="thead-inverse">
     <tr>
       <th></th>
       <th>Name</th>
-      <th>Read PDF</th>
-      <th>Print PDF</th>
-      <th>ePub</th>
-      <th>Mobi</th>
-      <th></th>
+      <th class="text-center">Read PDF</th>
+      <th class="text-center">Print PDF</th>
+      <th class="text-center">ePub</th>
+      <th class="text-center">Mobi</th>
     </tr>
   </thead>
 
@@ -17,25 +16,20 @@
     <% @books.each do |book| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, book], class: "btn btn-primary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, book], class: "btn btn-light border-secondary btn-sm" %>
         </td>
         <td>
-          <b class="h3"><%= link_to book.title, [:admin, book] %></b>
-          <br>
-          <%= book.subtitle %>
+          <%= link_to [:admin, book] do %>
+            <b><%= book.title %></b><br>
+            <%= book.subtitle %>
+          <% end %>
         </td>
 
-        <td> <%= "✔️" if book.read_download_present? %> </td>
-        <td> <%= "✔️" if book.print_download_present? %> </td>
-        <td> <%= "✔️" if book.epub_download_present? %> </td>
-        <td> <%= "✔️" if book.mobi_download_present? %> </td>
-
-        <td>
-          <%= link_to "DELETE", [:admin, book], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
-        </td>
+        <td class="text-center align-middle"><%= "✔️" if book.read_download_present? %> </td>
+        <td class="text-center align-middle"><%= "✔️" if book.print_download_present? %></td>
+        <td class="text-center align-middle"><%= "✔️" if book.epub_download_present? %> </td>
+        <td class="text-center align-middle"><%= "✔️" if book.mobi_download_present? %> </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= paginate @books, views_prefix: "admin", theme: "twitter-bootstrap-4" %>
