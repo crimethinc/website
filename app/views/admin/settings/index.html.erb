@@ -1,7 +1,7 @@
 <%= render "admin/page_header", thing: @settings %>
 
-<table class='table'>
-  <thead>
+<table class="table table-striped table-sm mb-5">
+  <thead class="thead-inverse">
     <tr>
       <th></th>
       <th>Name</th>
@@ -13,14 +13,11 @@
     <% @settings.each do |setting| %>
       <tr>
         <td>
-          <%= link_to 'EDIT', [:edit, :admin, setting], class: 'btn btn-primary btn-sm' %>
+          <%= link_to "EDIT", [:edit, :admin, setting], class: "btn btn-light border-secondary btn-sm" %>
         </td>
-        <td><%= link_to setting.name,     [:admin, setting] %></td>
+        <td><%= setting.name %></td>
         <td><%= setting.content %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-
-<%= paginate @settings, views_prefix: "admin", theme: "twitter-bootstrap-4" %>

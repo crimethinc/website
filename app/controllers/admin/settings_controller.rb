@@ -2,30 +2,24 @@ class Admin::SettingsController < Admin::AdminController
   before_action :authorize
   before_action :set_setting, only: [:show, :edit, :update, :destroy]
 
-  # /admin/settings
   def index
     @body_id = "settings"
     @settings = Setting.order("name ASC").page(params[:page])
     @title = admin_title
   end
 
-  # /admin/settings/1
   def show
-    @title = admin_title(@setting, [:name])
+    redirect_to [:admin, :settings]
   end
 
-  # /admin/settings/new
   def new
     redirect_to [:admin, :settings]
-    @title = admin_title
   end
 
-  # /admin/settings/1/edit
   def edit
     @title = admin_title(@setting, [:id, :name])
   end
 
-  # /admin/settings
   def create
     @setting = Setting.new(setting_params)
 
@@ -36,7 +30,6 @@ class Admin::SettingsController < Admin::AdminController
     end
   end
 
-  # /admin/settings/1
   def update
     if @setting.update(setting_params)
       redirect_to [:admin, @setting], notice: 'Setting was successfully updated.'
@@ -45,7 +38,6 @@ class Admin::SettingsController < Admin::AdminController
     end
   end
 
-  # /admin/settings/1
   def destroy
     @setting.destroy
     redirect_to [:admin, :settings], notice: 'Setting was successfully destroyed.'

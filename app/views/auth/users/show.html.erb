@@ -5,7 +5,3 @@
 <% end %>
 
 <h3><%= mail_to @user.email, @user.email %></h3>
-
-<% if @user.avatar.present? %>
-  <%= image_tag @user.avatar, style: "max-width: 200px" %>
-<% end %>
