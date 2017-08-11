@@ -4,8 +4,7 @@ class Admin::EpisodesController < Admin::AdminController
 
   # /admin/episodes
   def index
-    @episodes = Episode.page(params[:page])
-    @title = admin_title
+    redirect_to [:admin, :podcasts]
   end
 
   # /admin/episodes/1
