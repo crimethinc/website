@@ -49,45 +49,23 @@
         <div class="form-group">
           <label for="downloads">Downloads</label>
 
-          <div class="checkbox">
-            <%= f.label :read_download_present do %>
-                <%= f.check_box :read_download_present, id: :book_read_download_present %>
-                <b>Reading:</b>
-                Is there a PDF for on-screen reading uploaded?
-            <% end %>
-          </div>
 
-          <div class="checkbox">
-            <%= f.label :print_download_present do %>
-                <%= f.check_box :print_download_present, id: :book_print_download_present %>
-                <b>Printing:</b>
-                Is there an imposed PDF uploaded?
-            <% end %>
-          </div>
+          <% {
+            read:  ["Reading",    "Is there a PDF for on-screen reading uploaded?"],
+            print: ["Printing",   "Is there an imposed PDF uploaded?"],
+            lite:  ["Lo Res",     "Is there a low resolution / smaller file size PDF uploaded?"],
+            epub:  ["ePub", "Is there a <code>.epub</code> uploaded?"],
+            mobi:  ["Mobi", "Is there a <code>.epub</code> uploaded?"],
+          }.each do |type, texts| %>
+            <div class="checkbox">
+              <%= f.label "#{type}_download_present" do %>
+                <%= f.check_box "#{type}_download_present", id: "book_#{type}_download_present" %>
 
-          <div class="checkbox">
-            <%= f.label :lite_download_present do %>
-                <%= f.check_box :lite_download_present, id: :book_lite_download_present %>
-                <b>Lo Res:</b>
-                Is there a low resolution / smaller file size PDF uploaded?
-            <% end %>
-          </div>
-
-          <div class="checkbox">
-            <%= f.label :epub_download_present do %>
-                <%= f.check_box :epub_download_present, id: :book_epub_download_present %>
-                <b>ePub:</b>
-                Is there a <code>.epub</code> uploaded?
-            <% end %>
-          </div>
-
-          <div class="checkbox">
-            <%= f.label :mobi_download_present do %>
-                <%= f.check_box :mobi_download_present, id: :book_mobi_download_present %>
-                <b>Lo Res:</b>
-                Is there a <code>.mobi</code> uploaded?
-            <% end %>
-          </div>
+                <b><%= texts.first %>:</b>
+                <%= texts.last.html_safe %>
+              <% end %>
+            </div>
+          <% end %>
 
           <p class="form-text text-muted">
             Downloads must be uploaded to

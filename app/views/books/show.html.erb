@@ -19,23 +19,51 @@
 
       <div id="download">
         <% if @book.read_download_present? %>
-          <div><%= link_to @book.zine? ? t("views.products.zine_download_read_button_text") : t("views.products.book_download_read_button_text"), @book.download_url, class: "download button" %></div>
+          <div>
+            <%= link_to @book.zine? ?
+                          t("views.products.zine_download_read_button_text") :
+                          t("views.products.book_download_read_button_text"),
+                        @book.download_url,
+                        class: "download button" %>
+          </div>
         <% end %>
 
         <% if @book.print_download_present? %>
-          <div><%= link_to t("views.products.zine_download_print_button_text"), @book.download_url(:print), class: "download button" %></div>
+          <div>
+            <%= link_to t("views.products.zine_download_print_button_text"),
+                        @book.download_url(:print),
+                        class: "download button" %>
+          </div>
         <% end %>
 
         <% if @book.lite_download_present? %>
-          <div><%= link_to @book.zine? ? t("views.products.zine_download_lite_button_text") : t("views.products.book_download_lite_button_text"), @book.download_url(:lite), class: "download button" %></div>
+          <div>
+            <%= link_to @book.zine? ?
+                          t("views.products.zine_download_lite_button_text") :
+                          t("views.products.book_download_lite_button_text"),
+                        @book.download_url(:lite),
+                        class: "download button" %>
+          </div>
         <% end %>
 
         <% if @book.epub_download_present? %>
-          <div><%= link_to @book.zine? ? t("views.products.zine_download_epub_button_text") : t("views.products.book_download_epub_button_text"), @book.download_url(extension: :epub), class: "download button" %></div>
+          <div>
+            <%= link_to @book.zine? ?
+                          t("views.products.zine_download_epub_button_text") :
+                          t("views.products.book_download_epub_button_text"),
+                        @book.download_url(extension: :epub),
+                        class: "download button" %>
+          </div>
         <% end %>
 
         <% if @book.mobi_download_present? %>
-          <div><%= link_to @book.zine? ? t("views.products.zine_download_mobi_button_text") : t("views.products.book_download_mobi_button_text"), @book.download_url(extension: :mobi), class: "download button" %></div>
+          <div>
+            <%= link_to @book.zine? ?
+                          t("views.products.zine_download_mobi_button_text") :
+                          t("views.products.book_download_mobi_button_text"),
+                        @book.download_url(extension: :mobi),
+                        class: "download button" %>
+          </div>
         <% end %>
 
         <% if @book.book? and
@@ -44,7 +72,9 @@
                @book.lite_download_present? or
                @book.epub_download_present? or
                @book.mobi_download_present? ) %>
-          <div><%= link_to t("views.products.pdf_donoate_button_text"), "https://store.crimethinc.com/x/donate.html", class: "download button" %></div>
+          <div><%= link_to t("views.products.pdf_donoate_button_text"),
+                           "https://store.crimethinc.com/x/donate.html",
+                           class: "download button" %></div>
 
           <%= render_markdown t("views.products.pdf_donoate_button_label") %>
         <% end %>

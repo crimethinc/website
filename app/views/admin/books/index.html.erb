@@ -5,10 +5,12 @@
     <tr>
       <th></th>
       <th>Name</th>
-      <th class="text-center">Read PDF</th>
-      <th class="text-center">Print PDF</th>
-      <th class="text-center">ePub</th>
-      <th class="text-center">Mobi</th>
+
+      <% %w(read print lite epub mobi).each do |type| %>
+        <th class="text-center">
+          <%= t("views.products.admin_#{@books.first.namespace.singularize}_#{type}_download_text") %>
+        </th>
+      <% end %>
     </tr>
   </thead>
 
@@ -18,6 +20,7 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, book], class: "btn btn-light border-secondary btn-sm" %>
         </td>
+
         <td>
           <%= link_to [:admin, book] do %>
             <b><%= book.title %></b><br>
@@ -25,10 +28,11 @@
           <% end %>
         </td>
 
-        <td class="text-center align-middle"><%= "✔️" if book.read_download_present? %> </td>
-        <td class="text-center align-middle"><%= "✔️" if book.print_download_present? %></td>
-        <td class="text-center align-middle"><%= "✔️" if book.epub_download_present? %> </td>
-        <td class="text-center align-middle"><%= "✔️" if book.mobi_download_present? %> </td>
+        <% %w(read print lite epub mobi).each do |type| %>
+          <td class="text-center align-middle">
+            <%= "✔️" if book.send("#{type}_download_present?") %>
+          </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

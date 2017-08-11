@@ -152,9 +152,22 @@ en:
       zine_download_mobi_button_text:  Download Mobi eBook
 
       book_download_read_button_text:  Download Two Page View PDF
+      book_download_print_button_text: Download Print PDF
       book_download_lite_button_text:  Download Single Page View PDF
       book_download_epub_button_text:  Download ePub eBook
       book_download_mobi_button_text:  Download Mobi eBook
+
+      admin_book_read_download_text:  Two Up PDF
+      admin_book_print_download_text: Print PDF
+      admin_book_lite_download_text:  One Up PDF
+      admin_book_epub_download_text:  Mobi
+      admin_book_mobi_download_text:  ePub
+
+      admin_zine_read_download_text:  Read PDF
+      admin_zine_print_download_text: Print PDF
+      admin_zine_lite_download_text:  Lo-Res PDF
+      admin_zine_epub_download_text:  Mobi
+      admin_zine_mobi_download_text:  ePub
 
       download_front_button_text:  Download PDF of Front
       download_back_button_text:   Download PDF of Back
@@ -162,11 +175,11 @@ en:
       pdf_donoate_button_text: Donate
       pdf_donoate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
 
-      logos_intro_text:     CrimethInc. for yourself! Logos for your own CrimethInc. projects.
-      tools_intro_text:     Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
-      zines_intro_text:     A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also obtain full PDFs of *Rolling Thunder,* our acclaimed journal of analysis and direct action, [in the *Rolling Thunder* archives,](/rt/archives.html) and obtain PDFs of *To Change Everything,* our introduction to anarchism, in dozens of languages at the [*To Change Everything*](/tce/) site.
-      posters_intro_text:   Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
-      stickers_intro_text:  Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
+      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
+      tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
+      zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also obtain full PDFs of *Rolling Thunder,* our acclaimed journal of analysis and direct action, [in the *Rolling Thunder* archives,](/rt/archives.html) and obtain PDFs of *To Change Everything,* our introduction to anarchism, in dozens of languages at the [*To Change Everything*](/tce/) site.
+      posters_intro_text:  Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
+      stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
       books_intro_text:
         From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
 
