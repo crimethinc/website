@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
               message: "The passphrase '%{value}' is prohibited."
             }
 
+  default_scope { order(username: :asc) }
+
+
   class << self
     def options_for_select
       User.all.map { |u| ["@#{u.username} (#{u.name})", u.id] }

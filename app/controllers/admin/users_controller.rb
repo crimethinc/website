@@ -10,7 +10,7 @@ class Admin::UsersController < Admin::AdminController
 
   # /admin/users/1
   def show
-    @title = admin_title(@user, [:name])
+    redirect_to [:admin, :users]
   end
 
   # /admin/users/new

@@ -8,17 +8,12 @@
   <div class="form-group">
     <%= f.label :display_name, "Name" %>
     <%= f.text_field :display_name, class: "form-control form-control-lg" %>
-    <p class="help-block">Visible by anyone in multiple places (post authorship, site footer, meta tags, etc)</p>
+    <p class="help-block">Visible only to other CMS users.</p>
   </div>
 
   <div class="form-group">
     <%= f.label :email %>
-    <%= f.text_field :email, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :avatar, "Profile Picture URL" %>
-    <%= f.url_field :avatar, class: "form-control" %>
+    <%= f.text_field :email, class: "form-control form-control-lg" %>
   </div>
 
   <fieldset>
@@ -28,7 +23,7 @@
       <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :password %>
-          <%= f.password_field :password, class: "form-control" %>
+          <%= f.password_field :password, class: "form-control form-control-lg" %>
           <p class="help-block">Leave these blank unless changing your password</p>
         </div>
       </div>
@@ -36,7 +31,7 @@
       <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= f.label :password_confirmation, "Confirm Password" %>
-          <%= f.password_field :password_confirmation, class: "form-control" %>
+          <%= f.password_field :password_confirmation, class: "form-control form-control-lg" %>
         </div>
       </div>
     </div>
