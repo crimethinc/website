@@ -1,0 +1,15 @@
+<div class="panel panel-danger danger-zone">
+  <div class="panel-heading">
+    <h3 class="panel-title text-danger">Want to delete this <%= label.gsub("_", " ").titleize %>?</h3>
+  </div>
+
+  <div class="panel-body">
+    You can delete this <%= label.gsub("_", " ").titleize %> at anytime.
+    All of its associated data will be immediately and permanently deleted.
+    There is <b>NO UNDO</b>.
+  </div>
+
+  <div class="panel-footer actions">
+    <%= link_to "Delete", path, method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger" %>
+  </div>
+</div>

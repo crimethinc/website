@@ -1,11 +1,39 @@
 <%= render "admin/page_header", thing: @podcasts %>
 
 <% @podcasts.each do |podcast| %>
-  <%= render "admin/podcasts/podcast", podcast: podcast %>
+<div class="mb-5">
+  <header class="mt-5 mb-3">
+    <h1><%= podcast.title %></h1>
+    <h2 class="lead"><%= podcast.subtitle %></h2>
+  </header>
 
-  <hr>
-<% end %>
+  <table class="table table-striped table-sm">
+    <thead class="thead-inverse">
+      <tr>
+        <th></th>
+        <th>Slug</th>
+        <th>Name</th>
+        <th>Published At</th>
+        <th>Public Path</th>
+      </tr>
+    </thead>
 
-<div class="pagination-container">
-  <%= paginate @podcasts, views_prefix: "admin" %>
+    <tbody>
+      <% podcast.episodes.each do |episode| %>
+        <tr>
+          <td><%= link_to "EDIT", [:edit, :admin, episode], class: "btn btn-secondary btn-sm" %></td>
+          <td><%= episode.slug %></td>
+          <td>
+            <%= link_to [:admin, episode] do %>
+              <b><%= episode.title %></b><br>
+              <%= episode.subtitle %>
+            <% end %>
+          </td>
+          <td><%= episode.published_at %></td>
+          <td><%= link_to episode.path, episode.path %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
+<% end %>

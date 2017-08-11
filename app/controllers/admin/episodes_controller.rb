@@ -47,7 +47,7 @@ class Admin::EpisodesController < Admin::AdminController
   # /admin/episodes/1
   def destroy
     @episode.destroy
-    redirect_to [:admin, :episodes], notice: "Episode was successfully destroyed."
+    redirect_to [:admin, :podcasts], notice: "Episode was successfully destroyed."
   end
 
   private
