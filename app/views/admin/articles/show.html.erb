@@ -103,7 +103,7 @@
     <div id="collection" style="margin-top: 6rem">
       <h3>
         Nested Articles
-        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-xs" %>
+        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-sm" %>
       </h3>
 
       <%= render "table", articles: @article.collection_posts %>

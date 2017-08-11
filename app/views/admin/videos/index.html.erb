@@ -14,12 +14,12 @@
     <% @videos.each do |video| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, video], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, video], class: "btn btn-primary btn-sm" %>
         </td>
         <td><%= link_to video.title, [:admin, video] %></td>
         <td><%= video.subtitle %></td>
         <td>
-          <%= link_to "DELETE", [:admin, video], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, video], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>

@@ -10,7 +10,7 @@ class Redirect < ApplicationRecord
   validate :noncircular_redirect
 
   def name
-    "#{source_path} to #{target_path}"
+    source_path
   end
 
   def add_leading_slash

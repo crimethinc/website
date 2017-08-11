@@ -1,20 +1,22 @@
-<h1>
-  <%= link_to_unless_current current_resource_name.pluralize, [:admin, current_resource_name.pluralize.downcase] %>
-</h1>
+<div class="mb-5">
+  <h1>
+    <%= link_to_unless_current current_resource_name.pluralize, [:admin, current_resource_name.pluralize.downcase] %>
+  </h1>
 
-<p>
-  <% if listing? %>
-    <%= link_to "NEW", [:new, :admin, current_resource_name.downcase], class: "btn btn-primary btn-xs action-new" %>
-  <% elsif showing? %>
-    <%# TODO %>
-    <%= link_to "EDIT", [:edit, :admin, thing], class: "btn btn-primary btn-xs action-edit" %>
+  <p>
+    <% if listing? %>
+      <%= link_to "NEW", [:new, :admin, current_resource_name.downcase], class: "btn btn-primary btn-sm action-new" %>
+    <% elsif showing? %>
+      <%# TODO %>
+      <%= link_to "EDIT", [:edit, :admin, thing], class: "btn btn-light border-secondary btn-sm action-edit" %>
+    <% end %>
+  </p>
+
+  <% if editing? %>
+    <h2>Editing <%= link_to thing.name, [:admin, thing] %></h2>
   <% end %>
-</p>
 
-<% if editing? %>
-  <h2>Editing <%= link_to thing.name, [:admin, thing] %></h2>
-<% end %>
-
-<% if creating? %>
-  <h2>New <%= current_resource_name %></h2>
-<% end %>
+  <% if creating? %>
+    <h2>New <%= current_resource_name %></h2>
+  <% end %>
+</div>

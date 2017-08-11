@@ -16,25 +16,26 @@
             <% end %>
 
             <ul class="dropdown-menu">
-              <li class="dropdown-item"><%= link_to "Articles", [:admin, :articles] %></li>
+              <li class="dropdown-item"><%= link_to "Articles",   [:admin, :articles] %></li>
               <li class="dropdown-item"><%= link_to "Categories", [:admin, :categories] %></li>
-              <li class="dropdown-item"><%= link_to "Pages", [:admin, :pages] %></li>
+              <li class="dropdown-item"><%= link_to "Pages",      [:admin, :pages] %></li>
               <li role="separator" class="dropdown-divider"></li>
               <li class="dropdown-header">Media:</li>
               <li class="dropdown-item"><%= link_to "Podcasts", [:admin, :podcasts] %></li>
-              <li class="dropdown-item"><%= link_to "Videos", [:admin, :videos] %></li>
+              <li class="dropdown-item"><%= link_to "Videos",   [:admin, :videos] %></li>
               <li role="separator" class="dropdown-divider"></li>
               <li class="dropdown-header">Tools:</li>
-              <li class="dropdown-item"><%= link_to "Books", [:admin, :books] %></li>
-              <li class="dropdown-item"><%= link_to "Zines", [:admin, :zines] %></li>
-              <li class="dropdown-item"><%= link_to "Posters", [:admin, :posters] %></li>
+              <li class="dropdown-item"><%= link_to "Books",    [:admin, :books] %></li>
+              <li class="dropdown-item"><%= link_to "Zines",    [:admin, :zines] %></li>
+              <li class="dropdown-item"><%= link_to "Posters",  [:admin, :posters] %></li>
               <li class="dropdown-item"><%= link_to "Stickers", [:admin, :stickers] %></li>
-              <li class="dropdown-item"><%= link_to "Logos", [:admin, :logos] %></li>
+              <li class="dropdown-item"><%= link_to "Logos",    [:admin, :logos] %></li>
             </ul>
           </li>
 
           <li class="nav-item"><%= link_to "Articles", [:admin, :articles], class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Pages", [:admin, :pages], class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Redirects",  [:admin, :redirects], class: "nav-link" %></li>
 
           <!--
           <li class="dropdown">
@@ -58,9 +59,8 @@
               <li class="dropdown-item"><%= link_to "Users", [:admin, :users] %></li>
               <li role="separator" class="dropdown-divider"></li>
               <li class="dropdown-item"><%= link_to "Links", [:admin, :links] %></li>
-              <li class="dropdown-item"><%= link_to "Redirects", [:admin, :redirects] %></li>
               <li class="dropdown-item"><%= link_to "Settings", [:admin, :settings] %></li>
-              <li class="dropdown-item"><%= link_to "Themes", [:admin, :themes] %></li>
+              <!-- <li class="dropdown-item"><%= link_to "Themes", [:admin, :themes] %></li> -->
             </ul>
           </li>
         </ul>

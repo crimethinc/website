@@ -18,7 +18,7 @@
     <% @logos.each do |logo| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, logo], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, logo], class: "btn btn-primary btn-sm" %>
         </td>
         <td>
           <b class="h3"><%= link_to logo.title, [:admin, logo] %></b>
@@ -34,7 +34,7 @@
 
 
         <td>
-          <%= link_to "DELETE", [:admin, logo], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, logo], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>

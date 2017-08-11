@@ -15,7 +15,7 @@
     <% @posters.each do |poster| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-primary btn-sm" %>
         </td>
         <td>
           <b class="h3"><%= link_to poster.title, [:admin, poster] %></b>
@@ -27,7 +27,7 @@
         <td> <%= "✔️" if poster.back_download_present? %> </td>
 
         <td>
-          <%= link_to "DELETE", [:admin, poster], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, poster], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>

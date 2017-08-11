@@ -15,7 +15,7 @@
     <% @users.each do |user| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, user], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, user], class: "btn btn-primary btn-sm" %>
         </td>
         <td>
           <% if user.avatar.present? %>

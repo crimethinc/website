@@ -14,12 +14,12 @@
     <% @links.each do |link| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, link], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, link], class: "btn btn-primary btn-sm" %>
         </td>
         <td><%= link_to link.name, [:admin, link] %></td>
         <td><%= link_to link.url,  [:admin, link] %></td>
         <td>
-          <%= link_to "DELETE", [:admin, link], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, link], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>

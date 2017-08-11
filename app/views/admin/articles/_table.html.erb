@@ -14,7 +14,7 @@
     <% articles.each do |article| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-primary btn-sm" %>
         </td>
         <td>
           <%= render "/admin/articles/publication_status", article: article %>
@@ -36,7 +36,7 @@
           <% end %>
         </td>
         <td>
-          <%= link_to "DELETE", [:admin, article], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, article], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>

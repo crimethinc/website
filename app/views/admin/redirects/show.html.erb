@@ -1,15 +1,15 @@
-<%= render "admin/page_header", thing:    @redirect %>
+<%= render "admin/page_header", thing: @redirect %>
 
 <p>
   <%= redirect_http_status_code(@redirect) %>
 </p>
 
 <h2>
-  <small>Source Path</small><br>
-  <%= @redirect.source_path %>
+  <small>FROM</small><br>
+  <%= link_to @redirect.source_path, @redirect.source_path %>
 </h2>
 
 <h2>
-  <small>Target Path</small><br>
-  <%= @redirect.target_path %>
+  <small>TO</small><br>
+  <%= link_to @redirect.target_path, @redirect.target_path %>
 </h2>

@@ -14,12 +14,12 @@
     <% @contributors.each do |contributor| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, contributor], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, contributor], class: "btn btn-primary btn-sm" %>
         </td>
         <td><%= link_to contributor.name, [:admin, contributor] %></td>
         <td><%= link_to contributor.slug, [:admin, contributor] %></td>
         <td>
-          <%= link_to "DELETE", [:admin, contributor], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, contributor], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>

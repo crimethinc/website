@@ -13,7 +13,7 @@
     <% @settings.each do |setting| %>
       <tr>
         <td>
-          <%= link_to 'EDIT', [:edit, :admin, setting], class: 'btn btn-primary btn-xs' %>
+          <%= link_to 'EDIT', [:edit, :admin, setting], class: 'btn btn-primary btn-sm' %>
         </td>
         <td><%= link_to setting.name,     [:admin, setting] %></td>
         <td><%= setting.content %></td>

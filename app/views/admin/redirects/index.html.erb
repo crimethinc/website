@@ -1,13 +1,12 @@
 <%= render "admin/page_header", thing: @redirects %>
 
-<table class="table">
-  <thead>
+<table class="table table-striped table-sm">
+  <thead class="thead-inverse">
     <tr>
       <th></th>
-      <th>Source Path</th>
-      <th>Target Path</th>
-      <th>HTTP Status</th>
-      <th></th>
+      <th>From</th>
+      <th>To</th>
+      <th>HTTP</th>
     </tr>
   </thead>
 
@@ -15,13 +14,12 @@
     <% @redirects.each do |redirect| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, redirect], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, redirect], class: "btn btn-light btn-sm border-secondary" %>
         </td>
         <td><%= link_to redirect.source_path, [:admin, redirect] %></td>
         <td><%= link_to redirect.target_path, [:admin, redirect] %></td>
-        <td><%= redirect_http_status_code(redirect) %></td>
         <td>
-          <%= link_to "DELETE", [:admin, redirect], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= redirect_http_status_code redirect %>
         </td>
       </tr>
     <% end %>

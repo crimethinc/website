@@ -18,7 +18,7 @@
     <% @pages.each do |page| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, page], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, page], class: "btn btn-primary btn-sm" %>
         </td>
         <td>
           <% if page.title.present? %>
@@ -41,7 +41,7 @@
           <%= page.published_at %>
         </td>
         <td>
-          <%= link_to "DELETE", [:admin, page], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, page], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>

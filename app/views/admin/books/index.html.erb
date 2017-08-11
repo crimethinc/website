@@ -17,7 +17,7 @@
     <% @books.each do |book| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, book], class: "btn btn-primary btn-xs" %>
+          <%= link_to "EDIT", [:edit, :admin, book], class: "btn btn-primary btn-sm" %>
         </td>
         <td>
           <b class="h3"><%= link_to book.title, [:admin, book] %></b>
@@ -31,7 +31,7 @@
         <td> <%= "✔️" if book.mobi_download_present? %> </td>
 
         <td>
-          <%= link_to "DELETE", [:admin, book], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-xs" %>
+          <%= link_to "DELETE", [:admin, book], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>
