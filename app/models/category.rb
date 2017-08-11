@@ -13,4 +13,8 @@ class Category < ApplicationRecord
   def strip_whitespace
     self.name = name.strip
   end
+
+  def path
+    "/categories/#{slug}"
+  end
 end

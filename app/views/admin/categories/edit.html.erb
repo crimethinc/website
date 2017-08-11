@@ -1,2 +1,7 @@
 <%= render "admin/page_header", thing: @category %>
 <%= render "form" %>
+
+<%= render "admin/danger_zone",
+           thing: @category,
+           label: "category",
+           path: [:admin, @category] %>

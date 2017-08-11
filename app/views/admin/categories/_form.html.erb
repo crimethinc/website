@@ -9,6 +9,10 @@
   <div class="form-group">
     <%= f.label :slug %>
     <%= f.text_field :slug, class: "form-control form-control-lg" %>
+
+    <p class="form-text text-muted">
+      Leave blank to auto-generate <code>slug</code> based on <code>name</code>.
+    </p>
   </div>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :categories] %>

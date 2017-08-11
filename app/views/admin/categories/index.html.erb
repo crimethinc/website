@@ -1,12 +1,12 @@
 <%= render "admin/page_header", thing: @categories %>
 
-<table class="table">
-  <thead>
+<table class="table table-striped table-sm mb-5">
+  <thead class="thead-inverse">
     <tr>
       <th></th>
       <th>Name</th>
-      <th>Slug</th>
-      <th></th>
+      <th>Path</th>
+      <th>Articles</th>
     </tr>
   </thead>
 
@@ -14,13 +14,11 @@
     <% @categories.each do |category| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, category], class: "btn btn-primary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, category], class: "btn btn-light border-secondary btn-sm" %>
         </td>
-        <td><%= link_to category.name, [:admin, category] %></td>
-        <td><%= category.slug %></td>
-        <td>
-          <%= link_to "DELETE", [:admin, category], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
-        </td>
+        <td><b><%= category.name %></b></td>
+        <td><%= link_to category.path, category.path %></td>
+        <td><%= category.articles.count %></td>
       </tr>
     <% end %>
   </tbody>
