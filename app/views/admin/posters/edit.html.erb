@@ -1,2 +1,7 @@
 <%= render "admin/page_header", thing: @poster %>
 <%= render "admin/posters/form", resource: @poster %>
+
+<%= render "admin/danger_zone",
+           thing: @poster,
+           label: "poster",
+           path: [:admin, @poster] %>

@@ -15,10 +15,12 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm" %>
         </td>
+
         <td>
           <%= render "/admin/articles/publication_status", article: article %>
           <%= render "/admin/articles/content_format",     article: article %>
         </td>
+
         <td>
           <b><%= link_to article.title, [:admin, article] %></b><br>
 
@@ -26,10 +28,12 @@
             <%= link_to article.subtitle, [:admin, article] %>
           <% end %>
         </td>
+
         <td>
           <%= display_date article.published_at %><br>
           <%= display_time article.published_at %>
         </td>
+
         <td>
           <% if article.collection_root? %>
             <%= link_to(article.collection_posts.count, admin_article_path(article, anchor: "collection")) %>

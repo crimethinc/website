@@ -5,6 +5,7 @@ class Logo < ApplicationRecord
   default_scope { order("slug ASC") }
 
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
+  FORMATS = %w(jpg png pdf svg tif)
 
   def namespace
     "logos"

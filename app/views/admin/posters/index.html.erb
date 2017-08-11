@@ -1,13 +1,13 @@
 <%= render "admin/page_header", thing: @posters %>
 
-<table class="table">
-  <thead>
+<table class="table table-striped table-sm mb-5 table-bordered">
+  <thead class="thead-inverse">
     <tr>
       <th></th>
-      <th>Name</th>
-      <th>Front Download</th>
-      <th>Back Download</th>
-      <th></th>
+      <th>Title / Subtitle</th>
+      <th>Published Date</th>
+      <th class="text-center">Front Download</th>
+      <th class="text-center">Back Download</th>
     </tr>
   </thead>
 
@@ -15,20 +15,21 @@
     <% @posters.each do |poster| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-primary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-light border-secondary btn-sm" %>
         </td>
+
         <td>
-          <b class="h3"><%= link_to poster.title, [:admin, poster] %></b>
-          <br>
+          <b><%= link_to poster.title, [:admin, poster] %></b><br>
           <%= poster.subtitle %>
         </td>
 
-        <td> <%= "✔️" if poster.front_download_present? %> </td>
-        <td> <%= "✔️" if poster.back_download_present? %> </td>
-
         <td>
-          <%= link_to "DELETE", [:admin, poster], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
+          <%= display_date poster.published_at %><br>
+          <%= display_time poster.published_at %>
         </td>
+
+        <td class="text-center align-middle"> <%= "✔️" if poster.front_download_present? %> </td>
+        <td class="text-center align-middle"> <%= "✔️" if poster.back_download_present? %> </td>
       </tr>
     <% end %>
   </tbody>

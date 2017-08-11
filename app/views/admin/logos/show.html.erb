@@ -1,18 +1,13 @@
 <%= render "admin/page_header", thing: @logo %>
 
-<article>
+<article class="mb-5">
   <header>
-    <h1>
-      <%= link_to [:admin, @logo], class: "p-name" do %>
-      <span class="h1 title"><%= @logo.title %></span><br>
-      <span class="h2 subtitle"><%= @logo.subtitle %></span>
-      <% end %>
-    </h1>
+    <h1><%= @logo.title %></h1>
   </header>
 
   <div>
     <p>
-      <% %w(jpg png pdf svg).each do |extension| %>
+      <% Logo::FORMATS.each do |extension| %>
         <% if @logo.send("#{extension}_url_present?") %>
           <span class="badge badge-success">✔ <%= extension.upcase %> Image</span>
         <% end %>
@@ -21,20 +16,26 @@
 
     <p><b>URL:</b> <b><%= link_to @logo.path, @logo.path %></b></p>
 
-    <div>
-      <h1>Preview PNG</h1>
-      <%= image_tag @logo.preview_image_url %>
-    </div>
-
     <div class="row">
-      <div class="col-4">
-        <% %w(jpg png svg).each do |extension| %>
-          <% if @logo.send("#{extension}_url_present?") %>
-            <h2><%= extension.upcase %></h2>
-            <%= image_tag @logo.image_url(extension) %>
-          <% end %>
+      <% Logo::FORMATS.each do |extension| %>
+        <% if @logo.send("#{extension}_url_present?") %>
+          <div class="col">
+
+            <div class="card">
+              <div class="card-body">
+                <%= link_to @logo.download_url(extension) do %>
+                  <%= image_tag @logo.image_url(extension) %>
+                <% end %>
+              </div>
+
+              <div class="card-footer">
+                <%= extension.upcase %>
+              </div>
+            </div>
+
+          </div>
         <% end %>
-      </div>
+      <% end %>
     </div>
 
     <hr>
@@ -45,13 +46,6 @@
       x
       <%= @logo.height %>
     </p>
-
-
-    <% %w(jpg png pdf svg).each do |extension| %>
-      <% if @logo.send("#{extension}_url_present?") %>
-        <p><b><%= extension.upcase %> Download URL:</b> <b><%= link_to @logo.download_url(extension), @logo.download_url(extension) %></b></p>
-      <% end %>
-    <% end %>
 
     <p>
       <strong>Description:</strong>

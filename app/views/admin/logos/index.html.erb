@@ -1,16 +1,14 @@
 <%= render "admin/page_header", thing: @logos %>
 
-<table class="table">
-  <thead>
+<table class="table table-striped table-sm mb-5 table-bordered">
+  <thead class="thead-inverse">
     <tr>
       <th></th>
       <th>Name</th>
-      <th>JPEG</th>
-      <th>PNG</th>
-      <th>PDF</th>
-      <th>SVG</th>
-      <th>TIF</th>
-      <th></th>
+
+      <% Logo::FORMATS.each do |extension| %>
+        <th class="text-center"><%= extension.upcase %></td>
+      <% end %>
     </tr>
   </thead>
 
@@ -18,24 +16,20 @@
     <% @logos.each do |logo| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, logo], class: "btn btn-primary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, logo], class: "btn btn-light border-secondary btn-sm" %>
         </td>
+
         <td>
-          <b class="h3"><%= link_to logo.title, [:admin, logo] %></b>
+          <b><%= link_to logo.title, [:admin, logo] %></b>
           <% if logo.subtitle.present? %>
             <br>
             <%= logo.subtitle %>
           <% end %>
         </td>
 
-        <% %w(jpg png pdf svg tif).each do |extension| %>
-          <td> <%= "✔️" if logo.send"#{extension}_url_present?" %> </td>
+        <% Logo::FORMATS.each do |extension| %>
+          <td class="text-center align-middle"><%= "✔️" if logo.send"#{extension}_url_present?" %></td>
         <% end %>
-
-
-        <td>
-          <%= link_to "DELETE", [:admin, logo], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
-        </td>
       </tr>
     <% end %>
   </tbody>
