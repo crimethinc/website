@@ -7,6 +7,8 @@ class Episode < ApplicationRecord
 
   after_create :generate_slug
 
+  scope :live, -> { where("published_at < ?", Time.now) }
+
   def path
     "/podcast/#{to_param}"
   end

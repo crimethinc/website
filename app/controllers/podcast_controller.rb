@@ -32,6 +32,6 @@ class PodcastController < ApplicationController
   end
 
   def set_episodes
-    @episodes = Episode.order(published_at: :desc).to_a
+    @episodes = Episode.live.order(published_at: :desc).to_a
   end
 end
