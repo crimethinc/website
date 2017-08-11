@@ -130,7 +130,9 @@ si:
       first: "&laquo;"
       last: "&raquo;"
       previous: "&lsaquo;"
+      previous_screen_reader: Previous
       next: "&rsaquo;"
+      next_screen_reader: Next
       truncate: "&hellip;"
       next_page: "Next &rsaquo;"
       previous_page: "&lsaquo; Previous"

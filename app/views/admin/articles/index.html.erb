@@ -2,6 +2,4 @@
 
 <%= render "table", articles: @articles %>
 
-<div class="pagination-container">
-  <%= paginate @articles, views_prefix: "admin" %>
-</div>
+<%= paginate @articles, views_prefix: "admin", theme: "twitter-bootstrap-4" %>
