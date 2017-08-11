@@ -51,11 +51,11 @@
 
 
           <% {
-            read:  ["Reading",    "Is there a PDF for on-screen reading uploaded?"],
-            print: ["Printing",   "Is there an imposed PDF uploaded?"],
-            lite:  ["Lo Res",     "Is there a low resolution / smaller file size PDF uploaded?"],
-            epub:  ["ePub", "Is there a <code>.epub</code> uploaded?"],
-            mobi:  ["Mobi", "Is there a <code>.epub</code> uploaded?"],
+            read:  ["Reading",  "Is there a PDF for on-screen reading uploaded?"],
+            print: ["Printing", "Is there an imposed PDF for printing uploaded?"],
+            lite:  ["Lo Res",   "Is there a low resolution or single page view PDF uploaded?"],
+            epub:  ["ePub",     "Is there a <code>.epub</code> uploaded?"],
+            mobi:  ["Mobi",     "Is there a <code>.epub</code> uploaded?"],
           }.each do |type, texts| %>
             <div class="checkbox">
               <%= f.label "#{type}_download_present" do %>
