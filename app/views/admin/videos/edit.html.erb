@@ -1,2 +1,7 @@
 <%= render "admin/page_header", thing: @video %>
 <%= render "form" %>
+
+<%= render "admin/danger_zone",
+           thing: @video,
+           label: "video",
+           path: [:admin, @video] %>

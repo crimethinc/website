@@ -1,11 +1,10 @@
 <%= render "admin/page_header", thing: @videos %>
 
-<table class="table">
-  <thead>
+<table class="table table-striped table-sm mb-5">
+  <thead class="thead-inverse">
     <tr>
       <th></th>
-      <th>Title</th>
-      <th>Subtitle</th>
+      <th>Title / Subtitle</th>
       <th></th>
     </tr>
   </thead>
@@ -14,12 +13,13 @@
     <% @videos.each do |video| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, video], class: "btn btn-primary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, video], class: "btn btn-light border-secondary btn-sm" %>
         </td>
-        <td><%= link_to video.title, [:admin, video] %></td>
-        <td><%= video.subtitle %></td>
         <td>
-          <%= link_to "DELETE", [:admin, video], method: :delete, data: { confirm: "Are you sure you're sure? There is NO UNDO." }, class: "btn btn-danger btn-sm" %>
+          <%= link_to [:admin, video] do %>
+            <b><%= video.title %></b><br>
+            <%= video.subtitle %>
+          <% end %>
         </td>
       </tr>
     <% end %>
