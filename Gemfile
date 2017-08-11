@@ -18,7 +18,7 @@ source "https://rails-assets.org" do
 end
 
 # assets
-gem "bootstrap", "~> 4.0.0.alpha6"
+gem "bootstrap", "~> 4.0.0.beta"
 gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"

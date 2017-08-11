@@ -1,4 +1,4 @@
-//= require jquery
+//= require jquery3
 
 //= require base
 //= require article_queue
