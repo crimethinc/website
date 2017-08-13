@@ -36,24 +36,42 @@
   </fieldset>
   -->
 
-  <% unless @collection.present? %>
-    <fieldset id="categories">
-      <legend>Categories</legend>
+    <div class="row mt-5">
+    <div class="col-12 col-sm-6">
+    <% unless @collection.present? %>
+        <fieldset id="categories">
+          <label>Categories</label>
 
-      <div class="col-12 col-sm-12">
-        <div class="form-group">
-          <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "checkbox" do |b| %>
-            <div class="checkbox">
-              <%= b.label do %>
-                <%= b.check_box %>
-                <%= b.text %>
-              <% end %>
-            </div>
+          <div class="form-group">
+          <% Category.all.in_groups_of(2).each do |group| %>
+              <div class="row">
+                  <% group.each do |category| %>
+                      <div class="col-6">
+                        <% if category.present? %>
+                            <div class="checkbox">
+                              <%= f.label "category_ids_#{category.id}" do %>
+                                  <%= f.check_box :category_ids, {id: "article_category_ids_#{category.id}", name: "article[category_ids][]"}, category.id, nil %>
+                                  <%= category.name %>
+                              <% end %>
+                            </div>
+                        <% end %>
+                      </div>
+                  <% end %>
+              </div>
           <% end %>
+          </div>
+        </fieldset>
+    <% end %>
+      </div>
+
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :tags %>
+          <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
+          <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
         </div>
       </div>
-    </fieldset>
-  <% end %>
+    </div>
 
   <% unless @collection.present? %>
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
@@ -91,14 +109,6 @@
 
     <% unless @collection.present? %>
       <div class="row">
-        <div class="col-12 col-sm-6">
-          <div class="form-group">
-            <%= f.label :tags %>
-            <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
-            <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
-          </div>
-        </div>
-
         <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= f.label :content_format, "Content Format" %>
