@@ -25,7 +25,7 @@
         <div class="form-group">
           <%= f.label :tweet %>
           <%= f.text_area :tweet, class: "form-control form-control-lg" %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             Maximum 115 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
             Used for syndicated tweet for this Article.
           </p>
@@ -36,7 +36,7 @@
         <div class="form-group">
           <%= f.label :summary %>
           <%= f.text_area :summary, class: "form-control form-control-lg" %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             Maximum 200 characters.
             Used for page description and previews in story cards on other sites.
           </p>
@@ -59,7 +59,7 @@
         <div class="form-group">
           <%= f.label :tags %>
           <%= text_field_tag :tags, @page.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
-          <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
+          <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@
       <div class="col-12 col-sm-6">
         <%= f.label :image, "Hero Image" %>
         <%= f.text_field :image, class: "form-control form-control-lg" %>
-        <p class="help-block">
+        <p class="form-text text-muted">
           This is the large image that will be front and center on the <i>Page</i> page,
           on the homepage and when syndicated to other sites. Minimum size: <code>1400x1000</code> pixels.
         </p>
@@ -98,7 +98,7 @@
         <div class="form-group">
           <%= f.label :image_description, "Hero Image Description" %>
           <%= f.text_field :image_description, class: "form-control form-control-lg" %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
           </p>
         </div>
@@ -112,7 +112,7 @@
         <div class="form-group">
           <%= f.label :css, "Page Specific CSS" %>
           <%= f.text_area :css, class: "form-control form-control-lg", rows: 20 %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             <% if @page.new_record? %>
               After you save this
             <% else %>
@@ -127,7 +127,7 @@
         <div class="form-group">
           <%= f.check_box :hide_header %>
           <%= f.label :hide_header, "Hide the Site Header?" %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             This will remove the site header/<wbr>nav/<wbr>search/<wbr>etc from this <i>Page</i> only.
           </p>
         </div>
@@ -135,7 +135,7 @@
         <div class="form-group">
           <%= f.check_box :hide_footer %>
           <%= f.label :hide_footer, "Hide the Site Footer?" %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             This will remove the site footer from this <i>Page</i> only.
           </p>
         </div>
@@ -143,7 +143,7 @@
         <div class="form-group">
           <%= f.check_box :hide_layout %>
           <%= f.label :hide_layout, "Hide the Site Layout?" %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             <b class="text-danger">Danger Zone&trade; &mdash; exercise caution with this option.</b>
             The will remove all of the wrapper layout.
             This <i>Page</i> will be responsible for <i>all</i> of its HTML,

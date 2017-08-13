@@ -48,7 +48,7 @@
       <div class="form-group">
         <%= f.label :image_description, "Image Description" %>
         <%= f.text_field :image_description, class: "form-control form-control-lg" %>
-        <p class="help-block">
+        <p class="form-text text-muted">
           This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
         </p>
       </div>
@@ -67,7 +67,7 @@
         <div class="form-group">
           <%= f.label :tweet %>
           <%= f.text_area :tweet, class: "form-control" %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             Maximum 115 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
             Used for syndicated tweet for this Video.
           </p>
@@ -78,7 +78,7 @@
         <div class="form-group">
           <%= f.label :summary %>
           <%= f.text_area :summary, class: "form-control" %>
-          <p class="help-block">
+          <p class="form-text text-muted">
             Maximum 200 characters.
             Used for video description and previews in story cards on other sites.
           </p>

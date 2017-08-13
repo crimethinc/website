@@ -8,7 +8,7 @@
         <%= f.text_field :source_path, class: "form-control form-control-lg" %>
       </div>
 
-      <p class="help-block">The URL or path to redirect <b>from</b></p>
+      <p class="form-text text-muted">The URL or path to redirect <b>from</b></p>
     </div>
 
     <div class="col-12 col-sm-6">
@@ -17,7 +17,7 @@
         <%= f.text_field :target_path, class: "form-control form-control-lg" %>
       </div>
 
-      <p class="help-block">The URL path to redirect <b>to</b></p>
+      <p class="form-text text-muted">The URL path to redirect <b>to</b></p>
     </div>
   </div>
 
@@ -26,7 +26,7 @@
   <div class="form-group">
     <%= f.check_box :temporary %>
     <%= f.label :temporary %>
-    <p class="help-block">
+    <p class="form-text text-muted">
       By default, all Redirects are saved as a permanent redirect,
       <a href="https://http.cat/301"><code>301</code></a>.<br>
       By choosing <code>temporary</code>, it&rsquo;ll be served as a temporary redirect
