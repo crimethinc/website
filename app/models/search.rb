@@ -45,7 +45,7 @@ class Search
     self.scope = scope
                  .select("ts_rank(document, phraseto_tsquery('#{term}')) AS ranking")
                  .where("document @@ phraseto_tsquery(?)", term)
-                 .order(ranking: :desc)
+                 .order("ranking DESC")
   end
 
   def normalize_filters(query)
