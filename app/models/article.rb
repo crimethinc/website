@@ -15,10 +15,6 @@ class Article < ApplicationRecord
 
   accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
-  scope :chronological, -> { order(published_at: :desc) }
-
-  scope :root, -> { where(collection_id: nil) }
-
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
   before_validation :normalize_newlines,       on: [:create, :update]
@@ -30,11 +26,13 @@ class Article < ApplicationRecord
   before_save :update_or_create_redirect
 
   default_scope { order(published_at: :desc) }
-  scope :live,     -> { where("published_at < ?", Time.now) }
-  scope :on,       lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
-  scope :recent,   -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days, Time.now) }
-  scope :next,     lambda { |article| unscoped.root.where("published_at > ?", article.published_at).live.published.order(published_at: :asc).limit(1) }
-  scope :previous, lambda { |article| root.where("published_at < ?", article.published_at).live.published.chronological.limit(1) }
+  scope :chronological, -> { order(published_at: :desc) }
+  scope :root,          -> { where(collection_id: nil) }
+  scope :live,          -> { where("published_at < ?", Time.now) }
+  scope :recent,        -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days, Time.now) }
+  scope :on,            lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
+  scope :next,          lambda { |article| unscoped.root.where("published_at > ?", article.published_at).live.published.order(published_at: :asc).limit(1) }
+  scope :previous,      lambda { |article| root.where("published_at < ?", article.published_at).live.published.chronological.limit(1) }
 
   def path
     if published?
