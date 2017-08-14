@@ -1,4 +1,4 @@
-<%= form_for [:admin, @article] do |f| %>
+<%= form_for [:admin, @article], html: { id: "article-form" } do |f| %>
   <%= render "admin/form_errors", thing: @article %>
 
   <%= f.hidden_field :collection_id, value: @collection.id if @collection %>
@@ -20,21 +20,56 @@
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
-  <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
 
-  <!--
-  <fieldset id="contributions">
-    <legend>Contributions</legend>
 
-    <%= f.fields_for :contributions do |contribution| %>
-      <%= render "contribution_fields", f: contribution %>
-    <% end %>
+  <% if @article.new_record? %>
+    <div class="row my-5">
+      <div class="col-12 col-lg-8">
 
-    <div class="links">
-      <%= link_to_add_association "Add Contribution", f, :contributions, class: "btn btn-primary" %>
-    </div>
-  </fieldset>
-  -->
+        <div class="card">
+          <h4 class="card-header bg-primary text-white"><b>To Future Publish…</b></h4>
+
+          <div class="card-body">
+            <p class="card-text">
+              <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
+            </p>
+
+            <div class="text-right">
+              <%= button_tag "Save", class: "btn btn-primary btn-lg" %>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- .col -->
+
+      <div class="col-12 col-lg-4">
+
+        <div class="card">
+          <h4 class="card-header bg-warning"><b>To Publish Now…</b></h4>
+
+          <div class="card-body">
+            <p class="card-text">
+              If you want to publish this article <b>right now</b>, you can with one click.
+              If you click the <b class="text-success">Publish NOW!</b> button, the
+              <code>published at</code> will be set to now and the <code>publication status</code>
+              will be set to <i>Published</i>. This article will show immediately show up in
+              the homepage feed.
+
+              <noscript><p><b>Requires Javascript</b> to be turned on to work.</p></noscript>
+            </p>
+
+            <div class="text-right">
+              <%= link_to "Publish NOW!", "#", id: "publish-now", class: "btn btn-warning btn-lg" %>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- .col -->
+    </div><!-- .row -->
+
+  <% else %>
+    <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
+  <% end %>
 
     <div class="row mt-5">
     <div class="col-12 col-sm-6">

@@ -25,12 +25,14 @@ class Admin::ArticlesController < Admin::AdminController
     @collection = Article.find(params[:id]) if params[:id]
     @article = Article.new
     @title = admin_title
+    @html_id = "admin-article"
   end
 
   # /admin/articles/1/edit
   def edit
     @collection = Article.find(@article.collection_id) if @article.in_collection?
     @title = admin_title(@article, [:id, :title, :subtitle])
+    @html_id = "admin-article"
   end
 
   # /admin/articles
