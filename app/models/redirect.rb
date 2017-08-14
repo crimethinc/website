@@ -1,13 +1,11 @@
 class Redirect < ApplicationRecord
-  belongs_to :article
-
   before_validation :strip_leading_domain_from_source_path, on: [:create, :update]
   before_validation :strip_leading_domain_from_target_path, on: [:create, :update]
   before_validation :add_leading_slash,                     on: [:create, :update]
 
   validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
-  validate :article_short_path_unique
+  validate  :article_short_path_unique
 
   validate :noncircular_redirect
 
@@ -80,7 +78,13 @@ class Redirect < ApplicationRecord
   end
 
   def article_short_path_unique
-    errors.add(:source_path, 'is already taken by article short path') if Article.where(short_path: self.source_path[/\w+/]).exists?
+    aa = Article.where(short_path: self.source_path[/\w+/])
+
+    if aa.exists?
+      unless aa.first.id == self.article.id
+        errors.add(:source_path, 'is already taken by article short path')
+      end
+    end
   end
 
 end

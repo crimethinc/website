@@ -85,21 +85,13 @@ class Article < ApplicationRecord
 
       if redirect.present?
         if short_path_changed? || slug_changed? || published_at_changed? || status_id_changed?
-          # redirect.update_attributes(source_path: "/" + self.short_path, target_path: self.path )
-
-          redirect.source_path = "/" + self.short_path
-          redirect.target_path = self.path
-          redirect.save(validate: false)
+          redirect.update_attributes(source_path: "/" + self.short_path, target_path: self.path )
         end
       elsif Redirect.where(source_path: "/" + self.short_path).exists?
         errors.add(:short_path, ' is a path that already points to a redirect.')
       else
-        puts "in else"
-        puts self.status.name
-        puts "*"*80
         if self.status.name == "published"
-          r = Redirect.new(source_path: "/" + self.short_path, target_path: path, article_id: id)
-          r.save(validate: false)
+          Redirect.create(source_path: "/" + self.short_path, target_path: path, article_id: id)
         end
       end
     end

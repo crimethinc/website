@@ -10,7 +10,6 @@
 <%= form_for [:admin, @article], html: { id: "article-form" } do |f| %>
   <%= render "admin/form_errors", thing: @article %>
 
-
   <%# hidden fields... %>
   <%= f.hidden_field :collection_id, value: @collection.id if @collection %>
 
@@ -21,9 +20,6 @@
     <%= f.label :hide_layout, "Hide the Site Layout?" %>
   </div>
   <%# ...hidden fields %>
-
-
-
 
   <div class="form-group">
     <%= f.label :title %>
