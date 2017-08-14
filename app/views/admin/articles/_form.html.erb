@@ -151,7 +151,7 @@
     <% unless @collection.present? %>
       <div class="row">
         <div class="col-12 col-sm-6">
-          <div class="form-group sr-only">
+          <div class="form-group" hidden>
             <%= f.label :content_format, "Content Format" %>
 
             <div class="radio">
@@ -294,7 +294,7 @@
             </p>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" hidden>
             <%= f.check_box :hide_layout %>
             <%= f.label :hide_layout, "Hide the Site Layout?" %>
             <p class="form-text text-muted">
