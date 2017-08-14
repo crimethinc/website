@@ -27,6 +27,8 @@ class Admin::ArticlesController < Admin::AdminController
   def new
     @collection = Article.find(params[:id]) if params[:id]
     @article = Article.new
+    @article.status = Status.find_by(name: "draft")
+
     @title = admin_title
     @html_id = "admin-article"
   end
