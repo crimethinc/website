@@ -84,6 +84,11 @@ class ArticlesController < ApplicationController
       return redirect_to @article.path
     end
 
+    # redirect to parent article, never show nested articles directly
+    if @article.collection_id.present?
+      return redirect_to Article.find(@article.collection_id).path
+    end
+
     @title = @article.name
 
     @previous_article = Article.previous(@article).first
