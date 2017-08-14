@@ -8,7 +8,7 @@ Ruby on Rails app that powers https://crimethinc.com
 
 ### tl;dr
 
-[Strap your computer](https://osx-strap.herokuapp.com), first.
+[Strap your computer](https://macos-strap.herokuapp.com), first.
 
 ```
 git clone https://github.com/crimethinc/website.git
@@ -28,7 +28,7 @@ Development setup on a Windows or Linux computer may vary.
 
 ## Development Scripts
 
-The rest of these instructions assume that you've [strapped your computer](https://osx-strap.herokuapp.com) already. If you haven't, you'll need to install somethings manually. (But really, you're better off using [Strap](https://osx-strap.herokuapp.com).)
+The rest of these instructions assume that you've [strapped your computer](https://macos-strap.herokuapp.com) already. If you haven't, you'll need to install somethings manually. (But really, you're better off using [Strap](https://osx-strap.herokuapp.com).)
 
 - [Homebrew](http://brew.sh)
 - Homebrew taps and extensions
