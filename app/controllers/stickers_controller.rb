@@ -17,6 +17,8 @@ class StickersController < ApplicationController
     @product = Poster.sticker.find_by(slug: params[:slug])
     @title   = "Stickers : #{@product.name}"
 
+    @editable = @product
+
     render "products/show"
   end
 end

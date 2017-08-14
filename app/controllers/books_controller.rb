@@ -29,6 +29,8 @@ class BooksController < ApplicationController
     @body_id = "products"
     @title   = "Books : #{@book.title}"
     @type    = "books"
+
+    @editable = @book
   end
 
   def extras

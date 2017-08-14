@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 
   def show
     @html_id = "page"
+    @editable = @page
 
     # no layout
     if @page.hide_layout?

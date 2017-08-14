@@ -37,19 +37,6 @@
           <li class="nav-item"><%= link_to "Pages", [:admin, :pages], class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Redirects",  [:admin, :redirects], class: "nav-link" %></li>
 
-          <!--
-          <li class="dropdown">
-            <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"}, role: "button", aria: {haspopup: "true", expanded: "false"} do %>
-              Contributors <span class="caret"></span>
-            <% end %>
-
-            <ul class="dropdown-menu">
-              <li><%= link_to "Contributors", [:admin, :contributors] %></li>
-              <li><%= link_to "Roles", [:admin, :roles] %></li>
-            </ul>
-          </li>
-          -->
-
           <li class="dropdown nav-item">
             <%= link_to "#", class: "nav-link dropdown-toggle", data: {toggle: "dropdown"}, role: "button", aria: {haspopup: "true", expanded: "false"} do %>
                 Site Settings <span class="caret"></span>
@@ -60,7 +47,6 @@
               <li role="separator" class="dropdown-divider"></li>
               <li class="dropdown-item"><%= link_to "Links", [:admin, :links] %></li>
               <li class="dropdown-item"><%= link_to "Settings", [:admin, :settings] %></li>
-              <!-- <li class="dropdown-item"><%= link_to "Themes", [:admin, :themes] %></li> -->
             </ul>
           </li>
         </ul>

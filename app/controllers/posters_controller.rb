@@ -17,6 +17,8 @@ class PostersController < ApplicationController
     @product = Poster.poster.find_by(slug: params[:slug])
     @title   = "Posters : #{@product.name}"
 
+    @editable = @product
+
     render "products/show"
   end
 end

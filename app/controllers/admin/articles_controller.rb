@@ -17,6 +17,7 @@ class Admin::ArticlesController < Admin::AdminController
     if @article.collection_id.present?
       @collection = Article.find(@article.collection_id)
     end
+
     @title = admin_title(@article, [:title, :subtitle])
     @html_id = "admin-article"
     @body_id = "top"

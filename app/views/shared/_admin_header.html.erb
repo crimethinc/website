@@ -1,0 +1,18 @@
+<% if signed_in? %>
+
+  <style>
+    #admin-header {
+      padding: 2rem;
+      background: #ff8300;
+    }
+  </style>
+
+  <nav id="admin-header">
+    <%= link_to "ADMIN Dashboard", admin_path, class: "button" %>
+
+    <% if @editable.present? %>
+      <b><%= link_to "Edit #{@editable.class}", [:edit, :admin, @editable], class: "button button-buy" %></b>
+    <% end %>
+  </nav>
+
+<% end %>

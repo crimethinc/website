@@ -88,6 +88,7 @@ class ArticlesController < ApplicationController
 
     @previous_article = Article.previous(@article).first
     @next_article     = Article.next(@article).first
+    @editable = @article
 
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false

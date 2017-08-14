@@ -12,5 +12,7 @@ class VideosController < ApplicationController
     @html_id  = "page"
     @body_id  = "video"
     @title    = @video.title
+
+    @editable = @video
   end
 end
