@@ -19,7 +19,6 @@ class Article < ApplicationRecord
 
   scope :root, -> { where(collection_id: nil) }
 
-  # before_validation :generate_slug,            on: [:create, :update]
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
   before_validation :normalize_newlines,       on: [:create, :update]
@@ -30,7 +29,7 @@ class Article < ApplicationRecord
 
   before_save :update_or_create_redirect
 
-  default_scope { order("published_at DESC") }
+  default_scope { order(published_at: :desc) }
   scope :live,     -> { where("published_at < ?", Time.now) }
   scope :on,       lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
   scope :recent,   -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days, Time.now) }

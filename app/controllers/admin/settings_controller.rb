@@ -4,7 +4,7 @@ class Admin::SettingsController < Admin::AdminController
 
   def index
     @body_id = "settings"
-    @settings = Setting.order("name ASC").page(params[:page])
+    @settings = Setting.order(name: :asc).page(params[:page])
     @title = admin_title
   end
 

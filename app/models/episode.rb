@@ -3,7 +3,7 @@ class Episode < ApplicationRecord
 
   belongs_to :podcast
 
-  default_scope { order("id DESC") }
+  default_scope { order(id: :desc) }
 
   after_create :generate_slug
 
