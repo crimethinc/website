@@ -1,7 +1,29 @@
+<nav class="mb-5">
+  <p class="h6 text-muted">Jump to</p>
+  <%= link_to "Date + Time",    "#datetime",       class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Categorization", "#categorization", class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Syndication",    "#syndication",    class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Appearance",     "#appearance",     class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Alternates",     "#alternates",     class: "btn btn-outline-primary mb-2 mr-2" %>
+</nav>
+
 <%= form_for [:admin, @article], html: { id: "article-form" } do |f| %>
   <%= render "admin/form_errors", thing: @article %>
 
+
+  <%# hidden fields... %>
   <%= f.hidden_field :collection_id, value: @collection.id if @collection %>
+
+  <div class="form-group sr-only">
+    <%= f.radio_button :content_format, "html" %>
+    <%= f.radio_button :content_format, "kramdown" %>
+
+    <%= f.label :hide_layout, "Hide the Site Layout?" %>
+  </div>
+  <%# ...hidden fields %>
+
+
+
 
   <div class="form-group">
     <%= f.label :title %>
@@ -21,198 +43,167 @@
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
 
+  <div id="datetime" class="py-5">
+    <% if @article.new_record? || (true) %>
+      <div class="row">
+        <div class="col-12 col-lg-8">
 
-  <% if @article.new_record? %>
-    <div class="row my-5">
-      <div class="col-12 col-lg-8">
+          <div class="card">
+            <h4 class="card-header bg-primary text-white"><b>To Future Publish…</b></h4>
 
-        <div class="card">
-          <h4 class="card-header bg-primary text-white"><b>To Future Publish…</b></h4>
+            <div class="card-body">
+              <p class="card-text">
+                <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
+              </p>
 
-          <div class="card-body">
-            <p class="card-text">
-              <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
-            </p>
-
-            <div class="text-right">
-              <%= button_tag "Save", class: "btn btn-primary btn-lg" %>
+              <div class="text-right">
+                <%= button_tag "Save", class: "btn btn-primary btn-lg" %>
+              </div>
             </div>
           </div>
-        </div>
 
-      </div><!-- .col -->
+        </div><!-- .col -->
 
-      <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4">
 
-        <div class="card">
-          <h4 class="card-header bg-warning"><b>To Publish Now…</b></h4>
+          <div class="card">
+            <h4 class="card-header bg-warning"><b>To Publish Now…</b></h4>
 
-          <div class="card-body">
-            <p class="card-text">
-              If you want to publish this article <b>right now</b>, you can with one click.
-              If you click the <b class="text-success">Publish NOW!</b> button, the
-              <code>published at</code> will be set to now and the <code>publication status</code>
-              will be set to <i>Published</i>. This article will show immediately show up in
-              the homepage feed.
+            <div class="card-body">
+              <p class="card-text">
+                If you want to publish this article <b>right now</b>, you can with one click.
+                If you click the <b>Publish NOW!</b> button, the <code>published_at</code>
+                will be set to now and the <code>publication_status</code> will be set to
+                <i>Published</i>. This article will immediately show up in
+                the homepage feed.
 
-              <noscript><p><b>Requires Javascript</b> to be turned on to work.</p></noscript>
-            </p>
+                <noscript><p><b>Requires Javascript</b> to be turned on to work.</p></noscript>
+              </p>
 
-            <div class="text-right">
-              <%= link_to "Publish NOW!", "#", id: "publish-now", class: "btn btn-warning btn-lg" %>
+              <div class="text-right">
+                <%= link_to "Publish NOW!", "#", id: "publish-now", class: "btn btn-warning btn-lg" %>
+              </div>
             </div>
           </div>
-        </div>
 
-      </div><!-- .col -->
-    </div><!-- .row -->
+        </div><!-- .col -->
+      </div><!-- .row -->
 
-  <% else %>
-    <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
-  <% end %>
+    <% else %>
+      <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
+    <% end %>
 
-    <div class="row mt-5">
+    <%= render "admin/articles/back_to_top" %>
+  </div><!-- #datetime -->
+
+  <div id="categorization" class="row pt-5">
     <div class="col-12 col-sm-6">
-    <% unless @collection.present? %>
+      <% unless @collection.present? %>
         <fieldset id="categories">
-          <label>Categories</label>
+          <label class="h4">Categories</label>
 
           <div class="form-group">
-          <% Category.all.in_groups_of(2).each do |group| %>
+            <% Category.all.in_groups_of(2).each do |group| %>
+
               <div class="row">
-                  <% group.each do |category| %>
-                      <div class="col-6">
-                        <% if category.present? %>
-                            <div class="checkbox">
-                              <%= f.label "category_ids_#{category.id}" do %>
-                                  <%= f.check_box :category_ids, {id: "article_category_ids_#{category.id}", name: "article[category_ids][]"}, category.id, nil %>
-                                  <%= category.name %>
-                              <% end %>
-                            </div>
+                <% group.each do |category| %>
+                  <div class="col-6">
+                    <% if category.present? %>
+                      <div class="checkbox">
+                        <%= f.label "category_ids_#{category.id}" do %>
+                          <%= f.check_box :category_ids,
+                                          {
+                                            id: "article_category_ids_#{category.id}",
+                                            name: "article[category_ids][]"
+                                          },
+                                          category.id,
+                                          nil %>
+                          <%= category.name %>
                         <% end %>
                       </div>
-                  <% end %>
-              </div>
-          <% end %>
-          </div>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div><!-- .row -->
+
+            <% end %>
+          </div><!-- .form-group -->
         </fieldset>
-    <% end %>
+      <% end %>
+    </div><!-- .col -->
+
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :tags, "Tags", class: "h4" %>
+        <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
+        <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
       </div>
 
-      <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :tags %>
-          <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
-          <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
-        </div>
-      </div>
-    </div>
+      <hr class="my-5">
 
-  <% unless @collection.present? %>
-    <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
-  <% end %>
-
-  <fieldset id="meta">
-    <legend>Meta</legend>
-    <div class="row">
       <% unless @collection.present? %>
-        <div class="col-12 col-sm-4">
-          <div class="form-group">
-            <%= f.label :slug, "URL Slug" %>
-            <%= f.text_field :slug, class: "form-control form-control-lg" %>
-
-            <p class="form-text text-muted">
-              <b>Leave this blank.</b> It will be autogenerated.
-              If you update the title/subtitle while in draft mode,
-              blank this out again to re-generate.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-4">
-          <div class="form-group">
-            <%= f.label :short_path, "Short URL Path" %>
-            <%= f.text_field :short_path, class: "form-control form-control-lg" %>
-          </div>
+        <div class="form-group">
+          <%= f.label :short_path, "Short URL Path", class: "h6" %>
+          <%= f.text_field :short_path, class: "form-control form-control-lg" %>
         </div>
       <% end %>
 
-      <div class="col-12 col-sm-4">
-        <div class="form-group">
-          <%= f.label :status_id, "Publication Status" %>
-          <%= f.select :status_id,
-                       Status.options_for_select,
-                       { selected: @article.status.try(:id) },
-                       class: "form-control form-control-lg" %>
-        </div>
+      <div class="form-group">
+        <%= f.label :status_id, "Publication Status", class: "h6" %>
+        <%= f.select :status_id,
+                     Status.options_for_select,
+                     { selected: @article.status.try(:id) },
+                     class: "form-control form-control-lg" %>
       </div>
-    </div>
+    </div><!-- .col -->
 
-    <% unless @collection.present? %>
-      <div class="row">
-        <div class="col-12 col-sm-6">
-          <div class="form-group sr-only">
-            <%= f.label :content_format, "Content Format" %>
+    <%= render "admin/articles/back_to_top" %>
+  </div><!-- #categorization.row -->
 
-            <div class="radio">
-              <label>
-                <%= f.radio_button :content_format, "html" %>
-                HTML
-              </label>
-            </div>
-
-            <div class="radio">
-              <label>
-                <%= f.radio_button :content_format, "kramdown" %>
-                Markdown
-              </label>
-            </div>
-
-            <p class="form-text text-muted">
-              Defaults to <b>Markdown</b>. Only change to <b>HTML</b> if you know what you&rsquo;re doing.
-            </p>
-          </div>
-        </div>
-      </div> <!-- .row -->
-    <% end %>
-  </fieldset>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
-  <fieldset id="syndication">
-    <legend>Syndication</legend>
-    <div class="row">
-      <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :tweet %>
-          <%= f.text_area :tweet, class: "form-control form-control-lg", data: { 'max-length': '115', 'feedback-box': 'tweet-length' } %>
-          <div id="tweet-length"></div>
-          <p class="form-text text-muted">
-            Maximum 115 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
-            Used for syndicated tweet for this Article.
-          </p>
-        </div>
-      </div>
 
-      <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :summary %>
-          <%= f.text_area :summary, class: "form-control form-control-lg", data: { 'max-length': '200', 'feedback-box': 'summary-length' } %>
-          <div id="summary-length"></div>
-          <p class="form-text text-muted">
-            Maximum 200 characters.
-            Used for page description and previews in story cards on other sites.
-          </p>
+  <div id="syndication" class="pt-5">
+    <fieldset>
+      <legend>Syndication</legend>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <div class="form-group">
+            <%= f.label :tweet %>
+            <%= f.text_area :tweet, class: "form-control form-control-lg", data: { 'max-length': '115', 'feedback-box': 'tweet-length' } %>
+            <div id="tweet-length"></div>
+            <p class="form-text text-muted">
+              Maximum 115 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
+              Used for syndicated tweet for this Article.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6">
+          <div class="form-group">
+            <%= f.label :summary %>
+            <%= f.text_area :summary, class: "form-control form-control-lg", data: { 'max-length': '200', 'feedback-box': 'summary-length' } %>
+            <div id="summary-length"></div>
+            <p class="form-text text-muted">
+              Maximum 200 characters.
+              Used for page description and previews in story cards on other sites.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </fieldset>
+    </fieldset>
+
+    <%= render "admin/articles/back_to_top" %>
+  </div><!-- #syndication -->
 
   <% unless @collection.present? %>
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
   <% end %>
 
-  <fieldset id="appearance">
+
+  <div id="appearance" class="py-5">
+    <fieldset>
     <legend>Appearance</legend>
 
     <div class="row">
@@ -244,23 +235,8 @@
       <div class="row">
         <div class="col-12 col-sm-6">
           <div class="form-group">
-            <%= f.label :css, "Article Specific CSS" %>
-            <%= f.text_area :css, class: "form-control form-control-lg", rows: 20 %>
-            <p class="form-text text-muted">
-              <% if @article.new_record? %>
-              After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
-              <% else %>
-              Prefix your CSS selectors with <b><code>#article-<%= @article.slug %></code></b> to scope your styles to just this <i>Article</i>.
-              For example, <code>#article-<%= @article.slug %> b { background: green }</code>.
-              <% end %>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6">
-          <div class="form-group">
             <%= f.check_box :header_shadow_text %>
-            <%= f.label :header_shadow_text, "Header Shadow Text" %>
+            <%= f.label :header_shadow_text, "Apply Shadow to Header Text?" %>
             <p class="form-text text-muted">
               If selected, the title and subtile in the header will have a drop-shadow.
               This is useful for images that are over light, or have some white spots
@@ -294,42 +270,51 @@
             </p>
           </div>
 
+        </div>
+
+        <div class="col-12 col-sm-6">
           <div class="form-group">
-            <%= f.check_box :hide_layout %>
-            <%= f.label :hide_layout, "Hide the Site Layout?" %>
+            <%= f.label :css, "Article Specific CSS" %>
+            <%= f.text_area :css, class: "form-control form-control-lg", rows: 10 %>
             <p class="form-text text-muted">
-              <b class="text-danger">Danger Zone&trade; &mdash; exercise caution with this option.</b>
-              The will remove all of the wrapper layout.
-              This <i>Article</i> will be responsible for <i>all</i> of its HTML,
-              including <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,
-              <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code> tags etc.
-              Any <code>CSS</code> will have to be included in the
-              <code>Content</code>, not the <code>Article Specific CSS</code>.
+              <% if @article.new_record? %>
+              After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
+              <% else %>
+              Prefix your CSS selectors with <b><code>#article-<%= @article.slug %></code></b> to scope your styles to just this <i>Article</i>.
+              For example, <code>#article-<%= @article.slug %> b { background: green }</code>.
+              <% end %>
             </p>
           </div>
-
         </div>
       </div>
     <% end %>
   </fieldset>
 
-  <% unless @collection.present? %>
-    <fieldset id="alternates">
-      <legend>Alternates</legend>
+    <%= render "admin/articles/back_to_top" %>
+  </div><!-- #appearance -->
 
-      <div class="row">
-        <div class="col-12">
-          <div class="form-group">
-            <%= f.label :download_url, "PDF Download URL" %>
-            <%= f.url_field :download_url, class: "form-control form-control-lg" %>
-            <p class="form-text text-muted">
-              This is the URL of a downloadable / printable PDF of this Article.
-            </p>
+
+  <div id="alternates" class="py-5">
+    <% unless @collection.present? %>
+      <fieldset>
+        <legend>Alternates</legend>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <%= f.label :download_url, "PDF Download URL" %>
+              <%= f.url_field :download_url, class: "form-control form-control-lg" %>
+              <p class="form-text text-muted">
+                This is the URL of a downloadable / printable PDF of this Article.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </fieldset>
-  <% end %>
+      </fieldset>
+    <% end %>
+
+    <%= render "admin/articles/back_to_top" %>
+  </div><!-- #alternates -->
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 <% end %>

@@ -18,6 +18,7 @@ class Admin::ArticlesController < Admin::AdminController
     end
     @title = admin_title(@article, [:title, :subtitle])
     @html_id = "admin-article"
+    @body_id = "top"
   end
 
   # /admin/articles/new
