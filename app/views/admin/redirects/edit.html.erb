@@ -1,2 +1,7 @@
 <%= render "admin/page_header", thing:    @redirect %>
 <%= render "form",              redirect: @redirect %>
+
+<%= render "admin/danger_zone",
+           thing: @redirect,
+           label: "redirect",
+           path: [:admin, @redirect] %>

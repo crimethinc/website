@@ -1,4 +1,6 @@
 class Redirect < ApplicationRecord
+  belongs_to :article
+
   before_validation :strip_leading_domain_from_source_path, on: [:create, :update]
   before_validation :strip_leading_domain_from_target_path, on: [:create, :update]
   before_validation :add_leading_slash,                     on: [:create, :update]

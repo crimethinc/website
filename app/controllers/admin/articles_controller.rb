@@ -47,6 +47,7 @@ class Admin::ArticlesController < Admin::AdminController
     if @article.save
       redirect_to [:admin, @article], notice: "Article was successfully created."
     else
+      set_statuses
       render :new
     end
   end
@@ -57,6 +58,7 @@ class Admin::ArticlesController < Admin::AdminController
       redirect_to [:admin, @article], notice: "Article was successfully updated."
     else
       set_contribution_options
+      set_statuses
       render :edit
     end
   end

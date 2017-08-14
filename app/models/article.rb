@@ -75,22 +75,34 @@ class Article < ApplicationRecord
     self.content_format = self.content_format.downcase
   end
 
-  def update_or_create_redirect
-    unless short_path.blank?
-      if redirect.present?
-        if short_path_changed? || slug_changed? || published_at_changed?
-          redirect.update_attributes(source_path: self.short_path, target_path: self.path )
-        end
-      elsif Redirect.where(source_path: "/"+self.short_path).exists?
-        errors.add(:short_path, ' is a path that already points to a redirect.')
-      else
-        Redirect.create(source_path: short_path, target_path: path, article_id: id)
-      end
-    end
-  end
-
   def normalize_newlines
     tweet.gsub!("\r\n", "\n") if tweet.present?
     summary.gsub!("\r\n", "\n") if summary.present?
+  end
+
+  def update_or_create_redirect
+    if short_path.present?
+
+      if redirect.present?
+        if short_path_changed? || slug_changed? || published_at_changed? || status_id_changed?
+          # redirect.update_attributes(source_path: "/" + self.short_path, target_path: self.path )
+
+          redirect.source_path = "/" + self.short_path
+          redirect.target_path = self.path
+          redirect.save(validate: false)
+        end
+      elsif Redirect.where(source_path: "/" + self.short_path).exists?
+        errors.add(:short_path, ' is a path that already points to a redirect.')
+      else
+        puts "in else"
+        puts self.status.name
+        puts "*"*80
+        if self.status.name == "published"
+          r = Redirect.new(source_path: "/" + self.short_path, target_path: path, article_id: id)
+          r.save(validate: false)
+        end
+      end
+    end
+
   end
 end
