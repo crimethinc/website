@@ -44,7 +44,7 @@
 
 
   <div id="datetime" class="py-5">
-    <% if @article.new_record? || (true) %>
+    <% if @article.new_record? || (@article.status.present? && !@article.published?) %>
       <div class="row">
         <div class="col-12 col-lg-8">
 
