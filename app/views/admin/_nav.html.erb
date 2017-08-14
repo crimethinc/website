@@ -5,14 +5,20 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <%= link_to "Admin Dashboard", admin_path, class: "navbar-brand" %>
+      <%= link_to "ADMIN", admin_path, class: "navbar-brand" %>
 
 
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to [:new, :admin, :article] do %>
+              <span class=" btn btn-light mr-3">New Article</span>
+            <% end %>
+          </li>
+
           <li class="nav-item dropdown">
             <%= link_to "#", class: "nav-link dropdown-toggle", data: {toggle: "dropdown"}, role: "button", aria: {haspopup: "true", expanded: "false"} do %>
-                Content <span class="caret"></span>
+              Content <span class="caret"></span>
             <% end %>
 
             <ul class="dropdown-menu">
@@ -34,12 +40,11 @@
           </li>
 
           <li class="nav-item"><%= link_to "Articles", [:admin, :articles], class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Pages", [:admin, :pages], class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Redirects",  [:admin, :redirects], class: "nav-link" %></li>
 
           <li class="dropdown nav-item">
             <%= link_to "#", class: "nav-link dropdown-toggle", data: {toggle: "dropdown"}, role: "button", aria: {haspopup: "true", expanded: "false"} do %>
-                Site Settings <span class="caret"></span>
+              Site Settings <span class="caret"></span>
             <% end %>
 
             <ul class="dropdown-menu">
