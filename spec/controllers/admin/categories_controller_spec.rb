@@ -66,7 +66,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
         category = create(:category)
         get :show, params: {id: category.id}
 
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(302)
         expect(assigns[:category]).to eq(category)
       end
     end
