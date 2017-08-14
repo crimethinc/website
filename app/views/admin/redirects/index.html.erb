@@ -1,5 +1,51 @@
 <%= render "admin/page_header", thing: @redirects %>
 
+
+<% if params[:from].present? or params[:to].present? %>
+  <h2>
+    <small class="text-muted">Search results for</small>
+
+    <% if params[:from].present? %>
+      FROM: <%= params[:from] %>
+    <% end %>
+    <% if params[:to].present? %>
+      TO: <%= params[:to] %>
+    <% end %>
+  </h2>
+
+  <div class="my-3">
+    <%= link_to "Clear search form and view all Redirects", [:admin, :redirects], class: "btn btn-light border-secondary btn-sm" %>
+  </div>
+<% end %>
+
+
+<div class="row my-5">
+  <div class="col">
+    <%= form_tag [:admin, :redirects], method: "get" do %>
+      <div class="form-group">
+        <%= text_field_tag :from, params[:from], class: "form-control form-control-lg", placeholder: "FROM" %>
+      </div>
+
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col">
+    <%= form_tag [:admin, :redirects], method: "get" do %>
+      <div class="form-group">
+        <%= text_field_tag :to, params[:to], class: "form-control form-control-lg", placeholder: "TO" %>
+      </div>
+
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
 <table class="table table-striped table-sm mb-5">
   <thead class="thead-inverse">
     <tr>

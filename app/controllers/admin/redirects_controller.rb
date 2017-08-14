@@ -2,29 +2,44 @@ class Admin::RedirectsController < Admin::AdminController
   before_action :authorize
   before_action :set_redirect, only: [:show, :edit, :update, :destroy]
 
-  # /admin/redirects
   def index
-    @redirects = Redirect.order(:source_path).page(params[:page])
+
+    if params[:from].present?
+      from = params[:from].strip.sub(%r{https*://}, "").sub(%r{cwc.im|crimethinc.com}, "")
+
+      @redirects = Redirect.order(:source_path).where(source_path: from).page(params[:page])
+
+      if @redirects.blank?
+        @redirects = Redirect.order(:source_path).where(source_path: "/#{from}").page(params[:page])
+      end
+    elsif params[:to].present?
+      to = params[:to].strip.sub(%r{https*://}, "").sub(%r{cwc.im|crimethinc.com}, "")
+
+      @redirects = Redirect.order(:source_path).where(target_path: to).page(params[:page])
+
+      if @redirects.blank?
+        @redirects = Redirect.order(:source_path).where(target_path: "/#{to}").page(params[:page])
+      end
+    else
+      @redirects = Redirect.order(:source_path).page(params[:page])
+    end
+
     @title = admin_title
   end
 
-  # /admin/redirects/1
   def show
     @title = admin_title(@redirect, [:source_path])
   end
 
-  # /admin/redirects/new
   def new
     @redirect = Redirect.new
     @title = admin_title
   end
 
-  # /admin/redirects/1/edit
   def edit
     @title = admin_title(@redirect, [:id, :source_path])
   end
 
-  # /admin/redirects
   def create
     @redirect = Redirect.new(redirect_params)
 
@@ -35,7 +50,6 @@ class Admin::RedirectsController < Admin::AdminController
     end
   end
 
-  # /admin/redirects/1
   def update
     if @redirect.update(redirect_params)
       redirect_to [:admin, @redirect], notice: 'Redirect was successfully updated.'
@@ -44,20 +58,18 @@ class Admin::RedirectsController < Admin::AdminController
     end
   end
 
-  # /admin/redirects/1
   def destroy
     @redirect.destroy
     redirect_to [:admin, :redirects], notice: 'Redirect was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_redirect
-      @redirect = Redirect.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def redirect_params
-      params.require(:redirect).permit(:source_path, :target_path, :temporary)
-    end
+  def set_redirect
+    @redirect = Redirect.find(params[:id])
+  end
+
+  def redirect_params
+    params.require(:redirect).permit(:source_path, :target_path, :temporary)
+  end
 end
