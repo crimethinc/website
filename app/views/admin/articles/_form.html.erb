@@ -102,25 +102,26 @@
         <fieldset id="categories">
           <label class="h4">Categories</label>
 
-          <div class="form-group">
+          <div class="form-check">
             <% Category.all.in_groups_of(2).each do |group| %>
 
               <div class="row">
                 <% group.each do |category| %>
                   <div class="col-6">
                     <% if category.present? %>
-                      <div class="checkbox">
-                        <%= f.label "category_ids_#{category.id}" do %>
-                          <%= f.check_box :category_ids,
-                                          {
-                                            id: "article_category_ids_#{category.id}",
-                                            name: "article[category_ids][]"
-                                          },
-                                          category.id,
-                                          nil %>
-                          <%= category.name %>
-                        <% end %>
-                      </div>
+
+                      <%= f.label "category_ids_#{category.id}" do %>
+                        <%= f.check_box :category_ids,
+                                        {
+                                          id: "article_category_ids_#{category.id}",
+                                          name: "article[category_ids][]"
+                                        },
+                                        category.id,
+                                        nil %>
+
+                        <b><%= category.name %></b>
+                      <% end %>
+
                     <% end %>
                   </div>
                 <% end %>
@@ -143,17 +144,28 @@
 
       <% unless @collection.present? %>
         <div class="form-group">
-          <%= f.label :short_path, "Short URL Path", class: "h6" %>
+          <%= f.label :short_path, "Short URL Path" %>
           <%= f.text_field :short_path, class: "form-control form-control-lg" %>
         </div>
       <% end %>
 
-      <div class="form-group">
-        <%= f.label :status_id, "Publication Status", class: "h6" %>
-        <%= f.select :status_id,
-                     Status.options_for_select,
-                     { selected: @article.status.try(:id) },
-                     class: "form-control form-control-lg" %>
+      <div class="form-check">
+        <%= f.label :status_id, "Publication Status" %><br>
+
+        <span class="d-inline-block mr-3">
+          <%= f.label :status_id_draft do %>
+            <%= f.radio_button :status_id, @draft.id, id: :article_status_id_draft %>
+            <b>Draft</b>
+          <% end %>
+        </span>
+
+        <span class="d-inline-block">
+          <%= f.label :status_id_published do %>
+            <%= f.radio_button :status_id, @published.id, id: :article_status_id_published %>
+            <b>Published</b>
+          <% end %>
+        </span>
+
       </div>
     </div><!-- .col -->
 
@@ -234,9 +246,12 @@
 
       <div class="row">
         <div class="col-12 col-sm-6">
-          <div class="form-group">
-            <%= f.check_box :header_shadow_text %>
-            <%= f.label :header_shadow_text, "Apply Shadow to Header Text?" %>
+          <div class="form-check">
+            <%= f.label :header_shadow_text do %>
+              <%= f.check_box :header_shadow_text %>
+              Apply Shadow to Header Text?
+            <% end %>
+
             <p class="form-text text-muted">
               If selected, the title and subtile in the header will have a drop-shadow.
               This is useful for images that are over light, or have some white spots

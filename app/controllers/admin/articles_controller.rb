@@ -1,6 +1,7 @@
 class Admin::ArticlesController < Admin::AdminController
   before_action :authorize
   before_action :set_article,              only: [:show, :edit, :update, :destroy]
+  before_action :set_statuses,             only: [:new, :edit]
   before_action :set_contribution_options, only: [:new, :edit]
   after_action  :organize_article,         only: [:create, :update]
 
@@ -84,6 +85,11 @@ class Admin::ArticlesController < Admin::AdminController
   def set_contribution_options
     @contributors = Contributor.order(:name)
     @roles        = Role.order(:name)
+  end
+
+  def set_statuses
+    @draft     = Status.find_by(name: "draft")
+    @published = Status.find_by(name: "published")
   end
 
   def organize_article
