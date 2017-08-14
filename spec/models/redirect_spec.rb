@@ -6,7 +6,7 @@ RSpec.describe Redirect, type: :model do
 
     subject { redirect.name }
 
-    it { is_expected.to eq("/source to /target") }
+    it { is_expected.to eq("/source") }
   end
 
   describe "#add_leading_slash" do

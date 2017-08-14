@@ -9,7 +9,7 @@ RSpec.describe RedirectsHelper, type: :helper do
 
       it { is_expected.to match("TEMPORARY") }
       it { is_expected.to match("302") }
-      it { is_expected.to match("label-success") }
+      it { is_expected.to match("badge-warning") }
     end
 
     context "with permanent redirect" do
@@ -17,7 +17,7 @@ RSpec.describe RedirectsHelper, type: :helper do
 
       it { is_expected.to match("PERMANENT") }
       it { is_expected.to match("301") }
-      it { is_expected.to match("label-default") }
+      it { is_expected.to match("badge-success") }
     end
   end
 end
