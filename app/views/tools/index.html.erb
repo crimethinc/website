@@ -14,7 +14,7 @@
 
     <hr>
 
-      <% [:zines, :posters, :stickers, :logos].each do |type| %>
+      <% [:zines, :posters, :stickers, :logos, :videos].each do |type| %>
         <div class="product-section">
           <h1 class="p-name"><%= link_to type.capitalize, [type] %></h1>
           <%= render_markdown t("views.products.#{type}_intro_text") %>
