@@ -68,6 +68,7 @@ feature "Setting and changing an articles published_at date" do
 
     within('#datetime') { click_on 'Publish NOW!' }
 
+    expect(page).to have_content 'Article was successfully created'
     article = Article.last
 
     # rough approximation of 'now'
