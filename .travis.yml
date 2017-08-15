@@ -5,3 +5,10 @@ sudo: false
 script: ./script/cibuild
 addons:
   postgresql: "9.6"
+  chrome: "stable"
+before_install:
+  - mkdir -p ~/drivers; export PATH=~/drivers:$PATH;
+  - CHROMEDRIVER_VERSION=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE);
+    CHROMEDRIVER_URL="http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip";
+    FILE=`mktemp`; wget "$CHROMEDRIVER_URL" -qO $FILE && unzip $FILE chromedriver -d ~/drivers; rm $FILE; chmod 777 ~/drivers/chromedriver;
+    ~/drivers/chromedriver --version;
