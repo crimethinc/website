@@ -230,7 +230,7 @@ GEM
     scenic (1.4.0)
       activerecord (>= 4.0.0)
       railties (>= 4.0.0)
-    selenium-webdriver (3.4.4)
+    selenium-webdriver (3.5.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
     shellany (0.0.1)
