@@ -32,7 +32,7 @@ class Admin::UsersController < Admin::AdminController
 
   # /admin/users/edit/1
   def edit
-    @title = admin_title(@user, [:id, :name])
+    @title = admin_title(@user, [:id, :username])
   end
 
   # /admin/users/edit/1
@@ -56,10 +56,6 @@ class Admin::UsersController < Admin::AdminController
   end
 
   def user_params
-    params.require(:user).permit(:username,
-                                 :email,
-                                 :password,
-                                 :password_confirmation,
-                                 :display_name)
+    params.require(:user).permit(:username, :password, :password_confirmation)
   end
 end

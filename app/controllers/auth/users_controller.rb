@@ -47,10 +47,6 @@ class Auth::UsersController < Admin::AdminController
   end
 
   def user_params
-    params.require(:user).permit(:username,
-                                 :email,
-                                 :password,
-                                 :password_confirmation,
-                                 :display_name)
+    params.require(:user).permit(:username, :password, :password_confirmation)
   end
 end

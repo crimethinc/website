@@ -4,9 +4,7 @@
   <thead class="thead-inverse">
     <tr>
       <th></th>
-      <th>Name</th>
       <th>Username</th>
-      <th>Email</th>
     </tr>
   </thead>
 
@@ -16,9 +14,7 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, user], class: "btn btn-light border-secondary btn-sm" %>
         </td>
-        <td><%= user.name %></td>
         <td><b><%= user.username %></b></td>
-        <td><%= mail_to user.email, user.email %></td>
       </tr>
     <% end %>
   </tbody>

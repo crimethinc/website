@@ -21,11 +21,11 @@ class User < ActiveRecord::Base
 
   class << self
     def options_for_select
-      User.all.map { |u| ["@#{u.username} (#{u.name})", u.id] }
+      User.all.map { |u| [u.username, u.id] }
     end
   end
 
   def name
-    display_name || username
+    username
   end
 end

@@ -3,17 +3,6 @@
 <%= form_for [:auth, @user] do |f| %>
   <%= render "admin/form_errors", thing: @user %>
 
-  <div class="form-group">
-    <%= f.label :display_name, "Name" %>
-    <%= f.text_field :display_name, class: "form-control form-control-lg" %>
-    <p class="form-text text-muted">Visible by anyone in multiple places (post authorship, site footer, meta tags, etc)</p>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :email %>
-    <%= f.text_field :email, class: "form-control form-control-lg" %>
-  </div>
-
   <fieldset>
     <legend>Change Your Password</legend>
 
