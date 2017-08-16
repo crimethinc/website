@@ -5,8 +5,6 @@ end
 if Rails.env.development?
   test_user = User.new(
                 username:              "tester",
-                display_name:          "A Tester Account",
-                email:                 "test@example.com",
                 password:              "a long passphrase to meet the minimum length",
                 password_confirmation: "a long passphrase to meet the minimum length")
   test_user.save!(validate: false)
