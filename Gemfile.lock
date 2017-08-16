@@ -117,9 +117,10 @@ GEM
     kramdown (1.14.0)
     launchy (2.4.3)
       addressable (~> 2.3)
-    listen (3.0.8)
+    listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.12)
@@ -214,6 +215,7 @@ GEM
       rspec-mocks (~> 3.6.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    ruby_dep (1.5.0)
     rubypants (0.6.0)
     rubyzip (1.2.1)
     sass (3.5.1)
@@ -299,7 +301,7 @@ DEPENDENCIES
   kaminari
   kramdown
   launchy
-  listen (~> 3.0.5)
+  listen (~> 3.1.5)
   markdown_media
   memory_profiler
   new_relic_ping
