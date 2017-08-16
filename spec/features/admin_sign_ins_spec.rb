@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "Signing in as an admin" do
   background do
-    create(:user, username: 'user1', email: 'user@example.com', password: 'c'*31)
+    create(:user, username: 'user1', password: 'c'*31)
   end
 
   scenario "Signing in with correct credentials"  do
