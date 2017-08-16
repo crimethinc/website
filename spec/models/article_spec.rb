@@ -39,42 +39,42 @@ describe Article do
     subject { article.path }
 
     context "published" do
-      let(:article) { FactoryGirl.create(:article, slug: "slug", published_at: date, status: status) }
+      let(:article) { create(:article, slug: "slug", published_at: date, status: status) }
       let(:date)    { Date.parse("2017-01-01") }
-      let(:status)  { FactoryGirl.create(:status) }
+      let(:status)  { create(:status, :published) }
 
       it { is_expected.to eq("/2017/01/01/slug") }
     end
 
     context "not published" do
-      let(:article) { FactoryGirl.create(:article, draft_code: "draft-code", status: status) }
-      let(:status)  { FactoryGirl.create(:status, name: "draft") }
+      let(:article) { create(:article, draft_code: "draft-code", status: status) }
+      let(:status)  { create(:status, :draft) }
 
       it { is_expected.to eq("/drafts/articles/draft-code") }
     end
   end
 
   describe "#slug_exists?" do
-    let(:status)  { FactoryGirl.create(:status) }
+    let(:status)  { create(:status, :published) }
     let(:article) { Article.new(slug: "slug", published_at: date, short_path: SecureRandom.hex, status: Status.last) }
     let(:date)    { Date.parse("2017-01-01") }
 
     subject { article.slug_exists? }
 
     context "with the same slug on the same date" do
-      before { FactoryGirl.create(:article, slug: "slug", published_at: date, status: status) }
+      before { create(:article, slug: "slug", published_at: date, status: status) }
 
       it { is_expected.to be true }
     end
 
     context "with the same slug on a different date" do
-      before { FactoryGirl.create(:article, slug: "slug", published_at: date + 1.day, status: status) }
+      before { create(:article, slug: "slug", published_at: date + 1.day, status: status) }
 
       it { is_expected.to be false }
     end
 
     context "with a unique slug" do
-      before { FactoryGirl.create(:article, slug: "another-slug", published_at: date, status: status) }
+      before { create(:article, slug: "another-slug", published_at: date, status: status) }
 
       it { is_expected.to be false }
     end
@@ -100,30 +100,30 @@ describe Article do
   # end
 
   describe "#collection_posts" do
-    let(:status)  { FactoryGirl.create(:status) }
+    let(:status)  { create(:status) }
     let(:published_at) { Date.current }
     it "finds related collection_posts by collection_id" do
-      collection = FactoryGirl.create(:article, title: 'test', status: status, published_at: published_at)
-      article = FactoryGirl.create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
+      collection = create(:article, title: 'test', status: status, published_at: published_at)
+      article = create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
 
       expect(collection.collection_posts).to include article
     end
   end
 
   describe "collection_root?" do
-    let(:status)  { FactoryGirl.create(:status) }
+    let(:status)  { create(:status) }
     let(:published_at) { Date.current }
     context "when #collection_posts exists" do
       it "returns true" do
-        collection = FactoryGirl.create(:article, title: 'test', status: status, published_at: published_at)
-        article = FactoryGirl.create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
+        collection = create(:article, title: 'test', status: status, published_at: published_at)
+        article = create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
 
         expect(collection.collection_root?).to eq true
       end
     end
     context "when zero #collection_posts exist" do
       it "returns false" do
-        article = FactoryGirl.create(:article, title: 'test', status: status, published_at: published_at)
+        article = create(:article, title: 'test', status: status, published_at: published_at)
 
         expect(article.collection_root?).to eq false
       end
@@ -131,19 +131,19 @@ describe Article do
   end
 
   describe "in_collection?" do
-    let(:status)  { FactoryGirl.create(:status) }
+    let(:status)  { create(:status) }
     let(:published_at) { Date.current }
     context "when it has a collection_id" do
       it "returns true" do
-        collection = FactoryGirl.create(:article, title: 'test', status: status, published_at: published_at)
-        article = FactoryGirl.create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
+        collection = create(:article, title: 'test', status: status, published_at: published_at)
+        article = create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
 
         expect(article.in_collection?).to eq true
       end
     end
     context "when collection_id is nil" do
       it "returns false" do
-        article = FactoryGirl.create(:article, title: 'test', status: status, published_at: published_at)
+        article = create(:article, title: 'test', status: status, published_at: published_at)
 
         expect(article.in_collection?).to eq false
       end
@@ -151,11 +151,11 @@ describe Article do
   end
 
   describe "short_path_redirect_creation" do
-    let(:status)  { FactoryGirl.create(:status) }
+    let(:status)  { create(:status) }
     let(:published_at) { Date.current }
     context "successfull creates a short_path redirect" do
       it "returns true" do
-        article = FactoryGirl.create(:article, title: 'test', status: status, published_at: published_at)
+        article = create(:article, title: 'test', status: status, published_at: published_at)
         # expect(Redirect.last.source_path[/\w+/]).to eq article.short_path
       end
     end
