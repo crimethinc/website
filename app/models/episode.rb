@@ -18,7 +18,12 @@ class Episode < ApplicationRecord
   end
 
   def episode_id_in_podcast
-    podcast.episodes.reverse.find_index(self) + 1
+    index_in_podcast = podcast.episodes.reverse.find_index(self)
+    if index_in_podcast.blank?
+      1
+    else
+      index_in_podcast + 1
+    end
   end
 
   def generate_slug
