@@ -7,17 +7,22 @@
 
 .nav-link {
   font-size: 1.7rem;
+  letter-spacing: .05em;
   text: {
     align: center;
-    transform: uppercase;
+    transform: lowercase;
   }
-  width: 33.333333333333%;
+  width: 20%;
 
   a {
     display: block;
     padding: 1em 0;
     text-decoration: none;
     transition: background-color 250ms;
+
+    @media screen and (max-width: $small-tablet) {
+      padding: .5em 0;
+    }
 
     &:link, &:visited {
       color: $color-white;

@@ -26,6 +26,11 @@
   @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 15rem, 3rem);
   @include size(15rem, 3rem);
   display: block;
+
+  @media screen and (max-width: $small-tablet) {
+    @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 10rem, 2rem);
+    @include size(10rem, 2rem);
+  }
 }
 
 .bulb-and-bones-logo {
@@ -33,7 +38,10 @@
   @include size(3rem, 3rem);
   display: block;
 
-  @media screen and (min-width: $small-tablet) {
+  @media screen and (max-width: $small-tablet) {
     margin-left: 122px;
+    display: none;
+//    @include image-replacement-graphic("icons/icon-120x120.png", "icons/icon-120x120.png", 2rem, 2rem);
+//    @include size(2rem, 2rem);
   }
 }
