@@ -20,10 +20,6 @@
     text-decoration: none;
     transition: background-color 250ms;
 
-    @media screen and (max-width: $small-tablet) {
-      padding: .5em 0;
-    }
-
     &:link, &:visited {
       color: $color-white;
     }
@@ -31,6 +27,15 @@
     &:hover, &:active {
       background-color: $color-white;
       color: $color-true-black;
+    }
+
+    @media screen and (max-width: $small-tablet) {
+      padding: 0 0 .5em 0;
+
+      &:hover, &:active {
+        background-color: $color-true-black;
+        color: $color-white;
+      }
     }
   }
 }
