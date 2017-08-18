@@ -1,6 +1,7 @@
 class Admin::EpisodesController < Admin::AdminController
   before_action :authorize
-  before_action :set_episode, only: [:show, :edit, :update, :destroy]
+  before_action :set_episode,      only: [:show, :edit, :update, :destroy]
+  before_action :set_published_at, only: [:create, :update]
 
   # /admin/episodes
   def index
@@ -59,6 +60,6 @@ class Admin::EpisodesController < Admin::AdminController
     params.require(:episode).permit(:podcast_id, :title, :subtitle, :image, :content,
       :audio_mp3_url, :audio_mp3_file_size, :audio_ogg_url,
       :audio_ogg_file_size, :show_notes, :transcript, :audio_length,
-      :duration, :audio_type, :tags, :published_at)
+      :duration, :audio_type, :tags, :published_at, :published_at_tz)
   end
 end

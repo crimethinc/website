@@ -16,42 +16,60 @@ feature "Setting and changing an articles published_at date" do
     click_on 'NEW'
 
     within '#publication_datetime' do
-      select('2018', from: 'article_published_at_1i')
-      select('12 - December', from: 'article_published_at_2i')
-      select('24', from: 'article_published_at_3i')
-      select('11', from: 'article_published_at_4i')
-      select('59', from: 'article_published_at_5i')
+      fill_in 'publication_date', with: "2018-12-24"
+      fill_in 'publication_time', with: "11:59:00"
+      select('UTC', from: 'article_published_at_tz')
     end
 
     within('#publication_status') { choose 'Draft' }
 
     find_button('Save', match: :first).click
 
+    expect(page).to have_content 'Article was successfully created'
     article = Article.first
-    expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
   end
 
   scenario "updating an existing article" do
     article = create(:article, published_at: Time.parse('2018-12-24 11:59:00 UTC'))
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
+    expect(article.published_at_tz).to eq('Pacific Time (US & Canada)')
 
     login_user(admin)
 
     click_on 'EDIT'
     within '#publication_datetime' do
-      select('2018', from: 'article_published_at_1i')
-      select('12 - December', from: 'article_published_at_2i')
-      select('26', from: 'article_published_at_3i')
-      select('22', from: 'article_published_at_4i')
-      select('59', from: 'article_published_at_5i')
+      # make sure pre-fills are right
+      expect(find_field('published_at_date').value).to eq '2018-12-24'
+      expect(find_field('published_at_time').value).to eq '03:59:00'
+      expect(find_field('article_published_at_tz').value).to eq 'Pacific Time (US & Canada)'
+
+      fill_in 'publication_date', with: "2018-12-26"
+      fill_in 'publication_time', with: "22:59:00"
+      select('UTC', from: 'article_published_at_tz')
     end
 
     within('#publication_status') { choose 'Draft' }
 
     find_button('Save', match: :first).click
 
+    expect(page).to have_content 'Article was successfully updated'
     expect(article.reload.published_at.utc).to eq('2018-12-26 22:59:00 UTC')
+    expect(article.reload.published_at_tz).to eq('UTC')
+  end
+
+  scenario "Saving an article without entering publication date info" do
+    login_user(admin)
+
+    click_on 'NEW'
+
+    within('#publication_status') { choose 'Draft' }
+
+    find_button('Save', match: :first).click
+
+    expect(page).to have_content 'Article was successfully created'
+    article = Article.first
+    expect(article.published_at).to be_nil
   end
 
   scenario "Using 'PUBLISH NOW' feature", :js do
@@ -78,5 +96,7 @@ feature "Setting and changing an articles published_at date" do
     expect(article.published_at.min).to eq(time.min)
     expect(article.published_at.hour).to eq(time.hour)
     expect(article).to be_published
+
+    expect(article.reload.published_at_tz).to eq('UTC')
   end
 end

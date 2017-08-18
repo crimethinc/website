@@ -23,6 +23,7 @@ gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"
 gem "jquery-rails"
+gem "jquery-ui-rails"   # used for polyfilling forms in admin/articles
 gem "sitemap_generator" # generates compliant xml sitemap
 
 # text utilities
