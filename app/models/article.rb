@@ -9,6 +9,7 @@ class Article < ApplicationRecord
   has_many :categories, through: :categorizations
   has_many :contributions, dependent: :destroy
   has_many :collection_posts, foreign_key: :collection_id, class_name: :Article
+  has_many :views, dependent: :destroy
 
   has_one    :redirect, dependent: :destroy
   belongs_to :collection, foreign_key: :parent_id, class_name: :Article

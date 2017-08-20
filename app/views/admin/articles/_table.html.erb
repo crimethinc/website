@@ -5,7 +5,8 @@
       <th>Status</th>
       <th>Title / Subtitle</th>
       <th>Published Date</th>
-      <th>Children</th>
+      <th class="text-right">Children</th>
+      <th class="text-right">Views</th>
     </tr>
   </thead>
 
@@ -34,10 +35,14 @@
           <%= display_time article.published_at %>
         </td>
 
-        <td>
+        <td class="text-right">
           <% if article.collection_root? %>
             <%= link_to(article.collection_posts.count, admin_article_path(article, anchor: "collection")) %>
           <% end %>
+        </td>
+
+        <td class="text-right">
+          <%= number_with_delimiter article.views.count %>
         </td>
       </tr>
     <% end %>

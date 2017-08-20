@@ -93,7 +93,10 @@ class ArticlesController < ApplicationController
 
     @previous_article = Article.previous(@article).first
     @next_article     = Article.next(@article).first
-    @editable = @article
+    @editable         = @article
+
+    # save view stats
+    @article.views.create!
 
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false
