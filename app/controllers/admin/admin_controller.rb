@@ -15,4 +15,21 @@ class Admin::AdminController < ApplicationController
     logger.error "#{controller_path}:#{action_name} has an issue with the page title"
     return ''
   end
+
+  def set_published_at
+    time = params[:published_at_time]
+    date = params[:published_at_date]
+    tz_string = params.dig(controller_name.singularize.to_sym, :published_at_tz)
+
+    return if date.blank? || time.blank? || tz_string.blank?
+
+    tz = ActiveSupport::TimeZone[tz_string]
+    # The `in_time_zone` is needed to account for DST. If we just did
+    # `Time.parse("#{date} #{time}#{tz.formatted_offset})` we would
+    # get off-by-1-hr issues if the date is far enough in the future
+    # that DST toggles
+    tz_offset = Time.parse("#{date} #{time}").in_time_zone(tz).strftime("%z")
+    datetime  = Time.parse("#{date} #{time}#{tz_offset}")
+    params[controller_name.singularize.to_sym].merge!(published_at: datetime)
+  end
 end

@@ -1,4 +1,7 @@
 //= require jquery3
+//= require jquery-ui/widgets/datepicker
+//= require timepicker
+//= require modernizr
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
@@ -36,17 +39,15 @@ $(function() {
   $("#admin-article #publish-now").click(function() {
     var now    = new Date();
     var year   = now.getUTCFullYear();
-    var month  = now.getUTCMonth() + 1;
-    var day    = now.getUTCDate();
+    var month  = rjust((now.getUTCMonth() + 1).toString(),   2, "0");
+    var day    = rjust(now.getUTCDate().toString(),   2, "0");
     var hour   = rjust(now.getUTCHours().toString(),   2, "0");
     var minute = rjust(now.getUTCMinutes().toString(), 2, "0");
 
     // set published_at date to utc.now
-    $("#article_published_at_1i").val(year);
-    $("#article_published_at_2i").val(month);
-    $("#article_published_at_3i").val(day);
-    $("#article_published_at_4i").val(hour);
-    $("#article_published_at_5i").val(minute);
+    $("#article_published_at_tz").val('UTC');
+    $("#publication_date").val(year + "-" + month + "-" + day);
+    $("#publication_time").val(hour+":"+minute);
 
     // set publication status to published
     $("#article_status_id_published").attr("checked", "checked");
@@ -55,4 +56,23 @@ $(function() {
     $("#article-form").submit();
     return false;
   });
+});
+
+$(function() {
+  var date_and_time_supported = (Modernizr.inputtypes.time && Modernizr.inputtypes.date);
+  // not-supported, so polyfill
+  if (!date_and_time_supported) {
+    // use jquery for date picker
+    $('#publication_date').datepicker({ dateFormat: 'yy-mm-dd' });
+
+    // use jquery for time picker
+    $('input.timepicker').timepicker({
+      timeFormat: 'h:mm p',
+      interval: 30,
+      startTime: '10:00',
+      dynamic: false,
+      dropdown: true,
+      scrollbar: true
+    });
+  }
 });

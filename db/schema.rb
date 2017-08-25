@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170820184153) do
+ActiveRecord::Schema.define(version: 20170821082344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20170820184153) do
     t.string "short_path"
     t.boolean "header_shadow_text"
     t.text "image_mobile"
+    t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.index ["collection_id"], name: "index_articles_on_collection_id"
     t.index ["status_id"], name: "index_articles_on_status_id"
     t.index ["theme_id"], name: "index_articles_on_theme_id"
@@ -149,6 +150,7 @@ ActiveRecord::Schema.define(version: 20170820184153) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
+    t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
 
@@ -202,6 +204,7 @@ ActiveRecord::Schema.define(version: 20170820184153) do
     t.boolean "hide_layout", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.index ["status_id"], name: "index_pages_on_status_id"
     t.index ["user_id"], name: "index_pages_on_user_id"
   end
@@ -344,6 +347,7 @@ ActiveRecord::Schema.define(version: 20170820184153) do
     t.string "day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
   end
 
   create_table "views", force: :cascade do |t|

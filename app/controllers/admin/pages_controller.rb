@@ -1,7 +1,8 @@
 class Admin::PagesController < Admin::AdminController
   before_action :authorize
-  before_action :set_page,      only: [:show, :edit, :update, :destroy]
-  after_action  :organize_page, only: [:create, :update]
+  before_action :set_page,         only: [:show, :edit, :update, :destroy]
+  after_action  :organize_page,    only: [:create, :update]
+  before_action :set_published_at, only: [:create, :update]
 
   # /admin/pages
   def index
@@ -74,6 +75,7 @@ class Admin::PagesController < Admin::AdminController
                                  :slug, :tags, :draft_code, :status_id,
                                  :published_at, :tags, :categories,
                                  :image, :image_description, :css,
-                                 :hide_header, :hide_footer, :hide_layout)
+                                 :hide_header, :hide_footer,
+                                 :hide_layout, :published_at_tz)
   end
 end

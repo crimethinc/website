@@ -1,6 +1,7 @@
 class Admin::VideosController < Admin::AdminController
   before_action :authorize
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video,        only: [:show, :edit, :update, :destroy]
+  before_action :set_published_at, only: [:create, :update]
 
   # /admin/videos
   def index
@@ -57,6 +58,9 @@ class Admin::VideosController < Admin::AdminController
   end
 
   def video_params
-    params.require(:video).permit(:title, :subtitle, :content, :slug, :vimeo_id, :image, :image_description, :published_at, :tweet, :summary, :quality, :duration)
+    params.require(:video).permit(:title, :subtitle,
+                                  :content, :slug, :vimeo_id, :image, :image_description,
+                                  :published_at, :tweet, :summary, :quality, :duration,
+                                  :published_at_tz)
   end
 end
