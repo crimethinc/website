@@ -63,16 +63,20 @@ RSpec.configure do |config|
 end
 
 # set up headless chrome webdriver for feature specs
-Capybara.register_driver(:headless_chrome) do |app|
-  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w[headless disable-gpu] }
-  )
+chrome_bin = ENV.fetch('GOOGLE_CHROME_SHIM', nil) # This is from the heroku bin defined in app.json
+chrome_opts = if chrome_bin
+                # CI is running on heroku
+                { chromeOptions: { 'binary' => chrome_bin } }
+              else
+                # CI is running locally or in Travis
+                { chromeOptions: { args: %w[headless disable-gpu] } }
+              end
 
+Capybara.register_driver :headless_chrome do |app|
   Capybara::Selenium::Driver.new(
     app,
     browser: :chrome,
-    desired_capabilities: capabilities
+    desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(chrome_opts)
   )
 end
-
 Capybara.javascript_driver = :headless_chrome
