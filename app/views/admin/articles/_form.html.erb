@@ -34,6 +34,14 @@
   <div class="form-group">
     <%= f.label :content %>
     <%= f.text_area :content, class: "form-control form-control-lg", rows: 10 %>
+
+    <p class="form-text text-muted">
+      You can apply color to any item by putting a CSS directive on the immediate line after it.
+      <code>{: .COLOR}</code>.<br>
+
+      Allowed colors are:
+      <code> {: .darkgreen} {: .darkred} {: .deeppink} {: .goldenrod} {: .olive} {: .slategray} {: .steelblue} </code>
+    </p>
   </div>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
