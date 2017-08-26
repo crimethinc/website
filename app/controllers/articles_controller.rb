@@ -95,6 +95,14 @@ class ArticlesController < ApplicationController
     @next_article     = Article.next(@article).first
     @editable         = @article
 
+    # suggest reading / related articles
+    @related_articles = {}
+    if @article.categories.present?
+      @article.categories.each do |category|
+        @related_articles[category] = category.articles[1..2]
+      end
+    end
+
     # save view stats
     @article.views.create!
 
