@@ -115,13 +115,7 @@ class ApplicationController < ActionController::Base
 
   def render_content(post)
     cache post do
-      Kramdown::Document.new(
-        MarkdownMedia.parse(post.content),
-        input: post.content_format == "html" ? :html : :kramdown,
-        remove_block_html_tags: false,
-        transliterated_header_ids: true,
-        html_to_native: true
-      ).to_html.html_safe
+      post.content_rendered
     end
   end
   helper_method :render_content

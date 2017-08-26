@@ -198,7 +198,7 @@ RSpec.describe ApplicationController, type: :controller do
   describe "#render_content" do
     let(:post) { Page.new(content: "text", content_format: "markdown") }
 
-    subject { controller.render_content(post).strip }
+    subject { post.content_rendered.strip }
 
     it { is_expected.to eq("<p>text</p>") }
   end

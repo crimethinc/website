@@ -44,7 +44,7 @@
             <%= xml_escape(figure_image_with_caption_tag(article)).html_safe %>
           <% end %>
 
-          <%= xml_escape(render_content(article)).html_safe  %>
+          <%= xml_escape(render_content article).html_safe  %>
         </content>
       </entry>
 
