@@ -99,7 +99,14 @@ class ArticlesController < ApplicationController
     @related_articles = {}
     if @article.categories.present?
       @article.categories.each do |category|
-        @related_articles[category] = category.articles[1..2]
+        articles = []
+        category.articles[0..2].each do |article|
+          if article != @article && articles.length < 2
+            articles << article
+          end
+        end
+
+        @related_articles[category] = articles
       end
     end
 
