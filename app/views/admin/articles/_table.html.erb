@@ -42,7 +42,7 @@
         </td>
 
         <td class="text-right">
-          <%= number_with_delimiter article.views.count %>
+          <%= number_with_delimiter(article.views.count + article.page_views) %>
         </td>
       </tr>
     <% end %>
