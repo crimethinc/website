@@ -12,6 +12,9 @@ cd "$(dirname "$0")/.."
 RACK_ROOT="$(cd "$(dirname "$0")"/.. && pwd)"
 export RACK_ROOT
 
+# ensure DB is reset to devs
+bin/rake db:create
+
 if [ "$RAILS_ENV" = "test" ] || [ "$RACK_ENV" = "test" ]; then
   # if executed and the environment is already set to `test`, then we want a
   # clean from scratch application. This almost always means a ci environment,

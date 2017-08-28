@@ -12,7 +12,7 @@ export RAILS_ENV="test" RACK_ENV="test"
 script/update
 
 # ensure DB is reset to devs
-bin/rake db:test:clone
+bin/rake db:create
 
 # boot the app and any other necessary processes.
 bundle exec guard
