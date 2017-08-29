@@ -141,7 +141,7 @@ GEM
     nenv (0.3.0)
     new_relic_ping (0.1.2)
       rails (>= 3.2)
-    newrelic_rpm (4.3.0.335)
+    newrelic_rpm (4.4.0.336)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
