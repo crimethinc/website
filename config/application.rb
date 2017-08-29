@@ -18,12 +18,5 @@ module Magazine
     config.middleware.use Rack::ApexRedirect
     config.middleware.use Rack::BlogRedirect
     config.middleware.use Rack::Attack
-
-    # Monitor database
-    NewRelicPing.configure do |c|
-      c.monitor("database") do
-        ActiveRecord::Base.connection.execute("select count(*) from schema_migrations")
-      end
-    end
   end
 end

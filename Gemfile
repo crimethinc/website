@@ -81,8 +81,6 @@ group :development do
 end
 
 # monitoring
-gem "newrelic_rpm"
-gem "new_relic_ping"
 gem "bugsnag"
 
 # DDOS protection

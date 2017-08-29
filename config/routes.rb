@@ -187,8 +187,6 @@ Rails.application.routes.draw do
   get "wp-login.php", to: redirect("/signin")
   get "wp-login.php?action=logout&_wpnonce=:nonce", to: redirect("/signout")
 
-  # Ping and Health monitoring
-  mount NewRelicPing::Engine, at: "/status"
 
   # Pages
   get "*path", to: "pages#show", as: :page, via: :all
