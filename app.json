@@ -1,16 +1,15 @@
 {
-  "name": "Magazine, by CrimethInc.",
-  "description": "Rails app to power an #indieweb friendly magazine publishing platform.",
+  "name": "Website, by CrimethInc.",
+  "description": "Rails app that powers crimethinc.com",
   "keywords": [
     "indieweb",
-    "magazine",
     "publishing",
     "rubyonrails",
     "rails"
   ],
 
   "website": "http://crimethinc.com",
-  "repository": "https://github.com/CrimethincDotCom/magazine",
+  "repository": "https://github.com/CrimethincDotCom/website",
   "logo": "https://avatars0.githubusercontent.com/u/21285375",
 
   "success_url": "/",

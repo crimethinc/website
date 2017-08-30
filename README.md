@@ -1,4 +1,4 @@
-# Magazine, A CrimethInc. production
+# CrimethInc. website
 
 Ruby on Rails app that powers https://crimethinc.com
 
@@ -20,7 +20,7 @@ cd website
 
 ## Scripts to Rule Them All
 
-Magazine uses the [Scripts to Rule Them All](http://githubengineering.com/scripts-to-rule-them-all) pattern.
+CrimethInc. website uses the [Scripts to Rule Them All](http://githubengineering.com/scripts-to-rule-them-all) pattern.
 See also: https://github.com/github/scripts-to-rule-them-all
 
 `/script` is a collection of scripts for development on an OS X / macOS computer.
@@ -225,7 +225,7 @@ Everyone interacting in the CrimethInc.'s project's codebases, issue trackers, c
 Your heart is as free as the air you breathe. <br>
 The ground you stand on is liberated territory.
 
-In legal text, **Magazine, A CrimethInc. production** is dedicated to the public domain
+In legal text, **CrimethInc. website** is dedicated to the public domain
 using Creative Commons -- CC0 1.0 Universal.
 
 [http://creativecommons.org/publicdomain/zero/1.0](http://creativecommons.org/publicdomain/zero/1.0 "Creative Commons &mdash; CC0 1.0 Universal")

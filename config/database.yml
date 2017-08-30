@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: magazine_development
+  database: crimethinc_development
 
 test:
   <<: *default
-  database: magazine_test
+  database: crimethinc_test
 
 production:
   <<: *default
-  database: magazine_production
-  username: magazine
-  password: <%= ENV['MAGAZINE_DATABASE_PASSWORD'] %>
+  database: crimethinc_production
+  username: crimethinc
+  password: <%= ENV['CRIMETHINC_DATABASE_PASSWORD'] %>
