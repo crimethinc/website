@@ -1,14 +1,16 @@
 dist: trusty
 sudo: false
 language: ruby
-sudo: false
-script: ./script/cibuild
+script: "./script/cibuild"
 addons:
-  postgresql: "9.6"
-  chrome: "stable"
+  postgresql: '9.6'
+  chrome: stable
 before_install:
-  - mkdir -p ~/drivers; export PATH=~/drivers:$PATH;
-  - CHROMEDRIVER_VERSION=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE);
-    CHROMEDRIVER_URL="http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip";
-    FILE=`mktemp`; wget "$CHROMEDRIVER_URL" -qO $FILE && unzip $FILE chromedriver -d ~/drivers; rm $FILE; chmod 777 ~/drivers/chromedriver;
-    ~/drivers/chromedriver --version;
+- mkdir -p ~/drivers; export PATH=~/drivers:$PATH;
+- CHROMEDRIVER_VERSION=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE);
+  CHROMEDRIVER_URL="http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip";
+  FILE=`mktemp`; wget "$CHROMEDRIVER_URL" -qO $FILE && unzip $FILE chromedriver -d
+  ~/drivers; rm $FILE; chmod 777 ~/drivers/chromedriver; ~/drivers/chromedriver --version;
+notifications:
+  slack:
+    secure: lPI2LWfiFjs1hLF/dPkmplZ6c56Kdri95wI21QzW73ctM9+Dyn01hGg0gYMBoW8mRsk3Je1yeJpemyGNFt7Ul2vpbZTSKIvMMh715JL9Y6QtQEkX/Tspv+lGlw9PcqxVRaCVDDTRwwr05N+h2AjBnWVYurlIbWJ+ihUB+iHXVufECp+hAn6CIDjGdXA5hMWQImCK4vZllMcYsvuInWCYz0JZchdDyUlJKKlmCfYTznC9VTVJLkxhTO7maCTtlNif1tPcUXI2dFyQ/1xZUbkYNC4etUAbf3zSG6CFaVY/FFIIC7h/g537kIwvoKqrkSRtV3IaH6FqW6qbdkx2oLSiwieXIo1cjkjfBDlynZ0/GAAHr+GV+3Mm9acxFqC7fxWcSc5XzdZxm7i3AWFrcx4KdgAxXFlDWp+pQuBOo+3Ge+3KG5Iz8+RdXM7xhFQuyDKslDXZ+0fWV1f7EfxNxQKD9LCnr8+9seoLLaNymfozRWUSKcFiXL13wEgV0FuMCy0Ci2DkNThlUJESQX3hZiqCt1R1SPFzHQPzciXeN1JlpYaAOklvAyP0TNzIrDmzzlsmKdsa4B3Lfq9tUx0QceqovLSJCbOs92W2WD2Gre9kVEpav6eLSM6hSSF4iYdxXuwLUBNYy8El1jSqZ/Gb0sb5Km0J7EZfw2vt8Nu56demgLE=
