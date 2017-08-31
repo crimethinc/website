@@ -111,7 +111,7 @@ class ArticlesController < ApplicationController
     end
 
     # save view stats
-    @article.views.create!
+    @article.views.create! unless signed_in?
 
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false
