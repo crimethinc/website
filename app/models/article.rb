@@ -72,6 +72,26 @@ class Article < ApplicationRecord
     ).to_html.html_safe
   end
 
+  def related
+    related_articles = {}
+
+    if categories.present?
+     categories.each do |category|
+
+        articles = []
+        category.articles[0..2].each do |article|
+          if article != @article && articles.length < 2
+            articles << article
+          end
+        end
+
+        related_articles[category] = articles
+      end
+    end
+
+    related_articles
+  end
+
   private
 
   def generate_published_dates

@@ -1,8 +1,8 @@
-<% if @related_articles.present? %>
+<% if article.related.present? %>
 <div class="related-articles">
   <h1 class="related-articles-heading">Related Articles</h1>
 
-  <% @related_articles.each do |category, articles| %>
+  <% article.related.each do |category, articles| %>
     <div class="h-feed">
       <h2 class="related-articles-category-heading"><%= link_to category.name, category.path %></h2>
 

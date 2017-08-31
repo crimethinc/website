@@ -95,21 +95,6 @@ class ArticlesController < ApplicationController
     @next_article     = Article.next(@article).first
     @editable         = @article
 
-    # suggest reading / related articles
-    @related_articles = {}
-    if @article.categories.present?
-      @article.categories.each do |category|
-        articles = []
-        category.articles[0..2].each do |article|
-          if article != @article && articles.length < 2
-            articles << article
-          end
-        end
-
-        @related_articles[category] = articles
-      end
-    end
-
     # save view stats
     @article.views.create! unless signed_in?
 
