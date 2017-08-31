@@ -16,7 +16,7 @@
   <tbody>
     <% articles.each do |article| %>
       <%# border on this article (2017-08-23) indicates when the view counter started. everything below it was published pre-counter. %>
-      <tr style="<%= 'border-bottom: 10px solid #666;' if article.published_at.strftime('%Y-%m-%d') == '2017-08-23' %>">
+      <tr style="<%= 'border-bottom: 10px solid #666;' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') == '2017-08-23' %>">
         <td>
           <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm" %>
         </td>
@@ -40,7 +40,7 @@
           <%= display_time article.published_at %>
         </td>
 
-        <td class="text-right <%= 'text-muted' if article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
+        <td class="text-right <%= 'text-muted' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
           <%= number_with_delimiter(article.views.count + article.page_views) %>
         </td>
       </tr>
