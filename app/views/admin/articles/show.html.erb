@@ -42,9 +42,9 @@
     <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
 
     <% unless @article.in_collection? %>
-      <br>
-      <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-danger btn-lg" %>
-      <br><br><br>
+      <div class="my-5 sr-only">
+        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-danger btn-lg" %>
+      </div>
     <% end %>
 
     <% unless @article.published? %>
