@@ -1,25 +1,30 @@
 <table class="table table-striped table-sm mb-5">
+  <caption class="text-muted text-right">
+    View counts started on <code>2017-08-23</code>
+  </caption>
+
   <thead class="thead-inverse">
     <tr>
       <th></th>
       <th>Status</th>
       <th>Title / Subtitle</th>
       <th>Published Date</th>
-      <th class="text-right">Children</th>
       <th class="text-right">Views</th>
     </tr>
   </thead>
 
   <tbody>
     <% articles.each do |article| %>
-      <tr>
+      <%# border on this article (2017-08-23) indicates when the view counter started. everything below it was published pre-counter. %>
+      <tr style="<%= 'border-bottom: 10px solid #666;' if article.published_at.strftime('%Y-%m-%d') == '2017-08-23' %>">
         <td>
           <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm" %>
         </td>
 
         <td>
-          <%= render "/admin/articles/publication_status", article: article %>
-          <%= render "/admin/articles/content_format",     article: article %>
+          <%= render "/admin/articles/publication_status_badge", article: article %>
+          <%= render "/admin/articles/content_format_badge",     article: article %>
+          <%= render "/admin/articles/children_articles_badge",  article: article %>
         </td>
 
         <td>
@@ -35,13 +40,7 @@
           <%= display_time article.published_at %>
         </td>
 
-        <td class="text-right">
-          <% if article.collection_root? %>
-            <%= link_to(article.collection_posts.count, admin_article_path(article, anchor: "collection")) %>
-          <% end %>
-        </td>
-
-        <td class="text-right">
+        <td class="text-right <%= 'text-muted' if article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
           <%= number_with_delimiter(article.views.count + article.page_views) %>
         </td>
       </tr>
