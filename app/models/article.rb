@@ -80,7 +80,7 @@ class Article < ApplicationRecord
 
         articles = []
         category.articles[0..2].each do |article|
-          if article != @article && articles.length < 2
+          if article != self && articles.length < 2
             articles << article
           end
         end
