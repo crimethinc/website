@@ -16,7 +16,7 @@
   <tbody>
     <% articles.each do |article| %>
       <%# border on this article (2017-08-23) indicates when the view counter started. everything below it was published pre-counter. %>
-      <tr style="<%= 'border-bottom: 10px solid #666;' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') == '2017-08-23' %>">
+      <tr class="<%= "bg-warning" if article.user.present? %>" style="<%= 'border-bottom: 10px solid #666;' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') == '2017-08-23' %>">
         <td>
           <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm" %>
         </td>
@@ -28,6 +28,10 @@
         </td>
 
         <td>
+          <% if article.user.present? %>
+            <p><b>Currently being edited by <%= article.user.username %></b>.</p>
+          <% end %>
+
           <b><%= link_to article.title, [:admin, article] %></b><br>
 
           <% if article.subtitle.present? %>
