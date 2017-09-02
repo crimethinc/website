@@ -30,8 +30,7 @@
         <td>
           <% if article.user.present? %>
             <p>
-              <b><%= article.user.username %></b> started editing at
-              <%= time_ago_in_words article.updated_at %> ago.
+              <b><%= article.user.username %> started editing at <%= time_ago_in_words article.updated_at %> ago.</b>
             </p>
           <% end %>
 
