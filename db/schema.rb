@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826204052) do
+ActiveRecord::Schema.define(version: 20170902210005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "articles", id: :serial, force: :cascade do |t|
     t.integer "user_id"
@@ -42,7 +43,7 @@ ActiveRecord::Schema.define(version: 20170826204052) do
     t.datetime "updated_at", null: false
     t.integer "collection_id"
     t.string "short_path"
-    t.boolean "header_shadow_text"
+    t.boolean "header_shadow_text", default: true
     t.text "image_mobile"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "page_views", default: 0
