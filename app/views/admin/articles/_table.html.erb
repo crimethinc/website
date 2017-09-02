@@ -1,55 +1,54 @@
-<table class="table table-responsive table-striped table-sm mb-5">
-  <caption class="text-muted text-right">
-    View counts started on <code>2017-08-23</code>
-  </caption>
+<div class="articles col-12 mb-5">
+  <div class="articles-header row py-2 bg-dark text-white d-none d-md-flex">
+    <div class="col-sm-2"><b>Status</b></div>
+    <div class="col-sm-6"><b>Title / Subtitle</b></div>
+    <div class="col-sm-3"><b>Published Date</b></div>
+    <div class="col-sm-1 text-right"><b>Views</b></div>
+  </div>
 
-  <thead class="thead-inverse">
-    <tr>
-      <th></th>
-      <th>Status</th>
-      <th>Title / Subtitle</th>
-      <th>Published Date</th>
-      <th class="text-right">Views</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% articles.each do |article| %>
-      <%# border on this article (2017-08-23) indicates when the view counter started. everything below it was published pre-counter. %>
-      <tr class="<%= "bg-warning" if article.user.present? %>" style="<%= 'border-bottom: 10px solid #666;' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') == '2017-08-23' %>">
-        <td>
-          <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm" %>
-        </td>
+  <% articles.each do |article| %>
+    <%# border on this article (2017-08-23) indicates when the view counter started. everything below it was published pre-counter. %>
+    <div class="articles-body row mb-3 py-2 <%= 'bg-warning' if article.user.present? %>" style="<%= 'border-bottom: 10px solid #666;' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') == '2017-08-23' %>">
+      <div class="col-md-2 mb-2">
+        <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm mr-2" %>
+        <%= render "/admin/articles/publication_status_badge", article: article %>
+        <%= render "/admin/articles/content_format_badge",     article: article %>
+        <%= render "/admin/articles/children_articles_badge",  article: article %>
 
-        <td>
-          <%= render "/admin/articles/publication_status_badge", article: article %>
-          <%= render "/admin/articles/content_format_badge",     article: article %>
-          <%= render "/admin/articles/children_articles_badge",  article: article %>
-        </td>
-
-        <td>
-          <% if article.user.present? %>
-            <p>
-              <b><%= article.user.username %> started editing at <%= time_ago_in_words article.updated_at %> ago.</b>
-            </p>
-          <% end %>
-
-          <b><%= link_to article.title, [:admin, article] %></b><br>
-
-          <% if article.subtitle.present? %>
-            <%= link_to article.subtitle, [:admin, article] %>
-          <% end %>
-        </td>
-
-        <td>
-          <%= display_date article.published_at %><br>
-          <%= display_time article.published_at %>
-        </td>
-
-        <td class="text-right <%= 'text-muted' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
+        <span class="d-md-none float-right <%= 'text-muted' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
           <%= number_with_delimiter(article.views.count + article.page_views) %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          Views
+        </span>
+      </div>
+
+      <div class="col-md-6">
+        <% if article.user.present? %>
+          <p>
+            <b><%= article.user.username %> started editing at <%= time_ago_in_words article.updated_at %> ago.</b>
+          </p>
+        <% end %>
+
+        <b><%= link_to article.title, [:admin, article] %></b><br>
+
+        <% if article.subtitle.present? %>
+          <%= link_to article.subtitle, [:admin, article] %>
+        <% end %>
+      </div>
+
+      <div class="col-md-3">
+        <%= display_date article.published_at %>
+        <br class="d-none d-md-flex">
+        <span class="text-muted"><%= display_time article.published_at %></span>
+      </div>
+
+      <div class="d-none d-md-block col-md-1 text-right <%= 'text-muted' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
+        <%= number_with_delimiter(article.views.count + article.page_views) %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="articles-footer row">
+    <p class="col text-right text-muted p2-3">View counts started on <code>2017-08-23</code></p>
+  </div>
+</div>

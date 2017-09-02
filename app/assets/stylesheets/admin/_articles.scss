@@ -9,3 +9,7 @@ label  {
 .form-check label b {
   font-weight: normal;
 }
+
+.articles-body:nth-child(even) {
+  background: #f3f3f3;
+}
