@@ -97,6 +97,9 @@ en:
         heading: Email Updates
         description: Sign up here to receive regular email updates.
         signup_form_placeholder: What’s your email address?
+        signup_form_select_placeholder: You want a lot of emails? Or a little?
+        signup_form_select_option_lot:    Every little thing. (Many emails)
+        signup_form_select_option_little: Just the big stuff! (Fewer emails)
         signup_button_text: Sign Up
       social:
         heading: Find Us Elsewhere

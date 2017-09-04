@@ -126,11 +126,19 @@ footer[role=contentinfo] {
   .footer-section.footer-section-contact {
     margin: 0 auto;
 
-    .newsletter-signup-form button {
-      @extend .button;
-      font-size: 1.5rem;
-      float: right;
-      background: $color-blue;
+    .newsletter-signup-form {
+      select {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        @extend .button;
+        font-size: 1.5rem;
+        float: right;
+        background: $color-blue;
+      }
     }
 
     .social {
