@@ -130,8 +130,10 @@ Rails.application.routes.draw do
 
 
   # Admin Dashboard
-  get :admin, to: redirect("/admin/articles"), as: "admin"
+  get :admin, to: redirect("/admin/dashboard"), as: "admin"
   namespace :admin do
+  get "dashboard", to: "dashboard#index"
+
     concern :paginatable do
       get "page(/1)", on: :collection, to: redirect { |_, req| req.path.split("page").first }
       get "(page/:page)", action: :index, on: :collection, as: ""
