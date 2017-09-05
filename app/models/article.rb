@@ -76,10 +76,10 @@ class Article < ApplicationRecord
     related_articles = {}
 
     if categories.present?
-     categories.each do |category|
+      categories.each do |category|
 
         articles = []
-        category.articles[0..4].each do |article|
+        category.articles.published[0..7].each do |article|
           if article != self &&
              articles.length < 2 &&
              !related_articles.values.flatten.include?(article)
