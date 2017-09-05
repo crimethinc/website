@@ -4,7 +4,7 @@ class Admin::DashboardController < Admin::AdminController
   # /admin/dashboard
   def index
     @draft_articles  = Article.draft
-    @recent_articles = Article.last_10_days
+    @recent_articles = Article.last_2_weeks
     @title           = admin_title
   end
 end
