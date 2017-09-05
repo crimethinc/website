@@ -12,6 +12,7 @@ feature "Setting and changing an articles published_at date" do
 
   scenario "Creating a new article" do
     login_user(admin)
+    visit '/admin/articles'
 
     click_on 'NEW'
 
@@ -36,6 +37,7 @@ feature "Setting and changing an articles published_at date" do
     expect(article.published_at_tz).to eq('Pacific Time (US & Canada)')
 
     login_user(admin)
+    visit '/admin/articles'
 
     click_on 'EDIT'
     within '#publication_datetime' do
@@ -60,6 +62,7 @@ feature "Setting and changing an articles published_at date" do
 
   scenario "Saving an article without entering publication date info" do
     login_user(admin)
+    visit '/admin/articles'
 
     click_on 'NEW'
 
@@ -79,6 +82,7 @@ feature "Setting and changing an articles published_at date" do
     # Timecop.freeze the front-end. Consider making the 'Publish Now!'
     # feature a back-end feature
     login_user(admin)
+    visit '/admin/articles'
 
     click_on 'NEW'
 

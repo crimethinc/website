@@ -14,7 +14,7 @@ feature "Signing in as an admin" do
     click_button 'Sign In'
 
     expect(page).to have_content 'Logged in!'
-    expect(current_path).to eq(admin_articles_path)
+    expect(current_path).to eq(admin_dashboard_path)
   end
 
   given(:other_user) { create(:user, username: 'user2', password: 'Na'*30) }
