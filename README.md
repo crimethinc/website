@@ -82,7 +82,7 @@ The `server` script starts the Rails server on port `3000`
 (using **Foreman** which uses the `Procile` which uses **Puma**.)
 
 ```
-./script/setup
+./script/server
 ```
 
 #### Can't Find Posgresql Error
