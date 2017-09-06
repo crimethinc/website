@@ -4,8 +4,14 @@
     <h1 class="newsletter-signup-label"><%= t("footer.contact.newsletter.heading") %></h1>
     <div class="newsletter-signup-description"><%= render_markdown t("footer.contact.newsletter.description") %></div>
 
-    <%= form_with url: "//crimethinc.us2.list-manage.com/subscribe/post?u=cb48383602b7373f496e9ba33&amp;id=344714b249", html: { id: "mc-embedded-subscribe-form", class: "newsletter-signup-form validate", name: "mc-embedded-subscribe-form", target: "_blank", novalidate: true, } do |form| %>
-
+    <%= form_with url: "//crimethinc.us2.list-manage.com/subscribe/post?u=cb48383602b7373f496e9ba33&amp;id=344714b249",
+                  html: {
+                    id: "mc-embedded-subscribe-form",
+                    class: "newsletter-signup-form validate",
+                    name: "mc-embedded-subscribe-form",
+                    target: "_blank",
+                    novalidate: true
+                  } do |form| %>
         <div class="mc-field-group">
           <%= form.label       "mce-EMAIL",                                         t("footer.contact.newsletter.signup_form_placeholder"), class: "screen-reader-only" %>
           <%= form.email_field :email, name: "EMAIL", id: "mce-EMAIL", placeholder: t("footer.contact.newsletter.signup_form_placeholder"), class: "simple-field" %>
