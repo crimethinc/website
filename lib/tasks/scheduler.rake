@@ -15,7 +15,3 @@ task :rollup_page_views => :environment do
   views.destroy_all
   puts "...done."
 end
-
-task :send_reminders => :environment do
-  # User.send_reminders
-end
