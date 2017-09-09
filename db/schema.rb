@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170902210005) do
+ActiveRecord::Schema.define(version: 20170909002712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "articles", id: :serial, force: :cascade do |t|
     t.integer "user_id"
@@ -256,6 +257,14 @@ ActiveRecord::Schema.define(version: 20170902210005) do
     t.string "front_image_format", default: "jpg"
     t.string "back_image_format", default: "jpg"
     t.datetime "published_at"
+    t.boolean "front_color_image_present"
+    t.boolean "front_black_and_white_image_present"
+    t.boolean "back_color_image_present"
+    t.boolean "back_black_and_white_image_present"
+    t.boolean "front_color_download_present"
+    t.boolean "front_black_and_white_download_present"
+    t.boolean "back_color_download_present"
+    t.boolean "back_black_and_white_download_present"
   end
 
   create_table "redirects", id: :serial, force: :cascade do |t|

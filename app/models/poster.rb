@@ -30,13 +30,40 @@ class Poster < ApplicationRecord
     "Photo of '#{title}' back side"
   end
 
+  def front_color_image
+    image side: :front, color: :color
+  end
+
+  def front_black_and_white_image
+    image side: :front, color: :black_and_white
+  end
+
+  def back_color_image
+    image side: :back, color: :color
+  end
+
+  def back_black_and_white_image
+    image side: :back, color: :black_and_white
+  end
+
+  def image(side:nil, color:nil)
+    filename = [slug, "_", side, "_", color, ".", self.send("#{side}_image_format")].join
+    [ASSET_BASE_URL, namespace, slug, filename].join("/")
+  end
+
+
   def front_image
-    [ASSET_BASE_URL, namespace, slug, "#{slug}_front.#{front_image_format}"].join("/")
+    if front_color_image_present? || front_black_and_white_image_present?
+      front_color_image_present ? front_color_image : front_black_and_white_image
+    else
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.#{front_image_format}"].join("/")
+    end
   end
 
   def back_image
     [ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join("/")
   end
+
 
   def download_url(type=nil)
     filename = [slug]

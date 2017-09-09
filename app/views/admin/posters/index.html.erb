@@ -8,6 +8,11 @@
       <th>Published Date</th>
       <th class="text-center">Front Download</th>
       <th class="text-center">Back Download</th>
+
+      <th class="text-center">Front Color Download</th>
+      <th class="text-center">Back Color Download</th>
+      <th class="text-center">Front B/W Download</th>
+      <th class="text-center">Back B/W Download</th>
     </tr>
   </thead>
 
@@ -30,6 +35,11 @@
 
         <td class="text-center align-middle"> <%= "✔️" if poster.front_download_present? %> </td>
         <td class="text-center align-middle"> <%= "✔️" if poster.back_download_present? %> </td>
+
+        <td class="text-center align-middle"> <%= "✔️" if poster.front_color_download_present? %> </td>
+        <td class="text-center align-middle"> <%= "✔️" if poster.back_color_download_present? %> </td>
+        <td class="text-center align-middle"> <%= "✔️" if poster.front_black_and_white_download_present? %> </td>
+        <td class="text-center align-middle"> <%= "✔️" if poster.back_black_and_white_download_present? %> </td>
       </tr>
     <% end %>
   </tbody>

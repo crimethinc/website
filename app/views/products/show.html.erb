@@ -1,15 +1,33 @@
 <div class="h-entry product">
   <div class="row">
     <div class="column column-one-third section meta">
-      <div class="product-front">
-        <%= image_tag @product.front_image, alt: @product.front_image_description, class: "u-image" %>
-      </div>
 
-      <% if @product.back_image_present? %>
-        <div class="product-back">
-          <%= image_tag @product.back_image, alt: @product.back_image_description, class: "u-image" %>
+
+      <% unless @product.front_color_image_present? or @product.front_black_and_white_image_present? %>
+        <div class="product-front">
+          <%= image_tag @product.front_image, alt: @product.front_image_description, class: "u-image" %>
         </div>
       <% end %>
+
+
+      <% %w(front back).each do |side| %>
+        <% if @product.send("#{side}_color_image_present?") %>
+          <div class="product-front">
+            <%= image_tag @product.send("#{side}_color_image"), alt: @product.front_image_description, class: "u-image" %>
+          </div>
+        <% end %>
+      <% end %>
+
+      <% %w(front back).each do |side| %>
+        <% if @product.send("#{side}_black_and_white_image_present?") %>
+          <div class="product-front">
+            <%= image_tag @product.send("#{side}_black_and_white_image"), alt: @product.front_image_description, class: "u-image" %>
+          </div>
+        <% end %>
+      <% end %>
+
+
+
 
       <% if @product.price_in_cents.present? %>
         <div id="buy-now">
