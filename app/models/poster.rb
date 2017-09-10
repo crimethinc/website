@@ -61,10 +61,14 @@ class Poster < ApplicationRecord
   end
 
   def back_image
-    [ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join("/")
+    if back_color_image_present? || back_black_and_white_image_present?
+      back_color_image_present ? back_color_image : back_black_and_white_image
+    else
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join("/")
+    end
   end
 
-
+  # TODO add color to url builder
   def download_url(type=nil)
     filename = [slug]
     filename << "_#{type.to_s}" if type.present?
