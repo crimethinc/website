@@ -30,6 +30,7 @@
           <%= render_markdown product.buy_info %>
         <% end %>
 
+
         <% if product.class == Book %>
           <% if product.read_download_present? %>
             <div>
@@ -56,7 +57,24 @@
           <% end %>
         <% end %>
 
+
         <% if product.class == Poster %>
+          <% %w(front back).each do |side| %>
+            <% %w(color black_and_white).each do |color| %>
+              <% if product.send("#{side}_#{color}_download_present?") %>
+
+                <div>
+                  <%= link_to t("views.products.download_#{side}_#{color}_button_text"),
+                              product.download_url(side),
+                              class: "download button" %>
+                </div>
+
+              <% end %>
+            <% end %>
+          <% end %>
+
+
+          <%# TODO remove after poster files are renamed, db updated %>
           <% if product.front_download_present? %>
             <div><%= link_to t("views.products.download_front_button_text"),
                              product.download_url(:front),
@@ -69,6 +87,8 @@
                              class: "download button" %></div>
           <% end %>
         <% end %>
+
+
       </div><!-- .buttons -->
     </div><!-- .product-main -->
   </div><!-- .e-content -->

@@ -11,22 +11,18 @@
 
 
       <% %w(front back).each do |side| %>
-        <% if @product.send("#{side}_color_image_present?") %>
-          <div class="product-front">
-            <%= image_tag @product.send("#{side}_color_image"), alt: @product.front_image_description, class: "u-image" %>
-          </div>
+        <% %w(color black_and_white).each do |color| %>
+          <% if @product.send("#{side}_#{color}_image_present?") %>
+
+            <div class="product-<%= side %>">
+              <%= image_tag @product.send("#{side}_#{color}_image"),
+                            alt: @product.send("#{side}_image_description"),
+                            class: "u-image" %>
+            </div>
+
+          <% end %>
         <% end %>
       <% end %>
-
-      <% %w(front back).each do |side| %>
-        <% if @product.send("#{side}_black_and_white_image_present?") %>
-          <div class="product-front">
-            <%= image_tag @product.send("#{side}_black_and_white_image"), alt: @product.front_image_description, class: "u-image" %>
-          </div>
-        <% end %>
-      <% end %>
-
-
 
 
       <% if @product.price_in_cents.present? %>

@@ -12,69 +12,32 @@
 
   <div>
     <p>
-      <% %w(front back).each do |side| %>
-        <% if @poster.send("#{side}_color_image_present?") %>
-          <span class="badge badge-success">✔ <%= side.capitalize %> Color Image</span>
+
+      <% %w(image download).each do |type| %>
+        <% %w(front back).each do |side| %>
+          <% %w(color black_and_white).each do |color| %>
+            <% if @poster.send("#{side}_#{color}_#{type}_present?") %>
+              <span class="badge badge-<%= color == 'color' ? 'success' : 'secondary' %>">
+                ✔ <%= side.capitalize %> <%= color.titleize %> <%= type.capitalize %>
+              </span>
+            <% end %>
+          <% end %>
         <% end %>
+        <br>
       <% end %>
 
-      <% %w(front back).each do |side| %>
-        <% if @poster.send("#{side}_black_and_white_image_present?") %>
-          <span class="badge badge-secondary">✔ <%= side.capitalize %> B/W Image</span>
-        <% end %>
-      <% end %>
-
-      <br>
-
-      <% %w(front back).each do |side| %>
-        <% if @poster.send("#{side}_color_download_present?") %>
-          <span class="badge badge-success">✔ <%= side.capitalize %> Color Download</span>
-        <% end %>
-      <% end %>
-
-      <% %w(front back).each do |side| %>
-        <% if @poster.send("#{side}_black_and_white_download_present?") %>
-          <span class="badge badge-secondary">✔ <%= side.capitalize %> B/W Download</span>
-        <% end %>
-      <% end %>
-
-
-
-<!--
-      <% if @poster.front_image_present? %>
-        <span class="badge badge-success">✔ Front Image</span>
-      <% end %>
-
-      <% if @poster.back_image_present? %>
-        <span class="badge badge-danger">✔ Back Image</span>
-      <% end %>
-
-      <% if @poster.front_download_present? %>
-        <span class="badge badge-primary">✔ Front Download</span>
-      <% end %>
-
-      <% if @poster.back_download_present? %>
-        <span class="badge badge-primary">✔ Back Download</span>
-      <% end %>
- -->
     </p>
 
     <p><b>URL:</b> <b><%= link_to @poster.path, @poster.path %></b></p>
 
     <div class="row">
       <% %w(front back).each do |side| %>
-        <% if @poster.send("#{side}_color_image_present?") %>
-          <div class="col-sm-3">
-            <%= image_tag @poster.send("#{side}_color_image") %>
-          </div>
-        <% end %>
-      <% end %>
-
-      <% %w(front back).each do |side| %>
-        <% if @poster.send("#{side}_black_and_white_image_present?") %>
-          <div class="col-sm-3">
-            <%= image_tag @poster.send("#{side}_black_and_white_image") %>
-          </div>
+        <% %w(color black_and_white).each do |color| %>
+          <% if @poster.send("#{side}_#{color}_image_present?") %>
+            <div class="col-sm-3">
+              <%= image_tag @poster.send("#{side}_#{color}_image") %>
+            </div>
+          <% end %>
         <% end %>
       <% end %>
     </div>
@@ -95,14 +58,18 @@
 
 
       <% %w(front back).each do |side| %>
-        <% if @poster.send("#{side}_color_image_present?") %>
-          <p><b><%= side.capitalize %> PDF Download URL:</b> <b><%= link_to @poster.download_url(side), @poster.download_url(side) %></b></p>
-        <% end %>
-      <% end %>
+        <% %w(color black_and_white).each do |color| %>
+          <% if @poster.send("#{side}_#{color}_image_present?") %>
+            <p>
+              <b>
+                <%= side.capitalize %>
+                <%= color.titleize %>
+                PDF Download URL:
+              </b>
 
-      <% %w(front back).each do |side| %>
-        <% if @poster.send("#{side}_black_and_white_image_present?") %>
-          <p><b><%= side.capitalize %> PDF Download URL:</b> <b><%= link_to @poster.download_url(side), @poster.download_url(side) %></b></p>
+              <b><%= link_to @poster.download_url(side), @poster.download_url(side) %></b>
+            </p>
+          <% end %>
         <% end %>
       <% end %>
 

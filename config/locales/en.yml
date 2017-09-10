@@ -172,8 +172,13 @@ en:
       admin_zine_epub_download_text:  Mobi
       admin_zine_mobi_download_text:  ePub
 
-      download_front_button_text:  Download PDF of Front
-      download_back_button_text:   Download PDF of Back
+      download_front_button_text: "Download PDF : Front"
+      download_back_button_text:  "Download PDF : Back"
+
+      download_front_color_button_text:  "Download PDF : Front Color"
+      download_back_color_button_text:   "Download PDF : Front Color"
+      download_front_black_and_white_button_text: "Download PDF : Front B/W"
+      download_back_black_and_white_button_text:  "Download PDF : Front B/W"
 
       pdf_donoate_button_text: Donate
       pdf_donoate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
