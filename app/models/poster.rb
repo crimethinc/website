@@ -69,9 +69,10 @@ class Poster < ApplicationRecord
   end
 
   # TODO add color to url builder
-  def download_url(type=nil)
+  def download_url(side:nil, color:nil)
     filename = [slug]
-    filename << "_#{type.to_s}" if type.present?
+    filename << "_#{side.to_s}"  if side.present?
+    filename << "_#{color.to_s}" if color.present?
     filename << ".pdf"
     filename = filename.join
     [ASSET_BASE_URL, namespace, slug, filename].join("/")

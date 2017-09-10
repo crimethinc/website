@@ -65,7 +65,7 @@
 
                 <div>
                   <%= link_to t("views.products.download_#{side}_#{color}_button_text"),
-                              product.download_url(side),
+                              product.download_url(side: side, color: color),
                               class: "download button" %>
                 </div>
 
@@ -77,13 +77,13 @@
           <%# TODO remove after poster files are renamed, db updated %>
           <% if product.front_download_present? %>
             <div><%= link_to t("views.products.download_front_button_text"),
-                             product.download_url(:front),
+                             product.download_url(side: :front),
                              class: "download button" %></div>
           <% end %>
 
           <% if product.back_download_present? %>
             <div><%= link_to t("views.products.download_back_button_text"),
-                             product.download_url(:back),
+                             product.download_url(side: :back),
                              class: "download button" %></div>
           <% end %>
         <% end %>
