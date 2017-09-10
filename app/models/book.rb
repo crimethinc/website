@@ -1,11 +1,8 @@
 class Book < ApplicationRecord
-  include Name
-  include Slug
+  include Name, Slug, Publishable
 
   scope :book, -> { where(zine: false) }
   scope :zine, -> { where(zine: true)  }
-
-  default_scope { order(slug: :asc) }
 
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
 

@@ -39,5 +39,14 @@ RSpec.describe Book, type: :model do
     let(:book) { Book.new(title: "Contradictionary") }
 
     it { is_expected.to eq("Photo of 'Contradictionary' cover") }
-    end
+  end
+
+  describe "#published?" do
+    subject { book.published? }
+
+    let(:status) { Status.new(name: "published") }
+    let(:book) { Book.new(title: "Contradictionary", status: status) }
+
+    it { is_expected.to eq(true)}
+  end
 end
