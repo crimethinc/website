@@ -10,6 +10,8 @@ Ruby on Rails app that powers https://crimethinc.com
 
 [Strap your computer](https://macos-strap.herokuapp.com), first.
 
+Install `Ruby 2.4.1` using your Ruby version manager of choice ([ruby-install](https://github.com/postmodern/ruby-install)/[chruby](https://github.com/postmodern/chruby), [rbenv](https://github.com/rbenv/rbenv), [brew](https://brew.sh), etc)
+
 ```
 git clone https://github.com/crimethinc/website.git
 cd website
