@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170910235433) do
+ActiveRecord::Schema.define(version: 20170911053257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -181,6 +181,7 @@ ActiveRecord::Schema.define(version: 20170910235433) do
     t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status_id"
   end
 
   create_table "pages", id: :serial, force: :cascade do |t|
@@ -265,6 +266,7 @@ ActiveRecord::Schema.define(version: 20170910235433) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
+    t.integer "status_id"
   end
 
   create_table "redirects", id: :serial, force: :cascade do |t|
@@ -357,6 +359,7 @@ ActiveRecord::Schema.define(version: 20170910235433) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
+    t.integer "status_id"
   end
 
   create_table "views", force: :cascade do |t|

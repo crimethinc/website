@@ -5,7 +5,7 @@ RSpec.describe Logo, type: :model do
     subject { logo.published? }
 
     let(:status) { Status.new(name: "published") }
-    let(:logo) { Logo.new(title: "Contradictionary", status: status) }
+    let(:logo) { Logo.new(title: "Logo", status: status) }
 
     it { is_expected.to eq(true)}
   end
