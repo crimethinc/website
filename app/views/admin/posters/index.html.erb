@@ -6,9 +6,6 @@
       <th></th>
       <th>Title / Subtitle</th>
       <th>Published Date</th>
-      <th class="text-center">Front Download</th>
-      <th class="text-center">Back Download</th>
-
       <th class="text-center">Front Color Download</th>
       <th class="text-center">Back Color Download</th>
       <th class="text-center">Front B/W Download</th>
@@ -32,9 +29,6 @@
           <%= display_date poster.published_at %><br>
           <%= display_time poster.published_at %>
         </td>
-
-        <td class="text-center align-middle"> <%= "✔️" if poster.front_download_present? %> </td>
-        <td class="text-center align-middle"> <%= "✔️" if poster.back_download_present? %> </td>
 
         <td class="text-center align-middle"> <%= "✔️" if poster.front_color_download_present? %> </td>
         <td class="text-center align-middle"> <%= "✔️" if poster.back_color_download_present? %> </td>
