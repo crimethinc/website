@@ -1,7 +1,6 @@
 class Logo < ApplicationRecord
-  include Name
-  include Slug
-
+  include Name, Slug
+  
   default_scope { order(published_at: :desc) }
 
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
