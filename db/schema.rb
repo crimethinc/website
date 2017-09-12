@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170909002712) do
+ActiveRecord::Schema.define(version: 20170912233217) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -244,10 +244,6 @@ ActiveRecord::Schema.define(version: 20170909002712) do
     t.integer "price_in_cents"
     t.text "summary"
     t.text "description"
-    t.boolean "front_image_present", default: true
-    t.boolean "back_image_present", default: false
-    t.boolean "front_download_present", default: false
-    t.boolean "back_download_present", default: false
     t.text "slug"
     t.string "height"
     t.string "width"
