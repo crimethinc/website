@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170911053257) do
+ActiveRecord::Schema.define(version: 20170912235817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "articles", id: :serial, force: :cascade do |t|
     t.integer "user_id"
@@ -93,6 +94,12 @@ ActiveRecord::Schema.define(version: 20170911053257) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
+    t.boolean "print_black_and_white_a4_download_present"
+    t.boolean "print_color_a4_download_present"
+    t.boolean "print_color_download_present"
+    t.boolean "print_black_and_white_download_present"
+    t.boolean "screen_single_page_view_download_present"
+    t.boolean "screen_two_page_view_download_present"
     t.integer "status_id"
   end
 
@@ -245,10 +252,6 @@ ActiveRecord::Schema.define(version: 20170911053257) do
     t.integer "price_in_cents"
     t.text "summary"
     t.text "description"
-    t.boolean "front_image_present", default: true
-    t.boolean "back_image_present", default: false
-    t.boolean "front_download_present", default: false
-    t.boolean "back_download_present", default: false
     t.text "slug"
     t.string "height"
     t.string "width"

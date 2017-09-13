@@ -6,10 +6,20 @@
       <th></th>
       <th>Name</th>
 
-      <% %w(read print lite epub mobi).each do |type| %>
-        <th class="text-center">
-          <%= t("views.products.admin_#{@books.first.namespace.singularize}_#{type}_download_text") %>
-        </th>
+        <% [
+        "Print",
+        "Read",
+          "Screen Single Page View PDF",
+          "Screen Two Page View PDF",
+          "Print Color PDF",
+          "Print B/W PDF",
+          "Print Color A4 PDF",
+          "Print B/W A4 PDF",
+          "Lo Res PDF",
+          "ePub",
+          "Mobi",
+        ].each do |type| %>
+          <th class="text-center"><%= type %></th>
       <% end %>
     </tr>
   </thead>
@@ -28,7 +38,19 @@
           <% end %>
         </td>
 
-        <% %w(read print lite epub mobi).each do |type| %>
+        <% [
+            :print,
+            :read,
+            :screen_single_page_view,
+            :screen_two_page_view,
+            :print_color,
+            :print_black_and_white,
+            :print_color_a4,
+            :print_black_and_white_a4,
+            :lite,
+            :epub,
+            :mobi
+          ].each do |type| %>
           <td class="text-center align-middle">
             <%= "✔️" if book.send("#{type}_download_present?") %>
           </td>

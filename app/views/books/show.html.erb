@@ -18,6 +18,28 @@
       <% end %>
 
       <div id="download">
+        <p>Downloads:</p>
+
+        <% {
+          screen_single_page_view:  "Screen Single Page View PDF",
+          screen_two_page_view:     "Screen Two Page View PDF",
+          print_color:              "Print Color PDF",
+          print_black_and_white:    "Print B/W PDF",
+          print_color_a4:           "Print Color A4 PDF",
+          print_black_and_white_a4: "Print B/W A4 PDF",
+          lite:                     "Lo Res PDF",
+          epub:                     "ePub",
+          mobi:                     "Mobi",
+        }.each do |type, label| %>
+
+          <% if @book.send("#{type}_download_present?") %>
+            <div>
+              <%= link_to label, @book.download_url(type), class: "download button" %>
+            </div>
+          <% end %>
+        <% end %>
+
+
         <% if @book.read_download_present? %>
           <div>
             <%= link_to @book.zine? ?

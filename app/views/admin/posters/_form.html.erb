@@ -31,13 +31,15 @@
     </div>
   </div> <!-- .row -->
 
-  <div class="row">
+  <div class="row my-5">
     <div class="col-12 col-sm-6">
       <div class="form-group">
         <%= form.label :slug %>
         <%= form.text_field :slug, id: :poster_slug, class: "form-control" %>
       </div>
+    </div>
 
+    <div class="col-12 col-sm-6">
       <div class="row">
         <div class="col-12 col-sm-6">
           <div class="form-group">
@@ -55,131 +57,91 @@
       </div>
     </div>
 
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <label for="downloads">Downloads</label>
-
-        <div class="checkbox">
-          <%= form.label :front_download_present do %>
-            <%= form.check_box :front_download_present, id: :poster_front_download_present, class: "form-check-input" %>
-            <b>Front Side</b>
-            Is there a PDF of the front of the poster uploaded?
-          <% end %>
-        </div>
-
-        <div class="checkbox">
-          <%= form.label :back_download_present do %>
-            <%= form.check_box :back_download_present, id: :poster_back_download_present, class: "form-check-input" %>
-            <b>Back Side</b>
-            Is there a PDF of the back of the poster uploaded?
-          <% end %>
-        </div>
-
-        <p class="form-text text-muted">
-          PDFs must be uploaded to
-          <code>/assets/<%= @publication_type.pluralize %>/<%= resource.new_record? ? "[slug]" : resource.slug %>/</code>
-          on S3/Cloudfront.<br>
-
-          PDFs must be named:
-          <% if resource.new_record? %>
-            <code>[slug]_front.pdf</code>,
-            <code>[slug]_back.pdf</code>,
-          <% else %>
-            <code><%= resource.slug %>_front.pdf</code>,
-            <code><%= resource.slug %>_back.pdf</code>
-          <% end %>
-        </p>
-
-      </div>
-    </div>
   </div> <!-- .row -->
+
+
+  <hr class="my-5">
+
 
   <div class="row">
-    <div class="col-12 col-sm-4">
-      <div class="form-group">
-        <label for="images">Images</label>
 
-        <div class="checkbox">
-          <%= form.label :front_image_present do %>
-            <%= form.check_box :front_image_present, id: :poster_front_image_present %>
-            <b>Front:</b>
-            Is there an image of the front side uploaded?
-          <% end %>
-        </div>
+    <% %w(image download).each do |type| %>
+      <% file      = type == "image" ? "Image" : "PDF" %>
+      <% extension = type == "image" ? "[filetype]" : "pdf" %>
 
-        <div class="checkbox">
-          <%= form.label :back_image_present do %>
-            <%= form.check_box :back_image_present, id: :poster_back_image_present %>
-            <b>Back:</b>
-            Is there an image of the back side uploaded?
-          <% end %>
-        </div>
-      </div>
-    </div>
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <label for="downloads"><%= type.capitalize.pluralize %></label>
 
-    <div class="col-12 col-sm-4">
-      <div class="form-group">
-        <label for="downloads">Preview Front Image Format</label>
+          <p class="form-text text-muted">
+            <%= file %>s must be uploaded to S3/Cloudfront in:<br>
+            <code>/assets/<%= @publication_type.pluralize %>/<%= resource.new_record? ? "[slug]" : resource.slug %>/</code>
 
-        <div class="checkbox">
-          <%= form.label :front_image_format_jpg, class: "form-check-label" do %>
-            <%= form.radio_button :front_image_format, :jpg, id: :poster_front_image_format_jpg, class: "form-check-input" %>
-            <b>JPG</b>
-            Is there a JPG of the front side uploaded?
-          <% end %>
-        </div>
+            <br><%= file %>s must be named:
+            <% if resource.new_record? %>
+              <br><code>[slug]_front_color.<%= extension %></code>
+              <br><code>[slug]_back_color.<%= extension %></code>
+              <br><code>[slug]_front_black_and_white.<%= extension %></code>
+              <br><code>[slug]_back_black_and_white.<%= extension %></code>
+            <% else %>
+              <br><code><%= resource.slug %>_front_color.<%= extension %></code>
+              <br><code><%= resource.slug %>_back_color.<%= extension %></code>
+              <br><code><%= resource.slug %>_front_black_and_white.<%= extension %></code>
+              <br><code><%= resource.slug %>_back_black_and_white.<%= extension %></code>
+            <% end %>
+          </p>
 
-        <div class="checkbox">
-          <%= form.label :front_image_format_gif, class: "form-check-label" do %>
-            <%= form.radio_button :front_image_format, :gif, id: :poster_front_image_format_gif, class: "form-check-input" %>
-            <b>GIF</b>
-            Is there a GIF of the front of the poster uploaded?
-          <% end %>
-        </div>
+          <div class="form-group">
+            <% %w(front back).each do |side| %>
+              <% %w(color black_and_white).each do |color| %>
 
-        <div class="checkbox">
-          <%= form.label :front_image_format_png, class: "form-check-label" do %>
-            <%= form.radio_button :front_image_format, :png, id: :poster_front_image_format_png, class: "form-check-input" %>
-            <b>PNG</b>
-            Is there a PNG of the front of the poster uploaded?
-          <% end %>
+                <div class="checkbox">
+                  <%= form.label "#{side}_#{color}_#{type}_present", class: "form-check-label" do %>
+                    <%= form.check_box "#{side}_#{color}_#{type}_present", id: "poster_#{side}_#{color}_#{type}_present", class: "form-check-input" %>
+                    <b><%= side.capitalize %> <%= color.titleize %></b>
+                    <span class="form-text text-muted font-weight-normal">
+                      Is there a <%= file %> of the <%= side %> in <%= color.titleize.downcase %> of the poster uploaded?
+                    </span>
+                  <% end %>
+                </div>
+
+              <% end %>
+            <% end %>
+          </div>
+
         </div>
       </div>
-    </div>
-
-    <div class="col-12 col-sm-4">
-      <div class="form-group">
-        <label for="downloads">Preview Back Image Format</label>
-
-        <div class="checkbox">
-          <%= form.label :back_image_format_jpg do %>
-            <%= form.radio_button :back_image_format, :jpg, id: :poster_back_image_format_jpg, class: "form-check-input" %>
-            <b>JPG</b>
-            Is there a JPG of the back side uploaded?
-          <% end %>
-        </div>
-
-        <div class="checkbox">
-          <%= form.label :back_image_format_gif do %>
-            <%= form.radio_button :back_image_format, :gif, id: :poster_back_image_format_gif, class: "form-check-input" %>
-            <b>GIF</b>
-            Is there a GIF of the back of the poster uploaded?
-          <% end %>
-        </div>
-
-        <div class="checkbox">
-          <%= form.label :back_image_format_png do %>
-            <%= form.radio_button :back_image_format, :png, id: :poster_back_image_format_png, class: "form-check-input" %>
-            <b>PNG</b>
-            Is there a PNG of the back of the poster uploaded?
-          <% end %>
-        </div>
-      </div>
-    </div>
+    <% end %>
 
   </div> <!-- .row -->
 
+
+  <div class="row">
+
+    <% %w(front back).each do |side| %>
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <label for="downloads">Preview <%= side.capitalize %> Images Format</label>
+
+          <% %w(jpg gif png).each do |filetype| %>
+            <div class="checkbox">
+              <%= form.label "#{side}_image_format_#{filetype}", class: "form-check-label" do %>
+                <%= form.radio_button "#{side}_image_format", filetype, id: "poster_#{side}_image_format_#{filetype}", class: "form-check-input" %>
+                <b><%= filetype.upcase %></b>
+                <span class="text-muted font-weight-normal">Are the <%= side %> side images <%= filetype.upcase %>s?</span>
+              <% end %>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+    <% end %>
+
+  </div> <!-- .row -->
+
+
   <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+
 
   <fieldset id="purchasing">
     <legend>Purchasing</legend>
@@ -203,6 +165,7 @@
       </div>
     </div> <!-- .row -->
   </fieldset>
+
 
   <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 
@@ -234,6 +197,7 @@
 
     </div> <!-- .row -->
   </fieldset>
+
 
   <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 <% end %>

@@ -16,11 +16,13 @@
       <% %w(image download).each do |type| %>
         <% %w(front back).each do |side| %>
           <% %w(color black_and_white).each do |color| %>
+
             <% if @poster.send("#{side}_#{color}_#{type}_present?") %>
               <span class="badge badge-<%= color == 'color' ? 'success' : 'secondary' %>">
                 ✔ <%= side.capitalize %> <%= color.titleize %> <%= type.capitalize %>
               </span>
             <% end %>
+
           <% end %>
         <% end %>
         <br>
@@ -28,7 +30,7 @@
 
     </p>
 
-    <p><b>URL:</b> <b><%= link_to @poster.path, @poster.path %></b></p>
+    <p><b>URL:</b> <%= link_to @poster.path, @poster.path %></p>
 
     <div class="row">
       <% %w(front back).each do |side| %>
@@ -66,8 +68,9 @@
                 <%= color.titleize %>
                 PDF Download URL:
               </b>
+              <br>
 
-              <b><%= link_to @poster.download_url(side), @poster.download_url(side) %></b>
+              <%= link_to @poster.download_url(side: side, color: color), @poster.download_url(side: side, color: color) %>
             </p>
           <% end %>
         <% end %>

@@ -2,6 +2,7 @@ class Redirect < ApplicationRecord
   before_validation :strip_leading_domain_from_source_path, on: [:create, :update]
   before_validation :strip_leading_domain_from_target_path, on: [:create, :update]
   before_validation :add_leading_slash,                     on: [:create, :update]
+  before_validation :strip_double_slashes,                  on: [:create, :update]
 
   validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
@@ -21,6 +22,11 @@ class Redirect < ApplicationRecord
     unless self.target_path =~ /^\/|http/
       self.target_path = "/#{self.target_path}"
     end
+  end
+
+  def strip_double_slashes
+    self.source_path = self.source_path.gsub(%r{//}, "/")
+    self.target_path = self.target_path.gsub(%r{//}, "/")
   end
 
   def strip_leading_domain_from_source_path
