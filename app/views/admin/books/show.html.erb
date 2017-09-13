@@ -1,6 +1,6 @@
 <%= render "admin/page_header", thing: @book %>
 
-<article>
+<article class="mb-5">
   <header>
     <h1>
       <%= link_to [:admin, @book], class: "p-name" do %>
@@ -69,26 +69,35 @@
   </p>
 
 
-  <% if @book.read_download_present? %>
-    <p><b>Read PDF Download URL:</b> <b><%= link_to @book.download_url, @book.download_url %></b></p>
-  <% end %>
+  <% {
+    screen_single_page_view:  "Screen Single Page View",
+    screen_two_page_view:     "Screen Two Page View",
+    print_color:              "Print Color",
+    print_black_and_white:    "Print B/W",
+    print_color_a4:           "Print Color A4",
+    print_black_and_white_a4: "Print B/W A4",
+    epub:                     "ePub",
+    mobi:                     "Mobi",
+    lite:                     "Lo Res"
+  }.each do |type, label| %>
 
-  <% if @book.print_download_present? %>
-    <p><b>Print PDF Download URL:</b> <b><%= link_to @book.download_url(:print), @book.download_url(:print) %></b></p>
-  <% end %>
+    <% if @book.send("#{type}_download_present?") %>
+      <p>
+        <b>Print PDF Download URL:</b><br>
+        <%= link_to @book.download_url(type), @book.download_url(type) %>
+      </p>
+    <% end %>
 
-  <% if @book.lite_download_present? %>
-    <p><b>Lite PDF Download URL:</b> <b><%= link_to @book.download_url(:lite), @book.download_url(:lite) %></b></p>
   <% end %>
 
   <p>
     <strong>Description:</strong>
-    <%= @book.description %>
+    <%= render_markdown @book.description %>
   </p>
 
   <p>
     <strong>Summary</strong> <span class="text-muted">(used for link previews in Facebook, Twitter, etc)</span>:<br>
-    <%= @book.summary %>
+    <%= render_markdown @book.summary %>
   </p>
 
   <% if @book.buy_url.present? %>

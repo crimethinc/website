@@ -32,28 +32,21 @@
 
 
         <% if product.class == Book %>
-          <% if product.read_download_present? %>
-            <div>
-              <%= link_to product.zine? ?
-                            t("views.products.zine_download_read_button_text") :
-                            t("views.products.book_download_read_button_text"),
-                          product.download_url,
-                          class: "download button" %>
-            </div>
-          <% end %>
+          <% {
+            screen_single_page_view:  "Screen Single Page View PDF",
+            screen_two_page_view:     "Screen Two Page View PDF",
+            print_color:              "Print Color PDF",
+            print_black_and_white:    "Print B/W PDF",
+            print_color_a4:           "Print Color A4 PDF",
+            print_black_and_white_a4: "Print B/W A4 PDF",
+            lite:                     "Lo Res PDF",
+            epub:                     "ePub",
+            mobi:                     "Mobi",
+          }.each do |type, label| %>
 
-          <% if product.print_download_present? %>
-            <div><%= link_to t("views.products.zine_download_print_button_text"),
-                             product.download_url(:print),
-                             class: "download button" %></div>
-          <% end %>
-
-          <% if product.lite_download_present? %>
-            <div><%= link_to product.zine? ?
-                               t("views.products.zine_download_lite_button_text") :
-                               t("views.products.book_download_lite_button_text"),
-                             product.download_url(:lite),
-                             class: "download button" %></div>
+            <% if product.send("#{type}_download_present?") %>
+              <%= link_to label, product.download_url(type), class: "download button" %>
+            <% end %>
           <% end %>
         <% end %>
 

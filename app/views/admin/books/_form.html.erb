@@ -37,56 +37,71 @@
           <%= f.label :slug %>
           <%= f.text_field :slug, class: "form-control form-control-lg" %>
         </div>
-
-        <div class="form-group">
-          <%= f.label :gallery_images_count %>
-          <%= f.text_field :gallery_images_count, class: "form-control form-control-lg" %>
-          <p class="form-text text-muted">The number of <code>.jpg</code> gallery images are uploaded?</p>
-        </div>
       </div>
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
+          <%= f.label :gallery_images_count %>
+          <%= f.text_field :gallery_images_count, class: "form-control form-control-lg" %>
+          <p class="form-text text-muted">
+            The number of <code>.jpg</code> gallery images that are uploaded to the
+            <code>[slug]/gallery</code> folder?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
           <label for="downloads">Downloads</label>
-
-
-          <% {
-            read:  ["Reading",  "Is there a PDF for on-screen reading uploaded?"],
-            print: ["Printing", "Is there an imposed PDF for printing uploaded?"],
-            lite:  ["Lo Res",   "Is there a low resolution or single page view PDF uploaded?"],
-            epub:  ["ePub",     "Is there a <code>.epub</code> uploaded?"],
-            mobi:  ["Mobi",     "Is there a <code>.epub</code> uploaded?"],
-          }.each do |type, texts| %>
-            <div class="checkbox">
-              <%= f.label "#{type}_download_present" do %>
-                <%= f.check_box "#{type}_download_present", id: "book_#{type}_download_present" %>
-
-                <b><%= texts.first %>:</b>
-                <%= texts.last.html_safe %>
-              <% end %>
-            </div>
-          <% end %>
 
           <p class="form-text text-muted">
             Downloads must be uploaded to
-            <code>/assets/<%= @publication_type.pluralize %>/<%= resource.new_record? ? "[slug]" : resource.slug %>/</code>
-            on S3/Cloudfront.<br>
-
-            Downloads must be named:
-            <% if resource.new_record? %>
-                <code>[slug].pdf</code>,
-                <code>[slug]_print.pdf</code>,
-                <code>[slug]_lite.pdf</code>,
-                <code>[slug].epub</code>,
-                <code>[slug].mobi</code>
-            <% else %>
-                <code><%= resource.slug %>.pdf</code>,
-                <code><%= resource.slug %>_print.pdf</code>,
-                <code><%= resource.slug %>_lite.pdf</code>,
-                <code><%= resource.slug %>.epub</code>,
-                <code><%= resource.slug %>.mobi</code>
-            <% end %>
+            <code>
+              /assets/<%= @publication_type.pluralize %>/<%= slug = resource.new_record? ? "[slug]" : resource.slug %>/
+            </code>
+            on S3/Cloudfront.
           </p>
+
+          <% {
+            screen_single_page_view:  ["Screen Single Page View", "Is there a one page wide <code>PDF</code> for on-screen reading uploaded?"],
+            screen_two_page_view:     ["Screen Two Page View",    "Is there a two page wide <code>PDF</code> for on-screen reading uploaded?"],
+            print_color:              ["Print Color",             "Is there a color <code>PDF</code> for printing uploaded?"],
+            print_black_and_white:    ["Print B/W",               "Is there a B/W <code>PDF</code> for printing uploaded?"],
+            print_color_a4:           ["Print Color A4",          "Is there an A4 sized color <code>PDF</code> for printing uploaded?"],
+            print_black_and_white_a4: ["Print B/W A4",            "Is there an A4 sized B/W <code>PDF</code> for printing uploaded?"],
+            epub:                     ["ePub",                    "Is there a <code>.epub</code> file uploaded?"],
+            mobi:                     ["Mobi",                    "Is there a <code>.mobi</code> file uploaded?"],
+            lite:                     ["Lo Res",                  "Is there a low resolution or single page view PDF uploaded?"],
+          }.each do |type, texts| %>
+            <%
+              extension = case type
+              when :epub
+                "epub"
+              when :mobi
+                "mobi"
+              else
+                "pdf"
+              end
+            %>
+
+
+            <div class="checkbox">
+              <%= f.label "#{type}_download_present" do %>
+                <%= f.check_box "#{type}_download_present", id: "book_#{type}_download_present" %>
+                <b><%= texts.first %>:</b>
+
+                <span class="form-text text-muted font-weight-normal">
+                  <%= texts.last.html_safe %><br>
+
+                  <code>
+                    /assets/<%= @publication_type.pluralize %>/<%= slug %>/<b><%= slug %>_<%= type %>.<%= extension %></b>
+                  </code>
+                </span>
+              <% end %>
+            </div>
+          <% end %>
 
         </div>
       </div>
@@ -289,17 +304,17 @@
 
             <div class="col-6">
               <% if @book.slug == "recipes-for-disaster" %>
-                  <div class="form-group">
-                    <%= f.label :recipes %>
-                    <%= f.text_field :recipes, class: "form-control form-control-lg" %>
-                  </div>
+                <div class="form-group">
+                  <%= f.label :recipes %>
+                  <%= f.text_field :recipes, class: "form-control form-control-lg" %>
+                </div>
               <% end %>
 
               <% if @book.slug == "contradictionary" %>
-                  <div class="form-group">
-                    <%= f.label :definitions %>
-                    <%= f.text_field :definitions, class: "form-control form-control-lg" %>
-                  </div>
+                <div class="form-group">
+                  <%= f.label :definitions %>
+                  <%= f.text_field :definitions, class: "form-control form-control-lg" %>
+                </div>
               <% end %>
             </div>
 

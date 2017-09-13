@@ -62,6 +62,15 @@ class Book < ApplicationRecord
   end
 
   def download_url(type=nil, extension:"pdf")
+    case type
+    when :epub
+      type = nil
+      extension = "epub"
+    when :mobi
+      type = nil
+      extension = "mobi"
+    end
+
     filename = [slug]
     filename << "_#{type.to_s}" if type.present?
     filename << "."
