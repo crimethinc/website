@@ -83,7 +83,7 @@
 
     <% if @book.send("#{type}_download_present?") %>
       <p>
-        <b>Print PDF Download URL:</b><br>
+        <b><%= label %> Download URL:</b><br>
         <%= link_to @book.download_url(type), @book.download_url(type) %>
       </p>
     <% end %>
