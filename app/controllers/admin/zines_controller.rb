@@ -68,8 +68,7 @@ class Admin::ZinesController < Admin::AdminController
       :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,
       :photographs, :printing, :ink, :definitions, :recipes, :has_index, :cover_style,
       :binding_style, :table_of_contents, :zine, :back_image_present,
-      :read_download_present, :print_download_present, :lite_download_present,
-      :epub_download_present, :mobi_download_present,
+      :lite_download_present, :epub_download_present, :mobi_download_present,
       :print_black_and_white_a4_download_present, :print_color_a4_download_present,
       :print_color_download_present, :print_black_and_white_download_present,
       :screen_single_page_view_download_present, :screen_two_page_view_download_present)
