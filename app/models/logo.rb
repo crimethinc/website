@@ -1,6 +1,5 @@
 class Logo < ApplicationRecord
-  include Name
-  include Slug
+  include Name, Slug, Publishable
 
   default_scope { order(published_at: :desc) }
 

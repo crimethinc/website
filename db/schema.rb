@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20170913061727) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
+    t.integer "status_id"
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|
@@ -184,6 +185,7 @@ ActiveRecord::Schema.define(version: 20170913061727) do
     t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status_id"
   end
 
   create_table "pages", id: :serial, force: :cascade do |t|
@@ -264,6 +266,7 @@ ActiveRecord::Schema.define(version: 20170913061727) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
+    t.integer "status_id"
   end
 
   create_table "redirects", id: :serial, force: :cascade do |t|
@@ -356,6 +359,7 @@ ActiveRecord::Schema.define(version: 20170913061727) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
+    t.integer "status_id"
   end
 
   create_table "views", force: :cascade do |t|

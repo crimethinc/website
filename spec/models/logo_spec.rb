@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe Poster, type: :model do
+RSpec.describe Logo, type: :model do
     describe "#published?" do
-    subject { poster.published? }
+    subject { logo.published? }
 
     let(:status) { Status.new(name: "published") }
-    let(:poster) { Poster.new(title: "Poster", status: status) }
+    let(:logo) { Logo.new(title: "Logo", status: status) }
 
     it { is_expected.to eq(true)}
   end

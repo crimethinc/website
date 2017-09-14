@@ -1,41 +1,12 @@
 module Post
   extend ActiveSupport::Concern
 
-  include Name
-  include Searchable
-  include Slug
+  include Name, Searchable, Slug, Publishable
 
   included do
     belongs_to :user, optional: true
-    belongs_to :status
-
-    scope :draft,       -> { where(status: Status.find_by(name: "draft")) }
-    scope :edited,      -> { where(status: Status.find_by(name: "edited")) }
-    scope :designed,    -> { where(status: Status.find_by(name: "designed")) }
-    scope :published,   -> { where(status: Status.find_by(name: "published")) }
 
     before_validation :generate_draft_code, on: [:create, :update]
-  end
-
-  # article states through the process from creation to publishing
-  def draft?
-    status.name == "draft"
-  end
-
-  def edited?
-    status.name == "edited"
-  end
-
-  def designed?
-    status.name == "designed"
-  end
-
-  def published?
-    status.name == "published"
-  end
-
-  def dated?
-    published_at.present?
   end
 
   def meta_description

@@ -1,6 +1,5 @@
 class Poster < ApplicationRecord
-  include Name
-  include Slug
+  include Name, Slug, Publishable
 
   scope :poster,  -> { where(sticker: false) }
   scope :sticker, -> { where(sticker: true)  }

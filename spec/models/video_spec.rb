@@ -8,4 +8,13 @@ RSpec.describe Video, type: :model do
 
     it { is_expected.to eq("/videos/slug") }
   end
+
+  describe "#published?" do
+    subject { video.published? }
+    
+    let(:status) { Status.new(name: "published") }
+    let(:video) { Video.new(status: status) } 
+
+    it { is_expected.to eq(true) }
+  end
 end
