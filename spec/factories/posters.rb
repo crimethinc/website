@@ -12,9 +12,6 @@ FactoryGirl.define do
     description "MyText"
     front_image_present false
     back_image_present false
-    read_download_present false
-    print_download_present false
-    lite_download_present false
     slug "MyText"
     height "MyString"
     width "MyString"
