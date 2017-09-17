@@ -3,7 +3,7 @@ class VideosController < ApplicationController
     @html_id = "page"
     @body_id = "watch"
 
-    @videos  = Video.all.page(params[:page]).per(20)
+    @videos  = Video.published.page(params[:page]).per(20)
   end
 
   def show
