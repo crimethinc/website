@@ -10,10 +10,14 @@ FactoryGirl.define do
     price_in_cents 1
     summary "MyText"
     description "MyText"
-    front_image_present false
-    back_image_present false
+    front_color_image_present false
+    back_color_image_present false
     slug "MyText"
     height "MyString"
     width "MyString"
+  end
+
+  trait :sticker do
+    sticker true
   end
 end

@@ -4,7 +4,7 @@ class LogosController < ApplicationController
     @body_id  = "products"
     @type     = "logos"
     @title    = "logos"
-    @products = Logo.page(params[:page]).per(100)
+    @products = Logo.published.page(params[:page]).per(100)
   end
 
   def show

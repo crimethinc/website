@@ -4,9 +4,5 @@ class ToolsController < ApplicationController
     @body_id = "products"
     @type    = "tools"
     @title   = "Tools"
-
-    @posters  = Poster.poster.all
-    @stickers = Poster.sticker.all
-    @zines    = Book.zine.all
   end
 end
