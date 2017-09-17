@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170912235817) do
+ActiveRecord::Schema.define(version: 20170913061727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,8 +87,6 @@ ActiveRecord::Schema.define(version: 20170912235817) do
     t.boolean "zine", default: false
     t.boolean "back_image_present", default: false
     t.boolean "front_image_present", default: false
-    t.boolean "read_download_present", default: false
-    t.boolean "print_download_present", default: false
     t.boolean "lite_download_present", default: false
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
