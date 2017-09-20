@@ -4,8 +4,8 @@ class PostersController < ApplicationController
     @body_id  = "products"
     @type     = "posters"
     @title    = "Posters"
-    @featured_products = Poster.poster.order(published_at: :desc).all.map{ |x| x if     x.buy_url.present? }.compact
-    @products          = Poster.poster.order(published_at: :desc).all.map{ |x| x unless x.buy_url.present? }.compact
+    @featured_products = Poster.poster.order(published_at: :desc).published.map{ |x| x if     x.buy_url.present? }.compact
+    @products          = Poster.poster.order(published_at: :desc).published.map{ |x| x unless x.buy_url.present? }.compact
 
     render "products/index"
   end
