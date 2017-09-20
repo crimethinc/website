@@ -17,6 +17,9 @@ if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
 fi
 
 if [ -f "Gemfile" ]; then
+  echo "==> Installing Bundler..."
+  gem install bundler --pre
+
   echo "==> Installing gem dependencies..."
   bundle install --quiet --without production
 fi
