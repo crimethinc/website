@@ -11,12 +11,6 @@ gem "scenic", "~> 1.4"
 # webserver
 gem "puma"
 
-
-# bootstrap tooltips and popovers depend on tether for positioning
-source "https://rails-assets.org" do
-  gem "rails-assets-tether", ">= 1.1.0"
-end
-
 # assets
 gem "bootstrap", "~> 4.0.0.beta"
 gem "sass-rails"
