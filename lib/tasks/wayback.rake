@@ -9,8 +9,8 @@ task :wayback, [:url] => :environment do |_t, args|
   if args[:url]
     urls.append args[:url]
   else
-    since = (Time.new - 86_400).to_s
-    Article.where("published_at > '#{since}'").each do |article|
+    since = 1.day.ago.to_s
+    Article.where("updated_at > '#{since}'").each do |article|
       urls.append [app['website'], article.path].join('')
     end
   end
