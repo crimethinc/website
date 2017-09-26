@@ -4,7 +4,7 @@ class Admin::BooksController < Admin::AdminController
   before_action :set_publication_type, only: [:show, :edit, :new, :index]
 
   def index
-    @books = Book.book.page(params[:page])
+    @books = Book.book.order(slug: :asc).page(params[:page])
     @title = admin_title
   end
 

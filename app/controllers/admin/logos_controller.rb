@@ -3,7 +3,7 @@ class Admin::LogosController < Admin::AdminController
   before_action :set_logo, only: [:show, :edit, :update, :destroy]
 
   def index
-    @logos = Logo.page(params[:page])
+    @logos = Logo.order(slug: :asc).page(params[:page])
     @title = admin_title
   end
 
