@@ -4,7 +4,7 @@ class Admin::StickersController < Admin::AdminController
   before_action :set_publication_type, only: [:show, :edit, :new, :index]
 
   def index
-    @posters = Poster.sticker.page(params[:page])
+    @posters = Poster.sticker.order(slug: :asc).page(params[:page])
     @title = admin_title
     render "admin/posters/index"
   end
