@@ -5,7 +5,7 @@ class Admin::VideosController < Admin::AdminController
 
   # /admin/videos
   def index
-    @videos = Video.page(params[:page])
+    @videos = Video.order(slug: :asc).page(params[:page])
     @title = admin_title
   end
 
