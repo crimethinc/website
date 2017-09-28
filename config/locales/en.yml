@@ -275,7 +275,7 @@ en:
       index_title: "Users"
       new_title: "New Users"
       show_title: "Users : %{name}"
-      edit_title: "Editing user %{id} %{name}"
+      edit_title: "Editing user %{id} %{username}"
     settings:
       index_title: "Settings"
       new_title: "New Settings"
@@ -316,3 +316,11 @@ en:
       new_title: "New Themes"
       show_title: "Themes : %{name}"
       edit_title: "Editing theme %{id} %{name}"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              burned_password: ": This password has previously appeared in a data breach. Please choose a more secure alternative."
