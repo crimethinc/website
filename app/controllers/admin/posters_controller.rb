@@ -4,7 +4,7 @@ class Admin::PostersController < Admin::AdminController
   before_action :set_publication_type, only: [:show, :edit, :new, :index]
 
   def index
-    @posters = Poster.poster.page(params[:page]).per(50)
+    @posters = Poster.poster.order(slug: :asc).page(params[:page]).per(50)
     @title = admin_title
   end
 

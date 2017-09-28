@@ -4,7 +4,7 @@ class Admin::ZinesController < Admin::AdminController
   before_action :set_publication_type, only: [:show, :edit, :new, :index]
 
   def index
-    @books = Book.zine.page(params[:page])
+    @books = Book.zine.order(slug: :asc).page(params[:page])
     @title = admin_title
     render "admin/books/index"
   end
