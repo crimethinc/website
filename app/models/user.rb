@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
               in: ["mickey fickie fire cracker soap on a rope", "a long passphrase to meet the minimum length"],
               message: "The passphrase '%{value}' is prohibited."
             }
+  validate :password_not_already_burned, on: :create
 
   default_scope { order(username: :asc) }
 
@@ -27,5 +28,12 @@ class User < ActiveRecord::Base
 
   def name
     username
+  end
+
+  private
+
+  def password_not_already_burned
+    burned = BurnedPassword.exists?(Digest::SHA1.hexdigest(password))
+    errors.add(:password, :burned_password) if burned
   end
 end
