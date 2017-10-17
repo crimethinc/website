@@ -115,7 +115,7 @@ class Article < ApplicationRecord
           redirect.update_attributes(source_path: "/" + self.short_path, target_path: self.path )
         end
       elsif Redirect.where(source_path: "/" + self.short_path).exists?
-        errors.add(:short_path, ' is a path that already points to a redirect.')
+        errors.add(:short_path, ' is a path that already points to a redirect')
       else
         if self.status.name == "published"
           Redirect.create(source_path: "/" + self.short_path, target_path: path, article_id: id)
