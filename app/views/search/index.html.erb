@@ -11,7 +11,9 @@
   <div class="articles-list">
     <ol>
       <% @results.each do |result| %>
-        <%= render "result", result: result %>
+        <% unless result.blank? %>
+          <%= render "result", result: result %>
+        <% end %>
       <% end %>
     </ol>
   </div>
