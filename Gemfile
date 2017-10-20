@@ -12,7 +12,7 @@ gem "scenic", "~> 1.4"
 gem "puma"
 
 # assets
-gem "bootstrap", "~> 4.0.0.beta"
+gem "bootstrap", "~> 4.0.0.beta2"
 gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"
