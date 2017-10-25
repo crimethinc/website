@@ -33,11 +33,13 @@ SitemapGenerator::Sitemap.create(default_host: "https://crimethinc.com", compres
       "/get/",
       "/kickstarter/2017/",
       "/listen/",
+      "/library/",
       "/read/",
       "/rt/", "/rt/archives/",
       "/start/",
       "/store/", "/store/audio/", "/store/added/",
       "/tce/",
+      "/tools/",
       "/watch/",
   ]
   tce_languages = ["czech", "deutsch", "espanol", "polski", "portugues", "quebecois", "slovenscina", "slovensko"]
@@ -56,6 +58,10 @@ SitemapGenerator::Sitemap.create(default_host: "https://crimethinc.com", compres
 
   Category.find_each do |category|
     add "/categories/#{category.slug}/"
+  end
+
+  [2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1997, 1996].each do |year|
+    add "/#{year}/"
   end
 
   [Book, Episode, Page, Podcast, Video].each do |model|
