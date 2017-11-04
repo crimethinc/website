@@ -14,6 +14,7 @@ class PodcastController < ApplicationController
     @body_id = "podcast"
     @episode = Episode.find_by(slug: params[:slug])
     @editable = @episode
+    @title = @episode.name
   end
 
   def transcript
