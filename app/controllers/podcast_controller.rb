@@ -19,9 +19,11 @@ class PodcastController < ApplicationController
   end
 
   def transcript
-    @html_id = "page"
-    @body_id = "podcast"
-    @episode = Episode.find_by(slug: params[:slug])
+    @html_id  = "page"
+    @body_id  = "podcast"
+    @episode  = Episode.find_by(slug: params[:slug])
+    @editable = @episode
+    @title    = "#{@episode.name} — Transcript"
 
     render "podcast/show"
   end
