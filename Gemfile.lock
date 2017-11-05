@@ -61,7 +61,7 @@ GEM
       xpath (~> 2.0)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
-    cocoon (1.2.10)
+    cocoon (1.2.11)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.2)
@@ -290,7 +290,7 @@ DEPENDENCIES
   bugsnag
   byebug
   capybara
-  cocoon (~> 1.2.9)
+  cocoon (~> 1.2.11)
   dalli
   database_cleaner
   factory_bot_rails
