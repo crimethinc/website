@@ -7,11 +7,11 @@ feature "Tools Pages" do
     create(:status, :draft)
   end
   scenario "Renders published logos calling tools/logos" do
-    FactoryGirl.create(:logo, 
+    FactoryBot.create(:logo, 
                         title: "published", 
                         status_id: Status.find_by(name: "published").id)
 
-    FactoryGirl.create(:logo,
+    FactoryBot.create(:logo,
                         title: "draft", 
                         status_id: Status.find_by(name: "draft").id)
 
@@ -22,12 +22,12 @@ feature "Tools Pages" do
   end
 
   scenario "Renders published stickers calling tools/sticker" do
-    FactoryGirl.create(:poster,
+    FactoryBot.create(:poster,
                         :sticker,
                         title: "published", 
                         status_id: Status.find_by(name: "published").id)
 
-    FactoryGirl.create(:poster,
+    FactoryBot.create(:poster,
                         :sticker, 
                         title: "draft", 
                         status_id: Status.find_by(name: "draft").id)
@@ -39,12 +39,12 @@ feature "Tools Pages" do
   end
 
   scenario "Renders published zines calling tools/zines" do
-    FactoryGirl.create(:book,
+    FactoryBot.create(:book,
                         :zine, 
                         title: "published", 
                         status_id: Status.find_by(name: "published").id)
 
-    FactoryGirl.create(:book,
+    FactoryBot.create(:book,
                         :zine, 
                         title: "draft", 
                         status_id: Status.find_by(name: "draft").id)
@@ -56,11 +56,11 @@ feature "Tools Pages" do
   end
 
   scenario "Renders published posters calling tools/posters" do
-    FactoryGirl.create(:poster, 
+    FactoryBot.create(:poster, 
                        title: "published", 
                        status_id: Status.find_by(name: "published").id)
 
-    FactoryGirl.create(:poster, 
+    FactoryBot.create(:poster, 
                         title: "draft", 
                         status_id: Status.find_by(name: "draft").id)
 
@@ -72,11 +72,11 @@ feature "Tools Pages" do
 
 
   scenario "Renders published videos calling tools/videos" do
-    FactoryGirl.create(:video, 
+    FactoryBot.create(:video, 
                        title: "published", 
                        status_id: Status.find_by(name: "published").id)
 
-    FactoryGirl.create(:video, 
+    FactoryBot.create(:video, 
                         title: "draft", 
                         status_id: Status.find_by(name: "draft").id)
 

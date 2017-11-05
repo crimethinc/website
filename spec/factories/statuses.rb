@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :status do
     initialize_with { Status.find_or_create_by(name: "draft") }
   end
