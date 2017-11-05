@@ -7,7 +7,7 @@ task page_views_rollup: :environment do
     end
 
     view.article.page_views += 1
-    view.article.save!
+    view.article.save validate: false
 
     if Rails.env.development?
       puts "Page Views after update:  #{view.article.page_views}"
