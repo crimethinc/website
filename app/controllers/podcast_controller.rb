@@ -7,13 +7,15 @@ class PodcastController < ApplicationController
     @body_id        = "podcast"
     @latest_episode = @episodes.shift
     @editable       = @latest_episode.podcast
+    @title          = @podcast.name
   end
 
   def show
-    @html_id = "page"
-    @body_id = "podcast"
-    @episode = Episode.find_by(slug: params[:slug])
+    @html_id  = "page"
+    @body_id  = "podcast"
+    @episode  = Episode.find_by(slug: params[:slug])
     @editable = @episode
+    @title    = @episode.name
   end
 
   def transcript
