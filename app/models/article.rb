@@ -58,7 +58,7 @@ class Article < ApplicationRecord
 
   def content_rendered
     Kramdown::Document.new(
-      MarkdownMedia.parse(content.gsub("\n","\n\n")),
+      MarkdownMedia.parse(content),
       input: content_format == "html" ? :html : :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
