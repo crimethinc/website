@@ -45,10 +45,10 @@ GEM
       execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
-    bootstrap (4.0.0.beta)
+    bootstrap (4.0.0.beta2.1)
       autoprefixer-rails (>= 6.0.3)
-      popper_js (~> 1.11.1)
-      sass (>= 3.4.19)
+      popper_js (>= 1.12.3, < 2)
+      sass (>= 3.5.2)
     bugsnag (6.0.1)
     builder (3.2.3)
     byebug (9.1.0)
@@ -148,7 +148,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (0.21.0)
-    popper_js (1.11.1)
+    popper_js (1.12.5)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -218,7 +218,7 @@ GEM
     ruby_dep (1.5.0)
     rubypants (0.6.0)
     rubyzip (1.2.1)
-    sass (3.5.1)
+    sass (3.5.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -286,7 +286,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bcrypt (~> 3.1.7)
-  bootstrap (~> 4.0.0.beta)
+  bootstrap (~> 4.0.0.beta2)
   bugsnag
   byebug
   capybara
