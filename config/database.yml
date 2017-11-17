@@ -5,10 +5,12 @@ default: &default
 
 development:
   <<: *default
+  host: localhost
   database: crimethinc_development
 
 test:
   <<: *default
+  host: localhost
   database: crimethinc_test
 
 production:
