@@ -10,6 +10,7 @@ gem "scenic", "~> 1.4"
 
 # webserver
 gem "puma"
+gem "rack-timeout"
 
 # assets
 gem "bootstrap", "~> 4.0.0.beta"
