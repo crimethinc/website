@@ -8,7 +8,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'database_cleaner'
 
-require 'support/factory_girl'
+require 'support/factory_bot'
 
 ActiveRecord::Migration.maintain_test_schema!
 
