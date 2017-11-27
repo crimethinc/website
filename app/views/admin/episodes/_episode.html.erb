@@ -1,4 +1,4 @@
-<article>
+<article class="mb-5">
   <header>
     <div class="p-name">
       <h1><%= link_to_unless_current episode.title, [:admin, episode] %></h1>
@@ -9,66 +9,78 @@
   </header>
 
   <div class="e-content">
-    <dl class="dl-horizontal">
+    <dl>
       <dt>Episode Path</dt>
-      <dd><%= link_to episode.path, episode.path %></dd>
+      <dd class="mb-4"><%= link_to episode.path, episode.path %></dd>
 
       <dt>Image</dt>
-      <dd>
+      <dd class="mb-4">
         <% if episode.image.present? %>
           <%= link_to(image_tag(episode.image, style: "width: 200px"), episode.image) %>
         <% end %>
       </dd>
 
       <dt>Podcast</dt>
-      <dd><%= link_to episode.podcast.name, [:admin, episode.podcast] %></dd>
+      <dd class="mb-4"><%= link_to episode.podcast.name, [:admin, episode.podcast] %></dd>
 
       <dt>Title</dt>
-      <dd><%= episode.title %></dd>
+      <dd class="mb-4"><%= episode.title %></dd>
 
       <dt>Subtitle</dt>
-      <dd><%= episode.subtitle %></dd>
+      <dd class="mb-4"><%= episode.subtitle %></dd>
 
       <dt>MP3 URL</dt>
-      <dd><%= link_to episode.audio_mp3_url, episode.audio_mp3_url %></dd>
+      <dd class="mb-4"><%= link_to episode.audio_mp3_url, episode.audio_mp3_url %></dd>
 
       <dt>MP3 File Size</dt>
-      <dd><%= episode.audio_mp3_file_size %></dd>
+      <dd class="mb-4"><%= episode.audio_mp3_file_size %></dd>
 
       <dt>OGG URL</dt>
-      <dd><%= link_to episode.audio_ogg_url, episode.audio_ogg_url %></dd>
+      <dd class="mb-4"><%= link_to episode.audio_ogg_url, episode.audio_ogg_url %></dd>
 
       <dt>OGG File Size</dt>
-      <dd><%= episode.audio_ogg_file_size %></dd>
+      <dd class="mb-4"><%= episode.audio_ogg_file_size %></dd>
 
       <dt>Audio Length</dt>
-      <dd><%= episode.audio_length %></dd>
+      <dd class="mb-4"><%= episode.audio_length %></dd>
 
       <dt>Duration</dt>
-      <dd><%= episode.duration %></dd>
+      <dd class="mb-4"><%= episode.duration %></dd>
 
       <dt>Audio Type</dt>
-      <dd><%= episode.audio_type %></dd>
+      <dd class="mb-4"><%= episode.audio_type %></dd>
 
       <dt>Tags</dt>
-      <dd><%= episode.tags %></dd>
+      <dd class="mb-4"><%= episode.tags %></dd>
     </dl>
 
     <hr>
 
     <% unless action_name == "index" %>
-      <dl class="dl-horizontal">
+      <dl>
         <dt>Published At</dt>
-        <dd><%= episode.published_at %></dd>
+        <dd class="mb-4"><%= episode.published_at %></dd>
 
         <dt>Content</dt>
-        <dd><%= episode.content %></dd>
+        <dd class="mb-4">
+          <code>
+            <%= episode.content %>
+          </code>
+        </dd>
 
         <dt>Show Notes</dt>
-        <dd><%= episode.show_notes %></dd>
+        <dd class="mb-4">
+          <code>
+            <%= episode.show_notes %>
+          </code>
+        </dd>
 
         <dt>Transcript</dt>
-        <dd><%= episode.transcript %></dd>
+        <dd class="mb-4">
+          <code>
+            <%= episode.transcript %>
+          </code>
+        </dd>
       </dl>
     <% end %>
   </div>

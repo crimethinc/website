@@ -141,7 +141,7 @@
       <div class="form-group">
         <%= f.label :tags, "Tags", class: "h4" %>
         <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
-        <p class="help-block">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
+        <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
       </div>
 
       <hr class="my-5">

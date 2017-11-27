@@ -9,7 +9,7 @@
 
       <% if @article.content_format == "html" %>
       &nbsp;
-      <b class="label label-warning">HTML</b>
+      <b class="badge badge-warning">HTML</b>
       <% end %>
 
       &nbsp;
@@ -26,13 +26,13 @@
     <p>
       <% if @article.categories.present? %>
         <% @article.categories.each do |category| %>
-          <%= link_to category.name, category_path(category.slug), class: "label label-primary" %>
+          <%= link_to category.name, category_path(category.slug), class: "badge badge-primary" %>
         <% end %>
       <% end %>
 
       <% if @article.tags.present? %>
         <% @article.tags.each do |tag| %>
-          <%= link_to tag.name, tag_path(tag.slug), class: "label label-info" %>
+          <%= link_to tag.name, tag_path(tag.slug), class: "badge badge-info" %>
         <% end %>
       <% end %>
     </p>
@@ -61,7 +61,7 @@
       <p>
         <b>Contributions:</b>
         <% @article.contributions.each do |contribution| %>
-          <span class="badge badge-default">
+          <span class="badge badge-secondary">
             <%= link_to contribution.role.name.titleize, [:admin, contribution.role] %>
             <span>by</span>
             <%= link_to contribution.contributor.name, [:admin, contribution.contributor] %>

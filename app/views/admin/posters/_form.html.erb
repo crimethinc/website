@@ -95,7 +95,7 @@
             <% %w(front back).each do |side| %>
               <% %w(color black_and_white).each do |color| %>
 
-                <div class="checkbox">
+                <div class="form-check">
                   <%= form.label "#{side}_#{color}_#{type}_present", class: "form-check-label" do %>
                     <%= form.check_box "#{side}_#{color}_#{type}_present", id: "poster_#{side}_#{color}_#{type}_present", class: "form-check-input" %>
                     <b><%= side.capitalize %> <%= color.titleize %></b>
@@ -124,7 +124,7 @@
           <label for="downloads">Preview <%= side.capitalize %> Images Format</label>
 
           <% %w(jpg gif png).each do |filetype| %>
-            <div class="checkbox">
+            <div class="form-check">
               <%= form.label "#{side}_image_format_#{filetype}", class: "form-check-label" do %>
                 <%= form.radio_button "#{side}_image_format", filetype, id: "poster_#{side}_image_format_#{filetype}", class: "form-check-input" %>
                 <b><%= filetype.upcase %></b>
