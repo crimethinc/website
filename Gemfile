@@ -80,6 +80,7 @@ gem "bugsnag"
 # DDOS protection
 gem "rack-attack"
 gem "redis"
+gem "redis-store"
 
 # windows dev
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

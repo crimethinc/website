@@ -193,6 +193,8 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     redis (4.0.1)
+    redis-store (1.4.1)
+      redis (>= 2.2, < 5)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -311,6 +313,7 @@ DEPENDENCIES
   rails (~> 5.1.4)
   rails-controller-testing
   redis
+  redis-store
   rspec-rails
   rubypants
   sass-rails

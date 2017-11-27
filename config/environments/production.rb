@@ -18,7 +18,7 @@ Rails.application.configure do
   # Configure memcache as the cache_store if available
   # Pulled from https://devcenter.heroku.com/articles/memcachedcloud
   if ENV["MEMCACHEDCLOUD_SERVERS"]
-      config.cache_store = :dalli_store, ENV["MEMCACHEDCLOUD_SERVERS"].split(','), { :username => ENV["MEMCACHEDCLOUD_USERNAME"], :password => ENV["MEMCACHEDCLOUD_PASSWORD"] }
+    config.cache_store = :dalli_store, ENV["MEMCACHEDCLOUD_SERVERS"].split(','), { :username => ENV["MEMCACHEDCLOUD_USERNAME"], :password => ENV["MEMCACHEDCLOUD_PASSWORD"] }
   else
     # Cache in memory otherwise
     config.cache_store = :memory_store, { size: 64.megabytes }
