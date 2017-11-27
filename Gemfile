@@ -10,6 +10,7 @@ gem "scenic", "~> 1.4"
 
 # webserver
 gem "puma"
+gem "rack-timeout"
 
 # assets
 gem "bootstrap", "~> 4.0.0.beta2"
@@ -51,7 +52,6 @@ group :development, :test do
   gem "factory_bot_rails"
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'database_cleaner'
   gem 'launchy'
 end
 
