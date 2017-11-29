@@ -60,6 +60,7 @@ Rails.application.routes.draw do
 
 
   # Categories
+  get "categories",                    to: "categories#index", as: :categories
   get "categories/:slug/page(/1)",     to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
   get "categories/:slug(/page/:page)", to: "categories#show", as: :category
   get "categories/:slug/feed",         to: "categories#feed", defaults: { format: "atom" }, as: :category_feed
