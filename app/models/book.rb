@@ -4,6 +4,11 @@ class Book < ApplicationRecord
   scope :book, -> { where(zine: false) }
   scope :zine, -> { where(zine: true)  }
 
+  has_many :taggings, dependent: :destroy, as: :taggable
+  has_many :tags, through: :taggings
+
+  default_scope { order(slug: :asc) }
+
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
 
   def namespace

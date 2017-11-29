@@ -2,6 +2,10 @@ class Tagging < ApplicationRecord
   TAGGABLES = [
     ARTICLE   = "Article",
     PAGE      = "Page",
+    POSTER    = "Poster",
+    STICKER   = "Sticker",
+    ZINE      = "Zine",
+    BOOK      = "Book"
   ]
 
   belongs_to :tag
