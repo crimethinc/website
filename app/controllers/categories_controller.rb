@@ -27,7 +27,10 @@ class CategoriesController < ApplicationController
   end
 
   def index
-    redirect_to [:root]
+    @html_id = "page"
+    @body_id = "categories"
+    @title = "Categories"
+    @categories = Category.all
   end
 
   def feed
