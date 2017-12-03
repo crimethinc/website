@@ -4,6 +4,9 @@ class Poster < ApplicationRecord
   scope :poster,  -> { where(sticker: false) }
   scope :sticker, -> { where(sticker: true)  }
 
+  has_many :taggings, dependent: :destroy, as: :taggable
+  has_many :tags, through: :taggings
+
   default_scope { order(slug: :asc) }
 
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
