@@ -17,7 +17,7 @@ module MetaHelper
   end
 
   def meta_image(thing)
-    thing.present? ? thing.meta_image : ""
+    thing.present? ? thing.meta_image : t("head.meta_image_url")
   end
 
 end
