@@ -17,7 +17,11 @@ module MetaHelper
   end
 
   def meta_image(thing)
-    thing.present? ? thing.meta_image : t("head.meta_image_url")
+    if thing.present? && thing.image.present?
+      thing.meta_image
+    else
+      t("head.meta_image_url")
+    end
   end
 
 end

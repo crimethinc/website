@@ -5,8 +5,8 @@ class ZinesController < ApplicationController
     @type    = "zines"
     @title   = "Zines"
 
-    @featured_products = Book.zine.order(published_at: :desc).published.where.not(buy_url: "")
-    @products          = Book.zine.order(published_at: :desc).published.where(buy_url: "")
+    @featured_products = Book.zine.order(published_at: :desc).published.where.not(buy_url: nil)
+    @products          = Book.zine.order(published_at: :desc).published.where(buy_url: nil)
 
     render "products/index"
   end
