@@ -5,8 +5,8 @@ class ZinesController < ApplicationController
     @type    = "zines"
     @title   = "Zines"
 
-    @featured_products = Book.zine.order(published_at: :desc).published.map{ |x| x if     x.buy_url.present? }.compact
-    @products          = Book.zine.order(published_at: :desc).published.map{ |x| x unless x.buy_url.present? }.compact
+    @featured_products = Book.zine.order(published_at: :desc).published.where.not(buy_url: "")
+    @products          = Book.zine.order(published_at: :desc).published.where(buy_url: "")
 
     render "products/index"
   end
