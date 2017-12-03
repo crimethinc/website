@@ -1,0 +1,8 @@
+<header>
+  <h1><%= @title %></h1>
+</header>
+<uL>
+  <% @categories.each do |category| %>
+    <li><a href="<%= category.path %>"><strong><%= category.name %></strong> (<%= category.articles.count %>)</a></li>
+  <% end %>
+</uL>

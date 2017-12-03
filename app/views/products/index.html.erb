@@ -9,15 +9,9 @@
     <%= render_markdown t("views.products.#{@type}_intro_text") %>
   </div>
 
-  <% @featured_products.each do |product| %>
-    <%= render "products/product", product: product %>
-  <% end %>
-
-  <% @products.each do |product| %>
-    <%= render "products/product", product: product %>
+  <% [@featured_products, @products].each do |collection| %>
+    <% collection.each do |product| %>
+      <%= render "products/product", product: product %>
+    <% end %>
   <% end %>
 </article>
-
-<div class="pagination-container">
-  <%#= paginate @products %>
-</div>

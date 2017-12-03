@@ -1,19 +1,10 @@
-desc 'Request the Wayback Machine to snapshot a specific URL or all new '\
-     'article URLs for the past 24 hours if no argument is given'
+desc 'Request the Wayback Machine to snapshot a ALL articles'
 
-task :wayback, [:url] => :environment do |_t, args|
+task :wayback_all, [:url] => :environment do |_t, args|
   app = JSON.parse(File.read(Rails.root.join('app.json')))
   api = 'https://pragma.archivelab.org/'
-  urls = []
 
-  if args[:url]
-    urls.append args[:url]
-  else
-    since = 1.day.ago.to_s
-    Article.where("updated_at > '#{since}'").each do |article|
-      urls.append [app['website'], article.path].join('')
-    end
-  end
+  urls = Article.published.map{|a| app['website'] + a.path}
 
   uri = URI.parse(api)
   urls.each do |url|
@@ -31,5 +22,7 @@ task :wayback, [:url] => :environment do |_t, args|
       puts "Snapshot ping for #{url} Failed"
       puts response.body
     end
+
+    puts
   end
 end
