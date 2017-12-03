@@ -1,7 +1,7 @@
 module MetaHelper
 
   def find_the_thing
-    @find_the_thing ||= [@article, @page, @podcast, @episode].compact.first
+    @find_the_thing ||= [@article, @page, @podcast, @episode, @book, @product, @video].compact.first
   end
 
   def meta_type(thing)
@@ -17,10 +17,7 @@ module MetaHelper
   end
 
   def meta_image(thing)
-    if thing.present?
-      thing.image || t("head.meta_image_url") # TODO
-    else
-      t("head.meta_image_url") # TODO
-    end
+    thing.present? ? thing.meta_image : ""
   end
+
 end
