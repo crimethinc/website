@@ -37,8 +37,7 @@ class Article < ApplicationRecord
     end
   end
 
- # Overwrites slug_exists? from Slug.  We allow duplicate slugs on different
- # published_at dates.
+ # Overwrites slug_exists? from Slug. We allow duplicate slugs on different published_at dates.
   def slug_exists?
     Article.on(published_at).where(slug: slug).exists?
   end

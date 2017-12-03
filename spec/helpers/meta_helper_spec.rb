@@ -5,7 +5,7 @@ RSpec.describe MetaHelper, type: :helper do
     subject { helper.meta_image(thing) }
 
     context "with a thing" do
-      let(:thing) { OpenStruct.new(image: "http://example.com/image.png") }
+      let(:thing) { OpenStruct.new(image: "http://example.com/image.png", meta_image: "http://example.com/image.png") }
 
       it { is_expected.to eq("http://example.com/image.png") }
     end
