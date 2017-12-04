@@ -2,3 +2,5 @@ version: "2"
 
 exclude_patterns:
   - "public/"
+  - "script/"
+  - "db/seeds/"
