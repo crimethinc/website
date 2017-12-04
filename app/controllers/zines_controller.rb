@@ -17,7 +17,14 @@ class ZinesController < ApplicationController
     @type    = "zines"
 
     # Treat a Zine as a Book
-    @book  = Book.zine.find_by(slug: params[:slug])
+    @book  = Book.zine.where(slug: params[:slug])
+
+    if @book.present?
+      @book = @book.first
+    else
+      return redirect_to [:zines]
+    end
+
     @title = "Zines : #{@book.name}"
 
     @editable = @book

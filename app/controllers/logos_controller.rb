@@ -11,7 +11,14 @@ class LogosController < ApplicationController
     @html_id = "page"
     @body_id = "products"
     @type    = "logos"
-    @product = Logo.find_by(slug: params[:slug])
+    @product = Logo.where(slug: params[:slug])
+
+    if @product.blank?
+      return redirect_to [:logos]
+    else
+      @product = @product.first
+    end
+
     @title   = "logos : #{@product.name}"
   end
 end

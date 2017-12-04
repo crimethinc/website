@@ -1,24 +1,36 @@
 class TagsController < ApplicationController
+  before_action :set_tag
+  before_action :set_title
+  before_action :set_articles
 
   def show
-    @tag = Tag.find_by(slug: params["slug"])
-    return redirect_to root_path if @tag.blank?
-
-    @articles = @tag.articles.live.published.page(params[:page]).per(15)
-    return redirect_to root_path if @articles.empty?
-
-    @html_id  = "page"
-    @body_id  = "tag"
-    @title    = @tag.name
+    @html_id = "page"
+    @body_id = "tag"
   end
 
   def feed
-    @tag      = Tag.find_by!(slug: params["slug"])
-    @articles = @tag.articles.live.published.page(params[:page]).per(25)
-
-    @title    = @tag.name
-
     render "articles/index"
+  end
+
+  private
+
+  def set_tag
+    @tag = Tag.where(slug: params["slug"])
+
+    if @tag.present?
+      @tag = @tag.first
+    else
+      return redirect_to [:root]
+    end
+  end
+
+  def set_title
+    @title = @tag.name
+  end
+
+  def set_articles
+    @articles = @tag.articles.live.published.page(params[:page]).per(25)
+    return redirect_to root_path if @articles.empty?
   end
 
 end

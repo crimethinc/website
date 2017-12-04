@@ -14,7 +14,14 @@ class StickersController < ApplicationController
     @html_id = "page"
     @body_id = "products"
     @type    = "stickers"
-    @product = Poster.sticker.find_by(slug: params[:slug])
+    @product = Poster.sticker.where(slug: params[:slug])
+
+    if @product.present?
+      @product = @product.first
+    else
+      return redirect_to [:stickers]
+    end
+
     @title   = "Stickers : #{@product.name}"
 
     @editable = @product
