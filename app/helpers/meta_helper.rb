@@ -17,6 +17,8 @@ module MetaHelper
   end
 
   def meta_image(thing)
+    return "" # TODO TEMP HOT FIX
+
     if thing.present? && thing.image.present?
       thing.meta_image
     else
