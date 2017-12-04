@@ -8,6 +8,7 @@ task rollup_page_views: :environment do
     article = Article.find(article_id)
 
     # Update the page view count for this Article
+    # update_columns to avoid hitting callbacks, namely updating Search index
     article.update_columns(page_views: article.page_views + page_view_count)
   end
 
