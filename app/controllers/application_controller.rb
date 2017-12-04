@@ -9,8 +9,13 @@ class ApplicationController < ActionController::Base
   before_action :set_social_links
   before_action :set_new_subscriber
   before_action :set_pinned_pages
+  before_action :authorize, if: :staging?
 
   helper :meta
+
+  def staging?
+    ENV["ON_STAGING"] == "TRUE"
+  end
 
   def set_pinned_pages
     # pinned article
