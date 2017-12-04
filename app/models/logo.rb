@@ -37,6 +37,7 @@ class Logo < ApplicationRecord
   def meta_image
     image_url :png
   end
+  alias_method :image, :meta_image
 
   def price_in_cents; nil; end
   def buy_info; nil; end

@@ -48,11 +48,10 @@ class Poster < ApplicationRecord
     image side: :back, color: :black_and_white
   end
 
-  def image(side:nil, color:nil)
+  def image(side: :front, color: :color)
     filename = [slug, "_", side, "_", color, ".", self.send("#{side}_image_format")].join
     [ASSET_BASE_URL, namespace, slug, filename].join("/")
   end
-
 
   def front_image
     if front_color_image_present? || front_black_and_white_image_present?
@@ -70,7 +69,6 @@ class Poster < ApplicationRecord
     end
   end
 
-  # TODO add color to url builder
   def download_url(side:nil, color:nil)
     filename = [slug]
     filename << "_#{side.to_s}"  if side.present?

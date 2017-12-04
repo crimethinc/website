@@ -23,8 +23,8 @@ class Book < ApplicationRecord
     [nil, namespace, slug].join("/")
   end
 
-  def image(type, count=0)
-    case type
+  def image(side: :front, count: 0)
+    case side
     when :front
       [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join("/")
     when :back
@@ -52,15 +52,15 @@ class Book < ApplicationRecord
   end
 
   def front_image
-    image :front
+    image side: :front
   end
 
   def back_image
-    iamge :back
+    image side: :back
   end
 
   def header_image
-    image :header
+    image side: :header
   end
 
   def download_url(type=nil, extension:"pdf")
@@ -98,7 +98,7 @@ class Book < ApplicationRecord
   end
 
   def meta_image
-    image :front
+    image side: :front
   end
 
 end

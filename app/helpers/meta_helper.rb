@@ -17,9 +17,7 @@ module MetaHelper
   end
 
   def meta_image(thing)
-    return "" # TODO TEMP HOT FIX
-
-    if thing.present? && thing.image.present?
+    if thing.present? && thing.image.present? && thing.respond_to?(:meta_image)
       thing.meta_image
     else
       t("head.meta_image_url")

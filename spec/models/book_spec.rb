@@ -26,7 +26,7 @@ RSpec.describe Book, type: :model do
   end
 
   describe "#image" do
-    subject { book.image(:front) }
+    subject { book.image(side: :front) }
 
     let(:book) { Book.new(slug: "slug") }
 
