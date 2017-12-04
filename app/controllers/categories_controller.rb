@@ -1,45 +1,54 @@
 class CategoriesController < ApplicationController
+  before_action :set_slug,     only: [:show, :feed]
+  before_action :set_category, only: [:show, :feed]
+  before_action :set_title,    only: [:show, :feed]
+  before_action :set_articles, only: [:show, :feed]
 
   def show
-    slug = params[:slug].gsub("_", "-")
+    @html_id  = "page"
+    @body_id  = "category"
+  end
 
-    if slug != params[:slug]
-      return redirect_to category_path(slug)
+  def index
+    @html_id    = "page"
+    @body_id    = "categories"
+    @title      = "Categories"
+    @categories = Category.all
+  end
+
+  def feed
+    render "articles/index"
+  end
+
+  private
+
+  def set_slug
+    @slug = params[:slug].gsub("_", "-")
+
+    if @slug != params[:slug]
+      return redirect_to category_path(@slug)
     end
+  end
 
-    @category = Category.where(slug: slug)
+  def set_category
+    @category = Category.where(slug: @slug)
 
     if @category.blank?
       return redirect_to [:categories]
     else
       @category = @category.first
     end
+  end
 
-    @articles = @category.articles.live.published.page(params[:page]).per(15)
+  def set_title
+    @title = @category.name
+  end
+
+  def set_articles
+    @articles = @category.articles.live.published.page(params[:page]).per(25)
 
     if @articles.blank?
       return redirect_to root_path
     end
-
-    @html_id  = "page"
-    @body_id  = "category"
-    @title    = @category.name
   end
-
-  def index
-    @html_id = "page"
-    @body_id = "categories"
-    @title = "Categories"
-    @categories = Category.all
-  end
-
-  def feed
-    @category = Category.find_by!(slug: params[:slug])
-    @articles = @category.articles.live.published.page(params[:page]).per(25)
-
-    @title    = @category.name
-
-    render "articles/index"
-  end
-
 end

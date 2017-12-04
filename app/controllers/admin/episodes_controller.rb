@@ -53,7 +53,13 @@ class Admin::EpisodesController < Admin::AdminController
   private
 
   def set_episode
-    @episode = Episode.find_by(slug: params[:id])
+    @episode = Episode.where(slug: params[:id])
+
+    if @episode.blank?
+      return redirect_to [:admin, :podcasts]
+    else
+      @episode = @episode.first
+    end
   end
 
   def episode_params

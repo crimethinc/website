@@ -54,6 +54,12 @@ class BooksController < ApplicationController
   private
 
   def set_book
-    @book = Book.find_by(slug: params[:slug])
+    @book = Book.where(slug: params[:slug])
+
+    if @book.present?
+      @book = @book.first
+    else
+      return redirect_to [:books]
+    end
   end
 end

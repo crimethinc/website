@@ -7,7 +7,13 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.find_by!(slug: params[:slug])
+    @video = Video.where(slug: params[:slug])
+
+    if @video.present?
+      @video = @video.first
+    else
+      return redirect_to [:videos]
+    end
 
     @html_id  = "page"
     @body_id  = "video"

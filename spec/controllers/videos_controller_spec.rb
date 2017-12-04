@@ -18,8 +18,11 @@ RSpec.describe VideosController, type: :controller do
       expect(response).to have_http_status(200)
     end
 
-    it "responds with 404 if it can't find the video" do
-      expect { get :show, params: { slug: "slug" } }.to raise_exception(ActiveRecord::RecordNotFound)
+    it "redirects to root if it can't find the video" do
+      get :show, params: { slug: "slug" }
+
+      expect(response).to redirect_to([:videos])
+
     end
   end
 end
