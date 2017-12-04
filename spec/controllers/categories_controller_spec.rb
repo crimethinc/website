@@ -31,13 +31,11 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   describe "GET #feed" do
-    let(:status)  { create(:status) }
+    let(:status)  { create(:status, name: "published") }
     let(:published)  { status.published }
     let(:category) { create(:category, name: "Test Category") }
 
     it "renders on a category with articles" do
-      skip # TODO TEMP FIXME
-
       article = create(:article, title: "Test", published_at: 1.day.ago, category_ids: [category.id], status: status)
 
       get :feed, params: { slug: category.slug }
