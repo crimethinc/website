@@ -57,8 +57,11 @@ module ArticlesHelper
     links.join("-").html_safe
   end
 
-  XML_ENCODING = ::Encoding.find("utf-8")
+  def publication_status_badge_class article
+    article.status.name.downcase == "draft" ? "danger" : "success"
+  end
 
+  XML_ENCODING = ::Encoding.find("utf-8")
   require 'builder/xchar'
   def xml_escape(text)
     unless text.nil?
