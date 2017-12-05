@@ -1,8 +1,6 @@
 class Article < ApplicationRecord
   include Post
 
-  belongs_to :theme
-
   has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy

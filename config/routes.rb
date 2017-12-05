@@ -160,7 +160,6 @@ Rails.application.routes.draw do
     resources :settings,     concerns: :paginatable
     resources :stickers,     concerns: :paginatable
     resources :subscribers,  concerns: :paginatable
-    resources :themes,       concerns: :paginatable
     resources :users,        concerns: :paginatable
     resources :videos,       concerns: :paginatable
     resources :zines,        concerns: :paginatable
