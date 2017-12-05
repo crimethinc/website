@@ -179,15 +179,9 @@ Rails.application.routes.draw do
   get "signout",  to: "auth/sessions#destroy", as: :signout
 
 
-
   # Misc plumbing infrastructure
   get "manifest.json",  to: "misc#manifest_json"
   get "opensearch.xml", to: "misc#opensearch_xml"
-
-  # Wordpress admin URL redirects
-  get "wp-admin",     to: redirect("/admin")
-  get "wp-login.php", to: redirect("/signin")
-  get "wp-login.php?action=logout&_wpnonce=:nonce", to: redirect("/signout")
 
 
   # Pages
