@@ -113,27 +113,6 @@ ActiveRecord::Schema.define(version: 20171205184950) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "contributions", id: :serial, force: :cascade do |t|
-    t.integer "article_id"
-    t.integer "contributor_id"
-    t.integer "role_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["article_id"], name: "index_contributions_on_article_id"
-    t.index ["contributor_id"], name: "index_contributions_on_contributor_id"
-    t.index ["role_id"], name: "index_contributions_on_role_id"
-  end
-
-  create_table "contributors", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.string "photo"
-    t.text "bio"
-    t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["slug"], name: "index_contributors_on_slug", unique: true
-  end
-
   create_table "episodes", id: :serial, force: :cascade do |t|
     t.integer "podcast_id", default: 1
     t.string "title"
@@ -360,9 +339,6 @@ ActiveRecord::Schema.define(version: 20171205184950) do
     t.index ["article_id"], name: "index_views_on_article_id"
   end
 
-  add_foreign_key "contributions", "articles"
-  add_foreign_key "contributions", "contributors"
-  add_foreign_key "contributions", "roles"
   add_foreign_key "links", "users"
   add_foreign_key "views", "articles"
 
