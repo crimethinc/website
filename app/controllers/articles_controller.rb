@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   skip_before_action :check_for_redirection, only: :index
 
   def index
-    @articles = Article.includes(:tags, :categories, :contributions).live.published.root.page(params[:page]).per(10)
+    @articles = Article.includes(:tags, :categories).live.published.root.page(params[:page]).per(10)
 
     render_json_feed if params[:format] == "json"
   end

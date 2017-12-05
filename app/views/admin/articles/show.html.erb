@@ -56,19 +56,6 @@
     <% if @article.download_url.present? %>
       <p><b>Download URL:</b> <b><%= link_to @article.download_url, @article.download_url %></b></p>
     <% end %>
-
-    <% if @article.contributions.present? %>
-      <p>
-        <b>Contributions:</b>
-        <% @article.contributions.each do |contribution| %>
-          <span class="badge badge-secondary">
-            <%= link_to contribution.role.name.titleize, [:admin, contribution.role] %>
-            <span>by</span>
-            <%= link_to contribution.contributor.name, [:admin, contribution.contributor] %>
-          </span>
-        <% end %>
-      </p>
-    <% end %>
   </div>
 
   <% if @article.image.present? %>

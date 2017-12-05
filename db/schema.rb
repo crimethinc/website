@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171205054223) do
+ActiveRecord::Schema.define(version: 20171205184950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -374,8 +374,7 @@ ActiveRecord::Schema.define(version: 20171205054223) do
       a.content,
       a.tag_names AS tag,
       a.category_names AS category,
-      a.contributor_names AS contributor,
-      (((((setweight(a.title, 'A'::"char") || setweight(a.subtitle, 'B'::"char")) || setweight(a.content, 'C'::"char")) || setweight(array_to_tsvector((a.tag_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.category_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.contributor_names)::text[]), 'D'::"char")) AS document
+      ((((setweight(a.title, 'A'::"char") || setweight(a.subtitle, 'B'::"char")) || setweight(a.content, 'C'::"char")) || setweight(array_to_tsvector((a.tag_names)::text[]), 'D'::"char")) || setweight(array_to_tsvector((a.category_names)::text[]), 'D'::"char")) AS document
      FROM ( SELECT articles.id AS searchable_id,
               'Article'::text AS searchable_type,
               to_tsvector(COALESCE(articles.title, ''::text)) AS title,
@@ -388,19 +387,13 @@ ActiveRecord::Schema.define(version: 20171205054223) do
                   CASE
                       WHEN (count(categories.*) = 0) THEN (ARRAY[]::text[])::character varying[]
                       ELSE array_agg(categories.name)
-                  END AS category_names,
-                  CASE
-                      WHEN (count(contributors.*) = 0) THEN (ARRAY[]::text[])::character varying[]
-                      ELSE array_agg(contributors.name)
-                  END AS contributor_names
-             FROM (((((((articles
+                  END AS category_names
+             FROM (((((articles
                JOIN statuses ON (((statuses.id = articles.status_id) AND ((statuses.name)::text = 'published'::text))))
                LEFT JOIN taggings ON (((taggings.taggable_id = articles.id) AND ((taggings.taggable_type)::text = 'Article'::text))))
                LEFT JOIN tags ON ((tags.id = taggings.tag_id)))
                LEFT JOIN categorizations ON ((categorizations.article_id = articles.id)))
                LEFT JOIN categories ON ((categories.id = categorizations.category_id)))
-               LEFT JOIN contributions ON ((contributions.article_id = articles.id)))
-               LEFT JOIN contributors ON ((contributors.id = contributions.contributor_id)))
             WHERE (articles.published_at < now())
             GROUP BY articles.id, 'Article'::text
           UNION
@@ -413,8 +406,7 @@ ActiveRecord::Schema.define(version: 20171205054223) do
                       WHEN (count(tags.*) = 0) THEN (ARRAY[]::text[])::character varying[]
                       ELSE array_agg(tags.name)
                   END AS tag_names,
-              ARRAY[]::text[] AS category_names,
-              ARRAY[]::text[] AS contributor_names
+              ARRAY[]::text[] AS category_names
              FROM (((pages
                JOIN statuses ON (((statuses.id = pages.status_id) AND ((statuses.name)::text = 'published'::text))))
                LEFT JOIN taggings ON (((taggings.taggable_id = pages.id) AND ((taggings.taggable_type)::text = 'Page'::text))))
@@ -428,15 +420,13 @@ ActiveRecord::Schema.define(version: 20171205054223) do
               to_tsvector((COALESCE(episodes.subtitle, ''::character varying))::text) AS subtitle,
               to_tsvector((COALESCE(episodes.content, ''::character varying))::text) AS content,
               ARRAY[]::text[] AS tag_names,
-              ARRAY[]::text[] AS category_names,
-              ARRAY[]::text[] AS contributor_names
+              ARRAY[]::text[] AS category_names
              FROM episodes
             GROUP BY episodes.id, 'Episode'::text) a;
   SQL
 
   add_index "search_results", ["category"], name: "index_search_results_on_category", using: :gin
   add_index "search_results", ["content"], name: "index_search_results_on_content", using: :gist
-  add_index "search_results", ["contributor"], name: "index_search_results_on_contributor", using: :gin
   add_index "search_results", ["document"], name: "index_search_results_on_document", using: :gist
   add_index "search_results", ["searchable_id", "searchable_type"], name: "index_search_results_on_searchable_id_and_searchable_type", unique: true
   add_index "search_results", ["subtitle"], name: "index_search_results_on_subtitle", using: :gist

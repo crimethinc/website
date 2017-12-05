@@ -37,16 +37,6 @@ class AdvancedSearch
     filters.select { |filter| filter.first == "content" }.map(&:last).join(" ")
   end
 
-  def contributor=(contributor)
-    contributor.to_s.split.map(&:strip).each do |c|
-      @query += "contributor:#{c}" + " "
-    end
-  end
-
-  def contributor
-    filters.select { |filter| filter.first == "contributor" }.map(&:last).map { |c| c.tr('"', "") }.join(" ")
-  end
-
   def tag=(tags)
     tags.to_s.split(",").map(&:strip).each do |tag|
       if tag.match?(/\s/)
