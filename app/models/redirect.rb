@@ -1,8 +1,9 @@
 class Redirect < ApplicationRecord
-  before_validation :strip_leading_domain_from_source_path, on: [:create, :update]
-  before_validation :strip_leading_domain_from_target_path, on: [:create, :update]
-  before_validation :add_leading_slash,                     on: [:create, :update]
-  before_validation :strip_double_slashes,                  on: [:create, :update]
+  before_validation :strip_domain_from_source_path, on: [:create, :update]
+  before_validation :strip_domain_from_target_path, on: [:create, :update]
+  before_validation :add_leading_slash,             on: [:create, :update]
+  before_validation :strip_double_slashes,          on: [:create, :update]
+  before_validation :downcase_paths,                on: [:create, :update]
 
   validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
@@ -14,38 +15,48 @@ class Redirect < ApplicationRecord
   end
 
   def add_leading_slash
-    [self.source_path, self.target_path].each do |path_type|
-      path_type.prepend "/" unless path_type =~ %r{^/|http}
+    paths.each do |path|
+      path = path.prepend "/" unless path =~ %r{^/|http}
     end
   end
 
   def strip_double_slashes
-    [self.source_path, self.target_path].each do |path_type|
-      path_type.gsub!("//", "/")
+    paths.each do |path|
+      path.downcase.gsub!("//", "/")
     end
   end
 
-  def strip_leading_domain_from_path path_type
-    url = build_url_for path_type
+  def downcase_paths
+    paths.each do |path|
+      path.downcase!
+    end
+  end
+
+  def strip_domain_from_path path
+    url = build_url_for path
     groomed_path_or_url url if url.respond_to? :host
   end
 
-  def strip_leading_domain_from_source_path
-    self.source_path = strip_leading_domain_from_path self.source_path
+  def strip_domain_from_source_path
+    self.source_path = strip_domain_from_path self.source_path
   end
 
-  def strip_leading_domain_from_target_path
-    self.target_path = strip_leading_domain_from_path self.target_path
+  def strip_domain_from_target_path
+    self.target_path = strip_domain_from_path self.target_path
   end
 
   private
 
-  def build_url_for path_type
-    URI.parse("http://" + strip_protocol_from_path(path_type))
+  def paths
+    [self.source_path, self.target_path]
   end
 
-  def strip_protocol_from_path path_type
-    path_type.strip.gsub(%r{https*://}, "")
+  def build_url_for path
+    URI.parse("http://" + strip_protocol_from_path(path))
+  end
+
+  def strip_protocol_from_path path
+    path.strip.gsub(%r{https*://}, "")
   end
 
   def groomed_path_or_url url

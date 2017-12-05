@@ -29,8 +29,21 @@ RSpec.describe Redirect, type: :model do
     end
   end
 
-  describe "#strip_leading_domain_from_target_path" do
-    before { redirect.strip_leading_domain_from_target_path }
+  describe "#downcase_paths" do
+    before { redirect.downcase_paths }
+
+    subject { redirect }
+
+    context "with mixed case" do
+      let(:redirect) { Redirect.new(source_path: "SoUrCe", target_path: "TaRgEt") }
+
+      specify { expect(subject.source_path).to eq("source") }
+      specify { expect(subject.target_path).to eq("target") }
+    end
+  end
+
+  describe "#strip_domain_from_target_path" do
+    before { redirect.strip_domain_from_target_path }
 
     subject { redirect.target_path }
 
