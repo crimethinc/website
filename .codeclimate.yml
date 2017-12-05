@@ -7,3 +7,4 @@ exclude_patterns:
   - "public/"
   - "script/"
   - "vendor/"
+  - "spec/"
