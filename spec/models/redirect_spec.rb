@@ -62,7 +62,7 @@ RSpec.describe Redirect, type: :model do
   describe "#article_short_path_unique" do
     let(:status)  { FactoryBot.create(:status) }
     let(:published_at) { Date.current }
-    context "shouldnt create a redirect if short path exists" do
+    context "shouldn't create a redirect if short path exists" do
       it "should raise error" do
         article = FactoryBot.create(:article, title: 'test', short_path: "tester", status: status, published_at: published_at)
         redirect = Redirect.new(source_path: "/tester", target_path: "/test/test")
