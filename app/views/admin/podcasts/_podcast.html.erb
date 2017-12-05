@@ -9,44 +9,44 @@
 
   </header>
 
-  <dl class="e-content dl-horizontal">
+  <dl class="e-content">
     <dt>Slug</dt>
-    <dd><%= podcast.slug %></dd>
+    <dd class="mb-4"><%= podcast.slug %></dd>
 
     <dt>Language</dt>
-    <dd><%= podcast.language %></dd>
+    <dd class="mb-4"><%= podcast.language %></dd>
 
     <dt>Copyright</dt>
-    <dd><%= podcast.copyright %></dd>
+    <dd class="mb-4"><%= podcast.copyright %></dd>
 
     <dt>Image</dt>
-    <dd><%= podcast.image %></dd>
+    <dd class="mb-4"><%= image_tag podcast.image, width: 100 %></dd>
 
     <dt>Content</dt>
-    <dd><%= podcast.content %></dd>
+    <dd class="mb-4"><%= podcast.content %></dd>
 
     <dt>iTunes author</dt>
-    <dd><%= podcast.itunes_author %></dd>
+    <dd class="mb-4"><%= podcast.itunes_author %></dd>
 
     <dt>iTunes categories</dt>
-    <dd><%= podcast.itunes_categories %></dd>
+    <dd class="mb-4"><%= podcast.itunes_categories.html_safe %></dd>
 
     <dt>iTunes Owner email</dt>
-    <dd><%= podcast.itunes_owner_email %></dd>
+    <dd class="mb-4"><%= mail_to podcast.itunes_owner_email %></dd>
 
     <dt>iTunes explicit</dt>
-    <dd><%= podcast.itunes_explicit %></dd>
+    <dd class="mb-4"><%= podcast.itunes_explicit %></dd>
 
     <dt>Tags</dt>
-    <dd><%= podcast.tags %></dd>
+    <dd class="mb-4"><%= podcast.tags.gsub(",", ", ") %></dd>
 
     <dt>iTunes Owner name</dt>
-    <dd><%= podcast.itunes_owner_name %></dd>
+    <dd class="mb-4"><%= podcast.itunes_owner_name %></dd>
 
     <dt>iTunes summary</dt>
-    <dd><%= podcast.itunes_summary %></dd>
+    <dd class="mb-4"><%= podcast.itunes_summary %></dd>
 
     <dt>iTunes URL</dt>
-    <dd><%= podcast.itunes_url %></dd>
+    <dd class="mb-4"><%= link_to podcast.itunes_url, podcast.itunes_url %></dd>
   </dl>
 </article>

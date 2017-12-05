@@ -10,12 +10,7 @@ gem "scenic", "~> 1.4"
 
 # webserver
 gem "puma"
-
-
-# bootstrap tooltips and popovers depend on tether for positioning
-source "https://rails-assets.org" do
-  gem "rails-assets-tether", ">= 1.1.0"
-end
+gem "rack-timeout"
 
 # assets
 gem "bootstrap", "~> 4.0.0.beta"
@@ -37,7 +32,7 @@ gem "markdown_media" # for [[ media embeds ]]
 gem "bcrypt", "~> 3.1.7"
 
 # forms
-gem "cocoon", "~> 1.2.9"
+gem "cocoon", "~> 1.2.11"
 
 # pagination
 gem "kaminari"
@@ -54,10 +49,9 @@ group :development, :test do
   gem "guard-rspec"
   gem "spring-commands-rspec"
   gem "simplecov", :require => false
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'database_cleaner'
   gem 'launchy'
 end
 
@@ -86,6 +80,7 @@ gem "bugsnag"
 # DDOS protection
 gem "rack-attack"
 gem "redis"
+gem "redis-store"
 
 # windows dev
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

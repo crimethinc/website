@@ -24,6 +24,50 @@ books << {
 }
 
 books << {
+  title:          "No Wall They Can Build",
+  subtitle:       "capitalism . economics . resistance",
+  slug:           "no-wall-they-can-build",
+  tweet:          "",
+  series:         "bullet",
+  summary:        "After so much technological progress, why do we have to work more than ever before? How is it that the harder we work, the poorer we end up compared to our bosses? Starting from the vantage point of our daily lives, _Work_ offers an overview of 21st century capitalism and how to fight it.",
+  pages:          "378 + cover",
+  words:          "66,507",
+  width:          '4.75"',
+  height:         '7.5"',
+  depth:          '.8125"',
+  weight:         "13.7 ounces",
+  illustrations:  "106",
+  photographs:    "52",
+  cover_style:    "",
+  ink:            "",
+  price_in_cents: 1000,
+  has_index:      false,
+  buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=work&Dest=books"
+}
+
+books << {
+  title:          "From Democracy To Freedom",
+  subtitle:       "capitalism . economics . resistance",
+  slug:           "from-democracy-to-freedom",
+  tweet:          "",
+  series:         "bullet",
+  summary:        "After so much technological progress, why do we have to work more than ever before? How is it that the harder we work, the poorer we end up compared to our bosses? Starting from the vantage point of our daily lives, _Work_ offers an overview of 21st century capitalism and how to fight it.",
+  pages:          "378 + cover",
+  words:          "66,507",
+  width:          '4.75"',
+  height:         '7.5"',
+  depth:          '.8125"',
+  weight:         "13.7 ounces",
+  illustrations:  "106",
+  photographs:    "52",
+  cover_style:    "",
+  ink:            "",
+  price_in_cents: 1000,
+  has_index:      false,
+  buy_url:        "http://store.crimethinc.com/x/AddToCart?Item=work&Dest=books"
+}
+
+books << {
   title:          "Days of War, Nights of Love",
   subtitle:       "Crimethink for Beginners",
   slug:           "days-of-war-nights-of-love",

@@ -4,6 +4,11 @@ class Book < ApplicationRecord
   scope :book, -> { where(zine: false) }
   scope :zine, -> { where(zine: true)  }
 
+  has_many :taggings, dependent: :destroy, as: :taggable
+  has_many :tags, through: :taggings
+
+  default_scope { order(slug: :asc) }
+
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
 
   def namespace
@@ -18,8 +23,8 @@ class Book < ApplicationRecord
     [nil, namespace, slug].join("/")
   end
 
-  def image(type, count=0)
-    case type
+  def image(side: :front, count: 0)
+    case side
     when :front
       [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join("/")
     when :back
@@ -47,15 +52,15 @@ class Book < ApplicationRecord
   end
 
   def front_image
-    image :front
+    image side: :front
   end
 
   def back_image
-    iamge :back
+    image side: :back
   end
 
   def header_image
-    image :header
+    image side: :header
   end
 
   def download_url(type=nil, extension:"pdf")
@@ -75,4 +80,25 @@ class Book < ApplicationRecord
     filename = filename.join
     [ASSET_BASE_URL, namespace, slug, filename].join("/")
   end
+
+  def meta_description
+    if summary.blank?
+      html = Kramdown::Document.new(
+        content,
+        input: :kramdown,
+        remove_block_html_tags: false,
+        transliterated_header_ids: true
+      ).to_html.to_s
+
+      doc = Nokogiri::HTML(html)
+      doc.css("body").text.truncate(200)
+    else
+      summary
+    end
+  end
+
+  def meta_image
+    image side: :front
+  end
+
 end

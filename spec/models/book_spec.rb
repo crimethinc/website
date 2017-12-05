@@ -26,7 +26,7 @@ RSpec.describe Book, type: :model do
   end
 
   describe "#image" do
-    subject { book.image(:front) }
+    subject { book.image(side: :front) }
 
     let(:book) { Book.new(slug: "slug") }
 
@@ -48,5 +48,15 @@ RSpec.describe Book, type: :model do
     let(:book) { Book.new(title: "Contradictionary", status: status) }
 
     it { is_expected.to eq(true)}
+  end
+
+  describe "#tags" do
+    let!(:book) { Book.create(title: "title", subtitle: "subtitle") }
+    let!(:tag_1) { Tag.create(name: "test 1", slug: "test-1") }
+    let!(:taggable) { Tagging.create(tag: tag_1, taggable: book) }
+
+    it "returns the tag" do
+      expect(book.tags.map(&:id)).to eq([tag_1.id])
+    end
   end
 end

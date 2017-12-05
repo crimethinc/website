@@ -30,6 +30,15 @@ class Logo < ApplicationRecord
   end
   alias_method :download_url, :image_url
 
+  def meta_description
+    "CrimethInc. logo: #{title}. Size: #{width} x #{height}."
+  end
+
+  def meta_image
+    image_url :png
+  end
+  alias_method :image, :meta_image
+
   def price_in_cents; nil; end
   def buy_info; nil; end
   def back_image_present?; nil; end
@@ -38,14 +47,3 @@ class Logo < ApplicationRecord
   def depth; nil; end
   def content; nil; end
 end
-
-
-
-
-
-
-
-
-
-
-

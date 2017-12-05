@@ -254,14 +254,10 @@
       }
     }
 
-    ul,
-    ol {
-      margin-bottom: 1em;
-    }
-
-    li ul,
-    li ol {
-      margin-top: .5em;
+    ul, ol {
+      list-style-type: disc;
+      padding-left: 2.5rem;
+      margin-bottom:  1.5rem;
     }
 
     ol {

@@ -36,7 +36,9 @@ class Admin::ArticlesController < Admin::AdminController
 
   # /admin/articles/1/edit
   def edit
-    @article.update(user: current_user)
+    # update_columns to avoid hitting callbacks, namely updating Search index
+    @article.update_columns(user_id: current_user)
+
     @collection = Article.find(@article.collection_id) if @article.in_collection?
     @title = admin_title(@article, [:id, :title, :subtitle])
     @html_id = "admin-article"
@@ -57,7 +59,9 @@ class Admin::ArticlesController < Admin::AdminController
   # /admin/articles/1
   def update
     if @article.update(article_params)
-      @article.update(user: nil)
+      # update_columns to avoid hitting callbacks, namely updating Search index
+      @article.update_columns(user_id: nil)
+
       redirect_to [:admin, @article], notice: "Article was successfully updated."
     else
       set_contribution_options

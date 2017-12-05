@@ -1,8 +1,6 @@
 class Article < ApplicationRecord
   include Post
 
-  belongs_to :theme
-
   has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
@@ -21,20 +19,13 @@ class Article < ApplicationRecord
   before_validation :normalize_newlines,       on: [:create, :update]
 
   validates :short_path, uniqueness: true, unless: :short_path_blank?
-  validates :tweet, length: { maximum: 115 }
+  validates :tweet, length:   { maximum: 250 }
   validates :summary, length: { maximum: 200 }
 
   before_save :update_or_create_redirect
 
   default_scope { order(published_at: :desc) }
-  scope :chronological, -> { order(published_at: :desc) }
-  scope :root,          -> { where(collection_id: nil) }
-  scope :live,          -> { where("published_at < ?", Time.now) }
-  scope :recent,        -> { where("published_at BETWEEN ? AND ?", Time.now - 2.days,  Time.now) }
-  scope :last_2_weeks,  -> { where("published_at BETWEEN ? AND ?", Time.now - 2.weeks, Time.now) }
-  scope :on,            lambda { |date| where("published_at BETWEEN ? AND ?", date.try(:beginning_of_day), date.try(:end_of_day)) }
-  scope :next,          lambda { |article| unscoped.root.where("published_at > ?", article.published_at).live.published.order(published_at: :asc).limit(1) }
-  scope :previous,      lambda { |article| root.where("published_at < ?", article.published_at).live.published.chronological.limit(1) }
+  scope :last_2_weeks, -> { where("published_at BETWEEN ? AND ?", Time.now - 2.weeks, Time.now) }
 
   def path
     if published?
@@ -44,8 +35,7 @@ class Article < ApplicationRecord
     end
   end
 
- # Overwrites slug_exists? from Slug.  We allow duplicate slugs on different
- # published_at dates.
+ # Overwrites slug_exists? from Slug. We allow duplicate slugs on different published_at dates.
   def slug_exists?
     Article.on(published_at).where(slug: slug).exists?
   end
@@ -65,7 +55,7 @@ class Article < ApplicationRecord
 
   def content_rendered
     Kramdown::Document.new(
-      MarkdownMedia.parse(content.gsub("\n","\n\n")),
+      MarkdownMedia.parse(content),
       input: content_format == "html" ? :html : :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
@@ -122,7 +112,7 @@ class Article < ApplicationRecord
           redirect.update_attributes(source_path: "/" + self.short_path, target_path: self.path )
         end
       elsif Redirect.where(source_path: "/" + self.short_path).exists?
-        errors.add(:short_path, ' is a path that already points to a redirect.')
+        errors.add(:short_path, ' is a path that already points to a redirect')
       else
         if self.status.name == "published"
           Redirect.create(source_path: "/" + self.short_path, target_path: path, article_id: id)

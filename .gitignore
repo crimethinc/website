@@ -10,3 +10,4 @@ ISSUES.md
 /coverage
 .idea/
 TAGS
+.env

@@ -3,11 +3,17 @@ class VideosController < ApplicationController
     @html_id = "page"
     @body_id = "watch"
 
-    @videos  = Video.all.page(params[:page]).per(20)
+    @videos  = Video.published.page(params[:page]).per(20)
   end
 
   def show
-    @video = Video.find_by!(slug: params[:slug])
+    @video = Video.where(slug: params[:slug])
+
+    if @video.present?
+      @video = @video.first
+    else
+      return redirect_to [:videos]
+    end
 
     @html_id  = "page"
     @body_id  = "video"

@@ -9,8 +9,13 @@ class ApplicationController < ActionController::Base
   before_action :set_social_links
   before_action :set_new_subscriber
   before_action :set_pinned_pages
+  before_action :authorize, if: :staging?
 
   helper :meta
+
+  def staging?
+    ENV["ON_STAGING"] == "TRUE"
+  end
 
   def set_pinned_pages
     # pinned article
@@ -104,7 +109,7 @@ class ApplicationController < ActionController::Base
   def render_markdown(text)
     unless text.blank?
       Kramdown::Document.new(
-        MarkdownMedia.parse(text.gsub("\n","\n\n")),
+        MarkdownMedia.parse(text),
         input: :kramdown,
         remove_block_html_tags: false,
         transliterated_header_ids: true

@@ -5,8 +5,8 @@ class ZinesController < ApplicationController
     @type    = "zines"
     @title   = "Zines"
 
-    @featured_products = Book.zine.order(published_at: :desc).all.map{ |x| x if     x.buy_url.present? }.compact
-    @products          = Book.zine.order(published_at: :desc).all.map{ |x| x unless x.buy_url.present? }.compact
+    @featured_products = Book.zine.order(published_at: :desc).published.where.not(buy_url: nil)
+    @products          = Book.zine.order(published_at: :desc).published.where(buy_url: nil)
 
     render "products/index"
   end
@@ -17,7 +17,14 @@ class ZinesController < ApplicationController
     @type    = "zines"
 
     # Treat a Zine as a Book
-    @book  = Book.zine.find_by(slug: params[:slug])
+    @book  = Book.zine.where(slug: params[:slug])
+
+    if @book.present?
+      @book = @book.first
+    else
+      return redirect_to [:zines]
+    end
+
     @title = "Zines : #{@book.name}"
 
     @editable = @book

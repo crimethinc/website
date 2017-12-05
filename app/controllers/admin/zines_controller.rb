@@ -4,7 +4,7 @@ class Admin::ZinesController < Admin::AdminController
   before_action :set_publication_type, only: [:show, :edit, :new, :index]
 
   def index
-    @books = Book.zine.page(params[:page])
+    @books = Book.zine.order(slug: :asc).page(params[:page])
     @title = admin_title
     render "admin/books/index"
   end
@@ -63,7 +63,7 @@ class Admin::ZinesController < Admin::AdminController
   end
 
   def book_params
-    params.require(:book).permit(:title, :subtitle, :content, :tweet, :summary,
+    params.require(:book).permit(:title, :subtitle, :content, :tweet, :summary, :status_id,
       :description, :buy_url, :buy_info, :content_format, :slug, :series, :published_at,
       :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,
       :photographs, :printing, :ink, :definitions, :recipes, :has_index, :cover_style,

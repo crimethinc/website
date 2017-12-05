@@ -1,4 +1,4 @@
-%w(draft edited designed published).each do |status|
+%w(draft published).each do |status|
   Status.create!(name: status)
 end
 

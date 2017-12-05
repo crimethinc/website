@@ -4,6 +4,9 @@ class Poster < ApplicationRecord
   scope :poster,  -> { where(sticker: false) }
   scope :sticker, -> { where(sticker: true)  }
 
+  has_many :taggings, dependent: :destroy, as: :taggable
+  has_many :tags, through: :taggings
+
   default_scope { order(slug: :asc) }
 
   ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
@@ -45,11 +48,10 @@ class Poster < ApplicationRecord
     image side: :back, color: :black_and_white
   end
 
-  def image(side:nil, color:nil)
+  def image(side: :front, color: :color)
     filename = [slug, "_", side, "_", color, ".", self.send("#{side}_image_format")].join
     [ASSET_BASE_URL, namespace, slug, filename].join("/")
   end
-
 
   def front_image
     if front_color_image_present? || front_black_and_white_image_present?
@@ -67,7 +69,6 @@ class Poster < ApplicationRecord
     end
   end
 
-  # TODO add color to url builder
   def download_url(side:nil, color:nil)
     filename = [slug]
     filename << "_#{side.to_s}"  if side.present?
@@ -75,5 +76,25 @@ class Poster < ApplicationRecord
     filename << ".pdf"
     filename = filename.join
     [ASSET_BASE_URL, namespace, slug, filename].join("/")
+  end
+
+  def meta_description
+    if summary.blank?
+      html = Kramdown::Document.new(
+        content,
+        input: :kramdown,
+        remove_block_html_tags: false,
+        transliterated_header_ids: true
+      ).to_html.to_s
+
+      doc = Nokogiri::HTML(html)
+      doc.css("body").text.truncate(200)
+    else
+      summary
+    end
+  end
+
+  def meta_image
+    front_image
   end
 end

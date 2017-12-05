@@ -7,77 +7,55 @@ class Redirect < ApplicationRecord
   validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
   validate  :article_short_path_unique
-
-  validate :noncircular_redirect
+  validate  :noncircular_redirect
 
   def name
     source_path
   end
 
   def add_leading_slash
-    unless self.source_path =~ /^\/|http/
-      self.source_path = "/#{self.source_path}"
-    end
-
-    unless self.target_path =~ /^\/|http/
-      self.target_path = "/#{self.target_path}"
+    [self.source_path, self.target_path].each do |path_type|
+      path_type.prepend "/" unless path_type =~ %r{^/|http}
     end
   end
 
   def strip_double_slashes
-    self.source_path = self.source_path.gsub(%r{//}, "/")
-    self.target_path = self.target_path.gsub(%r{//}, "/")
+    [self.source_path, self.target_path].each do |path_type|
+      path_type.gsub!("//", "/")
+    end
+  end
+
+  def strip_leading_domain_from_path path_type
+    url = build_url_for path_type
+    groomed_path_or_url url if url.respond_to? :host
   end
 
   def strip_leading_domain_from_source_path
-    domains_regex = /crimethinc|cwc\.im/
-
-    path = self.source_path.strip
-    path = path.gsub(/http:\/\//, "")
-    path = path.gsub(/https:\/\//, "")
-    path = "http://" + path
-
-    url = URI.parse(path)
-    if url.respond_to?(:host) && url.host =~ domains_regex
-      new_path = url.path
-
-      if url.query.present?
-        new_path << "?#{url.query}"
-      end
-
-      if url.fragment.present?
-        new_path << "##{url.fragment}"
-      end
-
-      self.source_path = new_path
-    end
+    self.source_path = strip_leading_domain_from_path self.source_path
   end
 
   def strip_leading_domain_from_target_path
-    domains_regex = /crimethinc|cwc\.im/
-
-    path = self.target_path.strip
-    path = path.gsub(/http:\/\//, "")
-    path = path.gsub(/https:\/\//, "")
-    path = "http://" + path
-
-    url = URI.parse(path)
-    if url.respond_to?(:host) && url.host =~ domains_regex
-      new_path = url.path
-
-      if url.query.present?
-        new_path << "?#{url.query}"
-      end
-
-      if url.fragment.present?
-        new_path << "##{url.fragment}"
-      end
-
-      self.target_path = new_path
-    end
+    self.target_path = strip_leading_domain_from_path self.target_path
   end
 
   private
+
+  def build_url_for path_type
+    URI.parse("http://" + strip_protocol_from_path(path_type))
+  end
+
+  def strip_protocol_from_path path_type
+    path_type.strip.gsub(%r{https*://}, "")
+  end
+
+  def groomed_path_or_url url
+    url_pieces = []
+    url_pieces << url.host unless url.host =~ %r{crimethinc.com|cwc.im}
+    url_pieces << url.path
+    url_pieces << "?" + url.query    if url.query.present?
+    url_pieces << "#" + url.fragment if url.fragment.present?
+    url_pieces.join
+  end
 
   def noncircular_redirect
     errors.add(:target_path, "redirects to itself") if source_path == target_path
@@ -92,5 +70,4 @@ class Redirect < ApplicationRecord
       end
     end
   end
-
 end

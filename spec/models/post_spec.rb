@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Post, type: :model do
-  %w(draft edited designed published).each do |status_name|
+  %w(draft published).each do |status_name|
     describe "#{status_name}?" do
       subject { post.send("#{status_name}?") }
 

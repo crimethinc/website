@@ -20,5 +20,6 @@ module Crimethinc
     config.middleware.use Rack::BlogRedirect
     config.middleware.use Rack::Redirect
     config.middleware.use Rack::Attack
+    config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
   end
 end

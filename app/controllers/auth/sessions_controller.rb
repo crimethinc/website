@@ -1,4 +1,6 @@
 class Auth::SessionsController < Admin::AdminController
+  skip_before_action :authorize
+
   layout "admin"
 
   # /signin

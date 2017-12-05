@@ -5,6 +5,7 @@ Ruby on Rails app that powers https://crimethinc.com
 ## Development
 
 [![Build Status](https://travis-ci.org/crimethinc/website.svg?branch=master)](https://travis-ci.org/crimethinc/website)
+[![Maintainability](https://api.codeclimate.com/v1/badges/22ef4ea6475be7057b87/maintainability)](https://codeclimate.com/github/crimethinc/website/maintainability)
 
 ### tl;dr
 

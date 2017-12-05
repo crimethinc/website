@@ -7,53 +7,14 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.includes(:tags, :categories, :contributions).live.published.root.page(params[:page]).per(10)
 
-    if params[:format] == "json"
-      items = []
-
-      @articles.each do |article|
-        items << {
-          id:  root_url + article.path,
-          url: root_url + article.path,
-          title: article.name,
-          summary: article.summary,
-          image: article.image,
-          banner_image: article.image,
-          date_published: article.published_at.to_formatted_s(:iso8601),
-          date_modified: article.updated_at.to_formatted_s(:iso8601),
-          tags: article.tags.map{ |t| t.name }.compact,
-          content_html: article.content_rendered
-        }
-      end
-
-      json_feed = {
-        version:       "https://jsonfeed.org/version/1",
-        user_comment:  "I support your decision, I believe in change and hope you find just what it is that you are looking for. ::: If your heart is free, the ground you stand on is liberated territory. Defend it. ::: This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — https://crimethinc.com/feed.json — and add it your reader. ::: For more info on this format: https://jsonfeed.org ",
-        title:         page_title,
-        description:   meta_title,
-        home_page_url: root_url,
-        feed_url:      json_feed_url,
-        next_url:      [json_feed_url, "?page=", params[:page].present? ? params[:page].to_i + 1 : 2].join,
-        icon:          view_context.asset_url("icons/icon-600x600.png"),
-        favicon:       view_context.asset_url("icons/icon-70x70.png"),
-
-        author: {
-          name: author,
-          url:  root_url,
-          avatar: view_context.asset_url("icons/icon-600x600.png")
-        },
-
-        items: items
-      }
-
-      return render json: JSON.pretty_generate(json_feed)
-    end
+    render_json_feed if params[:format] == "json"
   end
 
   def show
     @body_id = "article"
 
     # get the article
-    if request.path =~ /^\/drafts/
+    if request.path =~ %r{^/drafts}
       @article = Article.find_by(draft_code: params[:draft_code])
 
       if @article.published?
@@ -103,5 +64,48 @@ class ArticlesController < ApplicationController
     else
       render "/articles/show"
     end
+  end
+
+  private
+
+  def render_json_feed
+    items = []
+
+    @articles.each do |article|
+      items << {
+        id:  root_url + article.path,
+        url: root_url + article.path,
+        title: article.name,
+        summary: article.summary,
+        image: article.image,
+        banner_image: article.image,
+        date_published: article.published_at.to_formatted_s(:iso8601),
+        date_modified: article.updated_at.to_formatted_s(:iso8601),
+        tags: article.tags.map{ |t| t.name }.compact,
+        content_html: article.content_rendered
+      }
+    end
+
+    json_feed = {
+      version:       "https://jsonfeed.org/version/1",
+      user_comment:  "I support your decision, I believe in change and hope you find just what it is that you are looking for. ::: If your heart is free, the ground you stand on is liberated territory. Defend it. ::: This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — https://crimethinc.com/feed.json — and add it your reader. ::: For more info on this format: https://jsonfeed.org ",
+      title:         page_title,
+      description:   meta_title,
+      home_page_url: root_url,
+      feed_url:      json_feed_url,
+      next_url:      [json_feed_url, "?page=", params[:page].present? ? params[:page].to_i + 1 : 2].join,
+      icon:          view_context.asset_url("icons/icon-600x600.png"),
+      favicon:       view_context.asset_url("icons/icon-70x70.png"),
+
+      author: {
+        name: author,
+        url:  root_url,
+        avatar: view_context.asset_url("icons/icon-600x600.png")
+      },
+
+      items: items
+    }
+
+    return render json: JSON.pretty_generate(json_feed)
   end
 end

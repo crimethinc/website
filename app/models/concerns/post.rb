@@ -25,6 +25,10 @@ module Post
     end
   end
 
+  def meta_image
+    image.present? ? image : t("head.meta_image_url")
+  end
+
   private
 
   def generate_draft_code

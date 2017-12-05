@@ -36,6 +36,10 @@ class Episode < ApplicationRecord
     end
   end
 
+  def meta_image
+    image.present? ? image : t("head.meta_image_url")
+  end
+
   def duration_string
     duration_in_seconds = duration.to_i.minutes
 

@@ -311,8 +311,3 @@ en:
       new_title: "New Redirects"
       show_title: "Redirects : %{source_path}"
       edit_title: "Editing redirect %{id} %{source_path}"
-    themes:
-      index_title: "Themes"
-      new_title: "New Themes"
-      show_title: "Themes : %{name}"
-      edit_title: "Editing theme %{id} %{name}"
