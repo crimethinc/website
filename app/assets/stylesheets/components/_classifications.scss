@@ -1,8 +1,7 @@
 .h-entry {
   .tags,
   .categories,
-  .dt-published,
-  .contributions {
+  .dt-published {
     ul,
     li {
       display: inline-block;
@@ -14,10 +13,6 @@
   .dt-published {
     display: inline-block;
     margin-top: .5em;
-  }
-
-  .contributions {
-    margin-bottom: .5em;
   }
 
   .categories {

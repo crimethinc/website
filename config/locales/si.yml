@@ -277,11 +277,6 @@ si:
       new_title: "New Subscribers"
       show_title: "Subscribers : %{name}"
       edit_title: "Editing subscriber %{id} %{name}"
-    contributors:
-      index_title: "Contributors"
-      new_title: "New Contributors"
-      show_title: "Contributors : %{name}"
-      edit_title: "Editing contributor %{id} %{name}"
     pages:
       index_title: "Pages"
       new_title: "New Pages"

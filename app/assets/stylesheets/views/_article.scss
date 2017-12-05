@@ -112,32 +112,6 @@
         color: $color-white;
       }
 
-      .contributors {
-        display: inline-block;
-        font: {
-          size: 0.5em;
-          weight: 300;
-        }
-        margin: 0 auto;
-
-        @media screen and (min-width: $small-tablet) {
-          font-size: 1em;
-        }
-
-        th {
-          font: {
-            weight: 300;
-            style: italic;
-          }
-          padding-right: 0.25em;
-          text-align: right;
-        }
-
-        td {
-          font-weight: normal;
-          text-align: left;
-        }
-      } /* .contributors */
     } /* header */
 
     footer {

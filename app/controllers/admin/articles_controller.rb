@@ -3,7 +3,6 @@ class Admin::ArticlesController < Admin::AdminController
   before_action :set_article,              only: [:show, :edit, :update, :destroy]
   before_action :set_published_at,         only: [:create, :update]
   before_action :set_statuses,             only: [:new, :edit]
-  before_action :set_contribution_options, only: [:new, :edit]
   after_action  :organize_article,         only: [:create, :update]
 
   # /admin/articles
@@ -64,7 +63,6 @@ class Admin::ArticlesController < Admin::AdminController
 
       redirect_to [:admin, @article], notice: "Article was successfully updated."
     else
-      set_contribution_options
       set_statuses
       render :edit
     end
@@ -94,11 +92,6 @@ class Admin::ArticlesController < Admin::AdminController
     end
   end
 
-  def set_contribution_options
-    @contributors = Contributor.order(:name)
-    @roles        = Role.order(:name)
-  end
-
   def set_statuses
     @draft     = Status.find_by(name: "draft")
     @published = Status.find_by(name: "published")
@@ -119,9 +112,6 @@ class Admin::ArticlesController < Admin::AdminController
                                     :image, :image_description, :css, :hide_layout,
                                     :header_background_color, :header_text_color,
                                     :header_shadow_text, :image_mobile, :published_at_tz,
-                                    category_ids: [],
-                                    contributions_attributes: [
-                                      :id, :contributor_id, :role_id,:_destroy
-                                    ])
+                                    category_ids: [])
   end
 end

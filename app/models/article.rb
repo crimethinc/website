@@ -5,14 +5,11 @@ class Article < ApplicationRecord
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
-  has_many :contributions, dependent: :destroy
   has_many :collection_posts, foreign_key: :collection_id, class_name: :Article
   has_many :views, dependent: :destroy
 
   has_one    :redirect, dependent: :destroy
   belongs_to :collection, foreign_key: :parent_id, class_name: :Article
-
-  accepts_nested_attributes_for :contributions, reject_if: :all_blank, allow_destroy: true
 
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]

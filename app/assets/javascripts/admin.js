@@ -5,7 +5,6 @@
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
-//= require cocoon
 
 // character counter on textareas
 $(function() {
@@ -45,7 +44,7 @@ $(function() {
     var minute = rjust(now.getUTCMinutes().toString(), 2, "0");
 
     // set published_at date to utc.now
-    $("#article_published_at_tz").val('UTC');
+    $("#article_published_at_tz").val("UTC");
     $("#publication_date").val(year + "-" + month + "-" + day);
     $("#publication_time").val(hour+":"+minute);
 
@@ -63,13 +62,13 @@ $(function() {
   // not-supported, so polyfill
   if (!date_and_time_supported) {
     // use jquery for date picker
-    $('#publication_date').datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#publication_date").datepicker({ dateFormat: "yy-mm-dd" });
 
     // use jquery for time picker
-    $('input.timepicker').timepicker({
-      timeFormat: 'h:mm p',
+    $("input.timepicker").timepicker({
+      timeFormat: "h:mm p",
       interval: 30,
-      startTime: '10:00',
+      startTime: "10:00",
       dynamic: false,
       dropdown: true,
       scrollbar: true

@@ -148,7 +148,6 @@ Rails.application.routes.draw do
 
     resources :books,        concerns: :paginatable
     resources :categories,   concerns: :paginatable
-    resources :contributors, concerns: :paginatable
     resources :episodes,     concerns: :paginatable
     resources :links,        concerns: :paginatable
     resources :logos,        concerns: :paginatable

@@ -29,7 +29,7 @@
     width: 100%;
     height: 300pt;
 
-    /* for vertically aligning title/subtitle/contributors */
+    /* for vertically aligning title/subtitle */
     transform-style: preserve-3d;
 
     @media screen and (min-width: $small-phone) {
@@ -125,25 +125,6 @@
     a {
       color: $color-white;
       text-decoration: none;
-    }
-
-    .contributors {
-      display: none;
-
-      @media screen and (min-width: $small-tablet) {
-        display: inline-block;
-        margin: 0 auto;
-
-        th {
-          text-align: right;
-          padding-right: .25em;
-          font-weight: normal;
-        }
-
-        td {
-          text-align: left;
-        }
-      }
     }
   } /* .h-entry */
 

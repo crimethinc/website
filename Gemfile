@@ -31,9 +31,6 @@ gem "markdown_media" # for [[ media embeds ]]
 # auth
 gem "bcrypt", "~> 3.1.7"
 
-# forms
-gem "cocoon", "~> 1.2.11"
-
 # pagination
 gem "kaminari"
 
