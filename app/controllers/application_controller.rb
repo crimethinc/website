@@ -84,14 +84,14 @@ class ApplicationController < ActionController::Base
   end
 
   def check_for_redirection
-    redirect = Redirect.where(source_path: request.path).last
+    redirect = Redirect.where(source_path: request.path.downcase).last
 
     if redirect.blank?
-      redirect = Redirect.where(source_path: "#{request.path}/").last
+      redirect = Redirect.where(source_path: "#{request.path.downcase}/").last
     end
 
     if redirect.present?
-      return redirect_to redirect.target_path, status: redirect.temporary? ? 302 : 301
+      return redirect_to redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301
     end
   end
 
