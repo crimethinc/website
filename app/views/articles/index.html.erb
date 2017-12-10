@@ -14,7 +14,7 @@
   <ol class="h-feed">
     <% @articles.each do |article| %>
       <li>
-        <article class="h-entry" role="article">
+        <article class="h-entry">
           <header>
             <%= render "articles/titles", header: article, linked: true %>
           </header>

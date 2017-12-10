@@ -1,5 +1,5 @@
 <% unless article.blank? %>
-  <article class="h-entry" id="article-<%= article.id %>" style="background-image: url(<%= article.image %>)" role="article">
+  <article class="h-entry" id="article-<%= article.id %>" style="background-image: url(<%= article.image %>)">
     <%= render "articles/header",     article: article %>
     <%= render "articles/categories", article: article %>
 

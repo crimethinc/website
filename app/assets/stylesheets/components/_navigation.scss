@@ -77,18 +77,18 @@
 }
 
 // small viewports
-.site-header nav[role=navigation],
+.site-header nav,
 .secondary-navigation {
   display: none;
 }
 
 // larger than $large-phone viewport
 @media screen and (min-width: $small-tablet) {
-  .site-header + nav[role=navigation] {
+  .site-header + nav {
     display: none;
   }
 
-  .site-header nav[role=navigation],
+  .site-header nav,
   .secondary-navigation {
     display: flex;
   }
