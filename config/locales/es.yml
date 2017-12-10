@@ -4,7 +4,8 @@ es:
   site_author: CrimethInc. Ex-Workers Collective
 
   head:
-    meta_title: "CrimethInc. ex-Workers' Collective: Your ticket to a world free of charge"
+    # meta_title is wrapped in quotes because it has a colon in its text value
+    meta_title: "CrimethInc. ex-Workers’ Collective: Your ticket to a world free of charge"
     meta_image_url: https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png
     meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
@@ -88,10 +89,8 @@ es:
       first_time_text: Is this your first time hearing about CrimethInc.?
       first_time_link: Start here. →
       heading: About CrimethInc.
-      description:
-        "CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
-
-        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, *let’s do something about it.*"
+      # description is wrapped in quotes because it has a colon in its text value
+      description: "CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid. <br> <br> We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._"
       more_link: More about CrimethInc. →
       donate_button_text: Support this site
 
@@ -175,9 +174,9 @@ es:
       admin_zine_epub_download_text:  Mobi
       admin_zine_mobi_download_text:  ePub
 
+      # these text values are wrapped in quotes because each has a colon in its text value
       download_front_button_text: "Download PDF : Front"
       download_back_button_text:  "Download PDF : Back"
-
       download_front_color_button_text:  "Download PDF : Front Color"
       download_back_color_button_text:   "Download PDF : Front Color"
       download_front_black_and_white_button_text: "Download PDF : Front B/W"
@@ -212,8 +211,6 @@ es:
       literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
 
 
-
-
   helpers:
     page_entries_info:
       entry:
@@ -227,6 +224,7 @@ es:
           other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
         display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+
   admin:
     title_prepend: "Admin"
     articles:
