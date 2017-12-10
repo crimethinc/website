@@ -1,22 +1,15 @@
 <style>
-  #home .h-entry#article-<%= article.id %> {
-    <% if article.header_background_color.present? %>
+  <% if article.header_background_color.present? %>
+    #home .h-entry#article-<%= article.id %> {
       /* Set header background color */
       background: <%= article.header_background_color %>;
-    <% end %>
-  }
+    }
+  <% end %>
 
-  #home .h-entry#article-<%= article.id %> a {
-    <% if article.header_text_color.present? %>
+  <% if article.header_text_color.present? %>
+    #home .h-entry#article-<%= article.id %> a {
       /* Set header text color */
       color: <%= article.header_text_color %>;
-    <% end %>
-  }
-
-  #home #article-<%= article.id %> header {
-    <% if article.subtitle.blank? %>
-      /* Embiggen Article titles when there's no subtitle */
-      font-size: <%= featured ? "1.5em;" : "1.75em;" %>
-    <% end %>
-  }
+    }
+  <% end %>
 </style>

@@ -8,6 +8,15 @@
     margin:  0 0 $border-size-xsmall 0;
     padding: 0;
     list-style: none;
+
+    // first/featured entry only
+    > .h-entry {
+      height: 300pt;
+
+      @media screen and (min-width: $small-tablet) {
+        height: 400pt;
+      }
+    }
   }
 
   .pagination {
@@ -16,7 +25,6 @@
 
   // all entries in the feed (including first/featured)
   .h-entry {
-    *zoom: 1;
     background-color:    $color-true-black;
     background-position: center;
     background-size:     cover;
@@ -27,17 +35,8 @@
     position: relative;
     text-align: left;
     width: 100%;
-    height: 300pt;
-
-    /* for vertically aligning title/subtitle */
-    transform-style: preserve-3d;
-
-    @media screen and (min-width: $small-phone) {
-      height: 300pt;
-    }
 
     @media screen and (min-width: $small-tablet) {
-      height: 400pt;
       text-align: left;
     }
 
@@ -52,12 +51,9 @@
     }
 
     header {
+      height: 100%;
       margin: 0 $border-size-small;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
       z-index: 10;
-      overflow: hidden;
 
       @media screen and (min-width: $small-phone) {
         margin: 0 $border-size-medium;
@@ -69,6 +65,10 @@
     }
 
     .p-name {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: $border-size-medium;
 
       &.shadowed {
@@ -128,14 +128,14 @@
     }
   } /* .h-entry */
 
-  // all entries in the feed except first/featured
+  // all entries in the feed except most recent
   .row {
     @media screen and (min-width: $small-tablet) {
       display: flex;
     }
 
     .h-entry {
-      height: 100pt;
+      height: 100vw;
       width: 100%;
 
       &:first-of-type {
