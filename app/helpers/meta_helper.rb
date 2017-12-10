@@ -5,7 +5,7 @@ module MetaHelper
   end
 
   def meta_type(thing)
-    thing.present? ? "article" : og_type
+    thing.present? ? "article" : "website"
   end
 
   def meta_title(thing)

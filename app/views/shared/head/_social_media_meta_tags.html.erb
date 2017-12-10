@@ -1,16 +1,16 @@
 <!-- Google Site Verification for WebMaster tools -->
 <!-- <meta name="google-site-verification" content="<%#= TODO google-site-verification %>" /> -->
 
-<!-- Backward compatibility: Twitter Cards and Facebook (Open Graph) -->
-<meta name="twitter:dnt"                                   content="on" />
-<meta name="twitter:card"                                  content="summary" />
-<meta name="twitter:site"                                  content="<%= twitter_username %>" />
-<meta name="twitter:site:id"                               content="<%= twitter_user_id %>" />
-<meta name="twitter:creator"                               content="<%= twitter_username %>" />
-<meta name="twitter:creator:id"                            content="<%= twitter_user_id %>" />
-<meta name="twitter:url"         property="og:url"         content="<%= request.url %>" />
-<meta name="twitter:title"       property="og:title"       content="<%= meta_title(find_the_thing) %>" />
-<meta name="twitter:description" property="og:description" content="<%= meta_description(find_the_thing) %>" />
-<meta name="twitter:image"       property="og:image"       content="<%= meta_image(find_the_thing) %>" />
-<meta property="og:site_name"                              content="<%= t(:site_name) %>" />
-<meta property="og:type"                                   content="<%= meta_type(find_the_thing) %>" />
+<!-- Social media support: Twitter Cards and Facebook (Open Graph) -->
+<meta name="twitter:dnt"         content="on" />
+<meta name="twitter:card"        content="summary" />
+<meta name="twitter:site"        content="@crimethinc" />
+<meta name="twitter:site:id"     content="14884161" />
+<meta name="twitter:creator"     content="@crimethinc" />
+<meta name="twitter:creator:id"  content="14884161" />
+<meta name="twitter:url"         content="<%= request.url %>"                      property="og:url" />
+<meta name="twitter:title"       content="<%= meta_title(find_the_thing) %>"       property="og:title" />
+<meta name="twitter:description" content="<%= meta_description(find_the_thing) %>" property="og:description" />
+<meta name="twitter:image"       content="<%= meta_image(find_the_thing) %>"       property="og:image" />
+<meta property="og:site_name"    content="<%= t(:site_name) %>" />
+<meta property="og:type"         content="<%= meta_type(find_the_thing) %>" />
