@@ -1,12 +1,7 @@
 module ApplicationHelper
 
-  def lang
-    # TODO
-    "en"
-  end
-
   def html_id
-    @html_id
+    "id='#{@html_id}'".html_safe if @html_id.present?
   end
 
   def body_id
@@ -39,4 +34,5 @@ module ApplicationHelper
   def br_to_p(html)
     simple_format(html, {}, sanitize: false).gsub("\n<br />", "</p><p>").html_safe
   end
+
 end
