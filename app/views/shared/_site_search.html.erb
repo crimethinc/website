@@ -1,6 +1,6 @@
 <%= form_tag "/search", class: "archives-search-form", role: "search", method: "get" do %>
-  <%= label_tag        "q",                   t("form.search_form_placeholder"), class: "screen-reader-only" %>
-  <%= search_field_tag "q", @search.try(:query), placeholder: t("form.search_form_placeholder"), class: "simple-field" %>
+  <%= label_tag        "q", t("form.search_form_placeholder"), class: "screen-reader-only" %>
+  <%= search_field_tag "q", @search.try(:query), placeholder: t("form.search_form_placeholder"), class: "simple-field", id: "q-#{location}" %>
 
   <% if @search %>
     <%= link_to "Advanced Search", advanced_search_path(q: @search.query), class: "advanced-search-link" %>
