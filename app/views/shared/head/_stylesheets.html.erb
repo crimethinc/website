@@ -1,16 +1,21 @@
 <!-- CSS -->
 <%= stylesheet_link_tag "application", media: "all" %>
 
-<% if @article.present? %>
+<% if @article.present? && @article.css.present? %>
   <!-- Custom Article CSS -->
   <style>
     <%= @article.css %>
   </style>
 <% end %>
 
-<% if @page.present? %>
+<% if @page.present? && @page.css.present? %>
   <!-- Custom Page CSS -->
   <style>
     <%= @page.css %>
   </style>
 <% end %>
+
+<!-- Page specific CSS -->
+<style>
+  <%= yield :style_tag %>
+</style>

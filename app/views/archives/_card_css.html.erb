@@ -1,4 +1,5 @@
-<style>
+<% content_for :style_tag do %>
+
   <% if article.header_background_color.present? %>
     #home .h-entry#article-<%= article.id %> {
       /* Set header background color */
@@ -12,4 +13,5 @@
       color: <%= article.header_text_color %>;
     }
   <% end %>
-</style>
+
+<% end %>
