@@ -59,6 +59,7 @@ es:
         label: Podcast
         feed: RSS
         the_ex_worker: The Ex-Worker
+        the_hotwire: The Hotwire
 
       journal:
         label: Journal
@@ -73,9 +74,11 @@ es:
         posters:   Posters
         stickers:  Stickers
         videos:    Videos
+        logos:     Logos
 
       store:
         label: Store
+        description: Books, Posters, Stickers, and more…
 
       projects:
         label: Projects
@@ -95,8 +98,11 @@ es:
     contact:
       newsletter:
         heading: Email Updates
-        description: Sign up here to receive regular email updates.
+        description: Sign up here to receive regular email updates. _(Processed by Mailchimp.)_
         signup_form_placeholder: What’s your email address?
+        signup_form_select_placeholder: You want a lot of emails? Or a little?
+        signup_form_select_option_lot:    Every little thing. (Many emails)
+        signup_form_select_option_little: Just the big stuff! (Fewer emails)
         signup_button_text: Sign Up
       social:
         heading: Find Us Elsewhere
@@ -169,8 +175,13 @@ es:
       admin_zine_epub_download_text:  Mobi
       admin_zine_mobi_download_text:  ePub
 
-      download_front_button_text:  Download PDF of Front
-      download_back_button_text:   Download PDF of Back
+      download_front_button_text: "Download PDF : Front"
+      download_back_button_text:  "Download PDF : Back"
+
+      download_front_color_button_text:  "Download PDF : Front Color"
+      download_back_color_button_text:   "Download PDF : Front Color"
+      download_front_black_and_white_button_text: "Download PDF : Front B/W"
+      download_back_black_and_white_button_text:  "Download PDF : Front B/W"
 
       pdf_donoate_button_text: Donate
       pdf_donoate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
@@ -180,6 +191,7 @@ es:
       zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also obtain full PDFs of *Rolling Thunder,* our acclaimed journal of analysis and direct action, [in the *Rolling Thunder* archives,](/rt/archives.html) and obtain PDFs of *To Change Everything,* our introduction to anarchism, in dozens of languages at the [*To Change Everything*](/tce/) site.
       posters_intro_text:  Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
       stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
+      videos_intro_text:   Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
       books_intro_text:
         From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
 

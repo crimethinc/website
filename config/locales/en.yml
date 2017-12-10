@@ -59,6 +59,7 @@ en:
         label: Podcast
         feed: RSS
         the_ex_worker: The Ex-Worker
+        the_hotwire: The Hotwire
 
       journal:
         label: Journal
@@ -73,9 +74,11 @@ en:
         posters:   Posters
         stickers:  Stickers
         videos:    Videos
+        logos:     Logos
 
       store:
         label: Store
+        description: Books, Posters, Stickers, and more…
 
       projects:
         label: Projects
