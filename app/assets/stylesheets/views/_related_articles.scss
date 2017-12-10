@@ -6,6 +6,8 @@
   .related-articles-heading {
     font-weight: 700;
     font-size: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-bottom: 3rem;
     border-bottom: 1px solid $color-black;
   }
@@ -13,7 +15,14 @@
   .related-articles-category-heading {
     font-weight: 500;
     font-size: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .h-entry {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .h-entry header h1 {
