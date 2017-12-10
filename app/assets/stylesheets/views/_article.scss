@@ -61,15 +61,21 @@
           }
 
           &.shadowed {
-            h1 {
-              text-shadow: 0 0 1rem $color-black;
-            }
+            h1,
             h2 {
-              text-shadow: 0 0 2rem $color-black;
+              text-shadow: 0 0 1rem $color-black;
+              text-shadow: 0 0 1rem $color-black;
             }
           }
         }
       }
+
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+      }
+
 
       h1 {
         font: {
@@ -107,11 +113,6 @@
           letter-spacing: -0.01em;
         }
       }
-
-      a {
-        color: $color-white;
-      }
-
     } /* header */
 
     footer {
