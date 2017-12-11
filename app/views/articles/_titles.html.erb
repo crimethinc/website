@@ -1,5 +1,3 @@
-<% truncate_length ||= 2000 %>
-
 <div class="p-name <%= 'shadowed' if header.is_a?(Article) && header.header_shadow_text? %>">
   <%= link_to header.path do %>
 
@@ -11,9 +9,7 @@
       <span class="screen-reader-only sr-only"> : </span>
 
       <h2 class="p-x-subtitle">
-        <%= RubyPants.new(
-              truncate(header.subtitle, length: truncate_length)
-            ).to_html.html_safe %>
+        <%= RubyPants.new(header.subtitle).to_html.html_safe %>
       </h2>
     <% end %>
 
