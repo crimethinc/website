@@ -58,32 +58,35 @@
 
     header {
       height: 100%;
-      margin: 0 $border-size-small;
+      margin: 0;
       z-index: 10;
-
-      @media screen and (min-width: $small-phone) {
-        margin: 0 $border-size-medium;
-      }
-
-      @media screen and (min-width: $large-tablet) {
-        margin: 0 50pt;
-      }
     }
 
     .p-name {
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: $border-size-medium;
 
       &.shadowed {
         h1 { text-shadow: 0 0 2rem $color-black; }
         h2 { text-shadow: 0 0 1rem $color-black; }
       }
+    }
+
+    .article-titles {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      height: 100%;
+      width:  100%;
+
+      padding: 0 $border-size-medium;
 
       @media screen and (min-width: $small-phone) {
-        padding: $border-size-medium;
+        padding: 0 $border-size-large;
+      }
+
+      @media screen and (min-width: $large-tablet) {
+        padding: 0 50pt;
       }
     }
 
