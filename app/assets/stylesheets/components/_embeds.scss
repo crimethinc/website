@@ -40,12 +40,14 @@ figure {
 }
 
 figcaption {
-  font: {
-    size: 1.6rem;
-    weight: 300;
-  }
+  font-weight: 300;
+  font-size: 1rem;
   margin: 0.5em auto 1em auto;
-  max-width: 80%;
+
+  @media screen and (min-width: $small-tablet) {
+    max-width: 80%;
+    font-size: 1.6rem;
+  }
 }
 
 .video-container {
