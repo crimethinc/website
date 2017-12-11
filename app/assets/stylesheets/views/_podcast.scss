@@ -65,7 +65,7 @@
         display: inline-block;
         margin: 0 0 $border-size-small $border-size-small;
 
-        // WHY is this necessary? :(
+        // TODO WHY is this necessary? :(
         text-indent: 9999em !important;
 
         &:first-child {

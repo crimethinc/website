@@ -93,48 +93,49 @@
         font-size: 1.75rem;
         line-height: 1.5em;
         text-rendering: optimizeLegibility;
+      }
+
+      p {
         margin-bottom: $border-size-large;
       }
     }
 
-    .list {
-      li {
-        text-rendering: optimizeLegibility;
-        margin-bottom: $border-size-large;
-      }
+    li {
+      text-rendering: optimizeLegibility;
+      margin-bottom: $border-size-large;
+    }
 
-      ul,
-      ol {
-        margin-bottom: 1em;
-      }
+    ul,
+    ol {
+      margin-bottom: 1em;
+    }
 
-      li ul,
-      li ol {
-        margin-top: .5em;
-      }
+    li ul,
+    li ol {
+      margin-top: .5em;
+    }
 
-      ol {
-        list-style-type: square;
-      }
+    ol {
+      list-style-type: square;
+    }
 
-      ul {
-        list-style-type: square;
-      }
+    ul {
+      list-style-type: square;
+    }
 
-      dd,
-      dt,
-      li {
-        line-height: 1em;
-      }
+    dd,
+    dt,
+    li {
+      line-height: 1em;
+    }
 
-      li {
-        margin: 0 0 .5em 0;
-      }
+    li {
+      margin: 0 0 .5em 0;
+    }
 
-      li li {
-        margin: 0 0 0 1.5em;
-        line-height: 1.5em;
-      }
+    li li {
+      margin: 0 0 0 1.5em;
+      line-height: 1.5em;
     }
 
     @media screen and (min-width: $small-tablet) {
