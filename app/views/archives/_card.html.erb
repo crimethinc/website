@@ -4,7 +4,5 @@
            style="background-image: url(<%= article.image %>)">
     <%= render "articles/header",     article: article %>
     <%= render "articles/categories", article: article %>
-
-    <%= link_to "Read More...", article.path, class: "read-more" %>
   </article>
 <% end %>
