@@ -8,6 +8,10 @@
         margin: 0;
       }
 
+      .p-name {
+        margin-bottom: 4rem;
+      }
+
       .screen-reader-only  { display: none; }
 
       .u-photo {
@@ -34,10 +38,6 @@
 } // .h-feed
 
 // articles lists (/tags, /categories, /search)...
-#page .p-name {
-  margin-bottom: 4rem;
-}
-
 .categories,
 .categories ul {
   margin: 0 !important;
