@@ -1,9 +1,5 @@
 <div class="articles-list">
-  <ol>
-    <% articles.each do |article| %>
-
-      <%= render "articles/list_item", article: article %>
-
-    <% end %>
-  </ol>
+  <% articles.each do |article| %>
+    <%= render "articles/list_item", article: article %>
+  <% end %>
 </div>
