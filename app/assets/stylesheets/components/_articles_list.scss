@@ -2,7 +2,7 @@
 
   .articles-list {
     .h-entry {
-      margin-bottom: 4rem;
+      margin-bottom: 6rem;
 
       header {
         margin: 0;
@@ -32,3 +32,14 @@
   } //.articles-list
 
 } // .h-feed
+
+// articles lists (/tags, /categories, /search)...
+#page .p-name {
+  margin-bottom: 4rem;
+}
+
+.categories,
+.categories ul {
+  margin: 0 !important;
+}
+// ...articles lists (/tags, /categories, /search)

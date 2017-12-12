@@ -8,14 +8,11 @@
 
     <div class="<%= "column" if article.image.present? %> column-two-third">
       <header>
-        <%= render "articles/categories", article: article %>
         <%= render "articles/titles", header: article, linked: true %>
         <%= render "articles/published_on", article: article %>
-      </header>
-
-      <footer>
+        <%= render "articles/categories", article: article %>
         <%= render "articles/tags", article: article %>
-      </footer>
+      </header>
     </div>
   </div>
 </article>
