@@ -1,67 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en">
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!--
+    ********************************************************************************************************
+    I support your decision, I believe in change and hope you find just what it is that you are looking for.
+    ********************************************************************************************************
+  -->
+
+  <title>CrimethInc. : File Not Found : 404</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- General meta tags -->
+  <meta name="robots"              content="index,follow" />
+  <meta name="application-name"    content="CrimethInc." />
+  <meta name="description"         content="CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid." />
+  <meta name="generator"           content="CrimethInc. Internet Rube Goldberg Machine 3000" />
+  <meta name="author"              content="CrimethInc. Ex-Workers Collective" />
+
+  <!-- Bio -->
+  <link rel="me"     href="mailto:help@crimethinc.com" />
+  <link rel="author" href="/about" title="About CrimethInc." />
+
+  <!-- Sitemap -->
+  <link rel="home"  href="https://crimethinc.com" />
+  <link rel="index" href="https://crimethinc.com/sitemap" />
+
+  <!-- Browser hints -->
+  <link rel="dns-prefetch" href="https://assets.crimethinc.com" />
+
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon"         href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon icon" href="/apple-touch-icon.png" sizes="180x180" type="image/png" />
+  <link rel="mask-icon"             href="/logo.svg" sizes="any" color="#000000" />
+
+  <!-- Windows, IE and Edge -->
+  <meta name="msapplication-TileImage" content="/assets/icons/icon-144x144-86bd63dc42be1f7f410157196cc8502a84f2bdcb81184b7b22c7566e6a3434c1.png" />
+  <meta name="msapplication-TileColor" content="#000000" />
+
+  <meta name="msapplication-square70x70logo"   content="/assets/icons/icon-150x150-2bbc36e2858c663cadd3b7d9c521f4a068a5163bc33dabcecc93622ee1de59f1.png" />
+  <meta name="msapplication-square150x150logo" content="/assets/icons/icon-70x70-08a7fad7c944474fe0eb3e34051e35cc72c56c33eb1bef5d840dbc499f304176.png" />
+  <meta name="msapplication-wide310x150logo"   content="/assets/icons/icon-310x150-36431934bc397fa08b8e979c9a2e6d4b66fd69f58bba8a01cd3321f210fb0d78.png" />
+  <meta name="msapplication-square310x310logo" content="/assets/icons/icon-310x310-7a7cd8278a478a0b6c7f136834313bf6968e855f9be7c54ed77a2cc354316c94.png" />
+
+  <!-- Icons and stuff for more browsers via manifest.json -->
+  <link rel="manifest" href="/manifest.json" />
+
   <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      width:  100vw;
+      height: 100vh;
+    }
 
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+    a {
+      color: #fff;
+      font-weight: 700;
+    }
 
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    picture, img {
+      position: fixed;
+      top:  0;
+      left: 0;
+      z-index: 0;
 
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+      /* Preserve aspet ratio */
+      min-width:  100%;
+      min-height: 100%;
+    }
 
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    h1 {
+      text-shadow: 0 0 1rem #444;
+      font-size: 2em;
+      letter-spacing: -0.01em;
+      line-height: 1em;
+      margin-top: 0;
+    }
+
+    main {
+      z-index: 1;
+      position: relative;
+      padding: 5%;
+    }
+
+    article {
+      background: #0009;
+      padding: .75em;
+      max-width: 960px;
+      font-size: 1.25em;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
   </style>
 </head>
 
 <body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+  <picture>
+    <source media="(min-width: 36em)"
+            srcset="/assets/errors/404/x-large.jpg  2667w,
+                    /assets/errors/404/large.jpg    1366w,
+                    /assets/errors/404/medium.jpg   640w,
+                    /assets/errors/404/small.jpg    320w"
+            sizes="100vw" />
+
+    <source srcset="/assets/errors/404/cropped-large.jpg    2x,
+                    /assets/errors/404/cropped-medium.jpg 1.5x,
+                    /assets/errors/404/cropped-small.jpg    1x" />
+
+    <img src="/assets/errors/404/small.jpg" />
+  </picture>
+
+  <main>
+    <article>
+      <h1>404: File Not Found</h1>
+      <p>
+        <em>The page you are looking for does not seem to be here.</em>
+      </p>
+
+      <p>
+        To go hunting for the page you want,
+        you can <a href="/search/advanced">use our sophisticated search engine</a>,
+        or peruse our <a href="/library">reading library</a>.
+        To report a problem to us,
+        <a href="mailto:tech@crimethinc.com">email us</a>.
+      </p>
+    </article>
+  </main>
+
 </body>
 </html>
