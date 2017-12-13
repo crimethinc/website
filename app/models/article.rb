@@ -9,7 +9,7 @@ class Article < ApplicationRecord
   has_many :views, dependent: :destroy
 
   has_one    :redirect, dependent: :destroy
-  belongs_to :collection, foreign_key: :parent_id, class_name: :Article
+  belongs_to :collection, foreign_key: :parent_id, class_name: :Article, touch: true
 
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]
