@@ -1,57 +1,59 @@
-<%= render "articles/css", article: @article %>
+<% cache @article, expires_in: 1.day do %>
+  <%= render "articles/css", article: @article %>
 
-<% if @article.draft? %>
-  <div class="draft-preview-message">
-    PREVIEWING DRAFT.
-    <%= link_to "Continue editing article", [:edit, :admin, @article] %> or
-    <%= link_to "view article in Admin",    [:admin, @article] %>.
-  </div>
-<% end %>
-
-<%= article_tag @article do %>
-  <header>
-    <%= render "articles/image", article: @article, linked: false %>
-
-    <div class="meta">
-      <%= render "articles/titles", header: @article, linked: false %>
+  <% if @article.draft? %>
+    <div class="draft-preview-message">
+      PREVIEWING DRAFT.
+      <%= link_to "Continue editing article", [:edit, :admin, @article] %> or
+      <%= link_to "view article in Admin",    [:admin, @article] %>.
     </div>
+  <% end %>
 
-    <%= render "articles/categories", article: @article %>
-  </header>
+  <%= article_tag @article do %>
+    <header>
+      <%= render "articles/image", article: @article, linked: false %>
 
-  <div class="e-content">
-    <%= render_content @article %>
-
-    <%= render partial: "collection_post", collection: @collection_posts, as: :article if @article.collection_root? %>
-  </div>
-
-  <footer>
-    <%= render "articles/published_on",  article: @article, linked: true %>
-    <%= render "articles/categories",    article: @article %>
-    <%= render "articles/tags",          article: @article %>
-
-    <% if @article.download_url.present? %>
-      <div id="download-pdf">
-        <%= link_to "Download PDF", @article.download_url, class: "button" %>
+      <div class="meta">
+        <%= render "articles/titles", header: @article, linked: false %>
       </div>
-    <% end %>
 
-    <div>
-      <ul class="pagination">
-        <% if @previous_article.present? %>
-          <li class="page">
-            <%= link_to t("views.pagination.previous_article", title: @previous_article.title).html_safe, @previous_article.path %>
-          </li>
-        <% end %>
+      <%= render "articles/categories", article: @article %>
+    </header>
 
-        <% if @next_article.present? %>
-          <li class="page">
-            <%= link_to t("views.pagination.next_article", title: @next_article.title).html_safe, @next_article.path %>
-          </li>
-        <% end %>
-      </ul>
+    <div class="e-content">
+      <%= render_content @article %>
+
+      <%= render partial: "collection_post", collection: @collection_posts, as: :article if @article.collection_root? %>
     </div>
-  </footer>
-<% end %>
 
-<%= render "articles/related", article: @article %>
+    <footer>
+      <%= render "articles/published_on",  article: @article, linked: true %>
+      <%= render "articles/categories",    article: @article %>
+      <%= render "articles/tags",          article: @article %>
+
+      <% if @article.download_url.present? %>
+        <div id="download-pdf">
+          <%= link_to "Download PDF", @article.download_url, class: "button" %>
+        </div>
+      <% end %>
+
+      <div>
+        <ul class="pagination">
+          <% if @previous_article.present? %>
+            <li class="page">
+              <%= link_to t("views.pagination.previous_article", title: @previous_article.title).html_safe, @previous_article.path %>
+            </li>
+          <% end %>
+
+          <% if @next_article.present? %>
+            <li class="page">
+              <%= link_to t("views.pagination.next_article", title: @next_article.title).html_safe, @next_article.path %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </footer>
+  <% end %>
+
+  <%= render "articles/related", article: @article %>
+<% end %>
