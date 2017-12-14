@@ -1,0 +1,5 @@
+<div class="social-networks-share-btns">
+  <a class="link-domain-twitter" href="https://twitter.com/intent/tweet?text=<%= url_encode(article.title) %>&url=<%= article_url %>&via=crimethinc" target="_blank">Share on Twitter</a>
+  <a href="https://www.facebook.com/dialog/feed?app_id=966242223397117&display=popup&caption=<%= url_encode(article.title) %>&link=<%= article_url %>&redirect_uri=http://www.facebook.com/&display=popup">Share on Facebook</a>
+  <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=<%= article_url %>&caption=<%= url_encode(article.title) %>&content=<%= article.image %>">Share on Tumblr</a>
+</div>
