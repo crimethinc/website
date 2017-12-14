@@ -1,5 +1,14 @@
-<div class="social-networks-share-btns">
-  <a class="link-domain-twitter" href="https://twitter.com/intent/tweet?text=<%= url_encode(article.title) %>&url=<%= article_url %>&via=crimethinc" target="_blank">Share on Twitter</a>
-  <a href="https://www.facebook.com/dialog/feed?app_id=966242223397117&display=popup&caption=<%= url_encode(article.title) %>&link=<%= article_url %>&redirect_uri=http://www.facebook.com/&display=popup">Share on Facebook</a>
-  <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=<%= article_url %>&caption=<%= url_encode(article.title) %>&content=<%= article.image %>">Share on Tumblr</a>
+<div class="social">
+  <h1 class="share-btns-heading">Share it</h1>
+  <ul class="social-links">
+    <li class="social-link">
+      <a class="link-domain-twitter" href="https://twitter.com/intent/tweet?text=<%= url_encode(article.title) %>&url=<%= article_url %>&via=crimethinc" target="_blank">Share on Twitter</a>
+    </li>
+    <li class="social-link">
+      <a class="link-domain-facebook" href="https://www.facebook.com/dialog/feed?app_id=966242223397117&display=popup&caption=<%= url_encode(article.title) %>&link=<%= article_url %>&redirect_uri=http://www.facebook.com/&display=popup">Share on Facebook</a>
+    </li>
+    <li class="social-link">
+      <a class="link-domain-tumblr" href="http://tumblr.com/widgets/share/tool?canonicalUrl=<%= article_url %>&caption=<%= url_encode(article.title) %>&content=<%= article.image %>" target="_blank">Share on Tumblr</a>
+    </li>
+  </ul>
 </div>
