@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html dir="<%=t('.language_direction')%>" lang="<%=t('.lang_code')%>" prefix="og: http://ogp.me/ns#" <%= html_id %>>
+<head>
+  <title><%=t('.head.title').html_safe%></title>
+  <meta charset="utf-8" />
+  <!-- <script src="/mint/?js"></script> -->
+  <!-- <link rel="stylesheet" href="/tce/css/master.css" media="screen"> -->
+  <%= stylesheet_link_tag "to_change_everything", media: "screen" %>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $(window).resize(function() {
+      $("h1,h2,h4,blockquote").css("z-index", 1);
+    });
+
+    function toggleDiv(tocdiv) {
+      $("#"+tocdiv).toggle();
+    }
+
+    function toggleDiv(languagediv) {
+      $("#"+languagediv).toggle();
+    }
+
+    function toggleDiv(sharediv) {
+      $("#"+sharediv).toggle();
+    }
+  </script>
+
+  <script src="/tce/js/jquery.responsImg.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $('.responsive-image').responsImg({
+        allowDownsize: true,
+        breakpoints: {
+          phonesmall: 1,
+          phone: 340,
+          tablet: 601,
+          small: 1201,
+          large: 1671
+        }
+      });
+    });
+  </script>
+
+
+  <link rel="stylesheet" href="/tce/css/jquery.fancybox.css" media="screen" />
+
+  <script src="/tce/js/jquery.fancybox.pack.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".fancybox").fancybox({
+        maxWidth  : 1334,
+        autoHeight  : true,
+        padding    : 0,
+        fitToView  : false,
+        width    : '100%',
+        autoSize  : false,
+        closeClick  : false,
+        openEffect  : 'elastic',
+        closeEffect  : 'elastic',
+        openSpeed  : 'fast',
+        closeSpeed  : 'fast'
+      });
+    });
+  </script>
+  <meta name="viewport" content="initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@crimethinc">
+  <meta name="twitter:title" content="<%=t('.head.meta.title').html_safe%>">
+  <meta name="twitter:description" content="<%=t('.head.meta.description').html_safe%>">
+  <meta name="twitter:image:src" content="https://cloudfront.crimethinc.com/assets/tce/images/twitter-card-750.jpg">
+  <meta property="og:url" content="<%=t('.head.meta.url').html_safe%>" />
+  <meta property="og:title" content="<%=t('.head.meta.title').html_safe%>" />
+  <meta property="og:description" content="<%=t('.head.meta.description').html_safe%>" />
+  <meta property="og:image" content="https://cloudfront.crimethinc.com/assets/tce/images/twitter-card-1486.jpg" />
+  <meta property="og:type" content="article" />
+
+  <link rel="stylesheet" href="https://cloudfront.crimethinc.com/tce/images/546676/CE039F8C7119876F1.css" />
+</head>
+
+<body class="<%=@locale.to_s%>">
+  <div class="grandwrapper">
+  <nav><div id="navwrapper">
+      <div id="cwc">
+        <a href="http://crimethinc.com"><div id="cwclogo"></div><div id="cwclabel"></div></a>
+      </div>
+
+      <div id="menus">
+        <ul>
+          <li><span class="green"><a href="javascript:toggleDiv('tocdiv');"><span class="icon"></span><span class="label"> <%=t('.menu.toc').html_safe%></span></a></span>
+            <ul id="toc">
+              <li><a href="#introduction"><%=t('.toc.introduction').html_safe%></a></li>
+              <li><a href="#self"><%=t('.toc.self').html_safe%></a></li>
+              <li><a href="#answering"><%=t('.toc.answering').html_safe%></a></li>
+              <li><a href="#power"><%=t('.toc.power').html_safe%></a></li>
+              <li><a href="#relationships"><%=t('.toc.relationships').html_safe%></a></li>
+              <li><a href="#reconciling"><%=t('.toc.reconciling').html_safe%></li>
+              <li><a href="#liberation"><%=t('.toc.liberation').html_safe%></a></li>
+              <li><a href="#revolt"><%=t('.toc.revolt').html_safe%></a></li>
+              <li><a href="#control"><%=t('.toc.control').html_safe%></a></li>
+              <li><a href="#hierarchy"><%=t('.toc.hierarchy').html_safe%></a></li>
+              <li><a href="#borders"><%=t('.toc.borders').html_safe%></a></li>
+              <li><a href="#representation"><%=t('.toc.representation').html_safe%></a></li>
+              <li><a href="#leaders"><%=t('.toc.leaders').html_safe%></a></li>
+              <li><a href="#government"><%=t('.toc.government').html_safe%></a></li>
+              <li><a href="#profit"><%=t('.toc.profit').html_safe%></a></li>
+              <li><a href="#property"><%=t('.toc.property').html_safe%></a></li>
+              <li><a href="#lastcrime"><%=t('.toc.lastcrime').html_safe%></a></li>
+              <li><a href="#anarchy"><%=t('.toc.anarchy').html_safe%></a></li>
+              <li><a href="#outro"><%=t('.toc.outro').html_safe%></a></li>
+              <li><a href="#takeflight"><%=t('.toc.takeflight').html_safe%></a></li>
+              <li><a href="#next"><%=t('.toc.next').html_safe%></a></li>
+            </ul>
+          </li>
+          <li><span class="pink"><a href="javascript:toggleDiv('languagediv');"><span class="icon"></span><span class="label"> <%=t('.menu.language').html_safe%></span></a></span>
+            <ul id="language">
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#arabic">العربية</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#armenian">հայերեն</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#bulgarian">Български</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#cebuano">Cebuano</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#catalan">Català</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#chinese">中文</a></li>
+              <li><a href="/tce/czech">Czech</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#danish">Dansk</a></li>
+              <li><a href="/tce/deutsch">Deutsch</a></li>
+              <li><a href="/tce">English</a></li>
+              <li><a href="/tce/espanol">Español</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#espanol">Español<br />&nbsp;&nbsp;&nbsp;(América Latina)</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#farsi">فارسی</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#french">Français</a></li>
+              <li><a href="/tce/quebecois">Français (Québec)</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#greek">ελληνικά</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#italian">Italiano</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#korean">한국어</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#malay">Malay</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#maltese">Malti</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#dutch">Nederlands</a></li>
+              <li><a href="/tce/polski">Polski</a></li>
+              <li><a href="/tce/portugues">Português</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#romanian">Română</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#russian">русский</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#serbocroatian"><!--српскохрватски-->Srpskohrvatski</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#slovakvideo">Slovenčina</a></li>
+              <li><a href="/tce/slovenscina">Slovenščina</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#swedish">Svenska</a></li>
+              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#cebuano">Tagalog</a></li>
+              <!--<li class="inactive"><a href="#">&nbsp;</a></li>
+                  <li class="inactive"><a href="#">--Coming Soon--</a></li>
+              <li class="inactive"><a href="#">العَرَبِيةُ</a></li>
+              <li class="inactive"><a href="#">српскохрватски</a></li>
+              <li class="inactive"><a href="#">Visayan</a></li>-->
+            </ul>
+          </li>
+          <li><span class="blue"><a href="javascript:toggleDiv('sharediv');"><span class="icon"></span><span class="label"> <%=t('.menu.share').html_safe%></span></a></span>
+            <ul id="share">
+              <li><a href="<%=t('.bulk_get.url').html_safe%>"><span class="icon"></span> <%=t('.bulk_get.text').html_safe%></a></li>
+              <li><a href="https://twitter.com/share?url=http%3A%2F%2Fwww.crimethinc.com%2Ftce&text=To%20Change%20Everything%2C%20an%20anarchist%20appeal&via=crimethinc" target="_blank"><span class="icon"></span> Twitter</a></li>
+              <li><a href="https://www.facebook.com/dialog/feed?app_id=184683071273&link=http%3A%2F%2Fcrimethinc.com%2Ftce&picture=http%3A%2F%2Fcloudfront.crimethinc.com%2Fassets%2Ftce%2Fimages%2Ftwitter-card-1486.jpg&name=To%20Change%20Everything%2C%20an%20anarchist%20appeal&caption=%20&description=The%20case%20for%20complete%20self-determination--a%20guide%20for%20the%20furious%2C%20the%20curious%2C%20and%20the%20pure%20of%20heart&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F" target="_blank"><span class="icon">&thinsp;&thinsp;</span> Facebook</a></li>
+              <li><a href="http://www.tumblr.com/share/photo=http%3A%2F%2Fcloudfront.crimethinc.com%2Fassets%2Ftce%2Fimages%2Ftwitter-card-1486.jpg&caption=To%20Change%20Everything%2C%20an%20anarchist%20appeal%20-%20The%20case%20for%20complete%20self-determination--a%20guide%20for%20the%20furious%2C%20the%20curious%2C%20and%20the%20pure%20of%20heart&click_thru=http%3A%2F%2Fcrimethinc.com%2Ftce" target="_blank"><span class="icon">&thinsp;&thinsp;</span> Tumblr</a></li>
+              <li><a href="mailto:?subject=To%20Change%20Everything!&body=Check%20this%20shit%20out%20yo!%20The%20case%20for%20complete%20self-determination%E2%80%94a%20guide%20for%20the%20furious%2C%20the%20curious%2C%20and%20the%20pure%20of%20heart%0D%0A%0D%0Ahttp%3A%2F%2Fcrimethinc.com%2Ftce%2F"><span class="icon"></span> Email</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="sharediv">
+      <!--<h1>Share</h1>-->
+      <li><a href="<%=t('.bulk_get.url').html_safe%>"><span class="icon"></span> <%=t('.bulk_get.text').html_safe%></a></li>
+      <li><a href="https://twitter.com/share?url=http%3A%2F%2Fwww.crimethinc.com%2Ftce&text=To%20Change%20Everything%2C%20an%20anarchist%20appeal&via=crimethinc" target="_blank"><span class="icon"></span> Twitter</a></li>
+      <li><a href="https://www.facebook.com/dialog/feed?app_id=184683071273&link=http%3A%2F%2Fcrimethinc.com%2Ftce&picture=http%3A%2F%2Fcloudfront.crimethinc.com%2Fassets%2Ftce%2Fimages%2Ftwitter-card-1486.jpg&name=To%20Change%20Everything%2C%20an%20anarchist%20appeal&caption=%20&description=The%20case%20for%20complete%20self-determination--a%20guide%20for%20the%20furious%2C%20the%20curious%2C%20and%20the%20pure%20of%20heart&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F" target="_blank"><span class="icon">&thinsp;&thinsp;</span> Facebook</a></li>
+      <li><a href="http://www.tumblr.com/share/photo=http%3A%2F%2Fcloudfront.crimethinc.com%2Fassets%2Ftce%2Fimages%2Ftwitter-card-1486.jpg&caption=To%20Change%20Everything%2C%20an%20anarchist%20appeal%20-%20The%20case%20for%20complete%20self-determination--a%20guide%20for%20the%20furious%2C%20the%20curious%2C%20and%20the%20pure%20of%20heart&click_thru=http%3A%2F%2Fcrimethinc.com%2Ftce" target="_blank"><span class="icon">&thinsp;&thinsp;</span> Tumblr</a></li>
+      <li><a href="mailto:?subject=To%20Change%20Everything!&body=Check%20this%20shit%20out%20yo!%20The%20case%20for%20complete%20self-determination%E2%80%94a%20guide%20for%20the%20furious%2C%20the%20curious%2C%20and%20the%20pure%20of%20heart%0D%0A%0D%0Ahttp%3A%2F%2Fcrimethinc.com%2Ftce%2F"><span class="icon"></span> Email</a></li>
+    </div>
+
+    <div id="languagediv">
+
+      <div id="lang1">
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#arabic">العربية</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#armenian">հայերեն</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#bulgarian">Български</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#cebuano">Cebuano</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#catalan">Català</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#chinese">中文</a></li>
+        <li><a href="/tce/czech">Czech  <span class="check check-czech"></span></a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#danish">Dansk</a></li>
+        <li><a href="/tce/deutsch">Deutsch  <span class="check check-deutsch"></span></a></li>
+        <li><a href="/tce">English <span class="check check-english"></span></a></li>
+        <li><a href="/tce/espanol">Español  <span class="check check-espanol"></span></a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#espanol">Español<br />&nbsp;&nbsp;&nbsp;(América Latina)</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#farsi">فارسی</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#french">Français</a></li>
+        <li><a href="/tce/quebecois">Français (Québec)  <span class="check check-quebecois"></span></a></li>
+      </div>
+
+      <div id="lang2">
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#greek">ελληνικά</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#italian">Italiano</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#korean">한국어</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#malay">Malay</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#maltese">Malti</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#dutch">Nederlands</a></li>
+        <li><a href="/tce/polski">Polski  <span class="check check-polski"></span></a></li>
+        <li><a href="/tce/portugues">Português  <span class="check check-portugues"></span></a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#romanian">Română</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#russian">русский</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#serbocroatian"><!--српскохрватски-->Srpskohrvatski</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#slovakvideo">Slovenčina</a></li>
+        <li><a href="/tce/slovenscina">Slovenščina  <span class="check check-slovenscina"></span></a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#swedish">Svenska</a></li>
+        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#cebuano">Tagalog</a></li>
+      </div>
+
+    </div>
+
+
+
+    <div id="tocdiv">
+      <h1><%=t('.menu.toc').html_safe%></h1>
+      <div id="toc1">
+        <li><a href="#introduction"><%=t('.toc.introduction').html_safe%></a></li>
+        <li><a href="#self"><%=t('.toc.self').html_safe%></a></li>
+        <li><a href="#answering"><%=t('.toc.answering').html_safe%></a></li>
+        <li><a href="#power"><%=t('.toc.power').html_safe%></a></li>
+        <li><a href="#relationships"><%=t('.toc.relationships').html_safe%></a></li>
+        <li><a href="#reconciling"><%=t('.toc.reconciling').html_safe%></li>
+        <li><a href="#liberation"><%=t('.toc.liberation').html_safe%></a></li>
+        <li><a href="#revolt"><%=t('.toc.revolt').html_safe%></a></li>
+        <li><a href="#control"><%=t('.toc.control').html_safe%></a></li>
+      </div>
+
+      <div id="toc2">
+        <li><a href="#hierarchy"><%=t('.toc.hierarchy').html_safe%></a></li>
+        <li><a href="#borders"><%=t('.toc.borders').html_safe%></a></li>
+        <li><a href="#representation"><%=t('.toc.representation').html_safe%></a></li>
+        <li><a href="#leaders"><%=t('.toc.leaders').html_safe%></a></li>
+        <li><a href="#government"><%=t('.toc.government').html_safe%></a></li>
+        <li><a href="#profit"><%=t('.toc.profit').html_safe%></a></li>
+        <li><a href="#property"><%=t('.toc.property').html_safe%></a></li>
+        <li><a href="#lastcrime"><%=t('.toc.lastcrime').html_safe%></a></li>
+        <li><a href="#anarchy"><%=t('.toc.anarchy').html_safe%></a></li>
+        <li><a href="#outro"><%=t('.toc.outro').html_safe%></a></li>
+        <li><a href="#takeflight"><%=t('.toc.takeflight').html_safe%></a></li>
+        <li><a href="#next"><%=t('.toc.next').html_safe%></a></li>
+      </div>
+    </div>
+
+
+  </nav>
+  <%= yield %>
+<footer>
+</footer>
+
+<div id="video-container">
+  <iframe src="//player.vimeo.com/video/111159930" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+  </div>
+
+</body>
+</html>

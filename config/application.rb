@@ -21,5 +21,8 @@ module Crimethinc
     config.middleware.use Rack::Redirect
     config.middleware.use Rack::Attack
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
+
+    # allow nested diretories in locales
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end
 end
