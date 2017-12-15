@@ -17,7 +17,7 @@
         <%= render "/admin/articles/children_articles_badge",  article: article %>
 
         <span class="d-md-none float-right <%= 'text-muted' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
-          <%= number_with_delimiter(article.views.count + article.page_views) %>
+          <%= number_with_delimiter(article.page_views) %>
           Views
         </span>
       </div>
@@ -43,7 +43,7 @@
       </div>
 
       <div class="d-none d-md-block col-md-1 text-right <%= 'text-muted' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
-        <%= number_with_delimiter(article.views.count + article.page_views) %>
+        <%= number_with_delimiter(article.page_views) %>
       </div>
     </div>
   <% end %>

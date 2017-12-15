@@ -57,7 +57,7 @@ class ArticlesController < ApplicationController
     @editable         = @article
 
     # save view stats
-    @article.views.create! unless signed_in?
+    Article.increment_counter(:page_views, @article.id) unless signed_in?
 
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false

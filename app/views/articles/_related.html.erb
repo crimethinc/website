@@ -1,16 +1,16 @@
 <% if article.related.present? %>
-<div class="related-articles">
-  <h1 class="related-articles-heading">Related Articles</h1>
+  <div class="related-articles">
+    <h1 class="related-articles-heading">Related Articles</h1>
 
-  <% article.related.each do |category, articles| %>
-    <div class="h-feed">
-      <h2 class="related-articles-category-heading"><%= link_to category.name, category.path %></h2>
-
+    <% article.related.each do |category, articles| %>
       <div class="h-feed">
-        <%= render "articles/list", articles: articles %>
-      </div>
-    </div><!-- .h-feed -->
-  <% end %>
+        <h2 class="related-articles-category-heading"><%= link_to category.name, category.path %></h2>
 
-</div><!-- .related-articles -->
+        <div class="h-feed">
+          <%= render "articles/list", articles: articles %>
+        </div>
+      </div><!-- .h-feed -->
+    <% end %>
+
+  </div><!-- .related-articles -->
 <% end %>
