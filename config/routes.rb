@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # Homepage
   root to: "home#index"
 
+  # Donations
+  get "donate", to: "donate#index", as: :donate
 
 
   get "page(/1)", to: redirect { |_, _| "/" }

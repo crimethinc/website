@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   def staging?
     ENV["ON_STAGING"] == "TRUE"
   end
+  helper_method :staging?
 
   def set_pinned_pages
     # pinned article
