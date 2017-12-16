@@ -23,10 +23,12 @@
     <div class="e-content">
       <%= render_content @article %>
 
+
       <%= render partial: "collection_post", collection: @collection_posts, as: :article if @article.collection_root? %>
     </div>
 
     <footer>
+      <%= render "articles/share_on_social_networks", article: @article %>
       <%= render "articles/published_on",  article: @article, linked: true %>
       <%= render "articles/categories",    article: @article %>
       <%= render "articles/tags",          article: @article %>

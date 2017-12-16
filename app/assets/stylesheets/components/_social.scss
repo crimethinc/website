@@ -1,0 +1,31 @@
+.social {
+  margin-top: 4rem;
+  clear: both;
+}
+
+.social-links {
+  margin-top: 2rem;
+
+  .social-link {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      @include square(40px);
+      @include social-icon("rss");
+      margin: 0 $border-size-small $border-size-small 0;
+    }
+
+    .link-domain-facebook  { @include social-icon("facebook"); }
+    .link-domain-instagram { @include social-icon("instagram"); }
+    .link-domain-medium    { @include social-icon("medium"); }
+    .link-domain-patreon   { @include social-icon("patreon"); }
+    .link-domain-periscope { @include social-icon("periscope"); }
+    .link-domain-snapchat  { @include social-icon("snapchat"); }
+    .link-domain-tumblr    { @include social-icon("tumblr"); }
+    .link-domain-twitter   { @include social-icon("twitter"); }
+    .link-domain-vimeo     { @include social-icon("vimeo"); }
+    .link-domain-wordpress { @include social-icon("wordpress"); }
+    .link-domain-youtube   { @include social-icon("youtube"); }
+  }
+}
