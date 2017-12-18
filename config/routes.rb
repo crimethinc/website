@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # External Redirects
   get "books/evasion",      to: redirect("http://evasionbook.com"), status: 301
   get "books/evasion.html", to: redirect("http://evasionbook.com"), status: 301
+  get "evasion/home.html",  to: redirect("http://evasionbook.com"), status: 301
 
   # Store Redirect and support page
   get "store",               to: redirect("https://store.crimethinc.com")
