@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   get "page(/1)", to: redirect { |_, _| "/" }
   get "page/:page", to: "home#index"
 
+  #TCE
+  get "tce/:lang", to: 'to_change_everything#show'
+
   # Articles
   # Article listings by year, optional month, optional day
   get "(/:year)(/:month)(/:day)/page(/1)", to: redirect { |_, req|
