@@ -3,7 +3,7 @@
 class ToChangeEverythingController < ApplicationController
   layout 'to_change_everything', only: [:show]
 
-  TO_CHANGE_ANYTHING_YAMLS = %w[espanol فارسی].freeze
+  TO_CHANGE_ANYTHING_YAMLS = %w[english espanol فارسی].freeze
 
   def show
     @locale = params[:lang]
