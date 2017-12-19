@@ -10,40 +10,40 @@
           description: ????????????????????????????????????????????????????????
           url: http://tochangeeverything.com/한국어
       menu:
-        toc: ???????????????????
+        toc: 목차 # Google translate of 'table of contents'
         language: 한국어
-        share: ????????????????????
+        share: 몫 # Google translate of 'share'
       bulk_get:
         url: /tce/get/#order
         text: ????????????????????
       toc:
-        introduction: ??????????????????
-        self: ??????????????????
-        answering: ??????????????????
-        power: ??????????????????
-        relationships: ??????????????????
-        reconciling: ??????????????????
-        liberation: ??????????????????
-        revolt: ??????????????????
-        control: ??????????????????
-        hierarchy: ??????????????????
-        borders: ??????????????????
-        representation: ??????????????????
-        leaders: ??????????????????
-        government: ??????????????????
-        profit: ??????????????????
-        property: ??????????????????
-        lastcrime: ??????????????????
+        introduction: ???????
+        self: 시작은&#8200;<br /><span class="bold">스스로&#8200;<br />결정</span>하는&#8200;<br />것부터&#8200;
+        answering: <span class="bold">스스로</span>에게&#8200;<br /><span class="bold">응답</span>하자
+        power: <span class="bold">권력</span>을&#8200;<br />얻으려&#8200;<br />하지 말고&#8200;<br />힘을&#8200;<br />추구하자&#8200;
+        relationships: <span class="bold">신뢰</span>에<br />&nbsp;&nbsp;&nbsp;기반한<br /><span class="bold">관계</span>를<br />&nbsp; &nbsp; 만들자
+        reconciling: <span class="bold">개인</span>과<br />&nbsp; &nbsp; <span class="bold">전체</span>를<br /><span class="bold">조화</span>시키자
+        liberation: <span class="bold">욕망</span>을<br /><span class="bold">&nbsp;해방</span><br />&nbsp; &nbsp;시키자
+        revolt: <span class="bold">저항으로</span><br />시작하자
+        control: 문제는<br /><span class="bold">&nbsp; &nbsp; 통제다</span>
+        hierarchy: 문제는<br /><span class="bold">위계질서</span><br />이다
+        borders: 문제는 경계를 나누는 것이다
+        representation: '&nbsp; &nbsp; 문제는<br /><span class="bold">대의제</span><br />&nbsp; (代議)<span class="bold">다</span>'
+        leaders: 문제는<br /><span class="bold">&nbsp; &nbsp; 지휘자이다</span>
+        government: 문제는<br /><span class="bold">&nbsp; &nbsp; 정부다</span>
+        profit: 문제는<br /><span class="bold">&nbsp; &nbsp; 이윤이다</span>
+        property: 문제는<br /><span class="bold">&nbsp; &nbsp; 재산이다</span>
+        lastcrime: the<br /><span class="bold">&#8200;Last Crime<br />&nbsp; &nbsp; &nbsp; &nbsp; 마지막 범죄</span>
         anarchy: ??????????????????
         outro: ??????????????????
-        takeflight: ??????????????????
+        takeflight: 오래된<br /><span class="bold">&nbsp; &nbsp;세상</span>에<br /><span class="bold">집착</span>하지 <span class="bold">말자</span>
         next: ??????????????????
   to_change_everything:
     show:
-      title_html: '&nbsp;모든것을<br />바꾸기 위해'
+      title_html: '모든 <span class="drop-word-1">것을</span><br /><span class="drop-word-2">바꾸자</span>'
       subtitle_html: <span class="green">아나키</span> <span class="blue">호소문</span>
-      video_cte: 비디오를보다 #Google translate of 'Watch video'
-      pdf_cte_html: PDF보기 #Google translate of 'Get PDF'
+      video_cte: 비디오를보다 # Google translate of 'Watch video'
+      pdf_cte_html: PDF보기 # Google translate of 'Get PDF'
       pdf_get_url: https://crimethinc.com/2016/01/25/to-change-everything-in-ten-more-languages/#korean
       pdf_image: tce-cover-200.png
       intro:
@@ -78,8 +78,8 @@
         left_text_html: 문제는<br /><span class="bold">위계질서</span><br />이다
         right_text_html: '<p><span class="bold">관계</span>의 불평등을 강요하는 방법은 여러 가지가 있다. 그 중에는 법원과 같이 중앙집권적 장치를 필요로 하는 곳도 있다. 또는 성별 역할 체계나, 학벌과 족벌과 같이 더 비공식적 으로 작동하는 것도 있다.</p><p><span class="bold">이런</span> 불평등한 위계질서 중 몇몇은 이제 거의 작동하지 않는다. 왕권이 하늘의 뜻이라고 몇백 년간 믿어왔었고, 다른 사회를 생각하는 것은 거의 불가능한 적도 있었다. 오늘날 왕 권이 하늘의 뜻이라고 믿는 자는 거의 없다. 그러나 한편으론 불평등이 없는 삶을 상상조 차 하지 못할 정도로 아직 깊이 스며들어 있기도 하다. 누가 소유권이 없는 세상을 상상할 수 있는가? 위계질서가 실제 존재하지만 불가피한 것이 아니다. 황제의 존재가 자연스럽 거나 필수적이거나 이롭지 않은 것처럼 주인과 사장의 존재 역시 마찬가지로 자연스럽거 나 필수적이거나 이로운 것이 아니다.</p><p><span class="bold">불평등</span>과 서열을 정당화 시키는 이 모든 방식은 서로를 강화시키며 함께 발달해 왔다. 예 를 들면 자본주의 역사는 백인 우월주의의 역사로부터 분리할 수 없다. 식민지, 노예제도, 그리고 노동자를 분류하고 아직도 누가 감옥이나 판자촌에 살지를 정하는 피부색에 의한 차별이 없었으면 자본주의는 성립할 수 없었을 것이다. 마찬가지로 자본주의와 성 차별은 상호 작용을 하면서 양립된다. 자본주의에서는 상품을 생산하는 노동자는 (주로 남성) 임금을 받지만, 가정에서 이 노동자를 낳고 기르고 매일 충전시키고 평생 돌봐주며 신체적으로도 감정적으로도 가사 노동을 담당하는 여성들은 임금을 받지 못하고 감춰진다. 그래서 여성은 일할 때도 임금을 적게 받게 된다. 노동자 간에 만들어진 이 서열은 노동자 계급을 분열시키고 약화시킴으로 노동자와 자본 사이에 위계를 낳는다. 위계질서는 여러 차원이 있지만 모두 연결되어 있다. 나라와 지역간 경제 적인 불평등, 국적과 법 제도, 인종, 민족과 성 차별, 이 모든 요소들이 상호 작용한다. 아 이를 키우는 이주여성 가사노동자가 (혹은 결혼이주여성) 마주치는 상황이 그 예시이다.</p><p><span class="bold">이러한</span> 차별의 문제는 개인 사이의 편견 문제를 뛰어넘는 체계적인 문제이며, 제도와 권 력과 관련되어 있다. 국가와 사회의 또 다른 위계질서가 없었다면, 개인의 편견만으로 체 계적인 백인/남성 우월주의를 강요할 방법이 없었을 것이다. 이 체제의 최상위에 흑인 이나 여성 대통령이 가능하다는 사실은 오히려 현 체제를 안정시켜 규칙을 정당화한다.</p><p><span class="bold">다시</span> 말하자면, 경찰이 있는 한 경찰은 누군가를 괴롭힐 것이다. 감옥이 있는 한 누군가는 감옥에 가게 될것이다. 빈곤이 있는 한 누군가는 빈곤에 빠질 것이다. 위계에 기반 둔 사회 에서 평등을 이룰 수 있다고 믿는다면 너무 순진한 생각이다. 자리만 바뀐다고해서 근본 적으로 바뀌는 것은 아무 것도 없다. 판을 바꿔야 한다!</p>'
       borders:
-        left_text_html: 문제는 경계를 나누는 것이다
-        right_text_html: '<p><span class="bold>만약</span> 외국에서 침략군이 우리나라에 쳐들어 와 숲을 파괴하고, 강을 오염 시키고, 어린이를 강제로 납치해 자신에게 충성을 맹세하게 한다면, 누가 이 침략에 맞서서 무장투쟁을 반대하겠는가? 그러나 우리나라 정부가 같은 짓을 할 때, 애국자들은 기꺼이 복종하고 재산과 자식까지 바친다.</p><p><span class="bold">국경</span>은 우리를 보호하지 않고, 우리를 분리시킨다. 국적에서 배제된 이들 과 불필요한 갈등을 일으키고, 포함된 이들 사이에서도 현실적 차이를 모 호하게 한다. 가장 민주적인 정부라도 참여하는 이와 배제된 이, 합법적인 사람들과 불법적인 사람들의 분리를 기반으로 한다. 민주주의의 발생지라 는 고대 그리스 아테네에서 정치에 참여하는 사람은 소수의 남성 인구 뿐이 었고, 미국에서 근대 민주주의 창립자들은 노예를 소유한 주인이었다. 그 리고 현재에도 국적과 체류권 제도는 포함된 이와 배제된 이 사이에 차별을 낳고, 수 많은 불법체류자들의 삶을 취약하고 힘들게 만든다.</p><p><span class="bold">자유주의</span>가 추구하는 이상은 울타리를 계속 넓혀 전세계를 거대한 민주 주의 체제에 통합시키는 것이다. 그러나 불평등은 체제 구조에 배태되어 있 다. 이 사회 각계 각층에 수 많은 미세한 경계가 나뉘어져 있어서 우리를 권 력을 가진 자와 권력을 가지지 않은 자로 분리한다. 보안 검색대, 신용 등급 평가, 데이터베이스 암호화, 상품 등급 등이 그것이다. 우리는 배제하지 않 으며, 권력을 집중시키지 않고, 닫힌 공동체에만 공감하는 것이 아니라 열 린 공동체를 만들어야 한다!</p>'
+        left_text_html: '&nbsp; &nbsp; 문제는<br /><span class="bold">&nbsp; &nbsp; &nbsp; &nbsp;경계를<br />나누는 것이다</span>'
+        right_text_html: '<p><span class="bold">만약</span> 외국에서 침략군이 우리나라에 쳐들어 와 숲을 파괴하고, 강을 오염 시키고, 어린이를 강제로 납치해 자신에게 충성을 맹세하게 한다면, 누가 이 침략에 맞서서 무장투쟁을 반대하겠는가? 그러나 우리나라 정부가 같은 짓을 할 때, 애국자들은 기꺼이 복종하고 재산과 자식까지 바친다.</p><p><span class="bold">국경</span>은 우리를 보호하지 않고, 우리를 분리시킨다. 국적에서 배제된 이들 과 불필요한 갈등을 일으키고, 포함된 이들 사이에서도 현실적 차이를 모 호하게 한다. 가장 민주적인 정부라도 참여하는 이와 배제된 이, 합법적인 사람들과 불법적인 사람들의 분리를 기반으로 한다. 민주주의의 발생지라 는고대그리스아테네에서정치에참여하는사람은소수의남성인구뿐이 었고, 미국에서 근대 민주주의 창립자들은 노예를 소유한 주인이었다. 그 리고현재에도국적과체류권제도는포함된이와배제된이사이에차별을 낳고, 수 많은 불법체류자들의 삶을 취약하고 힘들게 만든다.</p><p><span class="bold">자유주의</span>가 추구하는 이상은 울타리를 계속 넓혀 전세계를 거대한 민주 주의 체제에 통합시키는 것이다. 그러나 불평등은 체제 구조에 배태되어 있 다.이사회각계 각층에수많은미세한경계가나뉘어져있어서우리를권 력을가진자와권력을가지지않은자로분리한다.보안검색대,신용등급 평가, 데이터베이스 암호화, 상품 등급 등이 그것이다. 우리는 배제하지 않 으며, 권력을 집중시키지 않고, 닫힌 공동체에만 공감하는 것이 아니라 열 린 공동체를 만들어야 한다!</p>'
         image_name: borders
       representation:
         left_text_html: '&nbsp; &nbsp; 문제는<br /><span class="bold">대의제</span><br />&nbsp; (代議)<span class="bold">다</span>'
