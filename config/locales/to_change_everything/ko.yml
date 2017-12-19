@@ -41,7 +41,7 @@
         next: ??????????????????
   to_change_everything:
     show:
-      title_html: '모든 <span class="drop-word-1">것을</span><br /><span class="drop-word-2">바꾸자</span>'
+      title_html: '모든 <span class="drop-word-1">것을</span><br /><span class="drop-word-2">바<div class="mirror-letter">꾸</div>자</span>'
       subtitle_html: <span class="green">아나키</span> <span class="blue">호소문</span>
       video_cte: 비디오를보다 # Google translate of 'Watch video'
       pdf_cte_html: PDF보기 # Google translate of 'Get PDF'

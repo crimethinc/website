@@ -25,6 +25,15 @@
                 left: .4em;
                 position: relative;
             }
+
+            div.mirror-letter {
+                transform: rotateY(180deg);
+                display: inline-flex;
+                padding-right: 3%;
+                padding-left: 0;
+                margin-left: -1%;
+                margin-right: -2%;
+            }
         }
     }
 
