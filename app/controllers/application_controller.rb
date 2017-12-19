@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :set_social_links
-  before_action :set_new_subscriber
   before_action :authorize, if: :staging?
 
   helper :meta
@@ -53,10 +52,6 @@ class ApplicationController < ActionController::Base
 
   def set_social_links
     @social_links = Link.where(user: nil).all
-  end
-
-  def set_new_subscriber
-    @subscriber = Subscriber.new
   end
 
   def check_for_redirection

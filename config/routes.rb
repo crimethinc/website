@@ -132,10 +132,6 @@ Rails.application.routes.draw do
   post "search/advanced", to: "search#advanced_search", as: :advanced_searches
 
 
-  # Email newsletter signup, used on homepage
-  resources :subscribers, only: [:create]
-
-
   # Admin Dashboard
   get :admin, to: redirect("/admin/dashboard"), as: "admin"
   namespace :admin do
@@ -163,7 +159,6 @@ Rails.application.routes.draw do
     resources :redirects,    concerns: :paginatable
     resources :roles,        concerns: :paginatable
     resources :stickers,     concerns: :paginatable
-    resources :subscribers,  concerns: :paginatable
     resources :users,        concerns: :paginatable
     resources :videos,       concerns: :paginatable
     resources :zines,        concerns: :paginatable
