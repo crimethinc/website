@@ -1,6 +1,5 @@
 class ToChangeEverythingController < ApplicationController
   layout 'to_change_everything', only: [:show]
-  skip_before_action :set_pinned_pages, only: [:show]
 
   TO_CHANGE_ANYTHING_YAMLS = ["espanol"].freeze
 

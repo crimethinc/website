@@ -277,11 +277,6 @@ en:
       new_title: "New Users"
       show_title: "Users : %{name}"
       edit_title: "Editing user %{id} %{name}"
-    settings:
-      index_title: "Settings"
-      new_title: "New Settings"
-      show_title: "Settings : %{name}"
-      edit_title: "Editing settings %{id} %{name}"
     subscribers:
       index_title: "Subscribers"
       new_title: "New Subscribers"

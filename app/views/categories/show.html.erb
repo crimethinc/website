@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :auto_discovery do %>
-  <%= auto_discovery_link_tag(:atom, category_feed_path(@category.slug), title: setting(:page_title)) %>
+  <%= auto_discovery_link_tag(:atom, category_feed_path(@category.slug), title: page_title) %>
 <% end %>
 
 <header>

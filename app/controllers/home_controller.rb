@@ -6,19 +6,6 @@ class HomeController < ApplicationController
     # feed
     @top_article = Article.includes(:categories, :status).live.published.root.first if first_page?
     @articles    = Article.includes(:categories, :status).live.published.root.page(params[:page]).per(6).padding(1)
-
-    # pinned articles
-    # pinned: site top
-    pinned_to_site_top_page_id = setting(:pinned_to_site_top_page_id)
-    if pinned_to_site_top_page_id.present?
-      @pinned_to_site_top = Page.find(pinned_to_site_top_page_id)
-    end
-
-    # pinned: home bottom
-    pinned_to_home_bottom_page_id = setting(:pinned_to_home_bottom_page_id)
-    if pinned_to_home_bottom_page_id.present?
-      @pinned_to_home_bottom = Page.find(pinned_to_home_bottom_page_id)
-    end
   end
 
   private

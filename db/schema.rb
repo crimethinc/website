@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171213083856) do
+ActiveRecord::Schema.define(version: 20171218234824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,13 +90,13 @@ ActiveRecord::Schema.define(version: 20171213083856) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
+    t.integer "status_id"
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|
@@ -261,17 +261,6 @@ ActiveRecord::Schema.define(version: 20171213083856) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_roles_on_name", unique: true
-  end
-
-  create_table "settings", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.string "slug"
-    t.text "saved_content"
-    t.boolean "editable", default: true
-    t.string "form_element", default: "text_field"
-    t.text "fallback"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "statuses", id: :serial, force: :cascade do |t|

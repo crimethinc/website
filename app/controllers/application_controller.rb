@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
   before_action :strip_file_extension
   before_action :set_social_links
   before_action :set_new_subscriber
-  before_action :set_pinned_pages
   before_action :authorize, if: :staging?
 
   helper :meta
@@ -17,25 +16,6 @@ class ApplicationController < ActionController::Base
     ENV["ON_STAGING"] == "TRUE"
   end
   helper_method :staging?
-
-  def set_pinned_pages
-    # pinned article
-    pinned_to_site_top_page_id      = setting(:pinned_to_site_top_page_id)
-    pinned_to_footer_top_page_id    = setting(:pinned_to_footer_top_page_id)
-    pinned_to_footer_bottom_page_id = setting(:pinned_to_footer_bottom_page_id)
-
-    if pinned_to_site_top_page_id.present?
-      @pinned_to_site_top = Page.find(pinned_to_site_top_page_id)
-    end
-
-    if pinned_to_footer_top_page_id.present?
-      @pinned_to_footer_top = Page.find(pinned_to_footer_top_page_id)
-    end
-
-    if pinned_to_footer_bottom_page_id.present?
-      @pinned_to_footer_bottom = Page.find(pinned_to_footer_bottom_page_id)
-    end
-  end
 
   def signed_in?
     current_user
@@ -50,11 +30,6 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to signin_url, alert: "You need to sign in to view that page." unless signed_in?
   end
-
-  def setting(slug)
-    Setting.find_by(slug: slug).try(:content)
-  end
-  helper_method :setting
 
   def listing?
     action_name == "index"

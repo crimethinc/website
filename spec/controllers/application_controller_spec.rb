@@ -54,28 +54,6 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-  describe "#set_pinned_pages" do
-    context "with all pinned" do
-      let(:site_top) { Page.create(title: "Site Top") }
-      let(:footer_top) { Page.create(title: "footer top") }
-      let(:footer_bottom) { Page.create(title: "footer bottom") }
-
-      before do
-        Setting.create!(name: "pinned to site top page id", saved_content: site_top.id)
-        Setting.create!(name: "pinned to footer top page id", saved_content: footer_top.id)
-        Setting.create!(name: "pinned to footer bottom page id", saved_content: footer_bottom.id)
-      end
-
-      it "assigns all pinned pages" do
-        get :index
-
-        expect(assigns[:pinned_to_site_top]).to eq(site_top)
-        expect(assigns[:pinned_to_footer_top]).to eq(footer_top)
-        expect(assigns[:pinned_to_footer_bottom]).to eq(footer_bottom)
-      end
-    end
-  end
-
   describe "#current_user" do
     let(:user) { User.create(username: "example", password: "x" * 30) }
 
