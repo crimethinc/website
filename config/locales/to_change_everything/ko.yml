@@ -3,6 +3,7 @@
     to_change_everything:
       language_direction: ltr
       lang_code: ko
+      video_url: https://player.vimeo.com/video/471349862
       head:
         title: "모든것을  바꾸기 위해, 아나키스트 호소 / CrimethInc. Ex-Workers' Collective"
         meta:

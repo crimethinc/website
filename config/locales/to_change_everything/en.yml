@@ -3,6 +3,7 @@ english:
     to_change_everything:
       language_direction: ltr
       lang_code: en
+      video_url: https://player.vimeo.com/video/111159930
       head:
         title: "To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers' Collective"
         meta:

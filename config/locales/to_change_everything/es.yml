@@ -3,6 +3,7 @@ espanol:
     to_change_everything:
       language_direction: ltr
       lang_code: es
+      video_url: https://player.vimeo.com/video/111658785
       head:
         title: "Para Cambiar Todo, un llamamiento anarquista / CrimethInc. Ex-Workers' Collective"
         meta:
