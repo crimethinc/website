@@ -9,8 +9,9 @@
     }
 
     .title {
-        width: 75%;
-        padding-left: 25%;
+        width: 70%;
+        padding-left: 30%;
+        padding-top: 4%;
 
         h1 {
             font-size: 10vw;
@@ -35,7 +36,13 @@
                 margin-right: -2%;
             }
         }
+
+        h4 {
+            padding: 24% 0 0 16.5%;
+        }
     }
+
+    #videopdf { margin-top: 3%; }
 
     p {
         text-indent: 0 !important;
@@ -55,9 +62,85 @@
         letter-spacing: 0;
         line-height: 1;
     }
+    .title {
+        width: 70%;
+        padding-left: 30%;
+        padding-top: 4%;
+
+        h1 {
+            font-size: 10vw;
+
+            span.drop-word-1 {
+                top: 0.37em;
+                left: -0.2em;
+                position: relative;
+            }
+            span.drop-word-2 {
+                top: 0.4em;
+                left: .4em;
+                position: relative;
+            }
+
+            div.mirror-letter {
+                transform: rotateY(180deg);
+                display: inline-flex;
+                padding-right: 3%;
+                padding-left: 0;
+                margin-left: -1%;
+                margin-right: -2%;
+            }
+        }
+
+        h4 {
+            padding: 33% 0 0 16.5%;
+        }
+    }
+
+    /*-------------PHONE CSS------------------*/
+    @media (min-device-width: 200px) and (max-width: 600px) {
+        #videopdf { margin-top: 3%; }
+        .cover { padding-bottom: 88%; }
+        .title {
+            h1 { padding-top: 4%; }
+            h4 { padding: 45% 0 0 16.5%; }
+        }
+    }
+
+    /*-------------TABLET CSS------------------*/
+    @media (min-width: 601px) and (max-width: 1023px) {
+        #videopdf { margin-top: 24%; }
+        .title {
+            h1 { padding-top: 4%; }
+            h4 {
+                padding: 45% 0 0 16.5%;
+                margin-bottom: -25%;
+            }
+        }
+    }
+
+    /*-------------TABLET LANDSCAPE------------------*/
+    @media (min-width: 1024px) and (max-width: 1200px) {
+        #videopdf { margin-top: 3%; }
+        .title {
+            h1 { padding-top: 0 }
+            h4 {
+                padding: 23vw 0 0 16.5%;
+                margin-bottom: -25%;
+            }
+        }
+    }
 
     /*-------------DESKTOP SMALL CSS------------------*/
     @media (min-width: 1201px) and (max-width: 1670px) {
+        #videopdf { margin-top: 3%; }
+        .title {
+            h1 { padding-top: 0 }
+            h4 {
+                padding: 23vw 0 0 16.5%;
+                margin-bottom: -25%;
+            }
+        }
+
         #hierarchy div.right div.righttext {
             padding-top: 5%;
 
@@ -72,6 +155,14 @@
 
     /*-------------DESKTOP BIG CSS------------------*/
     @media (min-width:1671px) {
+        #videopdf { margin-top: 3%; }
+        .title {
+            h1 { padding-top: 0 }
+            h4 {
+                padding: 20% 0 0 16.5%;
+                margin-bottom: -25%;
+            }
+        }
 
         #hierarchy div.right div.righttext {
             padding-top: 5%;
