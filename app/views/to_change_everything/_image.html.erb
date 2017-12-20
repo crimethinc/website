@@ -1,0 +1,15 @@
+<%
+  base_url = "https://cloudfront.crimethinc.com/tce/images/"
+  alt_text = locals[:alt_text]
+  name     = locals[:name]
+%>
+
+<img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+     class="responsive-image"
+     data-responsimg-phonesmall="<%= base_url + name %>-phonesmall.jpg, <%= base_url + name %>-phonesmall@2x.jpg"
+     data-responsimg-phone="<%=  base_url + name %>-phone.jpg,  <%= base_url + name %>-phone@2x.jpg"
+     data-responsimg-tablet="<%= base_url + name %>-tablet.jpg, <%= base_url + name %>-tablet@2x.jpg"
+     data-responsimg-small="<%=  base_url + name %>-small.jpg,  <%= base_url + name %>-small@2x.jpg"
+     data-responsimg-large="<%=  base_url + name %>-large.jpg,  <%= base_url + name %>-large@2x.jpg"
+     alt="<%= alt_text %>"
+     />
