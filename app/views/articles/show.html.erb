@@ -28,12 +28,10 @@
     </div>
 
     <footer>
-      <% if @article.published? %>
-        <%= render "articles/share_on_social_networks", article: @article %>
-      <% end %>
-      <%= render "articles/published_on",  article: @article, linked: true %>
-      <%= render "articles/categories",    article: @article %>
-      <%= render "articles/tags",          article: @article %>
+      <%= render "articles/share_on_social_networks", article: @article %>
+      <%= render "articles/published_on",             article: @article, linked: true %>
+      <%= render "articles/categories",               article: @article %>
+      <%= render "articles/tags",                     article: @article %>
 
       <% if @article.download_url.present? %>
         <div id="download-pdf">
