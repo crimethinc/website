@@ -1,16 +1,7 @@
 <% if article.published? %>
   <div class="social">
-    <h1 class="share-btns-heading">Share it</h1>
-    <ul class="social-links">
-      <li class="social-link">
-        <a class="link-domain-twitter" href="https://twitter.com/intent/tweet?text=<%= url_encode(article.title) %>&amp;url=<%= article_url %>&amp;via=crimethinc" target="_blank">Share on Twitter</a>
-      </li>
-      <li class="social-link">
-        <a class="link-domain-facebook" href="https://www.facebook.com/dialog/feed?app_id=966242223397117&amp;display=popup&amp;caption=<%= url_encode(article.title) %>&amp;link=<%= article_url %>&amp;redirect_uri=http://www.facebook.com/&amp;display=popup">Share on Facebook</a>
-      </li>
-      <li class="social-link">
-        <a class="link-domain-tumblr" href="http://tumblr.com/widgets/share/tool?canonicalUrl=<%= article_url %>&amp;caption=<%= url_encode(article.title) %>&amp;content=<%= article.image %>" target="_blank">Share on Tumblr</a>
-      </li>
-    </ul>
+    <h2 class="share-btns-heading">Share this article</h2>
+
+    <%= social_links_for article %>
   </div>
 <% end %>
