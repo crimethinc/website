@@ -1,0 +1,10 @@
+.english {
+    /*--- Highlight language in mobile language menu ---*/
+    #lang1  li  > a[href="/tce"] {
+        color: #d62d34 !important;
+    }
+
+    .check-english:before {
+        content: '';
+    }
+}

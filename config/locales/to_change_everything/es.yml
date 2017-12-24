@@ -3,6 +3,7 @@ espanol:
     to_change_everything:
       language_direction: ltr
       lang_code: es
+      video_url: https://player.vimeo.com/video/111658785
       head:
         title: "Para Cambiar Todo, un llamamiento anarquista / CrimethInc. Ex-Workers' Collective"
         meta:
@@ -136,5 +137,5 @@ espanol:
       outro:
         left_text_html: '<p>Cuando vemos lo que todas las distintas instituciones y mecanismos de dominación tienen en común, se hace evidente que nuestras luchas individuales también son parte de algo más grande que nosotras, algo que podría conectarnos. Cuando nos juntamos en base a esta conexión, todo cambia: no sólo nuestras luchas, sino también nuestro sentido de agencia, nuestra capacidad para la alegría, la sensación de que nuestras vidas tienen un sentido. Lo único que se necesita para encontrarnos es empezar a actuar según una lógica distinta.</p>'
         right_text_html: Para&#8200;<br />cambiar&#8200;<br />todo,<br />empieza en&#8200;<br />cualquier parte.
-      take_flight: No te aferres al mundo viejo
+      take_flight_html: No te aferres al mundo viejo
       next_html: <a href="/texts/r/empezar">El secreto es empezar.</a>
