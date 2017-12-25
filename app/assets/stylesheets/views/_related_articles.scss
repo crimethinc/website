@@ -20,31 +20,37 @@
     margin-bottom: 1rem;
   }
 
-  .h-entry {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+  .related-article {
+    display: block;
+    height: 200px;
 
-  .h-entry header h1 {
-    font-size: 1.5em;
-  }
+    .related-article-image {
+      width: 100%;
+      height: 100%;
+    }
 
-  .h-entry header h2 {
-    font-size: 1.25em;
+    header {
+      margin-top: -50%;
+      margin-left: 10%;
+      a {
+        color: $color-white;
+        text-decoration: none;
+      }
+      h1 {
+        font-weight: 800;
+        font-size: 2em;
+        margin-bottom: 0.25em;
+      }
+    }
   }
+  
+  @media screen and (max-width: $large-phone) {
+    .third-related-article {
+      display: none;
+    }
 
-  .h-entry header a {
-    color: $color-black;
-  }
-
-  .h-entry footer {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }
-
-  .tags,
-  .categories {
-    display: none;
+    .related-article-image {
+      padding: 1rem;
+    }
   }
 }
