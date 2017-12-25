@@ -69,7 +69,7 @@ class Article < ApplicationRecord
         articles = []
         category.articles.published[0..7].each do |article|
           if article != self &&
-             articles.length < 2 &&
+             articles.length < 3 &&
              !related_articles.values.flatten.include?(article)
             articles << article
           end
