@@ -8,6 +8,8 @@ addons:
   chrome: stable
 
 before_install:
+- gem update --system 2.7.4
+- gem --version
 - mkdir -p ~/drivers; export PATH=~/drivers:$PATH;
 - CHROMEDRIVER_VERSION=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE);
   CHROMEDRIVER_URL="http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip";
