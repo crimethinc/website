@@ -1,0 +1,17 @@
+.byebug_history
+.codeclimate
+.gitignore
+.rspec
+.rubocop.yml
+.travis.yml
+Brewfile
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+Dockerfile
+issues.md
+LICENSE.md
+README.md
+coverage/*
+docs/*
+script/*
+spec/*
