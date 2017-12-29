@@ -96,8 +96,9 @@
               <% %w(color black_and_white).each do |color| %>
 
                 <div class="form-check">
+                  <%= form.check_box "#{side}_#{color}_#{type}_present", id: "poster_#{side}_#{color}_#{type}_present", class: "form-check-input" %>
+
                   <%= form.label "#{side}_#{color}_#{type}_present", class: "form-check-label" do %>
-                    <%= form.check_box "#{side}_#{color}_#{type}_present", id: "poster_#{side}_#{color}_#{type}_present", class: "form-check-input" %>
                     <b><%= side.capitalize %> <%= color.titleize %></b>
                     <span class="form-text text-muted font-weight-normal">
                       Is there a <%= file %> of the <%= side %> in <%= color.titleize.downcase %> of the poster uploaded?

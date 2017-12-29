@@ -1,335 +1,274 @@
 <%= form_for [:admin, resource] do |f| %>
-    <%= render "admin/form_errors", thing: resource %>
+  <%= render "admin/form_errors", thing: resource %>
 
-    <%= f.hidden_field :zine, value: @publication_type == "zine" %>
+  <%= f.hidden_field :zine, value: @publication_type == "zine" %>
 
-    <div class="form-group">
-      <%= f.label :title %>
-      <%= f.text_field :title, class: "form-control form-control-lg" %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control form-control-lg" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control form-control-lg", rows: 8 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+      </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :subtitle %>
-      <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control form-control-lg", rows: 8 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+      </div>
+    </div>
+  </div> <!-- .row -->
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :slug %>
+        <%= f.text_field :slug, class: "form-control form-control-lg" %>
+      </div>
     </div>
 
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <%= f.label :gallery_images_count %>
+        <%= f.text_field :gallery_images_count, class: "form-control form-control-lg" %>
+        <p class="form-text text-muted">
+          The number of <code>.jpg</code> gallery images that are uploaded to the
+          <code>[slug]/gallery</code> folder?
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <%= render "admin/books/downloads_form", f: f, resource: resource %>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+
+  <fieldset id="purchasing">
+    <legend>Purchasing</legend>
     <div class="row">
-      <div class="col-12 col-sm-6">
+      <div class="col-6">
         <div class="form-group">
-          <%= f.label :description %>
-          <%= f.text_area :description, class: "form-control form-control-lg", rows: 8 %>
+          <%= f.label :buy_info, "Buying Info" %>
+          <%= f.text_area :buy_info, class: "form-control form-control-lg", rows: 8 %>
           <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
         </div>
       </div>
 
-      <div class="col-12 col-sm-6">
+      <div class="col-6">
         <div class="form-group">
-          <%= f.label :content %>
-          <%= f.text_area :content, class: "form-control form-control-lg", rows: 8 %>
-          <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+          <%= f.label :buy_url, "Buy URL" %>
+          <%= f.url_field :buy_url, class: "form-control form-control-lg" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :price_in_cents, "Price (in USD cents)" %>
+          <%= f.text_field :price_in_cents, class: "form-control form-control-lg" %>
         </div>
       </div>
     </div> <!-- .row -->
+  </fieldset>
 
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+
+  <fieldset id="syndication">
+    <legend>Syndication</legend>
     <div class="row">
-      <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= f.label :slug %>
-          <%= f.text_field :slug, class: "form-control form-control-lg" %>
-        </div>
-      </div>
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :gallery_images_count %>
-          <%= f.text_field :gallery_images_count, class: "form-control form-control-lg" %>
+          <%= f.label :summary %>
+          <%= f.text_area :summary, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">
-            The number of <code>.jpg</code> gallery images that are uploaded to the
-            <code>[slug]/gallery</code> folder?
+            Maximum 200 characters.
+            Used for page description and previews in story cards on other sites.
           </p>
         </div>
       </div>
+
+      <div class="col-12 col-sm-6">
+        <div class="form-group">
+          <%= f.label :published_at %>
+          <%= f.date_select :published_at,
+                            {start_year: Time.now.year, end_year: 1995, include_blank: true},
+                            class: "form-control form-control-lg" %>
+        </div>
+      </div>
+
+    </div> <!-- .row -->
+  </fieldset>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <fieldset id="table-of-contents">
+        <legend>Table of Contents</legend>
+
+        <div class="form-group">
+          <%= f.label :table_of_contents %>
+          <%= f.text_area :table_of_contents, class: "form-control form-control-lg", rows: 10 %>
+          <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+        </div>
+      </fieldset>
     </div>
 
-    <div class="row">
-      <div class="col-12">
-        <div class="form-group">
-          <label for="downloads">Downloads</label>
+    <div class="col-12 col-sm-6">
+      <fieldset id="specs">
+        <legend>Specs</legend>
 
-          <p class="form-text text-muted">
-            Downloads must be uploaded to
-            <code>
-              /assets/<%= @publication_type.pluralize %>/<%= slug = resource.new_record? ? "[slug]" : resource.slug %>/
-            </code>
-            on S3/Cloudfront.
-          </p>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :width %>
+              <%= f.text_field :width, class: "form-control form-control-lg" %>
+            </div>
+          </div>
 
-          <% {
-            screen_single_page_view:  ["Screen Single Page View", "Is there a one page wide <code>PDF</code> for on-screen reading uploaded?"],
-            screen_two_page_view:     ["Screen Two Page View",    "Is there a two page wide <code>PDF</code> for on-screen reading uploaded?"],
-            print_color:              ["Print Color",             "Is there a color <code>PDF</code> for printing uploaded?"],
-            print_black_and_white:    ["Print B/W",               "Is there a B/W <code>PDF</code> for printing uploaded?"],
-            print_color_a4:           ["Print Color A4",          "Is there an A4 sized color <code>PDF</code> for printing uploaded?"],
-            print_black_and_white_a4: ["Print B/W A4",            "Is there an A4 sized B/W <code>PDF</code> for printing uploaded?"],
-            epub:                     ["ePub",                    "Is there a <code>.epub</code> file uploaded?"],
-            mobi:                     ["Mobi",                    "Is there a <code>.mobi</code> file uploaded?"],
-            lite:                     ["Lo Res",                  "Is there a low resolution or single page view PDF uploaded?"],
-          }.each do |type, texts| %>
-            <%
-              extension = case type
-              when :epub
-                "epub"
-              when :mobi
-                "mobi"
-              else
-                "pdf"
-              end
-            %>
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :height %>
+              <%= f.text_field :height, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+        </div>
 
+
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :depth %>
+              <%= f.text_field :depth, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :weight %>
+              <%= f.text_field :weight, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
+
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :pages %>
+              <%= f.text_field :pages, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :words %>
+              <%= f.text_field :words, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
+
+
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :illustrations %>
+              <%= f.text_field :illustrations, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :photographs %>
+              <%= f.text_field :photographs, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
+
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :cover_style, "Cover Style" %>
+              <%= f.text_field :cover_style, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :binding_style, "Binding Style" %>
+              <%= f.text_field :binding_style, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
+
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :printing, "Printing" %>
+              <%= f.text_field :printing, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :ink, "Ink" %>
+              <%= f.text_field :ink, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+        </div> <!-- .row -->
+
+        <div class="row">
+          <div class="col-6">
+            <%= f.label :has_index, "Has Index?" %><br>
 
             <div class="form-check">
-              <%= f.label "#{type}_download_present" do %>
-                <%= f.check_box "#{type}_download_present", id: "book_#{type}_download_present" %>
-                <b><%= texts.first %>:</b>
-
-                <span class="form-text text-muted font-weight-normal">
-                  <%= texts.last.html_safe %><br>
-
-                  <code>
-                    /assets/<%= @publication_type.pluralize %>/<%= slug %>/<b><%= slug %>_<%= type %>.<%= extension %></b>
-                  </code>
-                </span>
-              <% end %>
-            </div>
-          <% end %>
-
-        </div>
-      </div>
-    </div> <!-- .row -->
-
-    <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
-
-    <fieldset id="purchasing">
-      <legend>Purchasing</legend>
-      <div class="row">
-        <div class="col-6">
-          <div class="form-group">
-            <%= f.label :buy_info, "Buying Info" %>
-            <%= f.text_area :buy_info, class: "form-control form-control-lg", rows: 8 %>
-            <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
-          </div>
-        </div>
-
-        <div class="col-6">
-          <div class="form-group">
-            <%= f.label :buy_url, "Buy URL" %>
-            <%= f.url_field :buy_url, class: "form-control form-control-lg" %>
-          </div>
-
-          <div class="form-group">
-            <%= f.label :price_in_cents, "Price (in USD cents)" %>
-            <%= f.text_field :price_in_cents, class: "form-control form-control-lg" %>
-          </div>
-        </div>
-      </div> <!-- .row -->
-    </fieldset>
-
-    <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
-
-    <fieldset id="syndication">
-      <legend>Syndication</legend>
-      <div class="row">
-
-        <div class="col-12 col-sm-6">
-          <div class="form-group">
-            <%= f.label :summary %>
-            <%= f.text_area :summary, class: "form-control form-control-lg" %>
-            <p class="form-text text-muted">
-              Maximum 200 characters.
-              Used for page description and previews in story cards on other sites.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6">
-          <div class="form-group">
-            <%= f.label :published_at %>
-            <%= f.date_select :published_at,
-                              {start_year: Time.now.year, end_year: 1995, include_blank: true},
-                              class: "form-control form-control-lg" %>
-          </div>
-        </div>
-
-      </div> <!-- .row -->
-    </fieldset>
-
-    <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
-
-    <div class="row">
-      <div class="col-12 col-sm-6">
-        <fieldset id="table-of-contents">
-          <legend>Table of Contents</legend>
-
-          <div class="form-group">
-            <%= f.label :table_of_contents %>
-            <%= f.text_area :table_of_contents, class: "form-control form-control-lg", rows: 10 %>
-            <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
-          </div>
-        </fieldset>
-      </div>
-
-      <div class="col-12 col-sm-6">
-        <fieldset id="specs">
-          <legend>Specs</legend>
-
-          <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :width %>
-                <%= f.text_field :width, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :height %>
-                <%= f.text_field :height, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :depth %>
-                <%= f.text_field :depth, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :weight %>
-                <%= f.text_field :weight, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-          </div> <!-- .row -->
-
-
-          <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :pages %>
-                <%= f.text_field :pages, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :words %>
-                <%= f.text_field :words, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-          </div> <!-- .row -->
-
-
-          <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :illustrations %>
-                <%= f.text_field :illustrations, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :photographs %>
-                <%= f.text_field :photographs, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-          </div> <!-- .row -->
-
-
-          <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :cover_style, "Cover Style" %>
-                <%= f.text_field :cover_style, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :binding_style, "Binding Style" %>
-                <%= f.text_field :binding_style, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-          </div> <!-- .row -->
-
-          <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :printing, "Printing" %>
-                <%= f.text_field :printing, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="form-group">
-                <%= f.label :ink, "Ink" %>
-                <%= f.text_field :ink, class: "form-control form-control-lg" %>
-              </div>
-            </div>
-          </div> <!-- .row -->
-
-
-          <div class="row">
-            <div class="col-6">
-              <%= f.label :has_index, "Has Index?" %><br>
-
               <span class="d-inline-block mr-3">
-                <%= f.label :has_index_true do %>
-                  <%= f.radio_button :has_index, true, id: :book_has_index_true %>
+                <%= f.radio_button :has_index, true, id: :book_has_index_true, class: "form-check-input" %>
+
+                <%= f.label :has_index_true, class: "form-check-label" do %>
                   <b>Yes</b>
                 <% end %>
               </span>
 
-                <span class="d-inline-block">
-                <%= f.label :has_index_false do %>
-                  <%= f.radio_button :has_index, false, id: :book_has_index_false %>
+              <span class="d-inline-block ml-3">
+                <%= f.radio_button :has_index, false, id: :book_has_index_false, class: "form-check-input" %>
+
+                <%= f.label :has_index_false, class: "form-check-label" do %>
                   <b>No</b>
                 <% end %>
               </span>
             </div>
+          </div>
 
-            <div class="col-6">
-              <% if @book.slug == "recipes-for-disaster" %>
-                <div class="form-group">
-                  <%= f.label :recipes %>
-                  <%= f.text_field :recipes, class: "form-control form-control-lg" %>
-                </div>
-              <% end %>
+          <div class="col-6">
+            <% if @book.slug == "recipes-for-disaster" %>
+              <div class="form-group">
+                <%= f.label :recipes %>
+                <%= f.text_field :recipes, class: "form-control form-control-lg" %>
+              </div>
+            <% end %>
 
-              <% if @book.slug == "contradictionary" %>
-                <div class="form-group">
-                  <%= f.label :definitions %>
-                  <%= f.text_field :definitions, class: "form-control form-control-lg" %>
-                </div>
-              <% end %>
-            </div>
+            <% if @book.slug == "contradictionary" %>
+              <div class="form-group">
+                <%= f.label :definitions %>
+                <%= f.text_field :definitions, class: "form-control form-control-lg" %>
+              </div>
+            <% end %>
+          </div>
 
-          </div> <!-- .row -->
+        </div> <!-- .row -->
+      </fieldset> <!-- #specs -->
+    </div>
+  </div> <!-- .row -->
 
-
-        </fieldset> <!-- #specs -->
-
-      </div>
-
-    </div> <!-- .row -->
-
-
-
-    <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
-
-
+  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
 <% end %>

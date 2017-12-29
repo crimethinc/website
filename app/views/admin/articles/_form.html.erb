@@ -12,13 +12,9 @@
 
   <%# hidden fields... %>
   <%= f.hidden_field :collection_id, value: @collection.id if @collection %>
-
-  <div class="form-group sr-only">
-    <%= f.radio_button :content_format, "html" %>
-    <%= f.radio_button :content_format, "kramdown" %>
-
-    <%= f.label :hide_layout, "Hide the Site Layout?" %>
-  </div>
+  <%= f.hidden_field :content_format %>
+  <%= f.hidden_field :hide_layout %>
+  <%= f.hidden_field :header_shadow_text %>
   <%# ...hidden fields %>
 
   <div class="form-group">
@@ -100,82 +96,7 @@
     <%= render "admin/articles/back_to_top" %>
   </div><!-- #datetime -->
 
-  <div id="categorization" class="row pt-5">
-    <div class="col-12 col-sm-6">
-      <% unless @collection.present? %>
-        <fieldset id="categories">
-          <label class="h4">Categories</label>
-
-          <div class="form-check">
-            <% Category.all.in_groups_of(2).each do |group| %>
-
-              <div class="row">
-                <% group.each do |category| %>
-                  <div class="col-6">
-                    <% if category.present? %>
-
-                      <%= f.label "category_ids_#{category.id}" do %>
-                        <%= f.check_box :category_ids,
-                                        {
-                                          id: "article_category_ids_#{category.id}",
-                                          name: "article[category_ids][]"
-                                        },
-                                        category.id,
-                                        nil %>
-
-                        <b><%= category.name %></b>
-                      <% end %>
-
-                    <% end %>
-                  </div>
-                <% end %>
-              </div><!-- .row -->
-
-            <% end %>
-          </div><!-- .form-group -->
-        </fieldset>
-      <% end %>
-    </div><!-- .col -->
-
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <%= f.label :tags, "Tags", class: "h4" %>
-        <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
-        <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
-      </div>
-
-      <hr class="my-5">
-
-      <% unless @collection.present? %>
-        <div class="form-group">
-          <%= f.label :short_path, "Short URL Path" %>
-          <%= f.text_field :short_path, class: "form-control form-control-lg" %>
-        </div>
-      <% end %>
-
-      <div class="form-check" id="publication_status">
-        <%= f.label :status_id, "Publication Status" %><br>
-
-        <span class="d-inline-block mr-3">
-          <%= f.label :status_id_draft do %>
-            <%= f.radio_button :status_id, @draft.id, id: :article_status_id_draft %>
-            <b>Draft</b>
-          <% end %>
-        </span>
-
-        <span class="d-inline-block">
-          <%= f.label :status_id_published do %>
-            <%= f.radio_button :status_id, @published.id, id: :article_status_id_published %>
-            <b>Published</b>
-          <% end %>
-        </span>
-
-      </div>
-    </div><!-- .col -->
-
-    <%= render "admin/articles/back_to_top" %>
-  </div><!-- #categorization.row -->
-
+  <%= render "admin/articles/categories_form", f: f %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
@@ -261,19 +182,6 @@
 
       <div class="row">
         <div class="col-12 col-sm-6">
-          <div class="form-check sr-only">
-            <%= f.label :header_shadow_text do %>
-              <%= f.check_box :header_shadow_text, checked: true %>
-              Apply Shadow to Header Text?
-            <% end %>
-
-            <p class="form-text text-muted">
-              If selected, the title and subtile in the header will have a drop-shadow.
-              This is useful for images that are over light, or have some white spots
-              that make the title (in its default style) difficult to read.
-            </p>
-          </div>
-
           <div class="form-group">
             <%= f.label :header_background_color, "Header Background Color" %>
             <%= f.text_field :header_background_color, class: "form-control form-control-lg" %>

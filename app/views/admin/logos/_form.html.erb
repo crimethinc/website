@@ -51,8 +51,9 @@
 
         <% %w(jpg png pdf svg tif).each do |extension| %>
           <div class="form-check">
-            <%= form.label "#{extension}_url_present" do %>
-              <%= form.check_box "#{extension}_url_present", id: "logo_#{extension}_url_present", class: "form-check-input" %>
+            <%= form.check_box "#{extension}_url_present", id: "logo_#{extension}_url_present", class: "form-check-input" %>
+
+            <%= form.label "#{extension}_url_present", class: "form-check-label" do %>
               <b><%= extension.upcase %></b>
               Is there a <%= extension %> of the logo uploaded?
             <% end %>
@@ -114,8 +115,6 @@
 
     </div> <!-- .row -->
   </fieldset>
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :logos] %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :logos] %>
 <% end %>

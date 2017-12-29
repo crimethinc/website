@@ -13,7 +13,7 @@ class Admin::CategoriesController < Admin::AdminController
 
   def new
     @category = Category.new
-    @title = admin_title
+    @title    = admin_title
   end
 
   def edit

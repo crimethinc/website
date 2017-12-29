@@ -1,0 +1,57 @@
+
+<div class="row">
+  <div class="col-12">
+    <div class="form-group">
+      <label for="downloads">Downloads</label>
+
+      <p class="form-text text-muted">
+        Downloads must be uploaded to
+        <code>
+          /assets/<%= @publication_type.pluralize %>/<%= slug = resource.new_record? ? "[slug]" : resource.slug %>/
+        </code>
+        on S3/Cloudfront.
+      </p>
+
+      <% {
+        screen_single_page_view:  ["Screen Single Page View", "Is there a one page wide <code>PDF</code> for on-screen reading uploaded?"],
+        screen_two_page_view:     ["Screen Two Page View",    "Is there a two page wide <code>PDF</code> for on-screen reading uploaded?"],
+        print_color:              ["Print Color",             "Is there a color <code>PDF</code> for printing uploaded?"],
+        print_black_and_white:    ["Print B/W",               "Is there a B/W <code>PDF</code> for printing uploaded?"],
+        print_color_a4:           ["Print Color A4",          "Is there an A4 sized color <code>PDF</code> for printing uploaded?"],
+        print_black_and_white_a4: ["Print B/W A4",            "Is there an A4 sized B/W <code>PDF</code> for printing uploaded?"],
+        epub:                     ["ePub",                    "Is there a <code>.epub</code> file uploaded?"],
+        mobi:                     ["Mobi",                    "Is there a <code>.mobi</code> file uploaded?"],
+        lite:                     ["Lo Res",                  "Is there a low resolution or single page view PDF uploaded?"],
+      }.each do |type, labels| %>
+        <%
+          extension = case type
+          when :epub
+            "epub"
+          when :mobi
+            "mobi"
+          else
+            "pdf"
+          end
+        %>
+
+        <div class="form-check mb-3">
+          <%= f.check_box "#{type}_download_present", id: "book_#{type}_download_present", class: "form-check-input" %>
+
+          <%= f.label "#{type}_download_present", class: "form-check-label" do %>
+            <b><%= labels.first %>:</b>
+
+            <span class="form-text text-muted font-weight-normal">
+              <%= labels.last.html_safe %><br>
+
+              <code>
+                /assets/<%= @publication_type.pluralize %>/<%= slug %>/<b><%= slug %>_<%= type %>.<%= extension %></b>
+              </code>
+            </span>
+          <% end %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div> <!-- .row -->
+
