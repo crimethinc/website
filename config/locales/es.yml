@@ -287,11 +287,6 @@ es:
       new_title: "New Links"
       show_title: "Links : %{name}"
       edit_title: "Editing link %{id} %{name}"
-    roles:
-      index_title: "Roles"
-      new_title: "New Roles"
-      show_title: "Roles : %{name}"
-      edit_title: "Editing role %{id} %{name}"
     redirects:
       index_title: "Redirects"
       new_title: "New Redirects"
