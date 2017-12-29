@@ -18,6 +18,7 @@ module AdminHelper
 
     unless options.blank?
       options = options.first
+
       if options[:no_css]
         classes  = [options[:class]]
       else
@@ -25,10 +26,13 @@ module AdminHelper
       end
     end
 
+    target = nil
+    target = "_blank" if text =~ /View Site/
+
     classes << "active" if current_page?(path)
 
     content_tag :li, class: "nav-item" do
-      link_to text, path, class: classes.join(" ")
+      link_to text, path, class: classes.join(" "), target: target
     end
   end
 end
