@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219221111) do
+ActiveRecord::Schema.define(version: 20171229104806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "articles", id: :serial, force: :cascade do |t|
     t.integer "user_id"
@@ -89,13 +90,13 @@ ActiveRecord::Schema.define(version: 20171219221111) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
+    t.integer "status_id"
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|
@@ -134,15 +135,6 @@ ActiveRecord::Schema.define(version: 20171219221111) do
     t.string "slug"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
-  end
-
-  create_table "links", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.text "url"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_links_on_user_id"
   end
 
   create_table "logos", force: :cascade do |t|
@@ -313,7 +305,6 @@ ActiveRecord::Schema.define(version: 20171219221111) do
     t.integer "status_id"
   end
 
-  add_foreign_key "links", "users"
 
   create_view "search_results", materialized: true,  sql_definition: <<-SQL
       SELECT a.searchable_id,
