@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   skip_before_action :set_social_links, only: :index
-  skip_before_action :set_new_subscriber, only: :index
   skip_before_action :check_for_redirection, only: :index
 
   def index

@@ -1,4 +1,4 @@
-<% cache @article, expires_in: 1.day do %>
+<% cache @article, expires_in: (Rails.env.development? ? 1.second : 1.day) do %>
   <%= render "articles/css", article: @article %>
 
   <% if @article.draft? %>
@@ -29,9 +29,9 @@
 
     <footer>
       <%= render "articles/share_on_social_networks", article: @article %>
-      <%= render "articles/published_on",  article: @article, linked: true %>
-      <%= render "articles/categories",    article: @article %>
-      <%= render "articles/tags",          article: @article %>
+      <%= render "articles/published_on",             article: @article, linked: true %>
+      <%= render "articles/categories",               article: @article %>
+      <%= render "articles/tags",                     article: @article %>
 
       <% if @article.download_url.present? %>
         <div id="download-pdf">

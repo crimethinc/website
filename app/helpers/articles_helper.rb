@@ -1,5 +1,28 @@
 module ArticlesHelper
 
+  def social_links_for article
+    content_tag :ul, class: "social-links" do
+      social_link_for(article, :twitter)  +
+      social_link_for(article, :facebook) +
+      social_link_for(article, :tumblr)
+    end
+  end
+
+  def social_link_for article, site
+    url = case site
+    when :twitter
+      "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{article_url}&amp;via=crimethinc"
+    when :facebook
+      "https://www.facebook.com/dialog/feed?app_id=966242223397117&amp;display=popup&amp;caption=#{url_encode article.title}&amp;link=#{article_url}&amp;redirect_uri=http://www.facebook.com/&amp;display=popup"
+    when :tumblr
+      "http://tumblr.com/widgets/share/tool?canonicalUrl=#{article_url}&amp;caption=#{url_encode article.title}&amp;content=#{article.image}"
+    end
+
+    content_tag :li, class: "social-link" do
+      link_to "Share on #{site.capitalize}", url, class: "link-domain-#{site}", target: "_blank"
+    end
+  end
+
   def figure_image_with_caption_tag(article)
     if article.image.present?
       img = image_tag article.image, class: "u-photo", alt: ""
