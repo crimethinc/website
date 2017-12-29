@@ -276,7 +276,7 @@ en:
       index_title: "Users"
       new_title: "New Users"
       show_title: "Users : %{name}"
-      edit_title: "Editing user %{id} %{name}"
+      edit_title: "Editing user %{id} : %{username}"
     pages:
       index_title: "Pages"
       new_title: "New Pages"
