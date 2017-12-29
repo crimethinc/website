@@ -1,77 +1,49 @@
 <% if signed_in? %>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
+  <nav class="navbar navbar-expand-md navbar-light bg-light border border-secondary border-top-0 border-right-0 border-left-0 mb-5" style="background-color: x#e3f2fd;">
+
     <div class="container">
-      <button type="button" class="navbar-toggler navbar-toggler-right collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="#navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#adminNavbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <%= link_to "ADMIN", admin_dashboard_path, class: "navbar-brand" %>
+      <%= link_to "🖤 ADMIN", [:admin, :dashboard], class: "navbar-brand" %>
 
-
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <%= link_to [:new, :admin, :article] do %>
-              <span class=" btn btn-light mr-3">New Article</span>
-            <% end %>
-          </li>
+      <div class="collapse navbar-collapse" id="adminNavbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <%= nav_to "📝 New Article", [:new, :admin, :article] %>
 
           <li class="nav-item dropdown">
             <%= link_to "#", class: "nav-link dropdown-toggle", data: {toggle: "dropdown"}, role: "button", aria: {haspopup: "true", expanded: "false"} do %>
-              Content <span class="caret"></span>
+              ⬇️ Content <span class="caret"></span>
             <% end %>
 
             <ul class="dropdown-menu">
-              <li class="dropdown-item"><%= link_to "Articles",   [:admin, :articles] %></li>
-              <li class="dropdown-item"><%= link_to "Categories", [:admin, :categories] %></li>
-              <li class="dropdown-item"><%= link_to "Pages",      [:admin, :pages] %></li>
+              <li class="dropdown-item"><%= link_to "📄 Articles",   [:admin, :articles] %></li>
+              <li class="dropdown-item"><%= link_to "📦 Categories", [:admin, :categories] %></li>
+              <li class="dropdown-item"><%= link_to "📜 Pages",      [:admin, :pages] %></li>
               <li role="separator" class="dropdown-divider"></li>
               <li class="dropdown-header">Media:</li>
-              <li class="dropdown-item"><%= link_to "Podcasts", [:admin, :podcasts] %></li>
-              <li class="dropdown-item"><%= link_to "Videos",   [:admin, :videos] %></li>
+              <li class="dropdown-item"><%= link_to "🎧 Podcasts", [:admin, :podcasts] %></li>
+              <li class="dropdown-item"><%= link_to "🎬 Videos",   [:admin, :videos] %></li>
               <li role="separator" class="dropdown-divider"></li>
               <li class="dropdown-header">Tools:</li>
-              <li class="dropdown-item"><%= link_to "Books",    [:admin, :books] %></li>
-              <li class="dropdown-item"><%= link_to "Zines",    [:admin, :zines] %></li>
-              <li class="dropdown-item"><%= link_to "Posters",  [:admin, :posters] %></li>
-              <li class="dropdown-item"><%= link_to "Stickers", [:admin, :stickers] %></li>
-              <li class="dropdown-item"><%= link_to "Logos",    [:admin, :logos] %></li>
+              <li class="dropdown-item"><%= link_to "📚 Books",    [:admin, :books] %></li>
+              <li class="dropdown-item"><%= link_to "🖨 Zines",    [:admin, :zines] %></li>
+              <li class="dropdown-item"><%= link_to "📉 Posters",  [:admin, :posters] %></li>
+              <li class="dropdown-item"><%= link_to "🌠 Stickers", [:admin, :stickers] %></li>
+              <li class="dropdown-item"><%= link_to "🔫 Logos",    [:admin, :logos] %></li>
             </ul>
           </li>
 
-          <li class="nav-item"><%= link_to "Articles", [:admin, :articles], class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Redirects",  [:admin, :redirects], class: "nav-link" %></li>
-
-          <li class="dropdown nav-item">
-            <%= link_to "#", class: "nav-link dropdown-toggle", data: {toggle: "dropdown"}, role: "button", aria: {haspopup: "true", expanded: "false"} do %>
-              Site Settings <span class="caret"></span>
-            <% end %>
-
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><%= link_to "Users", [:admin, :users] %></li>
-              <li role="separator" class="dropdown-divider"></li>
-              <li class="dropdown-item"><%= link_to "Links", [:admin, :links] %></li>
-            </ul>
-          </li>
+          <%= nav_to "📄 Articles",  [:admin, :articles] %>
+          <%= nav_to "↪️ Redirects", [:admin, :redirects] %>
         </ul>
 
-        <ul class="navbar-nav justify-content-end">
-          <li class="dropdown nav-item">
-            <%= link_to "#", class: "nav-link dropdown-toggle", data: {toggle: "dropdown"}, role: "button", aria: {haspopup: "true", expanded: "false"} do %>
-                You <span class="caret"></span>
-            <% end %>
-
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><%= link_to "Profile", profile_path %></li>
-              <li class="dropdown-item"><%= link_to "Settings", settings_path %></li>
-              <li role="separator" class="dropdown-divider"></li>
-              <li class="dropdown-item"><%= link_to "Sign out", signout_path %></li>
-            </ul>
-          </li>
-
-          <li class="nav-item"><%= link_to "View Site", root_path, target: "_blank", class: "nav-link" %></li>
+        <ul class="navbar-nav ml-auto">
+          <%= nav_to "🖥 View Site", [:root], target: "_blank", class: "nav-link" %>
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
+      </div>
+    </div>
+
   </nav>
 <% end %>
