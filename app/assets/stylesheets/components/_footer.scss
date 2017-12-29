@@ -75,6 +75,9 @@ footer#site-footer {
       }
     }
 
+    dd a:after            { content: ","; }
+    dd a:last-child:after { content: "";  }
+
     dd {
       font-weight: normal;
       font-weight: 300;
