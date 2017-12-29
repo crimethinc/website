@@ -9,8 +9,8 @@
         <b><%= link_to t("footer.nav.articles.feed"), [:feed]    %></b>
       </dt>
       <dd>
-        <% [:arts, :adventure, :analysis, :current_events, :history, :news, :technology].each do |category| %>
-          <%= link_to t("footer.nav.articles.#{category}"), [:category, slug: category] %>
+        <% [:arts, :adventure, :analysis, :current_events, :history, :how_to, :news, :technology].each do |category| %>
+          <%= link_to t("footer.nav.articles.#{category}"), [:category, slug: category.to_s.gsub('_', '-')] %>
         <% end %>
       </dd>
 

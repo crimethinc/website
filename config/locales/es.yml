@@ -37,6 +37,7 @@ es:
         arts: Arts
         current_events: Current Events
         geography: Geography
+        how_to: How To
         history: History
         news: News
         technology: Technology
@@ -266,7 +267,7 @@ es:
       index_title: "Categories"
       new_title: "New Categories"
       show_title: "Categories : %{name}"
-      edit_title: "Editing category %{id} %{name}"
+      edit_title: "Editing category %{id} : %{name}"
     episodes:
       index_title: "Episodes"
       new_title: "New Episodes"
@@ -276,7 +277,7 @@ es:
       index_title: "Users"
       new_title: "New Users"
       show_title: "Users : %{name}"
-      edit_title: "Editing user %{id} %{name}"
+      edit_title: "Editing user %{id} : %{username}"
     pages:
       index_title: "Pages"
       new_title: "New Pages"
@@ -286,7 +287,7 @@ es:
       index_title: "Links"
       new_title: "New Links"
       show_title: "Links : %{name}"
-      edit_title: "Editing link %{id} %{name}"
+      edit_title: "Editing link %{id} : %{name}"
     redirects:
       index_title: "Redirects"
       new_title: "New Redirects"
