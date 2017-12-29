@@ -21,13 +21,15 @@
       <%= yield %>
     </main>
 
-    <footer class="my-5 text-center" style="padding-top: 10rem">
-      <hr class="my-5">
+    <% if signed_in? %>
+      <footer class="my-5 text-center" style="padding-top: 10rem">
+        <hr class="my-5">
 
-      <%= link_to "Users",    [:admin, :users], class: "text-muted mr-3" %>
-      <%= link_to "Settings", [:settings],      class: "text-muted mr-3" %>
-      <%= link_to "Sign out", [:signout],       class: "text-muted" %>
-    </footer>
+        <%= link_to "Users",    [:admin, :users], class: "text-muted mr-3" %>
+        <%= link_to "Settings", [:settings],      class: "text-muted mr-3" %>
+        <%= link_to "Sign out", [:signout],       class: "text-muted" %>
+      </footer>
+    <% end %>
   </div>
 </body>
 </html>

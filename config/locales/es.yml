@@ -149,8 +149,23 @@ es:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
+    auth:
+      signin_failed:             Invalid email or password.
+      signout:                   Signed out!
+
+      signup_heading:            Sign Up
+      signin_heading:            Sign In
+      forgot_password_heading:   Forget Your Password?
+      reset_password_heading:    Reset Your Password
+
+      username_label:            🦁 Username
+      username_note:             Don’t worry. We hate spam too.
+      password_label:            🔑 Password
+      password_note:             Passwords must be **at least %{password_minimum_length} characters** long.
+      signin_button_text:        Sign In
+
     products:
-      buy_now_button_text: Buy Now
+      buy_now_button_text:             Buy Now
       zine_download_read_button_text:  Download PDF for Reading
       zine_download_print_button_text: Download PDF for Printing
       zine_download_lite_button_text:  Download Lo Res PDF
