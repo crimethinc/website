@@ -3,7 +3,7 @@ class Redirect < ApplicationRecord
   before_validation :strip_domain_from_target_path, on: [:create, :update]
   before_validation :add_leading_slash,             on: [:create, :update]
   before_validation :strip_double_slashes,          on: [:create, :update]
-  before_validation :downcase_paths,                on: [:create, :update]
+  before_validation :downcase_source_path,          on: [:create, :update]
 
   validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true
@@ -26,10 +26,8 @@ class Redirect < ApplicationRecord
     end
   end
 
-  def downcase_paths
-    paths.each do |path|
-      path.downcase!
-    end
+  def downcase_source_path
+    self.source_path.downcase!
   end
 
   def strip_domain_from_path path

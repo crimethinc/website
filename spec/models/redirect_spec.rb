@@ -29,8 +29,8 @@ RSpec.describe Redirect, type: :model do
     end
   end
 
-  describe "#downcase_paths" do
-    before { redirect.downcase_paths }
+  describe "#downcase_source_path" do
+    before { redirect.downcase_source_path }
 
     subject { redirect }
 
@@ -38,7 +38,7 @@ RSpec.describe Redirect, type: :model do
       let(:redirect) { Redirect.new(source_path: "SoUrCe", target_path: "TaRgEt") }
 
       specify { expect(subject.source_path).to eq("source") }
-      specify { expect(subject.target_path).to eq("target") }
+      specify { expect(subject.target_path).to eq("TaRgEt") }
     end
   end
 
