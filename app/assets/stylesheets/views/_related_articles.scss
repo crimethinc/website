@@ -6,18 +6,18 @@
   .related-articles-heading {
     font-weight: 700;
     font-size: 5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     margin-bottom: 3rem;
     border-bottom: 1px solid $color-black;
+  }
+
+  .related-articles-category  {
+    margin-bottom: 3rem;
   }
 
   .related-articles-category-heading {
     font-weight: 500;
     font-size: 3rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .related-article {
@@ -30,20 +30,15 @@
     }
 
     header {
-      margin-top: -50%;
-      margin-left: 10%;
-      a {
-        color: $color-white;
-        text-decoration: none;
-      }
-      h1 {
-        font-weight: 800;
-        font-size: 2em;
-        margin-bottom: 0.25em;
+      h2, h3{
+        color: $color-black;
+        a {
+          color: $color-black;
+        }
       }
     }
   }
-  
+
   @media screen and (max-width: $large-phone) {
     .third-related-article {
       display: none;
