@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "~> 2.5.0"
+ruby "~> 2.4.2"
 
 # app server
 gem "rails", "~> 5.1.4"
