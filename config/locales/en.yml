@@ -37,6 +37,7 @@ en:
         arts: Arts
         current_events: Current Events
         geography: Geography
+        how_to: How To
         history: History
         news: News
         technology: Technology
@@ -148,8 +149,23 @@ en:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
+    auth:
+      signin_failed:             Invalid email or password.
+      signout:                   Signed out!
+
+      signup_heading:            Sign Up
+      signin_heading:            Sign In
+      forgot_password_heading:   Forget Your Password?
+      reset_password_heading:    Reset Your Password
+
+      username_label:            🦁 Username
+      username_note:             Don’t worry. We hate spam too.
+      password_label:            🔑 Password
+      password_note:             Passwords must be **at least %{password_minimum_length} characters** long.
+      signin_button_text:        Sign In
+
     products:
-      buy_now_button_text: Buy Now
+      buy_now_button_text:             Buy Now
       zine_download_read_button_text:  Download PDF for Reading
       zine_download_print_button_text: Download PDF for Printing
       zine_download_lite_button_text:  Download Lo Res PDF
@@ -266,7 +282,7 @@ en:
       index_title: "Categories"
       new_title: "New Categories"
       show_title: "Categories : %{name}"
-      edit_title: "Editing category %{id} %{name}"
+      edit_title: "Editing category %{id} : %{name}"
     episodes:
       index_title: "Episodes"
       new_title: "New Episodes"
@@ -276,7 +292,7 @@ en:
       index_title: "Users"
       new_title: "New Users"
       show_title: "Users : %{name}"
-      edit_title: "Editing user %{id} %{name}"
+      edit_title: "Editing user %{id} : %{username}"
     pages:
       index_title: "Pages"
       new_title: "New Pages"
@@ -286,12 +302,7 @@ en:
       index_title: "Links"
       new_title: "New Links"
       show_title: "Links : %{name}"
-      edit_title: "Editing link %{id} %{name}"
-    roles:
-      index_title: "Roles"
-      new_title: "New Roles"
-      show_title: "Roles : %{name}"
-      edit_title: "Editing role %{id} %{name}"
+      edit_title: "Editing link %{id} : %{name}"
     redirects:
       index_title: "Redirects"
       new_title: "New Redirects"

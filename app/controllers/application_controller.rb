@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
 
   before_action :check_for_redirection
   before_action :strip_file_extension
-  before_action :set_social_links
   before_action :authorize, if: :staging?
 
   helper :meta
@@ -49,10 +48,6 @@ class ApplicationController < ActionController::Base
     action_name == "new"
   end
   helper_method :creating?
-
-  def set_social_links
-    @social_links = Link.where(user: nil).all
-  end
 
   def check_for_redirection
     redirect = Redirect.where(source_path: request.path.downcase).last

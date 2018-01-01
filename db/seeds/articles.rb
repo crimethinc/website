@@ -181,7 +181,6 @@ Dir.glob("#{filepath}/*").each do |f|
       header_background_color = "#444444"
     end
 
-    # Find existing or create a new Contributor of words
     author_name = doc.css("dc_creator").text
 
     # Article slug

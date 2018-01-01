@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "~> 2.5.0"
+ruby "~> 2.4.2"
 
 # app server
 gem "rails", "~> 5.1.4"
@@ -13,7 +13,7 @@ gem "puma"
 gem "rack-timeout"
 
 # assets
-gem "bootstrap", "~> 4.0.0.beta"
+gem "bootstrap", "~> 4.0.0.beta3"
 gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"

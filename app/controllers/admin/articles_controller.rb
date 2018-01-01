@@ -1,17 +1,16 @@
 class Admin::ArticlesController < Admin::AdminController
   before_action :authorize
-  before_action :set_article,              only: [:show, :edit, :update, :destroy]
-  before_action :set_published_at,         only: [:create, :update]
-  before_action :set_statuses,             only: [:new, :edit]
-  after_action  :organize_article,         only: [:create, :update]
+  before_action :set_article,      only: [:show, :edit, :update, :destroy]
+  before_action :set_published_at, only: [:create, :update]
+  before_action :set_statuses,     only: [:new, :edit]
+  before_action :set_categories,   only: [:new, :edit]
+  after_action  :organize_article, only: [:create, :update]
 
-  # /admin/articles
   def index
     @articles = Article.root.includes(:collection_posts).page(params[:page])
     @title = admin_title
   end
 
-  # /admin/articles/1
   def show
     # TODO this is a hack
     if @article.collection_id.present?
@@ -23,17 +22,15 @@ class Admin::ArticlesController < Admin::AdminController
     @body_id = "top"
   end
 
-  # /admin/articles/new
   def new
-    @collection = Article.find(params[:id]) if params[:id]
-    @article = Article.new
+    @collection     = Article.find(params[:id]) if params[:id]
+    @article        = Article.new
     @article.status = Status.find_by(name: "draft")
 
     @title = admin_title
     @html_id = "admin-article"
   end
 
-  # /admin/articles/1/edit
   def edit
     # update_columns to avoid hitting callbacks, namely updating Search index
     @article.update_columns(user_id: current_user)
@@ -43,7 +40,6 @@ class Admin::ArticlesController < Admin::AdminController
     @html_id = "admin-article"
   end
 
-  # /admin/articles
   def create
     @article = Article.new(article_params)
 
@@ -55,7 +51,6 @@ class Admin::ArticlesController < Admin::AdminController
     end
   end
 
-  # /admin/articles/1
   def update
     if @article.update(article_params)
       # update_columns to avoid hitting callbacks, namely updating Search index
@@ -68,7 +63,6 @@ class Admin::ArticlesController < Admin::AdminController
     end
   end
 
-  # /admin/articles/1
   def destroy
     @article.destroy
     redirect_to [:admin, :articles], notice: "Article was successfully destroyed."
@@ -90,6 +84,10 @@ class Admin::ArticlesController < Admin::AdminController
     else
       @article = Article.find(params[:id])
     end
+  end
+
+  def set_categories
+    @categories = Category.all
   end
 
   def set_statuses

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219221111) do
+ActiveRecord::Schema.define(version: 20180101003135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,6 +113,14 @@ ActiveRecord::Schema.define(version: 20171219221111) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "definitions", force: :cascade do |t|
+    t.string "name"
+    t.text "content"
+    t.boolean "image_present"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "episodes", id: :serial, force: :cascade do |t|
     t.integer "podcast_id", default: 1
     t.string "title"
@@ -135,15 +143,6 @@ ActiveRecord::Schema.define(version: 20171219221111) do
     t.string "slug"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
-  end
-
-  create_table "links", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.text "url"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_links_on_user_id"
   end
 
   create_table "logos", force: :cascade do |t|
@@ -256,13 +255,6 @@ ActiveRecord::Schema.define(version: 20171219221111) do
     t.integer "article_id"
   end
 
-  create_table "roles", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_roles_on_name", unique: true
-  end
-
   create_table "statuses", id: :serial, force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -314,7 +306,6 @@ ActiveRecord::Schema.define(version: 20171219221111) do
     t.integer "status_id"
   end
 
-  add_foreign_key "links", "users"
 
   create_view "search_results", materialized: true,  sql_definition: <<-SQL
       SELECT a.searchable_id,

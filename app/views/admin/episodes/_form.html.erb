@@ -4,12 +4,11 @@
   <div class="form-group">
     <%= f.label :podcast_id %>
 
-    <% Podcast.all.each do |podcast| %>
+    <% @podcasts.each do |podcast| %>
       <div class="form-check">
-        <label>
-          <%= f.radio_button :podcast_id, podcast.id %>
-          <%= podcast.title %>
-        </label>
+        <%= f.radio_button :podcast_id, podcast.id, id: "episode_podcast_id_#{podcast.id}", class: "form-check-input" %>
+
+        <%= f.label "podcast_id_#{podcast.id}", podcast.title, class: "form-check-label" %>
       </div>
     <% end %>
   </div>
@@ -147,7 +146,6 @@
       Formatted as HTML.
     </p>
   </div>
-
 
   <%= render "admin/form_actions", cancel_url: [:admin, :episodes] %>
 <% end %>

@@ -2,29 +2,25 @@ class Admin::EpisodesController < Admin::AdminController
   before_action :authorize
   before_action :set_episode,      only: [:show, :edit, :update, :destroy]
   before_action :set_published_at, only: [:create, :update]
+  before_action :set_podcasts,     only: [:new, :edit]
 
-  # /admin/episodes
   def index
     redirect_to [:admin, :podcasts]
   end
 
-  # /admin/episodes/1
   def show
     @title = admin_title(@episode, [:title, :subtitle])
   end
 
-  # /admin/episodes/new
   def new
     @episode = Episode.new
     @title = admin_title
   end
 
-  # /admin/episodes/1/edit
   def edit
     @title = admin_title(@episode, [:id, :title, :subtitle])
   end
 
-  # /admin/episodes
   def create
     @episode = Episode.new(episode_params)
 
@@ -35,7 +31,6 @@ class Admin::EpisodesController < Admin::AdminController
     end
   end
 
-  # /admin/episodes/1
   def update
     if @episode.update(episode_params)
       redirect_to [:admin, @episode], notice: "Episode was successfully updated."
@@ -44,13 +39,16 @@ class Admin::EpisodesController < Admin::AdminController
     end
   end
 
-  # /admin/episodes/1
   def destroy
     @episode.destroy
     redirect_to [:admin, :podcasts], notice: "Episode was successfully destroyed."
   end
 
   private
+
+  def set_podcasts
+    @podcasts = Podcast.all
+  end
 
   def set_episode
     @episode = Episode.where(slug: params[:id])

@@ -3,8 +3,12 @@
   <%= render_markdown t("footer.contact.social.description") %>
 
   <ul class="social-links">
-    <% @social_links.each do |link| %>
-      <li class="social-link"><%= link_to link.name, link.url, class: social_link_classes(link) %></li>
+    <% social_links.each do |name, url| %>
+      <li class="social-link">
+        <%= link_to name, url, class: social_link_classes(url: url, name: name), target: "_blank" %>
+      </li>
     <% end %>
   </ul>
+
+  <%= render "shared/site_search", location: :bottom %>
 </div>

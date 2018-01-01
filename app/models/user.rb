@@ -1,14 +1,15 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  has_many :links
+  PASSWORD_MINIMUM_LENGTH = 30
+
   has_many :articles
 
   validates :username, presence: :true, uniqueness: true, on: [:create, :update]
   validates :password,
             presence: :true,
             on: :create,
-            length: { minimum: 30 }
+            length: { minimum: PASSWORD_MINIMUM_LENGTH }
 
   validates :password,
             exclusion: {

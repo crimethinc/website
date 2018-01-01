@@ -148,20 +148,19 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :books,        concerns: :paginatable
-    resources :categories,   concerns: :paginatable
-    resources :episodes,     concerns: :paginatable
-    resources :links,        concerns: :paginatable
-    resources :logos,        concerns: :paginatable
-    resources :pages,        concerns: :paginatable
-    resources :podcasts,     concerns: :paginatable
-    resources :posters,      concerns: :paginatable
-    resources :redirects,    concerns: :paginatable
-    resources :roles,        concerns: :paginatable
-    resources :stickers,     concerns: :paginatable
-    resources :users,        concerns: :paginatable
-    resources :videos,       concerns: :paginatable
-    resources :zines,        concerns: :paginatable
+    resources :books,      concerns: :paginatable
+    resources :categories, concerns: :paginatable
+    resources :episodes,   concerns: :paginatable
+    resources :links,      concerns: :paginatable
+    resources :logos,      concerns: :paginatable
+    resources :pages,      concerns: :paginatable
+    resources :podcasts,   concerns: :paginatable
+    resources :posters,    concerns: :paginatable
+    resources :redirects,  concerns: :paginatable
+    resources :stickers,   concerns: :paginatable
+    resources :users,      concerns: :paginatable
+    resources :videos,     concerns: :paginatable
+    resources :zines,      concerns: :paginatable
   end
 
 

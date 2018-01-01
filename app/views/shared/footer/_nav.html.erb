@@ -6,57 +6,38 @@
     <dl>
       <dt class="nav-label nav-label-articles">
         <%= link_to t("footer.nav.articles.label"),   [:library] %>
-        <b><%= link_to t("footer.nav.articles.feed"), [:feed]  %></b>
+        <b><%= link_to t("footer.nav.articles.feed"), [:feed]    %></b>
       </dt>
       <dd>
-        <%= link_to t("footer.nav.articles.arts"),           [:category, slug: :arts]           %>,
-        <%= link_to t("footer.nav.articles.adventure"),      [:category, slug: :adventure]      %>,
-        <%= link_to t("footer.nav.articles.analysis"),       [:category, slug: :analysis]       %>,
-        <%= link_to t("footer.nav.articles.current_events"), [:category, slug: :current_events] %>,
-        <%= link_to t("footer.nav.articles.history"),        [:category, slug: :history]        %>,
-        <%= link_to t("footer.nav.articles.news"),           [:category, slug: :news]           %>,
-        <%= link_to t("footer.nav.articles.technology"),     [:category, slug: :technology]     %>
+        <% [:arts, :adventure, :analysis, :current_events, :history, :how_to, :news, :technology].each do |category| %>
+          <%= link_to t("footer.nav.articles.#{category}"), [:category, slug: category.to_s.gsub('_', '-')] %>
+        <% end %>
       </dd>
-
-      <!--
-      <dt class="nav-label nav-label-articles">
-        <%= link_to t("footer.nav.projects.label"), [:category, slug: :projects] %>
-      </dt>
-      <dd>
-        <%= link_to t("footer.nav.projects.kickstarter"), "/2017/01/31/help-us-publish-books-about-borders-and-democracy-no-wall-they-can-build-from-democracy-to-freedom" %>
-      </dd>
-      -->
 
       <dt class="nav-label nav-label-articles">
         <%= link_to t("footer.nav.tools.label"), [:tools] %>
       </dt>
       <dd>
-        <%= link_to t("footer.nav.tools.zines"),    [:zines] %>,
-        <%= link_to t("footer.nav.tools.posters"),  [:posters] %>,
-        <%= link_to t("footer.nav.tools.stickers"), [:stickers] %>,
-        <%= link_to t("footer.nav.tools.videos"),   [:videos] %>,
-        <%= link_to t("footer.nav.tools.logos"),    [:logos] %>
+        <% [:zines, :posters, :stickers, :videos, :logos].each do |tool| %>
+          <%= link_to t("footer.nav.tools.#{tool}"), [tool] %>
+        <% end %>
       </dd>
 
       <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), [:books] %></dt>
       <dd>
-        <%= link_to t("footer.nav.books.from_democracy_to_freedom"),  [:book, slug: "from-democracy-to-freedom"] %>,
-        <%= link_to t("footer.nav.books.contradictionary"),           [:book, slug: "contradictionary"] %>,
-        <%= link_to t("footer.nav.books.work"),                       [:book, slug: "work"] %>,
-        <%= link_to t("footer.nav.books.expect_resistance"),          [:book, slug: "expect-resistance"] %>,
-        <%= link_to t("footer.nav.books.recipes_for_disaster"),       [:book, slug: "recipes-for-disaster"] %>,
-        <%= link_to t("footer.nav.books.days_of_war_nights_of_love"), [:book, slug: "days-of-war-nights-of-love"] %>,
-        <%= link_to t("footer.nav.books.no_wall_they_can_build"),     [:book, slug: "no-wall-they-can-build"] %>,
-        <%= link_to t("footer.nav.books.off_the_map"),                [:book, slug: "off-the-map"] %>
+        <% [:from_democracy_to_freedom, :contradictionary, :work, :expect_resistance, :recipes_for_disaster, :days_of_war_nights_of_love, :no_wall_they_can_build, :off_the_map].each do |book| %>
+          <%= link_to t("footer.nav.books.#{book}"), [:book, slug: book.to_s.gsub('_', '-')] %>
+        <% end %>
       </dd>
 
       <dt class="nav-label nav-label-podcast">
         <%= link_to t("footer.nav.podcast.label"),   [:podcast] %>
-        <b><%= link_to t("footer.nav.podcast.feed"), [:podcast_feed]  %></b>
+        <b><%= link_to t("footer.nav.podcast.feed"), [:podcast_feed] %></b>
       </dt>
       <dd>
-        <%= link_to t("footer.nav.podcast.the_ex_worker"), [:podcast] %>,
-        <%= link_to t("footer.nav.podcast.the_hotwire"),   [:podcast] %>
+        <% [:the_ex_worker, :the_hotwire].each do |podcast|  %>
+          <%= link_to t("footer.nav.podcast.#{podcast}"), [:podcast] %>
+        <% end %>
       </dd>
 
       <dt class="nav-label nav-label-journal"><%= link_to t("footer.nav.journal.label"), "/rolling-thunder" %></dt>
@@ -69,7 +50,5 @@
         <%= link_to t("footer.nav.store.description"), [:store] %>
       </dd>
     </dl>
-
-    <%= render "shared/site_search", location: :bottom %>
   </div>
 </nav>
