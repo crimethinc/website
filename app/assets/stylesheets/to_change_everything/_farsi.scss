@@ -1,0 +1,262 @@
+.farsi {
+  /*--- Highlight language in mobile language menu ---*/
+  #lang1  li  > a[href="/tce/farsi"] { color: #d62d34 !important; }
+  .check-farsi:before { content: ''; }
+
+  .left h2 {
+      font-size: 8vw;
+      line-height: 7.25vw;
+  }
+  
+  /*-------------PHONE CSS------------------*/
+  @media (min-device-width:200px) and (max-width:600px) {
+    .title h1 {
+      top: 0;
+      left: 23%;
+      font-size: 13vw;
+      line-height: 11vw;
+    }
+    .title h4 { padding: 22% 18.5% 0 0; }
+    #videopdf {
+      padding-right: 8%;
+      padding-left: 0;
+      float: right;
+
+      #video {
+        float: right;
+      }
+
+      #pdf, #pdfleft, #pdfright { float: right; }
+      #pdfright p { padding: 4.5% .5% 0 0; }
+    }
+    #self h2,
+    #answering h2,
+    #power h2,
+    #relationships h2,
+    #reconciling h2,
+    #liberation h2,
+    #revolt h2,
+    #control h2,
+    #hierarchy h2,
+    #borders h2,
+    #representation h2,
+    #leaders h2,
+    #government h2,
+    #profit h2,
+    #property h2,
+    #lastcrime h2 {
+      font-size: 18vw;
+      line-height: 17.25vw;
+      width: unset;
+      margin-right: 10%;
+      right: 0;
+      padding: 0;
+      padding-top: 10%;
+    }
+  }
+
+  /*-------------TABLET CSS------------------*/
+  @media (min-width:601px) and (max-width:1023px) {
+    .title h1 {
+      top: 0;
+      left: 23%;
+      font-size: 13vw;
+      line-height: 11vw;
+    }
+    .title h4 { padding: 33% 18.5% 0 0; }
+    #videopdf {
+      padding-right: 8%;
+      padding-left: 0;
+      float: right;
+
+      #video {
+        float: right;
+      }
+
+      #pdf, #pdfleft, #pdfright { float: right; }
+      #pdfright p { padding: 4.5% .5% 0 0; }
+    }
+    #self h2,
+    #answering h2,
+    #power h2,
+    #relationships h2,
+    #reconciling h2,
+    #liberation h2,
+    #revolt h2,
+    #control h2,
+    #hierarchy h2,
+    #borders h2,
+    #representation h2,
+    #leaders h2,
+    #government h2,
+    #profit h2,
+    #property h2,
+    #lastcrime h2 {
+      width: unset;
+      margin-right: 10%;
+      right: 0;
+      padding: 0;
+    }
+  }
+
+  /*-------------TABLET LANDSCAPE------------------*/
+  @media (min-width:1024px) and (max-width:1200px) {
+    .title h1 {
+      top: 55%;
+      left: 30%;
+      font-size: 10vw;
+      line-height: 7vw;
+    }
+    .title h4 {
+      padding-left: 18.5%;  
+      padding-top: 8em;
+      padding-right: 15em;
+    }
+    #videopdf {
+      padding-right: 8%;
+      padding-left: 0;
+      padding-top: 25%;
+      float: right;
+
+      #video {
+        float: right;
+        margin-right: 50%;
+      }
+
+      #pdf, #pdfleft, #pdfright { float: right; }
+      #pdfright p { padding: 4.5% .5% 0 0; }
+    }
+    #self h2,
+    #answering h2,
+    #power h2,
+    #relationships h2,
+    #reconciling h2,
+    #liberation h2,
+    #revolt h2,
+    #control h2,
+    #hierarchy h2,
+    #borders h2,
+    #representation h2,
+    #leaders h2,
+    #government h2,
+    #profit h2,
+    #property h2,
+    #lastcrime h2 {
+      font-size: 15vw;
+      line-height: 14.25vw;
+      width: unset;
+      margin-right: 10%;
+      right: 0;
+      padding: 0;
+      padding-top: 5%;
+    }
+  }
+
+  /*-------------DESKTOP SMALL CSS------------------*/
+  @media (min-width:1201px) and (max-width:1670px) {
+    .title h1 {
+      top: 55%;
+      left: 30%;
+      font-size: 10vw;
+      line-height: 7vw;
+    }
+    .title h4 {
+      padding-left: 18.5%;  
+      padding-top: 8em;
+      padding-right: 15em;
+    }
+    #videopdf {
+      padding-right: 8%;
+      padding-left: 0;
+      padding-top: 25%;
+      float: right;
+
+      #video {
+        float: right;
+        margin-right: 50%;
+      }
+
+      #pdf, #pdfleft, #pdfright { float: right; }
+      #pdfright p { padding: 4.5% .5% 0 0; }
+    }
+
+    #self h2,
+    #answering h2,
+    #power h2,
+    #relationships h2,
+    #reconciling h2,
+    #liberation h2,
+    #revolt h2,
+    #control h2,
+    #hierarchy h2,
+    #borders h2,
+    #representation h2,
+    #leaders h2,
+    #government h2,
+    #profit h2,
+    #property h2,
+    #lastcrime h2 {
+      width: unset;
+      margin-right: 10%;
+      right: 0;
+      padding: 0;
+    }
+
+
+  }
+
+  /*-------------DESKTOP BIG CSS------------------*/
+  @media (min-width:1671px) {
+    .title h1 {
+      top: 55%;
+      left: 30%;
+      font-size: 10vw;
+      line-height: 7vw;
+    }
+    .title h4 {
+      font-size: 3vw;
+      padding-left: 18.5%;  
+      padding-top: 7em;
+      padding-right: 12em;
+    }
+    #videopdf {
+      width: 74%;
+      padding-right: 4%;
+      padding-left: 0;
+      padding-top: 26%;
+      float: right;
+
+      #video {
+        float: right;
+        margin-right: 50%;
+      }
+
+      #pdf, #pdfleft, #pdfright { float: right; }
+      #pdfright p { padding: 3.5% .5% 0 0; }
+    }
+    #self h2,
+    #answering h2,
+    #power h2,
+    #relationships h2,
+    #reconciling h2,
+    #liberation h2,
+    #revolt h2,
+    #control h2,
+    #hierarchy h2,
+    #borders h2,
+    #representation h2,
+    #leaders h2,
+    #government h2,
+    #profit h2,
+    #property h2,
+    #lastcrime h2 {
+      width: unset;
+      margin-right: 10%;
+      right: 0;
+      padding: 0;
+    }
+  }
+
+
+  /*---------------RETINA BACKGROUNDS----------------*/
+}

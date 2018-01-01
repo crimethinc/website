@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="<%=t('.language_direction')%>" lang="<%=t('.lang_code')%>" prefix="og: http://ogp.me/ns#" <%= html_id %>>
+<html class="<%=@locale.to_s%>" dir="<%=t('.language_direction')%>" lang="<%=t('.lang_code')%>" prefix="og: http://ogp.me/ns#" <%= html_id %>>
 <head>
   <title><%=t('.head.title').html_safe%></title>
   <meta charset="utf-8" />
@@ -127,7 +127,7 @@
               <li><a href="/tce">English</a></li>
               <li><a href="/tce/espanol">Español</a></li>
               <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#espanol">Español<br />&nbsp;&nbsp;&nbsp;(América Latina)</a></li>
-              <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#farsi">فارسی</a></li>
+              <li><a href="/tce/farsi">فارسی</a></li>
               <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#french">Français</a></li>
               <li><a href="/tce/quebecois">Français (Québec)</a></li>
               <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#greek">ελληνικά</a></li>
@@ -188,7 +188,7 @@
         <li><a href="/tce">English <span class="check check-english"></span></a></li>
         <li><a href="/tce/espanol">Español  <span class="check check-espanol"></span></a></li>
         <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#espanol">Español<br />&nbsp;&nbsp;&nbsp;(América Latina)</a></li>
-        <li><a href="http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#farsi">فارسی</a></li>
+        <li><a href="/tce/farsi"> <span class="check check-farsi"></span> فارسی</a></li>
         <li><a href="http://www.crimethinc.com/blog/2016/01/25/to-change-everything-in-ten-more-languages/#french">Français</a></li>
         <li><a href="/tce/quebecois">Français (Québec)  <span class="check check-quebecois"></span></a></li>
       </div>
@@ -252,7 +252,7 @@
 </footer>
 
 <div id="video-container">
-  <iframe src="//player.vimeo.com/video/111159930" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <iframe src="<%=t('.video_url')%>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
 
   </div>
