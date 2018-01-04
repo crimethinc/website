@@ -21,14 +21,6 @@
   }
 
   .related-article {
-    display: block;
-    height: 200px;
-
-    .related-article-image {
-      width: 100%;
-      height: 100%;
-    }
-
     header {
       h2, h3{
         color: $color-black;
@@ -43,9 +35,12 @@
     .third-related-article {
       display: none;
     }
+  }
+}
 
-    .related-article-image {
-      padding: 1rem;
-    }
+@media screen and (max-width: $large-phone){
+  #article .related-articles {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
