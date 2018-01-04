@@ -23,10 +23,10 @@ class ArticlesController < ApplicationController
       end
 
     else
-      @article = Article.live.where(year:  params[:year]
-                       ).where(month: params[:month]
-                       ).where(day:   params[:day]
-                       ).where(slug:  params[:slug]).first
+      @article = Article.live.where(year:  params[:year]).
+                              where(month: params[:month]).
+                              where(day:   params[:day]).
+                              where(slug:  params[:slug]).first
       if @article.present?
         @collection_posts = @article.collection_posts.published.live.chronological
       end
