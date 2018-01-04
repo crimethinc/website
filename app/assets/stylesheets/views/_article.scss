@@ -321,6 +321,16 @@
       @media screen and (min-width: $large-laptop)  { width: 33%; max-width: 33%; }
     }
 
+    .shadow img {
+      box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2)
+    }
+
+    .shadow-portrait,
+    .portrait-shadow {
+      @extend .shadow;
+      @extend .portrait;
+    }
+
     figure {
       img {
         margin: 0;
