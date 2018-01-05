@@ -33,6 +33,11 @@
     font-size: 8vw;
     line-height: 7.25vw;
   }
+  .righttext p {
+      line-height: 1.5;
+      font-weight: 300;
+      font-size: 1.5rem;
+  }
   
   /*-------------PHONE CSS------------------*/
   @media (min-device-width:200px) and (max-width:600px) {
@@ -131,7 +136,7 @@
     }
 
     #takeflight {
-      padding-bottom: 90%;
+      padding-bottom: 170%;
 
       h1 {
         font-family: 'Noto Kufi Arabic', sans-serif;
@@ -143,6 +148,12 @@
         top: 10%;
         width: 89%;
       }
+    }
+    #next h1 {
+      font-family: 'Noto Kufi Arabic', sans-serif;
+      font-weight: 900;
+      font-size: 8vw;
+      line-height: 1.5;
     }
   }
 
@@ -254,6 +265,12 @@
         top: 10%;
         width: 89%;
       }
+    }
+    #next h1 {
+      font-family: 'Noto Kufi Arabic', sans-serif;
+      font-weight: 900;
+      font-size: 8vw;
+      line-height: 1.5;
     }
   }
 
@@ -369,10 +386,21 @@
         width: 89%;
       }
     }
+    #next h1 {
+      font-family: 'Noto Kufi Arabic', sans-serif;
+      font-weight: 900;
+      font-size: 8vw;
+      line-height: 1.5;
+    }
   }
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width:1201px) and (max-width:1670px) {
+    .righttext p {
+      line-height: 1.25;
+      font-weight: 300;
+      font-size: 1.13rem;
+    }
     .title h1 {
       top: 55%;
       left: 30%;
@@ -493,9 +521,17 @@
       font-size: 7vw;
     }
 
-    #government h2 {
-      line-height: 1.25;
-      font-size: 7vw;
+    #government {
+      .righttext p {
+        line-height: 1.15;
+        font-weight: 300;
+        font-size: 1.1rem;
+      }
+
+      h2 {
+        line-height: 1.25;
+        font-size: 7vw;
+      }
     }
     #profit h2 {
       padding-top: 5%;
@@ -505,6 +541,11 @@
       font-size: 6.5vw;
     }
     #property {
+      .righttext p {
+        line-height: 1.15;
+        font-weight: 300;
+        font-size: 1.1rem;
+      }
       .left { padding-top: 50%; }
       h2 {
         padding-top: 5%;
@@ -538,11 +579,24 @@
       padding: 0;
       width: auto;
       right: 10%;
+      padding-top: 10%;
+    }
+
+    #next h1 {
+      font-family: 'Noto Kufi Arabic', sans-serif;
+      font-weight: 900;
+      font-size: 8vw;
+      line-height: 1.5;
     }
   }
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
+    .righttext p {
+      line-height: 1.25;
+      font-weight: 300;
+      font-size: 1.4rem;
+    }
     .title h1 {
       top: 55%;
       left: 35%;
@@ -665,9 +719,17 @@
       font-size: 7vw;
     }
 
-    #government h2 {
-      line-height: 1.25;
-      font-size: 7vw;
+    #government {
+      .righttext p {
+        line-height: 1.15;
+        font-weight: 300;
+        font-size: 1.3rem;
+      }
+
+      h2 {
+        line-height: 1.25;
+        font-size: 7vw;
+      }
     }
     #profit h2 {
       padding-top: 5%;
@@ -677,6 +739,12 @@
       font-size: 6.5vw;
     }
     #property {
+      .righttext p {
+        line-height: 1.15;
+        font-weight: 300;
+        font-size: 1.3rem;
+      }
+
       .left { padding-top: 50%; }
       h2 {
         padding-top: 5%;
@@ -710,6 +778,13 @@
       padding: 0;
       width: auto;
       right: 10%;
+      padding-top: 10%;
+    }
+    #next h1 {
+      font-family: 'Noto Kufi Arabic', sans-serif;
+      font-weight: 900;
+      font-size: 8vw;
+      line-height: 1.5;
     }
   }
 
