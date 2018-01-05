@@ -1,0 +1,42 @@
+<%# encoding: utf-8 %>
+.<%= url %> {
+    /*--- Highlight language in mobile language menu ---*/
+    /*--- TODO: This id (#lang1) might need to be changed to match what is
+                in app/views/layouts/to_change_everything.html.erb ---*/
+    #lang1  li  > a[href="/tce/<%= url %>"] {
+        color: #d62d34 !important;
+    }
+
+    /*--- TODO: make sure the .check-<%= url %> is on the language link
+                in app/views/layouts/to_change_everything.html.erb ---*/
+    .check-<%= url %>:before {
+        content: '';
+    }
+
+    /*-------------PHONE CSS------------------*/
+    @media (min-device-width:200px) and (max-width:600px) {
+
+    }
+
+    /*-------------TABLET CSS------------------*/
+    @media (min-width:601px) and (max-width:1023px) {
+
+    }
+
+    /*-------------TABLET LANDSCAPE------------------*/
+    @media (min-width:1024px) and (max-width:1200px) {
+
+    }
+
+    /*-------------DESKTOP SMALL CSS------------------*/
+    @media (min-width:1201px) and (max-width:1670px) {
+
+    }
+
+    /*-------------DESKTOP BIG CSS------------------*/
+    @media (min-width:1671px) {
+
+    }
+
+    /*---------------RETINA BACKGROUNDS----------------*/
+}
