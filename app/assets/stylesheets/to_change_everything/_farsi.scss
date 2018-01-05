@@ -1,28 +1,26 @@
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.eot);
+  src: url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.eot?#iefix) format('embedded-opentype'),
+  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.woff2) format('woff2'),
+  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.woff) format('woff'),
+  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.eot);
+  src: url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.eot?#iefix) format('embedded-opentype'),
+  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.woff2) format('woff2'),
+  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.woff) format('woff'),
+  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.ttf) format('truetype');
+}
+
 .فارسی {
   $black-text-shadow: 0 0 2rem #444;
-  @font-face {
-    font-family: 'Noto Kufi Arabic';
-    font-style: normal;
-    font-weight: 400;
-    src: local("Noto Kufi Arabic Regular"),
-         local("NotoKufiArabic-Regular"),
-         url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.eot) format('embedded-opentype'),
-         url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.woff2) format('woff2'),
-         url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.woff) format('woff'),
-         url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.ttf) format('truetype');
-  }
-  @font-face {
-    font-family: 'Noto Kufi Arabic';
-    font-style: normal;
-    font-weight: 700;
-    src: local("Noto Kufi Arabic Bold"),
-         local("NotoKufiArabic-Bold"),
-         url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.eot) format('embedded-opentype'),
-         url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.woff2) format('woff2'),
-         url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.woff) format('woff'),
-         url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.ttf) format('truetype');
-  }
-
   /*--- Highlight language in mobile language menu ---*/
   #lang1  li  > a[href="/tce/farsi"] { color: #d62d34 !important; }
   .check-farsi:before { content: ''; }
@@ -33,9 +31,9 @@
     line-height: 7.25vw;
   }
   .righttext p {
-      line-height: 1.5;
-      font-weight: 300;
-      font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 1.5rem;
   }
   
   /*-------------PHONE CSS------------------*/
