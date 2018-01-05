@@ -12,11 +12,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 @font-face {
   font-family: 'tcesymbols';
-  src: url('https://cloudfront.crimethinc.com/assets/tce/css/tcefont/tcesymbols.eot?77890001');
-  src: url('https://cloudfront.crimethinc.com/assets/tce/css/tcefont/tcesymbols.eot?77890001#iefix') format('embedded-opentype'),
-       url('https://cloudfront.crimethinc.com/assets/tce/css/tcefont/tcesymbols.woff?77890001') format('woff'),
-       url('https://cloudfront.crimethinc.com/assets/tce/css/tcefont/tcesymbols.ttf?77890001') format('truetype'),
-       url('https://cloudfront.crimethinc.com/assets/tce/css/tcefont/tcesymbols.svg?77890001#tcesymbols') format('svg');
+  src: url('/tce/css/tcefont/tcesymbols.eot?77890001');
+  src: url('/tce/css/tcefont/tcesymbols.eot?77890001#iefix') format('embedded-opentype'),
+       url('/tce/css/tcefont/tcesymbols.woff?77890001') format('woff'),
+       url('/tce/css/tcefont/tcesymbols.ttf?77890001') format('truetype'),
+       url('/tce/css/tcefont/tcesymbols.svg?77890001#tcesymbols') format('svg');
   font-weight: normal;
   font-style: normal;
 }
