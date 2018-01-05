@@ -1,23 +1,4 @@
-@font-face {
-  font-family: 'Noto Kufi Arabic';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.eot);
-  src: url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.eot?#iefix) format('embedded-opentype'),
-  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.woff2) format('woff2'),
-  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.woff) format('woff'),
-  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Noto Kufi Arabic';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.eot);
-  src: url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.eot?#iefix) format('embedded-opentype'),
-  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.woff2) format('woff2'),
-  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.woff) format('woff'),
-  url(https://cloudfront.crimethinc.com/assets/tce/fonts/NotoKufiArabic-Bold.ttf) format('truetype');
-}
+@import "to_change_everything/notokufiarabic";
 
 .فارسی {
   $black-text-shadow: 0 0 2rem #444;
