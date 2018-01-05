@@ -412,26 +412,38 @@
       padding-top: 5%;
     }
 
-    #reconciling h2 {
-      font-size: 6.5vw;
-      line-height: 1.25;
-      padding-top: 5%;
+    #reconciling {
+      .righttext p { font-size: 1rem; }
+      h2 {
+        font-size: 6.5vw;
+        line-height: 1.25;
+        padding-top: 5%;
+      }
     }
-    
+
     #liberation h2 {
       font-size: 6vw;
     }
 
-    #revolt h2 {
-      font-size: 7vw;
+    #revolt {
+      .righttext p { font-size: 1rem; }
+      h2 {
+        font-size: 7vw;
+      }
     }
 
-    #control h2 {
-      font-size: 9vw;
+    #control {
+      .righttext p { font-size: 1rem; }
+      h2 {
+        font-size: 9vw;
+      }
     }
 
-    #hierarchy h2 {
-      font-size: 9vw;
+    #hierarchy {
+      .righttext p { font-size: 1rem; }
+      h2 {
+        font-size: 9vw;
+      }
     }
 
     #borders h2 {
@@ -454,7 +466,7 @@
       .righttext p {
         line-height: 1.15;
         font-weight: 300;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       h2 {
@@ -462,16 +474,19 @@
         font-size: 7vw;
       }
     }
-    #profit h2 {
-      padding-top: 5%;
-      line-height: 1.25;
-      font-size: 6.5vw;
+    #profit {
+      .righttext p { font-size: 1rem; }
+      h2 {
+        padding-top: 5%;
+        line-height: 1.25;
+        font-size: 6.5vw;
+      }
     }
     #property {
       .righttext p {
         line-height: 1.15;
         font-weight: 300;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .left { padding-top: 50%; }
       h2 {
