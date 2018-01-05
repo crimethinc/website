@@ -1,6 +1,5 @@
 .فارسی {
   $black-text-shadow: 0 0 2rem #444;
-  $white-text-shadow: 0 0 2rem #CCC;
   @font-face {
     font-family: 'Noto Kufi Arabic';
     font-style: normal;
@@ -90,35 +89,15 @@
       padding-right: 10%;
       width: 89%;
       line-height: 1;
-    }
-    #intro h3 {
-      line-height: 1.5;
-    }
-
-    #self h2,
-    #answering h2 {
       color: white;
       text-shadow: $black-text-shadow;
     }
-    
+
+    #intro h3 { line-height: 1.5; }
     #relationships h2 {
       line-height: 1.5;
       font-size: 10vw;
       padding-top: 5%;
-    }
-
-    #reconciling h2,    
-    #revolt h2,
-    #control h2,
-    #hierarchy h2,
-    #borders h2,
-    #representation h2,
-    #leaders h2,
-    #profit h2,
-    #property h2,
-    #lastcrime h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
     }
 
     #outro {
@@ -207,35 +186,14 @@
       padding-right: 10%;
       width: 89%;
       line-height: 1;
-    }
-    #intro h3 {
-      line-height: 1.5;
-    }
-
-    #self h2,
-    #answering h2 {
       color: white;
       text-shadow: $black-text-shadow;
     }
-    
+    #intro h3 { line-height: 1.5; }
     #relationships h2 {
       line-height: 1.5;
       font-size: 10vw;
       padding-top: 5%;
-    }
-
-    #reconciling h2,    
-    #revolt h2,
-    #control h2,
-    #hierarchy h2,
-    #borders h2,
-    #representation h2,
-    #leaders h2,
-    #profit h2,
-    #property h2,
-    #lastcrime h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
     }
 
     #outro {
@@ -327,35 +285,14 @@
       padding-right: 10%;
       width: 89%;
       line-height: 1;
-    }
-    #intro h3 {
-      line-height: 1.5;
-    }
-
-    #self h2,
-    #answering h2 {
       color: white;
       text-shadow: $black-text-shadow;
     }
-    
+    #intro h3 { line-height: 1.5; }
     #relationships h2 {
       line-height: 1.5;
       font-size: 10vw;
       padding-top: 5%;
-    }
-
-    #reconciling h2,    
-    #revolt h2,
-    #control h2,
-    #hierarchy h2,
-    #borders h2,
-    #representation h2,
-    #leaders h2,
-    #profit h2,
-    #property h2,
-    #lastcrime h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
     }
 
     #outro {
@@ -451,7 +388,10 @@
       padding-top: 10%;
       margin-right: 10%;
       line-height: 1;
+      color: white;
+      text-shadow: $black-text-shadow;
     }
+
     #intro h3 {
       line-height: 1.25;
       font-size: 5vw;
@@ -459,8 +399,6 @@
 
     #self h2,
     #answering h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
       font-size: 7vw;
     }
     
@@ -475,8 +413,6 @@
     }
 
     #reconciling h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
       font-size: 6.5vw;
       line-height: 1.25;
       padding-top: 5%;
@@ -487,36 +423,29 @@
     }
 
     #revolt h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
       font-size: 7vw;
     }
 
     #control h2 {
-      text-shadow: $white-text-shadow;
       font-size: 9vw;
     }
 
     #hierarchy h2 {
-      text-shadow: $black-text-shadow;
       font-size: 9vw;
     }
 
     #borders h2 {
-      text-shadow: $black-text-shadow;
       padding-top: 5%;
       line-height: 1.25;
       font-size: 7vw;
     }
     #representation h2 {
-      text-shadow: $black-text-shadow;
       padding-top: 5%;
       line-height: 1.25;
       font-size: 6.5vw;
     }
     #leaders h2 {
       padding-top: 5%;
-      text-shadow: $black-text-shadow;
       line-height: 1.25;
       font-size: 7vw;
     }
@@ -535,8 +464,6 @@
     }
     #profit h2 {
       padding-top: 5%;
-      text-shadow: $black-text-shadow;
-      color: white;
       line-height: 1.25;
       font-size: 6.5vw;
     }
@@ -549,15 +476,12 @@
       .left { padding-top: 50%; }
       h2 {
         padding-top: 5%;
-        text-shadow: $black-text-shadow;
-        color: white;
         line-height: 1.25;
         font-size: 6.5vw;
       }
     }
 
     #lastcrime h2 {
-      text-shadow: $black-text-shadow;
       font-size: 8vw;
     }
 
@@ -649,6 +573,8 @@
       padding-top: 10%;
       margin-right: 10%;
       line-height: 1;
+      color: white;
+      text-shadow: $black-text-shadow;
     }
     #intro h3 {
       line-height: 1.25;
@@ -657,8 +583,6 @@
 
     #self h2,
     #answering h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
       font-size: 7vw;
     }
     
@@ -673,8 +597,6 @@
     }
 
     #reconciling h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
       font-size: 6.5vw;
       line-height: 1.25;
       padding-top: 5%;
@@ -685,36 +607,29 @@
     }
 
     #revolt h2 {
-      color: white;
-      text-shadow: $black-text-shadow;
       font-size: 7vw;
     }
 
     #control h2 {
-      text-shadow: $white-text-shadow;
       font-size: 9vw;
     }
 
     #hierarchy h2 {
-      text-shadow: $black-text-shadow;
       font-size: 9vw;
     }
 
     #borders h2 {
-      text-shadow: $black-text-shadow;
       padding-top: 5%;
       line-height: 1.25;
       font-size: 7vw;
     }
     #representation h2 {
-      text-shadow: $black-text-shadow;
       padding-top: 5%;
       line-height: 1.25;
       font-size: 6.5vw;
     }
     #leaders h2 {
       padding-top: 5%;
-      text-shadow: $black-text-shadow;
       line-height: 1.25;
       font-size: 7vw;
     }
@@ -733,8 +648,6 @@
     }
     #profit h2 {
       padding-top: 5%;
-      text-shadow: $black-text-shadow;
-      color: white;
       line-height: 1.25;
       font-size: 6.5vw;
     }
@@ -748,15 +661,12 @@
       .left { padding-top: 50%; }
       h2 {
         padding-top: 5%;
-        text-shadow: $black-text-shadow;
-        color: white;
         line-height: 1.25;
         font-size: 6.5vw;
       }
     }
 
     #lastcrime h2 {
-      text-shadow: $black-text-shadow;
       font-size: 8vw;
     }
 
