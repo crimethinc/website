@@ -7,18 +7,27 @@
   .check-farsi:before { content: ''; }
 
   h1,h2,h3,h4 { font-family: 'Noto Kufi Arabic', sans-serif; }
+
   .left h2 {
     font-size: 8vw;
     line-height: 7.25vw;
   }
-  .righttext p {
-    line-height: 1.5;
+  p, #anarchy p, .righttext p {
+    line-height: 1.25;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: .8rem;
+    font-family: 'Noto Naskh Arabic', serif;
   }
   
   /*-------------PHONE CSS------------------*/
   @media (min-device-width:200px) and (max-width:600px) {
+    p, #anarchy p, .righttext p {
+      line-height: 1.25;
+      font-weight: 300;
+      font-size: 1.3rem;
+      font-family: 'Noto Naskh Arabic', serif;
+    }
+
     .title h1 {
       top: 8%;
       left: 19%;
@@ -117,6 +126,13 @@
 
   /*-------------TABLET CSS------------------*/
   @media (min-width:601px) and (max-width:1023px) {
+    p, #anarchy p, .righttext p {
+      line-height: 1.25;
+      font-weight: 300;
+      font-size: 1.3rem;
+      font-family: 'Noto Naskh Arabic', serif;
+    }
+
     .title h1 {
       top: 5%;
       left: 25%;
@@ -158,7 +174,7 @@
     #property h2,
     #lastcrime h2 {
       right: 0;
-      font-size: 13vw;
+      font-size: 10vw;
       padding: 0;
       font-weight: 900;
       padding-top: 10%;
@@ -213,6 +229,13 @@
 
   /*-------------TABLET LANDSCAPE------------------*/
   @media (min-width:1024px) and (max-width:1200px) {
+    p, #anarchy p, .righttext p {
+      line-height: 1.25;
+      font-weight: 300;
+      font-size: 1.3rem;
+      font-family: 'Noto Naskh Arabic', serif;
+    }
+    
     .title h1 {
       top: 55%;
       left: 34%;
@@ -257,66 +280,64 @@
     #property h2,
     #lastcrime h2 {
       right: 0;
-      font-size: 13vw;
+      font-size: 10vw;
       padding: 0;
       font-weight: 900;
       padding-top: 10%;
       padding-right: 10%;
       width: 89%;
-      line-height: 1;
+      line-height: 1.25;
       color: white;
       text-shadow: $black-text-shadow;
     }
-    #intro h3 { line-height: 1.5; }
-    #relationships h2 {
-      line-height: 1.5;
-      font-size: 10vw;
-      padding-top: 5%;
-    }
 
     #outro {
-      padding-bottom: 180%;
+      .leftintro p { font-size: 3.5vw; }
 
-      h3 {
-        line-height: 1.45;
-        padding: 0;
-        font-weight: 900;
-        font-size: 7vw;
-        padding-right: 10%;
-        padding-top: 10%;
-        width: 89%;
+        padding-bottom: 180%;
+
+        h3 {
+          line-height: 1.45;
+          padding: 0;
+          font-weight: 900;
+          font-size: 7vw;
+          padding-right: 10%;
+          padding-top: 10%;
+          width: 89%;
+        }
       }
-    }
 
-    #takeflight {
-      padding-bottom: 90%;
+      #takeflight {
+        padding-bottom: 90%;
 
-      h1 {
+        h1 {
+          font-family: 'Noto Kufi Arabic', sans-serif;
+          font-weight: 900;
+          font-size: 12vw;
+          line-height: 1.5;
+          padding: 0;
+          right: 10%;
+          top: 10%;
+          width: 89%;
+        }
+      }
+      #next h1 {
         font-family: 'Noto Kufi Arabic', sans-serif;
         font-weight: 900;
-        font-size: 12vw;
+        font-size: 8vw;
         line-height: 1.5;
-        padding: 0;
-        right: 10%;
-        top: 10%;
-        width: 89%;
       }
     }
-    #next h1 {
-      font-family: 'Noto Kufi Arabic', sans-serif;
-      font-weight: 900;
-      font-size: 8vw;
-      line-height: 1.5;
-    }
-  }
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width:1201px) and (max-width:1670px) {
-    .righttext p {
+    p, #anarchy p, .righttext p {
       line-height: 1.25;
       font-weight: 300;
-      font-size: 1.13rem;
+      font-size: 1.3vw;
+      font-family: 'Noto Naskh Arabic', serif;
     }
+
     .title h1 {
       top: 55%;
       left: 30%;
@@ -392,7 +413,6 @@
     }
 
     #reconciling {
-      .righttext p { font-size: 1rem; }
       h2 {
         font-size: 6.5vw;
         line-height: 1.25;
@@ -405,21 +425,18 @@
     }
 
     #revolt {
-      .righttext p { font-size: 1rem; }
       h2 {
         font-size: 7vw;
       }
     }
 
     #control {
-      .righttext p { font-size: 1rem; }
       h2 {
         font-size: 9vw;
       }
     }
 
     #hierarchy {
-      .righttext p { font-size: 1rem; }
       h2 {
         font-size: 9vw;
       }
@@ -444,8 +461,6 @@
     #government {
       .righttext p {
         line-height: 1.15;
-        font-weight: 300;
-        font-size: 1rem;
       }
 
       h2 {
@@ -454,7 +469,6 @@
       }
     }
     #profit {
-      .righttext p { font-size: 1rem; }
       h2 {
         padding-top: 5%;
         line-height: 1.25;
@@ -464,8 +478,6 @@
     #property {
       .righttext p {
         line-height: 1.15;
-        font-weight: 300;
-        font-size: 1rem;
       }
       .left { padding-top: 50%; }
       h2 {
@@ -510,11 +522,13 @@
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
-    .righttext p {
+    p, #anarchy p, .righttext p {
       line-height: 1.25;
       font-weight: 300;
-      font-size: 1.4rem;
+      font-size: 1.1vw;
+      font-family: 'Noto Naskh Arabic', serif;
     }
+    
     .title h1 {
       top: 55%;
       left: 35%;
@@ -631,8 +645,6 @@
     #government {
       .righttext p {
         line-height: 1.15;
-        font-weight: 300;
-        font-size: 1.3rem;
       }
 
       h2 {
@@ -648,8 +660,6 @@
     #property {
       .righttext p {
         line-height: 1.15;
-        font-weight: 300;
-        font-size: 1.3rem;
       }
 
       .left { padding-top: 50%; }

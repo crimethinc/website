@@ -18,3 +18,23 @@
        url('//fonts.gstatic.com/ea/notokufiarabic/v2/NotoKufiArabic-Bold.woff') format('woff'),
        url('//fonts.gstatic.com/ea/notokufiarabic/v2/NotoKufiArabic-Bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notonaskharabic/v4/NotoNaskhArabic-Bold.ttf) format('truetype');
+}
