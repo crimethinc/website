@@ -42,6 +42,12 @@
   }
 }
 
+@media screen and (min-width: $small-tablet) {
+  #article .related-articles {
+    padding: $border-size-xlarge;
+  }
+}
+
 @media screen and (max-width: $large-phone){
   #article .related-articles {
     padding-right: 1rem;
