@@ -1,50 +1,56 @@
 #article .related-articles {
   margin: $border-size-xlarge auto;
   max-width: $large-tablet;
-  padding: 5rem 0;
+  padding: 5rem 0 5rem;
 
   .related-articles-heading {
     font-weight: 700;
     font-size: 5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     margin-bottom: 3rem;
     border-bottom: 1px solid $color-black;
+  }
+
+  .related-articles-category  {
+    margin-bottom: 3rem;
   }
 
   .related-articles-category-heading {
     font-weight: 500;
     font-size: 3rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
-  .h-entry {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  .related-article {
+    .related-article-image {
+      width: 100%;
+      height: 60%;
+    }
+    header {
+      h2, h3{
+        color: $color-black;
+        a {
+          color: $color-black;
+        }
+      }
+    }
   }
 
-  .h-entry header h1 {
-    font-size: 1.5em;
+  @media screen and (max-width: $large-phone) {
+    .third-related-article {
+      display: none;
+    }
   }
+}
 
-  .h-entry header h2 {
-    font-size: 1.25em;
+@media screen and (min-width: $small-tablet) {
+  #article .related-articles {
+    padding: $border-size-xlarge;
   }
+}
 
-  .h-entry header a {
-    color: $color-black;
-  }
-
-  .h-entry footer {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }
-
-  .tags,
-  .categories {
-    display: none;
+@media screen and (max-width: $large-phone){
+  #article .related-articles {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
