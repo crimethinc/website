@@ -60,6 +60,14 @@
         img {
           box-shadow: none !important;
         }
+        .product-main {
+          .logo-first-column {
+            margin-right: 1rem;
+          }
+          .logo-second-column {
+            margin-left: 1rem;
+          }
+        }
       }
 
 
@@ -158,6 +166,9 @@
         @media screen and (min-width: $large-phone) {
           padding-bottom: 0;
           border-bottom:  none;
+        }
+        ol, ul {
+          margin-left: 2rem;
         }
 
         li {
