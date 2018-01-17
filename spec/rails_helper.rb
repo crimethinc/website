@@ -6,7 +6,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rspec'
-
+require 'selenium-webdriver'
 require 'support/factory_bot'
 
 ActiveRecord::Migration.maintain_test_schema!
@@ -18,21 +18,20 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 end
 
-# set up headless chrome webdriver for feature specs
+# set up headless chrome webdriver for heroku feature specs
+# (Travis CI uses firefox)
 chrome_bin = ENV.fetch('GOOGLE_CHROME_SHIM', nil) # This is from the heroku bin defined in app.json
-chrome_opts = if chrome_bin
-                # CI is running on heroku
-                { chromeOptions: { 'binary' => chrome_bin } }
-              else
-                # CI is running locally or in Travis
-                { chromeOptions: { args: %w[headless disable-gpu] } }
-              end
 
-Capybara.register_driver :headless_chrome do |app|
-  Capybara::Selenium::Driver.new(
-    app,
-    browser: :chrome,
-    desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(chrome_opts)
-  )
+if chrome_bin # CI is running on heroku
+  chrome_opts = { chromeOptions: { 'binary' => chrome_bin } }
+
+  Capybara.register_driver :headless_chrome do |app|
+    Capybara::Selenium::Driver.new(
+      app,
+      browser: :chrome,
+      desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(chrome_opts)
+    )
+    Capybara.javascript_driver = :headless_chrome
+  end
 end
-Capybara.javascript_driver = :headless_chrome
+
