@@ -8,14 +8,14 @@ SitemapGenerator::Sitemap.create(default_host: "https://crimethinc.com", compres
   # Usage: add(path, options={})
   #        (default options are used if you don't specify)
   #
-  # Defaults: :priority => 0.5, :changefreq => 'weekly',
-  #           :lastmod => Time.now, :host => default_host
+  # Defaults: priority: 0.5, changefreq: 'weekly',
+  #           lastmod: Time.now, host: default_host
   #
   # Examples:
   #
   # Add '/articles'
   #
-  # add article_path, :priority => 0.7, :changefreq => 'daily'
+  # add article_path, priority: 0.7, changefreq: 'daily'
 
   add_to_index "/feed/", changefreq: "daily", lastmod: Time.now
   add_to_index "/podcast/feed/", changefreq: "weekly", lastmod: Time.now
