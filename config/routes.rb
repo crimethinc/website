@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get "page/:page", to: "home#index"
 
   #TCE
-  get "tce/:lang", to: 'to_change_everything#show'
+  get "tce(/:lang)", to: 'to_change_everything#show', defaults: { lang: 'english' }
 
   # Articles
   # Article listings by year, optional month, optional day
