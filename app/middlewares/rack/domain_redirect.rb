@@ -7,15 +7,23 @@ module Rack
     def call(env)
       request = Rack::Request.new(env)
 
-      if request.host.downcase =~ /cwc/ || request.host.downcase =~ /herokuapp/
-        location = "https://crimethinc.com" + request.path
-        return redirect(location)
+      if request.host.downcase =~ /cwc/
+        return redirect_to_crimethinc request
+      end
+
+      if request.host.downcase =~ /crimethinc.herokuapp.com$/
+        return redirect_to_crimethinc request
       end
 
       @app.call(env)
     end
 
     private
+
+    def redirect_to_crimethinc request
+      location = "https://crimethinc.com#{request.path}"
+      redirect location
+    end
 
     def redirect(location)
       [
