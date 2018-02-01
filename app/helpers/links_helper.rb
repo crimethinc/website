@@ -12,7 +12,8 @@ module LinksHelper
       "Crimethinc. on Periscope"      => "https://www.periscope.tv/crimethinc",
       "CrimethInc. on Snapchat"       => "https://www.snapchat.com/add/crimethinc",
       "CrimethInc. on Patreon"        => "https://www.patreon.com/crimethinc",
-      "CrimethInc.com RSS feed"       => "https://crimethinc.com/feed"
+      "CrimethInc.com RSS feed"       => "https://crimethinc.com/feed",
+      "CrimethInc.com on Github"      => "https://github.com/crimethinc"
     }
   end
 
