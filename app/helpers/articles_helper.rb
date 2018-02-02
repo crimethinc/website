@@ -13,7 +13,7 @@ module ArticlesHelper
     when :twitter
       "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{article_url}&amp;via=crimethinc"
     when :facebook
-      "https://www.facebook.com/dialog/feed?app_id=966242223397117&display=popup&caption=#{url_encode article.title}&link=#{article_url}&redirect_uri=#{article_url}"
+      "https://www.facebook.com/sharer?u=#{url_encode article_url}"
     when :tumblr
       "http://tumblr.com/widgets/share/tool?canonicalUrl=#{article_url}&amp;caption=#{url_encode article.title}&amp;content=#{article.image}"
     end
