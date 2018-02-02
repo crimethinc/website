@@ -7,10 +7,21 @@
         color: #d62d34 !important;
     }
 
-    /*--- TODO: make sure the .check-lietuvos is on the language link
-                in app/views/layouts/to_change_everything.html.erb ---*/
     .check-lietuvos:before {
         content: '';
+    }
+
+    .title {
+        width: 72%;
+        padding-left: 28%;
+        padding-top: 4%;
+        h1 {
+            font-size: 7vw;
+            line-height: 1;
+        }
+        h4 {
+            padding: 20.5% 0 0 11.5%;
+        }
     }
 
     /*-------------PHONE CSS------------------*/
