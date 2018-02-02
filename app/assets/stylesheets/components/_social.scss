@@ -17,6 +17,7 @@
     }
 
     .link-domain-facebook  { @include social-icon("facebook"); }
+    .link-domain-github    { @include social-icon("github"); }
     .link-domain-instagram { @include social-icon("instagram"); }
     .link-domain-medium    { @include social-icon("medium"); }
     .link-domain-patreon   { @include social-icon("patreon"); }
