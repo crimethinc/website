@@ -27,6 +27,14 @@ RSpec.describe Redirect, type: :model do
       specify { expect(subject.source_path).to eq("/source") }
       specify { expect(subject.target_path).to eq("/target") }
     end
+
+    context "with relative source path and absolute target path" do
+      https_target_path = "https://example.com/foo/bar"
+      let(:redirect) { Redirect.new(source_path: "source", target_path: https_target_path)}
+
+      specify { expect(subject.source_path).to eq("/source")}
+      specify { expect(subject.target_path).to eq(https_target_path)}
+    end
   end
 
   describe "#downcase_source_path" do
@@ -51,6 +59,20 @@ RSpec.describe Redirect, type: :model do
       let(:redirect) { Redirect.new(source_path: "source", target_path: "http://crimethinc.com/?query=true") }
 
       it { is_expected.to eq("/?query=true") }
+    end
+
+    context "with external http domain" do
+      http_target_path = "http://example.com/foo/bar"
+      let(:redirect) { Redirect.new(source_path: "source", target_path: http_target_path) }
+
+      it { is_expected.to eq(http_target_path)}
+    end
+
+    context "with external https domain" do
+      https_target_path = "https://example.com/foo/bar"
+      let(:redirect) { Redirect.new(source_path: "source", target_path: https_target_path) }
+
+      it { is_expected.to eq(https_target_path)}
     end
   end
 

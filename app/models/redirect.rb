@@ -16,7 +16,7 @@ class Redirect < ApplicationRecord
 
   def add_leading_slash
     paths.each do |path|
-      path = path.prepend "/" unless path =~ %r{^/|http}
+      path = path.prepend "/" unless path =~ %r{^\/|https?}
     end
   end
 
@@ -50,20 +50,20 @@ class Redirect < ApplicationRecord
   end
 
   def build_url_for path
-    URI.parse("http://" + strip_protocol_from_path(path))
-  end
-
-  def strip_protocol_from_path path
-    path.strip.gsub(%r{https*://}, "")
+    URI.parse path
   end
 
   def groomed_path_or_url url
-    url_pieces = []
-    url_pieces << url.host unless url.host =~ %r{crimethinc.com|cwc.im}
-    url_pieces << url.path
-    url_pieces << "?" + url.query    if url.query.present?
-    url_pieces << "#" + url.fragment if url.fragment.present?
-    url_pieces.join
+      url_pieces = []
+      url_pieces << "#{url.scheme}://#{url.host}" unless  url.host.blank? || is_a_crimethinc_url?(url)
+      url_pieces << url.path
+      url_pieces << "?" + url.query    if url.query.present?
+      url_pieces << "#" + url.fragment if url.fragment.present?
+      url_pieces.join
+  end
+
+  def is_a_crimethinc_url? url
+    url.host =~ %r{crimethinc.com|cwc.im}
   end
 
   def noncircular_redirect
