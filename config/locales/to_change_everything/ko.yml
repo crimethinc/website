@@ -138,4 +138,5 @@
         left_text_html: <p><span class="bold">다양한</span> 지배제도와 기제들의 공통점을 깨닫는다면, 우리의 개별적인 투쟁 들이 우리 자신들보다 더욱 대단한 것임이 명확해질 것이다. 그리고 그것 은 우리를 연결시킬 것이다. 이 연결관계에 기반을 두고 모인다면 모든 것 을 바꿀 수 있다. 우리의 투쟁 뿐만 아니라 우리의 행위 능력에 대한 감각 도, 기쁨에 대한 민감도도, 우리 인생의 의미도 다 바뀔 것이다. 각자 새로 운 논리대로 행동하다보면 자연스럽게 서로를 알아챌 수 있을 것이다.이와 지배받는 이, 이런 분리에 기반을 두지 않은 세상을 상상할 수 있을까? 마 지막 범죄는 무엇이 될까?</p>
         right_text_html: <span class="bold">모든 것</span>을<br />바꾸려면<br /><span class="bold">어디에서든</span><br />시작하자!
       take_flight_html: 오래된<br /><span class="bold">&nbsp; &nbsp;세상</span>에<br /><span class="bold">집착</span>하지 <span class="bold">말자</span>
-      next_html: <a href="/begin">비밀은 시작하는 것이에요.</a>
+      next_path: /begin
+      next_text: 비밀은 시작하는 것이에요.
