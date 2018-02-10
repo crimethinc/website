@@ -75,3 +75,34 @@
   font: 0/0 a;
   text-shadow: none;
 }
+
+@mixin color-fader($animation-name, $header-color-list) {
+  $color-count: length($header-color-list);
+  $interval: 100 / $color-count;
+
+  @keyframes #{$animation-name} {
+    $frame: 0;
+    @each $color in $header-color-list {
+      #{$frame}% {background: $color;}
+      $frame: $frame + $interval;
+    }
+  }
+
+  /* Safari */
+  @-webkit-keyframes #{$animation-name} {
+    $frame: 0;
+    @each $color in $header-color-list {
+      #{$frame}% {background: $color;}
+      $frame: $frame + $interval;
+    }
+  }
+
+  /* Firefox */
+  @-moz-keyframes #{$animation-name} {
+    $frame: 0;
+    @each $color in $header-color-list {
+      #{$frame}% {background: $color;}
+      $frame: $frame + $interval;
+    }
+  }
+}

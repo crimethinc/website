@@ -1,10 +1,17 @@
 .site-header {
   align-items: center;
-  background-color: $color-true-black;
+  background-color: #76c261;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: $border-size-medium $border-size-medium;
+  -webkit-animation: colorfader linear infinite;
+  -webkit-animation-duration: 90s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation: colorfader linear infinite;
+  -moz-animation-duration: 90s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
 
   label {
     @include hide-text();
@@ -45,3 +52,5 @@
 //    @include size(2rem, 2rem);
   }
 }
+
+@include color-fader("colorfader", $header-color-list);
