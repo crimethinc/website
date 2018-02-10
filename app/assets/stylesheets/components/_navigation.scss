@@ -2,7 +2,10 @@
 .primary-navigation {
   display: flex;
   flex-wrap: wrap;
-  background-color: $color-true-black;
+
+  @media screen and (max-width: $small-tablet) {
+    background-color: $color-true-black;
+  }
 }
 
 .nav-link {
@@ -30,7 +33,7 @@
     }
 
     @media screen and (max-width: $small-tablet) {
-      padding: 0 0 .5em 0;
+      padding: .5em 0;
 
       &:hover, &:active {
         background-color: $color-true-black;

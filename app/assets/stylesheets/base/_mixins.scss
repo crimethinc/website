@@ -75,3 +75,45 @@
   font: 0/0 a;
   text-shadow: none;
 }
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+//                                                                //
+// mixin: color-fader                                             //
+// params: $animation-name, $header-color-list                    //
+//   $animation-name: The name you give the animation in the css  //
+//   $header-color-list: The colors you want to cycle through     //
+//                                                                //
+// Divides 100% by the color count to get the $interval and       //
+//   increments the $frame by ($frame + $interval)                //
+//                                                                //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+@mixin color-fader($animation-name, $header-color-list) {
+  $color-count: length($header-color-list);
+  $interval: 100 / $color-count;
+
+  @keyframes #{$animation-name} {
+    $frame: 0;
+    @each $color in $header-color-list {
+      #{$frame}% {background: $color;}
+      $frame: $frame + $interval;
+    }
+  }
+
+  /* Safari */
+  @-webkit-keyframes #{$animation-name} {
+    $frame: 0;
+    @each $color in $header-color-list {
+      #{$frame}% {background: $color;}
+      $frame: $frame + $interval;
+    }
+  }
+
+  /* Firefox */
+  @-moz-keyframes #{$animation-name} {
+    $frame: 0;
+    @each $color in $header-color-list {
+      #{$frame}% {background: $color;}
+      $frame: $frame + $interval;
+    }
+  }
+}
