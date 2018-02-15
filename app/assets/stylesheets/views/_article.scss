@@ -1,3 +1,7 @@
+@import '../base/variables/colors';
+@import '../base/variables/viewports';
+@import '../base/variables/borders';
+
 .draft-preview-message {
   background: red;
   padding: 1em;
@@ -20,6 +24,8 @@
 
     header {
       color: $color-white;
+      // maybe a fix for https://github.com/crimethinc/website/issues/657
+      // background: $color-true-black;
       margin-bottom: 1em;
       position: relative;
 
