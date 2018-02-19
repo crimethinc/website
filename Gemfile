@@ -2,7 +2,7 @@ source "https://rubygems.org"
 ruby "~> 2.4.3"
 
 # app server
-gem "rails", "~> 5.1.4"
+gem "rails", "~> 5.1.5"
 
 # database
 gem "pg"
@@ -13,7 +13,7 @@ gem "puma"
 gem "rack-timeout"
 
 # assets
-gem "bootstrap", "~> 4.0.0.beta3"
+gem "bootstrap", "~> 4.0.0"
 gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"

@@ -13,7 +13,11 @@
             <% else %>
               <div class="related-article column column-one-third">
             <% end %>
-            <%= link_to image_tag(article.image, class: "related-article-image", alt: article.image_description), article.path %>
+
+            <% if article.image.present? %>
+              <%= link_to image_tag(article.image, class: "related-article-image", alt: article.image_description), article.path %>
+            <% end %>
+
             <header class="article-titles">
               <h2 class="p-x-title"><%= link_to article.title, article.path %></h2>
               <% if article.subtitle.present? %>

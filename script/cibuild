@@ -30,6 +30,6 @@ echo "==> Setting up DB..."
 bin/rails db:create
 
 # run tests
-echo "Running tests ..."
+echo "Running tests..."
 date "+%H:%M:%S"
 bundle exec bin/rspec

@@ -1,4 +1,4 @@
-@import "to_change_everything/notokufiarabic";
+@import 'notokufiarabic';
 
 .فارسی {
   $black-text-shadow: 0 0 2rem #444;
@@ -24,7 +24,7 @@
     p, #anarchy p, .righttext p {
       line-height: 1.25;
       font-weight: 300;
-      font-size: 1.3rem;
+      font-size: 5vw;
       font-family: 'Noto Naskh Arabic', serif;
     }
 
@@ -81,7 +81,13 @@
       text-shadow: $black-text-shadow;
     }
 
-    #intro h3 { line-height: 1.5; }
+    #intro {
+      h3 { line-height: 1.25; }
+      .rightintro {
+          position: absolute;
+          bottom: 5px;
+      }
+    }
     #relationships h2 {
       line-height: 1.5;
       font-size: 10vw;
@@ -129,7 +135,7 @@
     p, #anarchy p, .righttext p {
       line-height: 1.25;
       font-weight: 300;
-      font-size: 1.3rem;
+      font-size: 5vw;
       font-family: 'Noto Naskh Arabic', serif;
     }
 
@@ -232,7 +238,7 @@
     p, #anarchy p, .righttext p {
       line-height: 1.25;
       font-weight: 300;
-      font-size: 1.3rem;
+      font-size: 5vw;
       font-family: 'Noto Naskh Arabic', serif;
     }
     
@@ -331,6 +337,8 @@
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width:1201px) and (max-width:1670px) {
+    ul#share { width: 280px; }
+
     p, #anarchy p, .righttext p {
       line-height: 1.25;
       font-weight: 300;
@@ -339,10 +347,10 @@
     }
 
     .title h1 {
-      top: 55%;
+      top: 80%;
       left: 30%;
       font-size: 8vw;
-      line-height: 1;
+      line-height: .9;
     }
     .title h4 {
       padding-left: 18.5%;  
@@ -522,6 +530,8 @@
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
+    ul#share { width: 280px; }
+
     p, #anarchy p, .righttext p {
       line-height: 1.25;
       font-weight: 300;
@@ -530,10 +540,10 @@
     }
     
     .title h1 {
-      top: 55%;
+      top: 80%;
       left: 35%;
       font-size: 7vw;
-      line-height: 1;
+      line-height: .9;
     }
     .title h4 {
       font-size: 3vw;
