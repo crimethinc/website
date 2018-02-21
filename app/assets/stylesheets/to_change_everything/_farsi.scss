@@ -1,38 +1,16 @@
 @import 'notokufiarabic';
-
 .فارسی {
-  $black-text-shadow: 0 0 2rem #444;
+  @import "farsi/font_overrides";
+
   /*--- Highlight language in mobile language menu ---*/
   #lang1  li  > a[href="/tce/farsi"] { color: #d62d34 !important; }
   .check-farsi:before { content: ''; }
 
-  h1,h2,h3,h4 { font-family: 'Noto Kufi Arabic', sans-serif; }
-
-  .left h2 {
-    font-size: 8vw;
-    line-height: 7.25vw;
-  }
-  p, #anarchy p, .righttext p {
-    line-height: 1.25;
-    font-weight: 300;
-    font-size: .8rem;
-    font-family: 'Noto Naskh Arabic', serif;
-  }
-  
   /*-------------PHONE CSS------------------*/
   @media (min-device-width:200px) and (max-width:600px) {
-    p, #anarchy p, .righttext p {
-      line-height: 1.25;
-      font-weight: 300;
-      font-size: 5vw;
-      font-family: 'Noto Naskh Arabic', serif;
-    }
-
     .title h1 {
       top: 8%;
       left: 19%;
-      font-size: 13vw;
-      line-height: 1;
     }
     .title h4 {
       padding: 35% 30.5% 0 0;
@@ -70,38 +48,25 @@
     #property h2,
     #lastcrime h2 {
       right: 0;
-      font-size: 13vw;
       padding: 0;
-      font-weight: 900;
       padding-top: 10%;
       padding-right: 10%;
       width: 89%;
-      line-height: 1;
-      color: white;
-      text-shadow: $black-text-shadow;
     }
 
     #intro {
-      h3 { line-height: 1.25; }
       .rightintro {
-          position: absolute;
-          bottom: 5px;
+        position: absolute;
+        bottom: 5px;
       }
     }
     #relationships h2 {
-      line-height: 1.5;
-      font-size: 10vw;
       padding-top: 5%;
     }
 
     #outro {
-      padding-bottom: 180%;
-
       h3 {
-        line-height: 1.45;
         padding: 0;
-        font-weight: 900;
-        font-size: 7vw;
         padding-right: 10%;
         padding-top: 10%;
         width: 89%;
@@ -109,51 +74,31 @@
     }
 
     #takeflight {
-      padding-bottom: 170%;
-
       h1 {
-        font-family: 'Noto Kufi Arabic', sans-serif;
-        font-weight: 900;
-        font-size: 12vw;
-        line-height: 1.5;
         padding: 0;
         right: 10%;
         top: 10%;
         width: 89%;
       }
     }
-    #next h1 {
-      font-family: 'Noto Kufi Arabic', sans-serif;
-      font-weight: 900;
-      font-size: 8vw;
-      line-height: 1.5;
-    }
   }
 
   /*-------------TABLET CSS------------------*/
   @media (min-width:601px) and (max-width:1023px) {
-    p, #anarchy p, .righttext p {
-      line-height: 1.25;
-      font-weight: 300;
-      font-size: 5vw;
-      font-family: 'Noto Naskh Arabic', serif;
-    }
-
     .title h1 {
-      top: 5%;
-      left: 25%;
-      font-size: 11vw;
-      line-height: 1;
+      top: 9%;
+      left: 20%;
     }
     .title h4 {
-      padding: 34% 32.5% 0 0;
+      padding: 43% 25.5% 0 0;
       width: 71%;
     }
     #videopdf {
       padding-right: 8%;
       padding-left: 0;
       float: right;
-
+      margin-top: 5%;
+      
       #video {
         float: right;
       }
@@ -180,31 +125,18 @@
     #property h2,
     #lastcrime h2 {
       right: 0;
-      font-size: 10vw;
       padding: 0;
-      font-weight: 900;
       padding-top: 10%;
       padding-right: 10%;
       width: 89%;
-      line-height: 1;
-      color: white;
-      text-shadow: $black-text-shadow;
     }
-    #intro h3 { line-height: 1.5; }
     #relationships h2 {
-      line-height: 1.5;
-      font-size: 10vw;
       padding-top: 5%;
     }
 
     #outro {
-      padding-bottom: 180%;
-
       h3 {
-        line-height: 1.45;
         padding: 0;
-        font-weight: 900;
-        font-size: 7vw;
         padding-right: 10%;
         padding-top: 10%;
         width: 89%;
@@ -212,41 +144,20 @@
     }
 
     #takeflight {
-      padding-bottom: 90%;
-
       h1 {
-        font-family: 'Noto Kufi Arabic', sans-serif;
-        font-weight: 900;
-        font-size: 12vw;
-        line-height: 1.5;
         padding: 0;
         right: 10%;
         top: 10%;
         width: 89%;
       }
     }
-    #next h1 {
-      font-family: 'Noto Kufi Arabic', sans-serif;
-      font-weight: 900;
-      font-size: 8vw;
-      line-height: 1.5;
-    }
   }
 
   /*-------------TABLET LANDSCAPE------------------*/
   @media (min-width:1024px) and (max-width:1200px) {
-    p, #anarchy p, .righttext p {
-      line-height: 1.25;
-      font-weight: 300;
-      font-size: 5vw;
-      font-family: 'Noto Naskh Arabic', serif;
-    }
-    
     .title h1 {
       top: 55%;
       left: 34%;
-      font-size: 8vw;
-      line-height: 1;
     }
     .title h4 {
       padding-left: 18.5%;  
@@ -286,71 +197,38 @@
     #property h2,
     #lastcrime h2 {
       right: 0;
-      font-size: 10vw;
       padding: 0;
-      font-weight: 900;
       padding-top: 10%;
       padding-right: 10%;
       width: 89%;
-      line-height: 1.25;
-      color: white;
-      text-shadow: $black-text-shadow;
     }
 
     #outro {
-      .leftintro p { font-size: 3.5vw; }
-
-        padding-bottom: 180%;
-
-        h3 {
-          line-height: 1.45;
-          padding: 0;
-          font-weight: 900;
-          font-size: 7vw;
-          padding-right: 10%;
-          padding-top: 10%;
-          width: 89%;
-        }
-      }
-
-      #takeflight {
-        padding-bottom: 90%;
-
-        h1 {
-          font-family: 'Noto Kufi Arabic', sans-serif;
-          font-weight: 900;
-          font-size: 12vw;
-          line-height: 1.5;
-          padding: 0;
-          right: 10%;
-          top: 10%;
-          width: 89%;
-        }
-      }
-      #next h1 {
-        font-family: 'Noto Kufi Arabic', sans-serif;
-        font-weight: 900;
-        font-size: 8vw;
-        line-height: 1.5;
+      h3 {
+        padding: 0;
+        padding-right: 10%;
+        padding-top: 10%;
+        width: 89%;
       }
     }
+
+    #takeflight {
+      h1 {
+        padding: 0;
+        right: 10%;
+        top: 10%;
+        width: 89%;
+      }
+    }
+  }
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width:1201px) and (max-width:1670px) {
     ul#share { width: 280px; }
 
-    p, #anarchy p, .righttext p {
-      line-height: 1.25;
-      font-weight: 300;
-      font-size: 1.3vw;
-      font-family: 'Noto Naskh Arabic', serif;
-    }
-
     .title h1 {
       top: 80%;
       left: 30%;
-      font-size: 8vw;
-      line-height: .9;
     }
     .title h4 {
       padding-left: 18.5%;  
@@ -372,7 +250,12 @@
       #pdfright p { padding: 4.5% .5% 0 0; }
     }
 
-    #intro h3,
+    #intro h3 {
+      padding: 0;
+      padding-top: 5%;
+      margin-right: 10%;
+    }
+
     #self h2,
     #answering h2,
     #power h2,
@@ -392,163 +275,72 @@
       width: unset;
       right: 0;
       padding: 0;
-      font-weight: 900;
       padding-top: 10%;
       margin-right: 10%;
-      line-height: 1;
-      color: white;
-      text-shadow: $black-text-shadow;
     }
 
-    #intro h3 {
-      line-height: 1.25;
-      font-size: 5vw;
-    }
-
-    #self h2,
-    #answering h2 {
-      font-size: 7vw;
-    }
-    
     #power h2 {
-      font-size: 6vw;
       padding-top: 5%;
     }
 
     #relationships h2 {
-      font-size: 6vw;
       padding-top: 5%;
     }
 
     #reconciling {
       h2 {
-        font-size: 6.5vw;
-        line-height: 1.25;
         padding-top: 5%;
-      }
-    }
-
-    #liberation h2 {
-      font-size: 6vw;
-    }
-
-    #revolt {
-      h2 {
-        font-size: 7vw;
-      }
-    }
-
-    #control {
-      h2 {
-        font-size: 9vw;
-      }
-    }
-
-    #hierarchy {
-      h2 {
-        font-size: 9vw;
       }
     }
 
     #borders h2 {
       padding-top: 5%;
-      line-height: 1.25;
-      font-size: 7vw;
     }
     #representation h2 {
       padding-top: 5%;
-      line-height: 1.25;
-      font-size: 6.5vw;
     }
     #leaders h2 {
       padding-top: 5%;
-      line-height: 1.25;
-      font-size: 7vw;
     }
 
-    #government {
-      .righttext p {
-        line-height: 1.15;
-      }
-
-      h2 {
-        line-height: 1.25;
-        font-size: 7vw;
-      }
-    }
     #profit {
       h2 {
         padding-top: 5%;
-        line-height: 1.25;
-        font-size: 6.5vw;
       }
     }
     #property {
-      .righttext p {
-        line-height: 1.15;
-      }
       .left { padding-top: 50%; }
       h2 {
         padding-top: 5%;
-        line-height: 1.25;
-        font-size: 6.5vw;
       }
-    }
-
-    #lastcrime h2 {
-      font-size: 8vw;
     }
 
     #outro h3 {
       width: 100%;
-      line-height: 1.45;
       padding: 0;
       padding-right: 10%;
-      font-weight: 900;
       right: 10%;
-      font-size: 4vw;
     }
 
     #takeflight h1 {
-      font-family: 'Noto Kufi Arabic', sans-serif;
-      font-weight: 900;
-      font-size: 8vw;
-      line-height: 1.5;
       padding: 0;
       width: auto;
       right: 10%;
       padding-top: 10%;
-    }
-
-    #next h1 {
-      font-family: 'Noto Kufi Arabic', sans-serif;
-      font-weight: 900;
-      font-size: 8vw;
-      line-height: 1.5;
     }
   }
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
     ul#share { width: 280px; }
-
-    p, #anarchy p, .righttext p {
-      line-height: 1.25;
-      font-weight: 300;
-      font-size: 1.1vw;
-      font-family: 'Noto Naskh Arabic', serif;
-    }
     
     .title h1 {
       top: 80%;
       left: 35%;
-      font-size: 7vw;
-      line-height: .9;
     }
     .title h4 {
-      font-size: 3vw;
       padding-left: 18.5%;  
-      padding-top: 7em;
+      padding-top: 22vw;
       padding-right: 12em;
     }
     #videopdf {
@@ -567,7 +359,12 @@
       #pdfright p { padding: 3.5% .5% 0 0; }
     }
 
-    #intro h3,
+    #intro h3 {
+      padding: 0;
+      padding-top: 5%;
+      margin-right: 10%;
+    }
+
     #self h2,
     #answering h2,
     #power h2,
@@ -587,131 +384,54 @@
       width: unset;
       right: 0;
       padding: 0;
-      font-weight: 900;
       padding-top: 10%;
       margin-right: 10%;
-      line-height: 1;
-      color: white;
-      text-shadow: $black-text-shadow;
-    }
-    #intro h3 {
-      line-height: 1.25;
-      font-size: 5vw;
     }
 
-    #self h2,
-    #answering h2 {
-      font-size: 7vw;
-    }
-    
     #power h2 {
-      font-size: 6vw;
       padding-top: 5%;
     }
 
     #relationships h2 {
-      font-size: 6vw;
       padding-top: 5%;
     }
 
     #reconciling h2 {
-      font-size: 6.5vw;
-      line-height: 1.25;
       padding-top: 5%;
     }
     
-    #liberation h2 {
-      font-size: 6vw;
-    }
-
-    #revolt h2 {
-      font-size: 7vw;
-    }
-
-    #control h2 {
-      font-size: 9vw;
-    }
-
-    #hierarchy h2 {
-      font-size: 9vw;
-    }
-
     #borders h2 {
       padding-top: 5%;
-      line-height: 1.25;
-      font-size: 7vw;
     }
     #representation h2 {
       padding-top: 5%;
-      line-height: 1.25;
-      font-size: 6.5vw;
     }
     #leaders h2 {
       padding-top: 5%;
-      line-height: 1.25;
-      font-size: 7vw;
     }
 
-    #government {
-      .righttext p {
-        line-height: 1.15;
-      }
-
-      h2 {
-        line-height: 1.25;
-        font-size: 7vw;
-      }
-    }
     #profit h2 {
       padding-top: 5%;
-      line-height: 1.25;
-      font-size: 6.5vw;
     }
     #property {
-      .righttext p {
-        line-height: 1.15;
-      }
-
       .left { padding-top: 50%; }
       h2 {
         padding-top: 5%;
-        line-height: 1.25;
-        font-size: 6.5vw;
       }
-    }
-
-    #lastcrime h2 {
-      font-size: 8vw;
     }
 
     #outro h3 {
       width: 100%;
-      line-height: 1.45;
       padding: 0;
       padding-right: 10%;
-      font-weight: 900;
       right: 10%;
-      font-size: 4vw;
     }
 
     #takeflight h1 {
-      font-family: 'Noto Kufi Arabic', sans-serif;
-      font-weight: 900;
-      font-size: 8vw;
-      line-height: 1.5;
       padding: 0;
       width: auto;
       right: 10%;
       padding-top: 10%;
     }
-    #next h1 {
-      font-family: 'Noto Kufi Arabic', sans-serif;
-      font-weight: 900;
-      font-size: 8vw;
-      line-height: 1.5;
-    }
   }
-
-
-  /*---------------RETINA BACKGROUNDS----------------*/
 }

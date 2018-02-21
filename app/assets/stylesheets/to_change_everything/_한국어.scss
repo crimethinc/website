@@ -1,22 +1,16 @@
 .한국어 {
-  /*--- Highlight language in mobile language menu ---*/
-  $black-text-shadow: 0 0 2rem #444;
-  #lang2  li  > a[href="/tce/한국어"] {
-    color: #d62d34 !important;
-  }
+  @import "korean/font_overrides";
 
-  .check-한국어:before {
-    content: '';
-  }
+  /*--- Highlight language in mobile language menu ---*/
+  #lang2  li  > a[href="/tce/한국어"] { color: #d62d34 !important; }
+  .check-한국어:before { content: ''; }
 
   .title {
     width: 70%;
-    padding-left: 30%;
+    padding-left: 20%;
     padding-top: 4%;
 
     h1 {
-      font-size: 10vw;
-
       span.drop-word-1 {
         top: 0.37em;
         left: -0.2em;
@@ -38,96 +32,21 @@
       }
     }
 
-    h4 {
-      padding: 24% 0 0 16.5%;
-    }
+    h4 { padding: 24% 0 0 16.5%; }
   }
 
   #videopdf { margin-top: 3%; }
-
-  p {
-    text-indent: 0 !important;
-    margin-bottom: 2vw;
-  }
+  p { margin-bottom: 2vw; }
 
   #takeflight h1 {
     letter-spacing: 0;
-    font-weight: 300;
-    font-size: 14vw;
     padding-left: 15%;
     width: 85%;
-    .bold { font-weight: 600; }
-  }
-
-  #outro > div.rightintro h3 {
-    letter-spacing: 0;
-    line-height: 1;
-  }
-  .title {
-    width: 70%;
-    padding-left: 30%;
-    padding-top: 4%;
-
-    h1 {
-      font-size: 10vw;
-
-      span.drop-word-1 {
-        top: 0.37em;
-        left: -0.2em;
-        position: relative;
-      }
-      span.drop-word-2 {
-        top: 0.4em;
-        left: .4em;
-        position: relative;
-      }
-
-      div.mirror-letter {
-        transform: rotateY(180deg);
-        display: inline-flex;
-        padding-right: 3%;
-        padding-left: 0;
-        margin-left: -1%;
-        margin-right: -2%;
-      }
-    }
-
-    h4 {
-      padding: 33% 0 0 16.5%;
-    }
-  }
-
-  #intro h3 {
-    color: white;
-    text-shadow: $black-text-shadow;
-    line-height: 1.2;
-  }
-  #self h2,
-  #answering h2,
-  #power h2,
-  #relationships h2,
-  #reconciling h2,
-  #liberation h2,
-  #revolt h2,
-  #control h2,
-  #hierarchy h2,
-  #borders h2,
-  #representation h2,
-  #leaders h2,
-  #government h2,
-  #profit h2,
-  #property h2,
-  #lastcrime h2 {
-    color: white;
-    text-shadow: $black-text-shadow;
-    line-height: 1.2;
-    font-size: 7vw;
   }
 
   #self h2 {
     top: 30%;
     left: 40%;
-    font-size: 13vw;
     text-align: right;
   }
 
@@ -135,29 +54,24 @@
     top: unset;
     left: -20%;
     bottom: 5%;
-    font-size: 21vw;
   }
 
   #power h2 {
     top: 10%;
     left: -25%;
-    font-size: 7vw;
-    font-weight: 500;
     text-align: right;
   }
 
   #borders h2 {
     top: 10%;
     left: -4%;
-    font-size: 6.5vw;
 
     div.right div.righttext { padding-top: 25%; }
   }
+
   #representation h2 {
     top: 10%;
     left: -30%;
-    text-align: right;
-    font-size: 8vw;
   }
   #leaders h2 { left: -10%; }
   #property {
@@ -168,7 +82,6 @@
     top: unset;
     left: -10%;
     bottom: 5%;
-    font-size: 22vw;
   }
 
   /*-------------PHONE CSS------------------*/
@@ -177,35 +90,21 @@
     .cover { padding-bottom: 88%; }
     .title {
       h1 { padding-top: 4%; }
-      h4 { padding: 45% 0 0 16.5%; }
+      h4 { padding: 55% 0 0 16.5%; }
     }
-
-    #answering h2,
-    #relationships h2,
-    #reconciling h2,
-    #liberation h2,
-    #revolt h2,
-    #leaders h2,
-    #government h2,
-    #profit h2 { font-size: 14vw; }
 
     #power h2 {
       left: 20%;
-      font-size: 14vw;
     }
     #borders h2 {
       left: 4%;
-      font-size: 13vw;
     }
     #representation h2 {
       left: 5%;
-      font-size: 16vw;
     }
     #property {
-      h2 { font-size: 14vw; }
       .left { padding-top: 100%; }
     }
-    #lastcrime h2 { font-size: 11vw; }
   }
 
   /*-------------TABLET CSS------------------*/
@@ -214,75 +113,49 @@
     .title {
       h1 { padding-top: 4%; }
       h4 {
-        padding: 45% 0 0 16.5%;
+        padding: 55% 0 0 16.5%;
         margin-bottom: -25%;
       }
     }
-    #answering h2,
-    #relationships h2,
-    #reconciling h2,
-    #liberation h2,
-    #revolt h2,
-    #leaders h2,
-    #government h2,
-    #profit h2 { font-size: 14vw; }
 
     #power h2 {
       left: 20%;
-      font-size: 14vw;
     }
     #borders h2 {
       left: 4%;
-      font-size: 13vw;
     }
     #representation h2 {
       left: 5%;
-      font-size: 16vw;
     }
     #property {
-      h2 { font-size: 14vw; }
       .left { padding-top: 100%; }
     }
-    #lastcrime h2 { font-size: 11vw; }
   }
 
   /*-------------TABLET LANDSCAPE------------------*/
   @media (min-width: 1024px) and (max-width: 1200px) {
     #videopdf { margin-top: 3%; }
     #pdfright p { padding: 4.6% 0 0 .5%; }
+
     .title {
-      h1 { padding-top: 0 }
-      h4 {
-        padding: 23vw 0 0 16.5%;
-        margin-bottom: -25%;
-      }
+      width: 75%;
+      padding-left: 25%;
+      padding-top: 2%;
+      h4 { padding: 24vw 0 0 16.5%; }
     }
-    #answering h2,
-    #relationships h2,
-    #reconciling h2,
-    #liberation h2,
-    #revolt h2,
-    #leaders h2,
-    #government h2,
-    #profit h2 { font-size: 14vw; }
 
     #power h2 {
       left: 20%;
-      font-size: 14vw;
     }
     #borders h2 {
       left: 4%;
-      font-size: 13vw;
     }
     #representation h2 {
       left: 5%;
-      font-size: 16vw;
     }
     #property {
-      h2 { font-size: 14vw; }
       .left { padding-top: 100%; }
     }
-    #lastcrime h2 { font-size: 11vw; }
   }
 
   /*-------------DESKTOP SMALL CSS------------------*/
@@ -292,7 +165,6 @@
     #self h2 {
       top: 22%;
       left: -20%;
-      font-size: 7vw;
       text-align: right;
     }
     
@@ -300,24 +172,27 @@
       top: unset;
       left: -20%;
       bottom: 5%;
-      font-size: 12vw;
     }
 
     #hierarchy h2 {
       top: unset;
       left: -20%;
       bottom: 5%;
-      font-size: 12vw;
     }
-    #lastcrime h2 { font-size: 6vw; }
     #videopdf { margin-top: 3%; }
     .title {
+      width: 75%;
+      padding-left: 25%;
+
       h1 { padding-top: 0 }
       h4 {
-        padding: 23vw 0 0 16.5%;
+        padding: 24vw 0 0 16.5%;
         margin-bottom: -25%;
       }
     }
+
+    #lastcrime h2 { padding: 1vh 0 0 4vw; }
+    #representation h2 { left: unset; }
 
     #hierarchy div.right div.righttext {
       padding-top: 5%;
@@ -332,7 +207,6 @@
     #self h2 {
       top: 22%;
       left: -20%;
-      font-size: 7vw;
       text-align: right;
     }
 
@@ -340,24 +214,28 @@
       top: unset;
       left: -20%;
       bottom: 5%;
-      font-size: 12vw;
     }
 
     #hierarchy h2 {
       top: unset;
       left: -20%;
       bottom: 5%;
-      font-size: 12vw;
     }
-    #lastcrime h2 { font-size: 6vw; }
-    #videopdf { margin-top: 5%; }
+    #videopdf {
+      margin-top: 5%;
+      width: 70%;
+      padding-left: 30%;
+    }
+
     .title {
+      width: 75%;
+      padding-left: 25%;
+
       h1 span.drop-word-1 { top: 0.3em; }
       h1 span.drop-word-2 { top: 0.6em; }
 
       h1 { padding-top: 0 }
       h4 {
-        font-size: 3vw;
         padding: 22vw 0 0 18.5%;
         margin-bottom: -25%;
       }
@@ -365,13 +243,11 @@
 
     #hierarchy div.right div.righttext {
       padding-top: 5%;
+      p { margin-bottom: .5vw; }
+    }
 
-      p {
-        margin-bottom: .5vw;
-      }
-    }
-    #borders div.right div.righttext {
-      padding-top: 25%;
-    }
+    #borders div.right div.righttext { padding-top: 25%; }
+    #representation h2 { left: unset; }
+    #lastcrime h2 { padding: 1vh 0 0 4vw; }
   }
 }

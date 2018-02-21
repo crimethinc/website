@@ -1,0 +1,223 @@
+$black-text-shadow: 0 0 2rem #444;
+$header-font-stack: 'Vitesse SSm A', 'Vitesse SSm B', sans-serif !default;
+$body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
+
+@mixin title-text($font-size, $line-height)    { font: normal normal 800 $font-size /#{$line-height} $header-font-stack; }
+@mixin subtitle-text($font-size, $line-height) { font: normal normal 300 $font-size /#{$line-height} $header-font-stack; }
+@mixin pdfvideo-text($font-size, $line-height) { font: normal normal 600 $font-size /#{$line-height} $header-font-stack; }
+@mixin intro-header($font-size, $line-height)  { font: normal normal 500 $font-size /#{$line-height} $header-font-stack; }
+@mixin intro-text($font-size, $line-height)    { font: normal normal 600 $font-size /#{$line-height} $body-font-stack;   }
+@mixin imagetext($font-size, $line-height)     { font: normal normal 300 $font-size /#{$line-height} $header-font-stack  }
+@mixin body-text($font-size, $line-height)     { font: normal normal 500 $font-size /#{$line-height} $body-font-stack    }
+@mixin outro-text($font-size, $line-height)    { font: normal normal 600 $font-size /#{$line-height} $body-font-stack    }
+@mixin takeflight($font-size, $line-height)    { font: normal normal 800 $font-size /#{$line-height} $header-font-stack  }
+@mixin anarchy-text($font-size, $line-height)  { font: normal normal 600 $font-size /#{$line-height} $body-font-stack    }
+@mixin next-text($font-size, $line-height)     { font: normal normal 300 $font-size /#{$line-height} $header-font-stack  }
+
+.bold { font-weight: 800; }
+
+.right p:first-of-type,
+#anarchy p:first-of-type,
+.leftintro p:first-of-type { text-indent: 0px; }
+
+.title h1 {
+  color: white;
+  letter-spacing: -.03em;
+  @include title-text(14.5vw, 12vw);
+
+  @media (min-device-width:200px) and (max-width:600px) { @include title-text(14.5vw, 12vw); }
+  @media (min-width:601px) and (max-width:1023px) { @include title-text(14.5vw, 12vw); }
+  @media (min-width:1024px) and (max-width:1200px) { @include title-text(11vw, 9vw); }
+  @media (min-width:1201px) and (max-width:1670px) { @include title-text(11vw, 9vw); }
+  @media (min-width:1671px) { @include title-text(8.5vw, 6.75vw); }
+}
+
+.title h4 {
+  color: white;
+  @include subtitle-text(5.5vw, 5vw);
+
+  @media (min-device-width:200px) and (max-width:600px) { @include subtitle-text(5.5vw, 5vw); }
+  @media (min-width:601px) and (max-width:1023px) { @include subtitle-text(5.5vw, 5vw); }
+  @media (min-width:1024px) and (max-width:1200px) { @include subtitle-text(2.5vw, 2vw); }
+  @media (min-width:1201px) and (max-width:1670px) { @include subtitle-text(2.5vw, 2vw); }
+  @media (min-width:1671px) { @include subtitle-text(1.7vw, 2vw); }
+}
+
+#videopdf {
+  #pdf :hover {
+    color: #3cbce9;
+    text-decoration:none;
+  }
+
+  #video :hover {
+    color: #9ac149;
+    text-decoration:none;
+  }
+
+  p {
+    @include pdfvideo-text(4vw, 4.5vw);
+    color: black;
+    @media (min-width:1024px) { color: white; }
+    @media (min-device-width:200px) and (max-width:600px) { @include pdfvideo-text(4vw, 4.5vw); }
+    @media (min-width:601px) and (max-width:1023px) { @include pdfvideo-text(3vw, 3.5vw); }
+    @media (min-width:1024px) and (max-width:1200px) { @include pdfvideo-text(1.4vw, 1.4vw); }
+    @media (min-width:1201px) and (max-width:1670px) { @include pdfvideo-text(1.4vw, 1.4vw); }
+    @media (min-width:1671px) { @include pdfvideo-text(1vw, 1vw); }
+  }
+}
+
+.left h2 {
+  @include imagetext(9vw, 8.5vw);
+  letter-spacing: -.03em;
+  text-shadow: $black-text-shadow;
+  color: white;
+
+  @media (min-device-width:200px) and (max-width:600px) { @include imagetext(9vw, 8.5vw); }
+  @media (min-width:601px) and (max-width:1023px) { @include imagetext(9vw, 8.5vw); }
+  @media (min-width:1024px) and (max-width:1200px) { @include imagetext(9vw, 8.5vw); }
+  @media (min-width:1201px) and (max-width:1670px) { @include imagetext(4.5vw, 4.25vw); }
+  @media (min-width:1671px) { @include imagetext(4.5vw, 4.25vw); }
+}
+
+.right p {
+  @include body-text(14px, 20px);
+  text-indent: 20px;
+
+  @media (min-device-width:200px) and (max-width:600px) { @include body-text(14px, 20px); }
+  @media (min-width:601px) and (max-width:1023px) {
+    @include body-text(18px, 26px);
+    text-indent: 30px; }
+  @media (min-width:1024px) and (max-width:1200px) {
+    @include body-text(18px, 26px);
+    text-indent: 30px; }
+  @media (min-width:1201px) and (max-width:1670px) {
+    @include body-text(1vw, 1.6vw);
+    text-indent: 1.3vw; }
+  @media (min-width:1671px) {
+    @include body-text(.88vw, 1.5vw);
+    text-indent: 1.3vw; }
+}
+
+.rightintro h3 {
+  @include intro-header(15vw, 14vw);
+  text-shadow: $black-text-shadow;
+  text-align: right;
+  text-indent: 4vw;
+  color: white;
+  letter-spacing: -.03em;
+
+  @media (min-device-width:200px) and (max-width:600px) { @include intro-header(15vw, 14vw); }
+  @media (min-width:601px) and (max-width:1023px) { @include intro-header(15vw, 14vw); }
+  @media (min-width:1024px) and (max-width:1200px) { @include intro-header(6vw, 5.25vw); }
+  @media (min-width:1201px) and (max-width:1670px) { @include intro-header(6vw, 5.25vw); }
+  @media (min-width:1671px) { @include intro-header(6vw, 5.25vw); }
+}
+
+.leftintro p {
+  @include intro-text(4vw, 5.5vw);
+  text-indent: 4vw;
+
+  @media (min-device-width:200px) and (max-width:600px) { @include intro-text(4vw, 5.5vw); }
+  @media (min-width:601px) and (max-width:1023px) { @include intro-text(4vw, 5.5vw); }
+  @media (min-width:1024px) and (max-width:1200px) { @include intro-text(4vw, 5.5vw); }
+  @media (min-width:1201px) and (max-width:1670px) {
+    @include intro-text(1.55vw, 2vw);
+    text-indent: 2vw; }
+  @media (min-width:1671px) {
+    @include intro-text(1.55vw, 2vw);
+    text-indent: 2vw; }
+}
+
+#outro h3 {
+    color: black;
+    text-shadow: none;
+    @media (min-width:1201px) { color: white; }
+}
+
+#outro .leftintro p {
+  @include outro-text(4.5vw, 6vw);
+  text-indent: 0vw;
+  color: white;
+
+  @media (min-device-width:200px) and (max-width:600px) { @include outro-text(4.5vw, 6vw); }
+  @media (min-width:601px) and (max-width:1023px) { @include outro-text(4.5vw, 6vw); }
+  @media (min-width:1024px) and (max-width:1200px) { @include outro-text(4.5vw, 6vw); }
+  @media (min-width:1201px) and (max-width:1670px) {
+      @include outro-text(1.7vw, 2.3vw);
+      color: black; }
+  @media (min-width:1671px) {
+      @include outro-text(1.7vw, 2.3vw);
+      color: black; }
+}
+
+#anarchy p {
+  @include anarchy-text(16px, 24px);
+  text-indent: 22px;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+
+  @media (min-device-width:200px) and (max-width:600px) { @include anarchy-text(16px, 24px); }
+  @media (min-width:601px) and (max-width:1023px) {
+    @include anarchy-text(20px, 32px);
+    line-height: 32px; }
+  @media (min-width:1024px) and (max-width:1200px) {
+    @include anarchy-text(20px, 32px);
+    line-height: 32px; }
+  @media (min-width:1201px) and (max-width:1670px) {
+    @include anarchy-text(1.2vw, 1.7vw);
+    text-indent: 1.3vw; }
+  @media (min-width:1671px) {
+    @include anarchy-text(1.2vw, 1.7vw);
+    text-indent: 1.3vw; }
+}
+
+@media (min-device-width:200px) and (max-width:1200px) {
+  #anarchy .black {
+    font-weight: 800;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+}
+
+#takeflight h1 {
+  @include takeflight(25.5vw, 20vw);
+  color: white;
+  letter-spacing: -.05em;
+  text-transform: uppercase;
+
+  @media (min-device-width:200px) and (max-width:600px) { @include takeflight(25.5vw, 20vw); }
+  @media (min-width:601px) and (max-width:1023px) { @include takeflight(25.5vw, 20vw); }
+  @media (min-width:1024px) and (max-width:1200px) { @include takeflight(25.5vw, 20vw); }
+  @media (min-width:1201px) and (max-width:1670px) {
+    @include takeflight(15vw, 12.75vw);
+    letter-spacing: -.03em; }
+  @media (min-width:1671px) {
+    @include takeflight(15vw, 12.75vw);
+    letter-spacing: -.03em; }
+}
+
+#next h1 {
+  @include next-text(5.7vw, 2vw);
+  color: #d62d34;
+
+  @media (min-device-width:200px) and (max-width:600px) { @include next-text(5.7vw, 2vw); }
+  @media (min-width:601px) and (max-width:1023px) { @include next-text(3.7vw, 2vw); }
+  @media (min-width:1024px) and (max-width:1200px) { @include next-text(3.7vw, 2vw); }
+  @media (min-width:1201px) and (max-width:1670px) { @include next-text(3.7vw, 2vw); }
+  @media (min-width:1671px) { @include next-text(2.7vw, 2vw); }
+}
+
+#next h1 {
+  a:link, a:visited {
+    color: #d62d34;
+    text-decoration: none;
+  }
+
+  a:hover, a:active {
+    color: black;
+    text-shadow: 0px 0px 20px #d62d34;
+    text-decoration: none;
+  }
+}
