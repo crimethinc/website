@@ -2,7 +2,6 @@
 .primary-navigation {
   display: flex;
   flex-wrap: wrap;
-  //background-color: $color-true-black;
 }
 
 .nav-link {
@@ -13,6 +12,10 @@
     transform: lowercase;
   }
   width: 20%;
+
+  @media screen and (max-width: $small-phone) {
+    font-size: 1.5rem;
+  }
 
   a {
     display: block;
@@ -30,12 +33,7 @@
     }
 
     @media screen and (max-width: $small-tablet) {
-      padding: 0 0 .5em 0;
-
-      &:hover, &:active {
-        background-color: $color-true-black;
-        color: $color-white;
-      }
+      padding: .5em 0;
     }
   }
 }
@@ -77,17 +75,19 @@
 }
 
 // small viewports
-.site-header nav,
 .secondary-navigation {
   display: none;
 }
 
+@media screen and (max-width: $small-tablet) {
+  .site-header nav {
+    display: block;
+    margin-top: .4em;
+  }
+}
+
 // larger than $large-phone viewport
 @media screen and (min-width: $small-tablet) {
-  .site-header + nav {
-    display: none;
-  }
-
   .site-header nav,
   .secondary-navigation {
     display: flex;
@@ -101,3 +101,5 @@
     }
   }
 }
+
+@include color-fader("colorfader", $header-color-list);
