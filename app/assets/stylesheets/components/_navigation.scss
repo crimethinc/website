@@ -2,10 +2,6 @@
 .primary-navigation {
   display: flex;
   flex-wrap: wrap;
-
-  @media screen and (max-width: $small-tablet) {
-    background-color: $color-true-black;
-  }
 }
 
 .nav-link {
@@ -16,6 +12,10 @@
     transform: lowercase;
   }
   width: 20%;
+
+  @media screen and (min-width: $small-tablet) {
+    display: flex;
+  }
 
   a {
     display: block;
@@ -34,11 +34,6 @@
 
     @media screen and (max-width: $small-tablet) {
       padding: .5em 0;
-
-      &:hover, &:active {
-        background-color: $color-true-black;
-        color: $color-white;
-      }
     }
   }
 }
@@ -80,17 +75,19 @@
 }
 
 // small viewports
-.site-header nav,
 .secondary-navigation {
   display: none;
 }
 
+@media screen and (max-width: $small-tablet) {
+  .site-header nav {
+    display: block;
+    margin-top: .4em;
+  }
+}
+
 // larger than $large-phone viewport
 @media screen and (min-width: $small-tablet) {
-  .site-header + nav {
-    display: none;
-  }
-
   .site-header nav,
   .secondary-navigation {
     display: flex;
