@@ -41,7 +41,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (8.0.0)
+    autoprefixer-rails (8.1.0.1)
       execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
@@ -149,7 +149,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
     public_suffix (3.0.2)
-    puma (3.11.2)
+    puma (3.11.3)
     rack (2.0.4)
     rack-attack (5.0.1)
       rack
@@ -258,7 +258,7 @@ GEM
     stackprof (0.2.11)
     sterile (1.0.13)
       nokogiri
-    stringex (2.8.2)
+    stringex (2.8.3)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
