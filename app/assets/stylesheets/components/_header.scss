@@ -1,10 +1,16 @@
 .site-header {
   align-items: center;
-  background-color: $color-true-black;
-  display: flex;
+  background-color: #76c261;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: $border-size-medium $border-size-medium;
+  animation: colorfader linear infinite;
+  animation-duration: 270s;
+  animation-iteration-count: infinite;
+
+  @media screen and (min-width: $small-tablet) {
+    display: flex;
+  }
 
   label {
     @include hide-text();
@@ -45,3 +51,5 @@
 //    @include size(2rem, 2rem);
   }
 }
+
+@include color-fader("colorfader", $header-color-list);
