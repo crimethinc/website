@@ -76,6 +76,20 @@
   text-shadow: none;
 }
 
+<<<<<<< HEAD
+=======
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+//                                                                //
+// mixin: color-fader                                             //
+// params: $animation-name, $header-color-list                    //
+//   $animation-name: The name you give the animation in the css  //
+//   $header-color-list: The colors you want to cycle through     //
+//                                                                //
+// Divides 100% by the color count to get the $interval and       //
+//   increments the $frame by ($frame + $interval)                //
+//                                                                //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+>>>>>>> original/master
 @mixin color-fader($animation-name, $header-color-list) {
   $color-count: length($header-color-list);
   $interval: 100 / $color-count;
@@ -87,6 +101,7 @@
       $frame: $frame + $interval;
     }
   }
+<<<<<<< HEAD
 
   /* Safari */
   @-webkit-keyframes #{$animation-name} {
@@ -105,4 +120,6 @@
       $frame: $frame + $interval;
     }
   }
+=======
+>>>>>>> original/master
 }
