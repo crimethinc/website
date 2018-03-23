@@ -2,7 +2,7 @@
 
 <h1>Settings for @<%= @user.username %></h1>
 
-<%= form_for [:admin, @user] do |f| %>
+<%= form_with [:admin, @user] do |form| %>
   <%= render "admin/form_errors", thing: @user %>
 
   <fieldset>
@@ -11,16 +11,16 @@
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: "form-control form-control-lg" %>
+          <%= form.label :password %>
+          <%= form.password_field :password, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">Leave these blank unless changing your password</p>
         </div>
       </div>
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :password_confirmation, "Confirm Password" %>
-          <%= f.password_field :password_confirmation, class: "form-control form-control-lg" %>
+          <%= form.label :password_confirmation, "Confirm Password" %>
+          <%= form.password_field :password_confirmation, class: "form-control form-control-lg" %>
         </div>
       </div>
     </div>

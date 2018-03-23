@@ -47,12 +47,12 @@ filepath = File.expand_path("../db/seeds/articles/features/", __FILE__)
 # Create the Category for Features
 category = Category.find_or_create_by name: "Features"
 
-Dir.glob("#{filepath}/*/").each do |f|
-  path_pieces = f.strip.split("/")
+Dir.glob("#{filepath}/*/").each do |form|
+  path_pieces = form.strip.split("/")
   filename    = path_pieces.last
 
   unless filename =~ /.DS_Store/
-    doc   = File.open(f + "/index.html") { |f| Nokogiri::HTML(f) }
+    doc   = File.open(form + "/index.html") { |form| Nokogiri::HTML(form) }
 
     slug         = path_pieces[-1]
     title        = doc.css("title").text.gsub(" / CrimethInc. Ex-Workers' Collective", "")
@@ -65,7 +65,7 @@ Dir.glob("#{filepath}/*/").each do |f|
     end
 
     published_at = features_timestamps[slug]
-    content      = File.read(f + "/index.html")
+    content      = File.read(form + "/index.html")
     image        = doc.css("meta[name='twitter:image:src']").attribute("content").value rescue nil
 
 
@@ -117,11 +117,11 @@ end
 # Wordpress posts
 filepath = File.expand_path("../db/seeds/articles/posts/", __FILE__)
 
-Dir.glob("#{filepath}/*").each do |f|
-  filename = f.strip.split("/").last
+Dir.glob("#{filepath}/*").each do |form|
+  filename = form.strip.split("/").last
 
   unless filename =~ /.DS_Store/
-    doc = File.open(f) { |f| Nokogiri::XML(f) }
+    doc = File.open(form) { |form| Nokogiri::XML(form) }
 
     title   = doc.css("title").text
     content = doc.css("content_encoded").text
@@ -220,7 +220,7 @@ end
 
 # Site News Archive from pre- 3.0 of the site (pre Wordpress?)
 filepath = File.expand_path("../db/seeds/articles/site-news-archive.html", __FILE__)
-html_doc = File.open(filepath) { |f| Nokogiri::HTML(f) }
+html_doc = File.open(filepath) { |form| Nokogiri::HTML(form) }
 
 # And create a new Category for "Site News Archive"
 category = Category.find_or_create_by! name: "Site News Archive"
@@ -344,12 +344,12 @@ days_of_war_nights_of_love = %w(alienation alive asfuck bourgeoisie concealment 
 
 filepath = File.expand_path("../db/seeds/articles/texts/texts/", __FILE__)
 
-Dir.glob("#{filepath}/*").each do |f|
-  path_pieces = f.strip.split("/")
+Dir.glob("#{filepath}/*").each do |form|
+  path_pieces = form.strip.split("/")
   filename    = path_pieces.last
 
   unless filename =~ /.DS_Store/
-    doc   = File.open(f) { |f| Nokogiri::HTML(f) }
+    doc   = File.open(form) { |form| Nokogiri::HTML(form) }
 
     # Create the Category for Text
     filename_slug = filename.gsub(".php", "")
@@ -388,7 +388,7 @@ Dir.glob("#{filepath}/*").each do |f|
 
     title                   = doc.css("h1").first.try(:text)
     subtitle                = nil
-    content                 = File.read(f)
+    content                 = File.read(form)
     image                   = nil
     header_background_color = "#444444"
 

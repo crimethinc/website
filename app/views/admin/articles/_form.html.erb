@@ -7,29 +7,29 @@
   <%= link_to "Alternates",     "#alternates",     class: "btn btn-outline-primary mb-2 mr-2" %>
 </nav>
 
-<%= form_for [:admin, @article], html: { id: "article-form" } do |f| %>
+<%= form_with [:admin, @article], id: "article-form" do |form| %>
   <%= render "admin/form_errors", thing: @article %>
 
   <%# hidden fields... %>
-  <%= f.hidden_field :collection_id, value: @collection.id if @collection %>
-  <%= f.hidden_field :content_format %>
-  <%= f.hidden_field :hide_layout %>
-  <%= f.hidden_field :header_shadow_text %>
+  <%= form.hidden_field :collection_id, value: @collection.id if @collection %>
+  <%= form.hidden_field :content_format %>
+  <%= form.hidden_field :hide_layout %>
+  <%= form.hidden_field :header_shadow_text %>
   <%# ...hidden fields %>
 
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control form-control-lg" %>
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content, class: "form-control form-control-lg", rows: 10 %>
+    <%= form.label :content %>
+    <%= form.text_area :content, class: "form-control form-control-lg", rows: 10 %>
 
     <p class="form-text text-muted">
       You can apply color to any item by putting a CSS directive on the immediate line after it.
@@ -53,7 +53,7 @@
 
             <div class="card-body">
               <p class="card-text">
-                <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
+                <%= render "admin/datetime_group", form: form, post: @article, type: :article %>
               </p>
 
               <div class="text-right">
@@ -90,13 +90,13 @@
       </div><!-- .row -->
 
     <% else %>
-      <%= render "admin/datetime_group", f: f, post: @article, type: :article %>
+      <%= render "admin/datetime_group", form: form, post: @article, type: :article %>
     <% end %>
 
     <%= render "admin/articles/back_to_top" %>
   </div><!-- #datetime -->
 
-  <%= render "admin/articles/categories_form", f: f %>
+  <%= render "admin/articles/categories_form", form: form %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
@@ -107,8 +107,8 @@
       <div class="row">
         <div class="col-12 col-sm-6">
           <div class="form-group">
-            <%= f.label :tweet %>
-            <%= f.text_area :tweet, class: "form-control form-control-lg", data: { 'max-length': '250', 'feedback-box': 'tweet-length' } %>
+            <%= form.label :tweet %>
+            <%= form.text_area :tweet, class: "form-control form-control-lg", data: { 'max-length': '250', 'feedback-box': 'tweet-length' } %>
             <div id="tweet-length"></div>
             <p class="form-text text-muted">
               Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
@@ -119,8 +119,8 @@
 
         <div class="col-12 col-sm-6">
           <div class="form-group">
-            <%= f.label :summary %>
-            <%= f.text_area :summary, class: "form-control form-control-lg", data: { 'max-length': '200', 'feedback-box': 'summary-length' } %>
+            <%= form.label :summary %>
+            <%= form.text_area :summary, class: "form-control form-control-lg", data: { 'max-length': '200', 'feedback-box': 'summary-length' } %>
             <div id="summary-length"></div>
             <p class="form-text text-muted">
               Maximum 200 characters.
@@ -146,8 +146,8 @@
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :image, "Header Image" %>
-          <%= f.text_field :image, class: "form-control form-control-lg" %>
+          <%= form.label :image, "Header Image" %>
+          <%= form.text_field :image, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">
             This is the large image that will be front and center on the <i>Article</i> page,
             on the homepage and when syndicated to other sites. Preferred size:
@@ -156,8 +156,8 @@
         </div>
 
         <div class="form-group">
-          <%= f.label :image_mobile, "Mobile Header Image" %>
-          <%= f.text_field :image_mobile, class: "form-control form-control-lg" %>
+          <%= form.label :image_mobile, "Mobile Header Image" %>
+          <%= form.text_field :image_mobile, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">
             This is a square image that is used on the mobile <i>Article</i> page,
             on the mobile homepage and when syndicated to Instagram.
@@ -168,8 +168,8 @@
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :image_description, "Header Image Description" %>
-          <%= f.text_field :image_description, class: "form-control form-control-lg" %>
+          <%= form.label :image_description, "Header Image Description" %>
+          <%= form.text_field :image_description, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">
             This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
           </p>
@@ -183,8 +183,8 @@
       <div class="row">
         <div class="col-12 col-sm-6">
           <div class="form-group">
-            <%= f.label :header_background_color, "Header Background Color" %>
-            <%= f.text_field :header_background_color, class: "form-control form-control-lg" %>
+            <%= form.label :header_background_color, "Header Background Color" %>
+            <%= form.text_field :header_background_color, class: "form-control form-control-lg" %>
             <p class="form-text text-muted">
               This can be any valid CSS color value:
               <code>#f00</code>,
@@ -196,8 +196,8 @@
           </div>
 
           <div class="form-group">
-            <%= f.label :header_text_color, "Header Text Color" %>
-            <%= f.text_field :header_text_color, class: "form-control form-control-lg" %>
+            <%= form.label :header_text_color, "Header Text Color" %>
+            <%= form.text_field :header_text_color, class: "form-control form-control-lg" %>
             <p class="form-text text-muted">
               This can be any valid CSS color value:
               <code>#f00</code>,
@@ -212,8 +212,8 @@
 
         <div class="col-12 col-sm-6">
           <div class="form-group">
-            <%= f.label :css, "Article Specific CSS" %>
-            <%= f.text_area :css, class: "form-control form-control-lg", rows: 10 %>
+            <%= form.label :css, "Article Specific CSS" %>
+            <%= form.text_area :css, class: "form-control form-control-lg", rows: 10 %>
             <p class="form-text text-muted">
               <% if @article.new_record? %>
               After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
@@ -240,8 +240,8 @@
         <div class="row">
           <div class="col-12">
             <div class="form-group">
-              <%= f.label :download_url, "PDF Download URL" %>
-              <%= f.url_field :download_url, class: "form-control form-control-lg" %>
+              <%= form.label :download_url, "PDF Download URL" %>
+              <%= form.url_field :download_url, class: "form-control form-control-lg" %>
               <p class="form-text text-muted">
                 This is the URL of a downloadable / printable PDF of this Article.
               </p>

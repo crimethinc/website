@@ -8,12 +8,12 @@ require "nokogiri"
 # Videos
 filepath = File.expand_path("../db/seeds/videos/", __FILE__)
 
-Dir.glob("#{filepath}/*").each do |f|
-  path_pieces = f.strip.split("/")
+Dir.glob("#{filepath}/*").each do |form|
+  path_pieces = form.strip.split("/")
   filename    = path_pieces.last
 
   unless filename =~ /.DS_Store/
-    doc   = File.open(f) { |f| Nokogiri::HTML(f) }
+    doc   = File.open(form) { |form| Nokogiri::HTML(form) }
 
     title        = doc.css(".title").text
     slug         = title.to_slug

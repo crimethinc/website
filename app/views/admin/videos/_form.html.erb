@@ -1,21 +1,21 @@
-<%= form_for [:admin, @video] do |f| %>
+<%= form_with [:admin, @video] do |form| %>
   <%= render "admin/form_errors", thing: @video %>
 
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control form-control-lg" %>
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="row">
     <div class="col-12 col-sm-6">
       <div class="form-group">
-        <%= f.label :content %>
-        <%= f.text_area :content, class: "form-control", rows: 8 %>
+        <%= form.label :content %>
+        <%= form.text_area :content, class: "form-control", rows: 8 %>
       </div>
     </div>
   </div> <!-- .row -->
@@ -23,15 +23,15 @@
   <div class="row">
     <div class="col-6">
       <div class="form-group">
-        <%= f.label :slug %>
-        <%= f.text_field :slug, class: "form-control" %>
+        <%= form.label :slug %>
+        <%= form.text_field :slug, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-6">
       <div class="form-group">
-        <%= f.label :vimeo_id, "Vimeo ID" %>
-        <%= f.text_field :vimeo_id, class: "form-control" %>
+        <%= form.label :vimeo_id, "Vimeo ID" %>
+        <%= form.text_field :vimeo_id, class: "form-control" %>
       </div>
     </div>
   </div>
@@ -39,15 +39,15 @@
   <div class="row">
     <div class="col-12 col-sm-6">
       <div class="form-group">
-        <%= f.label :image, "Image" %>
-        <%= f.text_field :image, class: "form-control form-control-lg" %>
+        <%= form.label :image, "Image" %>
+        <%= form.text_field :image, class: "form-control form-control-lg" %>
       </div>
     </div>
 
     <div class="col-12 col-sm-6">
       <div class="form-group">
-        <%= f.label :image_description, "Image Description" %>
-        <%= f.text_field :image_description, class: "form-control form-control-lg" %>
+        <%= form.label :image_description, "Image Description" %>
+        <%= form.text_field :image_description, class: "form-control form-control-lg" %>
         <p class="form-text text-muted">
           This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
         </p>
@@ -55,7 +55,7 @@
     </div>
   </div>
 
-  <%= render "admin/datetime_group", f: f, post: @video, type: :video %>
+  <%= render "admin/datetime_group", form: form, post: @video, type: :video %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
 
@@ -65,8 +65,8 @@
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :tweet %>
-          <%= f.text_area :tweet, class: "form-control" %>
+          <%= form.label :tweet %>
+          <%= form.text_area :tweet, class: "form-control" %>
           <p class="form-text text-muted">
             Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
             Used for syndicated tweet for this Video.
@@ -76,8 +76,8 @@
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :summary %>
-          <%= f.text_area :summary, class: "form-control" %>
+          <%= form.label :summary %>
+          <%= form.text_area :summary, class: "form-control" %>
           <p class="form-text text-muted">
             Maximum 200 characters.
             Used for video description and previews in story cards on other sites.
@@ -98,15 +98,15 @@
         <div class="row">
           <div class="col-6">
             <div class="form-group">
-              <%= f.label :quality, "Quality" %>
-              <%= f.text_field :quality, class: "form-control" %>
+              <%= form.label :quality, "Quality" %>
+              <%= form.text_field :quality, class: "form-control" %>
             </div>
           </div>
 
           <div class="col-6">
             <div class="form-group">
-              <%= f.label :duration, "Duration" %>
-              <%= f.text_field :duration, class: "form-control" %>
+              <%= form.label :duration, "Duration" %>
+              <%= form.text_field :duration, class: "form-control" %>
             </div>
           </div>
         </div> <!-- .row -->
