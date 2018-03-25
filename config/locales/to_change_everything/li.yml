@@ -6,46 +6,46 @@ lietuvos:
       lang_code: li
       video_url: https://player.vimeo.com/video/111159930
       head:
-        title: "To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers' Collective"
+        title: "Tam, kad viską pakeistum, an anarchist appeal / CrimethInc. Ex-Workers' Collective"
         meta:
           title: To Change Everything, an anarchist appeal
           description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart
           url: http://tochangeeverything.com/
       menu:
-        toc: Table of Contents
+        toc: Table of Contents # Googele translate
         language: lietuvos
-        share: Share
+        share: Share # Googele translate
       bulk_get:
         url: /tce/get/#order
-        text: Order in Bulk
+        text: Order in Bulk # Googele translate
       toc:
-        introduction: introduction
-        self: start with self-determination
-        answering: start by answering to ourselves
-        power: start by seeking power, not authority
-        relationships: start with relationships built on trust
-        reconciling: start by reconciling the individual<br />&nbsp; &nbsp;and the whole
-        liberation: start with the liberation of desire
-        revolt: start with revolt
-        control: the problem is control
-        hierarchy: the problem is hierarchy
-        borders: the problem is borders
-        representation: the problem is representation
-        leaders: the problem is leaders
-        government: the problem is government
-        profit: the problem is profit
-        property: the problem is property
-        lastcrime: the last crime
-        anarchy: anarchy is
-        outro: outro
-        takeflight: take flight
-        next: next
+        introduction: įvadas # Googele translate
+        self: Pradėk nuo savimonės
+        answering: Pradėk nuo atsakomybės sau
+        power: Pradėk siekti asmeninės galios, o ne įtakos
+        relationships: Pradėkime santykius remti pasitikėjimu, o ne paklusnumu
+        reconciling: Pradėkime atkurdami individo ir visumos sąjungą
+        liberation: Pradėkime išlaisvindami troškimus
+        revolt: Pradėkime sukildami
+        control: Problema slypi kontrolėje
+        hierarchy: Problema slypi hierarchijoje
+        borders: Problema slypi sienose
+        representation: Problema slypi įvaizdyje
+        leaders: Problema slypi lyderystėje
+        government: Problema slypi vyriausybėse
+        profit: Problema slypi pelno siekyje
+        property: Problema slypi nuosavybėje
+        lastcrime: Paskutinis nusikaltimas
+        anarchy: Anarchija - tai
+        outro: išvadą # google translate of 'conclusion'
+        takeflight: skristi # google translate
+        next: Kitas # google translate
   to_change_everything:
     show:
       title_html: '&nbsp;Tam,<br />kad viską<br />pakeistum'
       subtitle_html: <span class="green">an</span> <span class="pink">anarchist</span> <span class="blue">appeal</span>
-      video_cte: Watch Video
-      pdf_cte_html: Download<br />&nbsp;PDF
+      video_cte: Žiūrėti video # google translate
+      pdf_cte_html: Atsisiųskite<br />&nbsp;PDF # google translate
       pdf_get_url: /tce/get
       pdf_image: tce-cover-200.png
       intro:
