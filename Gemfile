@@ -43,7 +43,6 @@ group :development, :test do
   gem "nokogiri"
   gem "rspec-rails"
   gem "rails-controller-testing"
-  gem "guard-rspec"
   gem "spring-commands-rspec"
   gem "simplecov", :require => false
   gem "factory_bot_rails"
@@ -54,6 +53,7 @@ end
 
 # dev
 group :development do
+  gem 'guard-rspec', require: false
   gem "web-console"
   gem "listen", "~> 3.1.5"
   gem "spring"
