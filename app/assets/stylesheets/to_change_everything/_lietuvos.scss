@@ -1,5 +1,6 @@
-
 .lietuvos {
+    @import "lietuvos/font_overrides";
+
     /*--- Highlight language in mobile language menu ---*/
     /*--- TODO: This id (#lang1) might need to be changed to match what is
                 in app/views/layouts/to_change_everything.html.erb ---*/
@@ -15,13 +16,7 @@
         width: 72%;
         padding-left: 28%;
         padding-top: 4%;
-        h1 {
-            font-size: 7vw;
-            line-height: 1;
-        }
-        h4 {
-            padding: 20.5% 0 0 11.5%;
-        }
+        h4 { padding: 20.5% 0 0 11.5%; }
     }
 
     /*-------------PHONE CSS------------------*/
@@ -41,12 +36,14 @@
 
     /*-------------DESKTOP SMALL CSS------------------*/
     @media (min-width:1201px) and (max-width:1670px) {
-
+      #answering h2 { padding: 5% 0 0 20%; }
+      #reconciling h2 { padding: 7% 0 0 3%; }
     }
 
     /*-------------DESKTOP BIG CSS------------------*/
     @media (min-width:1671px) {
-
+      #answering h2 { padding: 5% 0 0 20%; }
+      #reconciling h2 { padding: 7% 0 0 3%; }
     }
 
     /*---------------RETINA BACKGROUNDS----------------*/

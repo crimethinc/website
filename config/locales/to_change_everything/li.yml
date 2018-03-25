@@ -1,23 +1,22 @@
-
 lietuvos:
   layouts:
     to_change_everything:
       language_direction: ltr
       lang_code: li
-      video_url: https://player.vimeo.com/video/111159930
+      video_url: https://player.vimeo.com/video/111159930 # todo
       head:
-        title: "Tam, kad viską pakeistum, an anarchist appeal / CrimethInc. Ex-Workers' Collective"
+        titele: "Tam, kad viską pakeistum, an anarchist appeal / CrimethInc. Ex-Workers' Collective" # todo
         meta:
-          title: To Change Everything, an anarchist appeal
-          description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart
-          url: http://tochangeeverything.com/
+          title: To Change Everything, an anarchist appeal # todo
+          description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart # todo
+          url: http://tochangeeverything.com/ # todo
       menu:
-        toc: Table of Contents # Googele translate
+        toc: Turinys # Googele translate
         language: lietuvos
-        share: Share # Googele translate
+        share: Dalintis # Googele translate
       bulk_get:
         url: /tce/get/#order
-        text: Order in Bulk # Googele translate
+        text: Užsisakykite anglų kalbos versiją # Googele translate (Order Engish edition in Bulk)
       toc:
         introduction: įvadas # Googele translate
         self: Pradėk nuo savimonės
@@ -107,8 +106,8 @@ lietuvos:
         image_name: representation
         image_alt: a woman of asian ethnicity works as a mannequin factory stocking a shelves that are full of caucasian mannequin heads
       leaders:
-        left_text_html: the problem is<br /><span class="bold">leaders</span>
-        right_text_html: <p>Leadership is a social disorder in which the majority of participants in a group fail to take initiative or think critically about their actions. As long as we understand agency as a property of specific individuals rather than a relationship between people, we will always be dependent on leaders—and at their mercy. Truly exemplary leaders are as dangerous as the obviously corrupt, in that all their praiseworthy qualities only reinforce their status and others’ deference, not to mention the legitimacy of leadership itself.</p><p>When the police arrive at a protest, their first question is always “Who’s in charge?”—not because leadership is essential to collective action, but because it presents a vulnerability. The Conquistadores asked the same question when they arrived in the so-called New World; wherever there was an answer, it saved them centuries of trouble subduing the population themselves. So long as there is a leader, he can be deputized, replaced, or taken hostage. At best, depending on leaders is an Achilles heel; at worst, it reproduces the authorities’ interests and power structure inside those who oppose them. It’s better if everyone has her own agenda and a sense of her own agency.</p>
+        left_text_html: Problema slypi<br /><span class="bold">lyderystėje</span>
+        right_text_html: '<p>Lyderystė tai socialinis sutrikimas, kuris pasireiškia daugumos nesugebėjimu imtis iniciatyvos ar kritiškai vertinti savo veiksmų. Kol mes apibūdinam "reprezentatyvumą" kaip individų nuosavybę, o ne kaip tarpusavio santykių tipą mes visada išliksim bejėgiškai priklausomi nuo lyderių.</p><p>Kai policija bando sustabdyti protestą, jų pirmas klausimas - "kas atsakingas? " Ne todėl, kad kolektyviniam veiksmui būtinas lyderis, o todėl, kad per lyderį lengviausia valdyti bendruomenę. Kai užkariautojai atvyko į "naujajį pasaulį" jie irgi paklausė "kas čia vadas?" - jei tik buvo atsakymas jiem tai sutaupė dešimtmečius laiko užguiti pačias bendruomenes. Jei grupė turi lyderį, jis gali būti pakeistas ar pavergtas, priverstas atstovauti svetimiems interesams. Geriausiu atveju lyderis - bendruomenės Achilo kulnas. Blogiausiu - jis įgalina valdžios interesus bei valdymo strukturą tose grupėse bei individuose, kurie jiems priešinasi. Geriau būtų, jei kiekvienas susidarytų savo asmeninę nuomonę, suformuluotų savo siekius ir jaustų pareigą pats juos atstovauti.</p>'
         image_name: leaders
         image_alt: a portly politician talks into a bouquet of press microphones that surround him
       government:
@@ -138,5 +137,6 @@ lietuvos:
       outro:
         left_text_html: '<p>Kai suprantame ką skirtingos institucijos bei dominavimo mechanizmai turi bendro, pasidaro aišku, kad ir mūsų asmeniniai iššūkiai yra bendro "paveikslo" dalis, kuris iš tiesų galėtų žmoniją suvienyti. Kai mes pradedame veikti kaip visumos dalis, viskas pasikeičia: ne tik mūsų problemos, bet ir atsakomybės pojūtis, sugebėjimas džiaugtis, suvokimas kad mūsų gyvenimai yra prasmingi. Tam kad iš naujo atrastumėm save bei kitus, privalome pradėti grįsti savo veiksmus kitokia logika.</p>'
         right_text_html: Tam, kad viską pakeisti, reikia pradėti visur.
-      take_flight_html: Don’t cling to the old world
-      next_html: <a href="/begin">The secret is to begin.</a>
+      take_flight_html: Negalima klijuoti prie senojo pasaulio # Google translate
+      next_path: /begin
+      next_text: Paslaptis turi prasidėti. # Google translate

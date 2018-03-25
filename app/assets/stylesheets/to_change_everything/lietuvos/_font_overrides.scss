@@ -1,0 +1,5 @@
+@import "../common/font_styling";
+
+.title h1 {
+  @media (min-width: 1201px) and (max-width: 1670px) { @include title-text(7vw, 7vw); }
+}
