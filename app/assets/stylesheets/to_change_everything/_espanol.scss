@@ -1,4 +1,6 @@
 .espanol {
+    @import "common/font_styling";
+
     /*--- Highlight language in mobile language menu ---*/
     #lang1  li  > a[href="/tce/espanol"] {
         color: #d62d34 !important;

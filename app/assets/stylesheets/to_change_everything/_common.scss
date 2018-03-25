@@ -2,7 +2,6 @@
 @import "common/navigation";
 
 
-
 /*-----------------------------------------------------------------*/
 /*-------------APPLY TO ALL VERSIONS-------------------------------*/
 /*-----------------------------------------------------------------*/
@@ -120,23 +119,12 @@
 
     .title h1 {
       position: absolute;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
-      font-size: 14.5vw;
-      line-height: 12vw;
-      color: white;
-      letter-spacing: -.03em;
     }
 
     .title h4 {
       position: relative;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
       width: 85%;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 5.5vw;
-      line-height: 5vw;
-      color: white;
-    padding: 30% 0 0 11%;
+      padding: 30% 0 0 11%;
     }
 
     #videopdf {
@@ -153,11 +141,6 @@
     #video {
       width: 50%;
       float: left;
-    }
-
-    #video a:hover {
-      color: #9ac149;
-      text-decoration:none;
     }
 
     #video img {
@@ -187,22 +170,11 @@
 
     #videopdf p {
       position: absolute;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 800;
-      font-style: normal;
-      font-size: 4vw;
-      line-height: 4.5vw;
-      color: black;
       padding: .5% 0 0 7.5%;
     }
 
     #pdfright p {
       padding: 14% 0 0 .5%;
-    }
-
-    #pdf a:hover {
-      color: #3cbce9;
-      text-decoration:none;
     }
 
     .left {
@@ -228,15 +200,6 @@
     .left h2 {
       position: absolute;
       top: 0; left: 0;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
-      font-size: 9vw;
-      line-height: 8.5vw;
-      color: black;
-      letter-spacing: -.03em;
-    }
-
-    .bold {
-      font-weight: 800;
     }
 
     .lefttext {
@@ -259,33 +222,11 @@
       width: 50%;
     }
 
-    .right p {
-      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 500; font-style: normal;
-      font-size: 14px;
-      line-height: 20px;
-      text-indent: 20px;
-    }
-
-    .right p:first-of-type {
-      text-indent: 0px;
-      }
-
-
     .leftintro {
       position: relative;
       width: 100%;
       float: left;
     }
-
-    .leftintro p {
-      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
-      font-size: 4vw;
-      line-height: 5.5vw;
-      text-indent: 4vw;    }
-
-    .leftintro p:first-of-type {
-      text-indent: 0px;
-      }
 
     .rightintro {
       position: relative;
@@ -294,18 +235,10 @@
     }
 
     .rightintro h3 {
-      text-align: right;
       position: relative;
       top: 0;
       left: 0;
       width: 95%;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 500;
-      font-style: normal;
-      font-size: 15vw;
-      line-height: 14vw;
-      color: white;
-      letter-spacing: -.03em;
       padding: 16% 5% 0% 0%;
     }
 
@@ -327,17 +260,6 @@
       position: relative;
     }
 
-    #outro .leftintro p {
-      font-size: 4.5vw;
-      line-height: 6vw;
-      text-indent: 0vw;
-      color: white;
-    }
-
-    #outro h3 {
-      color: black;
-    }
-
     #takeflight {
       width: 100%;
       background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/takeflight-phone.jpg');
@@ -352,14 +274,6 @@
       top: 0;
       left: 0;
       width: 99%;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 800;
-      font-style: normal;
-      font-size: 25.5vw;
-      line-height: 20vw;
-      color: white;
-      letter-spacing: -.05em;
-      text-transform: uppercase;
       padding: 55% 0 0 1%;
     }
 
@@ -375,7 +289,6 @@
 
     #answering h2 {
       padding: 5% 0 0 33%;
-      color: white;
     }
 
     #power h2 {
@@ -384,12 +297,10 @@
 
     #relationships h2 {
       padding: 7% 0 0 15%;
-      color: white;
     }
 
     #reconciling h2 {
       padding: 7% 0 0 19%;
-      color: white;
     }
 
     #liberation h2 {
@@ -406,24 +317,18 @@
 
     #hierarchy h2 {
       padding: 10% 0 0 23%;
-      color: white;
-      text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
     }
 
     #borders h2 {
       padding: 7% 0 0 17%;
-      color: white;
     }
 
     #representation h2 {
       padding: 10% 0 0 13%;
-      color: white;
-      text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
     }
 
     #leaders h2 {
       padding: 6% 0 0 27%;
-      color: white;
     }
 
     #government h2 {
@@ -440,7 +345,6 @@
 
     #lastcrime h2 {
       padding: 8% 0 0 10%;
-      color: white;
     }
 
     #anarchy {
@@ -451,30 +355,9 @@
       padding-top: 3%;
     }
 
-    #anarchy p {
-      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
-      font-size: 16px;
-      line-height: 24px;
-      text-indent: 22px;
-      color: white;
-      -webkit-font-smoothing: antialiased;
-      -moz-font-smoothing: antialiased;
-      -o-font-smoothing: antialiased;
-    }
-
     #anarchy img {
       width: 50%;
       padding: 9% 0 0 24%;
-    }
-
-    #anarchy p:first-of-type {
-      text-indent: 0px;
-      }
-
-    #anarchy .black {
-      font-weight: 800;
-      font-size: 1.2em;
-      text-transform: uppercase;
     }
 
     .first {
@@ -499,27 +382,8 @@
     }
 
     #next h1 {
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 300;
-      font-style: normal;
-      font-size: 5.7vw;
-      line-height: 2vw;
-      color: #d62d34;
       text-align: center;
       padding: 90% 10% 90% 10% !important;
-    }
-
-    #next h1 a:link, #next h1 a:visited {
-      color: #d62d34;
-      text-decoration: none;
-
-    }
-
-    #next h1 a:hover, #next h1 a:active {
-      color: black;
-      text-shadow: 0px 0px 20px #d62d34;
-      text-decoration: none;
-
     }
 }
 
@@ -551,23 +415,12 @@
 
       .title h1 {
         position: absolute;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
-        font-size: 14.5vw;
-        line-height: 12vw;
-        color: white;
-        letter-spacing: -.03em;
       }
 
       .title h4 {
         position: relative;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
         width: 85%;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 5.5vw;
-        line-height: 5vw;
-        color: white;
-      padding: 30% 0 0 11%;
+        padding: 30% 0 0 11%;
       }
 
       #videopdf {
@@ -592,11 +445,6 @@
       #video {
         width: 45%;
         float: left;
-      }
-
-      #video a:hover {
-        color: #9ac149;
-        text-decoration:none;
       }
 
       #video img {
@@ -627,22 +475,11 @@
 
       #videopdf p {
         position: absolute;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-        font-weight: 800;
-        font-style: normal;
-        font-size: 3vw;
-        line-height: 3.5vw;
-        color: black;
         padding: .5% 0 0 4.5%;
       }
 
       #pdfright p {
         padding: 12% 0 0 .5%;
-      }
-
-      #pdf a:hover {
-        color: #3cbce9;
-        text-decoration:none;
       }
 
       .left {
@@ -668,15 +505,6 @@
       .left h2 {
         position: absolute;
         top: 0; left: 0;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
-        font-size: 9vw;
-        line-height: 8.5vw;
-        color: black;
-        letter-spacing: -.03em;
-      }
-
-      .bold {
-        font-weight: 800;
       }
 
       .lefttext {
@@ -699,35 +527,11 @@
         width: 50%;
       }
 
-      .right p {
-        font-family: 'Whitney SSm A', 'Whitney SSm B';
-        font-weight: 500;
-        font-style: normal;
-        font-size: 18px;
-        line-height: 26px;
-        text-indent: 30px;
-      }
-
-      .right p:first-of-type {
-        text-indent: 0px;
-        }
-
-
       .leftintro {
         position: relative;
         width: 100%;
         float: left;
       }
-
-      .leftintro p {
-        font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
-        font-size: 4vw;
-        line-height: 5.5vw;
-        text-indent: 4vw;    }
-
-      .leftintro p:first-of-type {
-        text-indent: 0px;
-        }
 
       .rightintro {
         position: relative;
@@ -736,18 +540,10 @@
       }
 
       .rightintro h3 {
-        text-align: right;
         position: relative;
         top: 0;
         left: 0;
         width: 95%;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-        font-weight: 500;
-        font-style: normal;
-        font-size: 15vw;
-        line-height: 14vw;
-        color: white;
-        letter-spacing: -.03em;
         padding: 16% 5% 0% 0%;
       }
 
@@ -769,17 +565,6 @@
         position: relative;
       }
 
-      #outro .leftintro p {
-        font-size: 4.5vw;
-        line-height: 6vw;
-        text-indent: 0vw;
-        color: white;
-      }
-
-      #outro h3 {
-        color: black;
-      }
-
       #takeflight {
         width: 100%;
         background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/takeflight-tablet.jpg');
@@ -794,14 +579,6 @@
         top: 0;
         left: 0;
         width: 99%;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-        font-weight: 800;
-        font-style: normal;
-        font-size: 25.5vw;
-        line-height: 20vw;
-        color: white;
-        letter-spacing: -.05em;
-        text-transform: uppercase;
         padding: 55% 0 0 1%;
       }
 
@@ -817,7 +594,6 @@
 
       #answering h2 {
         padding: 5% 0 0 33%;
-        color: white;
       }
 
       #power h2 {
@@ -826,12 +602,10 @@
 
       #relationships h2 {
         padding: 7% 0 0 15%;
-        color: white;
       }
 
       #reconciling h2 {
         padding: 7% 0 0 19%;
-        color: white;
       }
 
       #liberation h2 {
@@ -848,24 +622,18 @@
 
       #hierarchy h2 {
         padding: 10% 0 0 23%;
-        color: white;
-        text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
       }
 
       #borders h2 {
         padding: 7% 0 0 17%;
-        color: white;
       }
 
       #representation h2 {
         padding: 10% 0 0 13%;
-        color: white;
-        text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
       }
 
       #leaders h2 {
         padding: 6% 0 0 27%;
-        color: white;
       }
 
       #government h2 {
@@ -882,7 +650,6 @@
 
       #lastcrime h2 {
         padding: 8% 0 0 10%;
-        color: white;
       }
 
       #anarchy {
@@ -893,32 +660,9 @@
         padding-top: 3%;
       }
 
-      #anarchy p {
-        font-family: 'Whitney SSm A', 'Whitney SSm B';
-        font-weight: 600;
-        font-style: normal;
-        font-size: 20px;
-        line-height: 32px;
-        text-indent: 32px;
-        color: white;
-        -webkit-font-smoothing: antialiased;
-        -moz-font-smoothing: antialiased;
-        -o-font-smoothing: antialiased;
-      }
-
       #anarchy img {
         width: 50%;
         padding: 9% 0 0 24%;
-      }
-
-      #anarchy p:first-of-type {
-        text-indent: 0px;
-        }
-
-      #anarchy .black {
-        font-weight: 800;
-        font-size: 1.2em;
-        text-transform: uppercase;
       }
 
       .first {
@@ -943,31 +687,10 @@
       }
 
       #next h1 {
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-        font-weight: 300;
-        font-style: normal;
-        font-size: 3.7vw;
-        line-height: 2vw;
-        color: #d62d34;
         text-align: center;
         padding: 30% 10% 30% 10% !important;
       }
-
-      #next h1 a:link, #next h1 a:visited {
-        color: #d62d34;
-        text-decoration: none;
-
-      }
-
-      #next h1 a:hover, #next h1 a:active {
-        color: black;
-        text-shadow: 0px 0px 20px #d62d34;
-        text-decoration: none;
-
-      }
 }
-
-
 
 /*-------------TABLET LANDSCAPE------------------*/
 @media (min-width:1024px) and (max-width:1200px) {
@@ -996,21 +719,10 @@
 
     .title h1 {
       position: absolute;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
-      font-size: 11vw;
-      line-height: 9vw;
-      color: white;
-      letter-spacing: -.03em;
     }
 
     .title h4 {
       position: absolute;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 300;
-      font-style: normal;
-      font-size: 2.5vw;
-      line-height: 2vw;
-      color: white;
       padding: 22% 0 0 36.5%;
     }
 
@@ -1026,11 +738,6 @@
       width: 25%;
       float: left;
       margin-right: 2%;
-    }
-
-    #video a:hover {
-      color: #9ac149;
-      text-decoration:none;
     }
 
     #video img {
@@ -1059,22 +766,11 @@
 
     #videopdf p {
       position: absolute;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 500;
-      font-style: normal;
-      font-size: 1.4vw;
-      line-height: 1.4vw;
-      color: white;
       padding: .5% 0 0 2.6%;
     }
 
     #pdfright p {
       padding: 6.6% 0 0 .5%;
-    }
-
-    #pdf a:hover {
-      color: #3cbce9;
-      text-decoration:none;
     }
 
       .left {
@@ -1100,15 +796,6 @@
       .left h2 {
         position: absolute;
         top: 0; left: 0;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
-        font-size: 9vw;
-        line-height: 8.5vw;
-        color: black;
-        letter-spacing: -.03em;
-      }
-
-      .bold {
-        font-weight: 800;
       }
 
       .lefttext {
@@ -1131,35 +818,11 @@
         width: 50%;
       }
 
-      .right p {
-        font-family: 'Whitney SSm A', 'Whitney SSm B';
-        font-weight: 500;
-        font-style: normal;
-        font-size: 18px;
-        line-height: 26px;
-        text-indent: 30px;
-      }
-
-      .right p:first-of-type {
-        text-indent: 0px;
-        }
-
-
       .leftintro {
         position: relative;
         width: 100%;
         float: left;
       }
-
-      .leftintro p {
-        font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
-        font-size: 4vw;
-        line-height: 5.5vw;
-        text-indent: 4vw;    }
-
-      .leftintro p:first-of-type {
-        text-indent: 0px;
-        }
 
       .rightintro {
         position: relative;
@@ -1168,18 +831,10 @@
       }
 
       .rightintro h3 {
-        text-align: right;
         position: relative;
         top: 0;
         left: 0;
         width: 95%;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-        font-weight: 500;
-        font-style: normal;
-        font-size: 15vw;
-        line-height: 14vw;
-        color: white;
-        letter-spacing: -.03em;
         padding: 16% 5% 0% 0%;
       }
 
@@ -1201,17 +856,6 @@
         position: relative;
       }
 
-      #outro .leftintro p {
-        font-size: 4.5vw;
-        line-height: 6vw;
-        text-indent: 0vw;
-        color: white;
-      }
-
-      #outro h3 {
-        color: black;
-      }
-
       #takeflight {
         width: 100%;
         background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/takeflight-tablet.jpg');
@@ -1226,14 +870,6 @@
         top: 0;
         left: 0;
         width: 99%;
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-        font-weight: 800;
-        font-style: normal;
-        font-size: 25.5vw;
-        line-height: 20vw;
-        color: white;
-        letter-spacing: -.05em;
-        text-transform: uppercase;
         padding: 55% 0 0 1%;
       }
 
@@ -1246,10 +882,8 @@
         padding: 6% 0 0 10%;
       }
 
-
       #answering h2 {
         padding: 5% 0 0 33%;
-        color: white;
       }
 
       #power h2 {
@@ -1258,12 +892,10 @@
 
       #relationships h2 {
         padding: 7% 0 0 15%;
-        color: white;
       }
 
       #reconciling h2 {
         padding: 7% 0 0 19%;
-        color: white;
       }
 
       #liberation h2 {
@@ -1280,24 +912,18 @@
 
       #hierarchy h2 {
         padding: 10% 0 0 23%;
-        color: white;
-        text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
       }
 
       #borders h2 {
         padding: 7% 0 0 17%;
-        color: white;
       }
 
       #representation h2 {
         padding: 10% 0 0 13%;
-        color: white;
-        text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
       }
 
       #leaders h2 {
         padding: 6% 0 0 27%;
-        color: white;
       }
 
       #government h2 {
@@ -1314,7 +940,6 @@
 
       #lastcrime h2 {
         padding: 8% 0 0 10%;
-        color: white;
       }
 
       #anarchy {
@@ -1325,19 +950,6 @@
         padding-top: 3%;
       }
 
-      #anarchy p {
-        font-family: 'Whitney SSm A', 'Whitney SSm B';
-        font-weight: 600;
-        font-style: normal;
-        font-size: 20px;
-        line-height: 32px;
-        text-indent: 32px;
-        color: white;
-        -webkit-font-smoothing: antialiased;
-        -moz-font-smoothing: antialiased;
-        -o-font-smoothing: antialiased;
-      }
-
       #anarchy img {
         width: 50%;
         padding: 9% 0 0 24%;
@@ -1346,12 +958,6 @@
       #anarchy p:first-of-type {
         text-indent: 0px;
         }
-
-      #anarchy .black {
-        font-weight: 800;
-        font-size: 1.2em;
-        text-transform: uppercase;
-      }
 
       .first {
         position: relative;
@@ -1375,27 +981,8 @@
       }
 
       #next h1 {
-        font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-        font-weight: 300;
-        font-style: normal;
-        font-size: 3.7vw;
-        line-height: 2vw;
-        color: #d62d34;
         text-align: center;
         padding: 30% 10% 30% 10% !important;
-      }
-
-      #next h1 a:link, #next h1 a:visited {
-        color: #d62d34;
-        text-decoration: none;
-
-      }
-
-      #next h1 a:hover, #next h1 a:active {
-        color: black;
-        text-shadow: 0px 0px 20px #d62d34;
-        text-decoration: none;
-
       }
 }
 
@@ -1428,21 +1015,10 @@
 
     .title h1 {
       position: absolute;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
-      font-size: 11vw;
-      line-height: 9vw;
-      color: white;
-      letter-spacing: -.03em;
     }
 
     .title h4 {
       position: absolute;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 300;
-      font-style: normal;
-      font-size: 2.5vw;
-      line-height: 2vw;
-      color: white;
       padding: 22% 0 0 36.5%;
     }
 
@@ -1458,11 +1034,6 @@
       width: 25%;
       float: left;
       margin-right: 2%;
-    }
-
-    #video a:hover {
-      color: #9ac149;
-      text-decoration:none;
     }
 
     #video img {
@@ -1491,22 +1062,11 @@
 
     #videopdf p {
       position: absolute;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 500;
-      font-style: normal;
-      font-size: 1.4vw;
-      line-height: 1.4vw;
-      color: white;
       padding: .5% 0 0 2.6%;
     }
 
     #pdfright p {
       padding: 6.6% 0 0 .5%;
-    }
-
-    #pdf a:hover {
-      color: #3cbce9;
-      text-decoration:none;
     }
 
     .left {
@@ -1534,15 +1094,6 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
-      font-size: 4.5vw;
-      line-height: 4.25vw;
-      color: black;
-      letter-spacing: -.03em;
-    }
-
-    .bold {
-      font-weight: 800;
     }
 
     .lefttext {
@@ -1565,34 +1116,11 @@
       width: 50%;
     }
 
-    .right p {
-      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 500; font-style: normal;
-      font-size: 1vw;
-      line-height: 1.6vw;
-      text-indent: 1.3vw;
-    }
-
-    .right p:first-of-type {
-      text-indent: 0px;
-      }
-
-
     .leftintro {
       position: relative;
       width: 50%;
       float: left;
     }
-
-    .leftintro p {
-      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
-      font-size: 1.55vw;
-      line-height: 2vw;
-      text-indent: 2vw;
-    }
-
-    .leftintro p:first-of-type {
-      text-indent: 0px;
-      }
 
     .rightintro {
       position: relative;
@@ -1601,18 +1129,10 @@
     }
 
     .rightintro h3 {
-      text-align: right;
       position: absolute;
       top: 0;
       left: 0;
       width: 90%;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 500;
-      font-style: normal;
-      font-size: 6vw;
-      line-height: 5.25vw;
-      color: white;
-      letter-spacing: -.03em;
       padding: 12% 10% 0% 0%;
     }
 
@@ -1632,12 +1152,6 @@
       padding-bottom: 39.5%;
       background-position:center top;
       position: relative;
-    }
-
-    #outro .leftintro p {
-      font-size: 1.7vw;
-      line-height: 2.3vw;
-      text-indent: 0vw;
     }
 
     #outro .lefttext {
@@ -1662,12 +1176,6 @@
       top: 0;
       left: 0;
       width: 99%;
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
-      font-size: 15vw;
-      line-height: 12.75vw;
-      color: white;
-      letter-spacing: -.03em;
-      text-transform: uppercase;
       padding: 3% 0 0 1%;
     }
 
@@ -1687,7 +1195,6 @@
 
     #answering h2 {
       padding: 5% 0 0 33%;
-      color: white;
     }
 
     #answering .righttext {
@@ -1706,7 +1213,6 @@
 
     #relationships h2 {
       padding: 7% 0 0 15%;
-      color: white;
     }
 
     #relationships .righttext {
@@ -1720,7 +1226,6 @@
 
     #reconciling h2 {
       padding: 7% 0 0 19%;
-      color: white;
     }
 
     #reconciling .righttext {
@@ -1757,8 +1262,6 @@
 
     #hierarchy h2 {
       padding: 10% 0 0 23%;
-      color: white;
-      text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
     }
 
     #hierarchy .righttext {
@@ -1768,7 +1271,6 @@
 
     #borders h2 {
       padding: 7% 0 0 17%;
-      color: white;
     }
 
     #borders .righttext {
@@ -1778,8 +1280,6 @@
 
     #representation h2 {
       padding: 10% 0 0 13%;
-      color: white;
-      text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
     }
 
     #representation .righttext {
@@ -1789,7 +1289,6 @@
 
     #leaders h2 {
       padding: 6% 0 0 27%;
-      color: white;
     }
 
     #leaders .righttext {
@@ -1834,7 +1333,6 @@
 
     #lastcrime h2 {
       padding: 8% 0 0 10%;
-      color: white;
     }
 
     #lastcrime .righttext {
@@ -1849,25 +1347,10 @@
       overflow: auto;
     }
 
-    #anarchy p {
-      font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
-      font-size: 1.2vw;
-      line-height: 1.7vw;
-      text-indent: 1.3vw;
-      color: white;
-      -webkit-font-smoothing: antialiased;
-      -moz-font-smoothing: antialiased;
-      -o-font-smoothing: antialiased;
-    }
-
     #anarchy img {
       width: 50%;
       padding: 15% 0 0 20%;
     }
-
-    #anarchy p:first-of-type {
-      text-indent: 0px;
-      }
 
     .first {
       position: relative;
@@ -1891,27 +1374,8 @@
     }
 
     #next h1 {
-      font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-      font-weight: 300;
-      font-style: normal;
-      font-size: 3.7vw;
-      line-height: 2vw;
-      color: #d62d34;
       text-align: center;
       padding: 30% 10% 30% 10% !important;
-    }
-
-    #next h1 a:link, #next h1 a:visited {
-      color: #d62d34;
-      text-decoration: none;
-
-    }
-
-    #next h1 a:hover, #next h1 a:active {
-      color: black;
-      text-shadow: 0px 0px 20px #d62d34;
-      text-decoration: none;
-
     }
 }
 
@@ -1943,21 +1407,10 @@
 
   .title h1 {
     position: absolute;
-    font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
-    font-size: 8.5vw;
-    line-height: 6.75vw;
-    color: white;
-    letter-spacing: -.03em;
   }
 
   .title h4 {
     position: absolute;
-    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.7vw;
-    line-height: 2vw;
-    color: white;
     padding: 18% 0 0 32%;
   }
 
@@ -1973,11 +1426,6 @@
     width: 17.8%;
     float: left;
     margin-right: 2%;
-  }
-
-  #video a:hover {
-    color: #9ac149;
-    text-decoration:none;
   }
 
   #video img {
@@ -2007,22 +1455,11 @@
 
   #videopdf p {
     position: absolute;
-    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1vw;
-    line-height: 1vw;
-    color: white;
     padding: .5% 0 0 2.5%;
   }
 
   #pdfright p {
     padding: 4% 0 0 .5%;
-  }
-
-  #pdf a:hover {
-    color: #3cbce9;
-    text-decoration:none;
   }
 
   .left {
@@ -2050,15 +1487,6 @@
     position: absolute;
     top: 0; left: 0;
     width: 100%;
-    font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 300; font-style: normal;
-    font-size: 4.5vw;
-    line-height: 4.25vw;
-    color: black;
-    letter-spacing: -.03em;
-  }
-
-  .bold {
-    font-weight: 800;
   }
 
   .lefttext {
@@ -2081,34 +1509,11 @@
     width: 50%;
   }
 
-  .right p {
-    font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 500; font-style: normal;
-    font-size: .88vw;
-    line-height: 1.5vw;
-    text-indent: 1.3vw;
-  }
-
-  .right p:first-of-type {
-    text-indent: 0px;
-    }
-
-
   .leftintro {
     position: relative;
     width: 50%;
     float: left;
   }
-
-  .leftintro p {
-    font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
-    font-size: 1.55vw;
-    line-height: 2vw;
-    text-indent: 2vw;
-  }
-
-  .leftintro p:first-of-type {
-    text-indent: 0px;
-    }
 
   .rightintro {
     position: relative;
@@ -2117,18 +1522,10 @@
   }
 
   .rightintro h3 {
-    text-align: right;
     position: absolute;
     top: 0;
     left: 0;
     width: 90%;
-    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-    font-weight: 500;
-    font-style: normal;
-    font-size: 6vw;
-    line-height: 5.25vw;
-    color: white;
-    letter-spacing: -.03em;
     padding: 12% 10% 0% 0%;
   }
 
@@ -2150,12 +1547,6 @@
     position: relative;
   }
 
-  #outro .leftintro p {
-    font-size: 1.7vw;
-    line-height: 2.3vw;
-    text-indent: 0vw;
-  }
-
   #takeflight {
     width: 100%;
     background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/takeflight-large.jpg');
@@ -2170,12 +1561,6 @@
     top: 0;
     left: 0;
     width: 99%;
-    font-family: 'Vitesse SSm A', 'Vitesse SSm B'; font-weight: 800; font-style: normal;
-    font-size: 15vw;
-    line-height: 12.75vw;
-    color: white;
-    letter-spacing: -.03em;
-    text-transform: uppercase;
     padding: 3% 0 0 1%;
   }
 
@@ -2195,7 +1580,6 @@
 
   #answering h2 {
     padding: 5% 0 0 33%;
-    color: white;
   }
 
   #answering .righttext {
@@ -2209,7 +1593,6 @@
 
   #relationships h2 {
     padding: 7% 0 0 15%;
-    color: white;
   }
 
   #relationships .righttext {
@@ -2219,7 +1602,6 @@
 
   #reconciling h2 {
     padding: 7% 0 0 19%;
-    color: white;
   }
 
   #reconciling .righttext {
@@ -2251,8 +1633,6 @@
 
   #hierarchy h2 {
     padding: 10% 0 0 23%;
-    color: white;
-    text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
   }
 
   #hierarchy .righttext {
@@ -2262,7 +1642,6 @@
 
   #borders h2 {
     padding: 7% 0 0 17%;
-    color: white;
   }
 
   #borders .righttext {
@@ -2272,8 +1651,6 @@
 
   #representation h2 {
     padding: 10% 0 0 13%;
-    color: white;
-    text-shadow: 0 0 .1em rgba(0, 0, 0, 0.43);
   }
 
   #representation .righttext {
@@ -2283,7 +1660,6 @@
 
   #leaders h2 {
     padding: 6% 0 0 27%;
-    color: white;
   }
 
   #leaders .righttext {
@@ -2319,7 +1695,6 @@
 
   #lastcrime h2 {
     padding: 8% 0 0 10%;
-    color: white;
   }
 
   #lastcrime .righttext {
@@ -2334,25 +1709,10 @@
     overflow: auto;
   }
 
-  #anarchy p {
-    font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
-    font-size: 1.2vw;
-    line-height: 1.7vw;
-    text-indent: 1.3vw;
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-  }
-
   #anarchy img {
     width: 50%;
     padding: 15% 0 0 20%;
   }
-
-  #anarchy p:first-of-type {
-    text-indent: 0px;
-    }
 
   .first {
     position: relative;
@@ -2376,27 +1736,8 @@
   }
 
   #next h1 {
-    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
-    font-weight: 300;
-    font-style: normal;
-    font-size: 2.7vw;
-    line-height: 2vw;
-    color: #d62d34;
     text-align: center;
     padding: 30% 10% 30% 10% !important;
-  }
-
-  #next h1 a:link, #next h1 a:visited {
-    color: #d62d34;
-    text-decoration: none;
-
-  }
-
-  #next h1 a:hover, #next h1 a:active {
-    color: black;
-    text-shadow: 0px 0px 20px #d62d34;
-    text-decoration: none;
-
   }
 }
 
