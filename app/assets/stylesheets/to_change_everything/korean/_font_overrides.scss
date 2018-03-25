@@ -7,8 +7,8 @@
 .title h1 { letter-spacing: -.01em; }
 
 .title h4 {
-  @media (min-width:1201px) and (max-width:1670px) { @include subtitle-text(3vw, 2vw); }
-  @media (min-width:1671px) { @include subtitle-text(3vw, 2vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include subtitle-text(3vw, 2vw); }
+  @media (min-width: 1671px) { @include subtitle-text(3vw, 2vw); }
 }
 
 #videopdf {
@@ -20,11 +20,11 @@
 .left h2 {
   @include imagetext(12vw, 15vw);
 
-  @media (min-device-width:200px) and (max-width:600px) { @include imagetext(12vw, 15vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include imagetext(12vw, 15vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include imagetext(12vw, 15vw); }
-  @media (min-width:1201px) and (max-width:1670px) { @include imagetext(6.5vw, 8vw); }
-  @media (min-width:1671px) { @include imagetext(7vw, 8vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include imagetext(12vw, 15vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include imagetext(12vw, 15vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include imagetext(12vw, 15vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include imagetext(6.5vw, 8vw); }
+  @media (min-width: 1671px) { @include imagetext(7vw, 8vw); }
 }
 
 .rightintro h3 {
@@ -32,20 +32,20 @@
   text-indent: 0;
   letter-spacing: .01em;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include intro-header(15vw, 1.25); }
-  @media (min-width:601px) and (max-width:1023px) { @include intro-header(15vw, 1.25); }
-  @media (min-width:1024px) and (max-width:1200px) { @include intro-header(15vw, 1.25); }
-  @media (min-width:1201px) and (max-width:1670px) { @include intro-header(6vw, 1.25); }
-  @media (min-width:1671px) { @include intro-header(6vw, 1.25); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include intro-header(15vw, 1.25); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include intro-header(15vw, 1.25); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-header(15vw, 1.25); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include intro-header(6vw, 1.25); }
+  @media (min-width: 1671px) { @include intro-header(6vw, 1.25); }
 }
 
 #takeflight h1 {
   @include takeflight(20vw, 1.25);
   letter-spacing: .01em;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include takeflight(20vw, 1.25); }
-  @media (min-width:601px) and (max-width:1023px) { @include takeflight(20vw, 25vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include takeflight(20vw, 25vw); }
-  @media (min-width:1201px) and (max-width:1670px) { @include takeflight(11vw, 15vw); }
-  @media (min-width:1671px) { @include takeflight(11vw, 15vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include takeflight(20vw, 1.25); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include takeflight(20vw, 25vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include takeflight(20vw, 25vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include takeflight(11vw, 15vw); }
+  @media (min-width: 1671px) { @include takeflight(11vw, 15vw); }
 }

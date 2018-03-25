@@ -2,17 +2,56 @@ $black-text-shadow: 0 0 2rem #444;
 $header-font-stack: 'Vitesse SSm A', 'Vitesse SSm B', sans-serif !default;
 $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
 
-@mixin title-text($font-size, $line-height)    { font: normal normal 800 $font-size /#{$line-height} $header-font-stack; }
-@mixin subtitle-text($font-size, $line-height) { font: normal normal 300 $font-size /#{$line-height} $header-font-stack; }
-@mixin pdfvideo-text($font-size, $line-height) { font: normal normal 600 $font-size /#{$line-height} $header-font-stack; }
-@mixin intro-header($font-size, $line-height)  { font: normal normal 500 $font-size /#{$line-height} $header-font-stack; }
-@mixin intro-text($font-size, $line-height)    { font: normal normal 600 $font-size /#{$line-height} $body-font-stack;   }
-@mixin imagetext($font-size, $line-height)     { font: normal normal 300 $font-size /#{$line-height} $header-font-stack  }
-@mixin body-text($font-size, $line-height)     { font: normal normal 500 $font-size /#{$line-height} $body-font-stack    }
-@mixin outro-text($font-size, $line-height)    { font: normal normal 600 $font-size /#{$line-height} $body-font-stack    }
-@mixin takeflight($font-size, $line-height)    { font: normal normal 800 $font-size /#{$line-height} $header-font-stack  }
-@mixin anarchy-text($font-size, $line-height)  { font: normal normal 600 $font-size /#{$line-height} $body-font-stack    }
-@mixin next-text($font-size, $line-height)     { font: normal normal 300 $font-size /#{$line-height} $header-font-stack  }
+@mixin font-base($lh) {
+  line-height: $lh;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@mixin title-text($font-size, $line-height) {
+  font: { weight: 800; size: $font-size; family: $header-font-stack; }
+  @include font-base($line-height);
+}
+@mixin subtitle-text($font-size, $line-height) {
+  font: { weight: 300; size: $font-size; family: $header-font-stack; }
+  @include font-base($line-height);
+}
+@mixin pdfvideo-text($font-size, $line-height) {
+  font: { weight: 600; size: $font-size; family: $header-font-stack; }
+  @include font-base($line-height);
+}
+@mixin intro-header($font-size, $line-height)  {
+  font: { weight: 500; size: $font-size; family: $header-font-stack; }
+  @include font-base($line-height);
+}
+@mixin intro-text($font-size, $line-height)    {
+  font: { weight: 600; size: $font-size; family: $body-font-stack; }
+  @include font-base($line-height);
+}
+@mixin imagetext($font-size, $line-height)     {
+  font: { weight: 300; size: $font-size; family: $header-font-stack; }
+  @include font-base($line-height);
+}
+@mixin body-text($font-size, $line-height)     {
+  font: { weight: 500; size: $font-size; family: $body-font-stack; }
+  @include font-base($line-height);
+}
+@mixin outro-text($font-size, $line-height)    {
+  font: { weight: 600; size: $font-size; family: $body-font-stack; }
+  @include font-base($line-height);
+}
+@mixin takeflight($font-size, $line-height)    {
+  font: { weight: 800; size: $font-size; family: $header-font-stack; }
+  @include font-base($line-height);
+}
+@mixin anarchy-text($font-size, $line-height)  {
+  font: { weight: 600; size: $font-size; family: $body-font-stack; }
+  @include font-base($line-height);
+}
+@mixin next-text($font-size, $line-height)     {
+  font: { weight: 300; size: $font-size; family: $header-font-stack; }
+  @include font-base($line-height);
+}
 
 .bold { font-weight: 800; }
 
@@ -25,22 +64,22 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
   letter-spacing: -.03em;
   @include title-text(14.5vw, 12vw);
 
-  @media (min-device-width:200px) and (max-width:600px) { @include title-text(14.5vw, 12vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include title-text(14.5vw, 12vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include title-text(11vw, 9vw); }
-  @media (min-width:1201px) and (max-width:1670px) { @include title-text(11vw, 9vw); }
-  @media (min-width:1671px) { @include title-text(8.5vw, 6.75vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include title-text(14.5vw, 12vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include title-text(14.5vw, 12vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include title-text(11vw, 9vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include title-text(11vw, 9vw); }
+  @media (min-width: 1671px) { @include title-text(8.5vw, 6.75vw); }
 }
 
 .title h4 {
   color: white;
   @include subtitle-text(5.5vw, 5vw);
 
-  @media (min-device-width:200px) and (max-width:600px) { @include subtitle-text(5.5vw, 5vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include subtitle-text(5.5vw, 5vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include subtitle-text(2.5vw, 2vw); }
-  @media (min-width:1201px) and (max-width:1670px) { @include subtitle-text(2.5vw, 2vw); }
-  @media (min-width:1671px) { @include subtitle-text(1.7vw, 2vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include subtitle-text(5.5vw, 5vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include subtitle-text(5.5vw, 5vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include subtitle-text(2.5vw, 2vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include subtitle-text(2.5vw, 2vw); }
+  @media (min-width: 1671px) { @include subtitle-text(1.7vw, 2vw); }
 }
 
 #videopdf {
@@ -57,12 +96,12 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
   p {
     @include pdfvideo-text(4vw, 4.5vw);
     color: black;
-    @media (min-width:1024px) { color: white; }
-    @media (min-device-width:200px) and (max-width:600px) { @include pdfvideo-text(4vw, 4.5vw); }
-    @media (min-width:601px) and (max-width:1023px) { @include pdfvideo-text(3vw, 3.5vw); }
-    @media (min-width:1024px) and (max-width:1200px) { @include pdfvideo-text(1.4vw, 1.4vw); }
-    @media (min-width:1201px) and (max-width:1670px) { @include pdfvideo-text(1.4vw, 1.4vw); }
-    @media (min-width:1671px) { @include pdfvideo-text(1vw, 1vw); }
+    @media (min-width: 1024px) { color: white; }
+    @media (min-device-width: 200px) and (max-width: 600px) { @include pdfvideo-text(4vw, 4.5vw); }
+    @media (min-width: 601px) and (max-width: 1023px) { @include pdfvideo-text(3vw, 3.5vw); }
+    @media (min-width: 1024px) and (max-width: 1200px) { @include pdfvideo-text(1.4vw, 1.4vw); }
+    @media (min-width: 1201px) and (max-width: 1670px) { @include pdfvideo-text(1.4vw, 1.4vw); }
+    @media (min-width: 1671px) { @include pdfvideo-text(1vw, 1vw); }
   }
 }
 
@@ -72,30 +111,34 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
   text-shadow: $black-text-shadow;
   color: white;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include imagetext(9vw, 8.5vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include imagetext(9vw, 8.5vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include imagetext(9vw, 8.5vw); }
-  @media (min-width:1201px) and (max-width:1670px) { @include imagetext(4.5vw, 4.25vw); }
-  @media (min-width:1671px) { @include imagetext(4.5vw, 4.25vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include imagetext(9vw, 8.5vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include imagetext(9vw, 8.5vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include imagetext(9vw, 8.5vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include imagetext(4.5vw, 4.25vw); }
+  @media (min-width: 1671px) { @include imagetext(4.5vw, 4.25vw); }
 }
 
 .right p {
   @include body-text(14px, 20px);
   text-indent: 20px;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include body-text(14px, 20px); }
-  @media (min-width:601px) and (max-width:1023px) {
+  @media (min-device-width: 200px) and (max-width: 600px) { @include body-text(14px, 20px); }
+  @media (min-width: 601px) and (max-width: 1023px) {
     @include body-text(18px, 26px);
-    text-indent: 30px; }
-  @media (min-width:1024px) and (max-width:1200px) {
+    text-indent: 30px;
+  }
+  @media (min-width: 1024px) and (max-width: 1200px) {
     @include body-text(18px, 26px);
-    text-indent: 30px; }
-  @media (min-width:1201px) and (max-width:1670px) {
+    text-indent: 30px;
+  }
+  @media (min-width: 1201px) and (max-width: 1670px) {
     @include body-text(1vw, 1.6vw);
-    text-indent: 1.3vw; }
-  @media (min-width:1671px) {
+    text-indent: 1.3vw;
+  }
+  @media (min-width: 1671px) {
     @include body-text(.88vw, 1.5vw);
-    text-indent: 1.3vw; }
+    text-indent: 1.3vw;
+  }
 }
 
 .rightintro h3 {
@@ -106,26 +149,28 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
   color: white;
   letter-spacing: -.03em;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include intro-header(15vw, 14vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include intro-header(15vw, 14vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include intro-header(6vw, 5.25vw); }
-  @media (min-width:1201px) and (max-width:1670px) { @include intro-header(6vw, 5.25vw); }
-  @media (min-width:1671px) { @include intro-header(6vw, 5.25vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include intro-header(15vw, 14vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include intro-header(15vw, 14vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-header(6vw, 5.25vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include intro-header(6vw, 5.25vw); }
+  @media (min-width: 1671px) { @include intro-header(6vw, 5.25vw); }
 }
 
 .leftintro p {
   @include intro-text(4vw, 5.5vw);
   text-indent: 4vw;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include intro-text(4vw, 5.5vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include intro-text(4vw, 5.5vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include intro-text(4vw, 5.5vw); }
-  @media (min-width:1201px) and (max-width:1670px) {
+  @media (min-device-width: 200px) and (max-width: 600px) { @include intro-text(4vw, 5.5vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include intro-text(4vw, 5.5vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-text(4vw, 5.5vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) {
     @include intro-text(1.55vw, 2vw);
-    text-indent: 2vw; }
-  @media (min-width:1671px) {
+    text-indent: 2vw;
+  }
+  @media (min-width: 1671px) {
     @include intro-text(1.55vw, 2vw);
-    text-indent: 2vw; }
+    text-indent: 2vw;
+  }
 }
 
 #outro h3 {
@@ -139,15 +184,17 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
   text-indent: 0vw;
   color: white;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include outro-text(4.5vw, 6vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include outro-text(4.5vw, 6vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include outro-text(4.5vw, 6vw); }
-  @media (min-width:1201px) and (max-width:1670px) {
+  @media (min-device-width: 200px) and (max-width: 600px) { @include outro-text(4.5vw, 6vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include outro-text(4.5vw, 6vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include outro-text(4.5vw, 6vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) {
       @include outro-text(1.7vw, 2.3vw);
-      color: black; }
-  @media (min-width:1671px) {
+      color: black;
+  }
+  @media (min-width: 1671px) {
       @include outro-text(1.7vw, 2.3vw);
-      color: black; }
+      color: black;
+  }
 }
 
 #anarchy p {
@@ -158,22 +205,26 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include anarchy-text(16px, 24px); }
-  @media (min-width:601px) and (max-width:1023px) {
+  @media (min-device-width: 200px) and (max-width: 600px) { @include anarchy-text(16px, 24px); }
+  @media (min-width: 601px) and (max-width: 1023px) {
     @include anarchy-text(20px, 32px);
-    line-height: 32px; }
-  @media (min-width:1024px) and (max-width:1200px) {
+    line-height: 32px;
+  }
+  @media (min-width: 1024px) and (max-width: 1200px) {
     @include anarchy-text(20px, 32px);
-    line-height: 32px; }
-  @media (min-width:1201px) and (max-width:1670px) {
+    line-height: 32px;
+  }
+  @media (min-width: 1201px) and (max-width: 1670px) {
     @include anarchy-text(1.2vw, 1.7vw);
-    text-indent: 1.3vw; }
-  @media (min-width:1671px) {
+    text-indent: 1.3vw;
+  }
+  @media (min-width: 1671px) {
     @include anarchy-text(1.2vw, 1.7vw);
-    text-indent: 1.3vw; }
+    text-indent: 1.3vw;
+  }
 }
 
-@media (min-device-width:200px) and (max-width:1200px) {
+@media (min-device-width: 200px) and (max-width: 1200px) {
   #anarchy .black {
     font-weight: 800;
     font-size: 1.2em;
@@ -187,26 +238,28 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
   letter-spacing: -.05em;
   text-transform: uppercase;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include takeflight(25.5vw, 20vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include takeflight(25.5vw, 20vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include takeflight(25.5vw, 20vw); }
-  @media (min-width:1201px) and (max-width:1670px) {
+  @media (min-device-width: 200px) and (max-width: 600px) { @include takeflight(25.5vw, 20vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include takeflight(25.5vw, 20vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include takeflight(25.5vw, 20vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) {
     @include takeflight(15vw, 12.75vw);
-    letter-spacing: -.03em; }
-  @media (min-width:1671px) {
+    letter-spacing: -.03em;
+  }
+  @media (min-width: 1671px) {
     @include takeflight(15vw, 12.75vw);
-    letter-spacing: -.03em; }
+    letter-spacing: -.03em;
+  }
 }
 
 #next h1 {
   @include next-text(5.7vw, 2vw);
   color: #d62d34;
 
-  @media (min-device-width:200px) and (max-width:600px) { @include next-text(5.7vw, 2vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include next-text(3.7vw, 2vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include next-text(3.7vw, 2vw); }
-  @media (min-width:1201px) and (max-width:1670px) { @include next-text(3.7vw, 2vw); }
-  @media (min-width:1671px) { @include next-text(2.7vw, 2vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include next-text(5.7vw, 2vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include next-text(3.7vw, 2vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include next-text(3.7vw, 2vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include next-text(3.7vw, 2vw); }
+  @media (min-width: 1671px) { @include next-text(2.7vw, 2vw); }
 }
 
 #next h1 {

@@ -3,59 +3,71 @@ $body-font-stack:   'Noto Naskh Arabic', 'Whitney SSm A', 'Whitney SSm B', serif
 
 @import "../common/font_styling";
 
-@mixin intro-header($font-size, $line-height)  { font: normal normal 600 $font-size /#{$line-height} $header-font-stack; }
-@mixin intro-text($font-size, $line-height)    { font: normal normal 300 $font-size /#{$line-height} $body-font-stack;   }
-@mixin imagetext($font-size, $line-height)     { font: normal normal 600 $font-size /#{$line-height} $header-font-stack  }
-@mixin outro-text($font-size, $line-height)    { font: normal normal 300 $font-size /#{$line-height} $body-font-stack    }
+@mixin intro-header($font-size, $line-height) {
+  font: { weight: 600; size: $font-size; family: $header-font-stack; }
+  @include font-base($line-height);
+}
+@mixin intro-text($font-size, $line-height) {
+  font: { weight: 300; size: $font-size; family: $body-font-stack; }
+  @include font-base($line-height);
+}
+@mixin imagetext($font-size, $line-height) {
+  font: { weight: 600; size: $font-size; family: $header-font-stack }
+  @include font-base($line-height);
+}
+@mixin outro-text($font-size, $line-height) {
+  font: { weight: 300; size: $font-size; family: $body-font-stack }
+  @include font-base($line-height);
+}
 
 .title h1 {
   @include title-text(14.5vw, 12vw);
 
-  @media (min-device-width:200px) and (max-width:1023px) { @include title-text(14.5vw, 13vw); }
-  @media (min-width:1024px) { @include title-text(8.5vw, 7.5vw); }
+  @media (min-device-width: 200px) and (max-width: 1023px) { @include title-text(14.5vw, 13vw); }
+  @media (min-width: 1024px) { @include title-text(8.5vw, 7.5vw); }
 }
 
-.title h4 { @media (min-width:1671px) { @include subtitle-text(2.5vw, 2vw); } }
+.title h4 { @media (min-width: 1671px) { @include subtitle-text(2.5vw, 2vw); } }
 
 .left h2 {
   @include imagetext(13vw, 15vw);
 
-  @media (min-device-width:200px) and (max-width:1200px) { @include imagetext(13vw, 15vw); }
-  @media (min-width:1201px) { @include imagetext(5vw, 6vw); }
+  @media (min-device-width: 200px) and (max-width: 1200px) { @include imagetext(13vw, 15vw); }
+  @media (min-width: 1201px) { @include imagetext(5vw, 6vw); }
 }
 
 .right p {
-  @media (min-width:1201px) and (max-width:1670px) { @include body-text(1.2vw, 1.6vw); }
-  @media (min-width:1671px) { @include body-text(1vw, 1.6vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include body-text(1.2vw, 1.6vw); }
+  @media (min-width: 1671px) { @include body-text(1vw, 1.6vw); }
 }
 
 .rightintro h3 {
   @include intro-header(12vw, 16vw);
 
-  @media (min-device-width:200px) and (max-width:1200px) { @include intro-header(12vw, 16vw); }
-  @media (min-width:1201px) { @include intro-header(5vw, 6vw); }
+  @media (min-device-width: 200px) and (max-width: 1200px) { @include intro-header(12vw, 16vw); }
+  @media (min-width: 1201px) { @include intro-header(5vw, 6vw); }
 }
 
 .leftintro p {
   @include intro-text(4vw, 7vw);
 
-  @media (min-device-width:200px) and (max-width:600px) { @include intro-text(4vw, 7vw); }
-  @media (min-width:601px) and (max-width:1023px) { @include intro-text(4vw, 5.5vw); }
-  @media (min-width:1024px) and (max-width:1200px) { @include intro-text(4vw, 5.5vw); }
-  @media (min-width:1201px) and (max-width:1670px) { @include intro-text(1.55vw, 2vw); }
-  @media (min-width:1671px) { @include intro-text(1.55vw, 2vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) { @include intro-text(4vw, 7vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include intro-text(4vw, 5.5vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-text(4vw, 5.5vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include intro-text(1.55vw, 2vw); }
+  @media (min-width: 1671px) { @include intro-text(1.55vw, 2vw); }
 }
 
 #outro .leftintro p {
   @include outro-text(4.5vw, 6vw);
 
-  @media (min-device-width:200px) and (max-width:1200px) { @include outro-text(4.5vw, 6vw); }
-  @media (min-width:1201px) { @include outro-text(1.7vw, 2.3vw); }
+  @media (min-device-width: 200px) and (max-width: 1200px) { @include outro-text(4.5vw, 6vw); }
+  @media (min-width: 1201px) { @include outro-text(1.7vw, 2.3vw); }
 }
 
 #takeflight h1 {
   @include takeflight(20vw, 25vw);
 
-  @media (min-device-width:200px) and (max-width:1200px) { @include takeflight(20vw, 25vw); }
-  @media (min-width:1201px) { @include takeflight(9vw, 11vw); }
+  @media (min-device-width: 200px) and (max-width: 1200px) { @include takeflight(20vw, 25vw); }
+  @media (min-width: 1201px) { @include takeflight(9vw, 11vw); }
 }
