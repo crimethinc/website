@@ -5,7 +5,7 @@ lietuvos:
       lang_code: li
       video_url: https://player.vimeo.com/video/111159930 # todo
       head:
-        titele: "Tam, kad viską pakeistum, an anarchist appeal / CrimethInc. Ex-Workers' Collective" # todo
+        title: "Tam, kad viską pakeistum, an anarchist appeal / CrimethInc. Ex-Workers' Collective" # todo
         meta:
           title: To Change Everything, an anarchist appeal # todo
           description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart # todo
