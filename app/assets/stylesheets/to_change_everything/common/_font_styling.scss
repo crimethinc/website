@@ -59,7 +59,7 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
 #anarchy p:first-of-type,
 .leftintro p:first-of-type { text-indent: 0px; }
 
-.title h1 {
+.title-container h1 {
   color: white;
   letter-spacing: -.03em;
   @include title-text(14.5vw, 12vw);
@@ -71,37 +71,39 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
   @media (min-width: 1671px) { @include title-text(8.5vw, 6.75vw); }
 }
 
-.title h4 {
+.title-container h4 {
   color: white;
   @include subtitle-text(5.5vw, 5vw);
 
   @media (min-device-width: 200px) and (max-width: 600px) { @include subtitle-text(5.5vw, 5vw); }
   @media (min-width: 601px) and (max-width: 1023px) { @include subtitle-text(5.5vw, 5vw); }
-  @media (min-width: 1024px) and (max-width: 1200px) { @include subtitle-text(2.5vw, 2vw); }
-  @media (min-width: 1201px) and (max-width: 1670px) { @include subtitle-text(2.5vw, 2vw); }
-  @media (min-width: 1671px) { @include subtitle-text(1.7vw, 2vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include subtitle-text(4vw, 2vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include subtitle-text(4vw, 2vw); }
+  @media (min-width: 1671px) { @include subtitle-text(4vw, 2vw); }
 }
 
-#videopdf {
-  #pdf :hover {
+.call-to-action {
+  a { text-decoration: none; }
+  .cte-pdf :hover {
     color: #3cbce9;
-    text-decoration:none;
+    text-decoration: none;
   }
 
-  #video :hover {
+  .cte-video :hover {
     color: #9ac149;
-    text-decoration:none;
+    text-decoration: none;
   }
 
   p {
     @include pdfvideo-text(4vw, 4.5vw);
     color: black;
+
     @media (min-width: 1024px) { color: white; }
     @media (min-device-width: 200px) and (max-width: 600px) { @include pdfvideo-text(4vw, 4.5vw); }
     @media (min-width: 601px) and (max-width: 1023px) { @include pdfvideo-text(3vw, 3.5vw); }
-    @media (min-width: 1024px) and (max-width: 1200px) { @include pdfvideo-text(1.4vw, 1.4vw); }
+    @media (min-width: 1024px) and (max-width: 1200px) { @include pdfvideo-text(3vw, 3vw); }
     @media (min-width: 1201px) and (max-width: 1670px) { @include pdfvideo-text(1.4vw, 1.4vw); }
-    @media (min-width: 1671px) { @include pdfvideo-text(1vw, 1vw); }
+    @media (min-width: 1671px) { @include pdfvideo-text(1.5vw, 1.5vw); }
   }
 }
 
@@ -151,7 +153,7 @@ $body-font-stack:   'Whitney SSm A', 'Whitney SSm B', serif !default;
 
   @media (min-device-width: 200px) and (max-width: 600px) { @include intro-header(15vw, 14vw); }
   @media (min-width: 601px) and (max-width: 1023px) { @include intro-header(15vw, 14vw); }
-  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-header(6vw, 5.25vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-header(15vw, 14vw); }
   @media (min-width: 1201px) and (max-width: 1670px) { @include intro-header(6vw, 5.25vw); }
   @media (min-width: 1671px) { @include intro-header(6vw, 5.25vw); }
 }
