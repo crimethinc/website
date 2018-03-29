@@ -1,6 +1,6 @@
 <h1>Advanced Search</h1>
 
-<%= form_with model: @advanced_search do |form| %>
+<%= form_with model: @advanced_search, local: true do |form| %>
   <fieldset>
     <%= form.label :term, "Search" %>
     <%= form.text_field :term, class: "simple-field" %>

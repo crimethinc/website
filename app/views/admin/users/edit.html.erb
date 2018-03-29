@@ -2,7 +2,7 @@
 
 <h1>Settings for @<%= @user.username %></h1>
 
-<%= form_with [:admin, @user] do |form| %>
+<%= form_with(model: [:admin, @user]) do |form| %>
   <%= render "admin/form_errors", thing: @user %>
 
   <fieldset>

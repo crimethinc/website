@@ -1,7 +1,7 @@
 require "nokogiri"
 
 filepath = File.expand_path("../db/seeds/redirects/redirects.html", __FILE__)
-html_doc  = File.open(filepath) { |form| Nokogiri::HTML(form) }
+html_doc  = File.open(filepath) { |f| Nokogiri::HTML(f) }
 
 html_doc.css("#main_table tbody tr").each do |table_row|
   unless table_row.attribute("id").value == "nourl_found"

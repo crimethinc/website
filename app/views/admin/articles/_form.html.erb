@@ -7,7 +7,7 @@
   <%= link_to "Alternates",     "#alternates",     class: "btn btn-outline-primary mb-2 mr-2" %>
 </nav>
 
-<%= form_with [:admin, @article], id: "article-form" do |form| %>
+<%= form_with(model: [:admin, @article], id: "article-form") do |form| %>
   <%= render "admin/form_errors", thing: @article %>
 
   <%# hidden fields... %>

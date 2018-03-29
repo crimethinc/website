@@ -1,6 +1,6 @@
 <%= render "admin/page_header", thing: @users %>
 
-<%= form_with [:admin, @user] do |form| %>
+<%= form_with(model: [:admin, @user]) do |form| %>
   <%= render "admin/form_errors", thing: @user %>
 
   <div class="form-group">

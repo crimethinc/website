@@ -3,7 +3,7 @@ require "nokogiri"
 podcast = Podcast.find_by(title: "The Ex-Worker")
 
 filepath = File.expand_path("../db/seeds/episodes/episodes.rss", __FILE__)
-xml_doc  = File.open(filepath) { |form| Nokogiri::XML(form) }
+xml_doc  = File.open(filepath) { |f| Nokogiri::XML(f) }
 
 xml_doc.css("item").reverse.each do |episode|
   title         = episode.css("title").text
@@ -31,7 +31,7 @@ end
 
 
 filepath = File.expand_path("../db/seeds/episodes/episodes.html", __FILE__)
-html_doc = File.open(filepath) { |form| Nokogiri::HTML(form) }
+html_doc = File.open(filepath) { |f| Nokogiri::HTML(f) }
 
 titles    = html_doc.css(".podmain h4").map(&:text)
 subtitles = html_doc.css(".podmain h5").map(&:text)
@@ -47,11 +47,11 @@ end
 
 filepath = File.expand_path("../db/seeds/episodes/", __FILE__)
 
-Dir.glob("#{filepath}/*").each do |form|
-  filename = form.strip.split("/").last
+Dir.glob("#{filepath}/*").each do |f|
+  filename = f.strip.split("/").last
 
   unless filename =~ /.DS_Store|episodes.rss|episodes.html|transcripts/
-    doc = File.open(form) { |form| Nokogiri::HTML(form) }
+    doc = File.open(f) { |f| Nokogiri::HTML(f) }
 
     episode_id = doc.css("title").text.split("#").last.to_i
     list_items = doc.css(".podmain h2 + ul li")
@@ -84,11 +84,11 @@ end
 
 filepath = File.expand_path("../db/seeds/episodes/transcripts/", __FILE__)
 
-Dir.glob("#{filepath}/*").each do |form|
-  filename = form.strip.split("/").last
+Dir.glob("#{filepath}/*").each do |f|
+  filename = f.strip.split("/").last
 
   unless filename =~ /.DS_Store/
-    doc = File.open(form) { |form| Nokogiri::HTML(form) }
+    doc = File.open(f) { |f| Nokogiri::HTML(f) }
 
     episode_id = doc.css("title").text.split("#").last.to_i
 

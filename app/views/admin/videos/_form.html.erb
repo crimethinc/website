@@ -1,4 +1,4 @@
-<%= form_with [:admin, @video] do |form| %>
+<%= form_with(model: [:admin, @video]) do |form| %>
   <%= render "admin/form_errors", thing: @video %>
 
   <div class="form-group">

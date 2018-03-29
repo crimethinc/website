@@ -21,7 +21,7 @@
 
 <div class="row my-5">
   <div class="col">
-    <%= form_tag [:admin, :redirects], method: "get" do %>
+    <%= form_with url: [:admin, :redirects], method: "get" do %>
       <div class="form-group">
         <%= text_field_tag :from, params[:from], class: "form-control form-control-lg", placeholder: "FROM" %>
       </div>

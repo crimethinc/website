@@ -47,12 +47,12 @@ filepath = File.expand_path("../db/seeds/articles/features/", __FILE__)
 # Create the Category for Features
 category = Category.find_or_create_by name: "Features"
 
-Dir.glob("#{filepath}/*/").each do |form|
-  path_pieces = form.strip.split("/")
+Dir.glob("#{filepath}/*/").each do |f|
+  path_pieces = f.strip.split("/")
   filename    = path_pieces.last
 
   unless filename =~ /.DS_Store/
-    doc   = File.open(form + "/index.html") { |form| Nokogiri::HTML(form) }
+    doc   = File.open(f + "/index.html") { |f| Nokogiri::HTML(f) }
 
     slug         = path_pieces[-1]
     title        = doc.css("title").text.gsub(" / CrimethInc. Ex-Workers' Collective", "")
@@ -65,7 +65,7 @@ Dir.glob("#{filepath}/*/").each do |form|
     end
 
     published_at = features_timestamps[slug]
-    content      = File.read(form + "/index.html")
+    content      = File.read(f + "/index.html")
     image        = doc.css("meta[name='twitter:image:src']").attribute("content").value rescue nil
 
 
@@ -117,11 +117,11 @@ end
 # Wordpress posts
 filepath = File.expand_path("../db/seeds/articles/posts/", __FILE__)
 
-Dir.glob("#{filepath}/*").each do |form|
-  filename = form.strip.split("/").last
+Dir.glob("#{filepath}/*").each do |f|
+  filename = f.strip.split("/").last
 
   unless filename =~ /.DS_Store/
-    doc = File.open(form) { |form| Nokogiri::XML(form) }
+    doc = File.open(f) { |f| Nokogiri::XML(f) }
 
     title   = doc.css("title").text
     content = doc.css("content_encoded").text
@@ -220,7 +220,7 @@ end
 
 # Site News Archive from pre- 3.0 of the site (pre Wordpress?)
 filepath = File.expand_path("../db/seeds/articles/site-news-archive.html", __FILE__)
-html_doc = File.open(filepath) { |form| Nokogiri::HTML(form) }
+html_doc = File.open(filepath) { |f| Nokogiri::HTML(f) }
 
 # And create a new Category for "Site News Archive"
 category = Category.find_or_create_by! name: "Site News Archive"
@@ -344,12 +344,12 @@ days_of_war_nights_of_love = %w(alienation alive asfuck bourgeoisie concealment 
 
 filepath = File.expand_path("../db/seeds/articles/texts/texts/", __FILE__)
 
-Dir.glob("#{filepath}/*").each do |form|
-  path_pieces = form.strip.split("/")
+Dir.glob("#{filepath}/*").each do |f|
+  path_pieces = f.strip.split("/")
   filename    = path_pieces.last
 
   unless filename =~ /.DS_Store/
-    doc   = File.open(form) { |form| Nokogiri::HTML(form) }
+    doc   = File.open(f) { |f| Nokogiri::HTML(f) }
 
     # Create the Category for Text
     filename_slug = filename.gsub(".php", "")
@@ -388,7 +388,7 @@ Dir.glob("#{filepath}/*").each do |form|
 
     title                   = doc.css("h1").first.try(:text)
     subtitle                = nil
-    content                 = File.read(form)
+    content                 = File.read(f)
     image                   = nil
     header_background_color = "#444444"
 
@@ -433,22 +433,14 @@ end
 
 content = %q{
   As 2017 opens, we face new challenges in an increasingly volatile world. Since last summer, we’ve been hard at work expanding our networks and updating our infrastructure to prepare for the global situation that is now unfolding. Over the next month, we’ll be announcing several ambitious new projects.
-
   The first of these is this website itself. We’ve assembled several new editorial groups and are in the process of overhauling the web design.
-
   Effective immediately, we’ll be publishing at least four new articles a week, extending our coverage to a much wider range of topics and formats. We’re not just proposing a subculture or a particular methodology of protest, but a total way of living. Accordingly, in addition to current events and analysis, we’ve established separate CrimethInc. cells to focus on technology, history, the arts, and more. Over the next two weeks, each of these groups will introduce itself here and outline its goals for this new phase of activity.
-
   Meanwhile, we have completely rebuilt this website. The design is now responsive, meaning that it will work equally well on your phone, tablet, laptop, and big screen.
-
   The complete archives of everything that has appeared online under the CrimethInc. insignia are now all in one place, [the feed](/). For now, you can [explore the feed](/read) chronologically; soon, we’ll have it organized categorically and topically as well.
-
   Along with overhauling this website, we're also expanding our social media presence. You can find and share CrimethInc. articles on a wide variety of networks and platforms. [Links to all of our profiles](#social) are in the website footer. You can also [join our new email list](#subscribe) to receive a forthcoming newsletter.
-
   We’ll be putting the finishing touches on the redesign over the next two weeks. If you notice a problem or want to offer your input, please [drop us a line](mailto:rollingthunder@crimethinc.com).
-
   The website is powered by an app built with [Ruby on Rails](http://rubyonrails.org).
   If you're a designer, a developer, or an adventurous explorer and want to help us build a better world, [send up a signal flare](https://github.com/crimethinc/website/issues)—we'll be waiting for you. There's still plenty of work to do (and always will be until we finally destroy empire). Front end HTML and CSS—backend Ruby and Rails—UI/UX design—copyediting—language translation. There's something for everyone.
-
   And we've only just begun. Stay tuned for several more surprises.
 }
 
