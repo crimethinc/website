@@ -1,6 +1,6 @@
 @import "common/reset";
 @import "common/navigation";
-
+@import "common/title_section";
 
 /*-----------------------------------------------------------------*/
 /*-------------APPLY TO ALL VERSIONS-------------------------------*/
@@ -94,87 +94,9 @@
 /*-------------PHONE CSS------------------*/
 /*@media (min-device-width:200px) and (max-device-width:600px) OR  (max-width:600px) ORIGINAL COMBINED {*/
 @media (min-device-width:200px) and (max-width:600px) {
-  .cover {
-      width: 100%;
-      background-image: url('https://cloudfront.crimethinc.com/tce/images/cover-phone.jpg');
-      background-size: 100%;
-      padding-bottom: 110%;
-      background-position:center top;
-      position: relative;
-      background-repeat: no-repeat;
-    }
-
     .spread {
       width: 100%;
       clear: both;
-    }
-
-    .title {
-      position: relative;
-      width: 95%;
-      padding-left: 5%;
-      padding-top: 15%;
-      float: left;
-    }
-
-    .title h1 {
-      position: absolute;
-    }
-
-    .title h4 {
-      position: relative;
-      width: 85%;
-      padding: 30% 0 0 11%;
-    }
-
-    #videopdf {
-      position: relative;
-      width: 92%;
-      padding-left: 8%;
-      margin-top: 12%;
-      padding-bottom: 2%;
-      padding-top: 3%;
-      float: left;
-      background-color: rgba(255, 255, 255, 0.6)
-    }
-
-    #video {
-      width: 50%;
-      float: left;
-    }
-
-    #video img {
-       width: 51%;
-       padding-left: 17.5%;
-    }
-
-    #pdf {
-      width: 50%;
-      height: 8%;
-      float: left;
-    }
-
-    #pdf img {
-       width: 100%;
-       margin-top: -2%;
-    }
-
-    #pdfleft {
-      width: 36%;
-      float: left;
-    }
-
-    #pdfright {
-      float: left;
-    }
-
-    #videopdf p {
-      position: absolute;
-      padding: .5% 0 0 7.5%;
-    }
-
-    #pdfright p {
-      padding: 14% 0 0 .5%;
     }
 
     .left {
@@ -389,97 +311,9 @@
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:601px) and (max-width:1023px) {
-
-  .cover {
-        width: 100%;
-        background-image: url('https://cloudfront.crimethinc.com/tce/images/cover-tablet.jpg');
-        background-size: 100%;
-        padding-bottom: 78%;
-        background-position:center center;
-        position: relative;
-        background-repeat: no-repeat;
-      }
-
       .spread {
         width: 100%;
         clear: both;
-      }
-
-      .title {
-        position: relative;
-        width: 96%;
-        padding-left: 4%;
-        padding-top: 5%;
-        float: left;
-      }
-
-      .title h1 {
-        position: absolute;
-      }
-
-      .title h4 {
-        position: relative;
-        width: 85%;
-        padding: 30% 0 0 11%;
-      }
-
-      #videopdf {
-        position: relative;
-        width: 56%;
-        /* padding-left: 8%; */
-        margin-top: 9.3%;
-        margin-left: 22%;
-        margin-right: 22%;
-        padding-bottom: 1%;
-        padding-top: 2%;
-        float: left;
-        background-color: rgba(255, 255, 255, .9);
-        border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -webkit-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
-      }
-
-      #video {
-        width: 45%;
-        float: left;
-      }
-
-      #video img {
-         width: 60%;
-         padding-left: 19.5%;
-      }
-
-      #pdf {
-        width: 52%;
-        height: 8%;
-        padding-left: 3%;
-        float: left;
-      }
-
-      #pdf img {
-         width: 100%;
-         margin-top: -2%;
-      }
-
-      #pdfleft {
-        width: 37%;
-        float: left;
-      }
-
-      #pdfright {
-        float: left;
-      }
-
-      #videopdf p {
-        position: absolute;
-        padding: .5% 0 0 4.5%;
-      }
-
-      #pdfright p {
-        padding: 12% 0 0 .5%;
       }
 
       .left {
@@ -694,83 +528,9 @@
 
 /*-------------TABLET LANDSCAPE------------------*/
 @media (min-width:1024px) and (max-width:1200px) {
-
-  .cover {
-      width: 100%;
-      background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tiny.jpg');
-      background-size: 100%;
-      padding-bottom: 39.5%;
-      background-position:center top;
-      position: relative;
-    }
-
     .spread {
       width: 100%;
       clear: both;
-    }
-
-    .title {
-      position: relative;
-      width: 83%;
-      padding-left: 17%;
-      padding-top: 6%;
-      float: left;
-    }
-
-    .title h1 {
-      position: absolute;
-    }
-
-    .title h4 {
-      position: absolute;
-      padding: 22% 0 0 36.5%;
-    }
-
-    #videopdf {
-      position: relative;
-      width: 64%;
-      padding-left: 36%;
-      padding-top: 24%;
-      float: left;
-    }
-
-    #video {
-      width: 25%;
-      float: left;
-      margin-right: 2%;
-    }
-
-    #video img {
-       width: 51%;
-       padding-left: 12.75%;
-    }
-
-    #pdf {
-      width: 24%;
-      float: left;
-    }
-
-    #pdf img {
-       width: 100%;
-       margin-top: -2%;
-    }
-
-    #pdfleft {
-      width: 36%;
-      float: left;
-    }
-
-    #pdfright {
-      float: left;
-    }
-
-    #videopdf p {
-      position: absolute;
-      padding: .5% 0 0 2.6%;
-    }
-
-    #pdfright p {
-      padding: 6.6% 0 0 .5%;
     }
 
       .left {
@@ -990,83 +750,9 @@
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1201px) and (max-width:1670px) {
-
-  .cover {
-      width: 100%;
-      background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-small.jpg');
-      background-size: 100%;
-      padding-bottom: 39.5%;
-      background-position:center top;
-      position: relative;
-    }
-
     .spread {
       width: 100%;
       clear: both;
-    }
-
-    .title {
-      position: relative;
-      width: 83%;
-      padding-left: 17%;
-      padding-top: 6%;
-      float: left;
-    }
-
-    .title h1 {
-      position: absolute;
-    }
-
-    .title h4 {
-      position: absolute;
-      padding: 22% 0 0 36.5%;
-    }
-
-    #videopdf {
-      position: relative;
-      width: 64%;
-      padding-left: 36%;
-      padding-top: 24%;
-      float: left;
-    }
-
-    #video {
-      width: 25%;
-      float: left;
-      margin-right: 2%;
-    }
-
-    #video img {
-       width: 51%;
-       padding-left: 12.75%;
-    }
-
-    #pdf {
-      width: 24%;
-      float: left;
-    }
-
-    #pdf img {
-       width: 100%;
-       margin-top: -2%;
-    }
-
-    #pdfleft {
-      width: 36%;
-      float: left;
-    }
-
-    #pdfright {
-      float: left;
-    }
-
-    #videopdf p {
-      position: absolute;
-      padding: .5% 0 0 2.6%;
-    }
-
-    #pdfright p {
-      padding: 6.6% 0 0 .5%;
     }
 
     .left {
@@ -1382,84 +1068,9 @@
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1671px) {
-
-  .cover {
-    width: 100%;
-    background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-large.gif');
-    background-size: 100%;
-    padding-bottom: 39.5%;
-    background-position:center top;
-    position: relative;
-  }
-
   .spread {
     width: 100%;
     clear: both;
-  }
-
-  .title {
-    position: relative;
-    width: 77%;
-    padding-left: 23%;
-    padding-top: 5%;
-    float: left;
-  }
-
-  .title h1 {
-    position: absolute;
-  }
-
-  .title h4 {
-    position: absolute;
-    padding: 18% 0 0 32%;
-  }
-
-  #videopdf {
-    position: relative;
-    width: 62%;
-    padding-left: 38%;
-    padding-top: 21%;
-    float: left;
-  }
-
-  #video {
-    width: 17.8%;
-    float: left;
-    margin-right: 2%;
-  }
-
-  #video img {
-     width: 51%;
-     padding-left: 17.5%;
-  }
-
-  #pdf {
-    width: 17.8%;
-    height: 8%;
-    float: left;
-  }
-
-  #pdf img {
-     width: 100%;
-     margin-top: -2%;
-  }
-
-  #pdfleft {
-    width: 36%;
-    float: left;
-  }
-
-  #pdfright {
-    float: left;
-  }
-
-  #videopdf p {
-    position: absolute;
-    padding: .5% 0 0 2.5%;
-  }
-
-  #pdfright p {
-    padding: 4% 0 0 .5%;
   }
 
   .left {
@@ -1747,10 +1358,6 @@
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:200px),
 (min-resolution: 192dpi) and (min-width:200px) {
-  .cover {
-    background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-phonesmall@2x.jpg');
-  }
-
     #intro {
       background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/intro-phonesmall@2x.jpg');
     }
@@ -1767,10 +1374,6 @@
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:321px),
 (min-resolution: 192dpi) and (min-width:321px) {
-  .cover {
-    background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-phone@2x.jpg');
-  }
-
     #intro {
       background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/intro-phone@2x.jpg');
     }
@@ -1787,10 +1390,6 @@
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:601px),
 (min-resolution: 192dpi) and (min-width:601px) {
-  .cover {
-    background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tablet@2x.jpg');
-  }
-
     #intro {
       background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/intro-tablet@2x.jpg');
     }
@@ -1807,10 +1406,6 @@
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:1024px),
 (min-resolution: 192dpi) and (min-width:1024px) {
-  .cover {
-    background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tiny@2x.jpg');
-  }
-
   #intro {
     background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/intro-tablet@2x.jpg');
   }
@@ -1827,10 +1422,6 @@
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:1201px),
 (min-resolution: 192dpi) and (min-width:1201px) {
-  .cover {
-    background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-small@2x.jpg');
-  }
-
     #intro {
       background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/intro-small@2x.gif');
     }
@@ -1847,10 +1438,6 @@
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
 (min-resolution: 192dpi) and (min-width:1670px) {
-  .cover {
-    background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-large@2x.jpg');
-  }
-
     #intro {
       background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/intro-large@2x.gif');
     }

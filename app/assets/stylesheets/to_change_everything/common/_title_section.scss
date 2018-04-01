@@ -1,0 +1,129 @@
+// Overall Layout Spacing
+.title-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+
+  // make sure overall container is the right shape on all devices
+  min-height: 17rem;
+  min-height: 40vh;
+  @media (min-width: 75.0625rem)  { min-height: 60vh; }
+  @media (min-width: 104.4375rem) { min-height: 50vh; }
+
+  // clear the nav bar
+  padding-top: 3rem;
+  @media (min-width: 75.0625rem) { padding-top: 5rem; }
+
+  // the title
+  h1 {
+    text-align: center;
+
+    // make sure subtitle clears any descenders
+    padding-bottom: 1rem;
+    @media (min-width: 64rem) { padding-bottom: 3rem; }
+  }
+
+  // the subtitle
+  h4 {
+    text-align: center;
+    padding-bottom: 1rem;
+    @media (min-width: 64rem) { padding-bottom: 3rem; }
+  }
+
+  // the "call to action" is the section containg the buttons to watch
+  // the TCE video or download the TCE PDF
+  .call-to-action {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    // gap between subtitle and cte container
+    padding: 1rem 0;
+    @media (min-width: 104.4375rem) { padding: 3rem 0; }
+
+    // gap between bottom of cte container and start of text intro
+    @media (max-width: 104.375rem) { margin-bottom: 3rem; }
+
+    @media (max-width: 37.5rem) { background-color: rgba(255, 255, 255, 0.6); }
+    @media (min-width: 37.5625rem) and (max-width: 63.9375rem) {
+      width: 56%;
+      margin-bottom: 3rem;
+      background-color: rgba(255, 255, 255, .9);
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+    }
+  }
+
+  // the video image/link 
+  .cte-video {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+    img {
+      width: 5rem;
+      @media (min-width: 64rem) { width: 10rem; }
+      @media (min-width: 104.4375rem) { width: 15rem; }
+    }
+  }
+
+  // put a gap between pdf/video that will grow to be proportional based
+  // on container width
+  .cte-spacer {
+    min-width: 3rem;
+    flex-grow: .15;
+  }
+
+  // the pdf image and link
+  .cte-pdf {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    img {
+      width: 4rem;
+      @media (min-width: 64rem) { width: 8rem; }
+      @media (min-width: 104.4375rem) { width: 10rem; }
+    }
+  }
+}
+
+// The background image of the title section
+.title-container {
+  background-color: grey;
+  background-image: url('https://cloudfront.crimethinc.com/tce/images/cover-phone.jpg');
+  background-size: cover;
+  background-position: center top;
+
+  @media (min-device-width: 12.5rem) and (max-width: 37.5rem) { background-image: url('https://cloudfront.crimethinc.com/tce/images/cover-phone.jpg'); }
+  @media (min-width: 37.5625rem) and (max-width: 63.9375rem) { background-image: url('https://cloudfront.crimethinc.com/tce/images/cover-tablet.jpg'); }
+  @media (min-width: 64rem) and (max-width: 75rem) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tiny.jpg'); }
+  @media (min-width: 75.0625rem) and (max-width: 104.375rem) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-small.jpg'); }
+  @media (min-width: 104.4375rem) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-large.gif'); }
+
+  // Retina backgrounds
+  @media
+  (-webkit-min-device-pixel-ratio: 2) and (min-width:200px),
+  (min-resolution: 192dpi) and (min-width:200px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-phonesmall@2x.jpg'); }
+  @media
+  (-webkit-min-device-pixel-ratio: 2) and (min-width:321px),
+  (min-resolution: 192dpi) and (min-width:321px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-phone@2x.jpg'); }
+  @media
+  (-webkit-min-device-pixel-ratio: 2) and (min-width:601px),
+  (min-resolution: 192dpi) and (min-width:601px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tablet@2x.jpg'); }
+  @media
+  (-webkit-min-device-pixel-ratio: 2) and (min-width:1024px),
+  (min-resolution: 192dpi) and (min-width:1024px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tiny@2x.jpg'); }
+  @media
+  (-webkit-min-device-pixel-ratio: 2) and (min-width:1201px),
+  (min-resolution: 192dpi) and (min-width:1201px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-small@2x.jpg'); }
+  @media
+  (-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
+  (min-resolution: 192dpi) and (min-width:1670px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-large@2x.jpg'); }
+}
