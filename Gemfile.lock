@@ -153,8 +153,6 @@ GEM
     rack (2.0.4)
     rack-attack (5.2.0)
       rack
-    rack-mini-profiler (1.0.0)
-      rack (>= 1.2.0)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rack-timeout (0.4.2)
@@ -304,7 +302,6 @@ DEPENDENCIES
   pg
   puma
   rack-attack
-  rack-mini-profiler
   rack-timeout
   rails (~> 5.1.6)
   rails-controller-testing
