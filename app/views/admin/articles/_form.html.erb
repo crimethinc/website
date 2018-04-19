@@ -1,3 +1,5 @@
+
+
 <nav class="mb-5">
   <p class="h6 text-muted">Jump to</p>
   <%= link_to "Date + Time",    "#datetime",       class: "btn btn-outline-primary mb-2 mr-2" %>
@@ -5,6 +7,11 @@
   <%= link_to "Syndication",    "#syndication",    class: "btn btn-outline-primary mb-2 mr-2" %>
   <%= link_to "Appearance",     "#appearance",     class: "btn btn-outline-primary mb-2 mr-2" %>
   <%= link_to "Alternates",     "#alternates",     class: "btn btn-outline-primary mb-2 mr-2" %>
+
+  <%= link_to [:admin, :markdown], class: "btn btn-outline-primary mb-2 mr-2", target: "_blank" do %>
+    <span class="badge badge-secondary">MD</span>
+    Markdown Cheatsheet
+  <% end %>
 </nav>
 
 <%= form_with(model: [:admin, @article], id: "article-form") do |form| %>
@@ -121,7 +128,9 @@
           <div class="form-group">
             <%= form.label :summary %>
             <%= form.text_area :summary, class: "form-control form-control-lg", data: { 'max-length': '200', 'feedback-box': 'summary-length' } %>
-            <div id="summary-length"></div>
+
+            <div id="summary-length">0</div>
+
             <p class="form-text text-muted">
               Maximum 200 characters.
               Used for page description and previews in story cards on other sites.
@@ -137,7 +146,6 @@
   <% unless @collection.present? %>
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
   <% end %>
-
 
   <div id="appearance" class="py-5">
     <fieldset>

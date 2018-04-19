@@ -1,8 +1,8 @@
 source "https://rubygems.org"
-ruby "~> 2.4.3"
+ruby "~> 2.5.1"
 
 # app server
-gem "rails", "~> 5.1.5"
+gem "rails", "~> 5.1.6"
 
 # database
 gem "pg"
@@ -13,7 +13,7 @@ gem "puma"
 gem "rack-timeout"
 
 # assets
-gem "bootstrap", "~> 4.0.0"
+gem "bootstrap", "~> 4.1.0"
 gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"
@@ -43,7 +43,6 @@ group :development, :test do
   gem "nokogiri"
   gem "rspec-rails"
   gem "rails-controller-testing"
-  gem "guard-rspec"
   gem "spring-commands-rspec"
   gem "simplecov", :require => false
   gem "factory_bot_rails"
@@ -54,13 +53,11 @@ end
 
 # dev
 group :development do
+  gem 'guard-rspec', require: false
   gem "web-console"
   gem "listen", "~> 3.1.5"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-
-  # For measuring page/code performance
-  gem "rack-mini-profiler"
 
   # For memory profiling
   gem "memory_profiler"
