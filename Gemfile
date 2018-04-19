@@ -59,9 +59,6 @@ group :development do
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 
-  # For measuring page/code performance
-  gem "rack-mini-profiler"
-
   # For memory profiling
   gem "memory_profiler"
 
