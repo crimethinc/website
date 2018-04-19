@@ -7,7 +7,7 @@ RSpec.describe MiscController, type: :controller do
     it "responds successfully" do
       get :manifest_json
 
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status :ok
     end
   end
 
@@ -15,7 +15,7 @@ RSpec.describe MiscController, type: :controller do
     it "responds successfully" do
       get :opensearch_xml
 
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status :ok
     end
   end
 end
