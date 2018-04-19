@@ -20,7 +20,7 @@ RSpec.describe CategoriesController, type: :controller do
 
       get :show, params: {slug: category.slug}
 
-      expect(response).to have_http_status :ok
+      expect(response).to be_successful
     end
 
     it "redirects on an empty category" do
@@ -40,7 +40,7 @@ RSpec.describe CategoriesController, type: :controller do
 
       get :feed, params: { slug: category.slug }
 
-      expect(response).to have_http_status :ok
+      expect(response).to be_successful
     end
   end
 
