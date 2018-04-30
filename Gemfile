@@ -13,7 +13,7 @@ gem "puma"
 gem "rack-timeout"
 
 # assets
-gem "bootstrap", "~> 4.1.0"
+gem "bootstrap", "~> 4.1.1"
 gem "sass-rails"
 gem "autoprefixer-rails"
 gem "uglifier"
