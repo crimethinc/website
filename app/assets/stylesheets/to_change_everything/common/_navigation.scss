@@ -21,7 +21,7 @@ nav {
 #navwrapper {
   margin: -10% 0 0 0;
   position: relative;
-  width: 100%;
+  width: 97%;
   overflow: visible;
   padding-bottom: 0px;
   z-index: 10;
@@ -329,7 +329,7 @@ li.selected a:link, li.selected a:visited {
     font-size:3vw;
     line-height:3vw;
     font-family:'tcesymbols',Helvetica,Arial,sans-serif;
-    margin: unset;
+    margin: 0;
   }
 
   #languagediv {
@@ -380,7 +380,7 @@ li.selected a:link, li.selected a:visited {
     font-size:2vw;
     line-height:2vw;
     font-family:'tcesymbols',Helvetica,Arial,sans-serif;
-    margin: unset;
+    margin: 0;
   }
 
   #tocdiv {
@@ -448,7 +448,7 @@ li.selected a:link, li.selected a:visited {
     margin: 0;
     padding: 0;
     position: absolute;}
-  .label { display: unset; }
+  .label { display: inline; }
 
   #navwrapper {
     margin: 0 auto;
@@ -472,9 +472,7 @@ li.selected a:link, li.selected a:visited {
     margin-top: 7px;
     margin-right: 15px; }
 
-  #menus {
-    float: none;
-    margin-top: unset; }
+  #menus { margin-top: 0; }
 
   nav ul {
     a {
@@ -508,7 +506,8 @@ li.selected a:link, li.selected a:visited {
     line-height:32px;
     font-family:'tcesymbols',Helvetica,Arial,sans-serif;
     padding-right: 5px;
-    margin: unset; }
+    margin: 0;
+  }
 }
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1201px) and (max-width:1670px) {
@@ -523,7 +522,3 @@ li.selected a:link, li.selected a:visited {
   ul#language { width: 230px; }
   ul#share { width: 210px; }
 }
-
-
-/*-------------DESKTOP BIG CSS------------------*/
-@media (min-width:1671px) {}
