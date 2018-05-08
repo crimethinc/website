@@ -1,4 +1,6 @@
 .espanol {
+    @import "common/font_styling";
+
     /*--- Highlight language in mobile language menu ---*/
     #lang1  li  > a[href="/tce/espanol"] {
         color: #d62d34 !important;
@@ -24,35 +26,6 @@
         #toc2 {
             width: 35%;
             margin: 0 0 0 0%;
-        }
-        
-        .title {
-            padding-left: 7%;
-            padding-top: 11%;
-            width: 93%;
-        }
-        
-        .title h1 {
-            font-size: 12vw;
-            line-height: 10vw;
-        }
-        
-        .title h4 {
-            font-size: 4.25vw;
-            padding: 22.5% 0 0 10%;
-            width: 90%;
-        }
-        
-        #videopdf {
-            margin-top: 10%;
-        }
-        
-        #videopdf p {
-            padding: .5% 0 0 10.8%;
-        }
-        
-        #pdfright p {
-            padding: 12% 0 0 .5%;
         }
         
         .leftintro p {

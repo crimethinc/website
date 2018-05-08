@@ -1,0 +1,31 @@
+<h1>Markdown Cheatsheet</h1>
+<hr>
+
+<ul>
+  <% @sections.flatten.sort.each do |section| %>
+    <li><%= link_to section.to_s.titleize, "##{section}" %></li>
+  <% end %>
+</ul>
+
+<div class="row">
+
+  <% @sections.each do |column| %>
+    <div class="col-12 col-lg-6">
+
+      <% column.each do |card| %>
+        <div id="<%= card.to_s %>" class="card mb-5">
+          <div class="card-body">
+            <%= render "markdown_#{card}" %>
+          </div><!-- .card-body -->
+
+          <div class="card-footer">
+            <%= link_to "Back to Top ↑", "#top", class: "btn btn-outline-primary btn-block" %>
+          </div><!-- .card-footer -->
+        </div><!-- .card -->
+      <% end %>
+
+    </div><!-- .col -->
+  <% end %>
+
+</div><!-- .row -->
+

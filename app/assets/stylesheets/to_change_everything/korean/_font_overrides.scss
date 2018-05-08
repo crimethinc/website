@@ -1,0 +1,34 @@
+@import "../common/font_styling";
+
+.right p,
+#anarchy p,
+.leftintro p { text-indent: 0 !important; }
+
+// flip a character for a visual wordplay
+.title-container {
+  h1 {
+    span.drop-word-1 {
+      top: 0.37em;
+      left: -0.2em;
+      position: relative;
+    }
+    span.drop-word-2 {
+      top: 0.4em;
+      left: .4em;
+      position: relative;
+    }
+
+    span.mirror-letter {
+      transform: rotateY(180deg);
+      display: inline-flex;
+      padding-right: 3%;
+      padding-left: 0;
+      margin-left: -1%;
+      margin-right: -2%;
+    }
+  }
+}
+
+.title-container h1 {
+  @media (min-device-width: 200px) and (max-width: 600px) { @include title-text(14.5vw, 13.5vw); }
+}

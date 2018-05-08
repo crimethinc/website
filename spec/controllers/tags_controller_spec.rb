@@ -11,7 +11,7 @@ RSpec.describe TagsController, type: :controller do
 
       get :show, params: {slug: tag.slug}
 
-      expect(response).to have_http_status(:success)
+      expect(response).to be_successful
     end
 
     it "redirects on an empty tag" do
@@ -32,7 +32,7 @@ RSpec.describe TagsController, type: :controller do
   #
   #     get :feed, params: {slug: tag.slug}
   #
-  #     expect(response).to have_http_status(:success)
+  #     expect(response).to be_successful
   #   end
   # end
 end
