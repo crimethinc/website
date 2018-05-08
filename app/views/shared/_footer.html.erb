@@ -1,4 +1,4 @@
-<% cache do %>
+<% cache [Digest::MD5.hexdigest(Marshal.dump(social_links))] do %>
   <footer id="site-footer">
     <div class="footer-sections">
       <%= render "shared/footer/nav" %>

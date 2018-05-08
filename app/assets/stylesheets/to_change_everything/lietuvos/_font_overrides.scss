@@ -1,0 +1,22 @@
+@import "../common/font_styling";
+
+.title-container h1 {
+  @include title-text(9vw, 8.5vw);
+  @media (min-device-width: 200px) and (max-width: 600px) { @include title-text(9vw, 8.5vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include title-text(9vw, 8.5vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include title-text(9vw, 8.5vw); }
+}
+
+.call-to-action {
+  p { @media (min-width: 601px) and (max-width: 1023px) { @include pdfvideo-text(2.5vw, 3.5vw); } }
+}
+
+#takeflight h1 {
+  @include takeflight(17.5vw, 20vw);
+
+  @media (min-device-width: 200px) and (max-width: 600px) { @include takeflight(17.5vw, 20vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include takeflight(17.5vw, 20vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include takeflight(17.5vw, 20vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include takeflight(15vw, 12.75vw); }
+  @media (min-width: 1671px) { @include takeflight(15vw, 12.75vw); }
+}

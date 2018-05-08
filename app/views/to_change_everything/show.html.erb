@@ -1,12 +1,19 @@
-<div class="cover">
-  <div class="title">
-    <h1><%=t('.title_html')%></h1>
-    <h4><%=t('.subtitle_html')%></h4>
-  </div>
+<div class="title-container">
+  <h1><%=t('.title_html')%></h1>
+  <h4><%=t('.subtitle_html')%></h4>
 
-  <div id="videopdf">
-    <a class="fancybox" href="#video-container"><div id="video"><img src="https://cloudfront.crimethinc.com/assets/tce/images/video-play-icon-300.png" /><p><%=t('.video_cte')%></p></div></a>
-    <a href="<%=t('.pdf_get_url')%>"><div id="pdf"><div id="pdfleft"><img src="https://cloudfront.crimethinc.com/assets/tce/images/<%=t('.pdf_image').html_safe%>" /></div><div id="pdfright"><p><%=t('.pdf_cte_html')%></p></div></div></a>
+  <div class="call-to-action">
+    <a class="cte-video fancybox" href="#video-container">
+      <img src="https://cloudfront.crimethinc.com/assets/tce/images/video-play-icon-300.png" />
+      <p><%=t('.video_cte')%></p>
+    </a>
+
+    <div class="cte-spacer"></div>
+
+    <a class="cte-pdf" href="<%=t('.pdf_get_url')%>">
+      <img src="https://cloudfront.crimethinc.com/assets/tce/images/<%=t('.pdf_image').html_safe%>" />
+      <p><%=t('.pdf_cte_html')%></p>
+    </a>
   </div>
 </div>
 

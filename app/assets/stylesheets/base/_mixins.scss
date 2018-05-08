@@ -76,6 +76,8 @@
   text-shadow: none;
 }
 
+<<<<<<< HEAD
+=======
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 //                                                                //
 // mixin: color-fader                                             //
@@ -87,6 +89,7 @@
 //   increments the $frame by ($frame + $interval)                //
 //                                                                //
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+>>>>>>> original/master
 @mixin color-fader($animation-name, $header-color-list) {
   $color-count: length($header-color-list);
   $interval: 100 / $color-count;
@@ -98,4 +101,25 @@
       $frame: $frame + $interval;
     }
   }
+<<<<<<< HEAD
+
+  /* Safari */
+  @-webkit-keyframes #{$animation-name} {
+    $frame: 0;
+    @each $color in $header-color-list {
+      #{$frame}% {background: $color;}
+      $frame: $frame + $interval;
+    }
+  }
+
+  /* Firefox */
+  @-moz-keyframes #{$animation-name} {
+    $frame: 0;
+    @each $color in $header-color-list {
+      #{$frame}% {background: $color;}
+      $frame: $frame + $interval;
+    }
+  }
+=======
+>>>>>>> original/master
 }
