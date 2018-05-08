@@ -1,11 +1,11 @@
-<%= form_for [:admin, redirect] do |f| %>
+<%= form_with(model: [:admin, redirect]) do |form| %>
   <%= render "admin/form_errors", thing: redirect %>
 
   <div class="row">
     <div class="col-12 col-sm-6">
       <div class="form-group">
-        <%= f.label :source_path, "FROM" %>
-        <%= f.text_field :source_path, class: "form-control form-control-lg" %>
+        <%= form.label :source_path, "FROM" %>
+        <%= form.text_field :source_path, class: "form-control form-control-lg" %>
       </div>
 
       <p class="form-text text-muted">The URL or path to redirect <b>from</b></p>
@@ -13,8 +13,8 @@
 
     <div class="col-12 col-sm-6">
       <div class="form-group">
-        <%= f.label :target_path, "TO" %>
-        <%= f.text_field :target_path, class: "form-control form-control-lg" %>
+        <%= form.label :target_path, "TO" %>
+        <%= form.text_field :target_path, class: "form-control form-control-lg" %>
       </div>
 
       <p class="form-text text-muted">The URL path to redirect <b>to</b></p>
@@ -24,8 +24,8 @@
   <hr>
 
   <div class="form-group">
-    <%= f.check_box :temporary %>
-    <%= f.label :temporary %>
+    <%= form.check_box :temporary %>
+    <%= form.label :temporary %>
     <p class="form-text text-muted">
       By default, all Redirects are saved as a permanent redirect,
       <a href="https://http.cat/301"><code>301</code></a>.<br>

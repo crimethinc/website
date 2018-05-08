@@ -1,22 +1,22 @@
 <%= render "admin/page_header", thing: @users %>
 
-<%= form_for [:admin, @user] do |f| %>
+<%= form_with(model: [:admin, @user]) do |form| %>
   <%= render "admin/form_errors", thing: @user %>
 
   <div class="form-group">
-    <%= f.label :username %>
-    <%= f.text_field :username, class: "form-control form-control-lg" %>
+    <%= form.label :username %>
+    <%= form.text_field :username, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :password %>
-    <%= f.password_field :password, class: "form-control form-control-lg" %>
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "form-control form-control-lg" %>
     <p class="form-text text-muted">Passwords must be <b>at least 30 characters</b> long.</p>
   </div>
 
   <div class="form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, class: "form-control form-control-lg" %>
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, class: "form-control form-control-lg" %>
     <p class="form-text text-muted">
       Pro Tip: Use a password manager like
       <a href="https://1password.com">1Password</a>,

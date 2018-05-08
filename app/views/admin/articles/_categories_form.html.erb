@@ -13,7 +13,7 @@
                 <div class="col-6">
                   <% if category.present? %>
 
-                    <%= f.check_box :category_ids,
+                    <%= form.check_box :category_ids,
                                     {
                                       id: "article_category_ids_#{category.id}",
                                       name: "article[category_ids][]",
@@ -22,7 +22,7 @@
                                     category.id,
                                     nil %>
 
-                    <%= f.label "category_ids_#{category.id}", class: "form-check-label" do %>
+                    <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
                       <b><%= category.name %></b>
                     <% end %>
 
@@ -40,7 +40,7 @@
 
   <div class="col-12 col-sm-6">
     <div class="form-group">
-      <%= f.label :tags, "Tags", class: "h4" %>
+      <%= form.label :tags, "Tags", class: "h4" %>
       <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
       <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
     </div>
@@ -49,26 +49,26 @@
 
     <% unless @collection.present? %>
       <div class="form-group">
-        <%= f.label :short_path, "Short URL Path" %>
-        <%= f.text_field :short_path, class: "form-control form-control-lg" %>
+        <%= form.label :short_path, "Short URL Path" %>
+        <%= form.text_field :short_path, class: "form-control form-control-lg" %>
       </div>
     <% end %>
 
-    <%= f.label :status_id, "Publication Status" %><br>
+    <%= form.label :status_id, "Publication Status" %><br>
     <div class="form-check" id="publication_status">
 
       <span class="d-inline-block mr-3">
-        <%= f.radio_button :status_id, @draft.id, id: :article_status_id_draft, class: "form-check-input" %>
+        <%= form.radio_button :status_id, @draft.id, id: :article_status_id_draft, class: "form-check-input" %>
 
-        <%= f.label :status_id_draft, class: "form-check-label" do %>
+        <%= form.label :status_id_draft, class: "form-check-label" do %>
           <b>Draft</b>
         <% end %>
       </span>
 
       <span class="d-inline-block ml-3">
-        <%= f.radio_button :status_id, @published.id, id: :article_status_id_published, class: "form-check-input" %>
+        <%= form.radio_button :status_id, @published.id, id: :article_status_id_published, class: "form-check-input" %>
 
-        <%= f.label :status_id_published, class: "form-check-label" do %>
+        <%= form.label :status_id_published, class: "form-check-label" do %>
           <b>Published</b>
         <% end %>
       </span>
@@ -78,4 +78,3 @@
 
   <%= render "admin/articles/back_to_top" %>
 </div><!-- #categorization.row -->
-
