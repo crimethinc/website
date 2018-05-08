@@ -4,9 +4,19 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: $border-size-medium $border-size-medium;
+<<<<<<< HEAD
+  -webkit-animation: colorfader linear infinite;
+  -webkit-animation-duration: 90s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation: colorfader linear infinite;
+  -moz-animation-duration: 90s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+=======
   animation: colorfader linear infinite;
   animation-duration: 270s;
   animation-iteration-count: infinite;
+>>>>>>> original/master
 
   @media screen and (min-width: $small-tablet) {
     display: flex;
