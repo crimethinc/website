@@ -60,7 +60,7 @@
       <span class="d-inline-block mr-3">
         <%= form.radio_button :status_id, @draft.id, id: :article_status_id_draft, class: "form-check-input" %>
 
-        <%= form.label :status_id_draft, class: "form-check-label" do %>
+        <%= form.label :status_id_draft, class: "form-check-label", for: "article_status_id_draft" do %>
           <b>Draft</b>
         <% end %>
       </span>
@@ -68,7 +68,7 @@
       <span class="d-inline-block ml-3">
         <%= form.radio_button :status_id, @published.id, id: :article_status_id_published, class: "form-check-input" %>
 
-        <%= form.label :status_id_published, class: "form-check-label" do %>
+        <%= form.label :status_id_published, class: "form-check-label", for: "article_status_id_published" do %>
           <b>Published</b>
         <% end %>
       </span>
