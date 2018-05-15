@@ -204,6 +204,7 @@ Click this button to easily deploy to Heroku. (You must have a Heroku account.)
 ## Authors
 
 * Shane Becker / [@veganstraightedge](https://github.com/veganstraightedge)
+* [@astronaut-wannabe](https://github.com/astronaut-wannabe)
 * ( add yourself )
 
 
