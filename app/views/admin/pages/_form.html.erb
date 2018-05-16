@@ -1,19 +1,19 @@
-<%= form_for [:admin, @page] do |f| %>
+<%= form_with(model: [:admin, @page]) do |form| %>
   <%= render "admin/form_errors", thing: @page %>
 
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control form-control-lg" %>
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content, class: "form-control form-control-lg", rows: 10 %>
+    <%= form.label :content %>
+    <%= form.text_area :content, class: "form-control form-control-lg", rows: 10 %>
   </div>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :pages] %>
@@ -23,8 +23,8 @@
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :tweet %>
-          <%= f.text_area :tweet, class: "form-control form-control-lg" %>
+          <%= form.label :tweet %>
+          <%= form.text_area :tweet, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">
             Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
             Used for syndicated tweet for this Article.
@@ -34,8 +34,8 @@
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :summary %>
-          <%= f.text_area :summary, class: "form-control form-control-lg" %>
+          <%= form.label :summary %>
+          <%= form.text_area :summary, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">
             Maximum 200 characters.
             Used for page description and previews in story cards on other sites.
@@ -50,27 +50,27 @@
     <div class="row">
       <div class="col-12 col-sm-4">
         <div class="form-group">
-          <%= f.label :slug, "URL Slug" %>
-          <%= f.text_field :slug, class: "form-control form-control-lg" %>
+          <%= form.label :slug, "URL Slug" %>
+          <%= form.text_field :slug, class: "form-control form-control-lg" %>
         </div>
       </div>
 
       <div class="col-12 col-sm-4">
         <div class="form-group">
-          <%= f.label :tags %>
+          <%= form.label :tags %>
           <%= text_field_tag :tags, @page.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
           <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
         </div>
       </div>
     </div>
 
-    <%= render "admin/datetime_group", f: f, post: @page, type: :page %>
+    <%= render "admin/datetime_group", form: form, post: @page, type: :page %>
 
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :status_id, "Publication Status" %>
-          <%= f.select :status_id,
+          <%= form.label :status_id, "Publication Status" %>
+          <%= form.select :status_id,
                        Status.options_for_select,
                        { selected: @page.status.try(:id) },
                        class: "form-control form-control-lg" %>
@@ -86,8 +86,8 @@
 
     <div class="row">
       <div class="col-12 col-sm-6">
-        <%= f.label :image, "Hero Image" %>
-        <%= f.text_field :image, class: "form-control form-control-lg" %>
+        <%= form.label :image, "Hero Image" %>
+        <%= form.text_field :image, class: "form-control form-control-lg" %>
         <p class="form-text text-muted">
           This is the large image that will be front and center on the <i>Page</i> page,
           on the homepage and when syndicated to other sites. Minimum size: <code>1400x1000</code> pixels.
@@ -96,8 +96,8 @@
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :image_description, "Hero Image Description" %>
-          <%= f.text_field :image_description, class: "form-control form-control-lg" %>
+          <%= form.label :image_description, "Hero Image Description" %>
+          <%= form.text_field :image_description, class: "form-control form-control-lg" %>
           <p class="form-text text-muted">
             This is used for the <code>&lt;img&gt;</code>&rsquo;s <code>alt</code> text.
           </p>
@@ -110,8 +110,8 @@
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :css, "Page Specific CSS" %>
-          <%= f.text_area :css, class: "form-control form-control-lg", rows: 20 %>
+          <%= form.label :css, "Page Specific CSS" %>
+          <%= form.text_area :css, class: "form-control form-control-lg", rows: 20 %>
           <p class="form-text text-muted">
             <% if @page.new_record? %>
               After you save this
@@ -125,24 +125,24 @@
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.check_box :hide_header %>
-          <%= f.label :hide_header, "Hide the Site Header?" %>
+          <%= form.check_box :hide_header %>
+          <%= form.label :hide_header, "Hide the Site Header?" %>
           <p class="form-text text-muted">
             This will remove the site header/<wbr>nav/<wbr>search/<wbr>etc from this <i>Page</i> only.
           </p>
         </div>
 
         <div class="form-group">
-          <%= f.check_box :hide_footer %>
-          <%= f.label :hide_footer, "Hide the Site Footer?" %>
+          <%= form.check_box :hide_footer %>
+          <%= form.label :hide_footer, "Hide the Site Footer?" %>
           <p class="form-text text-muted">
             This will remove the site footer from this <i>Page</i> only.
           </p>
         </div>
 
         <div class="form-group">
-          <%= f.check_box :hide_layout %>
-          <%= f.label :hide_layout, "Hide the Site Layout?" %>
+          <%= form.check_box :hide_layout %>
+          <%= form.label :hide_layout, "Hide the Site Layout?" %>
           <p class="form-text text-muted">
             <b class="text-danger">Danger Zone&trade; &mdash; exercise caution with this option.</b>
             The will remove all of the wrapper layout.

@@ -1,31 +1,31 @@
-<%= form_for [:admin, @episode] do |f| %>
+<%= form_with(model: [:admin, @episode]) do |form| %>
   <%= render "admin/form_errors", thing: @episode %>
 
   <div class="form-group">
-    <%= f.label :podcast_id %>
+    <%= form.label :podcast_id %>
 
     <% @podcasts.each do |podcast| %>
       <div class="form-check">
-        <%= f.radio_button :podcast_id, podcast.id, id: "episode_podcast_id_#{podcast.id}", class: "form-check-input" %>
+        <%= form.radio_button :podcast_id, podcast.id, id: "episode_podcast_id_#{podcast.id}", class: "form-check-input" %>
 
-        <%= f.label "podcast_id_#{podcast.id}", podcast.title, class: "form-check-label" %>
+        <%= form.label "podcast_id_#{podcast.id}", podcast.title, class: "form-check-label" %>
       </div>
     <% end %>
   </div>
 
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control form-control-lg" %>
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :image %>
-    <%= f.url_field :image, class: "form-control form-control-lg" %>
+    <%= form.label :image %>
+    <%= form.url_field :image, class: "form-control form-control-lg" %>
   </div>
 
   <fieldset class="my-5">
@@ -33,15 +33,15 @@
     <div class="row">
       <div class="col-12 col-sm-9">
         <div class="form-group">
-          <%= f.label :audio_mp3_url, "MP3 URL" %>
-          <%= f.url_field :audio_mp3_url, class: "form-control form-control-lg" %>
+          <%= form.label :audio_mp3_url, "MP3 URL" %>
+          <%= form.url_field :audio_mp3_url, class: "form-control form-control-lg" %>
         </div>
       </div>
 
       <div class="col-12 col-sm-3">
         <div class="form-group">
-          <%= f.label :audio_mp3_file_size, "MP3 file size in MB" %>
-          <%= f.text_field :audio_mp3_file_size, class: "form-control form-control-lg" %>
+          <%= form.label :audio_mp3_file_size, "MP3 file size in MB" %>
+          <%= form.text_field :audio_mp3_file_size, class: "form-control form-control-lg" %>
         </div>
 
         <p class="form-text text-muted">
@@ -54,15 +54,15 @@
     <div class="row">
       <div class="col-12 col-sm-9">
         <div class="form-group">
-          <%= f.label :audio_ogg_url, "OGG URL" %>
-          <%= f.url_field :audio_ogg_url, class: "form-control form-control-lg" %>
+          <%= form.label :audio_ogg_url, "OGG URL" %>
+          <%= form.url_field :audio_ogg_url, class: "form-control form-control-lg" %>
         </div>
       </div>
 
       <div class="col-12 col-sm-3">
         <div class="form-group">
-          <%= f.label :audio_ogg_file_size, "OGG file size in MB" %>
-          <%= f.text_field :audio_ogg_file_size, class: "form-control form-control-lg" %>
+          <%= form.label :audio_ogg_file_size, "OGG file size in MB" %>
+          <%= form.text_field :audio_ogg_file_size, class: "form-control form-control-lg" %>
         </div>
 
         <p class="form-text text-muted">
@@ -75,8 +75,8 @@
   <div class="row">
     <div class="col-12 col-sm-4">
       <div class="form-group">
-        <%= f.label :audio_length %>
-        <%= f.text_field :audio_length, class: "form-control form-control-lg" %>
+        <%= form.label :audio_length %>
+        <%= form.text_field :audio_length, class: "form-control form-control-lg" %>
 
         <p class="form-text text-muted">
           In seconds.
@@ -86,8 +86,8 @@
 
     <div class="col-12 col-sm-4">
       <div class="form-group">
-        <%= f.label :duration %>
-        <%= f.text_field :duration, class: "form-control form-control-lg" %>
+        <%= form.label :duration %>
+        <%= form.text_field :duration, class: "form-control form-control-lg" %>
 
         <p class="form-text text-muted">
           In minutes, rounded.
@@ -97,8 +97,8 @@
 
     <div class="col-12 col-sm-4">
       <div class="form-group">
-        <%= f.label :audio_type %>
-        <%= f.text_field :audio_type, class: "form-control form-control-lg" %>
+        <%= form.label :audio_type %>
+        <%= form.text_field :audio_type, class: "form-control form-control-lg" %>
 
         <p class="form-text text-muted">
           Defaults to MP3.
@@ -109,20 +109,20 @@
 
 
   <div class="form-group mb-5">
-    <%= f.label :tags %>
-    <%= f.text_field :tags, class: "form-control form-control-lg" %>
+    <%= form.label :tags %>
+    <%= form.text_field :tags, class: "form-control form-control-lg" %>
 
     <p class="form-text text-muted">
       Comma separated.
     </p>
   </div>
 
-  <%= render "admin/datetime_group", f: f, post: @episode, type: :episode %>
+  <%= render "admin/datetime_group", form: form, post: @episode, type: :episode %>
 
 
   <div class="form-group mt-5">
-    <%= f.label :content, "Description" %>
-    <%= f.text_area :content, class: "form-control form-control-lg", rows: "5" %>
+    <%= form.label :content, "Description" %>
+    <%= form.text_area :content, class: "form-control form-control-lg", rows: "5" %>
 
     <p class="form-text text-muted">
       Formatted as HTML.
@@ -130,8 +130,8 @@
   </div>
 
   <div class="form-group mt-5">
-    <%= f.label :show_notes %>
-    <%= f.text_area :show_notes, class: "form-control form-control-lg", rows: "5" %>
+    <%= form.label :show_notes %>
+    <%= form.text_area :show_notes, class: "form-control form-control-lg", rows: "5" %>
 
     <p class="form-text text-muted">
       Formatted as HTML.
@@ -139,8 +139,8 @@
   </div>
 
   <div class="form-group mt-5">
-    <%= f.label :transcript %>
-    <%= f.text_area :transcript, class: "form-control form-control-lg", rows: "5" %>
+    <%= form.label :transcript %>
+    <%= form.text_area :transcript, class: "form-control form-control-lg", rows: "5" %>
 
     <p class="form-text text-muted">
       Formatted as HTML.

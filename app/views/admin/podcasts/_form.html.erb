@@ -1,36 +1,36 @@
-<%= form_for [:admin, @podcast] do |f| %>
+<%= form_with(model: [:admin, @podcast]) do |form| %>
   <%= render "admin/form_errors", thing: @podcast %>
 
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control form-control-lg" %>
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control form-control-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle, class: "form-control form-control-lg" %>
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, class: "form-control form-control-lg" %>
   </div>
 
 
   <div class="row">
     <div class="col-12 col-sm-2">
       <div class="form-group">
-        <%= f.label :language, "Language Code" %>
-        <%= f.text_field :language, class: "form-control form-control-lg" %>
+        <%= form.label :language, "Language Code" %>
+        <%= form.text_field :language, class: "form-control form-control-lg" %>
       </div>
     </div>
 
     <div class="col-12 col-sm-5">
       <div class="form-group">
-        <%= f.label :slug %>
-        <%= f.text_field :slug, class: "form-control form-control-lg" %>
+        <%= form.label :slug %>
+        <%= form.text_field :slug, class: "form-control form-control-lg" %>
       </div>
     </div>
 
     <div class="col-12 col-sm-5">
       <div class="form-group">
-        <%= f.label :episode_prefix %>
-        <%= f.text_field :episode_prefix, class: "form-control form-control-lg" %>
+        <%= form.label :episode_prefix %>
+        <%= form.text_field :episode_prefix, class: "form-control form-control-lg" %>
       </div>
     </div>
   </div>
@@ -39,27 +39,27 @@
   <div class="row">
     <div class="col-12 col-sm-3">
       <div class="form-group">
-        <%= f.label :copyright %>
-        <%= f.text_field :copyright, class: "form-control form-control-lg" %>
+        <%= form.label :copyright %>
+        <%= form.text_field :copyright, class: "form-control form-control-lg" %>
       </div>
     </div>
 
     <div class="col-12 col-sm-9">
       <div class="form-group">
-        <%= f.label :image %>
-        <%= f.url_field :image, class: "form-control form-control-lg" %>
+        <%= form.label :image %>
+        <%= form.url_field :image, class: "form-control form-control-lg" %>
       </div>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content, class: "form-control form-control-lg", rows: 6 %>
+    <%= form.label :content %>
+    <%= form.text_area :content, class: "form-control form-control-lg", rows: 6 %>
   </div>
 
   <div class="form-group">
-    <%= f.label :tags %>
-    <%= f.text_field :tags, class: "form-control form-control-lg" %>
+    <%= form.label :tags %>
+    <%= form.text_field :tags, class: "form-control form-control-lg" %>
 
     <p class="form-text text-muted">
       Comma separated.
@@ -76,15 +76,15 @@
     <div class="row">
       <div class="col-12 col-sm-9">
         <div class="form-group">
-          <%= f.label :itunes_categories, "iTunes Categories" %>
-          <%= f.text_field :itunes_categories, class: "form-control form-control-lg" %>
+          <%= form.label :itunes_categories, "iTunes Categories" %>
+          <%= form.text_field :itunes_categories, class: "form-control form-control-lg" %>
         </div>
       </div>
 
       <div class="col-12 col-sm-3">
         <div class="form-group">
-          <%= f.label :itunes_explicit, "iTunes Explicit?" %>
-          <%= f.check_box :itunes_explicit, class: "form-control form-control-lg" %>
+          <%= form.label :itunes_explicit, "iTunes Explicit?" %>
+          <%= form.check_box :itunes_explicit, class: "form-control form-control-lg" %>
         </div>
       </div>
     </div>
@@ -92,28 +92,28 @@
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :itunes_owner_name, "iTunes Owner’s Name" %>
-          <%= f.text_field :itunes_owner_name, class: "form-control form-control-lg" %>
+          <%= form.label :itunes_owner_name, "iTunes Owner’s Name" %>
+          <%= form.text_field :itunes_owner_name, class: "form-control form-control-lg" %>
         </div>
       </div>
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= f.label :itunes_owner_email, "iTunes Owner’s Email" %>
-          <%= f.text_field :itunes_owner_email, class: "form-control form-control-lg" %>
+          <%= form.label :itunes_owner_email, "iTunes Owner’s Email" %>
+          <%= form.text_field :itunes_owner_email, class: "form-control form-control-lg" %>
         </div>
       </div>
     </div>
 
 
     <div class="form-group">
-      <%= f.label :itunes_url, "iTunes URL" %>
-      <%= f.url_field :itunes_url, class: "form-control form-control-lg" %>
+      <%= form.label :itunes_url, "iTunes URL" %>
+      <%= form.url_field :itunes_url, class: "form-control form-control-lg" %>
     </div>
 
     <div class="form-group">
-      <%= f.label :itunes_summary, "iTunes Summary" %>
-      <%= f.text_area :itunes_summary, class: "form-control form-control-lg", rows: 6 %>
+      <%= form.label :itunes_summary, "iTunes Summary" %>
+      <%= form.text_area :itunes_summary, class: "form-control form-control-lg", rows: 6 %>
     </div>
   </fieldset>
 

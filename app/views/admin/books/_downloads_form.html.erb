@@ -13,9 +13,9 @@
 
       <% @ebook_formats.each do |type, labels| %>
         <div class="form-check mb-3">
-          <%= f.check_box "#{type}_download_present", id: "book_#{type}_download_present", class: "form-check-input" %>
+          <%= form.check_box "#{type}_download_present", id: "book_#{type}_download_present", class: "form-check-input" %>
 
-          <%= f.label "#{type}_download_present", class: "form-check-label" do %>
+          <%= form.label "#{type}_download_present", class: "form-check-label" do %>
             <b><%= labels.first %>:</b>
 
             <span class="form-text text-muted font-weight-normal">
@@ -32,4 +32,3 @@
     </div>
   </div>
 </div> <!-- .row -->
-
