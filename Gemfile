@@ -29,7 +29,7 @@ gem "stringex"       # for Markdown header IDs processing
 gem "markdown_media" # for [[ media embeds ]]
 
 # auth
-gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.12"
 
 # pagination
 gem "kaminari"
