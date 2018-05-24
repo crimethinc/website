@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  # External Redirects
-  get "books/evasion",      to: redirect("http://evasionbook.com"), status: 301
-  get "books/evasion.html", to: redirect("http://evasionbook.com"), status: 301
-  get "evasion/home.html",  to: redirect("http://evasionbook.com"), status: 301
 
   # Store Redirect and support page
-  get "store",               to: redirect("https://store.crimethinc.com")
   get "store/order-success", to: "about#post_order_success", as: :post_order_success
 
 
@@ -44,8 +39,6 @@ Rails.application.routes.draw do
       action:     "edit",
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
 
-  get "archives", to: redirect("/library"), as: :archives_redirect
-
   # Draft Articles and Pages
   get "drafts/articles/:draft_code", to: "articles#show", as: :article_draft
   get "drafts/pages/:draft_code",    to: "pages#show",    as: :page_draft
@@ -78,11 +71,6 @@ Rails.application.routes.draw do
 
   # Pages (linked in header/nav)
   get "library", to: "about#library",     as: :library
-  get "read",    to: redirect("library"), as: :read_redirect
-  get "watch",   to: redirect("videos"),  as: :watch_redirect
-  get "listen",  to: redirect("podcast"), as: :listen_redirect
-  get "get",     to: redirect("store"),   as: :get_redirect
-
 
   # Podcast
   get "podcast/feed",             to: "podcast#feed",       as: :podcast_feed, defaults: { format: "rss" }
@@ -117,12 +105,6 @@ Rails.application.routes.draw do
 
 
   # Tools
-  get "tools/downloads", to: redirect("/logos")
-  get "tools/logos",     to: redirect("/logos")
-  get "tools/stickers",  to: redirect("/stickers")
-  get "tools/zines",     to: redirect("/zines")
-  get "tools/posters",   to: redirect("/posters")
-  get "tools/videos",    to: redirect("/videos")
   get "tools",           to: "tools#index", as: :tools
 
 

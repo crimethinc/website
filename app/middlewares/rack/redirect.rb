@@ -22,11 +22,11 @@ module Rack
           unless line.blank?
             source_path, target_path = line.chomp.split
 
-            unless source_path =~ /^\//
+            unless source_path =~ /^\/|http/
               source_path = "/#{source_path}"
             end
 
-            unless target_path =~ /^\//
+            unless target_path =~ /^\/|http/
               target_path = "/#{target_path}"
             end
 
