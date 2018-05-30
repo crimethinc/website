@@ -15,7 +15,7 @@ class Article < ApplicationRecord
   before_validation :normalize_newlines,       on: [:create, :update]
 
   validates :short_path, uniqueness: true, unless: :short_path_blank?
-  validates :tweet, length:   { maximum: 250 }
+  # validates :tweet, length:   { maximum: 250 }
   validates :summary, length: { maximum: 200 }
 
   before_save :update_or_create_redirect
