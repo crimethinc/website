@@ -1,6 +1,6 @@
 <h1>Settings for @<%= @user.username %></h1>
 
-<%= form_with [:auth, @user], local: true do |form| %>
+<%= form_with model: [:auth, @user], local: true do |form| %>
   <%= render "admin/form_errors", thing: @user %>
 
   <fieldset>
