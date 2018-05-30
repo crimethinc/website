@@ -1,4 +1,5 @@
 class Auth::UsersController < Admin::AdminController
+  before_action :authorize, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   layout "admin"
 
