@@ -1,4 +1,4 @@
-<% content_for :style_tag do %>
+<style>
   #article .h-entry header .meta {
     <% if article.subtitle.blank? %>
       /* Embiggen Article titles when there's no subtitle */
@@ -17,4 +17,4 @@
       color: <%= article.header_text_color %>;
     <% end %>
   }
-<% end %>
+</style>

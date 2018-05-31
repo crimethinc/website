@@ -1,6 +1,4 @@
 <% cache @article, expires_in: (Rails.env.development? ? 1.second : 1.day) do %>
-  <%= render "articles/css", article: @article %>
-
   <% if @article.draft? %>
     <div class="draft-preview-message">
       PREVIEWING DRAFT.
@@ -8,6 +6,8 @@
       <%= link_to "view article in Admin",    [:admin, @article] %>.
     </div>
   <% end %>
+
+  <%= render "articles/css", article: @article %>
 
   <%= article_tag @article do %>
     <header>
@@ -22,7 +22,6 @@
 
     <div class="e-content">
       <%= render_content @article %>
-
 
       <%= render partial: "collection_post", collection: @collection_posts, as: :article if @article.collection_root? %>
     </div>
