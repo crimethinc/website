@@ -45,7 +45,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
-    autoprefixer-rails (8.5.2)
+    autoprefixer-rails (8.6.1)
       execjs
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -120,7 +120,7 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    kramdown (1.16.2)
+    kramdown (1.17.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -162,7 +162,7 @@ GEM
       rack
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
-    rack-timeout (0.5.0.1)
+    rack-timeout (0.5.1)
     rails (5.2.0)
       actioncable (= 5.2.0)
       actionmailer (= 5.2.0)
