@@ -17,7 +17,7 @@
     <% end %>
 
     <%= label_tag :amount %>
-    <%= select_tag :amount, options_for_select(@amounts, selected: "20") %>
+    <%= select_tag :amount, options_for_select(@amounts_for_select, selected: "20") %>
 
     <%= radio_button_tag :monthly, true, checked: true %>
     <%= label_tag :monthly_true, t("views.donations.radio_label_monthly") %>

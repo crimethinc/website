@@ -3,10 +3,9 @@ class DonationsController < ApplicationController
   def show
   end
 
-
   def new
     @amounts = (1..100).to_a + [200,300,400,500,600,700,800,900,1000]
-    @amounts = @amounts.map{ |amount| ["$#{amount}", amount] }
+    @amounts_for_select = @amounts.map{ |amount| ["$#{amount}", amount] }
   end
 
   def create
