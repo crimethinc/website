@@ -1,4 +1,9 @@
 class DonationsController < ApplicationController
+
+  def show
+  end
+
+
   def new
     @amounts = (1..100).to_a + [200,300,400,500,600,700,800,900,1000]
     @amounts = @amounts.map{ |amount| ["$#{amount}", amount] }
@@ -29,6 +34,6 @@ class DonationsController < ApplicationController
     flash[:error] = e.message
     render :new
   else
-    redirect_to [:donation_confirmation]
+    redirect_to [:donation]
   end
 end
