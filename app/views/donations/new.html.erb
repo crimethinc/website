@@ -1,0 +1,28 @@
+<%= form_tag [:donations] do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+
+    <%= label_tag :amount %>
+    <%= select_tag :amount, options_for_select(@amounts, selected: "20") %>
+
+    <%= radio_button_tag :monthly, true, checked: true %>
+    <%= label_tag :monthly_true, "Charge me monthly" %>
+
+    <%= radio_button_tag :monthly, false %>
+    <%= label_tag :monthly_false, "Charge me once" %>
+
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="5000"
+          data-zip-code="true"
+          data-locale="auto"></script>
+<% end %>
+
+<!-- $(".stripe-button")[0].setAttribute("data-amount", 700) -->

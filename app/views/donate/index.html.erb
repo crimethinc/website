@@ -6,15 +6,16 @@
   <div class="intro">
     <div class="row">
       <div class="column column-half">
-        <header><h2>Make a recurring donation $50/month</h2></header>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="A month's subscription"
+                data-amount="500"
+                data-zip-code="true"
+                data-locale="auto"></script>
 
-        <script src="https://staging.cashmusic.org/public/cashmusic.js" data-element="5181"></script>
       </div>
 
       <div class="column column-half">
-        <h><h2>Make a one-time donation $50</h2></h>
-
-        <script src="https://staging.cashmusic.org/public/cashmusic.js" data-element="5183"></script>
       </div>
     </div>
 

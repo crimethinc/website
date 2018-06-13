@@ -37,6 +37,9 @@ gem "kaminari"
 # memcache
 gem "dalli"
 
+# stripe for donations
+gem "stripe"
+
 # dev and testing
 group :development, :test do
   gem "byebug", platform: :mri
@@ -44,11 +47,12 @@ group :development, :test do
   gem "rspec-rails"
   gem "rails-controller-testing"
   gem "spring-commands-rspec"
-  gem "simplecov", :require => false
+  gem "simplecov", require: false
   gem "factory_bot_rails"
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'dotenv-rails'
 end
 
 # dev

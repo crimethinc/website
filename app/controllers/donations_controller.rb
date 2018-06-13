@@ -1,0 +1,32 @@
+class DonationsController < ApplicationController
+  def new
+    @amounts = (1..100).to_a + [200,300,400,500,600,700,800,900,1000]
+    @amounts = @amounts.map{ |amount| ["$#{amount}", amount] }
+  end
+
+  def create
+    customer = Stripe::Customer.create(
+      email: params[:stripeEmail],
+      source: params[:stripeToken]
+    )
+
+    if params[:monthly] == "true"
+      Stripe::Subscription.create(
+        customer: customer.id,
+        plan:     STRIPE_MONTHLY_PLAN_ID,
+        quantity: params[:amount]
+      )
+    else
+      Stripe::Charge.create(
+        customer:    customer.id,
+        amount:      params[:amount].to_i * 100,
+        description: 'CWC One-time donation',
+        currency:    'usd'
+      )
+    end
+
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to [:donation_confirmation]
+  end
+end

@@ -8,8 +8,9 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   # Donations
-  get "donate", to: "donate#index", as: :donate
-
+  get "donate", to: "donations#new", as: :donations_new
+  post "donate", to: "donations#create", as: :donations
+  get "donate/confirmation", to: "donations#show", as: :donation
 
   get "page(/1)", to: redirect { |_, _| "/" }
   get "page/:page", to: "home#index"
