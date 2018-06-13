@@ -6,8 +6,8 @@ class DonationsController < ApplicationController
 
   def create
     customer = Stripe::Customer.create(
-      email: params[:stripeEmail],
-      source: params[:stripeToken]
+      email: params["js-stripe-email"],
+      source: params["js-stripe-token"]
     )
 
     if params[:monthly] == "true"
@@ -27,6 +27,8 @@ class DonationsController < ApplicationController
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
+    render :new
+  else
     redirect_to [:donation_confirmation]
   end
 end
