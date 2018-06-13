@@ -226,6 +226,13 @@ en:
       literature_distro_kit_heading: Literature Distro Kit
       literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
 
+    donations:
+      header: Make a Donation
+      radio_label_monthly: Charge me monthly
+      radio_label_once: Charge me once
+      button_text: DONATE!
+      description_monthly: "Recurring Monthly Donation"
+      description_once: "One-Time Donation"
 
   helpers:
     page_entries_info:

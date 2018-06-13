@@ -25,7 +25,7 @@ class DonationsController < ApplicationController
       Stripe::Charge.create(
         customer:    customer.id,
         amount:      params[:amount].to_i * 100,
-        description: 'CWC One-time donation',
+        description: t("views.donations.description_once"),
         currency:    'usd'
       )
     end
