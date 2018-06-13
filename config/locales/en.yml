@@ -231,8 +231,8 @@ en:
       radio_label_monthly: Charge me monthly
       radio_label_once: Charge me once
       button_text: DONATE!
-      description_monthly: "Recurring Monthly Donation"
-      description_once: "One-Time Donation"
+      description_monthly: Recurring Monthly Donation
+      description_once: One-Time Donation
 
   helpers:
     page_entries_info:
