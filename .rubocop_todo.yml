@@ -6,13 +6,6 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 18
-# Configuration parameters: EnabledMethods.
-Capybara/FeatureMethods:
-  Exclude:
-    - 'spec/system/admin_sign_ins_spec.rb'
-    - 'spec/system/article_datetime_settings_spec.rb'
-    - 'spec/system/tools_index_pages_spec.rb'
 
 # Offense count: 1
 FactoryBot/DynamicAttributeDefinedStatically:

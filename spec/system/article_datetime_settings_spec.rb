@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-feature 'Setting and changing an articles published_at date' do
+describe 'Setting and changing an articles published_at date' do
   let(:admin) do
     create(:user, username: 'user1', password: 'c'*31)
   end
 
-  background do
+  before do
     create(:status, :published)
     create(:status, :draft)
   end
 
-  scenario 'Creating a new article' do
+  it 'Creating a new article' do
     login_user(admin)
     visit '/admin/articles'
 
@@ -31,7 +31,7 @@ feature 'Setting and changing an articles published_at date' do
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
   end
 
-  scenario 'updating an existing article' do
+  it 'updating an existing article' do
     article = create(:article, published_at: Time.parse('2018-12-24 11:59:00 UTC'))
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
     expect(article.published_at_tz).to eq('Pacific Time (US & Canada)')
@@ -60,7 +60,7 @@ feature 'Setting and changing an articles published_at date' do
     expect(article.reload.published_at_tz).to eq('UTC')
   end
 
-  scenario 'Saving an article without entering publication date info' do
+  it 'Saving an article without entering publication date info' do
     login_user(admin)
     visit '/admin/articles'
 
@@ -75,7 +75,7 @@ feature 'Setting and changing an articles published_at date' do
     expect(article.published_at).to be_nil
   end
 
-  scenario 'Using ‘PUBLISH NOW’ feature', :js do
+  it 'Using ‘PUBLISH NOW’ feature', :js do
     # TODO: the 'publish now' feature relies on a JavaScript in
     # the front-end to automatically set the form fields and submit the
     # form. This makes testing time hard since we cannot

@@ -1,11 +1,13 @@
 require 'rails_helper'
 
-feature 'Signing in as an admin' do
-  background do
+describe 'Signing in as an admin' do
+  before do
     create(:user, username: 'user1', password: 'c'*31)
   end
 
-  scenario 'Signing in with correct credentials'  do
+  let(:other_user) { create(:user, username: 'user2', password: 'Na'*30) }
+
+  it 'Signing in with correct credentials'  do
     visit '/signin'
     within('main') do
       fill_in 'username', with: 'user1'
@@ -17,9 +19,7 @@ feature 'Signing in as an admin' do
     expect(page).to have_current_path(admin_dashboard_path)
   end
 
-  given(:other_user) { create(:user, username: 'user2', password: 'Na'*30) }
-
-  scenario 'Signing in with invalid password' do
+  it 'Signing in with invalid password' do
     visit '/signin'
     within('main') do
       fill_in 'username', with: 'user2'

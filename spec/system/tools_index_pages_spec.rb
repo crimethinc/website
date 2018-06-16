@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-feature 'Tools Pages' do
-  background do
+describe 'Tools Pages' do
+  before do
     create(:status, :published)
     create(:status, :draft)
   end
 
-  scenario 'Renders published logos calling /logos' do
+  it 'Renders published logos calling /logos' do
     FactoryBot.create(:logo,
                       title: 'published',
                       status_id: Status.find_by(name: 'published').id)
@@ -21,7 +21,7 @@ feature 'Tools Pages' do
     expect(page).to_not have_content 'draft'
   end
 
-  scenario 'Renders published stickers calling /stickers' do
+  it 'Renders published stickers calling /stickers' do
     FactoryBot.create(:poster,
                       :sticker,
                       title: 'published',
@@ -38,7 +38,7 @@ feature 'Tools Pages' do
     expect(page).to_not have_content 'draft'
   end
 
-  scenario 'Renders published zines calling /zines' do
+  it 'Renders published zines calling /zines' do
     FactoryBot.create(:book,
                       :zine,
                       title: 'published',
@@ -55,7 +55,7 @@ feature 'Tools Pages' do
     expect(page).to_not have_content 'draft'
   end
 
-  scenario 'Renders published posters calling /posters' do
+  it 'Renders published posters calling /posters' do
     FactoryBot.create(:poster,
                        title: 'published',
                        status_id: Status.find_by(name: 'published').id)
@@ -71,7 +71,7 @@ feature 'Tools Pages' do
   end
 
 
-  scenario 'Renders published videos calling /videos' do
+  it 'Renders published videos calling /videos' do
     FactoryBot.create(:video,
                        title: 'published',
                        status_id: Status.find_by(name: 'published').id)
