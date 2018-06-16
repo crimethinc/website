@@ -21,7 +21,7 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
 
-def login_user(user)
+def login_user(_user)
   visit '/signin'
   within('main') do
     fill_in 'username', with: 'user1'
