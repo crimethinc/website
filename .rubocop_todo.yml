@@ -57,16 +57,6 @@ Metrics/MethodLength:
 Metrics/ParameterLists:
   Max: 6
 
-# Offense count: 1
-# Configuration parameters: NamePrefix, NamePrefixBlacklist, NameWhitelist, MethodDefinitionMacros.
-# NamePrefix: is_, has_, have_
-# NamePrefixBlacklist: is_, has_, have_
-# NameWhitelist: is_a?
-# MethodDefinitionMacros: define_method, define_singleton_method
-Naming/PredicateName:
-  Exclude:
-    - 'spec/**/*'
-    - 'app/models/redirect.rb'
 
 # Offense count: 6
 # Cop supports --auto-correct.

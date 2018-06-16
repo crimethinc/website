@@ -55,14 +55,14 @@ class Redirect < ApplicationRecord
 
   def groomed_path_or_url url
       url_pieces = []
-      url_pieces << "#{url.scheme}://#{url.host}" unless url.host.blank? || is_a_crimethinc_url?(url)
+      url_pieces << "#{url.scheme}://#{url.host}" unless url.host.blank? || crimethinc_url?(url)
       url_pieces << url.path
       url_pieces << '?' + url.query    if url.query.present?
       url_pieces << '#' + url.fragment if url.fragment.present?
       url_pieces.join
   end
 
-  def is_a_crimethinc_url? url
+  def crimethinc_url? url
     url.host =~ %r{crimethinc.com|cwc.im}
   end
 
