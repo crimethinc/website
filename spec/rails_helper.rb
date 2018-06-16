@@ -34,4 +34,3 @@ if chrome_bin # CI is running on heroku
     Capybara.javascript_driver = :headless_chrome
   end
 end
-

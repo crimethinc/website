@@ -15,35 +15,35 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     end
 
     it 'redirects on create' do
-      post :create, params: {category: {name: 'test'}}
+      post :create, params: { category: { name: 'test' } }
 
       expect(response).to have_http_status(302)
     end
 
     it 'redirects on show' do
       category = create(:category)
-      get :show, params: {id: category.id}
+      get :show, params: { id: category.id }
 
       expect(response).to have_http_status(302)
     end
 
     it 'redirects on edit' do
       category = create(:category)
-      get :edit, params: {id: category.id}
+      get :edit, params: { id: category.id }
 
       expect(response).to have_http_status(302)
     end
 
     it 'redirects on update' do
       category = create(:category)
-      patch :update, params: {id: category.id, category: {name: 'test'}}
+      patch :update, params: { id: category.id, category: { name: 'test' } }
 
       expect(response).to have_http_status(302)
     end
 
     it 'redirects on destroy' do
       category = create(:category)
-      delete :destroy, params: {id: category.id}
+      delete :destroy, params: { id: category.id }
 
       expect(response).to have_http_status(302)
     end
@@ -64,7 +64,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     describe 'GET #show' do
       it 'renders show' do
         category = create(:category)
-        get :show, params: {id: category.id}
+        get :show, params: { id: category.id }
 
         expect(response).to have_http_status(302)
         expect(assigns[:category]).to eq(category)
@@ -73,7 +73,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
 
     describe 'POST #create' do
       it 'creates a category' do
-        post :create, params: {category: attributes_for(:category)}
+        post :create, params: { category: attributes_for(:category) }
 
         expect(response).to have_http_status(302)
         expect(Category.count).to eq(1)
@@ -83,7 +83,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     describe 'PUT #update' do
       it 'updates the category' do
         category = create(:category)
-        patch :update, params: {id: category.id, category: attributes_for(:category)}
+        patch :update, params: { id: category.id, category: attributes_for(:category) }
 
         expect(response).to have_http_status(302)
         expect(Category.find(category.id).name).to_not eq(category.name)
@@ -93,12 +93,11 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     describe 'DELETE #destroy' do
       it 'deletes the category' do
         category = create(:category)
-        delete :destroy, params: {id: category.id}
+        delete :destroy, params: { id: category.id }
 
         expect(response).to have_http_status(302)
         expect(Category.find_by(id: category.id)).to be_nil
       end
     end
   end
-
 end

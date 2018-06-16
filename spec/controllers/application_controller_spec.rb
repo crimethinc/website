@@ -166,7 +166,6 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-
   describe '#render_markdown' do
     subject { controller.render_markdown('text').strip }
 
@@ -189,5 +188,4 @@ RSpec.describe ApplicationController, type: :controller do
     #
     # it { is_expected.to eq('Thing') }
   end
-
 end

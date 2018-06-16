@@ -7,6 +7,5 @@ class CollectionPostsController < ApplicationController
     else
       render json: { published_at: Time.now.to_i, posts: posts }
     end
-
   end
 end

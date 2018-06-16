@@ -1,22 +1,22 @@
 module ArticlesHelper
-
   def social_links_for article
     content_tag :ul, class: "social-links" do
-      social_link_for(article, :twitter)  +
-      social_link_for(article, :facebook) +
-      social_link_for(article, :tumblr)
+      social_link_for(article, :twitter) +
+        social_link_for(article, :facebook) +
+        social_link_for(article, :tumblr)
     end
   end
 
   def social_link_for article, site
-    url = case site
-    when :twitter
-      "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{article_url}&amp;via=crimethinc"
-    when :facebook
-      "https://www.facebook.com/sharer?u=#{url_encode article_url}"
-    when :tumblr
-      "http://tumblr.com/widgets/share/tool?canonicalUrl=#{article_url}&amp;caption=#{url_encode article.title}&amp;content=#{article.image}"
-    end
+    url =
+      case site
+      when :twitter
+        "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{article_url}&amp;via=crimethinc"
+      when :facebook
+        "https://www.facebook.com/sharer?u=#{url_encode article_url}"
+      when :tumblr
+        "http://tumblr.com/widgets/share/tool?canonicalUrl=#{article_url}&amp;caption=#{url_encode article.title}&amp;content=#{article.image}"
+      end
 
     content_tag :li, class: 'social-link' do
       link_to "Share on #{site.capitalize}", url, class: "link-domain-#{site}", target: '_blank'
@@ -46,13 +46,13 @@ module ArticlesHelper
     content_tag 'article', id: article.slug, class: klasses.join(' '), data: data, &block
   end
 
-  def display_date(datetime=nil)
+  def display_date(datetime = nil)
     unless datetime.nil?
       datetime.strftime('%Y-%m-%d')
     end
   end
 
-  def display_time(datetime=nil)
+  def display_time(datetime = nil)
     unless datetime.nil?
       datetime.strftime('%l:%M&nbsp;%z').html_safe
     end
@@ -93,9 +93,9 @@ module ArticlesHelper
         result.encode(XML_ENCODING)
       rescue
         # if the encoding can't be supported, use numeric character references
-        result.
-          gsub(/[^\u0000-\u007F]/) {|c| "&##{c.ord};"}.
-          force_encoding('ascii')
+        result
+          .gsub(/[^\u0000-\u007F]/) { |c| "&##{c.ord};" }
+          .force_encoding('ascii')
       end
     end
   end

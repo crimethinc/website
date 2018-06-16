@@ -91,7 +91,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :render_content
 
-  def meta_title(thing=nil)
+  def meta_title(thing = nil)
     thing.present? ? thing.title : t('head.meta_title')
   end
   helper_method :meta_title

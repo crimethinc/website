@@ -20,7 +20,7 @@ module AdminHelper
       options = options.first
 
       if options[:no_css]
-        classes  = [options[:class]]
+        classes = [options[:class]]
       else
         classes << [options[:class]]
       end

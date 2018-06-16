@@ -19,7 +19,6 @@ class User < ActiveRecord::Base
 
   default_scope { order(username: :asc) }
 
-
   class << self
     def options_for_select
       User.all.map { |u| [u.username, u.id] }

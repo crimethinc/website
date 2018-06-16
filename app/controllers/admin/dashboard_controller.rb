@@ -14,8 +14,8 @@ class Admin::DashboardController < Admin::AdminController
     @html_id  = 'markdown'
     @body_id  = 'top'
     @sections = [
-                  [:headings, :links, :horizontal_rules, :paragraphs],
-                  [:lists, :bold_and_italics]
-                ]
+      [:headings, :links, :horizontal_rules, :paragraphs],
+      [:lists, :bold_and_italics]
+    ]
   end
 end

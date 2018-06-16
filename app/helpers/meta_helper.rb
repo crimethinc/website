@@ -1,5 +1,4 @@
 module MetaHelper
-
   def find_the_thing
     @find_the_thing ||= [@article, @page, @podcast, @episode, @book, @product, @video].compact.first
   end
@@ -24,5 +23,4 @@ module MetaHelper
       t('head.meta_image_url')
     end
   end
-
 end

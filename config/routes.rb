@@ -8,11 +8,10 @@ Rails.application.routes.draw do
   # Donations
   get 'donate', to: 'donate#index', as: :donate
 
-
   get 'page(/1)', to: redirect { |_, _| '/' }
   get 'page/:page', to: 'home#index'
 
-  #TCE
+  # TCE
   get 'tce(/:lang)', to: 'to_change_everything#show', defaults: { lang: 'english' }
 
   # Articles
@@ -51,10 +50,8 @@ Rails.application.routes.draw do
   # Articles - Collection Items
   get 'articles/:id/collection_posts', to: 'collection_posts#index'
 
-
   # Static pages
   get 'arts/submission-guidelines', to: 'about#arts_submission_guidelines'
-
 
   # Categories
   get 'categories',                    to: 'categories#index', as: :categories
@@ -68,14 +65,13 @@ Rails.application.routes.draw do
   get 'tags/:slug/feed',         to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
 
   # Pages (linked in header/nav)
-  get 'library', to: 'about#library',     as: :library
+  get 'library', to: 'about#library', as: :library
 
   # Podcast
   get 'podcast/feed',             to: 'podcast#feed',       as: :podcast_feed, defaults: { format: 'rss' }
   get 'podcast',                  to: 'podcast#index',      as: :podcast
   get 'podcast/:slug',            to: 'podcast#show',       as: :episode
   get 'podcast/:slug/transcript', to: 'podcast#transcript', as: :episode_transcript
-
 
   # Books
   get 'books/lit-kit',        to: 'books#lit_kit',        as: :books_lit_kit
@@ -84,12 +80,10 @@ Rails.application.routes.draw do
   get 'books',                to: 'books#index',          as: :books
   get 'books/:slug',          to: 'books#show',           as: :book
 
-
   # Videos
   get 'videos/page(/1)', to: redirect { |_, _| '/videos' }
   get 'videos',          to: 'videos#index', as: :videos
   get 'videos/:slug',    to: 'videos#show',  as: :video
-
 
   # Posters, Stickers, Zines
   get 'posters',        to: 'posters#index',  as: :posters
@@ -101,16 +95,13 @@ Rails.application.routes.draw do
   get 'zines',          to: 'zines#index',    as: :zines
   get 'zines/:slug',    to: 'zines#show',     as: :zine
 
-
   # Tools
-  get 'tools',           to: 'tools#index', as: :tools
-
+  get 'tools', to: 'tools#index', as: :tools
 
   # Site search
-  get 'search', to: 'search#index'
-  get 'search/advanced', to: 'search#advanced', as: :advanced_search
+  get 'search',           to: 'search#index'
+  get 'search/advanced',  to: 'search#advanced', as: :advanced_search
   post 'search/advanced', to: 'search#advanced_search', as: :advanced_searches
-
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
@@ -144,7 +135,6 @@ Rails.application.routes.draw do
     resources :zines,      concerns: :paginatable
   end
 
-
   # Auth + User signup
   namespace :auth do
     resources :users,    only: [:create, :update, :destroy]
@@ -157,11 +147,9 @@ Rails.application.routes.draw do
   get 'signin',   to: 'auth/sessions#new',     as: :signin
   get 'signout',  to: 'auth/sessions#destroy', as: :signout
 
-
   # Misc plumbing infrastructure
   get 'manifest.json',  to: 'misc#manifest_json'
   get 'opensearch.xml', to: 'misc#opensearch_xml'
-
 
   # Pages
   get '*path', to: 'pages#show', as: :page, via: :all

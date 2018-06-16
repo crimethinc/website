@@ -57,8 +57,8 @@ describe 'Tools Pages' do
 
   it 'Renders published posters calling /posters' do
     FactoryBot.create(:poster,
-                       title: 'published',
-                       status_id: Status.find_by(name: 'published').id)
+                      title: 'published',
+                      status_id: Status.find_by(name: 'published').id)
 
     FactoryBot.create(:poster,
                       title: 'draft',
@@ -70,11 +70,10 @@ describe 'Tools Pages' do
     expect(page).to_not have_content 'draft'
   end
 
-
   it 'Renders published videos calling /videos' do
     FactoryBot.create(:video,
-                       title: 'published',
-                       status_id: Status.find_by(name: 'published').id)
+                      title: 'published',
+                      status_id: Status.find_by(name: 'published').id)
 
     FactoryBot.create(:video,
                       title: 'draft',

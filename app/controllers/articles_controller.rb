@@ -23,10 +23,10 @@ class ArticlesController < ApplicationController
       end
 
     else
-      @article = Article.live.where(year:  params[:year]).
-                              where(month: params[:month]).
-                              where(day:   params[:day]).
-                              where(slug:  params[:slug]).first
+      @article = Article.live.where(year: params[:year])
+                        .where(month: params[:month])
+                        .where(day:   params[:day])
+                        .where(slug:  params[:slug]).first
       if @article.present?
         @collection_posts = @article.collection_posts.published.live.chronological
       end
@@ -78,7 +78,7 @@ class ArticlesController < ApplicationController
         banner_image: article.image,
         date_published: article.published_at.to_formatted_s(:iso8601),
         date_modified: article.updated_at.to_formatted_s(:iso8601),
-        tags: article.tags.map{ |t| t.name }.compact,
+        tags: article.tags.map { |t| t.name }.compact,
         content_html: article.content_rendered
       }
     end

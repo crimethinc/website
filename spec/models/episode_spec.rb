@@ -22,7 +22,7 @@ RSpec.describe Episode, type: :model do
 
     subject { episode.path }
 
-    it { is_expected.to eq('/podcast/test-slug')}
+    it { is_expected.to eq('/podcast/test-slug') }
   end
 
   describe '#duration_string' do

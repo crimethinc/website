@@ -40,10 +40,16 @@ class Logo < ApplicationRecord
   alias_method :image, :meta_image
 
   def price_in_cents; nil; end
+
   def buy_info; nil; end
+
   def back_image_present?; nil; end
+
   def front_download_present?; nil; end
+
   def back_download_present?; nil; end
+
   def depth; nil; end
+
   def content; nil; end
 end

@@ -14,7 +14,6 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-
   # Configure memcache as the cache_store if available
   # Pulled from https://devcenter.heroku.com/articles/memcachedcloud
   config.cache_store = if ENV['MEMCACHEDCLOUD_SERVERS']
@@ -28,9 +27,8 @@ Rails.application.configure do
                          ]
                        else
                          # Cache in memory otherwise
-                         [ :memory_store, { size: 64.megabytes } ]
+                         [:memory_store, { size: 64.megabytes }]
                        end
-
 
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
   # Requires an encryption key in `ENV['RAILS_MASTER_KEY']` or
@@ -75,7 +73,7 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store

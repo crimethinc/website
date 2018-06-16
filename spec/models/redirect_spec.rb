@@ -30,10 +30,10 @@ RSpec.describe Redirect, type: :model do
 
     context "with relative source path and absolute target path" do
       https_target_path = "https://example.com/foo/bar"
-      let(:redirect) { Redirect.new(source_path: "source", target_path: https_target_path)}
+      let(:redirect) { Redirect.new(source_path: "source", target_path: https_target_path) }
 
-      specify { expect(subject.source_path).to eq("/source")}
-      specify { expect(subject.target_path).to eq(https_target_path)}
+      specify { expect(subject.source_path).to eq("/source") }
+      specify { expect(subject.target_path).to eq(https_target_path) }
     end
   end
 
@@ -65,14 +65,14 @@ RSpec.describe Redirect, type: :model do
       http_target_path = "http://example.com/foo/bar"
       let(:redirect) { Redirect.new(source_path: "source", target_path: http_target_path) }
 
-      it { is_expected.to eq(http_target_path)}
+      it { is_expected.to eq(http_target_path) }
     end
 
     context "with external https domain" do
       https_target_path = "https://example.com/foo/bar"
       let(:redirect) { Redirect.new(source_path: "source", target_path: https_target_path) }
 
-      it { is_expected.to eq(https_target_path)}
+      it { is_expected.to eq(https_target_path) }
     end
   end
 
@@ -95,7 +95,7 @@ RSpec.describe Redirect, type: :model do
   end
 
   describe "#article_short_path_unique" do
-    let(:status)  { FactoryBot.create(:status) }
+    let(:status) { FactoryBot.create(:status) }
     let(:published_at) { Date.current }
     context "shouldn’t create a redirect if short path exists" do
       it "should raise error" do

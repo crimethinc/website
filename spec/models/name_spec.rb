@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe Name do
-
   describe '#name' do
     subject { model.name }
 
@@ -18,4 +17,3 @@ describe Name do
     end
   end
 end
-

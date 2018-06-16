@@ -63,7 +63,7 @@ class Book < ApplicationRecord
     image side: :header
   end
 
-  def download_url(type=nil, extension: 'pdf')
+  def download_url(type = nil, extension: 'pdf')
     case type
     when :epub
       type = nil
@@ -73,11 +73,11 @@ class Book < ApplicationRecord
       extension = 'mobi'
     end
 
-    filename  = [slug]
+    filename = [slug]
     filename << "_#{type.to_s}" if type.present?
     filename << '.'
     filename << extension
-    filename  = filename.join
+    filename = filename.join
     [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
@@ -100,5 +100,4 @@ class Book < ApplicationRecord
   def meta_image
     image side: :front
   end
-
 end

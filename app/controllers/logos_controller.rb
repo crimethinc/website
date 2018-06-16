@@ -19,6 +19,6 @@ class LogosController < ApplicationController
       @product = @product.first
     end
 
-    @title   = "logos : #{@product.name}"
+    @title = "logos : #{@product.name}"
   end
 end

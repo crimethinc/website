@@ -101,7 +101,7 @@ describe Article do
   # end
 
   describe '#collection_posts' do
-    let(:status)  { create(:status) }
+    let(:status) { create(:status) }
     let(:published_at) { Date.current }
     it 'finds related collection_posts by collection_id' do
       collection = create(:article, title: 'test', status: status, published_at: published_at)
@@ -112,7 +112,7 @@ describe Article do
   end
 
   describe 'collection_root?' do
-    let(:status)  { create(:status) }
+    let(:status) { create(:status) }
     let(:published_at) { Date.current }
     context 'when #collection_posts exists' do
       it 'returns true' do
@@ -132,7 +132,7 @@ describe Article do
   end
 
   describe 'in_collection?' do
-    let(:status)  { create(:status) }
+    let(:status) { create(:status) }
     let(:published_at) { Date.current }
     context 'when it has a collection_id' do
       it 'returns true' do
@@ -152,7 +152,7 @@ describe Article do
   end
 
   describe 'short_path_redirect_creation' do
-    let(:status)  { create(:status) }
+    let(:status) { create(:status) }
     let(:published_at) { Date.current }
     context 'successfull creates a short_path redirect' do
       it 'returns true' do

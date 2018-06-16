@@ -22,7 +22,6 @@ RSpec.describe VideosController, type: :controller do
       get :show, params: { slug: 'slug' }
 
       expect(response).to redirect_to([:videos])
-
     end
   end
 end

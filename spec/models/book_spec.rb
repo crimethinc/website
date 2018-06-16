@@ -22,7 +22,7 @@ RSpec.describe Book, type: :model do
 
     subject { book.path }
 
-    it { is_expected.to eq('/books/slug')}
+    it { is_expected.to eq('/books/slug') }
   end
 
   describe '#image' do
@@ -47,7 +47,7 @@ RSpec.describe Book, type: :model do
     let(:status) { Status.new(name: 'published') }
     let(:book) { Book.new(title: 'Contradictionary', status: status) }
 
-    it { is_expected.to eq(true)}
+    it { is_expected.to eq(true) }
   end
 
   describe '#tags' do

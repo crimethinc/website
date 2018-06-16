@@ -1,7 +1,7 @@
 class Admin::AdminController < ApplicationController
   layout 'admin'
 
-  def admin_title(model=nil, keys = [])
+  def admin_title(model = nil, keys = [])
     return t(".#{action_name}_title", default: '') unless model.present?
 
     translation_vars = {}

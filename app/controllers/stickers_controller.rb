@@ -4,8 +4,8 @@ class StickersController < ApplicationController
     @body_id  = 'products'
     @type     = 'stickers'
     @title    = 'Stickers'
-    @featured_products = Poster.sticker.order(published_at: :desc).published.map{ |x| x if     x.buy_url.present? }.compact
-    @products          = Poster.sticker.order(published_at: :desc).published.map{ |x| x unless x.buy_url.present? }.compact
+    @featured_products = Poster.sticker.order(published_at: :desc).published.map { |x| x if     x.buy_url.present? }.compact
+    @products          = Poster.sticker.order(published_at: :desc).published.map { |x| x unless x.buy_url.present? }.compact
 
     render 'products/index'
   end
@@ -22,7 +22,7 @@ class StickersController < ApplicationController
       return redirect_to [:stickers]
     end
 
-    @title   = "Stickers : #{@product.name}"
+    @title = "Stickers : #{@product.name}"
 
     @editable = @product
 

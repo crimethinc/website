@@ -17,7 +17,7 @@ class ZinesController < ApplicationController
     @type    = 'zines'
 
     # Treat a Zine as a Book
-    @book  = Book.zine.where(slug: params[:slug])
+    @book = Book.zine.where(slug: params[:slug])
 
     if @book.present?
       @book = @book.first

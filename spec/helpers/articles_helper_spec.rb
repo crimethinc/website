@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ArticlesHelper, type: :helper do
   describe '#article_tag' do
-    subject { helper.article_tag(article) { 'Test Text'}.to_s }
+    subject { helper.article_tag(article) { 'Test Text' }.to_s }
 
     context 'without an image' do
       let(:article) { Article.new(id: 1, slug: 'slug') }
@@ -80,8 +80,8 @@ RSpec.describe ArticlesHelper, type: :helper do
   describe '#link_to_dates' do
     subject { helper.link_to_dates(year: 2017, month: 1, day: 1) }
 
-    it { is_expected.to match(%{<a rel="archives" class="year" href="/2017">2017</a>})}
-    it { is_expected.to match(%{<a rel="archives" class="month" href="/2017/01">01</a>})}
-    it { is_expected.to match(%{<a rel="archives" class="day" href="/2017/01/01">01</a>})}
+    it { is_expected.to match(%{<a rel="archives" class="year" href="/2017">2017</a>}) }
+    it { is_expected.to match(%{<a rel="archives" class="month" href="/2017/01">01</a>}) }
+    it { is_expected.to match(%{<a rel="archives" class="day" href="/2017/01/01">01</a>}) }
   end
 end

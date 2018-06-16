@@ -11,4 +11,3 @@ describe Slug do
     it { is_expected.to eq('test-1') }
   end
 end
-

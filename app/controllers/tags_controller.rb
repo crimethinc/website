@@ -32,5 +32,4 @@ class TagsController < ApplicationController
     @articles = @tag.articles.live.published.page(params[:page]).per(25)
     return redirect_to root_path if @articles.empty?
   end
-
 end

@@ -27,7 +27,7 @@ class Admin::PostersController < Admin::AdminController
 
   def create
     @poster = Poster.new(poster_params)
-    publication_type = @poster.sticker? ? :stickers :  :posters
+    publication_type = @poster.sticker? ? :stickers : :posters
 
     if @poster.save
       redirect_to [:admin, @poster], notice: "#{publication_type.to_s.capitalize.singularize} was successfully created."
@@ -37,7 +37,7 @@ class Admin::PostersController < Admin::AdminController
   end
 
   def update
-    publication_type = @poster.sticker? ? :stickers :  :posters
+    publication_type = @poster.sticker? ? :stickers : :posters
     if @poster.update(poster_params)
       redirect_to [:admin, @poster], notice: "#{publication_type.to_s.capitalize.singularize} was successfully updated."
     else
@@ -46,7 +46,7 @@ class Admin::PostersController < Admin::AdminController
   end
 
   def destroy
-    publication_type = @poster.sticker? ? :stickers :  :posters
+    publication_type = @poster.sticker? ? :stickers : :posters
     @poster.destroy
     redirect_to [:admin, publication_type], notice: "#{publication_type.to_s.capitalize.singularize} was successfully destroyed."
   end
@@ -63,12 +63,12 @@ class Admin::PostersController < Admin::AdminController
 
   def poster_params
     params.require(:poster).permit(:sticker, :title, :subtitle, :content, :content_format,
-      :buy_info, :buy_url, :price_in_cents, :summary, :description, :published_at, :status_id,
-      :front_image_present, :back_image_present, :front_download_present, :back_download_present,
-      :slug, :height, :width, :depth, :front_image_format, :back_image_format,
-      :front_color_image_present, :front_black_and_white_image_present, :back_color_image_present,
-      :back_black_and_white_image_present, :front_color_download_present,
-      :front_black_and_white_download_present, :back_color_download_present,
-      :back_black_and_white_download_present)
+                                   :buy_info, :buy_url, :price_in_cents, :summary, :description, :published_at, :status_id,
+                                   :front_image_present, :back_image_present, :front_download_present, :back_download_present,
+                                   :slug, :height, :width, :depth, :front_image_format, :back_image_format,
+                                   :front_color_image_present, :front_black_and_white_image_present, :back_color_image_present,
+                                   :back_black_and_white_image_present, :front_color_download_present,
+                                   :front_black_and_white_download_present, :back_color_download_present,
+                                   :back_black_and_white_download_present)
   end
 end

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Archive, type: :model do
   describe 'it sorts the articles correctly' do
     Status.delete_all
-    let(:status)  { create(:status, :published) }
+    let(:status) { create(:status, :published) }
     let!(:first) { create(:article, published_at: DateTime.parse('2017-01-01'), status: status) }
     let!(:last) { create(:article, published_at: DateTime.parse('2017-01-20'), status: status) }
 

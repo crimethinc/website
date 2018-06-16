@@ -2,16 +2,16 @@ require 'rails_helper'
 
 describe 'Signing in as an admin' do
   before do
-    create(:user, username: 'user1', password: 'c'*31)
+    create(:user, username: 'user1', password: 'c' * 31)
   end
 
-  let(:other_user) { create(:user, username: 'user2', password: 'Na'*30) }
+  let(:other_user) { create(:user, username: 'user2', password: 'Na' * 30) }
 
-  it 'Signing in with correct credentials'  do
+  it 'Signing in with correct credentials' do
     visit '/signin'
     within('main') do
       fill_in 'username', with: 'user1'
-      fill_in 'password', with: 'c'*31
+      fill_in 'password', with: 'c' * 31
     end
     click_button 'Sign In'
 
@@ -23,7 +23,7 @@ describe 'Signing in as an admin' do
     visit '/signin'
     within('main') do
       fill_in 'username', with: 'user2'
-      fill_in 'password', with: 'Ba'*30
+      fill_in 'password', with: 'Ba' * 30
     end
     click_button 'Sign In'
 

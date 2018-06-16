@@ -69,7 +69,7 @@ class Poster < ApplicationRecord
     end
   end
 
-  def download_url(side:nil, color:nil)
+  def download_url(side: nil, color: nil)
     filename = [slug]
     filename << "_#{side.to_s}"  if side.present?
     filename << "_#{color.to_s}" if color.present?

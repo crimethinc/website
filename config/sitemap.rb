@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compress: true)  do
+SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compress: true) do
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
@@ -25,22 +25,22 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
   end
 
   static_paths = [
-      '/about/',
-      '/arts/submission-guidelines',
-      '/books/into-libraries/', '/books/lit-kit/',
-      '/categories/',
-      '/faq/',
-      '/get/',
-      '/kickstarter/2017/',
-      '/listen/',
-      '/library/',
-      '/read/',
-      '/rt/', '/rt/archives/',
-      '/start/',
-      '/store/', '/store/audio/', '/store/added/',
-      '/tce/',
-      '/tools/',
-      '/watch/',
+    '/about/',
+    '/arts/submission-guidelines',
+    '/books/into-libraries/', '/books/lit-kit/',
+    '/categories/',
+    '/faq/',
+    '/get/',
+    '/kickstarter/2017/',
+    '/listen/',
+    '/library/',
+    '/read/',
+    '/rt/', '/rt/archives/',
+    '/start/',
+    '/store/', '/store/audio/', '/store/added/',
+    '/tce/',
+    '/tools/',
+    '/watch/',
   ]
   tce_languages = ['czech', 'deutsch', 'espanol', 'polski', 'portugues', 'quebecois', 'slovenscina', 'slovensko']
 
