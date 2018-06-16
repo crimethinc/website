@@ -62,7 +62,7 @@ class ApplicationController < ActionController::Base
   end
 
   def strip_file_extension
-    if request.path =~ /\.html/
+    if /\.html/.match?(request.path)
       return redirect_to request.path.sub(/\.html/, '')
     end
   end

@@ -58,15 +58,6 @@ Metrics/ParameterLists:
   Max: 6
 
 
-# Offense count: 6
-# Cop supports --auto-correct.
-Performance/RegexpMatch:
-  Exclude:
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/articles_controller.rb'
-    - 'app/middlewares/rack/domain_redirect.rb'
-    - 'app/middlewares/rack/redirect.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Performance/StringReplacement:

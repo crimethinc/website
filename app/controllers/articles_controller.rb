@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
     @body_id = 'article'
 
     # get the article
-    if request.path =~ %r{^/drafts}
+    if %r{^/drafts}.match?(request.path)
       @article = Article.find_by(draft_code: params[:draft_code])
 
       if @article&.published?
