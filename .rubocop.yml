@@ -102,3 +102,7 @@ RSpec/VerifiedDoubles:
 
 RSpec/MessageSpies:
   Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/system/*'
