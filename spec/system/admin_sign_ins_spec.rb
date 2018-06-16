@@ -14,7 +14,7 @@ feature 'Signing in as an admin' do
     click_button 'Sign In'
 
     expect(page).to have_content 'Logged in!'
-    expect(current_path).to eq(admin_dashboard_path)
+    expect(page).to have_current_path(admin_dashboard_path)
   end
 
   given(:other_user) { create(:user, username: 'user2', password: 'Na'*30) }
@@ -27,8 +27,7 @@ feature 'Signing in as an admin' do
     end
     click_button 'Sign In'
 
-    # TODO: is it weird that we don't go back to /signin and there is
-    # no error message?
-    expect(current_path).to eq(auth_sessions_path)
+    # TODO: is it weird that we don’t go back to /signin and there is no error message?
+    expect(page).to have_current_path(auth_sessions_path)
   end
 end

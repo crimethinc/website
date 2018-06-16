@@ -14,11 +14,6 @@ Bundler/OrderedGems:
   Exclude:
     - 'Gemfile'
 
-# Offense count: 2
-Capybara/CurrentPathExpectation:
-  Exclude:
-    - 'spec/system/admin_sign_ins_spec.rb'
-
 # Offense count: 18
 # Configuration parameters: EnabledMethods.
 Capybara/FeatureMethods:
