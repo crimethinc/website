@@ -45,6 +45,7 @@ gem 'rubocop-rspec'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara'
+  gem 'chromedriver-helper'
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'nokogiri'

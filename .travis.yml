@@ -5,15 +5,15 @@ script: "./script/cibuild"
 
 addons:
   postgresql: '9.6'
-  firefox: latest
+  chrome: latest
 
 before_install:
-- gem update --system 2.7.4
-- gem --version
-- mkdir geckodriver
-- wget https://github.com/mozilla/geckodriver/releases/download/v$GECKODRIVER_VERSION/geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz
-- tar -xzf geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz -C geckodriver
-- export PATH=$PATH:$PWD/geckodriver
+  - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 
 notifications:
   slack:
