@@ -27,13 +27,6 @@ Lint/ParenthesesAsGroupedExpression:
   Exclude:
     - 'spec/helpers/articles_helper_spec.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
-Lint/UnusedBlockArgument:
-  Exclude:
-    - 'lib/tasks/wayback_all.rake'
-
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
