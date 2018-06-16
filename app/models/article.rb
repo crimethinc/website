@@ -21,7 +21,7 @@ class Article < ApplicationRecord
   before_save :update_or_create_redirect
 
   default_scope { order(published_at: :desc) }
-  scope :last_2_weeks, -> { where("published_at BETWEEN ? AND ?", Time.now - 2.weeks, Time.now) }
+  scope :last_2_weeks, -> { where('published_at BETWEEN ? AND ?', Time.now - 2.weeks, Time.now) }
 
   def path
     if published?
@@ -52,7 +52,7 @@ class Article < ApplicationRecord
   def content_rendered
     Kramdown::Document.new(
       MarkdownMedia.parse(content),
-      input: content_format == "html" ? :html : :kramdown,
+      input: content_format == 'html' ? :html : :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
       html_to_native: true
@@ -86,8 +86,8 @@ class Article < ApplicationRecord
   def generate_published_dates
     if published_at.present?
       self.year  = published_at.year                     if published_at.year.present?
-      self.month = published_at.month.to_s.rjust(2, "0") if published_at.month.present?
-      self.day   = published_at.day.to_s.rjust(2, "0")   if published_at.day.present?
+      self.month = published_at.month.to_s.rjust(2, '0') if published_at.month.present?
+      self.day   = published_at.day.to_s.rjust(2, '0')   if published_at.day.present?
     end
   end
 
@@ -96,7 +96,7 @@ class Article < ApplicationRecord
   end
 
   def normalize_newlines
-    tweet.gsub!("\r\n", "\n") if tweet.present?
+    tweet.gsub!("\r\n", "\n")   if tweet.present?
     summary.gsub!("\r\n", "\n") if summary.present?
   end
 
@@ -105,13 +105,13 @@ class Article < ApplicationRecord
 
       if redirect.present?
         if short_path_changed? || slug_changed? || published_at_changed? || status_id_changed?
-          redirect.update_attributes(source_path: "/" + self.short_path, target_path: self.path )
+          redirect.update_attributes(source_path: '/' + self.short_path, target_path: self.path )
         end
-      elsif Redirect.where(source_path: "/" + self.short_path).exists?
+      elsif Redirect.where(source_path: '/' + self.short_path).exists?
         errors.add(:short_path, ' is a path that already points to a redirect')
       else
-        if self.status.name == "published"
-          Redirect.create(source_path: "/" + self.short_path, target_path: path, article_id: id)
+        if self.status.name == 'published'
+          Redirect.create(source_path: '/' + self.short_path, target_path: path, article_id: id)
         end
       end
     end

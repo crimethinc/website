@@ -1,5 +1,5 @@
-require "open-uri"
-require "json"
+require 'open-uri'
+require 'json'
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   helper :meta
 
   def staging?
-    ENV["ON_STAGING"] == "TRUE"
+    ENV['ON_STAGING'] == 'TRUE'
   end
   helper_method :staging?
 
@@ -26,26 +26,26 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authorize
-    redirect_to signin_url, alert: "You need to sign in to view that page." unless signed_in?
+    redirect_to signin_url, alert: 'You need to sign in to view that page.' unless signed_in?
   end
 
   def listing?
-    action_name == "index"
+    action_name == 'index'
   end
   helper_method :listing?
 
   def showing?
-    action_name == "show"
+    action_name == 'show'
   end
   helper_method :showing?
 
   def editing?
-    action_name == "edit"
+    action_name == 'edit'
   end
   helper_method :editing?
 
   def creating?
-    action_name == "new"
+    action_name == 'new'
   end
   helper_method :creating?
 
@@ -63,12 +63,12 @@ class ApplicationController < ActionController::Base
 
   def strip_file_extension
     if request.path =~ /\.html/
-      return redirect_to request.path.sub(/\.html/, "")
+      return redirect_to request.path.sub(/\.html/, '')
     end
   end
 
   def current_resource_name
-    request.path.split("admin/").last.split("/").first.capitalize.singularize
+    request.path.split('admin/').last.split('/').first.capitalize.singularize
   end
   helper_method :current_resource_name
 
@@ -92,7 +92,7 @@ class ApplicationController < ActionController::Base
   helper_method :render_content
 
   def meta_title(thing=nil)
-    thing.present? ? thing.title : t("head.meta_title")
+    thing.present? ? thing.title : t('head.meta_title')
   end
   helper_method :meta_title
 
@@ -121,7 +121,7 @@ class ApplicationController < ActionController::Base
   helper_method :author
 
   def root_url
-    Rails.env.development? ? "http://localhost:3000" : "https://crimethinc.com"
+    Rails.env.development? ? 'http://localhost:3000' : 'https://crimethinc.com'
   end
   helper_method :root_url
 end

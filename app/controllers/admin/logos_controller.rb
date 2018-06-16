@@ -24,7 +24,7 @@ class Admin::LogosController < Admin::AdminController
     @logo = Logo.new(logo_params)
 
     if @logo.save
-      redirect_to [:admin, @logo], notice: "Logo was successfully created."
+      redirect_to [:admin, @logo], notice: 'Logo was successfully created.'
     else
       render :new
     end
@@ -32,7 +32,7 @@ class Admin::LogosController < Admin::AdminController
 
   def update
     if @logo.update(logo_params)
-      redirect_to [:admin, @logo], notice: "Logo was successfully updated."
+      redirect_to [:admin, @logo], notice: 'Logo was successfully updated.'
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class Admin::LogosController < Admin::AdminController
 
   def destroy
     @logo.destroy
-    redirect_to [:admin, :logos], notice: "Logo was successfully destroyed."
+    redirect_to [:admin, :logos], notice: 'Logo was successfully destroyed.'
   end
 
   private

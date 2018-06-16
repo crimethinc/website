@@ -8,7 +8,7 @@ class Search
   def initialize(query)
     @filters = normalize_filters(query)
     @query   = query
-    @scope   = SearchResult.select("search_results.*")
+    @scope   = SearchResult.select('search_results.*')
     @term    = strip_filters(query)
   end
 
@@ -45,16 +45,16 @@ class Search
     self.scope = scope
                  .select("ts_rank(document, phraseto_tsquery('#{term}')) AS ranking")
                  .where("document @@ phraseto_tsquery(?)", term)
-                 .order("ranking DESC")
+                 .order('ranking DESC')
   end
 
   def normalize_filters(query)
     filters = query
               .scan(FILTER_REGEX)
               .map(&:first)
-              .map { |filter| filter.split(":") }
+              .map { |filter| filter.split(':') }
               .select { |filter| VALID_FILTERS.include?(filter.first) }
-              .map { |filter| [filter.first, filter.last.tr('"', "")] }
+              .map { |filter| [filter.first, filter.last.tr('"', '')] }
 
     filters
   end
@@ -62,6 +62,6 @@ class Search
   def strip_filters(query)
     filters = query.scan(FILTER_REGEX).map(&:first)
 
-    filters.inject(query) { |q, match| q.sub(match, "") }.strip
+    filters.inject(query) { |q, match| q.sub(match, '') }.strip
   end
 end

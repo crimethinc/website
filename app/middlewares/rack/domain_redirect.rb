@@ -21,15 +21,15 @@ module Rack
     private
 
     def redirect_to_crimethinc request
-      location = "https://crimethinc.com#{request.path}"
+      location = ['https://crimethinc.com', 'request.path'].join
       redirect location
     end
 
     def redirect(location)
       [
         301,
-        { "Location" => location, "Content-Type" => "text/html" },
-        ["Moved Permanently"]
+        { 'Location' => location, 'Content-Type' => 'text/html' },
+        ['Moved Permanently']
       ]
     end
   end

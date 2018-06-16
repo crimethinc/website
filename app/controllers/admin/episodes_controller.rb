@@ -25,7 +25,7 @@ class Admin::EpisodesController < Admin::AdminController
     @episode = Episode.new(episode_params)
 
     if @episode.save
-      redirect_to [:admin, @episode], notice: "Episode was successfully created."
+      redirect_to [:admin, @episode], notice: 'Episode was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class Admin::EpisodesController < Admin::AdminController
 
   def update
     if @episode.update(episode_params)
-      redirect_to [:admin, @episode], notice: "Episode was successfully updated."
+      redirect_to [:admin, @episode], notice: 'Episode was successfully updated.'
     else
       render :edit
     end
@@ -41,7 +41,7 @@ class Admin::EpisodesController < Admin::AdminController
 
   def destroy
     @episode.destroy
-    redirect_to [:admin, :podcasts], notice: "Episode was successfully destroyed."
+    redirect_to [:admin, :podcasts], notice: 'Episode was successfully destroyed.'
   end
 
   private

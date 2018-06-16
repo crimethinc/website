@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
 
   validates :password,
             exclusion: {
-              in: ["mickey fickie fire cracker soap on a rope", "a long passphrase to meet the minimum length"],
-              message: "The passphrase '%{value}' is prohibited."
+              in: ['mickey fickie fire cracker soap on a rope', 'a long passphrase to meet the minimum length'],
+              message: 'The passphrase ‘%{value}’ is prohibited.'
             }
 
   default_scope { order(username: :asc) }

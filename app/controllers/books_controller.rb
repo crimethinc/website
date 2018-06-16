@@ -2,10 +2,10 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :extras]
 
   def index
-    @html_id = "page"
-    @body_id = "products"
-    @title   = "Books"
-    @type    = "books"
+    @html_id = 'page'
+    @body_id = 'products'
+    @title   = 'Books'
+    @type    = 'books'
 
     @bullet_books = []
     %w(no-wall-they-can-build
@@ -25,30 +25,30 @@ class BooksController < ApplicationController
   end
 
   def show
-    @html_id = "page"
-    @body_id = "products"
+    @html_id = 'page'
+    @body_id = 'products'
     @title   = "Books : #{@book.title}"
-    @type    = "books"
+    @type    = 'books'
 
     @editable = @book
   end
 
   def extras
-    @html_id = "page"
-    @body_id = "products"
+    @html_id = 'page'
+    @body_id = 'products'
     @title   = "Books : #{@book.title} : Extras"
   end
 
   def lit_kit
-    @html_id = "page"
-    @body_id = "products"
-    @title   = "Books : Literature Distribution Kit"
+    @html_id = 'page'
+    @body_id = 'products'
+    @title   = 'Books : Literature Distribution Kit'
   end
 
   def into_libraries
-    @html_id = "page"
-    @body_id = "products"
-    @title   = "Books : CrimethInc. Into Libraries"
+    @html_id = 'page'
+    @body_id = 'products'
+    @title   = 'Books : CrimethInc. Into Libraries'
   end
 
   private

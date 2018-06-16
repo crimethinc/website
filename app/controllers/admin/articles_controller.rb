@@ -18,17 +18,17 @@ class Admin::ArticlesController < Admin::AdminController
     end
 
     @title = admin_title(@article, [:title, :subtitle])
-    @html_id = "admin-article"
-    @body_id = "top"
+    @html_id = 'admin-article'
+    @body_id = 'top'
   end
 
   def new
     @collection     = Article.find(params[:id]) if params[:id]
     @article        = Article.new
-    @article.status = Status.find_by(name: "draft")
+    @article.status = Status.find_by(name: 'draft')
 
     @title = admin_title
-    @html_id = "admin-article"
+    @html_id = 'admin-article'
   end
 
   def edit
@@ -37,14 +37,14 @@ class Admin::ArticlesController < Admin::AdminController
 
     @collection = Article.find(@article.collection_id) if @article.in_collection?
     @title = admin_title(@article, [:id, :title, :subtitle])
-    @html_id = "admin-article"
+    @html_id = 'admin-article'
   end
 
   def create
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to [:admin, @article], notice: "Article was successfully created."
+      redirect_to [:admin, @article], notice: 'Article was successfully created.'
     else
       set_statuses
       render :new
@@ -56,7 +56,7 @@ class Admin::ArticlesController < Admin::AdminController
       # update_columns to avoid hitting callbacks, namely updating Search index
       @article.update_columns(user_id: nil)
 
-      redirect_to [:admin, @article], notice: "Article was successfully updated."
+      redirect_to [:admin, @article], notice: 'Article was successfully updated.'
     else
       set_statuses
       render :edit
@@ -65,7 +65,7 @@ class Admin::ArticlesController < Admin::AdminController
 
   def destroy
     @article.destroy
-    redirect_to [:admin, :articles], notice: "Article was successfully destroyed."
+    redirect_to [:admin, :articles], notice: 'Article was successfully destroyed.'
   end
 
   private
@@ -91,8 +91,8 @@ class Admin::ArticlesController < Admin::AdminController
   end
 
   def set_statuses
-    @draft     = Status.find_by(name: "draft")
-    @published = Status.find_by(name: "published")
+    @draft     = Status.find_by(name: 'draft')
+    @published = Status.find_by(name: 'published')
   end
 
   def organize_article

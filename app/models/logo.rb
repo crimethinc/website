@@ -3,30 +3,30 @@ class Logo < ApplicationRecord
 
   default_scope { order(published_at: :desc) }
 
-  ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
-  FORMATS = %w(jpg png pdf svg tif)
+  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'
+  FORMATS = %w[jpg png pdf svg tif]
 
   def namespace
-    "logos"
+    'logos'
   end
 
   def path
-    [nil, namespace, slug].join("/")
+    [nil, namespace, slug].join('/')
   end
 
   def image_description
-    "Photo of '#{title}' logo"
+    "Photo of ‘#{title}’ logo"
   end
   alias_method :front_image_description, :image_description
 
   def preview_image_url
-    [ASSET_BASE_URL, namespace, slug, "preview.png"].join("/")
+    [ASSET_BASE_URL, namespace, slug, 'preview.png'].join('/')
   end
   alias_method :front_image, :preview_image_url
 
   def image_url(extension)
-    filename = [slug, ".", extension.to_s].join
-    [ASSET_BASE_URL, namespace, slug, filename].join("/")
+    filename = [slug, '.', extension.to_s].join
+    [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
   alias_method :download_url, :image_url
 

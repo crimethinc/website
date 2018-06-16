@@ -19,14 +19,14 @@ module Post
       ).to_html.to_s
 
       doc = Nokogiri::HTML(html)
-      doc.css("body").text.truncate(200)
+      doc.css('body').text.truncate(200)
     else
       summary
     end
   end
 
   def meta_image
-    image.present? ? image : t("head.meta_image_url")
+    image.present? ? image : t('head.meta_image_url')
   end
 
   private

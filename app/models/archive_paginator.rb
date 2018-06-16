@@ -18,14 +18,14 @@ class ArchivePaginator
   end
 
   def previous_path
-    "/" + Array(previous_value).join("/")
+    '/' + Array(previous_value).join('/')
   end
 
   def previous_label
     if @archive.month
-      I18n.t("views.pagination.previous_month", month: previous_value.join("-")).html_safe
+      I18n.t('views.pagination.previous_month', month: previous_value.join('-')).html_safe
     else
-      I18n.t("views.pagination.previous_year", year: previous_value).html_safe
+      I18n.t('views.pagination.previous_year', year: previous_value).html_safe
     end
   end
 
@@ -34,14 +34,14 @@ class ArchivePaginator
   end
 
   def next_path
-    "/" + Array(next_value).join("/")
+    '/' + Array(next_value).join('/')
   end
 
   def next_label
     if @archive.month
-      I18n.t("views.pagination.next_month", month: next_value.join("-")).html_safe
+      I18n.t('views.pagination.next_month', month: next_value.join('-')).html_safe
     else
-      I18n.t("views.pagination.next_year", year: next_value).html_safe
+      I18n.t('views.pagination.next_year', year: next_value).html_safe
     end
   end
 

@@ -3,9 +3,8 @@ class Admin::RedirectsController < Admin::AdminController
   before_action :set_redirect, only: [:show, :edit, :update, :destroy]
 
   def index
-
     if params[:from].present?
-      from = params[:from].strip.sub(%r{https*://}, "").sub(%r{cwc.im|crimethinc.com}, "")
+      from = params[:from].strip.sub(%r{https*://}, '').sub(%r{cwc.im|crimethinc.com}, '')
 
       @redirects = Redirect.order(:source_path).where(source_path: from).page(params[:page])
 
@@ -13,7 +12,7 @@ class Admin::RedirectsController < Admin::AdminController
         @redirects = Redirect.order(:source_path).where(source_path: "/#{from}").page(params[:page])
       end
     elsif params[:to].present?
-      to = params[:to].strip.sub(%r{https*://}, "").sub(%r{cwc.im|crimethinc.com}, "")
+      to = params[:to].strip.sub(%r{https*://}, '').sub(%r{cwc.im|crimethinc.com}, '')
 
       @redirects = Redirect.order(:source_path).where(target_path: to).page(params[:page])
 

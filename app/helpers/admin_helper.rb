@@ -14,7 +14,7 @@ module AdminHelper
   end
 
   def nav_to(text, path, *options)
-    classes = ["nav-link"]
+    classes = ['nav-link']
 
     unless options.blank?
       options = options.first
@@ -27,11 +27,11 @@ module AdminHelper
     end
 
     target = nil
-    target = "_blank" if text =~ /View Site/
+    target = '_blank' if text =~ /View Site/
 
-    classes << "active" if current_page?(path)
+    classes << 'active' if current_page?(path)
 
-    content_tag :li, class: "nav-item" do
+    content_tag :li, class: 'nav-item' do
       link_to text, path, class: classes.join(" "), target: target
     end
   end

@@ -7,15 +7,15 @@ module Rack
     def redirect(location)
       [
         301,
-        { "Location" => location, "Content-Type" => "text/html" },
-        ["Moved Permanently"]
+        { 'Location' => location, 'Content-Type' => 'text/html' },
+        ['Moved Permanently']
       ]
     end
 
     def call(env)
       redirects = {}
 
-      filepath = ::File.expand_path("../redirects.txt", __FILE__)
+      filepath = ::File.expand_path('../redirects.txt', __FILE__)
 
       if ::File.exist?(filepath)
         ::File.open(filepath).each do |line|

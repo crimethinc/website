@@ -9,10 +9,10 @@ class Book < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
+  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'
 
   def namespace
-    zine? ? "zines" : "books"
+    zine? ? 'zines' : 'books'
   end
 
   def book?
@@ -20,35 +20,35 @@ class Book < ApplicationRecord
   end
 
   def path
-    [nil, namespace, slug].join("/")
+    [nil, namespace, slug].join('/')
   end
 
   def image(side: :front, count: 0)
     case side
     when :front
-      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join("/")
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join('/')
     when :back
-      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join("/")
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join('/')
     when :gallery
-      [ASSET_BASE_URL, namespace, slug, "gallery", "#{slug}-#{count}.jpg"].join("/")
+      [ASSET_BASE_URL, namespace, slug, "gallery", "#{slug}-#{count}.jpg"].join('/')
     when :header
-      [ASSET_BASE_URL, namespace, slug, "gallery", "#{slug}_header.jpg"].join("/")
+      [ASSET_BASE_URL, namespace, slug, "gallery", "#{slug}_header.jpg"].join('/')
     else
-      [ASSET_BASE_URL, namespace, slug, "photo.jpg"].join("/")
+      [ASSET_BASE_URL, namespace, slug, 'photo.jpg'].join('/')
     end
   end
 
   def image_description
-    "Photo of '#{title}' front cover"
+    "Photo of ‘#{title}’ front cover"
   end
   alias_method :front_image_description, :image_description
 
   def back_image_description
-    "Photo of '#{title}' back cover"
+    "Photo of ‘#{title}’ back cover"
   end
 
   def image_description
-    "Photo of '#{title}' cover"
+    "Photo of ‘#{title}’ cover"
   end
 
   def front_image
@@ -63,22 +63,22 @@ class Book < ApplicationRecord
     image side: :header
   end
 
-  def download_url(type=nil, extension:"pdf")
+  def download_url(type=nil, extension: 'pdf')
     case type
     when :epub
       type = nil
-      extension = "epub"
+      extension = 'epub'
     when :mobi
       type = nil
-      extension = "mobi"
+      extension = 'mobi'
     end
 
-    filename = [slug]
+    filename  = [slug]
     filename << "_#{type.to_s}" if type.present?
-    filename << "."
+    filename << '.'
     filename << extension
-    filename = filename.join
-    [ASSET_BASE_URL, namespace, slug, filename].join("/")
+    filename  = filename.join
+    [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def meta_description
@@ -91,7 +91,7 @@ class Book < ApplicationRecord
       ).to_html.to_s
 
       doc = Nokogiri::HTML(html)
-      doc.css("body").text.truncate(200)
+      doc.css('body').text.truncate(200)
     else
       summary
     end

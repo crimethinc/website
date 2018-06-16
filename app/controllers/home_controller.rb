@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @body_id = "home"
+    @body_id = 'home'
     @homepage = true
 
     # feed

@@ -24,7 +24,7 @@ class Admin::PodcastsController < Admin::AdminController
     @podcast = Podcast.new(podcast_params)
 
     if @podcast.save
-      redirect_to [:admin, @podcast], notice: "Podcast was successfully created."
+      redirect_to [:admin, @podcast], notice: 'Podcast was successfully created.'
     else
       render :new
     end
@@ -32,7 +32,7 @@ class Admin::PodcastsController < Admin::AdminController
 
   def update
     if @podcast.update(podcast_params)
-      redirect_to [:admin, @podcast], notice: "Podcast was successfully updated."
+      redirect_to [:admin, @podcast], notice: 'Podcast was successfully updated.'
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class Admin::PodcastsController < Admin::AdminController
 
   def destroy
     @podcast.destroy
-    redirect_to [:admin, :podcasts], notice: "Podcast was successfully destroyed."
+    redirect_to [:admin, :podcasts], notice: 'Podcast was successfully destroyed.'
   end
 
   private

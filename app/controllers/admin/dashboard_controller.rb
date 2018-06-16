@@ -10,9 +10,9 @@ class Admin::DashboardController < Admin::AdminController
 
   # /admin/markdown
   def markdown
-    @title    = "Markdown Cheatsheet"
-    @html_id  = "markdown"
-    @body_id  = "top"
+    @title    = 'Markdown Cheatsheet'
+    @html_id  = 'markdown'
+    @body_id  = 'top'
     @sections = [
                   [:headings, :links, :horizontal_rules, :paragraphs],
                   [:lists, :bold_and_italics]

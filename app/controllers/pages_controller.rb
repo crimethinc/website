@@ -3,14 +3,14 @@ class PagesController < ApplicationController
   before_action :page_redirects, only: [:show]
 
   def show
-    @html_id = "page"
+    @html_id = 'page'
     @editable = @page
 
     # no layout
     if @page.hide_layout?
       render html: @page.content.html_safe, layout: false
     else
-      render "pages/show"
+      render 'pages/show'
     end
   end
 

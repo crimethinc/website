@@ -7,7 +7,7 @@ class Episode < ApplicationRecord
 
   after_create :generate_slug
 
-  scope :live, -> { where("published_at < ?", Time.now) }
+  scope :live, -> { where('published_at < ?', Time.now) }
 
   def path
     "/podcast/#{to_param}"
@@ -27,7 +27,7 @@ class Episode < ApplicationRecord
   end
 
   def generate_slug
-    self.update slug: [podcast.episode_prefix, episode_id_in_podcast].reject(&:blank?).join("-")
+    self.update slug: [podcast.episode_prefix, episode_id_in_podcast].reject(&:blank?).join('-')
   end
 
   def meta_description
@@ -37,7 +37,7 @@ class Episode < ApplicationRecord
   end
 
   def meta_image
-    image.present? ? image : t("head.meta_image_url")
+    image.present? ? image : t('head.meta_image_url')
   end
 
   def duration_string
@@ -47,6 +47,6 @@ class Episode < ApplicationRecord
     minutes =  (duration_in_seconds / 60 - hours * 60).to_i
     seconds =  (duration_in_seconds - (minutes * 60 + hours * 3600)).to_i
 
-    ['%.2d' % hours, '%.2d' % minutes, '%.2d' % seconds].join(":")
+    ['%.2d' % hours, '%.2d' % minutes, '%.2d' % seconds].join(':')
   end
 end

@@ -1,7 +1,7 @@
 class Auth::UsersController < Admin::AdminController
   before_action :authorize, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  layout "admin"
+  layout 'admin'
 
   # /signup
   def new
@@ -19,7 +19,7 @@ class Auth::UsersController < Admin::AdminController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to signin_path, notice: "User was successfully created."
+      redirect_to signin_path, notice: 'User was successfully created.'
     else
       render :new
     end
@@ -35,7 +35,7 @@ class Auth::UsersController < Admin::AdminController
   # /profile
   def update
     if @user.update(user_params)
-      redirect_to profile_path, notice: "User was successfully updated."
+      redirect_to profile_path, notice: 'User was successfully updated.'
     else
       render :edit
     end

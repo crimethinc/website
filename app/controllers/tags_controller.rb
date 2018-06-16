@@ -4,18 +4,18 @@ class TagsController < ApplicationController
   before_action :set_articles
 
   def show
-    @html_id = "page"
-    @body_id = "tag"
+    @html_id = 'page'
+    @body_id = 'tag'
   end
 
   def feed
-    render "articles/index"
+    render 'articles/index'
   end
 
   private
 
   def set_tag
-    @tag = Tag.where(slug: params["slug"])
+    @tag = Tag.where(slug: params['slug'])
 
     if @tag.present?
       @tag = @tag.first

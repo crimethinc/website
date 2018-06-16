@@ -4,11 +4,11 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.includes(:tags, :categories).live.published.root.page(params[:page]).per(10)
 
-    render_json_feed if params[:format] == "json"
+    render_json_feed if params[:format] == 'json'
   end
 
   def show
-    @body_id = "article"
+    @body_id = 'article'
 
     # get the article
     if request.path =~ %r{^/drafts}
@@ -59,7 +59,7 @@ class ArticlesController < ApplicationController
     if @article.hide_layout?
       render html: @article.content.html_safe, layout: false
     else
-      render "/articles/show"
+      render '/articles/show'
     end
   end
 
@@ -84,20 +84,20 @@ class ArticlesController < ApplicationController
     end
 
     json_feed = {
-      version:       "https://jsonfeed.org/version/1",
-      user_comment:  "I support your decision, I believe in change and hope you find just what it is that you are looking for. ::: If your heart is free, the ground you stand on is liberated territory. Defend it. ::: This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — https://crimethinc.com/feed.json — and add it your reader. ::: For more info on this format: https://jsonfeed.org ",
+      version:       'https://jsonfeed.org/version/1',
+      user_comment:  'I support your decision, I believe in change and hope you find just what it is that you are looking for. ::: If your heart is free, the ground you stand on is liberated territory. Defend it. ::: This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — https://crimethinc.com/feed.json — and add it your reader. ::: For more info on this format: https://jsonfeed.org ',
       title:         page_title,
       description:   meta_title,
       home_page_url: root_url,
       feed_url:      json_feed_url,
-      next_url:      [json_feed_url, "?page=", params[:page].present? ? params[:page].to_i + 1 : 2].join,
-      icon:          view_context.asset_url("icons/icon-600x600.png"),
-      favicon:       view_context.asset_url("icons/icon-70x70.png"),
+      next_url:      [json_feed_url, '?page=', params[:page].present? ? params[:page].to_i + 1 : 2].join,
+      icon:          view_context.asset_url('icons/icon-600x600.png'),
+      favicon:       view_context.asset_url('icons/icon-70x70.png'),
 
       author: {
         name: author,
         url:  root_url,
-        avatar: view_context.asset_url("icons/icon-600x600.png")
+        avatar: view_context.asset_url('icons/icon-600x600.png')
       },
 
       items: items

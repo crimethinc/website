@@ -30,7 +30,7 @@ class Admin::VideosController < Admin::AdminController
     @video = Video.new(video_params)
 
     if @video.save
-      redirect_to [:admin, @video], notice: "Video was successfully created."
+      redirect_to [:admin, @video], notice: 'Video was successfully created.'
     else
       render :new
     end
@@ -39,7 +39,7 @@ class Admin::VideosController < Admin::AdminController
   # /admin/videos/1
   def update
     if @video.update(video_params)
-      redirect_to [:admin, @video], notice: "Video was successfully updated."
+      redirect_to [:admin, @video], notice: 'Video was successfully updated.'
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class Admin::VideosController < Admin::AdminController
   # /admin/videos/1
   def destroy
     @video.destroy
-    redirect_to [:admin, :videos], notice: "Video was successfully destroyed."
+    redirect_to [:admin, :videos], notice: 'Video was successfully destroyed.'
   end
 
   private

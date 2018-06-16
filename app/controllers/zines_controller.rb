@@ -1,20 +1,20 @@
 class ZinesController < ApplicationController
   def index
-    @html_id = "page"
-    @body_id = "products"
-    @type    = "zines"
-    @title   = "Zines"
+    @html_id = 'page'
+    @body_id = 'products'
+    @type    = 'zines'
+    @title   = 'Zines'
 
     @featured_products = Book.zine.order(published_at: :desc).published.where.not(buy_url: nil)
     @products          = Book.zine.order(published_at: :desc).published.where(buy_url: nil)
 
-    render "products/index"
+    render 'products/index'
   end
 
   def show
-    @html_id = "page"
-    @body_id = "products"
-    @type    = "zines"
+    @html_id = 'page'
+    @body_id = 'products'
+    @type    = 'zines'
 
     # Treat a Zine as a Book
     @book  = Book.zine.where(slug: params[:slug])
@@ -30,6 +30,6 @@ class ZinesController < ApplicationController
     @editable = @book
 
     # Use the Book view
-    render "books/show"
+    render 'books/show'
   end
 end

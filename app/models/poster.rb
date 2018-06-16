@@ -9,10 +9,10 @@ class Poster < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  ASSET_BASE_URL = "https://cloudfront.crimethinc.com/assets"
+  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'
 
   def namespace
-    sticker? ? "stickers" : "posters"
+    sticker? ? 'stickers' : 'posters'
   end
 
   def poster?
@@ -20,16 +20,16 @@ class Poster < ApplicationRecord
   end
 
   def path
-    [nil, namespace, slug].join("/")
+    [nil, namespace, slug].join('/')
   end
 
   def image_description
-    "Photo of '#{title}' front side"
+    "Photo of ‘#{title}’ front side"
   end
   alias_method :front_image_description, :image_description
 
   def back_image_description
-    "Photo of '#{title}' back side"
+    "Photo of ‘#{title}’ back side"
   end
 
   def front_color_image
@@ -49,15 +49,15 @@ class Poster < ApplicationRecord
   end
 
   def image(side: :front, color: :color)
-    filename = [slug, "_", side, "_", color, ".", self.send("#{side}_image_format")].join
-    [ASSET_BASE_URL, namespace, slug, filename].join("/")
+    filename = [slug, '_', side, '_', color, '.', self.send("#{side}_image_format")].join
+    [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def front_image
     if front_color_image_present? || front_black_and_white_image_present?
       front_color_image_present ? front_color_image : front_black_and_white_image
     else
-      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.#{front_image_format}"].join("/")
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.#{front_image_format}"].join('/')
     end
   end
 
@@ -65,7 +65,7 @@ class Poster < ApplicationRecord
     if back_color_image_present? || back_black_and_white_image_present?
       back_color_image_present ? back_color_image : back_black_and_white_image
     else
-      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join("/")
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join('/')
     end
   end
 
@@ -73,9 +73,9 @@ class Poster < ApplicationRecord
     filename = [slug]
     filename << "_#{side.to_s}"  if side.present?
     filename << "_#{color.to_s}" if color.present?
-    filename << ".pdf"
+    filename << '.pdf'
     filename = filename.join
-    [ASSET_BASE_URL, namespace, slug, filename].join("/")
+    [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def meta_description
@@ -88,7 +88,7 @@ class Poster < ApplicationRecord
       ).to_html.to_s
 
       doc = Nokogiri::HTML(html)
-      doc.css("body").text.truncate(200)
+      doc.css('body').text.truncate(200)
     else
       summary
     end

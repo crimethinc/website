@@ -9,7 +9,7 @@ class Admin::PostersController < Admin::AdminController
   end
 
   def show
-    return redirect_to([nil, "admin", "stickers", @poster.id].join("/")) if @poster.sticker?
+    return redirect_to([nil, 'admin', 'stickers', @poster.id].join('/')) if @poster.sticker?
 
     @title = admin_title(@poster, [:title, :subtitle])
   end
@@ -20,7 +20,7 @@ class Admin::PostersController < Admin::AdminController
   end
 
   def edit
-    return redirect_to([nil, "admin", "stickers", @poster.id, "edit"].join("/")) if @poster.sticker?
+    return redirect_to([nil, 'admin', 'stickers', @poster.id, 'edit'].join('/')) if @poster.sticker?
 
     @title = admin_title(@poster, [:id, :title, :subtitle])
   end
@@ -58,7 +58,7 @@ class Admin::PostersController < Admin::AdminController
   end
 
   def set_publication_type
-    @publication_type = "poster"
+    @publication_type = 'poster'
   end
 
   def poster_params

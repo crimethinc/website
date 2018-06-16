@@ -8,7 +8,7 @@ class Video < ApplicationRecord
   def content_rendered
     Kramdown::Document.new(
       content,
-      input: content_format == "html" ? :html : :kramdown,
+      input: content_format == 'html' ? :html : :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
       html_to_native: true
@@ -25,13 +25,13 @@ class Video < ApplicationRecord
       ).to_html.to_s
 
       doc = Nokogiri::HTML(html)
-      doc.css("body").text.truncate(200)
+      doc.css('body').text.truncate(200)
     else
       summary
     end
   end
 
   def meta_image
-    ""
+    ''
   end
 end

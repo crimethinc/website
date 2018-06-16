@@ -1,41 +1,41 @@
-source "https://rubygems.org"
-ruby "~> 2.5.1"
+source 'https://rubygems.org'
+ruby '~> 2.5.1'
 
 # app server
-gem "rails", "~> 5.2.0"
+gem 'rails', '~> 5.2.0'
 
 # database
-gem "pg"
-gem "scenic", "~> 1.4"
+gem 'pg'
+gem 'scenic', '~> 1.4'
 
 # webserver
-gem "puma"
-gem "rack-timeout"
+gem 'puma'
+gem 'rack-timeout'
 
 # assets
-gem "bootstrap", "~> 4.1.1"
-gem "sass-rails"
-gem "autoprefixer-rails"
-gem "uglifier"
-gem "jquery-rails"
-gem "jquery-ui-rails"   # used for polyfilling forms in admin/articles
-gem "sitemap_generator" # generates compliant xml sitemap
+gem 'bootstrap', '~> 4.1.1'
+gem 'sass-rails'
+gem 'autoprefixer-rails'
+gem 'uglifier'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'   # used for polyfilling forms in admin/articles
+gem 'sitemap_generator' # generates compliant xml sitemap
 
 # text utilities
-gem "rubypants"      # for smart quotes
-gem "sterile"        # for slugs
-gem "kramdown"       # for Markdown processing
-gem "stringex"       # for Markdown header IDs processing
-gem "markdown_media" # for [[ media embeds ]]
+gem 'rubypants'      # for smart quotes
+gem 'sterile'        # for slugs
+gem 'kramdown'       # for Markdown processing
+gem 'stringex'       # for Markdown header IDs processing
+gem 'markdown_media' # for [[ media embeds ]]
 
 # auth
-gem "bcrypt", "~> 3.1.12"
+gem 'bcrypt', '~> 3.1.12'
 
 # pagination
-gem "kaminari"
+gem 'kaminari'
 
 # memcache
-gem "dalli"
+gem 'dalli'
 
 # For codestyle guide and linting
 gem 'rubocop', require: false
@@ -43,13 +43,13 @@ gem 'rubocop-rspec'
 
 # dev and testing
 group :development, :test do
-  gem "byebug", platform: :mri
-  gem "nokogiri"
-  gem "rspec-rails"
-  gem "rails-controller-testing"
-  gem "spring-commands-rspec"
-  gem "simplecov", :require => false
-  gem "factory_bot_rails"
+  gem 'byebug', platform: :mri
+  gem 'nokogiri'
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'spring-commands-rspec'
+  gem 'simplecov', :require => false
+  gem 'factory_bot_rails'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
@@ -58,27 +58,27 @@ end
 # dev
 group :development do
   gem 'guard-rspec', require: false
-  gem "web-console"
-  gem "listen", "~> 3.1.5"
-  gem "spring"
-  gem "spring-watcher-listen", "~> 2.0.0"
+  gem 'web-console'
+  gem 'listen', '~> 3.1.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 
   # For memory profiling
-  gem "memory_profiler"
+  gem 'memory_profiler'
 
   # For call-stack profiling flamegraphs
-  gem "flamegraph"
-  gem "stackprof"
-  gem "fast_stack"
+  gem 'flamegraph'
+  gem 'stackprof'
+  gem 'fast_stack'
 end
 
 # monitoring
-gem "bugsnag"
+gem 'bugsnag'
 
 # DDOS protection
-gem "rack-attack"
-gem "redis"
-gem "redis-store"
+gem 'rack-attack'
+gem 'redis'
+gem 'redis-store'
 
 # windows dev
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

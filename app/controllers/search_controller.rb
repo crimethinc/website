@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
-    @html_id = "page"
-    @body_id = "search"
+    @html_id = 'page'
+    @body_id = 'search'
 
     if params[:q].blank?
       return redirect_to root_path
@@ -13,9 +13,9 @@ class SearchController < ApplicationController
   end
 
   def advanced
-    @html_id = "page"
-    @body_id = "search"
-    @title   = "Advanced Search"
+    @html_id = 'page'
+    @body_id = 'search'
+    @title   = 'Advanced Search'
 
     @advanced_search = AdvancedSearch.new(params[:q])
   end
@@ -30,12 +30,12 @@ class SearchController < ApplicationController
   private
 
   def search_params
-    # single quotes are part of postgres's plain text search syntax
+    # single quotes are part of postgres’s plain text search syntax
     # and need to be removed to prevent syntax errors.
     #
     # There may be a way to handle single quotes in search terms that
-    # doesn't cause database-level concerns up to the controller
+    # doesn’t cause database-level concerns up to the controller
     # level, but I didn't find any (see commit message for links)
-    params[:q].tr("'", "")
+    params[:q].tr("'", '')
   end
 end

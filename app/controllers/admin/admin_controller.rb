@@ -1,5 +1,5 @@
 class Admin::AdminController < ApplicationController
-  layout "admin"
+  layout 'admin'
 
   def admin_title(model=nil, keys = [])
     return t(".#{action_name}_title", default: '') unless model.present?
@@ -28,7 +28,7 @@ class Admin::AdminController < ApplicationController
     # `Time.parse("#{date} #{time}#{tz.formatted_offset})` we would
     # get off-by-1-hr issues if the date is far enough in the future
     # that DST toggles
-    tz_offset = Time.parse("#{date} #{time}").in_time_zone(tz).strftime("%z")
+    tz_offset = Time.parse("#{date} #{time}").in_time_zone(tz).strftime('%z')
     datetime  = Time.parse("#{date} #{time}#{tz_offset}")
     params[controller_name.singularize.to_sym].merge!(published_at: datetime)
   end

@@ -5,25 +5,25 @@ class CategoriesController < ApplicationController
   before_action :set_articles, only: [:show, :feed]
 
   def show
-    @html_id  = "page"
-    @body_id  = "category"
+    @html_id  = 'page'
+    @body_id  = 'category'
   end
 
   def index
-    @html_id    = "page"
-    @body_id    = "categories"
-    @title      = "Categories"
+    @html_id    = 'page'
+    @body_id    = 'categories'
+    @title      = 'Categories'
     @categories = Category.all
   end
 
   def feed
-    render "articles/index"
+    render 'articles/index'
   end
 
   private
 
   def set_slug
-    @slug = params[:slug].gsub("_", "-")
+    @slug = params[:slug].gsub('_', '-')
 
     if @slug != params[:slug]
       return redirect_to category_path(@slug)

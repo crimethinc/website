@@ -1,8 +1,8 @@
 class ArchivesController < ApplicationController
   def index
-    @html_id    = "page"
-    @body_id    = "archives"
-    @page_title = "Articles"
+    @html_id    = 'page'
+    @body_id    = 'archives'
+    @page_title = 'Articles'
 
     @archive = Archive.new(year: params[:year], month: params[:month], day: params[:day], page: params[:page])
 
