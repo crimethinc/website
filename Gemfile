@@ -13,20 +13,20 @@ gem 'puma'
 gem 'rack-timeout'
 
 # assets
-gem 'bootstrap', '~> 4.1.1'
-gem 'sass-rails'
 gem 'autoprefixer-rails'
-gem 'uglifier'
+gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'   # used for polyfilling forms in admin/articles
+gem 'sass-rails'
 gem 'sitemap_generator' # generates compliant xml sitemap
+gem 'uglifier'
 
 # text utilities
+gem 'kramdown'       # for Markdown processing
+gem 'markdown_media' # for [[ media embeds ]]
 gem 'rubypants'      # for smart quotes
 gem 'sterile'        # for slugs
-gem 'kramdown'       # for Markdown processing
 gem 'stringex'       # for Markdown header IDs processing
-gem 'markdown_media' # for [[ media embeds ]]
 
 # auth
 gem 'bcrypt', '~> 3.1.12'
@@ -44,32 +44,32 @@ gem 'rubocop-rspec'
 # dev and testing
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'nokogiri'
-  gem 'rspec-rails'
-  gem 'rails-controller-testing'
-  gem 'spring-commands-rspec'
-  gem 'simplecov', :require => false
-  gem 'factory_bot_rails'
   gem 'capybara'
-  gem 'selenium-webdriver'
+  gem 'factory_bot_rails'
   gem 'launchy'
+  gem 'nokogiri'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'simplecov', :require => false
+  gem 'spring-commands-rspec'
 end
 
 # dev
 group :development do
   gem 'guard-rspec', require: false
-  gem 'web-console'
   gem 'listen', '~> 3.1.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console'
 
   # For memory profiling
   gem 'memory_profiler'
 
   # For call-stack profiling flamegraphs
+  gem 'fast_stack'
   gem 'flamegraph'
   gem 'stackprof'
-  gem 'fast_stack'
 end
 
 # monitoring
