@@ -81,7 +81,7 @@ module ArticlesHelper
   end
 
   def publication_status_badge_class article
-    article.status.name.downcase == 'draft' ? 'danger' : 'success'
+    article.status.name.casecmp('draft').zero? ? 'danger' : 'success'
   end
 
   XML_ENCODING = ::Encoding.find('utf-8')

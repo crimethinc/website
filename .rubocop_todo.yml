@@ -68,12 +68,6 @@ Naming/PredicateName:
     - 'spec/**/*'
     - 'app/models/redirect.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Performance/Casecmp:
-  Exclude:
-    - 'app/helpers/articles_helper.rb'
-
 # Offense count: 6
 # Cop supports --auto-correct.
 Performance/RegexpMatch:
