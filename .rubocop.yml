@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 require: rubocop-rspec
 
 AllCops:
@@ -36,10 +38,10 @@ Metrics/ClassLength:
   Max: 210
 
 Metrics/LineLength:
-  Max: 160
+  Max: 200
 
 Metrics/MethodLength:
-  Max: 25
+  Max: 40
 
 Metrics/BlockLength:
   Max: 140
@@ -48,7 +50,7 @@ Metrics/BlockLength:
     - 'spec/**/*'
 
 Metrics/AbcSize:
-  Max: 40
+  Max: 65
 
 Style/Documentation:
   Enabled: false
@@ -93,7 +95,7 @@ RSpec/ExampleLength:
   Max: 15
 
 RSpec/MultipleExpectations:
-  Max: 5
+  Max: 10
 
 RSpec/VerifiedDoubles:
   Enabled: false

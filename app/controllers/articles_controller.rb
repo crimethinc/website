@@ -85,7 +85,11 @@ class ArticlesController < ApplicationController
 
     json_feed = {
       version:       'https://jsonfeed.org/version/1',
-      user_comment:  'I support your decision, I believe in change and hope you find just what it is that you are looking for. ::: If your heart is free, the ground you stand on is liberated territory. Defend it. ::: This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — https://crimethinc.com/feed.json — and add it your reader. ::: For more info on this format: https://jsonfeed.org ',
+      user_comment:  'I support your decision, I believe in change and hope you find just what it is that you are looking for.
+                     ::: If your heart is free, the ground you stand on is liberated territory. Defend it. :::
+                     This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format.
+                     To add this feed to your reader, copy the following URL — https://crimethinc.com/feed.json — and add it your reader.
+                     ::: For more info on this format: https://jsonfeed.org ',
       title:         page_title,
       description:   meta_title,
       home_page_url: root_url,
