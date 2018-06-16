@@ -45,6 +45,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
+    ast (2.4.0)
     autoprefixer-rails (8.6.2)
       execjs
     bcrypt (3.1.12)
@@ -101,6 +102,7 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.1)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -150,8 +152,12 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    parallel (1.12.1)
+    parser (2.5.1.0)
+      ast (~> 2.4.0)
     pg (1.0.0)
     popper_js (1.12.9)
+    powerpack (0.1.2)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -191,6 +197,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (3.0.0)
     rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -219,6 +226,17 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
+    rubocop (0.57.2)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    rubocop-rspec (1.27.0)
+      rubocop (>= 0.56.0)
+    ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     rubypants (0.7.0)
     rubyzip (1.2.1)
@@ -272,6 +290,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.11)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.4.0)
     web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -316,6 +335,8 @@ DEPENDENCIES
   redis
   redis-store
   rspec-rails
+  rubocop
+  rubocop-rspec
   rubypants
   sass-rails
   scenic (~> 1.4)
@@ -336,4 +357,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

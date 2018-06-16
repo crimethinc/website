@@ -37,6 +37,10 @@ gem "kaminari"
 # memcache
 gem "dalli"
 
+# For codestyle guide and linting
+gem 'rubocop', require: false
+gem 'rubocop-rspec'
+
 # dev and testing
 group :development, :test do
   gem "byebug", platform: :mri
