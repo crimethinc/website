@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :book do
-    title "MyBook"
+    title 'MyBook'
     zine false
     status_id 1
   end

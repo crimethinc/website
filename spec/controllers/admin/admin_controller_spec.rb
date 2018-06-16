@@ -15,7 +15,7 @@ RSpec.describe Admin::AdminController, type: :controller do
     end
 
     it 'logs error and does not blow up if invalid keys passed' do
-      expect(Rails.logger).to receive(:error).with("admin/articles:edit has an issue with the page title")
+      expect(Rails.logger).to receive(:error).with('admin/articles:edit has an issue with the page title')
 
       title = controller.admin_title(article, [:id, :foo])
 

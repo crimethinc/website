@@ -1,47 +1,47 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe Admin::CategoriesController, type: :controller do
-  context "unauthorized" do
-    it "redirects on index" do
+  context 'unauthorized' do
+    it 'redirects on index' do
       get :index
 
       expect(response).to have_http_status(302)
     end
 
-    it "redirects on new" do
+    it 'redirects on new' do
       get :new
 
       expect(response).to have_http_status(302)
     end
 
-    it "redirects on create" do
-      post :create, params: {category: {name: "test"}}
+    it 'redirects on create' do
+      post :create, params: {category: {name: 'test'}}
 
       expect(response).to have_http_status(302)
     end
 
-    it "redirects on show" do
+    it 'redirects on show' do
       category = create(:category)
       get :show, params: {id: category.id}
 
       expect(response).to have_http_status(302)
     end
 
-    it "redirects on edit" do
+    it 'redirects on edit' do
       category = create(:category)
       get :edit, params: {id: category.id}
 
       expect(response).to have_http_status(302)
     end
 
-    it "redirects on update" do
+    it 'redirects on update' do
       category = create(:category)
-      patch :update, params: {id: category.id, category: {name: "test"}}
+      patch :update, params: {id: category.id, category: {name: 'test'}}
 
       expect(response).to have_http_status(302)
     end
 
-    it "redirects on destroy" do
+    it 'redirects on destroy' do
       category = create(:category)
       delete :destroy, params: {id: category.id}
 
@@ -49,20 +49,20 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     end
   end
 
-  context "authorized" do
+  context 'authorized' do
     let(:user) { create(:user) }
     before { session[:user_id] = user.id }
 
-    describe "GET #index" do
-      it "renders index" do
+    describe 'GET #index' do
+      it 'renders index' do
         get :index
 
         expect(response).to have_http_status(200)
       end
     end
 
-    describe "GET #show" do
-      it "renders show" do
+    describe 'GET #show' do
+      it 'renders show' do
         category = create(:category)
         get :show, params: {id: category.id}
 
@@ -71,8 +71,8 @@ RSpec.describe Admin::CategoriesController, type: :controller do
       end
     end
 
-    describe "POST #create" do
-      it "creates a category" do
+    describe 'POST #create' do
+      it 'creates a category' do
         post :create, params: {category: attributes_for(:category)}
 
         expect(response).to have_http_status(302)
@@ -80,8 +80,8 @@ RSpec.describe Admin::CategoriesController, type: :controller do
       end
     end
 
-    describe "PUT #update" do
-      it "updates the category" do
+    describe 'PUT #update' do
+      it 'updates the category' do
         category = create(:category)
         patch :update, params: {id: category.id, category: attributes_for(:category)}
 
@@ -90,8 +90,8 @@ RSpec.describe Admin::CategoriesController, type: :controller do
       end
     end
 
-    describe "DELETE #destroy" do
-      it "deletes the category" do
+    describe 'DELETE #destroy' do
+      it 'deletes the category' do
         category = create(:category)
         delete :destroy, params: {id: category.id}
 

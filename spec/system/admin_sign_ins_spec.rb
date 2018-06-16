@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-feature "Signing in as an admin" do
+feature 'Signing in as an admin' do
   background do
     create(:user, username: 'user1', password: 'c'*31)
   end
 
-  scenario "Signing in with correct credentials"  do
+  scenario 'Signing in with correct credentials'  do
     visit '/signin'
     within('main') do
       fill_in 'username', with: 'user1'
@@ -19,7 +19,7 @@ feature "Signing in as an admin" do
 
   given(:other_user) { create(:user, username: 'user2', password: 'Na'*30) }
 
-  scenario "Signing in with invalid password" do
+  scenario 'Signing in with invalid password' do
     visit '/signin'
     within('main') do
       fill_in 'username', with: 'user2'
