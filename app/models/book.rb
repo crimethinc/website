@@ -74,7 +74,7 @@ class Book < ApplicationRecord
     end
 
     filename = [slug]
-    filename << "_#{type.to_s}" if type.present?
+    filename << "_#{type}" if type.present?
     filename << '.'
     filename << extension
     filename = filename.join

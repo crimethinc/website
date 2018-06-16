@@ -27,13 +27,6 @@ Lint/ParenthesesAsGroupedExpression:
   Exclude:
     - 'spec/helpers/articles_helper_spec.rb'
 
-# Offense count: 3
-# Cop supports --auto-correct.
-Lint/StringConversionInInterpolation:
-  Exclude:
-    - 'app/models/book.rb'
-    - 'app/models/poster.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.

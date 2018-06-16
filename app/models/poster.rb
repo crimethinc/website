@@ -71,8 +71,8 @@ class Poster < ApplicationRecord
 
   def download_url(side: nil, color: nil)
     filename = [slug]
-    filename << "_#{side.to_s}"  if side.present?
-    filename << "_#{color.to_s}" if color.present?
+    filename << "_#{side}"  if side.present?
+    filename << "_#{color}" if color.present?
     filename << '.pdf'
     filename = filename.join
     [ASSET_BASE_URL, namespace, slug, filename].join('/')
