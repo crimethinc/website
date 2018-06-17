@@ -39,16 +39,6 @@ RSpec/ContextWording:
     - 'spec/models/redirect_spec.rb'
     - 'spec/models/tag_spec.rb'
 
-# Offense count: 5
-# Configuration parameters: CustomIncludeMethods.
-RSpec/EmptyExampleGroup:
-  Exclude:
-    - 'spec/controllers/application_controller_spec.rb'
-    - 'spec/controllers/posters_controller_spec.rb'
-    - 'spec/controllers/tools_controller_spec.rb'
-    - 'spec/helpers/admin_helper_spec.rb'
-    - 'spec/models/definition_spec.rb'
-
 # Offense count: 2
 RSpec/EmptyLineAfterExampleGroup:
   Exclude:
@@ -88,11 +78,6 @@ RSpec/ExpectInHook:
     - 'spec/controllers/admin/admin_controller_spec.rb'
     - 'spec/helpers/articles_helper_spec.rb'
 
-# Offense count: 1
-# Configuration parameters: CustomTransform, IgnoreMethods.
-RSpec/FilePath:
-  Exclude:
-    - 'spec/controllers/posters_controller_spec.rb'
 
 # Offense count: 19
 RSpec/LeadingSubject:
@@ -111,6 +96,8 @@ RSpec/LeadingSubject:
     - 'spec/models/user_spec.rb'
     - 'spec/models/video_spec.rb'
 
+
+
 # Offense count: 2
 RSpec/LetSetup:
   Exclude:
@@ -128,8 +115,6 @@ RSpec/NamedSubject:
     - 'spec/models/redirect_spec.rb'
     - 'spec/models/tag_spec.rb'
     - 'spec/services/tag_assigner_spec.rb'
-
-
 
 # Offense count: 2
 # Configuration parameters: Include.
