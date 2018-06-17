@@ -7,10 +7,10 @@ class Page < ApplicationRecord
   has_many :tags, through: :taggings
 
   def path
-    if self.published?
-      "/#{self.slug}"
+    if published?
+      "/#{slug}"
     else
-      "/drafts/pages/#{self.draft_code}"
+      "/drafts/pages/#{draft_code}"
     end
   end
 

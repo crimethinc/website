@@ -27,7 +27,7 @@ class Article < ApplicationRecord
     if published?
       published_at.strftime("/%Y/%m/%d/#{slug}")
     else
-      "/drafts/articles/#{self.draft_code}"
+      "/drafts/articles/#{draft_code}"
     end
   end
 
@@ -88,7 +88,7 @@ class Article < ApplicationRecord
   end
 
   def downcase_content_format
-    self.content_format = self.content_format.downcase
+    self.content_format = content_format.downcase
   end
 
   def normalize_newlines
@@ -100,11 +100,11 @@ class Article < ApplicationRecord
     if short_path.present?
 
       if redirect.present?
-        redirect.update(source_path: '/' + self.short_path, target_path: self.path) if short_path_changed? || slug_changed? || published_at_changed? || status_id_changed?
-      elsif Redirect.where(source_path: '/' + self.short_path).exists?
+        redirect.update(source_path: '/' + short_path, target_path: path) if short_path_changed? || slug_changed? || published_at_changed? || status_id_changed?
+      elsif Redirect.where(source_path: '/' + short_path).exists?
         errors.add(:short_path, ' is a path that already points to a redirect')
       else
-        Redirect.create(source_path: '/' + self.short_path, target_path: path, article_id: id) if self.status.name == 'published'
+        Redirect.create(source_path: '/' + short_path, target_path: path, article_id: id) if status.name == 'published'
       end
     end
   end

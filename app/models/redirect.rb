@@ -27,7 +27,7 @@ class Redirect < ApplicationRecord
   end
 
   def downcase_source_path
-    self.source_path.downcase!
+    source_path.downcase!
   end
 
   def strip_domain_from_path path
@@ -36,17 +36,17 @@ class Redirect < ApplicationRecord
   end
 
   def strip_domain_from_source_path
-    self.source_path = strip_domain_from_path self.source_path
+    self.source_path = strip_domain_from_path source_path
   end
 
   def strip_domain_from_target_path
-    self.target_path = strip_domain_from_path self.target_path
+    self.target_path = strip_domain_from_path target_path
   end
 
   private
 
   def paths
-    [self.source_path, self.target_path]
+    [source_path, target_path]
   end
 
   def build_url_for path
@@ -71,10 +71,10 @@ class Redirect < ApplicationRecord
   end
 
   def article_short_path_unique
-    aa = Article.where(short_path: self.source_path[/\w+/])
+    aa = Article.where(short_path: source_path[/\w+/])
 
     if aa.exists?
-      errors.add(:source_path, 'is already taken by article short path') unless aa.first.id == self.article_id
+      errors.add(:source_path, 'is already taken by article short path') unless aa.first.id == article_id
     end
   end
 end

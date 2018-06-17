@@ -14,7 +14,7 @@ class Episode < ApplicationRecord
   end
 
   def to_param
-    self.slug
+    slug
   end
 
   def episode_id_in_podcast
@@ -27,7 +27,7 @@ class Episode < ApplicationRecord
   end
 
   def generate_slug
-    self.update slug: [podcast.episode_prefix, episode_id_in_podcast].reject(&:blank?).join('-')
+    update slug: [podcast.episode_prefix, episode_id_in_podcast].reject(&:blank?).join('-')
   end
 
   def meta_description

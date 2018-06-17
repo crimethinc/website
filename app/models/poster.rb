@@ -51,7 +51,7 @@ class Poster < ApplicationRecord
   end
 
   def image(side: :front, color: :color)
-    filename = [slug, '_', side, '_', color, '.', self.send("#{side}_image_format")].join
+    filename = [slug, '_', side, '_', color, '.', send("#{side}_image_format")].join
     [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 

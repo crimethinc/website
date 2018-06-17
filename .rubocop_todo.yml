@@ -268,17 +268,6 @@ Style/IfInsideElse:
   Exclude:
     - 'app/models/article.rb'
 
-# Offense count: 29
-# Cop supports --auto-correct.
-Style/RedundantSelf:
-  Exclude:
-    - 'app/models/article.rb'
-    - 'app/models/concerns/slug.rb'
-    - 'app/models/episode.rb'
-    - 'app/models/page.rb'
-    - 'app/models/poster.rb'
-    - 'app/models/redirect.rb'
-
 # Offense count: 11
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, AllowInnerSlashes.
