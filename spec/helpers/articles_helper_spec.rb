@@ -62,14 +62,14 @@ RSpec.describe ArticlesHelper, type: :helper do
 
   describe '#display_time' do
     context 'with a datetime' do
-      let(:date) { DateTime.parse('2017-01-01') }
+      let(:date) { Date.parse('2017-01-01') }
 
       subject { helper.display_time(date) }
 
       it { is_expected.to eq('12:00&nbsp;+0000') }
     end
 
-    context 'witout a datetime' do
+    context 'without a datetime' do
       subject { helper.display_date(nil) }
 
       it { is_expected.to be_nil }
