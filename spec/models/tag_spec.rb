@@ -6,7 +6,7 @@ describe Tag do
   describe 'assigned_to?' do
     let(:page) { Page.create(title: 'about') }
 
-    context 'assigned to page' do
+    context 'when assigned to a page' do
       before do
         subject.assign_to!(page)
       end
@@ -16,7 +16,7 @@ describe Tag do
       end
     end
 
-    context 'not assigned ts page' do
+    context 'when not assigned to a page' do
       it 'returns false' do
         expect(subject).not_to be_assigned_to(page)
       end

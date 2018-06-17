@@ -39,7 +39,7 @@ describe Article do
   describe '#path' do
     subject { article.path }
 
-    context 'published' do
+    context 'when published' do
       let(:article) { create(:article, slug: 'slug', published_at: date, status: status) }
       let(:date)    { Date.parse('2017-01-01') }
       let(:status)  { create(:status, :published) }
@@ -47,7 +47,7 @@ describe Article do
       it { is_expected.to eq('/2017/01/01/slug') }
     end
 
-    context 'not published' do
+    context 'when not published' do
       let(:article) { create(:article, draft_code: 'draft-code', status: status) }
       let(:status)  { create(:status, :draft) }
 
@@ -160,7 +160,7 @@ describe Article do
     let(:status) { create(:status) }
     let(:published_at) { Date.current }
 
-    context 'successfully creates a short_path redirect' do
+    context 'when it successfully creates a short_path redirect' do
       it 'returns true' do
         # TODO: FIXME: redo this test
         # article = create(:article, title: 'test', status: status, published_at: published_at)
@@ -168,7 +168,7 @@ describe Article do
       end
     end
 
-    context 'doesn’t create a short_path redirect if redirect exists' do
+    context 'when it doesn’t create a short_path redirect if redirect exists' do
       it 'should raise error' do
         # TODO: FIXME: redo this test
         # redirect = Redirect.create!(source_path: '/tester', target_path: '/test/test')

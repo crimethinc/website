@@ -28,16 +28,6 @@ Metrics/ParameterLists:
   Max: 6
 
 
-# Offense count: 11
-# Configuration parameters: Prefixes.
-# Prefixes: when, with, without
-RSpec/ContextWording:
-  Exclude:
-    - 'spec/controllers/admin/categories_controller_spec.rb'
-    - 'spec/helpers/articles_helper_spec.rb'
-    - 'spec/models/article_spec.rb'
-    - 'spec/models/redirect_spec.rb'
-    - 'spec/models/tag_spec.rb'
 
 
 

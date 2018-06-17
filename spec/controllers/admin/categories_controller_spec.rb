@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Admin::CategoriesController, type: :controller do
-  context 'unauthorized' do
+  context 'when unauthorized' do
     it 'redirects on index' do
       get :index
 
@@ -49,7 +49,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     end
   end
 
-  context 'authorized' do
+  context 'when authorized' do
     let(:user) { create(:user) }
 
     before { session[:user_id] = user.id }

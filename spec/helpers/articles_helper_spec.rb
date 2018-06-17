@@ -54,7 +54,7 @@ RSpec.describe ArticlesHelper, type: :helper do
       it { is_expected.to eq('2017-01-01') }
     end
 
-    context 'witout a datetime' do
+    context 'without a datetime' do
       subject { helper.display_date(nil) }
 
       it { is_expected.to be_nil }
