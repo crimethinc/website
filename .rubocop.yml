@@ -37,6 +37,9 @@ Metrics/PerceivedComplexity:
 Metrics/ClassLength:
   Max: 210
 
+Metrics/ParameterLists:
+  Max: 6
+
 Metrics/LineLength:
   Max: 200
 
@@ -117,3 +120,4 @@ Rails/SkipsModelValidations:
     - 'app/controllers/admin/articles_controller.rb'
     - 'app/controllers/articles_controller.rb'
     - 'lib/tasks/scheduler.rake'
+
