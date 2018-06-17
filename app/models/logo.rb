@@ -41,17 +41,31 @@ class Logo < ApplicationRecord
   end
   alias image meta_image
 
-  def price_in_cents; nil; end
+  def price_in_cents
+    nil
+  end
 
-  def buy_info; nil; end
+  def buy_info
+    nil
+  end
 
-  def back_image_present?; nil; end
+  def back_image_present?
+    nil
+  end
 
-  def front_download_present?; nil; end
+  def front_download_present?
+    nil
+  end
 
-  def back_download_present?; nil; end
+  def back_download_present?
+    nil
+  end
 
-  def depth; nil; end
+  def depth
+    nil
+  end
 
-  def content; nil; end
+  def content
+    nil
+  end
 end
