@@ -102,7 +102,7 @@ class ApplicationController < ActionController::Base
   helper_method :page_title
 
   def prepend_admin_if_needed
-    if controller_path.match(/\Aadmin\/.*\z/).present?
+    if controller_path.match(%r{\Aadmin\/.*\z}).present?
       " #{t('admin.title_prepend')} : "
     else
       ' : '

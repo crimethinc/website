@@ -7,7 +7,7 @@ RSpec.describe ArticlesHelper, type: :helper do
     context 'without an image' do
       let(:article) { Article.new(id: 1, slug: 'slug') }
 
-      it { is_expected.to match(/\A<article [^>]+>.*<\/article>\z/) }
+      it { is_expected.to match(%r{\A<article [^>]+>.*<\/article>\z}) }
       it { is_expected.to match('h-entry') }
       it { is_expected.to match('article-with-no-header-image') }
       it { is_expected.to match(%(data-id="1")) }
@@ -20,7 +20,7 @@ RSpec.describe ArticlesHelper, type: :helper do
     context 'with an image' do
       let(:article) { Article.new(id: 1, slug: 'slug', image: 'http://example.com') }
 
-      it { is_expected.to match(/\A<article [^>]+>.*<\/article>\z/) }
+      it { is_expected.to match(%r{\A<article [^>]+>.*<\/article>\z}) }
       it { is_expected.to match('h-entry') }
       it { is_expected.to match(%(data-id="1")) }
       it { is_expected.to match(/data-published-at="\d+"/) }
@@ -34,7 +34,7 @@ RSpec.describe ArticlesHelper, type: :helper do
       let(:article) { Article.new(id: 1, slug: 'slug') }
       before { expect(article).to receive(:collection_posts) { OpenStruct.new(recent: [Article.new]) } }
 
-      it { is_expected.to match(/\A<article [^>]+>.*<\/article>\z/) }
+      it { is_expected.to match(%r{\A<article [^>]+>.*<\/article>\z}) }
       it { is_expected.to match('h-entry') }
       it { is_expected.to match('article-with-no-header-image') }
       it { is_expected.to match(%(data-id="1")) }

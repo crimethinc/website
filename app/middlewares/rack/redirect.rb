@@ -22,8 +22,8 @@ module Rack
           next if line.blank?
           source_path, target_path = line.chomp.split
 
-          source_path = "/#{source_path}" unless /^\/|http/.match?(source_path)
-          target_path = "/#{target_path}" unless /^\/|http/.match?(target_path)
+          source_path = "/#{source_path}" unless %r{^/|http}.match?(source_path)
+          target_path = "/#{target_path}" unless %r{^/|http}.match?(target_path)
 
           redirects[source_path] = target_path
         end
