@@ -33,11 +33,6 @@ Metrics/ParameterLists:
 
 
 # Offense count: 1
-RSpec/EmptyLineAfterSubject:
-  Exclude:
-    - 'spec/services/tag_assigner_spec.rb'
-
-# Offense count: 1
 # Configuration parameters: Max.
 RSpec/ExampleLength:
   Exclude:

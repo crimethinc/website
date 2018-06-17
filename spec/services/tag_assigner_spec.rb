@@ -22,6 +22,7 @@ describe TagAssigner do
 
   describe 'assign_tags_to!' do
     subject { described_class.new(tag1, tag2, tag3) }
+
     let(:tag1) { double }
     let(:tag2) { double }
     let(:tag3) { double }
@@ -35,6 +36,7 @@ describe TagAssigner do
       expect(tag1).to receive(:assign_to!).with(taggable)
       expect(tag2).not_to receive(:assign_to!).with(taggable)
       expect(tag3).to receive(:assign_to!).with(taggable)
+
       subject.assign_tags_to!(taggable)
     end
   end
