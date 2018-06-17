@@ -106,3 +106,14 @@ RSpec/MessageSpies:
 RSpec/DescribeClass:
   Exclude:
     - 'spec/system/*'
+
+
+# Offense count: 4
+# Configuration parameters: Blacklist.
+# Blacklist: decrement!, decrement_counter, increment!, increment_counter, toggle!, touch, update_all, update_attribute, update_column, update_columns, update_counters
+# README: update_column and increment_counter are used in these methods to avoid validations for performance
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'app/controllers/admin/articles_controller.rb'
+    - 'app/controllers/articles_controller.rb'
+    - 'lib/tasks/scheduler.rake'
