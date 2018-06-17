@@ -14,9 +14,7 @@ module Admin
 
     def show
       # TODO this is a hack
-      if @article.collection_id.present?
-        @collection = Article.find(@article.collection_id)
-      end
+      @collection = Article.find(@article.collection_id) if @article.collection_id.present?
 
       @title = admin_title(@article, [:title, :subtitle])
       @html_id = 'admin-article'
@@ -95,9 +93,7 @@ module Admin
 
     def organize_article
       tag_assigner = TagAssigner.parse_glob(params[:tags])
-      if tag_assigner.present?
-        tag_assigner.assign_tags_to!(@article)
-      end
+      tag_assigner.assign_tags_to!(@article) if tag_assigner.present?
     end
 
     def article_params

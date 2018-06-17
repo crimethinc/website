@@ -9,17 +9,13 @@ module Admin
 
         @redirects = Redirect.order(:source_path).where(source_path: from).page(params[:page])
 
-        if @redirects.blank?
-          @redirects = Redirect.order(:source_path).where(source_path: "/#{from}").page(params[:page])
-        end
+        @redirects = Redirect.order(:source_path).where(source_path: "/#{from}").page(params[:page]) if @redirects.blank?
       elsif params[:to].present?
         to = params[:to].strip.sub(%r{https*://}, '').sub(%r{cwc.im|crimethinc.com}, '')
 
         @redirects = Redirect.order(:source_path).where(target_path: to).page(params[:page])
 
-        if @redirects.blank?
-          @redirects = Redirect.order(:source_path).where(target_path: "/#{to}").page(params[:page])
-        end
+        @redirects = Redirect.order(:source_path).where(target_path: "/#{to}").page(params[:page]) if @redirects.blank?
       else
         @redirects = Redirect.order(:source_path).page(params[:page])
       end

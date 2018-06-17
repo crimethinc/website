@@ -27,9 +27,7 @@ module ArticlesHelper
     if article.image.present?
       img = image_tag article.image, class: 'u-photo', alt: ''
 
-      if article.image_description.present?
-        figcaption = content_tag(:figcaption, article.image_description)
-      end
+      figcaption = content_tag(:figcaption, article.image_description) if article.image_description.present?
 
       content_tag :figure, img + figcaption.to_s
     end
@@ -47,15 +45,11 @@ module ArticlesHelper
   end
 
   def display_date(datetime = nil)
-    unless datetime.nil?
-      datetime.strftime('%Y-%m-%d')
-    end
+    datetime.strftime('%Y-%m-%d') unless datetime.nil?
   end
 
   def display_time(datetime = nil)
-    unless datetime.nil?
-      datetime.strftime('%l:%M&nbsp;%z').html_safe
-    end
+    datetime.strftime('%l:%M&nbsp;%z').html_safe unless datetime.nil?
   end
 
   def link_to_dates(year: nil, month: nil, day: nil, show_year: true, show_month: true, show_day: true)
@@ -67,15 +61,9 @@ module ArticlesHelper
     month = month.to_s.rjust(2, '0') unless month.nil?
     day   = day.to_s.rjust(2, '0')   unless day.nil?
 
-    if year && show_year
-      links << link_to_unless_current(year,  article_archives_path(year),               rel: 'archives', class: 'year')
-    end
-    if month && show_month
-      links << link_to_unless_current(month, article_archives_path(year, month),        rel: 'archives', class: 'month')
-    end
-    if day && show_day
-      links << link_to_unless_current(day,   article_archives_path(year, month, day),   rel: 'archives', class: 'day')
-    end
+    links << link_to_unless_current(year,  article_archives_path(year),               rel: 'archives', class: 'year') if year && show_year
+    links << link_to_unless_current(month, article_archives_path(year, month),        rel: 'archives', class: 'month') if month && show_month
+    links << link_to_unless_current(day,   article_archives_path(year, month, day),   rel: 'archives', class: 'day') if day && show_day
 
     links.join('-').html_safe
   end

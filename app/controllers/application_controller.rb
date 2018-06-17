@@ -52,9 +52,7 @@ class ApplicationController < ActionController::Base
   def check_for_redirection
     redirect = Redirect.where(source_path: request.path.downcase).last
 
-    if redirect.blank?
-      redirect = Redirect.where(source_path: "#{request.path.downcase}/").last
-    end
+    redirect = Redirect.where(source_path: "#{request.path.downcase}/").last if redirect.blank?
 
     if redirect.present?
       return redirect_to redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301
@@ -62,9 +60,7 @@ class ApplicationController < ActionController::Base
   end
 
   def strip_file_extension
-    if /\.html/.match?(request.path)
-      return redirect_to request.path.sub(/\.html/, '')
-    end
+    return redirect_to request.path.sub(/\.html/, '') if /\.html/.match?(request.path)
   end
 
   def current_resource_name

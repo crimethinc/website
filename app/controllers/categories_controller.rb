@@ -25,9 +25,7 @@ class CategoriesController < ApplicationController
   def set_slug
     @slug = params[:slug].tr('_', '-')
 
-    if @slug != params[:slug]
-      return redirect_to category_path(@slug)
-    end
+    return redirect_to category_path(@slug) if @slug != params[:slug]
   end
 
   def set_category
@@ -47,8 +45,6 @@ class CategoriesController < ApplicationController
   def set_articles
     @articles = @category.articles.live.published.page(params[:page]).per(25)
 
-    if @articles.blank?
-      return redirect_to root_path
-    end
+    return redirect_to root_path if @articles.blank?
   end
 end

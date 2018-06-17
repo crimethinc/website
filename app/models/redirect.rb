@@ -74,9 +74,7 @@ class Redirect < ApplicationRecord
     aa = Article.where(short_path: self.source_path[/\w+/])
 
     if aa.exists?
-      unless aa.first.id == self.article_id
-        errors.add(:source_path, 'is already taken by article short path')
-      end
+      errors.add(:source_path, 'is already taken by article short path') unless aa.first.id == self.article_id
     end
   end
 end

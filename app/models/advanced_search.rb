@@ -39,9 +39,7 @@ class AdvancedSearch
 
   def tag=(tags)
     tags.to_s.split(',').map(&:strip).each do |tag|
-      if tag.match?(/\s/)
-        tag = tag.inspect
-      end
+      tag = tag.inspect if tag.match?(/\s/)
 
       @query += "tag:#{tag}" + ' '
     end

@@ -7,13 +7,9 @@ module Rack
     def call(env)
       request = Rack::Request.new(env)
 
-      if /cwc/.match?(request.host.downcase)
-        return redirect_to_crimethinc request
-      end
+      return redirect_to_crimethinc request if /cwc/.match?(request.host.downcase)
 
-      if /crimethinc.herokuapp.com$/.match?(request.host.downcase)
-        return redirect_to_crimethinc request
-      end
+      return redirect_to_crimethinc request if /crimethinc.herokuapp.com$/.match?(request.host.downcase)
 
       @app.call(env)
     end

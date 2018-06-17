@@ -22,13 +22,9 @@ module Rack
           if line.present?
             source_path, target_path = line.chomp.split
 
-            unless /^\/|http/.match?(source_path)
-              source_path = "/#{source_path}"
-            end
+            source_path = "/#{source_path}" unless /^\/|http/.match?(source_path)
 
-            unless /^\/|http/.match?(target_path)
-              target_path = "/#{target_path}"
-            end
+            target_path = "/#{target_path}" unless /^\/|http/.match?(target_path)
 
             redirects[source_path] = target_path
           end
@@ -38,9 +34,7 @@ module Rack
       req = Rack::Request.new(env)
 
       if redirects.include?(req.path)
-        if req.query_string.present?
-          args = "?#{req.query_string}"
-        end
+        args = "?#{req.query_string}" if req.query_string.present?
 
         return redirect(redirects[req.path] + args.to_s)
       end

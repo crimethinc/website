@@ -32,8 +32,6 @@ class PagesController < ApplicationController
   end
 
   def page_redirects
-    if @page.published? && params[:draft_code].present?
-      return redirect_to @page.path
-    end
+    return redirect_to @page.path if @page.published? && params[:draft_code].present?
   end
 end

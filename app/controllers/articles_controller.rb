@@ -14,38 +14,26 @@ class ArticlesController < ApplicationController
     if %r{^/drafts}.match?(request.path)
       @article = Article.find_by(draft_code: params[:draft_code])
 
-      if @article&.published?
-        return redirect_to(@article.path)
-      end
+      return redirect_to(@article.path) if @article&.published?
 
-      if @article.present?
-        @collection_posts = @article.collection_posts.chronological
-      end
+      @collection_posts = @article.collection_posts.chronological if @article.present?
 
     else
       @article = Article.live.where(year: params[:year])
                         .where(month: params[:month])
                         .where(day:   params[:day])
                         .where(slug:  params[:slug]).first
-      if @article.present?
-        @collection_posts = @article.collection_posts.published.live.chronological
-      end
+      @collection_posts = @article.collection_posts.published.live.chronological if @article.present?
     end
 
     # no article found, go to /articles feed
-    if @article.blank?
-      return redirect_to root_path
-    end
+    return redirect_to root_path if @article.blank?
 
     # redirect from draft URL to proper URL
-    if @article.published? && params[:draft_code].present?
-      return redirect_to @article.path
-    end
+    return redirect_to @article.path if @article.published? && params[:draft_code].present?
 
     # redirect to parent article, never show nested articles directly
-    if @article.collection_id.present?
-      return redirect_to Article.find(@article.collection_id).path
-    end
+    return redirect_to Article.find(@article.collection_id).path if @article.collection_id.present?
 
     @title = @article.name
 
