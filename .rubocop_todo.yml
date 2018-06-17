@@ -182,3 +182,8 @@ Rails/TimeZone:
     - 'spec/models/archive_spec.rb'
     - 'spec/models/post_spec.rb'
     - 'spec/system/article_datetime_settings_spec.rb'
+
+
+Rails/UniqBeforePluck:
+  Exclude:
+    - 'app/models/article_archive_paginator.rb'
