@@ -16,7 +16,7 @@ class Redirect < ApplicationRecord
 
   def add_leading_slash
     paths.each do |path|
-      path = path.prepend '/' unless path =~ %r{^\/|https?}
+      path.prepend '/' unless path =~ %r{^\/|https?}
     end
   end
 

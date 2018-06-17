@@ -8,21 +8,6 @@
 
 
 # Offense count: 3
-Lint/ParenthesesAsGroupedExpression:
-  Exclude:
-    - 'spec/helpers/articles_helper_spec.rb'
-
-# Offense count: 12
-Lint/UselessAssignment:
-  Exclude:
-    - 'app/controllers/admin/books_controller.rb'
-    - 'app/models/redirect.rb'
-    - 'app/views/podcast/feed.rss.builder'
-    - 'spec/controllers/categories_controller_spec.rb'
-    - 'spec/models/article_spec.rb'
-    - 'spec/models/redirect_spec.rb'
-
-# Offense count: 3
 Metrics/AbcSize:
   Max: 61
 

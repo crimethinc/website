@@ -103,7 +103,7 @@ xml.rss 'version'      => '2.0',
         end
 
         xml.tag!('itunes:subtitle') do
-          xml.cdata! truncate(html_doc = Nokogiri::HTML(episode.content).text, length: 245)
+          xml.cdata! truncate(Nokogiri::HTML(episode.content).text, length: 245)
         end
       end
     end
