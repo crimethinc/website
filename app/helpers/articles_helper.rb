@@ -45,11 +45,11 @@ module ArticlesHelper
   end
 
   def display_date(datetime = nil)
-    datetime.strftime('%Y-%m-%d') unless datetime.nil?
+    datetime&.strftime('%Y-%m-%d')
   end
 
   def display_time(datetime = nil)
-    datetime.strftime('%l:%M&nbsp;%z').html_safe unless datetime.nil?
+    datetime&.strftime('%l:%M&nbsp;%z')&.html_safe
   end
 
   def link_to_dates(year: nil, month: nil, day: nil, show_year: true, show_month: true, show_day: true)
