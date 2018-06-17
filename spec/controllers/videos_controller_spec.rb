@@ -5,7 +5,7 @@ RSpec.describe VideosController, type: :controller do
     it 'renders the videos' do
       get :index
 
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
     end
   end
 
@@ -15,7 +15,7 @@ RSpec.describe VideosController, type: :controller do
 
       get :show, params: { slug: video.slug }
 
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'redirects to root if it can’t find the video' do

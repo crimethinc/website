@@ -5,47 +5,47 @@ RSpec.describe Admin::CategoriesController, type: :controller do
     it 'redirects on index' do
       get :index
 
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(:found)
     end
 
     it 'redirects on new' do
       get :new
 
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(:found)
     end
 
     it 'redirects on create' do
       post :create, params: { category: { name: 'test' } }
 
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(:found)
     end
 
     it 'redirects on show' do
       category = create(:category)
       get :show, params: { id: category.id }
 
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(:found)
     end
 
     it 'redirects on edit' do
       category = create(:category)
       get :edit, params: { id: category.id }
 
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(:found)
     end
 
     it 'redirects on update' do
       category = create(:category)
       patch :update, params: { id: category.id, category: { name: 'test' } }
 
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(:found)
     end
 
     it 'redirects on destroy' do
       category = create(:category)
       delete :destroy, params: { id: category.id }
 
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(:found)
     end
   end
 
@@ -57,7 +57,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
       it 'renders index' do
         get :index
 
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
     end
 
@@ -66,7 +66,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
         category = create(:category)
         get :show, params: { id: category.id }
 
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:found)
         expect(assigns[:category]).to eq(category)
       end
     end
@@ -75,7 +75,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
       it 'creates a category' do
         post :create, params: { category: attributes_for(:category) }
 
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:found)
         expect(Category.count).to eq(1)
       end
     end
@@ -85,7 +85,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
         category = create(:category)
         patch :update, params: { id: category.id, category: attributes_for(:category) }
 
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:found)
         expect(Category.find(category.id).name).to_not eq(category.name)
       end
     end
@@ -95,7 +95,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
         category = create(:category)
         delete :destroy, params: { id: category.id }
 
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:found)
         expect(Category.find_by(id: category.id)).to be_nil
       end
     end

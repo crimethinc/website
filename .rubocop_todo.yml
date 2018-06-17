@@ -207,15 +207,6 @@ Rails/HasManyOrHasOneDependent:
     - 'app/models/status.rb'
     - 'app/models/user.rb'
 
-# Offense count: 14
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: numeric, symbolic
-Rails/HttpStatus:
-  Exclude:
-    - 'spec/controllers/admin/categories_controller_spec.rb'
-    - 'spec/controllers/videos_controller_spec.rb'
-
 # Offense count: 2
 # Configuration parameters: Include.
 # Include: app/models/**/*.rb
