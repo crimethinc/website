@@ -268,16 +268,6 @@ Style/IfInsideElse:
   Exclude:
     - 'app/models/article.rb'
 
-# Offense count: 12
-# Cop supports --auto-correct.
-Style/MutableConstant:
-  Exclude:
-    - 'app/models/book.rb'
-    - 'app/models/logo.rb'
-    - 'app/models/poster.rb'
-    - 'app/models/search.rb'
-    - 'app/models/tagging.rb'
-
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, MinBodyLength.

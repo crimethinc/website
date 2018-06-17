@@ -1,12 +1,12 @@
 class Tagging < ApplicationRecord
   TAGGABLES = [
-    ARTICLE   = 'Article',
-    PAGE      = 'Page',
-    POSTER    = 'Poster',
-    STICKER   = 'Sticker',
-    ZINE      = 'Zine',
-    BOOK      = 'Book'
-  ]
+    ARTICLE   = 'Article'.freeze,
+    PAGE      = 'Page'.freeze,
+    POSTER    = 'Poster'.freeze,
+    STICKER   = 'Sticker'.freeze,
+    ZINE      = 'Zine'.freeze,
+    BOOK      = 'Book'.freeze
+  ].freeze
 
   belongs_to :tag
   belongs_to :taggable, polymorphic: true, touch: true

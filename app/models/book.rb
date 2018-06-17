@@ -11,7 +11,7 @@ class Book < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'
+  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
 
   def namespace
     zine? ? 'zines' : 'books'

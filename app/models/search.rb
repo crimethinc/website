@@ -1,5 +1,5 @@
 class Search
-  ARRAY_FILTERS = %w[tag category]
+  ARRAY_FILTERS = %w[tag category].freeze
   FILTER_REGEX  = /(\w+:(\w+|"[^"]+"))/
   VALID_FILTERS = %w[title subtitle content tag category].freeze
 
