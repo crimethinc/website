@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Tag do
-  subject { Tag.new(name: 'test') }
+  subject { described_class.new(name: 'test') }
 
   describe 'assigned_to?' do
     let(:page) { Page.create(title: 'about') }
