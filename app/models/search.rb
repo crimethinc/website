@@ -40,7 +40,7 @@ class Search
   end
 
   def full_text_search
-    return scope unless term.present?
+    return scope if term.blank?
 
     self.scope = scope
                  .select("ts_rank(document, phraseto_tsquery('#{term}')) AS ranking")

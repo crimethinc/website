@@ -190,17 +190,6 @@ RSpec/ReturnFromStub:
   Exclude:
     - 'spec/services/tag_assigner_spec.rb'
 
-# Offense count: 5
-# Cop supports --auto-correct.
-# Configuration parameters: NilOrEmpty, NotPresent, UnlessPresent.
-Rails/Blank:
-  Exclude:
-    - 'app/controllers/admin/admin_controller.rb'
-    - 'app/controllers/home_controller.rb'
-    - 'app/controllers/posters_controller.rb'
-    - 'app/controllers/stickers_controller.rb'
-    - 'app/models/search.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: EnforceForPrefixed.
