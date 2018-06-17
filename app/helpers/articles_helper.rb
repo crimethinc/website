@@ -68,13 +68,13 @@ module ArticlesHelper
     day   = day.to_s.rjust(2, '0')   unless day.nil?
 
     if year && show_year
-      links << link_to_unless_current(year,  archives_path(year),               rel: 'archives', class: 'year')
+      links << link_to_unless_current(year,  article_archives_path(year),               rel: 'archives', class: 'year')
     end
     if month && show_month
-      links << link_to_unless_current(month, archives_path(year, month),        rel: 'archives', class: 'month')
+      links << link_to_unless_current(month, article_archives_path(year, month),        rel: 'archives', class: 'month')
     end
     if day && show_day
-      links << link_to_unless_current(day,   archives_path(year, month, day),   rel: 'archives', class: 'day')
+      links << link_to_unless_current(day,   article_archives_path(year, month, day),   rel: 'archives', class: 'day')
     end
 
     links.join('-').html_safe

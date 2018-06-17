@@ -20,9 +20,9 @@ Rails.application.routes.draw do
     req.path.split('page').first
   }
   get '(/:year)(/:month)(/:day)(/page/:page)',
-      to:          'archives#index',
+      to:          'article_archives#index',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
-      as:          :archives
+      as:          :article_archives
 
   # Article permalink
   get ':year/:month/:day/:slug',

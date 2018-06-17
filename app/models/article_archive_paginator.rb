@@ -1,14 +1,14 @@
-class ArchivePaginator
-  attr_reader :archive
+class ArticleArchivePaginator
+  attr_reader :article_archive
 
-  def initialize(archive)
-    @archive = archive
+  def initialize(article_archive)
+    @article_archive = article_archive
 
-    if archive.month.present?
-      @current    = [archive.year.to_s, archive.month.to_s]
+    if article_archive.month.present?
+      @current    = [article_archive.year.to_s, article_archive.month.to_s]
       @collection = months
     else
-      @current    = archive.year.to_s
+      @current    = article_archive.year.to_s
       @collection = years
     end
   end
@@ -22,7 +22,7 @@ class ArchivePaginator
   end
 
   def previous_label
-    if @archive.month
+    if @article_archive.month
       I18n.t('views.pagination.previous_month', month: previous_value.join('-')).html_safe
     else
       I18n.t('views.pagination.previous_year', year: previous_value).html_safe
@@ -38,7 +38,7 @@ class ArchivePaginator
   end
 
   def next_label
-    if @archive.month
+    if @article_archive.month
       I18n.t('views.pagination.next_month', month: next_value.join('-')).html_safe
     else
       I18n.t('views.pagination.next_year', year: next_value).html_safe
