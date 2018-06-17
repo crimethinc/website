@@ -232,8 +232,3 @@ Style/DoubleNegation:
 # Configuration parameters: MinBodyLength.
 Style/GuardClause:
   Enabled: false
-
-# Offense count: 1
-Style/IfInsideElse:
-  Exclude:
-    - 'app/models/article.rb'
