@@ -1,5 +1,7 @@
 class Video < ApplicationRecord
-  include Name, Publishable, Slug
+  include Name
+  include Slug
+  include Publishable
 
   def path
     "/videos/#{slug}"

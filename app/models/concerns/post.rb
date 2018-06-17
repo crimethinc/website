@@ -1,7 +1,10 @@
 module Post
   extend ActiveSupport::Concern
 
-  include Name, Searchable, Slug, Publishable
+  include Name
+  include Searchable
+  include Slug
+  include Publishable
 
   included do
     belongs_to :user, optional: true
