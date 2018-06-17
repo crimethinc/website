@@ -5,9 +5,9 @@ class User < ApplicationRecord
 
   has_many :articles
 
-  validates :username, presence: :true, uniqueness: true, on: [:create, :update]
+  validates :username, presence: true, uniqueness: true, on: [:create, :update]
   validates :password,
-            presence: :true,
+            presence: true,
             on: :create,
             length: { minimum: PASSWORD_MINIMUM_LENGTH }
 
