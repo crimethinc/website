@@ -1,7 +1,7 @@
 module Auth
   class UsersController < Admin::AdminController
-    before_action :authorize, only: [:show, :edit, :update, :destroy]
-    before_action :set_user, only: [:show, :edit, :update, :destroy]
+    before_action :authorize, only: [:show, :edit, :update]
+    before_action :set_user,  only: [:show, :edit, :update]
     layout 'admin'
 
     # /signup

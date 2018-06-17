@@ -159,13 +159,6 @@ Rails/InverseOf:
   Exclude:
     - 'app/models/article.rb'
 
-# Offense count: 2
-# Configuration parameters: Include.
-# Include: app/controllers/**/*.rb
-Rails/LexicallyScopedActionFilter:
-  Exclude:
-    - 'app/controllers/auth/users_controller.rb'
-
 
 Rails/UniqBeforePluck:
   Exclude:
