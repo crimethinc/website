@@ -268,14 +268,6 @@ Style/IfInsideElse:
   Exclude:
     - 'app/models/article.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: implicit, explicit
-Style/RescueStandardError:
-  Exclude:
-    - 'app/helpers/articles_helper.rb'
-
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: ConvertCodeThatCanStartToReturnNil, Whitelist.

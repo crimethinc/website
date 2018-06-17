@@ -79,7 +79,7 @@ module ArticlesHelper
       result = Builder::XChar.encode(text)
       begin
         result.encode(XML_ENCODING)
-      rescue
+      rescue StandardError
         # if the encoding can't be supported, use numeric character references
         result
           .gsub(/[^\u0000-\u007F]/) { |c| "&##{c.ord};" }
