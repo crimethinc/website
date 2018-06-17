@@ -17,11 +17,12 @@ class PagesController < ApplicationController
   private
 
   def set_page
-    if params[:draft_code].present?
-      @page = Page.where(draft_code: params[:draft_code])
-    else
-      @page = Page.where(slug: params[:path])
-    end
+    @page =
+      if params[:draft_code].present?
+        Page.where(draft_code: params[:draft_code])
+      else
+        Page.where(slug: params[:path])
+      end
 
     if @page.blank?
       return redirect_to [:root]

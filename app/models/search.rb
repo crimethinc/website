@@ -29,11 +29,12 @@ class Search
       key   = filter.first
       value = filter.last
 
-      if ARRAY_FILTERS.include?(key)
-        self.scope = scope.where("#{key}::text[] @> ARRAY[?]", value)
-      else
-        self.scope = scope.where("#{key} @@ plainto_tsquery(?)", value)
-      end
+      self.scope =
+        if ARRAY_FILTERS.include?(key)
+          scope.where("#{key}::text[] @> ARRAY[?]", value)
+        else
+          scope.where("#{key} @@ plainto_tsquery(?)", value)
+        end
     end
 
     scope

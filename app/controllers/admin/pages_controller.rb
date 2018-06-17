@@ -56,11 +56,12 @@ module Admin
     private
 
     def set_page
-      if params[:draft_code].present?
-        @page = Page.find_by(draft_code: params[:draft_code])
-      else
-        @page = Page.find(params[:id])
-      end
+      @page =
+        if params[:draft_code].present?
+          Page.find_by(draft_code: params[:draft_code])
+        else
+          Page.find(params[:id])
+        end
     end
 
     def organize_page
