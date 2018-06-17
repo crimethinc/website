@@ -268,13 +268,6 @@ Style/IfInsideElse:
   Exclude:
     - 'app/models/article.rb'
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/RedundantParentheses:
-  Exclude:
-    - 'app/helpers/books_helper.rb'
-    - 'spec/helpers/articles_helper_spec.rb'
-
 # Offense count: 8
 # Cop supports --auto-correct.
 # Configuration parameters: AllowMultipleReturnValues.
