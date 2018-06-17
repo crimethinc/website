@@ -5,7 +5,7 @@ unless Rails.env.test?
     # Rack::Attack.cache.store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.current)
   end
 
-  class Rack
+  module Rack
     class Attack
       throttle('limit requests per IP', limit: 60, period: 1.minute) do |req|
         req.ip unless req.path.start_with?('/assets')
