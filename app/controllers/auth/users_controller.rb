@@ -26,12 +26,10 @@ module Auth
       end
     end
 
-    def show
-    end
+    def show; end
 
     # /settings
-    def edit
-    end
+    def edit; end
 
     # /profile
     def update

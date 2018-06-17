@@ -272,15 +272,6 @@ Style/DoubleNegation:
   Exclude:
     - 'app/models/archive_paginator.rb'
 
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: compact, expanded
-Style/EmptyMethod:
-  Exclude:
-    - 'app/controllers/auth/users_controller.rb'
-    - 'app/controllers/podcast_controller.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/ExpandPathArguments:

@@ -27,8 +27,7 @@ class PodcastController < ApplicationController
     render 'podcast/show'
   end
 
-  def feed
-  end
+  def feed; end
 
   private
 
