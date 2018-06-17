@@ -99,7 +99,7 @@ RSpec.describe Redirect, type: :model do
     let(:published_at) { Date.current }
 
     context 'without creating a redirect if short path exists' do
-      it 'should raise error' do
+      it 'raises error' do
         # article = FactoryBot.create(:article, title: 'test', short_path: 'tester', status: status, published_at: published_at)
         # redirect = Redirect.new(source_path: '/tester', target_path: '/test/test')
         # expect{redirect.save!}.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Source path has already been taken, Source path is already taken by article short path')

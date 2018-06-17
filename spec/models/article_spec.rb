@@ -169,7 +169,7 @@ describe Article do
     end
 
     context 'when it doesn’t create a short_path redirect if redirect exists' do
-      it 'should raise error' do
+      it 'raises error' do
         # TODO: FIXME: redo this test
         # redirect = Redirect.create!(source_path: '/tester', target_path: '/test/test')
         # article = Article.new(title: 'test', collection_id: nil, short_path: 'tester', status: status, published_at: published_at)
