@@ -25,7 +25,7 @@ RSpec.describe Post, type: :model do
     subject { post.dated? }
 
     context 'with published_at' do
-      let(:post) { Page.new(published_at: Time.now) }
+      let(:post) { Page.new(published_at: Time.now.utc) }
 
       it { is_expected.to be(true) }
     end

@@ -21,7 +21,7 @@ class Article < ApplicationRecord
   before_save :update_or_create_redirect
 
   default_scope { order(published_at: :desc) }
-  scope :last_2_weeks, -> { where('published_at BETWEEN ? AND ?', Time.now - 2.weeks, Time.now) }
+  scope :last_2_weeks, -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.weeks, Time.now.utc) }
 
   def path
     if published?

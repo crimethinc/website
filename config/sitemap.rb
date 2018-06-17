@@ -9,7 +9,7 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
   #        (default options are used if you don't specify)
   #
   # Defaults: priority: 0.5, changefreq: 'weekly',
-  #           lastmod: Time.now, host: default_host
+  #           lastmod: Time.now.utc, host: default_host
   #
   # Examples:
   #
@@ -17,8 +17,8 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
   #
   # add article_path, priority: 0.7, changefreq: 'daily'
 
-  add_to_index '/feed/',         changefreq: 'daily',  lastmod: Time.now
-  add_to_index '/podcast/feed/', changefreq: 'weekly', lastmod: Time.now
+  add_to_index '/feed/',         changefreq: 'daily',  lastmod: Time.now.utc
+  add_to_index '/podcast/feed/', changefreq: 'weekly', lastmod: Time.now.utc
 
   Category.find_each do |category|
     add_to_index "/categories/#{category.slug}/feed/"
