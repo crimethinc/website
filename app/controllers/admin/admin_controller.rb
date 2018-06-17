@@ -30,7 +30,7 @@ module Admin
       # get off-by-1-hr issues if the date is far enough in the future
       # that DST toggles
       tz_offset = Time.parse("#{date} #{time}").in_time_zone(tz).strftime('%z')
-      datetime  = Time.parse("#{date} #{time}#{tz_offset}")
+      datetime  = Time.zone.parse("#{date} #{time}#{tz_offset}")
       params[controller_name.singularize.to_sym].merge!(published_at: datetime)
     end
   end
