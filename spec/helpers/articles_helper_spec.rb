@@ -10,7 +10,7 @@ RSpec.describe ArticlesHelper, type: :helper do
       it { is_expected.to match (/\A<article [^>]+>.*<\/article>\z/) }
       it { is_expected.to match('h-entry') }
       it { is_expected.to match('article-with-no-header-image') }
-      it { is_expected.to match(%{data-id="1"}) }
+      it { is_expected.to match(%(data-id="1")) }
       it { is_expected.to match(/data-published-at="\d+"/) }
       it { is_expected.to match('Test Text') }
 
@@ -22,7 +22,7 @@ RSpec.describe ArticlesHelper, type: :helper do
 
       it { is_expected.to match (/\A<article [^>]+>.*<\/article>\z/) }
       it { is_expected.to match('h-entry') }
-      it { is_expected.to match(%{data-id="1"}) }
+      it { is_expected.to match(%(data-id="1")) }
       it { is_expected.to match(/data-published-at="\d+"/) }
       it { is_expected.to match('Test Text') }
 
@@ -37,7 +37,7 @@ RSpec.describe ArticlesHelper, type: :helper do
       it { is_expected.to match (/\A<article [^>]+>.*<\/article>\z/) }
       it { is_expected.to match('h-entry') }
       it { is_expected.to match('article-with-no-header-image') }
-      it { is_expected.to match(%{data-id="1"}) }
+      it { is_expected.to match(%(data-id="1")) }
       it { is_expected.to match(/data-published-at="\d+"/) }
       it { is_expected.to match('Test Text') }
       it { is_expected.to match('data-listen') }
@@ -80,8 +80,8 @@ RSpec.describe ArticlesHelper, type: :helper do
   describe '#link_to_dates' do
     subject { helper.link_to_dates(year: 2017, month: 1, day: 1) }
 
-    it { is_expected.to match(%{<a rel="archives" class="year" href="/2017">2017</a>}) }
-    it { is_expected.to match(%{<a rel="archives" class="month" href="/2017/01">01</a>}) }
-    it { is_expected.to match(%{<a rel="archives" class="day" href="/2017/01/01">01</a>}) }
+    it { is_expected.to match(%(<a rel="archives" class="year" href="/2017">2017</a>)) }
+    it { is_expected.to match(%(<a rel="archives" class="month" href="/2017/01">01</a>)) }
+    it { is_expected.to match(%(<a rel="archives" class="day" href="/2017/01/01">01</a>)) }
   end
 end

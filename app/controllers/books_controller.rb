@@ -8,18 +8,18 @@ class BooksController < ApplicationController
     @type    = 'books'
 
     @bullet_books = []
-    %w(no-wall-they-can-build
+    %w[no-wall-they-can-build
        from-democracy-to-freedom
        contradictionary
        work
        expect-resistance
        recipes-for-disaster
-       days-of-war-nights-of-love).each do |slug|
+       days-of-war-nights-of-love].each do |slug|
       @bullet_books << Book.find_by(slug: slug)
     end
 
     @letters_books = []
-    %w(off-the-map).each do |slug|
+    %w[off-the-map].each do |slug|
       @letters_books << Book.find_by(slug: slug)
     end
   end

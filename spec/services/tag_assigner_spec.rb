@@ -11,12 +11,12 @@ describe TagAssigner do
 
     it 'can parse a comma separated list of tags' do
       glob = 'foo, bar, baz'
-      expect(described_class.parse_glob(glob).tags.map(&:name)).to eq %w(foo bar baz)
+      expect(described_class.parse_glob(glob).tags.map(&:name)).to eq %w[foo bar baz]
     end
 
     it 'will drop blank tags' do
       glob = 'foo,, bar'
-      expect(described_class.parse_glob(glob).tags.map(&:name)).to eq %w(foo bar)
+      expect(described_class.parse_glob(glob).tags.map(&:name)).to eq %w[foo bar]
     end
   end
 
