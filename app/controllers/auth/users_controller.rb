@@ -7,11 +7,11 @@ module Auth
     # /signup
     def new
       if signed_in?
-        return redirect_to(admin_url)
+        redirect_to(admin_url)
       elsif User.count.zero?
         @user = User.new
       else
-        return redirect_to(signin_path)
+        redirect_to(signin_path)
       end
     end
 

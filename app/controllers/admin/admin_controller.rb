@@ -14,7 +14,7 @@ module Admin
       t(".#{action_name}_title", translation_vars)
     rescue NoMethodError
       logger.error "#{controller_path}:#{action_name} has an issue with the page title"
-      return ''
+      ''
     end
 
     def set_published_at

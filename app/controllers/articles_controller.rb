@@ -95,6 +95,6 @@ class ArticlesController < ApplicationController
       items: items
     }
 
-    return render json: JSON.pretty_generate(json_feed)
+    render json: JSON.pretty_generate(json_feed)
   end
 end

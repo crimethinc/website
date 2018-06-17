@@ -268,18 +268,6 @@ Style/IfInsideElse:
   Exclude:
     - 'app/models/article.rb'
 
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: AllowMultipleReturnValues.
-Style/RedundantReturn:
-  Exclude:
-    - 'app/controllers/admin/admin_controller.rb'
-    - 'app/controllers/admin/articles_controller.rb'
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/articles_controller.rb'
-    - 'app/controllers/auth/users_controller.rb'
-    - 'app/controllers/pages_controller.rb'
-
 # Offense count: 29
 # Cop supports --auto-correct.
 Style/RedundantSelf:

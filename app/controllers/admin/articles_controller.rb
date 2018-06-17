@@ -73,10 +73,10 @@ module Admin
       if params[:year] && params[:slug]
         @article = Article.where(year: params[:year]).where(month: params[:month]).where(day: params[:day]).where(slug: params[:slug]).first
 
-        return redirect_to([:edit, :admin, @article])
+        redirect_to([:edit, :admin, @article])
       elsif params[:draft_code].present?
         @article = Article.find_by(draft_code: params[:draft_code])
-        return redirect_to([:edit, :admin, @article])
+        redirect_to([:edit, :admin, @article])
       else
         @article = Article.find(params[:id])
       end
