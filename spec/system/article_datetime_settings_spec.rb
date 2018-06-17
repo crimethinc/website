@@ -32,7 +32,7 @@ describe 'Setting and changing an articles published_at date' do
   end
 
   it 'updating an existing article' do
-    article = create(:article, published_at: Time.parse('2018-12-24 11:59:00 UTC'))
+    article = create(:article, published_at: Time.zone.parse('2018-12-24 11:59:00 UTC'))
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
     expect(article.published_at_tz).to eq('Pacific Time (US & Canada)')
 
