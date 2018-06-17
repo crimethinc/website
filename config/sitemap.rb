@@ -40,7 +40,7 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
     '/store/', '/store/audio/', '/store/added/',
     '/tce/',
     '/tools/',
-    '/watch/',
+    '/watch/'
   ]
   tce_languages = ['czech', 'deutsch', 'espanol', 'polski', 'portugues', 'quebecois', 'slovenscina', 'slovensko']
 
