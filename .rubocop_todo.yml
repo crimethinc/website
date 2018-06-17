@@ -221,13 +221,6 @@ Rails/LexicallyScopedActionFilter:
   Exclude:
     - 'app/controllers/auth/users_controller.rb'
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Rails/Presence:
-  Exclude:
-    - 'app/models/concerns/post.rb'
-    - 'app/models/episode.rb'
-
 # Offense count: 6
 # Cop supports --auto-correct.
 # Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.

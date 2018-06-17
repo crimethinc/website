@@ -37,7 +37,7 @@ class Episode < ApplicationRecord
   end
 
   def meta_image
-    image.present? ? image : t('head.meta_image_url')
+    image.presence || t('head.meta_image_url')
   end
 
   def duration_string
