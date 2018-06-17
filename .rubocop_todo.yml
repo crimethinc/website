@@ -268,15 +268,6 @@ Style/IfInsideElse:
   Exclude:
     - 'app/models/article.rb'
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, MinBodyLength.
-# SupportedStyles: skip_modifier_ifs, always
-Style/Next:
-  Exclude:
-    - 'app/middlewares/rack/redirect.rb'
-    - 'app/models/article.rb'
-
 # Offense count: 16
 # Cop supports --auto-correct.
 # Configuration parameters: PreferredDelimiters.

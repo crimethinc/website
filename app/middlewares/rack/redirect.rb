@@ -19,15 +19,13 @@ module Rack
 
       if ::File.exist?(filepath)
         ::File.open(filepath).each do |line|
-          if line.present?
-            source_path, target_path = line.chomp.split
+          next if line.blank?
+          source_path, target_path = line.chomp.split
 
-            source_path = "/#{source_path}" unless /^\/|http/.match?(source_path)
+          source_path = "/#{source_path}" unless /^\/|http/.match?(source_path)
+          target_path = "/#{target_path}" unless /^\/|http/.match?(target_path)
 
-            target_path = "/#{target_path}" unless /^\/|http/.match?(target_path)
-
-            redirects[source_path] = target_path
-          end
+          redirects[source_path] = target_path
         end
       end
 
