@@ -49,10 +49,6 @@ class Book < ApplicationRecord
     "Photo of ‘#{title}’ back cover"
   end
 
-  def image_description
-    "Photo of ‘#{title}’ cover"
-  end
-
   def front_image
     image side: :front
   end

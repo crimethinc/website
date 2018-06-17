@@ -7,11 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 
-# Offense count: 1
-Lint/DuplicateMethods:
-  Exclude:
-    - 'app/models/book.rb'
-
 # Offense count: 3
 Lint/InterpolationCheck:
   Exclude:
