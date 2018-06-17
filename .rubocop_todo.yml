@@ -11,11 +11,6 @@
 Metrics/AbcSize:
   Max: 61
 
-# Offense count: 1
-# Configuration parameters: Max.
-RSpec/ExampleLength:
-  Exclude:
-    - 'spec/system/article_datetime_settings_spec.rb'
 
 # Offense count: 3
 RSpec/ExpectInHook:

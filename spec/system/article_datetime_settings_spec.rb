@@ -10,7 +10,7 @@ describe 'Setting and changing an articles published_at date' do
     create(:status, :draft)
   end
 
-  it 'Creating a new article' do
+  it 'creates a new article' do
     login_user(admin)
     visit '/admin/articles'
 
@@ -31,7 +31,7 @@ describe 'Setting and changing an articles published_at date' do
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
   end
 
-  it 'updating an existing article' do
+  it 'updates an existing article' do
     article = create(:article, published_at: Time.zone.parse('2018-12-24 11:59:00 UTC'))
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
     expect(article.published_at_tz).to eq('Pacific Time (US & Canada)')
@@ -60,7 +60,7 @@ describe 'Setting and changing an articles published_at date' do
     expect(article.reload.published_at_tz).to eq('UTC')
   end
 
-  it 'Saving an article without entering publication date info' do
+  it 'saves an article without entering publication date info' do
     login_user(admin)
     visit '/admin/articles'
 
@@ -75,7 +75,7 @@ describe 'Setting and changing an articles published_at date' do
     expect(article.published_at).to be_nil
   end
 
-  it 'Using ‘PUBLISH NOW’ feature', :js do
+  it 'uses ‘PUBLISH NOW’ feature', :js do
     # TODO: the 'publish now' feature relies on a JavaScript in
     # the front-end to automatically set the form fields and submit the
     # form. This makes testing time hard since we cannot
