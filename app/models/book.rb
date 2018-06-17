@@ -32,9 +32,9 @@ class Book < ApplicationRecord
     when :back
       [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join('/')
     when :gallery
-      [ASSET_BASE_URL, namespace, slug, "gallery", "#{slug}-#{count}.jpg"].join('/')
+      [ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
     when :header
-      [ASSET_BASE_URL, namespace, slug, "gallery", "#{slug}_header.jpg"].join('/')
+      [ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}_header.jpg"].join('/')
     else
       [ASSET_BASE_URL, namespace, slug, 'photo.jpg'].join('/')
     end

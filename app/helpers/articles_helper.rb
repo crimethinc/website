@@ -1,6 +1,6 @@
 module ArticlesHelper
   def social_links_for article
-    content_tag :ul, class: "social-links" do
+    content_tag :ul, class: 'social-links' do
       social_link_for(article, :twitter) +
         social_link_for(article, :facebook) +
         social_link_for(article, :tumblr)
