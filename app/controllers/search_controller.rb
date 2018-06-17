@@ -22,7 +22,7 @@ class SearchController < ApplicationController
 
   def advanced_search
     @advanced_search = AdvancedSearch.new
-    @advanced_search.update_attributes(params[:advanced_search])
+    @advanced_search.update(params[:advanced_search])
 
     redirect_to(search_path(q: @advanced_search.query))
   end

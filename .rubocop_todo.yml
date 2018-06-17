@@ -190,13 +190,6 @@ RSpec/ReturnFromStub:
   Exclude:
     - 'spec/services/tag_assigner_spec.rb'
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Rails/ActiveRecordAliases:
-  Exclude:
-    - 'app/controllers/search_controller.rb'
-    - 'app/models/article.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Rails/ApplicationRecord:
