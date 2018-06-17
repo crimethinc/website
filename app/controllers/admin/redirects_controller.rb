@@ -5,13 +5,13 @@ module Admin
 
     def index
       if params[:from].present?
-        from = params[:from].strip.sub(%r{https*://}, '').sub(%r{cwc.im|crimethinc.com}, '')
+        from = params[:from].strip.sub(%r{https*://}, '').sub(/cwc.im|crimethinc.com/, '')
 
         @redirects = Redirect.order(:source_path).where(source_path: from).page(params[:page])
 
         @redirects = Redirect.order(:source_path).where(source_path: "/#{from}").page(params[:page]) if @redirects.blank?
       elsif params[:to].present?
-        to = params[:to].strip.sub(%r{https*://}, '').sub(%r{cwc.im|crimethinc.com}, '')
+        to = params[:to].strip.sub(%r{https*://}, '').sub(/cwc.im|crimethinc.com/, '')
 
         @redirects = Redirect.order(:source_path).where(target_path: to).page(params[:page])
 

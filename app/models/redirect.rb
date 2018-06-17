@@ -63,7 +63,7 @@ class Redirect < ApplicationRecord
   end
 
   def crimethinc_url? url
-    url.host =~ %r{crimethinc.com|cwc.im}
+    url.host =~ /crimethinc.com|cwc.im/
   end
 
   def noncircular_redirect

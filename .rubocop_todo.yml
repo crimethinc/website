@@ -268,19 +268,6 @@ Style/IfInsideElse:
   Exclude:
     - 'app/models/article.rb'
 
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, AllowInnerSlashes.
-# SupportedStyles: slashes, percent_r, mixed
-Style/RegexpLiteral:
-  Exclude:
-    - 'app/controllers/admin/redirects_controller.rb'
-    - 'app/controllers/application_controller.rb'
-    - 'app/helpers/embeds_helper.rb'
-    - 'app/middlewares/rack/redirect.rb'
-    - 'app/models/redirect.rb'
-    - 'spec/helpers/articles_helper_spec.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
