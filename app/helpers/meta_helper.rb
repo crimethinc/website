@@ -8,7 +8,7 @@ module MetaHelper
   end
 
   def meta_title(thing)
-    # TODO should be thing.name instead?
+    # TODO: should be thing.name instead?
     thing.present? ? thing.title : t('head.meta_title')
   end
 

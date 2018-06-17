@@ -13,7 +13,7 @@ module Admin
     end
 
     def show
-      # TODO this is a hack
+      # TODO: this is a hack
       @collection = Article.find(@article.collection_id) if @article.collection_id.present?
 
       @title = admin_title(@article, [:title, :subtitle])

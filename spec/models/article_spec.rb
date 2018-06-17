@@ -81,7 +81,7 @@ describe Article do
     end
   end
 
-  # TODO add new spec for saving tags
+  # TODO: add new spec for saving tags
   # describe '#save_tags!' do
   #   it 'creates Tags and adds taggings' do
   #     tags = ['Tag 1', 'Tag 2']

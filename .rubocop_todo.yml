@@ -247,20 +247,6 @@ Rails/TimeZone:
     - 'spec/models/post_spec.rb'
     - 'spec/system/article_datetime_settings_spec.rb'
 
-# Offense count: 7
-# Cop supports --auto-correct.
-# Configuration parameters: Keywords.
-# Keywords: TODO, FIXME, OPTIMIZE, HACK, REVIEW
-Style/CommentAnnotation:
-  Exclude:
-    - 'app/controllers/admin/articles_controller.rb'
-    - 'app/controllers/application_controller.rb'
-    - 'app/helpers/meta_helper.rb'
-    - 'app/models/article.rb'
-    - 'spec/controllers/application_controller_spec.rb'
-    - 'spec/controllers/tags_controller_spec.rb'
-    - 'spec/models/article_spec.rb'
-
 # Offense count: 3
 Style/DateTime:
   Exclude:

@@ -41,7 +41,7 @@ class Article < ApplicationRecord
   end
 
   def in_collection?
-    # TODO this is a hack
+    # TODO: this is a hack
     collection_id.present?
   end
 

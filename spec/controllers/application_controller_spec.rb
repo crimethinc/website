@@ -181,7 +181,7 @@ RSpec.describe ApplicationController, type: :controller do
   end
 
   describe '#current_resource_name' do
-    # TODO migrate this spec from admin_helper_spec to application_controller_spec
+    # TODO: migrate this spec from admin_helper_spec to application_controller_spec
     # before { expect(helper.request).to receive(:path) { 'admin/things/id' } }
     #
     # subject { helper.current_resource_name }

@@ -112,7 +112,7 @@ class ApplicationController < ActionController::Base
 
   def author
     t(:site_author)
-    # TODO make this article author aware
+    # TODO: make this article author aware
   end
   helper_method :author
 

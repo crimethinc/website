@@ -22,7 +22,7 @@ RSpec.describe TagsController, type: :controller do
     end
   end
 
-  # TODO update for new style tagging
+  # TODO: update for new style tagging
   # describe 'GET #feed' do
   #   it 'renders on a tag with articles' do
   #     article = Article.create(title: 'Test', published_at: 1.day.ago)
