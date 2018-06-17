@@ -64,7 +64,7 @@ class Admin::PagesController < Admin::AdminController
 
   def organize_page
     tag_assigner = TagAssigner.parse_glob(params[:tags])
-    unless tag_assigner.blank?
+    if tag_assigner.present?
       tag_assigner.assign_tags_to!(@page)
     end
   end

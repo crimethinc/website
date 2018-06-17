@@ -16,7 +16,7 @@ module AdminHelper
   def nav_to(text, path, *options)
     classes = ['nav-link']
 
-    unless options.blank?
+    if options.present?
       options = options.first
 
       if options[:no_css]

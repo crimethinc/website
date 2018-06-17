@@ -94,7 +94,7 @@ class Admin::ArticlesController < Admin::AdminController
 
   def organize_article
     tag_assigner = TagAssigner.parse_glob(params[:tags])
-    unless tag_assigner.blank?
+    if tag_assigner.present?
       tag_assigner.assign_tags_to!(@article)
     end
   end

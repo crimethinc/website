@@ -1,6 +1,6 @@
 class TagAssigner
   def self.parse_glob(glob)
-    unless glob.blank?
+    if glob.present?
       names = glob.split(',').reject(&:blank?)
       tags = names.map { |name| Tag.find_or_initialize_by(name: name.strip) }
       new(*tags)

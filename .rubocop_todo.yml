@@ -221,18 +221,6 @@ Rails/LexicallyScopedActionFilter:
   Exclude:
     - 'app/controllers/auth/users_controller.rb'
 
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.
-Rails/Present:
-  Exclude:
-    - 'app/controllers/admin/articles_controller.rb'
-    - 'app/controllers/admin/pages_controller.rb'
-    - 'app/controllers/application_controller.rb'
-    - 'app/helpers/admin_helper.rb'
-    - 'app/middlewares/rack/redirect.rb'
-    - 'app/services/tag_assigner.rb'
-
 # Offense count: 4
 # Configuration parameters: Blacklist.
 # Blacklist: decrement!, decrement_counter, increment!, increment_counter, toggle!, touch, update_all, update_attribute, update_column, update_columns, update_counters

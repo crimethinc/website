@@ -73,7 +73,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_resource_name
 
   def render_markdown(text)
-    unless text.blank?
+    if text.present?
       Kramdown::Document.new(
         MarkdownMedia.parse(text),
         input: :kramdown,
