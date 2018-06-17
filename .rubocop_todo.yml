@@ -247,24 +247,6 @@ Rails/TimeZone:
     - 'spec/models/post_spec.rb'
     - 'spec/system/article_datetime_settings_spec.rb'
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, AutoCorrect.
-# SupportedStyles: conservative, aggressive
-Rails/UniqBeforePluck:
-  Exclude:
-    - 'app/models/archive_paginator.rb'
-
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: prefer_alias, prefer_alias_method
-Style/Alias:
-  Exclude:
-    - 'app/models/book.rb'
-    - 'app/models/logo.rb'
-    - 'app/models/poster.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.

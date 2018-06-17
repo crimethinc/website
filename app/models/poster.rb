@@ -26,7 +26,7 @@ class Poster < ApplicationRecord
   def image_description
     "Photo of ‘#{title}’ front side"
   end
-  alias_method :front_image_description, :image_description
+  alias front_image_description image_description
 
   def back_image_description
     "Photo of ‘#{title}’ back side"

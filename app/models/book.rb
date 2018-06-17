@@ -41,7 +41,7 @@ class Book < ApplicationRecord
   def image_description
     "Photo of ‘#{title}’ front cover"
   end
-  alias_method :front_image_description, :image_description
+  alias front_image_description image_description
 
   def back_image_description
     "Photo of ‘#{title}’ back cover"

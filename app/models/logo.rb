@@ -17,18 +17,18 @@ class Logo < ApplicationRecord
   def image_description
     "Photo of ‘#{title}’ logo"
   end
-  alias_method :front_image_description, :image_description
+  alias front_image_description image_description
 
   def preview_image_url
     [ASSET_BASE_URL, namespace, slug, 'preview.png'].join('/')
   end
-  alias_method :front_image, :preview_image_url
+  alias front_image preview_image_url
 
   def image_url(extension)
     filename = [slug, '.', extension.to_s].join
     [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
-  alias_method :download_url, :image_url
+  alias download_url image_url
 
   def meta_description
     "CrimethInc. logo: #{title}. Size: #{width} x #{height}."
@@ -37,7 +37,7 @@ class Logo < ApplicationRecord
   def meta_image
     image_url :png
   end
-  alias_method :image, :meta_image
+  alias image meta_image
 
   def price_in_cents; nil; end
 
