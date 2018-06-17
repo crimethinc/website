@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_secure_password
 
   PASSWORD_MINIMUM_LENGTH = 30
