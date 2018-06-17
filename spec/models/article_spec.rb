@@ -103,6 +103,7 @@ describe Article do
   describe '#collection_posts' do
     let(:status) { create(:status) }
     let(:published_at) { Date.current }
+
     it 'finds related collection_posts by collection_id' do
       collection = create(:article, title: 'test', status: status, published_at: published_at)
       article = create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
@@ -114,6 +115,7 @@ describe Article do
   describe 'collection_root?' do
     let(:status) { create(:status) }
     let(:published_at) { Date.current }
+
     context 'when #collection_posts exists' do
       it 'returns true' do
         collection = create(:article, title: 'test', status: status, published_at: published_at)
@@ -122,6 +124,7 @@ describe Article do
         expect(collection.collection_root?).to eq true
       end
     end
+
     context 'when zero #collection_posts exist' do
       it 'returns false' do
         article = create(:article, title: 'test', status: status, published_at: published_at)
@@ -134,6 +137,7 @@ describe Article do
   describe 'in_collection?' do
     let(:status) { create(:status) }
     let(:published_at) { Date.current }
+
     context 'when it has a collection_id' do
       it 'returns true' do
         collection = create(:article, title: 'test', status: status, published_at: published_at)
@@ -142,6 +146,7 @@ describe Article do
         expect(article.in_collection?).to eq true
       end
     end
+
     context 'when collection_id is nil' do
       it 'returns false' do
         article = create(:article, title: 'test', status: status, published_at: published_at)
@@ -154,6 +159,7 @@ describe Article do
   describe 'short_path_redirect_creation' do
     let(:status) { create(:status) }
     let(:published_at) { Date.current }
+
     context 'successfully creates a short_path redirect' do
       it 'returns true' do
         # TODO: FIXME: redo this test

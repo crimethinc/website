@@ -5,6 +5,7 @@ describe Tag do
 
   describe 'assigned_to?' do
     let(:page) { Page.create(title: 'about') }
+
     context 'assigned to page' do
       before do
         subject.assign_to!(page)

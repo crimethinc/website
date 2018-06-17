@@ -32,6 +32,7 @@ RSpec.describe ArticlesHelper, type: :helper do
 
     context 'with collection posts' do
       let(:article) { Article.new(id: 1, slug: 'slug') }
+
       before { expect(article).to receive(:collection_posts) { OpenStruct.new(recent: [Article.new]) } }
 
       it { is_expected.to match(%r{\A<article [^>]+>.*<\/article>\z}) }

@@ -39,20 +39,8 @@ RSpec/ContextWording:
     - 'spec/models/redirect_spec.rb'
     - 'spec/models/tag_spec.rb'
 
-# Offense count: 2
-RSpec/EmptyLineAfterExampleGroup:
-  Exclude:
-    - 'spec/models/article_spec.rb'
 
-# Offense count: 9
-RSpec/EmptyLineAfterFinalLet:
-  Exclude:
-    - 'spec/controllers/admin/categories_controller_spec.rb'
-    - 'spec/controllers/tags_controller_spec.rb'
-    - 'spec/helpers/articles_helper_spec.rb'
-    - 'spec/models/article_spec.rb'
-    - 'spec/models/redirect_spec.rb'
-    - 'spec/models/tag_spec.rb'
+
 
 # Offense count: 1
 RSpec/EmptyLineAfterSubject:

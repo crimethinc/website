@@ -51,6 +51,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
 
   context 'authorized' do
     let(:user) { create(:user) }
+
     before { session[:user_id] = user.id }
 
     describe 'GET #index' do
