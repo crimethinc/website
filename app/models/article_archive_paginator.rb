@@ -64,10 +64,10 @@ class ArticleArchivePaginator
   end
 
   def years
-    @years ||= Article.uniq.pluck(:year)
+    @years ||= Article.pluck(:year).uniq
   end
 
   def months
-    @months ||= Article.uniq.pluck(:year, :month)
+    @months ||= Article.pluck(:year, :month).uniq
   end
 end
