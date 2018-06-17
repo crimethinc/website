@@ -267,11 +267,3 @@ Style/GuardClause:
 Style/IfInsideElse:
   Exclude:
     - 'app/models/article.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: WordRegex.
-# SupportedStyles: percent, brackets
-Style/WordArray:
-  EnforcedStyle: percent
-  MinSize: 9
