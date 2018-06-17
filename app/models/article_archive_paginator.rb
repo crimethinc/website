@@ -14,7 +14,7 @@ class ArticleArchivePaginator
   end
 
   def previous?
-    !!previous_value
+    previous_value.present?
   end
 
   def previous_path
@@ -30,7 +30,7 @@ class ArticleArchivePaginator
   end
 
   def next?
-    !!next_value
+    next_value.present?
   end
 
   def next_path
