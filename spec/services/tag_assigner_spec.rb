@@ -28,9 +28,9 @@ describe TagAssigner do
     let(:taggable) { double }
 
     it 'assigns tags which have not been assigned' do
-      allow(tag1).to receive(:assigned_to?).with(taggable) { false }
-      allow(tag2).to receive(:assigned_to?).with(taggable) { true }
-      allow(tag3).to receive(:assigned_to?).with(taggable) { false }
+      allow(tag1).to receive(:assigned_to?).with(taggable).and_return false
+      allow(tag2).to receive(:assigned_to?).with(taggable).and_return true
+      allow(tag3).to receive(:assigned_to?).with(taggable).and_return false
 
       expect(tag1).to receive(:assign_to!).with(taggable)
       expect(tag2).not_to receive(:assign_to!).with(taggable)

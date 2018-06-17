@@ -145,12 +145,10 @@ RSpec/PredicateMatcher:
   Exclude:
     - 'spec/controllers/application_controller_spec.rb'
 
-# Offense count: 3
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: and_return, block
-RSpec/ReturnFromStub:
-  Exclude:
-    - 'spec/services/tag_assigner_spec.rb'
+
+
+
+
 
 # Offense count: 2
 # Configuration parameters: Include.
@@ -158,7 +156,6 @@ RSpec/ReturnFromStub:
 Rails/InverseOf:
   Exclude:
     - 'app/models/article.rb'
-
 
 Rails/UniqBeforePluck:
   Exclude:
