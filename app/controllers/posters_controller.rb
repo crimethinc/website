@@ -11,18 +11,15 @@ class PostersController < ApplicationController
   end
 
   def show
+    @product = Poster.poster.where(slug: params[:slug])
+    return redirect_to [:posters] if @product.blank?
+
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'posters'
-    @product = Poster.poster.where(slug: params[:slug])
 
-    if @product.present?
-      @product = @product.first
-    else
-      return redirect_to [:posters]
-    end
-
-    @title = "Posters : #{@product.name}"
+    @product  = @product.first
+    @title    = "Posters : #{@product.name}"
     @editable = @product
 
     render 'products/show'

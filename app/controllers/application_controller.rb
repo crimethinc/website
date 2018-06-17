@@ -51,12 +51,9 @@ class ApplicationController < ActionController::Base
 
   def check_for_redirection
     redirect = Redirect.where(source_path: request.path.downcase).last
-
     redirect = Redirect.where(source_path: "#{request.path.downcase}/").last if redirect.blank?
 
-    if redirect.present?
-      return redirect_to redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301
-    end
+    return redirect_to(redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301) if redirect.present?
   end
 
   def strip_file_extension
@@ -69,14 +66,14 @@ class ApplicationController < ActionController::Base
   helper_method :current_resource_name
 
   def render_markdown(text)
-    if text.present?
-      Kramdown::Document.new(
-        MarkdownMedia.parse(text),
-        input: :kramdown,
-        remove_block_html_tags: false,
-        transliterated_header_ids: true
-      ).to_html.html_safe
-    end
+    return if text.blank?
+
+    Kramdown::Document.new(
+      MarkdownMedia.parse(text),
+      input: :kramdown,
+      remove_block_html_tags: false,
+      transliterated_header_ids: true
+    ).to_html.html_safe
   end
   helper_method :render_markdown
 

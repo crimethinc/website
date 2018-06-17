@@ -11,9 +11,9 @@ module Slug
   end
 
   def blank_slug
-    if is_a?(Article) || is_a?(Page)
-      self.slug = nil if status.blank? || (status.present? && !published?)
-    end
+    return unless is_a?(Article) || is_a?(Page)
+
+    self.slug = nil if status.blank? || (status.present? && !published?)
   end
 
   def generate_slug

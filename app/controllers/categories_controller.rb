@@ -30,12 +30,9 @@ class CategoriesController < ApplicationController
 
   def set_category
     @category = Category.where(slug: @slug)
+    return redirect_to [:categories] if @category.blank?
 
-    if @category.blank?
-      return redirect_to [:categories]
-    else
-      @category = @category.first
-    end
+    @category = @category.first
   end
 
   def set_title

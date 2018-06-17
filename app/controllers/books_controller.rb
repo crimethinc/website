@@ -55,11 +55,8 @@ class BooksController < ApplicationController
 
   def set_book
     @book = Book.where(slug: params[:slug])
+    return redirect_to [:books] if @book.blank?
 
-    if @book.present?
-      @book = @book.first
-    else
-      return redirect_to [:books]
-    end
+    @book = @book.first
   end
 end

@@ -182,8 +182,3 @@ Rails/TimeZone:
     - 'spec/models/archive_spec.rb'
     - 'spec/models/post_spec.rb'
     - 'spec/system/article_datetime_settings_spec.rb'
-
-# Offense count: 33
-# Configuration parameters: MinBodyLength.
-Style/GuardClause:
-  Enabled: false

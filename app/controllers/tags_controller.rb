@@ -16,12 +16,9 @@ class TagsController < ApplicationController
 
   def set_tag
     @tag = Tag.where(slug: params['slug'])
+    return redirect_to [:root] if @tag.blank?
 
-    if @tag.present?
-      @tag = @tag.first
-    else
-      return redirect_to [:root]
-    end
+    @tag = @tag.first
   end
 
   def set_title

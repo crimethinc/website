@@ -80,11 +80,11 @@ class Article < ApplicationRecord
   private
 
   def generate_published_dates
-    if published_at.present?
-      self.year  = published_at.year                     if published_at.year.present?
-      self.month = published_at.month.to_s.rjust(2, '0') if published_at.month.present?
-      self.day   = published_at.day.to_s.rjust(2, '0')   if published_at.day.present?
-    end
+    return if published_at.blank?
+
+    self.year  = published_at.year                     if published_at.year.present?
+    self.month = published_at.month.to_s.rjust(2, '0') if published_at.month.present?
+    self.day   = published_at.day.to_s.rjust(2, '0')   if published_at.day.present?
   end
 
   def downcase_content_format

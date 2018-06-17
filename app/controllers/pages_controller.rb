@@ -24,11 +24,9 @@ class PagesController < ApplicationController
         Page.where(slug: params[:path])
       end
 
-    if @page.blank?
-      return redirect_to [:root]
-    else
-      @page = @page.first
-    end
+    return redirect_to [:root] if @page.blank?
+
+    @page = @page.first
   end
 
   def page_redirects

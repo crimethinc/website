@@ -11,19 +11,15 @@ class StickersController < ApplicationController
   end
 
   def show
+    @product = Poster.sticker.where(slug: params[:slug])
+    return redirect_to [:stickers] if @product.blank?
+
+    @product = @product.first
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'stickers'
-    @product = Poster.sticker.where(slug: params[:slug])
-
-    if @product.present?
-      @product = @product.first
-    else
-      return redirect_to [:stickers]
-    end
 
     @title = "Stickers : #{@product.name}"
-
     @editable = @product
 
     render 'products/show'
