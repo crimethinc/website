@@ -138,12 +138,6 @@ RSpec/NotToNot:
     - 'spec/helpers/articles_helper_spec.rb'
     - 'spec/system/tools_index_pages_spec.rb'
 
-# Offense count: 2
-# Configuration parameters: Strict, EnforcedStyle.
-# SupportedStyles: inflected, explicit
-RSpec/PredicateMatcher:
-  Exclude:
-    - 'spec/controllers/application_controller_spec.rb'
 
 
 
