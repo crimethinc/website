@@ -86,7 +86,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
         patch :update, params: { id: category.id, category: attributes_for(:category) }
 
         expect(response).to have_http_status(:found)
-        expect(Category.find(category.id).name).to_not eq(category.name)
+        expect(Category.find(category.id).name).not_to eq(category.name)
       end
     end
 

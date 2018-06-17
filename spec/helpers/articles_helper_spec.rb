@@ -14,7 +14,7 @@ RSpec.describe ArticlesHelper, type: :helper do
       it { is_expected.to match(/data-published-at="\d+"/) }
       it { is_expected.to match('Test Text') }
 
-      it { is_expected.to_not match('data-listen') }
+      it { is_expected.not_to match('data-listen') }
     end
 
     context 'with an image' do
@@ -26,8 +26,8 @@ RSpec.describe ArticlesHelper, type: :helper do
       it { is_expected.to match(/data-published-at="\d+"/) }
       it { is_expected.to match('Test Text') }
 
-      it { is_expected.to_not match('data-listen') }
-      it { is_expected.to_not match('article-with-no-header-image') }
+      it { is_expected.not_to match('data-listen') }
+      it { is_expected.not_to match('article-with-no-header-image') }
     end
 
     context 'with collection posts' do

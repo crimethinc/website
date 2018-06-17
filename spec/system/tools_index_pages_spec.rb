@@ -18,7 +18,7 @@ describe 'Tools Pages' do
     visit '/logos'
 
     expect(page).to have_content 'published'
-    expect(page).to_not have_content 'draft'
+    expect(page).not_to have_content 'draft'
   end
 
   it 'Renders published stickers calling /stickers' do
@@ -35,7 +35,7 @@ describe 'Tools Pages' do
     visit '/stickers'
 
     expect(page).to have_content 'published'
-    expect(page).to_not have_content 'draft'
+    expect(page).not_to have_content 'draft'
   end
 
   it 'Renders published zines calling /zines' do
@@ -52,7 +52,7 @@ describe 'Tools Pages' do
     visit '/zines'
 
     expect(page).to have_content 'published'
-    expect(page).to_not have_content 'draft'
+    expect(page).not_to have_content 'draft'
   end
 
   it 'Renders published posters calling /posters' do
@@ -67,7 +67,7 @@ describe 'Tools Pages' do
     visit '/posters'
 
     expect(page).to have_content 'published'
-    expect(page).to_not have_content 'draft'
+    expect(page).not_to have_content 'draft'
   end
 
   it 'Renders published videos calling /videos' do
@@ -82,6 +82,6 @@ describe 'Tools Pages' do
     visit '/videos'
 
     expect(page).to have_content 'published'
-    expect(page).to_not have_content 'draft'
+    expect(page).not_to have_content 'draft'
   end
 end

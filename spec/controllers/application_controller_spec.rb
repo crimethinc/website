@@ -86,7 +86,7 @@ RSpec.describe ApplicationController, type: :controller do
     it 'is false with no user' do
       get :index
 
-      expect(controller).to_not be_signed_in
+      expect(controller).not_to be_signed_in
     end
   end
 

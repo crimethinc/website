@@ -129,19 +129,6 @@ RSpec/NamedSubject:
     - 'spec/models/tag_spec.rb'
     - 'spec/services/tag_assigner_spec.rb'
 
-# Offense count: 9
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: not_to, to_not
-RSpec/NotToNot:
-  Exclude:
-    - 'spec/controllers/admin/categories_controller_spec.rb'
-    - 'spec/helpers/articles_helper_spec.rb'
-    - 'spec/system/tools_index_pages_spec.rb'
-
-
-
-
-
 
 
 # Offense count: 2
