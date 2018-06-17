@@ -32,7 +32,7 @@ module Admin
       publication_type = @book.zine? ? :zines : :books
 
       if @book.save
-        redirect_to [:admin, @book], notice: '#{publication_type.to_s.capitalize.singularize} was successfully created.'
+        redirect_to [:admin, @book], notice: "#{publication_type.to_s.capitalize.singularize} was successfully created."
       else
         render :new
       end
@@ -41,7 +41,7 @@ module Admin
     def update
       publication_type = @book.zine? ? :zines : :books
       if @book.update(book_params)
-        redirect_to [:admin, @book], notice: '#{publication_type.to_s.capitalize.singularize} was successfully updated.'
+        redirect_to [:admin, @book], notice: "#{publication_type.to_s.capitalize.singularize} was successfully updated."
       else
         render :edit
       end
@@ -50,7 +50,7 @@ module Admin
     def destroy
       publication_type = @book.zine? ? :zines : :books
       @book.destroy
-      redirect_to [:admin, publication_type], notice: '#{publication_type.to_s.capitalize.singularize} was successfully destroyed.'
+      redirect_to [:admin, publication_type], notice: "#{publication_type.to_s.capitalize.singularize} was successfully destroyed."
     end
 
     private

@@ -8,11 +8,6 @@
 
 
 # Offense count: 3
-Lint/InterpolationCheck:
-  Exclude:
-    - 'app/controllers/admin/books_controller.rb'
-
-# Offense count: 3
 Lint/ParenthesesAsGroupedExpression:
   Exclude:
     - 'spec/helpers/articles_helper_spec.rb'
