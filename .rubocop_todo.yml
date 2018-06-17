@@ -191,13 +191,6 @@ RSpec/ReturnFromStub:
     - 'spec/services/tag_assigner_spec.rb'
 
 # Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforceForPrefixed.
-Rails/Delegate:
-  Exclude:
-    - 'app/models/article.rb'
-
-# Offense count: 1
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: slashes, arguments
 Rails/FilePath:

@@ -45,9 +45,7 @@ class Article < ApplicationRecord
     collection_id.present?
   end
 
-  def short_path_blank?
-    short_path.blank?
-  end
+  delegate :blank?, to: :short_path, prefix: true
 
   def content_rendered
     Kramdown::Document.new(
