@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # Donations
   get 'donate', to: 'donations#new', as: :donations_new
-  post 'donate/, to: 'donations#create', as: :donations
+  post 'donate', to: 'donations#create', as: :donations
   get 'donate/confirmation', to: 'donations#show', as: :donation
   get 'donate', to: 'donate#index', as: :donate
 
