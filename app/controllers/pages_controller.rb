@@ -3,36 +3,33 @@ class PagesController < ApplicationController
   before_action :page_redirects, only: [:show]
 
   def show
-    @html_id = "page"
+    @html_id = 'page'
     @editable = @page
 
     # no layout
     if @page.hide_layout?
       render html: @page.content.html_safe, layout: false
     else
-      render "pages/show"
+      render 'pages/show'
     end
   end
 
   private
 
   def set_page
-    if params[:draft_code].present?
-      @page = Page.where(draft_code: params[:draft_code])
-    else
-      @page = Page.where(slug: params[:path])
-    end
+    @page =
+      if params[:draft_code].present?
+        Page.where(draft_code: params[:draft_code])
+      else
+        Page.where(slug: params[:path])
+      end
 
-    if @page.blank?
-      return redirect_to [:root]
-    else
-      @page = @page.first
-    end
+    return redirect_to [:root] if @page.blank?
+
+    @page = @page.first
   end
 
   def page_redirects
-    if @page.published? && params[:draft_code].present?
-      return redirect_to @page.path
-    end
+    return redirect_to @page.path if @page.published? && params[:draft_code].present?
   end
 end

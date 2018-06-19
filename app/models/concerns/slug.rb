@@ -11,20 +11,16 @@ module Slug
   end
 
   def blank_slug
-    if self.is_a?(Article) || self.is_a?(Page)
-      if self.status.blank? || (self.status.present? && !published?)
-        self.slug = nil
-      end
-    end
+    return unless is_a?(Article) || is_a?(Page)
+
+    self.slug = nil if status.blank? || (status.present? && !published?)
   end
 
   def generate_slug
-    if self.new_record? || self.slug_changed? || self.slug.blank?
+    if new_record? || slug_changed? || slug.blank?
       n = 0
 
-      if slug.blank?
-        self.slug = self.name&.to_slug
-      end
+      self.slug = name&.to_slug if slug.blank?
 
       while slug_exists?
         n += 1
@@ -32,6 +28,6 @@ module Slug
       end
     end
 
-    self.slug = self.slug&.to_slug
+    self.slug = slug&.to_slug
   end
 end

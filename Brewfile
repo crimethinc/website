@@ -1,3 +1,3 @@
-brew "postgresql"
-brew "heroku"
-brew "geckodriver"
+brew 'postgresql'
+brew 'heroku'
+cask 'chromedriver'

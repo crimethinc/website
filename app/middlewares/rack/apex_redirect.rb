@@ -7,8 +7,8 @@ module Rack
     def call(env)
       request = Rack::Request.new(env)
 
-      if request.host.start_with?("www.")
-        location = request.scheme + "://" + request.host.sub("www.", "") + request.path
+      if request.host.start_with?('www.')
+        location = request.scheme + '://' + request.host.sub('www.', '') + request.path
         return redirect(location)
       end
 
@@ -20,8 +20,8 @@ module Rack
     def redirect(location)
       [
         301,
-        { "Location" => location, "Content-Type" => "text/html" },
-        ["Moved Permanently"]
+        { 'Location' => location, 'Content-Type' => 'text/html' },
+        ['Moved Permanently']
       ]
     end
   end

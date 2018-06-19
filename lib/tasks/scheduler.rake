@@ -1,6 +1,6 @@
-desc "This task is called by the Heroku scheduler add-on"
+desc 'This task is called by the Heroku scheduler add-on'
 task rollup_page_views: :environment do
-  puts "Rolling up page views..."
+  puts 'Rolling up page views…'
   views = View.all
 
   views.group(:article_id).count.sort.each do |article_id, page_view_count|
@@ -13,5 +13,5 @@ task rollup_page_views: :environment do
   end
 
   views.destroy_all
-  puts "...done."
+  puts '…done.'
 end

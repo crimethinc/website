@@ -2,64 +2,61 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :extras]
 
   def index
-    @html_id = "page"
-    @body_id = "products"
-    @title   = "Books"
-    @type    = "books"
+    @html_id = 'page'
+    @body_id = 'products'
+    @title   = 'Books'
+    @type    = 'books'
 
     @bullet_books = []
-    %w(no-wall-they-can-build
+    %w[no-wall-they-can-build
        from-democracy-to-freedom
        contradictionary
        work
        expect-resistance
        recipes-for-disaster
-       days-of-war-nights-of-love).each do |slug|
+       days-of-war-nights-of-love].each do |slug|
       @bullet_books << Book.find_by(slug: slug)
     end
 
     @letters_books = []
-    %w(off-the-map).each do |slug|
+    %w[off-the-map].each do |slug|
       @letters_books << Book.find_by(slug: slug)
     end
   end
 
   def show
-    @html_id = "page"
-    @body_id = "products"
+    @html_id = 'page'
+    @body_id = 'products'
     @title   = "Books : #{@book.title}"
-    @type    = "books"
+    @type    = 'books'
 
     @editable = @book
   end
 
   def extras
-    @html_id = "page"
-    @body_id = "products"
+    @html_id = 'page'
+    @body_id = 'products'
     @title   = "Books : #{@book.title} : Extras"
   end
 
   def lit_kit
-    @html_id = "page"
-    @body_id = "products"
-    @title   = "Books : Literature Distribution Kit"
+    @html_id = 'page'
+    @body_id = 'products'
+    @title   = 'Books : Literature Distribution Kit'
   end
 
   def into_libraries
-    @html_id = "page"
-    @body_id = "products"
-    @title   = "Books : CrimethInc. Into Libraries"
+    @html_id = 'page'
+    @body_id = 'products'
+    @title   = 'Books : CrimethInc. Into Libraries'
   end
 
   private
 
   def set_book
     @book = Book.where(slug: params[:slug])
+    return redirect_to [:books] if @book.blank?
 
-    if @book.present?
-      @book = @book.first
-    else
-      return redirect_to [:books]
-    end
+    @book = @book.first
   end
 end

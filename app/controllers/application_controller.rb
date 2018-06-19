@@ -1,5 +1,5 @@
-require "open-uri"
-require "json"
+require 'open-uri'
+require 'json'
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   helper :meta
 
   def staging?
-    ENV["ON_STAGING"] == "TRUE"
+    ENV['ON_STAGING'] == 'TRUE'
   end
   helper_method :staging?
 
@@ -26,61 +26,54 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authorize
-    redirect_to signin_url, alert: "You need to sign in to view that page." unless signed_in?
+    redirect_to signin_url, alert: 'You need to sign in to view that page.' unless signed_in?
   end
 
   def listing?
-    action_name == "index"
+    action_name == 'index'
   end
   helper_method :listing?
 
   def showing?
-    action_name == "show"
+    action_name == 'show'
   end
   helper_method :showing?
 
   def editing?
-    action_name == "edit"
+    action_name == 'edit'
   end
   helper_method :editing?
 
   def creating?
-    action_name == "new"
+    action_name == 'new'
   end
   helper_method :creating?
 
   def check_for_redirection
     redirect = Redirect.where(source_path: request.path.downcase).last
+    redirect = Redirect.where(source_path: "#{request.path.downcase}/").last if redirect.blank?
 
-    if redirect.blank?
-      redirect = Redirect.where(source_path: "#{request.path.downcase}/").last
-    end
-
-    if redirect.present?
-      return redirect_to redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301
-    end
+    return redirect_to(redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301) if redirect.present?
   end
 
   def strip_file_extension
-    if request.path =~ /\.html/
-      return redirect_to request.path.sub(/\.html/, "")
-    end
+    return redirect_to request.path.sub(/\.html/, '') if /\.html/.match?(request.path)
   end
 
   def current_resource_name
-    request.path.split("admin/").last.split("/").first.capitalize.singularize
+    request.path.split('admin/').last.split('/').first.capitalize.singularize
   end
   helper_method :current_resource_name
 
   def render_markdown(text)
-    unless text.blank?
-      Kramdown::Document.new(
-        MarkdownMedia.parse(text),
-        input: :kramdown,
-        remove_block_html_tags: false,
-        transliterated_header_ids: true
-      ).to_html.html_safe
-    end
+    return if text.blank?
+
+    Kramdown::Document.new(
+      MarkdownMedia.parse(text),
+      input: :kramdown,
+      remove_block_html_tags: false,
+      transliterated_header_ids: true
+    ).to_html.html_safe
   end
   helper_method :render_markdown
 
@@ -91,8 +84,8 @@ class ApplicationController < ActionController::Base
   end
   helper_method :render_content
 
-  def meta_title(thing=nil)
-    thing.present? ? thing.title : t("head.meta_title")
+  def meta_title(thing = nil)
+    thing.present? ? thing.title : t('head.meta_title')
   end
   helper_method :meta_title
 
@@ -106,7 +99,7 @@ class ApplicationController < ActionController::Base
   helper_method :page_title
 
   def prepend_admin_if_needed
-    if controller_path.match(/\Aadmin\/.*\z/).present?
+    if controller_path.match(%r{\Aadmin\/.*\z}).present?
       " #{t('admin.title_prepend')} : "
     else
       ' : '
@@ -116,12 +109,12 @@ class ApplicationController < ActionController::Base
 
   def author
     t(:site_author)
-    # TODO make this article author aware
+    # TODO: make this article author aware
   end
   helper_method :author
 
   def root_url
-    Rails.env.development? ? "http://localhost:3000" : "https://crimethinc.com"
+    Rails.env.development? ? 'http://localhost:3000' : 'https://crimethinc.com'
   end
   helper_method :root_url
 end

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @body_id = "home"
+    @body_id = 'home'
     @homepage = true
 
     # feed
@@ -11,6 +11,6 @@ class HomeController < ApplicationController
   private
 
   def first_page?
-    !params[:page].present?
+    params[:page].blank?
   end
 end

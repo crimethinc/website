@@ -10,16 +10,16 @@
   </span>
 
   <% if @top_article.present? %>
-    <%= render "archives/card_css", article: @top_article %>
-    <%= render "archives/card",     article: @top_article %>
+    <%= render "article_archives/card_css", article: @top_article %>
+    <%= render "article_archives/card",     article: @top_article %>
   <% end %>
 
   <% @articles.in_groups_of(2).each do |row| %>
     <div class="row">
       <% row.each do |article| %>
         <% unless article.blank? %>
-          <%= render "archives/card_css", article: article %>
-          <%= render "archives/card",     article: article %>
+          <%= render "article_archives/card_css", article: article %>
+          <%= render "article_archives/card",     article: article %>
         <% end %>
       <% end %>
     </div>

@@ -1,11 +1,12 @@
-require "rails_helper"
+require 'rails_helper'
 
 describe Tag do
-  subject { Tag.new(name: 'test') }
+  subject { described_class.new(name: 'test') }
 
   describe 'assigned_to?' do
     let(:page) { Page.create(title: 'about') }
-    context 'assigned to page' do
+
+    context 'when assigned to a page' do
       before do
         subject.assign_to!(page)
       end
@@ -15,7 +16,7 @@ describe Tag do
       end
     end
 
-    context 'not assigned ts page' do
+    context 'when not assigned to a page' do
       it 'returns false' do
         expect(subject).not_to be_assigned_to(page)
       end
@@ -23,7 +24,7 @@ describe Tag do
   end
 
   describe 'assign_to!' do
-    let(:status)  { Status.new(name: "published") }
+    let(:status) { Status.new(name: 'published') }
     let(:published_at) { Date.current }
     let(:article) { Article.new(title: 'foobar', short_path: SecureRandom.hex, status: status, published_at: published_at) }
     let(:page) { Page.new(title: 'about') }

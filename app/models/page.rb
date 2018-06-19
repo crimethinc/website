@@ -7,17 +7,17 @@ class Page < ApplicationRecord
   has_many :tags, through: :taggings
 
   def path
-    if self.published?
-      "/#{self.slug}"
+    if published?
+      "/#{slug}"
     else
-      "/drafts/pages/#{self.draft_code}"
+      "/drafts/pages/#{draft_code}"
     end
   end
 
   def content_rendered
     Kramdown::Document.new(
       content,
-      input: content_format == "html" ? :html : :kramdown,
+      input: content_format == 'html' ? :html : :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
       html_to_native: true

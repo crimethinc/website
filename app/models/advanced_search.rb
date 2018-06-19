@@ -1,7 +1,7 @@
 class AdvancedSearch
   include ActiveModel::Model
 
-  def initialize(query = "")
+  def initialize(query = '')
     @query = query.to_s
   end
 
@@ -18,41 +18,39 @@ class AdvancedSearch
   end
 
   def category=(categories)
-    categories.to_s.split(",").map(&:strip).each do |category|
-      @query += "category:#{category}" + " "
+    categories.to_s.split(',').map(&:strip).each do |category|
+      @query += "category:#{category}" + ' '
     end
   end
 
   def category
-    filters.select { |filter| filter.first == "category" }.map(&:last).map { |c| c.tr('"', "") }.join(", ")
+    filters.select { |filter| filter.first == 'category' }.map(&:last).map { |c| c.tr('"', '') }.join(', ')
   end
 
   def content=(content)
     content.to_s.split.map(&:strip).each do |c|
-      @query += "content:#{c}" + " "
+      @query += "content:#{c}" + ' '
     end
   end
 
   def content
-    filters.select { |filter| filter.first == "content" }.map(&:last).join(" ")
+    filters.select { |filter| filter.first == 'content' }.map(&:last).join(' ')
   end
 
   def tag=(tags)
-    tags.to_s.split(",").map(&:strip).each do |tag|
-      if tag.match?(/\s/)
-        tag = tag.inspect
-      end
+    tags.to_s.split(',').map(&:strip).each do |tag|
+      tag = tag.inspect if tag.match?(/\s/)
 
-      @query += "tag:#{tag}" + " "
+      @query += "tag:#{tag}" + ' '
     end
   end
 
   def tag
-    filters.select { |filter| filter.first == "tag" }.map(&:last).map { |c| c.tr('"', "") }.join(", ")
+    filters.select { |filter| filter.first == 'tag' }.map(&:last).map { |c| c.tr('"', '') }.join(', ')
   end
 
   def term=(term)
-    @query += term + " "
+    @query += term + ' '
   end
 
   def term
@@ -61,22 +59,22 @@ class AdvancedSearch
 
   def title=(title)
     title.to_s.split.map(&:strip).each do |t|
-      @query += "title:#{t}" + " "
+      @query += "title:#{t}" + ' '
     end
   end
 
   def title
-    filters.select { |filter| filter.first == "title" }.map(&:last).join(" ")
+    filters.select { |filter| filter.first == 'title' }.map(&:last).join(' ')
   end
 
   def subtitle=(subtitle)
     subtitle.to_s.split.map(&:strip).each do |s|
-      @query += "subtitle:#{s}" + " "
+      @query += "subtitle:#{s}" + ' '
     end
   end
 
   def subtitle
-    filters.select { |filter| filter.first == "subtitle" }.map(&:last).join(" ")
+    filters.select { |filter| filter.first == 'subtitle' }.map(&:last).join(' ')
   end
 
   private
@@ -87,7 +85,7 @@ class AdvancedSearch
     @filters = query
                .scan(Search::FILTER_REGEX)
                .map(&:first)
-               .map { |filter| filter.split(":") }
+               .map { |filter| filter.split(':') }
                .select { |filter| Search::VALID_FILTERS.include?(filter.first) }
 
     @filters
@@ -96,6 +94,6 @@ class AdvancedSearch
   def strip_filters(query)
     filters = query.scan(Search::FILTER_REGEX).map(&:first)
 
-    filters.inject(query) { |q, match| q.sub(match, "") }.strip
+    filters.inject(query) { |q, match| q.sub(match, '') }.strip
   end
 end

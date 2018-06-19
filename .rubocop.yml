@@ -1,0 +1,123 @@
+inherit_from: .rubocop_todo.yml
+
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.5
+
+  Exclude:
+    - 'db/**/*'
+    - 'script/*'
+    - 'bin/*'
+    - 'log/**/*'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+
+IndentationConsistency:
+  EnforcedStyle: 'rails'
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+
+Rails:
+  Enabled: true
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+Metrics/ClassLength:
+  Max: 210
+
+Metrics/ParameterLists:
+  Max: 6
+
+Metrics/LineLength:
+  Max: 200
+
+Metrics/MethodLength:
+  Max: 40
+
+Metrics/BlockLength:
+  Max: 140
+
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Max: 65
+
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/MethodDefParentheses:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/NestedParenthesizedCalls:
+  Enabled: false
+
+# TEMP: private and def foo() are at the same indentation level
+# This should NOT cause an offense but it does. ¯\_(ツ)_/¯
+# https://rubocop.readthedocs.io/en/latest/cops_layout/
+Layout/IndentationWidth:
+  Enabled: false
+
+# README: the `begin` in BadRequestRescue seems to be required
+Style/RedundantBegin:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Rails/OutputSafety:
+  Enabled: false
+
+# TEMP: Nokogiri’s use of `open` from `open-uri` is being
+# confused as Kernel#open by Rubocop
+Security/Open:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 4
+
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/MultipleExpectations:
+  Max: 10
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/system/*'
+
+
+# Offense count: 4
+# Configuration parameters: Blacklist.
+# Blacklist: decrement!, decrement_counter, increment!, increment_counter, toggle!, touch, update_all, update_attribute, update_column, update_columns, update_counters
+# README: update_column and increment_counter are used in these methods to avoid validations for performance
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'app/controllers/admin/articles_controller.rb'
+    - 'app/controllers/articles_controller.rb'
+    - 'lib/tasks/scheduler.rake'
+

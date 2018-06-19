@@ -1,24 +1,23 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_secure_password
 
   PASSWORD_MINIMUM_LENGTH = 30
 
-  has_many :articles
+  has_many :articles, dependent: :destroy
 
-  validates :username, presence: :true, uniqueness: true, on: [:create, :update]
+  validates :username, presence: true, uniqueness: true, on: [:create, :update]
   validates :password,
-            presence: :true,
+            presence: true,
             on: :create,
             length: { minimum: PASSWORD_MINIMUM_LENGTH }
 
   validates :password,
             exclusion: {
-              in: ["mickey fickie fire cracker soap on a rope", "a long passphrase to meet the minimum length"],
-              message: "The passphrase '%{value}' is prohibited."
+              in: ['mickey fickie fire cracker soap on a rope', 'a long passphrase to meet the minimum length'],
+              message: 'The passphrase ‘%{value}’ is prohibited.'
             }
 
   default_scope { order(username: :asc) }
-
 
   class << self
     def options_for_select

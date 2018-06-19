@@ -1,7 +1,10 @@
 module Post
   extend ActiveSupport::Concern
 
-  include Name, Searchable, Slug, Publishable
+  include Name
+  include Searchable
+  include Slug
+  include Publishable
 
   included do
     belongs_to :user, optional: true
@@ -19,14 +22,14 @@ module Post
       ).to_html.to_s
 
       doc = Nokogiri::HTML(html)
-      doc.css("body").text.truncate(200)
+      doc.css('body').text.truncate(200)
     else
       summary
     end
   end
 
   def meta_image
-    image.present? ? image : t("head.meta_image_url")
+    image.presence || t('head.meta_image_url')
   end
 
   private

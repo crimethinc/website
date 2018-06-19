@@ -4,36 +4,35 @@ class PodcastController < ApplicationController
   before_action :set_episode,  only: [:show, :transcript]
 
   def index
-    @html_id        = "page"
-    @body_id        = "podcast"
+    @html_id        = 'page'
+    @body_id        = 'podcast'
     @latest_episode = @episodes.shift
     @editable       = @latest_episode.podcast
     @title          = @podcast.name
   end
 
   def show
-    @html_id  = "page"
-    @body_id  = "podcast"
+    @html_id  = 'page'
+    @body_id  = 'podcast'
     @editable = @episode
     @title    = @episode.name
   end
 
   def transcript
-    @html_id  = "page"
-    @body_id  = "podcast"
+    @html_id  = 'page'
+    @body_id  = 'podcast'
     @editable = @episode
     @title    = "#{@episode.name} — Transcript"
 
-    render "podcast/show"
+    render 'podcast/show'
   end
 
-  def feed
-  end
+  def feed; end
 
   private
 
   def set_podcast
-    @podcast  = Podcast.find_by(title: "The Ex-Worker")
+    @podcast  = Podcast.find_by(title: 'The Ex-Worker')
   end
 
   def set_episodes
@@ -41,12 +40,9 @@ class PodcastController < ApplicationController
   end
 
   def set_episode
-    @episode  = Episode.where(slug: params[:slug])
+    @episode = Episode.where(slug: params[:slug])
+    return redirect_to [:podcast] if @episode.blank?
 
-    if @episode.blank?
-      return redirect_to [:podcast]
-    else
-      @episode = @episode.first
-    end
+    @episode = @episode.first
   end
 end

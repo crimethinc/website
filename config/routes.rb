@@ -1,134 +1,125 @@
 Rails.application.routes.draw do
-
   # Store Redirect and support page
-  get "store/order-success", to: "about#post_order_success", as: :post_order_success
-
+  get 'store/order-success', to: 'about#post_order_success', as: :post_order_success
 
   # Homepage
-  root to: "home#index"
+  root to: 'home#index'
 
   # Donations
-  get "donate", to: "donations#new", as: :donations_new
-  post "donate", to: "donations#create", as: :donations
-  get "donate/confirmation", to: "donations#show", as: :donation
+  get 'donate', to: 'donations#new', as: :donations_new
+  post 'donate/, to: 'donations#create', as: :donations
+  get 'donate/confirmation', to: 'donations#show', as: :donation
+  get 'donate', to: 'donate#index', as: :donate
 
-  get "page(/1)", to: redirect { |_, _| "/" }
-  get "page/:page", to: "home#index"
+  get 'page(/1)', to: redirect { |_, _| '/' }
+  get 'page/:page', to: 'home#index'
 
-  #TCE
-  get "tce(/:lang)", to: 'to_change_everything#show', defaults: { lang: 'english' }
+  # TCE
+  get 'tce(/:lang)', to: 'to_change_everything#show', defaults: { lang: 'english' }
 
   # Articles
   # Article listings by year, optional month, optional day
-  get "(/:year)(/:month)(/:day)/page(/1)", to: redirect { |_, req|
-    req.path.split("page").first
+  get '(/:year)(/:month)(/:day)/page(/1)', to: redirect { |_, req|
+    req.path.split('page').first
   }
-  get "(/:year)(/:month)(/:day)(/page/:page)",
-      to:          "archives#index",
+  get '(/:year)(/:month)(/:day)(/page/:page)',
+      to:          'article_archives#index',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
-      as:          :archives
+      as:          :article_archives
 
   # Article permalink
-  get ":year/:month/:day/:slug",
-      to:          "articles#show",
+  get ':year/:month/:day/:slug',
+      to:          'articles#show',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
 
   # Article edit convenience route
-  get ":year/:month/:day/:slug/edit",
-      controller: "admin/articles",
-      action:     "edit",
+  get ':year/:month/:day/:slug/edit',
+      controller: 'admin/articles',
+      action:     'edit',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
 
   # Draft Articles and Pages
-  get "drafts/articles/:draft_code", to: "articles#show", as: :article_draft
-  get "drafts/pages/:draft_code",    to: "pages#show",    as: :page_draft
+  get 'drafts/articles/:draft_code', to: 'articles#show', as: :article_draft
+  get 'drafts/pages/:draft_code',    to: 'pages#show',    as: :page_draft
 
   # Draft Articles and Pages /edit convenience routes
-  get "drafts/articles/:draft_code/edit", controller: "admin/articles", action: "edit"
+  get 'drafts/articles/:draft_code/edit', controller: 'admin/articles', action: 'edit'
 
   # Articles Atom Feed
-  get "feed.json", to: "articles#index", defaults: { format: "json" }, as: :json_feed
-  get "feed",      to: "articles#index", defaults: { format: "atom" }, as: :feed
+  get 'feed.json', to: 'articles#index', defaults: { format: 'json' }, as: :json_feed
+  get 'feed',      to: 'articles#index', defaults: { format: 'atom' }, as: :feed
 
   # Articles - Collection Items
-  get "articles/:id/collection_posts", to: "collection_posts#index"
-
+  get 'articles/:id/collection_posts', to: 'collection_posts#index'
 
   # Static pages
-  get "arts/submission-guidelines", to: "about#arts_submission_guidelines"
-
+  get 'arts/submission-guidelines', to: 'about#arts_submission_guidelines'
 
   # Categories
-  get "categories",                    to: "categories#index", as: :categories
-  get "categories/:slug/page(/1)",     to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
-  get "categories/:slug(/page/:page)", to: "categories#show", as: :category
-  get "categories/:slug/feed",         to: "categories#feed", defaults: { format: "atom" }, as: :category_feed
+  get 'categories',                    to: 'categories#index', as: :categories
+  get 'categories/:slug/page(/1)',     to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
+  get 'categories/:slug(/page/:page)', to: 'categories#show', as: :category
+  get 'categories/:slug/feed',         to: 'categories#feed', defaults: { format: 'atom' }, as: :category_feed
 
   # Tags
-  get "tags/:slug/page(/1)",     to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
-  get "tags/:slug(/page/:page)", to: "tags#show", as: :tag
-  get "tags/:slug/feed",         to: "tags#feed", defaults: { format: "atom" }, as: :tag_feed
+  get 'tags/:slug/page(/1)',     to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
+  get 'tags/:slug(/page/:page)', to: 'tags#show', as: :tag
+  get 'tags/:slug/feed',         to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
 
   # Pages (linked in header/nav)
-  get "library", to: "about#library",     as: :library
+  get 'library', to: 'about#library', as: :library
 
   # Podcast
-  get "podcast/feed",             to: "podcast#feed",       as: :podcast_feed, defaults: { format: "rss" }
-  get "podcast",                  to: "podcast#index",      as: :podcast
-  get "podcast/:slug",            to: "podcast#show",       as: :episode
-  get "podcast/:slug/transcript", to: "podcast#transcript", as: :episode_transcript
-
+  get 'podcast/feed',             to: 'podcast#feed',       as: :podcast_feed, defaults: { format: 'rss' }
+  get 'podcast',                  to: 'podcast#index',      as: :podcast
+  get 'podcast/:slug',            to: 'podcast#show',       as: :episode
+  get 'podcast/:slug/transcript', to: 'podcast#transcript', as: :episode_transcript
 
   # Books
-  get "books/lit-kit",        to: "books#lit_kit",        as: :books_lit_kit
-  get "books/into-libraries", to: "books#into_libraries", as: :books_into_libraries
-  get "books/:slug/extras",   to: "books#extras",         as: :books_extras
-  get "books",                to: "books#index",          as: :books
-  get "books/:slug",          to: "books#show",           as: :book
-
+  get 'books/lit-kit',        to: 'books#lit_kit',        as: :books_lit_kit
+  get 'books/into-libraries', to: 'books#into_libraries', as: :books_into_libraries
+  get 'books/:slug/extras',   to: 'books#extras',         as: :books_extras
+  get 'books',                to: 'books#index',          as: :books
+  get 'books/:slug',          to: 'books#show',           as: :book
 
   # Videos
-  get "videos/page(/1)", to: redirect { |_, _| "/videos" }
-  get "videos",          to: "videos#index", as: :videos
-  get "videos/:slug",    to: "videos#show",  as: :video
-
+  get 'videos/page(/1)', to: redirect { |_, _| '/videos' }
+  get 'videos',          to: 'videos#index', as: :videos
+  get 'videos/:slug',    to: 'videos#show',  as: :video
 
   # Posters, Stickers, Zines
-  get "posters",        to: "posters#index",  as: :posters
-  get "posters/:slug",  to: "posters#show",   as: :poster
-  get "stickers",       to: "stickers#index", as: :stickers
-  get "stickers/:slug", to: "stickers#show",  as: :sticker
-  get "logos",          to: "logos#index",    as: :logos
-  get "logos/:slug",    to: "logos#show",     as: :logo
-  get "zines",          to: "zines#index",    as: :zines
-  get "zines/:slug",    to: "zines#show",     as: :zine
-
+  get 'posters',        to: 'posters#index',  as: :posters
+  get 'posters/:slug',  to: 'posters#show',   as: :poster
+  get 'stickers',       to: 'stickers#index', as: :stickers
+  get 'stickers/:slug', to: 'stickers#show',  as: :sticker
+  get 'logos',          to: 'logos#index',    as: :logos
+  get 'logos/:slug',    to: 'logos#show',     as: :logo
+  get 'zines',          to: 'zines#index',    as: :zines
+  get 'zines/:slug',    to: 'zines#show',     as: :zine
 
   # Tools
-  get "tools",           to: "tools#index", as: :tools
-
+  get 'tools', to: 'tools#index', as: :tools
 
   # Site search
-  get "search", to: "search#index"
-  get "search/advanced", to: "search#advanced", as: :advanced_search
-  post "search/advanced", to: "search#advanced_search", as: :advanced_searches
-
+  get 'search',           to: 'search#index'
+  get 'search/advanced',  to: 'search#advanced', as: :advanced_search
+  post 'search/advanced', to: 'search#advanced_search', as: :advanced_searches
 
   # Admin Dashboard
-  get :admin, to: redirect("/admin/dashboard"), as: "admin"
+  get :admin, to: redirect('/admin/dashboard'), as: 'admin'
   namespace :admin do
-    get "dashboard", to: "dashboard#index"
-    get "markdown",  to: "dashboard#markdown"
+    get 'dashboard', to: 'dashboard#index'
+    get 'markdown',  to: 'dashboard#markdown'
 
     concern :paginatable do
-      get "page(/1)", on: :collection, to: redirect { |_, req| req.path.split("page").first }
-      get "(page/:page)", action: :index, on: :collection, as: ""
+      get 'page(/1)', on: :collection, to: redirect { |_, req| req.path.split('page').first }
+      get '(page/:page)', action: :index, on: :collection, as: ''
     end
 
     resources :articles, concerns: :paginatable do
       member do
-        get "new", as: :new_collection_post
+        get 'new', as: :new_collection_post
       end
     end
 
@@ -147,25 +138,22 @@ Rails.application.routes.draw do
     resources :zines,      concerns: :paginatable
   end
 
-
   # Auth + User signup
   namespace :auth do
     resources :users,    only: [:create, :update, :destroy]
     resources :sessions, only: [:create]
   end
 
-  get "profile",  to: "auth/users#show",       as: :profile
-  get "settings", to: "auth/users#edit",       as: :settings
-  get "signup",   to: "auth/users#new",        as: :signup
-  get "signin",   to: "auth/sessions#new",     as: :signin
-  get "signout",  to: "auth/sessions#destroy", as: :signout
-
+  get 'profile',  to: 'auth/users#show',       as: :profile
+  get 'settings', to: 'auth/users#edit',       as: :settings
+  get 'signup',   to: 'auth/users#new',        as: :signup
+  get 'signin',   to: 'auth/sessions#new',     as: :signin
+  get 'signout',  to: 'auth/sessions#destroy', as: :signout
 
   # Misc plumbing infrastructure
-  get "manifest.json",  to: "misc#manifest_json"
-  get "opensearch.xml", to: "misc#opensearch_xml"
-
+  get 'manifest.json',  to: 'misc#manifest_json'
+  get 'opensearch.xml', to: 'misc#opensearch_xml'
 
   # Pages
-  get "*path", to: "pages#show", as: :page, via: :all
+  get '*path', to: 'pages#show', as: :page, via: :all
 end

@@ -5,39 +5,34 @@ class CategoriesController < ApplicationController
   before_action :set_articles, only: [:show, :feed]
 
   def show
-    @html_id  = "page"
-    @body_id  = "category"
+    @html_id  = 'page'
+    @body_id  = 'category'
   end
 
   def index
-    @html_id    = "page"
-    @body_id    = "categories"
-    @title      = "Categories"
+    @html_id    = 'page'
+    @body_id    = 'categories'
+    @title      = 'Categories'
     @categories = Category.all
   end
 
   def feed
-    render "articles/index"
+    render 'articles/index'
   end
 
   private
 
   def set_slug
-    @slug = params[:slug].gsub("_", "-")
+    @slug = params[:slug].tr('_', '-')
 
-    if @slug != params[:slug]
-      return redirect_to category_path(@slug)
-    end
+    return redirect_to category_path(@slug) if @slug != params[:slug]
   end
 
   def set_category
     @category = Category.where(slug: @slug)
+    return redirect_to [:categories] if @category.blank?
 
-    if @category.blank?
-      return redirect_to [:categories]
-    else
-      @category = @category.first
-    end
+    @category = @category.first
   end
 
   def set_title
@@ -47,8 +42,6 @@ class CategoriesController < ApplicationController
   def set_articles
     @articles = @category.articles.live.published.page(params[:page]).per(25)
 
-    if @articles.blank?
-      return redirect_to root_path
-    end
+    return redirect_to root_path if @articles.blank?
   end
 end

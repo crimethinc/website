@@ -14,19 +14,24 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-
   # Configure memcache as the cache_store if available
   # Pulled from https://devcenter.heroku.com/articles/memcachedcloud
-  if ENV["MEMCACHEDCLOUD_SERVERS"]
-    config.cache_store = :dalli_store, ENV["MEMCACHEDCLOUD_SERVERS"].split(','), { username: ENV["MEMCACHEDCLOUD_USERNAME"], password: ENV["MEMCACHEDCLOUD_PASSWORD"] }
-  else
-    # Cache in memory otherwise
-    config.cache_store = :memory_store, { size: 64.megabytes }
-  end
-
+  config.cache_store = if ENV['MEMCACHEDCLOUD_SERVERS']
+                         [
+                           :dalli_store,
+                           ENV['MEMCACHEDCLOUD_SERVERS'].split(','),
+                           {
+                             username: ENV['MEMCACHEDCLOUD_USERNAME'],
+                             password: ENV['MEMCACHEDCLOUD_PASSWORD']
+                           }
+                         ]
+                       else
+                         # Cache in memory otherwise
+                         [:memory_store, { size: 64.megabytes }]
+                       end
 
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
-  # Requires an encryption key in `ENV["RAILS_MASTER_KEY"]` or
+  # Requires an encryption key in `ENV['RAILS_MASTER_KEY']` or
   # `config/secrets.yml.key`.
   config.read_encrypted_secrets = true
 
@@ -44,7 +49,7 @@ Rails.application.configure do
   # Allow the browser to cache images.
   config.serve_static_assets = true
   config.assets.digest = true
-  config.static_cache_control = "public, max-age=31536000"
+  config.static_cache_control = 'public, max-age=31536000'
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -68,14 +73,14 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "crimethinc_#{Rails.env}"
+  # config.active_job.queue_name_prefix = 'crimethinc_#{Rails.env}'
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
@@ -96,7 +101,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)

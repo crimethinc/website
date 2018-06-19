@@ -7,40 +7,32 @@ module Rack
     def redirect(location)
       [
         301,
-        { "Location" => location, "Content-Type" => "text/html" },
-        ["Moved Permanently"]
+        { 'Location' => location, 'Content-Type' => 'text/html' },
+        ['Moved Permanently']
       ]
     end
 
     def call(env)
       redirects = {}
 
-      filepath = ::File.expand_path("../redirects.txt", __FILE__)
+      filepath = ::File.expand_path('../redirects.txt', __FILE__)
 
       if ::File.exist?(filepath)
         ::File.open(filepath).each do |line|
-          unless line.blank?
-            source_path, target_path = line.chomp.split
+          next if line.blank?
+          source_path, target_path = line.chomp.split
 
-            unless source_path =~ /^\/|http/
-              source_path = "/#{source_path}"
-            end
+          source_path = "/#{source_path}" unless %r{^/|http}.match?(source_path)
+          target_path = "/#{target_path}" unless %r{^/|http}.match?(target_path)
 
-            unless target_path =~ /^\/|http/
-              target_path = "/#{target_path}"
-            end
-
-            redirects[source_path] = target_path
-          end
+          redirects[source_path] = target_path
         end
       end
 
       req = Rack::Request.new(env)
 
       if redirects.include?(req.path)
-        if req.query_string.present?
-          args = "?#{req.query_string}"
-        end
+        args = "?#{req.query_string}" if req.query_string.present?
 
         return redirect(redirects[req.path] + args.to_s)
       end

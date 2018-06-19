@@ -1,24 +1,21 @@
 class LogosController < ApplicationController
   def index
-    @html_id  = "page"
-    @body_id  = "products"
-    @type     = "logos"
-    @title    = "logos"
+    @html_id  = 'page'
+    @body_id  = 'products'
+    @type     = 'logos'
+    @title    = 'logos'
     @products = Logo.published.page(params[:page]).per(100)
   end
 
   def show
-    @html_id = "page"
-    @body_id = "products"
-    @type    = "logos"
     @product = Logo.where(slug: params[:slug])
+    return redirect_to [:logos] if @product.blank?
 
-    if @product.blank?
-      return redirect_to [:logos]
-    else
-      @product = @product.first
-    end
+    @html_id = 'page'
+    @body_id = 'products'
+    @type    = 'logos'
 
+    @product = @product.first
     @title   = "logos : #{@product.name}"
   end
 end

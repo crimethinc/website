@@ -16,18 +16,18 @@ class Redirect < ApplicationRecord
 
   def add_leading_slash
     paths.each do |path|
-      path = path.prepend "/" unless path =~ %r{^\/|https?}
+      path.prepend '/' unless path =~ %r{^\/|https?}
     end
   end
 
   def strip_double_slashes
     paths.each do |path|
-      path.downcase.gsub!("//", "/")
+      path.downcase.gsub!('//', '/')
     end
   end
 
   def downcase_source_path
-    self.source_path.downcase!
+    source_path.downcase!
   end
 
   def strip_domain_from_path path
@@ -36,17 +36,17 @@ class Redirect < ApplicationRecord
   end
 
   def strip_domain_from_source_path
-    self.source_path = strip_domain_from_path self.source_path
+    self.source_path = strip_domain_from_path source_path
   end
 
   def strip_domain_from_target_path
-    self.target_path = strip_domain_from_path self.target_path
+    self.target_path = strip_domain_from_path target_path
   end
 
   private
 
   def paths
-    [self.source_path, self.target_path]
+    [source_path, target_path]
   end
 
   def build_url_for path
@@ -55,28 +55,26 @@ class Redirect < ApplicationRecord
 
   def groomed_path_or_url url
       url_pieces = []
-      url_pieces << "#{url.scheme}://#{url.host}" unless  url.host.blank? || is_a_crimethinc_url?(url)
+      url_pieces << "#{url.scheme}://#{url.host}" unless url.host.blank? || crimethinc_url?(url)
       url_pieces << url.path
-      url_pieces << "?" + url.query    if url.query.present?
-      url_pieces << "#" + url.fragment if url.fragment.present?
+      url_pieces << '?' + url.query    if url.query.present?
+      url_pieces << '#' + url.fragment if url.fragment.present?
       url_pieces.join
   end
 
-  def is_a_crimethinc_url? url
-    url.host =~ %r{crimethinc.com|cwc.im}
+  def crimethinc_url? url
+    url.host =~ /crimethinc.com|cwc.im/
   end
 
   def noncircular_redirect
-    errors.add(:target_path, "redirects to itself") if source_path == target_path
+    errors.add(:target_path, 'redirects to itself') if source_path == target_path
   end
 
   def article_short_path_unique
-    aa = Article.where(short_path: self.source_path[/\w+/])
+    aa = Article.where(short_path: source_path[/\w+/])
 
-    if aa.exists?
-      unless aa.first.id == self.article_id
-        errors.add(:source_path, "is already taken by article short path")
-      end
-    end
+    return if aa.blank?
+
+    errors.add(:source_path, 'is already taken by article short path') unless aa.first.id == article_id
   end
 end

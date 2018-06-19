@@ -1,41 +1,41 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe Podcast, type: :model do
-  describe "#name" do
+  describe '#name' do
     subject { podcast.name }
 
-    context "with a subtitle" do
-      let(:podcast) { Podcast.new(title: "title", subtitle: "subtitle") }
+    context 'with a subtitle' do
+      let(:podcast) { Podcast.new(title: 'title', subtitle: 'subtitle') }
 
-      it { is_expected.to eq("title : subtitle") }
+      it { is_expected.to eq('title : subtitle') }
     end
 
-    context "without a subtitle" do
-      let(:podcast) { Podcast.new(title: "title") }
+    context 'without a subtitle' do
+      let(:podcast) { Podcast.new(title: 'title') }
 
-      it { is_expected.to eq("title") }
+      it { is_expected.to eq('title') }
     end
   end
 
-  describe "#path" do
+  describe '#path' do
     subject { Podcast.new.path }
 
-    it { is_expected.to eq("/podcast") }
+    it { is_expected.to eq('/podcast') }
   end
 
-  describe "#meta_description" do
+  describe '#meta_description' do
     subject { podcast.meta_description }
 
-    context "with subtitle" do
-      let(:podcast) { Podcast.new(subtitle: "subtitle") }
+    context 'with subtitle' do
+      let(:podcast) { Podcast.new(subtitle: 'subtitle') }
 
-      it { is_expected.to eq("subtitle") }
+      it { is_expected.to eq('subtitle') }
     end
 
-    context "without subtitle" do
-      let(:podcast) { Podcast.new(content: "x" * 250) }
+    context 'without subtitle' do
+      let(:podcast) { Podcast.new(content: 'x' * 250) }
 
-      it { is_expected.to eq("x" * 197 + "...") }
+      it { is_expected.to eq('x' * 197 + '...') }
     end
   end
 end

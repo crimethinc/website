@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def html_id
     "id='#{@html_id}'".html_safe if @html_id.present?
   end
@@ -18,5 +17,4 @@ module ApplicationHelper
 
     asset_url("icons/icon-#{dimensions}.png")
   end
-
 end

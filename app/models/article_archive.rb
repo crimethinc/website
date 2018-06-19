@@ -1,4 +1,4 @@
-class Archive
+class ArticleArchive
   extend Forwardable
   include Enumerable
 
@@ -43,7 +43,7 @@ class Archive
   end
 
   def paginator
-    @paginator ||= ArchivePaginator.new(self)
+    @paginator ||= ArticleArchivePaginator.new(self)
   end
 
   def each(&block)

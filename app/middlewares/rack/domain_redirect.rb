@@ -7,29 +7,25 @@ module Rack
     def call(env)
       request = Rack::Request.new(env)
 
-      if request.host.downcase =~ /cwc/
-        return redirect_to_crimethinc request
-      end
+      return redirect_to_crimethinc request if /cwc/.match?(request.host.downcase)
 
-      if request.host.downcase =~ /crimethinc.herokuapp.com$/
-        return redirect_to_crimethinc request
-      end
+      return redirect_to_crimethinc request if /crimethinc.herokuapp.com$/.match?(request.host.downcase)
 
       @app.call(env)
     end
 
     private
 
-    def redirect_to_crimethinc request
-      location = "https://crimethinc.com#{request.path}"
+    def redirect_to_crimethinc _request
+      location = ['https://crimethinc.com', 'request.path'].join
       redirect location
     end
 
     def redirect(location)
       [
         301,
-        { "Location" => location, "Content-Type" => "text/html" },
-        ["Moved Permanently"]
+        { 'Location' => location, 'Content-Type' => 'text/html' },
+        ['Moved Permanently']
       ]
     end
   end
