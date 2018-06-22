@@ -102,7 +102,7 @@ Rails.application.routes.draw do
 
   # Donations
   get  'support', to: 'donations#new',    as: :support
-  post 'donate',  to: 'donations#create', as: :donations
+  post 'support', to: 'donations#create', as: :donations
   get  'thanks',  to: 'donations#thanks', as: :thanks
 
   # Admin Dashboard

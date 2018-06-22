@@ -10,7 +10,7 @@
 
 <div class="row">
   <div class='column column-one-third'>
-    <%= form_tag [:donations], id: 'js-stripe-form' do %>
+    <%= form_tag [:support], id: 'js-stripe-form' do %>
       <script src='https://checkout.stripe.com/checkout.js'></script>
 
       <!-- These get populated by the token callback below -->
@@ -32,7 +32,7 @@
       <%= range_field_tag 'amount_slider', 50, in: 1..1000, step: 1 %>
 
       <%= label_tag :amount, t('views.donations.support.amount_label') %>
-      <%= text_field_tag :amount, '$50' %>
+      <%= text_field_tag :amount, '$50', tabindex: '-1' %>
 
       <div class='actions'>
         <button id='js-stripe-button' class='button'>
@@ -64,7 +64,7 @@
   });
 
   document.getElementById('js-stripe-button').addEventListener('click', function(e) {
-    var amount = document.getElementById('amount').value.replace('$','');
+    var amount = document.getElementById('amount').value.replace('$', '');
 
     if (document.getElementById('monthly_true').checked === true){
       description = '<%= t 'views.donations.support.description_monthly' %>: $' + amount;
@@ -86,4 +86,3 @@
     handler.close();
   });
 </script>
-
