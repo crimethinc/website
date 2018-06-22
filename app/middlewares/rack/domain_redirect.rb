@@ -16,8 +16,8 @@ module Rack
 
     private
 
-    def redirect_to_crimethinc _request
-      location = ['https://crimethinc.com', 'request.path'].join
+    def redirect_to_crimethinc request
+      location = ['https://crimethinc.com', request.path].join
       redirect location
     end
 
