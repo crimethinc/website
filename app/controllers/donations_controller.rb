@@ -1,8 +1,6 @@
 class DonationsController < ApplicationController
-  def show; end
-
   def new
-    @amounts = (1..100).to_a + [200, 300, 400, 500, 600, 700, 800, 900, 1000]
+    @amounts = (1..100).to_a + %w[200 300 400 500 600 700 800 900 1000]
     @amounts_for_select = @amounts.map { |amount| ["$#{amount}", amount] }
   end
 
@@ -30,6 +28,8 @@ class DonationsController < ApplicationController
     flash[:error] = e.message
     render :new
   else
-    redirect_to [:donation]
+    redirect_to [:thanks]
   end
+
+  def thanks; end
 end
