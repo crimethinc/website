@@ -1,9 +1,9 @@
 <header>
-  <h1><%= t("views.donations.header") %></h1>
+  <h1><%= t 'views.donations.header' %></h1>
 </header>
 
-<%= form_tag [:donations], id: "js-stripe-form" do %>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
+<%= form_tag [:donations], id: 'js-stripe-form' do %>
+  <script src='https://checkout.stripe.com/checkout.js'></script>
 
   <!-- These get populated by the token callback below -->
   <%= hidden_field_tag 'js-stripe-email' %>
@@ -11,32 +11,32 @@
 
   <article>
     <% if flash[:error].present? %>
-      <div id="error_explanation">
+      <div id='error_explanation'>
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
 
     <%= label_tag :amount %>
-    <%= select_tag :amount, options_for_select(@amounts_for_select, selected: "20") %>
+    <%= select_tag :amount, options_for_select(@amounts_for_select, selected: '20') %>
 
     <%= radio_button_tag :monthly, true, checked: true %>
-    <%= label_tag :monthly_true, t("views.donations.radio_label_monthly") %>
+    <%= label_tag :monthly_true, t('views.donations.radio_label_monthly') %>
 
     <%= radio_button_tag :monthly, false %>
-    <%= label_tag :monthly_false, t("views.donations.radio_label_once") %>
+    <%= label_tag :monthly_false, t('views.donations.radio_label_once') %>
   </article>
 
-  <button id="js-stripe-button"><%= t("views.donations.button_text") %></button>
+  <button id='js-stripe-button'><%= t 'views.donations.button_text' %></button>
 
   <script>
     var handler = StripeCheckout.configure({
-      key: "<%= Rails.configuration.stripe[:publishable_key] %>",
-      image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+      key:    '<%= Rails.configuration.stripe[:publishable_key] %>',
+      image:  'https://stripe.com/img/documentation/checkout/marketplace.png',
       locale: 'auto',
-      token: function(token) {
-        document.getElementById("js-stripe-token").value = token.id;
-        document.getElementById("js-stripe-email").value = token.email;
-        document.getElementById("js-stripe-form").submit();
+      token:  function(token) {
+        document.getElementById('js-stripe-token').value = token.id;
+        document.getElementById('js-stripe-email').value = token.email;
+        document.getElementById('js-stripe-form').submit();
       }
     });
 
@@ -44,9 +44,9 @@
       var amount = document.getElementById('amount').value;
 
       if (document.getElementById('monthly_true').checked === true){
-        description = "<%= t("views.donations.description_monthly") %>: $" + amount;
+        description = '<%= t 'views.donations.description_monthly' %>: $' + amount;
       } else {
-        description = "<%= t("views.donations.description_once") %>: $" + amount;
+        description = '<%= t 'views.donations.description_once' %>: $' + amount;
       }
 
       // Open Checkout with further options:
@@ -54,6 +54,7 @@
         description: description,
         amount: parseInt(amount) * 100
       });
+
       e.preventDefault();
     });
 

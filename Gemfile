@@ -42,7 +42,7 @@ gem 'rubocop', require: false
 gem 'rubocop-rspec'
 
 # stripe for donations
-gem "stripe"
+gem 'stripe'
 
 # dev and testing
 group :development, :test do

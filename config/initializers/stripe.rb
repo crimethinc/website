@@ -5,4 +5,4 @@ Rails.configuration.stripe = {
 
 Stripe.api_key = Rails.configuration.stripe[:secret_key]
 
-STRIPE_MONTHLY_PLAN_ID = ENV['STRIPE_MONTHLY_PLAN_ID'] || "monthly"
+STRIPE_MONTHLY_PLAN_ID = ENV['STRIPE_MONTHLY_PLAN_ID'] || 'monthly'
