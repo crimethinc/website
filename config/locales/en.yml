@@ -248,6 +248,8 @@ en:
         radio_label_monthly: Monthly
         radio_label_once: One-time
 
+        amount_label: Donation Amount
+
         button_text: Submit
         description_monthly: Recurring Monthly Donation
         description_once: One-Time Donation
