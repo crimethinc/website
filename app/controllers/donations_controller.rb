@@ -1,5 +1,7 @@
 class DonationsController < ApplicationController
   def new
+    @html_id = 'page'
+    @body_id = 'support'
     @amounts = (1..100).to_a + %w[200 300 400 500 600 700 800 900 1000]
     @amounts_for_select = @amounts.map { |amount| ["$#{amount}", amount] }
   end
@@ -31,5 +33,8 @@ class DonationsController < ApplicationController
     redirect_to [:thanks]
   end
 
-  def thanks; end
+  def thanks
+    @html_id = 'page'
+    @body_id = 'support'
+  end
 end
