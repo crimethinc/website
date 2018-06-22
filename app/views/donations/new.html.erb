@@ -32,7 +32,7 @@
       <%= range_field_tag 'amount_slider', 50, in: 1..1000, step: 1 %>
 
       <%= label_tag :amount, t('views.donations.support.amount_label') %>
-      <%= text_field_tag :amount, '$50', disabled: true %>
+      <%= text_field_tag :amount, '$50' %>
 
       <div class='actions'>
         <button id='js-stripe-button' class='button'>
