@@ -50,7 +50,7 @@
 <script>
   var handler = StripeCheckout.configure({
     key:    '<%= Rails.configuration.stripe[:publishable_key] %>',
-    image:  'https://stripe.com/img/documentation/checkout/marketplace.png',
+    image:  '<%= asset_url 'icons/icon-1200x1200.png' %>',
     locale: 'auto',
     token:  function(token) {
       document.getElementById('js-stripe-token').value = token.id;
