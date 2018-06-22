@@ -6,6 +6,19 @@
   #js-stripe-form {
     margin-bottom: 2rem;
 
+    .row {
+      display: flex;
+    }
+
+    .column {
+      margin-right: $border-size-large;
+    }
+
+    .column:last-child {
+      padding-right: 0;
+    }
+
+    .column.column-half { width: 50%; }
     .buttons {
       .column {
         margin: 0;
@@ -150,7 +163,7 @@
     border: 0;
     font-size: 5rem;
     display: inline-block;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .actions {

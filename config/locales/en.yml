@@ -244,15 +244,12 @@ en:
 
 
           As always, however, the very best way to support what we are doing is to _do it yourself._
-
         radio_label_monthly: Monthly
-        radio_label_once: One-time
-
+        radio_label_one_time: One-time
         amount_label: Donation Amount
-
-        button_text: Next →
         description_monthly: Recurring Monthly Donation
-        description_once: One-Time Donation
+        descriptionl_one_time: One-Time Donation
+        button_text: Next →
 
       thanks:
         heading: Thank You for Your Assistance
