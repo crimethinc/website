@@ -17,7 +17,7 @@
       <%= hidden_field_tag 'js-stripe-email' %>
       <%= hidden_field_tag 'js-stripe-token' %>
 
-      <div class='row'>
+      <div class='row buttons'>
         <div class='column column-half'>
           <%= radio_button_tag :monthly, true, checked: true %>
           <%= label_tag :monthly_true, t('views.donations.support.radio_label_monthly') %>
@@ -29,14 +29,16 @@
         </div>
       </div>
 
-      <div>
-        <%= range_field_tag 'amount_slider', 50, in: 1...1000, step: 1 %>
-      </div>
+      <%= range_field_tag 'amount_slider', 50, in: 1...1000, step: 1 %>
 
       <%= label_tag :amount, t('views.donations.support.amount_label') %>
       <%= text_field_tag :amount, 50 %>
 
-      <button id='js-stripe-button'><%= t 'views.donations.support.button_text' %></button>
+      <div class='actions'>
+        <button id='js-stripe-button' class='button'>
+          <%= t 'views.donations.support.button_text' %>
+        </button>
+      </div>
     <% end %>
   </div>
 

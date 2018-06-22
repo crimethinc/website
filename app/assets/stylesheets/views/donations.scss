@@ -6,8 +6,10 @@
   #js-stripe-form {
     margin-bottom: 2rem;
 
-    .column {
-      margin: 0;
+    .buttons {
+      .column {
+        margin: 0;
+      }
     }
   }
 
@@ -36,7 +38,7 @@
     background: $color-green;
     border: 1px solid $color-green;
     color: $color-white;
-    font-weight: 900;
+    font-weight: 400;
   }
 
   // Generated using: http://danielstern.ca/range.css
@@ -136,5 +138,30 @@
 
   #amount_slider:focus::-ms-fill-upper {
     background: #ffffff;
+  }
+
+  label[for=amount] {
+    text-align: right;
+    display: block;
+  }
+
+  #amount {
+    text-align: right;
+    border: 0;
+    font-size: 5rem;
+    display: inline-block;
+    font-weight: 400;
+  }
+
+  .actions {
+    text-align: right;
+    margin-top: 1rem;
+  }
+
+  .button {
+    background: $color-green;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: .08em;
   }
 }
