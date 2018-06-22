@@ -2,11 +2,13 @@ class DonationsController < ApplicationController
   def new
     @html_id = 'page'
     @body_id = 'support'
+    @title   = I18n.t('views.donations.support.heading')
   end
 
   def thanks
     @html_id = 'page'
     @body_id = 'support'
+    @title   = I18n.t('views.donations.thanks.heading')
   end
 
   def create
