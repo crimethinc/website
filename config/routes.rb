@@ -5,12 +5,6 @@ Rails.application.routes.draw do
   # Homepage
   root to: 'home#index'
 
-  # Donations
-  get 'donate', to: 'donations#new', as: :donations_new
-  post 'donate', to: 'donations#create', as: :donations
-  get 'donate/confirmation', to: 'donations#show', as: :donation
-  get 'donate', to: 'donate#index', as: :donate
-
   get 'page(/1)', to: redirect { |_, _| '/' }
   get 'page/:page', to: 'home#index'
 
@@ -105,6 +99,11 @@ Rails.application.routes.draw do
   get 'search',           to: 'search#index'
   get 'search/advanced',  to: 'search#advanced', as: :advanced_search
   post 'search/advanced', to: 'search#advanced_search', as: :advanced_searches
+
+  # Donations
+  get  'support', to: 'donations#new',    as: :support
+  post 'donate',  to: 'donations#create', as: :donations
+  get  'thanks',  to: 'donations#show',   as: :thanks
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
