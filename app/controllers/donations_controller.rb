@@ -10,6 +10,8 @@ class DonationsController < ApplicationController
   end
 
   def create
+    amount = params[:amount].tr('$', '')
+
     customer = Stripe::Customer.create(
       email: params['js-stripe-email'],
       source: params['js-stripe-token']
@@ -19,12 +21,12 @@ class DonationsController < ApplicationController
       Stripe::Subscription.create(
         customer: customer.id,
         plan:     STRIPE_MONTHLY_PLAN_ID,
-        quantity: params[:amount]
+        quantity: amount
       )
     else
       Stripe::Charge.create(
         customer:    customer.id,
-        amount:      params[:amount].to_i * 100,
+        amount:      amount.to_i * 100,
         description: t('views.donations.descriptionl_one_time'),
         currency:    'usd'
       )
