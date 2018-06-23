@@ -12,12 +12,6 @@ RSpec/ExpectInHook:
     - 'spec/controllers/admin/admin_controller_spec.rb'
     - 'spec/helpers/articles_helper_spec.rb'
 
-# Offense count: 2
-RSpec/LetSetup:
-  Exclude:
-    - 'spec/models/book_spec.rb'
-    - 'spec/models/poster_spec.rb'
-
 # Offense count: 16
 RSpec/NamedSubject:
   Exclude:

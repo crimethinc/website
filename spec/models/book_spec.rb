@@ -51,11 +51,12 @@ RSpec.describe Book, type: :model do
   end
 
   describe '#tags' do
-    let!(:book) { Book.create(title: 'title', subtitle: 'subtitle') }
-    let!(:tag_1) { Tag.create(name: 'test 1', slug: 'test-1') }
-    let!(:taggable) { Tagging.create(tag: tag_1, taggable: book) }
+    let(:book) { Book.create(title: 'title', subtitle: 'subtitle') }
+    let(:tag_1) { Tag.create(name: 'test 1', slug: 'test-1') }
 
     it 'returns the tag' do
+      Tagging.create(tag: tag_1, taggable: book)
+
       expect(book.tags.map(&:id)).to eq([tag_1.id])
     end
   end
