@@ -42,13 +42,6 @@ RSpec/NamedSubject:
     - 'spec/services/tag_assigner_spec.rb'
 
 # Offense count: 2
-# Configuration parameters: Include.
-# Include: app/models/**/*.rb
-Rails/InverseOf:
-  Exclude:
-    - 'app/models/article.rb'
-
-# Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, AutoCorrect.
 # SupportedStyles: conservative, aggressive
