@@ -18,9 +18,9 @@ RSpec.describe Book, type: :model do
   end
 
   describe '#path' do
-    let(:book) { Book.new(slug: 'slug') }
-
     subject { book.path }
+
+    let(:book) { Book.new(slug: 'slug') }
 
     it { is_expected.to eq('/books/slug') }
   end
