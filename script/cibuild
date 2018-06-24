@@ -1,35 +1,43 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
 # script/cibuild: Setup environment for CI to run tests. This is primarily
 #                 designed to run on the continuous integration server.
 
-set -e
+require 'pathname'
+require 'fileutils'
+include FileUtils
 
-cd "$(dirname "$0")/.."
+# # GC customizations
+# export RUBY_GC_MALLOC_LIMIT=79000000
+# export RUBY_GC_HEAP_INIT_SLOTS=800000
+# export RUBY_HEAP_FREE_MIN=100000
+# export RUBY_HEAP_SLOTS_INCREMENT=400000
+# export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+#
+# # setup environment
+# RAILS_ROOT="$(cd "$(dirname "$0")"/.. && pwd)"
+# export RAILS_ROOT
+# export RAILS_ENV="test"
+# export RACK_ROOT="$RAILS_ROOT"
+# export RACK_ENV="$RAILS_ENV"
+#
+# export PATH="$RACK_ROOT/bin:$PATH"
 
-echo "Tests started at..."
-date "+%H:%M:%S"
 
-# GC customizations
-export RUBY_GC_MALLOC_LIMIT=79000000
-export RUBY_GC_HEAP_INIT_SLOTS=800000
-export RUBY_HEAP_FREE_MIN=100000
-export RUBY_HEAP_SLOTS_INCREMENT=400000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+# path to your application root.
+APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
-# setup environment
-RAILS_ROOT="$(cd "$(dirname "$0")"/.. && pwd)"
-export RAILS_ROOT
-export RAILS_ENV="test"
-export RACK_ROOT="$RAILS_ROOT"
-export RACK_ENV="$RAILS_ENV"
+def system!(*args)
+  system(*args) || abort("\n==> Command #{args} failed")
+end
 
-export PATH="$RACK_ROOT/bin:$PATH"
+chdir APP_ROOT do
+  puts '==> Setting up DB...'
+  system! 'bin/rails db:create'
 
-echo "==> Setting up DB..."
-bin/rails db:create
+  puts "==> Tests started at: #{Time.now.strftime("%H:%M:%S")}"
 
-# run tests
-echo "Running tests..."
-date "+%H:%M:%S"
-bundle exec bin/rspec
+  system! 'bundle exec rspec'
+  system! 'bundle exec rubocop'
+end
+
