@@ -1,24 +1,24 @@
 require 'rails_helper'
 
 describe Tag do
-  subject { described_class.new(name: 'test') }
+  subject(:tag) { described_class.new(name: 'test') }
 
   describe 'assigned_to?' do
     let(:page) { Page.create(title: 'about') }
 
     context 'when assigned to a page' do
       before do
-        subject.assign_to!(page)
+        tag.assign_to!(page)
       end
 
       it 'returns true' do
-        expect(subject).to be_assigned_to(page)
+        expect(tag).to be_assigned_to(page)
       end
     end
 
     context 'when not assigned to a page' do
       it 'returns false' do
-        expect(subject).not_to be_assigned_to(page)
+        expect(tag).not_to be_assigned_to(page)
       end
     end
   end
@@ -30,13 +30,13 @@ describe Tag do
     let(:page) { Page.new(title: 'about') }
 
     it 'assigns the tag to articles' do
-      subject.assign_to!(article)
-      expect(subject.articles).to eq [article]
+      tag.assign_to!(article)
+      expect(tag.articles).to eq [article]
     end
 
     it 'assigns the tag to pages' do
-      subject.assign_to!(page)
-      expect(subject.pages).to eq [page]
+      tag.assign_to!(page)
+      expect(tag.pages).to eq [page]
     end
   end
 end
