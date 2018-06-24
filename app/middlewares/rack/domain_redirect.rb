@@ -11,6 +11,8 @@ module Rack
 
       return redirect_to_crimethinc request if /crimethinc.herokuapp.com$/.match?(request.host.downcase)
 
+      return redirect_to_tce request if /tochangeeverything.com$/.match?(request.host.downcase)
+
       @app.call(env)
     end
 
@@ -18,6 +20,11 @@ module Rack
 
     def redirect_to_crimethinc request
       location = ['https://crimethinc.com', request.path].join
+      redirect location
+    end
+
+    def redirect_to_tce request
+      location = ['https://crimethinc.com/tce', request.path].join
       redirect location
     end
 

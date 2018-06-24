@@ -1,18 +1,23 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
-# script/server: Launch the application and any extra required processes locally.
+# script/test: Run test suite for application. Optionally pass in a path to an
+#              individual test file to run a single test.
 
-set -e
+require 'pathname'
+require 'fileutils'
+include FileUtils
 
-cd "$(dirname "$0")/.."
+# path to your application root
+APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
-export RAILS_ENV="test" RACK_ENV="test"
+def system!(*args)
+  system(*args) || abort("\n==> Command #{args} failed")
+end
 
-# ensure everything in the app is up to date.
-script/update
+chdir APP_ROOT do
+  # ensure everything in the app is up to date
+  system! 'script/update'
 
-# ensure DB is reset to devs
-bin/rake db:create
-
-# boot the app and any other necessary processes.
-bundle exec guard
+  # boot the app and any other necessary processes
+  system! 'bundle exec guard'
+end

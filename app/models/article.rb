@@ -5,10 +5,10 @@ class Article < ApplicationRecord
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
-  has_many :collection_posts, foreign_key: :collection_id, class_name: :Article, dependent: :destroy
+  has_many :collection_posts, foreign_key: :collection_id, class_name: :Article, dependent: :destroy, inverse_of: :collection
 
   has_one    :redirect, dependent: :destroy
-  belongs_to :collection, foreign_key: :parent_id, class_name: :Article, touch: true
+  belongs_to :collection, foreign_key: :parent_id, class_name: :Article, touch: true, inverse_of: :collection_posts
 
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :downcase_content_format,  on: [:create, :update]

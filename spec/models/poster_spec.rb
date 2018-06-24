@@ -11,11 +11,12 @@ RSpec.describe Poster, type: :model do
   end
 
   describe '#tags' do
-    let!(:poster) { Poster.create(title: 'title', subtitle: 'subtitle') }
-    let!(:tag_1) { Tag.create(name: 'test 1', slug: 'test-1') }
-    let!(:taggable) { Tagging.create(tag: tag_1, taggable: poster) }
+    let(:poster) { Poster.create(title: 'title', subtitle: 'subtitle') }
+    let(:tag_1) { Tag.create(name: 'test 1', slug: 'test-1') }
 
     it 'returns the tag' do
+      Tagging.create(tag: tag_1, taggable: poster)
+
       expect(poster.tags.map(&:id)).to eq([tag_1.id])
     end
   end

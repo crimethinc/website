@@ -18,17 +18,17 @@ RSpec.describe Episode, type: :model do
   end
 
   describe '#path' do
-    let(:episode) { Episode.new(id: 1, slug: 'test-slug') }
-
     subject { episode.path }
+
+    let(:episode) { Episode.new(id: 1, slug: 'test-slug') }
 
     it { is_expected.to eq('/podcast/test-slug') }
   end
 
   describe '#duration_string' do
-    let(:episode) { Episode.new(duration: 60) }
-
     subject { episode.duration_string }
+
+    let(:episode) { Episode.new(duration: 60) }
 
     it { is_expected.to eq('01:00:00') }
   end

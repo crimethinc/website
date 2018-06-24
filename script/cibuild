@@ -1,35 +1,26 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
 # script/cibuild: Setup environment for CI to run tests. This is primarily
 #                 designed to run on the continuous integration server.
 
-set -e
+require 'pathname'
+require 'fileutils'
+include FileUtils
 
-cd "$(dirname "$0")/.."
+# path to your application root
+APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
-echo "Tests started at..."
-date "+%H:%M:%S"
+def system!(*args)
+  system(*args) || abort("\n==> Command #{args} failed")
+end
 
-# GC customizations
-export RUBY_GC_MALLOC_LIMIT=79000000
-export RUBY_GC_HEAP_INIT_SLOTS=800000
-export RUBY_HEAP_FREE_MIN=100000
-export RUBY_HEAP_SLOTS_INCREMENT=400000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+chdir APP_ROOT do
+  puts '==> Setting up DB...'
+  system! 'bin/rails db:create'
 
-# setup environment
-RAILS_ROOT="$(cd "$(dirname "$0")"/.. && pwd)"
-export RAILS_ROOT
-export RAILS_ENV="test"
-export RACK_ROOT="$RAILS_ROOT"
-export RACK_ENV="$RAILS_ENV"
+  puts "==> Tests started at: #{Time.now.strftime("%H:%M:%S")}"
 
-export PATH="$RACK_ROOT/bin:$PATH"
+  system! 'bundle exec rspec'
+  system! 'bundle exec rubocop'
+end
 
-echo "==> Setting up DB..."
-bin/rails db:create
-
-# run tests
-echo "Running tests..."
-date "+%H:%M:%S"
-bundle exec bin/rspec

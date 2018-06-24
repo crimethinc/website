@@ -1,30 +1,37 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
 # script/console: Launch a console for the application. Optionally allow an
 #                 environment to be passed in to let the script handle the
 #                 specific requirements for connecting to a console for that
 #                 environment.
 
-set -e
+require 'pathname'
+require 'fileutils'
+include FileUtils
 
-cd "$(dirname "$0")/.."
+# path to your application root.
+APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
-if [ -n "$1" ]; then
-  # use first argument as an environment name. Use this to decide how to connect
-  # to the appropriate console.
-  if [ "$1" = "production" ]; then
-    # INFO change "crimethinc" to the name of your Heroku app name
-    heroku run rails console --app crimethinc
-  elif [ "$1" = "staging" ]; then
-    # INFO change "crimethinc" to the name of your Heroku staging app name
-    heroku run rails console --app crimethinc-staging
+def system!(*args)
+  system(*args) || abort("\n==> Command #{args} failed")
+end
+
+chdir APP_ROOT do
+  if !ARGV[0].nil?
+    # use first argument as an environment name.
+    # Use this to decide how to connect to the appropriate console.
+    if ARGV[0] == 'production'
+      system! 'heroku run rails console --app crimethinc'
+    elsif ARGV[0] == 'staging'
+      system! 'heroku run rails console --app crimethinc-staging'
+    else
+      puts "Sorry, I don’t know how to connect to the #{ARGV[0]} environment."
+      `exit 1`
+    end
   else
-    echo "Sorry, I don't know how to connect to the '$1' environment."
-    exit 1
-  fi
-else
-  # no argument provided, so just run the local console in the development
-  # environment. Ensure the application is up to date first.
-  script/update
-  bin/rails console
-fi
+    # no argument provided, so just run the local console in the development
+    # environment. Ensure the application is up to date first.
+    system! 'script/update'
+    system! 'bin/rails console'
+  end
+end

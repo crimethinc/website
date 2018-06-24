@@ -2,17 +2,17 @@ require 'rails_helper'
 
 RSpec.describe Redirect, type: :model do
   describe '#name' do
-    let(:redirect) { Redirect.new(source_path: '/source', target_path: '/target') }
-
     subject { redirect.name }
+
+    let(:redirect) { Redirect.new(source_path: '/source', target_path: '/target') }
 
     it { is_expected.to eq('/source') }
   end
 
   describe '#add_leading_slash' do
-    before { redirect.add_leading_slash }
-
     subject { redirect }
+
+    before { redirect.add_leading_slash }
 
     context 'with absolute urls' do
       let(:redirect) { Redirect.new(source_path: 'http://example.com/source', target_path: 'http://example.com/target') }
@@ -38,9 +38,9 @@ RSpec.describe Redirect, type: :model do
   end
 
   describe '#downcase_source_path' do
-    before { redirect.downcase_source_path }
-
     subject { redirect }
+
+    before { redirect.downcase_source_path }
 
     context 'with mixed case' do
       let(:redirect) { Redirect.new(source_path: 'SoUrCe', target_path: 'TaRgEt') }
@@ -51,9 +51,9 @@ RSpec.describe Redirect, type: :model do
   end
 
   describe '#strip_domain_from_target_path' do
-    before { redirect.strip_domain_from_target_path }
-
     subject { redirect.target_path }
+
+    before { redirect.strip_domain_from_target_path }
 
     context 'with leading domain' do
       let(:redirect) { Redirect.new(source_path: 'source', target_path: 'http://crimethinc.com/?query=true') }
@@ -85,11 +85,11 @@ RSpec.describe Redirect, type: :model do
   end
 
   describe '#noncircular_redirect' do
+    subject { redirect.errors[:target_path] }
+
     before { redirect.valid? }
 
     let(:redirect) { Redirect.new(source_path: 'source', target_path: 'source') }
-
-    subject { redirect.errors[:target_path] }
 
     it { is_expected.to include('redirects to itself') }
   end
