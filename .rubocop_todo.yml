@@ -5,9 +5,3 @@
 # one by one as the offenses are removed from the code base.
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
-
-# Offense count: 3
-RSpec/ExpectInHook:
-  Exclude:
-    - 'spec/controllers/admin/admin_controller_spec.rb'
-    - 'spec/helpers/articles_helper_spec.rb'
