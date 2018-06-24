@@ -7,24 +7,7 @@ require 'pathname'
 require 'fileutils'
 include FileUtils
 
-# # GC customizations
-# export RUBY_GC_MALLOC_LIMIT=79000000
-# export RUBY_GC_HEAP_INIT_SLOTS=800000
-# export RUBY_HEAP_FREE_MIN=100000
-# export RUBY_HEAP_SLOTS_INCREMENT=400000
-# export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-#
-# # setup environment
-# RAILS_ROOT="$(cd "$(dirname "$0")"/.. && pwd)"
-# export RAILS_ROOT
-# export RAILS_ENV="test"
-# export RACK_ROOT="$RAILS_ROOT"
-# export RACK_ENV="$RAILS_ENV"
-#
-# export PATH="$RACK_ROOT/bin:$PATH"
-
-
-# path to your application root.
+# path to your application root
 APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
 def system!(*args)
