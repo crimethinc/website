@@ -14,10 +14,10 @@ if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
   }
 fi
 
-# TODO: pull the ruby version from Gemfile
-ruby_version="2.5.1"
+# read the ruby version from .ruby-version file
+ruby_version=`cat .ruby-version`
 
-echo "==> Installing Ruby…"
+echo "==> Installing Ruby: $ruby_version"
 ruby-install ruby $ruby_version --no-reinstall
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 chruby $ruby_version
