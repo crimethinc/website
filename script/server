@@ -1,15 +1,27 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
 # script/server: Launch the application and any extra required processes locally.
 
-set -e
+require 'pathname'
+require 'fileutils'
+include FileUtils
 
-cd "$(dirname "$0")/.."
+# path to your application root.
+APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
-# ensure everything in the app is up to date.
-script/update
+def system!(*args)
+  system(*args) || abort("\n==> Command #{args} failed")
+end
 
-test -z "$RACK_ENV" && RACK_ENV='development'
+chdir APP_ROOT do
+  # ensure everything in the app is up to date.
+  system! 'script/update'
 
-# boot the app and any other necessary processes.
-heroku local -p 3000
+  puts '==> Opening site in browser'
+  puts '==> README: Refresh your browser after server is started'
+  system! 'open http://localhost:3000'
+
+  puts '==> Starting Server'
+  system! 'rails server -p 3000'
+  puts
+end

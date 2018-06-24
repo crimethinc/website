@@ -8,16 +8,20 @@ cd "$(dirname "$0")/.."
 
 if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
   brew bundle check >/dev/null 2>&1  || {
-    echo "==> Installing Homebrew dependencies..."
+    echo "==> Installing Homebrew dependencies…"
     brew bundle
     brew services restart postgresql
   }
 fi
 
-if [ -f "Gemfile" ]; then
-  echo "==> Installing Bundler..."
-  gem install bundler --pre
+# read the ruby version from .ruby-version file
+ruby_version=`cat .ruby-version`
 
-  echo "==> Installing gem dependencies..."
-  bundle install --quiet --without production
-fi
+echo "==> Installing Ruby: $ruby_version"
+ruby-install ruby $ruby_version --no-reinstall
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby $ruby_version
+
+which bundle >/dev/null 2>&1  || {
+  gem install bundler
+}
