@@ -56,11 +56,11 @@ describe Article do
   end
 
   describe '#slug_exists?' do
+    subject { article.slug_exists? }
+
     let(:status)  { create(:status, :published) }
     let(:article) { described_class.new(slug: 'slug', published_at: date, short_path: SecureRandom.hex, status: Status.last) }
     let(:date)    { Date.parse('2017-01-01') }
-
-    subject { article.slug_exists? }
 
     context 'with the same slug on the same date' do
       before { create(:article, slug: 'slug', published_at: date, status: status) }

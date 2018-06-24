@@ -54,9 +54,9 @@ RSpec.describe Post, type: :model do
   end
 
   describe '#generated_draft_code' do
-    let(:post) { Page.create(title: 'test') }
-
     subject { post.draft_code }
+
+    let(:post) { Page.create(title: 'test') }
 
     it { is_expected.to be_present }
   end

@@ -1,34 +1,36 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
 # script/setup: Set up application for the first time after cloning, or set it
 #               back to the initial first unused state.
 
-set -e
+require 'pathname'
+require 'fileutils'
+include FileUtils
 
-cd "$(dirname "$0")/.."
+# path to your application root.
+APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
-script/bootstrap
+def system!(*args)
+  system(*args) || abort("\n==> Command #{args} failed")
+end
 
-echo "==> Setting up DB..."
-# reset database to a fresh state.
-bin/rails db:drop
-bin/rails db:create
-bin/rails db:migrate
+chdir APP_ROOT do
+  system! 'script/bootstrap'
 
-echo "==> Seed your DB with intial data..."
-bin/rails db:seed
+  puts '==> Installing dependencies'
+  system! 'gem install bundler --conservative'
+  system('bundle check') || system!('bundle install')
 
-echo "==> Clearing logs and tmp cache..."
-# clears old logs and tmp files
-bin/rails log:clear
-bin/rails tmp:clear
+  puts "==> Starting postgresql"
+  system! 'brew services start postgresql'
+  puts '==> Preparing database'
+  system! 'bin/rails db:create'
+  system! 'bin/rails db:migrate'
 
-if [ -z "$RAILS_ENV" ] && [ -z "$RACK_ENV" ]; then
-  # Only things for a development environment will run inside here
-  # Do things that need to be done to the application to set up for the first
-  # time. Or things needed to be run to to reset the application back to first
-  # use experience. These things are scoped to the application's domain.
-  true
-fi
+  puts '==> Removing old logs and tempfiles'
+  system! 'bin/rails log:clear tmp:clear'
 
-echo "==> App is now ready to go!"
+  puts '==> App is now setup!'
+  puts '==> Next step is:'
+  puts '    ./script/server'
+end

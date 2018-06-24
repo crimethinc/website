@@ -20,9 +20,9 @@ RSpec.describe Page, type: :model do
   end
 
   describe '#content_rendered' do
-    let(:page) { Page.new(content: 'content') }
-
     subject { page.content_rendered.strip }
+
+    let(:page) { Page.new(content: 'content') }
 
     it { is_expected.to eq('<p>content</p>') }
   end

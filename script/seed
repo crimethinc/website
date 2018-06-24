@@ -1,23 +1,32 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
 # script/seed: Drop the database, rebuild it, and fill it with seed data
 
-set -e
+require 'pathname'
+require 'fileutils'
+include FileUtils
 
-cd "$(dirname "$0")/.."
+# path to your application root.
+APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
-script/bootstrap
+def system!(*args)
+  system(*args) || abort("\n==> Command #{args} failed")
+end
 
-echo "==> Dropping DB..."
-bin/rails db:drop
+chdir APP_ROOT do
+  system! 'script/bootstrap'
 
-echo "==> Creating DB..."
-bin/rails db:create
+  puts '==> Dropping DB…'
+  system! 'bin/rails db:drop'
 
-echo "==> Migrating DB..."
-bin/rails db:migrate
+  puts '==> Creating DB…'
+  system! 'bin/rails db:create'
 
-echo "==> Seeding DB..."
-bin/rails db:seed
+  puts '==> Migrating DB…'
+  system! 'bin/rails db:migrate'
 
-echo "==> DB is now ready to go!"
+  puts '==> Seeding DB…'
+  system! 'bin/rails db:seed'
+
+  puts '==> DB is now ready to go!'
+end
