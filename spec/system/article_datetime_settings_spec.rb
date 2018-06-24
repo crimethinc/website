@@ -97,7 +97,6 @@ describe 'Setting and changing an articles published_at date' do
     expect(article.published_at.day).to eq(time.day)
     expect(article.published_at.month).to eq(time.month)
     expect(article.published_at.year).to eq(time.year)
-    expect(article.published_at.min).to eq(time.min)
     expect(article.published_at.hour).to eq(time.hour)
     expect(article).to be_published
 
