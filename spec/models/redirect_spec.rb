@@ -10,43 +10,39 @@ RSpec.describe Redirect, type: :model do
   end
 
   describe '#add_leading_slash' do
-    subject { redirect }
-
     before { redirect.add_leading_slash }
 
     context 'with absolute urls' do
       let(:redirect) { Redirect.new(source_path: 'http://example.com/source', target_path: 'http://example.com/target') }
 
-      specify { expect(subject.source_path).to eq('http://example.com/source') }
-      specify { expect(subject.target_path).to eq('http://example.com/target') }
+      specify { expect(redirect.source_path).to eq('http://example.com/source') }
+      specify { expect(redirect.target_path).to eq('http://example.com/target') }
     end
 
     context 'with relative urls' do
       let(:redirect) { Redirect.new(source_path: 'source', target_path: 'target') }
 
-      specify { expect(subject.source_path).to eq('/source') }
-      specify { expect(subject.target_path).to eq('/target') }
+      specify { expect(redirect.source_path).to eq('/source') }
+      specify { expect(redirect.target_path).to eq('/target') }
     end
 
     context 'with relative source path and absolute target path' do
       https_target_path = 'https://example.com/foo/bar'
       let(:redirect) { Redirect.new(source_path: 'source', target_path: https_target_path) }
 
-      specify { expect(subject.source_path).to eq('/source') }
-      specify { expect(subject.target_path).to eq(https_target_path) }
+      specify { expect(redirect.source_path).to eq('/source') }
+      specify { expect(redirect.target_path).to eq(https_target_path) }
     end
   end
 
   describe '#downcase_source_path' do
-    subject { redirect }
-
     before { redirect.downcase_source_path }
 
     context 'with mixed case' do
       let(:redirect) { Redirect.new(source_path: 'SoUrCe', target_path: 'TaRgEt') }
 
-      specify { expect(subject.source_path).to eq('source') }
-      specify { expect(subject.target_path).to eq('TaRgEt') }
+      specify { expect(redirect.source_path).to eq('source') }
+      specify { expect(redirect.target_path).to eq('TaRgEt') }
     end
   end
 

@@ -31,9 +31,11 @@ RSpec.describe ArticlesHelper, type: :helper do
     end
 
     context 'with collection posts' do
-      let(:article) { Article.new(id: 1, slug: 'slug') }
-
-      before { expect(article).to receive(:collection_posts) { OpenStruct.new(recent: [Article.new]) } }
+      let(:article) do
+        article = Article.new(id: 1, slug: 'slug')
+        allow(article).to receive(:collection_posts).and_return OpenStruct.new(recent: [Article.new])
+        article
+      end
 
       it { is_expected.to match(%r{\A<article [^>]+>.*<\/article>\z}) }
       it { is_expected.to match('h-entry') }
