@@ -147,17 +147,29 @@
     }
 
     label[for=amount] {
-      text-align: right;
       display: block;
     }
 
-    #amount {
-      text-align: right;
-      border: 0;
+    .dollar-sign, #amount {
       font-size: 5rem;
-      display: inline-block;
       font-weight: 600;
-      pointer-events:none;
+    }
+
+    .dollar-sign {
+      color: #000;
+    }
+
+    #amount {
+      border: 0;
+      width: 80%;
+      pointer-events: none;
+    }
+
+    // removes little up and down arrows in number field
+    #amount::-webkit-inner-spin-button,
+    #amount::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
 
     .actions {
