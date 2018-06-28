@@ -249,7 +249,7 @@ en:
         radio_label_one_time: One-time
         amount_label: Donation Amount
         description_monthly: Recurring Monthly Donation
-        descriptionl_one_time: One-Time Donation
+        description_one_time: One-Time Donation
         button_text: Next →
 
       thanks:

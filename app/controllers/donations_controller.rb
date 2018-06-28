@@ -29,7 +29,7 @@ class DonationsController < ApplicationController
       Stripe::Charge.create(
         customer:    customer.id,
         amount:      amount.to_i * 100,
-        description: t('views.donations.descriptionl_one_time'),
+        description: t('views.donations.description_one_time'),
         currency:    'usd'
       )
     end
