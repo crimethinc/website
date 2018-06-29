@@ -23,7 +23,7 @@ cd website
 
 ## Scripts to Rule Them All
 
-CrimethInc. website uses the [Scripts to Rule Them All](http://githubengineering.com/scripts-to-rule-them-all) pattern.
+CrimethInc. website uses the [Scripts to Rule Them All](https://githubengineering.com/scripts-to-rule-them-all) pattern.
 See also: https://github.com/github/scripts-to-rule-them-all
 
 `/script` is a collection of scripts for development on an OS X / macOS computer.
@@ -33,7 +33,7 @@ Development setup on a Windows or Linux computer may vary.
 
 The rest of these instructions assume that you've [strapped your computer](https://macos-strap.herokuapp.com) already. If you haven't, you'll need to install somethings manually. (But really, you're better off using [Strap](https://osx-strap.herokuapp.com).)
 
-- [Homebrew](http://brew.sh)
+- [Homebrew](https://brew.sh)
 - Homebrew taps and extensions
 - Xcode command line tools
 - Postgres launchctl (for `setup` script)
@@ -90,7 +90,7 @@ The `server` script starts the Rails server on port `3000`
 
 #### Can't Find Posgresql Error
 
-If you get an error when starting the server that Rails can't connect to the Posgresql server, you can fix it with these steps. (Assuming, you're on a Mac and use [Homebrew](http://brew.sh)).
+If you get an error when starting the server that Rails can't connect to the Posgresql server, you can fix it with these steps. (Assuming, you're on a Mac and use [Homebrew](https://brew.sh)).
 
 **WARNING:** These step will DELETE all Posgresql databases / software and re-install Posgresql from scratch.
 If you have data in your local Posgresql database that you can't re-create after deleting it, you'll want to run some backups first. (That's an exercise for the reader.)
@@ -233,4 +233,4 @@ The ground you stand on is liberated territory.
 In legal text, **CrimethInc. website** is dedicated to the public domain
 using Creative Commons -- CC0 1.0 Universal.
 
-[http://creativecommons.org/publicdomain/zero/1.0](http://creativecommons.org/publicdomain/zero/1.0 "Creative Commons &mdash; CC0 1.0 Universal")
+[https://creativecommons.org/publicdomain/zero/1.0](https://creativecommons.org/publicdomain/zero/1.0 "Creative Commons &mdash; CC0 1.0 Universal")
