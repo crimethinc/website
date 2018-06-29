@@ -289,7 +289,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stackprof (0.2.11)
+    stackprof (0.2.12)
     sterile (1.0.13)
       nokogiri
     stringex (2.8.4)
