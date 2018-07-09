@@ -12,6 +12,7 @@ class DonationsController < ApplicationController
   end
 
   def create
+    # number of 'units', each unit is $1
     amount = params[:amount]
 
     customer = Stripe::Customer.create(
@@ -28,9 +29,10 @@ class DonationsController < ApplicationController
     else
       Stripe::Charge.create(
         customer:    customer.id,
-        amount:     amount.to_i * 100,
+        amount:     amount.to_i * 100, # charges are in cents
         description: t('views.donations.support.description_one_time'),
-        currency:    'usd'
+        currency:    'usd',
+        receipt_email: customer.email
       )
     end
   rescue Stripe::CardError => e
