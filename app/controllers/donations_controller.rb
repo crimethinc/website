@@ -47,11 +47,11 @@ class DonationsController < ApplicationController
   def stripe_webhooks
     event_json = JSON.parse(request.body.read)
 
-    if event_json["type"] == "invoice.payment_succeeded"
-      customer_id = event_json["data"]["object"]["customer"]
+    if event_json['type'] == 'invoice.payment_succeeded'
+      customer_id = event_json['data']['object']['customer']
       customer    = Stripe::Customer.retrieve(customer_id)
 
-      charge_id = event_json["data"]["object"]["charge"]
+      charge_id = event_json['data']['object']['charge']
       charge    = Stripe::Charge.retrieve(charge_id)
 
       charge.receipt_email = customer.email
