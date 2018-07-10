@@ -104,6 +104,7 @@ Rails.application.routes.draw do
   get  'support', to: 'donations#new',    as: :support
   post 'support', to: 'donations#create', as: :donations
   get  'thanks',  to: 'donations#thanks', as: :thanks
+  post 'support/stripe_webhooks', to: 'donations#stripe_webhooks'
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
