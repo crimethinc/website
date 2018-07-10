@@ -49,13 +49,13 @@ class DonationsController < ApplicationController
 
     if event_json["type"] == "invoice.payment_succeeded"
       customer_id = event_json["data"]["object"]["customer"]
-      customer  = Stripe::Customer.retrieve(customer_id)
+      customer    = Stripe::Customer.retrieve(customer_id)
 
       charge_id = event_json["data"]["object"]["charge"]
       charge    = Stripe::Charge.retrieve(charge_id)
 
       charge.receipt_email = customer.email
-      charge.description = t('views.donations.support.description_monthly')
+      charge.description   = t('views.donations.support.description_monthly')
       charge.save
     end
 
