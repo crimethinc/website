@@ -49,7 +49,7 @@ class DonationsController < ApplicationController
 
     if event_json["type"] == "invoice.payment_succeeded"
       customer_id = event_json["data"]["object"]["customer"]
-      customer  = Stripe::Customer.retrieve("cus_DCbYHIi93Ldej7")
+      customer  = Stripe::Customer.retrieve(customer_id)
 
       charge_id = event_json["data"]["object"]["charge"]
       charge    = Stripe::Charge.retrieve(charge_id)
