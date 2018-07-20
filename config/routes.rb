@@ -103,7 +103,7 @@ Rails.application.routes.draw do
   get 'search/advanced',  to: 'search#advanced', as: :advanced_search
   post 'search/advanced', to: 'search#advanced_search', as: :advanced_searches
 
-  # Tex-only pages
+  # Text-only pages
   get 'txt',     to: 'text_only#home'
   get 'txt/:id', to: 'text_only#article', as: :txt_article
 

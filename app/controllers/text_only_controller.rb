@@ -12,13 +12,24 @@ class TextOnlyController < ApplicationController
   def render_text_only(post)
     return if post.content.blank?
 
-    Kramdown::Document.new(
+    # getting rid of image embed tags and turning newlines into full breaks
+    html = Kramdown::Document.new(
       post.content.gsub(MarkdownMedia::EMBED_REGEX, '').gsub("\n", "\n\n"),
       input: post.content_format == 'html' ? :html : :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
       html_to_native: true
     ).to_html.html_safe
+
+    if post.content_format == 'html'
+      doc = Nokogiri::HTML(html)
+      doc.search('img').each do |img|
+        img.remove
+      end
+      html = doc.to_html.html_safe
+    end
+
+    html
   end
-  helper_method :current_user
+  helper_method :render_text_only
 end
