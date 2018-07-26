@@ -93,7 +93,7 @@ module Admin
     def article_params
       params.require(:article).permit(:title, :subtitle, :content, :year, :month, :day,
                                       :tweet, :slug, :draft_code, :summary, :published_at,
-                                      :tags, :collection_id, :short_path, :image, :css,
+                                      :tags, :collection_id, :short_path, :header_image, :image, :css,
                                       :image_description, :image_mobile, :published_at_tz,
                                       :locale, :canonical_id,
                                       :publication_status, category_ids: [])

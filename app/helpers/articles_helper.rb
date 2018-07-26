@@ -55,6 +55,20 @@ module ArticlesHelper
     datetime&.strftime('%l:%M&nbsp;%z')&.html_safe
   end
 
+  def image_variant_by_width article, width
+    article.header_image.variant(
+      filter:     'Triangle',
+      define:     'filter:support=2 jpeg:fancy-upsampling=off png:compression-filter=5 png:compression-level=9 png:compression-strategy=1 png:exclude-chunk=all',
+      thumbnail:  width,
+      unsharp:    '0.25x0.08+8.3+0.045',
+      dither:     'None',
+      posterize:  '136',
+      quality:    '82',
+      interlace:  'none',
+      colorspace: 'sRGB'
+    )
+  end
+
   def link_to_dates year: nil, month: nil, day: nil, show_year: true, show_month: true, show_day: true
     show_month = false if month.nil?
     show_day   = false if day.nil?

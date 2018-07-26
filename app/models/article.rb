@@ -6,6 +6,7 @@ class Article < ApplicationRecord
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
+  has_one_attached :header_image
 
   # Collections / Nested Articles, used for live blogs
   has_many   :collection_posts, foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection, dependent: :destroy

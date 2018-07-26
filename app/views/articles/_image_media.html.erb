@@ -1,7 +1,19 @@
-<% if article.image.present? && media_mode? %>
+<% if article.header_image.attached? && media_mode? %>
+<div class="article-image">
+  <img class="u-photo"
+       alt="<%= article.image_description %>"
+       src="<%= url_for(article.header_image) %>"
+       sizes="100vw"
+       srcset="<%= url_for(image_variant_by_width(article, 2000)) %>  2000w,
+       <%= url_for(image_variant_by_width(article, 1024)) %>  1024w,
+       <%= url_for(image_variant_by_width(article, 640)) %> 640w,
+       <%= url_for(image_variant_by_width(article, 320)) %>  320w"
+       >
+</div>
+<% elsif article.image.present? && media_mode? %>
   <div class="article-image">
     <%= link_to_if linked,
-                   image_tag(article.image, class: "u-photo", alt: article.image_description),
+                   image_tag(url_for(article.image), class: "u-photo", alt: article.image_description),
                    article.path %>
   </div>
 <% end %>

@@ -23,6 +23,10 @@ gem 'uglifier'
 # JSON views
 gem 'jbuilder', '~> 2.9'
 
+# ActiveStorage setup
+gem 'aws-sdk-s3' # for using ActiveStorage AWS integration
+gem 'image_processing', '~> 1.2'
+
 # text utilities
 gem 'kramdown'       # for Markdown processing
 gem 'markdown_media' # for [[ media embeds ]]

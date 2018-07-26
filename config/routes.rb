@@ -183,5 +183,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#show', as: :contact, via: :all
 
   # For redirection
-  get '*path', to: 'pages#show', as: :page, via: :all
+  get '*path', to: 'pages#show', as: :page, via: :all, constraints: lambda { |req|
+    req.path.exclude? 'rails/active_storage'
+  }
 end
