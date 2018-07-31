@@ -14,7 +14,7 @@ gem 'rack-timeout'
 
 # assets
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'   # used for polyfilling forms in admin/articles
 gem 'sass-rails'
