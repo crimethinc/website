@@ -48,7 +48,7 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (9.0.2)
+    autoprefixer-rails (9.1.0)
       execjs
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -264,7 +264,7 @@ GEM
     scenic (1.4.1)
       activerecord (>= 4.0.0)
       railties (>= 4.0.0)
-    selenium-webdriver (3.13.1)
+    selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     shellany (0.0.1)
