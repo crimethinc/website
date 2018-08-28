@@ -165,7 +165,7 @@ GEM
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
-    pg (1.1.0)
+    pg (1.1.1)
     popper_js (1.14.3)
     powerpack (0.1.2)
     pry (0.11.3)
