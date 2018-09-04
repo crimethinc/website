@@ -7,12 +7,9 @@ Ruby on Rails app that powers https://crimethinc.com
 [![Build Status](https://travis-ci.org/crimethinc/website.svg?branch=master)](https://travis-ci.org/crimethinc/website)
 [![Maintainability](https://api.codeclimate.com/v1/badges/22ef4ea6475be7057b87/maintainability)](https://codeclimate.com/github/crimethinc/website/maintainability)
 
-
 ## Short Version
 
-**First things first**, Strap your computer’s development environment. Go to:
-[https://macos-strap.herokuapp.com](https://macos-strap.herokuapp.com)
-and follow the instructions.
+**First things first**, [Strap](https://macos-strap.herokuapp.com) your computer’s development environment.
 
 ```sh
 open https://macos-strap.herokuapp.com/strap.sh
