@@ -7,14 +7,21 @@ Ruby on Rails app that powers https://crimethinc.com
 [![Build Status](https://travis-ci.org/crimethinc/website.svg?branch=master)](https://travis-ci.org/crimethinc/website)
 [![Maintainability](https://api.codeclimate.com/v1/badges/22ef4ea6475be7057b87/maintainability)](https://codeclimate.com/github/crimethinc/website/maintainability)
 
-### tl;dr
+## Short Version
 
-[Strap your computer](https://macos-strap.herokuapp.com), first.
+**First things first**, [Strap](https://macos-strap.herokuapp.com) your computer’s development environment.
 
+```sh
+open https://macos-strap.herokuapp.com/strap.sh
 ```
+
+Then…
+
+```sh
+bash ~/Downloads/strap.sh
+rm -f ~/Downloads/strap.sh
 git clone https://github.com/crimethinc/website.git
 cd website
-./script/bootstrap
 ./script/setup
 ./script/server
 ```
@@ -26,6 +33,9 @@ See also: https://github.com/github/scripts-to-rule-them-all
 
 `/script` is a collection of scripts for development on an OS X / macOS computer.
 Development setup on a Windows or Linux computer may vary.
+
+If any of these scripts fail for you, , [file an issue](https://github.com/crimethinc/website/issues)
+with as much detail about your setup and any errors you got from the script, and we’ll try to fix whatever’s happening.
 
 ## Development Scripts
 
@@ -54,9 +64,6 @@ Then run the `bootstrap` script.
 ```
 ./script/bootstrap
 ```
-
-If that fails for you, [file an issue](https://github.com/crimethinc/website/issues)
-with as much detail about your setup and any errors you got from the script.
 
 ### Setup script
 
