@@ -20,6 +20,7 @@ module Rack
       if ::File.exist?(filepath)
         ::File.open(filepath).each do |line|
           next if line.blank?
+
           source_path, target_path = line.chomp.split
 
           source_path = "/#{source_path}" unless %r{^/|http}.match?(source_path)
