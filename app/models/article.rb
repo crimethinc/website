@@ -67,6 +67,7 @@ class Article < ApplicationRecord
           next unless article != self &&
                       articles.length < 3 &&
                       !related_articles.values.flatten.include?(article)
+
           articles << article
         end
 
