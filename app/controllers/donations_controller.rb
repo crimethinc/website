@@ -64,9 +64,9 @@ class DonationsController < ApplicationController
 
         SubscriptionMailer.with(subscription: subscription, email: email).edit.deliver_later
 
-        flash[:notice] = "We sent you an email with a link to do the thing you need to do."
+        flash[:notice] = 'We sent you an email with a link to do the thing you need to do.'
       else
-        flash[:error] = "We found multiple subscriptions with that email address."
+        flash[:error] = 'We found multiple subscriptions with that email address.'
       end
     else
       flash[:error] = "We can't find a subscription with that email address."
@@ -79,10 +79,10 @@ class DonationsController < ApplicationController
     session = SubscriptionSession.find_by(token: params[:token])
 
     if session
-      @customer = Stripe::Customer.retrieve({
+      @customer = Stripe::Customer.retrieve(
         id: session.stripe_customer_id,
         expand: ['default_source']
-      })
+      )
     else
       flash[:error] = "That link has expired. Please try again."
       redirect_to [:support]
@@ -95,12 +95,12 @@ class DonationsController < ApplicationController
       subscription.quantity = params[:amount].to_i
 
       if subscription&.save
-        flash[:notice] = "Your subscription amount has been updated!"
+        flash[:notice] = 'Your subscription amount has been updated!'
       else
-        flash[:error] = "There was a problem canceling your subscription."
+        flash[:error] = 'There was a problem canceling your subscription.'
       end
     else
-      flash[:error] = "You have to select an amount to update."
+      flash[:error] = 'You have to select an amount to update.'
     end
 
     redirect_to support_edit_path(params[:token])
@@ -110,9 +110,9 @@ class DonationsController < ApplicationController
     subscription = Stripe::Subscription.retrieve(params[:subscription_id])
 
     if subscription&.delete
-      flash[:notice] = "Your subscription has been canceled."
+      flash[:notice] = 'Your subscription has been canceled.'
     else
-      flash[:error] = "There was a problem canceling your subscription."
+      flash[:error] = 'There was a problem canceling your subscription.'
     end
 
     redirect_to [:support]

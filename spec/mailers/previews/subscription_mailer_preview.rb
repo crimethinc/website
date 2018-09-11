@@ -3,7 +3,7 @@ class SubscriptionMailerPreview < ActionMailer::Preview
   def edit
     SubscriptionMailer.with(
       subscription: SubscriptionSession.first,
-      email: "test@gmail.com"
+      email: 'test@gmail.com'
     ).edit
   end
 end
