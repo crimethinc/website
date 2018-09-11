@@ -2,7 +2,7 @@ require 'simplecov'
 
 SimpleCov.start do
   add_filter 'config/application.rb'
-  add_filter 'config/initializers/rack-attack.rb'
+  add_filter 'config/initializers/rack_attack.rb'
   add_filter '/app/channels/'
   add_filter '/spec/'
 
