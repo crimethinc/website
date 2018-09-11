@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '~> 2.5.1'
 
 # app server
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.1'
 
 # database
 gem 'pg'
@@ -14,7 +14,7 @@ gem 'rack-timeout'
 
 # assets
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'   # used for polyfilling forms in admin/articles
 gem 'sass-rails'

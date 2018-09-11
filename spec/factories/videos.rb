@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :video do
-    title 'MyTitle'
-    content 'Some Really Sweet Content'
-    slug 'MySlug'
-    status_id 1
+    title { 'MyTitle' }
+    content { 'Some Really Sweet Content' }
+    slug { 'MySlug' }
+    status_id { 1 }
   end
 end
