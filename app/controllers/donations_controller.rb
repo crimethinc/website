@@ -84,7 +84,7 @@ class DonationsController < ApplicationController
         expand: ['default_source']
       )
     else
-      flash[:error] = "That link has expired. Please try again."
+      flash[:error] = 'That link has expired. Please try again.'
       redirect_to [:support]
     end
   end
