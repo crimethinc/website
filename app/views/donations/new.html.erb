@@ -1,14 +1,20 @@
-<header>
-  <h1><%= t 'views.donations.support.heading' %></h1>
-</header>
-
 <% if flash[:error].present? %>
-  <div id='error_explanation'>
+  <div class='subscription-error'>
     <p><%= flash[:error] %></p>
   </div>
 <% end %>
 
-<div class="row">
+<% if flash[:notice].present? %>
+  <div class='subscription-notice'>
+    <p><%= flash[:notice] %></p>
+  </div>
+<% end %>
+
+<header>
+  <h1><%= t 'views.donations.support.heading' %></h1>
+</header>
+
+<div class='row'>
   <div class='column column-one-third'>
     <%= form_tag [:support], id: 'js-stripe-form' do %>
       <script src='https://checkout.stripe.com/checkout.js'></script>
@@ -46,6 +52,17 @@
 
   <div class='column column-two-third'>
     <%= render_markdown t 'views.donations.support.description' %>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='column'>
+    <p><strong>Existing Monthly Contributors</strong></p>
+    <p>If you need to update your card on file or want cancel your subscription, enter your email address:</p>
+    <%= form_tag [:support, :request] do %>
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, nil %>
+    <% end %>
   </div>
 </div>
 
@@ -138,9 +155,9 @@
     var amount = document.getElementById('amount').value
 
     if (document.getElementById('monthly_true').checked === true){
-      var description = '<%= t 'views.donations.support.description_monthly' %>: $' + amount;
+      var description = '$' + amount + ' <%= t 'views.donations.support.description_monthly' %>';
     } else {
-      var description = '<%= t 'views.donations.support.description_one_time' %>: $' + amount;
+      var description = '$' + amount + ' <%= t 'views.donations.support.description_one_time' %>';
     }
 
     // Open Checkout with further options:

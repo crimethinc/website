@@ -104,7 +104,15 @@ Rails.application.routes.draw do
   get  'support', to: 'donations#new',    as: :support
   post 'support', to: 'donations#create', as: :donations
   get  'thanks',  to: 'donations#thanks', as: :thanks
-  post 'support/stripe_webhooks', to: 'donations#stripe_webhooks'
+
+  post 'support/create_session', to: 'donations#create_session', as: :support_request
+
+  get 'support/edit/:token', to: 'donations#edit', as: :support_edit
+
+  post 'support/cancel/:subscription_id', to: 'donations#cancel', as: :support_cancel
+  post 'support/update/:subscription_id', to: 'donations#update_subscription', as: :support_update_subscription
+
+  post 'support/stripe_payment_succeeded_webhook', to: 'donations#stripe_payment_succeeded_webhook'
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'

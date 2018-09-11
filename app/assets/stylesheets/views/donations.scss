@@ -196,3 +196,118 @@
     margin-bottom: 1em;
   }
 }
+
+#support-edit {
+  width: 66%;
+  display: table;
+  margin: 30px auto;
+
+  @media (max-width: 800px) { width: 95% }
+
+  h1 {
+    font-weight: bold;
+    font-size: 250%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 160%;
+    margin-bottom: 30px;
+
+    @media (max-width: 800px) { text-align: center; }
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media (max-width: 800px) { font-size: 85%; }
+
+    thead {
+      th {
+        font-weight: bold;
+        text-align: left;
+        padding: 10px 5px;
+        border-bottom: 2px solid #333;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 10px 5px;
+        border-bottom: 1px solid #999;
+      }
+    }
+
+    .actions {
+      width: 150px;
+
+      @media (max-width: 800px) { width: 80px }
+    }
+
+    input[type=submit], select {
+      width: 100%;
+    }
+
+    input[type=submit] {
+      color: #fff;
+      background: #0193FF;
+      cursor: pointer;
+      border: 0;
+      padding: 5px;
+
+      &.cancel {
+        color: #fff;
+        background: #ff0000;
+      }
+    }
+
+    input[disabled] {
+      color: #ccc;
+      background: #eee;
+      cursor: not-allowed;
+    }
+
+    hr {
+      margin: 5px 0;
+      padding: 0;
+      border-style: none;
+      border-top: 1px solid #666;
+    }
+
+    form {
+      padding: 0;
+    }
+  }
+
+  .subscriptions {
+    padding: 15px;
+    background: #f7f7f7;
+    margin-bottom: 40px;
+  }
+
+  .credit-cards {
+    padding: 15px;
+    background: #f7f7f7;
+  }
+}
+
+.subscription-error {
+  p {
+    background: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+.subscription-notice {
+  p {
+    background: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+}

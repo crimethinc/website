@@ -1,5 +1,5 @@
 class DonationsController < ApplicationController
-  protect_from_forgery except: :stripe_webhooks
+  protect_from_forgery except: :stripe_subscription_payment_succeeded_webhook
 
   def new
     @html_id = 'page'
@@ -7,34 +7,28 @@ class DonationsController < ApplicationController
     @title   = I18n.t('views.donations.support.heading')
   end
 
-  def thanks
-    @html_id = 'page'
-    @body_id = 'support'
-    @title   = I18n.t('views.donations.thanks.heading')
-  end
-
   def create
     # number of 'units', each unit is $1
     amount = params[:amount]
 
-    customer = Stripe::Customer.create(
+    @customer = find_or_create_customer(
       email: params['js-stripe-email'],
       source: params['js-stripe-token']
     )
 
     if params[:monthly] == 'true'
       Stripe::Subscription.create(
-        customer: customer.id,
+        customer: @customer.id,
         plan:     STRIPE_MONTHLY_PLAN_ID,
         quantity: amount
       )
     else
       Stripe::Charge.create(
-        customer:    customer.id,
-        amount:     amount.to_i * 100, # charges are in cents
-        description: t('views.donations.support.description_one_time'),
-        currency:    'usd',
-        receipt_email: customer.email
+        currency:      'usd',
+        customer:      @customer.id,
+        amount:        amount.to_i * 100, # charges need to be in cents
+        description:   t('views.donations.support.description_one_time'),
+        receipt_email: @customer.email
       )
     end
   rescue Stripe::CardError => e
@@ -44,14 +38,94 @@ class DonationsController < ApplicationController
     redirect_to [:thanks]
   end
 
-  def stripe_webhooks
-    event_json = JSON.parse(request.body.read)
+  def thanks
+    @html_id = 'page'
+    @body_id = 'support'
+    @title   = I18n.t('views.donations.thanks.heading')
+  end
 
-    if event_json['type'] == 'invoice.payment_succeeded'
-      customer_id = event_json['data']['object']['customer']
+  def create_session
+    email = params[:email]
+    customers = Stripe::Customer.list(email: email).data
+
+    if customers.present?
+      customers.each do |customer|
+        customers.delete(customer) if customer.subscriptions.data.empty?
+      end
+
+      if customers.empty?
+        flash[:error] = "We can't find a subscription with that email address."
+      elsif customers.one?
+        subscription = SubscriptionSession.create!(
+          stripe_customer_id: customers.first.id,
+          token: SecureRandom.hex,
+          expires_at: 1.hour.from_now
+        )
+
+        # TODO send email!
+
+        flash[:notice] = "We sent you an email with a link to do the thing you need to do."
+      else
+        flash[:error] = "We found multiple subscriptions with that email address."
+      end
+    else
+      flash[:error] = "We can't find a subscription with that email address."
+    end
+
+    redirect_to [:support]
+  end
+
+  def edit
+    session = SubscriptionSession.find_by(token: params[:token])
+
+    if session
+      @customer = Stripe::Customer.retrieve({
+        id: session.stripe_customer_id,
+        expand: ['default_source']
+      })
+    else
+      flash[:error] = "That link has expired. Please try again."
+      redirect_to [:support]
+    end
+  end
+
+  def update_subscription
+    if params[:amount].present?
+      subscription = Stripe::Subscription.retrieve(params[:subscription_id])
+      subscription.quantity = params[:amount].to_i
+
+      if subscription&.save
+        flash[:notice] = "Your subscription amount has been updated!"
+      else
+        flash[:error] = "There was a problem canceling your subscription."
+      end
+    else
+      flash[:error] = "You have to select an amount to update."
+    end
+
+    redirect_to support_edit_path(params[:token])
+  end
+
+  def cancel
+    subscription = Stripe::Subscription.retrieve(params[:subscription_id])
+
+    if subscription&.delete
+      flash[:notice] = "Your subscription has been canceled."
+    else
+      flash[:error] = "There was a problem canceling your subscription."
+    end
+
+    redirect_to [:support]
+  end
+
+  def stripe_subscription_payment_succeeded_webhook
+    event = JSON.parse(request.body.read)
+
+    if event['type'] == 'invoice.payment_succeeded'
+      customer_id = event['data']['object']['customer']
       customer    = Stripe::Customer.retrieve(customer_id)
 
-      charge_id = event_json['data']['object']['charge']
+      charge_id = event['data']['object']['charge']
       charge    = Stripe::Charge.retrieve(charge_id)
 
       charge.receipt_email = customer.email
@@ -60,5 +134,26 @@ class DonationsController < ApplicationController
     end
 
     head :ok
+  end
+
+  private
+
+  def find_or_create_customer(email:, source:)
+    return if email.nil? || source.nil?
+
+    customers = Stripe::Customer.list(email: email).data
+
+    if customers.present?
+      customers.first
+    else
+      create_customer(email, source)
+    end
+  end
+
+  def create_customer(email, source)
+    Stripe::Customer.create(
+      email: email,
+      source: source
+    )
   end
 end
