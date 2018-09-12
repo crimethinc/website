@@ -54,7 +54,7 @@ class DonationsController < ApplicationController
       end
 
       if customers.empty?
-        flash[:error] = "We can't find a subscription with that email address."
+        flash[:error] = "We can't find any subscriptions with that email address. If you think this is in error, please [send us an email](mailto:support@crimethinc.com) so we can help you."
       elsif customers.one?
         subscription = SubscriptionSession.create!(
           stripe_customer_id: customers.first.id,
@@ -66,10 +66,10 @@ class DonationsController < ApplicationController
 
         flash[:notice] = 'We sent you an email with a link to do the thing you need to do.'
       else
-        flash[:error] = 'We found multiple subscriptions with that email address.'
+        flash[:error] = 'We found multiple subscriptions with that email address. Please [send us an email](mailto:support@crimethinc.com) so we can help you.'
       end
     else
-      flash[:error] = "We can't find a subscription with that email address."
+      flash[:error] = "We can't find any subscriptions with that email address. If you think this is in error, please [send us an email](mailto:support@crimethinc.com) so we can help you."
     end
 
     redirect_to [:support]
@@ -97,10 +97,10 @@ class DonationsController < ApplicationController
       if subscription&.save
         flash[:notice] = 'Your subscription amount has been updated!'
       else
-        flash[:error] = 'There was a problem canceling your subscription.'
+        flash[:error] = 'There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:support@crimethinc.com) so we can help you.'
       end
     else
-      flash[:error] = 'You have to select an amount to update.'
+      flash[:error] = 'You must first select an amount to update.'
     end
 
     redirect_to support_edit_path(params[:token])
@@ -112,7 +112,7 @@ class DonationsController < ApplicationController
     if subscription&.delete
       flash[:notice] = 'Your subscription has been canceled.'
     else
-      flash[:error] = 'There was a problem canceling your subscription.'
+      flash[:error] = 'There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:support@crimethinc.com) so we can help you.'
     end
 
     redirect_to [:support]
@@ -139,7 +139,7 @@ class DonationsController < ApplicationController
   private
 
   def find_or_create_customer(email:, source:)
-    return if email.nil? || source.nil?
+    return if email.blank? || source.blank?
 
     customers = Stripe::Customer.list(email: email).data
 
