@@ -33,23 +33,20 @@
               <%= form_tag support_update_subscription_path(subscription.id) do %>
                 <%= hidden_field_tag :token, params[:token] %>
                 <%= select_tag :amount, options_for_select(subscription_amounts) %>
-                <%=
-                  submit_tag "UPDATE",
-                  data: { confirm: "Are you sure you want to update your subscription amount?" },
-                  disabled: true,
-                  class: "js-button-update"
-                %>
+
+                <%= submit_tag "UPDATE",
+                               data:     { confirm: "Are you sure you want to update your subscription amount?" },
+                               disabled: true,
+                               class:    "js-button-update" %>
               <% end %>
 
               <hr/>
 
-              <%=
-                button_to "CANCEL",
-                support_cancel_path(subscription.id),
-                method: :post,
-                data: { confirm: "Are you sure you want to completely cancel your subscription?" },
-                class: "cancel"
-              %>
+              <%= button_to "CANCEL",
+                            support_cancel_path(subscription.id),
+                            method: :post,
+                            data:   { confirm: "Are you sure you want to completely cancel your subscription?" },
+                            class:  "cancel" %>
             </td>
           </tr>
         <% end %>
