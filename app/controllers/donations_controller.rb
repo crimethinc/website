@@ -72,11 +72,11 @@ class DonationsController < ApplicationController
   end
 
   def edit
-    session = SubscriptionSession.find_by(token: params[:token])
+    session = SubscriptionSession.find_by token: params[:token]
 
     if session
       @customer = Stripe::Customer.retrieve(
-        id: session.stripe_customer_id,
+        id:     session.stripe_customer_id,
         expand: ['default_source']
       )
     else
@@ -134,7 +134,7 @@ class DonationsController < ApplicationController
 
   private
 
-  def find_or_create_customer(email:, source:)
+  def find_or_create_customer email:, source:
     return if email.blank? || source.blank?
 
     customers = Stripe::Customer.list(email: email).data
