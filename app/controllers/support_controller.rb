@@ -1,10 +1,10 @@
-class DonationsController < ApplicationController
+class SupportController < ApplicationController
   protect_from_forgery except: :stripe_subscription_payment_succeeded_webhook
 
   def new
     @html_id = 'page'
     @body_id = 'support'
-    @title   = I18n.t('views.donations.support.heading')
+    @title   = I18n.t('views.support.new.heading')
   end
 
   def create
@@ -30,7 +30,7 @@ class DonationsController < ApplicationController
         currency:      'usd',
         customer:      customer.id,
         amount:        amount.to_i * 100, # charges need to be in cents
-        description:   t('views.donations.support.description_one_time'),
+        description:   t('views.support.new.description_one_time'),
         receipt_email: customer.email
       )
     end
@@ -44,17 +44,19 @@ class DonationsController < ApplicationController
   def thanks
     @html_id = 'page'
     @body_id = 'support'
-    @title   = I18n.t('views.donations.thanks.heading')
+    @title   = I18n.t('views.support.thanks.heading')
   end
 
   def create_session
-    customer = customer_with_subscription(params[:email])
+    email = params[:email]
+    customer = customer_with_subscription(email)
 
     if customer.nil?
       flash[:error] = 'We can’t find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     else
+      # TODO how to repeat attempts here?
       subscription = SubscriptionSession.create!(
-        stripe_customer_id: customers.first.id,
+        stripe_customer_id: customer.id,
         token:              SecureRandom.hex,
         expires_at:         1.hour.from_now
       )
@@ -65,7 +67,7 @@ class DonationsController < ApplicationController
         host: request.host_with_port
       ).edit.deliver_later
 
-      flash[:notice] = 'We sent you an email with a link to do the thing you need to do.'
+      flash[:notice] = "We sent an email to #{email} with a link to make changes to your subscription."
     end
 
     redirect_to [:support]
@@ -74,7 +76,7 @@ class DonationsController < ApplicationController
   def edit
     @html_id = 'page'
     @body_id = 'support-edit'
-    @title   = 'Update your Support' # I18n.t('views.donations.support.heading')
+    @title   = 'Update your Support' # I18n.t('views.support.new.heading')
 
     @subscription_session = SubscriptionSession.find_by token: params[:token]
 
@@ -131,7 +133,7 @@ class DonationsController < ApplicationController
       charge    = Stripe::Charge.retrieve(charge_id)
 
       charge.receipt_email = customer.email
-      charge.description   = t('views.donations.support.description_monthly')
+      charge.description   = t('views.support.new.description_monthly')
       charge.save
     end
 

@@ -100,18 +100,18 @@ Rails.application.routes.draw do
   get 'search/advanced',  to: 'search#advanced', as: :advanced_search
   post 'search/advanced', to: 'search#advanced_search', as: :advanced_searches
 
-  # Donations
-  get  'support', to: 'donations#new',    as: :support
-  post 'support', to: 'donations#create', as: :donations
-  get  'thanks',  to: 'donations#thanks', as: :thanks
+  # Support
+  get  'support', to: 'support#new',    as: :support
+  post 'support', to: 'support#create', as: :support_create
+  get  'thanks',  to: 'support#thanks', as: :thanks
 
-  post 'support/create_session', to: 'donations#create_session', as: :support_request
-  get  'support/edit/:token',    to: 'donations#edit',           as: :support_edit
+  post 'support/create_session', to: 'support#create_session', as: :support_request
+  get  'support/edit/:token',    to: 'support#edit',           as: :support_edit
 
-  post 'support/cancel/:subscription_id', to: 'donations#cancel',              as: :support_cancel
-  post 'support/update/:subscription_id', to: 'donations#update_subscription', as: :support_update_subscription
+  post 'support/cancel/:subscription_id', to: 'support#cancel',              as: :support_cancel
+  post 'support/update/:subscription_id', to: 'support#update_subscription', as: :support_update_subscription
 
-  post 'support/stripe_payment_succeeded_webhook', to: 'donations#stripe_payment_succeeded_webhook'
+  post 'support/stripe_payment_succeeded_webhook', to: 'support#stripe_payment_succeeded_webhook'
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'

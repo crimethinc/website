@@ -231,8 +231,8 @@ en:
       literature_distro_kit_heading: Literature Distro Kit
       literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
 
-    donations:
-      support:
+    support:
+      new:
         heading: Invest Your Money in CrimethInc.—!
         description:
           _Use the slider to adjust your donation. No amount is too big to be needed or too small to be helpful! If you can, sign up to donate on a monthly basis, so we can count on you to sustain us for the long haul._

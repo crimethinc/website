@@ -41,7 +41,7 @@ gem 'dalli'
 gem 'rubocop', require: false
 gem 'rubocop-rspec'
 
-# stripe for donations
+# stripe for support
 gem 'stripe'
 
 # dev and testing
