@@ -2,8 +2,9 @@
 class SubscriptionMailerPreview < ActionMailer::Preview
   def edit
     SubscriptionMailer.with(
+      email: 'test@example.com',
       subscription: SubscriptionSession.first,
-      email: 'test@example.com'
+      host: 'localhost:3333'
     ).edit
   end
 end

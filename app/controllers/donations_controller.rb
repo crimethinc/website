@@ -63,7 +63,11 @@ class DonationsController < ApplicationController
         expires_at:         1.hour.from_now
       )
 
-      SubscriptionMailer.with(subscription: subscription, email: email).edit.deliver_later
+      SubscriptionMailer.with(
+        email: email,
+        subscription: subscription,
+        host: request.host_with_port
+      ).edit.deliver_later
 
       flash[:notice] = 'We sent you an email with a link to do the thing you need to do.'
     else

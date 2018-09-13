@@ -3,8 +3,8 @@
 <p>Click this link to edit your support:</p>
 
 <p>
-  <%= link_to support_edit_url(host: 'crimethinc.com', token: @subscription.token),
-              support_edit_url(host: "crimethinc.com", token: @subscription.token) %>
+  <%= link_to support_edit_url(protocol: 'https', host: @host, token: @subscription.token),
+              support_edit_url(protocol: 'https', host: @host, token: @subscription.token) %>
 </p>
 
 <p>All power to you.</p>
