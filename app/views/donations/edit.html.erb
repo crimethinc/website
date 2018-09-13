@@ -1,77 +1,69 @@
-<div id="support-edit">
-  <% if flash[:error].present? %>
-    <div class='subscription-error'>
-      <p><%= flash[:error] %></p>
-    </div>
-  <% end %>
+<%= render "notifications" %>
 
-  <% if flash[:notice].present? %>
-    <div class='subscription-notice'>
-      <p><%= flash[:notice] %></p>
-    </div>
-  <% end %>
-
+<header>
   <h1>Support</h1>
+</header>
 
-  <div class="subscriptions">
-    <h2>Subscriptions</h2>
+<p class="expires_at">This page will expire in <%= time_until_expiration @subscription_session %>.</p>
 
-    <table>
-      <thead>
+<div class="subscriptions">
+  <h2>Subscriptions</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Started</th>
+        <th>Amount</th>
+        <th class="actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customer.subscriptions.data.each do |subscription| %>
         <tr>
-          <th>Started</th>
-          <th>Amount</th>
-          <th class="actions">Actions</th>
+          <td><%= Time.at(subscription.created).strftime("%b %-e") %></td>
+          <td>$<%= subscription.quantity %> / month</td>
+          <td>
+            <%= form_tag support_update_subscription_path(subscription.id) do %>
+              <%= hidden_field_tag :token, params[:token] %>
+              <%= select_tag :amount, options_for_select(subscription_amounts) %>
+
+              <%= submit_tag "UPDATE",
+                             data:     { confirm: "Are you sure you want to update your subscription amount?" },
+                             disabled: true,
+                             class:    "js-button-update" %>
+            <% end %>
+
+            <hr/>
+
+            <%= button_to "CANCEL",
+                          support_cancel_path(subscription.id),
+                          method: :post,
+                          data:   { confirm: "Are you sure you want to completely cancel your subscription?" },
+                          class:  "cancel" %>
+          </td>
         </tr>
-      </thead>
-      <tbody>
-        <% @customer.subscriptions.data.each do |subscription| %>
-          <tr>
-            <td><%= Time.at(subscription.created).strftime("%b %-e") %></td>
-            <td>$<%= subscription.quantity %> / month</td>
-            <td>
-              <%= form_tag support_update_subscription_path(subscription.id) do %>
-                <%= hidden_field_tag :token, params[:token] %>
-                <%= select_tag :amount, options_for_select(subscription_amounts) %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-                <%= submit_tag "UPDATE",
-                               data:     { confirm: "Are you sure you want to update your subscription amount?" },
-                               disabled: true,
-                               class:    "js-button-update" %>
-              <% end %>
+<div class="credit-cards">
+  <h2>Credit Cards</h2>
 
-              <hr/>
-
-              <%= button_to "CANCEL",
-                            support_cancel_path(subscription.id),
-                            method: :post,
-                            data:   { confirm: "Are you sure you want to completely cancel your subscription?" },
-                            class:  "cancel" %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="credit-cards">
-    <h2>Credit Cards</h2>
-
-    <table>
-      <thead>
+  <table>
+    <thead>
+      <tr>
+        <th>Card</th>
+        <th>Expires</th>
+        <th class="actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
         <tr>
-          <th>Card</th>
-          <th>Expires</th>
-          <th class="actions">Actions</th>
+          <td><%= @customer.default_source.brand %> <%= @customer.default_source.last4 %></td>
+          <td><%= @customer.default_source.exp_month %> / <%= @customer.default_source.exp_year %></td>
+          <td><%= link_to "update", "#" %></td>
         </tr>
-      </thead>
-      <tbody>
-          <tr>
-            <td><%= @customer.default_source.brand %> <%= @customer.default_source.last4 %></td>
-            <td><%= @customer.default_source.exp_month %> / <%= @customer.default_source.exp_year %></td>
-            <td><%= link_to "update", "#" %></td>
-          </tr>
-      </tbody>
-    </table>
-  </div>
+    </tbody>
+  </table>
 </div>

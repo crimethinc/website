@@ -78,11 +78,15 @@ class DonationsController < ApplicationController
   end
 
   def edit
-    session = SubscriptionSession.find_by token: params[:token]
+    @html_id = 'page'
+    @body_id = 'support-edit'
+    @title   = I18n.t('views.donations.support.heading')
 
-    if session&.expired?
+    @subscription_session = SubscriptionSession.find_by token: params[:token]
+
+    if @subscription_session&.expired?
       @customer = Stripe::Customer.retrieve(
-        id:     session.stripe_customer_id,
+        id:     @subscription_session.stripe_customer_id,
         expand: ['default_source']
       )
     else

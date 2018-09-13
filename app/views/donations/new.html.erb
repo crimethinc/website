@@ -1,14 +1,4 @@
-<% if flash[:error].present? %>
-  <div class='subscription-error'>
-    <p><%= render_markdown flash[:error] %></p>
-  </div>
-<% end %>
-
-<% if flash[:notice].present? %>
-  <div class='subscription-notice'>
-    <p><%= render_markdown flash[:notice] %></p>
-  </div>
-<% end %>
+<%= render "notifications" %>
 
 <header>
   <h1><%= t 'views.donations.support.heading' %></h1>

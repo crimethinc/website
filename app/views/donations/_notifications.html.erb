@@ -1,0 +1,11 @@
+<% if flash[:error].present? %>
+  <div class='subscription-error'>
+    <%= render_markdown flash[:error] %>
+  </div>
+<% end %>
+
+<% if flash[:notice].present? %>
+  <div class='subscription-notice'>
+    <%= render_markdown flash[:notice] %>
+  </div>
+<% end %>

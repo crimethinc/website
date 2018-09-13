@@ -1,4 +1,15 @@
 module SupportHelper
+
+  def time_until_expiration(subscription_session)
+    minutes = (subscription_session.expires_at.to_i - Time.current.to_i) / 60
+
+    if minutes == 0
+      "less than a minute"
+    else
+      "#{minutes} minutes"
+    end
+  end
+
   def subscription_amounts
     select_options = [
       ['Amount', nil]
