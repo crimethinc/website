@@ -6,12 +6,12 @@
 
 <div class='row'>
   <div class='column column-one-third'>
-    <%= form_tag [:support], id: 'js-stripe-form' do %>
+    <%= form_tag [:support], id: :js_stripe_form do %>
       <script src='https://checkout.stripe.com/checkout.js'></script>
 
       <!-- These get populated by the token callback below -->
-      <%= hidden_field_tag 'js-stripe-email' %>
-      <%= hidden_field_tag 'js-stripe-token' %>
+      <%= hidden_field_tag :js_stripe_email %>
+      <%= hidden_field_tag :js_stripe_token %>
 
       <div class='row buttons'>
         <div class='column column-half'>
@@ -62,9 +62,9 @@
     image:  '<%= asset_url 'icons/icon-1200x1200.png' %>',
     locale: 'auto',
     token:  function(token) {
-      document.getElementById('js-stripe-token').value = token.id;
-      document.getElementById('js-stripe-email').value = token.email;
-      document.getElementById('js-stripe-form').submit();
+      document.getElementById('js_stripe_token').value = token.id;
+      document.getElementById('js_stripe_email').value = token.email;
+      document.getElementById('js_stripe_form').submit();
     }
   });
 

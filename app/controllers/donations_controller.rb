@@ -8,27 +8,30 @@ class DonationsController < ApplicationController
   end
 
   def create
-    # number of 'units', each unit is $1
     amount = params[:amount]
-
-    @customer = find_or_create_customer(
-      email:  params['js-stripe-email'],
-      source: params['js-stripe-token']
-    )
+    email  = params[:js_stripe_email]
+    source = params[:js_stripe_token]
 
     if params[:monthly] == 'true'
-      Stripe::Subscription.create(
-        customer: @customer.id,
-        plan:     STRIPE_MONTHLY_PLAN_ID,
-        quantity: amount
-      )
+      if customer_with_subscription(email)
+        flash[:error] = "We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!"
+        redirect_to [:support] and return
+      else
+        customer = create_customer(email: email, source: source)
+        Stripe::Subscription.create(
+          customer: customer.id,
+          plan:     STRIPE_MONTHLY_PLAN_ID,
+          quantity: amount
+        )
+      end
     else
+      customer = create_customer(email: email, source: source)
       Stripe::Charge.create(
         currency:      'usd',
-        customer:      @customer.id,
+        customer:      customer.id,
         amount:        amount.to_i * 100, # charges need to be in cents
         description:   t('views.donations.support.description_one_time'),
-        receipt_email: @customer.email
+        receipt_email: customer.email
       )
     end
   rescue Stripe::CardError => e
@@ -45,18 +48,11 @@ class DonationsController < ApplicationController
   end
 
   def create_session
-    email = params[:email]
+    customer = customer_with_subscription(params[:email])
 
-    # TODO: move to customer_with_subscriptions(email:)
-    # TODO: only allow one subscription per email/stripe customer
-    customers = Stripe::Customer.list(email: email).data
-    customers.each do |customer|
-      customers.delete(customer) if customer.subscriptions.data.empty?
-    end
-
-    if customers.empty?
+    if customer.nil?
       flash[:error] = 'We can’t find any subscriptions with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
-    elsif customers.one?
+    else
       subscription = SubscriptionSession.create!(
         stripe_customer_id: customers.first.id,
         token:              SecureRandom.hex,
@@ -70,8 +66,6 @@ class DonationsController < ApplicationController
       ).edit.deliver_later
 
       flash[:notice] = 'We sent you an email with a link to do the thing you need to do.'
-    else
-      flash[:error] = 'We found multiple subscriptions with that email address. Please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     end
 
     redirect_to [:support]
@@ -80,7 +74,7 @@ class DonationsController < ApplicationController
   def edit
     @html_id = 'page'
     @body_id = 'support-edit'
-    @title   = I18n.t('views.donations.support.heading')
+    @title   = 'Update your Support' # I18n.t('views.donations.support.heading')
 
     @subscription_session = SubscriptionSession.find_by token: params[:token]
 
@@ -146,18 +140,17 @@ class DonationsController < ApplicationController
 
   private
 
-  def find_or_create_customer email:, source:
-    return if email.blank? || source.blank?
-
-    # TODO: move to customer_with_subscriptions(email:)
-    # TODO: only allow one subscription per email/stripe customer
-    # TODO: create a subscription customer even if store customer exists
+  def customer_with_subscription(email)
     customers = Stripe::Customer.list(email: email).data
 
-    if customers.present?
-      customers.first
-    else
-      Stripe::Customer.create email: email, source: source
+    customers.each do |customer|
+      customers.delete(customer) if customer.subscriptions.data.empty?
     end
+
+    customers.empty? ? nil : customers.first
+  end
+
+  def create_customer(email:, source:)
+    Stripe::Customer.create(email: email, source: source)
   end
 end
