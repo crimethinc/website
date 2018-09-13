@@ -110,7 +110,7 @@ class DonationsController < ApplicationController
       flash[:error] = 'You must first select an amount to update.'
     end
 
-    redirect_to support_edit_path(params[:token])
+    redirect_to [:support_edit, token: params[:token]]
   end
 
   def cancel

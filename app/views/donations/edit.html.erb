@@ -23,7 +23,7 @@
           <td><%= Time.at(subscription.created).strftime("%b %-e") %></td>
           <td>$<%= subscription.quantity %> / month</td>
           <td>
-            <%= form_tag support_update_subscription_path(subscription.id) do %>
+            <%= form_tag [:support_update_subscription, subscription_id: subscription.id] do %>
               <%= hidden_field_tag :token, params[:token] %>
               <%= select_tag :amount, options_for_select(subscription_amounts) %>
 
@@ -36,7 +36,7 @@
             <hr/>
 
             <%= button_to "CANCEL",
-                          support_cancel_path(subscription.id),
+                          [:support_cancel, subscription_id: subscription.id],
                           method: :post,
                           data:   { confirm: "Are you sure you want to completely cancel your subscription?" },
                           class:  "cancel" %>
