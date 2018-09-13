@@ -293,22 +293,19 @@
   }
 }
 
-.subscription-error {
+.support-notification {
   p {
-    color: white;
-    background: red;
-    text-align: center;
     padding: 15px;
     margin-bottom: 20px;
+    background: #f4f4f4;
+    text-align: center;
   }
-}
 
-.subscription-notice {
-  p {
-    color: white;
-    background: #0293FF;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 20px;
+  .notice {
+    p { border: 8px solid #0293FF }
+  }
+
+  .error {
+    p { border: 8px solid red }
   }
 }
