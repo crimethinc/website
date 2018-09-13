@@ -51,7 +51,7 @@ class DonationsController < ApplicationController
     customer = customer_with_subscription(params[:email])
 
     if customer.nil?
-      flash[:error] = 'We can’t find any subscriptions with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
+      flash[:error] = 'We can’t find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     else
       subscription = SubscriptionSession.create!(
         stripe_customer_id: customers.first.id,
