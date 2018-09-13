@@ -80,7 +80,7 @@ class DonationsController < ApplicationController
   def edit
     session = SubscriptionSession.find_by token: params[:token]
 
-    if session
+    if session&.expired?
       @customer = Stripe::Customer.retrieve(
         id:     session.stripe_customer_id,
         expand: ['default_source']
