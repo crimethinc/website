@@ -44,9 +44,6 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Max: 40
 
-  Exclude:
-    - 'app/helpers/support_helper.rb'
-
 Metrics/BlockLength:
   Max: 140
 
@@ -121,4 +118,3 @@ Rails/SkipsModelValidations:
     - 'app/controllers/admin/articles_controller.rb'
     - 'app/controllers/articles_controller.rb'
     - 'lib/tasks/scheduler.rake'
-
