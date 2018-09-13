@@ -1,7 +1,10 @@
-<h1>Crimethinc. Support</h1>
+<h1>CrimethInc. Support</h1>
 
 <p>Click this link to edit your support:</p>
 
-<p><%= link_to support_edit_url(host: "crimethinc.com", token: @subscription.token), support_edit_url(host: "crimethinc.com", token: @subscription.token) %></p>
+<p>
+  <%= link_to support_edit_url(host: 'crimethinc.com', token: @subscription.token),
+              support_edit_url(host: "crimethinc.com", token: @subscription.token) %>
+</p>
 
 <p>All power to you.</p>
