@@ -12,7 +12,7 @@ class DonationsController < ApplicationController
     amount = params[:amount]
 
     @customer = find_or_create_customer(
-      email: params['js-stripe-email'],
+      email:  params['js-stripe-email'],
       source: params['js-stripe-token']
     )
 
@@ -45,31 +45,27 @@ class DonationsController < ApplicationController
   end
 
   def create_session
-    email = params[:email]
+    email     = params[:email]
     customers = Stripe::Customer.list(email: email).data
 
-    if customers.present?
-      customers.each do |customer|
-        customers.delete(customer) if customer.subscriptions.data.empty?
-      end
+    customers.each do |customer|
+      customers.delete(customer) if customer.subscriptions.data.empty?
+    end
 
-      if customers.empty?
-        flash[:error] = "We can't find any subscriptions with that email address. If you think this is in error, please [send us an email](mailto:support@crimethinc.com) so we can help you."
-      elsif customers.one?
-        subscription = SubscriptionSession.create!(
-          stripe_customer_id: customers.first.id,
-          token: SecureRandom.hex,
-          expires_at: 1.hour.from_now
-        )
+    if customers.empty?
+      flash[:error] = 'We can’t find any subscriptions with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
+    elsif customers.one?
+      subscription = SubscriptionSession.create!(
+        stripe_customer_id: customers.first.id,
+        token:              SecureRandom.hex,
+        expires_at:         1.hour.from_now
+      )
 
-        SubscriptionMailer.with(subscription: subscription, email: email).edit.deliver_later
+      SubscriptionMailer.with(subscription: subscription, email: email).edit.deliver_later
 
-        flash[:notice] = 'We sent you an email with a link to do the thing you need to do.'
-      else
-        flash[:error] = 'We found multiple subscriptions with that email address. Please [send us an email](mailto:support@crimethinc.com) so we can help you.'
-      end
+      flash[:notice] = 'We sent you an email with a link to do the thing you need to do.'
     else
-      flash[:error] = "We can't find any subscriptions with that email address. If you think this is in error, please [send us an email](mailto:support@crimethinc.com) so we can help you."
+      flash[:error] = 'We found multiple subscriptions with that email address. Please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     end
 
     redirect_to [:support]
