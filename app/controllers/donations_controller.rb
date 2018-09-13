@@ -45,9 +45,11 @@ class DonationsController < ApplicationController
   end
 
   def create_session
-    email     = params[:email]
-    customers = Stripe::Customer.list(email: email).data
+    email = params[:email]
 
+    # TODO: move to customer_with_subscriptions(email:)
+    # TODO: only allow one subscription per email/stripe customer
+    customers = Stripe::Customer.list(email: email).data
     customers.each do |customer|
       customers.delete(customer) if customer.subscriptions.data.empty?
     end
@@ -86,6 +88,7 @@ class DonationsController < ApplicationController
   end
 
   def update_subscription
+    # TODO: user slider in view, remove outer if/else
     if params[:amount].present?
       subscription = Stripe::Subscription.retrieve(params[:subscription_id])
       subscription.quantity = params[:amount].to_i
@@ -104,6 +107,7 @@ class DonationsController < ApplicationController
 
   def cancel
     subscription = Stripe::Subscription.retrieve(params[:subscription_id])
+    # TODO: delete SubscriptionSession too
 
     if subscription&.delete
       flash[:notice] = 'Your subscription has been canceled.'
@@ -137,19 +141,15 @@ class DonationsController < ApplicationController
   def find_or_create_customer email:, source:
     return if email.blank? || source.blank?
 
+    # TODO: move to customer_with_subscriptions(email:)
+    # TODO: only allow one subscription per email/stripe customer
+    # TODO: create a subscription customer even if store customer exists
     customers = Stripe::Customer.list(email: email).data
 
     if customers.present?
       customers.first
     else
-      create_customer(email, source)
+      Stripe::Customer.create email: email, source: source
     end
-  end
-
-  def create_customer(email, source)
-    Stripe::Customer.create(
-      email: email,
-      source: source
-    )
   end
 end
