@@ -2,7 +2,7 @@
 class SupportMailerPreview < ActionMailer::Preview
   def edit
     support_session = SupportSession.new(
-      stripe_customer_id: "stripe-customore-id-123",
+      stripe_customer_id: 'stripe-customore-id-123',
       token: SecureRandom.urlsafe_base64(nil, false),
       expires_at: 1.hour.from_now
     )
