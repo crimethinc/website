@@ -55,7 +55,6 @@ class SupportController < ApplicationController
     if customer.nil?
       flash[:error] = 'We can’t find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     else
-      # TODO: how to check for repeated attempts here?
       subscription_session = SubscriptionSession.create!(
         stripe_customer_id: customer.id,
         token:              SecureRandom.hex,
@@ -70,7 +69,10 @@ class SupportController < ApplicationController
 
       flash[:notice] = "We sent an email to #{email} with a link to make changes to your subscription."
     end
-
+  rescue ActiveRecord::RecordInvalid => e
+    flash[:error] = "You already submitted a request. Look for an email from _info@crimethinc.com_. If you've lost your super secret link, wait an hour and try again."
+    redirect_to [:support]
+  else
     redirect_to [:support]
   end
 
