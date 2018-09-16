@@ -4,6 +4,7 @@ require 'json'
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  before_action :set_locale
   before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
@@ -48,6 +49,10 @@ class ApplicationController < ActionController::Base
     action_name == 'new'
   end
   helper_method :creating?
+
+  def set_locale
+    I18n.locale = I18n.default_locale
+  end
 
   def check_for_redirection
     redirect = Redirect.where(source_path: request.path.downcase).last
