@@ -108,7 +108,7 @@ Rails.application.routes.draw do
   post 'support/create_session', to: 'support#create_session', as: :support_request
   get  'support/edit/:token',    to: 'support#edit',           as: :support_edit
 
-  post 'support/cancel/:subscription_id', to: 'support#cancel',              as: :support_cancel
+  post 'support/cancel/:subscription_id', to: 'support#cancel_subscription', as: :support_cancel_subscription
   post 'support/update/:subscription_id', to: 'support#update_subscription', as: :support_update_subscription
 
   post 'support/stripe_payment_succeeded_webhook', to: 'support#stripe_payment_succeeded_webhook'

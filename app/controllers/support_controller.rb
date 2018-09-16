@@ -15,7 +15,8 @@ class SupportController < ApplicationController
     if params[:monthly] == 'true'
       if customer_with_subscription(email)
         flash[:error] = "We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!"
-        redirect_to([:support]) && return
+        redirect_to [:support]
+        return
       else
         customer = create_customer(email: email, source: source)
         Stripe::Subscription.create(
@@ -82,7 +83,8 @@ class SupportController < ApplicationController
 
     if @subscription_session.nil? || @subscription_session.expired?
       flash[:error] = 'That link has expired. Please try again.'
-      redirect_to([:support]) && return
+      redirect_to [:support]
+      return
     else
       @customer = Stripe::Customer.retrieve(
         id:     @subscription_session.stripe_customer_id,
@@ -105,11 +107,11 @@ class SupportController < ApplicationController
     redirect_to [:support_edit, token: params[:token]]
   end
 
-  def cancel
+  def cancel_subscription
     subscription = Stripe::Subscription.retrieve(params[:subscription_id])
-    # TODO: delete SubscriptionSession too
 
     if subscription&.delete
+      SubscriptionSession.find_by(token: params[:token]).destroy
       flash[:notice] = 'Your subscription has been canceled.'
     else
       flash[:error] = 'There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:support@crimethinc.com) so we can help you.'
