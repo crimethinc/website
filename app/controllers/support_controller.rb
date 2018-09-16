@@ -61,11 +61,11 @@ class SupportController < ApplicationController
         expires_at:         1.hour.from_now
       )
 
-      SubscriptionMailer.with(
+      SupportMailer.with(
         email: email,
         support_session: support_session,
         host: request.host_with_port
-      ).edit.deliver_later
+      ).edit_subscription.deliver_later
 
       flash[:notice] = "We sent an email to #{email} with a link to make changes to your subscription."
     end
