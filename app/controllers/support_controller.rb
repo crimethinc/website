@@ -57,7 +57,7 @@ class SupportController < ApplicationController
     else
       subscription_session = SubscriptionSession.create!(
         stripe_customer_id: customer.id,
-        token:              SecureRandom.hex,
+        token:              SubscriptionSession.generate_token,
         expires_at:         1.hour.from_now
       )
 
