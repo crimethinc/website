@@ -11,8 +11,13 @@
     <div class='row'>
       <div class='column column-half'>
         <p>Drag the slider to change your subscription amount:</p>
+
         <!-- Check the mapping hash in support.js to make sense of this -->
-        <%= range_field_tag 'amount_slider', @subscription.quantity, in: 1..67, step: 1, data: { starting_amount: @subscription.quantity } %>
+        <%= range_field_tag 'amount_slider',
+                            @subscription.quantity,
+                            in: 1..67,
+                            step: 1,
+                            data: { starting_amount: @subscription.quantity } %>
       </div>
 
       <div class='column column-half'>
