@@ -21,6 +21,9 @@
           <span class="dollar-sign">$</span>
           <%= number_field_tag :amount, @subscription.quantity, min: 1, max: 1000, step: 1, tabindex: '-1' %>
         </div>
+        <p class="start-date">
+          Subscribed since <%= Time.at(@subscription.created).strftime("%F") %>
+        </p>
       </div>
     </div>
 
@@ -29,10 +32,6 @@
                    data:     { confirm: "Are you sure you want to update your subscription amount?" },
                    disabled: true,
                    class:    "js-button-update" %>
-
-    <p class="start-date">
-      Your subscription started on <%= Time.at(@subscription.created).strftime("%F") %>.
-    </p>
   <% end %>
 </div>
 
