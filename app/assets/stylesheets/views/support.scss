@@ -6,19 +6,6 @@
   #js_stripe_form {
     margin-bottom: 2rem;
 
-    .row {
-      display: flex;
-    }
-
-    .column {
-      margin-right: $border-size-large;
-    }
-
-    .column:last-child {
-      padding-right: 0;
-    }
-
-    .column.column-half { width: 50%; }
     .buttons {
       .column {
         margin: 0;
@@ -48,131 +35,6 @@
       font-weight: 400;
     }
 
-    // Generated using: http://danielstern.ca/range.css
-    #amount_slider {
-      -webkit-appearance: none;
-      width: 100%;
-      margin: 1rem 0 3rem 0;
-    }
-
-    #amount_slider:focus {
-      outline: none;
-    }
-
-    #amount_slider::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 12px;
-      cursor: pointer;
-      box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
-      background: #ffffff;
-      border-radius: 25px;
-      border: 2px solid #cccccc;
-    }
-
-    #amount_slider::-webkit-slider-thumb {
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
-      border: 0px solid #ffffff;
-      height: 30px;
-      width: 30px;
-      border-radius: 50px;
-      background: #ffffff;
-      cursor: pointer;
-      -webkit-appearance: none;
-      margin-top: -11px;
-    }
-
-    #amount_slider:focus::-webkit-slider-runnable-track {
-      background: #ffffff;
-    }
-
-    #amount_slider::-moz-range-track {
-      width: 100%;
-      height: 12px;
-      cursor: pointer;
-      box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
-      background: #ffffff;
-      border-radius: 25px;
-      border: 2px solid #cccccc;
-    }
-
-    #amount_slider::-moz-range-thumb {
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
-      border: 0px solid #ffffff;
-      height: 30px;
-      width: 30px;
-      border-radius: 50px;
-      background: #ffffff;
-      cursor: pointer;
-    }
-
-    #amount_slider::-ms-track {
-      width: 100%;
-      height: 12px;
-      cursor: pointer;
-      background: transparent;
-      border-color: transparent;
-      color: transparent;
-    }
-
-    #amount_slider::-ms-fill-lower {
-      background: #b3b3b3;
-      border: 2px solid #cccccc;
-      border-radius: 50px;
-      box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
-    }
-
-    #amount_slider::-ms-fill-upper {
-      background: #ffffff;
-      border: 2px solid #cccccc;
-      border-radius: 50px;
-      box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
-    }
-
-    #amount_slider::-ms-thumb {
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
-      border: 0px solid #ffffff;
-      height: 30px;
-      width: 30px;
-      border-radius: 50px;
-      background: #ffffff;
-      cursor: pointer;
-      height: 12px;
-    }
-
-    #amount_slider:focus::-ms-fill-lower {
-      background: #ffffff;
-    }
-
-    #amount_slider:focus::-ms-fill-upper {
-      background: #ffffff;
-    }
-
-    label[for=amount] {
-      display: block;
-    }
-
-    .dollar-sign, #amount {
-      font-size: 5rem;
-      font-weight: 600;
-    }
-
-    .dollar-sign {
-      color: #000;
-    }
-
-    #amount {
-      border: 0;
-      width: 80%;
-      pointer-events: none;
-    }
-
-    // removes little up and down arrows in number field
-    #amount::-webkit-inner-spin-button,
-    #amount::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
     .actions {
       text-align: right;
       margin-top: 1rem;
@@ -196,71 +58,75 @@
     line-height: 1.25em;
     margin-bottom: 1em;
   }
+
+  .support-request {
+    margin-top: 50px;
+
+    input[type=email] {
+      padding: 10px;
+      display: block;
+      font-size: 20px;
+      width: 100%;
+    }
+
+    input[type=submit] {
+      display: block;
+      width: 100%;
+      border: 0;
+      padding: 10px;
+      background: #0193FF;
+      color: white;
+      font-size: 20px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  }
 }
 
 #support-edit {
-  h1 {
-    font-weight: bold;
-    font-size: 250%;
-    text-align: center;
+  form {
+    padding: 0;
   }
 
-  p.expires_at {
-    text-align: center;
-    margin: 10px 0 30px 0;
-  }
-
-  h2 {
-    font-weight: bold;
-    font-size: 160%;
-    margin-bottom: 30px;
-
-    @media (max-width: 800px) { text-align: center; }
-  }
-
-  table {
+  input[type=submit] {
     width: 100%;
+    border: 0;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 120%;
+  }
+
+  p {
+    font-size: 110%;
     margin-bottom: 20px;
+    line-height: 1.25;
+  }
 
-    @media (max-width: 800px) { font-size: 85%; }
+  .subscription-update {
+    margin: 40px 0 60px 0;
 
-    thead {
-      th {
-        font-weight: bold;
-        text-align: left;
-        padding: 10px 5px;
-        border-bottom: 2px solid #333;
+    .amount {
+      width: 60%;
+      display: table;
+      margin: 0 auto;
+      padding: 10px;
+      background: #eee;
+
+      label {
+        margin-bottom: 10px;
       }
-    }
 
-    tbody {
-      td {
-        padding: 10px 5px;
-        border-bottom: 1px solid #999;
+      input[type=number] {
+        padding: 0 5px;
+        margin-left: 5px;
+        background: none;
       }
-    }
-
-    .actions {
-      width: 150px;
-
-      @media (max-width: 800px) { width: 80px }
-    }
-
-    input[type=submit], select {
-      width: 100%;
     }
 
     input[type=submit] {
       color: #fff;
       background: #0193FF;
-      cursor: pointer;
-      border: 0;
-      padding: 5px;
-
-      &.cancel {
-        color: #fff;
-        background: #ff0000;
-      }
+      margin-top: 40px;
     }
 
     input[disabled] {
@@ -269,27 +135,33 @@
       cursor: not-allowed;
     }
 
-    hr {
-      margin: 5px 0;
-      padding: 0;
-      border-style: none;
-      border-top: 1px solid #666;
-    }
-
-    form {
-      padding: 0;
+    p.start-date {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 80%;
+      color: #999;
     }
   }
 
-  .subscriptions {
+  .subscription-cancel {
     padding: 15px;
     background: #f7f7f7;
     margin-bottom: 40px;
+
+    input[type=submit] {
+      color: #fff;
+      background: #ff0000;
+    }
   }
 
-  .credit-cards {
-    padding: 15px;
-    background: #f7f7f7;
+  p.expires_at {
+    text-align: center;
+    margin: 10px 0 30px 0;
+    font-size: 90%;
+  }
+
+  .column + .column {
+    margin-right: 0;
   }
 }
 
@@ -308,4 +180,140 @@
   .error {
     p { border: 8px solid red }
   }
+}
+
+#amount {
+  border: 0;
+  pointer-events: none;
+}
+
+// removes little up and down arrows in number field
+#amount::-webkit-inner-spin-button,
+#amount::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label[for=amount] {
+  display: block;
+  font-size: 110%;
+}
+
+.dollar-sign, #amount {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.dollar-sign {
+  color: #000;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Generated using: http://danielstern.ca/range.css
+#amount_slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 1rem 0 5rem 0;
+}
+
+#amount_slider:focus {
+  outline: none;
+}
+
+#amount_slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+  background: #ffffff;
+  border-radius: 25px;
+  border: 2px solid #cccccc;
+}
+
+#amount_slider::-webkit-slider-thumb {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
+  border: 0px solid #ffffff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+
+#amount_slider:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+
+#amount_slider::-moz-range-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+  background: #ffffff;
+  border-radius: 25px;
+  border: 2px solid #cccccc;
+}
+
+#amount_slider::-moz-range-thumb {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
+  border: 0px solid #ffffff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#amount_slider::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+#amount_slider::-ms-fill-lower {
+  background: #b3b3b3;
+  border: 2px solid #cccccc;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+}
+
+#amount_slider::-ms-fill-upper {
+  background: #ffffff;
+  border: 2px solid #cccccc;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+}
+
+#amount_slider::-ms-thumb {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
+  border: 0px solid #ffffff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 12px;
+}
+
+#amount_slider:focus::-ms-fill-lower {
+  background: #ffffff;
+}
+
+#amount_slider:focus::-ms-fill-upper {
+  background: #ffffff;
 }

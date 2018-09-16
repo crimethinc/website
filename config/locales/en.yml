@@ -244,9 +244,9 @@ en:
           As always, however, the very best way to support what we are doing is to _do it yourself._
         radio_label_monthly: Monthly
         radio_label_one_time: One-time
-        amount_label: Donation Amount
-        description_monthly: Monthly Donation
-        description_one_time: One-Time Donation
+        amount_label: Monthly Support
+        description_monthly: Monthly Subscription
+        description_one_time: One-Time Support
         button_text: Next →
 
       thanks:

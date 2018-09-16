@@ -1,69 +1,51 @@
 <%= render "notifications" %>
 
 <header>
-  <h1>Support</h1>
+  <h1>Your Subscription</h1>
 </header>
 
-<p class="expires_at">This page will expire in <%= time_until_expiration @subscription_session %>.</p>
+<div class="subscription-update">
+  <%= form_tag [:support_update_subscription, subscription_id: @subscription.id] do %>
+    <%= hidden_field_tag :token, params[:token] %>
 
-<div class="subscriptions">
-  <h2>Subscriptions</h2>
+    <div class='row'>
+      <div class='column column-half'>
+        <p>Drag the slider to change your subscription amount:</p>
+        <!-- Check the mapping hash in support.js to make sense of this -->
+        <%= range_field_tag 'amount_slider', @subscription.quantity, in: 1..67, step: 1, data: { starting_amount: @subscription.quantity } %>
+      </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Started</th>
-        <th>Amount</th>
-        <th class="actions">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @customer.subscriptions.data.each do |subscription| %>
-        <tr>
-          <td><%= Time.at(subscription.created).strftime("%b %-e") %></td>
-          <td>$<%= subscription.quantity %> / month</td>
-          <td>
-            <%= form_tag [:support_update_subscription, subscription_id: subscription.id] do %>
-              <%= hidden_field_tag :token, params[:token] %>
-              <%= select_tag :amount, options_for_select(subscription_amounts) %>
+      <div class='column column-half'>
+        <div class='amount'>
+          <%= label_tag :amount, t('views.support.new.amount_label') %>
+          <span class="dollar-sign">$</span>
+          <%= number_field_tag :amount, @subscription.quantity, min: 1, max: 1000, step: 1, tabindex: '-1' %>
+        </div>
+      </div>
+    </div>
 
-              <%= submit_tag "UPDATE",
-                             data:     { confirm: "Are you sure you want to update your subscription amount?" },
-                             disabled: true,
-                             class:    "js-button-update" %>
-            <% end %>
 
-            <hr/>
+    <%= submit_tag "Update Subscription",
+                   data:     { confirm: "Are you sure you want to update your subscription amount?" },
+                   disabled: true,
+                   class:    "js-button-update" %>
 
-            <%= button_to "CANCEL",
-                          [:support_cancel, subscription_id: subscription.id],
-                          method: :post,
-                          data:   { confirm: "Are you sure you want to completely cancel your subscription?" },
-                          class:  "cancel" %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <p class="start-date">
+      Your subscription started on <%= Time.at(@subscription.created).strftime("%F") %>.
+    </p>
+  <% end %>
 </div>
 
-<div class="credit-cards">
-  <h2>Credit Cards</h2>
+<div class="subscription-cancel">
+  <p>If you want to cancel your subscription, click the big red button! </p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Card</th>
-        <th>Expires</th>
-        <th class="actions">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><%= @customer.default_source.brand %> <%= @customer.default_source.last4 %></td>
-          <td><%= @customer.default_source.exp_month %> / <%= @customer.default_source.exp_year %></td>
-          <td><%= link_to "update", "#" %></td>
-        </tr>
-    </tbody>
-  </table>
+  <%= button_to "Cancel Subscription",
+                [:support_cancel, subscription_id: @subscription.id],
+                method: :post,
+                data:   { confirm: "Are you sure you want to completely cancel your subscription?" },
+                class:  "cancel" %>
 </div>
+
+<p class="expires_at">
+  This page will expire in <%= time_until_expiration @subscription_session %>.
+</p>

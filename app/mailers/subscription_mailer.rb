@@ -1,9 +1,9 @@
 class SubscriptionMailer < ApplicationMailer
   def edit
     @email = params[:email]
-    @subscription = params[:subscription]
+    @subscription_session = params[:subscription_session]
     @host = params[:host]
 
-    mail to: @email, subject: 'Request to update your CrimethInc Support'
+    mail to: @email, subject: 'Request to update your CrimethInc. Support'
   end
 end

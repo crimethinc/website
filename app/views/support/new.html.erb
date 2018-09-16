@@ -42,17 +42,16 @@
 
   <div class='column column-two-third'>
     <%= render_markdown t 'views.support.new.description' %>
-  </div>
-</div>
 
-<div class='row'>
-  <div class='column'>
-    <p><strong>Existing Monthly Contributors</strong></p>
-    <p>If you need to update your card on file or want cancel your subscription, enter your email address:</p>
-    <%= form_tag [:support, :request] do %>
-      <%= label_tag :email, "Email Address" %>
-      <%= text_field_tag :email, nil %>
-    <% end %>
+    <div class="support-request">
+      <p><strong>Existing Monthly Contributors</strong></p>
+      <p>Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.</p>
+      <%= form_tag [:support, :request] do %>
+        <%= label_tag :email, "Email Address", class: "sr-only" %>
+        <%= email_field_tag :email, nil, placeholder: "you@email.com" %>
+        <%= submit_tag "Send Super Secret Link" %>
+      <% end %>
+    </div>
   </div>
 </div>
 
@@ -66,79 +65,6 @@
       document.getElementById('js_stripe_email').value = token.email;
       document.getElementById('js_stripe_form').submit();
     }
-  });
-
-  document.getElementById('amount_slider').addEventListener('input', function(e) {
-    var mapping = {
-       "1":    1,
-       "2":    2,
-       "3":    3,
-       "4":    4,
-       "5":    5,
-       "6":    6,
-       "7":    7,
-       "8":    8,
-       "9":    9,
-      "10":   10,
-      "11":   11,
-      "12":   12,
-      "13":   13,
-      "14":   14,
-      "15":   15,
-      "16":   16,
-      "17":   17,
-      "18":   18,
-      "19":   19,
-      "20":   20,
-      "21":   21,
-      "22":   22,
-      "23":   23,
-      "24":   24,
-      "25":   25,
-      "26":   30,
-      "27":   35,
-      "28":   40,
-      "29":   45,
-      "30":   50,
-      "31":   55,
-      "32":   60,
-      "33":   65,
-      "34":   70,
-      "35":   75,
-      "36":   80,
-      "37":   85,
-      "38":   90,
-      "39":   95,
-      "40":  100,
-      "41":  105,
-      "42":  110,
-      "43":  115,
-      "44":  120,
-      "45":  125,
-      "46":  130,
-      "47":  135,
-      "48":  140,
-      "49":  145,
-      "50":  150,
-      "51":  200,
-      "52":  250,
-      "53":  300,
-      "54":  350,
-      "55":  400,
-      "56":  450,
-      "57":  500,
-      "58":  550,
-      "59":  600,
-      "60":  650,
-      "61":  700,
-      "62":  750,
-      "63":  800,
-      "64":  850,
-      "65":  900,
-      "66":  950,
-      "67": 1000
-    }
-    document.getElementById('amount').value = mapping[this.value];
   });
 
   document.getElementById('js-stripe-button').addEventListener('click', function(e) {

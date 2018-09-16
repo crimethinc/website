@@ -15,7 +15,7 @@ class SupportController < ApplicationController
     if params[:monthly] == 'true'
       if customer_with_subscription(email)
         flash[:error] = "We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!"
-        redirect_to [:support] and return
+        redirect_to([:support]) && return
       else
         customer = create_customer(email: email, source: source)
         Stripe::Subscription.create(
@@ -54,8 +54,8 @@ class SupportController < ApplicationController
     if customer.nil?
       flash[:error] = 'We can’t find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     else
-      # TODO how to repeat attempts here?
-      subscription = SubscriptionSession.create!(
+      # TODO: how to check for repeated attempts here?
+      subscription_session = SubscriptionSession.create!(
         stripe_customer_id: customer.id,
         token:              SecureRandom.hex,
         expires_at:         1.hour.from_now
@@ -63,7 +63,7 @@ class SupportController < ApplicationController
 
       SubscriptionMailer.with(
         email: email,
-        subscription: subscription,
+        subscription_session: subscription_session,
         host: request.host_with_port
       ).edit.deliver_later
 
@@ -80,30 +80,26 @@ class SupportController < ApplicationController
 
     @subscription_session = SubscriptionSession.find_by token: params[:token]
 
-    if @subscription_session&.expired?
+    if @subscription_session.nil? || @subscription_session.expired?
+      flash[:error] = 'That link has expired. Please try again.'
+      redirect_to([:support]) && return
+    else
       @customer = Stripe::Customer.retrieve(
         id:     @subscription_session.stripe_customer_id,
-        expand: ['default_source']
+        expand: ['default_source'] # for future credit card updates
       )
-    else
-      flash[:error] = 'That link has expired. Please try again.'
-      redirect_to [:support]
+      @subscription = @customer.subscriptions.data.first
     end
   end
 
   def update_subscription
-    # TODO: user slider in view, remove outer if/else
-    if params[:amount].present?
-      subscription = Stripe::Subscription.retrieve(params[:subscription_id])
-      subscription.quantity = params[:amount].to_i
+    subscription = Stripe::Subscription.retrieve(params[:subscription_id])
+    subscription.quantity = params[:amount].to_i
 
-      if subscription&.save
-        flash[:notice] = 'Your subscription amount has been updated!'
-      else
-        flash[:error] = 'There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:support@crimethinc.com) so we can help you.'
-      end
+    if subscription&.save
+      flash[:notice] = 'Your subscription amount has been updated!'
     else
-      flash[:error] = 'You must first select an amount to update.'
+      flash[:error] = 'There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:support@crimethinc.com) so we can help you.'
     end
 
     redirect_to [:support_edit, token: params[:token]]
