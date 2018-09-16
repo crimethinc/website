@@ -1,8 +1,7 @@
-# We have made every effort to always refer to instances of this class
-# as 'subscription_sessions' instead of 'subscriptions' because Stripe
-# has subscriptions and these are just here for passwordless auth.
+# passwordless auth for updating Stripe subscriptions
+# see also `rake destroy_expired_support_sessions`
 
-class SubscriptionSession < ApplicationRecord
+class SupportSession < ApplicationRecord
   validates :stripe_customer_id, :token, :expires_at, presence: true
   validates :stripe_customer_id, :token, uniqueness: true
 

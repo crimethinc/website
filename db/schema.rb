@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_27_224713) do
+ActiveRecord::Schema.define(version: 2018_09_16_190228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -260,7 +260,7 @@ ActiveRecord::Schema.define(version: 2018_08_27_224713) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "subscription_sessions", force: :cascade do |t|
+  create_table "support_sessions", force: :cascade do |t|
     t.string "stripe_customer_id"
     t.string "token"
     t.datetime "expires_at"

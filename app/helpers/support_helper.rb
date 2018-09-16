@@ -1,6 +1,6 @@
 module SupportHelper
-  def time_until_expiration(subscription_session)
-    minutes = (subscription_session.expires_at.to_i - Time.current.to_i) / 60
+  def time_until_expiration(support_session)
+    minutes = (support_session.expires_at.to_i - Time.current.to_i) / 60
 
     if minutes.zero?
       'less than a minute'

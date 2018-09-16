@@ -55,15 +55,15 @@ class SupportController < ApplicationController
     if customer.nil?
       flash[:error] = 'We can’t find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     else
-      subscription_session = SubscriptionSession.create!(
+      support_session = SupportSession.create!(
         stripe_customer_id: customer.id,
-        token:              SubscriptionSession.generate_token,
+        token:              SupportSession.generate_token,
         expires_at:         1.hour.from_now
       )
 
       SubscriptionMailer.with(
         email: email,
-        subscription_session: subscription_session,
+        support_session: support_session,
         host: request.host_with_port
       ).edit.deliver_later
 
@@ -81,15 +81,15 @@ class SupportController < ApplicationController
     @body_id = 'support-edit'
     @title   = 'Update your Support' # I18n.t('views.support.new.heading')
 
-    @subscription_session = SubscriptionSession.find_by token: params[:token]
+    @support_session = SupportSession.find_by token: params[:token]
 
-    if @subscription_session.nil? || @subscription_session.expired?
+    if @support_session.nil? || @support_session.expired?
       flash[:error] = 'That link has expired. Please try again.'
       redirect_to [:support]
       return
     else
       @customer = Stripe::Customer.retrieve(
-        id:     @subscription_session.stripe_customer_id,
+        id:     @support_session.stripe_customer_id,
         expand: ['default_source'] # for future credit card updates
       )
       @subscription = @customer.subscriptions.data.first
@@ -113,7 +113,7 @@ class SupportController < ApplicationController
     subscription = Stripe::Subscription.retrieve(params[:subscription_id])
 
     if subscription&.delete
-      SubscriptionSession.find_by(token: params[:token]).destroy
+      SupportSession.find_by(token: params[:token]).destroy
       flash[:notice] = 'Your subscription has been canceled.'
     else
       flash[:error] = 'There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:support@crimethinc.com) so we can help you.'
