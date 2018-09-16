@@ -65,20 +65,22 @@
     input[type=email] {
       padding: 10px;
       display: block;
-      font-size: 20px;
+      font-size: 120%;
       width: 100%;
     }
 
     input[type=submit] {
-      display: block;
-      width: 100%;
       border: 0;
+      width: 100%;
+      display: block;
       padding: 10px;
       background: #0193FF;
       color: white;
-      font-size: 20px;
+      font-size: 120%;
       margin-top: 15px;
       cursor: pointer;
+
+      &:hover { background: #0075cc }
     }
   }
 }
@@ -127,12 +129,16 @@
       color: #fff;
       background: #0193FF;
       margin-top: 40px;
+
+      &:hover { background: #0075cc }
     }
 
     input[disabled] {
       color: #ccc;
       background: #eee;
       cursor: not-allowed;
+
+      &:hover { background: #eee }
     }
 
     p.start-date {
@@ -151,6 +157,8 @@
     input[type=submit] {
       color: #fff;
       background: #ff0000;
+
+      &:hover { background: #cc0000 }
     }
   }
 
