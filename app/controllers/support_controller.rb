@@ -103,7 +103,7 @@ class SupportController < ApplicationController
     if subscription&.save
       flash[:notice] = 'Your subscription amount has been updated!'
     else
-      flash[:error] = 'There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:support@crimethinc.com) so we can help you.'
+      flash[:error] = 'There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     end
 
     redirect_to [:support_edit, token: params[:token]]
@@ -116,7 +116,7 @@ class SupportController < ApplicationController
       SupportSession.find_by(token: params[:token]).destroy
       flash[:notice] = 'Your subscription has been canceled.'
     else
-      flash[:error] = 'There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:support@crimethinc.com) so we can help you.'
+      flash[:error] = 'There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
     end
 
     redirect_to [:support]
