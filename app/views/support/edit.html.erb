@@ -5,9 +5,7 @@
 </header>
 
 <div class="subscription-update">
-  <%= form_tag [:support_update_subscription, subscription_id: @subscription.id] do %>
-    <%= hidden_field_tag :token, params[:token] %>
-
+  <%= form_tag [:support_update_subscription, token: params[:token], subscription_id: @subscription.id] do %>
     <div class='row'>
       <div class='column column-half'>
         <p>Drag the slider to change your subscription amount:</p>
@@ -42,8 +40,7 @@
 <div class="subscription-cancel">
   <p>If you want to cancel your subscription, click the big red button! </p>
 
-  <%= form_tag [:support_cancel_subscription, subscription_id: @subscription.id] do %>
-    <%= hidden_field_tag :token, params[:token] %>
+  <%= form_tag [:support_cancel_subscription, token: params[:token], subscription_id: @subscription.id] do %>
     <%= submit_tag "Cancel Subscription", data: { confirm: "Are you sure you want to completely cancel your subscription?" } %>
   <% end %>
 </div>
