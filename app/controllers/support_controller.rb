@@ -4,7 +4,7 @@ class SupportController < ApplicationController
   def new
     @html_id = 'page'
     @body_id = 'support'
-    @title   = I18n.t('views.support.new.heading')
+    @title   = t('views.support.new.heading')
   end
 
   def create
@@ -14,7 +14,7 @@ class SupportController < ApplicationController
 
     if params[:monthly] == 'true'
       if customer_with_subscription(email)
-        flash[:error] = "We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!"
+        flash[:error] = t('views.support.create.repeat_subscriber_error')
         redirect_to [:support]
         return
       else
@@ -45,7 +45,7 @@ class SupportController < ApplicationController
   def thanks
     @html_id = 'page'
     @body_id = 'support'
-    @title   = I18n.t('views.support.thanks.heading')
+    @title   = t('views.support.thanks.heading')
   end
 
   def create_session
@@ -53,7 +53,7 @@ class SupportController < ApplicationController
     customer = customer_with_subscription(email)
 
     if customer.nil?
-      flash[:error] = 'We can’t find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
+      flash[:error] = t('views.support.create_session.no_existing_customer_error')
     else
       support_session = SupportSession.create!(
         stripe_customer_id: customer.id,
@@ -67,10 +67,11 @@ class SupportController < ApplicationController
         host: request.host_with_port
       ).edit_subscription.deliver_later
 
-      flash[:notice] = "We sent an email to #{email} with a link to make changes to your subscription."
+      flash[:notice] = t('views.support.create_session.success_notice', email: email).html_safe
     end
   rescue ActiveRecord::RecordInvalid
-    flash[:error] = "You already submitted a request. Look for an email from _info@crimethinc.com_. If you've lost your super secret link, wait an hour and try again."
+    # SupportSession already exists for that stripe_customer_id
+    flash[:error] = t('views.support.create_session.repeat_customer_error')
     redirect_to [:support]
   else
     redirect_to [:support]
@@ -79,12 +80,12 @@ class SupportController < ApplicationController
   def edit
     @html_id = 'page'
     @body_id = 'support-edit'
-    @title   = 'Update your Support' # I18n.t('views.support.new.heading')
+    @title   = t('views.support.edit.heading')
 
     @support_session = SupportSession.find_by token: params[:token]
 
     if @support_session.nil? || @support_session.expired?
-      flash[:error] = 'That link has expired. Please try again.'
+      flash[:error] = t('views.support.edit.expired_link_error')
       redirect_to [:support]
       return
     else
@@ -101,9 +102,9 @@ class SupportController < ApplicationController
     subscription.quantity = params[:amount].to_i
 
     if subscription&.save
-      flash[:notice] = 'Your subscription amount has been updated!'
+      flash[:notice] = t('views.support.update_subscription.notice')
     else
-      flash[:error] = 'There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
+      flash[:error] = t('views.support.update_subscription.error')
     end
 
     redirect_to [:support_edit, token: params[:token]]
@@ -114,9 +115,9 @@ class SupportController < ApplicationController
 
     if subscription&.delete
       SupportSession.find_by(token: params[:token]).destroy
-      flash[:notice] = 'Your subscription has been canceled.'
+      flash[:notice] = t('views.support.cancel_subscription.notice')
     else
-      flash[:error] = 'There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.'
+      flash[:error] = t('views.support.cancel_subscription.error')
     end
 
     redirect_to [:support]

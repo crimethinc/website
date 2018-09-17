@@ -249,6 +249,26 @@ en:
         description_one_time: One-Time Support
         button_text: Next →
 
+      create:
+        repeat_subscriber_error: We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!
+
+      create_session:
+        no_existing_customer_error: We can't find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+        success_notice: We sent an email to %{email} with a link to make changes to your subscription.
+        repeat_customer_error: You already submitted a request! Look for an email from _info@crimethinc.com_. If you never got the email or you've lost your super secret link, wait an hour and try again.
+
+      edit:
+        heading: Your Subscription
+        expired_link_error: That link has expired. Please try again.
+
+      update_subscription:
+        notice: Your subscription amount has been updated!
+        error: There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+
+      cancel_subscription:
+        notice: Your subscription has been canceled.
+        error: There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+
       thanks:
         heading: Thanks for your help!
         description:
