@@ -1,8 +1,14 @@
 CrimethInc. Support
-===========================================================
+==========================================================================
 
-Click this link to edit your support:
+Click this link to edit your subscription:
 
 <%= support_edit_url(protocol: 'https', host: @host, token: @support_session.token) %>
 
-All power to you.
+That link will expire in one hour. If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link from here:
+
+<%= support_url(protocol: 'https', host: @host) %>
+
+All the best,
+
+CrimethInc.
