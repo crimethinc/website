@@ -1,4 +1,6 @@
 class SupportMailer < ApplicationMailer
+  default from: 'CrimethInc. Support <info@crimethinc.com>'
+
   def edit_subscription
     @email = params[:email]
     @support_session = params[:support_session]
