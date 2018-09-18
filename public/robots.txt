@@ -3,3 +3,4 @@ Sitemap: https://crimethinc.com/sitemap.xml.gz
 User-agent: *
 Disallow: /admin*
 Disallow: */page/*
+Disallow: /support/*
