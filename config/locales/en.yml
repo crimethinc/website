@@ -293,6 +293,14 @@ en:
 
           You’ll receive an email confirmation soon.
 
+      mailers:
+        edit_subscription:
+          subject: Support - Request for Super Secret Link
+          header: Your Super Secret Support Link has arrived!
+          link_description: Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe.
+          repeat_request: If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link.
+          more_help: You can also reply to this email if need more assistance.
+
   helpers:
     page_entries_info:
       entry:

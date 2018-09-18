@@ -1,14 +1,12 @@
-CrimethInc. Support
+<%= t('views.support.mailers.edit_subscription.header') %>
 ==========================================================================
-
-Click this link to edit your subscription:
 
 <%= support_edit_url(protocol: 'https', host: @host, token: @support_session.token) %>
 
-That link will expire in one hour. If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link from here:
+<%= t('views.support.mailers.edit_subscription.link_description') %>
+
+<%= t('views.support.mailers.edit_subscription.repeat_request') %>
 
 <%= support_url(protocol: 'https', host: @host) %>
 
-All the best,
-
-CrimethInc.
+<%= t('views.support.mailers.edit_subscription.more_help') %>
