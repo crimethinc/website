@@ -44,12 +44,12 @@
     <%= render_markdown t 'views.support.new.description' %>
 
     <div class="support-request">
-      <p><strong>Existing Monthly Contributors</strong></p>
-      <p>Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.</p>
+      <p><strong><%= t('views.support.new.support_request.header') %></strong></p>
+      <p><%= t('views.support.new.support_request.description') %></p>
       <%= form_tag [:support, :request] do %>
-        <%= label_tag :email, "Email Address", class: "sr-only" %>
-        <%= email_field_tag :email, nil, placeholder: "you@email.com" %>
-        <%= submit_tag "Send Super Secret Link" %>
+        <%= label_tag :email, t('views.support.new.support_request.email_label'), class: "sr-only" %>
+        <%= email_field_tag :email, nil, placeholder: t('views.support.new.support_request.email_placeholder') %>
+        <%= submit_tag t('views.support.new.support_request.button_text') %>
       <% end %>
     </div>
   </div>

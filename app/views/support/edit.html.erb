@@ -1,14 +1,14 @@
 <%= render "notifications" %>
 
 <header>
-  <h1>Your Subscription</h1>
+  <h1><%= t('views.support.edit.heading') %></h1>
 </header>
 
 <div class="subscription-update">
   <%= form_tag [:support_update_subscription, token: params[:token], subscription_id: @subscription.id] do %>
     <div class='row'>
       <div class='column column-half'>
-        <p>Drag the slider to change your subscription amount:</p>
+        <%= label_tag :amount_slider, t('views.support.edit.update.amount_slider_label') %>
 
         <!-- Check the mapping hash in support.js to make sense of this -->
         <%= range_field_tag 'amount_slider',
@@ -20,31 +20,31 @@
 
       <div class='column column-half'>
         <div class='amount'>
-          <%= label_tag :amount, t('views.support.new.amount_label') %>
+          <%= label_tag :amount, t('views.support.edit.update.amount_label') %>
           <span class="dollar-sign">$</span>
           <%= number_field_tag :amount, @subscription.quantity, min: 1, max: 1000, step: 1, tabindex: '-1' %>
         </div>
         <p class="start-date">
-          Subscribed since <%= Time.at(@subscription.created).strftime("%F") %>
+          <%= t('views.support.edit.update.subscribed_since', date: Time.at(@subscription.created).strftime("%F")) %>
         </p>
       </div>
     </div>
 
-    <%= submit_tag "Update Subscription",
-                   data:     { confirm: "Are you sure you want to update your subscription amount?" },
+    <%= submit_tag t('views.support.edit.update.button_text'),
+                   data:     { confirm: t('views.support.edit.update.button_confirm') },
                    class:    "js-button-update",
                    disabled: true %>
   <% end %>
 </div>
 
 <div class="subscription-cancel">
-  <p>If you want to cancel your subscription, click the big red button! </p>
+  <p><%= t('views.support.edit.cancel.header') %></p>
 
   <%= form_tag [:support_cancel_subscription, token: params[:token], subscription_id: @subscription.id] do %>
-    <%= submit_tag "Cancel Subscription", data: { confirm: "Are you sure you want to completely cancel your subscription?" } %>
+    <%= submit_tag t('views.support.edit.cancel.button_text'), data: { confirm: t('views.support.edit.cancel.button_confirm') } %>
   <% end %>
 </div>
 
 <p class="expires_at">
-  This page will expire in <%= time_until_expiration @support_session %>.
+  <%= t('views.support.edit.expires_at', minutes: minutes_until_expiration(@support_session)) %>
 </p>

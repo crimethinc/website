@@ -248,6 +248,12 @@ en:
         description_monthly: Monthly Subscription
         description_one_time: One-Time Support
         button_text: Next →
+        support_request:
+          header: Existing Monthly Subscribers
+          description: Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.
+          email_label: Email Address
+          email_placeholder: you@email.com
+          button_text: Send Super Secret Link
 
       create:
         repeat_subscriber_error: We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!
@@ -260,6 +266,17 @@ en:
       edit:
         heading: Your Subscription
         expired_link_error: That link has expired. Please try again.
+        expires_at: This page will expire in about %{minutes} minutes.
+        update:
+          amount_label: Monthly Support
+          amount_slider_label: Drag the slider to change your subscription amount
+          button_text: Update Subscription
+          button_confirm: Are you sure you want to update your subscription amount?
+          subscribed_since: Subscribed since %{date}
+        cancel:
+          header: If you want to cancel your subscription, click the big red button!
+          button_text: Cancel Subscription
+          button_confirm: Are you sure you want to completely cancel your subscription?
 
       update_subscription:
         notice: Your subscription amount has been updated!
@@ -273,7 +290,6 @@ en:
         heading: Thanks for your help!
         description:
           We welcome your [feedback](mailto:info@crimethinc.com) about our efforts and your [participation](mailto:info@crimethinc.com) in them.
-
 
           You’ll receive an email confirmation soon.
 
