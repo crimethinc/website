@@ -111,7 +111,7 @@ Rails.application.routes.draw do
   post 'support/cancel/:token/:subscription_id', to: 'support#cancel_subscription', as: :support_cancel_subscription
   post 'support/update/:token/:subscription_id', to: 'support#update_subscription', as: :support_update_subscription
 
-  post 'support/stripe_payment_succeeded_webhook', to: 'support#stripe_payment_succeeded_webhook'
+  post 'support/stripe_subscription_payment_succeeded_webhook', to: 'support#stripe_subscription_payment_succeeded_webhook'
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
