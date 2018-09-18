@@ -295,7 +295,7 @@ en:
 
       mailers:
         edit_subscription:
-          subject: CrimethInc. Support - Request for Super Secret Link
+          subject: Request for Super Secret Support Link
           header: Your Super Secret Support Link has arrived!
           link_description: Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe.
           repeat_request: If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link.
