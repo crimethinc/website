@@ -260,7 +260,7 @@ en:
 
       create_session:
         no_existing_customer_error: We can't find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.
-        success_notice: We sent an email to %{email} with a link to make changes to your subscription.
+        success_notice: We sent an email to _%{email}_ with a link where you can make changes to your subscription.
         repeat_customer_error: You already submitted a request! Look for an email from _info@crimethinc.com_. If you never got the email or you've lost your super secret link, wait an hour and try again.
 
       edit:
