@@ -1,0 +1,10 @@
+<p>Home</p>
+<p><%= Date.today.to_s(:long) %></p>
+<p>Recent Articles</p>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to "#{article.title}#{': ' + article.subtitle if article.subtitle.present?}", txt_article_path(article) %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,7 @@
+<p><a href='/txt'>Home</a></p>
+<p><%= @article.title%></p>
+<% if @article.subtitle.present? %>
+  <p><%= @article.subtitle %></p>
+<% end %>
+<p><%= @article.published_at.to_date.to_s(:long) %></p>
+<%= render_text_only @article %>
