@@ -237,14 +237,17 @@ en:
         description:
           _Use the slider to adjust your donation. No amount is too big to be needed or too small to be helpful! If you can, sign up to donate on a monthly basis, so we can count on you to sustain us for the long haul._
 
+
           CrimethInc. is an all-volunteer project with no outside sources of funding. We offer everything we do for free or at break-even prices while maintaining some of the highest quality standards in our field. We publish constantly, circulating material in [over 30 languages](/tce) on [all seven continents](/2008/01/06/now-serving-seven-continents). We’ve kept this up for a quarter of a century.
 
+
           We do all this on a shoestring budget—but despite our ingenuity, some expenses are unavoidable. We depend on your assistance to cover those. With more resources, we could expand to utilize more formats and free up time to publish even more frequently.
+
 
           As always, however, the very best way to support what we are doing is to _do it yourself._
         radio_label_monthly: Monthly
         radio_label_one_time: One-time
-        amount_label: Monthly Support
+        amount_label: Support Amount
         description_monthly: Monthly Subscription
         description_one_time: One-Time Support
         button_text: Next →

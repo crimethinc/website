@@ -46,6 +46,7 @@
     <div class="support-request">
       <p><strong><%= t('views.support.new.support_request.header') %></strong></p>
       <p><%= t('views.support.new.support_request.description') %></p>
+
       <%= form_tag [:support, :request] do %>
         <%= label_tag :email, t('views.support.new.support_request.email_label'), class: "sr-only" %>
         <%= email_field_tag :email, nil, placeholder: t('views.support.new.support_request.email_placeholder') %>
