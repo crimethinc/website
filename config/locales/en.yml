@@ -273,8 +273,8 @@ en:
           amount_slider_label: Drag the slider to change your subscription amount.
           button_text: Update Subscription
           button_confirm: Are you sure you want to update your subscription amount?
-          start_date: Subscribed Since
-          next_date: Next Charge
+          start_date: Subscribed since
+          next_date: Next charge
         cancel:
           header: If you want to cancel your subscription, click the big red button!
           button_text: Cancel Subscription
