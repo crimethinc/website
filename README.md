@@ -31,15 +31,15 @@ cd website
 CrimethInc. website uses the [Scripts to Rule Them All](https://githubengineering.com/scripts-to-rule-them-all) pattern.
 See also: https://github.com/github/scripts-to-rule-them-all
 
-`/script` is a collection of scripts for development on an OS X / macOS computer.
+`/script` is a collection of scripts for development on an macOS computer.
 Development setup on a Windows or Linux computer may vary.
 
-If any of these scripts fail for you, , [file an issue](https://github.com/crimethinc/website/issues)
+If any of these scripts fail for you, [file an issue](https://github.com/crimethinc/website/issues)
 with as much detail about your setup and any errors you got from the script, and we’ll try to fix whatever’s happening.
 
 ## Development Scripts
 
-The rest of these instructions assume that you've [strapped your computer](https://macos-strap.herokuapp.com) already. If you haven't, you'll need to install somethings manually. (But really, you're better off using [Strap](https://osx-strap.herokuapp.com).)
+The rest of these instructions assume that you’ve [strapped your computer](https://macos-strap.herokuapp.com) already. If you haven’t, you’ll need to install somethings manually. (But really, you’re better off using [Strap](https://osx-strap.herokuapp.com).)
 
 - [Homebrew](https://brew.sh)
 - Homebrew taps and extensions
@@ -67,16 +67,16 @@ Then run the `bootstrap` script.
 
 ### Setup script
 
-After you've `bootstrap`ed, you'll need to `setup`.
+After you’ve `bootstrap`ed, you’ll need to `setup`.
 The `setup` setups the Rails environment (creates, migrates and seeds databases, then clears logs and tmp).
 
 ```
 ./script/setup
 ```
 
-#### Can't Load Gem from /vendor Error
+#### Can’t Load Gem from /vendor Error
 
-If you get an error that some gem can't be loaded, like `bcrypt_ext`, follow these steps to rebuild this repo's dev setup. From the root directory of this repo:
+If you get an error that some gem can’t be loaded, like `bcrypt_ext`, follow these steps to rebuild this repo’s dev setup. From the root directory of this repo:
 
 ```
 rm -rf vendor/gems
@@ -93,7 +93,7 @@ The `server` script starts the Rails server on port `3000`
 ./script/server
 ```
 
-#### Site's running but no articles?
+#### Site’s running but no articles?
 
 Stop the server, [seed the database](#database-seed-script), then run the server script again.
 
@@ -102,12 +102,12 @@ Stop the server, [seed the database](#database-seed-script), then run the server
 ./script/server
 ```
 
-#### Can't Find Posgresql Error
+#### Can’t Find Posgresql Error
 
-If you get an error when starting the server that Rails can't connect to the Posgresql server, you can fix it with these steps. (Assuming, you're on a Mac and use [Homebrew](https://brew.sh)).
+If you get an error when starting the server that Rails can’t connect to the Posgresql server, you can fix it with these steps. (Assuming, you’re on a Mac and use [Homebrew](https://brew.sh)).
 
 **WARNING:** These step will DELETE all Posgresql databases / software and re-install Posgresql from scratch.
-If you have data in your local Posgresql database that you can't re-create after deleting it, you'll want to run some backups first. (That's an exercise for the reader.)
+If you have data in your local Posgresql database that you can’t re-create after deleting it, you’ll want to run some backups first. (That’s an exercise for the reader.)
 
 ```
 brew services stop postgresql
@@ -143,7 +143,7 @@ To run a process which runs tests on file change
 
 ### Console script
 
-If you need to use the app's console (in any environment), use the `console` script.
+If you need to use the app’s console (in any environment), use the `console` script.
 
 ```
 ./script/console
@@ -178,15 +178,15 @@ Drop the database, rebuild it, and fill it with seed data.
 ```
 
 ## Development Setup with Docker
-If you're doing development on Linux, you may find it more comfortable to run the website in a container. You can do this easily using Docker.
+If you’re doing development on Linux, you may find it more comfortable to run the website in a container. You can do this easily using Docker.
 
-First, you'll need to have a Postgres instance running. If you're just doing development and have no need to persist database changes to disk, you can run one like and print out its IP address like this:
+First, you’ll need to have a Postgres instance running. If you’re just doing development and have no need to persist database changes to disk, you can run one like and print out its IP address like this:
 ```
 docker run -d --name postgres postgres:latest
 docker inspect -f '{{ .NetworkSettings.IPAddress }}' postgres
 ```
 
-We're going to assume that the Postgres container's IP address was `172.17.0.2` for the next few steps; if that's not the case, be sure to replace it as appropriate.
+We’re going to assume that the Postgres container’s IP address was `172.17.0.2` for the next few steps; if that’s not the case, be sure to replace it as appropriate.
 
 Next, you need to build the Docker image, create, and then seed the database:
 ```
@@ -200,9 +200,9 @@ Now, you can run the app:
 docker run -it --rm -e DATABASE_URL=postgresql://postgres@172.17.0.2/crimethinc -p 3000:3000 crimethinc
 ```
 
-You'll now be able to access the app at [http://localhost:3000/](http://localhost:3000/).
+You’ll now be able to access the app at [http://localhost:3000](http://localhost:3000).
 
-When you're done, you can stop and remove your Postgres container:
+When you’re done, you can stop and remove your Postgres container:
 ```
 docker stop postgres
 docker rm postgres
@@ -233,7 +233,7 @@ If you find bugs, have feature requests or questions, please
 
 ## Code of Conduct
 
-Everyone interacting in the CrimethInc.'s project's codebases, issue trackers, chat rooms, and mailing lists is expected to follow the
+Everyone interacting in all CrimethInc. codebases, issue trackers, chat rooms, and mailing lists is expected to follow the
 [CrimethInc. development code of conduct](https://github.com/crimethinc/website/blob/master/CODE_OF_CONDUCT.md).
 
 
