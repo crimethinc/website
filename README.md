@@ -28,23 +28,33 @@ cd website
 
 ## Scripts to Rule Them All
 
-CrimethInc. website uses the [Scripts to Rule Them All](https://githubengineering.com/scripts-to-rule-them-all) pattern.
+The CrimethInc. website uses the [Scripts to Rule Them All](https://githubengineering.com/scripts-to-rule-them-all) pattern.
 See also: https://github.com/github/scripts-to-rule-them-all
 
 `/script` is a collection of scripts for development on an macOS computer.
-Development setup on a Windows or Linux computer may vary.
+Development setup on a Windows or Linux computer will likely vary.
 
 If any of these scripts fail for you, [file an issue](https://github.com/crimethinc/website/issues)
 with as much detail about your setup and any errors you got from the script, and we’ll try to fix whatever’s happening.
 
 ## Development Scripts
 
-The rest of these instructions assume that you’ve [strapped your computer](https://macos-strap.herokuapp.com) already. If you haven’t, you’ll need to install somethings manually. (But really, you’re better off using [Strap](https://osx-strap.herokuapp.com).)
+The rest of these instructions assume that you’ve [strapped your computer](https://macos-strap.herokuapp.com) already. If you haven’t, you’ll need to install somethings manually. (But really, you’re better off using [Strap](https://macos-strap.herokuapp.com).)
 
 - [Homebrew](https://brew.sh)
 - Homebrew taps and extensions
 - Xcode command line tools
 - Postgres launchctl (for `setup` script)
+
+- [bootstrap](#bootstrap-script)
+- [setup](#setup-script)
+- [server](#server-script)
+- [update](#update-script)
+- [test](#test-script)
+- [test_server](#test-server-script)
+- [console](#console-script)
+- [cibuild](#ci-build-script)
+- [seed](#database-seed-script)
 
 ### Bootstrap script
 
@@ -233,7 +243,7 @@ If you find bugs, have feature requests or questions, please
 
 ## Code of Conduct
 
-Everyone interacting in all CrimethInc. codebases, issue trackers, chat rooms, and mailing lists is expected to follow the
+Everyone interacting in all of CrimethInc. codebases, issue trackers, chat rooms, and mailing lists is expected to follow the
 [CrimethInc. development code of conduct](https://github.com/crimethinc/website/blob/master/CODE_OF_CONDUCT.md).
 
 
@@ -245,6 +255,6 @@ Your heart is as free as the air you breathe. <br>
 The ground you stand on is liberated territory.
 
 In legal text, **CrimethInc. website** is dedicated to the public domain
-using Creative Commons -- CC0 1.0 Universal.
+using Creative Commons — CC0 1.0 Universal.
 
-[https://creativecommons.org/publicdomain/zero/1.0](https://creativecommons.org/publicdomain/zero/1.0 "Creative Commons &mdash; CC0 1.0 Universal")
+[https://creativecommons.org/publicdomain/zero/1.0](https://creativecommons.org/publicdomain/zero/1.0 "Creative Commons — CC0 1.0 Universal")
