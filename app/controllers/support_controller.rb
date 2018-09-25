@@ -13,11 +13,7 @@ class SupportController < ApplicationController
       return redirect_to [:support]
     end
 
-    if params[:monthly] == 'true'
-      create_stripe_subscription
-    else
-      create_stripe_charge
-    end
+    params[:monthly] == 'true' ? create_stripe_subscription : create_stripe_charge
   rescue Stripe::CardError => e
     flash[:error] = e.message
     render :new
