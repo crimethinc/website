@@ -98,8 +98,7 @@ rm -rf .bundle
 
 ### Server script
 
-The `server` script starts the Rails server on port `3000`
-(using **Foreman** which uses the `Procile` which uses **Puma**.)
+The `server` script starts the Rails server on port `3000` (which uses **Puma**).
 
 ```
 ./script/server
