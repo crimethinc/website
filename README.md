@@ -46,6 +46,8 @@ The rest of these instructions assume that you’ve [strapped your computer](htt
 - Xcode command line tools
 - Postgres launchctl (for `setup` script)
 
+***
+
 - [bootstrap](#bootstrap-script)
 - [setup](#setup-script)
 - [server](#server-script)
