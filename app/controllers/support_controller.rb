@@ -31,28 +31,24 @@ class SupportController < ApplicationController
     email = params[:email]
     customer = customer_with_subscription(email)
 
-    if customer.nil?
+    if customer.blank?
       flash[:error] = t('views.support.create_session.no_existing_customer_error')
-    else
-      support_session = SupportSession.create!(
-        stripe_customer_id: customer.id,
-        token:              SupportSession.generate_token,
-        expires_at:         1.hour.from_now
-      )
-
-      SupportMailer.with(
-        email: email,
-        support_session: support_session,
-        host: request.host_with_port
-      ).edit_subscription.deliver_later
-
-      flash[:notice] = t('views.support.create_session.success_notice', email: email).html_safe
+      return redirect_to [:support]
     end
-  rescue ActiveRecord::RecordInvalid
-    # SupportSession already exists for that stripe_customer_id
-    flash[:error] = t('views.support.create_session.repeat_customer_error')
-    redirect_to [:support]
-  else
+
+    support_session = SupportSession.new(
+      stripe_customer_id: customer.id, token: SupportSession.generate_token, expires_at: 1.hour.from_now
+    )
+
+    if support_session.save
+      mailer_options = { email: email, support_session: support_session, host: request.host_with_port }
+      SupportMailer.with(mailer_options).edit_subscription.deliver_later
+
+      flash[:notice] = t('views.support.create_session.success_notice', email: email)
+    else
+      flash[:error] = t('views.support.create_session.repeat_customer_error')
+    end
+
     redirect_to [:support]
   end
 
