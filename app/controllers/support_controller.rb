@@ -150,19 +150,18 @@ class SupportController < ApplicationController
   end
 
   def create_stripe_charge
-    customer = stripe_customer
-
     Stripe::Charge.create(
       currency:      'usd',
-      customer:      customer.id,
+      customer:      stripe_customer.id,
       amount:        stripe_options[:amount].to_i * 100, # charges need to be in cents
       description:   t('views.support.new.description_one_time'),
-      receipt_email: customer.email
+      receipt_email: stripe_customer.email
     )
   end
 
   def stripe_customer
     stripe_options_without_amount = stripe_options.reject { |k, _v| k == :amount }
-    Stripe::Customer.create stripe_options_without_amount
+
+    @stripe_customer ||= Stripe::Customer.create stripe_options_without_amount
   end
 end
