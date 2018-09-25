@@ -8,32 +8,12 @@ class SupportController < ApplicationController
   end
 
   def create
-    amount = params[:amount]
-    email  = params[:js_stripe_email]
-    source = params[:js_stripe_token]
-
-    if params[:monthly] == 'true'
-      if customer_with_subscription(email)
-        flash[:error] = t('views.support.create.repeat_subscriber_error')
-        return redirect_to [:support]
-      else
-        customer = create_customer(email: email, source: source)
-        Stripe::Subscription.create(
-          customer: customer.id,
-          plan:     STRIPE_MONTHLY_PLAN_ID,
-          quantity: amount
-        )
-      end
-    else
-      customer = create_customer(email: email, source: source)
-      Stripe::Charge.create(
-        currency:      'usd',
-        customer:      customer.id,
-        amount:        amount.to_i * 100, # charges need to be in cents
-        description:   t('views.support.new.description_one_time'),
-        receipt_email: customer.email
-      )
+    if params[:monthly] == 'true' && customer_with_subscription(stripe_options[:email])
+      flash[:error] = t('views.support.create.repeat_subscriber_error')
+      return redirect_to [:support]
     end
+
+    params[:monthly] == 'true' ? create_stripe_subscription : create_stripe_charge
   rescue Stripe::CardError => e
     flash[:error] = e.message
     render :new
@@ -143,6 +123,14 @@ class SupportController < ApplicationController
 
   private
 
+  def stripe_options
+    {
+      amount: params[:amount],
+      email:  params[:js_stripe_email],
+      source: params[:js_stripe_token]
+    }
+  end
+
   def customer_with_subscription(email)
     customers = Stripe::Customer.list(email: email).data
 
@@ -153,7 +141,28 @@ class SupportController < ApplicationController
     customers.empty? ? nil : customers.first
   end
 
-  def create_customer(email:, source:)
-    Stripe::Customer.create(email: email, source: source)
+  def create_stripe_subscription
+    Stripe::Subscription.create(
+      customer: stripe_customer.id,
+      plan:     STRIPE_MONTHLY_PLAN_ID,
+      quantity: stripe_options[:amount]
+    )
+  end
+
+  def create_stripe_charge
+    customer = stripe_customer
+
+    Stripe::Charge.create(
+      currency:      'usd',
+      customer:      customer.id,
+      amount:        stripe_options[:amount].to_i * 100, # charges need to be in cents
+      description:   t('views.support.new.description_one_time'),
+      receipt_email: customer.email
+    )
+  end
+
+  def stripe_customer
+    stripe_options_without_amount = stripe_options.reject { |k, _v| k == :amount }
+    Stripe::Customer.create stripe_options_without_amount
   end
 end
