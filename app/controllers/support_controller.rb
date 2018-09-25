@@ -42,7 +42,7 @@ class SupportController < ApplicationController
 
     if support_session.save
       mailer_options = { email: email, support_session: support_session, host: request.host_with_port }
-      SupportMailer.with(mailer_options).edit_subscription.deliver_later
+      SupportMailer.with(mailer_options).edit_subscription.deliver_now
 
       flash[:notice] = t('views.support.create_session.success_notice', email: email)
     else
