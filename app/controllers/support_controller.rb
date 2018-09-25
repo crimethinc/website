@@ -15,8 +15,7 @@ class SupportController < ApplicationController
     if params[:monthly] == 'true'
       if customer_with_subscription(email)
         flash[:error] = t('views.support.create.repeat_subscriber_error')
-        redirect_to [:support]
-        return
+        return redirect_to [:support]
       else
         customer = create_customer(email: email, source: source)
         Stripe::Subscription.create(
