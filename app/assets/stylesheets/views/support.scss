@@ -96,6 +96,7 @@
     cursor: pointer;
     padding: 15px;
     font-size: 120%;
+    right: 0;
   }
 
   p {
@@ -108,19 +109,18 @@
     margin: 40px 0 60px 0;
 
     .amount {
-      width: 60%;
-      display: table;
-      margin: 0 auto;
-      padding: 10px;
       background: #eee;
+      font-size: 180%;
+      padding: 40px 20px;
+      text-align: center;
 
       label {
         margin-bottom: 10px;
       }
 
       input[type=number] {
+        margin: 0;
         padding: 0 5px;
-        margin-left: 5px;
         background: none;
       }
     }
@@ -141,11 +141,31 @@
       &:hover { background: #eee }
     }
 
-    p.start-date {
-      margin: 10px 0 0 0;
+    .stat {
       text-align: center;
-      font-size: 80%;
-      color: #ccc;
+      margin: 15px;
+
+      h3 {
+        font-size: 120%;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 250%;
+      }
+    }
+
+    .stat:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    .row {
+      margin: 40px 0;
+    }
+
+    .row:last-of-type {
+      margin-top: 0;
     }
   }
 
@@ -166,10 +186,6 @@
     text-align: center;
     margin: 10px 0 30px 0;
     font-size: 90%;
-  }
-
-  .column + .column {
-    margin-right: 0;
   }
 }
 
@@ -202,13 +218,14 @@
   margin: 0;
 }
 
-label[for=amount] {
+label[for=amount], label[for=amount_slider]  {
   display: block;
   font-size: 110%;
+  color: #444;
 }
 
 .dollar-sign, #amount {
-  font-size: 5rem;
+  font-size: 7.5rem;
   font-weight: 600;
 }
 
@@ -231,7 +248,7 @@ label[for=amount] {
 #amount_slider {
   -webkit-appearance: none;
   width: 100%;
-  margin: 3rem 0 5rem 0;
+  margin: 3rem 0 0 0;
 }
 
 #amount_slider:focus {

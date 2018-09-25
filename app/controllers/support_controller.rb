@@ -94,6 +94,7 @@ class SupportController < ApplicationController
         expand: ['default_source'] # for future credit card updates
       )
       @subscription = @customer.subscriptions.data.first
+      @next_invoice = Stripe::Invoice.upcoming(customer: @customer.id)
     end
   end
 

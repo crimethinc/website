@@ -5,17 +5,20 @@
 </header>
 
 <div class="subscription-update">
+  <p><%= t('views.support.edit.description') %></p>
+
   <%= form_tag [:support_update_subscription, token: params[:token], subscription_id: @subscription.id] do %>
     <div class='row'>
       <div class='column column-half'>
-        <%= label_tag :amount_slider, t('views.support.edit.update.amount_slider_label') %>
+        <div class='stat'>
+          <h3><%= t('views.support.edit.update.start_date') %></h3>
+          <p><%= Time.at(@subscription.created).strftime("%F") %></p>
+        </div>
 
-        <!-- Check the mapping hash in support.js to make sense of this -->
-        <%= range_field_tag 'amount_slider',
-                            @subscription.quantity,
-                            in: 1..67,
-                            step: 1,
-                            data: { starting_amount: @subscription.quantity } %>
+        <div class='stat'>
+          <h3><%= t('views.support.edit.update.next_date') %></h3>
+          <p><%= Time.at(@next_invoice.date).strftime("%F") %></p>
+        </div>
       </div>
 
       <div class='column column-half'>
@@ -24,25 +27,41 @@
           <span class="dollar-sign">$</span>
           <%= number_field_tag :amount, @subscription.quantity, min: 1, max: 1000, step: 1, tabindex: '-1' %>
         </div>
-        <p class="start-date">
-          <%= t('views.support.edit.update.subscribed_since', date: Time.at(@subscription.created).strftime("%F")) %>
-        </p>
       </div>
     </div>
 
-    <%= submit_tag t('views.support.edit.update.button_text'),
-                   data:     { confirm: t('views.support.edit.update.button_confirm') },
-                   class:    "js-button-update",
-                   disabled: true %>
+    <%= label_tag :amount_slider, t('views.support.edit.update.amount_slider_label') %>
+
+    <!-- Check the mapping hash in support.js to make sense of this -->
+    <%= range_field_tag 'amount_slider',
+                        @subscription.quantity,
+                        in: 1..67,
+                        step: 1,
+                        data: { starting_amount: @subscription.quantity } %>
+
+    <div class='row'>
+      <div class='column column-half'></div>
+      <div class='column column-half'>
+        <%= submit_tag t('views.support.edit.update.button_text'),
+                       data:     { confirm: t('views.support.edit.update.button_confirm') },
+                       class:    "js-button-update",
+                       disabled: true %>
+      </div>
+    </div>
   <% end %>
 </div>
 
 <div class="subscription-cancel">
   <p><%= t('views.support.edit.cancel.header') %></p>
 
-  <%= form_tag [:support_cancel_subscription, token: params[:token], subscription_id: @subscription.id] do %>
-    <%= submit_tag t('views.support.edit.cancel.button_text'), data: { confirm: t('views.support.edit.cancel.button_confirm') } %>
-  <% end %>
+  <div class='row'>
+    <div class='column column-half'></div>
+    <div class='column column-half'>
+      <%= form_tag [:support_cancel_subscription, token: params[:token], subscription_id: @subscription.id] do %>
+        <%= submit_tag t('views.support.edit.cancel.button_text'), data: { confirm: t('views.support.edit.cancel.button_confirm') } %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <p class="expires_at">

@@ -265,14 +265,16 @@ en:
 
       edit:
         heading: Your Subscription
+        description: Thank you so much for your on-going support. It’s contributions like yours that allow us to do more.
         expired_link_error: That link has expired. Please try again.
         expires_at: This page will expire in about %{minutes} minutes.
         update:
           amount_label: Monthly Support
-          amount_slider_label: Drag the slider to change your subscription amount
+          amount_slider_label: Drag the slider to change your subscription amount.
           button_text: Update Subscription
           button_confirm: Are you sure you want to update your subscription amount?
-          subscribed_since: Subscribed since %{date}
+          start_date: Subscribed Since
+          next_date: Next Charge
         cancel:
           header: If you want to cancel your subscription, click the big red button!
           button_text: Cancel Subscription
