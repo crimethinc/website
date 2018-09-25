@@ -58,6 +58,8 @@ The rest of these instructions assume that you’ve [strapped your computer](htt
 - [cibuild](#ci-build-script)
 - [seed](#database-seed-script)
 
+***
+
 ### Bootstrap script
 
 The `bootstrap` script is the first time development environment configuration for this app.
