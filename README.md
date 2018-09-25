@@ -93,6 +93,10 @@ The `server` script starts the Rails server on port `3000`
 ./script/server
 ```
 
+#### Site's running but no articles?
+
+Stop the server, [seed the DB](#seeding), then run the server script again.
+
 #### Can't Find Posgresql Error
 
 If you get an error when starting the server that Rails can't connect to the Posgresql server, you can fix it with these steps. (Assuming, you're on a Mac and use [Homebrew](https://brew.sh)).
@@ -160,7 +164,7 @@ Setup environment for CI to run tests. This is primarily designed to run on the 
 ./script/cibuild
 ```
 
-### Database seed script
+### <a name="seeding"></a> Database seed script
 
 Drop the database, rebuild it, and fill it with seed data.
 
