@@ -27,13 +27,11 @@ class Poster < ApplicationRecord
 
   def image_description
     I18n.t('tools.poster.image_description', title: title)
-    "Photo of ‘#{title}’ front side"
   end
   alias front_image_description image_description
 
   def back_image_description
     I18n.t('tools.poster.image_description', title: title)
-    "Photo of ‘#{title}’ back side"
   end
 
   def front_color_image
