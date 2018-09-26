@@ -16,6 +16,7 @@ class AboutController < ApplicationController
     @order_id = params[:ordernum]
   end
 
+  # TODO: make this view localizable
   def arts_submission_guidelines
     @html_id = 'page'
     @body_id = 'library'
