@@ -134,7 +134,7 @@ class SupportController < ApplicationController
       customers.delete(customer) if customer.subscriptions.data.empty?
     end
 
-    customers.empty? ? nil : customers.first
+    customers.first # returns nil if empty
   end
 
   def create_stripe_subscription
