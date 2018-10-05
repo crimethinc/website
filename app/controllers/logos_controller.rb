@@ -2,8 +2,8 @@ class LogosController < ApplicationController
   def index
     @html_id  = 'page'
     @body_id  = 'products'
-    @type     = 'logos'
-    @title    = 'logos'
+    @type     = 'Logos'
+    @title    = 'Logos'
     @products = Logo.published.page(params[:page]).per(100)
   end
 
@@ -16,6 +16,6 @@ class LogosController < ApplicationController
     @type    = 'logos'
 
     @product = @product.first
-    @title   = "logos : #{@product.name}"
+    @title   = "Logos : #{@product.name}"
   end
 end

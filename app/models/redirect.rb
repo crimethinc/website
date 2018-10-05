@@ -67,7 +67,7 @@ class Redirect < ApplicationRecord
   end
 
   def noncircular_redirect
-    errors.add(:target_path, 'redirects to itself') if source_path == target_path
+    errors.add(:target_path, I18n.t('activerecord.errors.models.article.target_path.uniqueness')) if source_path == target_path
   end
 
   def article_short_path_unique
@@ -75,6 +75,6 @@ class Redirect < ApplicationRecord
 
     return if aa.blank?
 
-    errors.add(:source_path, 'is already taken by article short path') unless aa.first.id == article_id
+    errors.add(:source_path, I18n.t('activerecord.errors.models.article.source_path.uniqueness')) unless aa.first.id == article_id
   end
 end

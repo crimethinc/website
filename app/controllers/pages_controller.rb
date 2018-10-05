@@ -7,11 +7,7 @@ class PagesController < ApplicationController
     @editable = @page
 
     # no layout
-    if @page.hide_layout?
-      render html: @page.content.html_safe, layout: false
-    else
-      render 'pages/show'
-    end
+    render html: @page.content.html_safe, layout: false if @page.hide_layout?
   end
 
   private
