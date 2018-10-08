@@ -18,6 +18,7 @@ module Crimethinc
     config.middleware.use Rack::DomainRedirect
     config.middleware.use Rack::ApexRedirect
     config.middleware.use Rack::BlogRedirect
+    config.middleware.use Rack::PicTwitterRedirect
     config.middleware.use Rack::Redirect
     config.middleware.use Rack::Attack
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater

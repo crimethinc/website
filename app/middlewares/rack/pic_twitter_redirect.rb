@@ -1,5 +1,5 @@
 module Rack
-  class BlogRedirect
+  class PicTwitterRedirect
     def initialize(app)
       @app = app
     end
