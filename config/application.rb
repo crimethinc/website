@@ -4,6 +4,7 @@ require 'rails/all'
 require_relative '../app/middlewares/rack/domain_redirect'
 require_relative '../app/middlewares/rack/apex_redirect'
 require_relative '../app/middlewares/rack/blog_redirect'
+require_relative '../app/middlewares/rack/pic_twitter_redirect'
 require_relative '../app/middlewares/rack/redirect'
 
 # Require the gems listed in Gemfile, including any gems
