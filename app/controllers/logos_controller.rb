@@ -3,7 +3,7 @@ class LogosController < ApplicationController
     @html_id  = 'page'
     @body_id  = 'products'
     @products = Logo.published.page(params[:page]).per(100)
-    @title    = title_for prefix: :logos, keys: [:index]
+    @title    = title_for namespace: :logos
   end
 
   def show
@@ -13,6 +13,6 @@ class LogosController < ApplicationController
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'logos'
-    @title   = title_for prefix: :zines, keys: [:index], suffix: @product.name
+    @title   = title_for namespace: :zines, suffix: @product.name
   end
 end

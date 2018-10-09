@@ -3,7 +3,7 @@ class ZinesController < ApplicationController
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'zines'
-    @title   = title_for prefix: :zines, keys: [:index]
+    @title   = title_for namespace: :zines
 
     @featured_products = Book.zine.order(published_at: :desc).published.where.not(buy_url: nil)
     @products          = Book.zine.order(published_at: :desc).published.where(buy_url: nil)
@@ -20,7 +20,7 @@ class ZinesController < ApplicationController
     @body_id = 'products'
     @type    = 'zines'
 
-    @title    = title_for prefix: :zines, keys: [:index], suffix: @book.name
+    @title    = title_for namespace: :zines, suffix: @book.name
     @editable = @book
 
     # Use the Book view

@@ -3,6 +3,6 @@ class ToolsController < ApplicationController
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'tools'
-    @title   = title_for prefix: :tools, keys: [:index]
+    @title   = title_for namespace: :tools
   end
 end

@@ -7,14 +7,14 @@ class CategoriesController < ApplicationController
   def show
     @html_id = 'page'
     @body_id = 'category'
-    @title   = title_for prefix: :categories, keys: [:index], suffix: @category.name
+    @title   = title_for namespace: :categories, suffix: @category.name
   end
 
   def index
     @html_id    = 'page'
     @body_id    = 'categories'
     @categories = Category.all
-    @title      = title_for prefix: :categories, keys: [:index]
+    @title      = title_for namespace: :categories
   end
 
   def feed
