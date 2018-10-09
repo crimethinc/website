@@ -296,7 +296,11 @@ en:
         description:
           We welcome your [feedback](mailto:info@crimethinc.com) about our efforts and your [participation](mailto:info@crimethinc.com) in them.
 
+
           You’ll receive an email confirmation soon.
+
+
+          If you signed up for a monthly subscription, you can update or cancel your subscription at anytime by submitting your email address in the form at the bottom of the [support](/support) page.
 
       mailers:
         edit_subscription:
