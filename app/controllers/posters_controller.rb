@@ -3,7 +3,7 @@ class PostersController < ApplicationController
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'posters'
-    @title   = title_for namespace: :posters
+    @title   = title_for :posters
 
     @featured_products = Poster.poster.order(published_at: :desc).published.map { |x| x if x.buy_url.present? }.compact
     @products          = Poster.poster.order(published_at: :desc).published.map { |x| x if x.buy_url.blank? }.compact
@@ -19,7 +19,7 @@ class PostersController < ApplicationController
     @body_id = 'products'
     @type    = 'posters'
 
-    @title    = title_for namespace: :posters, suffix: @product.name
+    @title    = title_for :posters, @product.name
     @editable = @product
 
     render 'products/show'

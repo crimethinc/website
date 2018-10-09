@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'books'
-    @title   = title_for namespace: :books
+    @title   = title_for :books
 
     @bullet_books = []
     %w[no-wall-they-can-build
@@ -29,25 +29,25 @@ class BooksController < ApplicationController
     @body_id  = 'products'
     @type     = 'books'
     @editable = @book
-    @title    = title_for namespace: :books, keys: [:index, @book.slug.tr('-', '_')]
+    @title    = title_for :books, @book.slug.tr('-', '_')
   end
 
   def extras
     @html_id = 'page'
     @body_id = 'products'
-    @title   = title_for namespace: :books, keys: [:index, @book.slug.tr('-', '_'), :extras]
+    @title   = title_for :books, @book.slug.tr('-', '_'), :extras
   end
 
   def lit_kit
     @html_id = 'page'
     @body_id = 'products'
-    @title   = title_for namespace: :books, keys: [:index, :lit_kit]
+    @title   = title_for :books, :lit_kit
   end
 
   def into_libraries
     @html_id = 'page'
     @body_id = 'products'
-    @title   = title_for namespace: :books, keys: [:index, :into_libraries]
+    @title   = title_for :books, :into_libraries
   end
 
   private

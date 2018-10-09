@@ -103,9 +103,19 @@ class ApplicationController < ActionController::Base
   end
   helper_method :page_title
 
-  def title_for namespace:, keys: [:index], suffix: []
-    pieces = [keys].flatten.map { |key| I18n.t("page_titles.#{namespace}.#{key}") }
-    pieces << suffix
+  def title_for *page_keys
+    pieces = []
+
+    if page_keys.first.is_a? Symbol
+      namespace = page_keys.shift
+      page_keys.unshift :index
+    end
+
+    page_keys.each do |key|
+      piece = I18n.t("page_titles.#{namespace}.#{key}")
+      pieces << (piece.match?(/translation missing/) ? key : piece)
+    end
+
     pieces.flatten.join ' : '
   end
 

@@ -2,7 +2,7 @@ class VideosController < ApplicationController
   def index
     @html_id = 'page'
     @body_id = 'watch'
-    @title   = title_for namespace: :videos
+    @title   = title_for :videos
     @videos  = Video.published.page(params[:page]).per(20)
   end
 
@@ -15,6 +15,6 @@ class VideosController < ApplicationController
 
     @html_id  = 'page'
     @body_id  = 'video'
-    @title    = title_for namespace: :videos, suffix: @video.title
+    @title    = title_for :videos, @video.title
   end
 end
