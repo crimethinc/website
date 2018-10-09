@@ -118,6 +118,18 @@ en:
       - Esperanza no espera.
 
   page_titles:
+    videos:
+      index: Vidoes
+    tools:
+      index: Tools
+    posters:
+      index: Posters
+    zines:
+      index: Zines
+    stickers:
+      index: Stickers
+    logos:
+      index: Logos
     podcasts:
       index: Podcasts
       transcript: Transcript

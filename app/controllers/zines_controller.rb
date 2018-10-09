@@ -3,7 +3,7 @@ class ZinesController < ApplicationController
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'zines'
-    @title   = 'Zines'
+    @title   = title_for prefix: :zines, keys: [:index]
 
     @featured_products = Book.zine.order(published_at: :desc).published.where.not(buy_url: nil)
     @products          = Book.zine.order(published_at: :desc).published.where(buy_url: nil)
@@ -13,15 +13,14 @@ class ZinesController < ApplicationController
 
   def show
     # Treat a Zine as a Book
-    @book = Book.zine.where(slug: params[:slug])
+    @book = Book.zine.where(slug: params[:slug]).first
     return redirect_to [:zines] if @book.blank?
 
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'zines'
 
-    @book     = @book.first
-    @title    = "Zines : #{@book.name}"
+    @title    = title_for prefix: :zines, keys: [:index], suffix: @book.name
     @editable = @book
 
     # Use the Book view
