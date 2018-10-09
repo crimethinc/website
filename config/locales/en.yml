@@ -118,6 +118,9 @@ en:
       - Esperanza no espera.
 
   page_titles:
+    podcasts:
+      index: Podcasts
+      transcript: Transcript
     categories:
       index: Categories
     books:

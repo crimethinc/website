@@ -103,7 +103,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :page_title
 
-  def title_for prefix:, keys:, suffix: []
+  def title_for prefix:, keys: [], suffix: []
     piecies = [keys].flatten.map { |key| I18n.t("page_titles.#{prefix}.#{key}") }
     piecies << suffix
     piecies.flatten.join ' : '
