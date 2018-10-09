@@ -118,6 +118,11 @@ en:
       - Esperanza no espera.
 
   page_titles:
+    about:
+      library: Online Reading Library
+      store: Store
+      post_order_success: Post-Order Glow
+      submission_guidelines: Submission Guidelines
     search:
       index: Search
       results: Results for
