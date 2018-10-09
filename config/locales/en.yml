@@ -117,6 +117,21 @@ en:
       - A spark for every powder keg.
       - Esperanza no espera.
 
+  page_titles:
+    books:
+      index: Books
+      extras: Extras
+      lit_kit: Literature Distribution Kit
+      into_libraries: CrimethInc. Into Libraries
+      contradictionary: Contradictionary
+      days_of_war_nights_of_love: Days of War Nights of Love
+      expect_resistance: Expect Resistance
+      from_democracy_to_freedom: From Democracy to Freedom
+      no_wall_they_can_build: No Wall They Can Build
+      off_the_map: Off the Map
+      recipes_for_disaster: Recipes for Disaster
+      work: Work
+
   form:
     search_form_placeholder: Search Archives…
 
