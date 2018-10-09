@@ -118,6 +118,10 @@ en:
       - Esperanza no espera.
 
   page_titles:
+    search:
+      index: Search
+      results: Results for
+      advanced: Advanced
     videos:
       index: Videos
     tools:
