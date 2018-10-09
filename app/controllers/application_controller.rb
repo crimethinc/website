@@ -103,6 +103,22 @@ class ApplicationController < ActionController::Base
   end
   helper_method :page_title
 
+  def title_for *page_keys
+    pieces = []
+
+    if page_keys.first.is_a? Symbol
+      namespace = page_keys.shift
+      page_keys.unshift :index
+    end
+
+    page_keys.each do |key|
+      piece = I18n.t("page_titles.#{namespace}.#{key}")
+      pieces << (piece.match?(/translation missing/) ? key : piece)
+    end
+
+    pieces.flatten.join ' : '
+  end
+
   def prepend_admin_if_needed
     if controller_path.match(%r{\Aadmin\/.*\z}).present?
       " #{t('admin.title_prepend')} : "
