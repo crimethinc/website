@@ -195,21 +195,6 @@ en:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
-    auth:
-      signin_failed:             Invalid email or password.
-      signout:                   Signed out!
-
-      signup_heading:            Sign Up
-      signin_heading:            Sign In
-      forgot_password_heading:   Forget Your Password?
-      reset_password_heading:    Reset Your Password
-
-      username_label:            🦁 Username
-      username_note:             Not an email address.
-      password_label:            🔑 Password
-      password_note:             Passwords must be **at least %{password_minimum_length} characters** long.
-      signin_button_text:        Sign In
-
     products:
       buy_now_button_text:             Buy Now
       zine_download_read_button_text:  Download PDF for Reading
@@ -285,81 +270,3 @@ en:
           other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
         display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
-
-
-  admin:
-    title_prepend: "Admin"
-    articles:
-      index_title: "Articles"
-      new_title: "New Articles"
-      show_title: "Articles : %{title}"
-      edit_title: "Editing article %{id} %{title} : %{subtitle}"
-    books:
-      index_title: "Books"
-      new_title: "New Books"
-      show_title: "Books : %{title}"
-      edit_title: "Editing book %{id} %{title} : %{subtitle}"
-    zines:
-      index_title: "Zines"
-      new_title: "New Zines"
-      show_title: "Zines : %{title}"
-      edit_title: "Editing zine %{id} %{title} : %{subtitle}"
-    posters:
-      index_title: "Posters"
-      new_title: "New Posters"
-      show_title: "Posters : %{title}"
-      edit_title: "Editing poster %{id} %{title} : %{subtitle}"
-    stickers:
-      index_title: "Stickers"
-      new_title: "New Stickers"
-      show_title: "Stickers : %{title}"
-      edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
-    podcasts:
-      index_title: "Podcasts"
-      new_title: "New Podcasts"
-      show_title: "Podcasts : %{title}"
-      edit_title: "Editing podcast %{id} %{title} : %{subtitle}"
-    videos:
-      index_title: "Videos"
-      new_title: "New Videos"
-      show_title: "Videos : %{title}"
-      edit_title: "Editing video %{id} %{title} : %{subtitle}"
-    categories:
-      index_title: "Categories"
-      new_title: "New Categories"
-      show_title: "Categories : %{name}"
-      edit_title: "Editing category %{id} : %{name}"
-    episodes:
-      index_title: "Episodes"
-      new_title: "New Episodes"
-      show_title: "Episodes : %{title}"
-      edit_title: "Editing episode %{id} %{title}"
-    users:
-      index_title: "Users"
-      new_title: "New Users"
-      show_title: "Users : %{name}"
-      edit_title: "Editing user %{id} : %{username}"
-    pages:
-      index_title: "Pages"
-      new_title: "New Pages"
-      show_title: "Pages : %{title}"
-      edit_title: "Editing page %{id} %{title} : %{subtitle}"
-    links:
-      index_title: "Links"
-      new_title: "New Links"
-      show_title: "Links : %{name}"
-      edit_title: "Editing link %{id} : %{name}"
-    redirects:
-      index_title: "Redirects"
-      new_title: "New Redirects"
-      show_title: "Redirects : %{source_path}"
-      edit_title: "Editing redirect %{id} %{source_path}"
-
-  activerecord:
-    errors:
-      models:
-        article:
-          source_path:
-            uniqueness: is already taken by article short path
-          target_path:
-            uniqueness: redirects to itself
