@@ -1,2 +1,0 @@
-module PostersHelper
-end

@@ -1,9 +1,10 @@
 class PostersController < ApplicationController
   def index
-    @html_id  = 'page'
-    @body_id  = 'products'
-    @type     = 'posters'
-    @title    = 'Posters'
+    @html_id = 'page'
+    @body_id = 'products'
+    @type    = 'posters'
+    @title   = title_for :posters
+
     @featured_products = Poster.poster.order(published_at: :desc).published.map { |x| x if x.buy_url.present? }.compact
     @products          = Poster.poster.order(published_at: :desc).published.map { |x| x if x.buy_url.blank? }.compact
 
@@ -11,15 +12,14 @@ class PostersController < ApplicationController
   end
 
   def show
-    @product = Poster.poster.where(slug: params[:slug])
+    @product = Poster.poster.where(slug: params[:slug]).first
     return redirect_to [:posters] if @product.blank?
 
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'posters'
 
-    @product  = @product.first
-    @title    = "Posters : #{@product.name}"
+    @title    = title_for :posters, @product.name
     @editable = @product
 
     render 'products/show'

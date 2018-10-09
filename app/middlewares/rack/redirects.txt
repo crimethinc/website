@@ -162,6 +162,7 @@
 /apologia /2012/02/21/black-bloc-confidential
 /archives /library
 /archives.html /rolling-thunder/archive
+/arts/submission-guidelines /submission-guidelines
 /atc1blog /2013/09/09/after-the-crest-the-life-cycle-of-movements
 /atc2blog /2013/09/10/after-the-crest-pt-ii-the-oakland-commune
 /atc3blog /2013/09/11/after-the-crest-pt-iii-barcelona-at-low-tide

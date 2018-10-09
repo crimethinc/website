@@ -3,6 +3,6 @@ class ToolsController < ApplicationController
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'tools'
-    @title   = 'Tools'
+    @title   = title_for :tools
   end
 end

@@ -23,6 +23,7 @@ chdir APP_ROOT do
 
   puts "==> Starting postgresql"
   system! 'brew services start postgresql'
+
   puts '==> Preparing database'
   system! 'bin/rails db:create'
   system! 'bin/rails db:migrate'

@@ -8,21 +8,21 @@ class PodcastController < ApplicationController
     @body_id        = 'podcast'
     @latest_episode = @episodes.shift
     @editable       = @latest_episode.podcast
-    @title          = @podcast.name
+    @title          = title_for :podcasts
   end
 
   def show
     @html_id  = 'page'
     @body_id  = 'podcast'
     @editable = @episode
-    @title    = @episode.name
+    @title    = title_for :podcasts, @episode.name
   end
 
   def transcript
     @html_id  = 'page'
     @body_id  = 'podcast'
     @editable = @episode
-    @title    = "#{@episode.name} — Transcript"
+    @title    = title_for :podcasts, @episode.name, :transcript
 
     render 'podcast/show'
   end

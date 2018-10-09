@@ -44,11 +44,7 @@ class ArticlesController < ApplicationController
     # save view stats
     Article.increment_counter(:page_views, @article.id) unless signed_in?
 
-    if @article.hide_layout?
-      render html: @article.content.html_safe, layout: false
-    else
-      render '/articles/show'
-    end
+    render html: @article.content.html_safe, layout: false if @article.hide_layout?
   end
 
   private
