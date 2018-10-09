@@ -7,12 +7,10 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.where(slug: params[:slug])
+    @video = Video.where(slug: params[:slug]).first
     return redirect_to [:videos] if @video.blank?
 
-    @video    = @video.first
     @editable = @video
-
     @html_id  = 'page'
     @body_id  = 'video'
     @title    = title_for :videos, @video.title
