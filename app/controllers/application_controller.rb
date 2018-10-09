@@ -103,6 +103,12 @@ class ApplicationController < ActionController::Base
   end
   helper_method :page_title
 
+  def title_for prefix:, keys:, suffix: []
+    piecies = [keys].map { |key| I18n.t("page_titles.#{prefix}.#{key}") }
+    piecies << suffix
+    piecies.flatten.join ' : '
+  end
+
   def prepend_admin_if_needed
     if controller_path.match(%r{\Aadmin\/.*\z}).present?
       " #{t('admin.title_prepend')} : "

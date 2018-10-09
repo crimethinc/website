@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     @html_id = 'page'
     @body_id = 'products'
     @type    = 'books'
-    @title   = title_for [:index]
+    @title   = title_for prefix: :books, keys: [:index]
 
     @bullet_books = []
     %w[no-wall-they-can-build
@@ -29,32 +29,28 @@ class BooksController < ApplicationController
     @body_id  = 'products'
     @type     = 'books'
     @editable = @book
-    @title    = title_for [:index, @book.slug.tr('-', '_')]
+    @title    = title_for prefix: :books, keys: [:index, @book.slug.tr('-', '_')]
   end
 
   def extras
     @html_id = 'page'
     @body_id = 'products'
-    @title   = title_for [:index, @book.slug.tr('-', '_'), :extras]
+    @title   = title_for prefix: :books, keys: [:index, @book.slug.tr('-', '_'), :extras]
   end
 
   def lit_kit
     @html_id = 'page'
     @body_id = 'products'
-    @title   = title_for [:index, :lit_kit]
+    @title   = title_for prefix: :books, keys: [:index, :lit_kit]
   end
 
   def into_libraries
     @html_id = 'page'
     @body_id = 'products'
-    @title   = title_for [:index, :into_libraries]
+    @title   = title_for prefix: :books, keys: [:index, :into_libraries]
   end
 
   private
-
-  def title_for keys
-    keys.map { |key| I18n.t("page_titles.books.#{key}") }.join ' : '
-  end
 
   def set_book
     @book = Book.where(slug: params[:slug])

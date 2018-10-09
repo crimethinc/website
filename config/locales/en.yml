@@ -118,6 +118,8 @@ en:
       - Esperanza no espera.
 
   page_titles:
+    categories:
+      index: Categories
     books:
       index: Books
       extras: Extras

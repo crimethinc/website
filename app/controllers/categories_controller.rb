@@ -5,15 +5,16 @@ class CategoriesController < ApplicationController
   before_action :set_articles, only: [:show, :feed]
 
   def show
-    @html_id  = 'page'
-    @body_id  = 'category'
+    @html_id = 'page'
+    @body_id = 'category'
+    @title   = title_for prefix: :categories, keys: [:index], suffix: @category.name
   end
 
   def index
     @html_id    = 'page'
     @body_id    = 'categories'
-    @title      = 'Categories'
     @categories = Category.all
+    @title      = title_for prefix: :categories, keys: [:index]
   end
 
   def feed
