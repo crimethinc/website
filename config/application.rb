@@ -4,6 +4,7 @@ require 'rails/all'
 require_relative '../app/middlewares/rack/domain_redirect'
 require_relative '../app/middlewares/rack/apex_redirect'
 require_relative '../app/middlewares/rack/blog_redirect'
+require_relative '../app/middlewares/rack/pic_twitter_redirect'
 require_relative '../app/middlewares/rack/redirect'
 
 # Require the gems listed in Gemfile, including any gems
@@ -18,6 +19,7 @@ module Crimethinc
     config.middleware.use Rack::DomainRedirect
     config.middleware.use Rack::ApexRedirect
     config.middleware.use Rack::BlogRedirect
+    config.middleware.use Rack::PicTwitterRedirect
     config.middleware.use Rack::Redirect
     config.middleware.use Rack::Attack
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater

@@ -29,7 +29,7 @@ RSpec.describe AboutController, type: :controller do
 
       expect(assigns[:html_id]).to eq('page')
       expect(assigns[:body_id]).to eq('store')
-      expect(assigns[:title]).to eq('Post-Order Glow')
+      expect(assigns[:title]).to eq('Store : Post-Order Glow')
       expect(assigns[:order_id]).to eq(ordernum)
     end
   end

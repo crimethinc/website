@@ -51,7 +51,8 @@ Rails.application.routes.draw do
   get 'articles/:id/collection_posts', to: 'collection_posts#index'
 
   # Static pages
-  get 'arts/submission-guidelines', to: 'about#arts_submission_guidelines'
+  get 'library',               to: 'about#library', as: :library
+  get 'submission-guidelines', to: 'about#submission_guidelines'
 
   # Categories
   get 'categories',                    to: 'categories#index', as: :categories
@@ -63,9 +64,6 @@ Rails.application.routes.draw do
   get 'tags/:slug/page(/1)',     to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
   get 'tags/:slug(/page/:page)', to: 'tags#show', as: :tag
   get 'tags/:slug/feed',         to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
-
-  # Pages (linked in header/nav)
-  get 'library', to: 'about#library', as: :library
 
   # Podcast
   get 'podcast/feed',             to: 'podcast#feed',       as: :podcast_feed, defaults: { format: 'rss' }
