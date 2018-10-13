@@ -41,11 +41,15 @@ gem 'dalli'
 gem 'rubocop', require: false
 gem 'rubocop-rspec'
 
+# stripe for support
+gem 'stripe'
+
 # dev and testing
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara'
   gem 'chromedriver-helper'
+  gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'nokogiri'

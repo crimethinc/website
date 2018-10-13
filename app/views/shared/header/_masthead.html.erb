@@ -1,7 +1,11 @@
 <header class="site-header" id="header">
-  <h1 class="header-logo"><%= link_to t("site_name"), root_path %></h1>
+  <h1 class="header-logo"><%= link_to t("site_name"), [:root] %></h1>
 
   <%= render "shared/header/nav" %>
 
-  <%= link_to t("site_name"), root_path, class: "bulb-and-bones-logo" %>
+  <% if Rails.env.production? %>
+    <%= link_to t("site_name"), root_path, class: "bulb-and-bones-logo" %>
+  <% else %>
+    <%= link_to t("header.support"), [:support], class: "button" %>
+  <% end %>
 </header>

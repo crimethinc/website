@@ -7,6 +7,7 @@
   animation: colorfader linear infinite;
   animation-duration: 270s;
   animation-iteration-count: infinite;
+  position: relative;
 
   @media screen and (min-width: $small-tablet) {
     display: flex;
@@ -24,6 +25,18 @@
       font-size: 2rem;
       position: absolute;
       right: 1rem;
+    }
+  }
+
+  .button {
+    background: $color-blue;
+
+    @media screen and (max-width: $small-tablet) {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 12px;
+      padding: .5em;
     }
   }
 }

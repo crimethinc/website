@@ -118,4 +118,3 @@ Rails/SkipsModelValidations:
     - 'app/controllers/admin/articles_controller.rb'
     - 'app/controllers/articles_controller.rb'
     - 'lib/tasks/scheduler.rake'
-

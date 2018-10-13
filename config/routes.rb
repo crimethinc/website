@@ -5,9 +5,6 @@ Rails.application.routes.draw do
   # Homepage
   root to: 'home#index'
 
-  # Donations
-  get 'donate', to: 'donate#index', as: :donate
-
   get 'page(/1)', to: redirect { |_, _| '/' }
   get 'page/:page', to: 'home#index'
 
@@ -100,6 +97,19 @@ Rails.application.routes.draw do
   get 'search',           to: 'search#index'
   get 'search/advanced',  to: 'search#advanced', as: :advanced_search
   post 'search/advanced', to: 'search#advanced_search', as: :advanced_searches
+
+  # Support
+  get  'support', to: 'support#new',    as: :support
+  post 'support', to: 'support#create', as: :support_create
+  get  'thanks',  to: 'support#thanks', as: :thanks
+
+  post 'support/create_session', to: 'support#create_session', as: :support_request
+  get  'support/edit/:token',    to: 'support#edit',           as: :support_edit
+
+  post 'support/cancel/:token/:subscription_id', to: 'support#cancel_subscription', as: :support_cancel_subscription
+  post 'support/update/:token/:subscription_id', to: 'support#update_subscription', as: :support_update_subscription
+
+  post 'support/stripe_subscription_payment_succeeded_webhook', to: 'support#stripe_subscription_payment_succeeded_webhook'
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'

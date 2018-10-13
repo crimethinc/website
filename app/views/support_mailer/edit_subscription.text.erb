@@ -1,0 +1,12 @@
+<%= t('views.support.mailers.edit_subscription.header') %>
+==========================================================================
+
+<%= support_edit_url(protocol: 'https', host: @host, token: @support_session.token) %>
+
+<%= t('views.support.mailers.edit_subscription.link_description') %>
+
+<%= t('views.support.mailers.edit_subscription.repeat_request') %>
+
+<%= support_url(protocol: 'https', host: @host) %>
+
+<%= t('views.support.mailers.edit_subscription.more_help') %>

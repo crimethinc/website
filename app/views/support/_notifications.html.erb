@@ -1,0 +1,13 @@
+<div class='support-notification'>
+  <% if flash[:error].present? %>
+    <div class='error'>
+      <%= render_markdown flash[:error] %>
+    </div>
+  <% end %>
+
+  <% if flash[:notice].present? %>
+    <div class='notice'>
+      <%= render_markdown flash[:notice] %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,349 @@
+#support {
+  .row {
+    margin-bottom: 2rem;
+  }
+
+  #js_stripe_form {
+    margin-bottom: 2rem;
+
+    .buttons {
+      .column {
+        margin: 0;
+      }
+    }
+
+    input[type=radio] {
+      display: none;
+    }
+
+    input[type=radio] + label {
+      background: white;
+      border: 1px solid lighten($color-gray-medium, 30%);
+      color: lighten($color-gray-medium, 30%);
+      padding: 1rem;
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    input[type=radio]:checked + label {
+      background: $color-green;
+      border: 1px solid $color-green;
+      color: $color-white;
+      font-weight: 400;
+    }
+
+    .actions {
+      text-align: right;
+      margin-top: 1rem;
+    }
+
+    .button {
+      background: $color-green;
+      font-size: 1.5rem;
+      font-weight: 200;
+      letter-spacing: .08em;
+      font-weight: 400;
+    }
+
+    .button:hover {
+      cursor: pointer;
+    }
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 1.25em;
+    margin-bottom: 1em;
+  }
+
+  .support-request {
+    margin-top: 50px;
+
+    input[type=email] {
+      padding: 10px;
+      display: block;
+      font-size: 120%;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    input[type=submit] {
+      border: 0;
+      width: 100%;
+      display: block;
+      padding: 10px;
+      background: #0193FF;
+      color: white;
+      font-size: 120%;
+      margin-top: 15px;
+      cursor: pointer;
+
+      &:hover { background: #0075cc }
+    }
+  }
+}
+
+#support-edit {
+  form {
+    padding: 0;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 120%;
+    right: 0;
+  }
+
+  p {
+    font-size: 110%;
+    margin-bottom: 20px;
+    line-height: 1.25;
+  }
+
+  .column:last-child {
+    margin-right: 0;
+  }
+
+  .subscription-update {
+    margin: 40px 0 60px 0;
+
+    .amount {
+      background: #eee;
+      font-size: 180%;
+      padding: 40px 20px;
+      text-align: center;
+
+      label {
+        margin-bottom: 10px;
+      }
+
+      input[type=number] {
+        margin: 0;
+        padding: 0 5px;
+        background: none;
+      }
+    }
+
+    input[type=submit] {
+      color: #fff;
+      background: #0193FF;
+      margin-top: 40px;
+
+      &:hover { background: #0075cc }
+    }
+
+    input[disabled] {
+      color: #ccc;
+      background: #eee;
+      cursor: not-allowed;
+
+      &:hover { background: #eee }
+    }
+
+    .stat {
+      text-align: center;
+      margin: 15px;
+
+      h3 {
+        font-size: 120%;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 250%;
+      }
+    }
+
+    .stat:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    .row {
+      margin: 40px 0;
+    }
+
+    .row:last-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .subscription-cancel {
+    padding: 15px;
+    background: #f7f7f7;
+    margin: 120px 0 40px 0;
+
+    input[type=submit] {
+      color: #fff;
+      background: #ff0000;
+
+      &:hover { background: #cc0000 }
+    }
+  }
+
+  p.expires-at {
+    text-align: center;
+    margin: 10px 0 30px 0;
+    font-size: 90%;
+  }
+}
+
+.support-notification {
+  p {
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #f4f4f4;
+    text-align: center;
+  }
+
+  .notice {
+    p { border: 8px solid #0293FF }
+  }
+
+  .error {
+    p { border: 8px solid red }
+  }
+}
+
+#amount {
+  border: 0;
+  pointer-events: none;
+}
+
+// removes little up and down arrows in number field
+#amount::-webkit-inner-spin-button,
+#amount::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label[for=amount], label[for=amount_slider]  {
+  display: block;
+  font-size: 110%;
+  color: #444;
+}
+
+.dollar-sign, #amount {
+  font-size: 7.5rem;
+  font-weight: 600;
+}
+
+.dollar-sign {
+  color: #000;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Generated using: http://danielstern.ca/range.css
+#amount_slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+#amount_slider:focus {
+  outline: none;
+}
+
+#amount_slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+  background: #ffffff;
+  border-radius: 25px;
+  border: 2px solid #cccccc;
+}
+
+#amount_slider::-webkit-slider-thumb {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
+  border: 0px solid #ffffff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+
+#amount_slider:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+
+#amount_slider::-moz-range-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+  background: #ffffff;
+  border-radius: 25px;
+  border: 2px solid #cccccc;
+}
+
+#amount_slider::-moz-range-thumb {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
+  border: 0px solid #ffffff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#amount_slider::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+#amount_slider::-ms-fill-lower {
+  background: #b3b3b3;
+  border: 2px solid #cccccc;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+}
+
+#amount_slider::-ms-fill-upper {
+  background: #ffffff;
+  border: 2px solid #cccccc;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+}
+
+#amount_slider::-ms-thumb {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(13, 13, 13, 0.5);
+  border: 0px solid #ffffff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 12px;
+}
+
+#amount_slider:focus::-ms-fill-lower {
+  background: #ffffff;
+}
+
+#amount_slider:focus::-ms-fill-upper {
+  background: #ffffff;
+}

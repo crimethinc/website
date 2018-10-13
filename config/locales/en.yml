@@ -17,6 +17,7 @@ en:
     video: Video
     store: Store
     subscribe: Subscribe
+    support: Support Us
 
     read: Read
     watch: Watch
@@ -87,7 +88,11 @@ en:
       first_time_link: Start here. →
       heading: About CrimethInc.
       # description is wrapped in quotes because it has a colon in its text value
-      description: "CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid. <br> <br> We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._"
+      description:
+        "CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+
+
+        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._"
       more_link: More about CrimethInc. →
       donate_button_text: Support this site
 
@@ -252,6 +257,85 @@ en:
 
       literature_distro_kit_heading: Literature Distro Kit
       literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
+
+    support:
+      new:
+        heading: Invest Your Money in CrimethInc.—!
+        description:
+          _Use the slider to adjust your donation. No amount is too big to be needed or too small to be helpful! If you can, sign up to donate on a monthly basis, so we can count on you to sustain us for the long haul._
+
+
+          CrimethInc. is an all-volunteer project with no outside sources of funding. We offer everything we do for free or at break-even prices while maintaining some of the highest quality standards in our field. We publish constantly, circulating material in [over 30 languages](/tce) on [all seven continents](/2008/01/06/now-serving-seven-continents). We’ve kept this up for a quarter of a century.
+
+
+          We do all this on a shoestring budget—but despite our ingenuity, some expenses are unavoidable. We depend on your assistance to cover those. With more resources, we could expand to utilize more formats and free up time to publish even more frequently.
+
+
+          As always, of course, the very best way to support what we are doing is to _do it yourself._
+        radio_label_monthly: Monthly
+        radio_label_one_time: One-time
+        amount_label: Support Amount
+        description_monthly: Monthly Subscription
+        description_one_time: One-Time Support
+        button_text: Next →
+        support_request:
+          header: Existing Monthly Subscribers
+          description: Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.
+          email_label: Email Address
+          email_placeholder: you@email.com
+          button_text: Send Super Secret Link
+
+      create:
+        repeat_subscriber_error: We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!
+
+      create_session:
+        no_existing_customer_error: We can't find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+        success_notice: We sent an email to _%{email}_ with a link where you can make changes to your subscription.
+        repeat_customer_error: You already submitted a request! Look for an email from _info@crimethinc.com_. If you never got the email or you've lost your super secret link, wait an hour and try again.
+
+      edit:
+        heading: Your Subscription
+        description: Thank you so much for your on-going support. It’s contributions like yours that allow us to do more.
+        expired_link_error: That link has expired. Please try again.
+        expires_at: This page will expire in about %{minutes} minutes.
+        update:
+          amount_label: Monthly Support
+          amount_slider_label: Drag the slider to change your subscription amount.
+          button_text: Update Subscription
+          button_confirm: Are you sure you want to update your subscription amount?
+          start_date: Subscribed since
+          next_date: Next charge
+        cancel:
+          header: If you want to cancel your subscription, click the big red button!
+          button_text: Cancel Subscription
+          button_confirm: Are you sure you want to completely cancel your subscription?
+
+      update_subscription:
+        notice: Your subscription amount has been updated!
+        error: There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+
+      cancel_subscription:
+        notice: Your subscription has been canceled.
+        error: There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+
+      thanks:
+        heading: Thanks for your help!
+        description:
+          We welcome your [feedback](mailto:info@crimethinc.com) about our efforts and your [participation](mailto:info@crimethinc.com) in them.
+
+
+          You’ll receive an email confirmation soon.
+
+
+          If you signed up for a monthly subscription, you can update or cancel your subscription at anytime by submitting your email address in the form at the bottom of the [support](/support) page.
+
+      mailers:
+        edit_subscription:
+          subject: Request for Super Secret Support Link
+          header: Your Super Secret Support Link has arrived!
+          link_description: Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe.
+          repeat_request: If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link.
+          more_help: You can also reply to this email if need more assistance.
 
   helpers:
     page_entries_info:
