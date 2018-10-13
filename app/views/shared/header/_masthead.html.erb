@@ -3,5 +3,9 @@
 
   <%= render "shared/header/nav" %>
 
-  <%= link_to t("header.support"), [:support], class: "button" %>
+  <% if Rails.env.production? %>
+    <%= link_to t("site_name"), root_path, class: "bulb-and-bones-logo" %>
+  <% else %>
+    <%= link_to t("header.support"), [:support], class: "button" %>
+  <% end %>
 </header>
