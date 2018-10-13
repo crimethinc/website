@@ -43,10 +43,6 @@ en:
         news: News
         technology: Technology
 
-      projects:
-        label: Projects
-        technology: Kickstarter campaign for books about Borders and Democracy
-
       books:
         label: Books
         contradictionary: Contradictionary
