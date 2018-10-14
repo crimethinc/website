@@ -295,7 +295,7 @@ en:
 
       edit:
         heading: Your Subscription
-        description: Thank you so much for your on-going support. It’s contributions like yours that allow us to do more.
+        description: Thank you so much for your ongoing support. We count on contributions like yours to do what we do.
         expired_link_error: That link has expired. Please try again.
         expires_at: This page will expire in about %{minutes} minutes.
         update:
@@ -327,7 +327,7 @@ en:
           You’ll receive an email confirmation soon.
 
 
-          If you signed up for a monthly subscription, you can update or cancel your subscription at anytime by submitting your email address in the form at the bottom of the [support](/support) page.
+          If you signed up for a monthly subscription, you can update or cancel your subscription at any time by submitting your email address in the form at the bottom of the [support](/support) page.
 
       mailers:
         edit_subscription:
