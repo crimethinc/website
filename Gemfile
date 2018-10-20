@@ -37,12 +37,17 @@ gem 'kaminari'
 # memcache
 gem 'dalli'
 
-# For codestyle guide and linting
+# codestyle guide and linting
 gem 'rubocop', require: false
 gem 'rubocop-rspec'
 
-# stripe for support
+# Stripe for /support
 gem 'stripe'
+
+# observability
+gem 'honeycomb-rails'
+gem 'lograge'
+gem 'logstash-event'
 
 # dev and testing
 group :development, :test do

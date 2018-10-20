@@ -1,6 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Format webserver logs in Logstash formatted JSON using Lograge
+  config.lograge.enabled   = true
+  config.lograge.formatter = Lograge::Formatters::Logstash.new
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
