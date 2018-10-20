@@ -4,7 +4,6 @@ module LinksHelper
       'CrimethInc. on Twitter'        => 'https://twitter.com/crimethinc',
       'CrimethincDotCom on Facebook'  => 'https://facebook.com/CrimethincDotCom',
       'CrimethincDotCom on Instagram' => 'https://instagram.com/CrimethincDotCom',
-      'CrimethInc. on Patreon'        => 'https://www.patreon.com/crimethinc',
       'CrimethInc.com RSS feed'       => 'https://crimethinc.com/feed',
       'CrimethInc.com on Github'      => 'https://github.com/crimethinc'
     }
