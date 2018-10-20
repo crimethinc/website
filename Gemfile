@@ -45,7 +45,6 @@ gem 'rubocop-rspec'
 gem 'stripe'
 
 # observability
-gem 'honeycomb-rails'
 gem 'lograge'
 gem 'logstash-event'
 
