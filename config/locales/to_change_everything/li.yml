@@ -14,9 +14,6 @@ lietuvos:
         toc: Turinys
         language: lietuvos
         share: Dalintis
-      bulk_get:
-        url: /tce/get/#order
-        text: Užsisakykite atspausdintą tekstą anglų kalba (platinimui)
       toc:
         introduction: įvadas
         self: Pradėk nuo savimonės

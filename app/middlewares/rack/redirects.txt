@@ -9110,3 +9110,4 @@
 http://thecloud.crimethinc.com/images/egypt/9b.gif /2011/02/02/egypt-today-tomorrow-the-world/#map
 http://thecloud.crimethinc.com/images/terrain/bannerb.jpg /2010/08/23/fighting-in-the-new-terrain
 http://thecloud.crimethinc.com/images/weare/weare2_b.jpg /2010/06/03/august-2010-we-are-everywhere
+/tce/get /zines/to-change-everything

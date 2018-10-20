@@ -14,9 +14,6 @@ english:
         toc: Table of Contents
         language: English
         share: Share
-      bulk_get:
-        url: /tce/get/#order
-        text: Order in Bulk
       toc:
         introduction: introduction
         self: start with self-determination
