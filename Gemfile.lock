@@ -189,6 +189,8 @@ GEM
     rack (2.0.5)
     rack-attack (5.4.1)
       rack (>= 1.0, < 3)
+    rack-contrib (2.1.0)
+      rack (~> 2.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rack-timeout (0.5.1)
@@ -365,6 +367,7 @@ DEPENDENCIES
   pg
   puma
   rack-attack
+  rack-contrib
   rack-timeout
   rails (~> 5.2.1)
   rails-controller-testing
@@ -394,4 +397,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.2
+   1.16.6

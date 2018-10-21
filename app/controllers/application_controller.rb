@@ -4,7 +4,7 @@ require 'json'
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :set_locale
+  before_action :subdomain_locale_override
   before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
@@ -50,8 +50,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :creating?
 
-  def set_locale
-    I18n.locale = I18n.default_locale
+  def subdomain_locale_override
+    locale = request.subdomain
+    if I18n.available_locales.include?(locale.to_sym)
+      I18n.locale = locale
+    end
   end
 
   def check_for_redirection

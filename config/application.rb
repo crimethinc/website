@@ -6,6 +6,7 @@ require_relative '../app/middlewares/rack/apex_redirect'
 require_relative '../app/middlewares/rack/blog_redirect'
 require_relative '../app/middlewares/rack/pic_twitter_redirect'
 require_relative '../app/middlewares/rack/redirect'
+require 'rack/contrib'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -22,6 +23,7 @@ module Crimethinc
     config.middleware.use Rack::PicTwitterRedirect
     config.middleware.use Rack::Redirect
     config.middleware.use Rack::Attack
+    config.middleware.use Rack::Locale
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     # allow nested diretories in locales
