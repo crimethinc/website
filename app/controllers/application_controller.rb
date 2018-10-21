@@ -57,9 +57,7 @@ class ApplicationController < ActionController::Base
     # Force the subdomain to match the locale.
     # Don't do this in development, because typically local development
     # environments don't support subdomains.
-    unless Rails.env.development?
-      return redirect_to subdomain: I18n.locale unless I18n.locale == request.subdomain.to_sym
-    end
+    return redirect_to subdomain: I18n.locale unless Rails.env.development? || I18n.locale == request.subdomain.to_sym
   end
 
   def check_for_redirection
