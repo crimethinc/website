@@ -52,9 +52,7 @@ class ApplicationController < ActionController::Base
 
   def subdomain_locale_override
     locale = request.subdomain
-    if I18n.available_locales.include?(locale.to_sym)
-      I18n.locale = locale
-    end
+    I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
   end
 
   def check_for_redirection
