@@ -4,14 +4,15 @@
 
   <div class="call-to-action">
     <a class="cte-video fancybox" href="#video-container">
-      <img src="https://cloudfront.crimethinc.com/assets/tce/images/video-play-icon-300.png" />
+      <%= tce_image_tag 'video-play-icon-300.png' %>
       <p><%=t('.video_cte')%></p>
     </a>
 
     <div class="cte-spacer"></div>
 
     <a class="cte-pdf" href="<%=t('.pdf_get_url')%>">
-      <img src="https://cloudfront.crimethinc.com/assets/tce/images/<%=t('.pdf_image').html_safe%>" />
+      <%= tce_image_tag t('.pdf_image') %>
+
       <p><%=t('.pdf_cte_html')%></p>
     </a>
   </div>
@@ -32,7 +33,7 @@
 
   <div class="spread" id="self">
     <div class="left">
-      <%= render 'image', locals: {name: t('.self.image_name'), alt_text: t('.self.image_alt')} %>
+      <%= render 'image', name: t('.self.image_name'), alt_text: t('.self.image_alt') %>
       <h2><%=t('.self.left_text_html')%></h2>
     </div>
 
@@ -45,7 +46,7 @@
 
   <div class="spread" id="answering">
     <div class="left">
-      <%= render 'image', locals: {name: t('.answering.image_name'), alt_text: t('.answering.image_alt')} %>
+      <%= render 'image', name: t('.answering.image_name'), alt_text: t('.answering.image_alt') %>
       <h2><%=t('.answering.left_text_html')%></h2>
     </div>
 
@@ -58,7 +59,7 @@
 
   <div class="spread" id="power">
     <div class="left">
-      <%= render 'image', locals: {name: t('.power.image_name'), alt_text: t('.power.image_alt')} %>
+      <%= render 'image', name: t('.power.image_name'), alt_text: t('.power.image_alt') %>
       <h2><%=t('.power.left_text_html')%></h2>
     </div>
 
@@ -71,7 +72,7 @@
 
   <div class="spread" id="relationships">
     <div class="left">
-      <%= render 'image', locals: {name: t('.relationships.image_name'), alt_text: t('.relationships.image_alt')} %>
+      <%= render 'image', name: t('.relationships.image_name'), alt_text: t('.relationships.image_alt') %>
       <h2><%=t('.relationships.left_text_html')%></h2>
     </div>
 
@@ -84,7 +85,7 @@
 
   <div class="spread" id="reconciling">
     <div class="left">
-      <%= render 'image', locals: {name: t('.reconciling.image_name'), alt_text: t('.reconciling.image_alt')} %>
+      <%= render 'image', name: t('.reconciling.image_name'), alt_text: t('.reconciling.image_alt') %>
       <h2><%=t('.reconciling.left_text_html')%></h2>
     </div>
 
@@ -97,7 +98,7 @@
 
   <div class="spread" id="liberation">
     <div class="left">
-      <%= render 'image', locals: {name: t('.liberation.image_name'), alt_text: t('.liberation.image_alt')} %>
+      <%= render 'image', name: t('.liberation.image_name'), alt_text: t('.liberation.image_alt') %>
       <h2><%=t('.liberation.left_text_html')%></h2>
     </div>
 
@@ -110,7 +111,7 @@
 
   <div class="spread" id="revolt">
     <div class="left">
-      <%= render 'image', locals: {name: t('.revolt.image_name'), alt_text: t('.revolt.image_alt')} %>
+      <%= render 'image', name: t('.revolt.image_name'), alt_text: t('.revolt.image_alt') %>
       <h2><%=t('.revolt.left_text_html')%></h2>
     </div>
 
@@ -123,7 +124,7 @@
 
   <div class="spread" id="control">
     <div class="left">
-      <%= render 'image', locals: {name: t('.control.image_name'), alt_text: t('.control.image_alt')} %>
+      <%= render 'image', name: t('.control.image_name'), alt_text: t('.control.image_alt') %>
       <h2><%=t('.control.left_text_html')%></h2>
     </div>
 
@@ -136,7 +137,7 @@
 
   <div class="spread" id="hierarchy">
     <div class="left">
-      <%= render 'image', locals: {name: t('.hierarchy.image_name'), alt_text: t('.hierarchy.image_alt')} %>
+      <%= render 'image', name: t('.hierarchy.image_name'), alt_text: t('.hierarchy.image_alt') %>
       <h2><%=t('.hierarchy.left_text_html')%></h2>
     </div>
 
@@ -149,7 +150,7 @@
 
   <div class="spread" id="borders">
     <div class="left">
-      <%= render 'image', locals: {name: t('.borders.image_name'), alt_text: t('.borders.image_alt')} %>
+      <%= render 'image', name: t('.borders.image_name'), alt_text: t('.borders.image_alt') %>
       <h2><%=t('.borders.left_text_html')%></h2>
     </div>
 
@@ -162,7 +163,7 @@
 
   <div class="spread" id="representation">
     <div class="left">
-      <%= render 'image', locals: {name: t('.representation.image_name'), alt_text: t('.representation.image_alt')} %>
+      <%= render 'image', name: t('.representation.image_name'), alt_text: t('.representation.image_alt') %>
       <h2><%=t('.representation.left_text_html')%></h2>
     </div>
 
@@ -175,7 +176,7 @@
 
   <div class="spread" id="leaders">
     <div class="left">
-      <%= render 'image', locals: {name: t('.leaders.image_name'), alt_text: t('.leaders.image_alt')} %>
+      <%= render 'image', name: t('.leaders.image_name'), alt_text: t('.leaders.image_alt') %>
       <h2><%=t('.leaders.left_text_html')%></h2>
     </div>
 
@@ -188,7 +189,7 @@
 
   <div class="spread" id="government">
     <div class="left">
-      <%= render 'image', locals: {name: t('.government.image_name'), alt_text: t('.government.image_alt')} %>
+      <%= render 'image', name: t('.government.image_name'), alt_text: t('.government.image_alt') %>
       <h2><%=t('.government.left_text_html')%></h2>
     </div>
 
@@ -201,7 +202,7 @@
 
   <div class="spread" id="profit">
     <div class="left">
-      <%= render 'image', locals: {name: t('.profit.image_name'), alt_text: t('.profit.image_alt')} %>
+      <%= render 'image', name: t('.profit.image_name'), alt_text: t('.profit.image_alt') %>
       <h2><%=t('.profit.left_text_html')%></h2>
     </div>
 
@@ -214,7 +215,7 @@
 
   <div class="spread" id="property">
     <div class="left">
-      <%= render 'image', locals: {name: t('.property.image_name'), alt_text: t('.property.image_alt')} %>
+      <%= render 'image', name: t('.property.image_name'), alt_text: t('.property.image_alt') %>
       <h2><%=t('.property.left_text_html')%></h2>
     </div>
 
@@ -227,7 +228,7 @@
 
   <div class="spread" id="lastcrime">
     <div class="left">
-      <%= render 'image', locals: {name: t('.last_crime.image_name'), alt_text: t('.last_crime.image_alt')} %>
+      <%= render 'image', name: t('.last_crime.image_name'), alt_text: t('.last_crime.image_alt') %>
       <h2><%=t('.last_crime.left_text_html')%></h2>
     </div>
 
@@ -249,7 +250,7 @@
 
     <div class="third">
       <%=t('.anarchy.third_html')%>
-      <img src="https://cloudfront.crimethinc.com/assets/tce/images/circle-a-logo-hands-white-large@2x.png" />
+      <%= tce_image_tag 'circle-a-logo-hands-white-large@2x.png' %>
     </div>
   </div>
 
