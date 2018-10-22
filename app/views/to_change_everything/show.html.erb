@@ -1,272 +1,35 @@
 <div class="title-container">
-  <h1><%=t('.title_html')%></h1>
-  <h4><%=t('.subtitle_html')%></h4>
+  <h1><%= t '.title_html' %></h1>
+  <h4><%= t '.subtitle_html' %></h4>
 
   <div class="call-to-action">
-    <a class="cte-video fancybox" href="#video-container">
-      <img src="https://cloudfront.crimethinc.com/assets/tce/images/video-play-icon-300.png" />
-      <p><%=t('.video_cte')%></p>
-    </a>
+    <%= link_to '#video-container', class: 'cte-video fancybox' do %>
+      <%= tce_image_tag 'video-play-icon-300.png' %>
+
+      <p><%= t '.video_cte' %></p>
+    <% end %>
 
     <div class="cte-spacer"></div>
 
-    <a class="cte-pdf" href="<%=t('.pdf_get_url')%>">
-      <img src="https://cloudfront.crimethinc.com/assets/tce/images/<%=t('.pdf_image').html_safe%>" />
-      <p><%=t('.pdf_cte_html')%></p>
-    </a>
+    <%= link_to t('.pdf_get_url'), class: 'cte-pdf' do %>
+      <%= tce_image_tag t('.pdf_image') %>
+
+      <p><%= t '.pdf_cte_html' %></p>
+    <% end %>
   </div>
 </div>
 
 <div class="primary">
-  <div class="spread" id="intro">
-    <div class="leftintro">
-      <div class="lefttext">
-        <%=t('.intro.left_text_html')%>
-      </div>
-    </div>
+  <%= render 'to_change_everything/spread', section: 'intro' %>
 
-    <div class="rightintro">
-      <h3><%=t('.intro.right_text_html')%></h3>
-    </div>
-  </div>
+  <% tce_sections.each do |section| %>
+    <%= render 'to_change_everything/spread_with_image', section: section %>
+  <% end %>
 
-  <div class="spread" id="self">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.self.image_name'), alt_text: t('.self.image_alt')} %>
-      <h2><%=t('.self.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.self.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="answering">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.answering.image_name'), alt_text: t('.answering.image_alt')} %>
-      <h2><%=t('.answering.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.answering.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="power">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.power.image_name'), alt_text: t('.power.image_alt')} %>
-      <h2><%=t('.power.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.power.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="relationships">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.relationships.image_name'), alt_text: t('.relationships.image_alt')} %>
-      <h2><%=t('.relationships.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.relationships.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="reconciling">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.reconciling.image_name'), alt_text: t('.reconciling.image_alt')} %>
-      <h2><%=t('.reconciling.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.reconciling.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="liberation">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.liberation.image_name'), alt_text: t('.liberation.image_alt')} %>
-      <h2><%=t('.liberation.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.liberation.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="revolt">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.revolt.image_name'), alt_text: t('.revolt.image_alt')} %>
-      <h2><%=t('.revolt.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.revolt.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="control">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.control.image_name'), alt_text: t('.control.image_alt')} %>
-      <h2><%=t('.control.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.control.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="hierarchy">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.hierarchy.image_name'), alt_text: t('.hierarchy.image_alt')} %>
-      <h2><%=t('.hierarchy.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.hierarchy.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="borders">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.borders.image_name'), alt_text: t('.borders.image_alt')} %>
-      <h2><%=t('.borders.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.borders.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="representation">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.representation.image_name'), alt_text: t('.representation.image_alt')} %>
-      <h2><%=t('.representation.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.representation.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="leaders">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.leaders.image_name'), alt_text: t('.leaders.image_alt')} %>
-      <h2><%=t('.leaders.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.leaders.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="government">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.government.image_name'), alt_text: t('.government.image_alt')} %>
-      <h2><%=t('.government.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.government.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="profit">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.profit.image_name'), alt_text: t('.profit.image_alt')} %>
-      <h2><%=t('.profit.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.profit.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="property">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.property.image_name'), alt_text: t('.property.image_alt')} %>
-      <h2><%=t('.property.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.property.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div class="spread" id="lastcrime">
-    <div class="left">
-      <%= render 'image', locals: {name: t('.last_crime.image_name'), alt_text: t('.last_crime.image_alt')} %>
-      <h2><%=t('.last_crime.left_text_html')%></h2>
-    </div>
-
-    <div class="right">
-      <div class="righttext">
-        <%=t('.last_crime.right_text_html')%>
-      </div>
-    </div>
-  </div>
-
-  <div id="anarchy">
-    <div class="first">
-      <%=t('.anarchy.first_html')%>
-    </div>
-
-    <div class="second">
-      <%=t('.anarchy.second_html')%>
-    </div>
-
-    <div class="third">
-      <%=t('.anarchy.third_html')%>
-      <img src="https://cloudfront.crimethinc.com/assets/tce/images/circle-a-logo-hands-white-large@2x.png" />
-    </div>
-  </div>
-
-  <div class="spread" id="outro">
-    <div class="leftintro">
-      <div class="lefttext">
-        <%=t('.outro.left_text_html')%>
-      </div>
-    </div>
-
-    <div class="rightintro">
-      <h3><%=t('.outro.right_text_html')%></h3>
-    </div>
-  </div>
+  <%= render 'to_change_everything/spread', section: 'outro' %>
 
   <div class="spread" id="takeflight">
-    <h1><%=t('.take_flight_html')%></h1>
+    <h1><%= t '.take_flight_html' %></h1>
   </div>
 
   <div class="spread" id="next">

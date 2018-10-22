@@ -1,25 +1,19 @@
-<%
-  base_url = "https://cloudfront.crimethinc.com/assets/tce/images/"
-  alt_text = locals[:alt_text]
-  name     = locals[:name]
-%>
-
 <picture class="responsive-image">
   <source media="(min-device-width:200px) and (max-width:600px)"
-          srcset="<%= base_url + name %>-phonesmall.jpg  320w,
-                  <%= base_url + name %>-phone.jpg  480w,
-                  <%= base_url + name %>-phonesmall@2x.jpg  640w,
-                  <%= base_url + name %>-phone@2x.jpg  1080w"
+          srcset="<%= url_for_tce_image name, '-phonesmall.jpg' %>    320w,
+                  <%= url_for_tce_image name, '-phone.jpg' %>         480w,
+                  <%= url_for_tce_image name, '-phonesmall@2x.jpg' %> 640w,
+                  <%= url_for_tce_image name, '-phone@2x.jpg' %>      1080w"
                   sizes="100vw" />
   <source media="(min-width:601px) and (max-width:1200px)"
-          srcset="<%= base_url + name %>-tablet.jpg  800w,
-                  <%= base_url + name %>-tablet@2x.jpg 1536w"
+          srcset="<%= url_for_tce_image name, '-tablet.jpg' %>    800w,
+                  <%= url_for_tce_image name, '-tablet@2x.jpg' %> 1536w"
                   sizes="100vw" />
   <source media="(min-device-width:1201px)"
-          srcset="<%= base_url + name %>-small.jpg  835w,
-                  <%= base_url + name %>-small@2x.jpg  1670w,
-                  <%= base_url + name %>-large.jpg  1280w"
+          srcset="<%= url_for_tce_image name, '-small.jpg' %>    835w,
+                  <%= url_for_tce_image name, '-small@2x.jpg' %> 1670w,
+                  <%= url_for_tce_image name, '-large.jpg' %>    1280w"
                   sizes="100vw" />
 
-  <img src="<%= base_url + name %>-small.jpg" alt="<%= alt_text %>" />
+  <%= image_tag url_for_tce_image(name, '-small.jpg'), alt: alt_text %>
 </picture>
