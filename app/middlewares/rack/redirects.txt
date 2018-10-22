@@ -2934,7 +2934,6 @@
 /taksim /2013/06/19/postcards-from-the-turkish-uprising
 /tce/%uFEFF /tce/
 /tce/%uFEFF/ /tce/
-/tce/espanol/get /zines/to-change-everything
 /tce/get /zines/to-change-everything
 /tce/slovensko /tce/slovenscina
 /tce/slovensko/ /tce/slovenscina
