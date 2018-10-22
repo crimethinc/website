@@ -1,0 +1,15 @@
+<div class="spread" id="<%= section %>">
+  <div class="left">
+    <%= render 'image',
+               name:     t("to_change_everything.show.#{section}.image_name"),
+               alt_text: t("to_change_everything.show.#{section}.image_alt") %>
+
+    <h2><%= t "to_change_everything.show.#{section}.left_text_html" %></h2>
+  </div>
+
+  <div class="right">
+    <div class="righttext">
+      <%= t "to_change_everything.show.#{section}.right_text_html" %>
+    </div>
+  </div>
+</div>
