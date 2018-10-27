@@ -1,0 +1,22 @@
+Description:
+    This generator is used to help automate some of the
+    wiring needed to create a new language version of "To Change
+    Everything".
+
+Example 1:
+    rails generate to_change_everything es espanol
+
+    This will create:
+      insert  app/controllers/to_change_everything_controller.rb
+      create  app/assets/stylesheets/to_change_everything/_espanol.scss
+      append  app/assets/stylesheets/to_change_everything.scss
+      create  config/locales/to_change_everything/es.yml
+
+Example 2:
+    rails generate to_change_everything fa فارسی rtl
+
+    This will create:
+      insert  app/controllers/to_change_everything_controller.rb
+      create  app/assets/stylesheets/to_change_everything/_فارسی.scss
+      append  app/assets/stylesheets/to_change_everything.scss
+      create  config/locales/to_change_everything/fa.yml
