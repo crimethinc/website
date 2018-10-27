@@ -23,7 +23,7 @@
   </author>
 
   <% @articles.each do |article| %>
-    <% cache ["feed", article] do %>
+    <% cache [:feed, article] do %>
 
       <entry>
         <id><%= request.base_url + article.path %></id>
