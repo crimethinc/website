@@ -1,5 +1,17 @@
 <header class="site-header" id="header">
-  <h1 class="header-logo"><%= link_to t("site_name"), [:root] %></h1>
+  <div>
+    <span class="header-logo"><%= link_to t("site_name"), [:root] %></span>
+
+    <p class="language-switcher">
+      <%= t 'header.languages' %>:
+
+      <% Locales::SUPPORTED.each do |locale| %>
+        <%= link_to_unless I18n.locale == locale,
+                           t(:name, locale: locale),
+                           url_for_localized_path(locale) %>
+      <% end %>
+    </p>
+  </div>
 
   <%= render "shared/header/nav" %>
 

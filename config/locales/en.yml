@@ -9,6 +9,7 @@
 #  9. Markdown examples: [link text](url), **bold**, _italics_, %{dynamic variable}, etc.
 # 10. If a value has <b>HTML</b> syntax characters in it, please keep those in your translation.
 en:
+  name: English
   language_direction: ltr
   site_name: CrimethInc.
   site_author: CrimethInc. Ex-Workers Collective
@@ -20,6 +21,7 @@ en:
     meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
   header:
+    languages: Languages
     books: Books
     library: Library
     tools: Tools
