@@ -92,3 +92,6 @@ gem 'redis-store'
 
 # windows dev
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# i18n
+gem 'rack-contrib'
