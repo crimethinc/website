@@ -75,11 +75,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def url_for_localized_path locale = I18n.default_locale
+  def url_for_localized_path locale = :en
     locale = locale == I18n.default_locale ? nil : "#{locale}."
     port   = ":#{request.port}" if request.port.present?
 
-    ['https://', locale, request.domain, port, request.path].join
+    [request.protocol, locale, request.domain, port, request.path].join
   end
   helper_method :url_for_localized_path
 
