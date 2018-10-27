@@ -44,12 +44,17 @@
 .header-logo a {
   @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 15rem, 3rem);
   @include size(15rem, 3rem);
-  display: block;
+  display: inline-block;
 
   @media screen and (max-width: $small-tablet) {
     @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 10rem, 2rem);
     @include size(10rem, 2rem);
   }
+}
+
+.language-switcher a,
+.language-switcher {
+  color: white !important;
 }
 
 .bulb-and-bones-logo {
