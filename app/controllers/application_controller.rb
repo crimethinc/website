@@ -4,7 +4,7 @@ require 'json'
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :set_locale
+  before_action :subdomain_locale_override
   before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
@@ -50,8 +50,14 @@ class ApplicationController < ActionController::Base
   end
   helper_method :creating?
 
-  def set_locale
-    I18n.locale = I18n.default_locale
+  def subdomain_locale_override
+    locale = request.subdomain
+    I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
+
+    # Force the subdomain to match the locale.
+    # Don't do this in development, because typically local development
+    # environments don't support subdomains (en.localhost doesn't resolve).
+    return redirect_to subdomain: I18n.locale if (I18n.locale != I18n.default_locale) && request.subdomain.empty? && Rails.env.production?
   end
 
   def check_for_redirection
