@@ -1,11 +1,11 @@
 module LinksHelper
   def social_links
     {
-      'CrimethInc. on Twitter'        => 'https://twitter.com/crimethinc',
-      'CrimethincDotCom on Facebook'  => 'https://facebook.com/CrimethincDotCom',
-      'CrimethincDotCom on Instagram' => 'https://instagram.com/CrimethincDotCom',
-      'CrimethInc.com RSS feed'       => 'https://crimethinc.com/feed',
-      'CrimethInc.com on Github'      => 'https://github.com/crimethinc'
+      'CrimethInc. on Twitter'           => 'https://twitter.com/crimethinc',
+      'CrimethincDotCom on Facebook'     => 'https://facebook.com/CrimethincDotCom',
+      'CrimethincDotCom on Instagram'    => 'https://instagram.com/CrimethincDotCom',
+      'CrimethInc.com Articles RSS feed' => 'https://crimethinc.com/feed',
+      'CrimethInc.com on Github'         => 'https://github.com/crimethinc'
     }
   end
 
