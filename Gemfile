@@ -50,6 +50,7 @@ gem 'logstash-event'
 
 # dev and testing
 group :development, :test do
+  gem 'awesome_print'
   gem 'byebug', platform: :mri
   gem 'capybara'
   gem 'chromedriver-helper'
