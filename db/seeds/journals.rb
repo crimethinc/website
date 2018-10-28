@@ -1,5 +1,3 @@
-Series.destroy_all
-
 # These hashes are all smushed to the left to preserve Markdown formatting of their values
 rolling_thunder_series = Series.create!(
 title: 'Rolling Thunder',
