@@ -17,7 +17,7 @@ module Admin
     end
 
     def new
-      @book = Journal.new(journal: true)
+      @book = Journal.new
       @title = admin_title
       render 'admin/books/new'
     end

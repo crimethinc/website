@@ -9,7 +9,7 @@ test_user = User.new(
 test_user.save!(validate: false)
 
 puts "Trying dev seeds for each post-type..."
-%w(articles books pages podcasts episodes redirects videos).each do |posttype|
+%w[articles books pages podcasts episodes redirects videos journals featured_journals].each do |posttype|
   filepath = File.expand_path("../seeds/#{posttype}.rb", __FILE__)
 
   puts "  Trying: #{posttype}"
