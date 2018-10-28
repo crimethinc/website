@@ -3,6 +3,8 @@ class Journal < ApplicationRecord
   include Slug
   include Publishable
 
+  belongs_to :series
+
   has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
 

@@ -66,10 +66,6 @@ en:
         the_ex_worker: The Ex-Worker
         the_hotwire: The Hotwire
 
-      journal:
-        label: Journal
-        rolling_thunder: Rolling Thunder
-
       videos:
         label: Videos
 
@@ -242,7 +238,7 @@ en:
       pdf_donoate_button_text: Donate
       pdf_donoate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
 
-      journals_intro_text: Here, you can download PDFs of _[Rolling Thunder](/rt),_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
+      journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
       logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
       tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
       zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [To Change Everything site](/tce).
