@@ -181,6 +181,18 @@ es:
       image_description:      Photo of ‘%{title}’ front side
       back_image_description: Photo of ‘%{title}’ back side
 
+  downloads:
+    formats:
+      screen_single_page_view:  Screen Single Page View PDF
+      screen_two_page_view:     Screen Two Page View PDF
+      print_color:              Print Color PDF
+      print_black_and_white:    Print B/W PDF
+      print_color_a4:           Print Color A4 PDF
+      print_black_and_white_a4: Print B/W A4 PDF
+      lite:                     Lo Res PDF
+      epub:                     ePub
+      mobi:                     Mobi
+
   views:
     pagination:
       first: "&laquo;"

@@ -18,37 +18,35 @@
       <% end %>
 
       <div id="download">
-        <p>Downloads:</p>
+        <% if @book.downloads_available? %>
+          <p>Downloads:</p>
 
-        <% {
-          screen_single_page_view:  "Screen Single Page View PDF",
-          screen_two_page_view:     "Screen Two Page View PDF",
-          print_color:              "Print Color PDF",
-          print_black_and_white:    "Print B/W PDF",
-          print_color_a4:           "Print Color A4 PDF",
-          print_black_and_white_a4: "Print B/W A4 PDF",
-          lite:                     "Lo Res PDF",
-          epub:                     "ePub",
-          mobi:                     "Mobi",
-        }.each do |type, label| %>
+          <% {
+            screen_single_page_view:  I18n.t('downloads.formats.screen_single_page_view'),
+            screen_two_page_view:     I18n.t('downloads.formats.screen_two_page_view'),
+            print_color:              I18n.t('downloads.formats.print_color'),
+            print_black_and_white:    I18n.t('downloads.formats.print_black_and_white'),
+            print_color_a4:           I18n.t('downloads.formats.print_color_a4'),
+            print_black_and_white_a4: I18n.t('downloads.formats.print_black_and_white_a4'),
+            lite:                     I18n.t('downloads.formats.lite'),
+            epub:                     I18n.t('downloads.formats.epub'),
+            mobi:                     I18n.t('downloads.formats.mobi'),
+          }.each do |type, label| %>
 
-          <% if @book.send("#{type}_download_present?") %>
-            <div>
-              <%= link_to label, @book.download_url(type), class: "download button" %>
-            </div>
+            <% if @book.send("#{type}_download_present?") %>
+              <div>
+                <%= link_to label, @book.download_url(type), class: "download button" %>
+              </div>
+            <% end %>
           <% end %>
         <% end %>
 
-
-        <% if @book.book? and
-          [
-            :screen_single_page_view, :screen_two_page_view, :print_color,
-            :print_black_and_white, :print_color_a4, :print_black_and_white_a4,
-            :lite, :epub, :mobi
-          ].map{ |type| @book.send("#{type}_download_present?") }.compact.include?(true) %>
-          <div><%= link_to t("views.products.pdf_donoate_button_text"),
-                           "https://store.crimethinc.com/x/donate.html",
-                           class: "download button" %></div>
+        <% if @book.book? && @book.downloads_available? %>
+          <div>
+            <%= link_to t("views.products.pdf_donoate_button_text"),
+                          "https://store.crimethinc.com/x/donate.html",
+                          class: "download button" %>
+          </div>
 
           <%= render_markdown t("views.products.pdf_donoate_button_label") %>
         <% end %>
@@ -62,20 +60,22 @@
 
       <div class="product-specs">
         <ol>
-          <li>
-            <b>Size</b>
-            <span>
-              <%= @book.width %>
-              x
-              <%= @book.height %>
-              <% if @book.depth.present? %>
+          <% if @book.width.present? %>
+            <li>
+              <b>Size</b>
+              <span>
+                <%= @book.width %>
                 x
-                <%= @book.depth %>
-              <% end %>
-            </span>
-          </li>
+                <%= @book.height %>
+                <% if @book.depth.present? %>
+                  x
+                  <%= @book.depth %>
+                <% end %>
+              </span>
+            </li>
+          <% end %>
 
-          <% %w(weight pages words illustrations photographs printing ink definitions recipes cover_style binding_style).each do |spec| %>
+          <% %w[weight pages words illustrations photographs printing ink definitions recipes cover_style binding_style].each do |spec| %>
             <% if @book.send(spec).present? %>
               <li>
                 <b><%= spec.titleize %></b>
@@ -113,15 +113,13 @@
         </div>
 
         <div class="product-content">
-          <% if @book.gallery_images_count.present? && @book.gallery_images_count > 0 %>
-            <% ("01"..@book.gallery_images_count.to_s.rjust(2, "0")).to_a.each do |photo_index| %>
+            <% @book.gallery_images.each do |photo_index| %>
               <%= link_to image_tag(@book.image(side: :gallery, count: photo_index),
                                     alt: "Gallery image ##{photo_index} of #{@book.name}"),
                           @book.image(side: :gallery, count: photo_index) %>
-            <% end %>
-
-            <hr />
           <% end %>
+
+          <hr />
 
           <% if @book.content.present? %>
             <%= render_markdown @book.content %>

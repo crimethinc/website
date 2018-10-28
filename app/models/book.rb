@@ -98,4 +98,24 @@ class Book < ApplicationRecord
   def meta_image
     image side: :front
   end
+
+  def downloads_available?
+    [epub_download_present,
+     mobi_download_present,
+     print_black_and_white_a4_download_present,
+     print_color_a4_download_present,
+     print_color_download_present,
+     print_black_and_white_download_present,
+     screen_single_page_view_download_present,
+     screen_two_page_view_download_present].compact.any?
+  end
+
+  def gallery_images
+    if gallery_images_count.present? && gallery_images_count.positive?
+      biggest_image = gallery_images_count.to_s.rjust(2, '0')
+      ('01'..biggest_image).to_a
+    else
+      []
+    end
+  end
 end
