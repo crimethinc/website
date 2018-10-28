@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_21_000005) do
+ActiveRecord::Schema.define(version: 2018_10_27_230207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -188,6 +188,8 @@ ActiveRecord::Schema.define(version: 2018_10_21_000005) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
+    t.integer "series_id"
+    t.integer "issue"
   end
 
   create_table "logos", force: :cascade do |t|
@@ -298,6 +300,14 @@ ActiveRecord::Schema.define(version: 2018_10_21_000005) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "article_id"
+  end
+
+  create_table "series", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "statuses", id: :serial, force: :cascade do |t|
