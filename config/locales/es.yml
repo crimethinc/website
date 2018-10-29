@@ -30,7 +30,20 @@ es:
     support: Apóyanos
 
     first_time: ¿Tu primera vez? Empieza aquí →
-    search_form_placeholder: Busca en el archivo
+
+  search:
+    form_placeholder: Busca en los archivos…
+    advanced:
+      heading: Búsqueda avanzada
+      form:
+        term_label: Buscar
+        title_label: Title
+        subtitle_label: Subtitle
+        content_label: Content
+        tag_label: Tags
+        category_label: Categories
+        comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
+        button: Buscar
 
   footer:
     nav:
@@ -163,9 +176,6 @@ es:
       recipes_for_disaster: Recetas para el desastre
       work: Trabajo
 
-  form:
-    search_form_placeholder: Search Busca en los archivos…
-
   podcast:
     latest_episode: Episodios recientes
     other_episodes: Otros episodios
@@ -183,16 +193,17 @@ es:
       back_image_description: Photo of ‘%{title}’ back side
 
   downloads:
+    heading: Descargas
     formats:
-      screen_single_page_view:  Screen Single Page View PDF
-      screen_two_page_view:     Screen Two Page View PDF
-      print_color:              Print Color PDF
-      print_black_and_white:    Print B/W PDF
-      print_color_a4:           Print Color A4 PDF
-      print_black_and_white_a4: Print B/W A4 PDF
-      lite:                     Lo Res PDF
+      screen_single_page_view:  Pantalla de PDF en una página
+      screen_two_page_view:     Pantalla de PDF en dos páginas
+      print_color:              Imprimir PDF a color
+      print_black_and_white:    Imprimir PDF en blanco y negro
+      print_color_a4:           Imprimir PDF a color en formato A4
+      print_black_and_white_a4: Imprimir PDF en blanco y negro en formato A4
+      lite:                     PDF baja resolución
       epub:                     ePub
-      mobi:                     Mobi
+      mobi:                     Mob
 
   views:
     pagination:
@@ -212,7 +223,7 @@ es:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
-    products: # I'm not clear what to translate from this part
+    products:
       buy_now_button_text:             Compra
       zine_download_read_button_text:  Descarga PDF para leer
       zine_download_print_button_text: Descarga PDF para imprimir

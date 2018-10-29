@@ -100,14 +100,11 @@ class Book < ApplicationRecord
   end
 
   def downloads_available?
-    [epub_download_present,
-     mobi_download_present,
-     print_black_and_white_a4_download_present,
-     print_color_a4_download_present,
-     print_color_download_present,
-     print_black_and_white_download_present,
-     screen_single_page_view_download_present,
-     screen_two_page_view_download_present].compact.any?
+     downloads = []
+     I18n.t('downloads.formats').keys.each do |format, _|
+       downloads << send("#{format}_download_present")
+     end
+     downloads.compact.any?
   end
 
   def gallery_images

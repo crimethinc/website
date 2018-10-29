@@ -30,7 +30,20 @@ en:
     support: Support Us
 
     first_time: First Time? Start Here →
-    search_form_placeholder: Search Archives…
+
+  search:
+    form_placeholder: Search Archives…
+    advanced:
+      heading: Advanced Search
+      form:
+        term_label: Search
+        title_label: Title
+        subtitle_label: Subtitle
+        content_label: Content
+        tag_label: Tags
+        category_label: Categories
+        comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
+        button: Search
 
   footer:
     nav:
@@ -129,7 +142,7 @@ en:
     search:
       index: Search
       results: Results for
-      advanced: Advanced
+      advanced: Advanced Search
     videos:
       index: Videos
     tools:
@@ -163,9 +176,6 @@ en:
       recipes_for_disaster: Recipes for Disaster
       work: Work
 
-  form:
-    search_form_placeholder: Search Archives…
-
   podcast:
     latest_episode: Latest Episode
     other_episodes: Other Episodes
@@ -183,6 +193,7 @@ en:
       back_image_description: Photo of ‘%{title}’ back side
 
   downloads:
+    heading: Downloads
     formats:
       screen_single_page_view:  Screen Single Page View PDF
       screen_two_page_view:     Screen Two Page View PDF
