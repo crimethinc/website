@@ -12,6 +12,11 @@ module Rack
         return redirect(location)
       end
 
+      if request.host.start_with?('en.')
+        location = request.scheme + '://' + request.host.sub('en.', '') + request.path
+        return redirect(location)
+      end
+
       @app.call(env)
     end
 
