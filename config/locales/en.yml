@@ -34,6 +34,7 @@ en:
 
   footer:
     nav:
+      heading: Site Map
       articles:
         label: Articles
         feed: RSS
