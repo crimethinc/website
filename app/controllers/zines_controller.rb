@@ -5,15 +5,15 @@ class ZinesController < ApplicationController
     @type    = 'zines'
     @title   = title_for :zines
 
-    @featured_products = Book.zine.order(published_at: :desc).published.where.not(buy_url: nil)
-    @products          = Book.zine.order(published_at: :desc).published.where(buy_url: nil)
+    @featured_products = Book.zine.order(published_at: :desc).live.published.where.not(buy_url: nil)
+    @products          = Book.zine.order(published_at: :desc).live.published.where(buy_url: nil)
 
     render 'products/index'
   end
 
   def show
     # Treat a Zine as a Book
-    @book = Book.zine.where(slug: params[:slug]).first
+    @book = Book.zine.live.published.where(slug: params[:slug]).first
     return redirect_to [:zines] if @book.blank?
 
     @html_id = 'page'
