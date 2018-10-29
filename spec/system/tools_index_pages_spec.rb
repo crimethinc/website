@@ -42,6 +42,13 @@ describe 'Tools Pages' do
     FactoryBot.create(:book,
                       :zine,
                       title: 'published',
+                      published_at: 1.day.ago,
+                      status_id: Status.find_by(name: 'published').id)
+
+    FactoryBot.create(:book,
+                      :zine,
+                      title: 'not live',
+                      published_at: 1.day.from_now,
                       status_id: Status.find_by(name: 'published').id)
 
     FactoryBot.create(:book,
@@ -53,6 +60,7 @@ describe 'Tools Pages' do
 
     expect(page).to have_content 'published'
     expect(page).not_to have_content 'draft'
+    expect(page).not_to have_content 'not live'
   end
 
   it 'Renders published posters calling /posters' do

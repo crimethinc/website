@@ -8,18 +8,12 @@ class BooksController < ApplicationController
     @title   = title_for :books
 
     @bullet_books = []
-    %w[no-wall-they-can-build
-       from-democracy-to-freedom
-       contradictionary
-       work
-       expect-resistance
-       recipes-for-disaster
-       days-of-war-nights-of-love].each do |slug|
+    published_bullet_book_slugs.each do |slug|
       @bullet_books << Book.find_by(slug: slug)
     end
 
     @letters_books = []
-    %w[off-the-map].each do |slug|
+    published_letters_book_slugs.each do |slug|
       @letters_books << Book.find_by(slug: slug)
     end
   end
@@ -52,10 +46,26 @@ class BooksController < ApplicationController
 
   private
 
-  def set_book
-    @book = Book.where(slug: params[:slug])
-    return redirect_to [:books] if @book.blank?
+  def published_bullet_book_slugs
+    %w[no-wall-they-can-build
+       from-democracy-to-freedom
+       contradictionary
+       work
+       expect-resistance
+       recipes-for-disaster
+       days-of-war-nights-of-love]
+  end
 
-    @book = @book.first
+  def published_letters_book_slugs
+    %w[off-the-map]
+  end
+
+  def published_book_slugs
+    published_bullet_book_slugs + published_letters_book_slugs
+  end
+
+  def set_book
+    @book = Book.find_by(slug: params[:slug])
+    return redirect_to [:books] if @book.blank? || !published_book_slugs.include?(@book.slug)
   end
 end
