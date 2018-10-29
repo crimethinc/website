@@ -5,6 +5,7 @@
     <tr>
       <th></th>
       <th>Name</th>
+      <th>Status</th>
 
         <% [
           "Screen Single Page View PDF",
@@ -35,6 +36,11 @@
             <%= book.subtitle %>
           <% end %>
         </td>
+
+        <td>
+          <%= render "/admin/articles/publication_status_badge", article: book %>
+        </td>
+
 
         <% [
             :screen_single_page_view,
