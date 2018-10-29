@@ -4,6 +4,7 @@ module Admin
     before_action :set_zine,             only: [:show, :edit, :update, :destroy]
     before_action :set_publication_type, only: [:show, :edit, :new, :index]
     before_action :set_ebook_formats,    only: [:edit, :new]
+    before_action :set_statuses,         only: [:new, :edit]
 
     def index
       @books = Book.zine.order(slug: :asc).page(params[:page])
@@ -21,6 +22,8 @@ module Admin
     def new
       @book = Book.new(zine: true)
       @title = admin_title
+      @book.status = Status.find_by(name: 'draft')
+
       render 'admin/books/new'
     end
 
@@ -38,6 +41,7 @@ module Admin
       if @book.save
         redirect_to [:admin, @book], notice: 'Zine was successfully created.'
       else
+        set_statuses
         render :new
       end
     end
@@ -58,6 +62,11 @@ module Admin
 
     def set_zine
       @book = Book.find(params[:id])
+    end
+
+    def set_statuses
+      @draft     = Status.find_by(name: 'draft')
+      @published = Status.find_by(name: 'published')
     end
 
     def set_publication_type

@@ -51,6 +51,8 @@
     </div>
   </div>
 
+  <%= render "admin/books/categories_form", form: form %>
+
   <%= render "admin/books/downloads_form", form: form, resource: resource %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
