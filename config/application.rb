@@ -26,8 +26,13 @@ module Crimethinc
     config.middleware.use Rack::Locale
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
-    # allow nested diretories in locales
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    # Set default locale to English
     config.i18n.default_locale = :en
+
+    # Whitelist locales available for the application
+    config.i18n.available_locales = [:en, :es]
+
+    # Allow nested diretories in locales
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end
 end
