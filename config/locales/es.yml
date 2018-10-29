@@ -30,7 +30,20 @@ es:
     support: Apóyanos
 
     first_time: ¿Tu primera vez? Empieza aquí →
-    search_form_placeholder: Busca en el archivo
+
+  search:
+    form_placeholder: Busca en los archivos…
+    advanced:
+      heading: Búsqueda avanzada
+      form:
+        term_label: Buscar
+        title_label: Title
+        subtitle_label: Subtitle
+        content_label: Content
+        tag_label: Tags
+        category_label: Categories
+        comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
+        button: Buscar
 
   footer:
     nav:
@@ -163,9 +176,6 @@ es:
       recipes_for_disaster: Recetas para el desastre
       work: Trabajo
 
-  form:
-    search_form_placeholder: Search Busca en los archivos…
-
   podcast:
     latest_episode: Episodios recientes
     other_episodes: Otros episodios
@@ -212,7 +222,7 @@ es:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
-    products: # I'm not clear what to translate from this part
+    products:
       buy_now_button_text:             Compra
       zine_download_read_button_text:  Descarga PDF para leer
       zine_download_print_button_text: Descarga PDF para imprimir
