@@ -4,7 +4,7 @@
   </div>
 
   <header>
-    <h1><%= t("views.products.tools_heading_text") %></h1>
+    <h1><%= t "views.products.tools_heading_text" %></h1>
   </header>
 
   <div class="e-content">
@@ -14,13 +14,14 @@
 
     <hr>
 
-      <% [:zines, :journals, :posters, :videos, :stickers, :logos].each do |type| %>
-        <div class="product-section">
-          <h1 class="p-name"><%= link_to type.capitalize, [type] %></h1>
-          <%= render_markdown t("views.products.#{type}_intro_text") %>
-          <%= link_to "Browse All #{type.capitalize} →", [type], class: "download button" %><br><br>
-        </div><!-- .row -->
-      <% end %>
+    <% [:zines, :journals, :posters, :videos, :stickers, :music, :logos].each do |tool| %>
+      <div class="product-section">
+        <h1 class="p-name"><%= link_to_tool tool: tool, type: :link %></h1>
+        <%= render_markdown t("views.products.#{tool}_intro_text") %>
+        <%= link_to_tool tool: tool, type: :button %>
+        <br><br>
+      </div>
+    <% end %>
 
   </div><!-- .e-content -->
 </article>
