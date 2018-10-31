@@ -188,6 +188,9 @@
 
 
       <div class="col-12 col-sm-6">
+
+        <%= render "admin/posters/categories_form", form: form %>
+
         <div class="form-group">
           <%= form.label :published_at %>
           <%= form.date_select :published_at,

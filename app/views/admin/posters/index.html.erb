@@ -5,6 +5,7 @@
     <tr>
       <th></th>
       <th>Title / Subtitle</th>
+      <th>Status</th>
       <th>Published Date</th>
       <th class="text-center">Front Color Download</th>
       <th class="text-center">Back Color Download</th>
@@ -23,6 +24,10 @@
         <td>
           <b><%= link_to poster.title, [:admin, poster] %></b><br>
           <%= poster.subtitle %>
+        </td>
+
+        <td>
+          <%= render "/admin/articles/publication_status_badge", article: poster %>
         </td>
 
         <td>
