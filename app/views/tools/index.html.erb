@@ -14,7 +14,7 @@
 
     <hr>
 
-    <% [:zines, :journals, :posters, :videos, :stickers, :music, :logos].each do |tool| %>
+    <% %i[zines journals posters stickers videos music logos].each do |tool| %>
       <div class="product-section">
         <h1 class="p-name"><%= link_to_tool tool: tool, type: :link %></h1>
         <%= render_markdown t("views.products.#{tool}_intro_text") %>

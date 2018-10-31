@@ -260,25 +260,25 @@ es:
       pdf_donoate_button_text: Dona
       pdf_donoate_button_label: Dona aquí para ayudarnos a mantener estos PDF's disponibles libremente y para seguir produciendo más.
 
-      journals_intro_text: Aquí puedes descargar los PDF’s de _Rolling Thunder_, nuestro aclamado periódico de análisis y acción directa, Harbinger, nuestro clásico tabloide de “propaganda del deseo”, y otras ambiciosas publicaciones seriales  de las últimas dos décadas.
-      logos_intro_text:    ¡CrimethInc. tú mismo! Logos para tus propios proyectos CrimethInc.
       tools_intro_text:    Con más de dos décadas de experiencia, ofrecemos una amplia gama de mareriales para que descargues o pidas en grandes cantidades. Usa estos materiales  para educar, agitar, y transformar el espacio a tu alrededor.
       zines_intro_text:    La mayoría de nuestros textos están disponibles en formato de panfleto. Imprímelos o fotocópialos para distribuirlos en escuelas, protestas, conciertos, eventos sociales, mercados y cualquier otro lugar donde la gente esté hambrienta de ideas. También puedes obtener PDF’s de _Para Cambiar Todo_, nuestra introducción al anarquismo, en una docena de idiomas. [To Change Everything site](/tce).
+      journals_intro_text: Aquí puedes descargar los PDF’s de _Rolling Thunder_, nuestro aclamado periódico de análisis y acción directa, Harbinger, nuestro clásico tabloide de “propaganda del deseo”, y otras ambiciosas publicaciones seriales  de las últimas dos décadas.
       posters_intro_text:  ¡Dale vida a los muros de tu casa, escuela, pueblo o centro comunitario! Recomendamos usar engrudo [wheatpaste](/posters) para pegarlos en lugares públicos.
       stickers_intro_text: ¡Ayuda a los objetos inanimados a tu alrededor a comunicarse de forma más elocuente! Ordénalos en un paquete o imprímelos en papel adhesivo.
       videos_intro_text:   Emergency Broadcast System — Una selección de videos de CrimethInc. Perpetual Motion Pictures
       music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
+      logos_intro_text:    ¡CrimethInc. tú mismo! Logos para tus propios proyectos CrimethInc.
       books_intro_text:
         Desde una escritura apasionada y una meticulosa edición, a un intrincado y único diseño, a una cuidadosa y profesional producción, estos libros son el producto de mucho amor y cuidado. Tenemos más de una década en esto, y aquí encontrarás la prueba en todos los pequeños detalles y a orquestación de momentos que sólo se pueden lograr con tinta y papel.
 
         Todos nuestros libros son impresos con tinta de soya en papel 100% reciclado por hábiles artesanos en Louisville, Quebec, Canadá usando las más finas offset's.
 
-      journals_heading_text: Periódicos
-      logos_heading_text:    Logos
       tools_heading_text:    Herramientas
       zines_heading_text:    Zines
+      journals_heading_text: Periódicos
       posters_heading_text:  Posters
       stickers_heading_text: Stickers
+      logos_heading_text:    Logos
       books_heading_text:    Amamos hacer libros.
 
     libros:
