@@ -60,6 +60,9 @@ class ApplicationController < ActionController::Base
     if (I18n.locale != I18n.default_locale) && # Don’t redirect to en.crimethinc.com
        request.subdomain.empty? &&             # Don’t redirect if there’s a subdomain
        Rails.env.production?                   # Don’t redirect in development
+
+      return redirect_to({ subdomain: I18n.locale }.merge(params.permit!)) if staging?
+
       return redirect_to subdomain: I18n.locale
     end
   end
