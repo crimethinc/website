@@ -2211,6 +2211,7 @@
 /facebookshare https://www.facebook.com/dialog/feed?app_id=966242223397117&link=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2Fcrimethinc%2Fnew-books-about-borders-and-democracy-by-crimethin&picture=http%3A%2F%2Fcloudfront.crimethinc.com%2Fassets%2Fkickstarter%2FKS-project-image2048.jpg&name=Help%20Us%20Publish%20Books%20about%20Borders%20and%20Democracy&caption=%20&description=We%27re%20back%20with%20two%20ambitious%20books%20about%20the%20issues%20of%20the%20hour%2C%20borders%20and%20democracy.%20Please%20help%20us%20raise%20funds%20to%20publish%20*No%20Wall%20They%20Can%20Build*%C2%A0and%20*From%20Democracy%20to%20Freedom.*&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F&display=popup
 /fashiontips /2008/10/11/fashion-tips-for-the-brave
 /features /texts/recentfeatures
+/features/11 /2006/04/01/fighting-for-our-lives-available-once-more-ten-year-report-mayday-poster
 /feed/rss /feed
 /five /2017/01/17/five-principles-of-direct-action-what-we-can-learn-from-the-2001-inauguration-protests
 /freespeech /2017/01/26/this-is-not-a-dialogue-not-just-free-speech-but-freedom-itself
