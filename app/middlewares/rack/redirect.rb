@@ -50,6 +50,12 @@ module Rack
       # delete from source path: trailing one or many slashes
       path = path.sub(%r{/+\z}, '')
 
+      # normalize source paths: all /texts/*/… => /texts/…
+      %w[atoz days ex fx harbinger images insidefront mostrecent
+         pastfeatures r recentfeatures rollingthunder selected ux].each do |section|
+        path = path.sub("/texts/#{section}", '/texts')
+      end
+
       if redirects.include?(path)
         args = "?#{req.query_string}" if req.query_string.present?
 
