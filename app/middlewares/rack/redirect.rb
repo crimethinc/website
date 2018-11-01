@@ -32,10 +32,13 @@ module Rack
 
       req = Rack::Request.new(env)
 
-      if redirects.include?(req.path)
+      # delete trailing one or many slashes
+      path = req.path.sub(%r{/+\z}, '')
+
+      if redirects.include?(path)
         args = "?#{req.query_string}" if req.query_string.present?
 
-        return redirect(redirects[req.path] + args.to_s)
+        return redirect(redirects[path] + args.to_s)
       end
 
       @app.call(env)
