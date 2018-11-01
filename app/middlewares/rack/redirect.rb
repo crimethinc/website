@@ -38,10 +38,13 @@ module Rack
       # delete from source path: index.html
       path = path.sub('index.html', '')
 
+      # delete from source path: .html extension
+      path = path.sub('.html', '')
+
       # delete from source path: index.php
       path = path.sub('index.php', '')
 
-      # delete from source path: any .php extension
+      # delete from source path: .php extension
       path = path.sub('.php', '')
 
       # delete from source path: trailing one or many slashes
