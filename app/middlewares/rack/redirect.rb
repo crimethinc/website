@@ -32,8 +32,29 @@ module Rack
 
       req = Rack::Request.new(env)
 
-      # delete trailing one or many slashes
-      path = req.path.sub(%r{/+\z}, '')
+      # source path
+      path = req.path
+
+      # delete from source path: index.html
+      path = path.sub('index.html', '')
+
+      # delete from source path: .html extension
+      path = path.sub('.html', '')
+
+      # delete from source path: index.php
+      path = path.sub('index.php', '')
+
+      # delete from source path: .php extension
+      path = path.sub('.php', '')
+
+      # delete from source path: trailing one or many slashes
+      path = path.sub(%r{/+\z}, '')
+
+      # normalize source paths: all /texts/*/… => /texts/…
+      %w[atoz days ex fx harbinger images insidefront mostrecent
+         pastfeatures r recentfeatures rollingthunder selected ux].each do |section|
+        path = path.sub("/texts/#{section}", '/texts')
+      end
 
       if redirects.include?(path)
         args = "?#{req.query_string}" if req.query_string.present?
