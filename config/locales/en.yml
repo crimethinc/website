@@ -32,10 +32,24 @@ en:
     support: Support Us
 
     first_time: First Time? Start Here →
-    search_form_placeholder: Search Archives…
+
+  search:
+    form_placeholder: Search Archives…
+    advanced:
+      heading: Advanced Search
+      form:
+        term_label: Search
+        title_label: Title
+        subtitle_label: Subtitle
+        content_label: Content
+        tag_label: Tags
+        category_label: Categories
+        comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
+        button: Search
 
   footer:
     nav:
+      heading: Site Map
       articles:
         label: Articles
         feed: RSS
@@ -130,7 +144,7 @@ en:
     search:
       index: Search
       results: Results for
-      advanced: Advanced
+      advanced: Advanced Search
     videos:
       index: Videos
     tools:
@@ -164,9 +178,6 @@ en:
       recipes_for_disaster: Recipes for Disaster
       work: Work
 
-  form:
-    search_form_placeholder: Search Archives…
-
   podcast:
     latest_episode: Latest Episode
     other_episodes: Other Episodes
@@ -184,6 +195,7 @@ en:
       back_image_description: Photo of ‘%{title}’ back side
 
   downloads:
+    heading: Downloads
     formats:
       screen_single_page_view:  Screen Single Page View PDF
       screen_two_page_view:     Screen Two Page View PDF
@@ -250,24 +262,25 @@ en:
       pdf_donoate_button_text: Donate
       pdf_donoate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
 
-      journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
-      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
       tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
       zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [To Change Everything site](/tce).
+      journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
       posters_intro_text:  Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
       stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
       videos_intro_text:   Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
+      music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
+      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
       books_intro_text:
         From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
 
         All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
 
-      journals_heading_text: Journals
-      logos_heading_text:    Logos
       tools_heading_text:    Tools
       zines_heading_text:    Zines
+      journals_heading_text: Journals
       posters_heading_text:  Posters
       stickers_heading_text: Stickers
+      logos_heading_text:    Logos
       books_heading_text:    We love making books.
 
     books:

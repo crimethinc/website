@@ -3,6 +3,7 @@ module Admin
     before_action :authorize
     before_action :set_poster,           only: [:show, :edit, :update, :destroy]
     before_action :set_publication_type, only: [:show, :edit, :new, :index]
+    before_action :set_statuses,         only: [:new, :edit]
 
     def index
       @posters = Poster.poster.order(slug: :asc).page(params[:page]).per(50)
@@ -17,6 +18,7 @@ module Admin
 
     def new
       @poster = Poster.new
+      @poster.status = Status.find_by(name: 'draft')
       @title = admin_title
     end
 
@@ -33,6 +35,7 @@ module Admin
       if @poster.save
         redirect_to [:admin, @poster], notice: "#{publication_type.to_s.capitalize.singularize} was successfully created."
       else
+        set_statuses
         render :new
       end
     end
@@ -60,6 +63,11 @@ module Admin
 
     def set_publication_type
       @publication_type = 'poster'
+    end
+
+    def set_statuses
+      @draft     = Status.find_by(name: 'draft')
+      @published = Status.find_by(name: 'published')
     end
 
     def poster_params

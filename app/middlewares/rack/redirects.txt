@@ -2740,6 +2740,7 @@
 /movies/miamimodel.html /videos/the-miami-model
 /movies/pickaxe.html /videos/pickaxe
 /movies/roses.html /videos/roses-on-my-table
+/music https://crimethinc.bandcamp.com
 /nationalists /2016/02/16/europe-between-rape-and-racism
 /nestar /2012/12/03/european-speaking-tour-reportback
 /neurope /2014/08/27/crimethinc-in-scandinavia-and-the-balkans

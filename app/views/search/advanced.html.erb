@@ -1,39 +1,43 @@
-<h1>Advanced Search</h1>
+<h1><%= t "search.advanced.heading" %></h1>
 
 <%= form_with model: @advanced_search, local: true do |form| %>
   <fieldset>
-    <%= form.label :term, "Search" %>
+    <%= form.label :term, t("search.advanced.form.term_label") %>
     <%= form.text_field :term, class: "simple-field" %>
   </fieldset>
 
   <fieldset>
-    <%= form.label :title %>
+    <%= form.label :title, t("search.advanced.form.title_label") %>
     <%= form.text_field :title, class: "simple-field" %>
   </fieldset>
 
   <fieldset>
-    <%= form.label :subtitle %>
+    <%= form.label :subtitle, t("search.advanced.form.subtitle_label") %>
     <%= form.text_field :subtitle, class: "simple-field" %>
   </fieldset>
 
   <fieldset>
-    <%= form.label :content %>
+    <%= form.label :content, t("search.advanced.form.content_label") %>
     <%= form.text_field :content, class: "simple-field" %>
   </fieldset>
 
   <fieldset>
-    <%= form.label :tag, "Tags" %>
+    <%= form.label :tag, t("search.advanced.form.tag_label") %>
     <%= form.text_field :tag, class: "simple-field" %>
 
-    <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
+    <div class="form-text text-muted">
+      <%= render_markdown t("search.advanced.form.comma_separated_note") %>
+    </div>
   </fieldset>
 
   <fieldset>
-    <%= form.label :category, "Categories" %>
+    <%= form.label :category, t("search.advanced.form.category_label") %>
     <%= form.text_field :category, class: "simple-field" %>
 
-    <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
+    <div class="form-text text-muted">
+      <%= render_markdown t("search.advanced.form.comma_separated_note") %>
+    </div>
   </fieldset>
 
-  <%= form.submit "Search", class: "button" %>
+  <%= form.submit t("search.advanced.form.button"), class: "button" %>
 <% end %>

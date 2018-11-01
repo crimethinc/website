@@ -19,20 +19,9 @@
 
       <div id="download">
         <% if @book.downloads_available? %>
-          <p>Downloads:</p>
+          <p><%= t "downloads.heading" %>:</p>
 
-          <% {
-            screen_single_page_view:  I18n.t('downloads.formats.screen_single_page_view'),
-            screen_two_page_view:     I18n.t('downloads.formats.screen_two_page_view'),
-            print_color:              I18n.t('downloads.formats.print_color'),
-            print_black_and_white:    I18n.t('downloads.formats.print_black_and_white'),
-            print_color_a4:           I18n.t('downloads.formats.print_color_a4'),
-            print_black_and_white_a4: I18n.t('downloads.formats.print_black_and_white_a4'),
-            lite:                     I18n.t('downloads.formats.lite'),
-            epub:                     I18n.t('downloads.formats.epub'),
-            mobi:                     I18n.t('downloads.formats.mobi'),
-          }.each do |type, label| %>
-
+          <% I18n.t('downloads.formats').each do |type, label| %>
             <% if @book.send("#{type}_download_present?") %>
               <div>
                 <%= link_to label, @book.download_url(type), class: "download button" %>

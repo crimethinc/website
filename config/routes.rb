@@ -80,7 +80,7 @@ Rails.application.routes.draw do
   get 'videos',          to: 'videos#index', as: :videos
   get 'videos/:slug',    to: 'videos#show',  as: :video
 
-  # Tools: Posters, Stickers, Zines, Journals, Logos
+  # Tools: Posters, Stickers, Zines, Journals, Logos, Music
   get 'posters',        to: 'posters#index',  as: :posters
   get 'posters/:slug',  to: 'posters#show',   as: :poster
   get 'stickers',       to: 'stickers#index', as: :stickers
@@ -91,6 +91,7 @@ Rails.application.routes.draw do
   get 'logos/:slug',    to: 'logos#show',     as: :logo
   get 'zines',          to: 'zines#index',    as: :zines
   get 'zines/:slug',    to: 'zines#show',     as: :zine
+  get 'music',          to: 'music#index',    as: :music
 
   # Tools
   get 'tools', to: 'tools#index', as: :tools
