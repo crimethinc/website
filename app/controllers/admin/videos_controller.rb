@@ -3,6 +3,7 @@ module Admin
     before_action :authorize
     before_action :set_video,        only: [:show, :edit, :update, :destroy]
     before_action :set_published_at, only: [:create, :update]
+    before_action :set_statuses,     only: [:new, :edit]
 
     # /admin/videos
     def index
@@ -18,6 +19,7 @@ module Admin
     # /admin/videos/new
     def new
       @video = Video.new
+      @video.status = Status.find_by(name: 'draft')
       @title = admin_title
     end
 
@@ -33,6 +35,7 @@ module Admin
       if @video.save
         redirect_to [:admin, @video], notice: 'Video was successfully created.'
       else
+        set_statuses
         render :new
       end
     end
@@ -56,6 +59,11 @@ module Admin
 
     def set_video
       @video = Video.find(params[:id])
+    end
+
+    def set_statuses
+      @draft     = Status.find_by(name: 'draft')
+      @published = Status.find_by(name: 'published')
     end
 
     def video_params

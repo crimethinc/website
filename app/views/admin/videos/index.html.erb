@@ -5,7 +5,7 @@
     <tr>
       <th></th>
       <th>Title / Subtitle</th>
-      <th></th>
+      <th>Status</th>
     </tr>
   </thead>
 
@@ -20,6 +20,9 @@
             <b><%= video.title %></b><br>
             <%= video.subtitle %>
           <% end %>
+        </td>
+        <td>
+          <%= render "/admin/articles/publication_status_badge", article: video %>
         </td>
       </tr>
     <% end %>
