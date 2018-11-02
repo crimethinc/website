@@ -5,6 +5,7 @@
     <tr>
       <th></th>
       <th>Name</th>
+      <th>Status</th>
 
       <% Logo::FORMATS.each do |extension| %>
         <th class="text-center"><%= extension.upcase %></td>
@@ -25,6 +26,10 @@
             <br>
             <%= logo.subtitle %>
           <% end %>
+        </td>
+
+        <td>
+          <%= render "/admin/articles/publication_status_badge", article: logo %>
         </td>
 
         <% Logo::FORMATS.each do |extension| %>

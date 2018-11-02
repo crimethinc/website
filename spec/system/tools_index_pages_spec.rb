@@ -9,6 +9,12 @@ describe 'Tools Pages' do
   it 'Renders published logos calling /logos' do
     FactoryBot.create(:logo,
                       title: 'published',
+                      published_at: 1.day.ago,
+                      status_id: Status.find_by(name: 'published').id)
+
+    FactoryBot.create(:logo,
+                      title: 'not live',
+                      published_at: 1.day.from_now,
                       status_id: Status.find_by(name: 'published').id)
 
     FactoryBot.create(:logo,
@@ -19,6 +25,7 @@ describe 'Tools Pages' do
 
     expect(page).to have_content 'published'
     expect(page).not_to have_content 'draft'
+    expect(page).not_to have_content 'not live'
   end
 
   it 'Renders published stickers calling /stickers' do
