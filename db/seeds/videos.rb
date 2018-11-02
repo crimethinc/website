@@ -8,6 +8,9 @@ require "nokogiri"
 # Videos
 filepath = File.expand_path("../db/seeds/videos/", __FILE__)
 
+# Find the "published" Status
+published_status = Status.find_by(name: "published")
+
 Dir.glob("#{filepath}/*").each do |f|
   path_pieces = f.strip.split("/")
   filename    = path_pieces.last
@@ -37,7 +40,9 @@ Dir.glob("#{filepath}/*").each do |f|
       duration:       duration,
       vimeo_id:       vimeo_id,
       published_at:   published_at,
-      content_format: "html"
+      content_format: "html",
+      status_id:      published_status.id,
+      published_at:   1.year.ago
     )
 
     puts "movies/#{filename}"

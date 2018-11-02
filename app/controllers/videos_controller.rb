@@ -3,11 +3,11 @@ class VideosController < ApplicationController
     @html_id = 'page'
     @body_id = 'watch'
     @title   = title_for :videos
-    @videos  = Video.published.page(params[:page]).per(20)
+    @videos  = Video.live.published.page(params[:page]).per(20)
   end
 
   def show
-    @video = Video.where(slug: params[:slug]).first
+    @video = Video.live.published.where(slug: params[:slug]).first
     return redirect_to [:videos] if @video.blank?
 
     @editable = @video

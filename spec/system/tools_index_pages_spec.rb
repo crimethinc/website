@@ -103,6 +103,12 @@ describe 'Tools Pages' do
   it 'Renders published videos calling /videos' do
     FactoryBot.create(:video,
                       title: 'published',
+                      published_at: 1.day.ago,
+                      status_id: Status.find_by(name: 'published').id)
+
+    FactoryBot.create(:video,
+                      title: 'not live',
+                      published_at: 1.day.from_now,
                       status_id: Status.find_by(name: 'published').id)
 
     FactoryBot.create(:video,
@@ -112,6 +118,7 @@ describe 'Tools Pages' do
     visit '/videos'
 
     expect(page).to have_content 'published'
+    expect(page).not_to have_content 'not live'
     expect(page).not_to have_content 'draft'
   end
 end

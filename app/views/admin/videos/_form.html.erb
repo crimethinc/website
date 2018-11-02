@@ -55,6 +55,7 @@
     </div>
   </div>
 
+  <%= render "admin/books/categories_form", form: form %>
   <%= render "admin/datetime_group", form: form, post: @video, type: :video %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
