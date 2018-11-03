@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_230242) do
+ActiveRecord::Schema.define(version: 2018_11_03_011535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_230242) do
     t.text "image_mobile"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "page_views", default: 0
+    t.integer "user_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
     t.index ["status_id"], name: "index_articles_on_status_id"
   end
