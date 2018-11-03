@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe CategoriesController, type: :controller do
   describe 'GET #show' do
-    let(:status) { create(:status, :published) }
     let(:category) { create(:category, name: 'Test Category') }
 
     it 'redirects with a normalized slug' do
@@ -15,7 +14,7 @@ RSpec.describe CategoriesController, type: :controller do
     end
 
     it 'renders on a category with articles' do
-      create(:article, title: 'Test', published_at: 1.day.ago, category_ids: [category.id], status: status)
+      create(:article, title: 'Test', published_at: 1.day.ago, category_ids: [category.id], publication_status: 'published')
 
       get :show, params: { slug: category.slug }
 
@@ -30,12 +29,10 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   describe 'GET #feed' do
-    let(:status) { create(:status, name: 'published') }
-    let(:published) { status.published }
     let(:category) { create(:category, name: 'Test Category') }
 
     it 'renders on a category with articles' do
-      create(:article, title: 'Test', published_at: 1.day.ago, category_ids: [category.id], status: status)
+      create(:article, title: 'Test', published_at: 1.day.ago, category_ids: [category.id], publication_status: 'published')
 
       get :feed, params: { slug: category.slug }
 

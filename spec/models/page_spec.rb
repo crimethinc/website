@@ -11,7 +11,7 @@ RSpec.describe Page, type: :model do
     end
 
     context 'when unpublished' do
-      let(:page) { Page.new(draft_code: 'draft-code', publication_status: 'published') }
+      let(:page) { Page.new(draft_code: 'draft-code', publication_status: 'draft') }
 
       it { is_expected.to eq('/drafts/pages/draft-code') }
     end

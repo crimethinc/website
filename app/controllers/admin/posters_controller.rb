@@ -17,8 +17,7 @@ module Admin
 
     def new
       @poster = Poster.new
-      @poster.status = Status.find_by(name: 'draft')
-      @title = admin_title
+      @title  = admin_title
     end
 
     def edit

@@ -49,7 +49,7 @@ $(function() {
     $("#publication_time").val(hour+":"+minute);
 
     // set publication status to published
-    $("#article_status_id_published").attr("checked", "checked");
+    $("#publication_status_published").attr("checked", "checked");
 
     // submit form to publish article
     $("#article-form").submit();

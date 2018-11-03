@@ -13,9 +13,8 @@ module Admin
     end
 
     def new
-      @logo = Logo.new
+      @logo  = Logo.new
       @title = admin_title
-      @logo.status = Status.find_by(name: 'draft')
     end
 
     def edit

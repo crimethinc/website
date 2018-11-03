@@ -11,8 +11,7 @@ RSpec.describe VideosController, type: :controller do
 
   describe 'GET show' do
     it 'renders the video' do
-      status =  create(:status, :published)
-      video = Video.create(title: 'A Video', status_id: status.id, published_at: 1.day.ago)
+      video = Video.create(title: 'A Video', publication_status: 'published', published_at: 1.day.ago)
 
       get :show, params: { slug: video.slug }
 

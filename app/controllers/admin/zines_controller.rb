@@ -19,9 +19,8 @@ module Admin
     end
 
     def new
-      @book = Book.new(zine: true)
+      @book  = Book.new(zine: true)
       @title = admin_title
-      @book.status = Status.find_by(name: 'draft')
 
       render 'admin/books/new'
     end

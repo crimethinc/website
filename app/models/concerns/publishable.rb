@@ -5,8 +5,8 @@ module Publishable
     belongs_to :status
     default_scope { order(published_at: :desc) }
 
-    scope :draft,         -> { where(status: Status.find_by(name: 'draft')) }
-    scope :published,     -> { where(status: Status.find_by(name: 'published')) }
+    scope :draft,         -> { where(publication_status: 'draft') }
+    scope :published,     -> { where(publication_status: 'published') }
     scope :chronological, -> { order(published_at: :desc) }
     scope :root,          -> { where(collection_id: nil) }
     scope :live,          -> { where('published_at < ?', Time.now.utc) }

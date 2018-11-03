@@ -17,9 +17,8 @@ module Admin
     end
 
     def new
-      @book = Book.new
+      @book  = Book.new
       @title = admin_title
-      @book.status = Status.find_by(name: 'draft')
     end
 
     def edit

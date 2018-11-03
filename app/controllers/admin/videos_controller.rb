@@ -18,7 +18,6 @@ module Admin
     # /admin/videos/new
     def new
       @video = Video.new
-      @video.status = Status.find_by(name: 'draft')
       @title = admin_title
     end
 
