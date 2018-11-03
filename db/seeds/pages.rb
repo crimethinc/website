@@ -8,7 +8,7 @@ Page.create!(
 - [What you can do](/begin#gs)
 - [For more coverage of anarchist activity in North America](https://itsgoingdown.org)
   },
-  status: Status.find_by(name: "published"),
+  publication_status: 'published',
   published_at: Time.parse("2017-01-01"),
   slug: "start",
   image: "https://cloudfront.crimethinc.com/assets/pages/start/start-header.jpg",

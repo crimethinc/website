@@ -3,11 +3,6 @@ require "nokogiri"
 # Clear out all testing Articles first
 Article.destroy_all
 
-# Find the "published" Status
-published_status = Status.find_by(name: "published")
-
-
-
 # These timestamps were pulled from the cwc.im admin site since
 # the Feature HTML doesn't have any publishication datetime
 features_timestamps          = {
@@ -68,18 +63,17 @@ Dir.glob("#{filepath}/*/").each do |f|
     content      = File.read(f + "/index.html")
     image        = doc.css("meta[name='twitter:image:src']").attribute("content").value rescue nil
 
-
     # Save the Article
     article = Article.create!(
-      title:          title,
-      subtitle:       subtitle,
-      content:        content,
-      published_at:   published_at,
-      image:          image,
-      status_id:      published_status.id,
-      content_format: "html",
-      hide_layout:    true,
-      short_path: SecureRandom.hex
+      title:              title,
+      subtitle:           subtitle,
+      content:            content,
+      published_at:       published_at,
+      image:              image,
+      publication_status: 'published',
+      content_format:     'html',
+      hide_layout:        true,
+      short_path:         SecureRandom.hex
     )
 
     # Prefix slug with "feature-" to avoid collision with blog post with the same title on that day
@@ -168,17 +162,12 @@ Dir.glob("#{filepath}/*").each do |f|
       end
     end
 
-    # Image and Header color
+    # Image
     image = ""
-    header_background_color = ""
     doc.css("wp_postmeta").each do |wp_postmeta|
       if wp_postmeta.css("wp_meta_key").text == "jumbo"
         image = wp_postmeta.css("wp_meta_value").text
       end
-    end
-
-    if image.blank?
-      header_background_color = "#444444"
     end
 
     author_name = doc.css("dc_creator").text
@@ -191,15 +180,14 @@ Dir.glob("#{filepath}/*").each do |f|
 
     # Save the Article
     article = Article.create!(
-      title: title,
-      content: content,
-      published_at: published_at,
-      slug: slug,
-      header_background_color: header_background_color,
-      image: image,
-      status_id: published_status.id,
-      content_format: "html",
-      short_path: SecureRandom.hex
+      title:              title,
+      content:            content,
+      published_at:       published_at,
+      slug:               slug,
+      image:              image,
+      publication_status: 'published',
+      content_format:     'html',
+      short_path:         SecureRandom.hex
     )
 
     # Add the Article to its Category
@@ -225,25 +213,19 @@ html_doc = File.open(filepath) { |f| Nokogiri::HTML(f) }
 # And create a new Category for "Site News Archive"
 category = Category.find_or_create_by! name: "Site News Archive"
 
-# Find the "published" Status
-published_status = Status.find_by(name: "published")
-
 html_doc.css(".h-entry").each do |entry|
-  title        = entry.css(".p-name").text
-
-  published_at = Time.parse(entry.css(".dt-published").text)
-  content      = entry.css(".e-content").inner_html
-  content      = content.gsub("\n", "").gsub(/\s{2,}/, " ").gsub("<p>", "").gsub("</p>", "\n\n").gsub(" \n\n ", "\n\n")
-  status_id    = published_status.id
+  title              = entry.css(".p-name").text
+  published_at       = Time.parse(entry.css(".dt-published").text)
+  content            = entry.css(".e-content").inner_html
+  content            = content.gsub("\n", "").gsub(/\s{2,}/, " ").gsub("<p>", "").gsub("</p>", "\n\n").gsub(" \n\n ", "\n\n")
 
   # Save the Article
-  article = Article.create!(title:          title,
-                            published_at:   published_at,
-                            content:        content,
-                            content_format: "html",
-                            status_id:      status_id,
-                            header_background_color: "#444",
-                            short_path: SecureRandom.hex)
+  article = Article.create!(title:              title,
+                            published_at:       published_at,
+                            content:            content,
+                            content_format:     'html',
+                            publication_status: 'published',
+                            short_path:          SecureRandom.hex)
 
   # Add the Article to its Category
   category.articles << article
@@ -295,10 +277,6 @@ articles = [
 ]
 
 
-
-# Find the "published" Status id once for reuse on each test Article
-published_status = Status.find_by(name: "published")
-
 # Loop through and create the articles
 articles.each_with_index do |article_params, index|
   # Delete URL from params before creating Article
@@ -308,10 +286,10 @@ articles.each_with_index do |article_params, index|
   # And create a new Category
   category = Category.find_or_create_by! name: article_params.delete(:category)
 
-  # article_params[:published_at]   = published_at
-  article_params[:status_id]      = published_status.id
-  article_params[:content_format] = "html"
-  article_params[:short_path]     = SecureRandom.hex
+  # article_params[:published_at]     = published_at
+  article_params[:publication_status] = 'published'
+  article_params[:content_format]     = 'html'
+  article_params[:short_path]         = SecureRandom.hex
 
   # Save the Article
   article = Article.create!(article_params)
@@ -332,9 +310,6 @@ end
 
 
 # Texts as Articles
-
-# Find the "published" Status
-published_status = Status.find_by(name: "published")
 
 # Text collections
 inside_front               = %w(permanentvacation selling situationists veganism workethic)
@@ -390,20 +365,18 @@ Dir.glob("#{filepath}/*").each do |f|
     subtitle                = nil
     content                 = File.read(f)
     image                   = nil
-    header_background_color = "#444444"
 
     # Save the Article
     article = Article.create!(
-      title:          title || filename_slug,
-      subtitle:       subtitle,
-      content:        content,
-      published_at:   published_at,
-      image:          image,
-      status_id:      published_status.id,
-      content_format: "html",
-      hide_layout:    false,
-      header_background_color: header_background_color,
-      short_path: SecureRandom.hex
+      title:              title || filename_slug,
+      subtitle:           subtitle,
+      content:            content,
+      published_at:       published_at,
+      image:              image,
+      publication_status: 'published',
+      content_format:     'html',
+      hide_layout:        false,
+      short_path:         SecureRandom.hex
     )
 
     # Add the Article to its Category
@@ -460,9 +433,6 @@ articles = [
 ]
 
 
-# Find the "published" Status id once for reuse on each test Article
-published_status = Status.find_by(name: "published")
-
 # Loop through and create the articles
 articles.each_with_index do |article_params, index|
   # Delete Category from params before creating Article
@@ -470,8 +440,8 @@ articles.each_with_index do |article_params, index|
   category = Category.find_or_create_by! name: article_params.delete(:category)
 
   # published
-  article_params[:status_id] = published_status.id
-  article_params[:short_path] = SecureRandom.hex
+  article_params[:publication_status] = 'published'
+  article_params[:short_path]         = SecureRandom.hex
 
   # Save the Article
   article = Article.create!(article_params)
@@ -497,9 +467,6 @@ articles = [
   }
 ]
 
-# Find the "published" Status id once for reuse on each test Article
-published_status = Status.find_by(name: "published")
-
 # Loop through and create the articles
 articles.each_with_index do |article_params, index|
   # Delete Category from params before creating Article
@@ -507,7 +474,7 @@ articles.each_with_index do |article_params, index|
   category = Category.find_or_create_by! name: article_params.delete(:category)
 
   # published
-  article_params[:status_id] = published_status.id
+  article_params[:publication_status] = 'published'
 
   # Save the Article
   article = Article.create!(article_params)
