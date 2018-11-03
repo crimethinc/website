@@ -19,7 +19,7 @@ class User < ApplicationRecord
 
   class << self
     def options_for_select
-      User.all.map { |u| [u.username, u.id] }
+      all.map { |u| [u.username, u.id] }
     end
   end
 
