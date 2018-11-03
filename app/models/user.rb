@@ -3,8 +3,6 @@ class User < ApplicationRecord
 
   PASSWORD_MINIMUM_LENGTH = 30
 
-  has_many :articles, dependent: :destroy
-
   validates :username, presence: true, uniqueness: true, on: [:create, :update]
   validates :password,
             presence: true,
