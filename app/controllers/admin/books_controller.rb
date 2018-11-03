@@ -4,7 +4,6 @@ module Admin
     before_action :set_book,             only: [:show, :edit, :update, :destroy]
     before_action :set_publication_type, only: [:show, :edit, :new, :index]
     before_action :set_ebook_formats,    only: [:edit, :new]
-    before_action :set_statuses,         only: [:new, :edit]
 
     def index
       @books = Book.book.order(slug: :asc).page(params[:page])
@@ -36,7 +35,6 @@ module Admin
       if @book.save
         redirect_to [:admin, @book], notice: "#{publication_type.to_s.capitalize.singularize} was successfully created."
       else
-        set_statuses
         render :new
       end
     end
@@ -64,11 +62,6 @@ module Admin
 
     def set_publication_type
       @publication_type = 'book'
-    end
-
-    def set_statuses
-      @draft     = Status.find_by(name: 'draft')
-      @published = Status.find_by(name: 'published')
     end
 
     def set_ebook_formats

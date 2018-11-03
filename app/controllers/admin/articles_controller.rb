@@ -3,7 +3,6 @@ module Admin
     before_action :authorize
     before_action :set_article,      only: [:show, :edit, :update, :destroy]
     before_action :set_published_at, only: [:create, :update]
-    before_action :set_statuses,     only: [:new, :edit]
     before_action :set_categories,   only: [:new, :edit]
     after_action  :organize_article, only: [:create, :update]
 
@@ -45,7 +44,6 @@ module Admin
       if @article.save
         redirect_to [:admin, @article], notice: 'Article was successfully created.'
       else
-        set_statuses
         render :new
       end
     end
@@ -57,7 +55,6 @@ module Admin
 
         redirect_to [:admin, @article], notice: 'Article was successfully updated.'
       else
-        set_statuses
         render :edit
       end
     end
@@ -84,11 +81,6 @@ module Admin
 
     def set_categories
       @categories = Category.all
-    end
-
-    def set_statuses
-      @draft     = Status.find_by(name: 'draft')
-      @published = Status.find_by(name: 'published')
     end
 
     def organize_article

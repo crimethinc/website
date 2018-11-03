@@ -3,8 +3,7 @@ module Admin
     before_action :authorize
     before_action :set_page,         only: [:show, :edit, :update, :destroy]
     before_action :set_published_at, only: [:create, :update]
-    before_action :set_statuses,     only: [:new, :edit]
-    after_action  :organize_page,    only: [:create, :update]
+    after_action :organize_page, only: [:create, :update]
 
     # /admin/pages
     def index
@@ -55,11 +54,6 @@ module Admin
     end
 
     private
-
-    def set_statuses
-      @draft     = Status.find_by(name: 'draft')
-      @published = Status.find_by(name: 'published')
-    end
 
     def set_page
       @page =
