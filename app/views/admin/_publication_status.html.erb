@@ -1,0 +1,19 @@
+<div id="publication-status" class="row mb-5">
+  <div class='col'>
+
+    <%= form.label :status_id, "Publication Status" %><br>
+
+    <div class="form-check row" id="publication_status">
+      <% PublicationStatus::STATES.each do |state| %>
+        <span class="col">
+          <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "form-check-input" %>
+
+          <%= form.label "publication_status_#{state}", class: "form-check-label", for: "publication_status_#{state}" do %>
+            <b><%= state.capitalize %></b>
+          <% end %>
+        </span>
+      <% end %>
+    </div>
+
+  </div>
+</div><!-- #categorization.row -->
