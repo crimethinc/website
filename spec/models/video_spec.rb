@@ -12,8 +12,7 @@ RSpec.describe Video, type: :model do
   describe '#published?' do
     subject { video.published? }
 
-    let(:status) { Status.new(name: 'published') }
-    let(:video) { Video.new(status: status) }
+    let(:video) { Video.new(publication_status: 'published') }
 
     it { is_expected.to eq(true) }
   end

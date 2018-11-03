@@ -68,6 +68,6 @@ module ArticlesHelper
   end
 
   def publication_status_badge_class article
-    article.status.name.casecmp('draft').zero? ? 'danger' : 'success'
+    article.publication_status.casecmp('draft').zero? ? 'danger' : 'success'
   end
 end

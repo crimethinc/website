@@ -6,15 +6,13 @@ RSpec.describe Post, type: :model do
       subject { post.send("#{status_name}?") }
 
       context "with status of #{status_name}" do
-        let(:status) { Status.new(name: status_name) }
-        let(:post) { Page.new(status: status) }
+        let(:post) { Page.new(publication_status: status_name) }
 
         it { is_expected.to eq(true) }
       end
 
       context 'with another status name' do
-        let(:status) { Status.new(name: 'another') }
-        let(:post) { Page.new(status: status) }
+        let(:post) { Page.new(publication_status: 'another') }
 
         it { is_expected.to eq(false) }
       end

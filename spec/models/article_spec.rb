@@ -40,16 +40,14 @@ describe Article do
     subject { article.path }
 
     context 'when published' do
-      let(:article) { create(:article, slug: 'slug', published_at: date, status: status) }
+      let(:article) { create(:article, slug: 'slug', published_at: date, publication_status: 'published') }
       let(:date)    { Date.parse('2017-01-01') }
-      let(:status)  { create(:status, :published) }
 
       it { is_expected.to eq('/2017/01/01/slug') }
     end
 
     context 'when not published' do
-      let(:article) { create(:article, draft_code: 'draft-code', status: status) }
-      let(:status)  { create(:status, :draft) }
+      let(:article) { create(:article, draft_code: 'draft-code', publication_status: 'draft') }
 
       it { is_expected.to eq('/drafts/articles/draft-code') }
     end
@@ -58,24 +56,23 @@ describe Article do
   describe '#slug_exists?' do
     subject { article.slug_exists? }
 
-    let(:status)  { create(:status, :published) }
-    let(:article) { described_class.new(slug: 'slug', published_at: date, short_path: SecureRandom.hex, status: Status.last) }
+    let(:article) { described_class.new(slug: 'slug', published_at: date, short_path: SecureRandom.hex, publication_status: 'published') }
     let(:date)    { Date.parse('2017-01-01') }
 
     context 'with the same slug on the same date' do
-      before { create(:article, slug: 'slug', published_at: date, status: status) }
+      before { create(:article, slug: 'slug', published_at: date, publication_status: 'published') }
 
       it { is_expected.to be true }
     end
 
     context 'with the same slug on a different date' do
-      before { create(:article, slug: 'slug', published_at: date + 1.day, status: status) }
+      before { create(:article, slug: 'slug', published_at: date + 1.day, publication_status: 'published') }
 
       it { is_expected.to be false }
     end
 
     context 'with a unique slug' do
-      before { create(:article, slug: 'another-slug', published_at: date, status: status) }
+      before { create(:article, slug: 'another-slug', published_at: date, publication_status: 'published') }
 
       it { is_expected.to be false }
     end
@@ -101,25 +98,23 @@ describe Article do
   # end
 
   describe '#collection_posts' do
-    let(:status) { create(:status) }
     let(:published_at) { Date.current }
 
     it 'finds related collection_posts by collection_id' do
-      collection = create(:article, title: 'test', status: status, published_at: published_at)
-      article = create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
+      collection = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
+      article = create(:article, title: 'test', collection_id: collection.id, publication_status: 'published', published_at: published_at)
 
       expect(collection.collection_posts).to include article
     end
   end
 
   describe 'collection_root?' do
-    let(:status) { create(:status) }
     let(:published_at) { Date.current }
 
     context 'when #collection_posts exists' do
       it 'returns true' do
-        collection = create(:article, title: 'test', status: status, published_at: published_at)
-        create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
+        collection = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
+        create(:article, title: 'test', collection_id: collection.id, publication_status: 'published', published_at: published_at)
 
         expect(collection.collection_root?).to eq true
       end
@@ -127,7 +122,7 @@ describe Article do
 
     context 'when zero #collection_posts exist' do
       it 'returns false' do
-        article = create(:article, title: 'test', status: status, published_at: published_at)
+        article = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
 
         expect(article.collection_root?).to eq false
       end
@@ -135,13 +130,12 @@ describe Article do
   end
 
   describe 'in_collection?' do
-    let(:status) { create(:status) }
     let(:published_at) { Date.current }
 
     context 'when it has a collection_id' do
       it 'returns true' do
-        collection = create(:article, title: 'test', status: status, published_at: published_at)
-        article = create(:article, title: 'test', collection_id: collection.id, status: status, published_at: published_at)
+        collection = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
+        article = create(:article, title: 'test', collection_id: collection.id, publication_status: 'published', published_at: published_at)
 
         expect(article.in_collection?).to eq true
       end
@@ -149,7 +143,7 @@ describe Article do
 
     context 'when collection_id is nil' do
       it 'returns false' do
-        article = create(:article, title: 'test', status: status, published_at: published_at)
+        article = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
 
         expect(article.in_collection?).to eq false
       end
@@ -157,13 +151,12 @@ describe Article do
   end
 
   describe 'short_path_redirect_creation' do
-    let(:status) { create(:status) }
     let(:published_at) { Date.current }
 
     context 'when it successfully creates a short_path redirect' do
       it 'returns true' do
         # TODO: FIXME: redo this test
-        # article = create(:article, title: 'test', status: status, published_at: published_at)
+        # article = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
         # expect(Redirect.last.source_path[/\w+/]).to eq article.short_path
       end
     end
@@ -172,7 +165,7 @@ describe Article do
       it 'raises error' do
         # TODO: FIXME: redo this test
         # redirect = Redirect.create!(source_path: '/tester', target_path: '/test/test')
-        # article = Article.new(title: 'test', collection_id: nil, short_path: 'tester', status: status, published_at: published_at)
+        # article = Article.new(title: 'test', collection_id: nil, short_path: 'tester', publication_status: 'published', published_at: published_at)
         # expect{article.save!}.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Short path  is already defined by a redirect')
       end
     end

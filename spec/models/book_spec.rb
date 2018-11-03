@@ -44,8 +44,7 @@ RSpec.describe Book, type: :model do
   describe '#published?' do
     subject { book.published? }
 
-    let(:status) { Status.new(name: 'published') }
-    let(:book) { Book.new(title: 'Contradictionary', status: status) }
+    let(:book) { Book.new(title: 'Contradictionary', publication_status: 'published') }
 
     it { is_expected.to eq(true) }
   end

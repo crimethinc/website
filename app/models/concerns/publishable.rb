@@ -17,11 +17,11 @@ module Publishable
   end
 
   def draft?
-    status.name == 'draft'
+    publication_status == 'draft'
   end
 
   def published?
-    status.name == 'published'
+    publication_status == 'published'
   end
 
   def dated?
