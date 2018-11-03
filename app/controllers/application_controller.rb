@@ -17,7 +17,8 @@ class ApplicationController < ActionController::Base
   helper_method :staging?
 
   def lite_mode?
-    request.subdomain == 'lite'
+    #request.subdomain == 'lite'
+    true
   end
   helper_method :lite_mode?
 
