@@ -104,7 +104,7 @@ module Admin
                                       :image, :image_description, :css, :hide_layout,
                                       :header_background_color, :header_text_color,
                                       :header_shadow_text, :image_mobile, :published_at_tz,
-                                      category_ids: [])
+                                      :publication_status, category_ids: [])
     end
   end
 end

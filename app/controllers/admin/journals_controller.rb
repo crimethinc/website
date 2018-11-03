@@ -74,7 +74,8 @@ module Admin
                                       :lite_download_present, :epub_download_present, :mobi_download_present,
                                       :print_black_and_white_a4_download_present, :print_color_a4_download_present,
                                       :print_color_download_present, :print_black_and_white_download_present,
-                                      :screen_single_page_view_download_present, :screen_two_page_view_download_present)
+                                      :screen_single_page_view_download_present, :screen_two_page_view_download_present,
+                                      :publication_status)
     end
   end
 end

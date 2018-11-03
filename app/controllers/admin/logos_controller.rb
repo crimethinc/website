@@ -60,8 +60,9 @@ module Admin
 
     def logo_params
       params.require(:logo).permit(:title, :subtitle, :description,
-                                   :slug, :height, :width, :content_format, :summary, :status_id, :published_at,
-                                   :jpg_url_present, :png_url_present, :pdf_url_present, :svg_url_present, :tif_url_present)
+                                   :slug, :height, :width, :content_format, :summary, :status_id,
+                                   :published_at, :jpg_url_present, :png_url_present, :pdf_url_present,
+                                   :svg_url_present, :tif_url_present, :publication_status)
     end
   end
 end

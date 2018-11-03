@@ -70,7 +70,7 @@ module Admin
       params.require(:video).permit(:title, :subtitle, :status_id,
                                     :content, :slug, :vimeo_id, :image, :image_description,
                                     :published_at, :tweet, :summary, :quality, :duration,
-                                    :published_at_tz)
+                                    :published_at_tz, :publication_status)
     end
   end
 end

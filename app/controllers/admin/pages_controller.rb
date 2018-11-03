@@ -76,10 +76,9 @@ module Admin
     end
 
     def page_params
-      params.require(:page).permit(:year, :month, :day, :css, :slug, :tags,
-                                   :draft_code, :status_id, :published_at,
-                                   :categories, :hide_header, :hide_footer,
-                                   :hide_layout, :published_at_tz)
+      params.require(:page).permit(:year, :month, :day, :css, :slug, :tags, :draft_code, :status_id,
+                                   :published_at, :categories, :hide_header, :hide_footer,
+                                   :hide_layout, :published_at_tz, :publication_status)
     end
   end
 end
