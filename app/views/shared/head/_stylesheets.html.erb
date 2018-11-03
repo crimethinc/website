@@ -1,5 +1,5 @@
 <!-- CSS -->
-<%= stylesheet_link_tag "application", media: "all" %>
+<%= stylesheet_link_tag "application", media: "all" unless lite_mode? %>
 
 <% if @article.present? && @article.css.present? %>
   <!-- Custom Article CSS -->
@@ -19,3 +19,5 @@
 <style>
   <%= yield :style_tag %>
 </style>
+
+<%= stylesheet_link_tag "lite_mode", media: "all" if lite_mode? %>
