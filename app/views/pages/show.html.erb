@@ -1,13 +1,5 @@
 <article id="page-<%= @page.id %>" class="h-entry">
-  <header>
-    <%= render "articles/titles", header: @page, linked: false %>
-
-    <% if @page.image.present? %>
-      <%= image_tag @page.image, alt: @page.image_description, class: "u-photo" %>
-    <% end %>
-  </header>
-
   <div class="e-content">
-    <%= render_content @page %>
+    <%= render_markdown_for page: @page.slug %>
   </div>
 </article>

@@ -44,6 +44,17 @@
     }
 
     .e-content {
+      h1 {
+        font: {
+          weight: bold;
+          weight: 700;
+          size: 4rem;
+        }
+
+        line-height: 1.25em;
+        margin-bottom: $border-size-small;
+      }
+
       h2 {
         font: {
           weight: normal;
