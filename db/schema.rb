@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_230242) do
+ActiveRecord::Schema.define(version: 2018_10_27_230207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "articles", id: :serial, force: :cascade do |t|
+    t.integer "user_id"
     t.integer "status_id"
     t.text "title"
     t.text "subtitle"
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_230242) do
     t.integer "page_views", default: 0
     t.index ["collection_id"], name: "index_articles_on_collection_id"
     t.index ["status_id"], name: "index_articles_on_status_id"
+    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "books", id: :serial, force: :cascade do |t|
@@ -211,6 +213,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_230242) do
   end
 
   create_table "pages", id: :serial, force: :cascade do |t|
+    t.integer "user_id"
     t.integer "status_id"
     t.text "title"
     t.text "subtitle"
@@ -233,6 +236,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_230242) do
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.index ["status_id"], name: "index_pages_on_status_id"
+    t.index ["user_id"], name: "index_pages_on_user_id"
   end
 
   create_table "podcasts", id: :serial, force: :cascade do |t|
