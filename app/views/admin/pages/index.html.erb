@@ -5,9 +5,8 @@
     <tr>
       <th></th>
       <th>Status</th>
-      <th>Title / Subtitle</th>
-      <th>Published Date</th>
       <th>Path</th>
+      <th>Published Date</th>
     </tr>
   </thead>
 
@@ -21,20 +20,12 @@
         <td><%= render "/admin/articles/publication_status_badge", article: page %></td>
 
         <td>
-          <b><%= link_to page.title, [:admin, page] %></b><br>
-
-          <% if page.subtitle.present? %>
-            <%= link_to page.subtitle, [:admin, page] %>
-          <% end %>
-        </td>
-
-        <td>
-          <%= display_date page.published_at %><br>
-          <%= display_time page.published_at %>
-        </td>
-
-        <td>
           <%= link_to page.path, page.path %>
+        </td>
+
+        <td>
+          <%= display_date page.published_at %>
+          <%= display_time page.published_at %>
         </td>
       </tr>
     <% end %>
