@@ -90,7 +90,7 @@ module Admin
     def article_params
       params.require(:article).permit(:title, :subtitle, :content, :content_format,
                                       :year, :month, :day, :download_url, :tweet,
-                                      :slug, :draft_code, :status_id, :summary,
+                                      :slug, :draft_code,  :summary,
                                       :published_at, :tags, :collection_id, :short_path,
                                       :image, :image_description, :css, :hide_layout,
                                       :header_background_color, :header_text_color,

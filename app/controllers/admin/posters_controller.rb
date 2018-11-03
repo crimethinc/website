@@ -65,7 +65,7 @@ module Admin
     def poster_params
       params.require(:poster).permit(:sticker, :title, :subtitle, :content, :content_format,
                                      :buy_info, :buy_url, :price_in_cents, :summary, :description,
-                                     :published_at, :status_id, :front_image_present, :back_image_present,
+                                     :published_at, :front_image_present, :back_image_present,
                                      :front_download_present, :back_download_present, :slug, :height, :width,
                                      :depth, :front_image_format, :back_image_format, :front_color_image_present,
                                      :front_black_and_white_image_present, :back_color_image_present,
