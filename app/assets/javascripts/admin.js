@@ -38,10 +38,10 @@ $(function() {
   $("#admin-article #publish-now").click(function() {
     var now    = new Date();
     var year   = now.getUTCFullYear();
-    var month  = rjust((now.getUTCMonth() + 1).toString(),   2, "0");
-    var day    = rjust(now.getUTCDate().toString(),   2, "0");
-    var hour   = rjust(now.getUTCHours().toString(),   2, "0");
-    var minute = rjust(now.getUTCMinutes().toString(), 2, "0");
+    var month  = rjust((now.getUTCMonth() + 1).toString(), 2, "0");
+    var day    = rjust(now.getUTCDate().toString(),        2, "0");
+    var hour   = rjust(now.getUTCHours().toString(),       2, "0");
+    var minute = rjust(now.getUTCMinutes().toString(),     2, "0");
 
     // set published_at date to utc.now
     $("#article_published_at_tz").val("UTC");
@@ -49,7 +49,7 @@ $(function() {
     $("#publication_time").val(hour+":"+minute);
 
     // set publication status to published
-    $("#article_status_id_published").attr("checked", "checked");
+    $("#publication_status_published").attr("checked", "checked");
 
     // submit form to publish article
     $("#article-form").submit();

@@ -3,7 +3,6 @@ module Admin
     before_action :authorize
     before_action :set_poster,           only: [:show, :edit, :update, :destroy]
     before_action :set_publication_type, only: [:show, :edit, :new, :index]
-    before_action :set_statuses,         only: [:new, :edit]
 
     def index
       @posters = Poster.poster.order(slug: :asc).page(params[:page]).per(50)
@@ -18,8 +17,7 @@ module Admin
 
     def new
       @poster = Poster.new
-      @poster.status = Status.find_by(name: 'draft')
-      @title = admin_title
+      @title  = admin_title
     end
 
     def edit
@@ -35,7 +33,6 @@ module Admin
       if @poster.save
         redirect_to [:admin, @poster], notice: "#{publication_type.to_s.capitalize.singularize} was successfully created."
       else
-        set_statuses
         render :new
       end
     end
@@ -65,20 +62,16 @@ module Admin
       @publication_type = 'poster'
     end
 
-    def set_statuses
-      @draft     = Status.find_by(name: 'draft')
-      @published = Status.find_by(name: 'published')
-    end
-
     def poster_params
       params.require(:poster).permit(:sticker, :title, :subtitle, :content, :content_format,
-                                     :buy_info, :buy_url, :price_in_cents, :summary, :description, :published_at, :status_id,
-                                     :front_image_present, :back_image_present, :front_download_present, :back_download_present,
-                                     :slug, :height, :width, :depth, :front_image_format, :back_image_format,
-                                     :front_color_image_present, :front_black_and_white_image_present, :back_color_image_present,
+                                     :buy_info, :buy_url, :price_in_cents, :summary, :description,
+                                     :published_at, :front_image_present, :back_image_present,
+                                     :front_download_present, :back_download_present, :slug, :height, :width,
+                                     :depth, :front_image_format, :back_image_format, :front_color_image_present,
+                                     :front_black_and_white_image_present, :back_color_image_present,
                                      :back_black_and_white_image_present, :front_color_download_present,
                                      :front_black_and_white_download_present, :back_color_download_present,
-                                     :back_black_and_white_download_present)
+                                     :back_black_and_white_download_present, :publication_status)
     end
   end
 end

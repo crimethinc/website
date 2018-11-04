@@ -1,14 +1,10 @@
-%w(draft published).each do |status|
-  Status.create!(name: status)
-end
-
 test_user = User.new(
-              username:              "tester",
-              password:              "a long passphrase to meet the minimum length",
-              password_confirmation: "a long passphrase to meet the minimum length")
+              username:              'tester',
+              password:              '123456789012345678901234567890',
+              password_confirmation: '123456789012345678901234567890')
 test_user.save!(validate: false)
 
-puts "Trying dev seeds for each post-type..."
+puts 'Trying dev seeds for each post-type...'
 %w[articles books pages podcasts episodes redirects videos journals featured_journals].each do |posttype|
   filepath = File.expand_path("../seeds/#{posttype}.rb", __FILE__)
 

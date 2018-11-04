@@ -7,11 +7,7 @@ class Page < ApplicationRecord
   has_many :tags, through: :taggings
 
   def path
-    if published?
-      "/#{slug}"
-    else
-      "/drafts/pages/#{draft_code}"
-    end
+    published? ? "/#{slug}" : "/drafts/pages/#{draft_code}"
   end
 
   def content_rendered

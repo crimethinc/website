@@ -137,11 +137,11 @@ pages: 114,
 
   journal.screen_two_page_view_download_present = true
 
-  journal.published_at = Time.parse("#{year}-#{month}-01T12:00 -0800")
-  journal.status       = Status.find_by(name: 'published')
-  journal.ink          = 'Soy'
-  journal.issue        = journal.title.split('#').last
-  journal.description  = [journal.summary, journal.description].join("\n\n")
+  journal.published_at       = Time.parse("#{year}-#{month}-01T12:00 -0800")
+  journal.publication_status = 'published'
+  journal.ink                = 'Soy'
+  journal.issue              = journal.title.split('#').last
+  journal.description        = [journal.summary, journal.description].join("\n\n")
 
   puts "    ==> Saving Journal: #{journal.name}"
   journal.save!

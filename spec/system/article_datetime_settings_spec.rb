@@ -5,11 +5,6 @@ describe 'Setting and changing an articles published_at date' do
     create(:user, username: 'user1', password: 'c' * 31)
   end
 
-  before do
-    create(:status, :published)
-    create(:status, :draft)
-  end
-
   it 'creates a new article' do
     login_user(admin)
     visit '/admin/articles'

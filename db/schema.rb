@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_020911) do
+ActiveRecord::Schema.define(version: 2018_11_04_000207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_020911) do
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "page_views", default: 0
     t.integer "user_id"
-    t.string "publication_status", default: "draft"
+    t.integer "publication_status", default: 0, null: false
     t.index ["collection_id"], name: "index_articles_on_collection_id"
     t.index ["status_id"], name: "index_articles_on_status_id"
   end
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_020911) do
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
     t.integer "status_id"
-    t.string "publication_status", default: "draft"
+    t.integer "publication_status", default: 0, null: false
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|
@@ -191,7 +191,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_020911) do
     t.boolean "screen_two_page_view_download_present"
     t.integer "series_id"
     t.integer "issue"
-    t.string "publication_status", default: "draft"
+    t.integer "publication_status", default: 0, null: false
   end
 
   create_table "logos", force: :cascade do |t|
@@ -212,7 +212,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_020911) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "status_id"
-    t.string "publication_status", default: "draft"
+    t.integer "publication_status", default: 0, null: false
   end
 
   create_table "pages", id: :serial, force: :cascade do |t|
@@ -237,7 +237,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_020911) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-    t.string "publication_status", default: "draft"
+    t.integer "publication_status", default: 0, null: false
     t.index ["status_id"], name: "index_pages_on_status_id"
   end
 
@@ -293,7 +293,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_020911) do
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
     t.integer "status_id"
-    t.string "publication_status", default: "draft"
+    t.integer "publication_status", default: 0, null: false
   end
 
   create_table "redirects", id: :serial, force: :cascade do |t|
@@ -368,7 +368,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_020911) do
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "status_id"
-    t.string "publication_status", default: "draft"
+    t.integer "publication_status", default: 0, null: false
   end
 
 

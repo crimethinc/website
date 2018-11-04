@@ -4,7 +4,6 @@ module Admin
     before_action :set_zine,             only: [:show, :edit, :update, :destroy]
     before_action :set_publication_type, only: [:show, :edit, :new, :index]
     before_action :set_ebook_formats,    only: [:edit, :new]
-    before_action :set_statuses,         only: [:new, :edit]
 
     def index
       @books = Book.zine.order(slug: :asc).page(params[:page])
@@ -20,9 +19,8 @@ module Admin
     end
 
     def new
-      @book = Book.new(zine: true)
+      @book  = Book.new(zine: true)
       @title = admin_title
-      @book.status = Status.find_by(name: 'draft')
 
       render 'admin/books/new'
     end
@@ -41,7 +39,6 @@ module Admin
       if @book.save
         redirect_to [:admin, @book], notice: 'Zine was successfully created.'
       else
-        set_statuses
         render :new
       end
     end
@@ -64,11 +61,6 @@ module Admin
       @book = Book.find(params[:id])
     end
 
-    def set_statuses
-      @draft     = Status.find_by(name: 'draft')
-      @published = Status.find_by(name: 'published')
-    end
-
     def set_publication_type
       @publication_type = 'zine'
     end
@@ -78,7 +70,7 @@ module Admin
     end
 
     def book_params
-      params.require(:book).permit(:title, :subtitle, :content, :tweet, :summary, :status_id,
+      params.require(:book).permit(:title, :subtitle, :content, :tweet, :summary,
                                    :description, :buy_url, :buy_info, :content_format, :slug, :series, :published_at,
                                    :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,
                                    :photographs, :printing, :ink, :definitions, :recipes, :has_index, :cover_style,
@@ -86,7 +78,8 @@ module Admin
                                    :lite_download_present, :epub_download_present, :mobi_download_present,
                                    :print_black_and_white_a4_download_present, :print_color_a4_download_present,
                                    :print_color_download_present, :print_black_and_white_download_present,
-                                   :screen_single_page_view_download_present, :screen_two_page_view_download_present)
+                                   :screen_single_page_view_download_present, :screen_two_page_view_download_present,
+                                   :publication_status)
     end
   end
 end

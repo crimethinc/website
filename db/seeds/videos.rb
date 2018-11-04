@@ -1,15 +1,9 @@
 require "nokogiri"
-
-
 # TODO add TCE video
 # TODO add Vimeo videos
 
-
 # Videos
 filepath = File.expand_path("../db/seeds/videos/", __FILE__)
-
-# Find the "published" Status
-published_status = Status.find_by(name: "published")
 
 Dir.glob("#{filepath}/*").each do |f|
   path_pieces = f.strip.split("/")
@@ -30,27 +24,26 @@ Dir.glob("#{filepath}/*").each do |f|
 
     # Save the Video
     video = Video.create!(
-      title:          title,
-      subtitle:       nil,
-      content:        content,
-      tweet:          nil,
-      summary:        nil,
-      slug:           slug,
-      quality:        quality,
-      duration:       duration,
-      vimeo_id:       vimeo_id,
-      published_at:   published_at,
-      content_format: "html",
-      status_id:      published_status.id,
-      published_at:   1.year.ago
+      title:              title,
+      subtitle:           nil,
+      content:            content,
+      tweet:              nil,
+      summary:            nil,
+      slug:               slug,
+      quality:            quality,
+      duration:           duration,
+      vimeo_id:           vimeo_id,
+      content_format:     'html',
+      publication_status: 'published',
+      published_at:       1.year.ago
     )
 
-    puts "movies/#{filename}"
-    puts "movies/#{slug}"
+    puts "videos/#{filename}"
+    puts "videos/#{slug}"
     puts
 
     unless Redirect.find_by(source_path: "/movies/#{filename}").present?
-      Redirect.create! source_path: "movies/#{filename}", target_path: "movies/#{slug}", temporary: false
+      Redirect.create! source_path: "movies/#{filename}", target_path: "videos/#{slug}", temporary: false
     end
  end
 

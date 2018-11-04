@@ -1,8 +1,7 @@
 module Admin
   class LogosController < Admin::AdminController
     before_action :authorize
-    before_action :set_logo,     only: [:show, :edit, :update, :destroy]
-    before_action :set_statuses, only: [:new, :edit]
+    before_action :set_logo, only: [:show, :edit, :update, :destroy]
 
     def index
       @logos = Logo.order(slug: :asc).page(params[:page])
@@ -14,9 +13,8 @@ module Admin
     end
 
     def new
-      @logo = Logo.new
+      @logo  = Logo.new
       @title = admin_title
-      @logo.status = Status.find_by(name: 'draft')
     end
 
     def edit
@@ -29,7 +27,6 @@ module Admin
       if @logo.save
         redirect_to [:admin, @logo], notice: 'Logo was successfully created.'
       else
-        set_statuses
         render :new
       end
     end
@@ -53,15 +50,11 @@ module Admin
       @logo = Logo.find(params[:id])
     end
 
-    def set_statuses
-      @draft     = Status.find_by(name: 'draft')
-      @published = Status.find_by(name: 'published')
-    end
-
     def logo_params
-      params.require(:logo).permit(:title, :subtitle, :description,
-                                   :slug, :height, :width, :content_format, :summary, :status_id, :published_at,
-                                   :jpg_url_present, :png_url_present, :pdf_url_present, :svg_url_present, :tif_url_present)
+      params.require(:logo).permit(:title, :subtitle, :description, :slug, :height,
+                                   :width, :content_format, :summary, :published_at,
+                                   :jpg_url_present, :png_url_present, :pdf_url_present,
+                                   :svg_url_present, :tif_url_present, :publication_status)
     end
   end
 end

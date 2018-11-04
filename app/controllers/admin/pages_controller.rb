@@ -3,8 +3,7 @@ module Admin
     before_action :authorize
     before_action :set_page,         only: [:show, :edit, :update, :destroy]
     before_action :set_published_at, only: [:create, :update]
-    before_action :set_statuses,     only: [:new, :edit]
-    after_action  :organize_page,    only: [:create, :update]
+    after_action :organize_page, only: [:create, :update]
 
     # /admin/pages
     def index
@@ -56,11 +55,6 @@ module Admin
 
     private
 
-    def set_statuses
-      @draft     = Status.find_by(name: 'draft')
-      @published = Status.find_by(name: 'published')
-    end
-
     def set_page
       @page =
         if params[:draft_code].present?
@@ -76,10 +70,9 @@ module Admin
     end
 
     def page_params
-      params.require(:page).permit(:year, :month, :day, :css, :slug, :tags,
-                                   :draft_code, :status_id, :published_at,
-                                   :categories, :hide_header, :hide_footer,
-                                   :hide_layout, :published_at_tz)
+      params.require(:page).permit(:year, :month, :day, :css, :slug, :tags, :draft_code,
+                                   :published_at, :categories, :hide_header, :hide_footer,
+                                   :hide_layout, :published_at_tz, :publication_status)
     end
   end
 end

@@ -3,6 +3,8 @@
 <article class="mb-5">
   <header>
     <h1><%= @logo.title %></h1>
+
+    <%= render "/admin/articles/publication_status_badge", resource: @logo %>
   </header>
 
   <div>

@@ -4,8 +4,7 @@ RSpec.describe Poster, type: :model do
   describe '#published?' do
     subject { poster.published? }
 
-    let(:status) { Status.new(name: 'published') }
-    let(:poster) { Poster.new(title: 'Poster', status: status) }
+    let(:poster) { Poster.new(title: 'Poster', publication_status: 'published') }
 
     it { is_expected.to eq(true) }
   end

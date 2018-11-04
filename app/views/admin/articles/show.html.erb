@@ -5,7 +5,7 @@
 <article>
   <header>
     <p>
-      <%= render "/admin/articles/publication_status_badge", article: @article %>
+      <%= render "/admin/articles/publication_status_badge", resource: @article %>
 
       <% if @article.content_format == "html" %>
       &nbsp;

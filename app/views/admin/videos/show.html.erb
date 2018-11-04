@@ -8,6 +8,8 @@
         <span class="h2 subtitle"><%= @video.subtitle %></span>
       <% end %>
     </h1>
+
+    <%= render "/admin/articles/publication_status_badge", resource: @video %>
   </header>
 
   <hr>

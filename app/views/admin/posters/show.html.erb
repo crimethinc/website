@@ -8,6 +8,8 @@
       <span class="h2 subtitle"><%= @poster.subtitle %></span>
       <% end %>
     </h1>
+
+    <%= render "/admin/articles/publication_status_badge", resource: @poster %>
   </header>
 
   <div>

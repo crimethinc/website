@@ -10,16 +10,16 @@ describe 'Tools Pages' do
     FactoryBot.create(:logo,
                       title: 'published',
                       published_at: 1.day.ago,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:logo,
                       title: 'not live',
                       published_at: 1.day.from_now,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:logo,
                       title: 'draft',
-                      status_id: Status.find_by(name: 'draft').id)
+                      publication_status: 'draft')
 
     visit '/logos'
 
@@ -33,18 +33,18 @@ describe 'Tools Pages' do
                       :sticker,
                       title: 'published',
                       published_at: 1.day.ago,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:poster,
                       :sticker,
                       title: 'not live',
                       published_at: 1.day.from_now,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:poster,
                       :sticker,
                       title: 'draft',
-                      status_id: Status.find_by(name: 'draft').id)
+                      publication_status: 'draft')
 
     visit '/stickers'
 
@@ -58,18 +58,18 @@ describe 'Tools Pages' do
                       :zine,
                       title: 'published',
                       published_at: 1.day.ago,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:book,
                       :zine,
                       title: 'not live',
                       published_at: 1.day.from_now,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:book,
                       :zine,
                       title: 'draft',
-                      status_id: Status.find_by(name: 'draft').id)
+                      publication_status: 'draft')
 
     visit '/zines'
 
@@ -82,16 +82,16 @@ describe 'Tools Pages' do
     FactoryBot.create(:poster,
                       title: 'published',
                       published_at: 1.day.ago,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:poster,
                       title: 'not live',
                       published_at: 1.day.from_now,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:poster,
                       title: 'draft',
-                      status_id: Status.find_by(name: 'draft').id)
+                      publication_status: 'draft')
 
     visit '/posters'
 
@@ -104,16 +104,16 @@ describe 'Tools Pages' do
     FactoryBot.create(:video,
                       title: 'published',
                       published_at: 1.day.ago,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:video,
                       title: 'not live',
                       published_at: 1.day.from_now,
-                      status_id: Status.find_by(name: 'published').id)
+                      publication_status: 'published')
 
     FactoryBot.create(:video,
                       title: 'draft',
-                      status_id: Status.find_by(name: 'draft').id)
+                      publication_status: 'draft')
 
     visit '/videos'
 

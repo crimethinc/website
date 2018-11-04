@@ -3,7 +3,6 @@ module Admin
     before_action :authorize
     before_action :set_article,      only: [:show, :edit, :update, :destroy]
     before_action :set_published_at, only: [:create, :update]
-    before_action :set_statuses,     only: [:new, :edit]
     before_action :set_categories,   only: [:new, :edit]
     after_action  :organize_article, only: [:create, :update]
 
@@ -24,7 +23,6 @@ module Admin
     def new
       @collection     = Article.find(params[:id]) if params[:id]
       @article        = Article.new
-      @article.status = Status.find_by(name: 'draft')
 
       @title = admin_title
       @html_id = 'admin-article'
@@ -45,7 +43,6 @@ module Admin
       if @article.save
         redirect_to [:admin, @article], notice: 'Article was successfully created.'
       else
-        set_statuses
         render :new
       end
     end
@@ -57,7 +54,6 @@ module Admin
 
         redirect_to [:admin, @article], notice: 'Article was successfully updated.'
       else
-        set_statuses
         render :edit
       end
     end
@@ -86,11 +82,6 @@ module Admin
       @categories = Category.all
     end
 
-    def set_statuses
-      @draft     = Status.find_by(name: 'draft')
-      @published = Status.find_by(name: 'published')
-    end
-
     def organize_article
       tag_assigner = TagAssigner.parse_glob(params[:tags])
       tag_assigner.assign_tags_to!(@article) if tag_assigner.present?
@@ -99,12 +90,12 @@ module Admin
     def article_params
       params.require(:article).permit(:title, :subtitle, :content, :content_format,
                                       :year, :month, :day, :download_url, :tweet,
-                                      :slug, :draft_code, :status_id, :summary,
+                                      :slug, :draft_code,  :summary,
                                       :published_at, :tags, :collection_id, :short_path,
                                       :image, :image_description, :css, :hide_layout,
                                       :header_background_color, :header_text_color,
                                       :header_shadow_text, :image_mobile, :published_at_tz,
-                                      category_ids: [])
+                                      :publication_status, category_ids: [])
     end
   end
 end
