@@ -1,4 +1,8 @@
 module ArticlesHelper
+  def story_card_background_image article:
+    "background-image: url(#{article.image})" unless lite_mode?
+  end
+
   def social_links_for article
     content_tag :ul, class: 'social-links' do
       social_link_for(article, :twitter) +

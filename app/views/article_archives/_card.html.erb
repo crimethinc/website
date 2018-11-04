@@ -1,11 +1,11 @@
 <% cache [:story_card, article] do %>
   <% unless article.blank? %>
-    <article class='h-entry'
-             id='article-<%= article.id %>'
-             <%= "style='background-image: url(#{article.image})'" unless lite_mode? %> >
-
+    <%= content_tag :article,
+                    class: 'h-entry',
+                    id:    "article-#{article.id}",
+                    style: story_card_background_image(article: article) do %>
       <%= render "articles/header",     article: article %>
       <%= render "articles/categories", article: article %>
-    </article>
+    <% end %>
   <% end %>
 <% end %>
