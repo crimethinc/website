@@ -17,7 +17,7 @@
           <%= link_to "EDIT", [:edit, :admin, page], class: "btn btn-light border-secondary btn-sm" %>
         </td>
 
-        <td><%= render "/admin/articles/publication_status_badge", article: page %></td>
+        <td><%= render "/admin/articles/publication_status_badge", resource: page %></td>
 
         <td>
           <%= link_to page.path, page.path %>
