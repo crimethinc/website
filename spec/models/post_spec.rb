@@ -10,12 +10,6 @@ RSpec.describe Post, type: :model do
 
         it { is_expected.to eq(true) }
       end
-
-      context 'with another status name' do
-        let(:post) { Page.new(publication_status: 'another') }
-
-        it { is_expected.to eq(false) }
-      end
     end
   end
 

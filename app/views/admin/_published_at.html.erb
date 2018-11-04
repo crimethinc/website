@@ -1,6 +1,5 @@
 <div id="datetime" class="py-5">
-  <%# TODO: refactor this to just: if resource.draft? %>
-  <% if resource.new_record? || (resource.publication_status.present? && !resource.published?) %>
+  <% if resource.draft? %>
     <div class="row">
       <div class="col-12 col-lg-8">
 
