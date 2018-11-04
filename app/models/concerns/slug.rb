@@ -13,7 +13,7 @@ module Slug
   def blank_slug
     return unless is_a?(Article) || is_a?(Page)
 
-    self.slug = nil if publication_status.blank? || (publication_status.present? && !published?)
+    self.slug = nil if draft?
   end
 
   def generate_slug
