@@ -18,7 +18,6 @@ class ApplicationController < ActionController::Base
 
   def lite_mode?
     request.subdomain == 'lite'
-    true # TEMP
   end
   helper_method :lite_mode?
 
