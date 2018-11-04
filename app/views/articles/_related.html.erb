@@ -14,7 +14,7 @@
               <div class="related-article column column-one-third">
             <% end %>
 
-            <% if article.image.present? %>
+            <% if article.image.present? && !lite_mode? %>
               <%= link_to image_tag(article.image, class: "related-article-image", alt: article.image_description), article.path %>
             <% end %>
 
