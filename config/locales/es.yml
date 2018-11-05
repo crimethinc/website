@@ -103,11 +103,10 @@ es:
       first_time_link: Empieza aquí. →
       heading: Sobre CrimethInc.
       # description is wrapped in quotes because it has a colon in its text value
-      description:
-        "CrimethInc. es una alianza rebelde-una red descentralizada dedicada a la acción colectiva anónima-una fuga de la prisión de nuestro tiempo. Luchamos por reinventar nuestras vidas y nuestro mundo de acuerdo a los principios de la autodeterminación y el apoyo mutuo.
+      description: |
+        CrimethInc. es una alianza rebelde-una red descentralizada dedicada a la acción colectiva anónima-una fuga de la prisión de nuestro tiempo. Luchamos por reinventar nuestras vidas y nuestro mundo de acuerdo a los principios de la autodeterminación y el apoyo mutuo.
 
-
-        Creemos que deberías poder disponer de tu ilimitado potencial en tus propios términos: que ningún gobierno, mercado o ideología debe dictar lo que tu vida ha de ser. Si estás de acuerdo, _hagamos algo al respeto_."
+        Creemos que deberías poder disponer de tu ilimitado potencial en tus propios términos: que ningún gobierno, mercado o ideología debe dictar lo que tu vida ha de ser. Si estás de acuerdo, _hagamos algo al respeto_.
       more_link: Más sobre CrimethInc. →
       donate_button_text: Apoya este sitio
 
@@ -291,15 +290,12 @@ es:
     support:
       new:
         heading: ¡Invierte en CrimethInc.!
-        description:
+        description: |
           _Ajusta tu donación. ¡Ninguna cantidad es lo suficientemente grande como para ser indispensable ni demasiado pequeña para no ser de ayuda! Si puedes, anótate para donar de forma mensual, para que podamos contar contigo para sostener a largo plazo._
-
 
           CrimethInc. es un proyecto donde todos somos voluntarios sin ninguna fuente externa de fondos. Ofrecemos todo lo que hacemos de forma gratuita o a precios de recuperación manteniendo los más altos estándares en nuestro campo. Publicamos constantemente, circulando materiales en [más de 30 idiomas](/tce) en [los siete continentes](/2008/01/06/now-serving-seven-continents). Nos hemos mantenido ya por un cuarto de siglo.
 
-
           Nos esforzamos por hacer todo con el menor presupuesto posible pero, a pesar de nuestros esfuerzos, algunos gastos son inevitables. Necesitamos tu ayuda para cubrir esos gastos. Con más recursos, podríamos expandirnos más formatos y liberar más tiempo para publicar con más frecuencia.
-
 
           Como siempre, la manera más efectiva de apoyar lo que hacemos es _hacerlo tú mismo._
         radio_label_monthly: Mensual
@@ -350,12 +346,10 @@ es:
 
       thanks:
         heading: ¡Gracias por tu apoyo!
-        description:
+        description: |
           Tu [retroalimentación] es bienvenida (envíala a:info@crimethinc.com) sobre nuestros esfuerzos y tu [participación](envíalo a:info@crimethinc.com) en ellos.
 
-
           Pronto recibirás un correo de confirmación.
-
 
           Si te anotaste para una suscripción mensual, puedes actualizar o cancelar tu suscripción en cualquier momento poniendo tu email en la forma que está al final de la página de [Apoyo](/support).
 

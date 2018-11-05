@@ -103,11 +103,10 @@ en:
       first_time_link: Start here. →
       heading: About CrimethInc.
       # description is wrapped in quotes because it has a colon in its text value
-      description:
-        "CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+      description: |
+        CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
-
-        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._"
+        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._
       more_link: More about CrimethInc. →
       donate_button_text: Support this site
 
@@ -291,15 +290,12 @@ en:
     support:
       new:
         heading: Invest Your Money in CrimethInc.—!
-        description:
+        description: |
           _Use the slider to adjust your donation. No amount is too big to be needed or too small to be helpful! If you can, sign up to donate on a monthly basis, so we can count on you to sustain us for the long haul._
-
 
           CrimethInc. is an all-volunteer project with no outside sources of funding. We offer everything we do for free or at break-even prices while maintaining some of the highest quality standards in our field. We publish constantly, circulating material in [over 30 languages](/tce) on [all seven continents](/2008/01/06/now-serving-seven-continents). We’ve kept this up for a quarter of a century.
 
-
           We do all this on a shoestring budget—but despite our ingenuity, some expenses are unavoidable. We depend on your assistance to cover those. With more resources, we could expand to utilize more formats and free up time to publish even more frequently.
-
 
           As always, of course, the very best way to support what we are doing is to _do it yourself._
         radio_label_monthly: Monthly
@@ -350,12 +346,10 @@ en:
 
       thanks:
         heading: Thanks for your help!
-        description:
+        description: |
           We welcome your [feedback](mailto:info@crimethinc.com) about our efforts and your [participation](mailto:info@crimethinc.com) in them.
 
-
           You’ll receive an email confirmation soon.
-
 
           If you signed up for a monthly subscription, you can update or cancel your subscription at any time by submitting your email address in the form at the bottom of the [support](/support) page.
 
