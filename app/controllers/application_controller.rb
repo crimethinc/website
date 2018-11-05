@@ -17,11 +17,6 @@ class ApplicationController < ActionController::Base
   helper_method :staging?
 
   def lite_mode?
-    logger.info '*' * 80
-    logger.info request.subdomain.inspect
-    logger.info request.subdomain == 'lite'
-    logger.info '*' * 80
-
     request.subdomain == 'lite'
   end
   helper_method :lite_mode?
