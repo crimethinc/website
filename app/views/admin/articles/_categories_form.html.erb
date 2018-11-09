@@ -13,16 +13,9 @@
                 <div class="col-6">
                   <% if category.present? %>
 
-                    <%= form.check_box :category_ids,
-                                    {
-                                      id: "article_category_ids_#{category.id}",
-                                      name: "article[category_ids][]",
-                                      class: "form-check-input"
-                                    },
-                                    category.id,
-                                    nil %>
-
                     <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
+                      <%= category_check_box form: form, category: category %>
+
                       <b><%= category.name %></b>
                     <% end %>
 

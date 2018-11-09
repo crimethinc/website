@@ -70,4 +70,15 @@ module AdminHelper
   def admin_articles_table_row_classes article
     [class_for_being_edited(article), class_for_article_counter_genesis(article)].join(' ')
   end
+
+  def category_check_box form:, category:
+    form.check_box :category_ids,
+                   {
+                     id: "article_category_ids_#{category.id}",
+                     name: 'article[category_ids][]',
+                     class: 'form-check-input'
+                   },
+                   category.id,
+                   nil
+  end
 end
