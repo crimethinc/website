@@ -8,16 +8,15 @@
 
 
   <% articles.each do |article| %>
-    <%# border on this article (2017-08-23) indicates when the view counter started. everything below it was published pre-counter. %>
-    <div class="articles-body row mb-3 py-2 <%= 'bg-warning' if article.user.present? %>" style="<%= 'border-bottom: 10px solid #666;' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') == '2017-08-23' %>">
+    <div class="articles-body row mb-3 py-2 <%= admin_articles_table_row_classes article %>">
       <div class="col-md-2 mb-2">
         <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm mr-2" %>
-        <%= render "/admin/articles/publication_status_badge", resource: article %>
+        <%= render "/admin/articles/publication_status_badge", resource: article if article.draft? %>
         <%= render "/admin/articles/content_format_badge",     article: article %>
         <%= render "/admin/articles/children_articles_badge",  article: article %>
 
-        <span class="d-md-none float-right <%= 'text-muted' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">
-          <%= number_with_delimiter(article.page_views) %>
+        <span class="d-md-none float-right <%= class_for_article_precounter_views article %>">
+          <%= number_with_delimiter article.page_views %>
           Views
         </span>
       </div>

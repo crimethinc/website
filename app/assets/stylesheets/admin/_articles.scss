@@ -13,3 +13,9 @@ label  {
 .articles-body:nth-child(even) {
   background: #f3f3f3;
 }
+
+// Border on this article (2017-08-23) indicates when the view counter started.
+// Everything below it was published pre-counter.
+.article-counter-genesis {
+  border-bottom: 10px solid #666;
+}
