@@ -34,7 +34,7 @@
   <div class="col-12 col-sm-6">
     <div class="form-group">
       <%= form.label :tags, "Tags", class: "h4" %>
-      <%= text_field_tag :tags, @article.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
+      <%= text_field_tag :tags, @article.tags.map(&:name).join(", "), class: "form-control form-control-lg" %>
       <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
     </div>
 
