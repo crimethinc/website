@@ -10,7 +10,6 @@ gem 'scenic', '~> 1.4'
 
 # webserver
 gem 'puma'
-gem 'rack-timeout'
 
 # assets
 gem 'autoprefixer-rails'
@@ -96,3 +95,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # i18n
 gem 'rack-contrib'
+
+group :production do
+  # webserver
+  gem 'rack-timeout'
+end
