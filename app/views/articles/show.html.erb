@@ -7,7 +7,7 @@
     </div>
   <% end %>
 
-  <%= render "articles/css", article: @article %>
+  <%= render "articles/css", article: @article unless lite_mode? %>
 
   <%= article_tag @article do %>
     <header>
