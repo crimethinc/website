@@ -11,13 +11,15 @@
 
   <%= article_tag @article do %>
     <header>
-      <%= render "articles/image", article: @article, linked: false %>
+      <%= render "articles/image_media", article: @article, linked: false %>
 
       <div class="meta">
         <%= render "articles/titles", header: @article, linked: false %>
       </div>
 
       <%= render "articles/categories", article: @article %>
+
+      <%= render "articles/image_lite", article: @article, linked: false %>
     </header>
 
     <div class="e-content">
