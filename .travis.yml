@@ -3,6 +3,11 @@ sudo: false
 language: ruby
 cache: bundler
 script: "./script/cibuild"
+before_script:
+  - cp config/database.yml.travis config/database.yml
+
+services:
+  - postgresql
 
 addons:
   postgresql: '9.6'
