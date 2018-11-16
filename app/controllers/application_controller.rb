@@ -21,6 +21,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :lite_mode?
 
+  def media_mode?
+    !lite_mode?
+  end
+  helper_method :media_mode?
+
   def signed_in?
     current_user
   end
@@ -97,7 +102,7 @@ class ApplicationController < ActionController::Base
     return if text.blank?
 
     Kramdown::Document.new(
-      MarkdownMedia.parse(text),
+      MarkdownMedia.parse(text, include_media: media_mode?),
       input: :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true
@@ -107,7 +112,7 @@ class ApplicationController < ActionController::Base
 
   def render_content(post)
     cache post do
-      post.content_rendered
+      post.content_rendered include_media: media_mode?
     end
   end
   helper_method :render_content
