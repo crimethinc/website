@@ -63,7 +63,7 @@ class ArticlesController < ApplicationController
         date_published: article.published_at.to_formatted_s(:iso8601),
         date_modified: article.updated_at.to_formatted_s(:iso8601),
         tags: article.tags.map(&:name).compact,
-        content_html: article.content_rendered
+        content_html: article.content_rendered(include_media: media_mode?)
       }
     end
 
