@@ -47,9 +47,9 @@ class Article < ApplicationRecord
 
   delegate :blank?, to: :short_path, prefix: true
 
-  def content_rendered
+  def content_rendered include_media:
     Kramdown::Document.new(
-      MarkdownMedia.parse(content),
+      MarkdownMedia.parse(content, include_media: include_media),
       input: content_format == 'html' ? :html : :kramdown,
       remove_block_html_tags: false,
       transliterated_header_ids: true,

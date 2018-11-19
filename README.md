@@ -22,7 +22,10 @@ bash ~/Downloads/strap.sh
 rm -f ~/Downloads/strap.sh
 git clone https://github.com/crimethinc/website.git
 cd website
+./script/bootstrap
+source ~/.bash_profile
 ./script/setup
+overcommit --install
 ./script/server
 ```
 

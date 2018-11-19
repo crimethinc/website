@@ -1,2 +1,4 @@
-<!-- JS -->
-<%= javascript_include_tag "application" %>
+<% if media_mode? || controller_name == 'support' %>
+  <!-- JS -->
+  <%= javascript_include_tag "application" %>
+<% end %>
