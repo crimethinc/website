@@ -54,19 +54,19 @@ describe 'Tools Pages' do
   end
 
   it 'Renders published zines calling /zines' do
-    FactoryBot.create(:book,
+    FactoryBot.create(:zine,
                       :zine,
                       title: 'published',
                       published_at: 1.day.ago,
                       publication_status: 'published')
 
-    FactoryBot.create(:book,
+    FactoryBot.create(:zine,
                       :zine,
                       title: 'not live',
                       published_at: 1.day.from_now,
                       publication_status: 'published')
 
-    FactoryBot.create(:book,
+    FactoryBot.create(:zine,
                       :zine,
                       title: 'draft',
                       publication_status: 'draft')

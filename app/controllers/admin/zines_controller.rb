@@ -6,7 +6,7 @@ module Admin
     before_action :set_ebook_formats,    only: [:edit, :new]
 
     def index
-      @books = Book.zine.order(slug: :asc).page(params[:page])
+      @books = Zine.order(slug: :asc).page(params[:page])
       @title = admin_title
       render 'admin/books/index'
     end
