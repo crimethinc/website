@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_04_000207) do
+ActiveRecord::Schema.define(version: 2018_11_20_011802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -368,6 +368,55 @@ ActiveRecord::Schema.define(version: 2018_11_04_000207) do
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
+  end
+
+  create_table "zines", force: :cascade do |t|
+    t.text "title"
+    t.text "subtitle"
+    t.text "content"
+    t.text "tweet"
+    t.text "summary"
+    t.text "description"
+    t.text "buy_url"
+    t.text "buy_info"
+    t.string "content_format", default: "kramdown"
+    t.string "slug"
+    t.string "series"
+    t.datetime "published_at"
+    t.integer "price_in_cents"
+    t.string "height"
+    t.string "width"
+    t.string "depth"
+    t.string "weight"
+    t.string "pages"
+    t.string "words"
+    t.string "illustrations"
+    t.string "photographs"
+    t.string "printing"
+    t.string "ink"
+    t.string "definitions"
+    t.string "recipes"
+    t.boolean "has_index"
+    t.text "cover_style"
+    t.text "binding_style"
+    t.text "table_of_contents"
+    t.boolean "zine", default: true
+    t.boolean "back_image_present", default: false
+    t.boolean "front_image_present", default: false
+    t.boolean "lite_download_present", default: false
+    t.integer "gallery_images_count"
+    t.boolean "epub_download_present"
+    t.boolean "mobi_download_present"
+    t.integer "status_id"
+    t.boolean "print_black_and_white_a4_download_present"
+    t.boolean "print_color_a4_download_present"
+    t.boolean "print_color_download_present"
+    t.boolean "print_black_and_white_download_present"
+    t.boolean "screen_single_page_view_download_present"
+    t.boolean "screen_two_page_view_download_present"
+    t.integer "publication_status", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 
