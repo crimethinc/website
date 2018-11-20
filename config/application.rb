@@ -27,7 +27,7 @@ module Crimethinc
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     # Set default locale to English
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :es
 
     # Whitelist locales available for the application
     config.i18n.available_locales = %i[espanol-america-latina en es lietuvos 한국어 english espanol فارسی]
