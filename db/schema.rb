@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_20_011802) do
+ActiveRecord::Schema.define(version: 2018_11_20_220555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -314,6 +314,37 @@ ActiveRecord::Schema.define(version: 2018_11_20_011802) do
 
   create_table "statuses", id: :serial, force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stickers", force: :cascade do |t|
+    t.text "title"
+    t.text "subtitle"
+    t.text "content"
+    t.string "content_format", default: "kramdown"
+    t.text "buy_info"
+    t.text "buy_url"
+    t.integer "price_in_cents"
+    t.text "summary"
+    t.text "description"
+    t.text "slug"
+    t.string "height"
+    t.string "width"
+    t.string "depth"
+    t.string "front_image_format", default: "jpg"
+    t.string "back_image_format", default: "jpg"
+    t.datetime "published_at"
+    t.boolean "front_color_image_present"
+    t.boolean "front_black_and_white_image_present"
+    t.boolean "back_color_image_present"
+    t.boolean "back_black_and_white_image_present"
+    t.boolean "front_color_download_present"
+    t.boolean "front_black_and_white_download_present"
+    t.boolean "back_color_download_present"
+    t.boolean "back_black_and_white_download_present"
+    t.integer "status_id"
+    t.integer "publication_status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
