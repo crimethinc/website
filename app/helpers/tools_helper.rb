@@ -9,8 +9,7 @@ module ToolsHelper
   def text_for_tool_link type:, tool:
     return "#{t "views.products.buttons.browse_#{tool}_text"} →" if type == :button
 
-    # tool.capitalize
-    t "footer.nav.tools.#{tool}"
+    t("footer.nav.tools.#{tool}").capitalize
   end
 
   def classes_for_tool_link type:
