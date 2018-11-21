@@ -5,7 +5,7 @@ module Admin
     before_action :set_publication_type, only: [:show, :edit, :new, :index]
 
     def index
-      @posters = Poster.sticker.order(slug: :asc).page(params[:page])
+      @posters = Sticker.order(slug: :asc).page(params[:page])
       @title = admin_title
       render 'admin/posters/index'
     end
