@@ -30,14 +30,14 @@
           <% end %>
         <% end %>
 
-        <% if @book.book? && @book.downloads_available? %>
+        <% if @book.ask_for_donation? %>
           <div>
-            <%= link_to t("views.products.pdf_donoate_button_text"),
+            <%= link_to t("views.products.pdf_donate_button_text"),
                           "https://store.crimethinc.com/x/donate.html",
                           class: "download button" %>
           </div>
 
-          <%= render_markdown t("views.products.pdf_donoate_button_label") %>
+          <%= render_markdown t("views.products.pdf_donate_button_label") %>
         <% end %>
       </div>
 

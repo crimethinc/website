@@ -16,14 +16,6 @@ class Journal < ApplicationRecord
     'journals'
   end
 
-  def book?
-    false
-  end
-
-  def zine?
-    false
-  end
-
   def path
     [nil, namespace, slug].join('/')
   end
@@ -108,6 +100,10 @@ class Journal < ApplicationRecord
        downloads << send("#{format}_download_present")
      end
      downloads.compact.any?
+  end
+
+  def ask_for_donation?
+    false
   end
 
   def gallery_images

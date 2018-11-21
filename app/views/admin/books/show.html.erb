@@ -105,7 +105,7 @@
     <%= @book.pages %>
   </p>
 
-  <% if @book.book? %>
+  <% if @book.is_a? Book %>
     <h2>Book Specs</h2>
 
     <p>

@@ -1,8 +1,6 @@
 <%= form_with(model: [:admin, resource]) do |form| %>
   <%= render "admin/form_errors", thing: resource %>
 
-  <%= form.hidden_field :sticker, value: @publication_type == "sticker" ? 1 : 0 %>
-
   <div class="form-group">
     <%= form.label :title %>
     <%= form.text_field :title, id: :poster_title, class: "form-control form-control-lg" %>
@@ -75,7 +73,7 @@
 
           <p class="form-text text-muted">
             <%= file %>s must be uploaded to S3/Cloudfront in:<br>
-            <code>/assets/<%= @publication_type.pluralize %>/<%= resource.new_record? ? "[slug]" : resource.slug %>/</code>
+            <code>/assets/<%= resource.namespace %>/<%= resource.new_record? ? "[slug]" : resource.slug %>/</code>
 
             <br><%= file %>s must be named:
             <% if resource.new_record? %>
@@ -141,7 +139,7 @@
   </div> <!-- .row -->
 
 
-  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
 
 
   <fieldset id="purchasing">
@@ -168,7 +166,7 @@
   </fieldset>
 
 
-  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
 
 
   <fieldset id="syndication">
@@ -203,5 +201,5 @@
   </fieldset>
 
 
-  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
 <% end %>

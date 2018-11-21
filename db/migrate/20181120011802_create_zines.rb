@@ -1,7 +1,6 @@
 class CreateZines < ActiveRecord::Migration[5.2]
   def change
     create_table :zines do |t|
-
       t.text "title"
       t.text "subtitle"
       t.text "content"

@@ -1,8 +1,7 @@
 module Admin
   class PostersController < Admin::AdminController
     before_action :authorize
-    before_action :set_poster,           only: [:show, :edit, :update, :destroy]
-    before_action :set_publication_type, only: [:show, :edit, :new, :index]
+    before_action :set_poster, only: [:show, :edit, :update, :destroy]
 
     def index
       @posters = Poster.order(slug: :asc).page(params[:page]).per(50)
@@ -10,8 +9,6 @@ module Admin
     end
 
     def show
-      return redirect_to([nil, 'admin', 'stickers', @poster.id].join('/')) if @poster.sticker?
-
       @title = admin_title(@poster, [:title, :subtitle])
     end
 
@@ -21,45 +18,36 @@ module Admin
     end
 
     def edit
-      return redirect_to([nil, 'admin', 'stickers', @poster.id, 'edit'].join('/')) if @poster.sticker?
-
       @title = admin_title(@poster, [:id, :title, :subtitle])
     end
 
     def create
       @poster = Poster.new(poster_params)
-      publication_type = @poster.sticker? ? :stickers : :posters
 
       if @poster.save
-        redirect_to [:admin, @poster], notice: "#{publication_type.to_s.capitalize.singularize} was successfully created."
+        redirect_to [:admin, @poster], notice: 'Poster was successfully created.'
       else
         render :new
       end
     end
 
     def update
-      publication_type = @poster.sticker? ? :stickers : :posters
       if @poster.update(poster_params)
-        redirect_to [:admin, @poster], notice: "#{publication_type.to_s.capitalize.singularize} was successfully updated."
+        redirect_to [:admin, @poster], notice: 'Poster was successfully updated.'
       else
         render :edit
       end
     end
 
     def destroy
-      publication_type = @poster.sticker? ? :stickers : :posters
       @poster.destroy
-      redirect_to [:admin, publication_type], notice: "#{publication_type.to_s.capitalize.singularize} was successfully destroyed."
+      redirect_to [:admin, :posters], notice: 'Poster was successfully destroyed.'
     end
 
     private
 
     def set_poster
       @poster = Poster.find(params[:id])
-    end
-
-    def set_publication_type
-      @publication_type = 'poster'
     end
 
     def poster_params

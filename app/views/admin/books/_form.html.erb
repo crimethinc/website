@@ -1,8 +1,6 @@
 <%= form_with(model: [:admin, resource]) do |form| %>
   <%= render "admin/form_errors", thing: resource %>
 
-  <%= form.hidden_field :zine, value: @publication_type == "zine" %>
-
   <div class="form-group">
     <%= form.label :title %>
     <%= form.text_field :title, class: "form-control form-control-lg" %>
@@ -55,7 +53,7 @@
 
   <%= render "admin/books/downloads_form", form: form, resource: resource %>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
 
   <fieldset id="purchasing">
     <legend>Purchasing</legend>
@@ -82,7 +80,7 @@
     </div> <!-- .row -->
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
 
   <fieldset id="syndication">
     <legend>Syndication</legend>
@@ -111,7 +109,7 @@
     </div> <!-- .row -->
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
 
   <div class="row">
     <div class="col-12 col-sm-6">
@@ -272,5 +270,5 @@
     </div>
   </div> <!-- .row -->
 
-  <%= render "admin/form_actions", cancel_url: [:admin, @publication_type.pluralize] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
 <% end %>

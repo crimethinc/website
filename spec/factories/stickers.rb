@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :sticker do
-    sticker { true }
     title { 'MyText' }
     subtitle { 'MyText' }
     content { 'MyText' }

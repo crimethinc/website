@@ -2,7 +2,6 @@ module Admin
   class JournalsController < Admin::AdminController
     before_action :authorize
     before_action :set_journal,          only: [:show, :edit, :update, :destroy]
-    before_action :set_publication_type, only: [:show, :edit, :new, :index]
     before_action :set_ebook_formats,    only: [:edit, :new]
 
     def index
@@ -48,17 +47,13 @@ module Admin
 
     def destroy
       @book.destroy
-      redirect_to [:admin, publication_type], notice: "#{publication_type.to_s.capitalize.singularize} was successfully destroyed."
+      redirect_to [:admin, :journals], notice: 'Journal was successfully destroyed.'
     end
 
     private
 
     def set_journal
       @book = Journal.find(params[:id])
-    end
-
-    def set_publication_type
-      @publication_type = 'journal'
     end
 
     def set_ebook_formats

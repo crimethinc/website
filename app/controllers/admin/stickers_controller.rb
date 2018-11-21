@@ -1,8 +1,7 @@
 module Admin
   class StickersController < Admin::AdminController
     before_action :authorize
-    before_action :set_poster,           only: [:show, :edit, :update, :destroy]
-    before_action :set_publication_type, only: [:show, :edit, :new, :index]
+    before_action :set_poster, only: [:show, :edit, :update, :destroy]
 
     def index
       @posters = Sticker.order(slug: :asc).page(params[:page])
@@ -11,8 +10,6 @@ module Admin
     end
 
     def show
-      return redirect_to([nil, 'admin', 'posters', @poster.id].join('/')) if @poster.poster?
-
       @title = admin_title(@poster, [:title, :subtitle])
       render 'admin/posters/show'
     end
@@ -24,8 +21,6 @@ module Admin
     end
 
     def edit
-      return redirect_to([nil, 'admin', 'stickers', @poster.id, 'edit'].join('/')) if @poster.poster?
-
       @title = admin_title(@poster, [:id, :title, :subtitle])
       render 'admin/posters/edit'
     end
@@ -34,7 +29,7 @@ module Admin
       @poster = Poster.new(poster_params)
 
       if @poster.save
-        redirect_to [:admin, @poster], notice: "#{publication_type.to_s.capitalize.singularize} was successfully created."
+        redirect_to [:admin, @poster], notice: 'Sticker was successfully created.'
       else
         render :new
       end
@@ -42,24 +37,21 @@ module Admin
 
     def update
       if @poster.update(poster_params)
-        redirect_to [:admin, @poster], notice: "#{publication_type.to_s.capitalize.singularize} was successfully updated."
+        redirect_to [:admin, @poster], notice: 'Sticker was successfully updated.'
       else
         render :edit
       end
     end
 
     def destroy
-      # Handled by admin/posters#destroy
+      @poster.destroy
+      redirect_to [:admin, :posters], notice: 'Sticker was successfully destroyed.'
     end
 
     private
 
     def set_poster
       @poster = Poster.find(params[:id])
-    end
-
-    def set_publication_type
-      @publication_type = 'sticker'
     end
 
     def poster_params

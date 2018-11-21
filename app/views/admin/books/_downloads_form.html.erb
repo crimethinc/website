@@ -6,7 +6,7 @@
       <p class="form-text text-muted">
         Downloads must be uploaded to
         <code>
-          /assets/<%= @publication_type.pluralize %>/<%= slug = resource.new_record? ? "[slug]" : resource.slug %>/
+          /assets/<%= resource.namespace %>/<%= slug = resource.new_record? ? "[slug]" : resource.slug %>/
         </code>
         on S3/Cloudfront.
       </p>
@@ -22,7 +22,7 @@
               <%= labels.last.html_safe %><br>
 
               <code>
-                /assets/<%= @publication_type.pluralize %>/<%= slug %>/<b><%= slug %>_<%= type %>.<%= extension_for_ebook type %></b>
+                /assets/<%= resource.namespace %>/<%= slug %>/<b><%= slug %>_<%= type %>.<%= extension_for_ebook type %></b>
               </code>
             </span>
           <% end %>

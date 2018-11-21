@@ -14,11 +14,7 @@ class Poster < ApplicationRecord
   ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
 
   def namespace
-    sticker? ? 'stickers' : 'posters'
-  end
-
-  def poster?
-    !sticker?
+    'posters'
   end
 
   def path

@@ -14,11 +14,7 @@ class Book < ApplicationRecord
   ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
 
   def namespace
-    zine? ? 'zines' : 'books'
-  end
-
-  def book?
-    !zine?
+    'books'
   end
 
   def path
@@ -105,6 +101,10 @@ class Book < ApplicationRecord
        downloads << send("#{format}_download_present")
      end
      downloads.compact.any?
+  end
+
+  def ask_for_donation?
+    downloads_available?
   end
 
   def gallery_images

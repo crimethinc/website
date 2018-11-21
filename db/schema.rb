@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_20_220555) do
+ActiveRecord::Schema.define(version: 2018_11_21_022539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,7 +82,6 @@ ActiveRecord::Schema.define(version: 2018_11_20_220555) do
     t.text "table_of_contents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "zine", default: false
     t.boolean "back_image_present", default: false
     t.boolean "front_image_present", default: false
     t.boolean "lite_download_present", default: false
@@ -264,7 +263,6 @@ ActiveRecord::Schema.define(version: 2018_11_20_220555) do
   end
 
   create_table "posters", force: :cascade do |t|
-    t.boolean "sticker"
     t.text "title"
     t.text "subtitle"
     t.text "content"
@@ -319,7 +317,6 @@ ActiveRecord::Schema.define(version: 2018_11_20_220555) do
   end
 
   create_table "stickers", force: :cascade do |t|
-    t.boolean "sticker", default: true
     t.text "title"
     t.text "subtitle"
     t.text "content"
@@ -432,7 +429,6 @@ ActiveRecord::Schema.define(version: 2018_11_20_220555) do
     t.text "cover_style"
     t.text "binding_style"
     t.text "table_of_contents"
-    t.boolean "zine", default: true
     t.boolean "back_image_present", default: false
     t.boolean "front_image_present", default: false
     t.boolean "lite_download_present", default: false
