@@ -319,6 +319,7 @@ ActiveRecord::Schema.define(version: 2018_11_20_220555) do
   end
 
   create_table "stickers", force: :cascade do |t|
+    t.boolean "sticker", default: true
     t.text "title"
     t.text "subtitle"
     t.text "content"
