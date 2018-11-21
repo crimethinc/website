@@ -1,3 +1,17 @@
+// HACK: overly specific override of _page.scss, will go away in 2.0 redesign's CSS
+#podcast {
+  main {
+    .e-content {
+      h1 {
+        font: {
+          weight: normal;
+          size: 2rem;
+        }
+      }
+    }
+  }
+}
+
 #podcast {
   main {
 
@@ -5,7 +19,11 @@
       margin: (2 * $border-size-xlarge) auto;
 
       h1 {
-        font-size: 3rem;
+        font: {
+          weight: normal;
+          size: 3rem;
+        }
+
         margin-bottom: $border-size-medium;
       }
     }
@@ -79,7 +97,7 @@
         }
 
         h1 {
-          font-weight: bold;
+          font-weight: normal;
           font-weight: 700;
           font-size: 2rem;
           margin-bottom: $border-size-medium;
