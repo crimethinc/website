@@ -32,7 +32,7 @@ en:
 
     first_time: First Time? Start Here →
 
-    site_mode: Switch to the full version of the site >>
+    site_mode: Switch to the full version of the site &raquo;
 
   search:
     form_placeholder: Search Archives…
@@ -137,7 +137,7 @@ en:
       - A spark for every powder keg.
       - Esperanza no espera.
 
-    site_mode: Switch to the lite version of the site >>
+    site_mode: Switch to the lite version of the site &raquo;
 
   page_titles:
     about:
