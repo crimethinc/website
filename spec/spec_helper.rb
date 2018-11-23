@@ -1,14 +1,3 @@
-require 'simplecov'
-
-SimpleCov.start do
-  add_filter 'config/application.rb'
-  add_filter 'config/initializers/rack_attack.rb'
-  add_filter '/app/channels/'
-  add_filter '/spec/'
-
-  track_files 'app/**/*.rb'
-end
-
 RSpec.configure do |config|
   config.before(:each, type: :system) do
     driven_by :chrome

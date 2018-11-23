@@ -61,7 +61,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
-  gem 'simplecov', require: false
   gem 'spring-commands-rspec'
 end
 
