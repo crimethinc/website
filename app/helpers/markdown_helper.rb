@@ -15,4 +15,10 @@ module MarkdownHelper
       transliterated_header_ids: true
     ).to_html.html_safe
   end
+
+  def render_content article
+    cache article do
+      article.content_rendered include_media: media_mode?
+    end
+  end
 end

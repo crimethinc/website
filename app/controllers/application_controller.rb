@@ -79,13 +79,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_resource_name
 
-  def render_content post
-    cache [:article_content, post, lite_mode?] do
-      post.content_rendered include_media: media_mode?
-    end
-  end
-  helper_method :render_content
-
   def meta_title(thing = nil)
     thing.present? ? thing.title : t('head.meta_title')
   end
