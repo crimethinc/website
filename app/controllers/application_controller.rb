@@ -79,13 +79,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_resource_name
 
-  def render_markdown_for page:
-    content = File.read [Rails.root, "config/locales/pages/#{I18n.locale}", "#{page}.markdown"].join('/')
-
-    render_markdown content
-  end
-  helper_method :render_markdown_for
-
   def render_markdown(text)
     return if text.blank?
 
