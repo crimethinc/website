@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 require: rubocop-rspec
 
 AllCops:
@@ -123,3 +125,11 @@ Rails/SkipsModelValidations:
 # https://gist.github.com/veganstraightedge/2bfcd5e5eaacda9f0d9120fb2d285878
 Layout/AlignHash:
   Enabled: false
+
+Layout/ClosingHeredocIndentation:
+  Exclude:
+    - 'app/views/articles/index.json.jbuilder'
+
+Layout/IndentHeredoc:
+  Exclude:
+    - 'app/views/articles/index.json.jbuilder'
