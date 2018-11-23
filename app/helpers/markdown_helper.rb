@@ -17,7 +17,7 @@ module MarkdownHelper
   end
 
   def render_content article
-    cache article do
+    cache [:article_content, article, lite_mode?] do
       article.content_rendered include_media: media_mode?
     end
   end
