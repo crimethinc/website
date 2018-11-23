@@ -79,18 +79,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_resource_name
 
-  def render_markdown(text)
-    return if text.blank?
-
-    Kramdown::Document.new(
-      MarkdownMedia.parse(text, include_media: media_mode?),
-      input: :kramdown,
-      remove_block_html_tags: false,
-      transliterated_header_ids: true
-    ).to_html.html_safe
-  end
-  helper_method :render_markdown
-
   def render_content post
     cache [:article_content, post, lite_mode?] do
       post.content_rendered include_media: media_mode?
