@@ -32,6 +32,8 @@ en:
 
     first_time: First Time? Start Here →
 
+    site_mode: Switch to the full version of the site &raquo;
+
   search:
     form_placeholder: Search Archives…
     advanced:
@@ -134,6 +136,8 @@ en:
       - The future is in chains within you — set it free.
       - A spark for every powder keg.
       - Esperanza no espera.
+
+    site_mode: Switch to the lite version of the site &raquo;
 
   page_titles:
     about:
