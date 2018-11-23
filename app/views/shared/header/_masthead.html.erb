@@ -1,4 +1,6 @@
 <header class="site-header" id="header">
+  <%= link_to_if(lite_mode?, t("header.site_mode"), :url_for_current_path_with_subdomain) {} %>
+
   <h1 class="header-logo"><%= link_to t("site_name"), [:root] %></h1>
 
   <%= render "shared/header/nav" %>
