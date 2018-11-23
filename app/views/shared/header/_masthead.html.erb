@@ -2,12 +2,13 @@
   <div>
      <span class="header-logo"><%= link_to t("site_name"), [:root] %></span>
 
-     <% unless Rails.env.production? %>
+     <% if staging? %>
        <p class="language-switcher">
          <%= t 'header.languages' %>:
 
          <% Locales.supported.each do |locale| %>
-           <%= link_to t(:name, locale: locale), url_for_localized_path(locale) %>
+           <%= link_to t(:name, locale: locale),
+                       url_for_current_path_with_subdomain(subdomain: locale) %>
          <% end %>
        </p>
      <% end %>
