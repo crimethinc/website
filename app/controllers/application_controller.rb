@@ -40,26 +40,6 @@ class ApplicationController < ActionController::Base
     redirect_to signin_url, alert: 'You need to sign in to view that page.' unless signed_in?
   end
 
-  def listing?
-    action_name == 'index'
-  end
-  helper_method :listing?
-
-  def showing?
-    action_name == 'show'
-  end
-  helper_method :showing?
-
-  def editing?
-    action_name == 'edit'
-  end
-  helper_method :editing?
-
-  def creating?
-    action_name == 'new'
-  end
-  helper_method :creating?
-
   def set_locale_from_subdomain
     locale = request.subdomain
     I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
@@ -74,6 +54,14 @@ class ApplicationController < ActionController::Base
       return redirect_to({ subdomain: I18n.locale }.merge(params.permit!))
     end
   end
+
+  def url_for_current_path_with_subdomain subdomain: :en
+    subdomain = subdomain == I18n.default_locale ? nil : "#{subdomain}."
+    port      = ":#{request.port}" if request.port.present?
+
+    [request.protocol, subdomain, request.domain, port, request.path].join
+  end
+  helper_method :url_for_current_path_with_subdomain
 
   def check_for_redirection
     redirect = Redirect.where(source_path: request.path.downcase).last

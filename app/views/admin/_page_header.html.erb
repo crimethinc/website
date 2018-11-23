@@ -4,19 +4,18 @@
   </h1>
 
   <p>
-    <% if listing? %>
+    <% if action_name == 'index' %>
       <%= link_to "NEW", [:new, :admin, current_resource_name.downcase], class: "btn btn-primary btn-sm action-new" %>
-    <% elsif showing? %>
-      <%# TODO %>
+    <% elsif action_name == 'show' %>
       <%= link_to "EDIT", [:edit, :admin, thing], class: "btn btn-light border-secondary btn-sm action-edit" %>
     <% end %>
   </p>
 
-  <% if editing? %>
+  <% if action_name == 'edit' %>
     <h2>Editing <%= link_to thing.name, [:admin, thing] %></h2>
   <% end %>
 
-  <% if creating? %>
+  <% if action_name == 'new' %>
     <h2>New <%= current_resource_name %></h2>
   <% end %>
 </div>
