@@ -108,38 +108,6 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-  describe '#listing?' do
-    it 'is true on index' do
-      get :index
-
-      expect(controller.listing?).to be(true)
-    end
-  end
-
-  describe '#showing?' do
-    it 'is true on show' do
-      get :show, params: { id: 1 }
-
-      expect(controller.showing?).to be(true)
-    end
-  end
-
-  describe '#editing?' do
-    it 'is true on edit' do
-      get :edit, params: { id: 1 }
-
-      expect(controller.editing?).to be(true)
-    end
-  end
-
-  describe '#creating?' do
-    it 'is true on new' do
-      get :new
-
-      expect(controller.creating?).to be(true)
-    end
-  end
-
   describe '#check_for_redirection' do
     it 'redirects temporarily when present' do
       Redirect.create(source_path: '/anonymous', target_path: 'http://example.com', temporary: true)

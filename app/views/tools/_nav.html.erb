@@ -4,7 +4,7 @@
   <% else %>
     <%= link_to "Tools", [:tools] %>
 
-    <% if showing? %>
+    <% if action_name == 'show' %>
       : <%= link_to @type.capitalize, [@type]  %>
     <% end %>
   <% end %>

@@ -40,26 +40,6 @@ class ApplicationController < ActionController::Base
     redirect_to signin_url, alert: 'You need to sign in to view that page.' unless signed_in?
   end
 
-  def listing?
-    action_name == 'index'
-  end
-  helper_method :listing?
-
-  def showing?
-    action_name == 'show'
-  end
-  helper_method :showing?
-
-  def editing?
-    action_name == 'edit'
-  end
-  helper_method :editing?
-
-  def creating?
-    action_name == 'new'
-  end
-  helper_method :creating?
-
   def set_locale_from_subdomain
     locale = request.subdomain
     I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
