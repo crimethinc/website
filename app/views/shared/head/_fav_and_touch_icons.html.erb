@@ -1,17 +1,24 @@
-<!-- Fav and touch icons -->
-<link rel="shortcut icon"         href="/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon icon" href="/apple-touch-icon.png" sizes="180x180" type="image/png" />
-<link rel="mask-icon"             href="/logo.svg" sizes="any" color="#000000" />
+<% if media_mode? %>
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon"         href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon icon" href="/apple-touch-icon.png" sizes="180x180" type="image/png" />
+  <link rel="mask-icon"             href="/logo.svg" sizes="any" color="#000000" />
 
-<!-- Windows, IE and Edge -->
-<meta name="msapplication-TileImage" content="<%= asset_path "icons/icon-144x144.png" %>" />
-<meta name="msapplication-TileColor" content="#000000" />
+  <!-- Windows, IE and Edge -->
+  <meta name="msapplication-TileImage" content="<%= asset_path "icons/icon-144x144.png" %>" />
+  <meta name="msapplication-TileColor" content="#000000" />
 
-<meta name="msapplication-square70x70logo"   content="<%= asset_path "icons/icon-150x150.png" %>" />
-<meta name="msapplication-square150x150logo" content="<%= asset_path "icons/icon-70x70.png"   %>" />
-<meta name="msapplication-wide310x150logo"   content="<%= asset_path "icons/icon-310x150.png" %>" />
-<meta name="msapplication-square310x310logo" content="<%= asset_path "icons/icon-310x310.png" %>" />
+  <meta name="msapplication-square70x70logo"   content="<%= asset_path "icons/icon-150x150.png" %>" />
+  <meta name="msapplication-square150x150logo" content="<%= asset_path "icons/icon-70x70.png"   %>" />
+  <meta name="msapplication-wide310x150logo"   content="<%= asset_path "icons/icon-310x150.png" %>" />
+  <meta name="msapplication-square310x310logo" content="<%= asset_path "icons/icon-310x310.png" %>" />
 
-<!-- Icons and stuff for more browsers via manifest.json -->
-<link rel="manifest" href="/manifest.json" />
+  <!-- Icons and stuff for more browsers via manifest.json -->
+  <link rel="manifest" href="/manifest.json" />
+<% end %>
 
+<% if lite_mode? %>
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon"         href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon icon" href="/apple-touch-icon-lite.png" sizes="180x180" type="image/png" />
+<% end %>
