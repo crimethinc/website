@@ -1,5 +1,7 @@
 <header class="site-header" id="header">
   <div>
+    <p><%= link_to(t("header.site_mode"), url_for_current_path_with_subdomain) if lite_mode? %></p>
+
      <span class="header-logo"><%= link_to t("site_name"), [:root] %></span>
 
      <% if staging? %>
