@@ -1,4 +1,4 @@
-<% cache @article, expires_in: (Rails.env.development? ? 1.second : 1.day) do %>
+<% cache [@article, lite_mode?], expires_in: (Rails.env.development? ? 1.second : 1.day) do %>
   <% if @article.draft? %>
     <div class="draft-preview-message">
       PREVIEWING DRAFT.

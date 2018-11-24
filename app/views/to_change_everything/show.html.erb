@@ -33,7 +33,9 @@
     <h1><%= t '.take_flight_html' %></h1>
   </div>
 
-  <div class="spread" id="next">
-    <h1><%= link_to t('.next_text'), t('.next_path') %></h1>
-  </div>
+  <% if t('.next_text').present? %>
+    <div class="spread" id="next">
+      <h1><%= link_to t('.next_text'), t('.next_path') %></h1>
+    </div>
+  <% end %>
 </div>
