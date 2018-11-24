@@ -2,12 +2,12 @@
   <div class="row">
     <div class="column column-one-third section meta">
       <div class="product-front">
-        <%= image_tag @book.front_image, alt: @book.front_image_description, class: "u-image" %>
+        <%= render_markdown "[[ #{@book.front_image} #{@book.front_image_description} ]]" %>
       </div>
 
       <% if @book.back_image_present? %>
         <div class="product-back">
-          <%= image_tag @book.back_image, alt: @book.back_image_description, class: "u-image" %>
+          <%= render_markdown "[[ #{@book.back_image} #{@book.back_image_description} ]]" %>
         </div>
       <% end %>
 
@@ -102,10 +102,11 @@
         </div>
 
         <div class="product-content">
-            <% @book.gallery_images.each do |photo_index| %>
-              <%= link_to image_tag(@book.image(side: :gallery, count: photo_index),
-                                    alt: "Gallery image ##{photo_index} of #{@book.name}"),
-                          @book.image(side: :gallery, count: photo_index) %>
+          <% @book.gallery_images.each do |photo_index| %>
+            <% image_url = @book.image(side: :gallery, count: photo_index) %>
+            <% alt_text  = "Gallery image ##{photo_index} of #{@book.name}" %>
+
+            <%= render_markdown "[[ #{image_url} #{alt_text} #{image_url} ]]" %>
           <% end %>
 
           <hr />
