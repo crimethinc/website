@@ -20,6 +20,9 @@ gem 'sassc-rails'
 gem 'sitemap_generator' # generates compliant xml sitemap
 gem 'uglifier'
 
+# JSON views
+gem 'jbuilder', '~> 2.5'
+
 # text utilities
 gem 'kramdown'       # for Markdown processing
 gem 'markdown_media' # for [[ media embeds ]]
