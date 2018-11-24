@@ -98,8 +98,8 @@ class ApplicationController < ActionController::Base
   end
   helper_method :render_markdown
 
-  def render_content(post)
-    cache post do
+  def render_content post
+    cache [:article_content, post, media_mode?] do
       post.content_rendered include_media: media_mode?
     end
   end
