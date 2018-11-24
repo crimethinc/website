@@ -32,6 +32,7 @@ es:
     support: Apóyanos
 
     first_time: ¿Tu primera vez? Empieza aquí →
+    site_mode: Switch to the full version of the site »
 
   search:
     form_placeholder: Busca en los archivos…
@@ -135,6 +136,8 @@ es:
       - El futuro está encadenado dentro de ti — Libéralo.
       - Una chispa en cada barril de pólvora.
       - La esperanza no espera.
+
+    site_mode: Switch to the lite version of the site »
 
   page_titles:
     about:
