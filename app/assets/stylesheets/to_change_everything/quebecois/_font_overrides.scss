@@ -1,0 +1,51 @@
+@import "../common/font_styling";
+
+.right p {
+  @media (min-width: 1201px) and (max-width: 1670px) { @include body-text(.9vw, 1.6vw); }
+  @media (min-width: 1671px) { @include body-text(.88vw, 1.5vw); }
+}
+
+.rightintro h3 {
+  @media (min-device-width: 200px) and (max-width: 600px) { @include intro-header(12vw, 12vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include intro-header(12vw, 12vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-header(12vw, 12vw); }
+}
+
+.leftintro p {
+  @include intro-text(3.5vw, 5vw);
+
+  @media (min-device-width: 200px) and (max-width: 600px) { @include intro-text(3.5vw, 5vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include intro-text(3.5vw, 5vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-text(3.5vw, 5vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include intro-text(1.25vw, 1.9vw); }
+  @media (min-width: 1671px) { @include intro-text(1.25vw, 1.9vw); }
+}
+
+#outro .leftintro p {
+  @media (min-width: 1201px) and (max-width: 1670px) { @include outro-text(1.5vw, 2.1vw); }
+  @media (min-width: 1671px) { @include outro-text(1.5vw, 2.1vw); }
+}
+
+#takeflight h1 {
+  @include takeflight(16vw, 20vw);
+
+  @media (min-device-width: 200px) and (max-width: 600px) { @include takeflight(16vw, 20vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include takeflight(16vw, 20vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include takeflight(16vw, 20vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include takeflight(15vw, 12.75vw); }
+  @media (min-width: 1671px) { @include takeflight(15vw, 12.75vw); }
+}
+
+#reconciling, #government, #property {
+    .right p {
+        @media (min-width: 1201px) { @include body-text(.9vw, 1.4vw); }
+    }
+}
+
+nav ul a {
+    @media (min-device-width: 200px) and (max-width: 600px) { font-size: 15px; }
+    @media (min-width: 601px) and (max-width: 1023px) { .label { font-size: 2.5vw; } }
+    @media (min-width: 1024px) and (max-width: 1200px) { .label { font-size: 2.5vw; } }
+    @media (min-width: 1201px) and (max-width: 1670px) { font-size: 15px; }
+    @media (min-width: 1671px) { font-size: 15px; }
+}

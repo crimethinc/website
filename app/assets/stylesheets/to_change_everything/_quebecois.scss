@@ -1,0 +1,64 @@
+.quebecois {
+    @import "quebecois/font_overrides";
+    /*--- Highlight language in mobile language menu ---*/
+    /*--- TODO: make sure the div selection (e.g. #lang1) matches what was added in
+          app/views/layouts/to_change_everything.html.erb ---*/
+    #lang1  li  > a[href="/tce/quebecois"] {
+        color: #d62d34 !important;
+    }
+
+    .check-quebecois:before {
+        content: '';
+    }
+
+    #leaders, #answering, #liberation, #control, #relationships, #profit {
+        @media (min-width: 1201px) { h2 { padding: 6% 0 0 15%; } }
+    }
+    #relationships { @media (min-width: 1201px) { h2 { padding: 6% 0 0 10%; } } }
+    #power { @media (min-width: 1201px) { h2 { width: 94%; } } }
+
+    #reconciling {
+        .left {
+            @media (min-width: 1201px) { padding-top: 50%; }
+        }
+        .righttext {
+            @media (min-width: 1201px) {
+                width: 84%;
+                padding: 5% 6% 0% 10%;
+            }
+        }
+    }
+
+    #revolt {
+        .righttext {
+            @media (min-width: 1201px) {
+                width: 80%;
+                padding: 5% 6% 0% 10%;
+            }
+        }
+    }
+
+    #government {
+        .left {
+            @media (min-width: 1201px) { padding-top: 69%; }
+        }
+        .righttext {
+            @media (min-width: 1201px) {
+                width: 84%;
+                padding: 5% 6% 0% 10%;
+            }
+        }
+    }
+
+    #property {
+        .left {
+            @media (min-width: 1201px) { padding-top: 50%; }
+        }
+        .righttext {
+            @media (min-width: 1201px) {
+                width: 84%;
+                padding: 5% 6% 0% 10%;
+            }
+        }
+    }
+}
