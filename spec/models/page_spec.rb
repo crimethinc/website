@@ -16,12 +16,4 @@ RSpec.describe Page, type: :model do
       it { is_expected.to eq('/drafts/pages/draft-code') }
     end
   end
-
-  describe '#content_rendered' do
-    subject { page.content_rendered.strip }
-
-    let(:page) { Page.new(content: 'content') }
-
-    it { is_expected.to eq('<p>content</p>') }
-  end
 end
