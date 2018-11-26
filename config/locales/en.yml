@@ -107,7 +107,6 @@ en:
       first_time_text: Is this your first time hearing about CrimethInc.?
       first_time_link: Start here. →
       heading: About CrimethInc.
-      # description is wrapped in quotes because it has a colon in its text value
       description: |
         CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
