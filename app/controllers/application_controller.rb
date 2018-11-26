@@ -26,6 +26,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :media_mode?
 
+  def render_content article
+    cache [:article_content, article, lite_mode?] do
+      article.content_rendered include_media: media_mode?
+    end
+  end
+  helper_method :render_content
+
   def signed_in?
     current_user
   end
