@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" prefix="og: http://ogp.me/ns#" <%= html_id %> <%= site_mode_html_class %>>
+<%= content_tag :html,
+                dir:    html_dir,
+                lang:   html_lang,
+                id:     html_id,
+                class:  html_class,
+                prefix: html_prefix do %>
+  <head>
+    <%= render "shared/head" %>
+  </head>
 
-<head>
-  <%= render "shared/head" %>
-</head>
+  <body id="<%= body_id %>">
+    <%= render "shared/admin_header" %>
+    <%= render "shared/development_mode_banner" %>
+    <%= render "shared/header" %>
 
-<body id="<%= body_id %>">
-  <%= render "shared/admin_header" %>
-  <%= render "shared/development_mode_banner" %>
-  <%= render "shared/header" %>
+    <main>
+      <%= yield %>
+    </main>
 
-  <main>
-    <%= yield %>
-  </main>
-
-  <%= render "shared/footer" %>
-</body>
-</html>
+    <%= render "shared/footer" %>
+  </body>
+<% end %>
