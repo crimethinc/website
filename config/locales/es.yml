@@ -32,7 +32,7 @@ es:
     support: Apóyanos
 
     first_time: ¿Tu primera vez? Empieza aquí →
-    site_mode: Switch to the full version of the site »
+    site_mode: Cambiar a la versión completa del sitio →
 
   search:
     form_placeholder: Busca en los archivos…
@@ -137,7 +137,7 @@ es:
       - Una chispa en cada barril de pólvora.
       - La esperanza no espera.
 
-    site_mode: Switch to the lite version of the site »
+    site_mode: Cambiar a a versión pequeña del sitio →
 
   page_titles:
     about:
