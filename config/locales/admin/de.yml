@@ -1,4 +1,4 @@
-en:
+de:
   auth:
     signin_failed:             Invalid email or password.
     signout:                   Signed out!
