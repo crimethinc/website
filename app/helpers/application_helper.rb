@@ -1,18 +1,6 @@
 module ApplicationHelper
-  def html_id
-    "id='#{@html_id}'".html_safe if @html_id.present?
-  end
-
   def site_mode
     lite_mode? ? 'lite' : 'media'
-  end
-
-  def site_mode_html_class
-    "class='#{site_mode}-mode'".html_safe
-  end
-
-  def body_id
-    @body_id
   end
 
   def icon_sizes

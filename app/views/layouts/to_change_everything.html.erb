@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html class="<%=@locale.to_s%>" dir="<%=t('.language_direction')%>" lang="<%=t('.lang_code')%>" prefix="og: http://ogp.me/ns#" <%= html_id %>>
+<%= content_tag :html,
+                dir:    t('.language_direction'),
+                lang:   t('.lang_code'),
+                class:  @locale.to_s,
+                prefix: html_prefix do %>
 <head>
   <title><%=t('.head.title').html_safe%></title>
   <meta charset="utf-8" />
@@ -247,4 +251,4 @@
   </div>
 
 </body>
-</html>
+<% end %>

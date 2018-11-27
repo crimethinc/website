@@ -9,6 +9,7 @@
 #  9. Markdown examples: [link text](url), **bold**, _italics_, %{dynamic variable}, etc.
 # 10. If a value has <b>HTML</b> syntax characters in it, please keep those in your translation.
 en:
+  name: English
   language_direction: ltr
   site_name: CrimethInc.
   site_author: CrimethInc. Ex-Workers Collective
@@ -106,7 +107,6 @@ en:
       first_time_text: Is this your first time hearing about CrimethInc.?
       first_time_link: Start here. →
       heading: About CrimethInc.
-      # description is wrapped in quotes because it has a colon in its text value
       description: |
         CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
@@ -265,26 +265,26 @@ en:
       pdf_donate_button_text: Donate
       pdf_donate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
 
-      tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
-      zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [_To Change Everything_ site](/tce).
       journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
+      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
+      music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
       posters_intro_text:  Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
       stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
+      tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
       videos_intro_text:   Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
-      music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
-      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
-      books_intro_text:
+      zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [_To Change Everything_ site](/tce).
+      books_intro_text: |
         From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
 
         All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
 
-      tools_heading_text:    Tools
-      zines_heading_text:    Zines
+      books_heading_text:    We love making books.
       journals_heading_text: Journals
+      logos_heading_text:    Logos
       posters_heading_text:  Posters
       stickers_heading_text: Stickers
-      logos_heading_text:    Logos
-      books_heading_text:    We love making books.
+      tools_heading_text:    Tools
+      zines_heading_text:    Zines
 
       buttons:
         browse_journals_text: Browse All Journals
@@ -313,6 +313,7 @@ en:
           We do all this on a shoestring budget—but despite our ingenuity, some expenses are unavoidable. We depend on your assistance to cover those. With more resources, we could expand to utilize more formats and free up time to publish even more frequently.
 
           As always, of course, the very best way to support what we are doing is to _do it yourself._
+
         radio_label_monthly: Monthly
         radio_label_one_time: One-time
         amount_label: Support Amount

@@ -26,6 +26,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :media_mode?
 
+  def render_content article
+    cache [:article_content, article, lite_mode?] do
+      article.content_rendered include_media: media_mode?
+    end
+  end
+  helper_method :render_content
+
   def signed_in?
     current_user
   end
@@ -78,32 +85,6 @@ class ApplicationController < ActionController::Base
     request.path.split('admin/').last.split('/').first.capitalize.singularize
   end
   helper_method :current_resource_name
-
-  def render_markdown_for page:
-    content = File.read [Rails.root, "config/locales/pages/#{I18n.locale}", "#{page}.markdown"].join('/')
-
-    render_markdown content
-  end
-  helper_method :render_markdown_for
-
-  def render_markdown(text)
-    return if text.blank?
-
-    Kramdown::Document.new(
-      MarkdownMedia.parse(text, include_media: media_mode?),
-      input: :kramdown,
-      remove_block_html_tags: false,
-      transliterated_header_ids: true
-    ).to_html.html_safe
-  end
-  helper_method :render_markdown
-
-  def render_content post
-    cache [:article_content, post, lite_mode?] do
-      post.content_rendered include_media: media_mode?
-    end
-  end
-  helper_method :render_content
 
   def meta_title(thing = nil)
     thing.present? ? thing.title : t('head.meta_title')

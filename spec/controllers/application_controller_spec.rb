@@ -134,20 +134,6 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-  describe '#render_markdown' do
-    subject { controller.render_markdown('text').strip }
-
-    it { is_expected.to eq('<p>text</p>') }
-  end
-
-  describe '#render_content' do
-    subject { post.content_rendered.strip }
-
-    let(:post) { Page.new(content: 'text', content_format: 'markdown') }
-
-    it { is_expected.to eq('<p>text</p>') }
-  end
-
   # describe '#current_resource_name' do
   #   # TODO: migrate this spec from admin_helper_spec to application_controller_spec
   #   before { expect(helper.request).to receive(:path) { 'admin/things/id' } }
