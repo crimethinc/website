@@ -1,0 +1,14 @@
+
+.crimethinc.com/tce/portugues {
+    @import "common/font_styling";
+    /*--- Highlight language in mobile language menu ---*/
+    /*--- TODO: make sure the div selection (e.g. #lang1) matches what was added in
+          app/views/layouts/to_change_everything.html.erb ---*/
+    #lang1  li  > a[href="/tce/crimethinc.com/tce/portugues"] {
+        color: #d62d34 !important;
+    }
+
+    .check-crimethinc.com/tce/portugues:before {
+        content: '';
+    }
+}
