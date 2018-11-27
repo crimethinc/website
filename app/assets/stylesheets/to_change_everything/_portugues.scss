@@ -1,14 +1,511 @@
-
-.crimethinc.com/tce/portugues {
-    @import "common/font_styling";
-    /*--- Highlight language in mobile language menu ---*/
-    /*--- TODO: make sure the div selection (e.g. #lang1) matches what was added in
-          app/views/layouts/to_change_everything.html.erb ---*/
-    #lang1  li  > a[href="/tce/crimethinc.com/tce/portugues"] {
-        color: #d62d34 !important;
+.portugues {
+  @import "common/font_styling";
+  /*--- Highlight language in mobile language menu ---*/
+  /*--- TODO: make sure the div selection (e.g. #lang1) matches what was added in
+  app/views/layouts/to_change_everything.html.erb ---*/
+  #lang1  li  > a[href="/tce/portugues"] {
+    color: #d62d34 !important;
+  }
+  .check-portugues:before {
+    content: '';
+  }
+  #answering h2 {
+    padding: 2% 0 0 26%;
+  }
+  #power h2 {
+    padding: 4% 0 0 15%;
+  }
+  #relationships h2 {
+    padding: 5% 0 0 5%;
+  }
+  #reconciling h2 {
+    padding: 7% 0 0 12%;
+  }
+  #revolt h2 {
+    padding: 10% 0 0 12%;
+  }
+  #hierarchy h2 {
+    padding: 15% 0 0 45%;
+  }
+  #borders h2 {
+    padding: 7% 0 0 10%;
+  }
+  #leaders h2 {
+    padding: 3% 0 0 37%;
+  }
+  #government h2 {
+    padding: 10% 0 0 21%;
+  }
+  #property h2 {
+    padding: 4% 0 0 9%;
+  }
+  #lastcrime h2 {
+    padding: 5% 0 0 10%;
+  }
+  /*-------------PHONE CSS------------------*/
+  @media (min-device-width:200px) and (max-width:600px) {
+    .title {
+      padding-left: 7%;
+      padding-top: 11%;
+      width: 89%;
     }
 
-    .check-crimethinc.com/tce/portugues:before {
-        content: '';
+    .title h1 {
+      font-size: 13vw;
+      line-height: 11vw;
     }
-}
+
+    .title h4 {
+      font-size: 4.75vw;
+      padding: 25% 0 0 10%;
+    }
+
+    #videopdf {
+      margin-top: 12%;
+    }
+
+    #videopdf p {
+      padding: .5% 0 0 2.8%;
+    }
+
+    #pdfright p {
+      padding: 12% 0 0 .5%;
+    }
+
+    .leftintro p {
+      padding: .5% 0 0 0;
+      font-size: 3.9vw;
+      line-height: 5.2vw;
+    }
+
+    .rightintro h3 {
+      padding: 22% 5% 0% 0%;
+      font-size: 12vw;
+      line-height: 12vw;
+    }
+
+    #self h2 {
+      padding: 6% 0 0 7%;
+    }
+
+    /*  #outro .leftintro p {
+
+      }*/
+
+      #takeflight h1 {
+        font-size: 23.5vw;
+        line-height: 18vw;
+      }
+
+    }
+    /*-------------TABLET CSS------------------*/
+    @media (min-width:601px) and (max-width:1023px) {
+
+      .title {
+        padding-left: 9%;
+        padding-top: 9%;
+        width:  91%;
+      }
+
+      .title h1 {
+        font-size: 12vw;
+        line-height: 10vw;
+      }
+
+      .title h4 {
+        font-size: 3.75vw;
+        padding: 22% 0 0 20%;
+        width: 80%;
+      }
+
+      #videopdf {
+        margin-top: 11.3%;
+      }
+
+      #videopdf p {
+        padding: .5% 0 0 0;
+      }
+
+      #pdfright p {
+        padding: 12% 0 0 .5%;
+      }
+
+      #video {
+        padding-left: 2%;
+      }
+
+      #pdf {
+        width: 48%;
+        padding-left: 5%;
+      }
+
+      .leftintro p {
+        padding: .5% 0 0 0;
+        font-size: 3.9vw;
+        line-height: 5.2vw;
+      }
+
+      .rightintro h3 {
+        padding: 22% 5% 0% 0%;
+        font-size: 12vw;
+        line-height: 12vw;
+      }
+
+      #self h2 {
+        padding: 6% 0 0 7%;
+      }
+
+      #outro .leftintro p {
+
+      }
+
+      #takeflight h1 {
+        font-size: 23.5vw;
+        line-height: 18vw;
+      }
+
+    }
+    /*-------------TABLET LANDSCAPE------------------*/
+    @media (min-width:1024px) and (max-width:1200px) {
+
+      .title {
+        padding-left: 13%;
+        padding-top: 4%;
+      }
+
+      .title h1 {
+        font-size: 11vw;
+        line-height: 9vw;
+      }
+
+      .title h4 {
+        font-size: 2.75vw;
+        padding: 22.5% 0 0 20%;
+      }
+
+      #videopdf {
+        padding-top: 25%;
+      }
+
+      #videopdf p {
+        padding: .5% 0 0 .6%;
+      }
+
+      #pdfright p {
+        padding: 6% 0 0 .5%;
+      }
+
+      .leftintro p {
+        font-size: 3.9vw;
+        line-height: 5.2vw;
+      }
+
+      .rightintro h3 {
+        font-size: 12.3vw;
+        line-height: 13vw;
+        padding: 20% 5% 0% 0%;
+      }
+
+      #self h2 {
+        padding: 6% 0 0 7%;
+      }
+
+      #outro .leftintro p {
+
+      }
+
+      #takeflight h1 {
+        font-size: 23.5vw;
+        line-height: 18vw;
+      }
+
+    }
+    /*-------------DESKTOP SMALL CSS------------------*/
+    @media (min-width:1201px) and (max-width:1670px) {
+
+      ul#toc {
+        width: 515px;
+      }
+
+      ul#share {
+        width: 230px;
+      }
+
+      .title {
+        padding-left: 18%;
+        padding-top: 5%;
+        width: 80%;
+      }
+
+      .title h1 {
+        font-size: 9.5vw;
+        line-height: 7.75vw;
+      }
+
+      .title h4 {
+        font-size: 2vw;
+        padding: 20.5% 0 0 32%;
+      }
+
+      #videopdf {
+        padding-top: 22%;
+      }
+
+      #videopdf p {
+        padding: .5% 0 0 .6%;
+      }
+
+      #pdfright p {
+        padding: 6% 0 0 .5%;
+      }
+
+      .leftintro p {
+        font-size: 1.35vw;
+        line-height: 1.9vw;
+      }
+
+      .rightintro h3 {
+        font-size: 5.9vw;
+      }
+
+      #self h2 {
+        padding: 6% 0 0 7%;
+      }
+
+      #power .righttext {
+        width: 76%;
+        padding: 5% 14% 0% 10%;
+      }
+
+      #power p {
+        font-size: .9vw;
+        line-height: 1.5vw;
+      }
+
+      #reconciling .righttext {
+        width: 84%;
+        padding: 5% 6% 0% 10%;
+      }
+
+      #reconciling p {
+        line-height: 1.5vw;
+      }
+
+      #revolt .righttext {
+        width: 84%;
+        padding: 1% 6% 0% 10%;
+      }
+
+      #revolt p {
+        line-height: 1.5vw;
+      }
+
+      #control .righttext {
+        width: 78%;
+        padding: 8% 12% 0% 10%;
+      }
+
+      #hierarchy .righttext {
+        width: 78%;
+        padding: 7% 12% 0% 10%;
+      }
+
+      #government .righttext {
+        width: 85%;
+        padding: 5% 5% 0% 10%;
+      }
+
+      #government p {
+        font-size: .95vw;
+        line-height: 1.5vw;
+      }
+
+      #profit .righttext {
+        width: 80%;
+        padding: 3% 10% 0% 10%;
+      }
+
+      #profit p {
+        line-height: 1.5vw;
+      }
+
+      #property .righttext {
+        width: 80%;
+        padding: 3% 10% 0% 10%;
+      }
+
+      #property p {
+        line-height: 1.5vw;
+      }
+
+      #lastcrime .righttext {
+        width: 70%;
+        padding: 15% 20% 0% 10%;
+      }
+
+      .first {
+        width: 24%;
+        padding: 5% 7% 5% 8%;
+      }
+
+      .second {
+        width: 27%;
+        padding: 5% 7% 5% 0%;
+      }
+
+      .third {
+        width: 20%;
+        padding: 5% 7% 5% 0%;
+      }
+
+      #outro .leftintro p {
+        font-size: 1.5vw;
+        line-height: 2.1vw;
+      }
+
+      #takeflight h1 {
+        font-size: 15vw;
+        line-height: 11.75vw;
+      }
+
+    }
+    /*-------------DESKTOP BIG CSS------------------*/
+    @media (min-width:1671px) {
+
+      #toc a {
+        width: 615px;
+      }
+
+      ul#toc {
+        width: 655px;
+      }
+
+      ul#share {
+        width: 275px;
+      }
+
+      .title {
+        padding-left: 18%;
+      }
+
+      .title h1 {
+        font-size: 9.5vw;
+        line-height: 7.75vw;
+      }
+
+      .title h4 {
+        font-size: 2vw;
+        padding: 20.5% 0 0 32%;
+      }
+
+      #videopdf {
+        padding-top: 22%;
+      }
+
+      #videopdf p {
+        padding: .5% 0 0 1%;
+      }
+
+      #pdfright p {
+        padding: 4% 0 0 .5%;
+      }
+
+      .leftintro p {
+        font-size: 1.35vw;
+        line-height: 1.9vw;
+      }
+
+      .rightintro h3 {
+        font-size: 5.9vw;
+      }
+
+      #self h2 {
+        padding: 6% 0 0 7%;
+      }
+
+      #power .righttext {
+        width: 70%;
+        padding: 5% 15% 0% 15%;
+      }
+
+      #power p {
+        line-height: 1.4vw;
+      }
+
+      #reconciling .righttext {
+        width: 79%;
+        padding: 5% 6% 0% 15%;
+      }
+
+      #reconciling p {
+        font-size: .85vw;
+        line-height: 1.4vw;
+      }
+
+      #revolt .righttext {
+        width: 74%;
+        padding: 5% 11% 0% 15%;
+      }
+
+      #hierarchy .righttext {
+        width: 65%;
+        padding: 10% 20% 0% 15%;
+      }
+
+      #government .righttext {
+        width: 81%;
+        padding: 5% 4% 0% 15%;
+      }
+
+      #government p {
+        font-size: .85vw;
+        line-height: 1.4vw;
+      }
+
+      #profit .righttext {
+        width: 70%;
+        padding: 5% 15% 0% 15%;
+      }
+
+      #property .righttext {
+        width: 80%;
+        padding: 3% 5% 0% 15%;
+      }
+
+      #property p {
+        line-height: 1.4vw;
+      }
+
+      #lastcrime .righttext {
+        width: 65%;
+        padding: 15% 20% 0% 15%;
+      }
+
+      .first {
+        width: 24%;
+        padding: 5% 7% 5% 8%;
+      }
+
+      .second {
+        width: 27%;
+        padding: 5% 7% 5% 0%;
+      }
+
+      .third {
+        width: 20%;
+        padding: 5% 7% 5% 0%;
+      }
+
+      #outro .leftintro p {
+        font-size: 1.5vw;
+        line-height: 2.1vw;
+      }
+
+      #takeflight h1 {
+        font-size: 15vw;
+        line-height: 11.75vw;
+      }
+
+    }
+    /*---------------RETINA BACKGROUNDS----------------*/
+  }
