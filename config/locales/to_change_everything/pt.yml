@@ -46,7 +46,7 @@ portugues:
       video_cte: Assista ao Vídeo
       pdf_cte_html: Baixe o<br> PDF
       pdf_get_url: https://cloudfront.crimethinc.com/tce/images/Para-Mudar-Tudo.pdf
-      pdf_image: https://cloudfront.crimethinc.com/tce/images/tce-cover-200-portugues.png
+      pdf_image: tce-cover-200-portugues.png
       intro:
         left_text_html: |-
           <p>Se você pudesse mudar qualquer coisa na sua realidade, o que escolheria? Sairia de férias pelo resto da vida? Faria com que os combustíveis fósseis parassem de causar distúrbios climáticos? Desejaria banqueiros e políticos éticos e honestos? Mas é claro que nada soa mais enganoso do que manter tudo como está e esperar algum resultado diferente disso.</p>
