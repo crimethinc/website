@@ -14,6 +14,13 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
     end
   end
 
+  def add_tce_url_to_application_config
+    app_config = 'config/application.rb'
+    inject_into_file app_config, after: '%i[' do
+      "#{url} "
+    end
+  end
+
   def add_language_to_nav_menu_desktop
     controller = 'app/views/layouts/to_change_everything.html.erb'
     inject_into_file controller, after: '<ul id="language">' do
