@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '~> 2.5.3'
 
 # app server
-gem 'rails', '~> 5.2.1'
+gem 'rails', '~> 5.2.2'
 
 # database
 gem 'pg'
