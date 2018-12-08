@@ -5,8 +5,8 @@ class JournalsController < ApplicationController
     @type    = 'journals'
     @title   = title_for :journals
 
-    @featured_products = Journal.order(published_at: :desc).published.where.not(buy_url: nil)
-    @products          = Journal.order(published_at: :desc).published.where(buy_url: nil)
+    @featured_products = Journal.order(published_at: :desc).live.published.where.not(buy_url: nil)
+    @products          = Journal.order(published_at: :desc).live.published.where(buy_url: nil)
 
     render 'products/index'
   end
