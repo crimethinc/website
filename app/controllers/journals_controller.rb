@@ -12,7 +12,8 @@ class JournalsController < ApplicationController
   end
 
   def show
-    @book = Journal.where(slug: params[:slug]).first
+    # Treat a Zine as a Book
+    @book = Journal.live.published.where(slug: params[:slug]).first
     return redirect_to [:journals] if @book.blank?
 
     @html_id = 'page'
