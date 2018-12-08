@@ -10,9 +10,10 @@ class LogosController < ApplicationController
     @product = Logo.live.published.where(slug: params[:slug]).first
     return redirect_to [:logos] if @product.blank?
 
-    @html_id = 'page'
-    @body_id = 'products'
-    @type    = 'logos'
-    @title   = title_for :zines, @product.name
+    @html_id  = 'page'
+    @body_id  = 'products'
+    @type     = 'logos'
+    @editable = @product
+    @title    = title_for :zines, @product.name
   end
 end
