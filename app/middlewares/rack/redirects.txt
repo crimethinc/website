@@ -1,4 +1,5 @@
 /1848 /2016/06/23/the-democracy-of-the-reaction-1848-2011
+/1900/09/11 /2004/01/01/despair
 /1900/09/11/accounting-for-ourselves /2013/04/17/accounting-for-ourselves
 /1900/09/11/accounts /2009/05/05/accounts
 /1900/09/11/after-the-fall /2001/09/30/after-the-fall
@@ -114,6 +115,7 @@
 /2007/10/09/crimethinc-into-libraries-progress-report /2007/10/10/crimethinc-into-libraries-progress-report
 /2007/10/12/anarchy-in-bulgaria-an-interview /2007/10/13/anarchy-in-bulgaria-an-interview
 /2007/10/2/athens-locals-convergence-report /2007/10/02/athens-locals-convergence-report
+/2007/10/30/introduction-to-anarchism-and-resistance-in-bogota /2007/10/26/introduction-to-anarchism-and-resistance-in-bogota
 /2007/10/30/what-weve-been-up-to /2007/10/31/what-weve-been-up-to
 /2007/10/4/fancy-free-bookmarks /2007/10/05/fancy-free-bookmarks
 /2007/10/9/crimethinc-into-libraries-progress-report /2007/10/10/crimethinc-into-libraries-progress-report
@@ -381,6 +383,7 @@
 /2009/1/5/?p=569 /2009/01/05/sixth-off-the-map-printing
 /2009/1/9/?p=579 /2009/01/09/reminder-shipping-rate-increase-imminent
 /2009/10/07/?p=947 /2009/10/07/g20-mobilization-preliminary-assessment
+/2009/10/08/g20-mobilization-preliminary-assessment /2009/10/07/g20-mobilization-preliminary-assessment
 /2009/10/13/?p=955 /2009/10/13/crimethinc-in-anarchist-fiction-anthology
 /2009/10/18/?p=965 /2009/10/18/crimethinc-into-libraries-progress-report-2
 /2009/10/25/?p=977 /2009/10/25/g20-legal-support-update
@@ -2210,7 +2213,7 @@
 /f /2013/04/04/daniel-mcgowan-imprisoned-for-speaking-out
 /facebookshare https://www.facebook.com/dialog/feed?app_id=966242223397117&link=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2Fcrimethinc%2Fnew-books-about-borders-and-democracy-by-crimethin&picture=http%3A%2F%2Fcloudfront.crimethinc.com%2Fassets%2Fkickstarter%2FKS-project-image2048.jpg&name=Help%20Us%20Publish%20Books%20about%20Borders%20and%20Democracy&caption=%20&description=We%27re%20back%20with%20two%20ambitious%20books%20about%20the%20issues%20of%20the%20hour%2C%20borders%20and%20democracy.%20Please%20help%20us%20raise%20funds%20to%20publish%20*No%20Wall%20They%20Can%20Build*%C2%A0and%20*From%20Democracy%20to%20Freedom.*&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F&display=popup
 /fashiontips /2008/10/11/fashion-tips-for-the-brave
-/features /texts/recentfeatures
+/features /categories/features
 /features/11 /2006/04/01/fighting-for-our-lives-available-once-more-ten-year-report-mayday-poster
 /feed/rss /feed
 /five /2017/01/17/five-principles-of-direct-action-what-we-can-learn-from-the-2001-inauguration-protests
@@ -2502,7 +2505,6 @@
 /texts/demands /2015/05/05/feature-why-we-dont-make-demands
 /texts/democracy /2012/04/29/feature-from-democracy-to-freedom
 /texts/demonstrating /2005/05/11/demonstrating-resistance
-/texts/despair /1900/09/11
 /texts/despair /2004/01/01/despair
 /texts/destination /2016/04/07/feature-destination-anarchy-every-step-is-an-obstacle
 /texts/difference /2000/09/11/there-is-a-difference-between-life-and-survival
@@ -2563,6 +2565,8 @@
 /texts/punkshows /1900/09/11/punk-shows
 /texts/purged /1900/09/11/all-traveler-kidspurged-from-crimethinc-membership
 /texts/reaction /2016/10/24/feature-after-the-election-the-reaction
+/texts/recentfeatures /categories/features
+/texts/recentfeatures/g202 /2009/10/08/g20-mobilization-preliminary-assessment
 /texts/reconsideringtv /2000/09/11/reconsidering-television
 /texts/rncdnc /1900/09/11/going-it-alone
 /texts/rncdncdocs /1900/09/11/accounts
