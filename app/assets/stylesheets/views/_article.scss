@@ -23,30 +23,20 @@
       }
 
       .meta {
+        margin: 5rem auto 0 auto;
+
+        @media screen and (min-width: $large-tablet) {
+          margin-top: 10rem;
+        }
+
+        max-width: $large-tablet;
+
         padding: 0 $border-size-medium;
+
         @media screen and (min-width: 957px) {
           padding: 0;
         }
 
-        text-align: left;
-        max-width: $large-tablet;
-
-        margin-top: 10rem;
-        margin-right: auto;
-        margin-left: auto;
-
-        @media screen and (min-width: $large-phone) {
-          font-size: 1.25em;
-        }
-
-        @media screen and (min-width: $large-tablet) {
-          font-size: 1.25em;
-          top: 33%;
-        }
-
-        @media screen and (min-width: $small-laptop) {
-          font-size: 1.25em;
-        }
       }
 
       a {
