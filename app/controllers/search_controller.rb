@@ -3,11 +3,16 @@ class SearchController < ApplicationController
     @html_id = 'page'
     @body_id = 'search'
 
-    params[:q] = '' if params[:q].blank?
+    if params[:q].blank?
+      @query = ''
+      @results = Kaminari.paginate_array([]).page(params[:page]).per(15)
+    else
+      @search  = Search.new(search_params)
+      @query   = @search.query
+      @results = @search.perform.page(params[:page]).per(15)
+    end
 
-    @search  = Search.new(search_params)
-    @results = @search.perform.page(params[:page]).per(15)
-    @title   = title_for :search, :results, "“#{@search.query}”"
+    @title = title_for :search, :results, "“#{@query}”"
   end
 
   def advanced

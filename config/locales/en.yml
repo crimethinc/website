@@ -37,6 +37,7 @@ en:
 
   search:
     form_placeholder: Search Archives…
+    search_results: 'Search results for: %{query}'
     advanced:
       heading: Advanced Search
       form:
