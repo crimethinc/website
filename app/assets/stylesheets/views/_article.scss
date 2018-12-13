@@ -20,7 +20,6 @@
       .u-photo {
         background: $color-true-black;
         width: 100%;
-        margin-bottom: 2rem;
       }
 
       .meta {
@@ -31,6 +30,8 @@
 
         text-align: left;
         max-width: $large-tablet;
+
+        margin-top: 10rem;
         margin-right: auto;
         margin-left: auto;
 
