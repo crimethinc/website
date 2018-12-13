@@ -13,18 +13,9 @@
   }
 
   .h-entry {
-    &.article-with-no-header-image header .meta {
-      position: relative;
-      transform: none;
-    }
-
     header {
+      color: red;
       color: $color-white;
-      margin-bottom: 1em;
-      position: relative;
-
-      /* for vertically aligning sub/title */
-      transform-style: preserve-3d;
 
       .u-photo {
         background: $color-true-black;
@@ -32,48 +23,37 @@
       }
 
       .meta {
-        position: absolute;
-        text-align: left;
-        width: 100%;
-
-        /* for vertically aligning sub/title */
-        transform: translateY(-50%);
-        top: 50%;
-
-        @media screen and (min-width: $large-phone) {
-          font-size: 1.25em;
-        }
+        margin: 4rem auto 0 auto;
 
         @media screen and (min-width: $large-tablet) {
-          font-size: 1.25em;
-          top: 33%;
+          margin-top: 8rem;
         }
 
-        @media screen and (min-width: $small-laptop) {
-          font-size: 1.25em;
+        max-width: $large-tablet;
+
+        padding: 0 $border-size-medium;
+
+        @media screen and (min-width: 957px) {
+          padding: 0;
         }
 
-        .p-name {
-          padding: 10pt;
-
-          @media screen and (min-width: $small-tablet) {
-            padding: 50pt;
-          }
-
-          &.shadowed {
-            h1,
-            h2 {
-              text-shadow: 0 0 1rem $color-black;
-              text-shadow: 0 0 1rem $color-black;
-            }
-          }
-        }
       }
 
-
       a {
-        color: $color-white;
+        color: $color-black;
         text-decoration: none;
+      }
+
+      .categories {
+        display: block;
+        padding: 2rem 0 4rem 0;
+
+        a {
+          text-transform: capitalize;
+          text-decoration: underline;
+          font-style: italic;
+          color: $color-gray;
+        }
       }
 
 
@@ -105,7 +85,7 @@
 
       h2 {
         font-size: 2rem;
-        line-height: 1em;
+        line-height: 1.25em;
 
         @media screen and (min-width: 350px) {
           font-size: 2.5rem;
@@ -162,7 +142,7 @@
 
     @media screen and (min-width: $small-tablet) {
       font-size: 1.5em;
-      padding: 0 50pt;
+      padding: 0 10pt;
     }
 
     > * {
@@ -170,8 +150,8 @@
       margin-left: auto;
     }
 
-    > :not(.video-container):not(:first-child) {
-      max-width: $large-tablet - 200px;
+    > :not(.video-container) {
+      max-width: $large-tablet - 100px;
     }
 
     > :first-child {
@@ -307,7 +287,8 @@
       display: block;
       width: 100%;
       max-width: 100%;
-      margin: 2em auto;
+      margin: auto;
+      text-align: center;
 
       &.auto-size {
         width: auto;
@@ -333,7 +314,10 @@
 
     figure {
       img {
-        margin: 0;
+        display: block;
+        max-width: 100%;
+        margin: auto;
+        text-align: center;
       }
     }
 
