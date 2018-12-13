@@ -30,12 +30,14 @@ en:
     store: Store
     subscribe: Subscribe
     support: Support Us
+    search: Search
 
     first_time: First Time? Start Here →
     site_mode: Switch to the full version of the site »
 
   search:
     form_placeholder: Search Archives…
+    search_results: 'Search results for: %{query}'
     advanced:
       heading: Advanced Search
       form:
