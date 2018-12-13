@@ -285,9 +285,9 @@
     /* for single images */
     img {
       display: block;
-      width: 80%;
-      max-width: 80%;
-      margin: 2em auto;
+      width: 100%;
+      max-width: 100%;
+      margin: auto;
       text-align: center;
 
       &.auto-size {
@@ -315,9 +315,8 @@
     figure {
       img {
         display: block;
-        width: 80%;
-        max-width: 80%;
-        margin: 2em auto;
+        max-width: 100%;
+        margin: auto;
         text-align: center;
       }
     }
