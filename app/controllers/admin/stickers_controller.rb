@@ -15,7 +15,7 @@ module Admin
     end
 
     def new
-      @poster = Poster.new
+      @poster = Sticker.new
       @title  = admin_title
       render 'admin/posters/new'
     end
@@ -26,7 +26,7 @@ module Admin
     end
 
     def create
-      @poster = Poster.new(poster_params)
+      @poster = Sticker.new(poster_params)
 
       if @poster.save
         redirect_to [:admin, @poster], notice: 'Sticker was successfully created.'
@@ -51,15 +51,17 @@ module Admin
     private
 
     def set_poster
-      @poster = Poster.find(params[:id])
+      @poster = Sticker.find(params[:id])
     end
 
     def poster_params
-      params.require(:poster).permit(:sticker, :title, :subtitle, :content, :published_at,
-                                     :content_format, :buy_info, :buy_url, :price_in_cents,
-                                     :summary, :description, :front_image_present,
-                                     :back_image_present, :lite_download_present, :slug, :height,
-                                     :width, :publication_status)
+      params.require(:sticker).permit(:title, :subtitle, :content, :content_format, :buy_info, :buy_url,
+                                      :price_in_cents, :summary, :description, :slug, :height, :width, :depth,
+                                      :front_image_format, :back_image_format, :published_at, :front_color_image_present,
+                                      :front_black_and_white_image_present, :back_color_image_present,
+                                      :back_black_and_white_image_present, :front_color_download_present,
+                                      :front_black_and_white_download_present, :back_color_download_present,
+                                      :back_black_and_white_download_present, :status_id, :publication_status)
     end
   end
 end

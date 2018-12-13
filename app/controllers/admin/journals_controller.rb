@@ -28,7 +28,6 @@ module Admin
 
     def create
       @book = Journal.new(journal_params)
-      @book.journal = true
 
       if @book.save
         redirect_to [:admin, @book], notice: 'Journal was successfully created.'
