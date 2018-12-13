@@ -23,10 +23,10 @@
       }
 
       .meta {
-        margin: 5rem auto 0 auto;
+        margin: 4rem auto 0 auto;
 
         @media screen and (min-width: $large-tablet) {
-          margin-top: 10rem;
+          margin-top: 8rem;
         }
 
         max-width: $large-tablet;
@@ -151,7 +151,7 @@
     }
 
     > :not(.video-container) {
-      max-width: $large-tablet;
+      max-width: $large-tablet - 100px;
     }
 
     > :first-child {
@@ -285,9 +285,10 @@
     /* for single images */
     img {
       display: block;
-      width: 100%;
-      max-width: 100%;
+      width: 80%;
+      max-width: 80%;
       margin: 2em auto;
+      text-align: center;
 
       &.auto-size {
         width: auto;
@@ -313,7 +314,11 @@
 
     figure {
       img {
-        margin: 0;
+        display: block;
+        width: 80%;
+        max-width: 80%;
+        margin: 2em auto;
+        text-align: center;
       }
     }
 
