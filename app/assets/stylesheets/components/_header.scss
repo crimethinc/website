@@ -3,6 +3,10 @@
   background-color: $color-true-black;
   padding: $border-size-large;
 
+  @media screen and (max-width: $small-tablet) {
+    padding: $border-size-medium;
+  }
+
   .button {
     background: $color-blue;
     position: absolute;
@@ -12,6 +16,8 @@
     @media screen and (max-width: $small-tablet) {
       font-size: 12px;
       padding: .5em;
+      top: $border-size-medium;
+      right: $border-size-medium;
     }
   }
 }
