@@ -3,7 +3,7 @@ class SearchController < ApplicationController
     @html_id = 'page'
     @body_id = 'search'
 
-    return redirect_to root_path if params[:q].blank?
+    params[:q] = '' if params[:q].blank?
 
     @search  = Search.new(search_params)
     @results = @search.perform.page(params[:page]).per(15)
