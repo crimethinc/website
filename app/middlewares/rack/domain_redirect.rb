@@ -1,37 +1,42 @@
 module Rack
   class DomainRedirect
-    def initialize(app)
+    def initialize app
       @app = app
     end
 
-    def call(env)
+    def call env
       request = Rack::Request.new(env)
       host    = request.host.downcase
+      path    = request.path
 
-      return redirect_to_crimethinc request if /cwc/.match?(host)
-      return redirect_to_crimethinc request if /crimethinc.herokuapp.com$/.match?(host)
-      return redirect_to_tce        request if /tochangeeverything.com$/.match?(host)
+      return redirect_to_tce path if /tochangeeverything.com$/.match?(host)
 
-      return redirect_to_crimethinc(request, subdomain: 'es') if /crimethinc.es/.match?(host)
+      {
+        ''   => /cwc|crimethinc.herokuapp.com$/,
+        'es' => /crimethinc.es/,
+        'de' => /crimethinc.de/
+      }.each do |subdomain, localized_tld|
+        return redirect_to_crimethinc(path, subdomain: subdomain) if localized_tld.match?(host)
+      end
 
-      @app.call(env)
+      @app.call env
     end
 
     private
 
-    def redirect_to_crimethinc request, subdomain: ''
+    def redirect_to_crimethinc path, subdomain: ''
       subdomain += '.' unless subdomain == ''
 
-      location = ['https://', subdomain, 'crimethinc.com', request.path].join
+      location = ['https://', subdomain, 'crimethinc.com', path].join
       redirect location
     end
 
-    def redirect_to_tce request
-      location = ['https://crimethinc.com/tce', request.path].join
+    def redirect_to_tce path
+      location = ['https://crimethinc.com/tce', path].join
       redirect location
     end
 
-    def redirect(location)
+    def redirect location
       [
         301,
         { 'Location' => location, 'Content-Type' => 'text/html' },
