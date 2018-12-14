@@ -12,13 +12,17 @@ module Rack
       return redirect_to_crimethinc request if /crimethinc.herokuapp.com$/.match?(host)
       return redirect_to_tce        request if /tochangeeverything.com$/.match?(host)
 
+      return redirect_to_crimethinc(request, subdomain: 'es') if /crimethinc.es/.match?(host)
+
       @app.call(env)
     end
 
     private
 
-    def redirect_to_crimethinc request
-      location = ['https://crimethinc.com', request.path].join
+    def redirect_to_crimethinc request, subdomain: ''
+      subdomain += '.' unless subdomain == ''
+
+      location = ['https://', subdomain, 'crimethinc.com', request.path].join
       redirect location
     end
 
