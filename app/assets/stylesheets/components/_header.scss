@@ -21,6 +21,7 @@
     }
   }
 }
+
 .header-logo a {
   @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 15rem, 3rem);
   @include size(15rem, 3rem);
@@ -61,6 +62,11 @@
       border-bottom: 1px solid $color-white;
     }
   }
+}
+
+.first-time-link {
+  @include bold();
+  border-bottom: 1px solid $color-white;
 }
 
 @media screen and (max-width: $small-tablet) {
