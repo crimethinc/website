@@ -1,5 +1,5 @@
-<div class="p-name <%= 'shadowed' if header.is_a?(Article) && header.header_shadow_text? %>">
-  <%= link_to header.path, class: "article-titles" do %>
+<div class="p-name <%= 'shadowed' if linked %>">
+  <% if linked %><a href='<%= header.path %>' class='article-titles'><% end %>
 
     <h1 class="p-x-title">
       <%= RubyPants.new(header.title).to_html.html_safe %>
@@ -13,5 +13,5 @@
       </h2>
     <% end %>
 
-  <% end %>
+  <% if linked %></a><% end %>
 </div>
