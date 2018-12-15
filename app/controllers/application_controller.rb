@@ -74,16 +74,13 @@ class ApplicationController < ActionController::Base
     return redirect_to request.path.sub(/\.html/, '') if /\.html/.match?(request.path)
   end
 
+  # TODO: move to meta helper
   def current_resource_name
     request.path.split('admin/').last.split('/').first.capitalize.singularize
   end
   helper_method :current_resource_name
 
-  def meta_title(thing = nil)
-    thing.present? ? thing.title : t('head.meta_title')
-  end
-  helper_method :meta_title
-
+  # TODO: move to meta helper
   def page_title
     if @title.present?
       t(:site_name) + prepend_admin_if_needed + @title
@@ -109,6 +106,7 @@ class ApplicationController < ActionController::Base
     pieces.flatten.join ' : '
   end
 
+  # TODO: move to meta helper
   def prepend_admin_if_needed
     if controller_path.match(%r{\Aadmin\/.*\z}).present?
       " #{t('admin.title_prepend')} : "
@@ -118,9 +116,9 @@ class ApplicationController < ActionController::Base
   end
   helper_method :prepend_admin_if_needed
 
+  # TODO: move to a helper
   def author
     t(:site_author)
-    # TODO: make this article author aware
   end
   helper_method :author
 

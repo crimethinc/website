@@ -7,7 +7,7 @@ module MetaHelper
     thing.present? ? 'article' : 'website'
   end
 
-  def meta_title(thing)
+  def meta_title thing = nil
     # TODO: should be thing.name instead?
     thing.present? ? thing.title : t('head.meta_title')
   end
