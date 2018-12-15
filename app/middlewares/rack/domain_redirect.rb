@@ -36,7 +36,7 @@ module Rack
     private
 
     def redirect_location path: '', subdomain: ''
-      [PROTOCOL, subdomain, domain, path].join
+      [PROTOCOL, subdomain, DOMAIN, path].join
     end
 
     def redirect location
