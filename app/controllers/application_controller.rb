@@ -69,6 +69,7 @@ class ApplicationController < ActionController::Base
     return redirect_to(redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301) if redirect.present?
   end
 
+  # TODO: move to rack middleware
   def strip_file_extension
     return redirect_to request.path.sub(/\.html/, '') if /\.html/.match?(request.path)
   end
