@@ -30,12 +30,14 @@ es:
     store: Tienda
     subscribe: Subscríbete
     support: Apóyanos
+    search: Buscar
 
     first_time: ¿Tu primera vez? Empieza aquí →
     site_mode: Cambiar a la versión completa del sitio →
 
   search:
     form_placeholder: Busca en los archivos…
+    search_results: 'Search results for: %{query}'
     advanced:
       heading: Búsqueda avanzada
       form:

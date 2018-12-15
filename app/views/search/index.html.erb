@@ -3,9 +3,17 @@
 <% end %>
 
 <div class="h-feed">
+  <%= render "shared/site_search", location: :top %>
 
   <header>
-    <h1>Search results for “<%= @search.query %>”</h1>
+    <h1>
+      <% if @query.blank? %>
+        <%= t 'search.form_placeholder' %>
+      <% else %>
+        <%= t 'search.search_results', query: @query %>
+      <% end %>
+    </h1>
+
   </header>
 
   <div class="articles-list">

@@ -7,17 +7,15 @@
     </div>
   <% end %>
 
-  <%= render "articles/css", article: @article unless lite_mode? %>
-
   <%= article_tag @article do %>
     <header>
       <%= render "articles/image_media", article: @article, linked: false %>
 
       <div class="meta">
         <%= render "articles/titles", header: @article, linked: false %>
-      </div>
 
-      <%= render "articles/categories", article: @article %>
+        <%= render "articles/categories", article: @article %>
+      </div>
 
       <%= render "articles/image_lite", article: @article, linked: false %>
     </header>
