@@ -62,14 +62,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def url_for_current_path_with_subdomain subdomain: :en
-    subdomain = subdomain == I18n.default_locale ? nil : "#{subdomain}."
-    port      = ":#{request.port}" if request.port.present?
-
-    [request.protocol, subdomain, request.domain, port, request.path].join
-  end
-  helper_method :url_for_current_path_with_subdomain
-
   def check_for_redirection
     redirect = Redirect.where(source_path: request.path.downcase).last
     redirect = Redirect.where(source_path: "#{request.path.downcase}/").last if redirect.blank?
