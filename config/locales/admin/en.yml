@@ -31,6 +31,11 @@ en:
       new_title: New Zines
       show_title: "Zines : %{title}"
       edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+    journals:
+      index_title: Journals
+      new_title: New Journals
+      show_title: "Journals : %{title}"
+      edit_title: "Editing journal %{id} %{title} : %{subtitle}"
     posters:
       index_title: Posters
       new_title: New Posters
