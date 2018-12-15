@@ -64,11 +64,6 @@
   }
 }
 
-.first-time-link {
-  @include bold();
-  border-bottom: 1px solid $color-white;
-}
-
 @media screen and (max-width: $small-tablet) {
   .site-header nav {
     display: block;
