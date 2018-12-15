@@ -2533,7 +2533,7 @@
 /texts/h4intro /2001/11/01/harbinger4-intro
 /texts/halloween /1900/09/11/every-night-a-halloween
 /texts/ideas /1900/09/11/do-you-have-ideas-or-do-ideas-have-you
-/texts/ideology /1900/09/11/against-ideology
+/texts/ideology /2010/08/12/against-ideology
 /texts/indulge /2001/11/01/indulge-undermine
 /texts/infighting /2001/11/01/why-were-right-youre-wrong
 /texts/insurrection /1900/09/11/insurrection
@@ -2566,7 +2566,7 @@
 /texts/purged /1900/09/11/all-traveler-kidspurged-from-crimethinc-membership
 /texts/reaction /2016/10/24/feature-after-the-election-the-reaction
 /texts/recentfeatures /categories/features
-/texts/recentfeatures/g202 /2009/10/08/g20-mobilization-preliminary-assessment
+/texts/g202 /2009/10/08/g20-mobilization-preliminary-assessment
 /texts/reconsideringtv /2000/09/11/reconsidering-television
 /texts/rncdnc /1900/09/11/going-it-alone
 /texts/rncdncdocs /1900/09/11/accounts
@@ -2589,7 +2589,7 @@
 /texts/syriza /2015/01/28/feature-syriza-cant-save-greece-why-theres-no-electoral-exit-from-the-crisis
 /texts/system /2000/09/11/working-within-the-system
 /texts/taskforce69 /2000/09/11/vanguard-of-the-sexual-revolution
-/texts/terrain /1900/09/11/fighting-in-the-new-terrain
+/texts/terrain /2010/08/23/fighting-in-the-new-terrain
 /texts/toronto /1900/09/11/g20-shut-doors-broken-windows
 /texts/toronto2 /1900/09/11/toronto-g20-eyewitness-report
 /texts/trump /2016/12/13/feature-does-trump-represent-fascism-or-white-supremacy
