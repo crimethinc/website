@@ -44,6 +44,14 @@
       <dd>
         <%= link_to t("footer.nav.store.description"), "/store" %>
       </dd>
+
+      <dt class="nav-label nav-label-languages" id="languages"><%= link_to t("header.languages"), "#languages" %></dt>
+      <dd>
+        <% Locales.supported.each do |locale| %>
+          <%= link_to t(:name, locale: locale),
+                      url_for_current_path_with_subdomain(subdomain: locale) %>
+        <% end %>
+      </dd>
     </dl>
   </div>
 </nav>
