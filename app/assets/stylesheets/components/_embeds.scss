@@ -1,4 +1,5 @@
 figure {
+  text-align: center;
   margin: 1em auto;
 
   img {
@@ -39,9 +40,11 @@ figure {
 }
 
 figcaption {
+  text-align: left;
   font-weight: 300;
   font-size: 1rem;
-  margin: 0.5em 0 1em 0;
+  margin: 0.5em auto 1em auto;
+  max-width: $small-laptop;
 
   &.video-caption-giphy {
     margin-top: 3rem;
