@@ -10,10 +10,8 @@ class Poster < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  NAMESPACE = 'posters'.freeze
-
-  def path
-    [nil, NAMESPACE, slug].join('/')
+  def namespace
+    'posters'
   end
 
   def image_description
@@ -43,14 +41,14 @@ class Poster < ApplicationRecord
 
   def image(side: :front, color: :color)
     filename = [slug, '_', side, '_', color, '.', send("#{side}_image_format")].join
-    [ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
+    [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def front_image
     if front_color_image_present? || front_black_and_white_image_present?
       front_color_image_present ? front_color_image : front_black_and_white_image
     else
-      [ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_front.#{front_image_format}"].join('/')
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.#{front_image_format}"].join('/')
     end
   end
 
@@ -58,7 +56,7 @@ class Poster < ApplicationRecord
     if back_color_image_present? || back_black_and_white_image_present?
       back_color_image_present ? back_color_image : back_black_and_white_image
     else
-      [ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_back.#{back_image_format}"].join('/')
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join('/')
     end
   end
 
@@ -68,7 +66,7 @@ class Poster < ApplicationRecord
     filename << "_#{color}" if color.present?
     filename << '.pdf'
     filename = filename.join
-    [ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
+    [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def meta_description

@@ -12,4 +12,8 @@ module Tool
     mobi:                     ['Mobi',                    'Is there a <code>.mobi</code> file uploaded?'],
     lite:                     ['Lo Res',                  'Is there a low resolution or single page view PDF uploaded?']
   }.freeze
+
+  def path
+    [nil, namespace, slug].join('/')
+  end
 end

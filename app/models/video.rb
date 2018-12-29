@@ -10,10 +10,8 @@ class Video < ApplicationRecord
 
   # default_scope { order(slug: :asc) }
 
-  NAMESPACE = 'videos'.freeze
-
-  def path
-    [nil, NAMESPACE, slug].join('/')
+  def namespace
+    'videos'
   end
 
   def meta_description

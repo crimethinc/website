@@ -10,24 +10,22 @@ class Book < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  NAMESPACE = 'books'.freeze
-
-  def path
-    [nil, NAMESPACE, slug].join('/')
+  def namespace
+    'books'
   end
 
   def image(side: :front, count: 0)
     case side
     when :front
-      [ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_front.jpg"].join('/')
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join('/')
     when :back
-      [ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_back.jpg"].join('/')
+      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join('/')
     when :gallery
-      [ASSET_BASE_URL, NAMESPACE, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
+      [ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
     when :header
-      [ASSET_BASE_URL, NAMESPACE, slug, 'gallery', "#{slug}_header.jpg"].join('/')
+      [ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}_header.jpg"].join('/')
     else
-      [ASSET_BASE_URL, NAMESPACE, slug, 'photo.jpg'].join('/')
+      [ASSET_BASE_URL, namespace, slug, 'photo.jpg'].join('/')
     end
   end
 
@@ -67,7 +65,7 @@ class Book < ApplicationRecord
     filename << '.'
     filename << extension
     filename = filename.join
-    [ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
+    [ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def meta_description
