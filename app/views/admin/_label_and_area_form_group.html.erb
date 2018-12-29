@@ -1,0 +1,7 @@
+<% label_text ||= nil %>
+<% rows       ||= nil %>
+
+<div class="form-group">
+  <%= form.label     attr, label_text %>
+  <%= form.text_area attr, class: "form-control form-control-lg", rows: rows %>
+</div>

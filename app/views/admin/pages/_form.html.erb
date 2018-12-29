@@ -1,24 +1,20 @@
 <%= form_with(model: [:admin, @page]) do |form| %>
   <%= render "admin/form_errors", thing: @page %>
 
-  <div class="form-group">
-    <%= form.label :slug, "URL Slug" %>
-    <%= form.text_field :slug, class: "form-control form-control-lg" %>
-  </div>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :slug, label_text: "URL Slug" %>
+
   <%= render "admin/form_actions", cancel_url: [:admin, :pages] %>
 
   <div class="row">
     <div class="col-12 col-sm-6">
       <fieldset id="syndication">
         <legend>Syndication</legend>
-        <div class="form-group">
-          <%= form.label :summary %>
-          <%= form.text_area :summary, class: "form-control form-control-lg" %>
-          <p class="form-text text-muted">
-            Maximum 200 characters.
-            Used for page description and previews in story cards on other sites.
-          </p>
-        </div>
+
+        <%= render "admin/label_and_area_form_group", form: form, attr: :summary %>
+        <p class="form-text text-muted">
+          Maximum 200 characters.
+          Used for page description and previews in story cards on other sites.
+        </p>
       </fieldset>
     </div>
 
@@ -53,10 +49,7 @@
 
     <div class="row">
       <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= form.label :css, "Page Specific CSS" %>
-          <%= form.text_area :css, class: "form-control form-control-lg", rows: 10 %>
-        </div>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :css, label_text: "CSS", rows: 10 %>
       </div>
     </div>
   </fieldset>

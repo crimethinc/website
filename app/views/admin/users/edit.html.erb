@@ -10,18 +10,11 @@
 
     <div class="row">
       <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= form.label :password %>
-          <%= form.password_field :password, class: "form-control form-control-lg" %>
-          <p class="form-text text-muted">Leave these blank unless changing your password</p>
-        </div>
+        <%= render "admin/label_and_field_form_group", form: form, attr: :password %>
       </div>
 
       <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= form.label :password_confirmation, "Confirm Password" %>
-          <%= form.password_field :password_confirmation, class: "form-control form-control-lg" %>
-        </div>
+        <%= render "admin/label_and_field_form_group", form: form, attr: :password_confirmation, label_text: "Confirm Password" %>
       </div>
     </div>
   </fieldset>

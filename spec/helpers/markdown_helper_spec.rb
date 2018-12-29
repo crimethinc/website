@@ -12,7 +12,7 @@ RSpec.describe MarkdownHelper, type: :helper do
   describe '#render_content' do
     subject { article.content_rendered.strip }
 
-    let(:article) { Article.new(content: 'text', content_format: 'markdown') }
+    let(:article) { Article.new(content: 'text', content_format: 'kramdown') }
 
     it { is_expected.to eq('<p>text</p>') }
   end

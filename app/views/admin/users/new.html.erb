@@ -3,29 +3,20 @@
 <%= form_with(model: [:admin, @user]) do |form| %>
   <%= render "admin/form_errors", thing: @user %>
 
-  <div class="form-group">
-    <%= form.label :username %>
-    <%= form.text_field :username, class: "form-control form-control-lg" %>
-  </div>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :username %>
 
-  <div class="form-group">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: "form-control form-control-lg" %>
-    <p class="form-text text-muted">Passwords must be <b>at least 30 characters</b> long.</p>
-  </div>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :password %>
+  <p class="form-text text-muted">Passwords must be <b>at least 30 characters</b> long.</p>
 
-  <div class="form-group">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation, class: "form-control form-control-lg" %>
-    <p class="form-text text-muted">
-      Pro Tip: Use a password manager like
-      <a href="https://1password.com">1Password</a>,
-      and/or try a passphrase like <code>mickey fickie fire cracker soap on a rope</code>
-      for length plus memorability.
-    </p>
-  </div>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :password_confirmation %>
+  <p class="form-text text-muted">
+    Pro Tip: Use a password manager like
+    <a href="https://1password.com">1Password</a>,
+    and/or try a passphrase like <code>mickey fickie fire cracker soap on a rope</code>
+    for length plus memorability.
+  </p>
 
   <div class="actions">
-    <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+    <button type="submit" class="btn btn-primary btn-lg">Create new user account</button>
   </div>
 <% end %>
