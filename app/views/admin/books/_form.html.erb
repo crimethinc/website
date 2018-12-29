@@ -1,51 +1,32 @@
 <%= form_with(model: [:admin, resource]) do |form| %>
   <%= render "admin/form_errors", thing: resource %>
 
-  <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "form-control form-control-lg" %>
-  </div>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
 
-  <div class="form-group">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle, class: "form-control form-control-lg" %>
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <%= render "admin/label_and_area_form_group", form: form, attr: :description, rows: 8 %>
+      <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 8 %>
+      <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+    </div>
   </div>
 
   <div class="row">
     <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <%= form.label :description %>
-        <%= form.text_area :description, class: "form-control form-control-lg", rows: 8 %>
-        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
-      </div>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :slug %>
     </div>
 
     <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <%= form.label :content %>
-        <%= form.text_area :content, class: "form-control form-control-lg", rows: 8 %>
-        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
-      </div>
-    </div>
-  </div> <!-- .row -->
-
-  <div class="row">
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <%= form.label :slug %>
-        <%= form.text_field :slug, class: "form-control form-control-lg" %>
-      </div>
-    </div>
-
-    <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <%= form.label :gallery_images_count %>
-        <%= form.text_field :gallery_images_count, class: "form-control form-control-lg" %>
-        <p class="form-text text-muted">
-          The number of <code>.jpg</code> gallery images that are uploaded to the
-          <code>[slug]/gallery</code> folder?
-        </p>
-      </div>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :gallery_images_count %>
+      <p class="form-text text-muted">
+        The number of <code>.jpg</code> gallery images that are uploaded to the
+        <code>[slug]/gallery</code> folder?
+      </p>
     </div>
   </div>
 
@@ -57,27 +38,18 @@
 
   <fieldset id="purchasing">
     <legend>Purchasing</legend>
+
     <div class="row">
       <div class="col-6">
-        <div class="form-group">
-          <%= form.label :buy_info, "Buying Info" %>
-          <%= form.text_area :buy_info, class: "form-control form-control-lg", rows: 8 %>
-          <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
-        </div>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :buy_info, label_text: "Buying Info" %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
       </div>
 
       <div class="col-6">
-        <div class="form-group">
-          <%= form.label :buy_url, "Buy URL" %>
-          <%= form.url_field :buy_url, class: "form-control form-control-lg" %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :price_in_cents, "Price (in USD cents)" %>
-          <%= form.text_field :price_in_cents, class: "form-control form-control-lg" %>
-        </div>
+        <%= render "admin/label_and_field_form_group", form: form, attr: :buy_url, label_text: "Buy URL" %>
+        <%= render "admin/label_and_field_form_group", form: form, attr: :price_in_cents, label_text: "Price (in USD cents)" %>
       </div>
-    </div> <!-- .row -->
+    </div>
   </fieldset>
 
   <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
@@ -87,22 +59,19 @@
     <div class="row">
 
       <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= form.label :summary %>
-          <%= form.text_area :summary, class: "form-control form-control-lg" %>
-          <p class="form-text text-muted">
-            Maximum 200 characters.
-            Used for page description and previews in story cards on other sites.
-          </p>
-        </div>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :summary %>
+        <p class="form-text text-muted">
+          Maximum 200 characters.
+          Used for page description and previews in story cards on other sites.
+        </p>
       </div>
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
           <%= form.label :published_at %>
           <%= form.date_select :published_at,
-                            {start_year: Time.now.utc.year, end_year: 1995, include_blank: true},
-                            class: "form-control form-control-lg" %>
+                               { start_year: Time.now.utc.year, end_year: 1995, include_blank: true },
+                               class: "form-control form-control-lg" %>
         </div>
       </div>
 
@@ -116,11 +85,8 @@
       <fieldset id="table-of-contents">
         <legend>Table of Contents</legend>
 
-        <div class="form-group">
-          <%= form.label :table_of_contents %>
-          <%= form.text_area :table_of_contents, class: "form-control form-control-lg", rows: 10 %>
-          <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
-        </div>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :table_of_contents, rows: 10 %>
+        <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
       </fieldset>
     </div>
 
@@ -128,103 +94,15 @@
       <fieldset id="specs">
         <legend>Specs</legend>
 
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :width %>
-              <%= form.text_field :width, class: "form-control form-control-lg" %>
-            </div>
+        <% %i[width height depth weight pages words illustrations photographs cover_style binding_style printing ink ].in_groups_of(2).each do |specs| %>
+          <div class="row">
+            <% specs.each do |spec| %>
+              <div class="col-6">
+                <%= render "admin/label_and_field_form_group", form: form, attr: spec %>
+              </div>
+            <% end %>
           </div>
-
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :height %>
-              <%= form.text_field :height, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :depth %>
-              <%= form.text_field :depth, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :weight %>
-              <%= form.text_field :weight, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-        </div> <!-- .row -->
-
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :pages %>
-              <%= form.text_field :pages, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :words %>
-              <%= form.text_field :words, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-        </div> <!-- .row -->
-
-
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :illustrations %>
-              <%= form.text_field :illustrations, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :photographs %>
-              <%= form.text_field :photographs, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-        </div> <!-- .row -->
-
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :cover_style, "Cover Style" %>
-              <%= form.text_field :cover_style, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :binding_style, "Binding Style" %>
-              <%= form.text_field :binding_style, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-        </div> <!-- .row -->
-
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :printing, "Printing" %>
-              <%= form.text_field :printing, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="form-group">
-              <%= form.label :ink, "Ink" %>
-              <%= form.text_field :ink, class: "form-control form-control-lg" %>
-            </div>
-          </div>
-        </div> <!-- .row -->
+        <% end %>
 
         <div class="row">
           <div class="col-6">
@@ -251,17 +129,11 @@
 
           <div class="col-6">
             <% if @book.slug == "recipes-for-disaster" %>
-              <div class="form-group">
-                <%= form.label :recipes %>
-                <%= form.text_field :recipes, class: "form-control form-control-lg" %>
-              </div>
+              <%= render "admin/label_and_field_form_group", form: form, attr: :recipes %>
             <% end %>
 
             <% if @book.slug == "contradictionary" %>
-              <div class="form-group">
-                <%= form.label :definitions %>
-                <%= form.text_field :definitions, class: "form-control form-control-lg" %>
-              </div>
+              <%= render "admin/label_and_field_form_group", form: form, attr: :definitions %>
             <% end %>
           </div>
 

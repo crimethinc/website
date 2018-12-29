@@ -41,10 +41,7 @@
     <hr class="my-5">
 
     <% unless @collection.present? %>
-      <div class="form-group">
-        <%= form.label :short_path, "Short URL Path" %>
-        <%= form.text_field :short_path, class: "form-control form-control-lg" %>
-      </div>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :short_path, label_text: "Short URL Path" %>
     <% end %>
 
     <%= render 'admin/publication_status', form: form %>
