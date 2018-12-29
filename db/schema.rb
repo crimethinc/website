@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_022539) do
+ActiveRecord::Schema.define(version: 2018_12_29_024050) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "articles", id: :serial, force: :cascade do |t|
@@ -40,7 +41,6 @@ ActiveRecord::Schema.define(version: 2018_11_21_022539) do
     t.datetime "updated_at", null: false
     t.integer "collection_id"
     t.string "short_path"
-    t.boolean "header_shadow_text", default: true
     t.text "image_mobile"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "page_views", default: 0
@@ -88,13 +88,13 @@ ActiveRecord::Schema.define(version: 2018_11_21_022539) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
+    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 

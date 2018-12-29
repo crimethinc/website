@@ -94,7 +94,7 @@ module Admin
                                       :published_at, :tags, :collection_id, :short_path,
                                       :image, :image_description, :css, :hide_layout,
                                       :header_background_color, :header_text_color,
-                                      :header_shadow_text, :image_mobile, :published_at_tz,
+                                      :image_mobile, :published_at_tz,
                                       :publication_status, category_ids: [])
     end
   end
