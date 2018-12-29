@@ -72,7 +72,6 @@ Dir.glob("#{filepath}/*/").each do |f|
       image:              image,
       publication_status: 'published',
       content_format:     'html',
-      hide_layout:        true,
       short_path:         SecureRandom.hex
     )
 
@@ -375,7 +374,6 @@ Dir.glob("#{filepath}/*").each do |f|
       image:              image,
       publication_status: 'published',
       content_format:     'html',
-      hide_layout:        false,
       short_path:         SecureRandom.hex
     )
 

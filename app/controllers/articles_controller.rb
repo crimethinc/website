@@ -43,6 +43,6 @@ class ArticlesController < ApplicationController
     # save view stats
     Article.increment_counter(:page_views, @article.id) unless signed_in?
 
-    render html: @article.content.html_safe, layout: false if @article.hide_layout?
+    render html: @article.content.html_safe, layout: false if @article.content_in_html?
   end
 end

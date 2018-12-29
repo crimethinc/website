@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_024050) do
+ActiveRecord::Schema.define(version: 2018_12_29_030905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2018_12_29_024050) do
     t.string "year"
     t.string "month"
     t.string "day"
-    t.boolean "hide_layout", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "collection_id"
@@ -229,9 +228,6 @@ ActiveRecord::Schema.define(version: 2018_12_29_024050) do
     t.string "slug"
     t.string "draft_code"
     t.datetime "published_at"
-    t.boolean "hide_header", default: false
-    t.boolean "hide_footer", default: false
-    t.boolean "hide_layout", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false

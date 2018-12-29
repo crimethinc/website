@@ -92,7 +92,7 @@ module Admin
                                       :year, :month, :day, :download_url, :tweet,
                                       :slug, :draft_code,  :summary,
                                       :published_at, :tags, :collection_id, :short_path,
-                                      :image, :image_description, :css, :hide_layout,
+                                      :image, :image_description, :css,
                                       :header_background_color, :header_text_color,
                                       :image_mobile, :published_at_tz,
                                       :publication_status, category_ids: [])
