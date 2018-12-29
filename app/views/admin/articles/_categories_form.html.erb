@@ -1,4 +1,5 @@
-<div id="categorization" class="row pt-5">
+<div id="categorization" class="pt-5">
+  <div class="row ">
   <div class="col-12 col-sm-6">
     <% unless @collection.present? %>
 
@@ -41,14 +42,12 @@
     <hr class="my-5">
 
     <% unless @collection.present? %>
-      <div class="form-group">
-        <%= form.label :short_path, "Short URL Path" %>
-        <%= form.text_field :short_path, class: "form-control form-control-lg" %>
-      </div>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :short_path, label_text: "Short URL Path" %>
     <% end %>
 
     <%= render 'admin/publication_status', form: form %>
   </div><!-- .col -->
 
+  </div><!-- .row -->
   <%= render "admin/articles/back_to_top" %>
-</div><!-- #categorization.row -->
+</div><!-- #categorization -->
