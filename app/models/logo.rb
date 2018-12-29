@@ -10,8 +10,6 @@ class Logo < ApplicationRecord
 
   default_scope { order(published_at: :desc) }
 
-  FORMATS = %w[jpg png pdf svg tif].freeze
-
   def namespace
     'logo'
   end
