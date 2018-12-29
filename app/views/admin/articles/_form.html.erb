@@ -188,12 +188,8 @@
               <%= form.label :css, "Article Specific CSS" %>
               <%= form.text_area :css, class: "form-control form-control-lg", rows: 10 %>
               <p class="form-text text-muted">
-                <% if @article.new_record? %>
-                After you save this, you can add <b>Custom CSS</b> by editing the saved <i>Article</i>.
-                <% else %>
-                Prefix your CSS selectors with <b><code>#article-<%= @article.slug %></code></b> to scope your styles to just this <i>Article</i>.
-                For example, <code>#article-<%= @article.slug %> b { background: green }</code>.
-                <% end %>
+                Prefix your CSS selectors with <b><code>main article</code></b> to scope your styles to just this <i>Article</i>.
+                For example, <code>main article b { background: green }</code>.
               </p>
             </div>
           </div>
