@@ -8,26 +8,24 @@ class Book < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  def namespace
-    'books'
-  end
+  NAMESPACE = 'books'.freeze
 
   def path
-    [nil, namespace, slug].join('/')
+    [nil, NAMESPACE, slug].join('/')
   end
 
   def image(side: :front, count: 0)
     case side
     when :front
-      [Tool::ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join('/')
+      [Tool::ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_front.jpg"].join('/')
     when :back
-      [Tool::ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join('/')
+      [Tool::ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_back.jpg"].join('/')
     when :gallery
-      [Tool::ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
+      [Tool::ASSET_BASE_URL, NAMESPACE, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
     when :header
-      [Tool::ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}_header.jpg"].join('/')
+      [Tool::ASSET_BASE_URL, NAMESPACE, slug, 'gallery', "#{slug}_header.jpg"].join('/')
     else
-      [Tool::ASSET_BASE_URL, namespace, slug, 'photo.jpg'].join('/')
+      [Tool::ASSET_BASE_URL, NAMESPACE, slug, 'photo.jpg'].join('/')
     end
   end
 
@@ -67,7 +65,7 @@ class Book < ApplicationRecord
     filename << '.'
     filename << extension
     filename = filename.join
-    [Tool::ASSET_BASE_URL, namespace, slug, filename].join('/')
+    [Tool::ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
   end
 
   def meta_description

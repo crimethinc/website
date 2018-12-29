@@ -8,14 +8,11 @@ class Logo < ApplicationRecord
 
   default_scope { order(published_at: :desc) }
 
+  NAMESPACE = 'logos'.freeze
   FORMATS = %w[jpg png pdf svg tif].freeze
 
-  def namespace
-    'logos'
-  end
-
   def path
-    [nil, namespace, slug].join('/')
+    [nil, NAMESPACE, slug].join('/')
   end
 
   def image_description
@@ -24,13 +21,13 @@ class Logo < ApplicationRecord
   alias front_image_description image_description
 
   def preview_image_url
-    [Tool::ASSET_BASE_URL, namespace, slug, 'preview.png'].join('/')
+    [Tool::ASSET_BASE_URL, NAMESPACE, slug, 'preview.png'].join('/')
   end
   alias front_image preview_image_url
 
   def image_url(extension)
     filename = [slug, '.', extension.to_s].join
-    [Tool::ASSET_BASE_URL, namespace, slug, filename].join('/')
+    [Tool::ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
   end
   alias download_url image_url
 

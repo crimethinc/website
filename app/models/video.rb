@@ -8,9 +8,7 @@ class Video < ApplicationRecord
 
   # default_scope { order(slug: :asc) }
 
-  def namespace
-    'videos'
-  end
+  NAMESPACE = 'videos'.freeze
 
   def path
     "/videos/#{slug}"
