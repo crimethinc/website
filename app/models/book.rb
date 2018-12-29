@@ -8,8 +8,6 @@ class Book < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
-
   def namespace
     'books'
   end
@@ -21,15 +19,15 @@ class Book < ApplicationRecord
   def image(side: :front, count: 0)
     case side
     when :front
-      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join('/')
+      [Tool::ASSET_BASE_URL, namespace, slug, "#{slug}_front.jpg"].join('/')
     when :back
-      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join('/')
+      [Tool::ASSET_BASE_URL, namespace, slug, "#{slug}_back.jpg"].join('/')
     when :gallery
-      [ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
+      [Tool::ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
     when :header
-      [ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}_header.jpg"].join('/')
+      [Tool::ASSET_BASE_URL, namespace, slug, 'gallery', "#{slug}_header.jpg"].join('/')
     else
-      [ASSET_BASE_URL, namespace, slug, 'photo.jpg'].join('/')
+      [Tool::ASSET_BASE_URL, namespace, slug, 'photo.jpg'].join('/')
     end
   end
 
@@ -69,7 +67,7 @@ class Book < ApplicationRecord
     filename << '.'
     filename << extension
     filename = filename.join
-    [ASSET_BASE_URL, namespace, slug, filename].join('/')
+    [Tool::ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def meta_description

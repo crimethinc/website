@@ -3,9 +3,11 @@ class Logo < ApplicationRecord
   include Slug
   include Publishable
 
+  has_many :taggings, dependent: :destroy, as: :taggable
+  has_many :tags, through: :taggings
+
   default_scope { order(published_at: :desc) }
 
-  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
   FORMATS = %w[jpg png pdf svg tif].freeze
 
   def namespace
@@ -22,13 +24,13 @@ class Logo < ApplicationRecord
   alias front_image_description image_description
 
   def preview_image_url
-    [ASSET_BASE_URL, namespace, slug, 'preview.png'].join('/')
+    [Tool::ASSET_BASE_URL, namespace, slug, 'preview.png'].join('/')
   end
   alias front_image preview_image_url
 
   def image_url(extension)
     filename = [slug, '.', extension.to_s].join
-    [ASSET_BASE_URL, namespace, slug, filename].join('/')
+    [Tool::ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
   alias download_url image_url
 

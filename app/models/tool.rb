@@ -1,4 +1,6 @@
 class Tool
+  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
+
   EBOOK_FORMATS = {
     screen_single_page_view:  ['Screen Single Page View', 'Is there a one page wide <code>PDF</code> for on-screen reading uploaded?'],
     screen_two_page_view:     ['Screen Two Page View',    'Is there a two page wide <code>PDF</code> for on-screen reading uploaded?'],

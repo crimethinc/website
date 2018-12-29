@@ -8,8 +8,6 @@ class Sticker < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
-
   def namespace
     'stickers'
   end
@@ -45,14 +43,14 @@ class Sticker < ApplicationRecord
 
   def image(side: :front, color: :color)
     filename = [slug, '_', side, '_', color, '.', send("#{side}_image_format")].join
-    [ASSET_BASE_URL, namespace, slug, filename].join('/')
+    [Tool::ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def front_image
     if front_color_image_present? || front_black_and_white_image_present?
       front_color_image_present ? front_color_image : front_black_and_white_image
     else
-      [ASSET_BASE_URL, namespace, slug, "#{slug}_front.#{front_image_format}"].join('/')
+      [Tool::ASSET_BASE_URL, namespace, slug, "#{slug}_front.#{front_image_format}"].join('/')
     end
   end
 
@@ -60,7 +58,7 @@ class Sticker < ApplicationRecord
     if back_color_image_present? || back_black_and_white_image_present?
       back_color_image_present ? back_color_image : back_black_and_white_image
     else
-      [ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join('/')
+      [Tool::ASSET_BASE_URL, namespace, slug, "#{slug}_back.#{back_image_format}"].join('/')
     end
   end
 
@@ -70,7 +68,7 @@ class Sticker < ApplicationRecord
     filename << "_#{color}" if color.present?
     filename << '.pdf'
     filename = filename.join
-    [ASSET_BASE_URL, namespace, slug, filename].join('/')
+    [Tool::ASSET_BASE_URL, namespace, slug, filename].join('/')
   end
 
   def meta_description

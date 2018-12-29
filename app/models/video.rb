@@ -3,6 +3,15 @@ class Video < ApplicationRecord
   include Slug
   include Publishable
 
+  has_many :taggings, dependent: :destroy, as: :taggable
+  has_many :tags, through: :taggings
+
+  # default_scope { order(slug: :asc) }
+
+  def namespace
+    'videos'
+  end
+
   def path
     "/videos/#{slug}"
   end
