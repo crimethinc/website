@@ -1,13 +1,13 @@
 <nav class="mb-5">
   <p class="h6 text-muted">Jump to</p>
-  <%= link_to "Date + Time",    "#datetime",       class: "btn btn-outline-primary mb-2 mr-2" %>
-  <%= link_to "Categorization", "#categorization", class: "btn btn-outline-primary mb-2 mr-2" %>
-  <%= link_to "Syndication",    "#syndication",    class: "btn btn-outline-primary mb-2 mr-2" %>
-  <%= link_to "Appearance",     "#appearance",     class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Date + Time ↓",    "#datetime",       class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Categorization ↓", "#categorization", class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Syndication ↓",    "#syndication",    class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Appearance ↓",     "#appearance",     class: "btn btn-outline-primary mb-2 mr-2" %>
 
   <%= link_to [:admin, :markdown], class: "btn btn-outline-primary mb-2 mr-2", target: "_blank" do %>
     <span class="badge badge-secondary">MD</span>
-    Markdown Cheatsheet
+    Markdown Cheatsheet ↗
   <% end %>
 </nav>
 
@@ -91,12 +91,13 @@
   <div id="syndication" class="pt-5">
     <fieldset>
       <legend>Syndication</legend>
+
       <div class="row">
         <div class="col-12 col-sm-6">
           <div class="form-group">
             <%= form.label :tweet %>
             <%= form.text_area :tweet, class: "form-control form-control-lg", data: { 'max-length': '250', 'feedback-box': 'tweet-length' } %>
-            <div id="tweet-length"></div>
+            <div id="tweet-length">0</div>
             <p class="form-text text-muted">
               Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
               Used for syndicated tweet for this Article.
