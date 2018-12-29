@@ -1,5 +1,5 @@
 <div class="mt-5">
-  <h2>Sign Up</h2>
+  <h2>New User</h2>
 </div>
 
 <%= form_with [:auth, @user], local: true do |form| %>
@@ -18,5 +18,5 @@
     for length plus memorability.
   </p>
 
-  <%= render "admin/form_actions", cancel_url: root_url, button_text: "Sign Up" %>
+  <%= render "admin/form_actions", cancel_url: root_url, button_text: "Create new user" %>
 <% end %>
