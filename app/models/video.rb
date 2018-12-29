@@ -11,7 +11,7 @@ class Video < ApplicationRecord
   NAMESPACE = 'videos'.freeze
 
   def path
-    "/videos/#{slug}"
+    [nil, NAMESPACE, slug].join('/')
   end
 
   def meta_description
