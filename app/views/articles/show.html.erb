@@ -32,12 +32,6 @@
       <%= render "articles/categories",               article: @article %>
       <%= render "articles/tags",                     article: @article %>
 
-      <% if @article.download_url.present? %>
-        <div id="download-pdf">
-          <%= link_to "Download PDF", @article.download_url, class: "button" %>
-        </div>
-      <% end %>
-
       <div>
         <ul class="pagination">
           <% if @previous_article.present? %>

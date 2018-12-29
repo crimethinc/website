@@ -88,12 +88,10 @@ module Admin
     end
 
     def article_params
-      params.require(:article).permit(:title, :subtitle, :content,
-                                      :year, :month, :day, :download_url, :tweet,
-                                      :slug, :draft_code,  :summary,
-                                      :published_at, :tags, :collection_id, :short_path,
-                                      :image, :image_description, :css,
-                                      :image_mobile, :published_at_tz,
+      params.require(:article).permit(:title, :subtitle, :content, :year, :month, :day,
+                                      :tweet, :slug, :draft_code, :summary, :published_at,
+                                      :tags, :collection_id, :short_path, :image, :css,
+                                      :image_description, :image_mobile, :published_at_tz,
                                       :publication_status, category_ids: [])
     end
   end
