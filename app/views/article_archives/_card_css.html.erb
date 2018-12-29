@@ -7,11 +7,4 @@
     }
   <% end %>
 
-  <% if article.header_text_color.present? %>
-    #home .h-entry#article-<%= article.id %> a {
-      /* Set header text color */
-      color: <%= article.header_text_color %>;
-    }
-  <% end %>
-
 <% end %>

@@ -93,7 +93,7 @@ module Admin
                                       :slug, :draft_code,  :summary,
                                       :published_at, :tags, :collection_id, :short_path,
                                       :image, :image_description, :css,
-                                      :header_background_color, :header_text_color,
+                                      :header_background_color,
                                       :image_mobile, :published_at_tz,
                                       :publication_status, category_ids: [])
     end
