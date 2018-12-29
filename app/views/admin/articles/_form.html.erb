@@ -145,38 +145,32 @@
     <fieldset>
       <legend>Appearance</legend>
 
-      <div class="row">
-        <div class="col-12 col-sm-6">
-          <div class="form-group">
-            <%= form.label :image, "Header Image" %>
-            <%= form.text_field :image, class: "form-control form-control-lg" %>
-            <p class="form-text text-muted">
-              This is the large image that will be front and center on the <i>Article</i> page,
-              on the homepage and when syndicated to other sites. Preferred size:
-              <code>2000px wide</code> by about <code>1000px tall or more</code>.
-            </p>
-          </div>
+      <div class="form-group">
+        <%= form.label :image, "Header Image" %>
+        <%= form.text_field :image, class: "form-control form-control-lg" %>
+        <p class="form-text text-muted">
+          This is the large image that will be front and center on the <i>Article</i> page,
+          on the homepage and when syndicated to other sites. Preferred size:
+          <code>2000px wide</code> by about <code>1000px tall or more</code>.
+        </p>
+      </div>
 
-          <div class="form-group">
-            <%= form.label :image_mobile, "Mobile Header Image" %>
-            <%= form.text_field :image_mobile, class: "form-control form-control-lg" %>
-            <p class="form-text text-muted">
-              This is a square image that is used on the mobile <i>Article</i> page,
-              on the mobile homepage and when syndicated to Instagram.
-              Minimum required size: <code>800x800</code> pixels.
-            </p>
-          </div>
-        </div>
+      <div class="form-group">
+        <%= form.label :image_mobile, "Mobile Header Image" %>
+        <%= form.text_field :image_mobile, class: "form-control form-control-lg" %>
+        <p class="form-text text-muted">
+          This is a square image that is used on the mobile <i>Article</i> page,
+          on the mobile homepage and when syndicated to Instagram.
+          Minimum required size: <code>800x800</code> pixels.
+        </p>
+      </div>
 
-        <div class="col-12 col-sm-6">
-          <div class="form-group">
-            <%= form.label :image_description, "Header Image Description" %>
-            <%= form.text_field :image_description, class: "form-control form-control-lg" %>
-            <p class="form-text text-muted">
-              This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
-            </p>
-          </div>
-        </div>
+      <div class="form-group">
+        <%= form.label :image_description, "Header Image Description" %>
+        <%= form.text_area :image_description, class: "form-control form-control-lg" %>
+        <p class="form-text text-muted">
+          This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
+        </p>
       </div>
 
       <% unless @collection.present? %>
