@@ -56,14 +56,6 @@
         <div class="form-group">
           <%= form.label :css, "Page Specific CSS" %>
           <%= form.text_area :css, class: "form-control form-control-lg", rows: 10 %>
-          <p class="form-text text-muted">
-            <% if @page.new_record? %>
-              After you save this
-            <% else %>
-              Prefix your CSS selectors with <b><code>#page-<%= @page.id %></code></b> to scope your styles to just this <i>Page</i>.
-              For example, <code>#page-<%= @page.id %> b { background: green }</code>.
-            <% end %>
-          </p>
         </div>
       </div>
     </div>
