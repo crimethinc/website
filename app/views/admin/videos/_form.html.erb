@@ -1,57 +1,35 @@
 <%= form_with(model: [:admin, @video]) do |form| %>
   <%= render "admin/form_errors", thing: @video %>
 
-  <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "form-control form-control-lg" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle, class: "form-control form-control-lg" %>
-  </div>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
 
   <div class="row">
     <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <%= form.label :content %>
-        <%= form.text_area :content, class: "form-control", rows: 8 %>
-      </div>
+      <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 8 %>
     </div>
-  </div> <!-- .row -->
+  </div>
 
   <div class="row">
     <div class="col-6">
-      <div class="form-group">
-        <%= form.label :slug %>
-        <%= form.text_field :slug, class: "form-control" %>
-      </div>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :slug %>
     </div>
 
     <div class="col-6">
-      <div class="form-group">
-        <%= form.label :vimeo_id, "Vimeo ID" %>
-        <%= form.text_field :vimeo_id, class: "form-control" %>
-      </div>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :vimeo_id, label_text: "Vimeo ID" %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <%= form.label :image, "Image" %>
-        <%= form.text_field :image, class: "form-control form-control-lg" %>
-      </div>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :image %>
     </div>
 
     <div class="col-12 col-sm-6">
-      <div class="form-group">
-        <%= form.label :image_description, "Image Description" %>
-        <%= form.text_field :image_description, class: "form-control form-control-lg" %>
-        <p class="form-text text-muted">
-          This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
-        </p>
-      </div>
+      <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
+      <p class="form-text text-muted">
+        This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
+      </p>
     </div>
   </div>
 
@@ -65,28 +43,23 @@
     <div class="row">
 
       <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= form.label :tweet %>
-          <%= form.text_area :tweet, class: "form-control" %>
-          <p class="form-text text-muted">
-            Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
-            Used for syndicated tweet for this Video.
-          </p>
-        </div>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :tweet %>
+
+        <p class="form-text text-muted">
+          Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
+          Used for syndicated tweet for this Video.
+        </p>
       </div>
 
       <div class="col-12 col-sm-6">
-        <div class="form-group">
-          <%= form.label :summary %>
-          <%= form.text_area :summary, class: "form-control" %>
-          <p class="form-text text-muted">
-            Maximum 200 characters.
-            Used for video description and previews in story cards on other sites.
-          </p>
-        </div>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :summary %>
+        <p class="form-text text-muted">
+          Maximum 200 characters.
+          Used for video description and previews in story cards on other sites.
+        </p>
       </div>
 
-    </div> <!-- .row -->
+    </div>
   </fieldset>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
@@ -98,24 +71,17 @@
 
         <div class="row">
           <div class="col-6">
-            <div class="form-group">
-              <%= form.label :quality, "Quality" %>
-              <%= form.text_field :quality, class: "form-control" %>
-            </div>
+            <%= render "admin/label_and_field_form_group", form: form, attr: :quality %>
           </div>
 
           <div class="col-6">
-            <div class="form-group">
-              <%= form.label :duration, "Duration" %>
-              <%= form.text_field :duration, class: "form-control" %>
-            </div>
+            <%= render "admin/label_and_field_form_group", form: form, attr: :duration %>
           </div>
-        </div> <!-- .row -->
+        </div>
 
       </fieldset> <!-- #specs -->
     </div>
   </div> <!-- .row -->
-
 
   <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
 <% end %>
