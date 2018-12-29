@@ -16,4 +16,8 @@ module Tool
   def path
     [nil, namespace, slug].join('/')
   end
+
+  def ask_for_donation?
+    false
+  end
 end
