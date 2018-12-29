@@ -3,9 +3,6 @@ class Book < ApplicationRecord
   include Slug
   include Publishable
 
-  scope :book, -> { where(zine: false) }
-  scope :zine, -> { where(zine: true)  }
-
   has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
 

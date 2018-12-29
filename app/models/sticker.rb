@@ -3,9 +3,6 @@ class Sticker < ApplicationRecord
   include Slug
   include Publishable
 
-  scope :poster,  -> { where(sticker: false) }
-  scope :sticker, -> { where(sticker: true)  }
-
   has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
 
