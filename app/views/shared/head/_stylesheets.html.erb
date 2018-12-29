@@ -1,23 +1,16 @@
 <!-- CSS -->
 <%= stylesheet_link_tag "application", media: "all" unless lite_mode? %>
 
-<% if @article.present? && @article.css.present? %>
-  <!-- Custom Article CSS -->
-  <style>
-    <%= @article.css %>
-  </style>
-<% end %>
-
-<% if @page.present? && @page.css.present? %>
-  <!-- Custom Page CSS -->
-  <style>
-    <%= @page.css %>
-  </style>
-<% end %>
-
-<!-- Page specific CSS -->
 <style>
-  <%= yield :style_tag %>
+  <% if @article.present? && @article.css.present? %>
+    <!-- Custom Article CSS -->
+    <%= @article.css %>
+  <% end %>
+
+  <% if @page.present? && @page.css.present? %>
+    <!-- Custom Page CSS -->
+    <%= @page.css %>
+  <% end %>
 </style>
 
 <%= render "shared/head/lite_mode_css" if lite_mode? %>

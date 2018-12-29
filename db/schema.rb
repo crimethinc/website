@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_033514) do
+ActiveRecord::Schema.define(version: 2018_12_29_034245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 2018_12_29_033514) do
     t.text "image_description"
     t.text "css"
     t.text "download_url"
-    t.string "header_background_color"
     t.string "content_format", default: "kramdown"
     t.string "slug"
     t.string "draft_code"
