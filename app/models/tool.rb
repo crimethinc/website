@@ -1,4 +1,4 @@
-class Tool
+module Tool
   ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
 
   EBOOK_FORMATS = {

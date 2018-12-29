@@ -1,4 +1,6 @@
 class Zine < ApplicationRecord
+  include Tool
+
   include Name
   include Slug
   include Publishable

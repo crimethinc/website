@@ -1,4 +1,6 @@
 class Poster < ApplicationRecord
+  include Tool
+
   include Name
   include Slug
   include Publishable

@@ -1,4 +1,6 @@
 class Journal < ApplicationRecord
+  include Tool
+
   include Name
   include Slug
   include Publishable
