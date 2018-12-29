@@ -1,5 +1,3 @@
-
-
 <nav class="mb-5">
   <p class="h6 text-muted">Jump to</p>
   <%= link_to "Date + Time",    "#datetime",       class: "btn btn-outline-primary mb-2 mr-2" %>
@@ -16,9 +14,8 @@
 <%= form_with(model: [:admin, @article], id: "article-form") do |form| %>
   <%= render "admin/form_errors", thing: @article %>
 
-  <%# hidden fields... %>
-  <%= form.hidden_field :collection_id, value: @collection.id if @collection %>
-  <%# ...hidden fields %>
+  <%# For nested Articles, a la live blogs %>
+  <%= form.hidden_field :collection_id, value: @collection&.id %>
 
   <div class="form-group">
     <%= form.label :title %>
