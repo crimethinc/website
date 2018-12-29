@@ -7,7 +7,7 @@
     <p>
       <%= render "/admin/articles/publication_status_badge", resource: @article %>
 
-      <% if @article.content_format == "html" %>
+      <% if @article.content_in_html? %>
       &nbsp;
       <b class="badge badge-warning">HTML</b>
       <% end %>
@@ -69,7 +69,7 @@
   <hr>
 
   <div class="e-content">
-    <% if @article.content_format == "html" %>
+    <% if @article.content_in_html? %>
       <pre><%= @article.content %></pre>
     <% else %>
       <%= render_content @article %>

@@ -1,6 +1,4 @@
-<% if article.content_format == "html" %>
+<% if article.content_in_html? %>
   <br>
-  <b class="badge badge-warning">
-    <%= article.content_format.upcase %>
-  </b>
+  <b class="badge badge-warning">HTML</b>
 <% end %>

@@ -11,7 +11,6 @@ class Article < ApplicationRecord
   belongs_to :collection, foreign_key: :collection_id, class_name: :Article, touch: true, inverse_of: :collection_posts
 
   before_validation :generate_published_dates, on: [:create, :update]
-  before_validation :downcase_content_format,  on: [:create, :update]
   before_validation :normalize_newlines,       on: [:create, :update]
 
   validates :short_path, uniqueness: true, unless: :short_path_blank?
@@ -50,7 +49,7 @@ class Article < ApplicationRecord
   def content_rendered include_media: true
     Kramdown::Document.new(
       MarkdownMedia.parse(content, include_media: include_media),
-      input: content_format == 'html' ? :html : :kramdown,
+      input: content_format.to_sym,
       remove_block_html_tags: false,
       transliterated_header_ids: true,
       html_to_native: true
@@ -78,6 +77,10 @@ class Article < ApplicationRecord
     related_articles
   end
 
+  def content_in_html?
+    content_format == 'html'
+  end
+
   private
 
   def generate_published_dates
@@ -86,10 +89,6 @@ class Article < ApplicationRecord
     self.year  = published_at.year                     if published_at.year.present?
     self.month = published_at.month.to_s.rjust(2, '0') if published_at.month.present?
     self.day   = published_at.day.to_s.rjust(2, '0')   if published_at.day.present?
-  end
-
-  def downcase_content_format
-    self.content_format = content_format.downcase
   end
 
   def normalize_newlines

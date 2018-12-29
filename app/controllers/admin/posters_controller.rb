@@ -51,7 +51,7 @@ module Admin
     end
 
     def poster_params
-      params.require(:poster).permit(:sticker, :title, :subtitle, :content, :content_format,
+      params.require(:poster).permit(:sticker, :title, :subtitle, :content,
                                      :buy_info, :buy_url, :price_in_cents, :summary, :description,
                                      :published_at, :front_image_present, :back_image_present,
                                      :front_download_present, :back_download_present, :slug, :height, :width,
