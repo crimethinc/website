@@ -21,15 +21,15 @@ class Journal < ApplicationRecord
   def image(side: :front, count: 0)
     case side
     when :front
-      [Tool::ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_front.jpg"].join('/')
+      [ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_front.jpg"].join('/')
     when :back
-      [Tool::ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_back.jpg"].join('/')
+      [ASSET_BASE_URL, NAMESPACE, slug, "#{slug}_back.jpg"].join('/')
     when :gallery
-      [Tool::ASSET_BASE_URL, NAMESPACE, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
+      [ASSET_BASE_URL, NAMESPACE, slug, 'gallery', "#{slug}-#{count}.jpg"].join('/')
     when :header
-      [Tool::ASSET_BASE_URL, NAMESPACE, slug, 'gallery', "#{slug}_header.jpg"].join('/')
+      [ASSET_BASE_URL, NAMESPACE, slug, 'gallery', "#{slug}_header.jpg"].join('/')
     else
-      [Tool::ASSET_BASE_URL, NAMESPACE, slug, 'photo.jpg'].join('/')
+      [ASSET_BASE_URL, NAMESPACE, slug, 'photo.jpg'].join('/')
     end
   end
 
@@ -69,7 +69,7 @@ class Journal < ApplicationRecord
     filename << '.'
     filename << extension
     filename = filename.join
-    [Tool::ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
+    [ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
   end
 
   def meta_description

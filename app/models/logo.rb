@@ -23,13 +23,13 @@ class Logo < ApplicationRecord
   alias front_image_description image_description
 
   def preview_image_url
-    [Tool::ASSET_BASE_URL, NAMESPACE, slug, 'preview.png'].join('/')
+    [ASSET_BASE_URL, NAMESPACE, slug, 'preview.png'].join('/')
   end
   alias front_image preview_image_url
 
   def image_url(extension)
     filename = [slug, '.', extension.to_s].join
-    [Tool::ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
+    [ASSET_BASE_URL, NAMESPACE, slug, filename].join('/')
   end
   alias download_url image_url
 
