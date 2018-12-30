@@ -1,4 +1,6 @@
 module Tool
+  extend ActiveSupport::Concern
+
   ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
 
   IMAGE_FORMATS = %w[jpg png pdf svg tif].freeze
