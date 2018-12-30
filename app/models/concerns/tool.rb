@@ -3,6 +3,7 @@ module Tool
   include Name
   include Slug
   include Publishable
+  include MetaDescription
 
   included do
     has_many :taggings, dependent: :destroy, as: :taggable
