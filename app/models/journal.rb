@@ -1,9 +1,6 @@
 class Journal < ApplicationRecord
   include Tool
 
-  has_many :taggings, dependent: :destroy, as: :taggable
-  has_many :tags, through: :taggings
-
   default_scope { order(slug: :asc) }
 
   belongs_to :series

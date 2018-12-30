@@ -1,12 +1,8 @@
 class Zine < ApplicationRecord
   include Tool
 
-  include Name
   include Slug
   include Publishable
-
-  has_many :taggings, dependent: :destroy, as: :taggable
-  has_many :tags, through: :taggings
 
   default_scope { order(slug: :asc) }
 
