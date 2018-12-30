@@ -1,6 +1,8 @@
 class Logo < ApplicationRecord
   include Tool
 
+  IMAGE_FORMATS = %w[jpg png pdf svg tif].freeze
+
   def image_description
     "Photo of ‘#{title}’ logo"
   end

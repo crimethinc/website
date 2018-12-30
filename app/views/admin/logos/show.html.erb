@@ -9,7 +9,7 @@
 
   <div>
     <p>
-      <% Tool::IMAGE_FORMATS.each do |extension| %>
+      <% Logo::IMAGE_FORMATS.each do |extension| %>
         <% if @logo.send("#{extension}_url_present?") %>
           <span class="badge badge-success">✔ <%= extension.upcase %> Image</span>
         <% end %>
@@ -19,7 +19,7 @@
     <p><b>URL:</b> <b><%= link_to @logo.path, @logo.path %></b></p>
 
     <div class="row">
-      <% Tool::IMAGE_FORMATS.each do |extension| %>
+      <% Logo::IMAGE_FORMATS.each do |extension| %>
         <% if @logo.send("#{extension}_url_present?") %>
           <div class="col">
 
