@@ -2,6 +2,7 @@ module Tool
   extend ActiveSupport::Concern
   include Name
   include Slug
+  include Publishable
 
   included do
     has_many :taggings, dependent: :destroy, as: :taggable

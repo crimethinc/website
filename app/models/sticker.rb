@@ -1,8 +1,6 @@
 class Sticker < ApplicationRecord
   include Tool
 
-  include Publishable
-
   def image_description
     I18n.t('tools.poster.image_description', title: title)
   end

@@ -1,8 +1,6 @@
 class Video < ApplicationRecord
   include Tool
 
-  include Publishable
-
   def meta_description
     if summary.blank?
       html = Kramdown::Document.new(

@@ -1,8 +1,6 @@
 class Logo < ApplicationRecord
   include Tool
 
-  include Publishable
-
   def image_description
     "Photo of ‘#{title}’ logo"
   end

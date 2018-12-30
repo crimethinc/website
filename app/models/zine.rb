@@ -1,8 +1,6 @@
 class Zine < ApplicationRecord
   include Tool
 
-  include Publishable
-
   def image(side: :front, count: 0)
     case side
     when :front
