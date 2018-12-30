@@ -1,5 +1,5 @@
 class Video < ApplicationRecord
-  include SinglePageTool
+  include Tool
 
   def meta_image
     ''
