@@ -17,6 +17,10 @@ module Post
     image.presence || t('head.meta_image_url')
   end
 
+  def content_in_html?
+    content_format == 'html'
+  end
+
   private
 
   def generate_draft_code
