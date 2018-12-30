@@ -36,4 +36,8 @@ module Tool
   def namespace
     self.class.to_s.downcase.pluralize
   end
+
+  def asset_base_url_prefix
+    [ASSET_BASE_URL, namespace, slug].join('/')
+  end
 end
