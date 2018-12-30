@@ -72,8 +72,4 @@ class Journal < ApplicationRecord
       summary
     end
   end
-
-  def meta_image
-    image side: :front
-  end
 end

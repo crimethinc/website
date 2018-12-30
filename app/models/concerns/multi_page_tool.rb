@@ -18,4 +18,8 @@ module MultiPageTool
     end
     downloads.compact.any?
   end
+
+  def meta_image
+    image side: :front
+  end
 end

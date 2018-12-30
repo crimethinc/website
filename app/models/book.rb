@@ -71,10 +71,6 @@ class Book < ApplicationRecord
     end
   end
 
-  def meta_image
-    image side: :front
-  end
-
   # Overrides
   def ask_for_donation?
     downloads_available?
