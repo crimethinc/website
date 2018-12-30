@@ -4,8 +4,6 @@ class Video < ApplicationRecord
   include Slug
   include Publishable
 
-  default_scope { order(slug: :asc) }
-
   def meta_description
     if summary.blank?
       html = Kramdown::Document.new(

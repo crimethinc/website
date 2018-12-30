@@ -4,8 +4,6 @@ class Logo < ApplicationRecord
   include Slug
   include Publishable
 
-  default_scope { order(published_at: :desc) }
-
   def image_description
     "Photo of ‘#{title}’ logo"
   end

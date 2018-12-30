@@ -1,8 +1,6 @@
 class Journal < ApplicationRecord
   include Tool
 
-  default_scope { order(slug: :asc) }
-
   belongs_to :series
 
   def namespace

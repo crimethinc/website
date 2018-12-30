@@ -4,8 +4,6 @@ class Zine < ApplicationRecord
   include Slug
   include Publishable
 
-  default_scope { order(slug: :asc) }
-
   def image(side: :front, count: 0)
     case side
     when :front

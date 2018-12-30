@@ -4,8 +4,6 @@ class Sticker < ApplicationRecord
   include Slug
   include Publishable
 
-  default_scope { order(slug: :asc) }
-
   def image_description
     I18n.t('tools.poster.image_description', title: title)
   end
