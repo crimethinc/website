@@ -75,14 +75,7 @@ class Book < ApplicationRecord
     image side: :front
   end
 
-  def downloads_available?
-    downloads = []
-    I18n.t('downloads.formats').keys.each do |format, _|
-      downloads << send("#{format}_download_present")
-    end
-    downloads.compact.any?
-  end
-
+  # Overrides
   def ask_for_donation?
     downloads_available?
   end
