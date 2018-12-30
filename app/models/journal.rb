@@ -3,10 +3,6 @@ class Journal < ApplicationRecord
 
   belongs_to :series
 
-  def namespace
-    'journals'
-  end
-
   def image(side: :front, count: 0)
     case side
     when :front
