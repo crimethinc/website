@@ -55,8 +55,4 @@ class Sticker < ApplicationRecord
     filename = filename.join
     [asset_base_url_prefix, filename].join('/')
   end
-
-  def meta_image
-    front_image
-  end
 end
