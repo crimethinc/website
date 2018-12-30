@@ -6,10 +6,6 @@ class Sticker < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  def namespace
-    'stickers'
-  end
-
   def image_description
     I18n.t('tools.poster.image_description', title: title)
   end

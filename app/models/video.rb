@@ -6,10 +6,6 @@ class Video < ApplicationRecord
 
   # default_scope { order(slug: :asc) }
 
-  def namespace
-    'videos'
-  end
-
   def meta_description
     if summary.blank?
       html = Kramdown::Document.new(

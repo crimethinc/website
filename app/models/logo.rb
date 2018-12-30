@@ -6,10 +6,6 @@ class Logo < ApplicationRecord
 
   default_scope { order(published_at: :desc) }
 
-  def namespace
-    'logo'
-  end
-
   def image_description
     "Photo of ‘#{title}’ logo"
   end

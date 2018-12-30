@@ -6,10 +6,6 @@ class Zine < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  def namespace
-    'zines'
-  end
-
   def image(side: :front, count: 0)
     case side
     when :front

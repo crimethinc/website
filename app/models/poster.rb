@@ -6,10 +6,6 @@ class Poster < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  def namespace
-    'posters'
-  end
-
   def image_description
     I18n.t('tools.poster.image_description', title: title)
   end

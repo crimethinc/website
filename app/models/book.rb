@@ -6,10 +6,6 @@ class Book < ApplicationRecord
 
   default_scope { order(slug: :asc) }
 
-  def namespace
-    'books'
-  end
-
   def image(side: :front, count: 0)
     case side
     when :front

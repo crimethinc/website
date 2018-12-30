@@ -30,4 +30,8 @@ module Tool
   def ask_for_donation?
     false
   end
+
+  def namespace
+    self.class.to_s.downcase.pluralize
+  end
 end
