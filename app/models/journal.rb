@@ -1,5 +1,5 @@
 class Journal < ApplicationRecord
-  include Tool
+  include MultiPageTool
 
   belongs_to :series
 

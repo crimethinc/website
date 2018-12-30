@@ -1,5 +1,5 @@
 class Logo < ApplicationRecord
-  include Tool
+  include SinglePageTool
 
   def image_description
     "Photo of ‘#{title}’ logo"

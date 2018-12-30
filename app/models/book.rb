@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  include Tool
+  include MultiPageTool
 
   def image(side: :front, count: 0)
     case side

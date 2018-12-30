@@ -1,5 +1,5 @@
 class Video < ApplicationRecord
-  include Tool
+  include SinglePageTool
 
   def meta_description
     if summary.blank?
