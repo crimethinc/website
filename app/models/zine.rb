@@ -36,22 +36,4 @@ class Zine < ApplicationRecord
   def header_image
     image side: :header
   end
-
-  def download_url(type = nil, extension: 'pdf')
-    case type
-    when :epub
-      type = nil
-      extension = 'epub'
-    when :mobi
-      type = nil
-      extension = 'mobi'
-    end
-
-    filename = [slug]
-    filename << "_#{type}" if type.present?
-    filename << '.'
-    filename << extension
-    filename = filename.join
-    [asset_base_url_prefix, filename].join('/')
-  end
 end
