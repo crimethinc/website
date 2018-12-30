@@ -1,7 +1,6 @@
 class Zine < ApplicationRecord
   include Tool
 
-  include Slug
   include Publishable
 
   def image(side: :front, count: 0)

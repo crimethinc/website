@@ -1,7 +1,6 @@
 class Video < ApplicationRecord
   include Tool
 
-  include Slug
   include Publishable
 
   def meta_description

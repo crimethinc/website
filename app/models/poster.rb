@@ -1,7 +1,6 @@
 class Poster < ApplicationRecord
   include Tool
 
-  include Slug
   include Publishable
 
   def image_description
