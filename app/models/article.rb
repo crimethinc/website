@@ -77,10 +77,6 @@ class Article < ApplicationRecord
     related_articles
   end
 
-  def content_in_html?
-    content_format == 'html'
-  end
-
   private
 
   def generate_published_dates
