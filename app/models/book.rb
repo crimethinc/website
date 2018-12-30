@@ -33,10 +33,6 @@ class Book < ApplicationRecord
     image side: :back
   end
 
-  def header_image
-    image side: :header
-  end
-
   # Overrides
   def ask_for_donation?
     downloads_available?

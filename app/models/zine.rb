@@ -32,8 +32,4 @@ class Zine < ApplicationRecord
   def back_image
     image side: :back
   end
-
-  def header_image
-    image side: :header
-  end
 end
