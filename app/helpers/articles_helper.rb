@@ -23,7 +23,7 @@ module ArticlesHelper
       end
 
     content_tag :li, class: 'social-link' do
-      link_to "Share on #{site.capitalize}", url, class: "link-domain-#{site}", target: '_blank'
+      link_to "Share on #{site.capitalize}", url, class: "link-domain-#{site}", target: '_blank', rel: 'noopener'
     end
   end
 
