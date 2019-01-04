@@ -7,7 +7,7 @@
       <th>Name</th>
       <th>Status</th>
 
-      <% Logo::FORMATS.each do |extension| %>
+      <% Logo::IMAGE_FORMATS.each do |extension| %>
         <th class="text-center"><%= extension.upcase %></td>
       <% end %>
     </tr>
@@ -32,7 +32,7 @@
           <%= render "/admin/articles/publication_status_badge", resource: logo %>
         </td>
 
-        <% Logo::FORMATS.each do |extension| %>
+        <% Logo::IMAGE_FORMATS.each do |extension| %>
           <td class="text-center align-middle"><%= "✔️" if logo.send"#{extension}_url_present?" %></td>
         <% end %>
       </tr>

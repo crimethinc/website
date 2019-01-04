@@ -15,10 +15,6 @@
         <div class="column column-one-quarter logo-first-column">
           <div class="product-front">
             <%= link_to image_tag(product.front_image, alt: product.front_image_description, class: "u-image"), product.path %>
-
-            <% if product.published_at.present? %>
-              <time datetime="<%= product.published_at.iso8601 %>"><%= product.published_at.year %></time>
-            <% end %>
           </div> <!-- product-front -->
         </div> <!-- logo-first-column -->
         <div class="column column-three-quarter logo-second-column">
