@@ -3,6 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 require_relative '../app/middlewares/rack/domain_redirect'
 require_relative '../app/middlewares/rack/apex_redirect'
+require_relative '../app/middlewares/rack/transliterate_unicode'
 require_relative '../app/middlewares/rack/clean_path'
 require_relative '../app/middlewares/rack/pic_twitter_redirect'
 require_relative '../app/middlewares/rack/redirect'
@@ -14,11 +15,9 @@ Bundler.require(*Rails.groups)
 
 module Crimethinc
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    # config.load_defaults 5.1
-
     config.middleware.use Rack::DomainRedirect
     config.middleware.use Rack::ApexRedirect
+    config.middleware.use Rack::TransliterateUnicode
     config.middleware.use Rack::CleanPath
     config.middleware.use Rack::PicTwitterRedirect
     config.middleware.use Rack::Redirect
