@@ -11,9 +11,11 @@ module Rack
       # source path
       path = req.path
 
+      # don’t transliterate for /tce URLs
+      return @app.call(env) if path =~ %r{^/tce}
+
       # convert Unicode to ASCII using transliteration
       # Eg: /ameaça => /ameaca
-
       path_pieces                = path.split '/'
       transliterated_path_pieces = path_pieces.map { |pp| transliterate pp }
       path                       = transliterated_path_pieces.join '/'
