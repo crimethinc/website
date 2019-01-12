@@ -1,10 +1,10 @@
 module Rack
   class PicTwitterRedirect
-    def initialize(app)
+    def initialize app
       @app = app
     end
 
-    def call(env)
+    def call env
       request = Rack::Request.new(env)
 
       if request.path.match?(/twitter/)
@@ -28,7 +28,7 @@ module Rack
 
     private
 
-    def redirect(location)
+    def redirect location
       [
         301,
         { 'Location' => location, 'Content-Type' => 'text/html' },

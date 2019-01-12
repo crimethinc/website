@@ -24,19 +24,11 @@ module Rack
       %r{/+\z}               => ''
     }.freeze
 
-    def initialize(app)
+    def initialize app
       @app = app
     end
 
-    def redirect(location)
-      [
-        301,
-        { 'Location' => location, 'Content-Type' => 'text/html' },
-        ['Moved Permanently']
-      ]
-    end
-
-    def call(env)
+    def call env
       # request
       req = Rack::Request.new(env)
 
@@ -56,6 +48,16 @@ module Rack
       end
 
       @app.call(env)
+    end
+
+    private
+
+    def redirect location
+      [
+        301,
+        { 'Location' => location, 'Content-Type' => 'text/html' },
+        ['Moved Permanently']
+      ]
     end
   end
 end

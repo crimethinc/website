@@ -1,10 +1,10 @@
 module Rack
   class ApexRedirect
-    def initialize(app)
+    def initialize app
       @app = app
     end
 
-    def call(env)
+    def call env
       request = Rack::Request.new(env)
 
       if request.host.start_with?('www.')
@@ -22,7 +22,7 @@ module Rack
 
     private
 
-    def redirect(location)
+    def redirect location
       [
         301,
         { 'Location' => location, 'Content-Type' => 'text/html' },

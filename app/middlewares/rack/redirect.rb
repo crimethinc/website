@@ -1,18 +1,10 @@
 module Rack
   class Redirect
-    def initialize(app)
+    def initialize app
       @app = app
     end
 
-    def redirect(location)
-      [
-        301,
-        { 'Location' => location, 'Content-Type' => 'text/html' },
-        ['Moved Permanently']
-      ]
-    end
-
-    def call(env)
+    def call env
       redirects = {}
 
       filepath = ::File.expand_path('../redirects.txt', __FILE__)
@@ -41,6 +33,16 @@ module Rack
       end
 
       @app.call(env)
+    end
+
+    private
+
+    def redirect location
+      [
+        301,
+        { 'Location' => location, 'Content-Type' => 'text/html' },
+        ['Moved Permanently']
+      ]
     end
   end
 end
