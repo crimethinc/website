@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe 'Rack::Redirect', type: :request do
   it 'redirects according to redirects.txt' do
-    get 'http://example.com/about/faq.html'
+    get 'http://example.com/about/faq'
 
     expect(response).to redirect_to('/faq')
   end
 
   it 'redirects with query string' do
-    get 'http://example.com/about/faq.html?test=true'
+    get 'http://example.com/about/faq?test=true'
 
     expect(response).to redirect_to('/faq?test=true')
   end
