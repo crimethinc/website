@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 require_relative '../app/middlewares/rack/domain_redirect'
 require_relative '../app/middlewares/rack/apex_redirect'
-require_relative '../app/middlewares/rack/blog_redirect'
+require_relative '../app/middlewares/rack/clean_path'
 require_relative '../app/middlewares/rack/pic_twitter_redirect'
 require_relative '../app/middlewares/rack/redirect'
 require 'rack/contrib'
@@ -19,7 +19,7 @@ module Crimethinc
 
     config.middleware.use Rack::DomainRedirect
     config.middleware.use Rack::ApexRedirect
-    config.middleware.use Rack::BlogRedirect
+    config.middleware.use Rack::CleanPath
     config.middleware.use Rack::PicTwitterRedirect
     config.middleware.use Rack::Redirect
     config.middleware.use Rack::Attack
