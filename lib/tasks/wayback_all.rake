@@ -1,5 +1,4 @@
 desc 'Request the Wayback Machine to snapshot a ALL articles'
-
 task :wayback_all, [:url] => :environment do |_t, _args|
   app = JSON.parse(File.read(Rails.root.join('app.json')))
   api = 'https://pragma.archivelab.org/'
