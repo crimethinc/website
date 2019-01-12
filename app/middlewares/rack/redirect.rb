@@ -35,20 +35,23 @@ module Rack
       # source path
       path = req.path
 
-      # delete from source path: index.html
-      path = path.sub('index.html', '')
+      # delete from source path:
+      #   index.html
+      #   .html extension
+      #   index.php
+      #   .php extension
+      #   trailing one or many slashes
+      removable_patterns = [
+        'index.html',
+        '.html',
+        'index.php',
+        '.php',
+        %r{/+\z}
+      ]
 
-      # delete from source path: .html extension
-      path = path.sub('.html', '')
-
-      # delete from source path: index.php
-      path = path.sub('index.php', '')
-
-      # delete from source path: .php extension
-      path = path.sub('.php', '')
-
-      # delete from source path: trailing one or many slashes
-      path = path.sub(%r{/+\z}, '')
+      removable_patterns.each do |removable_pattern|
+        path = path.sub(removable_pattern, '')
+      end
 
       # normalize source paths: all /texts/*/… => /texts/…
       %w[atoz days ex fx harbinger images insidefront mostrecent
