@@ -1,6 +1,6 @@
 module Admin
   class JournalsController < Admin::ToolsController
-    before_action :set_journal,       only: [:show, :edit, :update, :destroy]
+    before_action :set_journal, only: [:show, :edit, :update, :destroy]
 
     def index
       @books = Journal.order(slug: :asc).page(params[:page])
