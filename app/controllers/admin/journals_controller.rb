@@ -1,8 +1,7 @@
 module Admin
   class JournalsController < Admin::AdminController
-    before_action :authorize
-    before_action :set_journal,          only: [:show, :edit, :update, :destroy]
-    before_action :set_ebook_formats,    only: [:edit, :new]
+    before_action :set_journal,       only: [:show, :edit, :update, :destroy]
+    before_action :set_ebook_formats, only: [:edit, :new]
 
     def index
       @books = Journal.order(slug: :asc).page(params[:page])

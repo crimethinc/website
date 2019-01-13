@@ -1,11 +1,10 @@
 module Admin
   class PodcastsController < Admin::AdminController
-    before_action :authorize
     before_action :set_podcast, only: [:show, :edit, :update, :destroy]
 
     def index
       @podcasts = Podcast.all
-      @title = admin_title
+      @title    = admin_title
     end
 
     def show

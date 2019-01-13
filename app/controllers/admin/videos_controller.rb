@@ -1,13 +1,12 @@
 module Admin
   class VideosController < Admin::AdminController
-    before_action :authorize
     before_action :set_video,        only: [:show, :edit, :update, :destroy]
     before_action :set_published_at, only: [:create, :update]
 
     # /admin/videos
     def index
       @videos = Video.order(slug: :asc).page(params[:page])
-      @title = admin_title
+      @title  = admin_title
     end
 
     # /admin/videos/1

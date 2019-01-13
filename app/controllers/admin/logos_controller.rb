@@ -1,6 +1,5 @@
 module Admin
   class LogosController < Admin::AdminController
-    before_action :authorize
     before_action :set_logo, only: [:show, :edit, :update, :destroy]
 
     def index

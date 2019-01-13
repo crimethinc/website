@@ -1,5 +1,7 @@
 module Admin
   class AdminController < ApplicationController
+    before_action :authorize
+
     layout 'admin'
 
     def admin_title(model = nil, keys = [])

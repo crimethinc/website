@@ -1,6 +1,5 @@
 module Admin
   class RedirectsController < Admin::AdminController
-    before_action :authorize
     before_action :set_redirect, only: [:show, :edit, :update, :destroy]
 
     def index

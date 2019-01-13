@@ -1,6 +1,5 @@
 module Admin
   class PostersController < Admin::AdminController
-    before_action :authorize
     before_action :set_poster, only: [:show, :edit, :update, :destroy]
 
     def index

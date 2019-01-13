@@ -1,6 +1,5 @@
 module Admin
   class ArticlesController < Admin::AdminController
-    before_action :authorize
     before_action :set_article,      only: [:show, :edit, :update, :destroy]
     before_action :set_published_at, only: [:create, :update]
     before_action :set_categories,   only: [:new, :edit]

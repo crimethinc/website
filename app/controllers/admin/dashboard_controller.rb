@@ -1,7 +1,5 @@
 module Admin
   class DashboardController < Admin::AdminController
-    before_action :authorize
-
     # /admin/dashboard
     def index
       @draft_articles  = Article.draft

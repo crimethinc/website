@@ -1,6 +1,5 @@
 module Admin
   class UsersController < Admin::AdminController
-    before_action :authorize
     before_action :set_user, only: [:show, :edit, :update, :destroy]
 
     def index

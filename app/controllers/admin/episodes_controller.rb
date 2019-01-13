@@ -1,6 +1,5 @@
 module Admin
   class EpisodesController < Admin::AdminController
-    before_action :authorize
     before_action :set_episode,      only: [:show, :edit, :update, :destroy]
     before_action :set_published_at, only: [:create, :update]
     before_action :set_podcasts,     only: [:new, :edit]
