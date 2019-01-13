@@ -41,6 +41,9 @@ Metrics/ParameterLists:
 Metrics/LineLength:
   Max: 200
 
+  Exclude:
+    - 'app/middlewares/rack/redirect_pairs.rb'
+
 Metrics/MethodLength:
   Max: 40
 
