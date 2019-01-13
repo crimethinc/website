@@ -1,7 +1,6 @@
 module Admin
-  class JournalsController < Admin::AdminController
+  class JournalsController < Admin::ToolsController
     before_action :set_journal,       only: [:show, :edit, :update, :destroy]
-    before_action :set_ebook_formats, only: [:edit, :new]
 
     def index
       @books = Journal.order(slug: :asc).page(params[:page])
@@ -52,10 +51,6 @@ module Admin
 
     def set_journal
       @book = Journal.find(params[:id])
-    end
-
-    def set_ebook_formats
-      @ebook_formats = Tool::EBOOK_FORMATS
     end
 
     def journal_params

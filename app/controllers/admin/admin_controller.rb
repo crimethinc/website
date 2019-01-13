@@ -35,5 +35,9 @@ module Admin
       datetime  = Time.zone.parse("#{date} #{time}#{tz_offset}")
       params[controller_name.singularize.to_sym].merge!(published_at: datetime)
     end
+
+    def set_ebook_formats
+      @ebook_formats = Tool::EBOOK_FORMATS
+    end
   end
 end

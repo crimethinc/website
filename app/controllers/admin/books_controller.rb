@@ -1,7 +1,6 @@
 module Admin
-  class BooksController < Admin::AdminController
-    before_action :set_book,          only: [:show, :edit, :update, :destroy]
-    before_action :set_ebook_formats, only: [:edit, :new]
+  class BooksController < Admin::ToolsController
+    before_action :set_book, only: [:show, :edit, :update, :destroy]
 
     def index
       @books = Book.order(slug: :asc).page(params[:page])

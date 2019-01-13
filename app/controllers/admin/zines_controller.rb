@@ -1,7 +1,6 @@
 module Admin
-  class ZinesController < Admin::AdminController
-    before_action :set_zine,          only: [:show, :edit, :update, :destroy]
-    before_action :set_ebook_formats, only: [:edit, :new]
+  class ZinesController < Admin::ToolsController
+    before_action :set_zine, only: [:show, :edit, :update, :destroy]
 
     def index
       @books = Zine.order(slug: :asc).page(params[:page])
@@ -53,10 +52,6 @@ module Admin
 
     def set_zine
       @book = Zine.find(params[:id])
-    end
-
-    def set_ebook_formats
-      @ebook_formats = Tool::EBOOK_FORMATS
     end
 
     def book_params
