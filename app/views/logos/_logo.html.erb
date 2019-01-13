@@ -1,49 +1,49 @@
-<div class="product" id="<%= product.slug %>">
+<div class="tool" id="<%= tool.slug %>">
 
   <header>
-    <%= render "articles/titles", header: product, linked: true %>
+    <%= render "articles/titles", header: tool, linked: true %>
   </header>
 
   <div class="e-content row">
-    <div class="product-main">
+    <div class="tool-main">
       <!--<header>
 
-        <%= render "articles/titles", header: product, linked: true %>
+        <%= render "articles/titles", header: tool, linked: true %>
       </header>-->
 
       <div class="row">
         <div class="column column-one-quarter logo-first-column">
-          <div class="product-front">
-            <%= link_to image_tag(product.front_image, alt: product.front_image_description, class: "u-image"), product.path %>
-          </div> <!-- product-front -->
+          <div class="tool-front">
+            <%= link_to image_tag(tool.front_image, alt: tool.front_image_description, class: "u-image"), tool.path %>
+          </div> <!-- tool-front -->
         </div> <!-- logo-first-column -->
         <div class="column column-three-quarter logo-second-column">
           <header>
-            <%= render "articles/titles", header: product, linked: true %>
+            <%= render "articles/titles", header: tool, linked: true %>
           </header>
           <div class="p-summary">
-            <%= render_markdown product.summary %>
+            <%= render_markdown tool.summary %>
           </div>
           <p>
             <b>Size</b>
             <span>
-            <%= product.width %>
+            <%= tool.width %>
             x
-            <%= product.height %>
+            <%= tool.height %>
             </span>
           </p>
           <div class="buttons">
             <% %w(jpg png pdf svg tif).each do |extension| %>
-              <% if product.send("#{extension}_url_present?") %>
-                <%= link_to "Download .#{extension.upcase}", product.image_url(extension), class: "download button" %>
+              <% if tool.send("#{extension}_url_present?") %>
+                <%= link_to "Download .#{extension.upcase}", tool.image_url(extension), class: "download button" %>
               <% end %>
             <% end %>
-            <%= link_to "Download .ZIP", product.image_url(:zip), class: "download button" %>
+            <%= link_to "Download .ZIP", tool.image_url(:zip), class: "download button" %>
           </div><!-- .buttons -->
         </div> <!-- logo-second-column -->
       </div> <!-- row -->
 
-    </div><!-- .product-main -->
+    </div><!-- .tool-main -->
   </div><!-- .e-content -->
 
-</div><!-- .product -->
+</div><!-- .tool -->

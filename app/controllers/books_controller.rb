@@ -15,7 +15,7 @@ class BooksController < ApplicationController
 
   def index
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @type    = 'books'
     @title   = title_for :books
 
@@ -32,7 +32,7 @@ class BooksController < ApplicationController
 
   def show
     @html_id  = 'page'
-    @body_id  = 'products'
+    @body_id  = 'tools'
     @type     = 'books'
     @editable = @book
     @title    = title_for :books, @book.slug.tr('-', '_')
@@ -40,19 +40,19 @@ class BooksController < ApplicationController
 
   def extras
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @title   = title_for :books, @book.slug.tr('-', '_'), :extras
   end
 
   def lit_kit
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @title   = title_for :books, :lit_kit
   end
 
   def into_libraries
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @title   = title_for :books, :into_libraries
   end
 

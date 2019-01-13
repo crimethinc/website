@@ -1,16 +1,16 @@
 class JournalsController < ApplicationController
   def index
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @type    = 'journals'
     @title   = title_for :journals
 
     journals = Journal.order(published_at: :desc).live.published
 
-    @featured_products = journals.where.not(buy_url: nil)
-    @products          = journals.where(buy_url: nil)
+    @featured_tools = journals.where.not(buy_url: nil)
+    @tools          = journals.where(buy_url: nil)
 
-    render 'products/index'
+    render 'tools/index'
   end
 
   def show
@@ -19,7 +19,7 @@ class JournalsController < ApplicationController
     return redirect_to [:journals] if @book.blank?
 
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @type    = 'journals'
 
     @title    = title_for :journals, @book.name

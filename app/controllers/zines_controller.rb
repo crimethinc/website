@@ -1,16 +1,16 @@
 class ZinesController < ApplicationController
   def index
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @type    = 'zines'
     @title   = title_for :zines
 
     zines = Zine.order(published_at: :desc).live.published
 
-    @featured_products = zines.where.not(buy_url: nil)
-    @products          = zines.where(buy_url: nil)
+    @featured_tools = zines.where.not(buy_url: nil)
+    @tools          = zines.where(buy_url: nil)
 
-    render 'products/index'
+    render 'tools/index'
   end
 
   def show
@@ -19,7 +19,7 @@ class ZinesController < ApplicationController
     return redirect_to [:zines] if @book.blank?
 
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @type    = 'zines'
 
     @title    = title_for :zines, @book.name

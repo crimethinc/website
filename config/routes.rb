@@ -94,7 +94,7 @@ Rails.application.routes.draw do
   get 'music',          to: 'music#index',    as: :music
 
   # Tools
-  get 'tools', to: 'tools#index', as: :tools
+  get 'tools', to: 'tools#about', as: :tools
 
   # Site search
   get 'search',           to: 'search#index'

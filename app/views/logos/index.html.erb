@@ -1,19 +1,19 @@
-<article class="products-logos">
+<article class="tools-logos">
   <header>
     <%= render "tools/nav" %>
 
-    <h1><%= t("views.products.logos_heading_text") %></h1>
+    <h1><%= t("views.tools.logos_heading_text") %></h1>
   </header>
 
   <div class="e-content intro">
-    <%= render_markdown t("views.products.logos_intro_text") %>
+    <%= render_markdown t("views.tools.logos_intro_text") %>
   </div>
 
-  <% @products.each do |product| %>
-    <%= render "logos/logo", product: product %>
+  <% @tools.each do |tool| %>
+    <%= render "logos/logo", tool: tool %>
   <% end %>
 </article>
 
 <div class="pagination-container">
-  <%= paginate @products %>
+  <%= paginate @tools %>
 </div>

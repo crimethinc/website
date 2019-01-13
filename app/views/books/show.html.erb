@@ -1,12 +1,12 @@
-<div class="h-entry product">
+<div class="h-entry tool">
   <div class="row">
     <div class="column column-one-third section meta">
-      <div class="product-front">
+      <div class="tool-front">
         <%= render_markdown "[[ #{@book.front_image} #{@book.front_image_description} ]]" %>
       </div>
 
       <% if @book.back_image_present? %>
-        <div class="product-back">
+        <div class="tool-back">
           <%= render_markdown "[[ #{@book.back_image} #{@book.back_image_description} ]]" %>
         </div>
       <% end %>
@@ -32,12 +32,12 @@
 
         <% if @book.ask_for_donation? %>
           <div>
-            <%= link_to t("views.products.pdf_donate_button_text"),
+            <%= link_to t("views.tools.pdf_donate_button_text"),
                           "https://store.crimethinc.com/x/donate.html",
                           class: "download button" %>
           </div>
 
-          <%= render_markdown t("views.products.pdf_donate_button_label") %>
+          <%= render_markdown t("views.tools.pdf_donate_button_label") %>
         <% end %>
       </div>
 
@@ -47,7 +47,7 @@
         </div>
       <% end %>
 
-      <div class="product-specs">
+      <div class="tool-specs">
         <ol>
           <% if @book.width.present? %>
             <li>
@@ -80,12 +80,12 @@
             </li>
           <% end %>
         </ol>
-      </div> <!-- .product-specs -->
+      </div> <!-- .tool-specs -->
 
       <%= render "books/table_of_contents", book: @book %>
     </div>
 
-    <div class="column column-two-third section product-main">
+    <div class="column column-two-third section tool-main">
       <header>
         <%= render "tools/nav" %>
 
@@ -101,7 +101,7 @@
           <%= render_markdown @book.description %>
         </div>
 
-        <div class="product-content">
+        <div class="tool-content">
           <% @book.gallery_images.each do |photo_index| %>
             <% image_url = @book.image(side: :gallery, count: photo_index) %>
             <% alt_text  = "Gallery image ##{photo_index} of #{@book.name}" %>

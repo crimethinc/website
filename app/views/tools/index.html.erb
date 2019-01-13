@@ -1,27 +1,17 @@
 <article>
-  <div class="product-header-image">
-    <%= image_tag "https://cloudfront.crimethinc.com/assets/tools/images/header.jpg", alt: "CrimethInc. zines, posters, stickers" %>
-  </div>
-
   <header>
-    <h1><%= t "views.products.tools_heading_text" %></h1>
+    <%= render "tools/nav" %>
+
+    <h1><%= t("views.tools.#{@type}_heading_text") %></h1>
   </header>
 
-  <div class="e-content">
-    <div class="intro">
-      <%= render_markdown t("views.products.tools_intro_text") %>
-    </div>
+  <div class="e-content intro">
+    <%= render_markdown t("views.tools.#{@type}_intro_text") %>
+  </div>
 
-    <hr>
-
-    <% %i[zines journals posters stickers videos music logos].each do |tool| %>
-      <div class="product-section">
-        <h1 class="p-name"><%= link_to_tool tool: tool, type: :link %></h1>
-        <%= render_markdown t("views.products.#{tool}_intro_text") %>
-        <%= link_to_tool tool: tool, type: :button %>
-        <br><br>
-      </div>
+  <% [@featured_tools, @tools].each do |collection| %>
+    <% collection.each do |tool| %>
+      <%= render "tools/tool", tool: tool %>
     <% end %>
-
-  </div><!-- .e-content -->
+  <% end %>
 </article>

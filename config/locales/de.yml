@@ -231,7 +231,7 @@ de:
       next_year: "&lsaquo; Nächstes Jahr (%{year})"
       previous_year: "(%{year}) Voriges Jahr &rsaquo;"
 
-    products:
+    tools:
       buy_now_button_text:             Jetzt kaufen
       zine_download_read_button_text:  Download PDF zum lesen
       zine_download_print_button_text: Download druckbare PDF

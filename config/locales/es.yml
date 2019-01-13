@@ -231,7 +231,7 @@ es:
       next_year: "&lsaquo; Next Year (%{year})"
       previous_year: "(%{year}) Previous Year &rsaquo;"
 
-    products:
+    tools:
       buy_now_button_text:             Compra
       zine_download_read_button_text:  Descarga PDF para leer
       zine_download_print_button_text: Descarga PDF para imprimir
@@ -277,7 +277,7 @@ es:
       videos_intro_text:   Emergency Broadcast System — Una selección de videos de CrimethInc. Perpetual Motion Pictures
       zines_intro_text:    La mayoría de nuestros textos están disponibles en formato de panfleto. Imprímelos o fotocópialos para distribuirlos en escuelas, protestas, conciertos, eventos sociales, mercados y cualquier otro lugar donde la gente esté hambrienta de ideas. También puedes obtener PDF’s de _Para Cambiar Todo_, nuestra introducción al anarquismo, en una docena de idiomas. [Sitio del _Para Cambiar Todo_](/tce).
       books_intro_text: |
-        Desde una escritura apasionada y una meticulosa edición, a un intrincado y único diseño, a una cuidadosa y profesional producción, estos libros son el producto de mucho amor y cuidado. Tenemos más de una década en esto, y aquí encontrarás la prueba en todos los pequeños detalles y a orquestación de momentos que sólo se pueden lograr con tinta y papel.
+        Desde una escritura apasionada y una meticulosa edición, a un intrincado y único diseño, a una cuidadosa y profesional producción, estos libros son el toolo de mucho amor y cuidado. Tenemos más de una década en esto, y aquí encontrarás la prueba en todos los pequeños detalles y a orquestación de momentos que sólo se pueden lograr con tinta y papel.
 
         Todos nuestros libros son impresos con tinta de soya en papel 100% reciclado por hábiles artesanos en Louisville, Quebec, Canadá usando las más finas offset's.
 

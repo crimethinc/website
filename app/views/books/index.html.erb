@@ -1,27 +1,27 @@
 <article>
-  <div class="product-header-image">
+  <div class="tool-header-image">
     <%= render_markdown '[[https://cloudfront.crimethinc.com/assets/books/spines/book-spines-lg.jpg All of the CrimethInc. books’ spines]]' %>
   </div>
 
   <header>
-    <h1><%= t("views.products.books_heading_text") %></h1>
+    <h1><%= t("views.tools.books_heading_text") %></h1>
   </header>
 
   <div class="e-content intro">
-    <%= render_markdown t("views.products.books_intro_text") %>
+    <%= render_markdown t("views.tools.books_intro_text") %>
   </div>
 
-  <div class="product-series product-series-bullet">
+  <div class="tool-series tool-series-bullet">
     <% @bullet_books.each do |book| %>
       <%= render "books/book", book: book %>
     <% end %>
-  </div> <!-- .product-series-bullet -->
+  </div> <!-- .tool-series-bullet -->
 
-  <div class="product-series product-series-bullet">
+  <div class="tool-series tool-series-bullet">
     <% @letters_books.each do |book| %>
       <%= render "books/book", book: book %>
     <% end %>
-  </div> <!-- .product-series-letters -->
+  </div> <!-- .tool-series-letters -->
 
   <div class="row" id="extra">
     <div class="column column-half" id="into-libraries">

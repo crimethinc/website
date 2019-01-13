@@ -1,6 +1,6 @@
 module MetaHelper
   def find_the_thing
-    @find_the_thing ||= [@article, @page, @podcast, @episode, @book, @product, @video].compact.first
+    @find_the_thing ||= [@article, @page, @podcast, @episode, @book, @tool, @video].compact.first
   end
 
   def meta_type(thing)

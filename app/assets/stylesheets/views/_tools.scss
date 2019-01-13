@@ -1,5 +1,5 @@
 #page {
-  #products {
+  #tools {
     main{
 
       hr {
@@ -22,11 +22,11 @@
         font-weight: 300;
       }
 
-      .product-header-image {
+      .tool-header-image {
         margin-bottom: 2rem;
       }
 
-      .product-series {
+      .tool-series {
         margin: 8rem 0 4rem 0;
 
         .u-image {
@@ -34,16 +34,16 @@
         }
       }
 
-      #contradictionary           .product-front img { width:  60%; }
-      #work                       .product-front img { width:  68%; }
-      #no-wall-they-can-build     .product-front img { width:  68%; }
-      #from-democracy-to-freedom  .product-front img { width:  68%; }
-      #expect-resistance          .product-front img { width:  79%; }
-      #days-of-war-nights-of-love .product-front img { width:  79%; }
-      #recipes-for-disaster       .product-front img { width: 100%; }
-      #off-the-map                .product-front img { width:  68%; }
+      #contradictionary           .tool-front img { width:  60%; }
+      #work                       .tool-front img { width:  68%; }
+      #no-wall-they-can-build     .tool-front img { width:  68%; }
+      #from-democracy-to-freedom  .tool-front img { width:  68%; }
+      #expect-resistance          .tool-front img { width:  79%; }
+      #days-of-war-nights-of-love .tool-front img { width:  79%; }
+      #recipes-for-disaster       .tool-front img { width: 100%; }
+      #off-the-map                .tool-front img { width:  68%; }
 
-      .product-section {
+      .tool-section {
         margin-bottom: 3rem;
 
         h1 {
@@ -56,11 +56,11 @@
         }
       }
 
-      .products-logos {
+      .tools-logos {
         img {
           box-shadow: none !important;
         }
-        .product-main {
+        .tool-main {
           .logo-first-column {
             margin-right: 1rem;
           }
@@ -71,7 +71,7 @@
       }
 
 
-      .product {
+      .tool {
         margin-bottom: 4rem;
 
         .p-name {
@@ -84,8 +84,8 @@
           }
         }
 
-        .product-front,
-        .product-back {
+        .tool-front,
+        .tool-back {
           margin-bottom: 2rem;
 
           figure {
@@ -161,7 +161,7 @@
         margin-bottom:  .5rem;
       }
 
-      .product-specs {
+      .tool-specs {
         margin-top:     2rem;
         margin-bottom:  2rem;
         padding-bottom: 2rem;
@@ -209,12 +209,12 @@
         }
       }
 
-      .product-main header,
+      .tool-main header,
       .meta .table-of-contents {
         display: none;
       }
 
-      .product-main header {
+      .tool-main header {
         h2 {
           font-weight: lighter;
           font-weight: 300;
@@ -222,7 +222,7 @@
       }
 
 
-      .product-content {
+      .tool-content {
         padding-top: 2rem;
         border-top:  $border-size-xsmall solid $color-gray-light;
 
@@ -289,7 +289,7 @@
         }
       }
 
-      .product-photo {
+      .tool-photo {
         margin-bottom: 2rem;
 
         img {
@@ -298,16 +298,16 @@
       }
 
       @media screen and (min-width: $small-tablet) {
-        .product-series-bullet {
+        .tool-series-bullet {
           margin-bottom: 4rem;
         }
 
-        .product-main header,
+        .tool-main header,
         .meta .table-of-contents {
           display: block;
         }
 
-        .product > header,
+        .tool > header,
         .h-entry .e-content .table-of-contents {
           display: none;
         }

@@ -1,19 +1,19 @@
 class LogosController < ApplicationController
   def index
-    @html_id  = 'page'
-    @body_id  = 'products'
-    @products = Logo.live.published.page(params[:page]).per(100)
-    @title    = title_for :logos
+    @html_id = 'page'
+    @body_id = 'tools'
+    @tools   = Logo.live.published.page(params[:page]).per(100)
+    @title   = title_for :logos
   end
 
   def show
-    @product = Logo.live.published.where(slug: params[:slug]).first
-    return redirect_to [:logos] if @product.blank?
+    @tool = Logo.live.published.where(slug: params[:slug]).first
+    return redirect_to [:logos] if @tool.blank?
 
     @html_id  = 'page'
-    @body_id  = 'products'
+    @body_id  = 'tools'
     @type     = 'logos'
-    @editable = @product
-    @title    = title_for :zines, @product.name
+    @editable = @tool
+    @title    = title_for :zines, @tool.name
   end
 end

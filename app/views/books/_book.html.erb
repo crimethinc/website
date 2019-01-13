@@ -1,16 +1,16 @@
-<div class="product" id="<%= book.slug %>">
+<div class="tool" id="<%= book.slug %>">
   <header>
     <%= render "articles/titles", header: book, linked: true %>
   </header>
 
   <div class="e-content row">
-    <div class="product-front column column-one-quarter">
+    <div class="tool-front column column-one-quarter">
       <%= render_markdown "[[ #{book.front_image} #{book.front_image_description} #{book.path} ]]" %>
 
       <div><%= button_to_buy_now price: book.price_in_cents, url: book.buy_url %></div>
     </div>
 
-    <div class="product-main column column-three-quarter">
+    <div class="tool-main column column-three-quarter">
       <header>
         <%= render "articles/titles", header: book, linked: true %>
       </header>

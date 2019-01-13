@@ -1,7 +1,7 @@
 class ToolsController < ApplicationController
-  def index
+  def about
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @type    = 'tools'
     @title   = title_for :tools
   end

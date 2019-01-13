@@ -1,30 +1,30 @@
 class StickersController < ApplicationController
   def index
     @html_id  = 'page'
-    @body_id  = 'products'
+    @body_id  = 'tools'
     @type     = 'stickers'
     @title    = 'Stickers'
 
     stickers = Sticker.order(published_at: :desc).live.published
 
-    @featured_products = stickers.where.not(buy_url: nil)
-    @products          = stickers.where(buy_url: nil)
+    @featured_tools = stickers.where.not(buy_url: nil)
+    @tools          = stickers.where(buy_url: nil)
 
-    render 'products/index'
+    render 'tools/index'
   end
 
   def show
-    @product = Sticker.published.live.where(slug: params[:slug])
-    return redirect_to [:stickers] if @product.blank?
+    @tool = Sticker.published.live.where(slug: params[:slug])
+    return redirect_to [:stickers] if @tool.blank?
 
-    @product = @product.first
+    @tool = @tool.first
     @html_id = 'page'
-    @body_id = 'products'
+    @body_id = 'tools'
     @type    = 'stickers'
 
-    @title = "Stickers : #{@product.name}"
-    @editable = @product
+    @title = "Stickers : #{@tool.name}"
+    @editable = @tool
 
-    render 'products/show'
+    render 'tools/show'
   end
 end
