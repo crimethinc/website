@@ -40,6 +40,10 @@ module Rack
         path = path.sub(uncleaned_path, cleaned_path)
       end
 
+      # convert Unicode to ASCII using transliteration
+      # Eg: /ameaça => /ameaca
+      path = transliterate_unicode_to_ascii_in path
+
       # redirect to new cleaned path, but
       # don’t redirect the homepage to nowhere
       if req.path != path && path != ''
@@ -58,6 +62,26 @@ module Rack
         { 'Location' => location, 'Content-Type' => 'text/html' },
         ['Moved Permanently']
       ]
+    end
+
+    def path_pieces path
+      path.split('/')
+    end
+
+    def file_pieces path_piece
+      path_piece.split('.')
+    end
+
+    def transliterate_unicode_to_ascii_in path
+      result = path_pieces(path).map do |path_piece|
+        file_pieces(path_piece).map { |f| transliterate_unicode_to_ascii(f) }.join('.')
+      end
+
+      result.join('/')
+    end
+
+    def transliterate_unicode_to_ascii str
+      CGI.unescape(str).to_slug
     end
   end
 end
