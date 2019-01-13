@@ -1,0 +1,72 @@
+@import "../common/font_styling";
+
+.title-container h1 {
+  @include title-text(12vw, 14vw);
+
+  @media (min-device-width: 200px) and (max-width: 600px) { @include title-text(12vw, 14vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include title-text(12vw, 14vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include title-text(9vw, 9vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include title-text(9vw, 9vw); }
+  @media (min-width: 1671px) { @include title-text(6.5vw, 6.75vw); }
+}
+
+.title-container h4 {
+  @include subtitle-text(5vw, 5vw);
+
+  @media (min-device-width: 200px) and (max-width: 600px) { @include subtitle-text(5vw, 5vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include subtitle-text(5vw, 5vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include subtitle-text(4vw, 2vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include subtitle-text(3vw, 2vw); }
+  @media (min-width: 1671px) { @include subtitle-text(3vw, 2vw); }
+}
+
+.call-to-action {
+  p {
+    @include pdfvideo-text(3.5vw, 4.5vw);
+
+    @media (min-device-width: 200px) and (max-width: 600px) { @include pdfvideo-text(3.5vw, 4.5vw); }
+    @media (min-width: 601px) and (max-width: 1023px) { @include pdfvideo-text(2vw, 3.5vw); }
+    @media (min-width: 1024px) and (max-width: 1200px) { @include pdfvideo-text(2vw, 3vw); }
+    @media (min-width: 1201px) and (max-width: 1670px) { @include pdfvideo-text(2vw, 3vw); }
+    @media (min-width: 1671px) { @include pdfvideo-text(2vw, 3vw); }
+  }
+}
+
+.left h2 {
+  @include imagetext(9vw, 10vw);
+  letter-spacing: 0em;
+
+  @media (min-device-width: 200px) and (max-width: 600px) { @include imagetext(9vw, 10vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include imagetext(9vw, 10vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include imagetext(9vw, 10vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include imagetext(4.5vw, 5vw); }
+  @media (min-width: 1671px) { @include imagetext(4.5vw, 5vw); }
+}
+
+.rightintro h3 {
+  @include intro-header(12vw, 14vw);
+  text-align: start;
+  text-indent: 0;
+  letter-spacing: 0em;
+
+  @media (min-device-width: 200px) and (max-width: 600px) { @include intro-header(12vw, 14vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include intro-header(12vw, 14vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include intro-header(12vw, 14vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include intro-header(6vw, 7vw); }
+  @media (min-width: 1671px) { @include intro-header(6vw, 7vw); }
+}
+
+#outro h3 {
+  text-align: end;
+}
+
+#takeflight h1 {
+  @include takeflight(14vw, 20vw);
+  letter-spacing: 0em;
+
+  @media (min-device-width: 200px) and (max-width: 600px) { @include takeflight(14vw, 20vw); }
+  @media (min-width: 601px) and (max-width: 1023px) { @include takeflight(14vw, 20vw); }
+  @media (min-width: 1024px) and (max-width: 1200px) { @include takeflight(14vw, 20vw); }
+  @media (min-width: 1201px) and (max-width: 1670px) { @include takeflight(12vw, 12.75vw); }
+  @media (min-width: 1671px) { @include takeflight(12vw, 12.75vw); }
+}
