@@ -1,15 +1,15 @@
 <%= render "admin/page_header", thing: @redirects %>
 
 
-<% if params[:from].present? || params[:to].present? %>
+<% if params[:source_path].present? || params[:target_path].present? %>
   <h2>
     <small class="text-muted">Search results for</small>
 
-    <% if params[:from].present? %>
-      FROM: <%= params[:from] %>
+    <% if params[:source_path].present? %>
+      FROM: <%= params[:source_path] %>
     <% end %>
-    <% if params[:to].present? %>
-      TO: <%= params[:to] %>
+    <% if params[:target_path].present? %>
+      TO: <%= params[:target_path] %>
     <% end %>
   </h2>
 
@@ -23,7 +23,7 @@
   <div class="col">
     <%= form_with url: [:admin, :redirects], method: "get" do %>
       <div class="form-group">
-        <%= text_field_tag :from, params[:from], class: "form-control form-control-lg", placeholder: "FROM" %>
+        <%= text_field_tag :source_path, params[:source_path], class: "form-control form-control-lg", placeholder: "FROM" %>
       </div>
 
       <div class="text-right">
@@ -35,7 +35,7 @@
   <div class="col">
     <%= form_tag [:admin, :redirects], method: "get" do %>
       <div class="form-group">
-        <%= text_field_tag :to, params[:to], class: "form-control form-control-lg", placeholder: "TO" %>
+        <%= text_field_tag :target_path, params[:target_path], class: "form-control form-control-lg", placeholder: "TO" %>
       </div>
 
       <div class="text-right">

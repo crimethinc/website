@@ -10,6 +10,8 @@ class Redirect < ApplicationRecord
   validate  :article_short_path_unique
   validate  :noncircular_redirect
 
+  default_scope { order(source_path: :asc) }
+
   def name
     source_path
   end

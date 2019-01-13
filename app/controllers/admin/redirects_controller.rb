@@ -4,23 +4,15 @@ module Admin
     before_action :set_redirect, only: [:show, :edit, :update, :destroy]
 
     def index
-      if params[:from].present?
-        from = params[:from].strip.sub(%r{https*://}, '').sub(/cwc.im|crimethinc.com/, '')
+      redirects =
+        if search_lookup_key.present?
+          redirects_filtered_by_search
+        else
+          Redirect.all
+        end
 
-        @redirects = Redirect.order(:source_path).where(source_path: from).page(params[:page])
-
-        @redirects = Redirect.order(:source_path).where(source_path: "/#{from}").page(params[:page]) if @redirects.blank?
-      elsif params[:to].present?
-        to = params[:to].strip.sub(%r{https*://}, '').sub(/cwc.im|crimethinc.com/, '')
-
-        @redirects = Redirect.order(:source_path).where(target_path: to).page(params[:page])
-
-        @redirects = Redirect.order(:source_path).where(target_path: "/#{to}").page(params[:page]) if @redirects.blank?
-      else
-        @redirects = Redirect.order(:source_path).page(params[:page])
-      end
-
-      @title = admin_title
+      @redirects = redirects.page(params[:page])
+      @title     = admin_title
     end
 
     def show
@@ -60,6 +52,27 @@ module Admin
     end
 
     private
+
+    def convert_url_to_path url
+      url.strip.sub(%r{https*://}, '').sub(/cwc.im|crimethinc.com/, '')
+    end
+
+    def search_lookup_key
+      lookup_key = :source_path if params[:source_path].present?
+      lookup_key = :target_path if params[:target_path].present?
+      lookup_key
+    end
+
+    def redirects_filtered_by_search
+      searched_query = convert_url_to_path params[search_lookup_key]
+
+      redirects = [
+        Redirect.where(search_lookup_key => searched_query),
+        Redirect.where(search_lookup_key => "/#{searched_query}")
+      ]
+
+      redirects.select(&:present?).first
+    end
 
     def set_redirect
       @redirect = Redirect.find(params[:id])
