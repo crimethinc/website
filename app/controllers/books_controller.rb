@@ -36,6 +36,7 @@ class BooksController < ApplicationController
     @type     = 'books'
     @editable = @book
     @title    = title_for :books, @book.slug.tr('-', '_')
+    @tool     = @book
   end
 
   def extras
