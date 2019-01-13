@@ -1,10 +1,11 @@
-version: "2"
+version: '2'
 
 exclude_patterns:
-  - "config/"
-  - "db/"
-  - "db/seeds/"
-  - "public/"
-  - "script/"
-  - "vendor/"
-  - "spec/"
+  - 'config/'
+  - 'db/'
+  - 'db/seeds/'
+  - 'public/'
+  - 'script/'
+  - 'vendor/'
+  - 'spec/'
+  - 'app/middlewares/rack/redirect_pairs.rb'
