@@ -1,6 +1,18 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :extras]
 
+  PUBLISHED_BULLET_BOOK_SLUGS = %w[
+    no-wall-they-can-build
+    from-democracy-to-freedom
+    contradictionary
+    work
+    expect-resistance
+    recipes-for-disaster
+    days-of-war-nights-of-love
+  ].map(&:freeze).freeze
+
+  PUBLISHED_LETTERS_BOOK_SLUGS = %w[off-the-map].map(&:freeze).freeze
+
   def index
     @html_id = 'page'
     @body_id = 'products'
@@ -8,12 +20,12 @@ class BooksController < ApplicationController
     @title   = title_for :books
 
     @bullet_books = []
-    published_bullet_book_slugs.each do |slug|
+    PUBLISHED_BULLET_BOOK_SLUGS.each do |slug|
       @bullet_books << Book.find_by(slug: slug)
     end
 
     @letters_books = []
-    published_letters_book_slugs.each do |slug|
+    PUBLISHED_LETTERS_BOOK_SLUGS.each do |slug|
       @letters_books << Book.find_by(slug: slug)
     end
   end
@@ -46,22 +58,8 @@ class BooksController < ApplicationController
 
   private
 
-  def published_bullet_book_slugs
-    %w[no-wall-they-can-build
-       from-democracy-to-freedom
-       contradictionary
-       work
-       expect-resistance
-       recipes-for-disaster
-       days-of-war-nights-of-love]
-  end
-
-  def published_letters_book_slugs
-    %w[off-the-map]
-  end
-
   def published_book_slugs
-    published_bullet_book_slugs + published_letters_book_slugs
+    PUBLISHED_BULLET_BOOK_SLUGS + PUBLISHED_LETTERS_BOOK_SLUGS
   end
 
   def set_book
