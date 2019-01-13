@@ -5,8 +5,10 @@ class PostersController < ApplicationController
     @type    = 'posters'
     @title   = title_for :posters
 
-    @featured_products = Poster.order(published_at: :desc).live.published.map { |x| x if x.buy_url.present? }.compact
-    @products          = Poster.order(published_at: :desc).live.published.map { |x| x if x.buy_url.blank? }.compact
+    posters = Poster.order(published_at: :desc).live.published
+
+    @featured_products = posters.where.not(buy_url: nil)
+    @products          = posters.where(buy_url: nil)
 
     render 'products/index'
   end

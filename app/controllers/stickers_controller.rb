@@ -4,8 +4,11 @@ class StickersController < ApplicationController
     @body_id  = 'products'
     @type     = 'stickers'
     @title    = 'Stickers'
-    @featured_products = Sticker.order(published_at: :desc).published.live.map { |x| x if x.buy_url.present? }.compact
-    @products          = Sticker.order(published_at: :desc).published.live.map { |x| x if x.buy_url.blank? }.compact
+
+    stickers = Sticker.order(published_at: :desc).live.published
+
+    @featured_products = stickers.where.not(buy_url: nil)
+    @products          = stickers.where(buy_url: nil)
 
     render 'products/index'
   end
