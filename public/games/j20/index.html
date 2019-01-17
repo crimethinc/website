@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html data-init="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <title>j20 variables</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <script id="script-libraries" src="sugarcube-script-libraries.js"></script>
+
+  <link rel="stylesheet" href="style-normalize.css" id="style-normalize">
+  <link rel="stylesheet" href="style-font.css" id="style-font">
+  <link rel="stylesheet" href="style-core.css" id="style-core">
+  <link rel="stylesheet" href="style-core-display.css" id="style-core-display">
+  <link rel="stylesheet" href="style-core-passage.css" id="style-core-passage">
+  <link rel="stylesheet" href="style-core-macro.css" id="style-core-macro">
+  <link rel="stylesheet" href="style-ui-dialog.css" id="style-ui-dialog">
+  <link rel="stylesheet" href="style-ui.css" id="style-ui">
+  <link rel="stylesheet" href="style-ui-bar.css" id="style-ui-bar">
+  <link rel="stylesheet" href="style-debugview.css" id="style-debugview">
+
+  <link rel="stylesheet" href="overrides.css">
+</head>
+
+<body>
+  <div id="init-screen">
+    <div id="init-no-js">
+      <noscript>JavaScript is required. Please enable it to continue.</noscript>
+    </div>
+    <div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
+    <div id="init-loading">
+      <!-- <div>Loading…</div> -->
+    </div>
+  </div>
+
+  <main class="container">
+    <header role="banner">
+      <a class="logo" href="https://crimethinc.com">
+        <img src="crimethinc-logo-type-white.svg">
+      </a>
+    </header>
+
+    <div id="store-area" hidden>
+      <tw-storydata name="j20 variables" startnode="1" creator="Twine" creator-version="2.2.1" ifid="B904F8ED-7F76-4BB1-AF32-00E91F7787EF" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden>
+
+        <tw-passagedata pid="1" name="start" tags="" position="454,12" size="100,100">&lt;&lt;set $risk to 0&gt;&gt;&lt;&lt;set $solid to 0&gt;&gt;In November 2016, Donald Trump is elected President of the United States on an explicitly authoritarian, racist, and Islamophobic platform. This shocks you out of your Obama-induced slumber. Things are going to hell in the United States.
+
+          A couple days after the election, you see a &lt;a target=&quot;_blank&quot; href=&quot;https://vimeo.com/191197865&quot;&gt;dramatic video&lt;/a&gt; calling for &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2016/11/11/no-peaceful-transition&quot;&gt;actions&lt;/a&gt; in Washington, DC on the day that Trump will take office: January 20, 2017. Soon, a website appears—&lt;a target=&quot;_blank&quot; href=&quot;https://web.archive.org/web/20170119203918/http://www.disruptj20.org/&quot;&gt;disruptJ20.org&lt;/a&gt;—listing a range of protests scheduled for J20.
+          &lt;figure&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/191197865&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;
+          One of the options is described as an &quot;&lt;a target=&quot;_blank&quot; href=&quot;https://itsgoingdown.org/fierce-anti-capitalist-anti-fascist-bloc-inauguration/&quot;&gt;Anti-Fascist/Anti-Capitalist March&lt;/a&gt;.&quot; The flier enjoins attendees to “wear black.” It looks like the most confrontational of the actions scheduled for the day.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/1.jpg&quot;&gt;
+
+          Do you [[attend the “Anti-Fascist/Anti-Capitalist March”-&gt;go to march]] at 10 am on January 20?
+
+          Do you [[participate in the blockades-&gt;go to blockades]] on the morning of Trump’s inauguration, but avoid the sketchy march at 10 am?
+
+          Or do you [[avoid Washington, DC entirely on January 20-&gt;stay home]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="2" name="go to march" tags="" position="455,128" size="100,100">&lt;&lt;set $risk to $risk +1&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;Congratulations, you have decided to attend the black bloc march on J20. A brave choice!
+
+          To get ready, you read about the &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2003/11/20/blocs-black-and-otherwise&quot;&gt;black bloc&lt;/a&gt;, a traditional anarchist tactic for preserving the anonymity of demonstrators. You read a bit about &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2004/11/01/what-is-security-culture&quot;&gt;security culture&lt;/a&gt;, a set of practices that are supposed to keep you safer while you are engaging in risky protest activity. You study a map of DC, trying to learn the area you will be marching through. You ask around about police tactics in Washington, DC and &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/12/ten-reasons-to-go-hard-on-january-20&quot;&gt;read&lt;/a&gt; about why people think this demonstration is important. Maybe you even take a &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/08/podcast-episode-53&quot;&gt;radical history walking tour&lt;/a&gt; of DC.
+
+          You figure out who else is going that you trust. Together, you form an &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/02/06/how-to-form-an-affinity-group-the-essential-building-block-of-anarchist-organization&quot;&gt;affinity group&lt;/a&gt; that will stay together in the streets and look out for each other.
+
+          Now you have some important decisions to make. You know you should wear black clothes and a mask that conceals your identity; you also need gloves and goggles in case the police use pepper spray. The first question is how to pick out your outfit.
+
+          Do you [[borrow some black clothes at the last minute-&gt;not try on clothes]]?
+
+          Or do you read more about &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2008/10/11/fashion-tips-for-the-brave&quot;&gt;dressing properly&lt;/a&gt; for a black bloc and [[spend some time choosing an outfit and trying it on to make sure it fits and you can move comfortably in it-&gt;try on clothes]]?
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/5.jpg&quot;&gt;
+        </tw-passagedata>
+
+        <tw-passagedata pid="3" name="go to blockades" tags="" position="616,11" size="100,100">&lt;&lt;set $blockades to true&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt; On the morning of January 20, you get up very early and go downtown to the blockades around the parade route. Alongside organizers from Standing Rock and Black Lives Matter, you add your body to the crowds blockading access to the bleachers lining the parade route. It’s cold, it’s stressful, but it’s good to be among fellow opponents of authoritarianism on the first day of the Trump administration.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/3.jpg&quot;&gt;
+
+          Afterwards, you make your way north to see what else is going on downtown. There’s a permitted rally going on all day at McPherson Square. Two blocks east, where K Street approaches 13th Street, protesters have built a bonfire out of newspaper boxes and trash cans next to a smashed up limousine. The fire is still burning, surrounded by photographers. Some of the corporate franchises have their windows broken. It looks like something really crazy happened around here.
+
+          Then you hear that the police have surrounded hundreds of people who participated in the march at 10 am. They are being held in a &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests&quot;&gt;kettle&lt;/a&gt; at the intersection of 12th Street and L Street, just two blocks away.
+
+          Do you [[try to figure out how to support the people being detained by the police-&gt;do jail support]]?
+
+          Or do you [[forget about them and move on with your life-&gt;not do jail support]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="4" name="stay home" tags="" position="272,14" size="100,100">You decide not to go to Washington, DC on January 20. Who wants to get tear-gassed and end up on a government watch list? Maybe you’ll go to the local Women’s March on January 21. Maybe you’ll spend the entire Trump presidency indoors, hiding under your bed.
+
+          In August 2017, you find out that Trump’s &lt;a target=&quot;_blank&quot; href=&quot;https://arstechnica.com/tech-policy/2017/08/feds-demand-1-3-million-ip-addresses-of-those-who-visited-trump-protest-site/&quot;&gt;Department of Justice&lt;/a&gt; is attempting to subpoena the IP addresses of everyone who has ever visited disruptJ20.org—all 1.3 million of them. Just visiting that website has made you a suspect.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/2.jpg&quot;&gt;
+
+          The more frightened people are to take a stand against the suppression of protest, the further it will go. You can’t simply avoid rising totalitarianism; the only solution is to get out on the street and block the way to it.
+
+          You already bought the ticket. Now [[take the ride-&gt;start]].
+        </tw-passagedata>
+
+        <tw-passagedata pid="5" name="try on clothes" tags="" position="382,244" size="100,100">&lt;&lt;set $tryonclothes to true&gt;&gt;The next question is what kind of phone to bring.
+
+          Do you [[bring your fancy iPhone-&gt;iphone]]?
+
+          Not everyone can afford an iPhone. Do you [[bring your Android phone-&gt;android]]?
+
+          Or you could [[get a one-time-use “burner” phone not connected to your identity-&gt;burner]]. You can &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/03/27/burner-phone-best-practices&quot;&gt;read about how to do that here&lt;/a&gt;.
+
+          You could also decide [[not to bring a phone at all-&gt;no phone]].
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/6.jpg&quot;&gt;
+        </tw-passagedata>
+
+        <tw-passagedata pid="6" name="not try on clothes" tags="" position="530,244" size="100,100">&lt;&lt;set $tryonclothes to false&gt;&gt;&lt;&lt;set $risk to $risk +1&gt;&gt; The next question is what kind of phone to bring.
+
+          Do you [[bring your fancy iPhone-&gt;iphone]]?
+
+          Not everyone can afford an iPhone. Do you [[bring your Android phone-&gt;android]]?
+
+          Or you could [[get a one-time-use “burner” phone not connected to your identity-&gt;burner]]. You can &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/03/27/burner-phone-best-practices&quot;&gt;read about how to do that here&lt;/a&gt;.
+
+          You could also decide [[not to bring a phone at all-&gt;no phone]].
+        </tw-passagedata>
+
+        <tw-passagedata pid="7" name="iphone" tags="" position="238,392" size="100,100">&lt;&lt;set $iphone to true&gt;&gt;&lt;&lt;set $android to false&gt;&gt;&lt;&lt;set $burner to false&gt;&gt;&lt;&lt;set $nophone to false&gt;&gt;&lt;&lt;set $risk to $risk +1&gt;&gt; What kind of equipment do you want to bring with you to march on J20?
+
+          You’re afraid that the police might try to hurt people at this march. Do you go to a medic training and [[bring a medic kit-&gt;medic kit]]?
+
+          As a young person, you watched &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/videos/breaking-the-spell&quot;&gt;footage&lt;/a&gt; of anarchists breaking corporate windows during the 1999 summit of the World Trade Organization in Seattle. Do you [[bring a hammer-&gt;hammer]]?
+
+          You’re trying to get people to subscribe to your channel. Do you bring a camera to livestream the event? Just kidding—that’s a terrible idea.
+
+          You’ve heard it might rain in DC on January 20. Maybe you just [[bring an umbrella-&gt;umbrella]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="8" name="android" tags="" position="379,388" size="100,100">&lt;&lt;set $android to true&gt;&gt;&lt;&lt;set $iphone to false&gt;&gt;&lt;&lt;set $burner to false&gt;&gt;&lt;&lt;set $nophone to false&gt;&gt;&lt;&lt;set $risk to $risk +1&gt;&gt; What kind of equipment do you want to bring with you to march on J20?
+
+          You’re afraid that the police might try to hurt people at this march. Do you go to a medic training and [[bring a medic kit-&gt;medic kit]]?
+
+          As a young person, you watched &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/videos/breaking-the-spell&quot;&gt;footage&lt;/a&gt; of anarchists breaking corporate windows during the 1999 summit of the World Trade Organization in Seattle. Do you [[bring a hammer-&gt;hammer]]?
+
+          You’re trying to get people to subscribe to your channel. Do you bring a camera to livestream the event? Just kidding—that’s a terrible idea.
+
+          You’ve heard it might rain in DC on January 20. Maybe you just [[bring an umbrella-&gt;umbrella]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="9" name="burner" tags="" position="535,395" size="100,100">&lt;&lt;set $burner to true&gt;&gt;&lt;&lt;set $android to false&gt;&gt;&lt;&lt;set $iphone to false&gt;&gt;&lt;&lt;set $nophone to false&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt; What kind of equipment do you want to bring with you to march on J20?
+
+          You’re afraid that the police might try to hurt people at this march. Do you go to a medic training and [[bring a medic kit-&gt;medic kit]]?
+
+          As a young person, you watched &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/videos/breaking-the-spell&quot;&gt;footage&lt;/a&gt; of anarchists breaking corporate windows during the 1999 summit of the World Trade Organization in Seattle. Do you [[bring a hammer-&gt;hammer]]?
+
+          You’re trying to get people to subscribe to your channel. Do you bring a camera to livestream the event? Just kidding—that’s a terrible idea.
+
+          You’ve heard it might rain in DC on January 20. Maybe you just [[bring an umbrella-&gt;umbrella]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="10" name="no phone" tags="" position="684,395" size="100,100">&lt;&lt;set $nophone to true&gt;&gt;&lt;&lt;set $iphone to false&gt;&gt;&lt;&lt;set $burner to false&gt;&gt;&lt;&lt;set $nophone to false&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt; What kind of equipment do you want to bring with you to march on J20?
+
+          You’re afraid that the police might try to hurt people at this march. Do you go to a medic training and [[bring a medic kit-&gt;medic kit]]?
+
+          As a young person, you watched &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/videos/breaking-the-spell&quot;&gt;footage&lt;/a&gt; of anarchists breaking corporate windows during the 1999 summit of the World Trade Organization in Seattle. Do you [[bring a hammer-&gt;hammer]]?
+
+          You’re trying to get people to subscribe to your channel. Do you bring a camera to livestream the event? Just kidding—that’s a terrible idea.
+
+          You’ve heard it might rain in DC on January 20. Maybe you just [[bring an umbrella-&gt;umbrella]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="11" name="medic kit" tags="" position="285,531" size="100,100">&lt;&lt;set $medickit to true&gt;&gt;&lt;&lt;set $umbrella to false&gt;&gt;&lt;&lt;set $hammer to false&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;
+        &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SXO3fPVljVo&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;           You show up at Logan Circle at 10 am on the dot. Hundreds of people are here already dressed in black; others are pouring in from the side streets, pulling on masks and gloves, zipping up their sweatshirts, cinching their windbreakers tight around their wrists, unfurling great black banners proclaiming NO PEACEFUL TRANSITION—FIGHT BACK NOW—JOIN THE RESISTANCE.
+
+          Half a dozen or more police vans are pulled up around the circle with riot police around them. You want to seek out people you know in the crowd, but you don’t want to risk giving the police information about who knows who. Better to stick with your partner.
+
+          At a quarter past ten, the crowd begins moving off the island in the middle of the traffic circle. The people carrying banners take the front and the sides. The march is spread out over a wide area; the police are following, but they seem pretty hands off. The energy is electric, with people chanting and moving quickly. You scramble not to lose your friends in the rush.
+
+          People start dragging newspaper boxes and trashcans into street. Someone throws something at a gas station on the left. A corporate bakery on the right loses its windows. Someone is smashing the parking meter in front of it with a brick. Another person spray-paints “REVOLUTION OR DEATH” on the storefront beyond it. Your heart is pounding.
+          &lt;&lt;if $medickit is true&gt;&gt;
+          You grab your buddy&#39;s hand and try to get a look around. Now you don&#39;t see any police from where you are in the middle of the crowd, but you’re worried that they could attack the crowd at any minute. You pull out your goggles from your side pack and put them around your neck. Your medic training has taught you to be prepared for police weapons. Your buddy has a little bit more experience than you; you put your hands on each other&#39;s shoulders while one of you walks backwards so that together you can get a full view of what&#39;s going on. It&#39;s hard to see much through the crowd, but you hear glass breaking and the scrape of metal and a lot of yelling and chanting. You feel for your water bottles with the squirt tops and make sure they are ready on your fanny pack.&lt;&lt;/if&gt;&gt;
+
+          The march turns right on K Street. There’s a big park here—and a limousine. Somebody runs up to the limousine and smashes out its windows. The driver stands next to it, watching calmly, filming with his phone.
+
+          The march turns to cut through the middle of the park. Someone is shouting “Whose park? Our park!” You can hear sirens in the distance.
+
+          Further down the next street, you see a Starbucks and a Bank of America.
+          &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ivgwTZDEQho&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;           &lt;&lt;if $hammer is true&gt;&gt;Further down the next street, you see a Starbucks and a Bank of America. This is why you brought a hammer, right? You check in with your partner: “Should we get them?”
+
+          “OK with me,” answers your friend.
+
+          People have already smashed out several of the windows by the time you get through the crowd. Somebody is throwing a trashcan against the Starbucks. Someone else is swinging a baseball bat—?! You take your hammer to the door of the bank. That’s for those predatory loans! And that’s for evicting people from their homes! And that’s for getting a bailout while your parents were getting screwed!
+          &lt;&lt;if $tryonclothes is false&gt;&gt;
+          As you’re swinging the hammer, the cuffs of your sweatshirt ride up your wrists, exposing your tattoos. Hell—you should have practiced moving around in your gear before you got here! Hope nobody saw that&lt;&lt;/if&gt;&gt;
+
+          Your friend is watching your back to make sure undercover officers don’t grab you—but there are so many people with cameras around that the most they can do is keep photographers from getting a close-up shot. Who knows how many people recorded you smashing that door…
+
+          People keep throwing projectiles at the bank from behind you while you’re in their line of fire. That’s not safe either!
+
+          Most of the march has passed now. You and your partner run and get back into the middle of it. You try to find other people you know, but it’s hard with everyone dressed the same and so much chaos going on.&lt;&lt;/if&gt;&gt;
+          A block further, there’s another open area, a much smaller park. The march goes around it, only to find police massing on the other side of it. The crowd doubles back, but police are blocking the way you arrived. Cops are appearing from all directions now, shooting pepper spray at those on the margins of the group. The crowd surges southwest on New York Avenue towards the White House, but a block further on there are more police, and the front of the march turns north again.
+          &lt;&lt;if $medickit is true&gt;&gt;
+          As police attack the crowd, many people start to run. You try to continue walking calmly, but you have to move quickly to follow the crowd.  You notice a couple people who have been pepper-sprayed have stopped at the edge of the street.  You ask them if they are okay, but it turns out their friends brought an eye-wash with them; they have all the help they need. You get back into the crowd and keep moving, although here at the back of the march, you are getting doused in pepper-spray yourself; you are very grateful for your goggles, as you can see the streams of pepper-spray running across the thick plastic that protects your eyes. The skin on your face is burning. Your buddy is still at your side; together, you help some people who can&#39;t see anymore to get out of the path of the police.&lt;&lt;/if&gt;&gt;
+
+          Around the corner, you come upon a McDonald’s. People start smashing it, but it turns out you’ve just gone in a circle—the march is about to arrive back at the big park where the limousine is. It doesn’t seem like anyone has a plan. You can hear sting-ball grenades exploding as police attack the march.
+
+          There’s an alley by the McDonalds. Do you [[duck down the alley to try to get away-&gt;leave early]]?
+
+          Or do you [[stick with the march-&gt;stay to help]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="12" name="hammer" tags="" position="464,527" size="100,100">&lt;&lt;set $hammer to true&gt;&gt;&lt;&lt;set $umbrella to false&gt;&gt;&lt;&lt;set $medickit to false&gt;&gt;&lt;&lt;set $risk to $risk +1&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;
+        &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SXO3fPVljVo&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;           You show up at Logan Circle at 10 am on the dot. Hundreds of people are here already dressed in black; others are pouring in from the side streets, pulling on masks and gloves, zipping up their sweatshirts, cinching their windbreakers tight around their wrists, unfurling great black banners proclaiming NO PEACEFUL TRANSITION—FIGHT BACK NOW—JOIN THE RESISTANCE.
+
+          Half a dozen or more police vans are pulled up around the circle with riot police around them. You want to seek out people you know in the crowd, but you don’t want to risk giving the police information about who knows who. Better to stick with your partner.
+
+          At a quarter past ten, the crowd begins moving off the island in the middle of the traffic circle. The people carrying banners take the front and the sides. The march is spread out over a wide area; the police are following, but they seem pretty hands off. The energy is electric, with people chanting and moving quickly. You scramble not to lose your friends in the rush.
+
+          People start dragging newspaper boxes and trashcans into street. Someone throws something at a gas station on the left. A corporate bakery on the right loses its windows. Someone is smashing the parking meter in front of it with a brick. Another person spray-paints “REVOLUTION OR DEATH” on the storefront beyond it. Your heart is pounding.
+          &lt;&lt;if $medickit is true&gt;&gt;
+          You grab your buddy&#39;s hand and try to get a look around. Now you don&#39;t see any police from where you are in the middle of the crowd, but you’re worried that they could attack the crowd at any minute. You pull out your goggles from your side pack and put them around your neck. Your medic training has taught you to be prepared for police weapons. Your buddy has a little bit more experience than you; you put your hands on each other&#39;s shoulders while one of you walks backwards so that together you can get a full view of what&#39;s going on. It&#39;s hard to see much through the crowd, but you hear glass breaking and the scrape of metal and a lot of yelling and chanting. You feel for your water bottles with the squirt tops and make sure they are ready on your fanny pack.&lt;&lt;/if&gt;&gt;
+          The march turns right on K Street. There’s a big park here—and a limousine. Somebody runs up to the limousine and smashes out its windows. The driver stands next to it, watching calmly, filming with his phone.
+
+          The march turns to cut through the middle of the park. Someone is shouting “Whose park? Our park!” You can hear sirens in the distance.
+
+          &lt;&lt;if $hammer is true&gt;&gt;Further down the next street, you see a Starbucks and a Bank of America. This is why you brought a hammer, right? You check in with your partner: “Should we get them?”
+
+          “OK with me,” answers your friend.
+
+          People have already smashed out several of the windows by the time you get through the crowd. Somebody is throwing a trashcan against the Starbucks. Someone else is swinging a baseball bat—?! You take your hammer to the door of the bank. That’s for those predatory loans! And that’s for evicting people from their homes! And that’s for getting a bailout while your parents were getting screwed!
+          &lt;&lt;if $tryonclothes is false&gt;&gt;
+          As you’re swinging the hammer, the cuffs of your sweatshirt ride up your wrists, exposing your tattoos. Hell—you should have practiced moving around in your gear before you got here! Hope nobody saw that!
+          &lt;&lt;/if&gt;&gt;
+          Your friend is watching your back to make sure undercover officers don’t grab you—but there are so many people with cameras around that the most they can do is keep photographers from getting a close-up shot. Who knows how many people recorded you smashing that door…
+
+          People keep throwing projectiles at the bank from behind you while you’re in their line of fire. That’s not safe either!
+          &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ivgwTZDEQho&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;           Most of the march has passed now. You and your partner run and get back into the middle of it. You try to find other people you know, but it’s hard with everyone dressed the same and so much chaos going on.&lt;&lt;/if&gt;&gt;
+
+          A block further, there’s another open area, a much smaller park. The march goes around it, only to find police massing on the other side of it. The crowd doubles back, but police are blocking the way you arrived. Cops are appearing from all directions now, shooting pepper spray at those on the margins of the group. The crowd surges southwest on New York Avenue towards the White House, but a block further on there are more police, and the front of the march turns north again.
+          &lt;&lt;if $medickit is true&gt;&gt;
+          As police attack the crowd, many people start to run. You try to continue walking calmly, but you have to move quickly to follow the crowd.  You notice a couple people who have been pepper-sprayed have stopped at the edge of the street.  You ask them if they are okay, but it turns out their friends brought an eye-wash with them; they have all the help they need. You get back into the crowd and keep moving, although here at the back of the march, you are getting doused in pepper-spray yourself; you are very grateful for your goggles, as you can see the streams of pepper-spray running across the thick plastic that protects your eyes. The skin on your face is burning. Your buddy is still at your side; together, you help some people who can&#39;t see anymore to get out of the path of the police.&lt;&lt;/if&gt;&gt;
+          Around the corner, you come upon a McDonald’s. People start smashing it, but it turns out you’ve just gone in a circle—the march is about to arrive back at the big park where the limousine is. It doesn’t seem like anyone has a plan. You can hear sting-ball grenades exploding as police attack the march.
+
+          There’s an alley by the McDonalds. Do you [[duck down the alley to try to get away-&gt;leave early]]?
+
+          Or do you [[stick with the march-&gt;stay to help]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="13" name="umbrella" tags="" position="640,525" size="100,100">&lt;&lt;set $umbrella to true&gt;&gt;&lt;&lt;set $hammer to false&gt;&gt;&lt;&lt;set $medickit to false&gt;&gt;
+        &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SXO3fPVljVo&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;           You show up at Logan Circle at 10 am on the dot. Hundreds of people are here already dressed in black; others are pouring in from the side streets, pulling on masks and gloves, zipping up their sweatshirts, cinching their windbreakers tight around their wrists, unfurling great black banners proclaiming NO PEACEFUL TRANSITION—FIGHT BACK NOW—JOIN THE RESISTANCE.
+
+          Half a dozen or more police vans are pulled up around the circle with riot police around them. You want to seek out people you know in the crowd, but you don’t want to risk giving the police information about who knows who. Better to stick with your partner.
+
+          At a quarter past ten, the crowd begins moving off the island in the middle of the traffic circle. The people carrying banners take the front and the sides. The march is spread out over a wide area; the police are following, but they seem pretty hands off. The energy is electric, with people chanting and moving quickly. You scramble not to lose your friends in the rush.
+
+          People start dragging newspaper boxes and trashcans into street. Someone throws something at a gas station on the left. A corporate bakery on the right loses its windows. Someone is smashing the parking meter in front of it with a brick. Another person spray-paints “REVOLUTION OR DEATH” on the storefront beyond it. Your heart is pounding.
+          &lt;&lt;if $medickit is true&gt;&gt;
+          You grab your buddy&#39;s hand and try to get a look around. Now you don&#39;t see any police from where you are in the middle of the crowd, but you’re worried that they could attack the crowd at any minute. You pull out your goggles from your side pack and put them around your neck. Your medic training has taught you to be prepared for police weapons. Your buddy has a little bit more experience than you; you put your hands on each other&#39;s shoulders while one of you walks backwards so that together you can get a full view of what&#39;s going on. It&#39;s hard to see much through the crowd, but you hear glass breaking and the scrape of metal and a lot of yelling and chanting. You feel for your water bottles with the squirt tops and make sure they are ready on your fanny pack.  
+          &lt;&lt;/if&gt;&gt;
+          The march turns right on K Street. There’s a big park here—and a limousine. Somebody runs up to the limousine and smashes out its windows. The driver stands next to it, watching calmly, filming with his phone.
+
+          The march turns to cut through the middle of the park. Someone is shouting “Whose park? Our park!” You can hear sirens in the distance.
+
+          Further down the next street, you see a Starbucks and a Bank of America.
+          &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ivgwTZDEQho&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;           &lt;&lt;if $hammer is true&gt;&gt;
+          Further down the next street, you see a Starbucks and a Bank of America. This is why you brought a hammer, right? You check in with your partner: “Should we get them?”
+
+          “OK with me,” answers your friend.
+
+          People have already smashed out several of the windows by the time you get through the crowd. Somebody is throwing a trashcan against the Starbucks. Someone else is swinging a baseball bat—?! You take your hammer to the door of the bank. That’s for those predatory loans! And that’s for evicting people from their homes! And that’s for getting a bailout while your parents were getting screwed!
+          &lt;&lt;if $tryonclothes is false&gt;&gt;
+          As you’re swinging the hammer, the cuffs of your sweatshirt ride up your wrists, exposing your tattoos. Hell—you should have practiced moving around in your gear before you got here! Hope nobody saw that!
+          &lt;&lt;/if&gt;&gt;
+          Your friend is watching your back to make sure undercover officers don’t grab you—but there are so many people with cameras around that the most they can do is keep photographers from getting a close-up shot. Who knows how many people recorded you smashing that door…
+
+          People keep throwing projectiles at the bank from behind you while you’re in their line of fire. That’s not safe either!
+
+          Most of the march has passed now. You and your partner run and get back into the middle of it. You try to find other people you know, but it’s hard with everyone dressed the same and so much chaos going on.
+          &lt;&lt;/if&gt;&gt;
+          A block further, there’s another open area, a much smaller park. The march goes around it, only to find police massing on the other side of it. The crowd doubles back, but police are blocking the way you arrived. Cops are appearing from all directions now, shooting pepper spray at those on the margins of the group. The crowd surges southwest on New York Avenue towards the White House, but a block further on there are more police, and the front of the march turns north again.
+          &lt;&lt;if $medickit is true&gt;&gt;
+          As police attack the crowd, many people start to run. You try to continue walking calmly, but you have to move quickly to follow the crowd.  You notice a couple people who have been pepper-sprayed have stopped at the edge of the street.  You ask them if they are okay, but it turns out their friends brought an eye-wash with them; they have all the help they need. You get back into the crowd and keep moving, although here at the back of the march, you are getting doused in pepper-spray yourself; you are very grateful for your goggles, as you can see the streams of pepper-spray running across the thick plastic that protects your eyes. The skin on your face is burning. Your buddy is still at your side; together, you help some people who can&#39;t see anymore to get out of the path of the police.
+          &lt;&lt;/if&gt;&gt;
+          Around the corner, you come upon a McDonald’s. People start smashing it, but it turns out you’ve just gone in a circle—the march is about to arrive back at the big park where the limousine is. It doesn’t seem like anyone has a plan. You can hear sting-ball grenades exploding as police attack the march.
+
+          There’s an alley by the McDonalds. Do you [[duck down the alley to try to get away-&gt;leave early]]?
+
+          Or do you [[stick with the march-&gt;stay to help]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="14" name="do jail support" tags="" position="916,128" size="100,100">&lt;&lt;set $solid to $solid +1&gt;&gt;You walk up to the intersection of 12th Street and L Street. The police have positioned a forbidding line of riot cops here. On the other side of the street, you see a crowd of people surrounded by another line of police. This is the kettle where the march ended. Some of the people being detained are still wearing black; others look like they were trapped there at random when the police closed off the area. Some people look like they’ve been injured. You join the crowd chanting: “We love you! Stay strong! The revolution goes on!”
+
+          On your side of the police line, there are a few black sweatshirts and backpacks lying on the street. You grab them and get them out of the area so they don’t end up in evidence.
+
+          The next day, you go to the courthouse to greet the arrestees as they are released. Every arrestee has the exact same charge, felony rioting. There are more than 200 of them. You give them shoelaces, belts, burner phones, and metro cards as they come out and chant so everyone knows you support them.
+
+          On April 27, the prosecution &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/04/29/new-blanket-felony-charges-pressed-against-j20-arrestees&quot;&gt;adds seven or more additional felony charges&lt;/a&gt; to every single arrestee. The state is threatening everyone with up to seventy-five years in prison. They want to use collective punishment to terrorize everyone out of participating in street protests.
+
+          Over the next several months, you organize fundraisers to collect money for lawyers and transportation costs. You participate in various days of action in solidarity with the defendants. You explain the case over and over to liberals. You offer defendants emotional and logistical support as they grapple with the implications of spending years in prison and struggle to travel back and forth to Washington, DC for their court dates. In December, the defendants in the first trial block are all declared innocent on all counts. In January 2018, immediately before the day of solidarity actions a year after the arrests, the prosecutors drop the charges for 129 defendants. The tide is starting to turn, but the state is gunning hard for the remaining defendants, maintaining that they are the really bad ones.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/4.jpg&quot;&gt;
+
+          You keep raising money for them and publicizing their cases, trying to undermine the prosecutors’ narrative. Finally, after another trial in which no defendants are found guilty, the government drops the rest of the charges in July 2018.
+
+          You’ve helped support the defendants through their ordeal—and helped prevent the prosecution from setting a new precedent for repression.
+
+          Risk Factor: $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="15" name="not do jail support" tags="" position="1063,130" size="100,100">You know the police have surrounded people, but things have been stressful enough already. You get out of the area and return to your daily life.
+
+          You hear that over 200 people were arrested in the kettle after the march. All of them are charged with the same count of felony rioting. In April, the prosecution adds seven or more additional felony charges to every single arrestee, threatening everyone with up to seventy-five years in prison. They want to use collective punishment to terrorize everyone out of participating in any kind of street protest at all. You watch it all happening from a distance, feeling powerless. Things are sliding towards totalitarianism and you don’t know what to do to stop it.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/2.jpg&quot;&gt;
+
+          In the end, however, all the charges are resolved. Only one arrestee does a few months in prison. Most of the others have their charges dropped, though it takes a year and a half.
+
+          Their ordeal is over—no thanks to you.
+
+          Risk Factor: $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="16" name="leave early" tags="" position="647,709" size="100,100">You and your friend run down the alley away from the rest of the crowd. A few other people have had the same idea. The alley is narrow, but if you can get through, maybe you can get to safety. It curves around, so you can’t see what’s on the other end of it ahead of you. You run around the corner—and there, ahead of you at the other end of the alley, you see more cops! If they block you in from both sides and trap you in here, you’re screwed.
+
+          You run back where you came from and get back out of the alley just as the tail end of the march is passing by. A large number of armored officers are following the crowd on motorcycles and bicycles and on foot. You just barely get ahead of them. They don’t try to grab you, but they force you back towards the rest of the march. One cop is running along shooting pepper spray everywhere from a dispenser the size of a fire extinguisher. Someone in a mask fends him off with a pole.
+
+          You manage to [[rejoin the march-&gt;stay to help]]. That was close!
+        </tw-passagedata>
+
+        <tw-passagedata pid="17" name="stay to help" tags="" position="371,907" size="100,100">&lt;&lt;set $debloc to false&gt;&gt; The march arrives back at the park. Sirens and explosions are ringing out everywhere. Some middle-class spectator calls out “Keep it peaceful!”—as if Trump imprisoning and deporting people will be peaceful, as if the police throwing sting-ball grenades and dousing people with pepper spray is peaceful. Bike cops in blue jackets and motorcycle cops in fluorescent yellow jackets turn the corner behind you, chasing after the march.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/7.jpg&quot;&gt;
+
+          The march is spread out—a bunch of people are moving along the sidewalk to the left, others are massing in the street, others hurrying through the park. It looks like many people are heading towards the other side of the park to regroup.
+
+          Do you [[take this opportunity to try to escape-&gt;escape]]?
+
+          Or do you [[stick with the march-&gt;stick with the march]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="18" name="escape" tags="" position="562,907" size="100,100">&lt;&lt;set $debloc to true&gt;&gt; Police are running in from all sides, but they aren’t organized yet. You sprint across the park, aiming for low concentrations of police and taking advantage of gaps in their lines. Eventually, you reach a street that isn’t blocked off. You run down it for a block, then turn the corner and step into the first alley you see. Your lungs are heaving. Here, inside the mouth of the alley, you hope you have a little privacy from the police and the cameras to change your outfit—though you can’t be sure there aren’t surveillance cameras here, now that you think about it. In any case, it’s not safe to keep your black gear on when the streets are full of cops looking for people dressed like you.
+
+          &lt;&lt;if $tryonclothes is false&gt;&gt;You get your mask and sweatshirt off without much trouble, but you’re wearing black pants over your getaway outfit, and you haven’t practiced getting the black pants off quickly. You try to pull them over your shoes, but you get stuck, and your partner has to pull on them while you sit on the pavement, struggling to disentangle yourself. There are sirens and explosions ringing out nearby—it seems like they’re coming closer and closer. It’s a really stressful situation.
+
+          Speaking of your shoes, fuck—your shoes have a corporate logo prominently displayed on them that you didn’t see anyone else wearing. If someone managed to film you, you could probably be recognized by that logo, and you don’t have any other shoes to wear for the rest of the day.&lt;&lt;/if&gt;&gt;
+
+          Finally, you manage to complete your outfit change and get moving. You get out of the alley and walk quickly away, trying to look normal as police and National Guard run past you. It’s scarcely been half an hour since the march started, but it feels like you’ve lived through a whole day’s worth of events.
+
+          Two blocks later, your pulse is pounding in your ears—harder than it was when you were running in the march. But for the moment, at least, it looks like you’re safe. You eat an energy bar, drink some water, and exhale in disbelief.
+
+          Eventually, you make your way back through the streets. There’s a permitted rally going on all day at McPherson Square; you stop there and get a plate of food. Two blocks east, beside the park that the march passed through twice, protesters have built a bonfire out of newspaper boxes and trash cans next to the smashed up limousine at the intersection of K Street and 13th Street. The fire is still burning, surrounded by photographers.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/8.jpg&quot;&gt;
+
+          More and more people are filling the streets. Downtown looks a lot different than it did when you first passed through here.
+
+          Then you hear that the police are surrounding hundreds of people who participated in the march. They are being held in a &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests&quot;&gt;kettle&lt;/a&gt; at the intersection of 12th Street and L Street, just two blocks away.
+
+          Do you [[try to figure out how to support the people being detained by the police-&gt;support]]?
+
+          Or do you [[forget about them and move on with your life-&gt;no support]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="19" name="stick with the march" tags="" position="136,1035" size="100,100">&lt;&lt;set $risk to $risk +1&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;Sprinting across the park, you and your partner reach the rest of the march at the intersection to the northwest. A few National Guardsmen and a long line of bike cops fan out to block the way west, so you follow the crowd north. Someone is smashing a Starbucks inside the hotel on your right. There’s a line of police blocking the way forward at the next street, so everyone turns right. The motorcycle cops behind the march are following close behind, threatening to run over the heels of the marchers. Adrenaline is surging through your veins. It’s hard to think clearly.
+
+          By the time the front of the march is approaching the end of the block, motorcycle cops are trying to pass you on the sidewalk to your left. A scuffle erupts as someone hits a motorcycle cop with a patio chair from a restaurant. A pro-Trump biker tries to get involved; he comes away with a bloody face. You run through the intersection to the next block, but there are police everywhere. You can see cops ahead of you in the next intersection, too.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/9.jpg&quot;&gt;
+
+          You’re passing another alley on your right. Maybe it’s time to escape? Or would that mean abandoning your friends? Is there more power in numbers? Is it safer to try to get out of the area by yourself, or all together?
+
+          You can see a few different options, but all of them seem super risky.
+
+          Do you [[turn right and run down the alley-&gt;take second alley]], hoping the police won’t trap you in it?
+
+          Do you [[pull off your black clothes and fall behind the march-&gt;debloc]]?
+
+          Do you [[try to run past the police through the intersection ahead of the march-&gt;runahead]], hoping they won’t grab you?
+
+          Or do you [[stick together with everyone else-&gt;Stick together]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="20" name="support" tags="" position="875,1166" size="100,100">&lt;&lt;set $solid to $solid +1&gt;&gt;You walk up to the intersection of 12th Street and L Street. The police have positioned a forbidding line of riot cops here. On the other side of the street, you see a crowd of people surrounded by another line of police. This is the kettle where the march ended. Some of the people being detained are still wearing black; others look like they were trapped there at random when the police closed off the area. Some people look like they’ve been injured. You join the crowd chanting: “We love you! Stay strong! The revolution goes on!”
+
+          On your side of the police line, there are a few black sweatshirts and backpacks lying on the street. You grab them and get them out of the area so they don’t end up in evidence.
+
+          The next day, you go to the courthouse to greet the arrestees as they are released. Every arrestee has the exact same charge, felony rioting. There are more than 200 of them. You give them shoelaces, belts, burner phones, and metro cards as they come out and chant so everyone knows you support them.
+
+          On April 27, the prosecution &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/04/29/new-blanket-felony-charges-pressed-against-j20-arrestees&quot;&gt;adds seven or more additional felony charges&lt;/a&gt; to every single arrestee. The state is threatening everyone with up to seventy-five years in prison. They want to use collective punishment to terrorize everyone out of participating in street protests.
+
+          Over the next several months, you organize fundraisers to collect money for lawyers and transportation costs. You participate in various days of action in solidarity with the defendants. You explain the case over and over to liberals. You offer defendants emotional and logistical support as they grapple with the implications of spending years in prison and struggle to travel back and forth to Washington, DC for their court dates. In December, the defendants in the first trial block are all declared innocent on all counts. In January 2018, immediately before the day of solidarity actions a year after the arrests, the prosecutors drop the charges for 129 defendants. The tide is starting to turn, but the state is gunning hard for the remaining defendants, maintaining that they are the really bad ones.
+
+          &lt;img src=&quot;http://defendj20resistance.org/img/Timeline-Graphic_May-.jpg&quot;&gt;
+
+          You keep raising money for them and publicizing their cases, trying to undermine the prosecutors’ narrative. Finally, after another trial in which no defendants are found guilty, the government drops the rest of the charges in July 2018.
+
+          You’ve helped support the defendants through their ordeal—and helped prevent the prosecution from setting a new precedent for repression.
+
+          Risk Factor: $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="21" name="no support" tags="" position="998,1164" size="100,100">You know the police have surrounded people, but things have been stressful enough already. You get out of the area and return to your daily life.
+
+          You hear that over 200 people were arrested in the kettle after the march. All of them are charged with the same count of felony rioting. In April, the prosecution adds seven or more additional felony charges to every single arrestee, threatening everyone with up to seventy-five years in prison. They want to use collective punishment to terrorize everyone out of participating in any kind of street protest at all. You watch it all happening from a distance, feeling powerless. Things are sliding towards totalitarianism and you don’t know what to do to stop it.
+
+          In the end, however, all the charges are resolved. Only one arrestee does a few months in prison. Most of the others have their charges dropped, though it takes a year and a half.
+
+          At least their ordeal is over.
+
+          Risk Factor: $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="22" name="debloc" tags="" position="163,1174" size="100,100">It’s too sketchy to stay in the march, and you’re afraid that with so many people running into the alley, everyone will get surrounded and trapped there. You and your partner slip your masks and sweatshirts off in the middle of the crowd and move onto the sidewalk. Then you drop behind, dawdling. The first line of police chasing the march passes right by the two of you. There are other police further behind them, but you try to will yourselves invisible. It seems to work.
+
+          Unfortunately, when you go to try to make your way out, the police block your path and turn you around, shouting that you can’t go this way. The police lines have already closed off the alley you decided not to run down; you’re trapped in a dead end, at least in this direction.
+
+          In the other direction, a line of cops has blocked access to the next intersection, trapping everyone who remains in the march. You walk up just in time to see people in the front count down from ten to one and charge the line of police. Someone at the front of the charge is holding an umbrella to block the ensuing shower of pepper spray.
+          &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mIjWu06qQ30&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;
+          Amazingly, they break through the police line, and a lot of people fight their way to freedom. You’re at the back of the crowd, though, so even if you were still masked up, you wouldn’t be able to get there in time.
+
+          The police reform their lines. You’re trapped in a kettle.
+
+          Do you [[continue trying to escape-&gt;kettle]]?
+
+          Do you [[accept your fate-&gt;kettle]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="23" name="runahead" tags="" position="419,1111" size="100,100">You run towards the front of the march.
+
+          Police are massing in the intersection ahead of you—some of the motorcycle cops that have just driven past you, and some other cops, and a half dozen or more National Guardsmen, with motorcycles and cop cars parked as makeshift barricades. But they aren’t organized yet—they’re still getting their line together. You and your comrade sprint around them, right through a gap they haven’t filled in yet. Their instructions are to form a line; they can’t stop to run after you instead.
+
+          You linger on the other side of the police line for a moment, waiting to see if more people get through, but the situation is getting sketchier and sketchier as more cops arrive. Finally your partner convinces you to make a run for it. You dash off, turn a corner, and run until you reach the mouth of an alley.
+
+          Here, inside the mouth of the alley, you hope you have a little privacy from the police and the cameras to change your outfit—though you can’t be sure there aren’t surveillance cameras here, now that you think about it. In any case, you can’t keep your black gear on when there are so many cops around looking for people dressed like you.
+
+          Other people have arrived in this alley from the other end. They’re doing the same thing, stripping off their sweatshirts and gloves and balaclavas, dropping their backpacks. Hope those won’t be tested for DNA!
+
+          Finally, you manage to complete your outfit change and get moving. You get out of the alley and walk quickly away, trying to look normal as police and National Guard run past you.
+
+          Two blocks later, your pulse is pounding in your ears even harder than it was when you were running in the march. But for the moment, at least, it looks like you’re safe. You eat an energy bar, drink some water, and exhale in disbelief.
+
+          Eventually, you make your way back through the streets. There’s a permitted rally going on all day at McPherson Square; you stop there and get a plate of food. Two blocks east, beside the park that the march passed through twice, protesters have built a bonfire out of newspaper boxes and trash cans next to the smashed up limousine at the intersection of K Street and 13th Street. The fire is still burning, surrounded by photographers.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/8.jpg&quot;&gt;
+
+          More and more people are filling the streets. Downtown looks a lot different than it did when you first passed through here.
+
+          Then you hear that the police are still surrounding hundreds of people who participated in the march. They are being held in a &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests&quot;&gt;kettle&lt;/a&gt; at the intersection of 12th Street and L Street, just two blocks away.
+
+          Do you [[try to figure out how to support the people being detained by the police-&gt;support]]?
+
+          Or do you [[forget about them and move on with your life-&gt;no support]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="24" name="kettle" tags="" position="230,1349" size="100,100">&lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/10.jpg&quot;&gt;
+
+          The police close in around you from all sides. You’re scanning your surroundings, hoping there are still holes somewhere in the police line. You don’t see any. Maybe you can do another countdown and charge again? You hesitate—what if it’s too late? Maybe you can convince a cop that you and your friends just got caught in the wrong place at the wrong time. Your mind is racing and the situation around you is chaotic.
+
+          People are shouting as the police push protesters tighter and tighter together. A flash-bang grenade explodes a dozen feet away. Someone screams. When the smoke clears, one protester is lying on the ground. The police are pepper-spraying everyone and beating you with their batons and shields.
+          &lt;&lt;if $medickit is true&gt;&gt;
+          You start to look for medical needs in the crowd.  You start with yourself, wiping the pepper-spray off your goggles and putting on a new pair of nitrile gloves.  You change your bandana as well. Your skin is still stinging, but somehow, you seem to have evaded most of the pepper spray. You get to work washing out the eyes of the other protestors and asking if anyone needs medical help.
+
+          You find someone who is having difficulty breathing. They tell you that they have asthma. It’s not easy for anyone to breathe this air, as chemical weapons hang acrid in it. You bring the person with asthma to the front of the crowd and try to talk to the police.  At first, they keep yelling at you to “GET BACK!” and ramming their batons into your chest. You keep yelling, &quot;I am a medic, this person has asthma!&quot; Finally, keeping calm, you demand to speak to a supervisor. This has some effect; the officers come and take the person with asthma away.
+          &lt;&lt;/if&gt;&gt;
+          After things calm down, you’re just stuck there standing around in the &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests&quot;&gt;kettle&lt;/a&gt; for hours. There are over 200 of you. You try to drop your remaining gear as surreptitiously as you can, hoping it won’t be associated with you.
+
+          Then you get inside the crowd and change out of your clothes, hoping no camera is recording you.
+          &lt;&lt;if $tryonoutfit is false&gt;&gt;Now you’re worried about the mask you were wearing—it didn’t really fit you very well. Probably your hair was sticking out of it somewhere. And your shoes have a corporate logo prominently displayed on them that you don’t see anyone else wearing. If someone managed to film you earlier, you could probably be recognized by that logo. That’s not good news at all.
+          &lt;&lt;/if&gt;&gt;
+          Some people hang out in their black clothes and masks, giving the police additional footage of them to compare with the earlier footage of the march. You go around quietly explaining to people why that might be a bad idea.
+
+          People gather on the other side of the police lines, chanting support: “We love you! Stay strong! The revolution goes on!” After a couple hours, a scuffle breaks out over there and the police push them down the street and out of your view. You hear the intermittent explosion of sting-ball grenades from that direction for a long time. The police have started arresting everyone one by one.
+          &lt;&lt;if $burner is true&gt;&gt;
+          On your burner phone, you text your friends outside the kettle, telling them that you’re probably getting arrested and trying to coordinate legal support. Since it’s not your own phone, you figure you can just erase it and leave it on the ground here before you’re processed, or even smash it. You follow what’s going on a couple blocks away on twitter. It looks like people in masks are still throwing things at lines of police. That’s heartening. There’s even a video of somebody still dressed in black bloc gear running up and punching Richard Spencer, the famous fascist spokesperson, as he’s trying to do an interview right down the street from where the limousine was smashed up. It’s hilarious. Everyone presses around you, watching it over and over.
+
+          Eventually, later in the afternoon, you even see pictures of the limousine that got smashed up—now it’s on fire. At least they can’t accuse you of doing that!
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/8.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $iphone is true&gt;&gt;&lt;&lt;if $android is true&gt;&gt;Now that you realize you’re getting arrested and you may have a court case ahead of you, you wish you hadn’t brought your own phone. What if they use your cellular service records to chart your location throughout the march? You’re afraid to use your phone to call anyone because you don’t want to implicate anyone or give the authorities any more evidence.
+
+          Fortunately, somebody else has a burner phone. They’re following what’s going on a couple blocks away over twitter. It looks like people in masks are still throwing things at lines of police. That’s heartening. There’s even a video of somebody still dressed in black bloc gear running up and punching Richard Spencer, the famous fascist spokesperson, as he’s trying to do an interview right down the street from where the limousine was smashed up. The video is fucking hilarious. Everyone presses around the person with the burner phone, watching it over and over.
+
+          Eventually, later in the afternoon, the person with the burner phone reports that the limousine that got smashed up has been set on fire. At least they can’t accuse any of you of doing that!
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/8.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $nophone is true&gt;&gt;Somebody has a burner phone. They’re following what’s going on a couple blocks away over twitter. It looks like people in masks are still throwing things at lines of police. That’s heartening. There’s even a video of somebody still dressed in black bloc gear running up and punching Richard Spencer, the famous fascist spokesperson, as he’s trying to do an interview right down the street from where the limousine was smashed up. The video is fucking hilarious. Everyone presses around the person with the burner phone, watching it over and over.
+
+          Eventually, later in the afternoon, the person with the burner phone reports that the limousine that got smashed up has been set on fire. At least they can’t accuse any of you of doing that!
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/8.jpg&quot;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $medickit is true&gt;&gt;
+          As the hours drag on, you are growing increasingly worried about the crowd.  You are encouraging people to share water, extra clothes, and any food that they may have with each other. Some people are starting to get very cold. The sky is dreary and you know that hypothermia can become serious even in outdoor temperatures as high as 50 degrees. Many people are still soaking wet from rapidly executed eyewashes. You talk with the other medics in the kettle; two of you ask the police to process the arrestees more quickly on account of how dangerous the situation is. The police supervisor tells you he&#39;s working on it, but the hours continue to drag on.
+          &lt;&lt;/if&gt;&gt;
+          The arrests take a long time. The police aggressively misgender people. One officer keeps hitting on arrestees he perceives as young women. Your companions who have children are anxious about when they will be able to get back to them. There are no toilets.
+
+          Finally, you’re led into the back of the police van with the rest of the protesters that decided to drag their feet to the very end. You’re one of the last in line. It’s dark, about 7 pm. After hours of arresting protesters, the police are weary as they get you ready for jail.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/11.jpg&quot;&gt;
+
+          “Remove your shoelaces. Put all your belongings in the bag. Yes, that, too. I said everything.”
+
+          They cuff your hands with zip-ties—“flexi-cuffs”—and escort you to the van. You stuck together with your friends, figuring you’d be spending quite some time together. The door shuts and everyone starts trying to slip out of their cuffs.
+
+          You wait. And wait. Through the plexi-glass, you can see the police sitting in the front seats. They’re playing games on their phones; one of them is gambling, spending the overtime he’s earning. There is a line of police vans, all waiting. It’s like being in traffic and in jail at the same time. Eventually, the van starts moving and you’re on the highway out of DC. You’re confused as to where you’re going, but another protester is familiar with this system and fills you in: you’re probably heading to a police training center for processing, as has happened during other mass arrests. Miles outside the city, you finally arrive at a parking lot and wiggle back into your flexi-cuffs. You’re informed you’re going to have your picture taken and are offered the use of a bathroom for the first time since your arrest over twelve hours ago.
+
+          Police playing good cop try to chat, bad cops half-heartedly try to act tough. Everyone is tired. You put on a big smile for your arrest picture, why not? Other protesters put on some impressive attitude. Despite the situation, you’re in good spirits. You and your fellow protesters crack jokes and share information. You try to keep your morale high; it’s a good thing you got arrested with friends. People are still suffering the effects of pepper-spray; it’s worked its way deep into their skin. You try to make the best of your situation.
+
+          Next, you’re led into a bleak gray building fashioned to imitate a city block on the inside. You wonder if this is where police got so good at pepper-spraying random older people and beating bystanders. You’re shuffled from room to room as cops ask you the same questions over an over. The experience is a blur. You only get a pat-down, but some other people got much more invasive and violating searches. After many hours under the fluorescent lights of the training center, you’re put back into a police van and shuttled to the jail.
+
+          At this point it’s pretty late. Being one of the last protesters arrested, you’re at the end of the line. After many hours without food, water, or sleep, you’re brought to jail, still in flexi-cuffs. You and an acquaintance are thrown in a cell beside a large vent that produces quite a racket, not to mention sweltering temperatures. One of the “good cops” expresses sympathy about how hot it is. A “bad cop” yells at you and drags you down to get fingerprinted.
+
+          The machine doesn’t just take your fingerprints; it takes images of the sides of your hands and every angle it can get prints off of. You intentionally do a bad job; they force you to do each print multiple times. The wounds on your hands show up on the prints; you wonder if that is going to help or hurt you in this case. The cop working the machine tells you to do it over each time without a hint of emotion, then gives you a scan-able wristband with your picture on it. Back in your cell, it’s incredibly hot and you can’t sleep. They take your cellmate and you’re left alone for hours. Maybe you pass out for a little bit, but it’s so hot and loud you can’t remember.
+
+          Eventually you’re back in cuffs, sitting in a police van on the way to another giant bland beige building. It’s daytime and on your short ride you feel a mix of envy and pride as you watch the people in pink pussy hats en route to the Women’s March. After a lengthy wait in the van, you’re escorted to the custody of the US Marshals. They’re outwardly meaner than most of the cops have been so far. Again, you’re searched, more extensively this time, and thrown in a cell with a group of other protesters. It’s nice to see everyone; you start sharing information. People are giving you legal advice and you’re sharing what you understand thus far, while being careful not to say anything incriminating about yourself or your activities—who knows if you’re being recorded here. Someone with a clipboard starts filling out a form relating to your eligibility for a court-appointed lawyer. You get to hear the questions as they ask others and prepare your answers in advance. The people tire of filling out the forms; when they get to you, they just ask you two or three questions and jot your answers down on a scrap of paper.
+
+          Then they move you to yet another holding cell. It’s completely packed with protesters. You see more friends from around the country who you didn’t recognize before; hats off to their black bloc skills. Here you wait until you’re called to meet with legal council and asked the same basic questions that you’ve been asked many times already. Mostly, you wait.
+
+          Afterwards, you’re shuffled into a larger holding cell with dozens of other protesters also in adjacent holding cells. You’re happy to see everyone and everyone is happy to see you. You spend hours in here. Together, you complain about not having food and the marshals say they can’t feed you. You keep complaining, and yelling, and demanding food. The marshals keep telling you there’s nothing they can do. You continue protesting.
+
+          Eventually, they bring in bags full of sandwiches and you feel a small victory, despite the fact that the food is disgusting and it doesn’t meet the dietary needs of many of the people with you. Slowly, people are called away to see the judge. Every time a group of people is put in chains and led away, you join everyone in singing for them. You can hear other protesters singing in other rooms nearby, a sign of life in this inhuman place.
+
+          Your assigned lawyer comes to meet with you, but you’re only able to speak for a couple minutes before the marshals interrupt aggressively, preventing you from talking. You’ve seen a lot of cruelty and violence from the police, but these marshals seem to be especially despicable.
+
+          After many hours, your number comes up and you’re put in shackles to see the judge. People sing for you just as you sang for others before. The marshals lead you down the hall, insulting you the whole way. In shackles, you’re taken into a dark courtroom—or at least, everything seems dark after so many hours under unyielding florescent lights. The judge and your assigned lawyer go through the same process they’ve been through for all 234 arrestees; within a few minutes, you’re unshackled and free to go.
+
+          Walking out of the courtroom, you’re immediately surrounded by friends and supporters. Your lawyer takes you aside to explain what’s going on and what the next steps are. Then some punk-looking support people ask you to fill out a few forms about how to keep in touch and what your needs are. When you’re escorted out of the court with your friends, you’re greeted by a large group of people cheering and chanting. You choke up upon seeing such a beautiful display of support. In a whirlwind, people give you food, shoelaces to replace the ones taken at your arrest, a temporary phone, a DC metro card, and plenty of hugs as they escort you away from the courthouse, which is surrounded by police, and lead you to collect the property the police stole from you.
+
+          After filling out more forms, and more waiting, you get some of your things back. No one who brought a phone is getting it back, it seems. You comfort the people around you as they go through all sorts of grief, anger, and anxiety.
+
+          Reunited with your community, you begin to metabolize the trauma you’ve been through. It’s a lot to deal with. When you interact with people who haven’t experienced police attacks or jail or heavy charges, it’s as if a part of yourself is invisible.
+
+          All the arrestees are charged with the same count of felony rioting. How could over 200 people have broken the same handful of windows? You’re hoping that the charge will be dropped or reduced to a misdemeanor, but in April, the prosecution files a superseding indictment charging everyone with eight or more felonies. You ask your lawyer what the worst-case scenario is. He tells you that if you’re convicted, you could be sentenced to years in prison.
+
+          Other defendants get in touch with you about trying to organize a plan for collective defense. Your lawyer says you should focus on figuring out a defense strategy with him, and not to communicate with the other defendants. Your family is pressuring you to go along with whatever your lawyer says is best.
+
+          Do you [[go along with what your lawyer says]], keeping your distance from other defendants and relying on him to get you out of this mess?
+
+          Or do you [[communicate with other defendants to organize a collective defense strategy]], emphasizing to your lawyer that it’s important to you to organize in solidarity with all the other defendants even if it’s not something he has experience with?
+        </tw-passagedata>
+
+        <tw-passagedata pid="25" name="take second alley" tags="" position="301,1115" size="100,100">Police are running up from behind the march, but they aren’t organized yet. You sprint around them and run down the alley to your right, then turn left around another corner. Lots of other people have had the same idea. You’re afraid that so many people running down this alley will draw the cops after you—or make them run to meet you at the other end.
+
+          Fortunately, when you round the corner, you don’t see any cops ahead of you at the mouth of the next street. Here, at the end of the alley, you hope you have a little privacy from the police and the cameras to change your outfit—though you can’t be sure there aren’t surveillance cameras here, now that you think about it. In any case, you can’t keep your black gear on when the streets are full of cops looking for people dressed like you.
+
+          Lots of people around you are doing the same thing, stripping off their sweatshirts and gloves and balaclavas, dropping their backpacks. Hope those won’t be tested for DNA!
+
+          &lt;&lt;if $tryonclothes is false&gt;&gt;You get your mask and sweatshirt off without much trouble, but you’re wearing black pants over your getaway outfit, and you haven’t practiced getting the black pants off quickly. You try to pull them over your shoes, but you get stuck, and your partner has to pull on them while you sit on the pavement, struggling to disentangle yourself. There are sirens and explosions ringing out nearby—it seems like they’re coming closer and closer. A few more seconds and the police will be here. It’s a really stressful situation.
+
+          Speaking of your shoes, fuck—your shoes have a corporate logo prominently displayed on them that you didn’t see anyone else wearing. If someone filmed you, you could probably be recognized by that logo, and you don’t have any other shoes to wear for the rest of the day.&lt;&lt;/if&gt;&gt;
+
+          Finally, you manage to complete your outfit change and get moving. You get out of the alley and walk quickly away, trying to look normal as police and National Guard run past you.
+
+          Two blocks later, your pulse is pounding in your ears even harder than it was when you were running in the march. But for the moment, at least, it looks like you’re safe. You eat an energy bar, drink some water, and exhale in disbelief.
+
+          Eventually, you make your way back through the streets. There’s a permitted rally going on all day at McPherson Square; you stop there and get a plate of food. Two blocks east, beside the park that the march passed through twice, protesters have built a bonfire out of newspaper boxes and trash cans next to the smashed up limousine at the intersection of K Street and 13th Street. The fire is still burning, surrounded by photographers.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/8.jpg&quot;&gt;
+
+          More and more people are filling the streets. Downtown looks a lot different than it did when you first passed through here.
+
+          Then you hear that the police are still surrounding hundreds of people who participated in the march. They are being held in a &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests&quot;&gt;kettle&lt;/a&gt; at the intersection of 12th Street and L Street, just two blocks away.
+
+          Do you [[try to figure out how to support the people being detained by the police-&gt;support]]?
+
+          Or do you [[forget about them and move on with your life-&gt;no support]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="26" name="Stick together" tags="" position="331,1245" size="100,100">&lt;&lt;set $solid to $solid +1&gt;&gt;Many people duck out down the alley to your right, but you stick with the rest of the march moving forward. Over the heads of the people ahead of you, you see a line of blue-clad bike cops, motorcycle cops in fluorescent yellow, and police cars pulling into place to block access to the next intersection ahead of you—12th and L Street. That’s not good news!
+
+          You turn around. Behind you, the police have formed an even stronger line. Riot police in black armor are hitting people with their batons, trying to force everyone together; behind them, there is a line of officers in fluorescent yellow standing shoulder to shoulder across the entire street. One cop near the back of the march is splashing a thick arc of pepper spray across everyone in range. Even from a distance, it makes your eyes sting and your throat itch.
+
+          You can’t get to the alley behind you or the intersection ahead. You’re trapped. People are shouting in dismay. Despair is in the air.
+
+          “Should we charge the line?” asks someone you don’t know, to no one in particular.
+
+          Do you [[move to the front of the crowd]] in hopes of participating in a charge? If you do that and you get caught, it seems like your charges are bound to be worse.
+
+          Or do you [[hang back to see how it goes]], planning to join in if a charge works?
+        </tw-passagedata>
+
+        <tw-passagedata pid="27" name="move to the front of the crowd" tags="" position="653,1340" size="100,100">&lt;&lt;set $risk to $risk +2&gt;&gt;&lt;&lt;if $hammer is true&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;You and your friend move to the front of the crowd. You can see the police ahead of you, a line of blue and fluorescent yellow uniforms, and half a dozen or more National Guardsmen on the far right end. They’re all wearing helmets and gloves, holding batons and pepper spray, intimidating and inhuman. Behind them, they’ve parked their cars and motorcycles as an improvised barricade.
+
+          Someone shouts: “We’re going to do a countdown!” Her voice rings with courage, empty of hope but full of determination.
+
+          You’re standing in the front line of the march. The people around you are linking arms, and you hook your arms into theirs. It’s fucking terrifying. Someone calls out “Ten!” and everybody else joins in: “Nine! Eight! Seven! Six!” Everyone’s voices have that same ring of urgency. It binds you together as you prepare to do something insane and suicidal.
+
+          “Five! Four! Three!” Ahead of you, the police brace themselves and raise their weapons sadistically. “Two! ONE!”
+          &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mIjWu06qQ30&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;
+          You put your head down and charge the line of police. The cop in the front points his giant pepper spray dispenser at the crowd—but somebody has an umbrella, and miraculously, the first jet of pepper spray bounces off it. The person with the umbrella darts between the first two officers. You crash into the police line and push through the gaps as the police beat you with their batons and scream profanity. You sprint down the street. Behind you, you hear shrieks, blows, violence.
+
+          You bolt down the street for several blocks, then round a corner and turn into the first alley you see. Your lungs are heaving and your hands are burning from the pepper spray. Here, inside the mouth of the alley, you hope you’ll have a little privacy from the police and the cameras to change your outfit—though might be surveillance cameras here, now that you think about it. In any case, you can’t keep your black gear on when the streets are full of cops looking for people dressed like you.
+
+          &lt;&lt;if $tryonclothes is false&gt;&gt;You get your mask and sweatshirt off without much trouble, but you’re wearing black pants over your getaway outfit, and you haven’t practiced getting the black pants off quickly. You try to pull them over your shoes, but you get stuck, and your partner has to pull on them while you sit on the pavement, struggling to disentangle yourself. There are sirens and explosions ringing out nearby—it seems like they’re coming closer and closer. A few more seconds and the police will be here. It’s a really stressful situation.
+
+          Speaking of your shoes, fuck—your shoes have a corporate logo prominently displayed on them that you didn’t see anyone else wearing. If someone managed to film you, you could probably be recognized by that logo, and you don’t have any other shoes to wear for the rest of the day.&lt;&lt;/if&gt;&gt;
+
+          Finally, you manage to complete your outfit change and get moving. You get out of the alley and walk quickly away, trying to look normal as police and National Guard hurry past you.
+
+          Two blocks later, your pulse is still pounding in your ears just as hard as it was when you charged the line of police. But for the moment, at least, it looks like you’re safe. You try to wash the pepper spray off your face with the last of your water.
+
+          Eventually, you make your way back through the streets. There’s a permitted rally going on all day at McPherson Square; you stop there and get a plate of food. Two blocks east, beside the park that the march passed through twice, protesters have built a bonfire out of newspaper boxes and trash cans next to the smashed up limousine at the intersection of K Street and 13th Street. The fire is still burning, surrounded by photographers.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2017/01/20/fire-13th-k.jpg&quot;&gt;
+
+          More and more people are filling the streets. Downtown looks a lot different than it did when you first passed through here.
+
+          Then you hear that the police are surrounding hundreds of people who participated in the march. They are being held in a &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests&quot;&gt;kettle&lt;/a&gt; at the intersection of 12th Street and L Street, just two blocks away.
+
+          Do you [[try to figure out how to support the people being detained by the police-&gt;support]]?
+
+          Or do you [[forget about them and move on with your life-&gt;no support]]?
+          &lt;&lt;/if&gt;&gt;&lt;&lt;if $medickit is true&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;You and your friend move to the front of the crowd. You can see the police ahead of you, a line of blue and fluorescent yellow uniforms, and half a dozen or more National Guardsmen on the far right end. They’re all wearing helmets and gloves, holding batons and pepper spray, intimidating and inhuman. Behind them, they’ve parked their cars and motorcycles as an improvised barricade.
+
+          Someone shouts: “We’re going to do a countdown!” Her voice rings with courage, empty of hope but full of determination.
+
+          You’re standing in the front line of the march. The people around you are linking arms, and you hook your arms into theirs. It’s fucking terrifying. Someone calls out “Ten!” and everybody else joins in: “Nine! Eight! Seven! Six!” Everyone’s voices have that same ring of urgency. It binds you together as you prepare to do something insane and suicidal.
+
+          “Five! Four! Three!” Ahead of you, the police brace themselves and raise their weapons sadistically. “Two! ONE!”
+
+          You put your head down and charge the line of police. The cop in the front points his giant pepper spray dispenser at the crowd—but somebody has an umbrella, and miraculously, the first jet of pepper spray bounces off it. The person with the umbrella darts between the first two officers. You crash into the police line and push through the gaps as the police beat you with their batons and scream profanity. You sprint down the street. Behind you, you hear shrieks, blows, violence.
+
+          You bolt down the street for several blocks, then round a corner and turn into the first alley you see. Your lungs are heaving and your hands are burning from the pepper spray. Here, inside the mouth of the alley, you hope you’ll have a little privacy from the police and the cameras to change your outfit—though might be surveillance cameras here, now that you think about it. In any case, you can’t keep your black gear on when the streets are full of cops looking for people dressed like you.
+          &lt;&lt;if $tryonclothes is false&gt;&gt;You get your mask and sweatshirt off without much trouble, but you’re wearing black pants over your getaway outfit, and you haven’t practiced getting the black pants off quickly. You try to pull them over your shoes, but you get stuck, and your partner has to pull on them while you sit on the pavement, struggling to disentangle yourself. There are sirens and explosions ringing out nearby—it seems like they’re coming closer and closer. A few more seconds and the police will be here. It’s a really stressful situation.
+
+          Speaking of your shoes, fuck—your shoes have a corporate logo prominently displayed on them that you didn’t see anyone else wearing. If someone managed to film you, you could probably be recognized by that logo, and you don’t have any other shoes to wear for the rest of the day.
+          &lt;&lt;/if&gt;&gt;
+          Finally, you manage to complete your outfit change and get moving. You get out of the alley and walk quickly away, trying to look normal as police and National Guard hurry past you.
+
+          Two blocks later, your pulse is still pounding in your ears just as hard as it was when you charged the line of police. But for the moment, at least, it looks like you’re safe. You try to wash the pepper spray off your face with the last of your water.
+
+          Eventually, you make your way back through the streets. There’s a permitted rally going on all day at McPherson Square; you stop there and get a plate of food. Two blocks east, beside the park that the march passed through twice, protesters have built a bonfire out of newspaper boxes and trash cans next to the smashed up limousine at the intersection of K Street and 13th Street. The fire is still burning, surrounded by photographers.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2017/01/20/fire-13th-k.jpg&quot;&gt;
+
+          More and more people are filling the streets. Downtown looks a lot different than it did when you first passed through here.
+
+          Then you hear that the police are surrounding hundreds of people who participated in the march. They are being held in a &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests&quot;&gt;kettle&lt;/a&gt; at the intersection of 12th Street and L Street, just two blocks away.
+
+          Do you [[try to figure out how to support the people being detained by the police-&gt;support]]?
+
+          Or do you [[forget about them and move on with your life-&gt;no support]]?
+          &lt;&lt;/if&gt;&gt;&lt;&lt;if $umbrella is true&gt;&gt;&lt;&lt;set $solid to $solid +3&gt;&gt;You move to the front of the crowd with your companion. You can see the police ahead of you, a line of blue and fluorescent yellow uniforms. At the far right side, half a dozen or more National Guardsmen make up the final part of their line. The cops are all wearing helmets and gloves, holding batons and pepper spray, intimidating and inhuman. They’ve parked their cars and motorcycles behind them as an improvised barricade.
+
+          Someone you haven’t met before links arms with you. “We’re going to do a countdown!” she shouts. Her voice rings out above the din of voices and motors and sirens, empty of hope but full of determination. It rings like a sword drawn at Thermopylae.
+
+          You’re standing in the very front of the line of demonstrators. All you have to defend yourself against the police batons is your umbrella. You open it. Someone shouts out “Ten!” and others join in: “Nine! Eight!” You join in, too: “Seven! Six!” All of your voices share the same urgency. It binds you together as you prepare to do something insane.
+
+          “Five!” You raise your flimsy black umbrella in front of you like a battering ram. One of the spokes is already bent the wrong direction. It probably wouldn’t suffice to block a light rain.
+
+          “Four! Three!” Ahead of you, the police brace themselves and raise their weapons sadistically. “Two! ONE!”
+
+          You charge the line of police. The cop in the front points his giant pepper spray dispenser directly at you. You hold up your umbrella as you race forward, head down, hurtling towards certain doom.
+
+          Miraculously, the pepper spray bounces off the umbrella. You push between the first cop and the officer next to him, and the crowd pours through behind you as the police beat them with batons and scream profanity. You sprint down the street. Behind you, you can hear shrieks, blows, violence.
+
+          You bolt as fast as you can for several blocks, then turn a corner and step into the first alley you see. Your lungs are heaving and your hands are burning from the pepper spray. Here, inside the mouth of the alley, you hope you’ll have a little privacy from the police and the cameras to change your outfit—though there might be surveillance cameras here, now that you think about it. In any case, you can’t keep your black gear on when the streets are full of cops looking for you.
+          &lt;&lt;if $tryonclothes is false&gt;&gt;You get your mask and sweatshirt off without much trouble, but you’re wearing black pants over your getaway outfit, and you haven’t practiced getting the black pants off quickly. You try to pull them over your shoes, but you get stuck, and your partner has to pull on them while you sit on the pavement, struggling to disentangle yourself. There are sirens and explosions ringing out nearby—it seems like they’re coming closer and closer. A few more seconds and the police will be here. It’s a really stressful situation.
+
+          Speaking of your shoes, fuck—your shoes have a corporate logo prominently displayed on them that you didn’t see anyone else wearing. If someone managed to film you, you could probably be recognized by that logo, and you don’t have any other shoes to wear for the rest of the day.
+          &lt;&lt;/if&gt;&gt;
+          Finally, you manage to complete your outfit change and get moving. You get out of the alley and walk quickly away, trying to look normal as police and National Guard hurry past you.
+
+          Two blocks later, your pulse is still pounding in your ears just as hard as it was when you charged the line of police. But for the moment, at least, it looks like you’re safe. You try to wash the pepper spray off your face with the last of your water.
+
+          Eventually, you make your way back through the streets. There’s a permitted rally going on all day at McPherson Square; you stop there and get a plate of food. Two blocks east, beside the park that the march passed through twice, people have built a bonfire out of newspaper boxes and trash cans next to the smashed up limousine at the intersection of K Street and 13th Street. The fire is still burning, surrounded by photographers.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/8.jpg&quot;&gt;
+
+          More and more people are filling the streets. Downtown looks a lot different than it did when you first passed through here.
+
+          Then you hear that the police are still surrounding hundreds of people from the march. They are being held in a &lt;a target=&quot;_blank&quot; href=&quot;https://crimethinc.com/2017/01/30/making-the-best-of-mass-arrests-12-lessons-from-the-kettle-during-the-j20-protests&quot;&gt;kettle&lt;/a&gt; at the intersection of 12th Street and L Street, where you left them.
+
+          Do you [[try to figure out how to support the people being detained by the police-&gt;support]]?
+
+          Or do you [[forget about them and move on with your life-&gt;no support]]?&lt;&lt;/if&gt;&gt;
+        </tw-passagedata>
+
+        <tw-passagedata pid="28" name="hang back to see how it goes" tags="" position="535,1341" size="100,100">&lt;&lt;set $risk to $risk +1&gt;&gt;You want to get out of the kettle, but being in the front line of a charge against riot police sounds suicidal. You can see the cops ahead of you, a line of blue and fluorescent yellow uniforms, with half a dozen or more National Guardsmen at one side. They’re all wearing helmets and gloves, holding batons and pepper spray, intimidating and inhuman. Behind them, they’ve parked their cars and motorcycles as an improvised barricade.
+
+          Someone ahead of you shouts: “We’re going to do a countdown!” Her voice is empty of hope but full of determination. Someone calls out “Ten!” and everybody in the front joins in: “Nine! Eight! Seven! Six!” Doing a charge is fucking crazy, but let’s see if it works.
+
+          “Five! Four! Three!” Ahead, the police brace themselves and raise their weapons sadistically. “Two! ONE!”
+          &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mIjWu06qQ30&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;
+          The front of the crowd charges forward. The cop in the front points his giant pepper spray dispenser at the crowd—but somebody at the front of the charge is carrying an umbrella and the first jet of pepper spray bounces off it. The person with the umbrella darts between the first two officers. The people behind them get through as the officers scramble to beat and grab them. Actually, it looks like almost everyone at the front of the march is getting through. You’re packed in tight where you are, but the crowd around you starts moving forward, too.
+
+          The charge broke through the police lines at the far left, but there’s a bottleneck there as everyone tries to get through. The police have had to scramble to shift their lines towards the corner to block the crowd and chase the escapees, leaving gaps in their line across the rest of the street. Some individuals manage to run through those gaps, but then the cops get their bearings and start hitting and pepper-spraying everyone who approaches them. A lot of people have tripped and fallen over each other at the corner, blinded by pepper-spray. Cops are striking them with their batons, shouting “BACK THE FUCK UP!” in imitation of their favorite cop dramas.
+
+          Moving as fast as you can in the tight press of the crowd, you get as far as the police line—but by the time you get there, it’s impossible to get through. [[You’re trapped-&gt;kettle]].
+        </tw-passagedata>
+
+        <tw-passagedata pid="29" name="go along with what your lawyer says" tags="" position="155,1499" size="100,100">Isolated from the other defendants, you lack connection to other people who can relate to what you are going through. Your lawyer has accepted that you’re not going to testify against anyone else, but he still doesn’t really understand your values. All the stress from the uncertainty of your future keeps building up.
+
+          You sometimes hear about how the other defendants are working together, going through all the evidence and exchanging ideas about legal strategy. But at this point, you’re so checked out that you can’t bring yourself to think about the case. It’s a huge weight hanging over you. Sometimes you just want to go to prison and get it over with so you can move on with your life.
+
+          &lt;&lt;if $tryonclothes is false&gt;&gt;You have a lot of regrets about the way you dressed. Looking at videos from the day, it’s possible to pick you out by the distinguishing features of your clothing from one scene to the next. Sure, it was black, but it turns out it didn’t really conceal who you are. You hope it won’t be as obvious to prosecutors—and a jury—as it is to you.
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $android is true&gt;&gt;It turns out that, although you locked your phone, the government was able to crack into it and access all your data. This is terrible news—it means they can read all your text messages about going to the march and they know who you were communicating with. Your carelessness has made your court case harder and given them information about other people, now, too. It turns out there was a way to add an additional passcode to access Signal on an Android, but you didn’t use it—you thought your phone was secure. You have a lot of regrets about bringing your phone at all. It keeps you awake at night thinking about what you wish you’d done differently.
+          &lt;&lt;/if&gt;&gt;&lt;&lt;if $iphone is true&gt;&gt;You hear that the government has cracked the encryption to get into the Android phones, but apparently they haven’t been able to break into iPhones like you brought. You feel relieved for yourself, but terrible for the arrestees whose privacy has been invaded—and you’ve exchanged texts with some of the people whose phones were cracked, which just makes you more worried that the prosecution will be able to make an argument that you’re guilty of conspiracy.
+          &lt;&lt;/if&gt;&gt;
+          [[Proceed to the next stage of your case.-&gt;plea?]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="30" name="communicate with other defendants to organize a collective defense strategy" tags="" position="305,1499" size="100,100">&lt;&lt;set $solid to $solid +1&gt;&gt;You communicate with other defendants and supporters, trying to do so securely enough to retain plausible deniability if any further legal issues ensue. It’s stressful—most of you didn’t know each other in advance, and you certainly wouldn’t have agreed to form a collective together. There are plenty of internal tensions, resentments, and rivalries. But you arrive at a common baseline agreement about what constitutes solidarity.
+
+          Together, you agree that none of you will inform against any J20 defendant or accept a plea deal that involves cooperating with prosecutors at the expense of other co-defendants. When you speak to the media, you will emphasize that none of the charges or police actions have any legitimacy, refusing to perpetuate the good protester/bad protester dichotomy sought by police, corporate media outlets, liberals, and other proponents of oppression. You agree to share information, resources, and strategy wherever you can and not to say anything publicly or privately that could hurt defendants. You will accept each other’s individual decisions, even when you don&#39;t agree with them, as long as they don’t violate the agreement.
+
+          As the evidence is made available, you work together with other defendants, going through all of it and brainstorming about legal strategy. Your supporters are doing fundraising and organizing benefit events and spreading awareness of the case online. At first, no one is talking about it, but after a few months, you start to see coverage of the case in the corporate media.
+
+          It’s scary going up against the state. It seems like you’re bound to lose. But at least fighting it together gives you something to concentrate on and makes you feel like you’re part of a team.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/12.jpg&quot;&gt;
+
+          &lt;&lt;if $tryonclothes is false&gt;&gt;You have a lot of regrets about the way you dressed. Looking at videos from the day, it’s possible to pick you out by the distinguishing features of your clothing from one scene to the next. Sure, it was black, but it turns out it didn’t really conceal who you are. You hope it won’t be as obvious to prosecutors—and a jury—as it is to you.&lt;&lt;/if&gt;&gt;&lt;&lt;if $android is true&gt;&gt;It turns out that, although you locked your phone, the government was able to crack into it and access all your data. This is terrible news—it means they can read all your text messages about going to the march and they know who you were communicating with. Your carelessness has made your court case harder and given them information about other people, now, too. It turns out there was a way to add an additional passcode to access Signal on an Android, but you didn’t use it—you thought your phone was secure. You have a lot of regrets about bringing your phone at all. It keeps you awake at night thinking about what you wish you’d done differently.&lt;&lt;/if&gt;&gt;&lt;&lt;if $iphone&gt;&gt;You hear that the government has cracked the encryption to get into the Android phones, but apparently they haven’t been able to break into iPhones like you brought. You feel relieved for yourself, but terrible for the arrestees whose privacy has been invaded—and you’ve exchanged texts with some of the people whose phones were cracked, which just makes you more worried that the prosecution will be able to make an argument that you’re guilty of conspiracy.
+          &lt;&lt;/if&gt;&gt;
+
+          [[Proceed to the next stage of your case.-&gt;plea?]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="31" name="plea?" tags="" position="305,1649" size="100,100">&lt;&lt;if $hammer is true&gt;&gt;Some defendants lose their jobs because being charged with multiple felonies makes it impossible to pass a background check in their line of work. Others lose their jobs as a consequence of having to repeatedly take time off work to travel across the country to Washington, DC. You lose your job, too.
+
+          With the assistance of the DC metro police, fascist trolls get their hands on your full name and address and publish them all over the internet. It’s easy to imagine fascists coming by your place with a shotgun. The stress keeps you lying awake late at night. Facing a whole bunch of felonies in the Trump era is no joke.
+
+          The prosecution is alleging that they have footage of you smashing windows. Maybe they’ll be able to convince a jury that it’s you in the mask, and maybe they won’t, but the uncertainty is killing you. When they divide up the cases into groups, they put you in the first group. Whether or not they think they can convict everyone they arrested, it seems like they definitely think they can convict you.
+
+          Eventually, the prosecution offers you a plea deal. If you plea to one felony, they’ll drop the others. Your lawyer manages to arrange a deal in which you could take the plea without agreeing to inform on any of your co-defendants. Your lawyer says that if you take the deal, the judge might look approvingly on this gesture of contrition. Maybe you could avoid prison time. Otherwise, if you go to trial, who knows what kind of jury you’ll get, and if you’re convicted, a judge might sentence you much more punitively.
+
+          Do you [[agree to take the plea deal for one felony]]?
+
+          Or do you [[refuse the plea deal]]?
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $medickit is true&gt;&gt;Some defendants lose their jobs because being charged with multiple felonies makes it impossible to pass a background check in their line of work. Others lose their jobs as a consequence of having to repeatedly take time off work to travel across the country to Washington, DC. You lose your job, too.
+
+          With the assistance of the DC metro police, fascist trolls get their hands on your full name and address and publish them all over the internet. It’s easy to imagine fascists coming by your place with a shotgun. The stress keeps you lying awake late at night. Facing a whole bunch of felonies in the Trump era is no joke.
+
+          The prosecution doesn’t seem to be alleging that you broke anything or threw anything or hit anyone. Their argument is that just by being there, you were aiding and abetting the rioting. It’s not clear whether a jury will buy this—but it is the Trump era, and a lot of surprising things have already happened.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/13.jpg&quot;&gt;
+
+          After a few months, the prosecution offers you a plea deal. If you plea to a misdemeanor, they’ll drop the felony charges. Your lawyer arranges a deal in which you could take the plea without agreeing to inform on any of your co-defendants. Your lawyer says that if you take the deal, the judge might look approvingly on this gesture of contrition. Maybe you could avoid prison time. Otherwise, if you go to trial, who knows what kind of jury you’ll get, and if you’re convicted, a judge might have less sympathy for you at sentencing.
+
+          Do you [[agree to take the plea deal for a misdemeanor-&gt;pleamyes]]?
+
+          Or do you [[refuse the plea deal-&gt;pleamno]]?&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $umbrella is true&gt;&gt;Some defendants lose their jobs because being charged with multiple felonies makes it impossible to pass a background check in their line of work. Others lose their jobs as a consequence of having to repeatedly take time off work to travel across the country to Washington, DC. You lose your job, too.
+
+          With the assistance of the DC metro police, fascist trolls get their hands on your full name and address and publish them all over the internet. It’s easy to imagine fascists coming by your place with a shotgun. The stress keeps you lying awake late at night. Facing a whole bunch of felonies in the Trump era is no joke.
+
+          The prosecution doesn’t seem to be alleging that you broke anything or threw anything or hit anyone. Their argument is that just by being there, you were aiding and abetting the rioting. It’s not clear whether a jury will buy this—but it is the Trump era, and a lot of surprising things have already happened.
+
+          After a few months, the prosecution offers you a plea deal. If you plea to a misdemeanor, they’ll drop the felony charges. Your lawyer arranges a deal in which you could take the plea without agreeing to inform on any of your co-defendants. Your lawyer says that if you take the deal, the judge might look approvingly on this gesture of contrition. Maybe you could avoid prison time. Otherwise, if you go to trial, who knows what kind of jury you’ll get, and if you’re convicted, a judge might have less sympathy for you at sentencing.
+
+          Do you [[agree to take the plea deal for a misdemeanor-&gt;pleamyes]]?
+
+          Or do you [[refuse the plea deal-&gt;pleamno]]?
+          &lt;&lt;/if&gt;&gt;
+        </tw-passagedata>
+
+        <tw-passagedata pid="32" name="agree to take the plea deal for one felony" tags="" position="67,1792" size="100,100">You take the deal, pleading to one felony. There’s some tension with the other defendants; they wanted everyone to maintain pressure on the prosecutors by not pleading. But in the end, it’s up to you, and you want to get on with your life. You manage to avoid serving time, but you have to do a lot of probation and pay court costs and restitution. Having a felony conviction permanently on your record makes it harder to apply for jobs or get into school.
+
+          Most people don’t take pleas. After the first defendants go to trial and are declared innocent on all charges, the prosecutors start dropping the cases. They’re not doing very well in court; a judge imposes sanctions on them for withholding evidence. A year and a half after January 20, 2017, the last charges are dropped. Almost no one has accepted a plea deal, and everyone else has been found innocent or had their cases dropped. You wonder if you should have held out like they did. You can’t be sure, of course—you were in a worse position than some defendants.
+
+          In any case, your ordeal is over. Congratulations. You survived.
+
+          Risk Factor: $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="33" name="refuse the plea deal" tags="" position="305,1799" size="100,100">&lt;&lt;if $hammer is true&gt;&gt;&lt;&lt;set $risk to $risk +1&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;You reject the plea deal. You’re hoping that the court is under pressure from having to deal with nearly 200 felony cases as the J20 story gets more and more publicity. Hopefully at some point, you’ll be offered a better option—or if not, at least you want to cost them as much time and energy as you possibly can.
+
+          A whole year passes. One defendant serves some months in prison for taking a plea. Six others go to trial and are declared innocent. The prosecution says they’re going to go after every single case—but then they drop the charges against 129 defendants. It’s a massive victory for the case, but it’s a little bit bittersweet for you—you still have the same charges, and the prosecution is saying that the people who still have charges are the ones who are most obviously guilty. They’re desperate to get a conviction, and they’re focusing all their attention on you, now.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/4.jpg&quot;&gt;
+
+          Finally, though, they offer you a misdemeanor deal. You’ve been holding out for a better option, and here it is. Maybe this is your chance. You’re going to feel stupid if you give up the chance to take a misdemeanor conviction and instead you get convicted of felonies.
+
+          Do you [[agree to take the misdemeanor plea deal]]?
+
+          Or do you [[refuse the misdemeanor plea deal]], as well?
+          &lt;&lt;/if&gt;&gt;
+        </tw-passagedata>
+
+        <tw-passagedata pid="34" name="agree to take the misdemeanor plea deal" tags="" position="492,1948" size="100,100">You take the deal, pleading to one misdemeanor. The other remaining defendants wanted everyone to maintain pressure on the prosecutors by not pleading, but in the end, it’s up to you, you were in a worse situation than some of them, and you want to get on with your life. You don’t have to do any time in the end; you just get some probation and pay court costs. Having a conviction on your record makes it a little harder to apply for jobs or get into school, but it could be worse.
+
+          Most people don’t take pleas. A year and a half after January 20, 2017, the last charges are dropped. Almost no one has accepted a plea deal, and everyone else has been found innocent or had their cases dropped. You wonder if you should have held out, refusing to plea, too. You can’t be sure, of course—you were in a worse position than some defendants.
+
+          In any case, your ordeal is over. Congratulations.
+
+          Risk Factor: $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="35" name="refuse the misdemeanor plea deal" tags="" position="380,1949" size="100,100">&lt;&lt;set $risk to $risk +1&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;You don’t accept the misdemeanor deal. If they thought they were in a strong enough position to take you to trial, they would have done it!
+
+          Most of the other defendants don’t take pleas, either. Finally, a full year and a half after January 20, 2017, they drop your charges. You’re one of the last ones to have your case resolved. Nearly everyone has refused to plea. No one has been convicted at trial. It’s a tremendous victory for solidarity and for the movement. You’ve faced down terrifying threats from the government and prevented them from setting a new precedent for state repression. You’re still traumatized, and most people don’t appreciate the sacrifices you’ve made, but you’re proud of yourself and your co-defendants. There’s no guarantee it would turn out this way again, but for this time, your gamble has paid off.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/15.jpg&quot;&gt;
+
+          Your ordeal is over. Congratulations!
+
+          Risk Factor: $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="36" name="pleamyes" tags="" position="502,1797" size="100,100">You take the deal, pleading to one misdemeanor. The other defendants want everyone to maintain pressure on the prosecutors by not pleading, but in the end, it’s up to you, and you want to get on with your life. In the end, you just get some probation and pay court costs. Having a conviction on your record makes it harder to apply for jobs or get into school, but it could be worse.
+
+          Most people don’t take pleas. A year and a half after January 20, 2017, the last charges are dropped. Almost no one has accepted a plea deal, and everyone else has been found innocent or had their cases dropped. You wonder if you should have held out, refusing to plea, too. You can’t be sure, of course—but it seems like you could have come out of it with no conviction on your record if you had held out longer.
+
+          In any case, your ordeal is over. Congratulations.
+
+          Risk Factor:  $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="37" name="pleamno" tags="" position="648,1799" size="100,100">&lt;&lt;set $risk to $risk +1&gt;&gt;&lt;&lt;set $solid to $solid +1&gt;&gt;Screw them and their misdemeanor deal. If they thought they were in a strong enough position to take you to trial, they would have done it! You want to show solidarity with the defendants who are in a worse position than you by forcing the court to deal with every single case as the J20 story gets more and more publicity.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/14.jpg&quot;&gt;
+
+          The prosecution wants to bring the people it has the most evidence against to trial first. Some defendants are proposing a strategy in which those who have comparatively good cases try to go to trial first, to set a good precedent and undermine the state narrative about the J20 arrests.
+
+          Do you [[ask your lawyer to pressure the state to bring your case to trial as soon as possible]]?
+
+          Or do you [[wait to see what happens]]?
+        </tw-passagedata>
+
+        <tw-passagedata pid="38" name="ask your lawyer to pressure the state to bring your case to trial as soon as possible" tags="" position="622,1949" size="100,100">&lt;&lt;set $solid to $solid +1&gt;&gt;You demand to go to trial as soon as you can. You’re convinced they can’t convict you. What DC-area jury wants to convict someone who protested Trump of eight felonies just for walking around? I guess you’ll find out.
+
+          Preparing for the trial is extremely stressful. You have to figure out how to rent a place in DC to live, and you don’t know how long you’ll need it. It’s a nightmare having to be a public figure with your face on the news all the time. You’re worried that you will fail the other defendants by losing the trial. The pressure is intense.
+
+          Fortunately, friends and supporters have been raising money on behalf of defendants. They help you to cover housing, food, and travel costs for the trial.
+
+          The trial gets underway. The prosecutors are absolutely despicable people, insisting to the jury that you were aiding and abetting violence and destruction for their own sake. They don’t show any compunction about exaggerating and even outright lying. Some of the vandalism that happened that day is not very helpful to your case, either.
+
+          Waiting for the verdict is excruciating. But finally, it comes back—innocent on all counts!
+
+          Now you have to get down to the hard work of supporting all the other defendants. In the meantime, to celebrate, you watch your co-defendant’s video over and over on Democracy Now, laughing and cheering:
+          &lt;figure&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mUAIWWlDeLc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;
+          After the verdict comes out, the prosecution says they’re going to go after every single case—but a few weeks later, they drop the charges against 129 defendants. Finally, after another trial in which no one is convicted of any crime, the government drops the rest of the charges. Everyone is free, thanks in part to your bravery. You can’t be sure it would turn out this way again, but this time around, it’s a tremendous victory.
+
+          Congratulations!
+
+          Risk Factor: $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+        <tw-passagedata pid="39" name="wait to see what happens" tags="" position="723,1949" size="100,100">Months pass. One defendant serves a few months in prison for taking a plea. Six others go to trial and are declared innocent. The prosecution insists that they’re going to try every single case—but then they drop the charges against 129 defendants. Including you!
+
+          It’s a massive victory, but it’s bittersweet—you have survivor’s guilt, since 59 of your comrades are still facing felony charges. The prosecution is saying that these are the ones who are most obviously guilty. You redouble your efforts to support them.
+
+          &lt;img src=&quot;https://cloudfront.crimethinc.com/assets/articles/2019/01/17/4.jpg&quot;&gt;
+
+          Finally, though, after another trial in which no one is convicted of any crime, the government drops the rest of the charges. Everyone is free, thanks in part to your courage and endurance. You can’t be sure it would turn out this way again, but this time around, it’s a tremendous victory.
+
+          Your ordeal is over. Congratulations!
+
+          Risk Factor:  $risk out of 8
+          Solidarity Points: $solid out of 8
+          [[Try Again-&gt;start]]
+        </tw-passagedata>
+
+      </tw-storydata>
+    </div>
+  </main>
+
+  <script id="script-sugarcube" src="sugarcube.js"></script>
+
+</body>
+</html>
