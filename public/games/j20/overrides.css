@@ -9,19 +9,26 @@ body {
 @media screen and (min-width:1100px) { body { font-size:1.3em; } }
 @media screen and (min-width:1300px) { body { font-size:1.4em; } }
 
-#ui-bar {
-  display: none;
+.container {
+  margin: 5% auto;
+  padding: 0 5%;
 }
+
+main {
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+#ui-bar { display: none; }
 
 #ui-bar.stowed~#story,
 #story {
   margin: 0;
 }
 
-.container {
-  margin: 5% auto;
-  max-width: 880px;
-  padding: 0 5%;
+#passages {
+  max-width: 9999em;
 }
 
 tw-story {
@@ -51,8 +58,6 @@ tw-link:hover {
 
 /* Media */
 img { width: 100%; }
-/*iframe { max-width: 100%; }*/
-
 
 /* Videos */
 figure {
@@ -86,4 +91,9 @@ figure video {
   figure video {
     height: 56.25vw;
   }
+}
+
+#passage-start > * {
+  margin-right: auto;
+  margin-left: auto;
 }
