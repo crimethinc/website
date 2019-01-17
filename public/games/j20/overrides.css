@@ -42,9 +42,15 @@ header[role=banner] {
 }
 
 .logo {
-  padding: 20px 20px 20px 0;
+  padding: 0;
   display: inline-block;
   width: 200px;
+}
+
+header[role=banner] p {
+  padding: 0;
+  margin: .5em 0;
+  font-weight: 300;
 }
 
 /* Links */
