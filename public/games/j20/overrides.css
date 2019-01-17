@@ -74,28 +74,28 @@ figure iframe,
 figure object,
 figure embed,
 figure video {
-  height: 56.25vw;
+  height: 50vw;
   margin: 1em auto 0;
-  max-height: $large-phone;
-  max-width: $small-laptop;
+  max-height: 640px;
+  max-width: 1120px;
   width: 100%;
 }
 
-@media screen and (min-width: $small-tablet) {
+@media screen and (min-width: 800px) {
   figure iframe,
   figure object,
   figure embed,
   figure video {
-    height: calc(56.25vw - 50pt);
+    height: 40vw;
   }
 }
 
-@media screen and (min-width: $small-laptop) {
+@media screen and (min-width: 1120px) {
   figure iframe,
   figure object,
   figure embed,
   figure video {
-    height: 56.25vw;
+    height: 33vw;
   }
 }
 
