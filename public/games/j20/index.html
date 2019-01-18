@@ -68,6 +68,11 @@ https://cloudfront.crimethinc.com/assets/games/j20/
       margin-bottom: 2rem;
     }
 
+    header[role=banner] a,
+    header[role=banner] a:hover {
+      border-bottom: none;
+    }
+
     .logo {
       padding: 0;
       display: inline-block;
@@ -81,16 +86,47 @@ https://cloudfront.crimethinc.com/assets/games/j20/
     }
 
     /* Links */
-    body a,
-    tw-link,
-    body a:hover,
-    tw-link:hover {
+    #story a,
+    #story tw-link,
+    #story a:hover,
+    #story tw-link:hover {
       font-weight: bold;
       color: red;
+      text-decoration: none;
+      padding-bottom: 2px;
+    }
+
+    #story a,
+    #story tw-link {
+      border-bottom: 1px solid red;
+    }
+
+    #story a:hover,
+    #story tw-link:hover {
+      border-bottom: 10px solid red;
+    }
+
+    #story a.link-external:hover,
+    #story a.link-external {
+      color: white;
+      text-decoration: none;
+    }
+
+    #story a.link-external {
+      border-bottom: 1px solid white;
+    }
+
+    #story a.link-external:hover {
+      border-bottom: 10px solid white;
+    }
+
+    #story a.link-external:after {
+      color: rgba(255,255,255,.5);
+      content: "";
     }
 
     /* Media */
-    img { width: 100%; }
+    #story img { width: 100%; }
 
     /* Videos */
     figure {
@@ -154,7 +190,7 @@ https://cloudfront.crimethinc.com/assets/games/j20/
 
   <main class="container">
     <header role="banner">
-      <a class="logo" href="https://crimethinc.com">
+      <a class="logo" target="_blank" href="https://crimethinc.com">
         <img src="https://cloudfront.crimethinc.com/assets/games/j20/crimethinc-logo-type-white.svg">
       </a>
       <p>J20 Protest Simulator</p>
