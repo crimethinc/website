@@ -1,0 +1,105 @@
+/* Layout */
+body {
+  font-size: 1em;
+  background: black;
+  padding-bottom: 20rem;
+}
+
+@media screen and (min-width: 800px) { body { font-size:1.2em; } }
+@media screen and (min-width:1100px) { body { font-size:1.3em; } }
+@media screen and (min-width:1300px) { body { font-size:1.4em; } }
+
+.container {
+  margin: 5% auto;
+  padding: 0 5%;
+}
+
+main {
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+#ui-bar { display: none; }
+
+#ui-bar.stowed~#story,
+#story {
+  margin: 0;
+}
+
+#passages {
+  max-width: 9999em;
+}
+
+tw-story {
+  padding: 20px 0;
+}
+
+/* Header */
+header[role=banner] {
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  margin-bottom: 2rem;
+}
+
+.logo {
+  padding: 0;
+  display: inline-block;
+  width: 200px;
+}
+
+header[role=banner] p {
+  padding: 0;
+  margin: .5em 0;
+  font-weight: 300;
+}
+
+/* Links */
+body a,
+tw-link,
+body a:hover,
+tw-link:hover {
+  font-weight: bold;
+  color: red;
+}
+
+/* Media */
+img { width: 100%; }
+
+/* Videos */
+figure {
+  margin: 1em auto;
+}
+
+figure iframe,
+figure object,
+figure embed,
+figure video {
+  height: 50vw;
+  margin: 1em auto 0;
+  max-height: 640px;
+  max-width: 1120px;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  figure iframe,
+  figure object,
+  figure embed,
+  figure video {
+    height: 40vw;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  figure iframe,
+  figure object,
+  figure embed,
+  figure video {
+    height: 33vw;
+  }
+}
+
+#passage-start > * {
+  margin-right: auto;
+  margin-left: auto;
+}
