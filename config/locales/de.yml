@@ -37,7 +37,7 @@ de:
     site_mode: Switch to the full version of the site →
 
   search:
-    form_placeholder: Im Archiv suchen…
+    form_placeholder: Archive durchsuchen…
     search_results: 'Search results for: %{query}'
     advanced:
       heading: Advanced Search
@@ -113,14 +113,14 @@ de:
       description: |
         CrimethInc. ist eine Allianz von Rebell*innen - ein dezentrales Netzwerk, das sich zu anonymen kollektiven Aktionen verpflichtet hat - ein Ausbruch aus den Gefängnissen unserer Zeit. Wir streben danach, unser Leben und unsere Welt nach den Prinzipien der Selbstbestimmung und der gegenseitigen Hilfe neu zu erfinden.
 
-        Wir glauben, dass du frei sein solltest dein grenzenloses Potenzial nach deinen eigenen Vorstellungen nutzen zu können: dass keine Regierung, kein Markt und keine Ideologie in der Lage sein sollte, zu bestimmen, was euer Leben sein kann. Wenn du zustimmst, lass uns gemeinsam etwas dafür tun._
+        Wir glauben, dass du alle Möglichkeiten haben solltest dein grenzenloses Potenzial nach deinen eigenen Vorstellungen nutzen zu können: dass keine Regierung, kein Markt und keine Ideologie in der Lage sein sollte, zu bestimmen, was euer Leben sein kann. Wenn du zustimmst, lass uns gemeinsam etwas dafür tun._
       more_link: Mehr über CrimethInc. →
       donate_button_text: Unterstütze diese Seite
 
     contact:
       newsletter:
         heading: Email Updates
-        description: Track dich hier in unseren Newsletter ein _(Processed by Mailchimp.)_
+        description: Trag dich hier in unseren Newsletter ein _(Processed by Mailchimp.)_
         signup_form_placeholder: Wie ist deine Mailadresse?
         signup_form_select_placeholder: Willst du viele Mails? Oder wenige?
         signup_form_select_option_lot:    Über alles informiert werden.
@@ -268,18 +268,19 @@ de:
       pdf_donoate_button_text: Spenden
       pdf_donoate_button_label: Spende hier, damit wir diese PDFs weiterhin frei verfügbar halten und weiterhin neue erstellen können.
 
+      books_intro_text: |
+         Von leidenschaftlichem Schreiben und akribischer Bearbeitung, über kompliziertes und einzigartiges Design bis hin zu fachkundiger und sorgfältiger Produktion sind diese Bücher das Ergebnis von viel Liebe und Sorgfalt. Wir sind seit über einem Jahrzehnt dabei, und du wirst den Beweis in all den kleinen Details und zusammenspielenden Momenten finden, die nur mit tintengetränktem Papier erreicht werden können.
+
+        Alle unsere Bücher werden mit Sojatinte auf 100% Altpapier von erfahrenen Handwerker*innen in Louisville, Quebec, Kanada, mit den besten Offsetdruckmaschinen gedruckt.
+
       journals_intro_text: Zeitschriften sind wie Zines, aber irgendwie anders.
       logos_intro_text:    CrimethInc. für dich! Logos für dein eigenes CrimethInc. Projekt.
       music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
-      posters_intro_text: Erwecke die Mauern deines Hauses, deiner Schule, Stadt oder deines Gemeindezentrums zum Leben! Wir empfehlen, diese mit Tapetenkleister oder[Weizenkleister](/Poster) an öffentlichen Plätzen anzubringen.
+      posters_intro_text:  Erwecke die Mauern deines Hauses, deiner Schule, Stadt oder deines Jugendzentrums zum Leben! Wir empfehlen, diese mit Tapetenkleister oder [Weizenkleister](/Poster) an öffentlichen Plätzen anzubringen.
       stickers_intro_text: Hilf den stummen Objekten um dich herum, eloquenter zu kommunizieren! Bestell in großen Mengen oder drucken sie auf Klebepapier aus.
       tools_intro_text:    Basierend auf mehr als zwei Jahrzehnten Tätigkeit bieten wir euch eine breite Palette Materialien zum Herunterladen oder zum Bestellen in großen Mengen. Benutze diese, um die Räume um dich herum zu agitieren, zu bewegen und zu verändern.
-      videos_intro_text:  Notfall-Übertragungssystem - Eine Auswahl von Videos von CrimethInc. Perpetual Motion Pictures
+      videos_intro_text:   Notfall-Übertragungssystem - Eine Auswahl von Videos von CrimethInc. Perpetual Motion Pictures
       zines_intro_text:    Viele unserer Texte sind hier in Form von Broschüren verfügbar. Drucke sie aus und kopiere sie, um sie an Schulen, auf Demos, Konzerten, gesellschaftlichen Veranstaltungen, Bauernmärkten und überall sonst, wo Menschen nach Ideen hungrig sind, zu verteilen. Du kannst auch vollständige PDFs von *Rolling Thunder,* unserem renommierten Journal für Analyse und Direkte Aktion, [im *Rolling Thunder*-Archiv,](/rt/archives.html) und PDFs von *Alles Verändern,* unserer Einführung in den Anarchismus, in Dutzenden von Sprachen auf der Website von[*To Change Everything*](/tce) erhalten.
-      books_intro_text: |
-        Von leidenschaftlichem Schreiben und akribischer Bearbeitung, über kompliziertes und einzigartiges Design bis hin zu fachkundiger und sorgfältiger Produktion sind diese Bücher das Ergebnis von viel Liebe und Sorgfalt. Wir sind seit über einem Jahrzehnt dabei, und du wirst den Beweis in all den kleinen Details und zusammenspielenden Momenten finden, die nur mit tintengetränktem Papier erreicht werden können.
-
-        Alle unsere Bücher werden mit Sojatinte auf 100% Altpapier von erfahrenen Handwerker*innen in Louisville, Quebec, Kanada, mit den besten Offsetdruckmaschinen gedruckt.
 
       books_heading_text:    Wir lieben es, Bücher zu machen.
       journals_heading_text: Zeitungen
@@ -300,7 +301,7 @@ de:
 
     books:
       crimethinc_into_libraries_heading: CrimethInc. in die Bibliotheken
-      crimethinc_into_libraries_intro: Für diejenigen, die nicht über die Ressourcen verfügen, um Bücher zu kaufen, oder die einfach nicht begeistert davon sind, mehr Besitz anzuhäufen, haben wir gute Nachrichten - das Programm[CrimethInc. in die Bibliotheken](/books/intolibraries). Unsere Bücher befinden sich [in mehr Bibliotheken, als du vielleicht vermuten würdest] (/2007/10/09/crimethinc-in-libraries-progress-report), und wenn nicht, können sie sie wahrscheinlich kostenlos in die Regale bekommen. [Finde heraus, wie!](/bücher/bibliotheken)
+      crimethinc_into_libraries_intro: Für diejenigen, die nicht über die Ressourcen verfügen Bücher zu kaufen, oder die einfach nicht begeistert davon sind, mehr Besitz anzuhäufen, haben wir gute Nachrichten - das Programm [CrimethInc. in die Bibliotheken](/books/intolibraries). Unsere Bücher befinden sich [in mehr Bibliotheken, als du vielleicht vermuten würdest](/2007/10/09/crimethinc-in-libraries-progress-report), und wenn nicht, können sie sie wahrscheinlich kostenlos in die Regale bekommen. [Finde heraus, wie!](/books/lit-kit)
 
       literature_distro_kit_heading: Literatur Distro Kit
       literature_distro_kit_intro: Unsere Bücher sind der Eckpfeiler unseres [Literatur Distribution Kit](/books/lit-kit), einer All-in-One-Literaturdistribution, die ihr nach euren Vorstellungen einsetzen könnt. Es enthält eine Mischung aus Büchern zum Verkaufen und Sachen zum Verschenken, alles, was du brauchst, um einen Infotisch bei einem Konzert aufzustellen oder auf Tour mitzunehmen, oder um aus deinem Rucksack oder im Pausenraum Infos zu verbreiten.
@@ -309,7 +310,7 @@ de:
       new:
         heading: Investiere dein Geld in CrimethInc.—!
         description: |
-          _Use the slider to adjust your donation. No amount is too big to be needed or too small to be helpful! If you can, sign up to donate on a monthly basis, so we can count on you to sustain us for the long haul. Verwende den Slider, um deine Spende anzupassen. Es kann nicht zu viel zu sein um den Bedarf zu decken und nicht zu wenig, um nicht hilfreich zu sein. Wenn es dir möglich ist, melde dich an, um monatlich zu spenden, damit wir langfristig mit deiner Unterstützung planen können._
+          _Verwende den Slider, um deine Spende anzupassen. Es kann nicht zu viel zu sein um den Bedarf zu decken und nicht zu wenig, um nicht hilfreich zu sein. Wenn es dir möglich ist, melde dich an, um monatlich zu spenden, damit wir langfristig mit deiner Unterstützung planen können._
 
           CrimethInc. basiert auf der Arbeit Freiwilliger ohne externe Finanzierungsquellen. Wir bieten alles, was wir tun, kostenlos oder zu kostendeckenden Preisen an und halten dabei einige der höchsten Qualitätsstandards in unserem Bereich ein. Wir veröffentlichen ständig Material in [über 30 Sprachen](/tce) auf[allen sieben Kontinenten](/2008/01/06/now-serving-seven-continents). Wir halten das seit einem Vierteljahrhundert durch.
 
@@ -324,7 +325,7 @@ de:
         description_one_time: Einmalige Unterstützung
         button_text: Nächste →
         support_request:
-          header: Bereits existierende montatliche Unterstützung
+          header: Verwalte deine monatliche Unterstützung
           description: Möchtest du deine Unterstützung aktualisieren oder kündigen? Gib die E-Mail-Adresse ein, mit der du dich angemeldet hast, und wir senden dir eine E-Mail mit einem supergeheimen Link, über den du Änderungen vornehmen kannst.
           email_label: Email Addresse
           email_placeholder: you@email.com
