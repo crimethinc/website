@@ -1,5 +1,3 @@
-require_relative 'redirect_pairs'
-
 module Rack
   class Redirect
     def initialize app
@@ -12,10 +10,13 @@ module Rack
       # source path
       path = req.path
 
-      if redirects.include?(path)
-        args = "?#{req.query_string}" if req.query_string.present?
-        return redirect(redirects[path] + args.to_s)
-      end
+      # special case: non-ASCII paths
+      redirects = {
+        '/search?utf8=✓&' => '/search',
+        '/tce/%uFEFF'     => '/tce'
+      }
+
+      return redirect(redirects[path]) if redirects.include?(path)
 
       @app.call(env)
     end
@@ -28,10 +29,6 @@ module Rack
         { 'Location' => location, 'Content-Type' => 'text/html' },
         ['Moved Permanently']
       ]
-    end
-
-    def redirects
-      @redirects ||= REDIRECT_PAIRS
     end
   end
 end
