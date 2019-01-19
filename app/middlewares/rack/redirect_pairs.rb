@@ -2413,7 +2413,6 @@ REDIRECT_PAIRS = {
   '/rt9pdfannounce' => '/2016/01/19/rolling-thunder-9-full-pdf-now-available',
   '/rtnotes' => '/2012/08/27/notes-on-the-delay-and-the-future-of-rt',
   '/sd' => '/2011/12/17/self-destruction',
-  '/search?utf8=✓&' => '/search',
   '/seattlej20' => '/2017/01/21/seattle-after-j20',
   '/self-care' => '/2013/05/31/for-all-we-care-reconsidering-self-care',
   '/selfasother' => '/2013/09/06/new-zine-about-self-care-self-as-other',
@@ -2434,7 +2433,6 @@ REDIRECT_PAIRS = {
   '/surveillance' => '/2004/03/04/you-are-under-surveillance',
   '/table' => '/2007/02/18/the-table-has-turned',
   '/taksim' => '/2013/06/19/postcards-from-the-turkish-uprising',
-  '/tce/%uFEFF' => '/tce',
   '/tce/get' => '/zines/to-change-everything',
   '/tce/slovensko' => '/tce/slovenscina',
   '/tceannounce' => '/2015/01/15/announcing-to-change-everything',
@@ -2651,3 +2649,6 @@ REDIRECT_PAIRS = {
   'http://thecloud.crimethinc.com/images/terrain/bannerb.jpg' => '/2010/08/23/fighting-in-the-new-terrain',
   'http://thecloud.crimethinc.com/images/weare/weare2_b.jpg' => '/2010/06/03/august-2010-we-are-everywhere'
 }.freeze
+
+# '/search?utf8=✓&' => '/search',
+# '/tce/%uFEFF' => '/tce',
