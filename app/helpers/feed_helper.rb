@@ -15,4 +15,8 @@ module FeedHelper
         .force_encoding('ascii')
     end
   end
+
+  def strip_subdomain url
+    url.sub(%r{https://\S*\.*crimethinc.com}, 'https://crimethinc.com')
+  end
 end
