@@ -296,6 +296,11 @@
       }
     }
 
+    .poetry { padding: 0 5%; }
+
+    .center,
+    .centered { text-align: center; }
+
     .portrait {                                       width: 66%; max-width: 66%;
       @media screen and (min-width: $large-phone)   { width: 50%; max-width: 50%; }
       @media screen and (min-width: $medium-laptop) { width: 40%; max-width: 40%; }
