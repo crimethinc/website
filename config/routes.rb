@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # Store Redirect and support page
   get 'store/order-success', to: 'about#post_order_success', as: :post_order_success
+  get 'store', to: redirect('https://store.crimethinc.com')
 
   # Homepage
   root to: 'home#index'
