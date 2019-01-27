@@ -5,7 +5,7 @@ class AdvancedSearch
     @query = query.to_s
   end
 
-  def update_attributes(attributes)
+  def update(attributes)
     attributes.each_pair do |key, value|
       send("#{key}=", value)
     end
