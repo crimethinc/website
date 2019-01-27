@@ -3,7 +3,7 @@
 <%= form_with model: @advanced_search, local: true do |form| %>
   <fieldset>
     <%= form.label :term, t("search.advanced.form.term_label") %>
-    <%= form.text_field :term, class: "simple-field" %>
+    <%= form.text_field :term, class: "simple-field", autofocus: true %>
   </fieldset>
 
   <fieldset>
