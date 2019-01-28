@@ -70,7 +70,7 @@ module Admin
         Redirect.where(search_lookup_key => "/#{searched_query}")
       ]
 
-      redirects.select(&:present?).first
+      redirects.first.presence || redirects.last
     end
 
     def set_redirect
