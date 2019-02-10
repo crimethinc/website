@@ -49,10 +49,6 @@ module Admin
       @book = Book.find(params[:id])
     end
 
-    def set_ebook_formats
-      @ebook_formats = Tool::EBOOK_FORMATS
-    end
-
     def book_params
       params.require(:book).permit(:title, :subtitle, :content, :tweet, :summary, :publication_status,
                                    :description, :buy_url, :buy_info, :slug, :series, :published_at,

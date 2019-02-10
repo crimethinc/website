@@ -11,18 +11,20 @@
         on S3/Cloudfront.
       </p>
 
-      <% @ebook_formats.each do |type, labels| %>
+      <% EbookFormat.all.each do |ebook_format| %>
         <div class="form-check mb-3">
-          <%= form.check_box "#{type}_download_present", id: "book_#{type}_download_present", class: "form-check-input" %>
+          <%= form.check_box "#{ebook_format.slug}_download_present",
+                             id: "book_#{ebook_format.slug}_download_present",
+                             class: "form-check-input" %>
 
-          <%= form.label "#{type}_download_present", class: "form-check-label" do %>
-            <b><%= labels.first %>:</b>
+          <%= form.label "#{ebook_format.slug}_download_present", class: "form-check-label" do %>
+            <b><%= ebook_format.name %>:</b>
 
             <span class="form-text text-muted font-weight-normal">
-              <%= labels.last.html_safe %><br>
+              <%= render_markdown ebook_format.description %>
 
               <code>
-                /assets/<%= resource.namespace %>/<%= slug %>/<b><%= slug %>_<%= type %>.<%= extension_for_ebook type %></b>
+                /assets/<%= resource.namespace %>/<%= slug %>/<b><%= slug %>_<%= ebook_format.slug %>.<%= extension_for_ebook ebook_format.slug %></b>
               </code>
             </span>
           <% end %>

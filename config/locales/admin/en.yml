@@ -87,6 +87,36 @@ en:
       show_title: "Redirects : %{source_path}"
       edit_title: "Editing redirect %{id} %{source_path}"
 
+  ebooks:
+    - slug: screen_single_page_view
+      name: Screen Single Page View PDF
+      description: Is there a one page wide `PDF` for on-screen reading uploaded?
+    - slug: screen_two_page_view
+      name: Screen Two Page View PDF
+      description: Is there a two page wide `PDF` for on-screen reading uploaded?
+    - slug: print_color
+      name: Print Color PDF
+      description: Is there a color `PDF` for printing uploaded?
+    - slug: print_black_and_white
+      name: Print B/W PDF
+      description: Is there a B/W `PDF` for printing uploaded?
+    - slug: print_color_a4
+      name: Print Color A4 PDF
+      description: Is there an A4 sized color `PDF` for printing uploaded?
+    - slug: print_black_and_white_a4
+      name:  B/W A4 PDF
+      description: Is there an A4 sized B/W `PDF` for printing uploaded?
+    - slug: lite
+      name: Lo Res PDF
+      description: Is there a `.epub` file uploaded?
+    - slug: epub
+      name: ePub
+      description: Is there a `.mobi` file uploaded?
+    - slug: mobi
+      name: Mobi
+      description: Is there a low resolution or single page view PDF uploaded?
+
+
   activerecord:
     errors:
       models:
