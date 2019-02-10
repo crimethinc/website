@@ -30,4 +30,8 @@ module Slug
 
     self.slug = slug&.to_slug
   end
+
+  def formatted_slug
+    new_record? ? '[slug]' : slug
+  end
 end

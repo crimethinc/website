@@ -81,4 +81,24 @@ module AdminHelper
                    category.id,
                    nil
   end
+
+  def s3_folder_path resource:
+    [nil, 'assets', resource.namespace, resource.formatted_slug].join '/'
+  end
+
+  def s3_file_path resource:, ebook_format:
+    [
+      nil,
+      'assets',
+      resource.namespace,
+      resource.formatted_slug,
+      [
+        resource.formatted_slug,
+        '_',
+        ebook_format.slug,
+        '.',
+        extension_for_ebook(ebook_format.slug)
+      ].join
+    ].join '/'
+  end
 end

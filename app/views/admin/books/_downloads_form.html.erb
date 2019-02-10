@@ -5,26 +5,24 @@
 
       <p class="form-text text-muted">
         Downloads must be uploaded to
-        <code>
-          /assets/<%= resource.namespace %>/<%= slug = resource.new_record? ? "[slug]" : resource.slug %>/
-        </code>
+        <code><%= s3_folder_path resource: resource %></code>
         on S3/Cloudfront.
       </p>
 
       <% EbookFormat.all.each do |ebook_format| %>
         <div class="form-check mb-3">
-          <%= form.check_box "#{ebook_format.slug}_download_present",
-                             id: "book_#{ebook_format.slug}_download_present",
-                             class: "form-check-input" %>
+          <%= form.label class: "form-check-label" do %>
+            <%= form.check_box "#{ebook_format.slug}_download_present",
+                               id: "book_#{ebook_format.slug}_download_present",
+                               class: "form-check-input" %>
 
-          <%= form.label "#{ebook_format.slug}_download_present", class: "form-check-label" do %>
-            <b><%= ebook_format.name %>:</b>
+            <%= ebook_format.name %>
 
             <span class="form-text text-muted font-weight-normal">
               <%= render_markdown ebook_format.description %>
 
               <code>
-                /assets/<%= resource.namespace %>/<%= slug %>/<b><%= slug %>_<%= ebook_format.slug %>.<%= extension_for_ebook ebook_format.slug %></b>
+                <%= s3_file_path resource: resource, ebook_format: ebook_format %>
               </code>
             </span>
           <% end %>
