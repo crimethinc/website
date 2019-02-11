@@ -311,7 +311,7 @@ GEM
     sterile (1.0.14)
       nokogiri
     stringex (2.8.5)
-    stripe (4.8.0)
+    stripe (4.8.1)
       faraday (~> 0.13)
       net-http-persistent (~> 3.0)
     thor (0.20.3)
