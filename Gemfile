@@ -13,7 +13,7 @@ gem 'puma'
 
 # assets
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 4.2.1'
+gem 'bootstrap', '~> 4.3.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'   # used for polyfilling forms in admin/articles
 gem 'sassc-rails'
