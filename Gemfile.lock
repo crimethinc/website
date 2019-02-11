@@ -284,7 +284,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    scenic (1.4.1)
+    scenic (1.5.1)
       activerecord (>= 4.0.0)
       railties (>= 4.0.0)
     selenium-webdriver (3.141.0)
@@ -378,7 +378,7 @@ DEPENDENCIES
   rubocop-rspec
   rubypants
   sassc-rails
-  scenic (~> 1.4)
+  scenic (~> 1.5)
   selenium-webdriver
   sitemap_generator
   spring
