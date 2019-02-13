@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2019_01_24_043940) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "articles", id: :serial, force: :cascade do |t|
@@ -84,13 +83,13 @@ ActiveRecord::Schema.define(version: 2019_01_24_043940) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
+    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
