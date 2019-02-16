@@ -53,7 +53,7 @@ GEM
     awesome_print (1.8.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
-    bootstrap (4.3.0)
+    bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -340,7 +340,7 @@ DEPENDENCIES
   autoprefixer-rails
   awesome_print
   bcrypt (~> 3.1.12)
-  bootstrap (~> 4.3.0)
+  bootstrap (~> 4.3.1)
   bugsnag
   byebug
   capybara
