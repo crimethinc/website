@@ -18,7 +18,7 @@
           <h1><%= link_to @latest_episode.title, @latest_episode, class: "p-name u-url" %></h1>
           <p class="e-content"><%= @latest_episode.subtitle %></p>
 
-          <%= render "podcast/player", episode: @latest_episode %>
+          <%= render "podcast/player", episode: @latest_episode unless lite_mode? %>
         </article>
       </div> <!-- .latest-episodes -->
 
