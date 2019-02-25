@@ -18,16 +18,18 @@
       <div class="e-content">
 
         <h3 class="listen">
-          <%= t("podcast.listen") %>
-          <% if @episode.duration.present? %>
-            <small>
-              —
-              <%= @episode.duration %>
-              <abbr title="minutes">min</abbr>
-            </small>
+          <% unless lite_mode? %>
+            <%= t("podcast.listen") %>
+            <% if @episode.duration.present? %>
+              <small>
+                —
+                <%= @episode.duration %>
+                <abbr title="minutes">min</abbr>
+              </small>
+            <% end %>
           <% end %>
         </h3>
-        <%= render "podcast/player", episode: @episode %>
+        <%= render "podcast/player", episode: @episode unless lite_mode? %>
 
         <div class="episode-info">
           <div class="buttons">
