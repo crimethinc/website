@@ -46,6 +46,19 @@
     <% end %>
 
     <%= render 'admin/publication_status', form: form %>
+
+    <div class="form-group">
+      <%= form.label :locale, class: "h4" %><br>
+      <%= form.select :locale,
+                      options_for_select(Locale.options_for_select, @article.locale),
+                      {},
+                      class: "custom-select custom-select-lg" %>
+
+      <p class="form-text text-muted">
+        If it’s not in the list here, you can
+        <%= link_to "create a new locale. →", [:new, :admin, :locale], target: "_blank" %>
+      </p>
+    </div>
   </div><!-- .col -->
 
   </div><!-- .row -->
