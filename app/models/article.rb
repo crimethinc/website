@@ -26,6 +26,11 @@ class Article < ApplicationRecord
 
   default_scope { order(published_at: :desc) }
   scope :last_2_weeks, -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.weeks, Time.now.utc) }
+  scope :english, -> { where(locale: 'en') }
+
+  def id_and_name
+    "#{id} — #{name}"
+  end
 
   def path
     if published?

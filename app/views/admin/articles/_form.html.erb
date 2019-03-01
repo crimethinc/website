@@ -1,9 +1,7 @@
 <nav class="mb-5">
   <p class="h6 text-muted">Jump to</p>
-  <%= link_to "Date + Time ↓",    "#datetime",       class: "btn btn-outline-primary mb-2 mr-2" %>
-  <%= link_to "Categorization ↓", "#categorization", class: "btn btn-outline-primary mb-2 mr-2" %>
-  <%= link_to "Syndication ↓",    "#syndication",    class: "btn btn-outline-primary mb-2 mr-2" %>
-  <%= link_to "Appearance ↓",     "#appearance",     class: "btn btn-outline-primary mb-2 mr-2" %>
+
+  <%= link_to_article_form_sections %>
 
   <%= link_to [:admin, :markdown], class: "btn btn-outline-primary mb-2 mr-2", target: "_blank", rel: "noopener" do %>
     <span class="badge badge-secondary">MD</span>
@@ -85,6 +83,10 @@
   </div><!-- #datetime -->
 
   <%= render "admin/articles/categories_form", form: form %>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+
+  <%= render "admin/articles/localization_form", form: form %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 

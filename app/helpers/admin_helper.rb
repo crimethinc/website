@@ -1,6 +1,18 @@
 module AdminHelper
   VIEW_COUNTER_GENESIS_DATE = '2017-08-23'.freeze
 
+  def link_to_article_form_sections
+    {
+      datetime:       'Date + Time',
+      categorization: 'Categorization',
+      localization:   'Localization',
+      syndication:    'Syndication',
+      appearance:     'Appearance'
+    }.map do |id, display_text|
+       link_to "#{display_text} ↓", "##{id}", class: 'btn btn-outline-primary mb-2 mr-2'
+    end.join.html_safe
+  end
+
   def admin_form_date(post)
     tz = post&.published_at_tz
     return '' if tz.nil? || post.published_at.nil?
