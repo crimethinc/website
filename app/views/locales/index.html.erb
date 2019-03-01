@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Locales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abbreviation</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locales.each do |locale| %>
+      <tr>
+        <td><%= locale.abbreviation %></td>
+        <td><%= locale.name %></td>
+        <td><%= link_to 'Show', locale %></td>
+        <td><%= link_to 'Edit', edit_locale_path(locale) %></td>
+        <td><%= link_to 'Destroy', locale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Locale', new_locale_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_13_065105) do
+ActiveRecord::Schema.define(version: 2019_03_01_054757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -187,6 +187,14 @@ ActiveRecord::Schema.define(version: 2019_02_13_065105) do
     t.integer "series_id"
     t.integer "issue"
     t.integer "publication_status", default: 0, null: false
+  end
+
+  create_table "locales", force: :cascade do |t|
+    t.string "abbreviation"
+    t.string "name_in_english"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "logos", force: :cascade do |t|
