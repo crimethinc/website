@@ -1,14 +1,19 @@
 class Article < ApplicationRecord
   include Post
 
+  has_one  :redirect, dependent: :destroy
   has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
-  has_many :collection_posts, foreign_key: :collection_id, class_name: 'Article', dependent: :destroy, inverse_of: :collection
 
-  has_one    :redirect, dependent: :destroy
-  belongs_to :collection, foreign_key: :collection_id, class_name: 'Article', touch: true, inverse_of: :collection_posts
+  # Collections / Nested Articles, used for live blogs
+  has_many   :collection_posts, foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection, dependent: :destroy
+  belongs_to :collection,       foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection_posts, touch: true
+
+  # Localizations / Translations, canonical is the English article, localizations are other languages
+  has_many   :localizations, foreign_key: :canonical_id, class_name: 'Article', inverse_of: :canonical, dependent: :destroy
+  belongs_to :canonical,     foreign_key: :canonical_id, class_name: 'Article', inverse_of: :localizations, touch: true
 
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :normalize_newlines,       on: [:create, :update]
