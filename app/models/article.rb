@@ -90,7 +90,9 @@ class Article < ApplicationRecord
       self_localizations
     ]
 
-    all_localizations.flatten.compact - [self]
+    articles = all_localizations.flatten.compact - [self]
+
+    articles.sort_by(&:locale)
   end
 
   private
