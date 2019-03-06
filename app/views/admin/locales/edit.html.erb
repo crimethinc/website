@@ -1,0 +1,7 @@
+<%= render "admin/page_header", thing: @locale %>
+<%= render "form" %>
+
+<%= render "admin/danger_zone",
+           thing: @locale,
+           label: "locale",
+           path: [:admin, @locale] %>

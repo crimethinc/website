@@ -1,0 +1,27 @@
+<%= render "admin/page_header", thing: @locales %>
+
+<table class="table table-striped table-sm mb-5">
+  <thead class="thead-dark">
+    <tr>
+      <th></th>
+      <th>Abbreviation</th>
+      <th>Name in English</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locales.each do |locale| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, locale], class: "btn btn-light border-secondary btn-sm" %>
+        </td>
+        <td><%= locale.abbreviation %></td>
+        <td><%= locale.name_in_english %></td>
+        <td><%= locale.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @locales, views_prefix: "admin", theme: "twitter-bootstrap-4" %>

@@ -91,6 +91,7 @@ module Admin
                                       :tweet, :slug, :draft_code, :summary, :published_at,
                                       :tags, :collection_id, :short_path, :image, :css,
                                       :image_description, :image_mobile, :published_at_tz,
+                                      :locale, :canonical_id,
                                       :publication_status, category_ids: [])
     end
   end

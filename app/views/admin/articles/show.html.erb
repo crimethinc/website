@@ -24,6 +24,10 @@
     </h1>
 
     <p>
+      <% if @article.locale.present? %>
+        <%= link_to @article.locale.upcase, [:admin, :locales], class: "badge badge-dark" %>
+      <% end %>
+
       <% if @article.categories.present? %>
         <% @article.categories.each do |category| %>
           <%= link_to category.name, category_path(category.slug), class: "badge badge-primary" %>

@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_13_065105) do
+ActiveRecord::Schema.define(version: 2019_03_01_073243) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "articles", id: :serial, force: :cascade do |t|
@@ -42,6 +43,8 @@ ActiveRecord::Schema.define(version: 2019_02_13_065105) do
     t.integer "user_id"
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
     t.index ["status_id"], name: "index_articles_on_status_id"
   end
@@ -84,13 +87,13 @@ ActiveRecord::Schema.define(version: 2019_02_13_065105) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
+    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
@@ -186,6 +189,14 @@ ActiveRecord::Schema.define(version: 2019_02_13_065105) do
     t.integer "series_id"
     t.integer "issue"
     t.integer "publication_status", default: 0, null: false
+  end
+
+  create_table "locales", force: :cascade do |t|
+    t.string "abbreviation"
+    t.string "name_in_english"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "logos", force: :cascade do |t|

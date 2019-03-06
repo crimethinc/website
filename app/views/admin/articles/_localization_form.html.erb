@@ -1,0 +1,34 @@
+<div id="localization" class="pt-5">
+  <div class="row ">
+
+  <div class="col-12 col-lg-4">
+    <div class="form-group">
+      <%= form.label :locale, class: "h4" %><br>
+      <%= form.select :locale,
+                      options_for_select(Locale.options_for_select, @article.locale),
+                      {},
+                      class: "custom-select custom-select-lg" %>
+
+      <p class="form-text text-muted">
+        If it’s not here, you can
+        <%= link_to "create a new locale. →", [:new, :admin, :locale], target: "_blank" %>
+      </p>
+    </div>
+  </div><!-- .col -->
+
+  <div class="col-12 col-lg-8">
+    <div class="form-group">
+      <%= form.label 'English Article', class: "h4" %><br>
+
+      <%= form.collection_select :canonical_id,
+                                 Article.root.english,
+                                 :id,
+                                 :id_and_name,
+                                 { include_blank: true },
+                                 class: "custom-select custom-select-lg" %>
+    </div>
+  </div><!-- .col -->
+
+  </div><!-- .row -->
+  <%= render "admin/articles/back_to_top" %>
+</div><!-- #localization -->
