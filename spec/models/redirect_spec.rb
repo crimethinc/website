@@ -91,7 +91,6 @@ RSpec.describe Redirect, type: :model do
   end
 
   describe '#article_short_path_unique' do
-    let(:status) { FactoryBot.create(:status) }
     let(:published_at) { Date.current }
 
     context 'without creating a redirect if short path exists' do

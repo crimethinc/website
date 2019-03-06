@@ -1,11 +1,6 @@
 require 'rails_helper'
 
 describe 'Tools Pages' do
-  before do
-    create(:status, :published)
-    create(:status, :draft)
-  end
-
   it 'Renders published logos calling /logos' do
     FactoryBot.create(:logo,
                       title: 'published',

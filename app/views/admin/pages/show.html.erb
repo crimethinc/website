@@ -12,7 +12,7 @@
 
   <hr>
   <p>URL: <b><%= link_to @page.path, @page.path %></b></p>
-  <p>Publication Status: <b><%= @page.status.name.upcase %></b></p>
+  <p>Publication Status: <b><%= @page.publication_status.upcase %></b></p>
   <p><%= render "/articles/published_on", article: @page %></p>
   <p>Hero Image: <%= link_to_if @page.image.present?, @page.image, @page.image %></p>
   <p>Hero Image Description: <%= @page.image_description %></p>

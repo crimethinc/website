@@ -3,7 +3,6 @@ module Publishable
   extend ActiveSupport::Concern
 
   included do
-    belongs_to :status
     enum publication_status: PUBLICATION_STATUSES
 
     default_scope { order(published_at: :desc) }
