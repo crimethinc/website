@@ -45,17 +45,34 @@
       }
 
       .categories {
+        padding: 4rem 0 1.5rem 0;
+      }
+
+      .localizations,
+      .categories {
         display: block;
-        padding: 2rem 0 4rem 0;
 
         a {
           text-transform: capitalize;
           text-decoration: underline;
           font-style: italic;
+          font-weight: normal;
           color: $color-gray;
         }
       }
 
+      .localizations,
+      .categories {
+        li {
+          border-right: 1px solid #ccc;
+          padding-right: .5em;
+          margin-right: .25em;
+        }
+
+        li:last-child {
+          border-right: none;
+        }
+      }
 
       h1 {
         font: {
@@ -133,6 +150,8 @@
   .e-content {
     color: $color-black;
     padding: 0 $border-size-medium;
+    margin-top: 4rem;
+
     font: {
       size: 1.75rem;
       weight: lighter;

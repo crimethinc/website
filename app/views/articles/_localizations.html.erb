@@ -1,0 +1,11 @@
+<% if article.localizations.present? %>
+  <div class="localizations">
+    <b class="badge">Localizations:</b>
+
+    <% article.localizations.each do |article| %>
+      <li>
+        <%= link_to locale(article.locale).name, article.path %>
+      </li>
+    <% end %>
+  </div>
+<% end %>
