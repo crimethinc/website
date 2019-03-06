@@ -11,10 +11,6 @@ class Article < ApplicationRecord
   has_many   :collection_posts, foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection, dependent: :destroy
   belongs_to :collection,       foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection_posts, touch: true
 
-  # Localizations / Translations, canonical is the English article, localizations are other languages
-  has_many   :localizations, foreign_key: :canonical_id, class_name: 'Article', inverse_of: :canonical, dependent: :destroy
-  belongs_to :canonical,     foreign_key: :canonical_id, class_name: 'Article', inverse_of: :localizations, touch: true
-
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :normalize_newlines,       on: [:create, :update]
 
@@ -87,7 +83,29 @@ class Article < ApplicationRecord
     related_articles
   end
 
+  def localizations
+    all_localizations = [
+      canonical_article,
+      canonical_article_localizations,
+      self_localizations
+    ]
+
+    all_localizations.flatten.compact - [self]
+  end
+
   private
+
+  def self_localizations
+    Article.where(canonical_id: id)
+  end
+
+  def canonical_article
+    Article.find_by(id: canonical_id)
+  end
+
+  def canonical_article_localizations
+    canonical_article&.localizations
+  end
 
   def generate_published_dates
     return if published_at.blank?
