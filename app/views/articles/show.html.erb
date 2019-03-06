@@ -1,12 +1,12 @@
-<% cache [@article, lite_mode?], expires_in: (Rails.env.development? ? 1.second : 1.day) do %>
-  <% if @article.draft? %>
-    <div class="draft-preview-message">
-      PREVIEWING DRAFT.
-      <%= link_to "Continue editing article", [:edit, :admin, @article] %> or
-      <%= link_to "view article in Admin",    [:admin, @article] %>.
-    </div>
-  <% end %>
+<% if @article.draft? %>
+  <div class="draft-preview-message">
+    PREVIEWING DRAFT.
+    <%= link_to "Continue editing article", [:edit, :admin, @article] %> or
+    <%= link_to "view article in Admin",    [:admin, @article] %>.
+  </div>
+<% end %>
 
+<% cache [@article, lite_mode?], expires_in: (Rails.env.development? ? 1.second : 1.day) do %>
   <%= article_tag @article do %>
     <header>
       <%= render "articles/image_media", article: @article, linked: false %>
