@@ -65,6 +65,7 @@
 
         line-height: 1.2em;
         list-style-type: none;
+        margin-left: 0;
       }
 
       .video-info {
@@ -73,6 +74,23 @@
       }
 
     } // .h-entry
+
+    #samples {
+      .column:first-child {
+        padding-left: 0;
+      }
+      .column:last-child {
+        padding-rigth: 0;
+      }
+
+      li {
+        margin-left: 1.5em;
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+    }
 
   } // main
 } // #page

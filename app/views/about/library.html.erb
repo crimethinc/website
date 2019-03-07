@@ -5,15 +5,21 @@
 
   <div class="intro">
     <p>
-      This online archive collects more than twenty years of essays that have
-      appeared under the CrimethInc. insignia. It is by no means comprehensive.
+      This online archive includes essays, stories, accounts, and other texts
+      that have appeared under the CrimethInc. insignia over the past quarter of a century.
+      It is extensive, but by no means comprehensive.
     </p>
+
     <p>
-      Some of these texts and many others are available as PDFs in our
-      <a href="/tools">Downloads</a> section. You’ll find zines, magazines,
-      papers, and posters on a wide range of topics, ready to be printed
-      out and distributed to everyone in your path. You can also download
-      back issues of our journal, <a href="/rt">Rolling Thunder</a>.
+      Some of these texts are available as PDFs in our <a href="/tools">Tools</a> section.
+      You’ll find zines, magazines, papers, and posters on a wide range of topics,
+      ready for you to print them out and distribute them to everyone in your path.
+      You can also download back issues of
+      <a href="/journals">journals</a>
+      we have published, including
+      <i><a href="/journals#rolling-thunder">Rolling Thunder</a></i>,
+      <i><a href="/journals#harbinger">Harbinger</a></i>, and
+      <i><a href="/journals#inside-front">Inside Front</a></i>.
     </p>
   </div>
 
@@ -36,15 +42,13 @@
       <h2><b>Navigate Chronologically</b></h2>
     </header>
 
-    <div>
-      <div class="intro">
-        <p>
-          <% [2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1997, 1996].each do |year| %>
-            <%= link_to year, article_archives_path(year: year) %>
-          <% end %>
-        </p>
-      </div>
-    </div> <!-- .e-content -->
+    <div class="intro">
+      <p>
+        <% (1996..Time.current.year).to_a.reverse.each do |year| %>
+          <%= link_to year, article_archives_path(year: year) %>
+        <% end %>
+      </p>
+    </div>
   </div>
 
   <div id="samples">
@@ -52,117 +56,26 @@
       <h2><b>Sample Reading Lists</b></h2>
     </header>
 
-    <div class="row">
-      <div class="column column-half section h-entry">
-        <h1 id="current-events">Current Events</h1>
+    <% t("library").to_a.in_groups_of(2) do |group| %>
+      <div class="row">
 
-        <div class="e-content">
-          <%= image_tag @featured_current_events.image, alt: @featured_current_events.image_description %>
+        <% group.each do |section, links| %>
+          <div class="column column-half section h-entry">
+            <h1 id="<%= section.to_s.downcase.sub(' ', '-') %>"><%= section %></h1>
 
-          <ul>
-            <% {
-              "/2016/11/01/feature-report-back-from-the-battle-for-sacred-ground"                        => "Reportback from the Battle for Sacred Ground",
-              "/2015/12/14/feature-the-french-911"                                                       => "The French 9/11: A Dialogue",
-              "/2015/02/04/feature-turkish-anarchists-on-the-fight-for-kobane"                           => "Turkish Anarchists on the Fight for Kobanê",
-              "/2014/12/12/feature-from-ferguson-to-oakland-17-days-of-riots-and-revolt-in-the-bay-area" => "From Ferguson to Oakland: 17 Days of Riots and Revolt in the Bay Area",
-              "/2013/07/27/the-june-2013-uprisings-in-brazil-part-1"                                     => "The June 2013 Uprisings in Brazil, Part I: New Alliances, Age-Old Struggles",
-              "/2013/08/28/the-june-2013-uprisings-in-brazil-part-ii-giants-and-monsters"                => "The June 2013 Uprisings in Brazil, Part II: Giants and Monsters",
-              "/2009/05/05/going-it-alone"                                                               => "Going It Alone: Anarchist Action at the 2008 Democratic and Republican National Conventions"
-            }.each do |href, text| %>
-              <li><%= link_to text, href %></li>
-            <% end %>
-          </ul>
-        </div> <!-- .e-content -->
-      </div> <!-- .h-entry -->
+            <div class="e-content">
+              <%= image_tag_for_library_section links %>
 
-      <div class="column column-half section h-entry">
-        <h1 id="strategy-and-analysis">Strategy and Analysis</h1>
+              <ul>
+                <% links.each do |link| %>
+                  <li><%= link_to link[:name], link[:path] %></li>
+                <% end %>
+              </ul>
+            </div> <!-- .e-content -->
+          </div> <!-- .h-entry -->
+        <% end %>
 
-        <div class="e-content">
-          <%= image_tag @featured_strategy_and_analysis.image, alt: @featured_strategy_and_analysis.image_description %>
-
-          <ul>
-            <% {
-              "/2015/09/23/feature-understanding-the-kurdish-resistance-historical-overview-eyewitness-report"          => "Understanding the Kurdish Resistance",
-              "/2015/08/13/feature-next-time-it-explodes-revolt-repression-and-backlash-since-the-ferguson-uprising"    => "Next Time It Explodes: Revolt, Repression, and Backlash since the Ferguson Uprising",
-              "/2015/01/28/feature-syriza-cant-save-greece-why-theres-no-electoral-exit-from-the-crisis"                => "Syriza Can’t Save Greece: Why There’s No Electoral Exit from the Crisis",
-              "/2015/08/10/feature-reflections-on-the-ferguson-uprising"                                                => "Reflections on the Ferguson Uprising: An Interview with Participants",
-              "/2014/03/17/feature-the-ukrainian-revolution-the-future-of-social-movements"                             => "The Ukrainian Revolution an the Future of Social Movements",
-              "/2013/09/09/after-the-crest-part-i-what-to-do-while-the-dust-is-settling"                                => "After the Crest, Part I: What to Do While the Dust Is Settling",
-              "/2013/09/10/after-the-crest-part-ii-the-rise-and-fall-of-the-oakland-commune"                            => "After the Crest, Part II: The Rise and Fall of the Oakland Commune",
-              "/2013/09/11/after-the-crest-part-iii-barcelona-anarchists-at-low-tide"                                   => "After the Crest, Part III: Barcelona Anarchists at Low Tide",
-              "/2013/09/12/after-the-crest-part-iv-montreal-peaks-and-precipices"                                       => "After the Crest, Part IV: Montréal: Peaks and Precipices",
-              "/2013/04/23/breaking-with-consensus-reality-from-the-politics-of-consent-to-the-seduction-of-revolution" => "Breaking with Consensus Reality: From the Politics of Consent to the Seduction of Revolution",
-              "/2010/01/07/say-you-want-an-insurrection"                                                                => "Say You Want an Insurrection",
-              "/2008/09/01/the-shac-model-a-critical-assessment"                                                        => "The SHAC Model: A Critical Assessment"
-            }.each do |href, text| %>
-              <li><%= link_to text, href %></li>
-            <% end %>
-          </ul>
-        </div> <!-- .e-content -->
-      </div> <!-- .h-entry -->
-    </div> <!-- .row -->
-
-    <div class="row">
-      <div class="column column-half section h-entry">
-        <h1 id="theory-and-critique">Theory and Critique</h1>
-
-        <div class="e-content">
-          <%= image_tag @featured_theory_and_critique.image, alt: @featured_theory_and_critique.image_description %>
-
-          <ul>
-            <% {
-              "/2012/04/29/feature-from-democracy-to-freedom"                                                          => "From Democracy to Freedom",
-              "/2015/11/17/feature-the-borders-wont-protect-you-but-they-might-get-you-killed"                         => "The Borders Won’t Protect You but They Might Get You Killed",
-              "/2014/11/25/feature-the-thin-blue-line-is-a-burning-fuse"                                               => "The Thin Blue Line Is a Burning Fuse: Why Every Struggle Is Now a Struggle against the Police",
-              "/2014/08/20/feature-the-making-of-outside-agitators"                                                    => "The Making of “Outside Agitators”",
-              "/2014/08/18/feature-what-they-mean-when-they-say-peace"                                                 => "What They Mean when They Say Peace",
-              "/2013/10/04/feature-deserting-the-digital-utopia"                                                       => "Deserting the Digital Utopia: Computers against Computing",
-              "/2013/05/31/for-all-we-care-reconsidering-self-care"                                                    => "For All We Care: Reconsidering Self-Care",
-              "/2013/05/23/anarchism-and-the-english-language-english-and-the-anarchists-language"                     => "Anarchism and the English Language / English and the Anarchists’ Language",
-              "/2013/04/17/accounting-for-ourselves-breaking-the-impasse-around-assault-and-abuse-in-anarchist-scenes" => "Accounting for Ourselves: Breaking the Impasse Around Assault and Abuse in Anarchist Scenes",
-              "/2010/08/11/against-ideology"                                                                           => "Against Ideology?",
-            }.each do |href, text| %>
-              <li><%= link_to text, href %></li>
-            <% end %>
-          </ul>
-        </div> <!-- .e-content -->
-      </div> <!-- .h-entry -->
-
-      <div class="column column-half section h-entry">
-        <h1 id="classics">Classics</h1>
-
-        <div class="e-content">
-          <%= image_tag @featured_classics.image, alt: @featured_classics.image_description %>
-
-          <ul>
-            <% {
-              "/2000/09/11/there-is-a-difference-between-life-and-survival"   => "There Is a Difference between Life and Survival",
-              "/2000/09/11/ultimatum"                                         => "Ultimatum",
-              "/2000/09/11/forward"                                           => "Forward!",
-              "/2000/09/11/join-the-resistance-fall-in-love"                  => "Join the Resistance: Fall in Love",
-              "/2000/09/11/there-is-a-secret-world-concealed-within-this-one" => "There is a Secret World Concealed Within this One"
-            }.each do |href, text| %>
-              <li><%= link_to text, href %></li>
-            <% end %>
-          </ul>
-        </div> <!-- .e-content -->
-      </div> <!-- .h-entry -->
-    </div> <!-- .row -->
-  </div>
-
-  <!-- TODO temp hack -->
-  <br><hr /><br><br>
-
-  <div id="videos">
-    <header>
-      <h1>Emergency Broadcast System</h1>
-      <h2>A Selection of Videos from CrimethInc. Perpetual Motion Pictures</h2>
-    </header>
-
-    <%= link_to "See Also: <b>Videos →</b>".html_safe, [:videos], class: "button" %>
-
-    <!-- TODO temp hack -->
-    <br><br><br>
+      </div> <!-- .row -->
+    <% end %>
   </div>
 </div>
