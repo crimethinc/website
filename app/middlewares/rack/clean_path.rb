@@ -16,7 +16,7 @@ module Rack
       'texts/insidefront'    => 'texts',
       'texts/mostrecent'     => 'texts',
       'texts/pastfeatures'   => 'texts',
-      'texts/r'              => 'texts',
+      'texts/r/'             => 'texts/',
       'texts/recentfeatures' => 'texts',
       'texts/rollingthunder' => 'texts',
       'texts/selected'       => 'texts',
