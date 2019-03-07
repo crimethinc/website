@@ -2,10 +2,14 @@
   <div class="localizations">
     <b class="badge">Localizations:</b>
 
-    <% article.localizations.each do |article| %>
-      <li>
-        <%= link_to locale(article.locale).name, article.path %>
-      </li>
+    <% if action_name == 'show' %>
+      <%= image_tag 'library/localizations.png', class: 'icon-image' %>
     <% end %>
+
+    <ul>
+      <% article.localizations.each do |article| %>
+        <li><%= link_to locale(article.locale).name, article.path %></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
