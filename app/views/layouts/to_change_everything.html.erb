@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<%= content_tag :html,
-                dir:    t('.language_direction'),
-                lang:   t('.lang_code'),
-                class:  @locale.to_s,
-                prefix: html_prefix do %>
+<%= tag.html dir:    t('.language_direction'),
+             lang:   t('.lang_code'),
+             class:  @locale.to_s,
+             prefix: html_prefix do %>
 <head>
   <title><%=t('.head.title').html_safe%></title>
   <meta charset="utf-8" />

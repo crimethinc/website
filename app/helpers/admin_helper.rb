@@ -45,7 +45,7 @@ module AdminHelper
 
     classes << 'active' if current_page?(path)
 
-    content_tag :li, class: 'nav-item' do
+    tag.li class: 'nav-item' do
       link_to text, path, class: classes.join(' '), target: target
     end
   end

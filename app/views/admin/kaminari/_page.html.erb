@@ -1,6 +1,6 @@
 <% if page.current? %>
   <li class='active'>
-    <%= content_tag :a, page, rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil)) %>
+    <%= tag.a page, rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil)) %>
   </li>
 <% else %>
   <li>

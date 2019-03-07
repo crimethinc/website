@@ -4,7 +4,7 @@ module ArticlesHelper
   end
 
   def social_links_for article
-    content_tag :ul, class: 'social-links' do
+    tag.ul class: 'social-links' do
       social_link_for(article, :twitter) +
         social_link_for(article, :facebook) +
         social_link_for(article, :tumblr)
@@ -22,7 +22,7 @@ module ArticlesHelper
         "http://tumblr.com/widgets/share/tool?canonicalUrl=#{article_url}&amp;caption=#{url_encode article.title}&amp;content=#{article.image}"
       end
 
-    content_tag :li, class: 'social-link' do
+    tag.li class: 'social-link' do
       link_to "Share on #{site.capitalize}", url, class: "link-domain-#{site}", target: '_blank', rel: 'noopener'
     end
   end
@@ -31,9 +31,9 @@ module ArticlesHelper
     return if article.image.blank?
 
     img        = image_tag article.image, class: 'u-photo', alt: ''
-    figcaption = content_tag(:figcaption, article.image_description) if article.image_description.present?
+    figcaption = tag.figcaption(article.image_description) if article.image_description.present?
 
-    content_tag :figure, img + figcaption.to_s
+    tag.figure img + figcaption.to_s
   end
 
   def article_tag(article, &block)
@@ -44,7 +44,7 @@ module ArticlesHelper
     data = { id: article.id, published_at: Time.now.utc.to_i }
     data[:listen] = true if article.collection_posts.recent.any?
 
-    content_tag 'article', id: article.slug, class: klasses.join(' '), data: data, &block
+    tag.article id: article.slug, class: klasses.join(' '), data: data, &block
   end
 
   def display_date(datetime = nil)
