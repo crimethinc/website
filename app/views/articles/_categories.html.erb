@@ -2,7 +2,7 @@
   <div class="categories">
     <b class="badge">Categories:</b>
 
-    <% if action_name == 'show' %>
+    <% if controller_name == 'articles' && action_name == 'show' %>
       <%= image_tag 'library/tags.png', class: 'icon-image' %>
     <% end %>
 
