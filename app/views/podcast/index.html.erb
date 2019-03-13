@@ -1,41 +1,45 @@
-<header>
-  <%= render "articles/titles", header: @podcast, linked: false %>
-</header>
+<% @podcasts.each do |podcast| %>
+  <header>
+    <%= render "articles/titles", header: podcast, linked: false %>
+  </header>
 
-<div class="row">
-  <div class="column column-one-third meta">
-    <%= image_tag @podcast.image, class: "u-photo" %>
+  <div class="row" style="margin-bottom: 5rem;">
+    <div class="column column-one-third meta">
+      <%= image_tag podcast.image, class: "u-photo" %>
 
-    <%= render "podcast/subscribe_buttons", podcast: @podcast %>
-  </div> <!-- .column -->
+      <%= render "podcast/subscribe_buttons", podcast: podcast %>
+    </div> <!-- .column -->
 
-  <div class="column column-two-third e-content">
-    <div class="h-feed">
+    <div class="column column-two-third e-content">
+      <div class="h-feed">
 
-      <div class="latest-episode">
-        <h3><%= t("podcast.latest_episode") %></h3>
-        <article class="h-entry" id="episode-<%= @latest_episode.id %>">
-          <h1><%= link_to @latest_episode.title, @latest_episode, class: "p-name u-url" %></h1>
-          <p class="e-content"><%= @latest_episode.subtitle %></p>
+        <% latest_episode = podcast.episodes.first %>
 
-          <%= render "podcast/player", episode: @latest_episode unless lite_mode? %>
-        </article>
-      </div> <!-- .latest-episodes -->
+        <div class="latest-episode">
+          <h3><%= t("podcast.latest_episode") %></h3>
+          <article class="h-entry" id="episode-<%= latest_episode.id %>">
+            <h1><%= link_to latest_episode.title, latest_episode, class: "p-name u-url" %></h1>
+            <p class="e-content"><%= latest_episode.subtitle %></p>
 
-      <div class="other-episodes">
-        <h3><%= t("podcast.other_episodes") %></h3>
-        <ul>
-          <% @episodes.each do |episode| %>
-            <li>
-              <article class="h-entry" id="episode-<%= episode.id %>">
-                <h1><%= link_to episode.title, episode, class: "p-name u-url" %></h1>
-                <p class="e-content"><%= episode.subtitle %></p>
-              </article>
-            </li>
-          <% end %>
-        </ul>
-      </div> <!-- .other-episodes -->
+            <%= render "podcast/player", episode: latest_episode unless lite_mode? %>
+          </article>
+        </div> <!-- .latest-episodes -->
 
-    </div> <!-- .h-feed -->
-  </div> <!-- .column -->
-</div> <!-- .row -->
+        <div class="other-episodes">
+          <h3><%= t("podcast.other_episodes") %></h3>
+          <ul>
+            <% podcast.episodes.each do |episode| %>
+              <li>
+                <article class="h-entry" id="episode-<%= episode.id %>">
+                  <h1><%= link_to episode.title, episode, class: "p-name u-url" %></h1>
+                  <p class="e-content"><%= episode.subtitle %></p>
+                </article>
+              </li>
+            <% end %>
+          </ul>
+        </div> <!-- .other-episodes -->
+
+      </div> <!-- .h-feed -->
+    </div> <!-- .column -->
+  </div> <!-- .row -->
+<% end %>

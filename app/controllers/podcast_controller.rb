@@ -6,8 +6,8 @@ class PodcastController < ApplicationController
   def index
     @html_id        = 'page'
     @body_id        = 'podcast'
-    @latest_episode = @episodes.shift
-    @editable       = @latest_episode.podcast
+    @podcasts       = Podcast.all.sort_by { |podcast| podcast.latest_episode.published_at }.reverse
+    @editable       = @podcasts.first
     @title          = title_for :podcasts
   end
 
