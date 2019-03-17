@@ -73,6 +73,8 @@ module Rack
     end
 
     def transliterate_unicode_to_ascii_in path
+      return path if path.start_with?('/tce')
+
       result = path_pieces(path).map do |path_piece|
         file_pieces(path_piece).map { |f| transliterate_unicode_to_ascii(f) }.join('.')
       end
