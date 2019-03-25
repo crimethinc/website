@@ -90,8 +90,8 @@ Eventually, this will happen automatically. But as long as these instructions ar
 4. Sign in.
 5. Go to the `Site Settings` menu, then click on `Redirects`.
 6. Click `NEW` under the `Redirects` heading
-7. Fill out the `Source Path` with the value from the article's `Short URL Path`.
-8. Fill out the `Target Path` with the article's path or URL. You can copy that from the article show page in the CMS next to `URL:`. Like here: https://crimethinc.com/admin/articles/847. Or if the article is live (on the homepage), you can copy its URL from your browser's address bar when you're viewing that article (not the homepage). Like here: https://crimethinc.com/2017/04/10/inversions-palinodes-and-anti-poems.
+7. Fill out the `From` with the value from the article's `Short URL Path`.
+8. Fill out the `To` with the article's path or URL. You can copy that from the article show page in the CMS next to `URL:`. Like here: https://crimethinc.com/admin/articles/847. Or if the article is live (on the homepage), you can copy its URL from your browser's address bar when you're viewing that article (not the homepage). Like here: https://crimethinc.com/2017/04/10/inversions-palinodes-and-anti-poems.
 9. Leave `Temporary` unchecked, unless your making a special short URL whose destination will likely change in the future. Like `/acab` or `/live`. Those are temporary redirects, meaning that Google et al won't cache them forever as going to wherever they go right now.
 10. Click `Save`.
 
@@ -99,11 +99,11 @@ Eventually, this will happen automatically. But as long as these instructions ar
 
 - The Redirects manager is pretty smart about doing the right thing with your input. And is also pretty forgiving.
 - Technically, what gets saved looks like `/sourcepath` and `/target-path` with leading `/`s and no leading domain (https://crimethinc.com or cwc.im).
-- It should strip those out if you ever paste them in. BUT if you ever see something end up as the saved Redirect that doesn't look like `/sourcepath` and `/target-path`, raise a flag because something went wrong.
+- It should strip those out if you ever paste them in. BUT if you ever see something end up as the saved Redirect that doesn't look like `/from` and `/to`, raise a flag because something went wrong.
 - External redirects ARE allowed though. `/target-path` can be a fully qualified URL if it's pointing to a different domain.
-  - **sourcepath**: `/wtf` and **targetpath**`http://example.com`.
+  - **from**: `/wtf` and **to**`http://example.com`.
   - `http://` is required if that's the case. `www.example.com` is not enough.
-- `Source path` has to be unique. If you try to create a Redirect with a `Source path` that already exists, you'll get an error saying "Source path has already been taken." and you'll need to use something else instead.
+- `From` has to be unique. If you try to create a Redirect with a `From` that already exists, you'll get an error saying "Source path has already been taken." and you'll need to use something else instead.
   - If whatever you end up using is different from the `Short URL Path` saved on the Article, you should go back to the article and update its `Short URL Path` to match.
 - Again, eventually all of this will be automated.
 
