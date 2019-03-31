@@ -1,5 +1,4 @@
 <% if signed_in? %>
-
   <style>
     #admin-header {
       padding: 2rem;
@@ -15,5 +14,4 @@
       <b><%= link_to "Edit #{@editable.class}", [:edit, :admin, @editable], class: "button button-buy" %></b>
     <% end %>
   </nav>
-
 <% end %>

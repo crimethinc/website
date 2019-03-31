@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   before_action :set_page,       only: [:show]
   before_action :page_redirects, only: [:show]
+  before_action :set_html_id
 
   def show
     @html_id = 'page'
@@ -15,17 +16,19 @@ class PagesController < ApplicationController
   def set_page
     @page =
       if params[:draft_code].present?
-        Page.where(draft_code: params[:draft_code])
+        Page.find_by(draft_code: params[:draft_code])
       else
-        Page.where(slug: params[:path])
+        Page.find_by(slug: params[:path])
       end
 
-    return redirect_to [:root] if @page.blank?
-
-    @page = @page.first
+    redirect_to [:root] if @page.blank?
   end
 
   def page_redirects
     return redirect_to @page.path if @page.published? && params[:draft_code].present?
+  end
+
+  def set_html_id
+    @html_id = 'page'
   end
 end
