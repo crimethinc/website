@@ -1,0 +1,13 @@
+// vendor library
+@import 'bootstrap';
+
+// text
+@import 'steal-something-from-work-day/fonts';
+@import 'steal-something-from-work-day/typography';
+
+// header / hero
+@import 'steal-something-from-work-day/header';
+
+#steal-something-from-work-day {
+  img { max-width: 100%; }
+}

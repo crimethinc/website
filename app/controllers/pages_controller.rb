@@ -22,11 +22,11 @@ class PagesController < ApplicationController
   # TODO: make this view localizable
   def submission_guidelines
     @title = I18n.t('page_titles.about.submission_guidelines')
-    @title = 'Submission Guidelines'
   end
 
   def steal_something_from_work_day
     @title = I18n.t('page_titles.about.steal_something_from_work_day')
+    @body_id = 'steal-something-from-work-day'
     render layout: false
   end
 
