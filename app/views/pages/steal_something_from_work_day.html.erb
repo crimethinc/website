@@ -13,7 +13,7 @@
     <%= render "shared/head/link_tags" %>
     <%= render "shared/head/fav_and_touch_icons" %>
 
-    <%= stylesheet_link_tag "steal_something_from_work_day", media: "all" %>
+    <%= stylesheet_link_tag "steal-something-from-work-day", media: "all" %>
   </head>
 
   <body id="<%= body_id %>">
@@ -21,18 +21,17 @@
     <%= render "admin/nav" %>
 
     <div class="container">
-
       <% %w[
-      introduction
-      faq
-      outreach_materials
-      interviews
-      coverage
-      internationally
-      analysis
-      narratives
-      testimonials
-      further_reading
+        introduction
+        faq
+        outreach_materials
+        interviews
+        coverage
+        internationally
+        analysis
+        narratives
+        testimonials
+        further_reading
       ].each do |section| %>
 
         <article id='<%= section.to_slug %>'>
