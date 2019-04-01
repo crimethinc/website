@@ -4,7 +4,6 @@ class PagesController < ApplicationController
   before_action :set_html_id
 
   def show
-    @html_id = 'page'
     @editable = @page
 
     # no layout
@@ -18,6 +17,10 @@ class PagesController < ApplicationController
   def post_order_success
     @title    = title_for I18n.t('page_titles.about.store'), I18n.t('page_titles.about.post_order_success')
     @order_id = params[:ordernum]
+  end
+
+  def steal_something_from_work_day
+    @title = I18n.t('page_titles.about.steal_something_from_work_day')
   end
 
   # TODO: make this view localizable

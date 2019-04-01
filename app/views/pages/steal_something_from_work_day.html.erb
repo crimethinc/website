@@ -1,0 +1,18 @@
+<% %w[
+introduction
+faq
+outreach_materials
+interviews
+coverage
+internationally
+analysis
+narratives
+testimonials
+further_reading
+].each do |section| %>
+
+  <article id='<%= section.to_slug %>'>
+    <%= render_markdown_for page: "steal_something_from_work_day/#{section}" %>
+  </article>
+
+<% end %>
