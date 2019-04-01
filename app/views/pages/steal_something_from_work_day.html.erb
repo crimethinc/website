@@ -1,18 +1,45 @@
-<% %w[
-introduction
-faq
-outreach_materials
-interviews
-coverage
-internationally
-analysis
-narratives
-testimonials
-further_reading
-].each do |section| %>
+<!DOCTYPE html>
+<%= tag.html dir:    html_dir,
+             lang:   html_lang,
+             id:     html_id,
+             class:  html_class,
+             prefix: html_prefix do %>
+  <head>
+    <%= render "shared/head/license" %>
+    <title><%= page_title %></title>
+    <%= render "shared/head/meta_tags" %>
+    <%= render "shared/head/public_meta_tags" %>
+    <%= render "shared/head/social_media_meta_tags" %>
+    <%= render "shared/head/link_tags" %>
+    <%= render "shared/head/fav_and_touch_icons" %>
 
-  <article id='<%= section.to_slug %>'>
-    <%= render_markdown_for page: "steal_something_from_work_day/#{section}" %>
-  </article>
+    <%= stylesheet_link_tag "steal_something_from_work_day", media: "all" %>
+  </head>
 
+  <body id="<%= body_id %>">
+    <%= render "shared/development_mode_banner" %>
+    <%= render "admin/nav" %>
+
+    <div class="container">
+
+      <% %w[
+      introduction
+      faq
+      outreach_materials
+      interviews
+      coverage
+      internationally
+      analysis
+      narratives
+      testimonials
+      further_reading
+      ].each do |section| %>
+
+        <article id='<%= section.to_slug %>'>
+          <%= render_markdown_for page: "steal_something_from_work_day/#{section}" %>
+        </article>
+
+      <% end %>
+    </div>
+  </body>
 <% end %>
