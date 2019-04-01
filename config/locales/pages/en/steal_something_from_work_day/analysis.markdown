@@ -74,7 +74,7 @@ For worker/theorists who both enjoy the ruse of workplace theft and refuse a "re
 
 Or, to use de Certeau's metaphor, though our tactic is inevitably immersed in and permeated by its surroundings, can we insinuate ourselves _like worms_ into a place from which _la perruque_ could constitute revolutionary sabotage?
 
-[[https://crimethinc.com/blog/wp-content/uploads/2013/04/2b.jpg]]
+[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/2b.jpg]]
 
 ## Can the Master's Degree Dismantle the Master's House?
 
@@ -109,7 +109,7 @@ Elsewhere, de Certeau seemed to understand this tendency of the university to re
 
 There was a graduate student from the anthropology department, a self-described Marxist, who came frequently to our Occupy encampment. He would tell us that if we really wanted to change things we would go home and read more theory.
 
-[[https://crimethinc.com/blog/wp-content/uploads/2013/04/3b.jpg This is not a diploma.]]
+[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/3b.jpg This is not a diploma.]]
 
 ## 100% Time
 
@@ -159,7 +159,7 @@ Recent historians have suggested that the potlatch only reached this immolative 
 >
 > “Ah! that accounts for it,” said the Hatter. “He won't stand beating.”
 
-[[https://crimethinc.com/blog/wp-content/uploads/2013/04/4b.jpg]]
+[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/4b.jpg]]
 
 ## Resources
 
