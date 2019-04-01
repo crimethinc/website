@@ -29,7 +29,7 @@ Print out [this trifold](https://cloudfront.crimethinc.com/pdfs/sfw_media/trifol
 # Postcard
 
 [[https://cloudfront.crimethinc.com/pdfs/sfw_media/card.pdf]]
-WE NEED A JPG ILLUSTRATION OF THIS ONE!!!!!!!!!!!!!!!
+<!-- TODO: add JPG of this PDF -->
 
 # Journal
 
