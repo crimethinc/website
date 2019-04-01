@@ -19,14 +19,15 @@ class PagesController < ApplicationController
     @order_id = params[:ordernum]
   end
 
-  def steal_something_from_work_day
-    @title = I18n.t('page_titles.about.steal_something_from_work_day')
-  end
-
   # TODO: make this view localizable
   def submission_guidelines
     @title = I18n.t('page_titles.about.submission_guidelines')
     @title = 'Submission Guidelines'
+  end
+
+  def steal_something_from_work_day
+    @title = I18n.t('page_titles.about.steal_something_from_work_day')
+    render layout: false
   end
 
   private
