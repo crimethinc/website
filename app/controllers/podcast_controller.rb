@@ -11,13 +11,6 @@ class PodcastController < ApplicationController
     @title          = title_for :podcasts
   end
 
-  def show
-    @html_id  = 'page'
-    @body_id  = 'podcast'
-    @editable = @episode
-    @title    = title_for :podcasts, @episode.name
-  end
-
   def transcript
     @html_id  = 'page'
     @body_id  = 'podcast'
