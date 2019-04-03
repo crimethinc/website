@@ -13,7 +13,10 @@ class User < ApplicationRecord
 
   validates :password,
             exclusion: {
-              in: ['mickey fickie fire cracker soap on a rope', 'a long passphrase to meet the minimum length'],
+              in: [
+                'mickey fickie fire cracker soap on a rope',
+                'a long passphrase to meet the minimum length'
+              ],
               message: 'The passphrase ‘%{value}’ is prohibited.'
             }
 
