@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   PASSWORD_MINIMUM_LENGTH = 30
 
+  enum role: %i[author editor publisher]
+
   validates :username, presence: true, uniqueness: true, on: [:create, :update]
   validates :password,
             presence: true,
