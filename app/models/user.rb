@@ -6,12 +6,11 @@ class User < ApplicationRecord
   enum role: %i[author editor publisher]
 
   validates :username, presence: true, uniqueness: true, on: [:create, :update]
+
   validates :password,
             presence: true,
             on: :create,
-            length: { minimum: PASSWORD_MINIMUM_LENGTH }
-
-  validates :password,
+            length: { minimum: PASSWORD_MINIMUM_LENGTH },
             exclusion: {
               in: [
                 'mickey fickie fire cracker soap on a rope',
