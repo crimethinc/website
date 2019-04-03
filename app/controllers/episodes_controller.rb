@@ -1,11 +1,20 @@
 class EpisodesController < ApplicationController
-  before_action :set_episode, only: [:show]
+  before_action :set_episode, only: [:show, :transcript]
 
   def show
     @html_id  = 'page'
     @body_id  = 'podcast'
     @editable = @episode
     @title    = title_for :podcasts, @episode.name, :transcript
+  end
+
+  def transcript
+    @html_id  = 'page'
+    @body_id  = 'podcast'
+    @editable = @episode
+    @title    = title_for :podcasts, @episode.name, :transcript
+
+    render 'podcast/show'
   end
 
   private

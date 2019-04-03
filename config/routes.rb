@@ -66,8 +66,8 @@ Rails.application.routes.draw do
   # Podcast
   get 'podcast/feed',             to: 'podcast#feed',       as: :podcast_feed, defaults: { format: 'rss' }
   get 'podcast',                  to: 'podcast#index',      as: :podcast
-  get 'podcast/:slug/transcript', to: 'podcast#transcript', as: :episode_transcript
   get 'podcast/:slug',            to: 'episodes#show',      as: :episode
+  get 'podcast/:slug/transcript', to: 'episodes#transcript', as: :episode_transcript
 
   # Books
   get 'books/lit-kit',        to: 'books#lit_kit',        as: :books_lit_kit
