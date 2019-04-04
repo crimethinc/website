@@ -55,7 +55,6 @@ group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platform: :mri
   gem 'capybara'
-  gem 'chromedriver-helper'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'launchy'
@@ -65,6 +64,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
+  gem 'webdrivers'
 end
 
 # dev
