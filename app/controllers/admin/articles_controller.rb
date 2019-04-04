@@ -7,24 +7,24 @@ module Admin
 
     def index
       @articles = Article.root.includes(:collection_posts).page(params[:page])
-      @title = admin_title
+      @title    = admin_title
     end
 
     def show
       # TODO: this is a hack
       @collection = Article.find(@article.collection_id) if @article.collection_id.present?
 
-      @title = admin_title(@article, [:title, :subtitle])
-      @html_id = 'admin-article'
+      @title   = admin_title(@article, [:title, :subtitle])
+      @html_id = 'js-admin-article'
       @body_id = 'top'
     end
 
     def new
-      @collection     = Article.find(params[:id]) if params[:id]
-      @article        = Article.new
+      @collection = Article.find(params[:id]) if params[:id]
+      @article    = Article.new
 
-      @title = admin_title
-      @html_id = 'admin-article'
+      @title   = admin_title
+      @html_id = 'js-admin-article'
     end
 
     def edit
@@ -32,12 +32,12 @@ module Admin
       @article.update_columns(user_id: current_user)
 
       @collection = Article.find(@article.collection_id) if @article.in_collection?
-      @title = admin_title(@article, [:id, :title, :subtitle])
-      @html_id = 'admin-article'
+      @title      = admin_title(@article, [:id, :title, :subtitle])
+      @html_id    = 'js-admin-article'
     end
 
     def create
-      @article = Article.new(article_params)
+      @article = Article.new(updated_article_params)
 
       if @article.save
         redirect_to [:admin, @article], notice: 'Article was successfully created.'
@@ -47,7 +47,7 @@ module Admin
     end
 
     def update
-      if @article.update(article_params)
+      if @article.update(updated_article_params)
         # update_columns to avoid hitting callbacks, namely updating Search index
         @article.update_columns(user_id: nil)
 
@@ -58,6 +58,8 @@ module Admin
     end
 
     def destroy
+      return redirect_to [:admin, @article] unless current_user.can_delete?
+
       @article.destroy
       redirect_to [:admin, :articles], notice: 'Article was successfully destroyed.'
     end
@@ -93,6 +95,15 @@ module Admin
                                       :image_description, :image_mobile, :published_at_tz,
                                       :locale, :canonical_id,
                                       :publication_status, category_ids: [])
+    end
+
+    def updated_article_params
+      return article_params if current_user.can_publish?
+      return article_params if @article&.published?
+
+      # Override publication_status from the submitted for,
+      # to prevent authors and editors from publishing a draft article
+      article_params.merge(publication_status: 'draft') if @article.blank? || @article.draft?
     end
   end
 end
