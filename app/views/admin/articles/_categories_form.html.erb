@@ -45,7 +45,13 @@
       <%= render "admin/label_and_field_form_group", form: form, attr: :short_path, label_text: "Short URL Path" %>
     <% end %>
 
-    <%= render 'admin/publication_status', form: form %>
+    <% if current_user.can_publish? || @article.draft? %>
+      <%= render 'admin/publication_status', form: form %>
+    <% elsif @article.published? %>
+      <b>Publication Status</b><br>
+      <span class='badge badge-success'>PUBLISHED</span>
+    <% end %>
+
   </div><!-- .col -->
 
   </div><!-- .row -->

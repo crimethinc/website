@@ -42,6 +42,12 @@ class User < ApplicationRecord
     @user.author!
   end
 
-  # All of the publisher only permissiongs
+  # All of the publisher only permissions
   alias can_admin_users? publisher?
+  alias can_publish?     publisher?
+  alias can_delete?      publisher?
+
+  def cant_publish?
+    !can_publish?
+  end
 end

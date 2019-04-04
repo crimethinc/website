@@ -4,4 +4,4 @@
 <%= render "admin/danger_zone",
            thing: @article,
            label: "article",
-           path: [:admin, @article] %>
+           path: [:admin, @article] if current_user.can_delete? %>
