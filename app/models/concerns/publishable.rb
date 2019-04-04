@@ -20,4 +20,14 @@ module Publishable
   def dated?
     published_at.present?
   end
+
+  class << self
+    def publication_statuses_for user:
+      if user.can_publish?
+        PUBLICATION_STATUSES
+      else
+        PUBLICATION_STATUSES - %i[published]
+      end
+    end
+  end
 end

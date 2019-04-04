@@ -155,9 +155,7 @@ Rails.application.routes.draw do
     resources :sessions, only: [:create]
   end
 
-  get 'profile',  to: 'auth/users#show',       as: :profile
   get 'settings', to: 'auth/users#edit',       as: :settings
-  get 'signup',   to: 'auth/users#new',        as: :signup
   get 'signin',   to: 'auth/sessions#new',     as: :signin
   get 'signout',  to: 'auth/sessions#destroy', as: :signout
 

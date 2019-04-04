@@ -70,33 +70,35 @@
 
   <div class="e-content">
     <% if @article.content_in_html? %>
-      <pre><%= @article.content %></pre>
+      <pre class='bg-light p-3'><code><%= @article.content.gsub("\t", "  ") %></code></pre>
     <% else %>
       <%= render_content @article %>
     <% end %>
   </div>
 
-  <hr>
+  <% unless @article.content_in_html? %>
 
-  <h3 style="margin-top: 1rem">
-    <% if @article.in_collection? %>
-      Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
-    <% else %>
-      <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-lg" %>
+    <hr>
+
+    <h3 style="margin-top: 1rem">
+      <% if @article.in_collection? %>
+        Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
+      <% else %>
+        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-lg" %>
+      <% end %>
+    </h3>
+
+    <% if @article.collection_root? %>
+      <div id="collection" style="margin-top: 6rem">
+        <h3>
+          Nested Articles
+          <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-sm" %>
+        </h3>
+
+        <%= render "table", articles: @article.collection_posts %>
+      </div>
     <% end %>
-  </h3>
 
-  <% if @article.collection_root? %>
-    <div id="collection" style="margin-top: 6rem">
-      <h3>
-        Nested Articles
-        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-sm" %>
-      </h3>
-
-      <%= render "table", articles: @article.collection_posts %>
-    </div>
+    <hr>
   <% end %>
-
-  <hr>
-
 </article>
