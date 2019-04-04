@@ -31,6 +31,9 @@ class PagesController < ApplicationController
       'Introduction', 'FAQ', 'Outreach Materials', 'Interviews', 'Coverage',
       'Internationally', 'Analysis', 'Narratives', 'Testimonials', 'Further Reading'
     ]
+    @temp_sections = %w[
+      Introduction FAQ
+    ]
 
     render layout: false
   end
