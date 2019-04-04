@@ -10,4 +10,14 @@
 
 #steal-something-from-work-day {
   img { max-width: 100%; }
+
+  main figure img {
+    @extend .rounded;
+  }
+
+  figure figcaption {
+    @extend .mt-2;
+    @extend .text-muted;
+    @extend .form-text;
+  }
 }

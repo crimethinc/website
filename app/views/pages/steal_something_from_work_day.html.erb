@@ -44,19 +44,8 @@
       <div class='row'>
 
         <div class='col-12 col-md-4 nav-wrapper'>
-          <nav id="section-list" class="list-group sticky-top pt-5">
-            <% %w[
-              Introduction
-              FAQ
-              Outreach Materials
-              Interviews
-              Coverage
-              Internationally
-              Analysis
-              Narratives
-              Testimonials
-              Further Reading
-            ].each do |section| %>
+          <nav id="section-list" class="list-group sticky-top pt-3">
+            <% @sections.each do |section| %>
               <%= link_to section, "##{section.to_slug}", class: 'list-group-item list-group-item-action' %>
             <% end %>
           </nav>
@@ -66,7 +55,7 @@
         <div class='col-12 col-md-8 main-wrapper'>
           <main data-spy='scroll' data-target='#section-list' data-offset='0'>
 
-            <article id="introduction" class="pt-5 mb-5 border-bottom">
+            <article id="introduction" class="py-5 mb-5">
               <%= render 'pages/steal_something_from_work_day/introduction' %>
             </article>
 
