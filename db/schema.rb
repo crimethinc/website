@@ -452,7 +452,7 @@ ActiveRecord::Schema.define(version: 2019_03_01_073243) do
   end
 
 
-  create_view "search_results", materialized: true,  sql_definition: <<-SQL
+  create_view "search_results", materialized: true, sql_definition: <<-SQL
       SELECT a.searchable_id,
       a.searchable_type,
       a.title,
@@ -510,7 +510,6 @@ ActiveRecord::Schema.define(version: 2019_03_01_073243) do
              FROM episodes
             GROUP BY episodes.id, 'Episode'::text) a;
   SQL
-
   add_index "search_results", ["category"], name: "index_search_results_on_category", using: :gin
   add_index "search_results", ["content"], name: "index_search_results_on_content", using: :gist
   add_index "search_results", ["document"], name: "index_search_results_on_document", using: :gist
