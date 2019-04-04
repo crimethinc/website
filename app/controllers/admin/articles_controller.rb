@@ -15,7 +15,7 @@ module Admin
       @collection = Article.find(@article.collection_id) if @article.collection_id.present?
 
       @title = admin_title(@article, [:title, :subtitle])
-      @html_id = 'admin-article'
+      @html_id = 'js-admin-article'
       @body_id = 'top'
     end
 
@@ -24,7 +24,7 @@ module Admin
       @article        = Article.new
 
       @title = admin_title
-      @html_id = 'admin-article'
+      @html_id = 'js-admin-article'
     end
 
     def edit
@@ -33,7 +33,7 @@ module Admin
 
       @collection = Article.find(@article.collection_id) if @article.in_collection?
       @title = admin_title(@article, [:id, :title, :subtitle])
-      @html_id = 'admin-article'
+      @html_id = 'js-admin-article'
     end
 
     def create

@@ -35,7 +35,7 @@ $(function() {
     }
   }
 
-  $("#admin-article #publish-now").click(function() {
+  $("#js-admin-article #publish-now").click(function() {
     var now    = new Date();
     var year   = now.getUTCFullYear();
     var month  = rjust((now.getUTCMonth() + 1).toString(), 2, "0");
