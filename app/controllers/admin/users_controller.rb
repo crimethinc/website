@@ -1,5 +1,6 @@
 module Admin
   class UsersController < Admin::AdminController
+    before_action :authorize_admin_role
     before_action :set_user, only: [:show, :edit, :update, :destroy]
 
     def index
@@ -12,7 +13,7 @@ module Admin
     end
 
     def new
-      @user = User.new
+      @user  = User.new
       @title = admin_title
     end
 
@@ -50,7 +51,11 @@ module Admin
     end
 
     def user_params
-      params.require(:user).permit(:username, :password, :password_confirmation)
+      params.require(:user).permit(:username, :password, :password_confirmation, :role)
+    end
+
+    def authorize_admin_role
+      return redirect_to [:admin] unless current_user.can_admin_users?
     end
   end
 end

@@ -2,8 +2,9 @@ class User < ApplicationRecord
   has_secure_password
 
   PASSWORD_MINIMUM_LENGTH = 30
+  ROLES = %i[author editor publisher].freeze
 
-  enum role: %i[author editor publisher]
+  enum role: ROLES
 
   validates :username, presence: true, uniqueness: true, on: [:create, :update]
 
@@ -21,6 +22,8 @@ class User < ApplicationRecord
 
   default_scope { order(username: :asc) }
 
+  before_validation :strip_whitespace, on: [:create, :update]
+
   class << self
     def options_for_select
       all.map { |u| [u.username, u.id] }
@@ -30,4 +33,15 @@ class User < ApplicationRecord
   def name
     username
   end
+
+  def strip_whitespace
+    self.username = username.strip
+  end
+
+  def default_role!
+    @user.author!
+  end
+
+  # All of the publisher only permissiongs
+  alias can_admin_users? publisher?
 end

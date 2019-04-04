@@ -6,17 +6,23 @@
   <%= render "admin/form_errors", thing: @user %>
 
   <fieldset>
-    <legend>Change Your Password</legend>
+    <legend>Change user’s role</legend>
 
-    <div class="row">
-      <div class="col-12 col-sm-6">
-        <%= render "admin/label_and_field_form_group", form: form, attr: :password %>
-      </div>
+    <ul class='form-text text-muted list-unstyled'>
+      <li><b>Authors</b> can write drafts, but not publish articles.</li>
+      <li><b>Editors</b> can write drafts, and make edits to existing published articles, but not publish articles.</li>
+      <li><b>Publishers</b> can write drafts, make edits to published articles, and publish articles.</li>
+    </ul>
 
-      <div class="col-12 col-sm-6">
-        <%= render "admin/label_and_field_form_group", form: form, attr: :password_confirmation, label_text: "Confirm Password" %>
+    <% User::ROLES.each do |role| %>
+      <div class="form-check form-check-inline">
+        <span class="d-inline-block mr-3">
+          <%= form.radio_button :role, role, id: "user_role_#{role}", class: "form-check-input" %>
+
+          <%= form.label :role, role.capitalize, class: "form-check-label", for: "user_role_#{role}" %>
+        </span>
       </div>
-    </div>
+    <% end %>
   </fieldset>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :user] %>

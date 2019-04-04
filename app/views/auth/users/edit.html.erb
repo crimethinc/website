@@ -3,8 +3,14 @@
 <%= form_with model: [:auth, @user], local: true do |form| %>
   <%= render "admin/form_errors", thing: @user %>
 
+  <div class="row">
+    <div class="col-12">
+      <%= render "admin/label_and_field_form_group", form: form, attr: :username %>
+    </div>
+  </div>
+
   <fieldset>
-    <legend>Change Your Password</legend>
+    <legend>Change your password</legend>
 
     <div class="row">
       <div class="col-12 col-sm-6">
@@ -18,5 +24,5 @@
     </div>
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: profile_url %>
+  <%= render "admin/form_actions", cancel_url: [:admin] %>
 <% end %>
