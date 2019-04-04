@@ -113,4 +113,8 @@ module AdminHelper
       ].join
     ].join '/'
   end
+
+  def badge_color_class role:
+    { publisher: 'success', editor: 'warning', author: 'danger' }[role.to_sym]
+  end
 end
