@@ -28,11 +28,19 @@ class PagesController < ApplicationController
     @title = I18n.t('page_titles.about.steal_something_from_work_day')
     @body_id = 'steal-something-from-work-day'
     @sections = [
-      'Introduction', 'FAQ', 'Stickers', 'Posters', 'Trifold', 'Postcard', 'Journal', 'Interviews', 'Coverage',
+      'Introduction', 'FAQ', 'Stickers', 'Posters', 'Trifold', 'Postcard', 'Journal', 'Interviews', 'Selected Coverage',
       'Internationally', 'Analysis', 'Narratives', 'Testimonials', 'Further Reading'
     ]
-    @temp_sections = %w[
-      Introduction FAQ Stickers Posters Trifold Postcard Journal Interviews
+    @temp_sections = [
+      'Introduction',
+      'FAQ',
+      'Stickers',
+      'Posters',
+      'Trifold',
+      'Postcard',
+      'Journal',
+      'Interviews',
+      'Selected Coverage'
     ]
 
     render layout: false

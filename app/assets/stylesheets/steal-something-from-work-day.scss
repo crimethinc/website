@@ -32,12 +32,14 @@ main {
   }
 }
 
-h1 {
-  @include font-black;
-}
+header {
+  h1 {
+    @include font-black;
+  }
 
-h2 {
-  @include font-light;
+  h2 {
+    @include font-light;
+  }
 }
 
 dt {
