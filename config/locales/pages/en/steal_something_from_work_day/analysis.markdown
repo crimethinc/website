@@ -19,6 +19,8 @@
 
 3. **Step three: Build the team. Talk to your friends and trusted coworkers. The more people on the team, the better.**
 
+[[https://cloudfront.crimethinc.com/assets/articles/2013/04/15/1b1.jpg]]
+
 We are line cooks and bartenders, waitresses and bakers. We sell produce at farmers’ markets; we operate cash registers, we stock shelves and make espresso drinks. We take commodities, rearrange them and move them around, adding value so that our employers may make a profit. We are workers in the service industry, in essence no different from those who work on construction sites or in the few remaining factories of our post-industrial cities.
 
 Unlike our industrial counterparts, most of us have been ignored by organized labor. We are excluded from collective bargaining by assertions that our work is too precarious, that we can’t be expected to stick around long enough, that our workplaces are too small. Yet when we confess to our more securely employed acquaintances that we work for minimum wage, we never fail to hear the refrain, “Sounds like y’all could use a union.” Not that we mourn the official union’s lack of interest in our exploitation. We don’t need more boredom, bureaucracy and control in our already stifled, suppressed lives. But we could do with a bit more money at the end of the month, a few more groceries in our pantries, a dose of complicity in our friendships, and a sprinkling of agency in the places where we spend most of our waking hours.
@@ -282,6 +284,8 @@ What would it look like to go about labor organizing in the same way we go about
 A workforce that organized in this way would be impossible to co-opt or dupe. No boss could threaten it with anything, for its power would derive directly from its own actions, not from compromises that give the bosses hostages or give prominent organizers incentives not to fight. It would be a boss’s worst nightmare—and a union official’s, too.
 
 We might also ask what would it look like to go about stealing from work as if it were a way to try to change the world, rather than simply survive in it. So long as we solve our problems individually, we can only confront them individually as well. Stealing in secret keeps class struggle a private affair—the question is how to make it into a public project that gathers momentum. This shifts the focus from _What_ to _How_. A small item stolen with the knowledge and support of one’s coworkers is more significant than a huge heist carried out in secret. Stolen goods shared in such a way that they build workers’ collective power are worth more than a high-dollar embezzlement that only benefits one employee, the same way a raise or promotion does.
+
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
 
 Remember the story of the hardware store employee who embezzled enough money to get a college degree, only to find himself back behind the cash register afterwards! When it was too late, he wished he’d done something with the money to create a community that could fight against the world of cash registers and college degrees. Even as he broke the laws of his society, he had still accepted its basic values, investing in status that could only advance him on the bosses’ terms. Better we invest ourselves in breaking its values as well as its laws!
 

@@ -149,6 +149,8 @@ Some items in the store didn’t have bar codes, like nuts and bolts and so fort
 
 It was always important for me to maintain the appearance of doing my job accurately and correctly, at least as long as no one looked too closely. For instance, I’d always be very careful about doing anything if there were other people in line—let’s face it, some customers are as good as narcs. And this may sound bad, but I was always more wary about giving unauthorized discounts to customers if they were white—it just seemed to me that white people would be the most likely to inform on me. Why certain people feel they have to protect the interests of the store owners at the expense of themselves, the employees, and everyone else is beyond me, but some of them do it.
 
+[[https://cloudfront.crimethinc.com/images/ssfwd/sticker_b.jpg]]
+
 My fellow employees soon figured out that I’d turn a blind eye to almost anything that could be carried out the front door and into their cars. And when I noticed customers who looked like they were trying to shoplift—since I couldn’t openly tell them _Hey, take what you need, I’m on your side_—I would step away from the register and pretend to be busy doing something else so they’d feel like they could “sneak past” without my noticing.
 
 Of course, I’d steal whatever I needed, too—paint, tools, light bulbs, and so on—but I didn’t sell them or anything like that. They were just things that I needed. In order to get the money, I had to use other tactics.
@@ -236,6 +238,8 @@ In a Super 8 motel, I began to toy with a new idea. We dealt with lots of cash. 
 
 The answer hit me the next day as we drove by a riverboat casino: gambling.
 
+[[https://cloudfront.crimethinc.com/assets/articles/2018/04/15/2.jpg]]
+
 Obviously, this was a bad idea. Countless movies, crime novels, and real-life disasters start this way. Still, we passionately hated the company, we shared an affirming and subversive worker culture, and we had already gotten away with a lot. The fact that it was a bad idea was what made it so appealing: workers at terrible jobs are always looking for something self-destructive to do that might just take the whole enterprise down with them.
 
 There was one problem—I knew nothing about gambling. I sat in the motel for hours scribbling out math and probability problems, the way so many people have done in motels near casinos. The prudent gambler would have consulted proper sources via the internet or the library, as many people have written extensively on gambling tactics. But I was motivated and in my zone, and after a few days of neglecting the duties of the job, I had worked out my plan.
@@ -256,13 +260,9 @@ I experienced none of the feelings I project to be associated with gambling—I 
 
 The money I made came and went, as money does. But the feeling of getting yet another one over on the company that had engineered nothing but failure for its workers is something that I'll carry with me forever. It reminds me that if I divert the energy and time that my bosses want me to invest in the job towards the more strategic goal of subverting my workplace, my fellow employees and I will come out ahead.
 
-[[https://cloudfront.crimethinc.com/assets/articles/2018/04/15/2.jpg]]
-
 ---
 
 <header class='mt-5 pt-3' id='dont-beg-for-a-piece-of-the-pie'>
-  [[https://cloudfront.crimethinc.com/assets/articles/2016/04/15/1b-3.jpg]]
-
   <h1>Don’t Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!</h1>
 </header>
 
@@ -275,6 +275,8 @@ As a 16-year-old punk, before I even made a single crown, I had to buy my own fa
 My first idea was to invite couple of friends for lunch and give them a lot of food for free when the manager wasn't looking, then try to take a lunch break so I could eat some of the food too. Eventually, I realized that if I went for supplies to the refrigeration room, I could eat there—but it was so cold, and anyone could open the door at any time. I started to see more and more employees eating in the kitchen, smuggling food to the bathroom and locking themselves there, or sneaking it behind the counter when the manager went out to smoke.
 
 I started to build up to talking about it with the other workers; until then, it had been taboo to talk about getting back what we deserved. People got more conscious and started to help each other to get as much food as possible for lunch, like preparing a big bucket of food in the kitchen and then taking the manager out for a cigarette break so the one going for lunch could take it upstairs. From the counter, we would bring soda, coffee, muffins, and such back to the workers who had no access to those things.
+
+[[https://cloudfront.crimethinc.com/assets/articles/2016/04/15/1b-3.jpg]]
 
 I was new to working and still went to high school, so I didn't work that often. I wanted to get some food and leftovers to bring home and to school, to share with my family and friends. We made a deal that my colleagues would make a bag of food for me and leave it in the back so I could grab it when I went to change while the manager counted out my cash register.
 

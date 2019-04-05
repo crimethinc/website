@@ -43,7 +43,7 @@ Re-appropriate Everything!
 
 _–Service Class Insurgent_
 
----
+[[https://cloudfront.crimethinc.com/assets/articles/2010/03/24/gaspump_b.jpg]]
 
 ## STEAL FROM WORK FOR A SELF-ASSIGNED BONUS
 
@@ -147,7 +147,7 @@ Half of my DVD collection and sizable portion of my record collection have been 
 
 _–Obviously Anonymous_
 
----
+[[https://cloudfront.crimethinc.com/assets/articles/2011/04/15/sfw2b.jpg]]
 
 ## STEAL FROM WORK TO STAY FOCUSED ON THE JOB
 
