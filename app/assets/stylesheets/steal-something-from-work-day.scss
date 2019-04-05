@@ -8,29 +8,7 @@
 // header / hero
 @import 'steal-something-from-work-day/header';
 
-img { width: 100%; }
-
-main {
-  header {
-    @extend .mb-4;
-    @extend .pb-2;
-    @extend .border-bottom;
-  }
-
-  figure {
-    @extend .my-5;
-
-    img {
-      @extend .rounded;
-    }
-
-    figcaption {
-      @extend .mt-2;
-      @extend .text-muted;
-      @extend .form-text;
-    }
-  }
-}
+img { max-width: 100%; }
 
 header {
   h1 {
@@ -39,6 +17,20 @@ header {
 
   h2 {
     @include font-light;
+  }
+}
+
+figure {
+  @extend .my-5;
+
+  img {
+    @extend .rounded;
+  }
+
+  figcaption {
+    @extend .mt-2;
+    @extend .text-muted;
+    @extend .form-text;
   }
 }
 
@@ -53,6 +45,22 @@ dd + dt {
 
 dt + dd {
   @extend .mt-1;
+}
+
+blockquote {
+  @extend .blockquote;
+  @extend .text-secondary;
+  font-style: italic;
+}
+
+main {
+  img { width: 100%; }
+
+  header {
+    @extend .mb-4;
+    @extend .pb-2;
+    @extend .border-bottom;
+  }
 }
 
 #introduction header {

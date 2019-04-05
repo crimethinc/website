@@ -145,9 +145,7 @@ It is has been a long recapture, but a successful one: 40 years after the releas
 
 What, then, can we do? Can any _perruque_ oppose the regime of 100% Time?
 
-De Certeau offers a hint. _La perruque_ is
-
-> no doubt related to the potlatch described by Mauss, an interplay of voluntary allowances that counts on reciprocity and organizes a social network articulated by the “obligation to give.” … It survives in our economy, though on its margins or in its interstices. It is even developing, although held to be illegitimate, within modern market economy… the loss that was voluntary in a gift economy is transformed into a transgression in a profit economy: it appears as an excess (a waste), a challenge (a rejection of profit), or a crime (an attack on property).
+De Certeau offers a hint. _La perruque_ is no doubt related to the potlatch described by Mauss, an interplay of voluntary allowances that counts on reciprocity and organizes a social network articulated by the “obligation to give.” … It survives in our economy, though on its margins or in its interstices. It is even developing, although held to be illegitimate, within modern market economy… the loss that was voluntary in a gift economy is transformed into a transgression in a profit economy: it appears as an excess (a waste), a challenge (a rejection of profit), or a crime (an attack on property).
 
 Waste, challenge, and crime! This sounds quite like how we reclaim our time "on the clock," but where does de Certeau find the "obligation to give" in _la perruque_? The love letter and the family furniture he mentioned in his first example sound generous, but certainly many forms of _la perruque_ are like masturbation in employee bathrooms—unlike anything we would call "generosity." Taking a closer look, we see that de Certeau is directing our attention to Marcel Mauss's ethnographic conception of “[the gift](https://anonfiles.com/file/58272a47d0949a25147f4527b176c681).”
 
