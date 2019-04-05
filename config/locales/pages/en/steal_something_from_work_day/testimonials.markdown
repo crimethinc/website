@@ -43,7 +43,7 @@ Re-appropriate Everything!
 
 _–Service Class Insurgent_
 
-[[ https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/2b.jpg Somebody buy this woman a drink.]]
+[[ https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/2b.jpg Somebody buy this woman a drink. ]]
 
 ---
 
