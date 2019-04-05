@@ -18,12 +18,12 @@
     }
 
     .logo-mark {
-      max-width: 80px;
+      max-width: 60px;
       padding-bottom: 10px;
     }
 
     .logo-type {
-      width: 160px;
+      width: 120px;
     }
   }
 
@@ -35,7 +35,7 @@
     margin: 0 0 20px 0;
 
     letter-spacing: -.02em;
-    font-size: 4rem;
+    font-size: 3.5rem;
 
     text-shadow: 0 0 10px rgba(0,0,0,.1);
 
@@ -51,22 +51,22 @@
   }
 
   @include media-breakpoint-up(sm) {
-    h1        { font-size: 4.5rem; }
+    h1        { font-size: 4rem; }
     p, p span { font-size: 1.6rem; }
   }
 
   @include media-breakpoint-up(md) {
-    h1        { font-size: 5rem; }
+    h1        { font-size: 4.5rem; }
     p, p span { font-size: 1.8rem; }
   }
 
   @include media-breakpoint-up(lg) {
-    h1        { font-size: 5.5rem; }
+    h1        { font-size: 5rem; }
     p, p span { font-size: 2rem; }
   }
 
   @include media-breakpoint-up(xl) {
-    h1        { font-size: 6rem; }
+    h1        { font-size: 5.5rem; }
     p, p span { font-size: 2.2rem; }
   }
 }
