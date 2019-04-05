@@ -11,15 +11,33 @@
 img { max-width: 100%; }
 
 main {
-  figure img {
-    @extend .rounded;
+  header {
+    @extend .mb-4;
+    @extend .pb-2;
+    @extend .border-bottom;
   }
 
-  figure figcaption {
-    @extend .mt-2;
-    @extend .text-muted;
-    @extend .form-text;
+  figure {
+    @extend .my-5;
+
+    img {
+      @extend .rounded;
+    }
+
+    figcaption {
+      @extend .mt-2;
+      @extend .text-muted;
+      @extend .form-text;
+    }
   }
+}
+
+h1 {
+  @include font-black;
+}
+
+h2 {
+  @include font-light;
 }
 
 #introduction header {

@@ -31,8 +31,8 @@ class PagesController < ApplicationController
       'Introduction', 'FAQ', 'Outreach Materials', 'Interviews', 'Coverage',
       'Internationally', 'Analysis', 'Narratives', 'Testimonials', 'Further Reading'
     ]
-    @temp_sections = %w[
-      Introduction FAQ
+    @temp_sections = [
+      'Introduction', 'FAQ', 'Outreach Materials'
     ]
 
     render layout: false
