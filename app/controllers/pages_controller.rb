@@ -36,7 +36,7 @@ class PagesController < ApplicationController
       'Testimonials',
       'Further Reading',
       'Selected Coverage',
-      'International Coverage'
+      'Internationally'
     ]
 
     render layout: false
