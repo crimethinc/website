@@ -168,9 +168,7 @@ Recent historians have suggested that the potlatch only reached this immolative 
 ## Resources
 
 - De Certeau, [The Practice of Every Day Life](https://cdn.anonfiles.com/1346577041269.pdf)
-
 - Mauss, [The Gift](https://anonfiles.com/file/58272a47d0949a25147f4527b176c681)
-
 - Bataille, [The Accursed Share](http://cdn.anonfiles.com/1336313378261.pdf)
 
 ---
