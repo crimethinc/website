@@ -214,3 +214,5 @@ Back when I used to work more, I used to steal more. When I worked at a chain on
 "Oh," he said. And I picked up what I needed and left.
 
 _–Random Name_
+
+[[https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/war-on-misery-3.jpg]]
