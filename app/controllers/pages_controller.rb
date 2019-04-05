@@ -29,11 +29,7 @@ class PagesController < ApplicationController
     @sections = [
       'Introduction',
       'FAQ',
-      'Stickers',
-      'Posters',
-      'Trifold',
-      'Postcard',
-      'Journal',
+      'Outreach Materials',
       'Interviews',
       'Analysis',
       'Narratives',
