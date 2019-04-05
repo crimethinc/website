@@ -1,4 +1,4 @@
-# STEAL FROM WORK TO HELP PEOPLE
+## STEAL FROM WORK TO HELP PEOPLE
 
 My wife and I are both employed in Central Florida through a technical division of the largest American motor company. The location overstocks the restrooms with free hygiene products like tampons and pads, soaps, and first aid kits. We both fill our bags with these items a few times a week before leaving. We make waterproof bags and leave them in areas where homeless people congregate. We have done this for over a year and have redistributed thousands of items. 
 
@@ -6,7 +6,7 @@ _–Robin Hood of Hygiene_
 
 ---
 
-# STEAL FROM WORK FOR EDUCATION
+## STEAL FROM WORK FOR EDUCATION
 
 The high school decided that to save costs, all teachers had to provide their own lined and graph paper for their students. Use of the copy machine is free, however. A single page of graph paper and a double-sided printer equals about 500 pages of paper for the math department. Sometimes making the teacher's job easier at the cost of the administration is a genuinely philanthropic act.
 
@@ -14,7 +14,7 @@ _–Small-Town Educator_
 
 ---
 
-# STEAL FROM WORK TO EAT
+## STEAL FROM WORK TO EAT
 
 I have worked in kitchens and various other corporate jobs all my life. These fucks throw away perfectly good merchandise for no reason at all just for a tax write-off.
 Money started running low and I just stopped caring one day. My bosses were probably going to end up throwing it away, so I loaded lots of fruit, vegetables, and about three pounds of hamburger patties into a box, then put it in two garbage bags and then into a garbage can right before the end of the shift. I acted like I was taking the trash out and stashed the bag in some bushes down a back alley. I went home that night and ate until I felt good. Why should I starve when they are throwing it away—for money?
@@ -23,7 +23,7 @@ _–Luther Blisset_
 
 ---
 
-# STEAL FROM WORK TO PROVIDE FOR YOUR COMMUNITY
+## STEAL FROM WORK TO PROVIDE FOR YOUR COMMUNITY
 
 I am an anarchist who has been working in the service industry for way too long. In this time I have come across some of the worst muthafuckas you can imagine. I am not referring the bourgeoisie that come in everyday and humiliate me—who don’t make eye contact with me while they make demands, who make gestures to my female coworkers—the people who ignore me while their piping hot plate burns permanent scars into my hands. I’m not referring to the ones who have had me fired just because they were having a bad day. I’m not even referring to the people who make a shitstorm about the dressing not being on the side of their salad—this, almost always coming from a person who ordered a fried appetizer, salad (ranch on the side, of course), a disgustingly huge burger with more fried shit added, an unneeded dessert, and finally… a DIET FUCKING COKE! The logic of this I will leave to you to decide.
 
@@ -45,7 +45,7 @@ _–Service Class Insurgent_
 
 ---
 
-# STEAL FROM WORK FOR A SELF-ASSIGNED BONUS
+## STEAL FROM WORK FOR A SELF-ASSIGNED BONUS
 
 Being a buser is often the one of the lowest rungs in a restaurant hierarchy (besides dishwashers). At one job, this meant picking up slack for the waitresses and kitchen throughout closing duties if you were to get out of the place before 11:00, even if you were a minor. Among other tasks, you had to bring a large mesh bag full of linen napkins and liquor stock up from the basement. The napkins were taken to a container right next to the dumpster (a wonderful source of fine, free fabric!) and the liquor was normally taken to the bar.
 
@@ -55,7 +55,7 @@ _–Ghrey Mann_
 
 ---
 
-# STEAL FROM WORK TO EVEN THE SCORE
+## STEAL FROM WORK TO EVEN THE SCORE
 
 I wasted much of my youth working in retail sales. For some reason I did well lying to honest people and selling them stupid shit that was rarely worth half what it sold for. I'm sorry to all the people who I lied to, to whom I talked nonsense about bullshit products that were surely designed to last a short time before breaking. It depresses me to think of how much time I spent trading my life for a low hourly wage, but I'm happy to know that I figured the whole scam out at an early age rather than committing to a lifetime of drudgery.
 
@@ -79,7 +79,7 @@ _–Kid Fucking Vengeance_
 
 ---
 
-# STEAL FROM WORK TO RIDE
+## STEAL FROM WORK TO RIDE
 
 I work in an upscale bike shop. Where I live, family-owned and local is all the rage and it goes for this bike store as well. Of course, most things start off local and family-owned.  The “family” running this place has millions to invest in stock to outdo the competition of local bike enthusiasts, and hence are forcing them out of business. I also get paid a meager single-digit rate per hour. To compensate for this and for the fact that this bike store is yet another spoke, perhaps small, in the large wheel of capitalist industrial society, I garnish my wages by stealing various bike goods. Like my $60 photocromatic cycling glasses, or some Clif™ bars to ease my hunger, chain lube, cycle lights, etc. All stuff I use or my friends use, so it’s not just plain old wanton stealing for the hell of it, though I am typically not opposed to that either.
 
@@ -87,7 +87,7 @@ _–Pedals_
 
 ---
 
-# STEAL FROM WORK TO ROCK
+## STEAL FROM WORK TO ROCK
 
 The greatest thing about my job is being able to listen to music on the company-provided MP3 players while I work, but I never liked having to return home to my lacking-a-music-player room at the end of the night. So last night I devised a not-so-elaborate plan to liberate one of these players and bring it home with me. I wrapped it up in a garbage bag and put it in the bottom of the dirty rag basket I use to clean the rooms, then told a co-worker I was going to clean out the changing rooms. I cleaned the locker room, but not before putting the newest addition to my belongings in my backpack. As I write this I'm listening to some of my favorite bands on my brand new (sort of) MP3 player.
 
@@ -95,7 +95,7 @@ _–The Help_
 
 ---
 
-# STEAL FROM WORK TO STAY HYDRATED
+## STEAL FROM WORK TO STAY HYDRATED
 
 The man in the suit and his hostile smoldering eyes are on me. I’m standing in the corner of the movie theater lobby. After unloading the delivery, I hold the wooden palette in my hands. I have to bring it out to the dumpster in the ice rain. My hands sting from the splinters and the wind.
 
@@ -116,7 +116,7 @@ _–Aspiring Author Dan Larkins_
 
 ---
 
-# STEAL FROM WORK TO PARTY
+## STEAL FROM WORK TO PARTY
 
 Summer 2000 was the most enjoyable example of employee theft I've experienced at the workplace. I worked at an alcohol distribution warehouse where employee theft was common. There was so much theft going on that it had become a point of tension between the owners and workers. They even hired a manager specifically to tackle the problem. This manager was universally despised among all workers.
 Some were alcoholics; some stole to sell beer and wine on the street. Still others simply stole to get drunk. In this particular instance, it was a bunch of teenagers barely out of high school looking to get beer for their party. I was working second shift in the truck, shipping; these new guys had been working there only a couple weeks and already had got the drift of how things worked.
@@ -131,7 +131,7 @@ _–Argumentative Midwesterner_
 
 ---
 
-# STEAL FROM WORK WITH THE WHOLE FAMILY
+## STEAL FROM WORK WITH THE WHOLE FAMILY
 
 "Don't leave any evidence behind," my dad told me as we cleaned up our mess. It was fun to be in an office building during the night when no one was there. That photocopier wasn't used to printing anarchist propaganda, but the next day was May Day and it was time to celebrate! We made enough copies of a zine about the Haymarket Martyrs and the origins of May Day to fill a big box.
 
@@ -141,7 +141,7 @@ _–Pilferer’s Progeny_
 
 ---
 
-# STEAL FROM WORK FOR ENTERTAINMENT
+## STEAL FROM WORK FOR ENTERTAINMENT
 
 Half of my DVD collection and sizable portion of my record collection have been stolen from work. We’re talking a retail value somewhere in excess of $2000. Add to that the little things in life, like stationary, toilet paper, cleaning supplies, and lunch money, and it’s hard to keep from breaking down into incoherent giggling. Keeping a straight face while the manager explains that the store can afford to be lax on loss prevention because of how much trust he has in employees who don’t even make enough to stay above the poverty line is a monumental struggle, but well worth the effort.
 
@@ -149,7 +149,7 @@ _–Obviously Anonymous_
 
 ---
 
-# STEAL FROM WORK TO STAY FOCUSED ON THE JOB
+## STEAL FROM WORK TO STAY FOCUSED ON THE JOB
 
 I got out of school and walked the 25 minutes to the Baskin Robbins downtown, passing my coworkers and heading to the back to grab an apron and a visor. As I got dressed, I checked the clock: 2:45, early. I was almost always on time, and always showed up for my shifts. While this may seem like the bare minimum expected of an employee, being where I was supposed to be when I was supposed to be there and not spending whole shifts on the phone shouting at my significant other qualified me as one of the best employees there. This is because my boss hired exclusively high school students. The advantage of that was that she could pay us very little (after nearly three years I was making 75 cents more than when I started); she even had a system for screwing us out of our tips from time to time. She could also mess with our schedules and push us around in all sorts of other ways. The disadvantage was that somebody like me, who was really quite bad at doing my job, could be a _star employee._
 
@@ -177,7 +177,7 @@ _–Star Employee_
 
 ---
 
-# STEAL FROM WORK TO TILL THE SOIL
+## STEAL FROM WORK TO TILL THE SOIL
 
 The sun was about to rise, so I had to be quick. It was the very last shift at the seasonal sugar beet harvest I work at every fall. When the foreman was finally out of sight I slipped out of my car while two coworkers looked out for me. I grabbed the nicest shovel and pitchfork on our site and stuffed them in my trunk. They would be much more useful for the garden back home, or perhaps helping lay the groundwork for the guerrilla garden people had been talking about starting at the site of the Really Really Free Market in our town.
 
@@ -185,7 +185,7 @@ _–Seasonal Worker_
 
 ---
 
-# STEAL FROM WORK FOR DOWNRIGHT DADAISM
+## STEAL FROM WORK FOR DOWNRIGHT DADAISM
 
 OK, so there’s your garden-variety stealing from work, which is basically about survival. Of course, it can never go past a certain point, since you also need the job for survival. Fair enough, right?
 
@@ -203,7 +203,7 @@ _–Class Warrior_
 
 ---
 
-# STEAL FROM WORK EVEN AFTER YOU QUIT
+## STEAL FROM WORK EVEN AFTER YOU QUIT
 
 Back when I used to work more, I used to steal more. When I worked at a chain one-hour photo place, the upper management sent us a new manager to cut back on employee theft and hookups (which was why most of us worked there). But by being quite polite to the new manager, I was still able to steal all the film and printing I needed for myself and my friends. A year later, I stopped by the store. "The same manager still work here?" I asked the man behind the counter.
 
