@@ -28,8 +28,20 @@ class PagesController < ApplicationController
     @title = I18n.t('page_titles.about.steal_something_from_work_day')
     @body_id = 'steal-something-from-work-day'
     @sections = [
-      'Introduction', 'FAQ', 'Stickers', 'Posters', 'Trifold', 'Postcard', 'Journal', 'Interviews', 'Selected Coverage',
-      'International Coverage', 'Analysis', 'Narratives', 'Testimonials', 'Further Reading'
+      'Introduction',
+      'FAQ',
+      'Stickers',
+      'Posters',
+      'Trifold',
+      'Postcard',
+      'Journal',
+      'Interviews',
+      'Analysis',
+      'Narratives',
+      'Testimonials',
+      'Further Reading',
+      'Selected Coverage',
+      'International Coverage'
     ]
     @temp_sections = [
       'Introduction',
@@ -40,6 +52,7 @@ class PagesController < ApplicationController
       'Postcard',
       'Journal',
       'Interviews',
+      'Further Reading',
       'Selected Coverage',
       'International Coverage'
     ]
