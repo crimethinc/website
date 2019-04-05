@@ -40,6 +40,19 @@ h2 {
   @include font-light;
 }
 
+dt {
+  @include font-bold;
+  @extend .lead;
+}
+
+dd + dt {
+  @extend .mt-4;
+}
+
+dt + dd {
+  @extend .mt-1;
+}
+
 #introduction header {
   h1 {
     @include font-light;
@@ -49,20 +62,5 @@ h2 {
   h2 {
     @include font-black;
     @extend .h1;
-  }
-}
-
-#faq {
-  dt {
-    @include font-bold;
-    @extend .lead;
-  }
-
-  dd + dt {
-    @extend .mt-4;
-  }
-
-  dt + dd {
-    @extend .mt-1;
   }
 }

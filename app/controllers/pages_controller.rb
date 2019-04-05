@@ -32,7 +32,7 @@ class PagesController < ApplicationController
       'Internationally', 'Analysis', 'Narratives', 'Testimonials', 'Further Reading'
     ]
     @temp_sections = %w[
-      Introduction FAQ Stickers Posters Trifold Postcard Journal
+      Introduction FAQ Stickers Posters Trifold Postcard Journal Interviews
     ]
 
     render layout: false
