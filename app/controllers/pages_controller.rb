@@ -26,7 +26,6 @@ class PagesController < ApplicationController
 
   def steal_something_from_work_day
     @title = I18n.t('page_titles.about.steal_something_from_work_day')
-    @body_id = 'steal-something-from-work-day'
     @sections = [
       'Introduction',
       'FAQ',
@@ -52,6 +51,7 @@ class PagesController < ApplicationController
       'Postcard',
       'Journal',
       'Interviews',
+      'Analysis',
       'Further Reading',
       'Selected Coverage',
       'International Coverage'

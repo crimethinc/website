@@ -1,74 +1,72 @@
-#steal-something-from-work-day {
-  #hero {
-    padding: 0 10px 40px 10px;
+#hero {
+  padding: 0 10px 40px 10px;
+  margin-bottom: 80px;
+  color: white;
+  text-align: center;
+  width:  100vw;
+  height: 100vh;
+  background-size: cover;
+  background-color: black;
+
+  .logos {
     margin-bottom: 80px;
-    color: white;
-    text-align: center;
-    width:  100vw;
-    height: 100vh;
-    background-size: cover;
-    background-color: black;
 
-    .logos {
-      margin-bottom: 80px;
-
-      .logo-mark,
-      .logo-type {
-        display: block;
-        margin: 0 auto;
-      }
-
-      .logo-mark {
-        max-width: 80px;
-        padding-bottom: 10px;
-      }
-
-      .logo-type {
-        width: 160px;
-      }
+    .logo-mark,
+    .logo-type {
+      display: block;
+      margin: 0 auto;
     }
 
-    h1 {
-      @include font-black;
-
-      display: inline-block;
-      line-height: 1em;
-      margin: 0 0 20px 0;
-
-      letter-spacing: -.02em;
-      font-size: 4rem;
-
-      text-shadow: 0 0 10px rgba(0,0,0,.1);
-
-      span {
-        @include font-light;
-      }
+    .logo-mark {
+      max-width: 80px;
+      padding-bottom: 10px;
     }
 
-    p span,
-    p {
+    .logo-type {
+      width: 160px;
+    }
+  }
+
+  h1 {
+    @include font-black;
+
+    display: inline-block;
+    line-height: 1em;
+    margin: 0 0 20px 0;
+
+    letter-spacing: -.02em;
+    font-size: 4rem;
+
+    text-shadow: 0 0 10px rgba(0,0,0,.1);
+
+    span {
       @include font-light;
-      font-size: 1.4rem;
     }
+  }
 
-    @include media-breakpoint-up(sm) {
-      h1        { font-size: 4.5rem; }
-      p, p span { font-size: 1.6rem; }
-    }
+  p span,
+  p {
+    @include font-light;
+    font-size: 1.4rem;
+  }
 
-    @include media-breakpoint-up(md) {
-      h1        { font-size: 5rem; }
-      p, p span { font-size: 1.8rem; }
-    }
+  @include media-breakpoint-up(sm) {
+    h1        { font-size: 4.5rem; }
+    p, p span { font-size: 1.6rem; }
+  }
 
-    @include media-breakpoint-up(lg) {
-      h1        { font-size: 5.5rem; }
-      p, p span { font-size: 2rem; }
-    }
+  @include media-breakpoint-up(md) {
+    h1        { font-size: 5rem; }
+    p, p span { font-size: 1.8rem; }
+  }
 
-    @include media-breakpoint-up(xl) {
-      h1        { font-size: 6rem; }
-      p, p span { font-size: 2.2rem; }
-    }
+  @include media-breakpoint-up(lg) {
+    h1        { font-size: 5.5rem; }
+    p, p span { font-size: 2rem; }
+  }
+
+  @include media-breakpoint-up(xl) {
+    h1        { font-size: 6rem; }
+    p, p span { font-size: 2.2rem; }
   }
 }

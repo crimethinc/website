@@ -8,7 +8,7 @@
 
 ---
 
-# The Team is Real: A Model for Cross-Workplace Organizing
+## The Team is Real: A Model for Cross-Workplace Organizing
 
 **Step one: Wear the button when you’re at work. Hook people up (discounts, freebies, extras, etc.)**
 

@@ -1,46 +1,50 @@
-- **The Team is Real**—A model for how employees at a variety of businesses can support each other beyond networks of kinship or affinity.
+- [**The Team is Real**](#the-team-is-real)—A model for how employees at a variety of businesses can support each other beyond networks of kinship or affinity.
 
-- **A Theft or Work?**—A grad student brings poststructuralist theory to bear on time theft, why the master’s degrees will never dismantle the master’s house, and how to resist work when it has spread so far beyond the workplace.
+- [**A Theft or Work?**](#a-theft-or-work)—A grad student brings poststructuralist theory to bear on time theft, why the master’s degrees will never dismantle the master’s house, and how to resist work when it has spread so far beyond the workplace.
 
-- **Yes, We Even Stole from Work under Socialism**—An extract from _A Worker in a Worker’s State,_ a book written by Miklós Haraszti in 1972 when he was a young employee at the Red Star Tractor Factory and suppressed by the Hungarian government as a threat to socialism.
+- [**Yes, We Even Stole from Work under Socialism**](#yes-we-even-stole-from-work-under-socialism)—An extract from _A Worker in a Worker’s State,_ a book written by Miklós Haraszti in 1972 when he was a young employee at the Red Star Tractor Factory and suppressed by the Hungarian government as a threat to socialism.
 
-- **Beyond Stealing from Work**—Stealing from the workplace is only the beginning.
+- [**Beyond Stealing from Work**](#beyond-stealing-from-work)—Stealing from the workplace is only the beginning.
 
 ---
 
-# The Team is Real: A Model for Cross-Workplace Organizing
+<header class='mt-5 pt-3' id='the-team-is-real'>
+  <h1>The Team is Real</h1>
+  <h2>A Model for Cross-Workplace Organizing</h2>
+</header>
 
-**Step one: Wear the button when you’re at work. Hook people up (discounts, freebies, extras, etc.)**
+1. **Step one: Wear the button when you’re at work. Hook people up (discounts, freebies, extras, etc.)**
 
-**Step two: Wear the button when you go out. Get hooked up. Remember to ask your teammates where they work.**
+2. **Step two: Wear the button when you go out. Get hooked up. Remember to ask your teammates where they work.**
 
-**Step three: Build the team. Talk to your friends and trusted coworkers. The more people on the team, the better.**
+3. **Step three: Build the team. Talk to your friends and trusted coworkers. The more people on the team, the better.**
 
 We are line cooks and bartenders, waitresses and bakers. We sell produce at farmers’ markets; we operate cash registers, we stock shelves and make espresso drinks. We take commodities, rearrange them and move them around, adding value so that our employers may make a profit. We are workers in the service industry, in essence no different from those who work on construction sites or in the few remaining factories of our post-industrial cities.
- 
+
 Unlike our industrial counterparts, most of us have been ignored by organized labor. We are excluded from collective bargaining by assertions that our work is too precarious, that we can’t be expected to stick around long enough, that our workplaces are too small. Yet when we confess to our more securely employed acquaintances that we work for minimum wage, we never fail to hear the refrain, “Sounds like y’all could use a union.” Not that we mourn the official union’s lack of interest in our exploitation. We don’t need more boredom, bureaucracy and control in our already stifled, suppressed lives. But we could do with a bit more money at the end of the month, a few more groceries in our pantries, a dose of complicity in our friendships, and a sprinkling of agency in the places where we spend most of our waking hours.
 
 In the absence of a formal organization with pretensions of representing our interests, we are forced to supersede the union form and take directly for ourselves that which we are denied by the market. Along with workplace sabotage, slacking off instead of hustling, and the occasional sick day when it is just too beautiful outside, workplace theft constitutes our everyday practice of class struggle, our faceless resistance. Even those of us who work for “responsible,” “ethical” businesses find ourselves looking for ways to take home some extra food or to slip some bills out of the register. And when we can, we give freely of the commodities we produce, transforming them from objects with value (a price tag) to objects for free use (nourishment, intoxication, fun…). In this way, we subvert the commodity form on a daily basis by giving free food and drinks to our friends, but we do it in a limited and isolated manner.
- 
+
 The Team is an attempt to coordinate and elaborate that subversion: to spread it beyond the circumscribed boundaries of friendship while at the same time creating new relationships based on a common material condition, that of exploitation, and a common practice of rebellion, that of re-appropriation. Essentially The Team functions by the use of a common identifier—a button, a pin, a t-shirt or hat, anything that could be used to alert a stranger to the presence of a fellow member. The identifier should be unique enough to be easily distinguished, yet not so explicit as to tip off the boss. The deployment of explanatory cards is an optional compliment that while adding a potential risk also provides the opportunity to interject a more explicitly anti-capitalist theme. What do the kids say these days?
- 
+
 ## Everything for Everyone!
- 
+
 With only a few months of practical application, The Team has proven to be a moderate success in at least one average-sized Midwestern city. Almost two hundred buttons and cards have been given to enthusiastic young service workers. Some of us have enjoyed a trip to the grocery store with no bill upon checking out. Others have been able to feed their caffeine addictions for another day with no exchange of currency. Soon we hope to be riding city buses and partying in hotel rooms. Perhaps one day something will "fall off the truck" into our laps. In the meantime we are finding that social activities that normally leave us feeling isolated from those immediately surrounding us are now enveloped in an atmosphere of excitement and purpose. Knowing head nods and revealing conversations have once again found their way into the air around us. One story reached us of a twenty-something barista whose adolescent dreams of a network of free coffee suppliers has, years later, found resonance with our little union of thieves. We are finding that even apathetic hipsters and seemingly hostile liberals are making themselves at home in our attempt to do class struggle.
- 
+
 The Team, of course, is not a perfect system. There are many flaws, the exclusion of workers who cannot directly seize what they produce foremost among them, yet we believe that for every obstacle we, as a class, are capable of finding a creative solution. Some have suggested a central warehouse for things like toilet paper, soap, light bulbs, and office supplies—commodities that most jobs provide access to. Others have expressed interest in a directory of free social services. In the end, the point is not to establish some sort of alternative economy where we all just go on working our miserable jobs, but rather to help create a climate of subversion, to plant seeds that may manifest in various untold forms, to experiment, and above all to begin to attack the sources of misery.
 
 In our fantastical visions of the near future, we see ourselves reclining on patio furniture while savoring lattes, stocking our larders with the finest of produce from local markets. We are enveloped in sensations of pleasure foreign to our proletarian tongues as we drink freely of the bourgeoisie's wine. When we travel, we are greeted by friends and strangers with gifts of bounty and luxury. And when guests are received by us in turn we show them a night on the town like no other. A cornucopia of goods, freely taken and given, all at the expense of those who would exploit our lives, all in the spirit of the negation of capitalist relations.
 
 These words have been written with the hope that others beside ourselves might take up this project and make it their own.
 
--_Committee for Attacks Against the World of Work (CAAWW - Birds of the Coming Storm)_
+—_Committee for Attacks Against the World of Work (CAAWW - Birds of the Coming Storm)_
 
 ---
 
-# A Theft or Work?
-
-_Why [Steal Something from Work Day](http://stealfromwork.crimethinc.com/) Means Burn Down the Internet_
+<header class='mt-5 pt-3' id='a-theft-or-work'>
+  <h1>A Theft or Work?</h1>
+  <h2>Why Steal Something from Work Day Means Burn Down the Internet</h2>
+</header>
 
 A critical essay on the possibilities and limitations of _stealing time at work_ as a revolutionary practice. Our contributor is one of the countless grad students who have better odds of participating in an anarchist revolution than landing a tenure track position. Like anything _stolen from work,_ this text bears the imprint of the context in which it was created—yet hints at what it will take to abolish that context. Thieves of time, one more effort to steal back the world!
 
@@ -163,17 +167,21 @@ Recent historians have suggested that the potlatch only reached this immolative 
 
 ## Resources
 
-De Certeau, [The Practice of Every Day Life](https://cdn.anonfiles.com/1346577041269.pdf)
+- De Certeau, [The Practice of Every Day Life](https://cdn.anonfiles.com/1346577041269.pdf)
 
-Mauss, [The Gift](https://anonfiles.com/file/58272a47d0949a25147f4527b176c681)
+- Mauss, [The Gift](https://anonfiles.com/file/58272a47d0949a25147f4527b176c681)
 
-Bataille, [The Accursed Share](http://cdn.anonfiles.com/1336313378261.pdf)
+- Bataille, [The Accursed Share](http://cdn.anonfiles.com/1336313378261.pdf)
 
 ---
 
-[[https://cloudfront.crimethinc.com/assets/articles/2017/04/15/header.jpg]]
 
-# Yes, We Even Stole from Work under Socialism
+
+<header class='mt-5 pt-3' id='yes-we-even-stole-from-work-under-socialism'>
+  <h1>Yes, We Even Stole from Work under Socialism</h1>
+</header>
+
+[[https://cloudfront.crimethinc.com/assets/articles/2017/04/15/header.jpg]]
 
 We present this extract from the book _A Worker in a Worker’s State,_ written by Miklós Haraszti in 1972 when he was a young employee at the Red Star Tractor Factory and suppressed by the Hungarian government as a threat to socialism. Throughout history, workers have stolen from their workplaces under capitalism and socialism socialism alike. Haraszti suggests that this stealing is actually the most creative and enterprising activity that takes place in the factory, implying the possibility of a world in which all labor would be equally creative and free. His text also provides a window into the lives of workers in the Eastern Bloc, revealing the void at the heart of the supposed workers’ utopia. So long as there are managers, workers will rob their workplaces—not just for personal gain, but above all to keep alive that which is best in themselves.
 
@@ -184,6 +192,7 @@ At a time when young people in the West who did not experience the horrors of st
 ## In Search of the Great Homer
 
 > _A **homer** is an object made for his own purpose or pleasure by a worker using his factory’s machines and materials. It is not made for sale as an additional source of income. The word does not appear in most dictionaries, but appears to have been the most widely used equivalent in England and North America._
+{: .blockquote}
 
 “Homers? Is there any chance of homers?” is often asked by those thinking of leaving this factory, when they’re tipped off about another place. Many factors must be taken into account when you want to change your job. Although for most workers homers are not vital, they’ll make them if they have the chance, and they’ll try to create the opportunity if it doesn’t exist already. Some will pay a high price to obtain a position that allows them to make homers.
 
@@ -261,7 +270,10 @@ Finally, decades later, the man was due to retire. As he pushed his wheelbarrow 
 
 ---
 
-# Beyond Stealing from Work
+
+<header class='mt-5 pt-3' id='beyond-stealing-from-work'>
+  <h1>Beyond Stealing from Work</h1>
+</header>
 
 In the final analysis, stealing from our workplaces is not a rebellion against the status quo, but simply another aspect of it. It implies a profound discontent with our conditions, yes, and perhaps a rejection of the ethics of capitalism; but as long as the consequences of that discontent remain individualized and secretive, they will never propel us into a different world. Stealing from work is what we do instead of changing our lives—it treats the symptoms, not the condition. Perhaps it even serves our bosses’ interests—it gives us a pressure valve to blow off steam, and enables us to survive to work another day without a wage increase. Perhaps they figure the costs of it into their business plans because they know our stealing is an _inevitable side effect of exploitation_—though not one guaranteed to bring exploitation to an end.
 
@@ -283,4 +295,4 @@ _Next April 15, we won’t just pocket a few items—we’ll show up at our work
 
 > “It is better to loot than to shoplift, to ambush than to snipe, to walk out than to phone in a bomb threat, to strike than to call in sick, to riot than to vandalize . . . Increasingly collective and coordinated acts against this world of coercion and isolation aren’t solely a matter of effectivity, but equally a matter of sociality—of community and fun.”
 >
-> _-War on Misery #3_
+> _—War on Misery #3_
