@@ -66,3 +66,7 @@ dt + dd {
     @extend .h1;
   }
 }
+
+.embed-responsive figcaption {
+  padding-top: 125px;
+}

@@ -29,7 +29,7 @@ class PagesController < ApplicationController
     @body_id = 'steal-something-from-work-day'
     @sections = [
       'Introduction', 'FAQ', 'Stickers', 'Posters', 'Trifold', 'Postcard', 'Journal', 'Interviews', 'Selected Coverage',
-      'Internationally', 'Analysis', 'Narratives', 'Testimonials', 'Further Reading'
+      'International Coverage', 'Analysis', 'Narratives', 'Testimonials', 'Further Reading'
     ]
     @temp_sections = [
       'Introduction',
@@ -40,7 +40,8 @@ class PagesController < ApplicationController
       'Postcard',
       'Journal',
       'Interviews',
-      'Selected Coverage'
+      'Selected Coverage',
+      'International Coverage'
     ]
 
     render layout: false
