@@ -52,6 +52,8 @@ class PagesController < ApplicationController
       'Journal',
       'Interviews',
       'Analysis',
+      'Narratives',
+      'Testimonials',
       'Further Reading',
       'Selected Coverage',
       'International Coverage'
