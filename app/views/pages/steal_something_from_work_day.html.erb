@@ -17,7 +17,7 @@
     <%= javascript_include_tag 'steal-something-from-work-day' %>
   </head>
 
-  <body id='<%= body_id %>'>
+  <body id='<%= body_id %>' data-spy='scroll' data-target='#section-list' data-offset='0'>
     <%= render 'shared/development_mode_banner' %>
 
     <header role='banner' id='hero' class='d-flex' style='<%= hero_background_image_css %>'>
@@ -53,7 +53,7 @@
 
 
         <div class='col-12 col-md-8 main-wrapper'>
-          <main data-spy='scroll' data-target='#section-list' data-offset='0'>
+          <main>
 
             <% @temp_sections.each do |section| %>
               <article id="<%= section.to_slug %>" class="py-5 mb-5">
