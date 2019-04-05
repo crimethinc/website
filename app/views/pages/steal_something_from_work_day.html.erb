@@ -54,7 +54,7 @@
         <div class='col-12 col-md-8 main-wrapper'>
           <main>
 
-            <% @temp_sections.each do |section| %>
+            <% @sections.each do |section| %>
               <article id="<%= section.to_slug %>" class="py-5 mb-5">
                 <%= render "pages/steal_something_from_work_day/#{section.to_slug.gsub('-', '_')}" %>
               </article>

@@ -1,20 +1,23 @@
-- **Out Of Stock: Confessions Of A Grocery Store Guerrilla**—A former Whole Foods employee recounts his efforts to run his employer out of business by means of sabotage, graffiti, and insubordination, reinterpreting William Butler Yeats’ line “The falcon cannot hear the falconer” from a bird’s-eye view.
+- [**Out Of Stock: Confessions Of A Grocery Store Guerrilla**](#out-of-stock)—A former Whole Foods employee recounts his efforts to run his employer out of business by means of sabotage, graffiti, and insubordination, reinterpreting William Butler Yeats’ line “The falcon cannot hear the falconer” from a bird’s-eye view.
 
-- **Steal from Work to Create Autonomous Zones**—The shocking true story of how a photocopy scam nearly escalated into global revolution.
+- [**Steal from Work to Create Autonomous Zones**](#steal-from-work-to-create-autonomous-zones)—The shocking true story of how a photocopy scam nearly escalated into global revolution.
 
-- **A Cashier’s Guide to Putting Yourself Through College via Workplace Theft**— How one worker stole a higher education from a hardware store.
+- [**A Cashier’s Guide to Putting Yourself Through College via Workplace Theft**](#a-cashiers-guide)— How one worker stole a higher education from a hardware store.
 
-- **What Became of the Boxes**—An adventure in proletarian revenge.
+- [**What Became of the Boxes**](#what-became-of-the-boxes)—An adventure in proletarian revenge.
 
-- **Stealing from Work Is a Gamble, but It Can Be a Good Bet**—The story of one risk-tolerant employee who set out to double his earnings.
+- [**Stealing from Work Is a Gamble, but It Can Be a Good Bet**](#stealing-from-work-is-a gamble)—The story of one risk-tolerant employee who set out to double his earnings.
 
-- **Don't Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!**—A chronicle of workplace resource distribution in Eastern Europe.
+- [**Don't Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!**](#dont-beg-for-a-piece-of-the-pie)—A chronicle of workplace resource distribution in Eastern Europe.
 
-- **Like Most Workplace Thieves, I Am an Exceptional Worker**—Being a small-time criminal, demystified.
+- [**Like Most Workplace Thieves, I Am an Exceptional Worker**](#like-most-workplace-thieves)—Being a small-time criminal, demystified.
 
 ---
 
-# Out Of Stock: Confessions Of A Grocery Store Guerrilla
+<header class='mt-5 pt-3' id='out-of-stock'>
+  <h1>Out Of Stock</h1>
+  <h2>Confessions Of A Grocery Store Guerrilla</h2>
+</header>
 
 _This narrative is dedicated to the courageous individuals who attacked the Whole Foods during the [general strike](/2011/11/07/oakland-general-strike-footage) in Oakland on [November 2, 2011](/2013/09/10/after-the-crest-part-ii-the-rise-and-fall-of-the-oakland-commune); whatever the papers say, many of us employees would be overjoyed if you paid a visit to our workplaces._
 
@@ -73,7 +76,9 @@ All good things come to an end, however. Cameras were installed throughout the s
 
 ---
 
-# Steal from Work to Create Autonomous Zones
+<header class='mt-5 pt-3' id='steal-from-work-to-create-autonomous-zones'>
+  <h1>Steal from Work to Create Autonomous Zones</h1>
+</header>
 
 It was the late 20th century, back before the internet really took over, and I was trying to make a 'zine but I didn’t have any money to pay for copying. I’d lost my last office job after I accidentally left my 'zine masters in the copy machine when I sneaked in to use it one night. How embarrassing!
 
@@ -105,7 +110,10 @@ A lot of water has passed under the bridge, but I’ll always treasure memories 
 
 ---
 
-# A Cashier’s Guide to Putting Yourself Through College via Workplace Theft: How I Stole My Higher Education from a Hardware Store
+<header class='mt-5 pt-3' id='a-cashiers-guide'>
+  <h1>A Cashier’s Guide to Putting Yourself Through College via Workplace Theft</h1>
+  <h2>How I Stole My Higher Education from a Hardware Store</h2>
+</header>
 
 This is a tale of two cities. Both are nominally suburbs of the same Rust Belt metropolis, but both are large enough to be major cities themselves. They share the same local bus system and the same daily newspaper. What separates them is ten miles of suburban sprawl and the tremendous chasm of class privilege.
 
@@ -161,13 +169,16 @@ Perhaps ironically, when I stopped working at the store it was because I had ach
 
 Bittersweet: I may have pulled one over on my employer, but in the end the bursar’s office got the last laugh. 
 
-_-The Angry Po-Boy Collective, March 29, 2010_
+_—The Angry Po-Boy Collective, March 29, 2010_
 
 ---
 
-[[https://cloudfront.crimethinc.com/assets/articles/2014/04/15/1b4.jpg]]
 
-# What Became of the Boxes
+<header class='mt-5 pt-3' id='what-became-of-the-boxes'>
+  [[https://cloudfront.crimethinc.com/assets/articles/2014/04/15/1b4.jpg]]
+
+  <h1>What Became of the Boxes</h1>
+</header>
 
 _The testimony of a wage slave who recalls his misspent youth in the stockroom of an upscale clothing store and recounts how he exacted his revenge, ultimately calling into question whether there is anything worth taking from the world of work at all._
 
@@ -187,9 +198,13 @@ Was this theft? I don’t know. I mean, if I got caught, I would have been charg
 
 ---
 
-[[https://cloudfront.crimethinc.com/assets/articles/2018/04/15/1.jpg]]
 
-# Stealing from Work Is a Gamble, but It Can Be a Good Bet
+<header class='mt-5 pt-3' id='stealing-from-work-is-a gamble'>
+  [[https://cloudfront.crimethinc.com/assets/articles/2018/04/15/1.jpg]]
+
+  <h1>Stealing from Work Is a Gamble, but It Can Be a Good Bet</h1>
+</header>
+
 
 In the repertoire of punk jobs there used to be a job known as poster tour. Many people who have spent a little time on college campuses can conjure a memory of this traveling spectacle. Picture it: a company orders absurd quantities of posters from overseas and sends forth its minions to market them to the gaping voids of personality that are the college students of America. The premise is that these first-year students, lost in the sea of their future, will desperately cling to any kind of material affirmation money can buy—to be specific, by adorning their dismally blank walls with beautiful portraits of the complex identities they've laboriously constructed throughout their lives.
 
@@ -245,7 +260,11 @@ The money I made came and went, as money does. But the feeling of getting yet an
 
 ---
 
-# Don't Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!
+<header class='mt-5 pt-3' id='dont-beg-for-a-piece-of-the-pie'>
+  [[https://cloudfront.crimethinc.com/assets/articles/2016/04/15/1b-3.jpg]]
+
+  <h1>Don’t Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!</h1>
+</header>
 
 Being from the part of the world that is considered Eastern Europe in the West, you get paid a lot less for the same shitty jobs. I had a few of those jobs already, starting at the age of 14, usually sorting products on the shelves in the big hypermarkets. The theft prevention there seemed omnipotent, so however angry I was about getting paid the equivalent of $1.50 an hour (25% of which was taken by the contractor agency through which I found work), I had no idea how to do anything to improve my situation.
 
@@ -275,11 +294,15 @@ Sometimes the boss would say we were using too much cheese or tomato sauce. Then
 
 Nowadays, looking back, I remember those times as less risky than my adult life has been, in which (like many people in this country) in order to survive I have to be officially unemployed while I make a living under the table, supplemented by shoplifting and insurance frauds. It’s too bad the customers had to eat those thin little pizzas, but hey, I’m not the one who came up with this social order or the incentives that drive it! If you want thick crust pizza, abolish capitalism!
 
-[[https://cloudfront.crimethinc.com/assets/articles/2016/04/15/1b-3.jpg]]
 
 ---
 
-# Like Most Workplace Thieves, I Am an Exceptional Worker
+
+<header class='mt-5 pt-3' id='like-most-workplace-thieves'>
+  [[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/3b.jpg]]
+
+  <h1>Like Most Workplace Thieves, I Am an Exceptional Worker</h1>
+</header>
 
 My name is Ann and I am a successful small-time career criminal. I’ll start the story with some background information about my lifestyle. I have lived out of my car and in squats alternately for the past several years. I live remarkably cheaply, but I do use some money. My main expenses are my car, my storage unit, my gym membership and my coffee and cigarette addictions. Nobody’s perfect. I have more affluent tastes than the vast majority of homeless people but after having been on the streets off and on, I’ve learned to live without a lot and how to source a lot of things for free.
 
@@ -292,5 +315,3 @@ The register setup was perfect. I could cancel a transaction and pop the drawer 
 Business (and therefore my cash flow) was declining towards the winter. The boss installed a new POS [point of sale] system in the register to keep track of inventory. The next day a customer came in and bought something really expensive that we only had one of and paid in cash. I think it might have been a setup but I couldn’t resist. One time I worked somewhere where the supervisor was stealing and the boss knew it but didn’t fire him. He wanted to catch him in the act so he could press charges and he made me participate in trying (unsuccessfully) to trap him. I stayed up late into the night wondering if there would be cops there for me the next day. I decided to call in that morning with some bullshit story about having just been injured in a bicycle accident and never went back.
 
 At the end of my employment, I had saved up about ten grand in six months, roughly half of it stolen cash. I’ve been unemployed for eight months now. I’ve volunteered at a local youth drop-in center, and started a Food Not Bombs chapter and another free grocery distribution project. Giving back to my street community is important to me. I do a lot of resource sharing—clothing, sleeping gear, etc. I’ve taken up several hobbies, started a regular workout routine, traveled, and read lots of educational literature in that time. I bought myself a few nice toys, but mostly just lived modestly off the money. As I write this today, I am still sitting on five grand.
-
-[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/3b.jpg]]

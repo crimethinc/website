@@ -42,22 +42,6 @@ class PagesController < ApplicationController
       'Selected Coverage',
       'International Coverage'
     ]
-    @temp_sections = [
-      'Introduction',
-      'FAQ',
-      'Stickers',
-      'Posters',
-      'Trifold',
-      'Postcard',
-      'Journal',
-      'Interviews',
-      'Analysis',
-      'Narratives',
-      'Testimonials',
-      'Further Reading',
-      'Selected Coverage',
-      'International Coverage'
-    ]
 
     render layout: false
   end
