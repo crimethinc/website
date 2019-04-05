@@ -8,10 +8,10 @@
 // header / hero
 @import 'steal-something-from-work-day/header';
 
-#steal-something-from-work-day {
-  img { max-width: 100%; }
+img { max-width: 100%; }
 
-  main figure img {
+main {
+  figure img {
     @extend .rounded;
   }
 
@@ -19,5 +19,32 @@
     @extend .mt-2;
     @extend .text-muted;
     @extend .form-text;
+  }
+}
+
+#introduction header {
+  h1 {
+    @include font-light;
+    @extend .text-muted;
+    @extend .h2;
+  }
+  h2 {
+    @include font-black;
+    @extend .h1;
+  }
+}
+
+#faq {
+  dt {
+    @include font-bold;
+    @extend .lead;
+  }
+
+  dd + dt {
+    @extend .mt-4;
+  }
+
+  dt + dd {
+    @extend .mt-1;
   }
 }
