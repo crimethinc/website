@@ -44,7 +44,13 @@
       <div class='row'>
 
         <div class='col-12 col-md-4 nav-wrapper'>
-          <nav id="section-list" class="list-group sticky-top pt-3">
+          <nav class="d-sm-none">
+            <% @sections.each do |section| %>
+              <%= link_to section, "##{section.to_slug}", class: 'btn btn-outline-secondary mr-2 mb-3' %>
+            <% end %>
+          </nav>
+
+          <nav id="section-list" class="list-group sticky-top pt-3 d-none d-sm-block">
             <% @sections.each do |section| %>
               <%= link_to section, "##{section.to_slug}", class: 'list-group-item list-group-item-action' %>
             <% end %>
