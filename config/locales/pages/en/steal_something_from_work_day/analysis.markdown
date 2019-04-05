@@ -41,6 +41,8 @@ These words have been written with the hope that others beside ourselves might t
 
 —_Committee for Attacks Against the World of Work (CAAWW - Birds of the Coming Storm)_
 
+[[https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/if-you-dont-steal-from-your-boss.jpg]]
+
 ---
 
 <header class='mt-5 pt-3' id='a-theft-or-work'>
