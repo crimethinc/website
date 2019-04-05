@@ -21,7 +21,7 @@ Money started running low and I just stopped caring one day. My bosses were prob
 
 _–Luther Blisset_
 
----
+[[ https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/2b.jpg Somebody buy this woman a drink. ]]
 
 ## STEAL FROM WORK TO PROVIDE FOR YOUR COMMUNITY
 
@@ -42,8 +42,6 @@ I exit the workplace with a backpack full of goods for the house and two bags of
 Re-appropriate Everything!
 
 _–Service Class Insurgent_
-
-[[ https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/2b.jpg Somebody buy this woman a drink. ]]
 
 ---
 
