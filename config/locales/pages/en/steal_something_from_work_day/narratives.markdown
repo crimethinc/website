@@ -149,8 +149,6 @@ Some items in the store didn’t have bar codes, like nuts and bolts and so fort
 
 It was always important for me to maintain the appearance of doing my job accurately and correctly, at least as long as no one looked too closely. For instance, I’d always be very careful about doing anything if there were other people in line—let’s face it, some customers are as good as narcs. And this may sound bad, but I was always more wary about giving unauthorized discounts to customers if they were white—it just seemed to me that white people would be the most likely to inform on me. Why certain people feel they have to protect the interests of the store owners at the expense of themselves, the employees, and everyone else is beyond me, but some of them do it.
 
-[[https://cloudfront.crimethinc.com/images/ssfwd/sticker_b.jpg]]
-
 My fellow employees soon figured out that I’d turn a blind eye to almost anything that could be carried out the front door and into their cars. And when I noticed customers who looked like they were trying to shoplift—since I couldn’t openly tell them _Hey, take what you need, I’m on your side_—I would step away from the register and pretend to be busy doing something else so they’d feel like they could “sneak past” without my noticing.
 
 Of course, I’d steal whatever I needed, too—paint, tools, light bulbs, and so on—but I didn’t sell them or anything like that. They were just things that I needed. In order to get the money, I had to use other tactics.
