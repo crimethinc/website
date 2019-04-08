@@ -13,6 +13,7 @@ class PodcastController < ApplicationController
   def show
     @html_id = 'page'
     @body_id = 'podcast'
+    @title   = title_for @podcast.name
   end
 
   def feed; end
