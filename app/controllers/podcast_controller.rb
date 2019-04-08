@@ -1,5 +1,5 @@
 class PodcastController < ApplicationController
-  before_action :set_podcast,  only: [:index, :feed]
+  before_action :set_podcast,  only: [:index, :feed, :show]
   before_action :set_episodes, only: [:index, :feed]
 
   def index
@@ -8,6 +8,11 @@ class PodcastController < ApplicationController
     @podcasts       = Podcast.all.sort_by { |podcast| podcast.latest_episode.published_at }.reverse
     @editable       = @podcasts.first
     @title          = title_for :podcasts
+  end
+
+  def show
+    @html_id = 'page'
+    @body_id = 'podcast'
   end
 
   def feed; end

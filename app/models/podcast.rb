@@ -5,7 +5,7 @@ class Podcast < ApplicationRecord
   has_many :episodes, dependent: :destroy
 
   def path
-    '/podcast'
+    "/podcast/#{slug}"
   end
 
   def meta_description
