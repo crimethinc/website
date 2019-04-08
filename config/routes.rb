@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Store Redirect and support page
-  get 'store/order-success', to: 'about#post_order_success', as: :post_order_success
+  get 'store/order-success', to: 'pages#post_order_success', as: :post_order_success
   get 'store', to: redirect('https://store.crimethinc.com')
 
   # Homepage
@@ -49,8 +49,8 @@ Rails.application.routes.draw do
   get 'articles/:id/collection_posts', to: 'collection_posts#index'
 
   # Static pages
-  get 'library',               to: 'about#library', as: :library
-  get 'submission-guidelines', to: 'about#submission_guidelines'
+  get 'library',               to: 'pages#library', as: :library
+  get 'submission-guidelines', to: 'pages#submission_guidelines'
 
   # Categories
   get 'categories',                    to: 'categories#index', as: :categories
