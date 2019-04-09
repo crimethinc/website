@@ -1,0 +1,80 @@
+// vendor library
+@import 'bootstrap';
+
+// text
+@import 'steal-something-from-work-day/fonts';
+@import 'steal-something-from-work-day/typography';
+
+// header / hero
+@import 'steal-something-from-work-day/header';
+
+img { max-width: 100%; }
+
+header {
+  h1 {
+    @include font-black;
+  }
+
+  h2 {
+    @include font-light;
+  }
+}
+
+figure {
+  @extend .my-5;
+
+  img {
+    @extend .rounded;
+  }
+
+  figcaption {
+    @extend .mt-2;
+    @extend .text-muted;
+    @extend .form-text;
+  }
+}
+
+dt {
+  @include font-bold;
+  @extend .lead;
+}
+
+dd + dt {
+  @extend .mt-4;
+}
+
+dt + dd {
+  @extend .mt-1;
+}
+
+blockquote {
+  @extend .blockquote;
+  @extend .text-secondary;
+  font-style: italic;
+}
+
+main {
+  img { width: 100%; }
+
+  header {
+    @extend .mb-4;
+    @extend .pb-2;
+    @extend .border-bottom;
+  }
+}
+
+#introduction header {
+  h1 {
+    @include font-light;
+    @extend .text-muted;
+    @extend .h2;
+  }
+  h2 {
+    @include font-black;
+    @extend .h1;
+  }
+}
+
+.embed-responsive figcaption {
+  padding-top: 125px;
+}

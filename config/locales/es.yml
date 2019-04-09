@@ -147,6 +147,7 @@ es:
       store: Tienda
       post_order_success: Envíos Glow #I am not sure what you mean by Glow.
       submission_guidelines: Para colaboraciones
+      steal_something_from_work_day: Steal Something from Work Day
     search:
       index: Buscar
       results: Resultados
