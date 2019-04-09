@@ -2,12 +2,11 @@ module Rack
   class DomainRedirect
     # subdomain (optional), path prefix (optional), URL regex to match (required)
     REDIRECT_CONFIGS = [
-      ['',               '/steal-something-from-work-day', /stealfromworkday.com|stealsomethingfromworkday.com$/],
-      ['stealfromwork.', '/steal-something-from-work-day', /stealfromwork.crimethinc.com$/],
-      ['',               '/tce',                           /tochangeeverything.com/],
-      ['',               '',                               /cwc|crimethinc.herokuapp.com$/],
-      ['es.',            '',                               /crimethinc.es/],
-      ['de.',            '',                               /crimethinc.de/]
+      ['',    '/steal-something-from-work-day', /stealfromwork.crimethinc.com|stealfromworkday.com|stealsomethingfromworkday.com$/],
+      ['',    '/tce',                           /tochangeeverything.com/],
+      ['',    '',                               /cwc|crimethinc.herokuapp.com$/],
+      ['es.', '',                               /crimethinc.es/],
+      ['de.', '',                               /crimethinc.de/]
     ].freeze
 
     PROTOCOL = 'https://'.freeze
