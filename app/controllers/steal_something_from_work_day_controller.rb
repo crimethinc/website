@@ -8,7 +8,6 @@ class StealSomethingFromWorkDayController < ApplicationController
     # TODO
     I18n.locale = 'en'
 
-    @title = I18n.t('layouts.steal_something_from_work_day.head.title')
     @sections = [
       'Introduction',
       'FAQ',
