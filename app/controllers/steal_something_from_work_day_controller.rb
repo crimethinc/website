@@ -6,10 +6,13 @@ class StealSomethingFromWorkDayController < ApplicationController
 
   def show
     # TODO
-    # @locale = params[:locale]
 
+    I18n.locale = 'english'
     # @title = I18n.t('page_titles.about.steal_something_from_work_day')
     @title = I18n.t('layouts.steal_something_from_work_day.language_direction')
+    puts "----------------------------------------------------------------------"
+    puts "#@title"
+    
     @sections = [
       'Introduction',
       'FAQ',
