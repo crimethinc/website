@@ -65,7 +65,8 @@ header,
 #narratives,
 #testimonials,
 #further-reading,
-#selected-coverage {
+#selected-coverage,
+#internationally {
   h1 {
     @include font-black;
   }
@@ -122,7 +123,8 @@ header,
 #narratives #like-most-workplace-thieves,
 #testimonials h1,
 #further-reading h1,
-#selected-coverage h1 {
+#selected-coverage h1,
+#internationally h1 {
   @extend .mb-4;
   @extend .pb-2;
   @extend .border-bottom;
