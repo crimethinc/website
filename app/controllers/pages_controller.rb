@@ -24,24 +24,6 @@ class PagesController < ApplicationController
     @title = I18n.t('page_titles.about.submission_guidelines')
   end
 
-  def steal_something_from_work_day
-    @title = I18n.t('page_titles.about.steal_something_from_work_day')
-    @sections = [
-      'Introduction',
-      'FAQ',
-      'Outreach Materials',
-      'Interviews',
-      'Analysis',
-      'Narratives',
-      'Testimonials',
-      'Further Reading',
-      'Selected Coverage',
-      'Internationally'
-    ]
-
-    render layout: false
-  end
-
   private
 
   def set_page
