@@ -49,8 +49,9 @@ Rails.application.routes.draw do
   get 'articles/:id/collection_posts', to: 'collection_posts#index'
 
   # Static pages
-  get 'library',               to: 'pages#library', as: :library
-  get 'submission-guidelines', to: 'pages#submission_guidelines'
+  get 'library',                       to: 'pages#library', as: :library
+  get 'submission-guidelines',         to: 'pages#submission_guidelines'
+  get 'steal-something-from-work-day', to: 'pages#steal_something_from_work_day'
 
   # Categories
   get 'categories',                    to: 'categories#index', as: :categories
