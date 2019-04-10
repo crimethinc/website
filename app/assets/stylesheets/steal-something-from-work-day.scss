@@ -59,7 +59,8 @@ main {
 
 // Section headings
 header,
-#faq {
+#faq,
+#outreach-materials {
   h1 {
     @include font-black;
   }
@@ -81,8 +82,10 @@ header,
   }
 }
 
+// Acts as header
 #introduction h2,
-#faq h1 {
+#faq h1,
+#outreach-materials h1 {
   @extend .mb-4;
   @extend .pb-2;
   @extend .border-bottom;
