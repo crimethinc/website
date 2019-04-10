@@ -62,7 +62,10 @@ header,
 #faq,
 #outreach-materials,
 #interviews,
-#narratives {
+#narratives,
+#testimonials,
+#further-reading,
+#selected-coverage {
   h1 {
     @include font-black;
   }
@@ -116,7 +119,10 @@ header,
 #narratives #what-became-of-the-boxes,
 #narratives #stealing-from-work-is-a-gamble,
 #narratives #dont-beg-for-a-piece-of-the-pie,
-#narratives #like-most-workplace-thieves {
+#narratives #like-most-workplace-thieves,
+#testimonials h1,
+#further-reading h1,
+#selected-coverage h1 {
   @extend .mb-4;
   @extend .pb-2;
   @extend .border-bottom;
