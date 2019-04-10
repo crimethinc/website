@@ -1,6 +1,9 @@
-<%# Stickers %>
-<header>
-  <h1><%= t 'steal_something_from_work_day.outreach_materials.stickers.title' %></h1>
+<%# stickers %>
+<header id='stickers'>
+  <h1>
+    <%= t 'steal_something_from_work_day.outreach_materials.stickers.title' %>
+    <small><%= link_to '#', '#stickers' %></small>
+  </h1>
 </header>
 
 <p class='my-4'>
@@ -22,16 +25,13 @@
 </div>
 
 
-<%# Posters %>
-<header>
-  <h1><%= t 'steal_something_from_work_day.outreach_materials.posters.title' %></h1>
+<%# posters %>
+<header id='posters'>
+  <h1>
+    <%= t 'steal_something_from_work_day.outreach_materials.posters.title' %>
+    <small><%= link_to '#', '#posters' %></small>
+  </h1>
 </header>
-
-<% if false %>
-<p class='my-4'>
-  <%= t 'steal_something_from_work_day.outreach_materials.posters.description' %>
-</p>
-<% end %>
 
 <div class="row">
   <% t('steal_something_from_work_day.outreach_materials.posters.cards').each do |poster| %>
@@ -42,16 +42,17 @@
 </div>
 
 
-<%# Pamphlets %>
-<header>
-  <h1><%= t 'steal_something_from_work_day.outreach_materials.pamphlets.title' %></h1>
+<%# pamphlets %>
+<header id='pamphlets'>
+  <h1>
+    <%= t 'steal_something_from_work_day.outreach_materials.pamphlets.title' %>
+    <small><%= link_to '#', '#pamphlets' %></small>
+  </h1>
 </header>
 
-<% if false %>
 <p class='my-4'>
   <%= t 'steal_something_from_work_day.outreach_materials.pamphlets.description' %>
 </p>
-<% end %>
 
 <div class="row">
   <% t('steal_something_from_work_day.outreach_materials.pamphlets.cards').each do |pamphlet| %>
@@ -62,111 +63,38 @@
 </div>
 
 
-
-
-
-<% if false %>
-
-
-
-
-
-
-<div class="row">
-  <div class="col-lg-6 mb-5">
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft-1.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">I ❤️ Workplace Theft Front</h5>
-
-        <a href="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-  </div><!-- .col -->
-
-  <div class="col-lg-6 mb-5">
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft-2.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">I ❤️ Workplace Theft Back</h5>
-        <a href="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-
-  </div><!-- .col -->
-</div><!-- .row -->
-
-
-<header>
-  <h1>Postcard</h1>
+<%# postcards %>
+<header id='postcards'>
+  <h1>
+    <%= t 'steal_something_from_work_day.outreach_materials.postcards.title' %>
+    <small><%= link_to '#', '#postcards' %></small>
+  </h1>
 </header>
 
 <div class="row">
-  <div class="col-lg-6 mb-5">
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/postcards/postcard-front.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Postcard Front</h5>
-        <p class="card-text">
-
-        </p>
-
-        <a href="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-  </div><!-- .col -->
-
-  <div class="col-lg-6 mb-5">
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/postcards/postcard-back.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Postcard Back</h5>
-        <p class="card-text">
-
-        </p>
-        <a href="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-
-  </div><!-- .col -->
-</div><!-- .row -->
+  <% t('steal_something_from_work_day.outreach_materials.postcards.cards').each do |postcard| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag postcard %>
+    </div>
+  <% end %>
+</div>
 
 
-<header>
-  <h1>Journal</h1>
+<%# journals %>
+<header id='journals'>
+  <h1>
+    <%= t 'steal_something_from_work_day.outreach_materials.journals.title' %>
+    <small><%= link_to '#', '#journals' %></small>
+  </h1>
 </header>
 
 <div class="row">
-  <div class="col-lg-6 mb-5">
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist-reading.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Heist (color)</h5>
-        <p class="card-text">
-          An on-screen reading version of <a href="/zines/heist">the journal in color</a>.
-        </p>
-
-        <a href="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist_screen_single_page_view.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-  </div><!-- .col -->
-
-  <div class="col-lg-6 mb-5">
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist-printing.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Heist (color)</h5>
-        <p class="card-text">
-          A black-and-white PDF of <i>Heist</i> imposed for printing.
-        </p>
-
-        <a href="https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist_print_black_and_white.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-  </div><!-- .col -->
-</div><!-- .row -->
-
-<% end %>
+  <% t('steal_something_from_work_day.outreach_materials.journals.cards').each do |journal| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag journal %>
+    </div>
+  <% end %>
+</div>
 
 
 <div class='lead text-danger my-5 py-5'>
