@@ -10,16 +10,6 @@
 
 img { max-width: 100%; }
 
-header {
-  h1 {
-    @include font-black;
-  }
-
-  h2 {
-    @include font-light;
-  }
-}
-
 figure {
   @extend .my-5;
 
@@ -34,15 +24,18 @@ figure {
   }
 }
 
+// TODO: delete
 dt {
   @include font-bold;
   @extend .lead;
 }
 
+// TODO: delete
 dd + dt {
   @extend .mt-4;
 }
 
+// TODO: delete
 dt + dd {
   @extend .mt-1;
 }
@@ -56,10 +49,23 @@ blockquote {
 main {
   img { width: 100%; }
 
+  // TODO: delete
   header {
     @extend .mb-4;
     @extend .pb-2;
     @extend .border-bottom;
+  }
+}
+
+// Section headings
+header,
+#faq {
+  h1 {
+    @include font-black;
+  }
+
+  h2 {
+    @include font-light;
   }
 }
 
@@ -72,10 +78,14 @@ main {
   h2 {
     @include font-black;
     @extend .h1;
-    @extend .mb-4;
-    @extend .pb-2;
-    @extend .border-bottom;
   }
+}
+
+#introduction h2,
+#faq h1 {
+  @extend .mb-4;
+  @extend .pb-2;
+  @extend .border-bottom;
 }
 
 .embed-responsive figcaption {
