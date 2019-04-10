@@ -5,7 +5,6 @@ class StealSomethingFromWorkDayController < ApplicationController
   # STEAL_SOMETHING_FROM_WORK_DAY_LOCALES = %w[english].freeze
 
   def show
-    # TODO
     I18n.locale = 'en'
 
     @sections = [
