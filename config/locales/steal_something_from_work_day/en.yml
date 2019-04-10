@@ -8,4 +8,21 @@ en:
     subtitle: April 15, every year
 
     outreach_materials:
-      abolish_capitalism: Until we can abolish capitalism—**make every profit cost them!**
+      download_button: Download PDF
+
+      stickers:
+        title: Stickers
+        description: Print these out on a sheet of sticker paper, cut them up, and deploy!
+        abolish_capitalism: Until we can abolish capitalism—**make every profit cost them!**
+
+        cards:
+          -
+            name: Classic Sticker
+            description: A downloadable PDF of a sheet of our classic [Steal Something from Work Day stickers](/stickers/steal-from-work)
+            preview_url:  https://cloudfront.crimethinc.com/assets/stickers/steal-from-work/steal-from-work_front_black_and_white.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/stickers/steal-from-work/steal-from-work_front_black_and_white.pdf
+          -
+            name: Sticker Mix
+            description: A downloadable PDF of a sheet with [a variety of Steal Something from Work Day stickers](/stickers/steal-something-from-work-day)
+            preview_url:  https://cloudfront.crimethinc.com/assets/stickers/steal-something-from-work-day/steal-something-from-work-day_front_black_and_white.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/stickers/steal-something-from-work-day/steal-something-from-work-day_front_black_and_white.pdf
