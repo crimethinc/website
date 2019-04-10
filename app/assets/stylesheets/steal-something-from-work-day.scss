@@ -62,28 +62,13 @@ header,
 #faq,
 #outreach-materials,
 #interviews,
-#analysis {
+#narratives {
   h1 {
     @include font-black;
   }
 
   h2 {
     @include font-light;
-  }
-}
-
-#analysis {
-  h1, h2 {
-    @include font-black;
-    @extend .h1;
-  }
-
-  h3 {
-    @include font-light;
-  }
-
-  hr {
-    @extend .my-5;
   }
 }
 
@@ -99,6 +84,22 @@ header,
   }
 }
 
+#analysis,
+#narratives {
+  h1, h2 {
+    @include font-black;
+    @extend .h1;
+  }
+
+  h3 {
+    @include font-light;
+  }
+
+  hr {
+    @extend .my-5;
+  }
+}
+
 // Acts as header
 #introduction h2,
 #faq h1,
@@ -108,13 +109,18 @@ header,
 #analysis h1,
 #analysis h3,
 #analysis #yes-we-even-stole-from-work-under-socialism,
-#analysis #beyond-stealing-from-work {
+#analysis #beyond-stealing-from-work,
+#narratives h1,
+#narratives h3,
+#narratives #steal-from-work-to-create-autonomous-zones,
+#narratives #what-became-of-the-boxes,
+#narratives #stealing-from-work-is-a-gamble,
+#narratives #dont-beg-for-a-piece-of-the-pie,
+#narratives #like-most-workplace-thieves {
   @extend .mb-4;
   @extend .pb-2;
   @extend .border-bottom;
 }
-
-
 
 .embed-responsive figcaption {
   padding-top: 125px;
