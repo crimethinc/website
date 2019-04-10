@@ -17,7 +17,7 @@
 
     <% @sections.each do |section| %>
       <article id="<%= section.to_slug %>" class="py-5 mb-5">
-        <%= render "pages/steal_something_from_work_day/#{section.to_slug.gsub('-', '_')}" %>
+        <%= render section.to_slug.gsub '-', '_' %>
       </article>
     <% end %>
 
