@@ -60,7 +60,8 @@ main {
 // Section headings
 header,
 #faq,
-#outreach-materials {
+#outreach-materials,
+#interviews {
   h1 {
     @include font-black;
   }
@@ -85,7 +86,9 @@ header,
 // Acts as header
 #introduction h2,
 #faq h1,
-#outreach-materials h1 {
+#outreach-materials h1,
+#interviews h1,
+#interviews h3 {
   @extend .mb-4;
   @extend .pb-2;
   @extend .border-bottom;

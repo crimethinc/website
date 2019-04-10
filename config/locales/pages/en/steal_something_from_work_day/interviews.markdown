@@ -1,71 +1,69 @@
 # Interviews
 
-**Is STEALING SOMETHING FROM WORK immoral?**
+## _The Guardian_, March 2019
 
-Stealing is immoral, yes. That’s why your employers should pay you the full value they obtain from your labor, rather than paying you a fraction of it and taking the rest for themselves as profit. If you take something from the workplace, you’re not stealing, but simply taking back the results of your effort.
+**Why and when did you start Steal Something From Work Day? And what is its purpose?**
 
-**Is STEALING SOMETHING FROM WORK illegal?**
+Steal Something from Work Day arose as a way to call attention to the widespread phenomenon of workplace theft, which we understand as a form of covert protest activity. We’d prefer to live in an egalitarian society in which everyone has direct access to the resources they need—but so long as we don’t, we think it is important to reflect on the ways ordinary people get by in the prevailing order.
 
-Technically, it may be. Slavery, on the other hand, was legal until December 1865.
+**What do you encourage participants to steal?**
 
-**Is STEAL SOMETHING FROM WORK DAY anti-employer?**
+We don’t _encourage_ people to steal anything. We simply provide a space for people to talk about what they are stealing and why. You can find scores of narratives from participants in workplace theft in our annual coverage of Steal Something from Work Day.
 
-Hate to break it to you, boss, but your employees steal from you every day. By encouraging them to focus on one day a year, we’re looking out for you! Consider this a harm reduction approach.
+**What date will the event be this year? And roughly how many people do you expect to take part?**
 
-**Does STEAL SOMETHING FROM WORK DAY make it harder for employees to get away with stealing?**
+This year, Steal Something From Work Day falls on Monday, April 15. It coincides with Tax Day, calling attention to the variety of institutional forces that profit on the labor of employees—from individual employers to the military-industrial complex.
 
-Not significantly. The number one obstacle to employee theft is not bosses or cameras, but misguided coworkers. STEAL SOMETHING FROM WORK DAY is a consciousness-raising holiday promoting worker solidarity and legitimizing employee redistribution of wealth.
+Considering that employee theft accounts for billions of dollars annually and involves up to three quarters of the workforce, we anticipate that millions of people will be participating.
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
+**Why do people steal from work?**
 
-**Not everyone has an easy time stealing from the workplace. Some demographics are singled out for surveillance, and many people can’t afford to risk getting into trouble!**
+On the basis of all the interviews we have conducted and all the testimony we have received, we can summarize that the two chief reasons people steal from their workplaces are, first, needing resources to survive or at least live with dignity, and, second, losing respect for their employers on account of the asymmetry of power in the employer-employee relationship.
 
-That’s true! That’s why, if you are not one of those people, you should STEAL SOMETHING FROM WORK to share with those who can’t risk it themselves.
+**Why do you think the number of people stealing non-cash items from work is on the rise?**
 
-**I’m retired. Can I participate in STEAL SOMETHING FROM WORK DAY?**
+Since the recession of 2008, the economy has recovered, but this has largely benefitted employers, not employees. Your average employee senses this and acts accordingly via whatever means are at hand.
 
-Yes, you can—just go back to your former place of employment! If you had to wrestle over a pension with them, they’ve got it coming. It’s never too late to STEAL SOMETHING FROM WORK!
+**What is your view on the morality of stealing from work?**
 
-**I’d love to STEAL SOMETHING FROM WORK, but I work at a local non-profit foundation providing free services to survivors of domestic violence.**
+Stealing is immoral. That’s why employees should receive the full value of their labor, rather than a fraction of the value they produce for their employers. When employers enrich themselves on the labor of employees, many employees experience this as a form of theft. From this perspective, much employee theft is an attempt to reclaim the value of their labor and their dignity and autonomy. As much as employees steal today, there is no danger that the employing class will take home less profit this year than their employees.
 
-If you truly love the place you work, chances are it’s under-funded. That’s because the for-profit mega-corporations are hogging all the resources! Time to pay a visit to someone else’s workplace.
+A truly ethical project would be to set out to create a society in which no one would have any incentive to steal from anyone else. This is the question that really concerns us.
 
-**But my employers give to charitable causes when they make a profit! If I STEAL SOMETHING FROM WORK, they’ll have less to donate.**
+[[ https://cloudfront.crimethinc.com/assets/articles/2012/04/13/steal-something-from-work-day/1b.jpg ]]
 
-Who do you think should choose the most deserving charitable cause for your earnings—you, or some corporate bureaucrat? Just because you STEAL SOMETHING FROM WORK doesn’t mean you have to keep it all for yourself!
+## _Beyond Capitalist Meritocracy_
 
-**If I STEAL SOMETHING FROM WORK, will it make me a more selfish person?**
+### An Interview with Steal Something from Work Day Press Liaison Robyn Bausez
 
-Not necessarily! By and large, people find it easier to share things when they don’t have to trade their lives for them in miserable drudgery. STEALING SOMETHING FROM WORK might actually make you a more generous person!
+> April 15 is celebrated worldwide as Steal Something From Work Day. Every April 15, millions of employees around the world steal from their workplaces. Sweatshop seamstresses slip spools of thread under their sweaters. Cashiers outsmart surveillance cameras to pocket cash from registers. Secretaries pilfer envelopes, carpenters slip screws into their tool belts, baristas treat their friends to lattes on the house. Employers lose hundreds of thousands of dollars to employee-organized shrinkage in the US alone.
 
-**What does God think about STEALING FROM WORK?**
+**Is this website genuinely intended as a rhetorical device, or is that disclaimer simply intended to protect yourselves from being stolen from via lawsuits?**
 
-Academic theologians such as German Old Testament scholar A. Alt, author of _Das Verbot des Diebstahls im Dekalog,_ suggest that the commandment “thou shalt not steal” was originally intended against stealing _people_—against abductions and slavery. This lines up with Jewish interpretations of the statement as “thou shalt not kidnap”—for example, as stated by Rabbi Shlomo Yitzhaki, famed as the author of the first comprehensive commentary on the Talmud. If this is so, the real crime is not the worker taking back a part of the fruit of his labor, but the economic system that forces him into wage slavery in the first place. Likewise, as Jesus explains, “It is easier for a camel to pass through the eye of a needle than for a rich man to enter the kingdom of God” (Matthew 19:24)—don’t put your employer at such risk!
+We don’t need to encourage people to steal from work—they’re already doing it, whatever anyone thinks about it. STEAL SOMETHING FROM WORK DAY is simply an awareness day. Just as Black history is important all year round but the point of observing February as Black History Month is to bring it into the spotlight, STEAL SOMETHING FROM WORK DAY is every day, but it’s also April 15, so workers can take time to think about what is being stolen from them.
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
+**Who steals more, consumers or employees?**
 
-**What if I STEAL SOMETHING FROM WORK and my company goes out of business? Is this biting the hand that feeds me?**
+Here’s a hint: which way do they point the cameras?
 
-Corporations plan workplace shrinkage into the budget well in advance. They’re practically _counting on you_ to steal something! If that surplus goes unclaimed, it’ll just stay in their coffers as more unearned profits.
+**What is the most valuable thing you’ve stolen from work? Where were you working at the time?**
 
-**Will the costs of STEALING SOMETHING FROM WORK be passed on to consumers?**
+The first rule of STEAL SOMETHING FROM WORK DAY is—_you do not talk about stealing something from work!_
 
-Your employers are shrewd businessmen—if they were simply trying to distribute goods to the needy as affordably as possible, they’d be in a different line of work. That means if they could be charging customers more, they already would be. The prices of their products are determined by the market, not by the cost of producing them.
+But there are different notions of value when it comes to stealing from work. The wealthiest people are usually the ones who get the opportunity to steal the most, whether that be via legal or illegal white collar crime. So perhaps it’s a dead end to assess stealing from work in purely financial terms—it means privileging the ones who start with more, and thus can get access to more.
 
-**But won’t STEALING SOMETHING FROM WORK destabilize the economy? What if the market crashes again? Will STEALING SOMETHING FROM WORK bring about the end of the world?**
+Think instead of the night watchman who writes a novel instead of doing his rounds—or the story that Trent Reznor of Nine Inch Nails secretly recorded his demo while working as a janitor at a recording studio—or of the fed-up employee at an animal testing corporation who smuggled in a camera one day and got the whole place shut down. There are plenty of things to steal from work besides cash and condiments.
 
-Are you kidding? Who does all the work in this society—bosses, or workers? If anything, things would go more smoothly without them. If every corporation went out of business tomorrow and we could get our hands on all the resources they’ve hoarded, don’t you think we’d be able to distribute them more sensibly? They’re lucky we don’t steal _everything!_
+In theoretical terms, capitalists and socialists alike have always looked at work as something that produces value. Workers have to consider a different possibility—that working _uses up_ value. That’s why the forests and the polar ice caps are being consumed, the same as the hours of our own lives: the aches in our bodies when we come home from work parallel the damage occurring on a global scale. Everything ends up on the market, costing more and more but meaning less and less.
 
-**Will STEALING SOMETHING FROM WORK inhibit real social change? Shouldn’t we be organizing to address the root of our problems rather than acting individualistically?**
+In the long run, perhaps the most valuable thing anyone could steal from work is the realization that there are better things to do with one’s life than sell it away. Millions of workers know this already, but as a society we have yet to act on this knowledge.
 
-Maybe you’re onto something! But STEALING SOMETHING FROM WORK doesn’t prevent you from organizing collectively. For example, you could coordinate with your coworkers to share what you pocket. Really, what good would it do to get organized together if you were still afraid to take what you deserve? On the other hand, imagine if we could go beyond taking things from our workplaces, and take over the workplaces themselves…
+**What would you say to people who would turn in a co-worker for stealing?**
 
-**Why is April 15 STEAL SOMETHING FROM WORK DAY?**
+The universal moral prescription against theft is intended to protect the collective interests of humanity against individual thieves. Ironically, when an employee turns in a coworker for theft, that prescription ends up protecting the individual interests of a few employers against the collective interests of their employees, whose labor it is that produces the wealth they hoard in the first place. So even though it may be intended to preserve fairness, turning in a coworker for stealing can actually accomplish the opposite—it’s the equivalent of informing on freedom fighters struggling against a dictatorship.
 
-As most employees know, every day can be Steal Something From Work day. But we can’t encourage people to go steal from their workplaces all the time—for all we know, that would be illegal. The best we can do is ask people to limit their workplace theft to one day a year!
+The power that enables employers to exploit employees doesn’t just come from inequalities of wealth; it is maintained by the part of every worker that identifies with employers’ interests rather than with his or her own interests. People identify with the interests of those who exploit them for a variety of reasons: notions of right and wrong (which are often framed by those in power), the idea that they might become employers themselves one day, a hesitance to acknowledge the embarrassing fact of their own exploitation. Employers thrive on the tensions and competition between their employees: so long as the employees don’t view themselves as having shared interests, they will not act together to defend themselves. Instead, they may turn each other in for small-scale attempts to redress the grievous imbalances of the workplace.
 
-If there was ever a good day to Steal Something From Work, it has to be April 15, Tax Day. For the government, every April 15 is Steal Something From You Day. They take your hard-earned money and dump it right into some oil war or back-room deal—that’s yet another way the corporations are making out at your expense.
+Capitalist values are founded on the idea that those who own capital deserve the power it affords them; in concrete terms, this includes the power it gives them over others’ lives, even though this is hardly a “democratic” relationship. Capitalism implies a meritocracy: the best and brightest are rewarded with the most power, and everyone else ends up serving them. In practice, of course, the cutthroat competition of the market often rewards the most rapacious and merciless with the most power. Stealing from one’s workplace can be seen as an attempt to distribute power and resources according to a logic of need rather than of conquest.
 
-Don’t take it sitting down. **Steal something from work.**
-
-[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Remember who’s stealing from you! ]]
+Employees who turn in co-workers for stealing may be trying to abide by the Golden Rule—do unto others as you would have them do unto you. But stealing from a corporation is fundamentally different than stealing from another human being. The wealth of a corporation is the accumulation of profit derived from workers who are not paid the full value of their labor and consumers who pay more than the production cost of their purchases. Redistributing this wealth is not stealing so much as it is reversing the effects of a theft that is already in progress. Workplace theft is thus a challenge to the morality of capitalist meritocracy; at best, it can imply a totally different value system.
