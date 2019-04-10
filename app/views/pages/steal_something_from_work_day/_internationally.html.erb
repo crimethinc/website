@@ -1,34 +1,14 @@
 <%# Markdown file located in: /config/locales/pages/en/steal_something_from_work_day/internationally %>
 <%= render_markdown_for page: "steal_something_from_work_day/internationally" %>
 
-<div class='row'>
-  <div class='col-lg-6'>
-    <div class="card">
-      <img src="http://minijob.cc/wp-content/uploads/2013/04/steal-from-work-day.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Germany</h5>
-        <p class="card-text">
-          <a href="http://crimethinc.blogsport.de/2013/11/01/beklau-deinen-arbeitsplatz-tag/">BEKLAU-DEINEN-ARBEITSPLATZ-TAG</a>
-        </p>
-      </div>
-    </div><!-- .card -->
-  </div><!-- .col -->
-
-  <div class='col-lg-6'>
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/articles/2018/04/13/3.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Sweden</h5>
-        <p class="card-text">
-          A downloadable PDF of a sheet of these stickers.
-        </p>
-
-        <a href="https://cloudfront.crimethinc.com/assets/articles/2018/04/13/steal-something-from-work_swedish.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-  </div><!-- .col -->
-</div><!-- .row -->
+<div class="row">
+  <% t('steal_something_from_work_day.international_coverage.cards').each do |card| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag card %>
+    </div>
+  <% end %>
+</div>
 
 <div class="embed-responsive embed-responsive-16by9">
-  <%= render_markdown '[[ https://vimeo.com/264808377 **Sweden:** Sno-Från-Jobbet-Dagen: An action in support of Steal Something from Work Day 2018 in Sweden. The banner reads "Your job is eating you up—Steal a little back!" The line of the advertisement still visible below it urges "Don’t let pollen stop you this year." ]]' %>
+  <%= render_markdown "[[ https://vimeo.com/264808377 #{t 'steal_something_from_work_day.international_coverage.sweden_video_caption'} ]]" %>
 </div>

@@ -107,3 +107,19 @@ en:
             preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist-printing.jpg
             description: A black-and-white PDF of _Heist_ imposed for
             download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist_print_black_and_white.pdf
+
+    international_coverage:
+      sweden_video_caption: "**Sweden:** Sno-Från-Jobbet-Dagen: An action in support of Steal Something from Work Day 2018 in Sweden. The banner reads “Your job is eating you up—Steal a little back!” The line of the advertisement still visible below it urges “Don’t let pollen stop you this year.”"
+
+      cards:
+        -
+          name: Germany
+          description: "[BEKLAU-DEINEN-ARBEITSPLATZ-TAG](http://crimethinc.blogsport.de/2013/11/01/beklau-deinen-arbeitsplatz-tag/)"
+          preview_url: http://minijob.cc/wp-content/uploads/2013/04/steal-from-work-day.jpg
+          download_url: http://minijob.cc/wp-content/uploads/2013/04/steal-from-work-day.jpg
+
+        -
+          name: Sweden
+          description: A downloadable PDF of a sheet of these stickers.
+          preview_url: https://cloudfront.crimethinc.com/assets/articles/2018/04/13/3.jpg
+          download_url: https://cloudfront.crimethinc.com/assets/articles/2018/04/13/steal-something-from-work_swedish.pdf
