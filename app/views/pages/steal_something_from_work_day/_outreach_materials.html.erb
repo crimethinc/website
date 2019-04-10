@@ -1,3 +1,4 @@
+<%# Stickers %>
 <header>
   <h1><%= t 'steal_something_from_work_day.outreach_materials.stickers.title' %></h1>
 </header>
@@ -21,47 +22,31 @@
 </div>
 
 
+<%# Posters %>
+<header>
+  <h1><%= t 'steal_something_from_work_day.outreach_materials.posters.title' %></h1>
+</header>
 
+<% if false %>
+<p class='my-4'>
+  <%= t 'steal_something_from_work_day.outreach_materials.posters.description' %>
+</p>
+<% end %>
+
+<div class="row">
+  <% t('steal_something_from_work_day.outreach_materials.posters.cards').each do |poster| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag poster %>
+    </div>
+  <% end %>
+</div>
 
 
 
 
 
 <% if false %>
-<header>
-  <h1>Posters</h1>
-</header>
 
-<div class="row">
-  <div class="col-lg-6 mb-5">
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/posters/if-your-coworker-needs-something/if-your-coworker-needs-something_front_black_and_white.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">If Your Coworker Needs Something</h5>
-        <p class="card-text">
-          A downloadable PDF of a
-          <a href='/posters/if-your-coworker-needs-something'>Steal Something from Work Day poster</a>.
-        </p>
-
-        <a href="https://cloudfront.crimethinc.com/assets/posters/if-your-coworker-needs-something/if-your-coworker-needs-something_front_black_and_white.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-  </div><!-- .col -->
-
-  <div class="col-lg-6 mb-5">
-    <div class="card">
-      <img src="https://cloudfront.crimethinc.com/assets/posters/hang-in-there/hang-in-there_front_black_and_white.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Hang in There</h5>
-        <p class="card-text">
-          A downloadable PDF of a
-          <a href='/posters/hang-in-there'>Steal Something from Work Day poster</a>.
-        </p>
-        <a href="https://cloudfront.crimethinc.com/assets/posters/hang-in-there/hang-in-there_front_black_and_white.pdf" class="btn btn-primary">Download PDF</a>
-      </div>
-    </div><!-- .card -->
-  </div><!-- .col -->
-</div><!-- .row -->
 
 
 <header>
@@ -191,8 +176,9 @@
   </div><!-- .col -->
 </div><!-- .row -->
 
+<% end %>
+
+
 <div class='lead text-danger my-5 py-5'>
   <%= render_markdown t('steal_something_from_work_day.outreach_materials.abolish_capitalism') %>
 </div>
-
-<% end %>

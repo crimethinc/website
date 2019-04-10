@@ -9,11 +9,11 @@ en:
 
     outreach_materials:
       download_button: Download PDF
+      abolish_capitalism: Until we can abolish capitalism—**make every profit cost them!**
 
       stickers:
         title: Stickers
         description: Print these out on a sheet of sticker paper, cut them up, and deploy!
-        abolish_capitalism: Until we can abolish capitalism—**make every profit cost them!**
 
         cards:
           -
@@ -26,3 +26,20 @@ en:
             description: A downloadable PDF of a sheet with [a variety of Steal Something from Work Day stickers](/stickers/steal-something-from-work-day)
             preview_url:  https://cloudfront.crimethinc.com/assets/stickers/steal-something-from-work-day/steal-something-from-work-day_front_black_and_white.jpg
             download_url: https://cloudfront.crimethinc.com/assets/stickers/steal-something-from-work-day/steal-something-from-work-day_front_black_and_white.pdf
+
+      posters:
+        title: Posters
+        description:
+
+        cards:
+          -
+            name: If Your Coworker Needs Something
+            description: A downloadable PDF of a [Steal Something from Work Day poster](/posters/if-your-coworker-needs-something)
+            preview_url: https://cloudfront.crimethinc.com/assets/posters/if-your-coworker-needs-something/if-your-coworker-needs-something_front_black_and_white.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/posters/if-your-coworker-needs-something/if-your-coworker-needs-something_front_black_and_white.pdf
+
+          -
+            name: Hang in There
+            description: A downloadable PDF of a [Steal Something from Work Day poster](/posters/hang-in-there)
+            preview_url: https://cloudfront.crimethinc.com/assets/posters/hang-in-there/hang-in-there_front_black_and_white.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/posters/hang-in-there/hang-in-there_front_black_and_white.pdf
