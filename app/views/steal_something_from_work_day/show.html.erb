@@ -1,0 +1,31 @@
+<div class='col-12 col-md-4 nav-wrapper'>
+  <nav class="d-sm-none">
+    <% @sections.each do |section| %>
+      <%= link_to section, "##{section.to_slug}", class: 'btn btn-outline-secondary mr-2 mb-3' %>
+    <% end %>
+  </nav>
+
+  <nav id="section-list" class="list-group sticky-top pt-3 d-none d-sm-block">
+    <% @sections.each do |section| %>
+      <%= link_to section, "##{section.to_slug}", class: 'list-group-item list-group-item-action' %>
+    <% end %>
+  </nav>
+</div><!-- .nav-wrapper -->
+
+<div class='col-12 col-md-8 main-wrapper'>
+  <main>
+
+    <% @sections.each do |section| %>
+      <article id="<%= section.to_slug %>" class="py-5 mb-5">
+        <%= render "pages/steal_something_from_work_day/#{section.to_slug.gsub('-', '_')}" %>
+      </article>
+    <% end %>
+
+    <div class="embed-responsive embed-responsive-16by9 pb-5 mt-5">
+      <%= render_markdown "[[https://www.youtube.com/watch?v=33QwamMHVlA]]" %>
+    </div>
+
+    <%# HACK these BRs are to account for the CSS weirdness around the YouTube embed %>
+    <br><br><br><br><br>
+  </main>
+</div><!-- .main-wrapper -->

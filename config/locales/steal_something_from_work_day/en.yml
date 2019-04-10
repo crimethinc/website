@@ -2,14 +2,7 @@ en:
   steal_something_from_work_day:
     language_direction: ltr
     lang_code: en
+    crimethinc: CrimethInc. Ex-Workers’ Collective
+    title: Steal Something from Work Day
+    subtitle: April 15, every year
 
-    head:
-      title: Steal Something from Work Day | CrimethInc. Ex-Workers’ Collective
-      meta:
-        title: Steal Something from Work Day
-        description: TODO
-        url: https://crimethinc.com/steal-something-from-work-day
-
-    header:
-      title: Steal Something from Work Day
-      subtitle: April 15, every year
