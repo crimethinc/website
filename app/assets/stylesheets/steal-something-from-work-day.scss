@@ -61,13 +61,29 @@ main {
 header,
 #faq,
 #outreach-materials,
-#interviews {
+#interviews,
+#analysis {
   h1 {
     @include font-black;
   }
 
   h2 {
     @include font-light;
+  }
+}
+
+#analysis {
+  h1, h2 {
+    @include font-black;
+    @extend .h1;
+  }
+
+  h3 {
+    @include font-light;
+  }
+
+  hr {
+    @extend .my-5;
   }
 }
 
@@ -88,11 +104,17 @@ header,
 #faq h1,
 #outreach-materials h1,
 #interviews h1,
-#interviews h3 {
+#interviews h3,
+#analysis h1,
+#analysis h3,
+#analysis #yes-we-even-stole-from-work-under-socialism,
+#analysis #beyond-stealing-from-work {
   @extend .mb-4;
   @extend .pb-2;
   @extend .border-bottom;
 }
+
+
 
 .embed-responsive figcaption {
   padding-top: 125px;
