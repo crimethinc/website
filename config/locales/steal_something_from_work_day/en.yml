@@ -43,3 +43,34 @@ en:
             description: A downloadable PDF of a [Steal Something from Work Day poster](/posters/hang-in-there)
             preview_url: https://cloudfront.crimethinc.com/assets/posters/hang-in-there/hang-in-there_front_black_and_white.jpg
             download_url: https://cloudfront.crimethinc.com/assets/posters/hang-in-there/hang-in-there_front_black_and_white.pdf
+
+      pamphlets:
+        title: Trifold
+        description: Print out these trifolds to spread the word. Slip them into lockers, leave them in a tip jar paper-clipped to your tip, give them out at the metro.
+
+        cards:
+          -
+            name: Trifold Front
+            description:
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold-1.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold.pdf
+
+          -
+            name: Trifold Back
+            description:
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold-2.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold.pdf
+
+
+          -
+            name: I ❤️ Workplace Theft Front
+            description:
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft-1.png
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft.pdf
+
+          -
+            name: I ❤️ Workplace Theft Back
+            description:
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft-2.png
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft.pdf
+
