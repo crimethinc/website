@@ -1,10 +1,10 @@
-english:
+en:
   layouts:
     steal_something_from_work_day:
       language_direction: ltr
       lang_code: en
       head:
-        title: "Steal Something from Work Day / CrimethInc. Ex-Workers’ Collective"
+        title: "Steal Something from Work Day | CrimethInc. Ex-Workers’ Collective"
         meta:
           title: Steal Something from Work Day
           description: TODO
