@@ -63,7 +63,7 @@ main {
   }
 }
 
-#introduction header {
+#introduction {
   h1 {
     @include font-light;
     @extend .text-muted;
@@ -72,6 +72,9 @@ main {
   h2 {
     @include font-black;
     @extend .h1;
+    @extend .mb-4;
+    @extend .pb-2;
+    @extend .border-bottom;
   }
 }
 
