@@ -1,3 +1,5 @@
+# Narratives
+
 - [**Out Of Stock: Confessions Of A Grocery Store Guerrilla**](#out-of-stock)—A former Whole Foods employee recounts his efforts to run his employer out of business by means of sabotage, graffiti, and insubordination, reinterpreting William Butler Yeats’ line “The falcon cannot hear the falconer” from a bird’s-eye view.
 
 - [**Steal from Work to Create Autonomous Zones**](#steal-from-work-to-create-autonomous-zones)—The shocking true story of how a photocopy scam nearly escalated into global revolution.
@@ -6,24 +8,26 @@
 
 - [**What Became of the Boxes**](#what-became-of-the-boxes)—An adventure in proletarian revenge.
 
-- [**Stealing from Work Is a Gamble, but It Can Be a Good Bet**](#stealing-from-work-is-a gamble)—The story of one risk-tolerant employee who set out to double his earnings.
+- [**Stealing from Work Is a Gamble, but It Can Be a Good Bet**](#stealing-from-work-is-a-gamble)—The story of one risk-tolerant employee who set out to double his earnings.
 
 - [**Don't Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!**](#dont-beg-for-a-piece-of-the-pie)—A chronicle of workplace resource distribution in Eastern Europe.
 
 - [**Like Most Workplace Thieves, I Am an Exceptional Worker**](#like-most-workplace-thieves)—Being a small-time criminal, demystified.
 
+
 ---
 
-<header class='mt-5 pt-3' id='out-of-stock'>
-  <h1>Out Of Stock</h1>
-  <h2>Confessions Of A Grocery Store Guerrilla</h2>
-</header>
+
+## Out Of Stock
+{: #out-of-stock}
+
+### Confessions Of A Grocery Store Guerrilla
 
 _This narrative is dedicated to the courageous individuals who attacked the Whole Foods during the [general strike](/2011/11/07/oakland-general-strike-footage) in Oakland on [November 2, 2011](/2013/09/10/after-the-crest-part-ii-the-rise-and-fall-of-the-oakland-commune); whatever the papers say, many of us employees would be overjoyed if you paid a visit to our workplaces._
 
 [[https://cloudfront.crimethinc.com/images/ssfwd/2b.jpg]]
 
-## My Name Is Carlos
+#### My Name Is Carlos
 
 I am twenty-eight years old. I am wearing a black apron in the canned food aisle of the well-known corporate natural foods grocery store at which I work. I'm staring into nothingness, reflecting on the decisions that have put me here. I am beyond depressed; I've reached that juncture where depression meets anger. I am hostile, reactionary, and dangerous.
 
@@ -33,7 +37,7 @@ I've been asked this question about a dozen times already; I let out a sigh thro
 
 Confused by my response, she heads straight to the customer service booth to submit a complaint. This is not the first time this has happened; I disappear to my hiding spot. Thus begins the career of Carlos, grocery store guerrilla and ghost in the machine, the shadow employee known throughout the store for disobedience, obstruction, and customer service performance art.
 
-## Death to Loss Prevention
+#### Death to Loss Prevention
 
 I had been living in the same city for almost five years already and hadn't yet made contact with other anarchists. It was an incredibly isolated phase of my life. Between the hours I spent working and recovering from work, I schemed plan after spectacular plan to break free from my loneliness, only to have them crushed when I stepped back through those sliding doors.
 
@@ -45,7 +49,7 @@ I walked to the back of the store and used the intercom to call for the LP by hi
 
 Afterward, the LP and the store manager questioned me as to why I had called twice and never picked up. My answer was simple and easy enough to believe: I was trying to contact him about the group of shoplifters I had seen. When he didn't answer in time, I decided to follow them and called from a phone in another location. This put the blame back on the LP. A few months later, I met those same shoplifters in black outside my workplace and told them about what had transpired. They are my friends now and although I no longer work at that store, I do what I can to keep them safe when we are together.
 
-## Sabotage on the Dairy Floor
+#### Sabotage on the Dairy Floor
 
 Anyone who's worked in a grocery store knows how miserable the dairy department can be. You’re stuck in a claustrophobic freezer room for eight hours, terrified you’ll be accidentally locked inside. No matter how many layers you wear, the cold creeps in and reminds you of all the things you'd rather be doing. On top of that, you’re forced to listen to terrible muzak blaring from the speakers, occasionally interrupted by a shrill voice to add to your aural torture.
 
@@ -55,13 +59,13 @@ I wasn't content reserving my anger for the dairy doors. My second target was th
 
 Following several broken doors, a new speaker system, and a long list of health code violations, I was taken off dairy duty.
 
-## The Falcon Cannot Hear the Falconer
+#### The Falcon Cannot Hear the Falconer
 
 In the course of my final days as an employee, I took it upon myself to leave messages throughout the store. Armed with a permanent marker, I wrote anti-capitalist slogans under items, on items, on the bathroom stall doors, on baby diaper boxes, and on all the self-help customer computers, being careful never to get caught on the security cameras. The most notorious of these slogans was “the falcon cannot hear the falconer,” which I heard repeatedly discussed by both customers and employees. It’s a line from a William Butler Yeats poem describing Europe after the Second World War; I used to say it to my boss at a different job many years earlier when he asked me to do things I didn't feel like doing.
 
 Despite all the amusing things I wrote, this was the only one shoppers seemed to notice. Customers would simply ignore graffiti cursing work or capitalism as if it were just another tag on a shelf; but wherever I put up “the falcon cannot hear the falconer,” I'd witness customers staring at it, trying to decipher its meaning. Of course, any item that was written on became “damaged,” and employees were allowed to take home damaged items—so not only was I detracting from corporate profits, I was also improving conditions for us workers. And walking around the store with my permanent marker was one of my many ways of looking busy while doing as little work as possible.
 
-## The Damage Done
+#### The Damage Done
 
 Aside from breaking the dairy doors, writing graffiti, and carrying out psychological warfare against my employers, most of my antics consisted of petty vandalism and general bad behavior. My acts of indignation would probably have gotten me fired on the spot or arrested if it hadn’t been the affinity I had developed with my coworkers around our hatred for work. Most of the grocery team would mark off items to bring home or just blatantly put groceries in their bags as they were leaving for the night. Only a few of my coworkers were “good” employees, and those were widely loathed; after my first week working at the store, I was informed of who they were and warned to avoid them.
 
@@ -69,16 +73,17 @@ All good things come to an end, however. Cameras were installed throughout the s
 
 [[https://cloudfront.crimethinc.com/images/ssfwd/3b.jpg]]
 
-## Appendix
+#### Appendix
 
 - [How to quit your job at Whole Foods](http://gothamist.com/2011/07/25/how_to_quit_your_whole_foods_job_in.php)
 - [How to quit your job at Taco Bell](http://gothamist.com/2011/07/16/taco_bell_manager_who_worked_22_day.php)
 
+
 ---
 
-<header class='mt-5 pt-3' id='steal-from-work-to-create-autonomous-zones'>
-  <h1>Steal from Work to Create Autonomous Zones</h1>
-</header>
+
+## Steal from Work to Create Autonomous Zones
+{: #steal-from-work-to-create-autonomous-zones}
 
 It was the late 20th century, back before the internet really took over, and I was trying to make a 'zine but I didn’t have any money to pay for copying. I’d lost my last office job after I accidentally left my 'zine masters in the copy machine when I sneaked in to use it one night. How embarrassing!
 
@@ -108,12 +113,14 @@ A lot of water has passed under the bridge, but I’ll always treasure memories 
 
 “You see those two people who just came in? Whatever they ask for, _give it to them for free.”_
 
+
 ---
 
-<header class='mt-5 pt-3' id='a-cashiers-guide'>
-  <h1>A Cashier’s Guide to Putting Yourself Through College via Workplace Theft</h1>
-  <h2>How I Stole My Higher Education from a Hardware Store</h2>
-</header>
+
+## A Cashier’s Guide to Putting Yourself Through College via Workplace Theft
+{: #a-cashiers-guide}
+
+### How I Stole My Higher Education from a Hardware Store
 
 This is a tale of two cities. Both are nominally suburbs of the same Rust Belt metropolis, but both are large enough to be major cities themselves. They share the same local bus system and the same daily newspaper. What separates them is ten miles of suburban sprawl and the tremendous chasm of class privilege.
 
@@ -131,7 +138,9 @@ For a long time I only took one three-credit course per semester, because that w
 
 Over the span of less than a year after that decision I successfully embezzled more than twenty-five thousand dollars from my place of employment: a hardware store, owned by two Huffmanville businessmen, where I worked as a cashier. I was never caught or fired. And I graduated from college one year later.
 
+
 ---
+
 
 The store in which I worked was part of a regional chain of between ten and twenty others, all based out of a flagship store in Huffmanville. Definitely not a mom-and-pop operation, but not Wal-Mart, either. In fact, looking back, the size of the company was probably ideal: if it had been much smaller (a single store, or even a handful), I might have felt guilty about stealing from them—making things even tougher for the little guy than they already are. On the other hand, if it had been a big multinational corporation, there probably would have been too many security measures in place for me to do what I did. As it was, the chain was wholly owned by a father-and-son team, both big shots in the local Huffmanville business elite—there was even a building at my college named after them. The father had started the chain with the main store in Huffmanville, and the son was now president. This was also something that suited me: unlike many cases of workplace theft, I knew exactly who I was stealing from—I had _looked them both in the eye_ when they dropped by our store one time for a surprise inspection. And I knew they could afford it.
 
@@ -141,7 +150,9 @@ The standard wage for grunts like me was seven dollars per hour—just enough ov
 
 To my benefit, they seemed never to consider that this same problem-solving ability of mine could be put to uses contrary to theirs.
 
+
 ---
+
 
 I am what you’d call good with numbers. Remembering them, adding and subtracting them, keeping accurate running totals, all in my head—a skill which would prove to be quite useful, given the fact that my job involved handling a nearly ceaseless flow of cash every hour of every day, with minimal supervision. In some ways it’s one of the oldest stories in capitalism—the savvy accountant ripping off his less-mathematically-inclined wealthy clients—but there were also important differences. By this time in my life I was already familiar with anarchist principles, and I therefore considered all of my interests and those of the store owners to be in polar opposition. I wanted to inflict as many losses on the store as I could possibly get away with, even in ways that did not directly benefit me.
 
@@ -165,7 +176,9 @@ During this period, the store was robbed. The robbers were smart: they hit the s
 
 I truly felt bad for the assistant manager who had a gun stuck in her face; she didn't deserve it. To my knowledge she never received any acknowledgement from the owners that she had had her life threatened on behalf of _their_ money. She even had to open the next day.
 
+
 ---
+
 
 As far as I know, no member of the management at the store ever discovered what I was up to—or if they did, they had no way of proving it. I was too careful. But my guess is they had no clue. Anyone who is familiar with hourly-wage-work power relationships knows that even the weakest circumstantial evidence is sufficient for a boss to terminate an employee at will. If they had known about something like what I was doing, they’d have done _something_ about it. Realistically, they probably assumed I engaged in some minor theft (try finding an employee—especially in a place like New Stolp—who doesn’t!), but they clearly had no inkling about the scale, or else I would have been given the boot in two seconds flat, and possibly brought up on charges.
 
@@ -178,11 +191,10 @@ _—The Angry Po-Boy Collective, March 29, 2010_
 ---
 
 
-<header class='mt-5 pt-3' id='what-became-of-the-boxes'>
-  [[https://cloudfront.crimethinc.com/assets/articles/2014/04/15/1b4.jpg]]
+[[https://cloudfront.crimethinc.com/assets/articles/2014/04/15/1b4.jpg]]
 
-  <h1>What Became of the Boxes</h1>
-</header>
+## What Became of the Boxes
+{: #what-became-of-the-boxes}
 
 _The testimony of a wage slave who recalls his misspent youth in the stockroom of an upscale clothing store and recounts how he exacted his revenge, ultimately calling into question whether there is anything worth taking from the world of work at all._
 
@@ -203,12 +215,10 @@ Was this theft? I don’t know. I mean, if I got caught, I would have been charg
 ---
 
 
-<header class='mt-5 pt-3' id='stealing-from-work-is-a gamble'>
-  [[https://cloudfront.crimethinc.com/assets/articles/2018/04/15/1.jpg]]
+[[https://cloudfront.crimethinc.com/assets/articles/2018/04/15/1.jpg]]
 
-  <h1>Stealing from Work Is a Gamble, but It Can Be a Good Bet</h1>
-</header>
-
+## Stealing from Work Is a Gamble, but It Can Be a Good Bet
+{: #stealing-from-work-is-a-gamble}
 
 In the repertoire of punk jobs there used to be a job known as poster tour. Many people who have spent a little time on college campuses can conjure a memory of this traveling spectacle. Picture it: a company orders absurd quantities of posters from overseas and sends forth its minions to market them to the gaping voids of personality that are the college students of America. The premise is that these first-year students, lost in the sea of their future, will desperately cling to any kind of material affirmation money can buy—to be specific, by adorning their dismally blank walls with beautiful portraits of the complex identities they've laboriously constructed throughout their lives.
 
@@ -262,11 +272,12 @@ I experienced none of the feelings I project to be associated with gambling—I 
 
 The money I made came and went, as money does. But the feeling of getting yet another one over on the company that had engineered nothing but failure for its workers is something that I'll carry with me forever. It reminds me that if I divert the energy and time that my bosses want me to invest in the job towards the more strategic goal of subverting my workplace, my fellow employees and I will come out ahead.
 
+
 ---
 
-<header class='mt-5 pt-3' id='dont-beg-for-a-piece-of-the-pie'>
-  <h1>Don’t Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!</h1>
-</header>
+
+## Don’t Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!
+{: #dont-beg-for-a-piece-of-the-pie}
 
 Being from the part of the world that is considered Eastern Europe in the West, you get paid a lot less for the same shitty jobs. I had a few of those jobs already, starting at the age of 14, usually sorting products on the shelves in the big hypermarkets. The theft prevention there seemed omnipotent, so however angry I was about getting paid the equivalent of $1.50 an hour (25% of which was taken by the contractor agency through which I found work), I had no idea how to do anything to improve my situation.
 
@@ -302,11 +313,10 @@ Nowadays, looking back, I remember those times as less risky than my adult life 
 ---
 
 
-<header class='mt-5 pt-3' id='like-most-workplace-thieves'>
-  [[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/3b.jpg]]
+[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/3b.jpg]]
 
-  <h1>Like Most Workplace Thieves, I Am an Exceptional Worker</h1>
-</header>
+## Like Most Workplace Thieves, I Am an Exceptional Worker
+{: #like-most-workplace-thieves}
 
 My name is Ann and I am a successful small-time career criminal. I’ll start the story with some background information about my lifestyle. I have lived out of my car and in squats alternately for the past several years. I live remarkably cheaply, but I do use some money. My main expenses are my car, my storage unit, my gym membership and my coffee and cigarette addictions. Nobody’s perfect. I have more affluent tastes than the vast majority of homeless people but after having been on the streets off and on, I’ve learned to live without a lot and how to source a lot of things for free.
 

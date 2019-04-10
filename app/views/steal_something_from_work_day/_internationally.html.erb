@@ -1,0 +1,14 @@
+<%# Markdown file located in: /config/locales/pages/en/steal_something_from_work_day/internationally %>
+<%= render_markdown_for page: "steal_something_from_work_day/internationally" %>
+
+<div class="row">
+  <% t('steal_something_from_work_day.international_coverage.cards').each do |card| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag card %>
+    </div>
+  <% end %>
+</div>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <%= render_markdown "[[ https://vimeo.com/264808377 #{t 'steal_something_from_work_day.international_coverage.sweden_video_caption'} ]]" %>
+</div>

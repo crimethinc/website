@@ -10,16 +10,6 @@
 
 img { max-width: 100%; }
 
-header {
-  h1 {
-    @include font-black;
-  }
-
-  h2 {
-    @include font-light;
-  }
-}
-
 figure {
   @extend .my-5;
 
@@ -34,15 +24,18 @@ figure {
   }
 }
 
+// TODO: delete
 dt {
   @include font-bold;
   @extend .lead;
 }
 
+// TODO: delete
 dd + dt {
   @extend .mt-4;
 }
 
+// TODO: delete
 dt + dd {
   @extend .mt-1;
 }
@@ -56,6 +49,7 @@ blockquote {
 main {
   img { width: 100%; }
 
+  // TODO: delete
   header {
     @extend .mb-4;
     @extend .pb-2;
@@ -63,7 +57,26 @@ main {
   }
 }
 
-#introduction header {
+// Section headings
+header,
+#faq,
+#outreach-materials,
+#interviews,
+#narratives,
+#testimonials,
+#further-reading,
+#selected-coverage,
+#internationally {
+  h1 {
+    @include font-black;
+  }
+
+  h2 {
+    @include font-light;
+  }
+}
+
+#introduction {
   h1 {
     @include font-light;
     @extend .text-muted;
@@ -73,6 +86,48 @@ main {
     @include font-black;
     @extend .h1;
   }
+}
+
+#analysis,
+#narratives {
+  h1, h2 {
+    @include font-black;
+    @extend .h1;
+  }
+
+  h3 {
+    @include font-light;
+  }
+
+  hr {
+    @extend .my-5;
+  }
+}
+
+// Acts as header
+#introduction h2,
+#faq h1,
+#outreach-materials h1,
+#interviews h1,
+#interviews h3,
+#analysis h1,
+#analysis h3,
+#analysis #yes-we-even-stole-from-work-under-socialism,
+#analysis #beyond-stealing-from-work,
+#narratives h1,
+#narratives h3,
+#narratives #steal-from-work-to-create-autonomous-zones,
+#narratives #what-became-of-the-boxes,
+#narratives #stealing-from-work-is-a-gamble,
+#narratives #dont-beg-for-a-piece-of-the-pie,
+#narratives #like-most-workplace-thieves,
+#testimonials h1,
+#further-reading h1,
+#selected-coverage h1,
+#internationally h1 {
+  @extend .mb-4;
+  @extend .pb-2;
+  @extend .border-bottom;
 }
 
 .embed-responsive figcaption {

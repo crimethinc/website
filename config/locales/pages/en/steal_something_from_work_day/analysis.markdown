@@ -1,3 +1,5 @@
+# Analysis
+
 - [**The Team is Real**](#the-team-is-real)—A model for how employees at a variety of businesses can support each other beyond networks of kinship or affinity.
 
 - [**A Theft or Work?**](#a-theft-or-work)—A grad student brings poststructuralist theory to bear on time theft, why the master’s degrees will never dismantle the master’s house, and how to resist work when it has spread so far beyond the workplace.
@@ -6,12 +8,14 @@
 
 - [**Beyond Stealing from Work**](#beyond-stealing-from-work)—Stealing from the workplace is only the beginning.
 
+
 ---
 
-<header class='mt-5 pt-3' id='the-team-is-real'>
-  <h1>The Team is Real</h1>
-  <h2>A Model for Cross-Workplace Organizing</h2>
-</header>
+
+## The Team is Real
+{: #the-team-is-real}
+
+### A Model for Cross-Workplace Organizing
 
 1. **Step one: Wear the button when you’re at work. Hook people up (discounts, freebies, extras, etc.)**
 
@@ -29,7 +33,7 @@ In the absence of a formal organization with pretensions of representing our int
 
 The Team is an attempt to coordinate and elaborate that subversion: to spread it beyond the circumscribed boundaries of friendship while at the same time creating new relationships based on a common material condition, that of exploitation, and a common practice of rebellion, that of re-appropriation. Essentially The Team functions by the use of a common identifier—a button, a pin, a t-shirt or hat, anything that could be used to alert a stranger to the presence of a fellow member. The identifier should be unique enough to be easily distinguished, yet not so explicit as to tip off the boss. The deployment of explanatory cards is an optional compliment that while adding a potential risk also provides the opportunity to interject a more explicitly anti-capitalist theme. What do the kids say these days?
 
-## Everything for Everyone!
+#### Everything for Everyone!
 
 With only a few months of practical application, The Team has proven to be a moderate success in at least one average-sized Midwestern city. Almost two hundred buttons and cards have been given to enthusiastic young service workers. Some of us have enjoyed a trip to the grocery store with no bill upon checking out. Others have been able to feed their caffeine addictions for another day with no exchange of currency. Soon we hope to be riding city buses and partying in hotel rooms. Perhaps one day something will "fall off the truck" into our laps. In the meantime we are finding that social activities that normally leave us feeling isolated from those immediately surrounding us are now enveloped in an atmosphere of excitement and purpose. Knowing head nods and revealing conversations have once again found their way into the air around us. One story reached us of a twenty-something barista whose adolescent dreams of a network of free coffee suppliers has, years later, found resonance with our little union of thieves. We are finding that even apathetic hipsters and seemingly hostile liberals are making themselves at home in our attempt to do class struggle.
 
@@ -43,16 +47,18 @@ These words have been written with the hope that others beside ourselves might t
 
 [[https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/if-you-dont-steal-from-your-boss.jpg]]
 
+
 ---
 
-<header class='mt-5 pt-3' id='a-theft-or-work'>
-  <h1>A Theft or Work?</h1>
-  <h2>Why Steal Something from Work Day Means Burn Down the Internet</h2>
-</header>
+
+## A Theft or Work?
+{: #a-theft-or-work}
+
+### Why Steal Something from Work Day Means Burn Down the Internet
 
 A critical essay on the possibilities and limitations of _stealing time at work_ as a revolutionary practice. Our contributor is one of the countless grad students who have better odds of participating in an anarchist revolution than landing a tenure track position. Like anything _stolen from work,_ this text bears the imprint of the context in which it was created—yet hints at what it will take to abolish that context. Thieves of time, one more effort to steal back the world!
 
-## _La Perruque,_ “the Wig”
+#### _La Perruque,_ “the Wig”
 
 It is impossible to steal from work. If you are _at work,_ you are either an employee or a boss, or else both. A boss cannot steal from work because he or she already owns the apparatus of production; an employee cannot steal from work because _working_ means being part of that apparatus. If I get away with it, the staplers and printer cartridges my bag are just a category mistake, a peculiar misgrouping of my little hands with other company property. If I don’t, they are a trail of evidence proving that I was never really an employee.
 
@@ -62,7 +68,7 @@ Let’s begin with the labor of stealing back your time, if only because that ma
 
 > Take, for example, what in France is called _la perruque_, “the wig.” La perruque is the worker's own work disguised as work for his employer. It differs from pilfering in that nothing of material value is stolen. It differs from absenteeism in that the worker is officially on the job. _La perruque_ may be as simple a matter as a secretary's writing a love letter on “company time” or as complex as a cabinet maker's “borrowing” a lathe to make a piece of furniture for his living room.
 
-## Trickery and Domination
+#### Trickery and Domination
 
 For de Certeau, _la perruque_ is exemplary of "tactics," as opposed to "strategy." The difference between the two is central to his analysis of how power functions everywhere from the factory and the kitchen to language itself:
 
@@ -84,7 +90,7 @@ Or, to use de Certeau's metaphor, though our tactic is inevitably immersed in an
 
 [[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/2b.jpg]]
 
-## Can the Master's Degree Dismantle the Master's House?
+#### Can the Master's Degree Dismantle the Master's House?
 
 A good Jesuit, de Certeau flourishes a mind like a filigree of silver: he is refined toward ornate visionary practice and ordered instruction. To be crude, he’s a fancy poststructuralist academic, and he concisely presents the ethos of the well-meaning academic leftist:
 
@@ -119,7 +125,7 @@ There was a graduate student from the anthropology department, a self-described 
 
 [[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/3b.jpg This is not a diploma.]]
 
-## 100% Time
+#### 100% Time
 
 So _la perruque_ of writing about _la perruque_ doesn't constitute sabotage. Yet the problem is not the academy. De Certeau is right in asserting that nearly everyone sneaks time from work to do their own projects, even if they are being watched. But somehow millions of people running errands in company cars, making snacks from spare ingredients, and sexting while "on the clock" have failed to abolish capitalism.
 
@@ -143,7 +149,7 @@ As an aside, the video game industry is a phenomenally successful experiment in 
 
 It is has been a long recapture, but a successful one: 40 years after the release of _Spacewar!_, _America's Army_ became the name of both a murderous force of empire and the video game it uses as an official training and recruitment device.
 
-## The Potlatch: Destructive Gifts
+#### The Potlatch: Destructive Gifts
 
 What, then, can we do? Can any _perruque_ oppose the regime of 100% Time?
 
@@ -167,21 +173,20 @@ Recent historians have suggested that the potlatch only reached this immolative 
 
 [[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/4b.jpg]]
 
-## Resources
+#### Resources
 
 - De Certeau, [The Practice of Every Day Life](https://cdn.anonfiles.com/1346577041269.pdf)
 - Mauss, [The Gift](https://anonfiles.com/file/58272a47d0949a25147f4527b176c681)
 - Bataille, [The Accursed Share](http://cdn.anonfiles.com/1336313378261.pdf)
 
+
 ---
 
-
-
-<header class='mt-5 pt-3' id='yes-we-even-stole-from-work-under-socialism'>
-  <h1>Yes, We Even Stole from Work under Socialism</h1>
-</header>
-
 [[https://cloudfront.crimethinc.com/assets/articles/2017/04/15/header.jpg]]
+
+## Yes, We Even Stole from Work under Socialism
+{: #yes-we-even-stole-from-work-under-socialism}
+
 
 We present this extract from the book _A Worker in a Worker’s State,_ written by Miklós Haraszti in 1972 when he was a young employee at the Red Star Tractor Factory and suppressed by the Hungarian government as a threat to socialism. Throughout history, workers have stolen from their workplaces under capitalism and socialism socialism alike. Haraszti suggests that this stealing is actually the most creative and enterprising activity that takes place in the factory, implying the possibility of a world in which all labor would be equally creative and free. His text also provides a window into the lives of workers in the Eastern Bloc, revealing the void at the heart of the supposed workers’ utopia. So long as there are managers, workers will rob their workplaces—not just for personal gain, but above all to keep alive that which is best in themselves.
 
@@ -189,10 +194,9 @@ At a time when young people in the West who did not experience the horrors of st
 
 [[https://cloudfront.crimethinc.com/assets/articles/2017/04/15/02.jpg]]
 
-## In Search of the Great Homer
+#### In Search of the Great Homer
 
 > _A **homer** is an object made for his own purpose or pleasure by a worker using his factory’s machines and materials. It is not made for sale as an additional source of income. The word does not appear in most dictionaries, but appears to have been the most widely used equivalent in England and North America._
-{: .blockquote}
 
 “Homers? Is there any chance of homers?” is often asked by those thinking of leaving this factory, when they’re tipped off about another place. Many factors must be taken into account when you want to change your job. Although for most workers homers are not vital, they’ll make them if they have the chance, and they’ll try to create the opportunity if it doesn’t exist already. Some will pay a high price to obtain a position that allows them to make homers.
 
@@ -260,7 +264,7 @@ Connoisseurs of folklore may look on homers as a native, decorative art. As yet,
 
 [[https://cloudfront.crimethinc.com/assets/articles/2017/04/15/01.jpg]]
 
-## Epilogue
+#### Epilogue
 
 At a factory in the Soviet Union, inventory control had determined that one of the workers was stealing from the People’s State. They heightened security and monitored him carefully. Every evening, as the man left work with his wheelbarrow, the security guard would search him fastidiously—packages, boxes, bags, pockets, everything—but to no avail. Although the guard never found a thing, he continued to search the worker at the end of each shift—year after year after year.
 
@@ -268,12 +272,12 @@ Finally, decades later, the man was due to retire. As he pushed his wheelbarrow 
 
 “It’s easy,” shrugged the worker. “I’m stealing wheelbarrows.”
 
+
 ---
 
 
-<header class='mt-5 pt-3' id='beyond-stealing-from-work'>
-  <h1>Beyond Stealing from Work</h1>
-</header>
+## Beyond Stealing from Work
+{: #beyond-stealing-from-work}
 
 In the final analysis, stealing from our workplaces is not a rebellion against the status quo, but simply another aspect of it. It implies a profound discontent with our conditions, yes, and perhaps a rejection of the ethics of capitalism; but as long as the consequences of that discontent remain individualized and secretive, they will never propel us into a different world. Stealing from work is what we do instead of changing our lives—it treats the symptoms, not the condition. Perhaps it even serves our bosses’ interests—it gives us a pressure valve to blow off steam, and enables us to survive to work another day without a wage increase. Perhaps they figure the costs of it into their business plans because they know our stealing is an _inevitable side effect of exploitation_—though not one guaranteed to bring exploitation to an end.
 

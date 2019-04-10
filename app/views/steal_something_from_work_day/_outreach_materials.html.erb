@@ -1,0 +1,92 @@
+<%# stickers %>
+<h1 id='stickers'>
+  <%= t 'steal_something_from_work_day.outreach_materials.stickers.title' %>
+  <small><%= link_to '#', '#stickers' %></small>
+</h1>
+
+<p class='my-4'>
+  <%= t 'steal_something_from_work_day.outreach_materials.stickers.description' %>
+</p>
+
+<div class="row">
+  <div class="col-lg-6 mb-5">
+    <%= card_tag t('steal_something_from_work_day.outreach_materials.stickers.cards').first %>
+
+    <div class="card my-4">
+      <img src="https://cloudfront.crimethinc.com/assets/articles/2018/04/13/1.jpg" class="card-img-top">
+    </div><!-- .card -->
+  </div>
+
+  <div class="col-lg-6 mb-5">
+    <%= card_tag t('steal_something_from_work_day.outreach_materials.stickers.cards').last %>
+  </div>
+</div>
+
+
+<%# posters %>
+<h1 id='posters'>
+  <%= t 'steal_something_from_work_day.outreach_materials.posters.title' %>
+  <small><%= link_to '#', '#posters' %></small>
+</h1>
+
+<div class="row">
+  <% t('steal_something_from_work_day.outreach_materials.posters.cards').each do |poster| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag poster %>
+    </div>
+  <% end %>
+</div>
+
+
+<%# pamphlets %>
+<h1 id='pamphlets'>
+  <%= t 'steal_something_from_work_day.outreach_materials.pamphlets.title' %>
+  <small><%= link_to '#', '#pamphlets' %></small>
+</h1>
+
+<p class='my-4'>
+  <%= t 'steal_something_from_work_day.outreach_materials.pamphlets.description' %>
+</p>
+
+<div class="row">
+  <% t('steal_something_from_work_day.outreach_materials.pamphlets.cards').each do |pamphlet| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag pamphlet %>
+    </div>
+  <% end %>
+</div>
+
+
+<%# postcards %>
+<h1 id='postcards'>
+  <%= t 'steal_something_from_work_day.outreach_materials.postcards.title' %>
+  <small><%= link_to '#', '#postcards' %></small>
+</h1>
+
+<div class="row">
+  <% t('steal_something_from_work_day.outreach_materials.postcards.cards').each do |postcard| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag postcard %>
+    </div>
+  <% end %>
+</div>
+
+
+<%# journals %>
+<h1 id='journals'>
+  <%= t 'steal_something_from_work_day.outreach_materials.journals.title' %>
+  <small><%= link_to '#', '#journals' %></small>
+</h1>
+
+<div class="row">
+  <% t('steal_something_from_work_day.outreach_materials.journals.cards').each do |journal| %>
+    <div class="col-lg-6 mb-5">
+      <%= card_tag journal %>
+    </div>
+  <% end %>
+</div>
+
+
+<div class='lead text-danger my-5 py-5'>
+  <%= render_markdown t('steal_something_from_work_day.outreach_materials.abolish_capitalism') %>
+</div>

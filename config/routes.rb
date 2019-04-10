@@ -9,8 +9,17 @@ Rails.application.routes.draw do
   get 'page(/1)', to: redirect { |_, _| '/' }
   get 'page/:page', to: 'home#index'
 
-  # TCE
-  get 'tce(/:lang)', to: 'to_change_everything#show', defaults: { lang: 'english' }, as: :to_change_everything
+  # To Change Everything (TCE)
+  get 'tce(/:lang)',
+      to: 'to_change_everything#show',
+      defaults: { lang: 'english' },
+      as: :to_change_everything
+
+  # Steal Something from Work Day (SSfWD)
+  get 'steal-something-from-work-day(/:locale)',
+      to: 'steal_something_from_work_day#show',
+      defaults: { locale: 'english' },
+      as: :steal_something_from_work_day
 
   # Articles
   # Article listings by year, optional month, optional day
@@ -51,7 +60,6 @@ Rails.application.routes.draw do
   # Static pages
   get 'library',                       to: 'pages#library', as: :library
   get 'submission-guidelines',         to: 'pages#submission_guidelines'
-  get 'steal-something-from-work-day', to: 'pages#steal_something_from_work_day'
 
   # Categories
   get 'categories',                    to: 'categories#index', as: :categories
