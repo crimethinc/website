@@ -1,71 +1,74 @@
 # Frequently Asked Questions
 
-**Is STEALING SOMETHING FROM WORK immoral?**
+**Ist es unmoralisch, DEINEN ARBEITSPLATZ ZU BEKLAUEN?**
 
-Stealing is immoral, yes. That’s why your employers should pay you the full value they obtain from your labor, rather than paying you a fraction of it and taking the rest for themselves as profit. If you take something from the workplace, you’re not stealing, but simply taking back the results of your effort.
+Stehlen ist unmoralisch, ja. Deswegen sollte dir dein Unternehmen den vollen Wert auszahlen, den es durch deine Arbeitskraft erhählt – anstatt nur einen kleinen Teil davon. Wenn du etwas von deinem Arbeitsplatz stiehlst, nimmst du dir nur einen weiteren Teil deines hart verdienten Einkommens.
 
-**Is STEALING SOMETHING FROM WORK illegal?**
+**Ist es illegal, DEINEN ARBEITSPLATZ ZU BEKLAUEN?**
 
-Technically, it may be. Slavery, on the other hand, was legal until December 1865.
+Rechtlich gesehen, ja. Auf der anderen Seite war auch die Sklaverei bis Dezember 1865 legal…
 
-**Is STEAL SOMETHING FROM WORK DAY anti-employer?**
+**Ist DEINEN ARBEITSPLATZ ZU BEKLAUEN arbeitgeberfeindlich?**
 
 Hate to break it to you, boss, but your employees steal from you every day. By encouraging them to focus on one day a year, we’re looking out for you! Consider this a harm reduction approach.
+Es tut mir echt Leid, es dir zu sagen, Boss, aber deine Angestellten bestehlen dich jeden Tag. Indem wir sie ermutigen, sich auf einen Tag im Jahr zu konzentrieren, kümmern wir uns um dich! Betrachte es einfach als einen Ansatz zur Schadensminderung.
 
-**Does STEAL SOMETHING FROM WORK DAY make it harder for employees to get away with stealing?**
+**Macht der BEKLAU DEINEN ARBEITSPLATZ TAG das Stehlen für Angestellte schwieriger?**
 
-Not significantly. The number one obstacle to employee theft is not bosses or cameras, but misguided coworkers. STEAL SOMETHING FROM WORK DAY is a consciousness-raising holiday promoting worker solidarity and legitimizing employee redistribution of wealth.
+Nicht wirklich. Das gravierendste Hindernis, das überwunden werden muss, sind nicht etwa deine Bosse oder die Kameras, sondern fehlgeleitete ArbeitskollegInnen. Der BEKLAU DEINEN ARBEITSPLATZ TAG will die Solidarität unter den Arbeitenden und die Neuverteilung des Reichtums durch die Basis fördern.
 
 [[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
 
-**Not everyone has an easy time stealing from the workplace. Some demographics are singled out for surveillance, and many people can’t afford to risk getting into trouble!**
+**Für einige ist es schwierig, ihren ARBEITSPLATZ ZU BEKLAUEN. Manche Lokalitäten sind vollständig überwacht und viele Leute können es sich nicht leisten, in Schwierigkeiten zu geraten.**
 
-That’s true! That’s why, if you are not one of those people, you should STEAL SOMETHING FROM WORK to share with those who can’t risk it themselves.
+Richtig! Das ist ein weiterer Grund, warum du – wenn du nicht zu diesen Leuten gehörst – deinen Arbeitsplatz beklauen solltest, um jene zu unterstützen, die es selbst nicht tun können.
 
-**I’m retired. Can I participate in STEAL SOMETHING FROM WORK DAY?**
+**Ich bin in Rente. Kann ich beim BEKLAU DEINEN ARBEITSPLATZ TAG mitmachen?**
 
-Yes, you can—just go back to your former place of employment! If you had to wrestle over a pension with them, they’ve got it coming. It’s never too late to STEAL SOMETHING FROM WORK!
+Ja, kannst du – geh einfach zu deinem ehemaligen Arbeitsplatz zurück! Wenn du dort in der Vergangenheit Probleme und Konflikte hattest, erwarten sie dich vielleicht. Aber es ist nie zu spät, um DEINEN ARBEITSPLATZ ZU BEKLAUEN!
 
-**I’d love to STEAL SOMETHING FROM WORK, but I work at a local non-profit foundation providing free services to survivors of domestic violence.**
+**Ich würde gerne MEINEN ARBEITSPLATZ BEKLAUEN, aber ich arbeite für eine Non-Profit-Organisation, die sich für die Überlebenden von häuslicher Gewalt einsetzt.**
 
-If you truly love the place you work, chances are it’s under-funded. That’s because the for-profit mega-corporations are hogging all the resources! Time to pay a visit to someone else’s workplace.
+Wenn du deinen Arbeitsplatz wirklich liebst, sind die Chancen hoch, dass er finanziell schlecht dasteht. Es wird also Zeit, den Arbeitsplatz von jemand anderem zu besuchen.
 
-**But my employers give to charitable causes when they make a profit! If I STEAL SOMETHING FROM WORK, they’ll have less to donate.**
+**Aber meine Arbeitgebenden spenden für wohltätige Zwecke, wenn sie Profit machen! Wenn ich MEINEN ARBEITSPLATZ BEKLAUE, dann sind ihre Spenden kleiner.**
 
-Who do you think should choose the most deserving charitable cause for your earnings—you, or some corporate bureaucrat? Just because you STEAL SOMETHING FROM WORK doesn’t mean you have to keep it all for yourself!
+Wer sollte bestimmen, wofür es sich am meisten lohnt, Geld zu spenden – du oder irgend so ein steinreicher Bürokrat? Nur weil du DEINEN ARBEITSPLATZ BEKLAUST, heisst das nicht, dass du alles für dich allein behalten musst!
 
-**If I STEAL SOMETHING FROM WORK, will it make me a more selfish person?**
+**Wenn ich MEINEN ARBEITSPLATZ BEKLAUE, macht mich das zu einer egoistischeren Person?**
 
-Not necessarily! By and large, people find it easier to share things when they don’t have to trade their lives for them in miserable drudgery. STEALING SOMETHING FROM WORK might actually make you a more generous person!
+Nicht zwangsweise! Vielleicht fällt es dir ja leichter, etwas zu teilen, wenn du nicht deine Arbeitskraft dafür hergeben musstest. DEINEN ARBEITSPLATZ ZU BEKLAUEN könnte dich sogar zu einer grosszügigeren Person machen!
 
-**What does God think about STEALING FROM WORK?**
+**Was denkt Gott über BEKLAU DEINEN ARBEITSPLATZ**
 
-Academic theologians such as German Old Testament scholar A. Alt, author of _Das Verbot des Diebstahls im Dekalog,_ suggest that the commandment “thou shalt not steal” was originally intended against stealing _people_—against abductions and slavery. This lines up with Jewish interpretations of the statement as “thou shalt not kidnap”—for example, as stated by Rabbi Shlomo Yitzhaki, famed as the author of the first comprehensive commentary on the Talmud. If this is so, the real crime is not the worker taking back a part of the fruit of his labor, but the economic system that forces him into wage slavery in the first place. Likewise, as Jesus explains, “It is easier for a camel to pass through the eye of a needle than for a rich man to enter the kingdom of God” (Matthew 19:24)—don’t put your employer at such risk!
+Akademische Theologen wie der deutsche Gelehrte des Alten Testaments A. Alt, Autor von _Das Verbot des Diebstahls im Dekalog,_ legen nahe, dass das Gebot "Du sollst nicht stehlen" ursprünglich gegen das Stehlen von _Menschen_, also gegen Entführungen und Sklaverei gedacht war. Dies entspricht der jüdischen Interpretation der Aussage: "Du sollst nicht entführen" - wie zum Beispiel Rabbi Shlomo Yitzhaki konstantierte. Er ist als Autor des ersten umfassenden Kommentars zum Talmud bekannt. Wenn dies der Fall ist, ist das wirkliche Verbrechen nicht die Arbeiterin, die einen Teil der Früchte ihrer Arbeit zurücknimmt, sondern das Wirtschaftssystem, das sie überhaupt in die Lohnsklaverei zwingt. Außerdem erklärte Jesus: "Es ist einfacher für ein Kamel, durch das Nadelöhr zu gehen, als für einen reichen Mann, in das Reich Gottes einzutreten" (Matthäus 19,24) - setze deinen Arbeitgeber nicht einer solchen Gefahr aus!
 
 [[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
 
-**What if I STEAL SOMETHING FROM WORK and my company goes out of business? Is this biting the hand that feeds me?**
+**Was passiert, wenn ich MEINEN ARBEITSPLATZ BEKLAUE und meine Firma Konkurs geht? Säge ich nicht am Ast, auf dem ich sitze?**
 
-Corporations plan workplace shrinkage into the budget well in advance. They’re practically _counting on you_ to steal something! If that surplus goes unclaimed, it’ll just stay in their coffers as more unearned profits.
+Unternehmen planen potenzielle Verluste schon lange vorher mit ein. Sie _zählen praktisch auf dich_, dass du etwas stehlen! Wenn diese Umverteilung nicht eingefordert wird, bleiben einfach in ihren Kassen noch mehr unverdiente Gewinne.
 
-**Will the costs of STEALING SOMETHING FROM WORK be passed on to consumers?**
+**Werden die Kosten für den BEKLAU DEINEN ARBEITSPLATZ TAG an die VerbraucherInnen weitergegeben?**
 
-Your employers are shrewd businessmen—if they were simply trying to distribute goods to the needy as affordably as possible, they’d be in a different line of work. That means if they could be charging customers more, they already would be. The prices of their products are determined by the market, not by the cost of producing them.
+Deine ArbeitgeberInnen sind kluge Geschäftsleute - wenn sie einfach versuchen würden, Waren an die Bedürftigen so günstig wie möglich zu verteilen, wären sie in einer anderen Branche tätig. Das heißt, wenn sie den KundInnen mehr berechnen könnten, würden sie es bereits machen. Die Preise ihrer Produkte werden vom Markt bestimmt, nicht von den Kosten ihrer Herstellung.
 
-**But won’t STEALING SOMETHING FROM WORK destabilize the economy? What if the market crashes again? Will STEALING SOMETHING FROM WORK bring about the end of the world?**
+**Ist es nicht schlecht für die Wirtschaft, wenn ich MEINEN ARBEITSPLATZ BEKLAUE? Was passiert, wenn die Märkte wieder einbrechen? Wird uns der BEKLAU DEINEN ARBEITSPLATZ TAG dem Ende der Welt näher bringen?**
 
-Are you kidding? Who does all the work in this society—bosses, or workers? If anything, things would go more smoothly without them. If every corporation went out of business tomorrow and we could get our hands on all the resources they’ve hoarded, don’t you think we’d be able to distribute them more sensibly? They’re lucky we don’t steal _everything!_
+Du machst Witze, oder? Wer erledigt all die Arbeit in der Gesellschaft – Bosse und Aktionäre oder die Angestellten? Wenn jeder Konzern morgen Konkurs gehen würde und wir uns die ganzen Ressourcen aneignen könnten, die sie gehortet haben… Denkst du nicht, dass wir fähig wären, sie gerechter zu verteilen? Sie können von Glück reden, dass wir nicht gleich _alles_ stehlen!
 
-**Will STEALING SOMETHING FROM WORK inhibit real social change? Shouldn’t we be organizing to address the root of our problems rather than acting individualistically?**
 
-Maybe you’re onto something! But STEALING SOMETHING FROM WORK doesn’t prevent you from organizing collectively. For example, you could coordinate with your coworkers to share what you pocket. Really, what good would it do to get organized together if you were still afraid to take what you deserve? On the other hand, imagine if we could go beyond taking things from our workplaces, and take over the workplaces themselves…
 
-**Why is April 15 STEAL SOMETHING FROM WORK DAY?**
+**Verhindert der BEKLAU DEINEN ARBEITSPLATZ TAG reale soziale Veränderungen? Sollten wir uns nicht lieber zusammentun, um den Problemen gemeinsam an die Wurzeln zu gehen, anstatt individualisiert zu handeln?**
 
-As most employees know, every day can be Steal Something From Work day. But we can’t encourage people to go steal from their workplaces all the time—for all we know, that would be illegal. The best we can do is ask people to limit their workplace theft to one day a year!
+Du bist wohl auf der richtigen Spur! Der BEKLAU DEINEN ARBEITSPLATZ TAG hält dich nicht davon ab, dich gemeinsam mit anderen zu organisieren. Zum Beispiel könntest du mit deinen ArbeitskollegInnen absprechen, wie ihr euere Beute (ver)teilt. Im Ernst: Welchen Sinne hätte es, sich zusammen zu tun, wenn man immer noch Angst hat, sich das zu nehmen, was einem zusteht? Auf der anderen Seite: Stell dir mal vor, wenn wir über das blosse Stehlen hinausgehen und statt dessen gleich den ganzen Betrieb übernehmen würden…
 
-If there was ever a good day to Steal Something From Work, it has to be April 15, Tax Day. For the government, every April 15 is Steal Something From You Day. They take your hard-earned money and dump it right into some oil war or back-room deal—that’s yet another way the corporations are making out at your expense.
+**Warum ist der 15. April BEKLAU DEINEN ARBEITSPLATZ TAG**
 
-Don’t take it sitting down. **Steal something from work.**
+Wie die meisten ArbeiterInnen wissen, kann jeder Tag BEKLAU DEINEN ARBEITSTAG TAG sein. Aber wir können die Menschen nicht ermutigen, ständig ihre Arbeitsplätze zu beklauen, soweit wir wissen, wäre das illegal. Das Beste, was wir tun können, ist, die Menschen aufzufordern, ihren Arbeitsplatzdiebstahl auf einen Tag im Jahr zu beschränken!
 
-[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Remember who’s stealing from you! ]]
+In den USA ist der 15. April der Steuertag (Tax Day), also ein passender Termin, da die Regierung an diesem Tag von allen stiehlt. Sie nehmen dein hart verdientes Geld und stecken es direkt in einen Krieg um Resourcen oder ein Hinterzimmergeschäft - eine Art auf die dich die Firmen dann wiederrum beklauen.
+
+Nimm das nicht einfach hin. **Klau was von deiner Arbeit**
+
+[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Erinnere dich daran, wer dich beklaut! ]]
