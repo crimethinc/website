@@ -1,11 +1,13 @@
 class StealSomethingFromWorkDayController < ApplicationController
   layout 'steal_something_from_work_day'
 
-  # TODO
-  # STEAL_SOMETHING_FROM_WORK_DAY_LOCALES = %w[english].freeze
+  STEAL_SOMETHING_FROM_WORK_DAY_LOCALES = %i[de en es].freeze
 
   def show
-    I18n.locale = 'en'
+    unless STEAL_SOMETHING_FROM_WORK_DAY_LOCALES.include? I18n.locale
+      I18n.locale = I18n.default_locale
+      redirect_to [:steal_something_from_work_day]
+    end
 
     @sections = [
       'Introduction',
@@ -19,13 +21,5 @@ class StealSomethingFromWorkDayController < ApplicationController
       'Selected Coverage',
       'Internationally'
     ]
-
-    # TODO
-    # if STEAL_SOMETHING_FROM_WORK_DAY_LOCALES.include?(@locale)
-    #   I18n.locale = @locale
-    # else
-    #   I18n.locale = @locale = I18n.default_locale
-    #   redirect_to [:steal_something_from_work_day]
-    # end
   end
 end
