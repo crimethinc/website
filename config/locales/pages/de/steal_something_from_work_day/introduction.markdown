@@ -1,21 +1,21 @@
-# Getting robbed by the boss?
+# Vom Boss ausgeraubt werden?
 
-## April 15 is Steal Something from Work Day!
+## Am 15. April ist Beklau-deinen-Arbeitsplatz-Tag
 
-Does your boss work less than you but take home a bigger paycheck? Is somebody zipping around in a private jet at your expense? If the corporation is making money at the end of the day, that means they’re not paying you the full value of your labor—that’s where corporate profit comes from! So if you need something in your workplace, take it. You earned it!
+Arbeitet dein Chef weniger als du, verdient aber mehr? Schwirrt jemand in einem Privatjet auf deine Kosten herum? Wenn das Unternehmen am Ende des Tages Geld verdient, bedeutet das, dass es dir nicht den vollen Wert deiner Arbeit zahlt - so entsteht der Gewinn eines Unternehmens! Wenn du also etwas an deinem Arbeitsplatz brauchst, nimm es. Du hast es dir verdient!
 
-_Steal something from work!_ It could be a paper clip, or some cash out of the register, or full-on embezzlement. If you’re a barista, grab a bag of coffee; if you work at a garage, get a wrench set. If you’re unemployed, take something from someone else’s workplace! Unemployment works for the bosses, too—it forces people to take any job they can, and sends the message to other workers that if they don’t knuckle under they’ll be in for it too.
+_Klaue etwas von deiner Arbeit!_ Es könnte eine Büroklammer sein, oder etwas Geld aus der Kasse, oder gleich etwas größeres. Wenn du ein Barista bist, hol dir einen Beutel Kaffee; wenn du in einer Werkstatt arbeitest, besorg dir einen Schlüsselsatz. Wenn du arbeitslos bist, nimm etwas vom Arbeitsplatz eines anderen! Arbeitslosigkeit funktioniert auch für die Bosse - sie zwingt die Menschen jeden Job anzunehmen, den sie können, und sendet die Botschaft an andere ArbeiterInnen, dass, wenn sie nicht sich nicht unterordnen, sie auch bald Arbeitslos sein könnten.
 
-_Steal something from work!_ You could share it with your friends, or give it to your family—the family you never see because of your job. You could use it yourself, to do something you’ve always dreamed of—maybe something making use of all that potential you would fulfill if only you didn’t have to work for someone else all the time.
+_Klaue etwas von deiner Arbeit!_ Du kannst es mit deinen FreundInnen teilen oder es deiner Familie geben - der Familie, die du wegen deines Jobs nie siehst. Du könntest es selbst nutzen, um etwas zu tun, von dem du schon immer geträumt hast - vielleicht etwas, das all das Potenzial nutzt, das in dir steckt, dass du aber nicht nutzen kannst, weil du die ganze Zeit für jemand anderen arbeiten musst.
 
 [[ https://cloudfront.crimethinc.com/images/ssfwd/sticker_b.jpg ]]
 
-Don’t take shit from your boss—**steal it!**
+Lass dir von deinem Boss nichts gefallen—**klau dir deine Würde zurück**
 
-_Steal something from work!_ Break down the divisions that separate you from your co-workers. Work together to maximize your under-the-table profit-sharing; make sure all of you are safe and getting what you need. Don’t let the boss pit you against each other—in the end, that only makes all of you more vulnerable. Build up enough trust that you can graduate from taking things from work to taking control of your workplace itself!
+_Klaue etwas von deiner Arbeit!_ Vereine dich mit deinen MitarbeiterInnen. Arbeitet zusammen um euren unter-der-Hand-Gewinn zu maximieren; stellt sicher, dass alle sicher sind und bekommen, was Sie brauchen. Lasst euch vom Boss nicht gegeneinander ausspielen - am Ende macht euch das alle sonst nur noch verletzlicher. Baut so viel Vertrauen auf, bis ihr vom gemeinsamem Dinge-mitgehen-lassen soweit seid, dass ihr euch vorstellen könnt den Arbeitsplatz an sich zu übernehmen.
 
-Chances are you already steal from your work—if not physical items, at least time on the clock. Good for you! But don’t stop there—think of how much more you could take, how much more you _deserve._
+Es besteht die Möglichkeit, dass du bereits von deiner Arbeit klaust - wenn vielleicht nicht direkt Gegenstände, dann doch wenigstens durch Schummelei bei der Arbeitszeit. Schön für dich! Aber hör dort nicht auf - denk daran, wie viel mehr du nehmen könntest, wie viel mehr du _verdienst_.
 
-_Mark your calendar and plan ahead—_
+_Markiere es im Kalender und plane schon mal voraus—_
 
-#### April 15 is Steal Something from Work Day!
+#### Der 15. April ist Beklau-deinen-Arbeitsplatz-Tag
