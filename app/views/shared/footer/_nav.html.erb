@@ -5,38 +5,38 @@
 
     <dl>
       <dt class="nav-label nav-label-articles">
-        <%= link_to t("footer.nav.articles.label"),   [:library] %>
-        <b><%= link_to t("footer.nav.articles.feed"), [:feed]    %></b>
+        <%= link_to t("footer.nav.articles.label"),   %i[library] %>
+        <b><%= link_to t("footer.nav.articles.feed"), %i[feed]    %></b>
       </dt>
       <dd>
-        <% [:arts, :adventure, :analysis, :current_events, :history, :how_to, :news, :technology].each do |category| %>
+        <% %i[arts adventure analysis current_events history how_to news technology].each do |category| %>
           <%= link_to t("footer.nav.articles.#{category}"), [:category, slug: category.to_s.gsub('_', '-')] %>
         <% end %>
       </dd>
 
       <dt class="nav-label nav-label-articles">
-        <%= link_to t("footer.nav.tools.label"), [:tools] %>
+        <%= link_to t("footer.nav.tools.label"), %i[tools] %>
       </dt>
       <dd>
-        <% [:zines, :journals, :posters, :stickers, :videos, :music, :logos, :to_change_everything].each do |tool| %>
+        <% %i[zines journals posters stickers videos music logos to_change_everything steal_something_from_work_day].each do |tool| %>
           <%= link_to t("footer.nav.tools.#{tool}"), [tool] %>
         <% end %>
       </dd>
 
-      <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), [:books] %></dt>
+      <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), %i[books] %></dt>
       <dd>
-        <% [:from_democracy_to_freedom, :contradictionary, :work, :expect_resistance, :recipes_for_disaster, :days_of_war_nights_of_love, :no_wall_they_can_build, :off_the_map].each do |book| %>
+        <% %i[from_democracy_to_freedom contradictionary work expect_resistance recipes_for_disaster days_of_war_nights_of_love no_wall_they_can_build off_the_map].each do |book| %>
           <%= link_to t("footer.nav.books.#{book}"), [:book, slug: book.to_s.gsub('_', '-')] %>
         <% end %>
       </dd>
 
       <dt class="nav-label nav-label-podcast">
-        <%= link_to t("footer.nav.podcast.label"),   [:podcast] %>
-        <b><%= link_to t("footer.nav.podcast.feed"), [:podcast_feed] %></b>
+        <%= link_to t("footer.nav.podcast.label"),   %i[podcast] %>
+        <b><%= link_to t("footer.nav.podcast.feed"), %i[podcast_feed] %></b>
       </dt>
       <dd>
-        <% [:the_ex_worker, :the_hotwire].each do |podcast|  %>
-          <%= link_to t("footer.nav.podcast.#{podcast}"), [:podcast] %>
+        <% %i[the_ex_worker the_hotwire].each do |podcast|  %>
+          <%= link_to t("footer.nav.podcast.#{podcast}"), %i[podcast] %>
         <% end %>
       </dd>
 

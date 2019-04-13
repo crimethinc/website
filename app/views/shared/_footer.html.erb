@@ -5,9 +5,11 @@
     <%= render "shared/footer/contact" %>
   </div>
 
-  <div class="site-mode-link-container">
-    <p><%= link_to(t("footer.site_mode"), url_for_current_path_with_subdomain(subdomain: :lite)) unless lite_mode? %></p>
-  </div>
+  <% unless lite_mode? %>
+    <p class="site-mode-link-container">
+      <%= link_to(t("footer.site_mode"), url_for_current_path_with_subdomain(subdomain: :lite)) %>
+    </p>
+  <% end %>
 
   <div rel="license" class="license">
     <p><%= t("footer.mantra").sample %></p>

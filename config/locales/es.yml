@@ -88,15 +88,16 @@ es:
         label: Videos
 
       tools:
-        label:                Herramientas
-        zines:                Zines
-        journals:             Periódicos
-        posters:              Posters
-        stickers:             Stickers
-        videos:               Videos
-        music:                Música
-        logos:                Logos
-        to_change_everything: Para Cambiar Todo
+        label:    Herramientas
+        zines:    Zines
+        journals: Periódicos
+        posters:  Posters
+        stickers: Stickers
+        videos:   Videos
+        music:    Música
+        logos:    Logos
+        to_change_everything:          Para Cambiar Todo
+        steal_something_from_work_day: Steal Something from Work Day
 
       store:
         label: Tienda
