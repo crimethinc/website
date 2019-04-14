@@ -1,7 +1,7 @@
 class StealSomethingFromWorkDayController < ApplicationController
   layout 'steal_something_from_work_day'
 
-  STEAL_SOMETHING_FROM_WORK_DAY_LOCALES = %i[de en es].freeze
+  STEAL_SOMETHING_FROM_WORK_DAY_LOCALES = %i[cz de en es fr].freeze
 
   def show
     unless STEAL_SOMETHING_FROM_WORK_DAY_LOCALES.include? I18n.locale
