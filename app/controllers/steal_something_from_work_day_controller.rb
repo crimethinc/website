@@ -5,7 +5,6 @@ class StealSomethingFromWorkDayController < ApplicationController
     cz: 'Czech',
     de: 'Deutsche',
     en: 'English',
-    es: 'Español',
     fr: 'Français'
   }.freeze
 
