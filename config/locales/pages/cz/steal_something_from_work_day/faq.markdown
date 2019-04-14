@@ -1,71 +1,69 @@
-# Frequently Asked Questions
+# Nejčastější otázky
 
-**Is STEALING SOMETHING FROM WORK immoral?**
+**Je kradení v práci nemorální?**
 
-Stealing is immoral, yes. That’s why your employers should pay you the full value they obtain from your labor, rather than paying you a fraction of it and taking the rest for themselves as profit. If you take something from the workplace, you’re not stealing, but simply taking back the results of your effort.
+Ano, krádež je nemorální. Proto by ti tvůj zaměstnavatel měl platit plnou cenu toho, co získává z tvé práce, a ne dávat drobky. Pokud si něco z práce vezmeš, nejedná se o krádež, jednoduše si bereš zpátky část toho, co sis zasloužil svou prací.
 
-**Is STEALING SOMETHING FROM WORK illegal?**
+**Je kradení v práci nelegální?**
 
-Technically, it may be. Slavery, on the other hand, was legal until December 1865.
+Technicky vzato může být. Otroctví, na druhou stranu, bylo legální do prosince 1865.
 
-**Is STEAL SOMETHING FROM WORK DAY anti-employer?**
+**Je den „Ukradni něco z práce!“ namířen proti šéfům?**
 
-Hate to break it to you, boss, but your employees steal from you every day. By encouraging them to focus on one day a year, we’re looking out for you! Consider this a harm reduction approach.
+Mrzí nás, že to musíte slyšet zrovna od nás, šéfe, ale ano, zaměstnanci kradou v práci úplně každý den. To, že je budete podporovat, aby toto jednání omezili na jeden den v roce, můžete brát jako snižování škod preventivní cestou.
 
-**Does STEAL SOMETHING FROM WORK DAY make it harder for employees to get away with stealing?**
+**Učiní den „Ukradni něco v práci!“ pro zaměstnance kradení obtížnější?**
 
-Not significantly. The number one obstacle to employee theft is not bosses or cameras, but misguided coworkers. STEAL SOMETHING FROM WORK DAY is a consciousness-raising holiday promoting worker solidarity and legitimizing employee redistribution of wealth.
+Ne významně. Překážkou pro zaměstnance není šéf ani kamery, ale neuvědomělí kolegové. Den „Ukradni něco v práci!“ povzbuzuje solidaritu mezi zaměstnanci a legitimizuje jejich redistribuci bohatství.
 
 [[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
 
-**Not everyone has an easy time stealing from the workplace. Some demographics are singled out for surveillance, and many people can’t afford to risk getting into trouble!**
+**Ne každý si může snadno dovolit v práci krást. Někteří jsou pod neustálým dohledem anebo si opravdu nemůžou dovolit dostat se do problémů!**
 
-That’s true! That’s why, if you are not one of those people, you should STEAL SOMETHING FROM WORK to share with those who can’t risk it themselves.
+To je pravda! A je to i další důvod pro ty, kteří nepatří mezi výše zmíněné, aby v práci něco ukradli a podělili se s těmi, co si to dovolit nemůžou.
 
-**I’m retired. Can I participate in STEAL SOMETHING FROM WORK DAY?**
+**Jsem v důchodu. Můžu se zúčastnit dne „Ukradni něco v práci!“?**
 
-Yes, you can—just go back to your former place of employment! If you had to wrestle over a pension with them, they’ve got it coming. It’s never too late to STEAL SOMETHING FROM WORK!
+Ano, jistě – prostě jdi do svého bývalého zaměstnání! Nikdy není pozdě na to ukrást něco z práce!
 
-**I’d love to STEAL SOMETHING FROM WORK, but I work at a local non-profit foundation providing free services to survivors of domestic violence.**
+**Moc rád bych se zapojil do dne „Ukradni něco v práci!“, ale pracuji v místní nevládce, která se věnuje pomoci obětem domácího násilí.**
 
-If you truly love the place you work, chances are it’s under-funded. That’s because the for-profit mega-corporations are hogging all the resources! Time to pay a visit to someone else’s workplace.
+Pokud opravdu miluješ svoji práci, pravděpodobně je podfinancovaná. A to proto, že na zisk zaměřené velké korporace si syslí všechny zdroje! Takže je čas navštívit pracoviště někoho jiného.
 
-**But my employers give to charitable causes when they make a profit! If I STEAL SOMETHING FROM WORK, they’ll have less to donate.**
+**Ale můj zaměstnavatel dává zisk na charitu. Když se zapojím do dne „Ukradni něco z práce!“, charita dostane méně peněz.**
 
-Who do you think should choose the most deserving charitable cause for your earnings—you, or some corporate bureaucrat? Just because you STEAL SOMETHING FROM WORK doesn’t mean you have to keep it all for yourself!
+Myslíš si, že o tom, na jakou charitu má jít tvůj výdělek, bys měl rozhodovat ty, nebo nějaký korporátní úředník? Když v práci něco ukradneš, neznamená to, že si to musíš nechat pro sebe!
 
-**If I STEAL SOMETHING FROM WORK, will it make me a more selfish person?**
+**Když ukradnu něco z práce, nestane se ze mě sobec?**
 
-Not necessarily! By and large, people find it easier to share things when they don’t have to trade their lives for them in miserable drudgery. STEALING SOMETHING FROM WORK might actually make you a more generous person!
+Ne nutně! Ukazuje se, že lidé snáze sdílejí věci, které dostanou zdarma, než když kvůli nim musí dřít do úmoru. Takže díky kradení v práci se můžeš stát štědřejším!
 
-**What does God think about STEALING FROM WORK?**
+**Co říká bůh na kradení v práci?**
 
-Academic theologians such as German Old Testament scholar A. Alt, author of _Das Verbot des Diebstahls im Dekalog,_ suggest that the commandment “thou shalt not steal” was originally intended against stealing _people_—against abductions and slavery. This lines up with Jewish interpretations of the statement as “thou shalt not kidnap”—for example, as stated by Rabbi Shlomo Yitzhaki, famed as the author of the first comprehensive commentary on the Talmud. If this is so, the real crime is not the worker taking back a part of the fruit of his labor, but the economic system that forces him into wage slavery in the first place. Likewise, as Jesus explains, “It is easier for a camel to pass through the eye of a needle than for a rich man to enter the kingdom of God” (Matthew 19:24)—don’t put your employer at such risk!
+Akademičtí teologové jako například Albrecht Alt, autor _Das Verbot des Diebstahls im Dekalog,_ míní, že přikázání „nepokradeš“ bylo původně vztaženo na krádež  _lidí_  – proti únosům a otroctví. To se shoduje s židovskou interpretací „neuneseš“ – jakou udělal například rabín Shlomo Yitzhaki, známý jako autor prvního obsáhlejšího komentáře k _Talmudu_. Pokud tomu tak je, skutečným zločinem není, když si zaměstnanci berou zpět část plodů své práce. Zločinný je ekonomický systém, který je nutí k námezdnímu otroctví. A jak také říká Ježíš: _„Spíš projde velbloud uchem jehly, než vejde bohatý do Božího království.“_ Nevystavuj svého šéfa takovému nebezpečí!
 
 [[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
 
-**What if I STEAL SOMETHING FROM WORK and my company goes out of business? Is this biting the hand that feeds me?**
+**Co když ukradnu něco z práce a firma zkrachuje? Není to nevděčné vůči mým chlebodárcům?**
 
-Corporations plan workplace shrinkage into the budget well in advance. They’re practically _counting on you_ to steal something! If that surplus goes unclaimed, it’ll just stay in their coffers as more unearned profits.
+Firmy na to vyhrazují částku z rozpočtu tak jako tak. V podstatě _počítají_ s tím, že něco ukradneš! Pokud tento přebytek zůstane nevyužitý, prostě to zůstane firmě jako další nezasloužený zisk.
 
-**Will the costs of STEALING SOMETHING FROM WORK be passed on to consumers?**
+**Neponesou náklady za kradení v práci nakonec zákazníci?**
 
-Your employers are shrewd businessmen—if they were simply trying to distribute goods to the needy as affordably as possible, they’d be in a different line of work. That means if they could be charging customers more, they already would be. The prices of their products are determined by the market, not by the cost of producing them.
+Tvoji zaměstnavatelé jsou vychytralí obchodníci. Pokud by jednoduše chtěli nabízet zboží potřebným za dostupné ceny, dělali by jinou práci. To znamená, že pokud můžou zákazníka víc natáhnout, tak to bez zaváhání udělají. Ceny jejich produktů jsou určovány trhem, ne cenou za jejich vyprodukování.
 
-**But won’t STEALING SOMETHING FROM WORK destabilize the economy? What if the market crashes again? Will STEALING SOMETHING FROM WORK bring about the end of the world?**
+**Nedestabilizuje kradení v práci ekonomiku? Co když se zase zhroutí trh? Způsobí kradení v práci konec světa?**
 
-Are you kidding? Who does all the work in this society—bosses, or workers? If anything, things would go more smoothly without them. If every corporation went out of business tomorrow and we could get our hands on all the resources they’ve hoarded, don’t you think we’d be able to distribute them more sensibly? They’re lucky we don’t steal _everything!_
+Děláš si srandu? Kdo dělá všechnu práci v téhle společnosti – šéfové, anebo pracující? Pokud něco, aspoň bez nich půjdou některé věci snáz. Kdyby zítra všechny korporace zkrachovaly a my bychom se mohli dostat ke zdrojům, které hromadily, nemyslíš, že bychom je dokázali rozdělovat rozumněji? Mají štěstí, že nekrademe _všechno!_
 
-**Will STEALING SOMETHING FROM WORK inhibit real social change? Shouldn’t we be organizing to address the root of our problems rather than acting individualistically?**
+**Nepoškodí kradení v práci snahu o skutečnou sociální změnu? Neměli bychom se spíše organizovat tak, abychom mohli čelit opravdovým příčinám problémů, než jednat individualisticky?**
 
-Maybe you’re onto something! But STEALING SOMETHING FROM WORK doesn’t prevent you from organizing collectively. For example, you could coordinate with your coworkers to share what you pocket. Really, what good would it do to get organized together if you were still afraid to take what you deserve? On the other hand, imagine if we could go beyond taking things from our workplaces, and take over the workplaces themselves…
+Možná máš pravdu! Ale kradení v práci není v rozporu s kolektivním organizováním se. Můžeš například koordinovat mezi svými kolegy sdílení toho, co jste si vzali. Jaký by ostatně mělo smysl organizovat se kolektivně, kdyby ses stále bál vzít si to, co ti patří? Na druhou stranu, zkus si představit, že bychom už nemuseli krást v práci, ale mohli převzít kontrolu nad celým pracovištěm…
 
-**Why is April 15 STEAL SOMETHING FROM WORK DAY?**
+**Proč je právě 15. duben dnem kradení v práci?**
 
-As most employees know, every day can be Steal Something From Work day. But we can’t encourage people to go steal from their workplaces all the time—for all we know, that would be illegal. The best we can do is ask people to limit their workplace theft to one day a year!
+Jak většina zaměstnanců ví, každý den může být „dnem kradení v práci“. Ale nemůžeme povzbuzovat lidi k tomu, aby kradli v práci každý den – pokud je nám známo, bylo by to protizákonné. Můžeme je ale požádat, aby toto počínání omezili na tento jeden den v roce!
 
-If there was ever a good day to Steal Something From Work, it has to be April 15, Tax Day. For the government, every April 15 is Steal Something From You Day. They take your hard-earned money and dump it right into some oil war or back-room deal—that’s yet another way the corporations are making out at your expense.
-
-Don’t take it sitting down. **Steal something from work.**
+Pokud tady byl někdy vhodný den, byl to 15. duben, kdy se podává daňové přiznání (pozn. v ČR by to byl 1. duben). Pro vládu je každý 15. duben Dnem okrádání tebe. Vezmou tvoje těžce vydělané peníze a nacpou je do nějaké války o ropu nebo zákulisních obchodů – to je další způsob, jak korporace profitují z našich nákladů. Nenech si to líbit. Ukradni něco z práce.
 
 [[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Remember who’s stealing from you! ]]

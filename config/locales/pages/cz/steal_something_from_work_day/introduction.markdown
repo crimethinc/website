@@ -1,21 +1,23 @@
-# Getting robbed by the boss?
+# Sdírá tě tvůj šéf?
 
-## April 15 is Steal Something from Work Day!
+## Na 15. dubna je vyhlášeno heslo: „Ukradni něco z práce!“
 
-Does your boss work less than you but take home a bigger paycheck? Is somebody zipping around in a private jet at your expense? If the corporation is making money at the end of the day, that means they’re not paying you the full value of your labor—that’s where corporate profit comes from! So if you need something in your workplace, take it. You earned it!
+Maká tvůj šéf míň než ty, ale přitom má na výplatní pásce vyšší číslo? Prohání se někdo v soukromém tryskáči na tvé náklady? Pokud na konci dne korporace vydělává peníze, znamená to, že ti neplatí plnou cenu tvé práce – tak vzniká její zisk! Takže jestli něco potřebuješ, vem si to. Vydělal sis to!
 
-_Steal something from work!_ It could be a paper clip, or some cash out of the register, or full-on embezzlement. If you’re a barista, grab a bag of coffee; if you work at a garage, get a wrench set. If you’re unemployed, take something from someone else’s workplace! Unemployment works for the bosses, too—it forces people to take any job they can, and sends the message to other workers that if they don’t knuckle under they’ll be in for it too.
+Dostaneš jen to, co si vezmeš. Už s tebou vyjebávali dost dlouho.
 
-_Steal something from work!_ You could share it with your friends, or give it to your family—the family you never see because of your job. You could use it yourself, to do something you’ve always dreamed of—maybe something making use of all that potential you would fulfill if only you didn’t have to work for someone else all the time.
+Může to být sponka na papír, nějaké drobné z kasy nebo seriózní zpronevěra. Pracuješ za barem? Vezmi si balení kávy. Pracuješ v garáži? Sadu nářadí. Jestli jsi nezaměstnaný, vezmi něco z práce někoho jiného! Nezaměstnanost je pro šéfy taky výhodná – nutí lidi vzít jakoukoliv práci a zaměstnaným ukazuje, že když nebudou držet hubu a krok, čeká nezaměstnanost i je.
+
+Zapiš si do diáře a naplánuj si Den kradení v práci 15. dubna!
+
+Co si vezmeš, můžeš sdílet se svými přáteli nebo to dát své rodině – té rodině, kterou nevídáš, protože jsi pořád v práci. Můžeš to použít sám na něco, o čem jsi vždy snil – možná na něco, co by sis splnil, kdybys v jednom kuse nemusel pracovat pro někoho jiného.
+
+Neber si jen to, co ti dávají, vezmi si, co ti patří!
+
+_Ukradni něco z práce!_ Překonej bariéry mezi sebou a kolegy. Rozdělte se podpultově mezi sebou o podíl na zisku, dbejte na to, ať jsou všichni v bezpečí a dostávají, co potřebují. Nenechte se šéfem poštvat proti sobě – to jediné vás nakonec dělá zranitelnými. Budujte mezi sebou důvěru, která může začínat braním věcí z práce a končit převzetím celého pracoviště!
 
 [[ https://cloudfront.crimethinc.com/images/ssfwd/sticker_b.jpg ]]
 
-Don’t take shit from your boss—**steal it!**
+Je možné, že v práci už stejně kradeš – když ne materiálně, tak určitě aspoň dřívějšími odchody a ulejváním se. Výborně! Ale tady to nekončí – zamysli se, co víc si můžeš vzít, co víc si _zasloužíš._
 
-_Steal something from work!_ Break down the divisions that separate you from your co-workers. Work together to maximize your under-the-table profit-sharing; make sure all of you are safe and getting what you need. Don’t let the boss pit you against each other—in the end, that only makes all of you more vulnerable. Build up enough trust that you can graduate from taking things from work to taking control of your workplace itself!
-
-Chances are you already steal from your work—if not physical items, at least time on the clock. Good for you! But don’t stop there—think of how much more you could take, how much more you _deserve._
-
-_Mark your calendar and plan ahead—_
-
-#### April 15 is Steal Something from Work Day!
+_Tento text je pouze rétorické cvičení. Jeho cílem je poodhalit už převládající fenomén krádeží na pracovišti, ne povzbudit ty, kteří by se jinak nedopustili protiprávního jednání. Ani hostitel, ani překladatel nejsou zodpovědní za lidi, kteří k němu odkazují, ani za to, co dělají poté._
