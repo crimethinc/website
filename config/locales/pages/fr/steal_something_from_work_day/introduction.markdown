@@ -1,21 +1,21 @@
-# Getting robbed by the boss?
+# Se faire voler par le la patron ne?
 
-## April 15 is Steal Something from Work Day!
+## Le 15 avril est la Journée «Vole Quelque Chose au Travail!»
 
-Does your boss work less than you but take home a bigger paycheck? Is somebody zipping around in a private jet at your expense? If the corporation is making money at the end of the day, that means they’re not paying you the full value of your labor—that’s where corporate profit comes from! So if you need something in your workplace, take it. You earned it!
+Ton·ta patron·ne travaille-t-iel moins que toi mais gagne-t-iel un plus gros salaire ? Est-ce que quelqu’un se déplace en voiture avec chauffeur·euse ou en jet privé à tes frais ? Si l’entreprise gagne de l’argent à la fin de la journée, cela signifie qu’elle ne te paie pas la pleine valeur de ton travail — c’est de là que viennent les bénéfices d’entreprises ! Donc, si tu as besoin de quelque chose sur ton lieu de travail, prends-le. Tu l’as mérité !
 
-_Steal something from work!_ It could be a paper clip, or some cash out of the register, or full-on embezzlement. If you’re a barista, grab a bag of coffee; if you work at a garage, get a wrench set. If you’re unemployed, take something from someone else’s workplace! Unemployment works for the bosses, too—it forces people to take any job they can, and sends the message to other workers that if they don’t knuckle under they’ll be in for it too.
+_Vole Quelque Chose au Travail !_ Ça pourrait être un trombone, un peu d’argent pris dans la caisse, ou un détournement de fonds total. Si tu es barista, prends un paquet de café ; si tu travailles dans un garage, procure-toi un jeu de clés anglaises. Si tu es sans emploi, prends quelque chose sur le lieu de travail de quelqu’un d’autre ! Le chômage profite aussi aux patron·ne·s — il oblige les personnes à accepter n’importe quel emploi possible, et envoie le message aux autres travailleur·euse·s que si iels ne se plient pas aux exigences, iels y seront également confronté·e·s.
 
-_Steal something from work!_ You could share it with your friends, or give it to your family—the family you never see because of your job. You could use it yourself, to do something you’ve always dreamed of—maybe something making use of all that potential you would fulfill if only you didn’t have to work for someone else all the time.
+_Vole Quelque Chose au Travail !_ Tu pourrais le partager avec tes ami·e·s, ou bien le donner à ta famille — la famille que tu ne vois jamais à cause de ton boulot. Tu pourrais toi-même t’en servir, pour faire quelque chose dont tu as toujours rêvé — peut-être quelque chose faisant usage de tout ce potentiel que tu réaliserais si seulement tu n’avais pas à travailler tout le temps pour quelqu’un d’autre.
 
 [[ https://cloudfront.crimethinc.com/images/ssfwd/sticker_b.jpg ]]
 
-Don’t take shit from your boss—**steal it!**
+Ne te laisse pas emmerder par ton·ta patron·ne — **vole quelque chose !**
 
-_Steal something from work!_ Break down the divisions that separate you from your co-workers. Work together to maximize your under-the-table profit-sharing; make sure all of you are safe and getting what you need. Don’t let the boss pit you against each other—in the end, that only makes all of you more vulnerable. Build up enough trust that you can graduate from taking things from work to taking control of your workplace itself!
+_Vole Quelque Chose au Travail !_ Brise les divisions qui te séparent de tes collègues. Travaillez ensemble pour maximiser votre partage des bénéfices réalisés au noir ; assure-toi que vous êtes tou·te·s en sécurité et que chacun·e d’entre vous obtienne ce dont iel a besoin. Ne laisse pas le·la patron·ne vous dresser les un·e·s contre les autres — au final, cela ne fait que vous rendre tou·te·s encore plus vulnérables. Créez suffisamment de confiance entre vous pour que vous puissiez progressivement passer du simple vol au travail à la prise de contrôle de votre lieu de travail à proprement parler !
 
-Chances are you already steal from your work—if not physical items, at least time on the clock. Good for you! But don’t stop there—think of how much more you could take, how much more you _deserve._
+Il y a fort à parier que tu voles déjà sur ton lieu de travail — si tu ne voles pas d’objets physiques, tu voles au moins du temps. C’est bien pour toi ! Mais ne t’arrêtes pas là — pense à tout ce que tu pourrais prendre de plus, à tout ce que tu _mérites._
 
-_Mark your calendar and plan ahead—_
+_Marque cette date sur ton calendrier et planifie à l’avance_ —
 
-#### April 15 is Steal Something from Work Day!
+#### Le 15 avril est la Journée « Vole Quelque Chose au Travail ! »

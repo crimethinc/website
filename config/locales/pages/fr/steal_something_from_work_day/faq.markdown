@@ -1,71 +1,71 @@
-# Frequently Asked Questions
+# Foire Aux Questions
 
-**Is STEALING SOMETHING FROM WORK immoral?**
+**Est-ce que VOLER QUELQUE CHOSE AU TRAVAIL est immoral ?**
 
-Stealing is immoral, yes. That’s why your employers should pay you the full value they obtain from your labor, rather than paying you a fraction of it and taking the rest for themselves as profit. If you take something from the workplace, you’re not stealing, but simply taking back the results of your effort.
+Voler est immoral, oui. C’est pourquoi tes employeur·euse·s devraient te payer la totalité de la valeur de ton travail, plutôt que de te verser une fraction de cette dernière et de prendre le reste pour elleux comme profit. Si tu prends quelque chose sur ton lieu de travail, tu ne voles pas, mais tu reprends simplement le résultat de tes efforts.
 
-**Is STEALING SOMETHING FROM WORK illegal?**
+**Est-ce que VOLER QUELQUE CHOSE AU TRAVAIL est illégal ?**
 
-Technically, it may be. Slavery, on the other hand, was legal until December 1865.
+Techniquement, ça peut l’être. En revanche, l’esclavage était légal jusqu’en avril 1848 en France et jusqu’en décembre 1865 aux États-Unis.
 
-**Is STEAL SOMETHING FROM WORK DAY anti-employer?**
+**Est-ce que la JOURNÉE « VOLE QUELQUE CHOSE AU TRAVAIL » est anti-employeur·euse ?**
 
-Hate to break it to you, boss, but your employees steal from you every day. By encouraging them to focus on one day a year, we’re looking out for you! Consider this a harm reduction approach.
+Désolé de vous l’apprendre, patron·ne, mais vos employé·e·s vous volent chaque jour. En les encourageant à concentrer leurs actions un jour par an, nous veillons sur vous ! Considérez cela comme une approche consistant à réduire les risques.
 
-**Does STEAL SOMETHING FROM WORK DAY make it harder for employees to get away with stealing?**
+**La JOURNÉE « VOLE QUELQUE CHOSE AU TRAVAIL » rend-elle les choses plus difficiles pour les employé·e·s de s’en tirer avec le vol ?**
 
-Not significantly. The number one obstacle to employee theft is not bosses or cameras, but misguided coworkers. STEAL SOMETHING FROM WORK DAY is a consciousness-raising holiday promoting worker solidarity and legitimizing employee redistribution of wealth.
+Pas significativement. L’obstacle numéro un du vol commis par un·e employé·e n’est pas les patron·ne·s ou les caméras, mais les collègues malavisé·e·s. La JOURNÉE « VOLE QUELQUE CHOSE AU TRAVAIL » est une fête de sensibilisation promouvant la solidarité entre les travailleur·euse·s et légitimant la redistribution des richesses entre les employé·e·s.
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg Vole au travail ! ]]
 
-**Not everyone has an easy time stealing from the workplace. Some demographics are singled out for surveillance, and many people can’t afford to risk getting into trouble!**
+**Tout le monde ne peut pas voler au travail aussi facilement. Certaines personnes font plus l’objet d’une surveillance que d’autres, et beaucoup ne peuvent pas se permettre le risque d’avoir des ennuis !**
 
-That’s true! That’s why, if you are not one of those people, you should STEAL SOMETHING FROM WORK to share with those who can’t risk it themselves.
+C’est vrai ! C’est pourquoi, si tu n’es pas l’une de ces personnes, tu devrais VOLER QUELQUE CHOSE AU TRAVAIL pour le partager avec celleux qui ne peuvent pas prendre ce risque elleux-mêmes.
 
-**I’m retired. Can I participate in STEAL SOMETHING FROM WORK DAY?**
+**Je suis retraité·e. Puis-je participer à la JOURNÉE « VOLE QUELQUE CHOSE AU TRAVAIL » ?**
 
-Yes, you can—just go back to your former place of employment! If you had to wrestle over a pension with them, they’ve got it coming. It’s never too late to STEAL SOMETHING FROM WORK!
+Oui, tu le peux — retourne tout simplement sur ton ancien lieu de travail ! Si tu as dû te battre avec elleux à propos d’une pension de retraite ou autres, iels l’ont cherché. Il n’est jamais trop tard pour VOLER QUELQUE CHOSE AU TRAVAIL !
 
-**I’d love to STEAL SOMETHING FROM WORK, but I work at a local non-profit foundation providing free services to survivors of domestic violence.**
+**J’adorerais VOLER QUELQUE CHOSE AU TRAVAIL, mais je travaille pour une fondation locale à but non lucratif offrant des services gratuits aux survivant·e·s de violences familiales.**
 
-If you truly love the place you work, chances are it’s under-funded. That’s because the for-profit mega-corporations are hogging all the resources! Time to pay a visit to someone else’s workplace.
+Si tu aimes vraiment l’endroit où tu travailles, il y a des chances pour que ce dernier soit sous-financé. C’est parce que les méga-entreprises à but lucratif monopolisent toutes les ressources ! Il est temps de rendre visite au lieu de travail de quelqu’un d’autre.
 
-**But my employers give to charitable causes when they make a profit! If I STEAL SOMETHING FROM WORK, they’ll have less to donate.**
+**Mais, quand iels réalisent un profit, mes employeur·euse·s donnent à des œuvres caritatives ! Si je VOLE QUELQUE CHOSE AU TRAVAIL, iels auront moins à donner.**
 
-Who do you think should choose the most deserving charitable cause for your earnings—you, or some corporate bureaucrat? Just because you STEAL SOMETHING FROM WORK doesn’t mean you have to keep it all for yourself!
+Qui selon toi devrait choisir l’œuvre caritative la plus méritante pour recevoir vos bénéfices — toi, ou un bureaucrate ? Ce n’est pas parce que tu VOLES QUELQUE CHOSE AU TRAVAIL que tu dois tout garder pour toi !
 
-**If I STEAL SOMETHING FROM WORK, will it make me a more selfish person?**
+**Si je VOLE QUELQUE CHOSE AU TRAVAIL, cela fera-t-il de moi une personne plus égoïste ?**
 
-Not necessarily! By and large, people find it easier to share things when they don’t have to trade their lives for them in miserable drudgery. STEALING SOMETHING FROM WORK might actually make you a more generous person!
+Pas nécessairement ! Dans l’ensemble, les personnes trouvent qu’il est plus facile de partager des choses quand iels n’ont pas à sacrifier leurs vies lors de corvées misérables pour les obtenir. En fait, VOLER QUELQUE CHOSE AU TRAVAIL pourrait faire de toi une personne plus généreuse !
 
-**What does God think about STEALING FROM WORK?**
+**Qu’est-ce-que Dieu pense du fait de VOLER AU TRAVAIL ?**
 
-Academic theologians such as German Old Testament scholar A. Alt, author of _Das Verbot des Diebstahls im Dekalog,_ suggest that the commandment “thou shalt not steal” was originally intended against stealing _people_—against abductions and slavery. This lines up with Jewish interpretations of the statement as “thou shalt not kidnap”—for example, as stated by Rabbi Shlomo Yitzhaki, famed as the author of the first comprehensive commentary on the Talmud. If this is so, the real crime is not the worker taking back a part of the fruit of his labor, but the economic system that forces him into wage slavery in the first place. Likewise, as Jesus explains, “It is easier for a camel to pass through the eye of a needle than for a rich man to enter the kingdom of God” (Matthew 19:24)—don’t put your employer at such risk!
+Des théologiens universitaires tels que le spécialiste du Vieux Testament allemand A. Alt, auteur de _Das Verbot des Diebstahls im Dekalog,_ suggère que le commandement « Tu ne voleras point ! » était originellement dirigé contre le vol de personnes — contre les enlèvements et l’esclavage. Par exemple, cela s’aligne sur les interprétations juives de la déclaration « tu n’enlèveras point, » comme l’explique le rabbin Shlomo Yitzhaki, célèbre pour avoir été l’auteur du premier commentaire détaillé du Talmud. Si tel est le cas, le véritable crime n’est pas que le·la travailleur·euse reprenne une partie du fruit de son labeur, mais bien le système économique qui, en premier lieu, l’oblige à l’esclavage salarial. De même, comme Jésus l’explique, « il est plus facile à un chameau de passer par le trou d’une aiguille qu’à un riche d’entrer dans le royaume de Dieu » (Matthieu 19 :24) — ne fais pas courir de tels risques à ton employeur !
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg Vole au travail ! ]]
 
-**What if I STEAL SOMETHING FROM WORK and my company goes out of business? Is this biting the hand that feeds me?**
+**Et si je VOLE QUELQUE CHOSE AU TRAVAIL et que mon entreprise fait faillite ? N’est-ca pas mordre la main qui me nourrit ?**
 
-Corporations plan workplace shrinkage into the budget well in advance. They’re practically _counting on you_ to steal something! If that surplus goes unclaimed, it’ll just stay in their coffers as more unearned profits.
+Les entreprises prévoient bien à l’avance dans leur budget, les pertes réalisées sur le lieu de travail. Concrètement, iels _comptent sur toi_ pour voler quelque chose ! Si ce surplus est non-réclamé, il restera tout simplement dans leurs trésoreries comme des bénéfices non-réalisés en plus.
 
-**Will the costs of STEALING SOMETHING FROM WORK be passed on to consumers?**
+**Est-ce que les coûts liés au fait de VOLER QUELQUE CHOSE AU TRAVAIL seront répercutés sur les consommateurs ?**
 
-Your employers are shrewd businessmen—if they were simply trying to distribute goods to the needy as affordably as possible, they’d be in a different line of work. That means if they could be charging customers more, they already would be. The prices of their products are determined by the market, not by the cost of producing them.
+Tes employeur·euse·s sont des hommes et des femmes d’affaires habiles — s’iels essayaient simplement de distribuer des biens aux personnes dans le besoin à un coût le plus abordable possible, iels exerceraient un autre type de métier. Cela signifie que s’iels pouvaient faire payer les consommateur·rice·s plus cher, iels le feraient déjà. Les prix de leurs produits sont déterminés par le marché, non pas par le coût de leur production.
 
-**But won’t STEALING SOMETHING FROM WORK destabilize the economy? What if the market crashes again? Will STEALING SOMETHING FROM WORK bring about the end of the world?**
+**Mais VOLER QUELQUE CHOSE AU TRAVAIL ne déstabilisera-t-il pas l’économie ? Et si le marché s’effondre de nouveau ? VOLER QUELQUE CHOSE AU TRAVAIL ne provoquera-t-il pas la fin du monde ?**
 
-Are you kidding? Who does all the work in this society—bosses, or workers? If anything, things would go more smoothly without them. If every corporation went out of business tomorrow and we could get our hands on all the resources they’ve hoarded, don’t you think we’d be able to distribute them more sensibly? They’re lucky we don’t steal _everything!_
+Tu plaisantes ? Qui fait tout le travail dans cette société — les patron·ne·s ou les travailleur·euse·s ? Si quoi que ce soit, les choses iraient mieux sans elleux. Si demain, chaque entreprise faisait faillite et que nous pourrions mettre nos mains sur toutes les ressources qu’elles ont amassées, ne penses-tu pas que nous serions capable de les distribuer plus intelligemment ? Iels sont chanceux·ses que nous ne volions pas tout !
 
-**Will STEALING SOMETHING FROM WORK inhibit real social change? Shouldn’t we be organizing to address the root of our problems rather than acting individualistically?**
+**VOLER QUELQUE CHOSE AU TRAVAIL ne risque-t-il pas d’empêcher le véritable changement social ? Ne devrions-nous pas nous organiser pour nous attaquer à la racine de nos problèmes au lieu d’agir de façon individualiste ?**
 
-Maybe you’re onto something! But STEALING SOMETHING FROM WORK doesn’t prevent you from organizing collectively. For example, you could coordinate with your coworkers to share what you pocket. Really, what good would it do to get organized together if you were still afraid to take what you deserve? On the other hand, imagine if we could go beyond taking things from our workplaces, and take over the workplaces themselves…
+Tu es peut-être sur une bonne piste ! Mais VOLER QUELQUE CHOSE AU TRAVAIL ne t‘empêche en rien de t’organiser collectivement. Par exemple, tu pourrais te coordonner avec tes collègues pour partager ce qui vous avez empoché. Vraiment, à quoi bon s’organiser ensemble si tu as encore peur de prendre ce que tu mérites ? D’un autre côté, imagine si, au-delà du simple fait de prendre quelque chose sur nos lieux de travail, nous pouvions prendre le contrôle de nos lieux de travail eux-mêmes…
 
-**Why is April 15 STEAL SOMETHING FROM WORK DAY?**
+**Pourquoi le 15 avril est-il la JOURNÉE « VOLE QUELQUE CHOSE AU TRAVAIL » ?**
 
-As most employees know, every day can be Steal Something From Work day. But we can’t encourage people to go steal from their workplaces all the time—for all we know, that would be illegal. The best we can do is ask people to limit their workplace theft to one day a year!
+Comme la plupart des employé·e·s le savent, chaque jour peut-être la Journée « Vole Quelque Chose Au Travail. » Mais nous ne pouvons pas encourager les personnes à voler sur leurs lieux de travail tout le temps — pour ce que nous en savons, ce serait illégal. Le mieux que nous puissions faire est de demander aux personnes de limiter le vol sur leurs lieux de travail à un jour par an !
 
-If there was ever a good day to Steal Something From Work, it has to be April 15, Tax Day. For the government, every April 15 is Steal Something From You Day. They take your hard-earned money and dump it right into some oil war or back-room deal—that’s yet another way the corporations are making out at your expense.
+Dans le contexte étatsunien, s’il y avait bien un jour idéal pour VOLER QUELQUE CHOSE AU TRAVAIL, ce serait le 15 avril, Jour des Impôts. Pour les gouvernements, chaque jour correspondant à la date limite de déclaration des impôts sur le revenu est une Journée où Ils Te Volent Quelque Chose. Ils prennent ton argent durement gagné et le dépensent directement dans des projets inutiles, une guerre pétrolière, des accords commerciaux ou une entente secrète — c’est encore un autre moyen pour les entreprises de s’enrichir à tes dépens.
 
-Don’t take it sitting down. **Steal something from work.**
+Ne passe pas cette journée en restant assis·e. **Vole quelque chose au travail.**
 
-[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Remember who’s stealing from you! ]]
+[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Souviens-toi de qui te vole ? ]]
