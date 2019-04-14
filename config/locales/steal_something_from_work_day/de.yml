@@ -1,11 +1,11 @@
 de:
   steal_something_from_work_day:
     language_direction: ltr
-    lang_code: en
+    lang_code: de
 
     crimethinc: CrimethInc. Ex-Workers’ Collective
-    title: Steal Something from Work Day
-    subtitle: April 15, every year
+    title: Beklau-deinen-Arbeitsplatz-Tag
+    subtitle: 15 April
 
     outreach_materials:
       download_button: Download PDF
