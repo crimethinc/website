@@ -34,10 +34,17 @@
 
         <h1><%= t 'steal_something_from_work_day.title' %></h1>
         <p><%= t 'steal_something_from_work_day.subtitle' %></p>
+
+        <nav class='text-center my-5'>
+          <% @locales.each do |lang_code, name| %>
+            <%= link_to name, url_for_current_path_with_subdomain(subdomain: lang_code), class: 'btn btn-outline-light btn-sm' %>
+          <% end %>
+        </nav>
       </div>
     </header>
 
     <div class='container'>
+
       <div class='row'>
 
         <%= yield %>
