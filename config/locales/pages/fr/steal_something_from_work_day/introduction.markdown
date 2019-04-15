@@ -1,4 +1,4 @@
-# Se faire voler par le la patron ne?
+# Se faire voler par le·la patron·ne?
 
 ## Le 15 avril est la Journée « Vole Quelque Chose au Travail! »
 
