@@ -1,6 +1,6 @@
-# Se faire voler par le·la patron·ne?
+# Se faire voler par le·la patron·ne ?
 
-## Le 15 avril est la Journée « Vole Quelque Chose au Travail! »
+## Le 15 avril est la Journée « Vole Quelque Chose au Travail ! »
 
 Ton·ta patron·ne travaille-t-iel moins que toi mais gagne-t-iel un plus gros salaire ? Est-ce que quelqu’un se déplace en voiture avec chauffeur·euse ou en jet privé à tes frais ? Si l’entreprise gagne de l’argent à la fin de la journée, cela signifie qu’elle ne te paie pas la pleine valeur de ton travail — c’est de là que viennent les bénéfices d’entreprises ! Donc, si tu as besoin de quelque chose sur ton lieu de travail, prends-le. Tu l’as mérité !
 
