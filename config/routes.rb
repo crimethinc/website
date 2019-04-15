@@ -128,7 +128,7 @@ Rails.application.routes.draw do
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
   namespace :admin do
     get 'dashboard', to: 'dashboard#index'
-    get 'markdown',  to: 'dashboard#markdown'
+    get 'markdown',  to: 'dashboard#markdown', as: :markdown
 
     concern :paginatable do
       get 'page(/1)', on: :collection, to: redirect { |_, req| req.path.split('page').first }
