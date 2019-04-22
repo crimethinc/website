@@ -71,4 +71,4 @@ In den USA ist der 15. April der Steuertag (Tax Day), also ein passender Termin,
 
 Nimm das nicht einfach hin. **Klau was von deiner Arbeit**
 
-[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Erinnere dich daran, wer dich beklaut! ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Erinnere dich daran, wer dich beklaut! ]]

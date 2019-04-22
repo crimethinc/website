@@ -30,7 +30,7 @@ Stealing is immoral. That’s why employees should receive the full value of the
 
 A truly ethical project would be to set out to create a society in which no one would have any incentive to steal from anyone else. This is the question that really concerns us.
 
-[[ https://cloudfront.crimethinc.com/assets/articles/2012/04/13/steal-something-from-work-day/1b.jpg ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/ssfwd-three-stickers.jpg ]]
 
 ## _Beyond Capitalist Meritocracy_
 

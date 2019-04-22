@@ -8,7 +8,7 @@ _Klaue etwas von deiner Arbeit!_ Es könnte eine Büroklammer sein, oder etwas G
 
 _Klaue etwas von deiner Arbeit!_ Du kannst es mit deinen FreundInnen teilen oder es deiner Familie geben - der Familie, die du wegen deines Jobs nie siehst. Du könntest es selbst nutzen, um etwas zu tun, von dem du schon immer geträumt hast - vielleicht etwas, das all das Potenzial nutzt, das in dir steckt, dass du aber nicht nutzen kannst, weil du die ganze Zeit für jemand anderen arbeiten musst.
 
-[[ https://cloudfront.crimethinc.com/images/ssfwd/sticker_b.jpg ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/ssfwd-construction.jpg ]]
 
 Lass dir von deinem Boss nichts gefallen—**klau dir deine Würde zurück**
 

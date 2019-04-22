@@ -25,7 +25,7 @@
 
 _This narrative is dedicated to the courageous individuals who attacked the Whole Foods during the [general strike](/2011/11/07/oakland-general-strike-footage) in Oakland on [November 2, 2011](/2013/09/10/after-the-crest-part-ii-the-rise-and-fall-of-the-oakland-commune); whatever the papers say, many of us employees would be overjoyed if you paid a visit to our workplaces._
 
-[[https://cloudfront.crimethinc.com/images/ssfwd/2b.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/hulk-foods-sign-at-night.jpg ]]
 
 #### My Name Is Carlos
 
@@ -71,7 +71,7 @@ Aside from breaking the dairy doors, writing graffiti, and carrying out psycholo
 
 All good things come to an end, however. Cameras were installed throughout the store, most of them in the back stock area where my team usually worked. Though we were able to find a few spots outside the camera's view to continue our pilfering, the store managers initiated mandatory bag searches at the end of our shifts. My reign of terror came to a close soon after when upper management ordered my boss to get rid of me. In a generous gesture, my boss instead informed me of the decision and offered me the option to turn in my two-week notice. I put in my two weeks just in time for summer and took the opportunity to spend my free time making connections with other anarchists, fostering friendships that were only possible because I was no longer giving my time to that terrible job.
 
-[[https://cloudfront.crimethinc.com/images/ssfwd/3b.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/hulk-foods-strike.jpg ]]
 
 #### Appendix
 
@@ -101,7 +101,7 @@ Other friends of his started spending their nights there, mingling with the ecce
 
 The company had recently switched their machines from a plug-in counter system to a primitive card system, in hopes of thwarting the various scams based around the plug-in counters: resetting them with pins or magnets, stealing an extra one, just slamming them against something and claiming you had no idea what had happened but you'd only made a couple copies. Of course, my friend could produce the new cards behind the counter at his leisure. Whenever I mailed out a 'zine to someone, I threw in a $100 copying card with it: _Now go start your own 'zine._
 
-[[https://cloudfront.crimethinc.com/images/sfw/sfw3b.jpg]]
+[[ https://thecloud.crimethinc.com.s3.amazonaws.com/assets/steal-something-from-work-day/images/kinkos.jpg ]]
 
 Corresponding with people around the country, we discovered this was going on elsewhere as well: it seemed that everywhere there was a night shift at one of these franchises, there were people like us. We heard about a branch in the Bay Area where they were so sure of their power they even had bands play late-night shows right in the middle of the customer service area! We’d already developed a feeling of ownership of the store my friend worked in, but now this came to extend to the entire chain. Everywhere we went we looked for one, and usually we clicked with the employees we met. When we didn’t, we fearlessly looted the places all the same, more brazenly than we ever would have anywhere else: we were discovering the feeling of entitlement normally reserved for the rich, that comes from the sense that one is on one’s own territory. We workers never feel like we're on our own territory, so we never stand up for ourselves—but the night-shift salon had worked wonders for our self-confidence.
 
@@ -128,7 +128,7 @@ The first city, which I will call Huffmanville, is what generally comes to mind 
 
 The other city, which I will call New Stolp, is what is known to demographers as a “satellite city” of the metropolis, rather than a true suburb. This means it used to be a separate city before the expanding suburbs caught up with it, and there is still a large, relatively old, relatively dense urban core. For those of you on the East Coast, think Newark or Paterson; if you’re on the West Coast, think San Bernardino. This urban part of New Stolp is mainly lower- and working-class, and includes a large Mexican immigrant population. The billboards in town are in Spanish, and the main drag is lined with carnicerías, liquor stores, pawnshops, and predatory “payday loan” vendors. The Latin Kings are active there, and high-school students at New Stolp East are subjected to searches using metal detectors upon their arrival each morning. The police prowl neighborhoods keeping an eye on the residents, not for possible intruders, and routinely flush sleeping vagrants from the bus station and the parks. In the downtown area, the old stone and masonry buildings are mostly vacant, tenantless. Business leaders have been clamoring about “revitalization” for years, and the process of gentrification has only recently begun along the river’s edge.
 
-[[https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/can-you-imagine.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/can-you-imagine.jpg ]]
 
 The people in the suburban sprawl outside New Stolp (but still technically within the municipal limits) do not identify with the urban core, and will always make some kind of qualifying statement when they tell you where they live (“It’s not _New Stolp_ New Stolp; it's actually a nice area…”). And finally, as if to give expression to this division and make it more formalized, a county line runs through the municipal area such that Huffmanville and the suburban part of New Stolp are in one county, and the old, poor, urban part of New Stolp is in another.
 
@@ -164,7 +164,7 @@ It was always important for me to maintain the appearance of doing my job accura
 
 My fellow employees soon figured out that I’d turn a blind eye to almost anything that could be carried out the front door and into their cars. And when I noticed customers who looked like they were trying to shoplift—since I couldn’t openly tell them _Hey, take what you need, I’m on your side_—I would step away from the register and pretend to be busy doing something else so they’d feel like they could “sneak past” without my noticing.
 
-[[https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/they-garnish-wages-we-garnish-profits.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/they-garnish-wages-we-garnish-profits.jpg ]]
 
 Of course, I’d steal whatever I needed, too—paint, tools, light bulbs, and so on—but I didn’t sell them or anything like that. They were just things that I needed. In order to get the money, I had to use other tactics.
 
@@ -191,7 +191,7 @@ _—The Angry Po-Boy Collective, March 29, 2010_
 ---
 
 
-[[https://cloudfront.crimethinc.com/assets/articles/2014/04/15/1b4.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/employee-theft.jpg ]]
 
 ## What Became of the Boxes
 {: #what-became-of-the-boxes}
@@ -215,7 +215,7 @@ Was this theft? I don’t know. I mean, if I got caught, I would have been charg
 ---
 
 
-[[https://cloudfront.crimethinc.com/assets/articles/2018/04/15/1.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-everything.jpg ]]
 
 ## Stealing from Work Is a Gamble, but It Can Be a Good Bet
 {: #stealing-from-work-is-a-gamble}
@@ -250,7 +250,7 @@ In a Super 8 motel, I began to toy with a new idea. We dealt with lots of cash. 
 
 The answer hit me the next day as we drove by a riverboat casino: gambling.
 
-[[https://cloudfront.crimethinc.com/assets/articles/2018/04/15/2.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/fire.jpg ]]
 
 Obviously, this was a bad idea. Countless movies, crime novels, and real-life disasters start this way. Still, we passionately hated the company, we shared an affirming and subversive worker culture, and we had already gotten away with a lot. The fact that it was a bad idea was what made it so appealing: workers at terrible jobs are always looking for something self-destructive to do that might just take the whole enterprise down with them.
 
@@ -289,7 +289,7 @@ My first idea was to invite couple of friends for lunch and give them a lot of f
 
 I started to build up to talking about it with the other workers; until then, it had been taboo to talk about getting back what we deserved. People got more conscious and started to help each other to get as much food as possible for lunch, like preparing a big bucket of food in the kitchen and then taking the manager out for a cigarette break so the one going for lunch could take it upstairs. From the counter, we would bring soda, coffee, muffins, and such back to the workers who had no access to those things.
 
-[[https://cloudfront.crimethinc.com/assets/articles/2016/04/15/1b-3.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/art-theft.jpg ]]
 
 I was new to working and still went to high school, so I didn't work that often. I wanted to get some food and leftovers to bring home and to school, to share with my family and friends. We made a deal that my colleagues would make a bag of food for me and leave it in the back so I could grab it when I went to change while the manager counted out my cash register.
 
@@ -313,7 +313,7 @@ Nowadays, looking back, I remember those times as less risky than my adult life 
 ---
 
 
-[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/3b.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/good-theft-vs-bad-theft.jpg ]]
 
 ## Like Most Workplace Thieves, I Am an Exceptional Worker
 {: #like-most-workplace-thieves}

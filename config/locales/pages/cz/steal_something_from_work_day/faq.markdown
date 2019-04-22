@@ -66,4 +66,4 @@ Jak většina zaměstnanců ví, každý den může být „dnem kradení v prá
 
 Pokud tady byl někdy vhodný den, byl to 15. duben, kdy se podává daňové přiznání (pozn. v ČR by to byl 1. duben). Pro vládu je každý 15. duben Dnem okrádání tebe. Vezmou tvoje těžce vydělané peníze a nacpou je do nějaké války o ropu nebo zákulisních obchodů – to je další způsob, jak korporace profitují z našich nákladů. Nenech si to líbit. Ukradni něco z práce.
 
-[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Remember who’s stealing from you! ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Remember who’s stealing from you! ]]

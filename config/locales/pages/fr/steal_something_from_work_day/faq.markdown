@@ -68,4 +68,4 @@ Dans le contexte étatsunien, s’il y avait bien un jour idéal pour VOLER QUEL
 
 Ne passe pas cette journée en restant assis·e. **Vole quelque chose au travail.**
 
-[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Souviens-toi de qui te vole ? ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Souviens-toi de qui te vole ? ]]
