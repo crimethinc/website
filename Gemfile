@@ -41,6 +41,7 @@ gem 'dalli'
 
 # codestyle guide and linting
 gem 'rubocop', require: false
+gem 'rubocop-performance'
 gem 'rubocop-rspec'
 
 # Stripe for /support
