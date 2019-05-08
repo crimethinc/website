@@ -68,4 +68,4 @@ If there was ever a good day to Steal Something From Work, it has to be April 15
 
 Don’t take it sitting down. **Steal something from work.**
 
-[[ https://cloudfront.crimethinc.com/assets/articles/2017/04/13/01.jpg Remember who’s stealing from you! ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Remember who’s stealing from you! ]]

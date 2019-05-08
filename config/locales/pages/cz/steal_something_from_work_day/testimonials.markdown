@@ -23,7 +23,7 @@ Money started running low and I just stopped caring one day. My bosses were prob
 
 _–Luther Blisset_
 
-[[ https://cloudfront.crimethinc.com/blog/wp-content/uploads/2015/04/2b.jpg Somebody buy this woman a drink. ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/walmart.jpg Somebody buy this woman a drink. ]]
 
 ## STEAL FROM WORK TO PROVIDE FOR YOUR COMMUNITY
 
@@ -45,7 +45,7 @@ Re-appropriate Everything!
 
 _–Service Class Insurgent_
 
-[[https://cloudfront.crimethinc.com/assets/articles/2010/03/24/gaspump_b.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/gas-pump.jpg ]]
 
 ## STEAL FROM WORK FOR A SELF-ASSIGNED BONUS
 
@@ -149,7 +149,7 @@ Half of my DVD collection and sizable portion of my record collection have been 
 
 _–Obviously Anonymous_
 
-[[https://cloudfront.crimethinc.com/assets/articles/2011/04/15/sfw2b.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/articles/2011/04/15/sfw2b.jpg ]]
 
 ## STEAL FROM WORK TO STAY FOCUSED ON THE JOB
 
@@ -217,4 +217,4 @@ Back when I used to work more, I used to steal more. When I worked at a chain on
 
 _–Random Name_
 
-[[https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/war-on-misery-3.jpg]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/war-on-misery-3.jpg ]]

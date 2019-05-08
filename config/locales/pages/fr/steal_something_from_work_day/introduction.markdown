@@ -8,7 +8,7 @@ _Vole Quelque Chose au Travail !_ Ça pourrait être un trombone, un peu d’arg
 
 _Vole Quelque Chose au Travail !_ Tu pourrais le partager avec tes ami·e·s, ou bien le donner à ta famille — la famille que tu ne vois jamais à cause de ton boulot. Tu pourrais toi-même t’en servir, pour faire quelque chose dont tu as toujours rêvé — peut-être quelque chose faisant usage de tout ce potentiel que tu réaliserais si seulement tu n’avais pas à travailler tout le temps pour quelqu’un d’autre.
 
-[[ https://cloudfront.crimethinc.com/images/ssfwd/sticker_b.jpg ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/ssfwd-construction.jpg ]]
 
 Ne te laisse pas emmerder par ton·ta patron·ne — **vole quelque chose !**
 

@@ -8,7 +8,7 @@ _Steal something from work!_ It could be a paper clip, or some cash out of the r
 
 _Steal something from work!_ You could share it with your friends, or give it to your family—the family you never see because of your job. You could use it yourself, to do something you’ve always dreamed of—maybe something making use of all that potential you would fulfill if only you didn’t have to work for someone else all the time.
 
-[[ https://cloudfront.crimethinc.com/images/ssfwd/sticker_b.jpg ]]
+[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/ssfwd-construction.jpg ]]
 
 Don’t take shit from your boss—**steal it!**
 
