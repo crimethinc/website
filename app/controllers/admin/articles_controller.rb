@@ -47,6 +47,8 @@ module Admin
     end
 
     def update
+      @article.tags.destroy_all
+
       if @article.update(updated_article_params)
         # update_columns to avoid hitting callbacks, namely updating Search index
         @article.update_columns(user_id: nil)
