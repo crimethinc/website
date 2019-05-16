@@ -113,9 +113,8 @@ GEM
       concurrent-ruby (~> 1.0)
     iniparse (1.4.4)
     jaro_winkler (1.5.2)
-    jbuilder (2.8.0)
+    jbuilder (2.9.1)
       activesupport (>= 4.2.0)
-      multi_json (>= 1.2)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -262,7 +261,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.6)
-    rubocop-performance (1.2.0)
+    rubocop-performance (1.3.0)
       rubocop (>= 0.68.0)
     rubocop-rspec (1.33.0)
       rubocop (>= 0.60.0)
@@ -282,7 +281,7 @@ GEM
     scenic (1.5.1)
       activerecord (>= 4.0.0)
       railties (>= 4.0.0)
-    selenium-webdriver (3.142.1)
+    selenium-webdriver (3.142.2)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
     shellany (0.0.1)
@@ -322,7 +321,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webdrivers (3.8.1)
+    webdrivers (3.9.2)
       nokogiri (~> 1.6)
       rubyzip (~> 1.0)
       selenium-webdriver (~> 3.0)
@@ -349,7 +348,7 @@ DEPENDENCIES
   fast_stack
   flamegraph
   guard-rspec
-  jbuilder (~> 2.5)
+  jbuilder (~> 2.9)
   jquery-rails
   jquery-ui-rails
   kaminari
