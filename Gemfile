@@ -21,7 +21,7 @@ gem 'sitemap_generator' # generates compliant xml sitemap
 gem 'uglifier'
 
 # JSON views
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.9'
 
 # text utilities
 gem 'kramdown'       # for Markdown processing
