@@ -10,11 +10,7 @@ class Episode < ApplicationRecord
   scope :live, -> { where('published_at < ?', Time.now.utc) }
 
   def path
-    "/podcast/#{to_param}"
-  end
-
-  def to_param
-    slug
+    "/podcasts/#{podcast.slug}/episodes/#{episode_id}"
   end
 
   def episode_id_in_podcast
@@ -46,5 +42,10 @@ class Episode < ApplicationRecord
     seconds =  (duration_in_seconds - (minutes * 60 + hours * 3600)).to_i
 
     [format('%.2d', hours), format('%.2d', minutes), format('%.2d', seconds)].join(':')
+  end
+
+  # TODO: extract to database
+  def episode_id
+    slug.split('-').last
   end
 end
