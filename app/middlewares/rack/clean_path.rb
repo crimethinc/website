@@ -1,7 +1,7 @@
 module Rack
   class CleanPath
     # delete from source path:
-    SUBSITUTIONS = {
+    SUBSTITUTIONS = {
       '/blog'                => '',
       'index.html'           => '',
       '.html'                => '',
@@ -36,7 +36,7 @@ module Rack
       path = req.path
 
       # make subsitutions, from uncleaned to cleaned
-      SUBSITUTIONS.each do |uncleaned_path, cleaned_path|
+      SUBSTITUTIONS.each do |uncleaned_path, cleaned_path|
         path = path.sub(uncleaned_path, cleaned_path)
       end
 

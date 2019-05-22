@@ -88,15 +88,16 @@ en:
         label: Videos
 
       tools:
-        label:                Tools
-        zines:                Zines
-        journals:             Journals
-        posters:              Posters
-        stickers:             Stickers
-        videos:               Videos
-        music:                Music
-        logos:                Logos
-        to_change_everything: To Change Everything
+        label:    Tools
+        zines:    Zines
+        journals: Journals
+        posters:  Posters
+        stickers: Stickers
+        videos:   Videos
+        music:    Music
+        logos:    Logos
+        to_change_everything:          To Change Everything
+        steal_something_from_work_day: Steal Something from Work Day
 
       store:
         label: Store
@@ -138,6 +139,7 @@ en:
       - The future is in chains within you — set it free.
       - A spark for every powder keg.
       - Esperanza no espera.
+      - Mobilis in mobili
 
     site_mode: Switch to the lite version of the site →
 
@@ -147,6 +149,7 @@ en:
       store: Store
       post_order_success: Post-Order Glow
       submission_guidelines: Submission Guidelines
+      steal_something_from_work_day: Steal Something from Work Day
     search:
       index: Search
       results: Results for

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Setting and changing an articles published_at date' do
   let(:admin) do
-    create(:user, username: 'user1', password: 'c' * 31)
+    create(:user, username: 'user1', password: 'c' * 31, role: 'publisher')
   end
 
   it 'creates a new article' do

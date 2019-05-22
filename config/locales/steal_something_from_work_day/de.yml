@@ -1,0 +1,125 @@
+de:
+  steal_something_from_work_day:
+    language_direction: ltr
+    lang_code: de
+
+    crimethinc: CrimethInc. Ex-Workers’ Collective
+    title: Beklau-deinen-Arbeitsplatz-Tag
+    subtitle: 15 April
+
+    outreach_materials:
+      download_button: Download PDF
+      abolish_capitalism: Until we can abolish capitalism—**make every profit cost them!**
+
+      stickers:
+        title: Stickers
+        description: Print these out on a sheet of sticker paper, cut them up, and deploy!
+
+        cards:
+          -
+            name: Classic Sticker
+            description: A downloadable PDF of a sheet of our classic [Steal Something from Work Day stickers](/stickers/steal-from-work)
+            preview_url:  https://cloudfront.crimethinc.com/assets/stickers/steal-from-work/steal-from-work_front_black_and_white.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/stickers/steal-from-work/steal-from-work_front_black_and_white.pdf
+          -
+            name: Sticker Mix
+            description: A downloadable PDF of a sheet with [a variety of Steal Something from Work Day stickers](/stickers/steal-something-from-work-day)
+            preview_url:  https://cloudfront.crimethinc.com/assets/stickers/steal-something-from-work-day/steal-something-from-work-day_front_black_and_white.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/stickers/steal-something-from-work-day/steal-something-from-work-day_front_black_and_white.pdf
+
+      posters:
+        title: Posters
+        description:
+
+        cards:
+          -
+            name: If Your Coworker Needs Something
+            description: A downloadable PDF of a [Steal Something from Work Day poster](/posters/if-your-coworker-needs-something)
+            preview_url: https://cloudfront.crimethinc.com/assets/posters/if-your-coworker-needs-something/if-your-coworker-needs-something_front_black_and_white.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/posters/if-your-coworker-needs-something/if-your-coworker-needs-something_front_black_and_white.pdf
+
+          -
+            name: Hang in There
+            description: A downloadable PDF of a [Steal Something from Work Day poster](/posters/hang-in-there)
+            preview_url: https://cloudfront.crimethinc.com/assets/posters/hang-in-there/hang-in-there_front_black_and_white.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/posters/hang-in-there/hang-in-there_front_black_and_white.pdf
+
+      pamphlets:
+        title: Pamphlets
+        description: Print out these trifolds to spread the word. Slip them into lockers, leave them in a tip jar paper-clipped to your tip, give them out at the metro.
+
+        cards:
+          -
+            name: Trifold Front
+            description:
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold-1.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold.pdf
+
+          -
+            name: Trifold Back
+            description:
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold-2.jpg
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/trifold.pdf
+
+
+          -
+            name: I ❤️ Workplace Theft Front
+            description:
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft-1.png
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft.pdf
+
+          -
+            name: I ❤️ Workplace Theft Back
+            description:
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft-2.png
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/pamphlets/i-heart-work-place-theft/i-heart-work-place-theft.pdf
+
+      postcards:
+        title: Postcard
+        description:
+
+        cards:
+          -
+            name: Postcard Front
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/postcards/postcard-front.jpg
+            description:
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/postcards/postcard.pdf
+
+          -
+            name: Postcard Back
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/postcards/postcard-back.jpg
+            description:
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/postcards/postcard.pdf
+
+      journals:
+        title: Journal
+        description:
+
+        cards:
+          -
+            name: Heist (reading)
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist-reading.jpg
+            description: An on-screen reading version of [the journal in color](/zines/heist)
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist_screen_single_page_view.pdf
+
+          -
+            name: Heist (printing)
+            preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist-printing.jpg
+            description: A black-and-white PDF of _Heist_ imposed for
+            download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/journals/heist/heist_print_black_and_white.pdf
+
+    international_coverage:
+      sweden_video_caption: "**Sweden:** Sno-Från-Jobbet-Dagen: An action in support of Steal Something from Work Day 2018 in Sweden. The banner reads “Your job is eating you up—Steal a little back!” The line of the advertisement still visible below it urges “Don’t let pollen stop you this year.”"
+
+      cards:
+        -
+          name: Germany
+          description: "[BEKLAU-DEINEN-ARBEITSPLATZ-TAG](http://crimethinc.blogsport.de/2013/11/01/beklau-deinen-arbeitsplatz-tag/)"
+          preview_url: http://minijob.cc/wp-content/uploads/2013/04/steal-from-work-day.jpg
+          download_url: http://minijob.cc/wp-content/uploads/2013/04/steal-from-work-day.jpg
+
+        -
+          name: Sweden
+          description: A downloadable PDF of a sheet of these stickers.
+          preview_url: https://cloudfront.crimethinc.com/assets/articles/2018/04/13/3.jpg
+          download_url: https://cloudfront.crimethinc.com/assets/articles/2018/04/13/steal-something-from-work_swedish.pdf

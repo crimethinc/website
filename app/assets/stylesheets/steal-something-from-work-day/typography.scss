@@ -1,0 +1,41 @@
+@mixin font-regular {
+  font: {
+    family: alright_sansregular, system, sans-serif;
+  }
+}
+
+@mixin font-bold {
+  font: {
+    family: alright_sansmedium, system, sans-serif;
+    weight: 600;
+  }
+}
+
+@mixin font-bolder {
+  font: {
+    family: alright_sansbold, system, sans-serif;
+    weight: 900;
+  }
+}
+
+@mixin font-light {
+  font: {
+    family: alright_sanslight, system, sans-serif;
+    weight: 100;
+  }
+}
+
+@mixin font-black {
+  font: {
+    family: alright_sansblack, system, sans-serif;
+    weight: 900;
+  }
+}
+
+* {
+  @include font-regular;
+}
+
+b, strong {
+  @include font-bold;
+}

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '~> 2.5.5'
+ruby '~> 2.6.3'
 
 # app server
 gem 'rails', '~> 5.2.3'
@@ -21,7 +21,7 @@ gem 'sitemap_generator' # generates compliant xml sitemap
 gem 'uglifier'
 
 # JSON views
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.9'
 
 # text utilities
 gem 'kramdown'       # for Markdown processing
@@ -41,6 +41,7 @@ gem 'dalli'
 
 # codestyle guide and linting
 gem 'rubocop', require: false
+gem 'rubocop-performance'
 gem 'rubocop-rspec'
 
 # Stripe for /support
@@ -55,7 +56,6 @@ group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platform: :mri
   gem 'capybara'
-  gem 'chromedriver-helper'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'launchy'
@@ -65,6 +65,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
+  gem 'webdrivers'
 end
 
 # dev

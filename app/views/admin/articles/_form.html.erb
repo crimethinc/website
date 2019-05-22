@@ -52,25 +52,27 @@
 
         <div class="col-12 col-lg-4">
 
-          <div class="card">
-            <h4 class="card-header bg-warning"><b>To Publish Now…</b></h4>
+          <% if current_user.can_publish? %>
+            <div class="card">
+              <h4 class="card-header bg-warning"><b>To Publish Now…</b></h4>
 
-            <div class="card-body">
-              <p class="card-text">
-                If you want to publish this article <b>right now</b>, you can with one click.
-                If you click the <b>Publish NOW!</b> button, the <code>published_at</code>
-                will be set to now and the <code>publication_status</code> will be set to
-                <i>Published</i>. This article will immediately show up in
-                the homepage feed.
+              <div class="card-body">
+                <p class="card-text">
+                  If you want to publish this article <b>right now</b>, you can with one click.
+                  If you click the <b>Publish NOW!</b> button, the <code>published_at</code>
+                  will be set to now and the <code>publication_status</code> will be set to
+                  <i>Published</i>. This article will immediately show up in
+                  the homepage feed.
 
-                <noscript><p><b>Requires Javascript</b> to be turned on to work.</p></noscript>
-              </p>
+                  <noscript><p><b>Requires Javascript</b> to be turned on to work.</p></noscript>
+                </p>
 
-              <div class="text-right">
-                <%= link_to "Publish NOW!", "#", id: "publish-now", class: "btn btn-warning btn-lg" %>
+                <div class="text-right">
+                  <%= link_to "Publish NOW!", "#", id: "publish-now", class: "btn btn-warning btn-lg" %>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
 
         </div><!-- .col -->
       </div><!-- .row -->

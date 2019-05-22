@@ -28,9 +28,13 @@
         <footer class="my-5 text-center" style="padding-top: 10rem">
           <hr class="my-5">
 
-          <%= link_to "Users",    [:admin, :users], class: "text-muted mr-3" %>
-          <%= link_to "Settings", [:settings],      class: "text-muted mr-3" %>
-          <%= link_to "Sign out", [:signout],       class: "text-muted" %>
+          <% if current_user.can_admin_users? %>
+            <%= link_to "Users", [:admin, :users], class: "text-muted mx-2" %>
+          <% end %>
+
+          <%= link_to "Markdown", [:admin, :markdown], class: "text-muted mx-2" %>
+          <%= link_to "Settings", [:settings],         class: "text-muted mx-2" %>
+          <%= link_to "Sign out", [:signout],          class: "text-muted mx-2" %>
         </footer>
       <% end %>
     </div>

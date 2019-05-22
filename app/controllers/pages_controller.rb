@@ -4,7 +4,6 @@ class PagesController < ApplicationController
   before_action :set_html_id
 
   def show
-    @html_id = 'page'
     @editable = @page
 
     # no layout
@@ -23,7 +22,6 @@ class PagesController < ApplicationController
   # TODO: make this view localizable
   def submission_guidelines
     @title = I18n.t('page_titles.about.submission_guidelines')
-    @title = 'Submission Guidelines'
   end
 
   private

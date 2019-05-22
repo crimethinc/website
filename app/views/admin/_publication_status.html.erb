@@ -4,7 +4,7 @@
     <%= form.label :publication_status, "Publication Status" %><br>
 
     <div class="form-check row" id="publication_status">
-      <% Publishable::PUBLICATION_STATUSES.each do |state| %>
+      <% Publishable.publication_statuses_for(user: current_user).each do |state| %>
         <span class="col">
           <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "form-check-input" %>
 

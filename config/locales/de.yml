@@ -88,15 +88,16 @@ de:
         label: Videos
 
       tools:
-        label:                Materialien
-        zines:                Zines
-        journals:             Zeitungen
-        posters:              Poster
-        stickers:             Aufkleber
-        videos:               Videos
-        music:                Music
-        logos:                Logos
-        to_change_everything: To Change Everything
+        label:    Materialien
+        zines:    Zines
+        journals: Zeitungen
+        posters:  Poster
+        stickers: Aufkleber
+        videos:   Videos
+        music:    Music
+        logos:    Logos
+        to_change_everything:          Alles Verändernein
+        steal_something_from_work_day: Beklau-deinen-Arbeitsplatz-Tag
 
       store:
         label: Shop
@@ -138,6 +139,7 @@ de:
       - Die Zukunft liegt in dir in Ketten - lass sie frei.
       - Ein Funke für jedes Pulverfass.
       - Esperanza no espera.
+      - Mobilis in mobili
 
     site_mode: Switch to the lite version of the site →
 
@@ -147,6 +149,7 @@ de:
       store: Shop
       post_order_success: Glühen nach der Bestellung
       submission_guidelines: Richtlinien für's Einreichen von Beiträgen
+      steal_something_from_work_day: Steal Something from Work Day
     search:
       index: Suche
       results: Ergebnisse

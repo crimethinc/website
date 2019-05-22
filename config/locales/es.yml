@@ -88,15 +88,16 @@ es:
         label: Videos
 
       tools:
-        label:                Herramientas
-        zines:                Zines
-        journals:             Periódicos
-        posters:              Posters
-        stickers:             Stickers
-        videos:               Videos
-        music:                Música
-        logos:                Logos
-        to_change_everything: Para Cambiar Todo
+        label:    Herramientas
+        zines:    Zines
+        journals: Periódicos
+        posters:  Posters
+        stickers: Stickers
+        videos:   Videos
+        music:    Música
+        logos:    Logos
+        to_change_everything:          Para Cambiar Todo
+        steal_something_from_work_day: Steal Something from Work Day
 
       store:
         label: Tienda
@@ -138,6 +139,7 @@ es:
       - El futuro está encadenado dentro de ti — Libéralo.
       - Una chispa en cada barril de pólvora.
       - La esperanza no espera.
+      - Mobilis in mobili
 
     site_mode: Cambiar a a versión pequeña del sitio →
 
@@ -147,6 +149,7 @@ es:
       store: Tienda
       post_order_success: Envíos Glow #I am not sure what you mean by Glow.
       submission_guidelines: Para colaboraciones
+      steal_something_from_work_day: Steal Something from Work Day
     search:
       index: Buscar
       results: Resultados

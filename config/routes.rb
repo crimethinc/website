@@ -9,8 +9,17 @@ Rails.application.routes.draw do
   get 'page(/1)', to: redirect { |_, _| '/' }
   get 'page/:page', to: 'home#index'
 
-  # TCE
-  get 'tce(/:lang)', to: 'to_change_everything#show', defaults: { lang: 'english' }, as: :to_change_everything
+  # To Change Everything (TCE)
+  get 'tce(/:lang)',
+      to: 'to_change_everything#show',
+      defaults: { lang: 'english' },
+      as: :to_change_everything
+
+  # Steal Something from Work Day (SSfWD)
+  get 'steal-something-from-work-day(/:locale)',
+      to: 'steal_something_from_work_day#show',
+      defaults: { locale: 'english' },
+      as: :steal_something_from_work_day
 
   # Articles
   # Article listings by year, optional month, optional day
@@ -49,8 +58,8 @@ Rails.application.routes.draw do
   get 'articles/:id/collection_posts', to: 'collection_posts#index'
 
   # Static pages
-  get 'library',               to: 'pages#library', as: :library
-  get 'submission-guidelines', to: 'pages#submission_guidelines'
+  get 'library',                       to: 'pages#library', as: :library
+  get 'submission-guidelines',         to: 'pages#submission_guidelines'
 
   # Categories
   get 'categories',                    to: 'categories#index', as: :categories
@@ -120,7 +129,7 @@ Rails.application.routes.draw do
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
   namespace :admin do
     get 'dashboard', to: 'dashboard#index'
-    get 'markdown',  to: 'dashboard#markdown'
+    get 'markdown',  to: 'dashboard#markdown', as: :markdown
 
     concern :paginatable do
       get 'page(/1)', on: :collection, to: redirect { |_, req| req.path.split('page').first }
@@ -156,9 +165,7 @@ Rails.application.routes.draw do
     resources :sessions, only: [:create]
   end
 
-  get 'profile',  to: 'auth/users#show',       as: :profile
   get 'settings', to: 'auth/users#edit',       as: :settings
-  get 'signup',   to: 'auth/users#new',        as: :signup
   get 'signin',   to: 'auth/sessions#new',     as: :signin
   get 'signout',  to: 'auth/sessions#destroy', as: :signout
 

@@ -1,0 +1,1 @@
+Tento text je pouze rétorické cvičení. Jeho cílem je poodhalit už převládající fenomén krádeží na pracovišti, ne povzbudit ty, kteří by se jinak nedopustili protiprávního jednání. Ani hostitel, ani překladatel nejsou zodpovědní za lidi, kteří k němu odkazují, ani za to, co dělají poté.
