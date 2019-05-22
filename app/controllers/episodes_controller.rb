@@ -20,9 +20,16 @@ class EpisodesController < ApplicationController
   private
 
   def set_episode
-    @episode = Episode.where(id: params[:id])
-    return redirect_to [:podcast] if @episode.blank?
+    @episode = Episode.find_by(id: params[:id])
+    return @episode if @episode.present?
 
-    @episode = @episode.first
+    redirect_to_podcast
+  end
+
+  def redirect_to_podcast
+    podcast = Podcast.find_by(slug: params[:slug])
+
+    redirect_path = podcast.blank? ? [:podcasts] : podcast.path
+    redirect_to redirect_path
   end
 end
