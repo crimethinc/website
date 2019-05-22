@@ -27,7 +27,7 @@
       <div class="other-episodes">
         <h3><%= t("podcast.other_episodes") %></h3>
         <ul>
-          <% @podcast.episodes.each do |episode| %>
+          <% @podcast.episodes[1..-1].each do |episode| %>
             <li>
               <article class="h-entry" id="episode-<%= episode.id %>">
                 <h1><%= link_to episode.title, url_for([@podcast, episode]), class: "p-name u-url" %></h1>
