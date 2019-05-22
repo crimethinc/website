@@ -15,7 +15,7 @@ class EpisodesController < ApplicationController
     @editable = @episode
     @title    = title_for :podcasts, @episode.name, :transcript
 
-    render 'podcast/show'
+    render 'episodes/show'
   end
 
   private
