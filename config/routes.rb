@@ -77,7 +77,7 @@ Rails.application.routes.draw do
   get 'podcast',                  to: 'podcast#index',       as: :podcast
   get 'podcast/:slug',            to: 'podcast#show',        as: :podcast_detail
   get 'podcast/:slug/episodes/:id', to: 'episodes#show',     as: :podcast_episode
-  get 'podcast/:slug/transcript', to: 'episodes#transcript', as: :episode_transcript
+  get 'podcast/:slug/episodes/:id/transcript', to: 'episodes#transcript', as: :episode_transcript
 
   # Books
   get 'books/lit-kit',        to: 'books#lit_kit',        as: :books_lit_kit
