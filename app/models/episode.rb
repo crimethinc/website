@@ -6,6 +6,7 @@ class Episode < ApplicationRecord
   default_scope { order(id: :desc) }
 
   after_create :generate_slug
+  after_create :generate_episode_number
 
   scope :live, -> { where('published_at < ?', Time.now.utc) }
 
@@ -24,6 +25,10 @@ class Episode < ApplicationRecord
 
   def generate_slug
     update slug: [podcast.episode_prefix, episode_id_in_podcast].reject(&:blank?).join('-')
+  end
+
+  def generate_episode_number
+    update episode_number: episode_id_in_podcast
   end
 
   def meta_description
