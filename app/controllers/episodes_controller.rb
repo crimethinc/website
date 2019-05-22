@@ -1,4 +1,5 @@
 class EpisodesController < ApplicationController
+  before_action :set_podcast, only: [:show, :transcript]
   before_action :set_episode, only: [:show, :transcript]
 
   def show
@@ -19,17 +20,19 @@ class EpisodesController < ApplicationController
 
   private
 
+  def set_podcast
+    @podcast = Podcast.find_by(slug: params[:slug])
+  end
+
   def set_episode
-    @episode = Episode.find_by(id: params[:id])
+    @episode = Episode.find_by(podcast_id: @podcast, episode_number: params[:episode_number])
     return @episode if @episode.present?
 
     redirect_to_podcast
   end
 
   def redirect_to_podcast
-    podcast = Podcast.find_by(slug: params[:slug])
-
-    redirect_path = podcast.blank? ? [:podcasts] : podcast.path
+    redirect_path = @podcast.blank? ? [:podcasts] : @podcast.path
     redirect_to redirect_path
   end
 end
