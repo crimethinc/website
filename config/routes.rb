@@ -76,6 +76,7 @@ Rails.application.routes.draw do
   get 'podcast/feed',                           to: 'podcast#feed',        as: :podcast_feed, defaults: { format: 'rss' }
   get 'podcasts',                               to: 'podcast#index',       as: :podcasts
   get 'podcasts/:slug',                         to: 'podcast#show',        as: :podcast
+  get 'podcasts/:slug/episodes',                to: redirect { |path_params, _| "/podcasts/#{path_params[:slug]}" }
   get 'podcasts/:slug/episodes/:id',            to: 'episodes#show',       as: :episode
   get 'podcasts/:slug/episodes/:id/transcript', to: 'episodes#transcript', as: :episode_transcript
 
