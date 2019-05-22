@@ -73,11 +73,11 @@ Rails.application.routes.draw do
   get 'tags/:slug/feed',         to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
 
   # Podcast
-  get 'podcast/feed',                          to: 'podcast#feed',        as: :podcast_feed, defaults: { format: 'rss' }
-  get 'podcast',                               to: 'podcast#index',       as: :podcast
-  get 'podcast/:slug',                         to: 'podcast#show',        as: :podcast_detail
-  get 'podcast/:slug/episodes/:id',            to: 'episodes#show',       as: :podcast_episode
-  get 'podcast/:slug/episodes/:id/transcript', to: 'episodes#transcript', as: :episode_transcript
+  get 'podcast/feed',                           to: 'podcast#feed',        as: :podcast_feed, defaults: { format: 'rss' }
+  get 'podcasts',                               to: 'podcast#index',       as: :podcast
+  get 'podcasts/:slug',                         to: 'podcast#show',        as: :podcast_detail
+  get 'podcasts/:slug/episodes/:id',            to: 'episodes#show',       as: :podcast_episode
+  get 'podcasts/:slug/episodes/:id/transcript', to: 'episodes#transcript', as: :episode_transcript
 
   # Books
   get 'books/lit-kit',        to: 'books#lit_kit',        as: :books_lit_kit
