@@ -59,7 +59,8 @@
 
             <% unless action_name == "transcript" %>
               <p>
-                <%= link_to t("podcast.full_episode_transcript"), episode_transcript_url(@episode) %>
+                <%= link_to t("podcast.full_episode_transcript"),
+                            episode_transcript_url(slug: @episode.podcast.slug, episode_number: @episode.episode_number) %>
               </p>
             <% end %>
           </div>
