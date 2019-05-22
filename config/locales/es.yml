@@ -83,6 +83,7 @@ es:
         feed: RSS
         the_ex_worker: El Ex-Trabajador
         the_hotwire: The Hotwire
+        no_wall_they_can_build: No Wall They can Build
 
       videos:
         label: Videos
