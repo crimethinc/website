@@ -18,7 +18,7 @@
         <div class="latest-episode">
           <h3><%= t("podcast.latest_episode") %></h3>
           <article class="h-entry" id="episode-<%= latest_episode.id %>">
-            <h1><%= link_to latest_episode.title, url_for([podcast, latest_episode]), class: "p-name u-url" %></h1>
+            <h1><%= link_to latest_episode.title, latest_episode.path, class: "p-name u-url" %></h1>
             <p class="e-content"><%= latest_episode.subtitle %></p>
 
             <%= render "podcast/player", episode: latest_episode unless lite_mode? %>
