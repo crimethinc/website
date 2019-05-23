@@ -31,12 +31,16 @@
       </dd>
 
       <dt class="nav-label nav-label-podcast">
-        <%= link_to t("footer.nav.podcast.label"),   %i[podcast] %>
+        <%= link_to t("footer.nav.podcast.label"),   %i[podcasts] %>
         <b><%= link_to t("footer.nav.podcast.feed"), %i[podcast_feed] %></b>
       </dt>
       <dd>
-        <% %i[the_ex_worker the_hotwire].each do |podcast|  %>
-          <%= link_to t("footer.nav.podcast.#{podcast}"), %i[podcast] %>
+        <% {
+          the_ex_worker:          'the-ex-worker',
+          no_wall_they_can_build: 'no-wall-they-can-build',
+          the_hotwire:            'the-hotwire',
+        }.each do |podcast, path|  %>
+          <%= link_to t("footer.nav.podcast.#{podcast}"), "/podcasts/#{path}" %>
         <% end %>
       </dd>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_203017) do
+ActiveRecord::Schema.define(version: 2019_05_22_081347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_203017) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
+    t.string "episode_number"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
 

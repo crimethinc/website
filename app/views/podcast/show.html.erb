@@ -1,97 +1,43 @@
-<article class="h-entry" id="episode-<%= @episode.id %>">
-  <header>
-    <%= render "articles/titles", header: @episode, linked: action_name == "transcript" %>
-  </header>
+<header>
+  <%= render "articles/titles", header: @podcast, linked: false %>
+</header>
 
-  <div class="row">
-    <div class="column column-one-third podcast-meta">
-      <% if @episode.image.present? %>
-        <%= image_tag @episode.image, class: "u-photo" %>
-      <% end %>
+<div class="row" style="margin-bottom: 5rem;">
+  <div class="column column-one-third meta">
+    <%= image_tag @podcast.image, class: "u-photo" %>
 
-      <%= render "articles/titles", header: @episode.podcast, linked: true %>
+    <%= render "podcast/subscribe_buttons", podcast: @podcast %>
+  </div> <!-- .column -->
 
-      <%= render "podcast/subscribe_buttons", podcast: @episode.podcast %>
-    </div> <!-- .column -->
+  <div class="column column-two-third e-content">
+    <div class="h-feed">
 
-    <div class="column column-two-third">
-      <div class="e-content">
+      <% latest_episode = @podcast.episodes.first %>
 
-        <h3 class="listen">
-          <% unless lite_mode? %>
-            <%= t("podcast.listen") %>
-            <% if @episode.duration.present? %>
-              <small>
-                —
-                <%= @episode.duration %>
-                <abbr title="minutes">min</abbr>
-              </small>
-            <% end %>
+      <div class="latest-episode">
+        <h3><%= t("podcast.latest_episode") %></h3>
+        <article class="h-entry" id="episode-<%= latest_episode.id %>">
+          <h1><%= link_to latest_episode.title, latest_episode.path, class: "p-name u-url" %></h1>
+          <p class="e-content"><%= latest_episode.subtitle %></p>
+
+          <%= render "podcast/player", episode: latest_episode unless lite_mode? %>
+        </article>
+      </div> <!-- .latest-episodes -->
+
+      <div class="other-episodes">
+        <h3><%= t("podcast.other_episodes") %></h3>
+        <ul>
+          <% @podcast.episodes[1..-1].each do |episode| %>
+            <li>
+              <article class="h-entry" id="episode-<%= episode.id %>">
+                <h1><%= link_to episode.title, episode.path, class: "p-name u-url" %></h1>
+                <p class="e-content"><%= episode.subtitle %></p>
+              </article>
+            </li>
           <% end %>
-        </h3>
-        <%= render "podcast/player", episode: @episode unless lite_mode? %>
+        </ul>
+      </div> <!-- .other-episodes -->
 
-        <div class="episode-info">
-          <div class="buttons">
-            <% if @episode.audio_mp3_url.present? %>
-              <%= link_to @episode.audio_mp3_url, class: "button" do %>
-                <%= t("podcast.download") %> MP3
-                <% if @episode.audio_mp3_file_size.present? %>
-                  <small>
-                    <%= @episode.audio_mp3_file_size %>
-                    <abbr title="megabytes">MB</abbr>
-                  </small>
-                <% end %>
-              <% end %>
-            <% end %>
-
-            <% if @episode.audio_ogg_url.present? %>
-              <%= link_to @episode.audio_ogg_url, class: "button" do %>
-                <%= t("podcast.download") %> OGG
-                <% if @episode.audio_ogg_file_size.present? %>
-                  <small>
-                    <%= @episode.audio_ogg_file_size %>
-                    <abbr title="megabytes">MB</abbr>
-                  </small>
-                <% end %>
-              <% end %>
-            <% end %>
-
-            <% unless action_name == "transcript" %>
-              <p>
-                <%= link_to t("podcast.full_episode_transcript"), episode_transcript_url(@episode) %>
-              </p>
-            <% end %>
-          </div>
-
-          <% if action_name == "transcript" %>
-            <% if @episode.transcript.present? %>
-              <h3><%= t("podcast.transcript") %></h3>
-              <div class="transcript">
-                <%= raw @episode.transcript %>
-              </div>
-            <% end %>
-          <% else %>
-            <% if @episode.content.present? %>
-              <h3><%= t("podcast.summary") %></h3>
-              <div class="summary">
-                <%= raw @episode.content.
-                  gsub("-------SHOW NOTES------", "<h3>#{t('podcast.show_notes')}</h3>").
-                  gsub("<p> </p>", "").html_safe %>
-              </div>
-            <% end %>
-
-            <% if @episode.show_notes.present? %>
-              <h3><%= t("podcast.notes_and_links") %></h3>
-              <div class="notes">
-                <%= raw @episode.show_notes %>
-              </div>
-            <% end %>
-          <% end %>
-        </div>
-
-      </div> <!-- .h-feed -->
-    </div> <!-- .column -->
-  </div> <!-- .row -->
-
-</article>
+    </div> <!-- .h-feed -->
+  </div> <!-- .column -->
+</div> <!-- .row -->

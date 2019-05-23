@@ -25,7 +25,7 @@ cz:
     books: Books
     library: Library
     tools: Tools
-    audio: Podcast
+    audio: Podcasts
     video: Video
     store: Store
     subscribe: Subscribe
@@ -83,6 +83,7 @@ cz:
         feed: RSS
         the_ex_worker: The Ex-Worker
         the_hotwire: The Hotwire
+        no_wall_they_can_build: No Wall They can Build
 
       videos:
         label: Videos

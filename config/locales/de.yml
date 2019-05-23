@@ -25,7 +25,7 @@ de:
     books: Bücher
     library: Textsammlung
     tools: Materialien
-    audio: Podcast
+    audio: Podcasts
     video: Video
     store: Shop
     subscribe: Abonnieren
@@ -83,6 +83,7 @@ de:
         feed: RSS
         the_ex_worker: The Ex-Worker
         the_hotwire: The Hotwire
+        no_wall_they_can_build: No Wall They can Build
 
       videos:
         label: Videos

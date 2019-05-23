@@ -1,6 +1,6 @@
 <% @podcasts.each do |podcast| %>
   <header>
-    <%= render "articles/titles", header: podcast, linked: false %>
+    <%= render "articles/titles", header: podcast, linked: true %>
   </header>
 
   <div class="row" style="margin-bottom: 5rem;">
@@ -18,27 +18,12 @@
         <div class="latest-episode">
           <h3><%= t("podcast.latest_episode") %></h3>
           <article class="h-entry" id="episode-<%= latest_episode.id %>">
-            <h1><%= link_to latest_episode.title, latest_episode, class: "p-name u-url" %></h1>
+            <h1><%= link_to latest_episode.title, latest_episode.path, class: "p-name u-url" %></h1>
             <p class="e-content"><%= latest_episode.subtitle %></p>
 
             <%= render "podcast/player", episode: latest_episode unless lite_mode? %>
           </article>
         </div> <!-- .latest-episodes -->
-
-        <div class="other-episodes">
-          <h3><%= t("podcast.other_episodes") %></h3>
-          <ul>
-            <% podcast.episodes.each do |episode| %>
-              <li>
-                <article class="h-entry" id="episode-<%= episode.id %>">
-                  <h1><%= link_to episode.title, episode, class: "p-name u-url" %></h1>
-                  <p class="e-content"><%= episode.subtitle %></p>
-                </article>
-              </li>
-            <% end %>
-          </ul>
-        </div> <!-- .other-episodes -->
-
       </div> <!-- .h-feed -->
     </div> <!-- .column -->
   </div> <!-- .row -->
