@@ -20,7 +20,7 @@ RSpec.describe Podcast, type: :model do
   describe '#path' do
     subject { Podcast.new(slug: 'a-nice-podcast').path }
 
-    it { is_expected.to eq('/podcast/a-nice-podcast') }
+    it { is_expected.to eq('/podcasts/a-nice-podcast') }
   end
 
   describe '#meta_description' do
