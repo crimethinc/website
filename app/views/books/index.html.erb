@@ -11,17 +11,11 @@
     <%= render_markdown t("views.tools.books_intro_text") %>
   </div>
 
-  <div class="tool-series tool-series-bullet">
+  <div class="tool-series tool-series-books">
     <% @bullet_books.each do |book| %>
       <%= render "books/book", book: book %>
     <% end %>
-  </div> <!-- .tool-series-bullet -->
-
-  <div class="tool-series tool-series-bullet">
-    <% @letters_books.each do |book| %>
-      <%= render "books/book", book: book %>
-    <% end %>
-  </div> <!-- .tool-series-letters -->
+  </div> <!-- .tool-series-books -->
 
   <div class="row" id="extra">
     <div class="column column-half" id="into-libraries">

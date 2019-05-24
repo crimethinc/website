@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :extras]
 
-  PUBLISHED_BULLET_BOOK_SLUGS = %w[
+  BOOK_SLUGS = %w[
     no-wall-they-can-build
     from-democracy-to-freedom
     contradictionary
@@ -9,10 +9,9 @@ class BooksController < ApplicationController
     expect-resistance
     recipes-for-disaster
     days-of-war-nights-of-love
+    off-the-map
     no-habra-muro-que-nos-pare
   ].map(&:freeze).freeze
-
-  PUBLISHED_LETTERS_BOOK_SLUGS = %w[off-the-map].map(&:freeze).freeze
 
   def index
     @html_id = 'page'
@@ -20,15 +19,7 @@ class BooksController < ApplicationController
     @type    = 'books'
     @title   = title_for :books
 
-    @bullet_books = []
-    PUBLISHED_BULLET_BOOK_SLUGS.each do |slug|
-      @bullet_books << Book.find_by(slug: slug)
-    end
-
-    @letters_books = []
-    PUBLISHED_LETTERS_BOOK_SLUGS.each do |slug|
-      @letters_books << Book.find_by(slug: slug)
-    end
+    @bullet_books = BOOK_SLUGS.map { |slug| Book.find_by(slug: slug) }
   end
 
   def show
@@ -60,12 +51,8 @@ class BooksController < ApplicationController
 
   private
 
-  def published_book_slugs
-    PUBLISHED_BULLET_BOOK_SLUGS + PUBLISHED_LETTERS_BOOK_SLUGS
-  end
-
   def set_book
     @book = Book.find_by(slug: params[:slug])
-    return redirect_to [:books] if @book.blank? || !published_book_slugs.include?(@book.slug)
+    return redirect_to [:books] if @book.blank? || !BOOK_SLUGS.include?(@book.slug)
   end
 end
