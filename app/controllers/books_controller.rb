@@ -9,6 +9,7 @@ class BooksController < ApplicationController
     expect-resistance
     recipes-for-disaster
     days-of-war-nights-of-love
+    no-habra-muro-que-nos-pare
   ].map(&:freeze).freeze
 
   PUBLISHED_LETTERS_BOOK_SLUGS = %w[off-the-map].map(&:freeze).freeze

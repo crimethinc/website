@@ -7,7 +7,9 @@
     <div class="tool-front column column-one-quarter">
       <%= render_markdown "[[ #{book.front_image} #{book.front_image_description} #{book.path} ]]" %>
 
-      <div><%= button_to_buy_now price: book.price_in_cents, url: book.buy_url %></div>
+      <% if book.price_in_cents.present? %>
+        <div><%= button_to_buy_now price: book.price_in_cents, url: book.buy_url %></div>
+      <% end %>
     </div>
 
     <div class="tool-main column column-three-quarter">
