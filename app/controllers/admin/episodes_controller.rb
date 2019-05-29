@@ -51,10 +51,8 @@ module Admin
     end
 
     def set_episode
-      @episode = Episode.where(slug: params[:id])
+      @episode = Episode.find(params[:id])
       return redirect_to [:admin, :podcasts] if @episode.blank?
-
-      @episode = @episode.first
     end
 
     def episode_params
