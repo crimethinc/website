@@ -83,7 +83,7 @@ aside blockquote p {
 
 .accent a:link, .accent a:visited {
 	color:#FF2D55;
-}    
+}
 
 .accent a:hover, .accent a:active {
 	color: black;
@@ -92,7 +92,7 @@ aside blockquote p {
 
 .accent a:active {
 	color:black;
-} 
+}
 
 
 /*------------------GENERIC LINKS----------------------------------*/
@@ -104,7 +104,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -113,7 +113,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -132,7 +132,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -146,7 +146,7 @@ small a:hover, small a:active {
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -156,7 +156,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -189,12 +189,12 @@ small a:hover, small a:active {
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
+
 	.headerwrapper {
 		float: left;
 		width: 100%;
@@ -204,12 +204,12 @@ small a:hover, small a:active {
 		margin-bottom: -15px;
 		background-position:center top;
 	}
-	
+
 	.header {
 		padding-top: 98%;
 		padding-bottom: -1%;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 9.5vw;
@@ -218,38 +218,38 @@ small a:hover, small a:active {
 		width: 96%;
 		padding: 5% 2% 1% 2%;
 	}
-	
+
 	@media (min-width:320px) and (max-width:359px) {
 		h1 {
 			font-size: 30px;
 			font-size: 9.5vw;
 		}
 		}
-	
+
 	@media (min-width: 360px) and (max-width:379px) {
 		h1 {
 			font-size: 34px;
 			font-size: 9.5vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 384px) and (max-width:399px) {
 		h1 {
 			font-size: 36px;
 			font-size: 9.5vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 400px) and (max-width:599px) {
 		h1 {
 			font-size: 38px;
 			font-size: 9.5vw;
 		}
-		
+
 		}
-		
+
 	h4 {
 		font-size: 23px;
 		font-size: 7.1vw;
@@ -258,34 +258,34 @@ small a:hover, small a:active {
 		width: 96%;
 		padding: 2% 2% 5% 2%;
 	}
-	
+
 	aside blockquote {
 			font-size: 20px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 18px;
 		margin-top: 10px;
 	}
-	
+
 	.text {
 			padding-top: 30px;
 	}
-	
+
 	.first h5 {
 		margin: 25% 0 0 4%;
 		font-size: 96px;
 		font-size: 16vw;
 		width: 96%;
 	}
-	
+
 }
 
 
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/destination/images/header2000.jpg');
@@ -293,7 +293,7 @@ small a:hover, small a:active {
 		padding-bottom: 64%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 5vw;
 		margin-left: 0%;
@@ -305,7 +305,7 @@ small a:hover, small a:active {
 		-moz-border-radius: 0px 20px 0px 0px;
 		-webkit-border-radius: 0px 20px 0px 0px;
 	}
-	
+
 	h4 {
 		font-size: 3.7vw;
 		margin-left: 0%;
@@ -317,29 +317,29 @@ small a:hover, small a:active {
 		-moz-border-radius: 0px 0px 20px 0px;
 		-webkit-border-radius: 0px 0px 20px 0px;
 	}
-	
+
 	aside blockquote {
 		font-size: 25px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 20px;
 		margin-top: 18px;
 	}
-	
+
 	.first h5 {
 		margin: 25% 0 0 4%;
 		font-size: 96px;
 		font-size: 16vw;
 		width: 96%;
 	}
-		
+
 }
 
 
 /*-------------DESKTOP TINY CSS------------------*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/destination/images/header2000.jpg');
@@ -347,7 +347,7 @@ small a:hover, small a:active {
 		padding-bottom: 64%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 5vw;
 		margin-left: 0%;
@@ -359,7 +359,7 @@ small a:hover, small a:active {
 		-moz-border-radius: 0px 20px 0px 0px;
 		-webkit-border-radius: 0px 20px 0px 0px;
 	}
-	
+
 	h4 {
 		font-size: 3.7vw;
 		margin-left: 0%;
@@ -371,42 +371,42 @@ small a:hover, small a:active {
 		-moz-border-radius: 0px 0px 20px 0px;
 		-webkit-border-radius: 0px 0px 20px 0px;
 	}
-	
+
 	aside {
 		width: 770px;
 	}
-	
+
 	aside blockquote {
 		font-size: 25px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 22px;
 		margin-top: 10px;
 	}
-	
+
 	.first h5 {
 		margin: 300px 0px 0px 80px;
 		font-size: 160px;
 	}
-	
+
 	.longcaption {
 		height: auto;
 		padding-bottom: 8px;
 		text-align: center;
 	}
-	
+
 	/*div.smallimagecaption {
 		background-color: black;
 		margin-top: -30px;
 		padding-left: 8px;
 		width: 662px;
 	}*/
-	
+
 	.bottompadded {
 		padding-bottom: 30px;
 	}
-	
+
 	.bottompaddedlong {
 		padding-bottom: 60px;
 	}
@@ -416,7 +416,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/destination/images/header2000.jpg');
@@ -424,7 +424,7 @@ small a:hover, small a:active {
 		padding-bottom: 64%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 4vw;
 		margin-left: 0%;
@@ -436,7 +436,7 @@ small a:hover, small a:active {
 		-moz-border-radius: 0px 20px 0px 0px;
 		-webkit-border-radius: 0px 20px 0px 0px;
 	}
-	
+
 	h4 {
 		font-size: 3vw;
 		margin-left: 0%;
@@ -448,42 +448,42 @@ small a:hover, small a:active {
 		-moz-border-radius: 0px 0px 20px 0px;
 		-webkit-border-radius: 0px 0px 20px 0px;
 	}
-		
+
 	aside blockquote {
 		font-size: 20px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 18px;
 		margin-top: 10px;
 	}
-	
+
 	.first h5 {
 		margin: 360px 0px 0px 80px;
 		font-size: 200px;
 	}
-		
+
 	.longcaption {
 		height: auto;
 		padding-bottom: 8px;
 		text-align: center;
 	}
-	
+
 	.smallimagecaption p {
 		margin: 7px 5px 0 0;
 	}
-	
+
 	/*div.smallimagecaption {
 		background-color: black;
 		margin-top: -30px;
 		padding-left: 8px;
 		width: 537px;
 	}*/
-	
+
 	.bottompadded {
 		padding-bottom: 30px;
 	}
-	
+
 	.bottompaddedlong {
 		padding-bottom: 60px;
 	}
@@ -493,7 +493,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/destination/images/header2560.jpg');
@@ -501,7 +501,7 @@ small a:hover, small a:active {
 		padding-bottom: 64%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 4vw;
 		margin-left: 0%;
@@ -513,7 +513,7 @@ small a:hover, small a:active {
 		-moz-border-radius: 0px 20px 0px 0px;
 		-webkit-border-radius: 0px 20px 0px 0px;
 	}
-	
+
 	h4 {
 		font-size: 3vw;
 		margin-left: 0%;
@@ -525,45 +525,45 @@ small a:hover, small a:active {
 		-moz-border-radius: 0px 0px 20px 0px;
 		-webkit-border-radius: 0px 0px 20px 0px;
 	}
-	
-	
+
+
 	aside blockquote {
 		font-size: 30px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 25px;
 		margin-top: 20px;
 	}
-	
+
 	.first h5 {
 		margin: 460px 0px 0px 80px;
 		font-size: 220px;
 	}
-		
+
 	.longcaption {
 		height: auto;
 		padding-bottom: 8px;
 		text-align: center;
 	}
-	
+
 	.bigimage img {
 		width: 1370px;
 	}
-	
+
 	/*div.smallimagecaption {
 		background-color: black;
 		margin-top: -30px;
 		padding-left: 8px;
 		width: 662px;
 	}*/
-	
+
 	.bottompadded {
 		padding-bottom: 30px;
 	}
-	
+
 	.bottompaddedlong {
 		padding-bottom: 60px;
 	}
-	
+
 }

@@ -22,7 +22,7 @@ h2 {
 	width: 88%;
 	padding: 0 5% 0 7%;
 	}
-	
+
 h3 {
 	color: #444F61;
 	text-align: left;
@@ -134,7 +134,7 @@ aside {
 
 aside blockquote {
 	font-family: "quatro-slab",serif;
-	font-weight: 100;	
+	font-weight: 100;
 	font-size: 45px;
 	line-height: .85em;
 }
@@ -148,12 +148,12 @@ small {
 	list-style-type: disc;
 	color: black;
 	}
-	
+
 .list p {
 	width: 100%;
 	padding: 0;
 }
-	
+
 ul {
 	list-style-type: disc;
 	color: black;
@@ -171,7 +171,7 @@ a {
 
 a:link, a:visited {
 	color:#009a3a;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -180,7 +180,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -219,11 +219,11 @@ small a:hover, small a:active {
   font: 400 14px/1.5em "pt-sans",sans-serif;
   text-indent: 0px;
   }
-  
+
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -241,8 +241,8 @@ small a:hover, small a:active {
 
 .footlink {
 	color: #FF2D55;
-	vertical-align: top; 
-	position: relative; 
+	vertical-align: top;
+	position: relative;
 	top: -0.3em;
 	font-size: 0.85em;
 	font-weight: 700;
@@ -250,7 +250,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -260,7 +260,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -268,7 +268,7 @@ small a:hover, small a:active {
 }
 
 .footreturn {
-	position: relative; 
+	position: relative;
 	top: .1em;
 }
 
@@ -340,7 +340,7 @@ nav {
 	letter-spacing: .05em;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 	float: left;
 	padding: 3px 0 10px 0;
 	text-align: center;
@@ -352,7 +352,7 @@ nav {
 
 #navlinks a:link, #navlinks a:visited {
 	color: white;
-}    
+}
 
 #navlinks a:hover, #navlinks a:active {
 	color: #34AADC;
@@ -371,7 +371,7 @@ nav {
 	letter-spacing: .05em;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 	float: left;
 	padding: 0;
 	text-align: center;
@@ -389,7 +389,7 @@ nav {
 	color: white;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 	letter-spacing: .05em;
 	height: 30px;
 	width: 91%;
@@ -422,7 +422,7 @@ nav {
 	color: white;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 }
 
 .menu {
@@ -433,13 +433,13 @@ nav {
 
 .searchglass {
 	padding: 0 12px 0 0;
-	position: relative; 
+	position: relative;
 	top: -0.075em;
 }
 
 .menusearch a:link, .menusearch a:visited {
 	color: white;
-}    
+}
 
 .menusearch a:hover, .menusearch a:active {
 	color: white;
@@ -458,7 +458,7 @@ nav {
 		font-size: 119px;
 		font-size: 31vw;
 	}
-	
+
 	}
 
 @media (min-width: 384px) and (max-width:399px) {
@@ -466,7 +466,7 @@ nav {
 		font-size: 127px;
 		font-size: 31vw;
 	}
-	
+
 	}
 
 @media (min-width: 400px) and (max-width:599px) {
@@ -474,7 +474,7 @@ nav {
 		font-size: 159px;
 		font-size: 31vw;
 	}
-	
+
 	}
 
 footer {
@@ -508,7 +508,7 @@ footer {
 	margin: 12px 0 0 0;
 	list-style-type: none;
 	}
-	
+
 #moretexts a:hover, #moretexts a:active {
 	color: white;
 	text-shadow: none;
@@ -527,7 +527,7 @@ footer {
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
-	text-align: left;	
+	text-align: left;
 	color: white;
 }
 
@@ -543,7 +543,7 @@ footer {
 	margin: 0px 0 0 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 }
 
 .bookinfo h2 {
@@ -557,10 +557,10 @@ footer {
 	background-color: #bec0c2;
 	padding: 0 !important;
 	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg); 
+	-moz-transform: rotate(-3deg);
 	-ms-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);  
-	transform: rotate(-3deg);  
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
 	-webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
@@ -581,7 +581,7 @@ footer {
 
 #bookdisplay a:link, #bookdisplay a:visited {
 	color: white;
-}    
+}
 
 #bookdisplay a:hover, #bookdisplay a:active {
 	color: white;
@@ -614,7 +614,7 @@ footer {
 	font: 300 14px/1em "nimbus-sans",sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 }
 
 .video-container {
@@ -622,7 +622,7 @@ footer {
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
- 
+
 .video-container iframe,
 .video-container object,
 .video-container embed {

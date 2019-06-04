@@ -135,7 +135,7 @@ body {
 .subnav a:link {
 	color: #ff9900;
 }
-.subnav a:hover { 
+.subnav a:hover {
 	color: #AAE1FF;
 }
 
@@ -219,7 +219,7 @@ body {
 	padding-top: 4px;
 	padding-bottom: 4px;
 	border-bottom: 1px solid #A09899;
-	
+
 }
 
 .threemenu a:visited {
@@ -311,7 +311,7 @@ body {
 	background-color: #FFFFFF;
 	border: 1px solid #CCCCCC;
 	}
-	
+
 .threeleft h2 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 30px;
@@ -347,7 +347,7 @@ body {
 .threeleft a:visited {
 	color: #686800;
 }
-	
+
 .threeleft a:link {
 	color: #898900;
 }
@@ -379,7 +379,7 @@ body {
 	padding-left: 30px;
 	clear: both;
 	}
-	
+
 .readingtext p {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 13px;
@@ -392,7 +392,7 @@ body {
 	padding-left: 5px;
 	line-height: 20px;
 	}
-	
+
 .readingtext h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 30px;
@@ -405,7 +405,7 @@ body {
 	line-height: 33px;
 	font-weight: bold;
 	}
-	
+
 .readingtext h2 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 24px;
@@ -419,7 +419,7 @@ body {
 	line-height: 27px;
 	font-weight: bold;
 	}
-	
+
 .readingtext h3 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
@@ -433,7 +433,7 @@ body {
 	line-height: 25px;
 	font-weight: bold;
 	}
-	
+
 .readingtext h4 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 13px;
@@ -447,7 +447,7 @@ body {
 	line-height: 13px;
 	font-weight: bold;
 	}
-	
+
 
 .readingtext h5 {
 	font-family: Helvetica, Arial, sans-serif;
@@ -463,7 +463,7 @@ body {
 	text-align: right;
 	font-style: italic;
 	}
-	
+
 .readingtext h6 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 11px;
@@ -476,7 +476,7 @@ body {
 	line-height: 15px;
 	font-weight: normal;
 	}
-	
+
 .readingtext li {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
@@ -490,7 +490,7 @@ body {
 	padding-left: 0px;
 	line-height: 16px;
 	}
-	
+
 .readingtext img {
 	margin-top: 10px !important;
 	margin-bottom: 15px;
@@ -501,7 +501,7 @@ body {
 	padding-right: 15px;
 	border: 0px;
 	}
-	
+
 .readinggallery img {
 	margin-top: 8px !important;
 	margin-bottom: 0px;
@@ -513,7 +513,7 @@ body {
 	padding-right: 7px;
 	border: 0px;
 	}
-	
+
 .readingtext a {
 	text-decoration: none;
 }
@@ -533,7 +533,7 @@ body {
 .readingtext a:active {
 	color: #C8C800;
 }
-		
+
 a.footnote {
 	display: inline;
 	position:relative;
@@ -565,8 +565,8 @@ a.footnote span {
 	font-size: 10px;
 	line-height: 12px;
 }
-	
-	
+
+
 
 
 /* ######################## FOOTER, footer with notes ###################### */

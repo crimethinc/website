@@ -84,7 +84,7 @@ body, html {
 .headercart a:link {
 	color: #ff9900;
 }
-.headercart a:hover { 
+.headercart a:hover {
 	color: #AAE1FF;
 }
 
@@ -166,7 +166,7 @@ body, html {
 .subnav a:link {
 	color: #ff9900;
 }
-.subnav a:hover { 
+.subnav a:hover {
 	color: #AAE1FF;
 }
 
@@ -248,7 +248,7 @@ h4 {
 	-webkit-box-shadow: 1px 1px 5px #2b2b2b;
 	box-shadow: 1px 1px 5px #2b2b2b;*/
 	}
-	
+
 .halfboxtop {
 	margin: 10px 0px 0px 25px;
 	padding: 15px 15px 0px;
@@ -263,8 +263,8 @@ h4 {
 	-webkit-box-shadow: 1px 1px 5px #2b2b2b;
 	box-shadow: 1px 1px 5px #2b2b2b;*/
 	}
-	
-	
+
+
 .halfbox h1, .halfboxtop h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 15px;
@@ -372,7 +372,7 @@ h4 {
 	-webkit-box-shadow: 1px 1px 5px #2b2b2b;
 	box-shadow: 1px 1px 5px #2b2b2b;*/
 	}
-	
+
 .centerboxad {
 	margin: 25px 0px 0px 0px;
 	padding: 5px 15px 0px;
@@ -386,8 +386,8 @@ h4 {
 	-webkit-box-shadow: 1px 1px 5px #2b2b2b;
 	box-shadow: 1px 1px 5px #2b2b2b;*/
 	}
-	
-	
+
+
 .centerbox h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 15px;

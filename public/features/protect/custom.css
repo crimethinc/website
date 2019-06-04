@@ -45,7 +45,7 @@ aside blockquote {
 
 .accent a:link, .accent a:visited {
 	color:#009a3a;
-}    
+}
 
 .accent a:hover, .accent a:active {
 	color: black;
@@ -54,7 +54,7 @@ aside blockquote {
 
 .accent a:active {
 	color:black;
-} 
+}
 
 
 /*------------------GENERIC LINKS----------------------------------*/
@@ -66,7 +66,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -75,7 +75,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -94,7 +94,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -108,7 +108,7 @@ small a:hover, small a:active {
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -118,7 +118,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -149,12 +149,12 @@ small a:hover, small a:active {
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
+
 	.headerwrapper {
 		float: left;
 		width: 100%;
@@ -164,7 +164,7 @@ small a:hover, small a:active {
 		margin-bottom: -15px;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 14vw;
@@ -178,51 +178,51 @@ small a:hover, small a:active {
 		text-align: center;
 		color: white;
 	}
-	
+
 	@media (min-width:320px) and (max-width:359px) {
 		h1 {
 			font-size: 106px;
 			font-size: 14vw;
 		}
 		}
-	
+
 	@media (min-width: 360px) and (max-width:379px) {
 		h1 {
 			font-size: 119px;
 			font-size: 14vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 384px) and (max-width:399px) {
 		h1 {
 			font-size: 127px;
 			font-size: 14vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 400px) and (max-width:599px) {
 		h1 {
 			font-size: 159px;
 			font-size: 14vw;
 		}
-		
+
 		}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 5% 0 7%
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 14vw;
@@ -235,11 +235,11 @@ small a:hover, small a:active {
 		background-color: white;
 		text-align: center;
 	}
-	
+
 	.text {
 			padding-top: 30px;
 		}
-		
+
 	aside img {
 		width: 75%;
 		margin-left: auto;
@@ -252,7 +252,7 @@ small a:hover, small a:active {
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
+
 	.headerwrapper {
 		float: left;
 		width: 100%;
@@ -262,7 +262,7 @@ small a:hover, small a:active {
 		margin-bottom: 30px;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 14vw;
@@ -276,20 +276,20 @@ small a:hover, small a:active {
 		text-align: center;
 		color: white;
 	}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 10% 0 11%;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 14vw;
@@ -302,7 +302,7 @@ small a:hover, small a:active {
 		background-color: white;
 		text-align: center;
 	}
-	
+
 	aside img {
 		width: 50%;
 		margin-left: auto;
@@ -315,7 +315,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP TINY CSS------------------*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/protect/images/header2000.jpg');
@@ -324,7 +324,7 @@ small a:hover, small a:active {
 		background-position:center top;
 		/*overflow: hidden;*/
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 4.5vw;
@@ -337,19 +337,19 @@ small a:hover, small a:active {
 		background-color: black;
 		text-align: right;
 	}
-		
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 4.5vw;
@@ -362,11 +362,11 @@ small a:hover, small a:active {
 		background-color: white;
 		text-align: left;
 	}
-	
+
 	aside blockquote {
 		font-size: 6.1vw;
 	}
-	
+
 	aside img {
 		width: 175px;
 		margin-top: -200px;
@@ -379,7 +379,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/protect/images/header2000.jpg');
@@ -388,7 +388,7 @@ small a:hover, small a:active {
 		background-position:center top;
 		/*overflow: hidden;*/
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 4.8vw;
@@ -401,19 +401,19 @@ small a:hover, small a:active {
 		background-color: black;
 		text-align: right;
 	}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 4.8vw;
@@ -426,11 +426,11 @@ small a:hover, small a:active {
 		background-color: white;
 		text-align: left;
 	}
-	
+
 	aside blockquote {
 		font-size: 85px;
 	}
-	
+
 	aside img {
 		width: 250px;
 		margin-top: -100px;
@@ -441,7 +441,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/protect/images/header2560.jpg');
@@ -450,7 +450,7 @@ small a:hover, small a:active {
 		background-position:center top;
 		/*overflow: hidden;*/
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 4.8vw;
@@ -463,19 +463,19 @@ small a:hover, small a:active {
 		background-color: black;
 		text-align: right;
 	}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 4.8vw;
@@ -488,11 +488,11 @@ small a:hover, small a:active {
 		background-color: white;
 		text-align: left;
 	}
-	
+
 	aside blockquote {
 		font-size: 95px;
 	}
-	
+
 	aside img {
 		width: 250px;
 		margin-top: -100px;

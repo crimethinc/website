@@ -10,7 +10,7 @@ The tactics could be extended to any other sectors of the economy.&rdquo;<em> <b
 <br />
 <h4>&ldquo;Where all animal welfare and most animal rights groups insist on working within the legal boundaries of society, animal liberationists argue that the state is irrevocably corrupt and that legal approaches alone will never win justice for the animals.&rdquo;<em> <br />
 <div style="text-align: right">&ndash;ALF Press Office</div></em></h4>
-<p>&nbsp;</p> 
+<p>&nbsp;</p>
 <p>Over the past decade, <a href="http://en.wikipedia.org/wiki/Stop_Huntingdon_Animal_Cruelty" target="_blank">Stop Huntingdon Animal Cruelty&mdash;SHAC</a>&mdash;has waged an international direct action campaign against <a href="http://en.wikipedia.org/wiki/Huntingdon_Life_Sciences" target="_blank">Huntingdon Life Sciences</a>, Europe&rsquo;s largest contract animal testing corporation. By targeting investors and business partners of HLS, SHAC repeatedly brought HLS to the brink of collapse, and it took direct assistance from the British government and an international counter-campaign of severe legal repression to keep the corporation afloat.</p>
 <p> In the wake of this campaign, there was talk of applying the SHAC model in other contexts, such as environmental defense and anti-war organizing. But what is the SHAC model, precisely? What are its strengths and limitations? Is it, in fact, an effective model? If so, for what?</p>
 <h3>First, a Glossary of Terms</h3>

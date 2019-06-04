@@ -88,7 +88,7 @@ aside blockquote em {
 
 .accent a:link, .accent a:visited {
 	color:#FF2D55;
-}    
+}
 
 .accent a:hover, .accent a:active {
 	color: black;
@@ -97,7 +97,7 @@ aside blockquote em {
 
 .accent a:active {
 	color:black;
-} 
+}
 
 
 /*------------------GENERIC LINKS----------------------------------*/
@@ -109,7 +109,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -118,7 +118,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -137,7 +137,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -151,7 +151,7 @@ small a:hover, small a:active {
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -161,7 +161,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -193,12 +193,12 @@ small a:hover, small a:active {
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
+
 	.headerwrapper {
 		float: left;
 		width: 100%;
@@ -208,12 +208,12 @@ small a:hover, small a:active {
 		margin-bottom: -15px;
 		background-position:center top;
 	}
-	
+
 	.header {
 		padding-top: 69%;
 		padding-bottom: 5%;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 10vw;
@@ -221,52 +221,52 @@ small a:hover, small a:active {
 		margin-top: 0;
 		width: 60%;
 	}
-	
+
 	@media (min-width:320px) and (max-width:359px) {
 		h1 {
 			font-size: 32px;
 			font-size: 10vw;
 		}
 		}
-	
+
 	@media (min-width: 360px) and (max-width:379px) {
 		h1 {
 			font-size: 36px;
 			font-size: 10vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 384px) and (max-width:399px) {
 		h1 {
 			font-size: 38px;
 			font-size: 10vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 400px) and (max-width:599px) {
 		h1 {
 			font-size: 40px;
 			font-size: 10vw;
 		}
-		
+
 		}
-		
+
 	h2 {
 		font-size: 25px;
 		font-size: 6vw;
 		margin: 50px 0 20px 0;
 		padding: 0 5% 0 7%
 	}
-	
+
 	h3 {
 		font-size: 22px;
 		font-size: 5.5vw;
 		margin: 50px 0 20px 0;
 		padding: 0 5% 0 7%
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 7vw;
@@ -275,41 +275,41 @@ small a:hover, small a:active {
 		width: 83%;
 		padding: 1%;
 	}
-	
+
 	h6 {
 		font-size: 20px;
 		font-size: 5vw;
 		margin: 20px 0 20px 0;
 		padding: 0 10% 4% 11%;
 	}
-	
+
 	aside blockquote {
 			font-size: 30px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 18px;
 		margin-top: 10px;
 	}
-	
+
 	.text {
 			padding-top: 30px;
 	}
-	
+
 	.first h5 {
 		margin: 4% 0 0 1.5%;
 		font-size: 28px;
 		font-size: 8.5vw;
 		width: 98%;
 	}
-	
+
 }
 
 
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/slovenia/images/header2000.jpg');
@@ -317,7 +317,7 @@ small a:hover, small a:active {
 		padding-bottom: 56%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 7vw;
@@ -325,20 +325,20 @@ small a:hover, small a:active {
 		margin-top: 35%;
 		width: 60%;
 	}
-	
+
 	h2 {
 		font-size: 45px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 10% 0 11%;
 	}
-	
+
 	h3 {
 		font-size: 43px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 4vw;
@@ -346,36 +346,36 @@ small a:hover, small a:active {
 		margin-top: 1%;
 		padding: 1%;
 	}
-	
+
 	h6 {
 		font-size: 30px;
 		font-size: 5vw;
 		margin: 20px 0 20px 0;
 		padding: 2% 10% 4% 11%;
 	}
-	
+
 	aside blockquote {
 		font-size: 55px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 20px;
 		margin-top: 18px;
 	}
-	
+
 	.first h5 {
 		margin: 3% 0 0 1.5%;
 		font-size: 54px;
 		font-size: 9vw;
 		width: 98%;
 	}
-		
+
 }
 
 
 /*-------------DESKTOP TINY CSS------------------*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/slovenia/images/header2000.jpg');
@@ -383,7 +383,7 @@ small a:hover, small a:active {
 		padding-bottom: 56%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 7vw;
@@ -391,19 +391,19 @@ small a:hover, small a:active {
 		margin-top: 30%;
 		width: 60%;
 	}
-	
+
 	h2 {
 		font-size: 45px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 43px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 4vw;
@@ -411,50 +411,50 @@ small a:hover, small a:active {
 		margin-top: 1%;
 		padding: 1%;
 	}
-	
-	
-	
+
+
+
 	h6 {
 		font-size: 39px;
 		margin: 6% 0 6% 0;
 	}
-	
+
 	aside {
 		width: 770px;
 	}
-	
+
 	aside blockquote {
 		font-size: 75px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 22px;
 		margin-top: 10px;
 	}
-	
+
 	.first h5 {
 		margin: 30px 0px 0px 45px;
 		font-size: 90px;
 		width: 900px;
 	}
-	
+
 	.longcaption {
 		height: auto;
 		padding-bottom: 8px;
 		text-align: center;
 	}
-	
+
 	div.smallimagecaption {
 		background-color: black;
 		margin-top: -30px;
 		padding-left: 8px;
 		width: 662px;
 	}
-	
+
 	.bottompadded {
 		padding-bottom: 30px;
 	}
-	
+
 	.bottompaddedlong {
 		padding-bottom: 60px;
 	}
@@ -464,7 +464,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/slovenia/images/header2000.jpg');
@@ -472,7 +472,7 @@ small a:hover, small a:active {
 		padding-bottom: 56%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 5vw;
@@ -480,19 +480,19 @@ small a:hover, small a:active {
 		margin-top: 35%;
 		width: 60%;
 	}
-	
+
 	h2 {
 		font-size: 45px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 43px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 3vw;
@@ -500,49 +500,49 @@ small a:hover, small a:active {
 		margin-top: 1%;
 		padding: 1%;
 	}
-	
-	
+
+
 	h6 {
 		font-size: 30px;
 		margin: 6% 0 6% 0;
 	}
-		
+
 	aside blockquote {
 		font-size: 50px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 18px;
 		margin-top: 10px;
 	}
-	
+
 	.first h5 {
 		margin: 80px 0px 0px 60px;
 		font-size: 100px;
 		width: 1100px;
 	}
-		
+
 	.longcaption {
 		height: auto;
 		padding-bottom: 8px;
 		text-align: center;
 	}
-	
+
 	.smallimagecaption p {
 		margin: 7px 5px 0 0;
 	}
-	
+
 	div.smallimagecaption {
 		background-color: black;
 		margin-top: -30px;
 		padding-left: 8px;
 		width: 537px;
 	}
-	
+
 	.bottompadded {
 		padding-bottom: 30px;
 	}
-	
+
 	.bottompaddedlong {
 		padding-bottom: 60px;
 	}
@@ -552,7 +552,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/slovenia/images/header2560.jpg');
@@ -560,7 +560,7 @@ small a:hover, small a:active {
 		padding-bottom: 56%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 5vw;
@@ -568,19 +568,19 @@ small a:hover, small a:active {
 		margin-top: 35%;
 		width: 60%;
 	}
-	
+
 	h2 {
 		font-size: 45px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 43px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 200px;
 		font-size: 3vw;
@@ -588,49 +588,49 @@ small a:hover, small a:active {
 		margin-top: 1%;
 		padding: 1%;
 	}
-	
+
 	h6 {
 		font-size: 35px;
 		margin: 5% 0 5% 0;
 	}
-	
+
 	aside blockquote {
 		font-size: 80px;
 	}
-	
+
 	aside blockquote p {
 		font-size: 25px;
 		margin-top: 20px;
 	}
-	
+
 	.first h5 {
 		margin: 60px 80px 0px 80px;
 		font-size: 120px;
 	}
-		
+
 	.longcaption {
 		height: auto;
 		padding-bottom: 8px;
 		text-align: center;
 	}
-	
+
 	.bigimage img {
 		width: 1370px;
 	}
-	
+
 	div.smallimagecaption {
 		background-color: black;
 		margin-top: -30px;
 		padding-left: 8px;
 		width: 662px;
 	}
-	
+
 	.bottompadded {
 		padding-bottom: 30px;
 	}
-	
+
 	.bottompaddedlong {
 		padding-bottom: 60px;
 	}
-	
+
 }

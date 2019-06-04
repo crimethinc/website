@@ -44,7 +44,7 @@ h4 {
 
 .accent a:link, .accent a:visited {
 	color:#009a3a;
-}    
+}
 
 .accent a:hover, .accent a:active {
 	color: black;
@@ -53,7 +53,7 @@ h4 {
 
 .accent a:active {
 	color:black;
-} 
+}
 
 
 /*------------------GENERIC LINKS----------------------------------*/
@@ -65,7 +65,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -74,7 +74,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -93,7 +93,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -103,7 +103,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -117,7 +117,7 @@ small a:hover, small a:active {
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -128,13 +128,13 @@ small a:hover, small a:active {
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 /*@media (min-device-width:200px) and (max-device-width:599px) OR  (max-width:599px) ORIGINAL COMBINED {*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
+
 	.headerwrapper {
 		float: left;
 		width: 100%;
@@ -144,7 +144,7 @@ small a:hover, small a:active {
 		margin-bottom: 5px;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 48px;
 		font-size: 14.5vw;
@@ -152,51 +152,51 @@ small a:hover, small a:active {
 		margin-top: 4%;
 		letter-spacing: -.065em;
 	}
-	
+
 	@media (min-width:320px) and (max-width:359px) {
 		h1 {
 			font-size: 46px;
 			font-size: 14.5vw;
 		}
 		}
-	
+
 	@media (min-width: 360px) and (max-width:379px) {
 		h1 {
 			font-size: 52px;
 			font-size: 14.5vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 384px) and (max-width:399px) {
 		h1 {
 			font-size: 55px;
 			font-size: 14.5vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 400px) and (max-width:599px) {
 		h1 {
 			font-size: 58px;
 			font-size: 14.5vw;
 		}
-		
+
 		}
-	
+
 	h2 {
 		font-size: 30px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 5% 0 7%
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 6vw;
@@ -208,7 +208,7 @@ small a:hover, small a:active {
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson/images/force2000.jpg');
@@ -216,7 +216,7 @@ small a:hover, small a:active {
 		padding-bottom: 39%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 48px;
 		font-size: 8vw;
@@ -224,20 +224,20 @@ small a:hover, small a:active {
 		margin-top: .5%;
 		letter-spacing: -.08em;
 	}
-	
+
 	h2 {
 		font-size: 35px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 10% 0 11%;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 12px;
 		font-size: 2vw;
@@ -250,7 +250,7 @@ small a:hover, small a:active {
 /*-------------DESKTOP TINY CSS------------------*/
 /*@media (min-width:1024px) and (max-width:1249px) OR (min-device-width:600px) and (max-device-width:1199px) and (orientation:landscape) {*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson/images/force2000.jpg');
@@ -258,7 +258,7 @@ small a:hover, small a:active {
 		padding-bottom: 39%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 82px;
 		font-size: 7.5vw;
@@ -266,19 +266,19 @@ small a:hover, small a:active {
 		margin-top: 1%;
 		letter-spacing: -.06em;
 	}
-	
+
 	h2 {
 		font-size: 38px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 21px;
 		font-size: 2vw;
@@ -290,7 +290,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson/images/force2000.jpg');
@@ -298,7 +298,7 @@ small a:hover, small a:active {
 		padding-bottom: 39%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 88px;
 		font-size: 8vw;
@@ -306,19 +306,19 @@ small a:hover, small a:active {
 		margin-top: 3%;
 		letter-spacing: -.04em;
 	}
-	
+
 	h2 {
 		font-size: 34px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 2vw;
@@ -330,7 +330,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson/images/force2560.jpg');
@@ -338,7 +338,7 @@ small a:hover, small a:active {
 		padding-bottom: 39%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 117px;
 		font-size: 8vw;
@@ -346,19 +346,19 @@ small a:hover, small a:active {
 		margin-top: 3%;
 		letter-spacing: -.04em;
 	}
-	
+
 	h2 {
 		font-size: 42px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 2vw;

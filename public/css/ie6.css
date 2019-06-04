@@ -80,7 +80,7 @@ body {
 .headercart a:link {
 	color: #ff9900;
 }
-.headercart a:hover { 
+.headercart a:hover {
 	color: #AAE1FF;
 }
 
@@ -162,7 +162,7 @@ body {
 .subnav a:link {
 	color: #ff9900;
 }
-.subnav a:hover { 
+.subnav a:hover {
 	color: #AAE1FF;
 }
 
@@ -239,7 +239,7 @@ h4 {
 	border: 1px solid #CCCCCC;
 	display: inline;
 	}
-	
+
 .halfboxtop {
 	margin: 10px 0px 0px 25px;
 	padding: 15px 15px 0px;
@@ -249,8 +249,8 @@ h4 {
 	border: 1px solid #CCCCCC;
 	display: inline;
 	}
-	
-	
+
+
 .halfbox h1, .halfboxtop h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 15px;
@@ -525,7 +525,7 @@ h4 {
 	border: 1px solid #CCCCCC;
 	display: inline;
 }
-	
+
 .prime2 {
 	margin: 25px 0px 0px 25px;
 	padding: 15px 15px 0px;
@@ -535,7 +535,7 @@ h4 {
 	border: 1px solid #CCCCCC;
 	display: inline;
 	}
-	
+
 .prime2top {
 	margin: 10px 0px 0px 25px;
 	padding: 15px 15px 0px;
@@ -545,8 +545,8 @@ h4 {
 	border: 1px solid #CCCCCC;
 	display: inline;
 	}
-	
-	
+
+
 .prime2photogallery {
 	margin: 25px 0px 0px 25px;
 	padding: 13px 0px 0px 13px;
@@ -556,7 +556,7 @@ h4 {
 	border: 1px solid #CCCCCC;
 	display: inline;
 	}
-	
+
 .prime2photogallery img {
 	margin-top: 0px !important;
 	padding-top: 0px;
@@ -568,20 +568,20 @@ h4 {
 
 .primetwocolumnleft {
 	float: left;
-	width: 150px;	
+	width: 150px;
 }
 
 .primetwocolumnright {
 	float: right;
 	width: 150px;
 }
-	
+
 .list p {
 	font-size: 10px !important;
 	line-height: 13px !important;
 	margin-top: -2px;
-}	
-	
+}
+
 .prime1 h1, .prime2 h1, .prime1top h1, .prime2top h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 15px;
@@ -809,7 +809,7 @@ h4 {
 	padding-top: 4px;
 	padding-bottom: 4px;
 	border-bottom: 1px solid #A09899;
-	
+
 }
 
 .threemenu a:visited {
@@ -895,7 +895,7 @@ h4 {
 	background-color: #FFFFFF;
 	border: 1px solid #CCCCCC;
 	}
-	
+
 .threeleft h2 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 30px;
@@ -931,7 +931,7 @@ h4 {
 .threeleft a:visited {
 	color: #686800;
 }
-	
+
 .threeleft a:link {
 	color: #898900;
 }
@@ -953,8 +953,8 @@ h4 {
 	border: 1px solid #CCCCCC;
 	display: inline;
 	}
-	
-	
+
+
 .threeright h1, .threemainright h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 15px;
@@ -1365,7 +1365,7 @@ a.ups {
 }
 
 a.ups:hover {
-  z-index:51; 
+  z-index:51;
   text-transform: none;
 }
 
@@ -1413,7 +1413,7 @@ a.ups:hover img {
 	clear: both;
 	display: inline;
 	}
-	
+
 .readingtext p {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 13px;
@@ -1426,7 +1426,7 @@ a.ups:hover img {
 	padding-left: 5px;
 	line-height: 20px;
 	}
-	
+
 .readingtext h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 30px;
@@ -1439,7 +1439,7 @@ a.ups:hover img {
 	line-height: 33px;
 	font-weight: bold;
 	}
-	
+
 .readingtext h2 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 24px;
@@ -1453,7 +1453,7 @@ a.ups:hover img {
 	line-height: 27px;
 	font-weight: bold;
 	}
-	
+
 .readingtext h3 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
@@ -1467,7 +1467,7 @@ a.ups:hover img {
 	line-height: 25px;
 	font-weight: bold;
 	}
-	
+
 .readingtext h4 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 13px;
@@ -1481,7 +1481,7 @@ a.ups:hover img {
 	line-height: 13px;
 	font-weight: bold;
 	}
-	
+
 
 .readingtext h5 {
 	font-family: Helvetica, Arial, sans-serif;
@@ -1497,7 +1497,7 @@ a.ups:hover img {
 	text-align: right;
 	font-style: italic;
 	}
-	
+
 .readingtext h6 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 11px;
@@ -1510,7 +1510,7 @@ a.ups:hover img {
 	line-height: 15px;
 	font-weight: normal;
 	}
-	
+
 .readingtext li {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
@@ -1524,7 +1524,7 @@ a.ups:hover img {
 	padding-left: 0px;
 	line-height: 16px;
 	}
-	
+
 .readingtext img {
 	margin-top: 10px !important;
 	margin-bottom: 15px;
@@ -1535,7 +1535,7 @@ a.ups:hover img {
 	padding-right: 15px;
 	border: 0px;
 	}
-	
+
 .readinggallery img {
 	margin-top: 8px !important;
 	margin-bottom: 0px;
@@ -1547,7 +1547,7 @@ a.ups:hover img {
 	padding-right: 7px;
 	border: 0px;
 	}
-	
+
 .readingtext a {
 	text-decoration: none;
 }
@@ -1567,7 +1567,7 @@ a.ups:hover img {
 .readingtext a:active {
 	color: #C8C800;
 }
-	
+
 a.footnote {
 	position:relative;
 	z-index:50;
@@ -1580,7 +1580,7 @@ a.footnote {
 }
 
 a.footnote:hover {
-  z-index:51; 
+  z-index:51;
   text-transform: none;
 }
 
@@ -1609,7 +1609,7 @@ a.footnote:hover span {
 #footnoteprint {
 	display: inline;
 }
-	
+
 
 
 /* ######################## FOOTER, footer with notes ###################### */
@@ -1673,10 +1673,10 @@ a.footnote:hover span {
 #imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%	; }
 
 #imageData{	padding:0 10px; color: #666; }
-#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }
 #imageData #caption{ font-weight: bold;	}
-#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
-#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}	 	
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}
 
 #overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }
 

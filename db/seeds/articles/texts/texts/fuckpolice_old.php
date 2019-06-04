@@ -1,6 +1,6 @@
 <h1>Why Fuck the Police</h1>
 <p align="center"><a href="/tools/stickers.html"><img src="/texts/images/police.jpg" width="500" height="178"></a></p>
-<h5> (or if you are ready to jump right in, 
+<h5> (or if you are ready to jump right in,
 <br />
 go straight to <a href="#how">How to Fuck the Police</a>)</h5>
 <p>Criticism of opposition to the police usually falls into one of five categories. The first common argument is that the police, as our fellow workers, are also exploited members of the proletariat, and should therefore be our allies. Unfortunately, there is a vast gap between &ldquo;should&rdquo; and &ldquo;is.&rdquo; The police exist to enforce the will of the powerful; anyone who has not had a bad experience with them is likely either privileged or submissive. Today&rsquo;s police officers, at least in North America, know exactly what they&rsquo;re getting into when they join the force; people in uniform don&rsquo;t just get cats out of trees in this country. Yes, most take the job because of what they feel to be economic necessity, but needing a paycheck is no excuse for obeying orders to evict families, harass young men of color, or pepper spray demonstrators; those whose consciences can be bought are everyone else&rsquo;s enemies, not potential allies.</p>
@@ -16,7 +16,7 @@ go straight to <a href="#how">How to Fuck the Police</a>)</h5>
 <h1>How to  Fuck
 the Police <br />
 </h1>
-<h2>On the Streets: 
+<h2>On the Streets:
 <br />
 Organizing a Copwatch Program</h2>
 <p> Copwatch groups seek to contest or at least limit police repression by directly monitoring police officers. Copwatch volunteers patrol the streets, observing police and recording their interactions with civilians. They often concentrate on areas of high police activity or to which known trouble-making cops are assigned. Copwatch groups also advise people of their rights and listen to their stories, and otherwise endeavor to undermine and thwart the police state.</p>

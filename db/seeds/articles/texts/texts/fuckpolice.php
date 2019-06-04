@@ -32,7 +32,7 @@ That being said, it&rsquo;s true that the police are no more integral to hierarc
 <p>In any case, it&rsquo;s not as if a police-free society is suddenly going to appear overnight just because someone spray-paints &ldquo;Fuck the Police&rdquo; on a wall. The protracted struggle it will take to free our communities from police repression will probably go on as long as it takes us to learn to coexist peacefully; a community that can&rsquo;t sort out its own conflicts can&rsquo;t expect to triumph against a more powerful occupying force. In the meantime, opposition to police should be seen as a rejection of one of the most egregious sources of oppressive violence, not an assertion that without police there would be none. But if we can ever defeat and disband the police, we will surely be able to defend ourselves against less organized threats.
 </p>
 <p align="center"><img src="/texts/images/police4.gif" width="500" height="457"></p>
-<p><strong>Resisting the police is violent&mdash;it makes you no better than them.</strong> According to this line of thinking, violence is inherently a form of domination, and thus inconsistent with opposing domination. Those who engage in violence play the same game as their oppressors, thereby losing from the outset. 
+<p><strong>Resisting the police is violent&mdash;it makes you no better than them.</strong> According to this line of thinking, violence is inherently a form of domination, and thus inconsistent with opposing domination. Those who engage in violence play the same game as their oppressors, thereby losing from the outset.
 </p>
 <p>This is dangerously simplistic. Is a woman who defends herself against a rapist no better than a rapist? Were slaves who revolted no better than slave-holders? There is such a thing as self-defense. In some cases, violence enforces power imbalances; in other cases, it challenges them. For people who still have faith in an authoritarian system or God, following the rules&mdash;whether legal or moral&mdash;is the top priority, at whatever cost: they believe they will be rewarded for doing so, regardless of what happens to others as a result. Whether such people call themselves conservatives or pacifists makes little difference in the end. On the other hand, for those of us who take responsibility for ourselves, the most important question is what will serve to make the world a better place. Sometimes this may include violence.
 </p>
@@ -49,7 +49,7 @@ That being said, it&rsquo;s true that the police are no more integral to hierarc
 <h1>How to  Fuck
 the Police <br />
 </h1>
-<h2>On the Streets: 
+<h2>On the Streets:
 <br />
 Organizing a Copwatch Program</h2>
 <p> Copwatch groups seek to contest or at least limit police repression by directly monitoring police officers. Copwatch volunteers patrol the streets, observing police and recording their interactions with civilians. They often concentrate on areas of high police activity or to which known trouble-making cops are assigned. Copwatch groups also advise people of their rights and listen to their stories, and otherwise endeavor to undermine and thwart the police state.</p>

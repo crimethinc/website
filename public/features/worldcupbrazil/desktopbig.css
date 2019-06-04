@@ -91,7 +91,7 @@ p {
   text-indent: 0px;
   margin: 7px 15px 0 0;
   }
-  
+
 .embedcaption {
 	width: 1370px;
 	height: 35px;
@@ -110,8 +110,8 @@ p {
   text-indent: 0px;
   margin: 7px 15px 0 0;
   }
-  
-  
+
+
 .smallimage img {
  	width: 670px;
  	margin: 30px 0px 20px 0px;
@@ -158,7 +158,7 @@ aside {
 
 aside blockquote {
 	font-family: "quatro-slab",serif;
-	font-weight: 100;	
+	font-weight: 100;
 	font-size: 85px;
 	line-height: .85em;
 }
@@ -186,7 +186,7 @@ a {
 
 a:link, a:visited {
 	color:#009a3a;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -195,7 +195,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -225,8 +225,8 @@ small a:hover, small a:active {
 
 .refnumber {
 	color: #FF2D55;
-	vertical-align: top; 
-	position: relative; 
+	vertical-align: top;
+	position: relative;
 	top: -0.3em;
 	font-size: 0.85em;
 	font-weight: 700;
@@ -302,14 +302,14 @@ nav {
 	letter-spacing: .15em;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 	float: left;
 	padding: 13px 0 0 5px;
 }
 
 #navlinks a:link, #navlinks a:visited {
 	color: white;
-}    
+}
 
 #navlinks a:hover, #navlinks a:active {
 	color: #34AADC;
@@ -337,7 +337,7 @@ nav {
 	color: white;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 	letter-spacing: .15em;
 	height: 30px;
 	width: 140px;
@@ -391,16 +391,16 @@ footer {
 	margin: 12px 0 0 0;
 	list-style-type: none;
 	}
-	
+
 #moretexts a:link, #moretexts a:visited {
 	color:#34AADC;
-}   
+}
 
 #moretexts a:hover, #moretexts a:active {
 	color: white;
 	text-shadow: none;
 	}
-		
+
 #bookdisplay {
 	width: 1270px;
 	margin: 0;
@@ -414,7 +414,7 @@ footer {
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
-	text-align: left;	
+	text-align: left;
 	color: white;
 }
 
@@ -438,7 +438,7 @@ footer {
 	margin: 10px 0 0 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 }
 
 .bookinfo h2 {
@@ -452,10 +452,10 @@ footer {
 	background-color: #bec0c2;
 	padding: 0 !important;
 	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg); 
+	-moz-transform: rotate(-3deg);
 	-ms-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);  
-	transform: rotate(-3deg);  
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
 	-webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
@@ -476,7 +476,7 @@ footer {
 
 #bookdisplay a:link, #bookdisplay a:visited {
 	color: white;
-}    
+}
 
 #bookdisplay a:hover, #bookdisplay a:active {
 	color: white;
@@ -509,7 +509,7 @@ footer {
 	font: 300 19px/1em "nimbus-sans",sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;	
+	-o-font-smoothing: antialiased;
 }
 
 #footercredits br {
@@ -521,7 +521,7 @@ footer {
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
- 
+
 .video-container iframe,
 .video-container object,
 .video-container embed {

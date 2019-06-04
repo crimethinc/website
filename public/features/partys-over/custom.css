@@ -50,7 +50,7 @@ h5 {
 
 .accent a:link, .accent a:visited {
 	color:#009a3a;
-}    
+}
 
 .accent a:hover, .accent a:active {
 	color: black;
@@ -59,7 +59,7 @@ h5 {
 
 .accent a:active {
 	color:black;
-} 
+}
 
 
 /*------------------GENERIC LINKS----------------------------------*/
@@ -71,7 +71,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -80,7 +80,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -99,7 +99,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -113,7 +113,7 @@ small a:hover, small a:active {
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -123,7 +123,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -154,12 +154,12 @@ small a:hover, small a:active {
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
+
 	.headerwrapper {
 		float: left;
 		width: 100%;
@@ -169,100 +169,100 @@ small a:hover, small a:active {
 		margin-bottom: -15px;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 555px;
 		font-size: 25vw;
 		margin-left: 2%;
 		margin-top: -5%;
 	}
-	
+
 	@media (min-width:320px) and (max-width:359px) {
 		h1 {
 			font-size: 80px;
 			font-size: 25vw;
 		}
 		}
-	
+
 	@media (min-width: 360px) and (max-width:379px) {
 		h1 {
 			font-size: 90px;
 			font-size: 25vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 384px) and (max-width:399px) {
 		h1 {
 			font-size: 96px;
 			font-size: 25vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 400px) and (max-width:599px) {
 		h1 {
 			font-size: 100px;
 			font-size: 25vw;
 		}
-		
+
 		}
-		
+
 	.h1body {
 		width: 90%;
-		 margin-top: 25px; 
+		 margin-top: 25px;
 		font-size: 35px;
 		text-align: right;
 		color: black;
 	}
-	
+
 	h2 {
 		font-size: 20px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 5% 0 7%
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 7vw;
 		margin: 8% 0 9% 12%;
 	}
-	
+
 	aside blockquote {
 			font-size: 25px;
 	}
-	
+
 	.text {
 			padding-top: 30px;
 	}
-	
+
 	.first h5 {
 		margin: 13% 0 0 1.5%;
 		font-size: 48px;
 		font-size: 8vw;
 		width: 98%;
 	}
-	
+
 	.second h5 {
 		margin: 40% 0 0 1.5%;
 		font-size: 18px;
 		font-size: 9vw;
 		width: 98%;
 	}
-	
+
 	.third h5 {
 		margin: 20% 0 0 1.5%;
 		font-size: 54px;
 		font-size: 9vw;
 		width: 98%;
 	}
-	
+
 	.fourth h5 {
 		margin: 35% 0 0 1.5%;
 		font-size: 39px;
@@ -275,7 +275,7 @@ small a:hover, small a:active {
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/partys-over/images/header2000.jpg');
@@ -283,14 +283,14 @@ small a:hover, small a:active {
 		padding-bottom: 58%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 9vw;
 		margin-left: 5%;
 		margin-top: 4.2%;
 	}
-	
+
 	.h1body {
 		width: 90%;
 		/* margin-left: -113px; */
@@ -298,52 +298,52 @@ small a:hover, small a:active {
 		text-align: right;
 		color: black;
 	}
-	
+
 	h2 {
 		font-size: 45px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 10% 0 11%;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 4vw;
 		margin: 24% 0 0 45%;
 		width: 45%;
 	}
-	
+
 	aside blockquote {
 		font-size: 60px;
 	}
-	
+
 	.first h5 {
 		margin: 13% 0 0 1.5%;
 		font-size: 48px;
 		font-size: 8vw;
 		width: 98%;
 	}
-	
+
 	.second h5 {
 		margin: 40% 0 0 1.5%;
 		font-size: 54px;
 		font-size: 9vw;
 		width: 98%;
 	}
-	
+
 	.third h5 {
 		margin: 20% 0 0 1.5%;
 		font-size: 54px;
 		font-size: 9vw;
 		width: 98%;
 	}
-	
+
 	.fourth h5 {
 		margin: 35% 0 0 1.5%;
 		font-size: 39px;
@@ -355,7 +355,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP TINY CSS------------------*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/partys-over/images/header2000.jpg');
@@ -363,14 +363,14 @@ small a:hover, small a:active {
 		padding-bottom: 58%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 9vw;
 		margin-left: 4%;
 		margin-top: 3%;
 	}
-	
+
 	.h1body {
 		width: 1000px;
 		margin-left: -113px;
@@ -378,48 +378,48 @@ small a:hover, small a:active {
 		text-align: right;
 		color: black;
 	}
-	
+
 	h2 {
 		font-size: 40px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 4vw;
 		margin: 20% 0 0 45%;
 		width: 45%;
 	}
-	
+
 	aside blockquote {
 		font-size: 55px;
 	}
-	
+
 	.first h5 {
 		margin: 130px 0px 0px 45px;
 		font-size: 80px;
 		width: 900px;
 	}
-	
+
 	.second h5 {
 		margin: 370px 0 0 0;
 		font-size: 52px;
 		width: 1000px;
 	}
-	
+
 	.third h5 {
 		margin: 215px 0 0 10px;
 		font-size: 60px;
 		width: 980px;
 	}
-	
+
 	.fourth h5 {
 		margin: 345px 0 0 10px;
 		font-size: 60px;
@@ -431,7 +431,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/partys-over/images/header2000.jpg');
@@ -439,14 +439,14 @@ small a:hover, small a:active {
 		padding-bottom: 58%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 9vw;
 		margin-left: 5%;
 		margin-top: 3%;
 	}
-	
+
 	.h1body {
 		width: 1230px;
 		margin-left: -505px;
@@ -454,48 +454,48 @@ small a:hover, small a:active {
 		text-align: right;
 		color: black;
 	}
-	
+
 	h2 {
 		font-size: 34px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 4vw;
 		margin: 23% 0 0 45%;
 		width: 45%;
 	}
-	
+
 	aside blockquote {
 		font-size: 50px;
 	}
-	
+
 	.first h5 {
 		margin: 160px 0px 0px 60px;
 		font-size: 90px;
 		width: 1100px;
 	}
-	
+
 	.second h5 {
 		margin: 450px 0 0 0;
 		font-size: 65px;
 		width: 1230px;
 	}
-	
+
 	.third h5 {
 		margin: 275px 0 0 20px;
 		font-size: 70px;
 		width: 1200px;
 	}
-	
+
 	.fourth h5 {
 		margin: 275px 0 0 20px;
 		font-size: 70px;
@@ -507,7 +507,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/partys-over/images/header2560.jpg');
@@ -515,14 +515,14 @@ small a:hover, small a:active {
 		padding-bottom: 58%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 9vw;
 		margin-left: 5%;
 		margin-top: 3%;
 	}
-	
+
 	.h1body {
 		width: 1370px;
 		margin-left: -700px;
@@ -530,47 +530,47 @@ small a:hover, small a:active {
 		text-align: right;
 		color: black;
 	}
-	
+
 	h2 {
 		font-size: 40px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		font-size: 4vw;
 		margin: 23% 0 0 45%;
 		width: 45%;
 	}
-	
+
 	aside blockquote {
 		font-size: 70px;
 	}
-	
+
 	.first h5 {
 		margin: 180px 80px 80px 120px;
 		font-size: 100px;
 	}
-	
+
 	.second h5 {
 		margin: 550px 0 0 40px;
 		font-size: 70px;
 		width: 1300px;
 	}
-	
+
 	.third h5 {
 		margin: 295px 0 0 40px;
 		font-size: 80px;
 		width: 1300px;
 	}
-	
+
 	.fourth h5 {
 		margin: 495px 0 0 40px;
 		font-size: 80px;

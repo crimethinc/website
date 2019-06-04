@@ -64,7 +64,7 @@ h4 {
 
 .accent a:link, .accent a:visited {
 	color:#009a3a;
-}    
+}
 
 .accent a:hover, .accent a:active {
 	color: black;
@@ -73,7 +73,7 @@ h4 {
 
 .accent a:active {
 	color:black;
-} 
+}
 
 
 /*------------------GENERIC LINKS----------------------------------*/
@@ -85,7 +85,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -94,7 +94,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -113,7 +113,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -123,7 +123,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -137,7 +137,7 @@ small a:hover, small a:active {
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -148,13 +148,13 @@ small a:hover, small a:active {
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 /*@media (min-device-width:200px) and (max-device-width:599px) OR  (max-width:599px) ORIGINAL COMBINED {*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
+
 	.headerwrapper {
 		float: left;
 		width: 100%;
@@ -164,7 +164,7 @@ small a:hover, small a:active {
 		margin-bottom: 5px;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 29px;
 		font-size: 9vw;
@@ -172,57 +172,57 @@ small a:hover, small a:active {
 		margin-top: 48%;
 		text-align: center;
 	}
-	
+
 	@media (min-width:320px) and (max-width:359px) {
 		h1 {
 			font-size: 29px;
 			font-size: 9vw;
 		}
 		}
-	
+
 	@media (min-width: 360px) and (max-width:379px) {
 		h1 {
 			font-size: 32px;
 			font-size: 9vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 384px) and (max-width:399px) {
 		h1 {
 			font-size: 34px;
 			font-size: 9vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 400px) and (max-width:599px) {
 		h1 {
 			font-size: 36px;
 			font-size: 9vw;
 		}
-		
+
 		}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 5% 0 7%
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	.specialquote h5 {
 		font-size: 24px;
 		font: 900 7.5vw/.85em "quatro-slab",serif;
@@ -238,7 +238,7 @@ small a:hover, small a:active {
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/agitators/images/handsup2000.jpg');
@@ -246,33 +246,33 @@ small a:hover, small a:active {
 		padding-bottom: 49%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 42px;
 		font-size: 7vw;
 		margin-left: 8%;
 		margin-top: 20%;
 	}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 10% 0 11%;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	.specialquote h5 {
 		font-size: 45px;
 		font: 900 7.5vw/.85em "quatro-slab",serif;
@@ -289,7 +289,7 @@ small a:hover, small a:active {
 /*-------------DESKTOP TINY CSS------------------*/
 /*@media (min-width:1024px) and (max-width:1249px) OR (min-device-width:600px) and (max-device-width:1199px) and (orientation:landscape) {*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/agitators/images/handsup2000.jpg');
@@ -297,32 +297,32 @@ small a:hover, small a:active {
 		padding-bottom: 49%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 7vw;
 		margin-left: 8%;
 		margin-top: 20%;
 	}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	.specialquote h5 {
 		font: 900 70px/.85em "quatro-slab",serif;
 		padding-top: 12%;
@@ -337,7 +337,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/agitators/images/handsup2000.jpg');
@@ -345,32 +345,32 @@ small a:hover, small a:active {
 		padding-bottom: 49%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 7vw;
 		margin-left: 8%;
 		margin-top: 20%;
 	}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	.specialquote h5 {
 		font: 900 85px/.85em "quatro-slab",serif;
 		padding-top: 17%;
@@ -385,7 +385,7 @@ small a:hover, small a:active {
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/agitators/images/handsup2560.jpg');
@@ -393,32 +393,32 @@ small a:hover, small a:active {
 		padding-bottom: 49%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 200px;
 		font-size: 7vw;
 		margin-left: 8%;
 		margin-top: 20%;
 	}
-	
+
 	h2 {
 		font-size: 25px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	.specialquote h5 {
 		font: 900 100px/.85em "quatro-slab",serif;
 		padding-top: 13%;

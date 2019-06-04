@@ -52,7 +52,7 @@ aside blockquote {
 
 .accent a:link, .accent a:visited {
 	color:#009a3a;
-}    
+}
 
 .accent a:hover, .accent a:active {
 	color: black;
@@ -61,7 +61,7 @@ aside blockquote {
 
 .accent a:active {
 	color:black;
-} 
+}
 
 
 /*------------------GENERIC LINKS----------------------------------*/
@@ -73,7 +73,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -82,7 +82,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -101,7 +101,7 @@ small a:hover, small a:active {
 
 .footlink a:link, .footlink a:visited {
 	color: #FF2D55;
-}    
+}
 
 .footlink a:hover, .footlink a:active {
 	color: black;
@@ -111,7 +111,7 @@ small a:hover, small a:active {
 .footreturn a:link, .footreturn a:visited {
 	color: #FF2D55;
 	text-decoration: none;
-}    
+}
 
 .footreturn a:hover, .footreturn a:active {
 	color: black;
@@ -125,7 +125,7 @@ small a:hover, small a:active {
 .footnote a:link, .footnote a:visited {
 	color: black;
 	text-decoration: underline;
-}    
+}
 
 .footnote a:hover, .footnote a:active {
 	color: black;
@@ -136,12 +136,12 @@ small a:hover, small a:active {
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
+
 	.headerwrapper {
 		float: left;
 		width: 100%;
@@ -152,80 +152,80 @@ small a:hover, small a:active {
 		margin-bottom: 0px;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 73px;
 		font-size: 23vw;
 		margin-top: 0%;
 		margin-bottom: 5%;
 	}
-	
+
 	@media (min-width:320px) and (max-width:359px) {
 		h1 {
 			font-size: 73px;
 			font-size: 23vw;
 		}
 		}
-	
+
 	@media (min-width: 360px) and (max-width:379px) {
 		h1 {
 			font-size: 82px;
 			font-size: 23vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 384px) and (max-width:399px) {
 		h1 {
 			font-size: 88px;
 			font-size: 23vw;
 		}
-		
+
 		}
-	
+
 	@media (min-width: 400px) and (max-width:599px) {
 		h1 {
 			font-size: 92px;
 			font-size: 23vw;
 		}
-		
+
 		}
-	
+
 	h2 {
 		font-size: 19px;
 		font-size: 6vw;
 		margin: 50px 0 20px 0;
 		padding: 0 5% 0 7%
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	aside blockquote {
 		font-size: 22px;
 		font-size: 7vw;
 	}
-	
+
 	.bottomsmall {
 		padding: 0% 5% 10% 5% !important;
 	}
-	
+
 }
 
 
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/demands/images/header2560.jpg');
@@ -233,49 +233,49 @@ small a:hover, small a:active {
 		padding-bottom: 50%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 114px;
 		font-size: 18vw;
 		margin-left: 0;
 		margin-top: 4%;
 	}
-	
+
 	h2 {
 		font-size: 40px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 		padding: 0 10% 0 11%;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	aside blockquote {
 		font-size: 40px;
 	}
-	
+
 	.bottomsmall {
 		padding: 0% 10% 10% 11% !important;
 	}
-	
-	
+
+
 }
 
 
 
 /*-------------DESKTOP TINY CSS------------------*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/demands/images/header2560.jpg');
@@ -283,43 +283,43 @@ small a:hover, small a:active {
 		padding-bottom: 50%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 194px;
 		font-size: 18vw;
 		margin-left: 0;
 		margin-top: 1%;
 	}
-	
+
 	h2 {
 		font-size: 50px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	aside blockquote {
 		font-size: 55px;
 	}
-	
+
 }
 
 
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/demands/images/header2560.jpg');
@@ -327,47 +327,47 @@ small a:hover, small a:active {
 		padding-bottom: 50%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 237px;
 		font-size: 19vw;
 		margin-left: 0;
 		margin-top: 3%;
 	}
-	
+
 	h2 {
 		font-size: 40px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	aside blockquote {
 		font-size: 40px;
 	}
-	
+
 	.bottompull {
 		margin-top: 65px;
 	}
-	
+
 }
 
 
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
+
 	.headerwrapper {
 		width: 100%;
 		background-image: url('https://cloudfront.crimethinc.com/assets/features/demands/images/header2560.jpg');
@@ -375,36 +375,36 @@ small a:hover, small a:active {
 		padding-bottom: 50%;
 		background-position:center top;
 	}
-	
+
 	h1 {
 		font-size: 317px;
 		font-size: 19vw;
 		margin-left: 0;
 		margin-top: 4%;
 	}
-	
+
 	h2 {
 		font-size: 50px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h3 {
 		font-size: 15px;
 		/*font-size: 33vw;*/
 		margin: 50px 0 20px 0;
 	}
-	
+
 	h4 {
 		font-size: 30px;
 		/*font-size: 1.75vw;*/
 		margin: 2% 0 0 15%;
 	}
-	
+
 	aside blockquote {
 		font-size: 60px;
 	}
-	
+
 	.bottompull {
 		margin-top: 45px;
 	}

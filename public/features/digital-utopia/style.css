@@ -19,7 +19,7 @@ h2 {
 
 h3 {
 	font-family: "quatro-slab",serif;
-	font-weight: 900;	
+	font-weight: 900;
 	font-size: 55px;
 	line-height: .85em;
 	color: #FF2A68;
@@ -136,7 +136,7 @@ a {
 
 a:link, a:visited {
 	color:#34AADC;
-}    
+}
 
 a:hover, a:active {
 	color: black;
@@ -145,7 +145,7 @@ a:hover, a:active {
 
 a:active {
 	color:black;
-} 
+}
 
 small a:hover, small a:active {
 	color: #8E8E93;
@@ -164,8 +164,8 @@ small a:hover, small a:active {
 
 .refnumber {
 	color: #FF2D55;
-	vertical-align: top; 
-	position: relative; 
+	vertical-align: top;
+	position: relative;
 	top: -0.3em;
 	font-size: 0.85em;
 	font-weight: 700;

@@ -51,7 +51,7 @@
 			base.$controls = $('<div class="anythingControls"></div>');
 			base.$nav = $('<ul class="thumbNav"><li><a><span></span></a></li></ul>');
 			base.$startStop = $('<a href="#" class="start-stop"></a>');
-			
+
 			if (o.buildStartStop || o.buildNavigation) {
 				base.$controls.appendTo( (o.appendControlsTo && $(o.appendControlsTo).length) ? $(o.appendControlsTo) : base.$wrapper);
 			}
@@ -423,7 +423,7 @@
 
 		// Adjust slider dimensions on parent element resize
 		base.checkResize = function(stopTimer){
-			// checking document visibility - 
+			// checking document visibility -
 			var vis = !!(doc.hidden || doc.webkitHidden || doc.mozHidden || doc.msHidden);
 			clearTimeout(base.resizeTimer);
 			base.resizeTimer = setTimeout(function(){
@@ -542,7 +542,7 @@
 					page = o.stopAtEnd ? 1 : ( o.infiniteSlides ? base.pages + page : ( o.showMultiple > 1 - page ? 1 : adj ) );
 				}
 				if (page > base.pages) {
-					// 
+					//
 					page = o.stopAtEnd ? base.pages : ( o.showMultiple > 1 - page ? 1 : page -= adj );
 				} else if (page >= adj) {
 					// show multiple adjustments
