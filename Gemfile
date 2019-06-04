@@ -58,6 +58,7 @@ group :development, :test do
   gem 'capybara'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
+  gem 'i18n-debug'
   gem 'launchy'
   gem 'nokogiri'
   gem 'overcommit'
