@@ -266,7 +266,7 @@ GEM
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     rubypants (0.7.0)
-    rubyzip (1.2.2)
+    rubyzip (1.2.3)
     sassc (2.0.1)
       ffi (~> 1.9)
       rake
@@ -319,7 +319,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webdrivers (3.9.4)
+    webdrivers (4.0.0)
       nokogiri (~> 1.6)
       rubyzip (~> 1.0)
       selenium-webdriver (~> 3.0)
