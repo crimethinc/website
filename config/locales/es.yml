@@ -148,7 +148,7 @@ es:
     about:
       library: Biblioteca en línea
       store: Tienda
-      post_order_success: Envíos Glow #I am not sure what you mean by Glow.
+      post_order_success: Envíos Glow # I am not sure what you mean by Glow.
       submission_guidelines: Para colaboraciones
       steal_something_from_work_day: Steal Something from Work Day
     search:

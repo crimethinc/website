@@ -28,4 +28,3 @@ notifications:
 env:
   global:
     - CODECLIMATE_REPO_TOKEN: 70b1a0a5ca106d965eb0570c0e4b7577d76c352305fb5719aa984eeae4941bdf
-
