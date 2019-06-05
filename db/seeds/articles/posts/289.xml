@@ -1,11 +1,11 @@
 <item>
-		<title>Detailed Look at Recipes Second Edition</title>
-		<link>http://www.crimethinc.com/blog/2012/09/24/detailed-look-at-recipes-second-edition/</link>
-		<pubDate>Mon, 24 Sep 2012 18:01:26 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=3392</guid>
-		<description/>
-		<content_encoded><![CDATA[<p>I’ve wanted to reformat and redesign <a href="http://crimethinc.com/recipes"><em>Recipes for Disaster</em></a> for more than five years. Shortly after the dust had settled from the second printing, I had enough distance from working on the first edition to start noticing its flaws, or, more accurately, the mistakes I’d made. However, recognizing imperfections and failed objectives isn’t the same as finding solutions, and for years I’ve lived with the book, handling it nearly every day, sending out tens of thousands of copies to people and coordinating subsequent printings—all the while feeling like it wasn’t the absolute best version we could make. I made notes, registered feedback from readers, tinkered with prototype templates in InDesign, and—more than anything else—fretted. Today we <a href="http://crimethinc.com/blog/2012/09/24/recipes-for-disaster-second-edition-arrives/">announce the availability of the newly redesigned second edition</a>, and holding it in my hands fills me with more than just relief,  but also the sweet feeling of satisfaction. We really got it right.</p>
+    <title>Detailed Look at Recipes Second Edition</title>
+    <link>http://www.crimethinc.com/blog/2012/09/24/detailed-look-at-recipes-second-edition/</link>
+    <pubDate>Mon, 24 Sep 2012 18:01:26 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=3392</guid>
+    <description/>
+    <content_encoded><![CDATA[<p>I’ve wanted to reformat and redesign <a href="http://crimethinc.com/recipes"><em>Recipes for Disaster</em></a> for more than five years. Shortly after the dust had settled from the second printing, I had enough distance from working on the first edition to start noticing its flaws, or, more accurately, the mistakes I’d made. However, recognizing imperfections and failed objectives isn’t the same as finding solutions, and for years I’ve lived with the book, handling it nearly every day, sending out tens of thousands of copies to people and coordinating subsequent printings—all the while feeling like it wasn’t the absolute best version we could make. I made notes, registered feedback from readers, tinkered with prototype templates in InDesign, and—more than anything else—fretted. Today we <a href="http://crimethinc.com/blog/2012/09/24/recipes-for-disaster-second-edition-arrives/">announce the availability of the newly redesigned second edition</a>, and holding it in my hands fills me with more than just relief,  but also the sweet feeling of satisfaction. We really got it right.</p>
 
 <p>What follows is a beyond-nerdy breakdown of the changes made in the second edition, the reasoning behind the changes, and a look into what led to the shortcomings of the first edition. To do that we’ll have to travel back to 2004, but first we’ll show off a few of the improvements . . .</p>
 
@@ -57,64 +57,64 @@
 
 <p>The final problem with the format was only discernible after the book was produced—with its unusual, oblong shape and having more than six hundred pages of heft, the book had poor balance and was simply unwieldy to hold and read. A book that’s hard to read? Why, I do believe that’s a book due for a second edition.</p>
 ]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>3392</wp_post_id>
-		<wp_post_date><![CDATA[2012-09-24 18:01:26]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2012-09-24 18:01:26]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[closed]]></wp_ping_status>
-		<wp_post_name><![CDATA[detailed-look-at-recipes-second-edition]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[3400]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://www.crimethinc.com/blog/wp-content/uploads/2012/09/rfdcollagebig.jpg]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_cws_is_markdown]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cwc.im/rfd2details]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_sd_is_markdown]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_comment>
-			<wp_comment_id>1723</wp_comment_id>
-			<wp_comment_author><![CDATA[e. poe]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[sean.distro@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[74.124.88.46]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2012-11-13 10:23:07]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2012-11-13 10:23:07]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[it truly was harder to read, glad it's now 7x10]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>23</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1352802187.44";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:6:"e. poe";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>3392</wp_post_id>
+    <wp_post_date><![CDATA[2012-09-24 18:01:26]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2012-09-24 18:01:26]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[closed]]></wp_ping_status>
+    <wp_post_name><![CDATA[detailed-look-at-recipes-second-edition]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[3400]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://www.crimethinc.com/blog/wp-content/uploads/2012/09/rfdcollagebig.jpg]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_cws_is_markdown]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://cwc.im/rfd2details]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_sd_is_markdown]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_comment>
+      <wp_comment_id>1723</wp_comment_id>
+      <wp_comment_author><![CDATA[e. poe]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[sean.distro@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[74.124.88.46]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2012-11-13 10:23:07]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2012-11-13 10:23:07]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[it truly was harder to read, glad it's now 7x10]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>23</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1352802187.44";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:6:"e. poe";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+  </item>

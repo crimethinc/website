@@ -1,11 +1,11 @@
 <item>
-		<title>Presenting Rolling Thunder #11!</title>
-		<link>http://www.crimethinc.com/blog/2014/04/05/presenting-rolling-thunder-11/</link>
-		<pubDate>Sat, 05 Apr 2014 21:18:26 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=4871</guid>
-		<description/>
-		<content_encoded><![CDATA[<p>This one goes to eleven! We are pleased to inaugurate the second series of <em>Rolling Thunder,</em> our anarchist journal of dangerous living, with a <a href="http://crimethinc.com/rt"><strong>new issue full of adventure and analysis</strong></a>. Whether you’re a committed revolutionary looking for the latest strategic reflections from the front lines, or you simply enjoy the gripping tales of suspense and subversion, you can’t get this stuff anywhere else.</p>
+    <title>Presenting Rolling Thunder #11!</title>
+    <link>http://www.crimethinc.com/blog/2014/04/05/presenting-rolling-thunder-11/</link>
+    <pubDate>Sat, 05 Apr 2014 21:18:26 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=4871</guid>
+    <description/>
+    <content_encoded><![CDATA[<p>This one goes to eleven! We are pleased to inaugurate the second series of <em>Rolling Thunder,</em> our anarchist journal of dangerous living, with a <a href="http://crimethinc.com/rt"><strong>new issue full of adventure and analysis</strong></a>. Whether you’re a committed revolutionary looking for the latest strategic reflections from the front lines, or you simply enjoy the gripping tales of suspense and subversion, you can’t get this stuff anywhere else.</p>
 
 <p>The issue opens with an epic account of prisoner resistance from anarchist Sean Swain, who met the dreaded Extraction Team of Mansfield Correctional Institution in open battle and lived to tell. Our central feature, “After the Crest,” analyzes the opportunities and risks in the waning phase of social movements, including case studies of Occupy Oakland and the 2012 student strike in Québec. We also present a narrative direct from the tear gas in Taksim Square, the epicenter of the uprising that rocked Turkey in June 2013.</p>
 
@@ -28,50 +28,50 @@
 
 <p>All you subscribers should have your copies in hand by now—we hope you enjoyed experiencing the new format without being spoiled by pixely photos on the internet (a rare thing these days). Thanks again for subscribing, y'all make <em>RT</em> possible!</p>
 ]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>4871</wp_post_id>
-		<wp_post_date><![CDATA[2014-04-05 14:18:26]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2014-04-05 21:18:26]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[closed]]></wp_ping_status>
-		<wp_post_name><![CDATA[presenting-rolling-thunder-11]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="hot-off-the-presses"><![CDATA[Hot Off the Presses]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[4872]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://www.crimethinc.com/blog/wp-content/uploads/2014/04/1b1.jpg]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_post_restored_from]]></wp_meta_key>
-			<wp_meta_value><![CDATA[a:3:{s:20:"restored_revision_id";i:4879;s:16:"restored_by_user";i:1;s:13:"restored_time";i:1396732695;}]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_cws_is_markdown_gmt]]></wp_meta_key>
-			<wp_meta_value><![CDATA[2014-04-07 18:04:24]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_cws_is_markdown]]></wp_meta_key>
-			<wp_meta_value><![CDATA[2]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cwc.im/rt11]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_sd_is_markdown]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>4871</wp_post_id>
+    <wp_post_date><![CDATA[2014-04-05 14:18:26]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2014-04-05 21:18:26]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[closed]]></wp_ping_status>
+    <wp_post_name><![CDATA[presenting-rolling-thunder-11]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="hot-off-the-presses"><![CDATA[Hot Off the Presses]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[4872]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://www.crimethinc.com/blog/wp-content/uploads/2014/04/1b1.jpg]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_post_restored_from]]></wp_meta_key>
+      <wp_meta_value><![CDATA[a:3:{s:20:"restored_revision_id";i:4879;s:16:"restored_by_user";i:1;s:13:"restored_time";i:1396732695;}]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_cws_is_markdown_gmt]]></wp_meta_key>
+      <wp_meta_value><![CDATA[2014-04-07 18:04:24]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_cws_is_markdown]]></wp_meta_key>
+      <wp_meta_value><![CDATA[2]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://cwc.im/rt11]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_sd_is_markdown]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+  </item>

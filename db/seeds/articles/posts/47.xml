@@ -1,23 +1,23 @@
 <item>
-		<title>Now Shipping to Everywhere</title>
-		<link>http://www.crimethinc.com/blog/2007/09/21/now-shipping-to-everywhere/</link>
-		<pubDate>Sat, 22 Sep 2007 00:01:06 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/2007/09/21/now-shipping-to-everywhere/</guid>
-		<description/>
-		<content_encoded><![CDATA[For years, it has been a challenge to send packages to a long list of countries (including Italy, Greece, Argentina, Israel and many others) due to Global Priority Mail service being unavailable to those countries from the US. Fortunately, when the US Postal Service restructured their international mail classes in May of 2007, Global Prioity Mail was replaced by <a href="http://www.usps.com/international/prioritymailinternational.htm" target="_blank">Priority Mail International</a> which opened the service to nearly every country (Somalia, North Korea and Cuba—sorry, but apparently you are still in the dog house). Our new website revision has been adjusted for this and getting our stuff to many countries has become a lot easier. Hooray.]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>137</wp_post_id>
-		<wp_post_date><![CDATA[2007-09-21 17:01:06]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2007-09-22 00:01:06]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[now-shipping-to-everywhere]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
-	</item>
+    <title>Now Shipping to Everywhere</title>
+    <link>http://www.crimethinc.com/blog/2007/09/21/now-shipping-to-everywhere/</link>
+    <pubDate>Sat, 22 Sep 2007 00:01:06 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/2007/09/21/now-shipping-to-everywhere/</guid>
+    <description/>
+    <content_encoded><![CDATA[For years, it has been a challenge to send packages to a long list of countries (including Italy, Greece, Argentina, Israel and many others) due to Global Priority Mail service being unavailable to those countries from the US. Fortunately, when the US Postal Service restructured their international mail classes in May of 2007, Global Prioity Mail was replaced by <a href="http://www.usps.com/international/prioritymailinternational.htm" target="_blank">Priority Mail International</a> which opened the service to nearly every country (Somalia, North Korea and Cuba—sorry, but apparently you are still in the dog house). Our new website revision has been adjusted for this and getting our stuff to many countries has become a lot easier. Hooray.]]></content_encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>137</wp_post_id>
+    <wp_post_date><![CDATA[2007-09-21 17:01:06]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2007-09-22 00:01:06]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[now-shipping-to-everywhere]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
+  </item>

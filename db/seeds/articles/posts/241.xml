@@ -1,11 +1,11 @@
 <item>
-		<title>Work Book Now Available, Again</title>
-		<link>http://www.crimethinc.com/blog/2011/06/27/work-book-now-available-again/</link>
-		<pubDate>Mon, 27 Jun 2011 15:48:50 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=1904</guid>
-		<description/>
-		<content_encoded><![CDATA[We're relieved to announce that, at long last, the "new" printing of <em><a href="http://crimethinc.com/work">Work</a></em> has arrived here in Salem. We've put the binding through extensive torture testing, and by all accounts it has held up extraordinarily—these are the books as they <em>should</em> have been the first time.
+    <title>Work Book Now Available, Again</title>
+    <link>http://www.crimethinc.com/blog/2011/06/27/work-book-now-available-again/</link>
+    <pubDate>Mon, 27 Jun 2011 15:48:50 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=1904</guid>
+    <description/>
+    <content_encoded><![CDATA[We're relieved to announce that, at long last, the "new" printing of <em><a href="http://crimethinc.com/work">Work</a></em> has arrived here in Salem. We've put the binding through extensive torture testing, and by all accounts it has held up extraordinarily—these are the books as they <em>should</em> have been the first time.
 
 This ludicrous saga of faulty production has taken years from our lives, but sitting here, paging through a copy, makes it all worth it—we really love this book, and hope you do too. All backordered copies have been mailed out as of Saturday, to arrive in hands shortly. <a href="http://crimethinc.com/work">New orders will be shipped out immediately.</a> Thanks to everyone for their patience and understanding.
 
@@ -28,34 +28,34 @@ The below photo is all too familiar for those unlucky ones who received a defect
 
 
 ]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>1904</wp_post_id>
-		<wp_post_date><![CDATA[2011-06-27 08:48:50]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2011-06-27 15:48:50]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[work-book-now-available-again]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="hot-off-the-presses"><![CDATA[Hot Off the Presses]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cwc.im/workfixed]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[2975]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/work/4b.jpg]]></wp_meta_value>
-		</wp_postmeta>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>1904</wp_post_id>
+    <wp_post_date><![CDATA[2011-06-27 08:48:50]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2011-06-27 15:48:50]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[work-book-now-available-again]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="hot-off-the-presses"><![CDATA[Hot Off the Presses]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://cwc.im/workfixed]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[2975]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/work/4b.jpg]]></wp_meta_value>
+    </wp_postmeta>
+  </item>

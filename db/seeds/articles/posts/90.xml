@@ -1,11 +1,11 @@
 <item>
-		<title>One Month Until Postal Rate Increase</title>
-		<link>http://www.crimethinc.com/blog/2008/04/12/one-month-until-postal-rate-increase/</link>
-		<pubDate>Sat, 12 Apr 2008 16:47:03 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=224</guid>
-		<description/>
-		<content_encoded><![CDATA[Just a heads up that the <a href="http://www.usps.com/prices/" target="_blank">USPS is raising postal rates</a> across the board on May 12th, and the rates on this site will reflect that increase on May 11th.  While the domestic increase is modest (but still an increase nonetheless), the international increase is more substantial--due, we suspect, to the extremely weak US dollar. Anyway, if you were planning on placing an order, the smart move would be to do so before the rate increase. Here are some samples of the change from old rate to new rate:
+    <title>One Month Until Postal Rate Increase</title>
+    <link>http://www.crimethinc.com/blog/2008/04/12/one-month-until-postal-rate-increase/</link>
+    <pubDate>Sat, 12 Apr 2008 16:47:03 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=224</guid>
+    <description/>
+    <content_encoded><![CDATA[Just a heads up that the <a href="http://www.usps.com/prices/" target="_blank">USPS is raising postal rates</a> across the board on May 12th, and the rates on this site will reflect that increase on May 11th.  While the domestic increase is modest (but still an increase nonetheless), the international increase is more substantial--due, we suspect, to the extremely weak US dollar. Anyway, if you were planning on placing an order, the smart move would be to do so before the rate increase. Here are some samples of the change from old rate to new rate:
 
 2 Pound <strong>Media Mail</strong> from $2.47 <em>to</em> $2.58
 20 Pound <strong>Media Mail</strong> from $8.59 <em>to</em> $8.88
@@ -18,22 +18,22 @@ Flat-Rate <strong>Priority Mail International</strong> Box (<strong>Canada</stro
 
 Flat-Rate <strong>Priority Mail International</strong> Env. (<strong>Not-Canada</strong>) from  $10.45 to $11.35
 Flat-Rate <strong>Priority Mail International</strong> Box (<strong>Not-Canada</strong>) from $35.15 to $37.00]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>224</wp_post_id>
-		<wp_post_date><![CDATA[2008-04-12 08:47:03]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2008-04-12 16:47:03]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[one-month-until-postal-rate-increase]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[2]]></wp_meta_value>
-		</wp_postmeta>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>224</wp_post_id>
+    <wp_post_date><![CDATA[2008-04-12 08:47:03]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2008-04-12 16:47:03]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[one-month-until-postal-rate-increase]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[2]]></wp_meta_value>
+    </wp_postmeta>
+  </item>

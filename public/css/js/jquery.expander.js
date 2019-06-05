@@ -19,23 +19,23 @@
     return this.each(function() {
       var $this = $(this);
       var o = $.meta ? $.extend({}, opts, $this.data()) : opts;
-     	var cleanedTag, startTags, endTags;
-     	var allText = $this.html();
-     	var startText = allText.slice(0, o.slicePoint).replace(/\w+$/,'');
-     	startTags = startText.match(/<\w[^>]*>/g);
-   	  if (startTags) {startText = allText.slice(0,o.slicePoint + startTags.join('').length).replace(/\w+$/,'');}
+       var cleanedTag, startTags, endTags;
+       var allText = $this.html();
+       var startText = allText.slice(0, o.slicePoint).replace(/\w+$/,'');
+       startTags = startText.match(/<\w[^>]*>/g);
+       if (startTags) {startText = allText.slice(0,o.slicePoint + startTags.join('').length).replace(/\w+$/,'');}
 
-     	if (startText.lastIndexOf('<') > startText.lastIndexOf('>') ) {
-     	  startText = startText.slice(0,startText.lastIndexOf('<'));
-     	}
-     	var endText = allText.slice(startText.length);
-     	// create necessary expand/collapse elements if they don't already exist
-   	  if (!$('span.details', this).length) {
+       if (startText.lastIndexOf('<') > startText.lastIndexOf('>') ) {
+         startText = startText.slice(0,startText.lastIndexOf('<'));
+       }
+       var endText = allText.slice(startText.length);
+       // create necessary expand/collapse elements if they don't already exist
+       if (!$('span.details', this).length) {
         // end script if text length isn't long enough.
-       	if ( endText.replace(/\s+$/,'').split(' ').length < o.widow ) { return; }
-       	// otherwise, continue...
-       	if (endText.indexOf('</') > -1) {
-         	endTags = endText.match(/<(\/)?[^>]*>/g);
+         if ( endText.replace(/\s+$/,'').split(' ').length < o.widow ) { return; }
+         // otherwise, continue...
+         if (endText.indexOf('</') > -1) {
+           endTags = endText.match(/<(\/)?[^>]*>/g);
           for (var i=0; i < endTags.length; i++) {
 
             if (endTags[i].indexOf('</') > -1) {
@@ -62,41 +62,41 @@
 
           endText = cleanedTag && cleanedTag + endText || endText;
         }
-     	  $this.html([
-     		startText,
-     		'<span class="read-more">',
-     		o.expandPrefix,
-       		'<a href="#">',
-       		  o.expandText,
-       		'</a>',
+         $this.html([
+         startText,
+         '<span class="read-more">',
+         o.expandPrefix,
+           '<a href="#">',
+             o.expandText,
+           '</a>',
         '</span>',
-     		'<span class="details">',
-     		  endText,
-     		'</span>'
-     		].join('')
-     	  );
+         '<span class="details">',
+           endText,
+         '</span>'
+         ].join('')
+         );
       }
       var $thisDetails = $('span.details', this),
         $readMore = $('span.read-more', this);
-   	  $thisDetails.hide();
- 	    $readMore.find('a').click(function() {
- 	      $readMore.hide();
+       $thisDetails.hide();
+       $readMore.find('a').click(function() {
+         $readMore.hide();
 
- 	      if (o.expandEffect === 'show' && !o.expandSpeed) {
+         if (o.expandEffect === 'show' && !o.expandSpeed) {
           o.beforeExpand($this);
- 	        $thisDetails.show();
+           $thisDetails.show();
           o.afterExpand($this);
           delayCollapse(o, $thisDetails);
- 	      } else {
+         } else {
           o.beforeExpand($this);
- 	        $thisDetails[o.expandEffect](o.expandSpeed, function() {
+           $thisDetails[o.expandEffect](o.expandSpeed, function() {
             $thisDetails.css({zoom: ''});
             o.afterExpand($this);
             delayCollapse(o, $thisDetails);
- 	        });
- 	      }
+           });
+         }
         return false;
- 	    });
+       });
       if (o.userCollapse) {
         $this
         .find('span.details').append('<span class="re-collapse">' + o.userCollapsePrefix + '<a href="#">' + o.userCollapseText + '</a></span>');

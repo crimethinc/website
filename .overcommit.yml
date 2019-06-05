@@ -19,11 +19,8 @@ PreCommit:
   BundleCheck:
     enabled: true
 
-  # HardTabs:
-  #   enabled: true
-  #   exclude:
-  #     - app/assets/fonts/*
-  #     - db/seeds/articles/*
+  HardTabs:
+    enabled: true
 
   LineEndings:
     enabled: true

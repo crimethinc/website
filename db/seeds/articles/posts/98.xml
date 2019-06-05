@@ -1,11 +1,11 @@
 <item>
-		<title>Fourth FFOL Printing Hits the Streets</title>
-		<link>http://www.crimethinc.com/blog/2008/05/28/fourth-ffol-printing-hits-the-streets/</link>
-		<pubDate>Thu, 29 May 2008 04:39:15 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=237</guid>
-		<description/>
-		<content_encoded><![CDATA[<a rel="lightbox" href="https://cloudfront.crimethinc.com/images/ffol/ffol1b.jpg"> <img src="https://cloudfront.crimethinc.com/images/ffol/ffol1a.jpg" alt="" /></a><span class="invisible">-</span>
+    <title>Fourth FFOL Printing Hits the Streets</title>
+    <link>http://www.crimethinc.com/blog/2008/05/28/fourth-ffol-printing-hits-the-streets/</link>
+    <pubDate>Thu, 29 May 2008 04:39:15 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=237</guid>
+    <description/>
+    <content_encoded><![CDATA[<a rel="lightbox" href="https://cloudfront.crimethinc.com/images/ffol/ffol1b.jpg"> <img src="https://cloudfront.crimethinc.com/images/ffol/ffol1a.jpg" alt="" /></a><span class="invisible">-</span>
 We're pleased to announce the fourth printing of our flagship piece of propaganda, <em><a href="/tools/ffol.html" target="_self">Fighting For Our Lives</a></em>. We had  100,000 copies printed this time—bringing the total now in print to 600,000—and implemented a few minor improvements to the text and design. Additionally, we switched printers for this new printing, and the results are, by our estimation, a significant upgrade from those previous. You can place bulk requests as well as peruse PDFs of the new edition on our <a href="/tools/ffol.html"><em>FFOL</em> page</a>.
 
 <!--more A few more notes about FFOL distribution after the jump.-->
@@ -13,22 +13,22 @@ We're pleased to announce the fourth printing of our flagship piece of propagand
 Additionally, as some may have noticed, a few weeks ago we changed the quantities that are available entirely for free from 25/50 to 10/35. The move from 25 to 10 was spurred by feedback from people wanting a quantity that was less than 25 but more than 1—usually people who simply want to distribute them to their friends and acquaintances. The move from 50 to 35 was motivated in part due to feedback we've received, and in part as an effort to reduce cost and keep the completely free <em>FFOL</em> program sustainable—the recent increase in postage rates combined with rising paper costs have combined to force us to re-tune the equations of what exactly we can afford to give away for free. Quantities of 50, 100, 250 and 500 will continue to be free, but require that the cost of shipping be paid.
 
 Lastly, we just wanted to reiterate that the completely free <em>FFOL</em> packages are limited to one per person per decade. If you distribute all the ones we sent you, please try and send the minimum donation for your next batch. We'd like nothing more than to be able to send anyone, anywhere, as many <em>FFOL</em> as they can distribute, but that is not a current financial reality for us. Also, we get a little frustrated when a single individual places multiple separate free orders of <em>FFOL</em> for all their friends, on our dime—please, if you'd like send your friends <em>FFOL</em>, order a box from us and send them to your friends yourself. We'll appreciate not having to cancel all those requests, and your friends will appreciate the personalized little package you send them.]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>237</wp_post_id>
-		<wp_post_date><![CDATA[2008-05-28 21:39:15]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2008-05-29 04:39:15]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[fourth-ffol-printing-hits-the-streets]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="hot-off-the-presses"><![CDATA[Hot Off the Presses]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>237</wp_post_id>
+    <wp_post_date><![CDATA[2008-05-28 21:39:15]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2008-05-29 04:39:15]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[fourth-ffol-printing-hits-the-streets]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="hot-off-the-presses"><![CDATA[Hot Off the Presses]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+  </item>

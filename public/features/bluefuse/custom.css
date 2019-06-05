@@ -4,44 +4,44 @@
 
 
 h1, h2, h3, h4 {
-	font-family: 'Tungsten A', 'Tungsten B', sans-serif;
-	serif;
+  font-family: 'Tungsten A', 'Tungsten B', sans-serif;
+  serif;
 }
 
 h1 {
-	color: rgba(255, 255, 255, 1.0);
-	text-align: left;
-	text-shadow: none;
-	line-height: .85em;
-	font-weight: 100;
-	text-transform: uppercase;
+  color: rgba(255, 255, 255, 1.0);
+  text-align: left;
+  text-shadow: none;
+  line-height: .85em;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 h2 {
-	color: #002776;
-	text-align: left;
-	line-height: 1.05em;
+  color: #002776;
+  text-align: left;
+  line-height: 1.05em;
 }
 
 h3 {
-	color: #002776;
-	text-align: left;
-	line-height: 1.05em;
+  color: #002776;
+  text-align: left;
+  line-height: 1.05em;
 }
 
 h4 {
-	color: #e55d02;
-	text-align: center;
-	/* text-shadow: -1px 1px 1px #000000; */
-	line-height: .95em;
-	font-weight: 500;
-	/* text-transform: uppercase; */
-	/* letter-spacing: .4em; */
+  color: #e55d02;
+  text-align: center;
+  /* text-shadow: -1px 1px 1px #000000; */
+  line-height: .95em;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+  /* letter-spacing: .4em; */
 }
 
 .black {
-	font-weight: 800;
-	font-size: .91em
+  font-weight: 800;
+  font-size: .91em
 }
 
 
@@ -51,105 +51,105 @@ h4 {
 }
 
 .accent a:link, .accent a:visited {
-	color:#e55d02;
+  color:#e55d02;
 }
 
 .accent a:hover, .accent a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #e55d02;
+  color: black;
+  text-shadow: 0px 0px 20px #e55d02;
 }
 
 .accent a:active {
-	color:black;
+  color:black;
 }
 
 
 /*------------------GENERIC LINKS----------------------------------*/
 
 a {
-	text-decoration: none;
-	-webkit-transition:all .1s ease-in;
+  text-decoration: none;
+  -webkit-transition:all .1s ease-in;
 }
 
 a:link, a:visited {
-	color:#e55d02;
+  color:#e55d02;
 }
 
 a:hover, a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #e55d02;
+  color: black;
+  text-shadow: 0px 0px 20px #e55d02;
 }
 
 a:active {
-	color:black;
+  color:black;
 }
 
 small a:hover, small a:active {
-	color: #8E8E93;
+  color: #8E8E93;
 }
 
 
 /*-----------------FOOTNOTE COLORS------------------------*/
 
 .refnumber, .fnumber {
-	color: #FF2D55;
+  color: #FF2D55;
 }
 
 .footlink {
-	color: #FF2D55;
+  color: #FF2D55;
 }
 
 .footlink a:link, .footlink a:visited {
-	color: #FF2D55;
+  color: #FF2D55;
 }
 
 .footlink a:hover, .footlink a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #FF2D55;
+  color: black;
+  text-shadow: 0px 0px 20px #FF2D55;
 }
 
 .footreturn a:link, .footreturn a:visited {
-	color: #FF2D55;
-	text-decoration: none;
+  color: #FF2D55;
+  text-decoration: none;
 }
 
 .footreturn a:hover, .footreturn a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #FF2D55;
+  color: black;
+  text-shadow: 0px 0px 20px #FF2D55;
 }
 
 .footref {
-	color: #FF2D55;
+  color: #FF2D55;
 }
 
 .footnote a:link, .footnote a:visited {
-	color: black;
-	text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 
 .footnote a:hover, .footnote a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #8E8E93;
+  color: black;
+  text-shadow: 0px 0px 20px #8E8E93;
 }
 
 .specialquote {
-	background: none !important;
+  background: none !important;
 }
 
 .specialquote h5 {
-	z-index: -100;
-	position: absolute;
-	text-align: center;
-	color: white;
+  z-index: -100;
+  position: absolute;
+  text-align: center;
+  color: white;
 }
 
 .specialquote img {
-	position: relative;
-	top: 0;
-	left: 0;
-	border: 0px solid #000000;
-	width: 100%;
-	z-index: -101;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 0px solid #000000;
+  width: 100%;
+  z-index: -101;
 }
 
 
@@ -163,82 +163,82 @@ small a:hover, small a:active {
 /*@media (min-device-width:200px) and (max-device-width:599px) OR  (max-width:599px) ORIGINAL COMBINED {*/
 @media (min-device-width:200px) and (max-width:599px) {
 
-	.headerwrapper {
-		float: left;
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-1200.jpg');
-		background-size: 100%;
-		padding-bottom: 0;
-		margin-bottom: 5px;
-		background-position:center top;
-	}
+  .headerwrapper {
+    float: left;
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-1200.jpg');
+    background-size: 100%;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+    background-position:center top;
+  }
 
-	h1 {
-		font-size: 60px;
-		font-size: 19vw;
-		margin-left: 4%;
-		margin-top: 0%;
-	}
+  h1 {
+    font-size: 60px;
+    font-size: 19vw;
+    margin-left: 4%;
+    margin-top: 0%;
+  }
 
-	@media (min-width:320px) and (max-width:359px) {
-		h1 {
-			font-size: 60px;
-			font-size: 19vw;
-		}
-		}
+  @media (min-width:320px) and (max-width:359px) {
+    h1 {
+      font-size: 60px;
+      font-size: 19vw;
+    }
+    }
 
-	@media (min-width: 360px) and (max-width:379px) {
-		h1 {
-			font-size: 68px;
-			font-size: 19vw;
-		}
+  @media (min-width: 360px) and (max-width:379px) {
+    h1 {
+      font-size: 68px;
+      font-size: 19vw;
+    }
 
-		}
+    }
 
-	@media (min-width: 384px) and (max-width:399px) {
-		h1 {
-			font-size: 72px;
-			font-size: 19vw;
-		}
+  @media (min-width: 384px) and (max-width:399px) {
+    h1 {
+      font-size: 72px;
+      font-size: 19vw;
+    }
 
-		}
+    }
 
-	@media (min-width: 400px) and (max-width:599px) {
-		h1 {
-			font-size: 76px;
-			font-size: 19vw;
-		}
+  @media (min-width: 400px) and (max-width:599px) {
+    h1 {
+      font-size: 76px;
+      font-size: 19vw;
+    }
 
-		}
+    }
 
-	h2 {
-		font-size: 25px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-		padding: 0 5% 0 7%
-	}
+  h2 {
+    font-size: 25px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+    padding: 0 5% 0 7%
+  }
 
-	h3 {
-		font-size: 15px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
+  h3 {
+    font-size: 15px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
 
-	h4 {
-		font-size: 19px;
-		font-size: 6vw;
-		margin: 39% 0 5% 0%;
-	}
+  h4 {
+    font-size: 19px;
+    font-size: 6vw;
+    margin: 39% 0 5% 0%;
+  }
 
-	.specialquote h5 {
-		font-size: 24px;
-		font: 900 7.5vw/.85em "quatro-slab",serif;
-		padding-top: 5%;
-		text-shadow: -3px 3px 9px #000000;
-		line-height: 1.1em;
-		margin-right: 5%;
-		margin-left: 5%;
-	}
+  .specialquote h5 {
+    font-size: 24px;
+    font: 900 7.5vw/.85em "quatro-slab",serif;
+    padding-top: 5%;
+    text-shadow: -3px 3px 9px #000000;
+    line-height: 1.1em;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 }
 
 
@@ -246,55 +246,55 @@ small a:hover, small a:active {
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
 
-	.headerwrapper {
-		float: left;
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-1200.jpg');
-		background-size: 100%;
-		padding-bottom: 0;
-		margin-bottom: 5%;
-		background-position:center top;
-	}
+  .headerwrapper {
+    float: left;
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-1200.jpg');
+    background-size: 100%;
+    padding-bottom: 0;
+    margin-bottom: 5%;
+    background-position:center top;
+  }
 
-	h1 {
-		font-size: 114px;
-		font-size: 19vw;
-		margin-left: 4%;
-		margin-top: 0%;
-	}
+  h1 {
+    font-size: 114px;
+    font-size: 19vw;
+    margin-left: 4%;
+    margin-top: 0%;
+  }
 
-	h2 {
-		font-size: 25px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-		padding: 0 10% 0 11%;
-	}
+  h2 {
+    font-size: 25px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+    padding: 0 10% 0 11%;
+  }
 
-	h3 {
-		font-size: 15px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
+  h3 {
+    font-size: 15px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
 
-	h4 {
-		font-size: 36px;
-		font-size: 6vw;
-		margin: 39% 0 5% 0%;
-	}
+  h4 {
+    font-size: 36px;
+    font-size: 6vw;
+    margin: 39% 0 5% 0%;
+  }
 
-	.specialquote h5 {
-		font-size: 45px;
-		font: 900 7.5vw/.85em "quatro-slab",serif;
-		padding-top: 5%;
-		text-shadow: -3px 3px 9px #000000;
-		line-height: 1.1em;
-		margin-right: 5%;
-		margin-left: 5%;
-	}
+  .specialquote h5 {
+    font-size: 45px;
+    font: 900 7.5vw/.85em "quatro-slab",serif;
+    padding-top: 5%;
+    text-shadow: -3px 3px 9px #000000;
+    line-height: 1.1em;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 
-	.header {
-		position: relative;
-	}
+  .header {
+    position: relative;
+  }
 }
 
 
@@ -303,48 +303,48 @@ small a:hover, small a:active {
 /*@media (min-width:1024px) and (max-width:1249px) OR (min-device-width:600px) and (max-device-width:1199px) and (orientation:landscape) {*/
 @media (min-width:1024px) and (max-width:1249px) {
 
-	.headerwrapper {
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-2000.jpg');
-		background-size: 100%;
-		padding-bottom: 39%;
-		background-position:center top;
-	}
+  .headerwrapper {
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-2000.jpg');
+    background-size: 100%;
+    padding-bottom: 39%;
+    background-position:center top;
+  }
 
-	h1 {
-		font-size: 143px;
-		font-size: 14vw;
-		margin-left: 16%;
-		margin-top: -2%;
-	}
+  h1 {
+    font-size: 143px;
+    font-size: 14vw;
+    margin-left: 16%;
+    margin-top: -2%;
+  }
 
-	h2 {
-		font-size: 25px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
+  h2 {
+    font-size: 25px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
 
-	h3 {
-		font-size: 15px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
+  h3 {
+    font-size: 15px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
 
-	h4 {
-		font-size: 25px;
-		width: 19%;
-		font-size: 2.4vw;
-		margin: .4% 0 0 29%;
-	}
+  h4 {
+    font-size: 25px;
+    width: 19%;
+    font-size: 2.4vw;
+    margin: .4% 0 0 29%;
+  }
 
-	.specialquote h5 {
-		font: 900 70px/.85em "quatro-slab",serif;
-		padding-top: 12%;
-		text-shadow: -3px 3px 6px #000000;
-		line-height: 1.2em;
-		margin-right: -190px;
-		margin-left: 20px;
-	}
+  .specialquote h5 {
+    font: 900 70px/.85em "quatro-slab",serif;
+    padding-top: 12%;
+    text-shadow: -3px 3px 6px #000000;
+    line-height: 1.2em;
+    margin-right: -190px;
+    margin-left: 20px;
+  }
 }
 
 
@@ -352,48 +352,48 @@ small a:hover, small a:active {
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
 
-	.headerwrapper {
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-2000.jpg');
-		background-size: 100%;
-		padding-bottom: 39%;
-		background-position:center top;
-	}
+  .headerwrapper {
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-2000.jpg');
+    background-size: 100%;
+    padding-bottom: 39%;
+    background-position:center top;
+  }
 
-	h1 {
-		font-size: 200px;
-		font-size: 14vw;
-		margin-left: 16%;
-		margin-top: 0%;
-	}
+  h1 {
+    font-size: 200px;
+    font-size: 14vw;
+    margin-left: 16%;
+    margin-top: 0%;
+  }
 
-	h2 {
-		font-size: 25px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
+  h2 {
+    font-size: 25px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
 
-	h3 {
-		font-size: 15px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
+  h3 {
+    font-size: 15px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
 
-	h4 {
-		font-size: 42px;
-		width: 19%;
-		font-size: 2.4vw;
-		margin: 1% 0 0 29%;
-	}
+  h4 {
+    font-size: 42px;
+    width: 19%;
+    font-size: 2.4vw;
+    margin: 1% 0 0 29%;
+  }
 
-	.specialquote h5 {
-		font: 900 85px/.85em "quatro-slab",serif;
-		padding-top: 17%;
-		text-shadow: -3px 3px 7px #000000;
-		line-height: 1.2em;
-		margin-right: -150px;
-		margin-left: 20px;
-	}
+  .specialquote h5 {
+    font: 900 85px/.85em "quatro-slab",serif;
+    padding-top: 17%;
+    text-shadow: -3px 3px 7px #000000;
+    line-height: 1.2em;
+    margin-right: -150px;
+    margin-left: 20px;
+  }
 }
 
 
@@ -401,44 +401,44 @@ small a:hover, small a:active {
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
 
-	.headerwrapper {
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-2560.jpg');
-		background-size: 100%;
-		padding-bottom: 39%;
-		background-position:center top;
-	}
+  .headerwrapper {
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/bluefuse/images/header-2560.jpg');
+    background-size: 100%;
+    padding-bottom: 39%;
+    background-position:center top;
+  }
 
-	h1 {
-		font-size: 200px;
-		font-size: 12vw;
-		margin-left: 21%;
-		margin-top: -1.5%;
-	}
+  h1 {
+    font-size: 200px;
+    font-size: 12vw;
+    margin-left: 21%;
+    margin-top: -1.5%;
+  }
 
-	h2 {
-		font-size: 25px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
+  h2 {
+    font-size: 25px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
 
-	h3 {
-		font-size: 15px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
+  h3 {
+    font-size: 15px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
 
-	h4 {
-		font-size: 42px;
-		width: 14%;
-		font-size: 2.5vw;
-		margin: 5% 0 0 32.5%;
-	}
+  h4 {
+    font-size: 42px;
+    width: 14%;
+    font-size: 2.5vw;
+    margin: 5% 0 0 32.5%;
+  }
 
-	.specialquote h5 {
-		font: 900 100px/.85em "quatro-slab",serif;
-		padding-top: 13%;
-		text-shadow: -3px 3px 9px #000000;
-		line-height: 1.2em;
-	}
+  .specialquote h5 {
+    font: 900 100px/.85em "quatro-slab",serif;
+    padding-top: 13%;
+    text-shadow: -3px 3px 9px #000000;
+    line-height: 1.2em;
+  }
 }
