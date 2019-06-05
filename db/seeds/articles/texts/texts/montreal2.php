@@ -89,7 +89,7 @@
 <p>There were clashes with police. Bank windows were smashed out and dumpsters dragged into the streets. The police deployed their usual weapons: batons, pepper spray, flashbang grenades. A total of 15 people were arrested. The struggle continues.</p>
 <h2>Further Reading</h2>
 <p><a href="http://grevemontreal.noblogs.org/" target="_blank">Grève Montréal</a><br />
-<a href="http://mtlcounter-info.org/" target="_blank">Montréal Contre-information</a></p> 
+<a href="http://mtlcounter-info.org/" target="_blank">Montréal Contre-information</a></p>
 <p>&nbsp;</p>
 <div id="footnoteprint">
 <br />

@@ -1,11 +1,11 @@
 <item>
-		<title>Steal Something from Work Day 2016</title>
-		<link>http://www.crimethinc.com/blog/2016/04/15/steal-something-from-work-day-2016/</link>
-		<pubDate>Fri, 15 Apr 2016 17:58:07 +0000</pubDate>
-		<dc_creator><![CDATA[ret marut]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=6278</guid>
-		<description/>
-		<content_encoded><![CDATA[<p>Today we take a break from our <a href="http://www.crimethinc.com/blog/2016/03/16/series-the-anarchist-critique-of-democracy/">ongoing series about the anarchist critique of democracy</a> to observe an annual day of action, <a href="http://www.stealfromwork.crimethinc.com/">Steal Something from Work Day.</a></p>
+    <title>Steal Something from Work Day 2016</title>
+    <link>http://www.crimethinc.com/blog/2016/04/15/steal-something-from-work-day-2016/</link>
+    <pubDate>Fri, 15 Apr 2016 17:58:07 +0000</pubDate>
+    <dc_creator><![CDATA[ret marut]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=6278</guid>
+    <description/>
+    <content_encoded><![CDATA[<p>Today we take a break from our <a href="http://www.crimethinc.com/blog/2016/03/16/series-the-anarchist-critique-of-democracy/">ongoing series about the anarchist critique of democracy</a> to observe an annual day of action, <a href="http://www.stealfromwork.crimethinc.com/">Steal Something from Work Day.</a></p>
 
 <p>Today is April 15—in the US, the day that taxes are usually due to the federal government. Ironically, this time tax day has been moved back to Monday so the IRS can celebrate Emancipation Day—which the rest of us have no opportunity to celebrate, chained as we are to the grindstone. Slavery has been abolished, but wage slavery persists.</p>
 
@@ -57,38 +57,38 @@
 
 <p><a href="http://www.crimethinc.com/blog/2010/04/13/steal-something-from-work-day-is-here/">And there’s more!</a> Steal Something from Work Day <a href="https://www.youtube.com/watch?v=7juwrj2496Q">videos</a>, <a href="http://www.glennbeck.com/2011/04/18/something-missing-from-the-office-friday-was-national-steal-from-work-day/">corporate media coverage</a>, and even a <a href="https://cloudfront.crimethinc.com/images/ssfwd/heist.pdf">journal (pdf, 4.3 MB)</a>.</p>
 ]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>6278</wp_post_id>
-		<wp_post_date><![CDATA[2016-04-15 10:58:07]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2016-04-15 17:58:07]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[closed]]></wp_ping_status>
-		<wp_post_name><![CDATA[steal-something-from-work-day-2016]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[2]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_sd_is_markdown]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[6279]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://www.crimethinc.com/blog/wp-content/uploads/2016/04/1b-3.jpg]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cwc.im/ssfwd2016]]></wp_meta_value>
-		</wp_postmeta>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>6278</wp_post_id>
+    <wp_post_date><![CDATA[2016-04-15 10:58:07]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2016-04-15 17:58:07]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[closed]]></wp_ping_status>
+    <wp_post_name><![CDATA[steal-something-from-work-day-2016]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[2]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_sd_is_markdown]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[6279]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://www.crimethinc.com/blog/wp-content/uploads/2016/04/1b-3.jpg]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://cwc.im/ssfwd2016]]></wp_meta_value>
+    </wp_postmeta>
+  </item>

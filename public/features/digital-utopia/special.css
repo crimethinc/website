@@ -1,195 +1,195 @@
 @media (min-device-width:200px) and (max-device-width:599px) {
-	.specialquote {
-		width: 96%;
-		padding: 0 2%;
-		margin: 5% 0 5% 0;
-		line-height: 0;
-	}
-	
-	.specialquote img {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 0px solid #000000;
-		width: 100%;
-	}
-	
-	.specialquote h5 {
-		margin-right: 2%;
-		z-index: -100;
-		position: absolute;
-		text-align: center;
-		font: 900 6.7vw/.85em "quatro-slab",serif;
-		padding-top: 15%;
-		color: #FF1300;
-		font-size: 20px;
-		font-size: 6.7vw;
-	}
+  .specialquote {
+    width: 96%;
+    padding: 0 2%;
+    margin: 5% 0 5% 0;
+    line-height: 0;
+  }
+
+  .specialquote img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0px solid #000000;
+    width: 100%;
+  }
+
+  .specialquote h5 {
+    margin-right: 2%;
+    z-index: -100;
+    position: absolute;
+    text-align: center;
+    font: 900 6.7vw/.85em "quatro-slab",serif;
+    padding-top: 15%;
+    color: #FF1300;
+    font-size: 20px;
+    font-size: 6.7vw;
+  }
 }
 
 @media (max-width:599px) {
-	.specialquote {
-		width: 96%;
-		padding: 0 2%;
-		margin: 5% 0 5% 0;
-		line-height: 0;
-	}
-	
-	.specialquote img {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 0px solid #000000;
-		width: 100%;
-	}
-	
-	.specialquote h5 {
-		margin-right: 2%;
-		z-index: -100;
-		position: absolute;
-		text-align: center;
-		font: 900 6.7vw/.85em "quatro-slab",serif;
-		padding-top: 15%;
-		color: #FF1300;
-		font-size: 21px;
-		font-size: 6.7vw;
-	}
+  .specialquote {
+    width: 96%;
+    padding: 0 2%;
+    margin: 5% 0 5% 0;
+    line-height: 0;
+  }
+
+  .specialquote img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0px solid #000000;
+    width: 100%;
+  }
+
+  .specialquote h5 {
+    margin-right: 2%;
+    z-index: -100;
+    position: absolute;
+    text-align: center;
+    font: 900 6.7vw/.85em "quatro-slab",serif;
+    padding-top: 15%;
+    color: #FF1300;
+    font-size: 21px;
+    font-size: 6.7vw;
+  }
 }
 
 @media (min-width:600px) and (max-width:1023px) {
-	.specialquote {
-		width: 96%;
-		padding: 0 2%;
-		margin: 5% 0 5% 0;
-		line-height: 0;
-	}
-	
-	.specialquote img {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 0px solid #000000;
-		width: 100%;
-	}
-	
-	.specialquote h5 {
-		margin-right: 2%;
-		z-index: -100;
-		position: absolute;
-		text-align: center;
-		font: 900 6.7vw/.85em "quatro-slab",serif;
-		padding-top: 15%;
-		color: #FF1300;
-		font-size: 40px;
-		font-size: 6.7vw;
-	}
+  .specialquote {
+    width: 96%;
+    padding: 0 2%;
+    margin: 5% 0 5% 0;
+    line-height: 0;
+  }
+
+  .specialquote img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0px solid #000000;
+    width: 100%;
+  }
+
+  .specialquote h5 {
+    margin-right: 2%;
+    z-index: -100;
+    position: absolute;
+    text-align: center;
+    font: 900 6.7vw/.85em "quatro-slab",serif;
+    padding-top: 15%;
+    color: #FF1300;
+    font-size: 40px;
+    font-size: 6.7vw;
+  }
 }
 
 @media (min-width:1024px) and (max-width:1249px) {
-	.specialquote {
-		width: 1000px;
-		margin-left: -113px;
-		margin-top: 20px;
-		line-height: 0;
-	}
-	
-	.specialquote img {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 0px solid #000000;
-		width: 100%;
-	}
-	
-	.specialquote h5 {
-		margin-right: -215px;
-		z-index: -100;
-		position: absolute;
-		text-align: center;
-		font: 900 71px/.85em "quatro-slab",serif;
-		padding-top: 170px;
-		color: #FF1300;
-	}
+  .specialquote {
+    width: 1000px;
+    margin-left: -113px;
+    margin-top: 20px;
+    line-height: 0;
+  }
+
+  .specialquote img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0px solid #000000;
+    width: 100%;
+  }
+
+  .specialquote h5 {
+    margin-right: -215px;
+    z-index: -100;
+    position: absolute;
+    text-align: center;
+    font: 900 71px/.85em "quatro-slab",serif;
+    padding-top: 170px;
+    color: #FF1300;
+  }
 }
 
 @media (min-device-width:600px) and (max-device-width:1199px) and (orientation:landscape) {
-	.specialquote {
-		width: 1000px;
-		margin-left: -113px;
-		margin-top: 20px;
-		line-height: 0;
-	}
-	
-	.specialquote img {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 0px solid #000000;
-		width: 100%;
-	}
-	
-	.specialquote h5 {
-		margin-right: -215px;
-		z-index: -100;
-		position: absolute;
-		text-align: center;
-		font: 900 71px/.85em "quatro-slab",serif;
-		padding-top: 170px;
-		color: #FF1300;
-	}
+  .specialquote {
+    width: 1000px;
+    margin-left: -113px;
+    margin-top: 20px;
+    line-height: 0;
+  }
+
+  .specialquote img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0px solid #000000;
+    width: 100%;
+  }
+
+  .specialquote h5 {
+    margin-right: -215px;
+    z-index: -100;
+    position: absolute;
+    text-align: center;
+    font: 900 71px/.85em "quatro-slab",serif;
+    padding-top: 170px;
+    color: #FF1300;
+  }
 }
 
 @media (min-width:1250px) and (max-width:1669px) {
-	.specialquote {
-		width: 1230px;
-		margin-left: -505px;
-		margin-top: 20px;
-		line-height: 0;
-	}
-	
-	.specialquote img {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 0px solid #000000;
-		width: 100%;
-	}
-	
-	.specialquote h5 {
-		margin-right: -175px;
-		z-index: -100;
-		position: absolute;
-		text-align: center;
-		font: 900 88px/.85em "quatro-slab",serif;
-		padding-top: 200px;
-		color: #FF1300;
-	}
+  .specialquote {
+    width: 1230px;
+    margin-left: -505px;
+    margin-top: 20px;
+    line-height: 0;
+  }
+
+  .specialquote img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0px solid #000000;
+    width: 100%;
+  }
+
+  .specialquote h5 {
+    margin-right: -175px;
+    z-index: -100;
+    position: absolute;
+    text-align: center;
+    font: 900 88px/.85em "quatro-slab",serif;
+    padding-top: 200px;
+    color: #FF1300;
+  }
 }
 
 @media (min-width:1670px) {
-	.specialquote {
-		width: 1370px;
-		margin-left: -700px;
-		margin-top: 20px;
-		line-height: 0;
-	}
-	
-	.specialquote img {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 0px solid #000000;
-		width: 100%;
-	}
-	
-	.specialquote h5 {
-		z-index: -100;
-		position: absolute;
-		text-align: center;
-		font: 900 98px/.85em "quatro-slab",serif;
-		padding-top: 225px;
-		color: #FF1300;
-	}
+  .specialquote {
+    width: 1370px;
+    margin-left: -700px;
+    margin-top: 20px;
+    line-height: 0;
+  }
+
+  .specialquote img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0px solid #000000;
+    width: 100%;
+  }
+
+  .specialquote h5 {
+    z-index: -100;
+    position: absolute;
+    text-align: center;
+    font: 900 98px/.85em "quatro-slab",serif;
+    padding-top: 225px;
+    color: #FF1300;
+  }
 }
 
 
@@ -201,5 +201,5 @@
 <link rel="stylesheet" href="desktoptiny.css" type="text/css" media="(min-width:1024px) and (max-width:1249px)">
 <link rel="stylesheet" href="desktoptiny.css" type="text/css" media="(min-device-width:600px) and (max-device-width:1199px) and (orientation:landscape)">
 <link rel="stylesheet" href="desktopsmall.css" type="text/css" media="(min-width:1250px) and (max-width:1669px)">
-	<link rel="stylesheet" href="desktopbig.css" type="text/css" media="(min-width:1670px)">
+  <link rel="stylesheet" href="desktopbig.css" type="text/css" media="(min-width:1670px)">
 */

@@ -16,6 +16,28 @@
 # Uncomment the following lines to make the configuration take effect.
 
 PreCommit:
+  BundleCheck:
+    enabled: true
+
+  HardTabs:
+    enabled: true
+
+  LineEndings:
+    enabled: true
+    exclude:
+      - app/assets/fonts/*
+      - app/assets/images/*
+      - app/assets/images/*/*
+
+      - db/seeds/articles/*
+      - public/*
+      - public/*/*
+      - public/*/*/*
+      - public/*/*/*/*
+
+  RailsSchemaUpToDate:
+    enabled: true
+
   RuboCop:
     enabled: true
     on_warn: fail # Treat all warnings as failures
@@ -24,3 +46,17 @@ PreCommit:
     enabled: true
     exclude:
       - '**/db/structure.sql' # Ignore trailing whitespace in generated files
+
+  YamlSyntax:
+    enabled: true
+
+  YamlLint:
+    enabled: true
+
+PostCommit:
+  BundleInstall:
+    enabled: true
+
+PostMerge:
+  BundleInstall:
+    enabled: true

@@ -21,159 +21,159 @@
 
 /*-------------PHONE CSS------------------*/
 @media (min-device-width:200px) and (max-width:600px) {
-  
+
   #sharediv {
     padding: 7% 5% 10% 15%;
     width: 75%;
   }
-  
+
   #lang1 {
     width: 40%;
   }
-  
+
   #lang2 {
     width: 46%;
   }
-  
+
   .title {
     padding-left: 7%;
     padding-top: 11%;
     width: 89%;
   }
-  
+
   .title h1 {
     font-size: 14vw;
     line-height: 12vw;
   }
-  
+
   .title h4 {
     font-size: 4.25vw;
     padding: 27.5% 0 0 10%;
   }
-  
+
   #videopdf {
     margin-top: 12%;
   }
-  
+
   #videopdf p {
     padding: .5% 0 0 6.5%;
   }
-  
+
   #pdfright p {
     padding: 12% 0 0 .5%;
   }
-  
+
   .leftintro p {
     padding: .5% 0 0 0;
   }
-  
+
   .rightintro h3 {
     padding: 22% 5% 0% 0%;
     font-size: 12vw;
     line-height: 12vw;
   }
-  
+
   #self h2 {
     padding: 1% 0 0 15%;
   }
-  
+
   #answering h2 {
     padding: 2% 0 0 23%;
   }
-  
+
   #relationships h2 {
     padding: 5% 0 0 9%;
   }
-  
+
   #revolt h2 {
     padding: 75% 0 0 16%;
     color: white;
   }
-  
+
 /*  #outro .leftintro p {
-    
+
   }*/
-  
+
   #takeflight h1 {
     font-size: 20.5vw;
     line-height: 17vw;
   }
-  
+
 }
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:601px) and (max-width:1023px) {
-  
+
   .title {
     padding-left: 9%;
     padding-top: 8%;
     width: 91%;
   }
-  
+
   .title h1 {
     font-size: 13vw;
     line-height: 11vw;
   }
-  
+
   .title h4 {
     font-size: 3.75vw;
     padding: 23.5% 0 0 17%;
     width:  83%;
   }
-  
+
   #videopdf {
     margin-top: 12.3%;
   }
-  
+
   #videopdf p {
     padding: .5% 0 0 3%;
   }
-  
+
   #pdfright p {
     padding: 12% 0 0 .5%;
   }
-  
+
   #pdf {
     width: 49%;
     padding-left: 6%;
   }
-  
+
   .leftintro p {
     padding: .5% 0 0 0;
   }
-  
+
   .rightintro h3 {
     padding: 22% 5% 0% 0%;
     font-size: 12vw;
     line-height: 12vw;
   }
-    
+
   #self h2 {
     padding: 1% 0 0 15%;
   }
-  
+
   #answering h2 {
     padding: 2% 0 0 23%;
   }
-  
+
   #relationships h2 {
     padding: 5% 0 0 9%;
   }
-  
+
   #revolt h2 {
     padding: 75% 0 0 16%;
     color: white;
   }
-  
+
   #outro .leftintro p {
-    
+
   }
-  
+
   #takeflight h1 {
     font-size: 20.5vw;
     line-height: 17vw;
   }
-      
+
 }
 
 
@@ -182,349 +182,349 @@
 @media (min-width:1024px) and (max-width:1200px) {
 
   #sharediv li {
-    padding-right:3.5%;  
+    padding-right:3.5%;
   }
-  
+
   #sharediv {
     padding: 8% 0% 2% 8%;
     font-family:'Vitesse SSm A', 'Vitesse SSm B',Helvetica,Arial,sans-serif;
     width: 92%;
   }
-  
+
   .title {
     padding-left: 15%;
     padding-top: 3%;
   }
-  
+
   .title h1 {
     font-size: 11vw;
     line-height: 9vw;
   }
-  
+
   .title h4 {
     font-size: 2.75vw;
     padding: 23% 0 0 20%;
   }
-  
+
   #videopdf {
     padding-top: 25%;
   }
-  
+
   #videopdf p {
     padding: .5% 0 0 2.2%;
   }
-  
+
   #pdfright p {
     padding: 6% 0 0 .5%;
   }
-  
+
   .leftintro p {
-    
+
   }
-  
+
   .rightintro h3 {
     font-size: 12.3vw;
     line-height: 13vw;
     padding: 20% 5% 0% 0%;
   }
-  
+
   #self h2 {
     padding: 1% 0 0 15%;
   }
-  
+
   #answering h2 {
     padding: 2% 0 0 23%;
   }
-  
+
   #relationships h2 {
     padding: 5% 0 0 9%;
   }
-  
+
   #revolt h2 {
     padding: 75% 0 0 16%;
     color: white;
   }
-  
+
   #outro .leftintro p {
-    
+
   }
-  
+
   #takeflight h1 {
     font-size: 20.5vw;
     line-height: 17vw;
   }
-    
+
 }
 
 
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1201px) and (max-width:1670px) {
-  
+
   ul#toc {
     width: 435px;
   }
-  
+
   ul#share {
     width: 280px;
   }
-  
+
   .title {
     padding-left: 17%;
   }
-  
+
   .title h1 {
     font-size: 10.5vw;
     line-height: 8.75vw;
   }
-  
+
   .title h4 {
     font-size: 2.5vw;
     padding: 22% 0 0 20%;
   }
-  
+
   #videopdf {
     padding-top: 23%;
   }
-  
+
   #videopdf p {
     padding: .5% 0 0 2.2%;
   }
-  
+
   #pdfright p {
     padding: 6% 0 0 .5%;
   }
-  
-  
+
+
   .leftintro p {
     font-size: 1.4vw;
   }
-  
+
   .rightintro h3 {
     font-size: 5.9vw;
   }
-  
+
   #self h2 {
     padding: 1% 0 0 15%;
   }
-  
+
   #answering h2 {
     padding: 2% 0 0 23%;
   }
-  
+
   #power .righttext {
     width: 76%;
     padding: 5% 14% 0% 10%;
   }
-  
+
   #relationships h2 {
     padding: 5% 0 0 9%;
   }
-  
+
   #reconciling .righttext {
     width: 78%;
     padding: 5% 7% 0% 15%;
   }
-  
+
   #revolt h2 {
     padding: 75% 0 0 16%;
     color: white;
   }
-  
+
   #revolt .righttext {
     width: 84%;
     padding: 1% 6% 0% 10%;
   }
-  
+
   #control .righttext {
     width: 78%;
     padding: 8% 12% 0% 10%;
   }
-  
+
   #hierarchy .righttext {
     width: 78%;
     padding: 7% 12% 0% 10%;
   }
-  
+
   #government .righttext {
     width: 84%;
     padding: 5% 6% 0% 10%;
   }
-  
+
   #profit .righttext {
     width: 75%;
     padding: 6% 15% 0% 10%;
   }
-  
+
   #property .righttext {
     width: 76%;
     padding: 5% 14% 0% 10%;
   }
-  
+
   #lastcrime .righttext {
     width: 70%;
     padding: 15% 20% 0% 10%;
   }
-  
+
   .first {
     width: 24%;
     padding: 5% 7% 5% 8%;
   }
-  
+
   .second {
     width: 27%;
     padding: 5% 7% 5% 0%;
   }
-  
+
   .third {
     width: 20%;
     padding: 5% 7% 5% 0%;
   }
-  
+
   #outro .leftintro p {
     font-size: 1.7vw;
     line-height: 2.2vw;
   }
-  
+
   #takeflight h1 {
     font-size: 15vw;
     line-height: 11.75vw;
   }
-      
+
 }
 
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1671px) {
-  
+
   #toc a {
     width: 515px;
   }
-  
+
   ul#toc {
     width: 565px;
   }
-  
+
   ul#share {
     width: 350px;
   }
-  
+
   .title {
     padding-left: 17%;
   }
-  
+
   .title h1 {
     font-size: 10.5vw;
     line-height: 8.75vw;
   }
-  
+
   .title h4 {
     font-size: 2.5vw;
     padding: 23.5% 0 0 22%;
   }
-  
+
   #videopdf {
     padding-top: 23%;
   }
-  
+
   #videopdf p {
     padding: .5% 0 0 2.2%;
   }
-  
+
   #pdfright p {
     padding: 4% 0 0 .5%;
   }
-  
+
   .leftintro p {
     font-size: 1.4vw;
   }
-  
+
   .rightintro h3 {
     font-size: 5.9vw;
   }
-  
+
   #self h2 {
     padding: 1% 0 0 15%;
   }
-  
+
   #answering h2 {
     padding: 2% 0 0 23%;
   }
-  
+
   #power .righttext {
     width: 76%;
     padding: 5% 14% 0% 10%;
   }
-  
+
   #relationships h2 {
     padding: 5% 0 0 9%;
   }
-  
+
   #reconciling .righttext {
     width: 75%;
     padding: 5% 10% 0% 15%;
   }
-  
+
   #revolt h2 {
     padding: 75% 0 0 16%;
     color: white;
   }
-  
+
   #revolt .righttext {
     width: 71%;
     padding: 5% 14% 0% 15%;
   }
-  
+
   #hierarchy .righttext {
     width: 78%;
     padding: 7% 12% 0% 10%;
   }
-  
+
   #government .righttext {
     width: 76%;
     padding: 5% 9% 0% 15%;
   }
-  
+
   #profit .righttext {
     width: 70%;
     padding: 5% 15% 0% 15%;
   }
-  
+
   #property .righttext {
     width: 76%;
     padding: 3% 9% 0% 15%;
   }
-  
+
   #lastcrime .righttext {
     width: 65%;
     padding: 15% 20% 0% 15%;
   }
-  
+
   .first {
     width: 24%;
     padding: 5% 7% 5% 8%;
   }
-  
+
   .second {
     width: 27%;
     padding: 5% 7% 5% 0%;
   }
-  
+
   .third {
     width: 20%;
     padding: 5% 7% 5% 0%;
   }
-  
+
   #outro .leftintro p {
     font-size: 1.7vw;
     line-height: 2.2vw;
   }
-  
+
   #takeflight h1 {
     font-size: 15vw;
     line-height: 11.75vw;
   }
-  
+
 }
 
 

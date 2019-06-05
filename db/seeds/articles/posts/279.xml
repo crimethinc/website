@@ -1,11 +1,11 @@
 <item>
-		<title>New Feature, and Vortext Now Online</title>
-		<link>http://www.crimethinc.com/blog/2012/07/04/new-feature-and-vortext-now-online/</link>
-		<pubDate>Wed, 04 Jul 2012 22:53:25 +0000</pubDate>
-		<dc_creator><![CDATA[b. traven]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=2408</guid>
-		<description/>
-		<content_encoded><![CDATA[At long last, we’ve uploaded a pdf version of <a href="http://www.crimethinc.com/blog/2012/04/08/outliers-to-the-front-presenting-vortext/"><em>VORTEXT</em></a>, organ of the Experimentation Committee, to our <a href="http://www.crimethinc.com/tools/downloads/zines.html">downloads</a> page. Please print these out and share them freely—or, heaven help you, miserably slog through it online.
+    <title>New Feature, and Vortext Now Online</title>
+    <link>http://www.crimethinc.com/blog/2012/07/04/new-feature-and-vortext-now-online/</link>
+    <pubDate>Wed, 04 Jul 2012 22:53:25 +0000</pubDate>
+    <dc_creator><![CDATA[b. traven]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=2408</guid>
+    <description/>
+    <content_encoded><![CDATA[At long last, we’ve uploaded a pdf version of <a href="http://www.crimethinc.com/blog/2012/04/08/outliers-to-the-front-presenting-vortext/"><em>VORTEXT</em></a>, organ of the Experimentation Committee, to our <a href="http://www.crimethinc.com/tools/downloads/zines.html">downloads</a> page. Please print these out and share them freely—or, heaven help you, miserably slog through it online.
 
 <a href="https://cloudfront.crimethinc.com/images/vortext/4b.jpg" rel="lightbox[mrpa]" class="smallitem"><img src="https://cloudfront.crimethinc.com/images/vortext/4a.jpg" /></a><p><strong>VORTEXT:<br />ORGAN OF THE EXPERIMENTATION COMMITTEE</strong>
 <strong><a href="https://cloudfront.crimethinc.com/pdfs/vortext_imposed.pdf">PDF (35.4 MB) Imposed Zine Version (Legal Size)</a></strong>
@@ -16,38 +16,38 @@
 <p><strong><a href="http://crimethinc.com/texts/recentfeatures/experimentation.php">Beware/Join the Experimentation Committee!</a></strong></p>
 
 <p>We’ll upload a pdf of <a href="http://www.crimethinc.com/blog/2012/04/08/into-the-unknownterror-incognita/"><strong><em>TERROR INCOGNITA</em></strong></a> next.</p>]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>2408</wp_post_id>
-		<wp_post_date><![CDATA[2012-07-04 15:53:25]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2012-07-04 22:53:25]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[new-feature-and-vortext-now-online]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="read-all-about-it"><![CDATA[Read All About It]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[2497]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cwc.im/vortext]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/vortext/3b.jpg]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[readability]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://rdd.me/trihwexc]]></wp_meta_value>
-		</wp_postmeta>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>2408</wp_post_id>
+    <wp_post_date><![CDATA[2012-07-04 15:53:25]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2012-07-04 22:53:25]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[new-feature-and-vortext-now-online]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="read-all-about-it"><![CDATA[Read All About It]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[2497]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://cwc.im/vortext]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/vortext/3b.jpg]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[readability]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://rdd.me/trihwexc]]></wp_meta_value>
+    </wp_postmeta>
+  </item>

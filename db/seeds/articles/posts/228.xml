@@ -1,11 +1,11 @@
 <item>
-		<title>CrimethInc. State of the Union Address</title>
-		<link>http://www.crimethinc.com/blog/2011/03/29/crimethinc-state-of-the-union-address/</link>
-		<pubDate>Tue, 29 Mar 2011 17:33:59 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=1742</guid>
-		<description/>
-		<content_encoded><![CDATA[In just a couple days, we’ll unveil our newest round of projects—some of our most ambitious in several years. But first, we’d like to offer a glimpse into our internal discussions. We’ve been trying to figure out how to handle our current financial difficulties while rendering our materials more widely accessible; we think we’ve hit upon a solution, but we’ll need your support to make it work.
+    <title>CrimethInc. State of the Union Address</title>
+    <link>http://www.crimethinc.com/blog/2011/03/29/crimethinc-state-of-the-union-address/</link>
+    <pubDate>Tue, 29 Mar 2011 17:33:59 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=1742</guid>
+    <description/>
+    <content_encoded><![CDATA[In just a couple days, we’ll unveil our newest round of projects—some of our most ambitious in several years. But first, we’d like to offer a glimpse into our internal discussions. We’ve been trying to figure out how to handle our current financial difficulties while rendering our materials more widely accessible; we think we’ve hit upon a solution, but we’ll need your support to make it work.
 
 <!--more Read on after the jump.-->
 
@@ -35,51 +35,51 @@ Thank you all for everything you’ve done to enable us to do what we do. May it
 
 For the abolition of business and business plans, by any means necessary—
 A few overworked underlings at CrimethInc. Far East]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>1742</wp_post_id>
-		<wp_post_date><![CDATA[2011-03-29 09:33:59]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2011-03-29 17:33:59]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[crimethinc-state-of-the-union-address]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cwc.im/sotu]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/sotu/1b.jpg]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[3023]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_comment>
-			<wp_comment_id>1422</wp_comment_id>
-			<wp_comment_author><![CDATA[kudzu]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[xap9@hotmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[74.166.66.35]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-29 11:35:07]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-29 19:35:07]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[You seem to take a strong position that print is best - in fact, until now you've gone so far as to say that print is the only medium anyone should have your books in.  So I ask:
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>1742</wp_post_id>
+    <wp_post_date><![CDATA[2011-03-29 09:33:59]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2011-03-29 17:33:59]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[crimethinc-state-of-the-union-address]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://cwc.im/sotu]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/sotu/1b.jpg]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[3023]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_comment>
+      <wp_comment_id>1422</wp_comment_id>
+      <wp_comment_author><![CDATA[kudzu]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[xap9@hotmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[74.166.66.35]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-29 11:35:07]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-29 19:35:07]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[You seem to take a strong position that print is best - in fact, until now you've gone so far as to say that print is the only medium anyone should have your books in.  So I ask:
 
 What's the proper way to read a crimethinc book?  Should you start at the beginning and read each page, or can you skip around?  Can you photocopy your favorite bits and blow them up into a poster, or do those bits belong in their original book format?
 
 Dictating how the reader interacts with your work like that would be silly.  By the same token, it's silly to decide for everyone what format is best for them to read in.
 
-So here's my call:  
+So here's my call:
 Tonight, take all the digital proofs and raw source files for crimethinc publications and stick them in a torrent.  Done.
 
 You don't need to do any work, there's nothing to keep "tasteful".  I know you've got those files already sitting on some hard drive somewhere.  All you need to do is set them free, and the internet will do the rest for you.  Conversion, formatting, alternate formatting, OCR, all these things will be taken care of, and possibly done better than you would have had time for.
@@ -93,50 +93,50 @@ Who knows, some other collectives might even start printing and circulating your
 You've given the impression that restricting digital versions of your books was a benevolent decision for the benefit of readers, to protect them from poor quality.  But why can't readers make that decision themselves?  Maybe you're right and maybe you're wrong, but I see no reason you should be restricting everyone's access when you don't need to.
 
 The inevitable response is "But we can't stay in business if we give away everything for free!".  That's been discussed ad nauseum since the dawn of Napster, and there's a plethora of alternate models from the traditional exchange economics of "no money, no media".  I won't get into them here because I assume you already know.  But if y'all genuinely need some guidance, I'm happy to help.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301427308.74";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:5:"kudzu";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1423</wp_comment_id>
-			<wp_comment_author><![CDATA[strangers]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[strangers@riseup.net]]></wp_comment_author_email>
-			<wp_comment_author_url>http://www.tangledwilderness.org</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[85.72.220.209]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-29 13:02:02]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-29 21:02:02]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[I concur with Kudzo, though I suspect that it isn't necessarily simple for you to collect the master files, depending on your organizational systems and whatnot.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:12:"1301432522.9";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"strangers";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1424</wp_comment_id>
-			<wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[174.62.88.231]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-29 17:23:14]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-30 01:23:14]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[I disagree about one point.
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301427308.74";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:5:"kudzu";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1423</wp_comment_id>
+      <wp_comment_author><![CDATA[strangers]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[strangers@riseup.net]]></wp_comment_author_email>
+      <wp_comment_author_url>http://www.tangledwilderness.org</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[85.72.220.209]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-29 13:02:02]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-29 21:02:02]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[I concur with Kudzo, though I suspect that it isn't necessarily simple for you to collect the master files, depending on your organizational systems and whatnot.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:12:"1301432522.9";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"strangers";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1424</wp_comment_id>
+      <wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[174.62.88.231]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-29 17:23:14]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-30 01:23:14]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[I disagree about one point.
 
 Every artist, writer, military strategist, etc. has to think not only about what they do, but also about the context in which it will occur. To some extent, that really does mean "dictating how the reader interacts with your work." That's part of the task of being an artist, writer, or strategist. Indeed, if you compare Crimethinc. books to other books (in which the writers, editors, designers, and distributors are clearly not working together so closely), you can see a difference. It's not unusual that we are still thinking about context and form as we engage with the media formats that have arisen since this project began.
 
@@ -149,50 +149,50 @@ The plan here is indeed to maximize the ways the material that has appeared unde
 I'm trying to be friendly in my tone, as your comment is friendly and warrants the same. I fear that people with pointlessly hostile attitudes have often monopolized the discussion about this subject (fancy that, it seems to corroborate my skepticism about the internet) in a way that has used up a lot of my patience already. But I hope that my warmth is coming across.
 
 As for your guidance, if you have clever ideas about formats we haven't been using, please share them! I don't mean ways of making money but rather ways of getting ideas out there.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>2</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301448195.03";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1425</wp_comment_id>
-			<wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[76.14.65.154]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-30 02:06:36]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-30 10:06:36]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[I suppose something I neglected to mention is that anyone who wants the raw file of an image or text we've produced can simply write us and ask for it.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>2</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301479596.61";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1426</wp_comment_id>
-			<wp_comment_author><![CDATA[kudzu]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[xap9@hotmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[74.166.66.35]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-30 08:45:06]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-30 16:45:06]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA["There really is a difference between skimming something on a glowing screen and reading it “in the flesh.” Say what you want, they are different experiences, and they might produce different results."
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>2</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301448195.03";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1425</wp_comment_id>
+      <wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[76.14.65.154]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-30 02:06:36]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-30 10:06:36]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[I suppose something I neglected to mention is that anyone who wants the raw file of an image or text we've produced can simply write us and ask for it.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>2</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301479596.61";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1426</wp_comment_id>
+      <wp_comment_author><![CDATA[kudzu]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[xap9@hotmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[74.166.66.35]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-30 08:45:06]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-30 16:45:06]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA["There really is a difference between skimming something on a glowing screen and reading it “in the flesh.” Say what you want, they are different experiences, and they might produce different results."
 
 They are different, of course.  But you're making an assumption that everyone interacts with digital media the way you do, and has the same alienating experience.  Beyond that, you're assuming that the point of releasing electronic source files is to allow people to read crimethinc on a computer.  In fact, it can facilitate the production of a diversity of formats which require no screen, glowing or otherwise :)
 
@@ -205,50 +205,50 @@ In fact, that's optimistic.  To most people, the work is *noise*: the stuff you 
 "I suppose something I neglected to mention is that anyone who wants the raw file of an image or text we’ve produced can simply write us and ask for it."
 
 Not quite what I'm calling for, but a good start.  Belated though it may be, y'all definitely deserve props for re-evaluating your situation and opening up this way.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301503508.13";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:5:"kudzu";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1427</wp_comment_id>
-			<wp_comment_author><![CDATA[griffjam]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[weed_eo@hotmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[174.55.112.156]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-30 15:24:42]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-30 23:24:42]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Is "Anarchy in the Age of Dinosaurs" permanently out of print?]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:12:"1301527482.9";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:8:"griffjam";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1428</wp_comment_id>
-			<wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[76.14.65.154]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-30 16:17:34]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-31 00:17:34]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Kudzu--To try for a really personal [if embarrassingly cliched] explanation of what I'm trying to express here, last summer I after I got back from a long, heartbreaking journey I took a bicycle trip. I rode out of town in the hot sun until I arrived at a field. In the field was a rock, which had a poem from Rumi carved into it. I've flipped through Rumi's work before, and not been particularly moved. But on that day, in the context of my life, with my pulse raised from cycling and the sun coming down, reading the poem carved into the stone was very different.
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301503508.13";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:5:"kudzu";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1427</wp_comment_id>
+      <wp_comment_author><![CDATA[griffjam]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[weed_eo@hotmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[174.55.112.156]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-30 15:24:42]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-30 23:24:42]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Is "Anarchy in the Age of Dinosaurs" permanently out of print?]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:12:"1301527482.9";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:8:"griffjam";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1428</wp_comment_id>
+      <wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[76.14.65.154]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-30 16:17:34]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-31 00:17:34]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Kudzu--To try for a really personal [if embarrassingly cliched] explanation of what I'm trying to express here, last summer I after I got back from a long, heartbreaking journey I took a bicycle trip. I rode out of town in the hot sun until I arrived at a field. In the field was a rock, which had a poem from Rumi carved into it. I've flipped through Rumi's work before, and not been particularly moved. But on that day, in the context of my life, with my pulse raised from cycling and the sun coming down, reading the poem carved into the stone was very different.
 
 You're right that Rumi couldn't have engineered that situation, certainly not centuries ahead of time--it was simply fortuitous that someone else carved his poem in the stone and I took that ride. But it may be that the ways he originally presented his material helped it to make an impression on people such that they would desire to re-present it in other contexts.
 
@@ -257,52 +257,52 @@ Think of another situation. We could title a blog post "don't fuck around," and 
 One point of departure that I can derive from your notion of the "artists' conceit" is that those around the artist have at least as much power as the artists themselves to make the most of what is produced--this is the process by which it ceases to be "art" and becomes something different and more important. To use an old conceptual framework, the collective activity of a few secretive individuals produces CrimethInc., but it is everyone's collective activity that makes any of that crimethink--the "Inc." is there to remind everyone that what counts is what others do, not what the people "behind the curtain" do.
 
 You're demanding that the people behind the curtain maximize the ease with which everyone else can repurpose their efforts. Perhaps I am arguing that "ease" is not the most important quality for the ones behind the curtain to aim for. It may even be that a certain contentiousness is healthier for the relationship between those on different sides of the curtain. Do you follow me, or am I being too opaque?]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>2</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301530655.01";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1429</wp_comment_id>
-			<wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[76.14.65.154]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-30 16:21:11]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-31 00:21:11]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Griffjam--That book is not currently in print, though you can download a pdf. (Gah!) Do you need me to direct you to one?
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>2</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301530655.01";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1429</wp_comment_id>
+      <wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[76.14.65.154]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-30 16:21:11]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-31 00:21:11]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Griffjam--That book is not currently in print, though you can download a pdf. (Gah!) Do you need me to direct you to one?
 
 It might be a good thing for someone to reprint it! But it came out of another cell, not CWC Far East, so the structures aren't in place for that to happen here. Too much is already centralized here, anyway.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>2</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301530871.96";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1430</wp_comment_id>
-			<wp_comment_author><![CDATA[nolaanarchy]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[edelpirate@yahoo.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[98.164.95.1]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-30 16:43:56]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-31 00:43:56]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Here's an idea:
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>2</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301530871.96";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1430</wp_comment_id>
+      <wp_comment_author><![CDATA[nolaanarchy]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[edelpirate@yahoo.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[98.164.95.1]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-30 16:43:56]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-31 00:43:56]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Here's an idea:
 turn the growing part of the project - the network of likeminded folks - in to a loose organization.
 Like, pay $5 and get a crimethinc membership card and pin, that when shown to other mikeminded folks gets you hooked up with free stuff. there was a local version of this not too long ago somewhere in the midwest. can't remember the darn name right of the project right now though....
 
@@ -312,28 +312,28 @@ like a "union" card that you can present when purchasing things, and if the work
 the idea depends on a critical mass of people being part of it, i don't know exactly what the stats are on website traffic and orders and stuff, but if y'all think it could reach that critical mass where the card would be worth it for people....
 or perhaps with the card, you get access to a password protected website with a list of the businesses worldwide that folks register with y'all that folks may be able to get free stuff / discounts at (a list of where card members work....definately also has security concerns though....)
 anyway. workers unions that are based on networks of sharing would be awesome in every city. maybe y'all could make it work nationwide or something....]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301532236.71";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"nolaanarchy";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1431</wp_comment_id>
-			<wp_comment_author><![CDATA[ifyouseesomething]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[ifyouseesomething@mailinator.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[108.72.245.250]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-30 19:59:20]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-31 03:59:20]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[b. traven, et al.,
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301532236.71";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"nolaanarchy";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1431</wp_comment_id>
+      <wp_comment_author><![CDATA[ifyouseesomething]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[ifyouseesomething@mailinator.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[108.72.245.250]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-30 19:59:20]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-31 03:59:20]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[b. traven, et al.,
 
 First off, why not allow anonymous or at least pseudonymous commenting that doesn't require registering.  That I had to sign up through Wordpress with a throw-away email address to comment here is ridiculous.
 
@@ -347,7 +347,7 @@ With the margins being so tight on these books when y'all are selling them direc
 
 It sounds to me that your defense of paper media is tied up to capitalist conceptions of value.  And to me, that's surprising, considering the source and all. We've learned to push past the economics of scarcity in other aspect of our lives, eschewing monogamy for the promise of everything else, sharing for the pleasure of the act, and so on.
 
-Signal-to-noise will always be a problem, and the classic market solution to it has been price. It seems as if the market's solution is the solution you have chosen so as not to get "lost in this mush." 
+Signal-to-noise will always be a problem, and the classic market solution to it has been price. It seems as if the market's solution is the solution you have chosen so as not to get "lost in this mush."
 
 Your works are not Velben goods. Preference for them, and certainly not the utility of them, is not correlated to their price. What you've created has value independent of it price. You've seen this with the decrease of purchases and the corresponding increase in downloads.
 
@@ -362,80 +362,80 @@ You mention that you've received hostility on this topic in the past. Why do you
 You've rejected the individual authorship, copyright, and profits of your works. Now enable any that care to to download your works, preferably in a reworkable mash-upable format. Each of us will create our own context, and for some of us that will involve purchase, even of bourgie editions like the Ne Plus Ultra "Days of War" (what the fuck was up with that anyways?) or waiting on the pixel professionals at CWC to release a "tasteful" digital version, but trust us to decide for ourselves and don't fear irrelevance, at least not for a reason as superficial as distribution medium.
 
 As far as selling posters for funding, cool - I'll buy one.  Consider that you do not have to abandon selling the books to fund your efforts.  There was a widely circulated story recently of an author lowering the price of his ebook by 80% but selling ten times as many copies of his work and profiting something like two or three times he originally was.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301543960.51";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:17:"ifyouseesomething";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1432</wp_comment_id>
-			<wp_comment_author><![CDATA[kudzu]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[xap9@hotmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[74.166.66.35]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-03-31 08:44:33]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-03-31 16:44:33]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[b. traven, i completely agree that context matters.  In fact, as your anecdote suggests, sometimes context is the most important thing of all.  And I think y'all do a great job of creating compelling contexts for your ideas.  I'm not arguing that context is irrelevant, or that y'all are bad at it.  I'm just saying other people are probably good at creating compelling contexts for your ideas too, and that should be embraced.  I don't accept that your work is so fragile that you need a monopoly of control over the context for it to be effective.
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301543960.51";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:17:"ifyouseesomething";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1432</wp_comment_id>
+      <wp_comment_author><![CDATA[kudzu]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[xap9@hotmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[74.166.66.35]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-03-31 08:44:33]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-03-31 16:44:33]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[b. traven, i completely agree that context matters.  In fact, as your anecdote suggests, sometimes context is the most important thing of all.  And I think y'all do a great job of creating compelling contexts for your ideas.  I'm not arguing that context is irrelevant, or that y'all are bad at it.  I'm just saying other people are probably good at creating compelling contexts for your ideas too, and that should be embraced.  I don't accept that your work is so fragile that you need a monopoly of control over the context for it to be effective.
 
 It's not just a question of whether people have the "right" to mash up crimethinc...I think the reality is that we badly /need/ people to mash up crimethinc.  As y'all write: "Why give away our secrets? Because if they stay secrets, we're fucked."  In this sense, I disagree that contentiousness is appropriate.  The strangers all over the world who want to mash up crimethinc are your allies, your comrades in arms, and if there are very easy ways you can help them be significantly more effective, you should jump at the chance.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301589873.98";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:5:"kudzu";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1433</wp_comment_id>
-			<wp_comment_author><![CDATA[beneathOceansofOrion]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[beneathOceansofOrion@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[24.68.41.172]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-01 13:04:36]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-01 21:04:36]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Some fellow west coast graffiti writers and I have been talking about coming to together to make a collaborative graphic novel / comic series. For years I have drooled about adapting some of the story lines in Expect Resistance, and various other golden nuggets of revolutionary prose and story into a comic series. 
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301589873.98";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:5:"kudzu";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1433</wp_comment_id>
+      <wp_comment_author><![CDATA[beneathOceansofOrion]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[beneathOceansofOrion@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[24.68.41.172]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-01 13:04:36]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-01 21:04:36]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Some fellow west coast graffiti writers and I have been talking about coming to together to make a collaborative graphic novel / comic series. For years I have drooled about adapting some of the story lines in Expect Resistance, and various other golden nuggets of revolutionary prose and story into a comic series.
 
-Would anybody be interested in collaborating on this project? Either helping with writing a story line, developing characters, or later on with illustrations? The idea isnt to keep to a strictly graffiti style, infact it would be nice if someone with a different more realisitc style could draw some people. 
+Would anybody be interested in collaborating on this project? Either helping with writing a story line, developing characters, or later on with illustrations? The idea isnt to keep to a strictly graffiti style, infact it would be nice if someone with a different more realisitc style could draw some people.
 
 hit me up beneathoceansoforion@gmail.com]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301691877.76";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:20:"beneathOceansofOrion";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1436</wp_comment_id>
-			<wp_comment_author><![CDATA[wrathengine]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[wrathengine@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[24.4.66.140]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-05 00:41:59]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-05 08:41:59]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[How is it that you all have missed developments on the internet like the free culture movement, the open source movement, the embrace of piracy by many authors and content creators, and the anarchy that is at the very heart of what makes this website possible?
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301691877.76";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:20:"beneathOceansofOrion";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1436</wp_comment_id>
+      <wp_comment_author><![CDATA[wrathengine]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[wrathengine@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[24.4.66.140]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-05 00:41:59]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-05 08:41:59]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[How is it that you all have missed developments on the internet like the free culture movement, the open source movement, the embrace of piracy by many authors and content creators, and the anarchy that is at the very heart of what makes this website possible?
 
-It's infuriating. Crimethinc, and so many other "radical" projects, seem to completely ignore the models of autonomy, self-organization, cooperative production, and gift economies that are thriving on the internet and still manage to pay for themselves. 
+It's infuriating. Crimethinc, and so many other "radical" projects, seem to completely ignore the models of autonomy, self-organization, cooperative production, and gift economies that are thriving on the internet and still manage to pay for themselves.
 
 That you even call the sharing of your books on p2p networks "piracy" and don't embrace it the same way you would shitty hand-photocopied versions of the exact same material is baffling.
 
@@ -450,82 +450,82 @@ And Kudzu is right. If in the 90's you encouraged people to photocopy your work,
 The worst part is that capitalist enterprises appear to have figured out the benefits of doing things like this before you all have.
 
 I'm sorry if this sounds mean, but the walls between the thriving anarchist cultures on the internet and the anarchist communities that came into being before the internet have <em>got</em> to come down. I am absolutely sick of luddites on the radical left that can't figure this shit out.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301992920.06";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"wrathengine";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1437</wp_comment_id>
-			<wp_comment_author><![CDATA[ret marut]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[ret@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[108.85.255.53]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-05 01:42:43]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-05 09:42:43]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Wrathengine--Do me a favor and search "piracy" on this page, or even on this whole site.
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301992920.06";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"wrathengine";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1437</wp_comment_id>
+      <wp_comment_author><![CDATA[ret marut]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[ret@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[108.85.255.53]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-05 01:42:43]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-05 09:42:43]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Wrathengine--Do me a favor and search "piracy" on this page, or even on this whole site.
 
 I couldn't find it--maybe you will? You allege that we "call the sharing of [our] books on p2p networks 'piracy,'” but I can't figure out where you're getting that from. Please don't tell me you just pulled it out of the air.
 
 Everything else you say sounds like more of the same disagreement, in which those who have unqualified faith in the internet can't wrap their heads around others' misgivings. In any case, all of this will be a non-issue shortly. Perhaps you can try to err on the side of patience rather than stridency?]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>3</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301996563.07";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"ret marut";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1438</wp_comment_id>
-			<wp_comment_author><![CDATA[pfm]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[pfm@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://crimethinc.com/blog</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[76.115.209.87]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-05 08:13:34]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-05 16:13:34]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[hey wrathengine, i wanted to comment on the notion that: "I’m willing to bet that many of us would voluntarily pay more for your books if it were easy to do so."
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>3</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1301996563.07";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"ret marut";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1438</wp_comment_id>
+      <wp_comment_author><![CDATA[pfm]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[pfm@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://crimethinc.com/blog</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[76.115.209.87]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-05 08:13:34]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-05 16:13:34]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[hey wrathengine, i wanted to comment on the notion that: "I’m willing to bet that many of us would voluntarily pay more for your books if it were easy to do so."
 
-we've had a very simple one click donation method on our online store for many years. anyone that has extra resources they can spare can easily send us some. however, the amount donated is truly minuscule, less than .5% of our operating budget. we are ok with that, as stated at length above. our experience has shown that the internet utopia you speak of where people give away everything for free and are magically rewarded with money somehow, doesn't necessarily apply to radicals, who I suspect often have barely enough resources to get by on their own in the first place. it's convenient to cite success stories but ignoring the many failures is plainly dishonest--even billion dollar media empires are being forced to cut huge chunks of their writers and creatives, and that's *with* getting a huge amount of revenue from advertising, which we will never consider. 
+we've had a very simple one click donation method on our online store for many years. anyone that has extra resources they can spare can easily send us some. however, the amount donated is truly minuscule, less than .5% of our operating budget. we are ok with that, as stated at length above. our experience has shown that the internet utopia you speak of where people give away everything for free and are magically rewarded with money somehow, doesn't necessarily apply to radicals, who I suspect often have barely enough resources to get by on their own in the first place. it's convenient to cite success stories but ignoring the many failures is plainly dishonest--even billion dollar media empires are being forced to cut huge chunks of their writers and creatives, and that's *with* getting a huge amount of revenue from advertising, which we will never consider.
 
 my main point is that acting like there is no risk is just silly. we are going to try it and we've spent some time coming up with strategies to make it work, but there is still plenty of risk involved, and frankly it's terrifying to consider that our own actions may result in the cessation of our real world publishing projects. rest assured, as the experiment unfolds we'll be sharing our results, so stay tuned as we find out what works and what doesn't.
 
 and, puh-lease, don't pretend like we somehow don't 'get' the internet. we had one of the earliest radical websites, and today our site hosts a massive amount of free text and pdf downloads that are utilized by tens of thousands of people, and now includes free full-length streaming movies. just because we want to be careful with the survival of our real-world projects doesn't make us luddites—there is a lot more for consideration in this situation than your black-and-white appraisal recognizes.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>1</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302020015.23";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:3:"pfm";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1439</wp_comment_id>
-			<wp_comment_author><![CDATA[wrathengine]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[wrathengine@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[24.4.66.140]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-05 09:53:54]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-05 17:53:54]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Pay-what-you-will pricing is different from simply giving people a place to donate money. Here's why- once someone has already decided to buy one of your books, they're already planning to give you money. At <em>that</em> moment, you have a much better chance of getting a donation in the form of a voluntarily higher price.
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>1</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302020015.23";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:3:"pfm";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1439</wp_comment_id>
+      <wp_comment_author><![CDATA[wrathengine]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[wrathengine@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[24.4.66.140]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-05 09:53:54]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-05 17:53:54]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Pay-what-you-will pricing is different from simply giving people a place to donate money. Here's why- once someone has already decided to buy one of your books, they're already planning to give you money. At <em>that</em> moment, you have a much better chance of getting a donation in the form of a voluntarily higher price.
 
 Donation buttons on the internet have never worked. Pay-what-you-will pricing, on the other hand, has had success in a variety of places. Just look at Bandcamp.
 
@@ -538,113 +538,113 @@ This is why you don't get the internet:
 This is dead wrong. For supporting evidence, see: the entire free culture movement, Cory Doctorow's thoughts on piracy of his books, and the website Bandcamp.
 
 I'm not saying you lack the ability to use tools on the internet. I'm saying you lack an <em>analysis of how these tools work and what they mean,</em> and you appear to lack any knowledge of the development of thinking in this area over the last ten years.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302026034.78";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"wrathengine";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1440</wp_comment_id>
-			<wp_comment_author><![CDATA[wrathengine]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[wrathengine@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[24.4.66.140]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-05 10:00:25]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-05 18:00:25]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[You could also check out Yochai Benkler on Wikinomics on compare what he's talking about to Kropotkin or Kenneth Rexroth's ideas about social production, or the emerging use of p2p technology to collaboratively host radical websites without exposing a single point of failure.
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302026034.78";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"wrathengine";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1440</wp_comment_id>
+      <wp_comment_author><![CDATA[wrathengine]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[wrathengine@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[24.4.66.140]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-05 10:00:25]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-05 18:00:25]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[You could also check out Yochai Benkler on Wikinomics on compare what he's talking about to Kropotkin or Kenneth Rexroth's ideas about social production, or the emerging use of p2p technology to collaboratively host radical websites without exposing a single point of failure.
 
 Or just keep being terrified.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302026425.58";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"wrathengine";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1441</wp_comment_id>
-			<wp_comment_author><![CDATA[griffjam]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[weed_eo@hotmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[174.55.112.156]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-05 14:33:22]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-05 22:33:22]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Wrathengine, a ink &amp; paper book and an e-book are not the same medium. The same way a live show and a recording are different. Think of the authors as a band who refuse to do a studio session, but are fine with people who come to their shows recording them. With the internet people today are able to have the entire discography of a group within an hour of discovering them. This is a marvelous thing and just recently I met a kid who was amazed to find another flesh and bone person who was a fan of his favorite artist. Sure you can listen to an album until you know the all the words, but that experience fails to compare to singing them with the crowd at a show. The point I am trying to make is that a book is more than the information contained within. I recall Howard Zinn telling of how he, a poor boy in Brooklyn, finds a copy of "Tarzan and the Jewels of Opar." This book is what starts him on his lifelong love of learning. It's not a very good book and I don't think anything Tarzan did contributed to Zinn's passion for knowledge. Today, that book is in the public domain and is as free today as it was in that street; but it's not changing anyone's life. Right now I can think of three situations that would not have occurred if e-books and e-readers were substituted for ink &amp; paper. The first being when my copy of Evasion was thumbed through by a kid I was sitting next to. He asked if he could borrow it and he fell in love with it (I personally found in depressing, but I think that just had to do with it being in the '90s). A year and a half later he was inviting me to go train riding with him. The second was when my English teacher (jokingly) asked me if the title of my copy of "Expect Resistance" was meant to be a threat. I started to tell him about CrimethInc. and he laughed and told me how he used to sell copies of "Days of War, Nights of Love" at shows and was a straight-edge teenage anarchist (also used to run a distro http://www.oocities.org/hagerstownhc/). The last has to do with a kid who used to drop out of school, drop back in for a few weeks, get straight A's. Once during his vacation from life I saw him reading a copy of "Days of War." I had just got my copy back from someone and had finally discovered pages 283-4. I asked if I could check to see if his had the same pages missing. These could not have happened if it was a blank e-reader I had instead of ink &amp; paper. I laugh when I think the subway car filled with people silently reading electronic versions of situationist works.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302042802.24";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:8:"griffjam";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1442</wp_comment_id>
-			<wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[68.170.176.26]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-05 17:31:04]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-06 01:31:04]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Not to be petty, Wrathengine, but now you're using the word piracy unironically, when you never explained where you thought we used it. I'm a little confused.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>2</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302053464.71";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1443</wp_comment_id>
-			<wp_comment_author><![CDATA[wrathengine]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[wrathengine@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[24.4.66.140]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-06 21:04:21]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-07 05:04:21]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[You didn't use the word piracy, but you implied that the number of digital downloads was directly correlated with lost sales, implying piracy. My apologies. The rest of my critique still stands.
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302026425.58";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"wrathengine";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1441</wp_comment_id>
+      <wp_comment_author><![CDATA[griffjam]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[weed_eo@hotmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[174.55.112.156]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-05 14:33:22]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-05 22:33:22]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Wrathengine, a ink &amp; paper book and an e-book are not the same medium. The same way a live show and a recording are different. Think of the authors as a band who refuse to do a studio session, but are fine with people who come to their shows recording them. With the internet people today are able to have the entire discography of a group within an hour of discovering them. This is a marvelous thing and just recently I met a kid who was amazed to find another flesh and bone person who was a fan of his favorite artist. Sure you can listen to an album until you know the all the words, but that experience fails to compare to singing them with the crowd at a show. The point I am trying to make is that a book is more than the information contained within. I recall Howard Zinn telling of how he, a poor boy in Brooklyn, finds a copy of "Tarzan and the Jewels of Opar." This book is what starts him on his lifelong love of learning. It's not a very good book and I don't think anything Tarzan did contributed to Zinn's passion for knowledge. Today, that book is in the public domain and is as free today as it was in that street; but it's not changing anyone's life. Right now I can think of three situations that would not have occurred if e-books and e-readers were substituted for ink &amp; paper. The first being when my copy of Evasion was thumbed through by a kid I was sitting next to. He asked if he could borrow it and he fell in love with it (I personally found in depressing, but I think that just had to do with it being in the '90s). A year and a half later he was inviting me to go train riding with him. The second was when my English teacher (jokingly) asked me if the title of my copy of "Expect Resistance" was meant to be a threat. I started to tell him about CrimethInc. and he laughed and told me how he used to sell copies of "Days of War, Nights of Love" at shows and was a straight-edge teenage anarchist (also used to run a distro http://www.oocities.org/hagerstownhc/). The last has to do with a kid who used to drop out of school, drop back in for a few weeks, get straight A's. Once during his vacation from life I saw him reading a copy of "Days of War." I had just got my copy back from someone and had finally discovered pages 283-4. I asked if I could check to see if his had the same pages missing. These could not have happened if it was a blank e-reader I had instead of ink &amp; paper. I laugh when I think the subway car filled with people silently reading electronic versions of situationist works.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302042802.24";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:8:"griffjam";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1442</wp_comment_id>
+      <wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[68.170.176.26]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-05 17:31:04]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-06 01:31:04]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Not to be petty, Wrathengine, but now you're using the word piracy unironically, when you never explained where you thought we used it. I'm a little confused.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>2</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302053464.71";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1443</wp_comment_id>
+      <wp_comment_author><![CDATA[wrathengine]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[wrathengine@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[24.4.66.140]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-06 21:04:21]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-07 05:04:21]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[You didn't use the word piracy, but you implied that the number of digital downloads was directly correlated with lost sales, implying piracy. My apologies. The rest of my critique still stands.
 
-Griffjam, I have a physical copy of most of the books Crimethinc has produced. I agree with the authors about the importance of context- it's the reason I leave those books out on my living room table for company. 
+Griffjam, I have a physical copy of most of the books Crimethinc has produced. I agree with the authors about the importance of context- it's the reason I leave those books out on my living room table for company.
 
 What I'm suggesting is that there are different ways to sell books on the internet, ways that take advantage of the unique context of the internet, and that blaming this medium is ridiculous given the immense potential it creates for autonomy and self-organization, although perhaps to the detriment of certain methods of selling merchandise.
 
 I don't particularly like e-readers. I don't have one myself, and it seems like kind of a ridiculous format for Crimethinc books given the amount of corporate control over all of the leading e-book platforms.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302152662.57";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"wrathengine";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-	</item>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1302152662.57";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"wrathengine";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+  </item>

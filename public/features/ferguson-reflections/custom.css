@@ -4,47 +4,47 @@
 
 
 h1, h2, h4 {
-	font-family: "alternate-gothic-no-3-d",sans-serif;
+  font-family: "alternate-gothic-no-3-d",sans-serif;
 }
 
 h1 {
-	color: white;
-	text-shadow: none;
-	line-height: 1em;
-	text-align: center;
-	text-transform: uppercase;
+  color: white;
+  text-shadow: none;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h2 {
-	color: #e50000;
-	text-align: left;
-	line-height: .85em;
+  color: #e50000;
+  text-align: left;
+  line-height: .85em;
 }
 
 h3 {
-	color: black;
-	text-align: left;
-	font-family: "pt-sans",sans-serif;;
+  color: black;
+  text-align: left;
+  font-family: "pt-sans",sans-serif;;
 }
 
 h4 {
-	color: #F7F7F7;
-	text-align: center;
-	text-shadow: -1px 1px 1px #000000;
-	line-height: .85em;
-	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: .4em;
+  color: #F7F7F7;
+  text-align: center;
+  text-shadow: -1px 1px 1px #000000;
+  line-height: .85em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .4em;
 }
 
 aside blockquote {
-	font-family: "alternate-gothic-no-3-d",sans-serif;
-	font-weight: 100;	
+  font-family: "alternate-gothic-no-3-d",sans-serif;
+  font-weight: 100;
 }
 
 .answer {
-	text-indent: 0px;
-	padding-top: 1em !important;
+  text-indent: 0px;
+  padding-top: 1em !important;
 }
 
 /*------------ACCENT COLORS, INCLUDING LINKS----------------*/
@@ -53,372 +53,372 @@ aside blockquote {
 }
 
 .accent a:link, .accent a:visited {
-	color: #9a0000;
-}    
+  color: #9a0000;
+}
 
 .accent a:hover, .accent a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #9a0000;
+  color: black;
+  text-shadow: 0px 0px 20px #9a0000;
 }
 
 .accent a:active {
-	color:black;
-} 
+  color:black;
+}
 
 
 /*------------------GENERIC LINKS----------------------------------*/
 
 a {
-	text-decoration: none;
-	-webkit-transition:all .1s ease-in;
+  text-decoration: none;
+  -webkit-transition:all .1s ease-in;
 }
 
 a:link, a:visited {
-	color:#34AADC;
-}    
+  color:#34AADC;
+}
 
 a:hover, a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #34AADC;
+  color: black;
+  text-shadow: 0px 0px 20px #34AADC;
 }
 
 a:active {
-	color:black;
-} 
+  color:black;
+}
 
 small a:hover, small a:active {
-	color: #8E8E93;
+  color: #8E8E93;
 }
 
 
 /*-----------------FOOTNOTE COLORS------------------------*/
 
 .refnumber, .fnumber {
-	color: #FF2D55;
+  color: #FF2D55;
 }
 
 .footlink {
-	color: #FF2D55;
+  color: #FF2D55;
 }
 
 .footlink a:link, .footlink a:visited {
-	color: #FF2D55;
-}    
+  color: #FF2D55;
+}
 
 .footlink a:hover, .footlink a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #FF2D55;
+  color: black;
+  text-shadow: 0px 0px 20px #FF2D55;
 }
 
 .footreturn a:link, .footreturn a:visited {
-	color: #FF2D55;
-	text-decoration: none;
-}    
+  color: #FF2D55;
+  text-decoration: none;
+}
 
 .footreturn a:hover, .footreturn a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #FF2D55;
+  color: black;
+  text-shadow: 0px 0px 20px #FF2D55;
 }
 
 .footref {
-	color: #FF2D55;
+  color: #FF2D55;
 }
 
 .footnote a:link, .footnote a:visited {
-	color: black;
-	text-decoration: underline;
-}    
+  color: black;
+  text-decoration: underline;
+}
 
 .footnote a:hover, .footnote a:active {
-	color: black;
-	text-shadow: 0px 0px 20px #8E8E93;
+  color: black;
+  text-shadow: 0px 0px 20px #8E8E93;
 }
 
 .specialquote {
-	background: none !important;
+  background: none !important;
 }
 
 .specialquote h5 {
-	z-index: -100;
-	position: absolute;
-	text-align: center;
-	color: white;
+  z-index: -100;
+  position: absolute;
+  text-align: center;
+  color: white;
 }
 
 .specialquote img {
-	position: relative;
-	top: 0;
-	left: 0;
-	border: 0px solid #000000;
-	width: 100%;
-	z-index: -101;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 0px solid #000000;
+  width: 100%;
+  z-index: -101;
 }
 
 
 /*----------------------------------------------------------*/
 /*-------------RESPONSIVE CODE STARTS HERE------------------*/
 /*----------------------------------------------------------*/
-	
-	
-	
+
+
+
 /*-------------PHONE CSS------------------*/
 @media (min-device-width:200px) and (max-width:599px) {
-	
-	.headerwrapper {
-		float: left;
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header1200.jpg');
-		background-size: 100%;
-		padding-bottom: 54%;
-		background-position:center top;
-	}
-	
-	h1 {
-		font-size: 32px;
-		font-size: 10vw;
-		margin-top: 20%;
-	}
-	
-	@media (min-width:320px) and (max-width:359px) {
-		h1 {
-			font-size: 32px;
-			font-size: 10vw;
-		}
-		}
-	
-	@media (min-width: 360px) and (max-width:379px) {
-		h1 {
-			font-size: 36px;
-			font-size: 10vw;
-		}
-		
-		}
-	
-	@media (min-width: 384px) and (max-width:399px) {
-		h1 {
-			font-size: 38px;
-			font-size: 10vw;
-		}
-		
-		}
-	
-	@media (min-width: 400px) and (max-width:599px) {
-		h1 {
-			font-size: 40px;
-			font-size: 10vw;
-		}
-		
-		}
-	
-	h2 {
-		font-size: 30px;
-		/*font-size: 33vw;*/
-		margin: 30px 0 20px 0;
-		padding: 0 5% 0 7%
-	}
-	
-	h3 {
-		font-size: 16px;
-		line-height: 1.5em;
-		/*font-size: 33vw;*/
-		margin: 30px 0 20px 0;
-		width: 88%;
-		padding: 0 5% 0 7%;
-	}
-	
-	h4 {
-		font-size: 30px;
-		/*font-size: 1.75vw;*/
-		margin: 2% 0 0 15%;
-	}
-	
-	aside blockquote {
-		font-size: 23px;
-		font-size: 7.2vw;
-		line-height: 1em;
-	}
+
+  .headerwrapper {
+    float: left;
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header1200.jpg');
+    background-size: 100%;
+    padding-bottom: 54%;
+    background-position:center top;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-size: 10vw;
+    margin-top: 20%;
+  }
+
+  @media (min-width:320px) and (max-width:359px) {
+    h1 {
+      font-size: 32px;
+      font-size: 10vw;
+    }
+    }
+
+  @media (min-width: 360px) and (max-width:379px) {
+    h1 {
+      font-size: 36px;
+      font-size: 10vw;
+    }
+
+    }
+
+  @media (min-width: 384px) and (max-width:399px) {
+    h1 {
+      font-size: 38px;
+      font-size: 10vw;
+    }
+
+    }
+
+  @media (min-width: 400px) and (max-width:599px) {
+    h1 {
+      font-size: 40px;
+      font-size: 10vw;
+    }
+
+    }
+
+  h2 {
+    font-size: 30px;
+    /*font-size: 33vw;*/
+    margin: 30px 0 20px 0;
+    padding: 0 5% 0 7%
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 1.5em;
+    /*font-size: 33vw;*/
+    margin: 30px 0 20px 0;
+    width: 88%;
+    padding: 0 5% 0 7%;
+  }
+
+  h4 {
+    font-size: 30px;
+    /*font-size: 1.75vw;*/
+    margin: 2% 0 0 15%;
+  }
+
+  aside blockquote {
+    font-size: 23px;
+    font-size: 7.2vw;
+    line-height: 1em;
+  }
 }
 
 
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:600px) and (max-width:1023px) {
-	
-	.headerwrapper {
-		float: left;
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header1200.jpg');
-		background-size: 100%;
-		padding-bottom: 100%;
-		background-position:center top;
-		margin-bottom: 5%;
-	}
-	
-	h1 {
-		font-size: 36px;
-		font-size: 12vw;
-		margin-top: 24%;
-	}
-	
-	h2 {
-		font-size: 50px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-		padding: 0 10% 0 11%;
-	}
-	
-	h3 {
-		font-size: 19px;
-		/*font-size: 33vw;*/
-		line-height: 1.5em;
-		margin: 50px 0 20px 0;
-		width: 79%;
-		padding: 0 10% 0 11%;
-	}
-	
-	h4 {
-		font-size: 30px;
-		/*font-size: 1.75vw;*/
-		margin: 2% 0 0 15%;
-	}
-	
-	aside blockquote {
-		font-size: 55px;
-		line-height: 1em;
-	}
+
+  .headerwrapper {
+    float: left;
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header1200.jpg');
+    background-size: 100%;
+    padding-bottom: 100%;
+    background-position:center top;
+    margin-bottom: 5%;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-size: 12vw;
+    margin-top: 24%;
+  }
+
+  h2 {
+    font-size: 50px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+    padding: 0 10% 0 11%;
+  }
+
+  h3 {
+    font-size: 19px;
+    /*font-size: 33vw;*/
+    line-height: 1.5em;
+    margin: 50px 0 20px 0;
+    width: 79%;
+    padding: 0 10% 0 11%;
+  }
+
+  h4 {
+    font-size: 30px;
+    /*font-size: 1.75vw;*/
+    margin: 2% 0 0 15%;
+  }
+
+  aside blockquote {
+    font-size: 55px;
+    line-height: 1em;
+  }
 }
 
 
 
 /*-------------DESKTOP TINY CSS------------------*/
 @media (min-width:1024px) and (max-width:1249px) {
-	
-	.headerwrapper {
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header2000.jpg');
-		background-size: 100%;
-		padding-bottom: 50%;
-		background-position:center bottom;
-	}
-	
-	h1 {
-		font-size: 200px;
-		font-size: 5vw;
-		margin-left: 0;
-		margin-top: 7%;
-	}
-	
-	h2 {
-		font-size: 50px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
-	
-	h3 {
-		font-size: 18px;
-		/*font-size: 33vw;*/
-		line-height: 1.5em;
-		margin: 50px 0 20px 0;
-	}
-	
-	h4 {
-		font-size: 30px;
-		/*font-size: 1.75vw;*/
-		margin: 2% 0 0 15%;
-	}
-	
-	aside blockquote {
-		font-size: 43px;
-		line-height: 1em;
-	}
+
+  .headerwrapper {
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header2000.jpg');
+    background-size: 100%;
+    padding-bottom: 50%;
+    background-position:center bottom;
+  }
+
+  h1 {
+    font-size: 200px;
+    font-size: 5vw;
+    margin-left: 0;
+    margin-top: 7%;
+  }
+
+  h2 {
+    font-size: 50px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    /*font-size: 33vw;*/
+    line-height: 1.5em;
+    margin: 50px 0 20px 0;
+  }
+
+  h4 {
+    font-size: 30px;
+    /*font-size: 1.75vw;*/
+    margin: 2% 0 0 15%;
+  }
+
+  aside blockquote {
+    font-size: 43px;
+    line-height: 1em;
+  }
 }
 
 
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1250px) and (max-width:1669px) {
-	
-	.headerwrapper {
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header2560.jpg');
-		background-size: 100%;
-		padding-bottom: 50%;
-		background-position:center bottom;
-	}
-	
-	h1 {
-		font-size: 100px;
-		font-size: 5vw;
-		margin-left: 0;
-		margin-top: 7%;
-	}
-	
-	h2 {
-		font-size: 40px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
-	
-	h3 {
-		font-size: 17px;
-		/*font-size: 33vw;*/
-		line-height: 1.5em;
-		margin: 50px 0 20px 0;
-	}
-	
-	h4 {
-		font-size: 30px;
-		/*font-size: 1.75vw;*/
-		margin: 2% 0 0 15%;
-	}
-	
-	aside blockquote {
-		font-size: 55px;
-		line-height: 1em;
-	}
+
+  .headerwrapper {
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header2560.jpg');
+    background-size: 100%;
+    padding-bottom: 50%;
+    background-position:center bottom;
+  }
+
+  h1 {
+    font-size: 100px;
+    font-size: 5vw;
+    margin-left: 0;
+    margin-top: 7%;
+  }
+
+  h2 {
+    font-size: 40px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 17px;
+    /*font-size: 33vw;*/
+    line-height: 1.5em;
+    margin: 50px 0 20px 0;
+  }
+
+  h4 {
+    font-size: 30px;
+    /*font-size: 1.75vw;*/
+    margin: 2% 0 0 15%;
+  }
+
+  aside blockquote {
+    font-size: 55px;
+    line-height: 1em;
+  }
 }
 
 
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width:1670px) {
-	
-	.headerwrapper {
-		width: 100%;
-		background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header2560.jpg');
-		background-size: 100%;
-		padding-bottom: 50%;
-		background-position:center bottom;
-	}
-	
-	h1 {
-		font-size: 100px;
-		font-size: 4vw;
-		margin-left: 0;
-		margin-top: 7%;
-	}
-	
-	h2 {
-		font-size: 50px;
-		/*font-size: 33vw;*/
-		margin: 50px 0 20px 0;
-	}
-	
-	h3 {
-		font-size: 18px;
-		/*font-size: 33vw;*/
-		line-height: 1.5em;
-		margin: 50px 0 20px 0;
-	}
-	
-	h4 {
-		font-size: 30px;
-		/*font-size: 1.75vw;*/
-		margin: 2% 0 0 15%;
-	}
-	
-	aside blockquote {
-		font-size: 65px;
-		line-height: 1em;
-	}
+
+  .headerwrapper {
+    width: 100%;
+    background-image: url('https://cloudfront.crimethinc.com/assets/features/ferguson-reflections/images/header2560.jpg');
+    background-size: 100%;
+    padding-bottom: 50%;
+    background-position:center bottom;
+  }
+
+  h1 {
+    font-size: 100px;
+    font-size: 4vw;
+    margin-left: 0;
+    margin-top: 7%;
+  }
+
+  h2 {
+    font-size: 50px;
+    /*font-size: 33vw;*/
+    margin: 50px 0 20px 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    /*font-size: 33vw;*/
+    line-height: 1.5em;
+    margin: 50px 0 20px 0;
+  }
+
+  h4 {
+    font-size: 30px;
+    /*font-size: 1.75vw;*/
+    margin: 2% 0 0 15%;
+  }
+
+  aside blockquote {
+    font-size: 65px;
+    line-height: 1em;
+  }
 }

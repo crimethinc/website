@@ -1,11 +1,11 @@
 <item>
-		<title>From the Depths Website and Tour</title>
-		<link>http://www.crimethinc.com/blog/2008/05/25/from-the-depths-website-and-tour/</link>
-		<pubDate>Sun, 25 May 2008 15:04:56 +0000</pubDate>
-		<dc_creator><![CDATA[b. traven]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=236</guid>
-		<description/>
-		<content_encoded><![CDATA[<a href="http://www.crimethinc.com/blog/2008/03/31/from-the-depths-goes-on-tour/" target="_self">From the Depths</a> now has a full website at <a href="http://www.fromthedepths.info" target="_blank">www.fromthedepths.info</a>. They are also returning <a href="http://www.fromthedepths.info/shows.html" target="_blank">to the road this summer</a>, and eagerly seek booking assistance in the Midwest. Email <a href="mailto:booking@fromthedepths.info">booking@fromthedepths.info</a> if you can help.
+    <title>From the Depths Website and Tour</title>
+    <link>http://www.crimethinc.com/blog/2008/05/25/from-the-depths-website-and-tour/</link>
+    <pubDate>Sun, 25 May 2008 15:04:56 +0000</pubDate>
+    <dc_creator><![CDATA[b. traven]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=236</guid>
+    <description/>
+    <content_encoded><![CDATA[<a href="http://www.crimethinc.com/blog/2008/03/31/from-the-depths-goes-on-tour/" target="_self">From the Depths</a> now has a full website at <a href="http://www.fromthedepths.info" target="_blank">www.fromthedepths.info</a>. They are also returning <a href="http://www.fromthedepths.info/shows.html" target="_blank">to the road this summer</a>, and eagerly seek booking assistance in the Midwest. Email <a href="mailto:booking@fromthedepths.info">booking@fromthedepths.info</a> if you can help.
 
 <!--more Tour dates after the jump.-->
 
@@ -40,30 +40,30 @@ Aug 20 - Wed - Oklahoma City, OK
 Aug 21 - Thurs - Amarillo, TX
 Aug 22 - Fri - Colorado Springs, CO
 Aug 23 - Sat - Denver, CO]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>236</wp_post_id>
-		<wp_post_date><![CDATA[2008-05-25 08:04:56]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2008-05-25 15:04:56]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[from-the-depths-website-and-tour]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="from-the-trenches"><![CDATA[From the Trenches]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[3365]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/ftd/ftd1b.jpg]]></wp_meta_value>
-		</wp_postmeta>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>236</wp_post_id>
+    <wp_post_date><![CDATA[2008-05-25 08:04:56]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2008-05-25 15:04:56]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[from-the-depths-website-and-tour]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="from-the-trenches"><![CDATA[From the Trenches]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[3365]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/ftd/ftd1b.jpg]]></wp_meta_value>
+    </wp_postmeta>
+  </item>

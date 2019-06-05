@@ -1,11 +1,11 @@
 <item>
-		<title>Work Binding Calamity </title>
-		<link>http://www.crimethinc.com/blog/2011/04/19/work-binding-calamity/</link>
-		<pubDate>Wed, 20 Apr 2011 07:03:06 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=1814</guid>
-		<description/>
-		<content_encoded><![CDATA[We’re absolutely heartbroken to have to announce that the print run for our new book <a href="http://crimethinc.com/books/work.html"><em>Work</em></a> has been discovered to contain a high number of books with a production defect where the front cover can easily become detached from the rest of the book. We’ve fielded enough reports over the last few days to be sure the problem is not isolated, and thusly, we are suspending shipments of the book immediately. We are currently in negotiations with the printer as to how to fix this problem, and it is likely to take several weeks to resolve. You can be sure that until we are certain we have books in hand that do not have the defect, we won’t be sending any out.
+    <title>Work Binding Calamity </title>
+    <link>http://www.crimethinc.com/blog/2011/04/19/work-binding-calamity/</link>
+    <pubDate>Wed, 20 Apr 2011 07:03:06 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=1814</guid>
+    <description/>
+    <content_encoded><![CDATA[We’re absolutely heartbroken to have to announce that the print run for our new book <a href="http://crimethinc.com/books/work.html"><em>Work</em></a> has been discovered to contain a high number of books with a production defect where the front cover can easily become detached from the rest of the book. We’ve fielded enough reports over the last few days to be sure the problem is not isolated, and thusly, we are suspending shipments of the book immediately. We are currently in negotiations with the printer as to how to fix this problem, and it is likely to take several weeks to resolve. You can be sure that until we are certain we have books in hand that do not have the defect, we won’t be sending any out.
 
 <!--more For details on the problem itself, and how we are going to make things right with people already in possession of faulty books, read on.-->
 
@@ -28,371 +28,371 @@ We are still accepting orders for the book, but they now become backorders. If y
 
 
 <strong>UPDATE:</strong> <a href="http://www.crimethinc.com/blog/2011/05/22/more-bad-news-about-work/">New info here</a>.]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>1814</wp_post_id>
-		<wp_post_date><![CDATA[2011-04-19 23:03:06]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2011-04-20 07:03:06]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[work-binding-calamity]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[2997]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cwc.im/workbinding]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/workcover/cover1b.jpg]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_comment>
-			<wp_comment_id>1457</wp_comment_id>
-			<wp_comment_author><![CDATA[crustycamper]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[graham.bunn@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[88.109.125.180]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-20 11:10:31]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-20 19:10:31]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[I had this problem last week, but fear not i fixed with a bit of glue and it's fine now !]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303326631.41";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:12:"crustycamper";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1458</wp_comment_id>
-			<wp_comment_author><![CDATA[strongwindsahead]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[claytondewey@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[97.122.219.113]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-20 16:42:25]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-21 00:42:25]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Ha.  My four year old was playing with it and the binding came loose.  I just played it off to typical kid wear and tear.  It's not a big deal at all though.  Fixed ours with some glue too! :)]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303346546.58";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:16:"strongwindsahead";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1459</wp_comment_id>
-			<wp_comment_author><![CDATA[HighKeeba]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[Highkeeba@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[74.137.210.99]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-21 03:17:10]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-21 11:17:10]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Having the same issue. All I did was put it beneath something heavy (a larger book in my case, but I'm sure a box or crate would work as well) for about twenty-four hours and the problem was fixed. I'm more interested in what's between the covers anyway, so to speak...]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303384630.75";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"HighKeeba";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1460</wp_comment_id>
-			<wp_comment_author><![CDATA[neverknowsbest]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[kidfromyesterday@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[68.110.251.212]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-21 21:09:34]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-22 05:09:34]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[man, that is a sucky thing!  i'm sorry you guys are having problems.  i haven't gotten to read my copy yet so i don't know if i'm affected.  sounds easily fixed though, and HighKeeba is totally right anyway.  (and pretty clever too!)]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303448975.51";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:14:"neverknowsbest";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1461</wp_comment_id>
-			<wp_comment_author><![CDATA[GO_OUTSIDE]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[evanmadeanemail@yahoo.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[68.81.125.129]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-23 17:45:26]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-24 01:45:26]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[So basically 13 and some odd dollars goes away for nothing but a raincheck?
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>1814</wp_post_id>
+    <wp_post_date><![CDATA[2011-04-19 23:03:06]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2011-04-20 07:03:06]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[work-binding-calamity]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[2997]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://cwc.im/workbinding]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/workcover/cover1b.jpg]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_comment>
+      <wp_comment_id>1457</wp_comment_id>
+      <wp_comment_author><![CDATA[crustycamper]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[graham.bunn@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[88.109.125.180]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-20 11:10:31]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-20 19:10:31]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[I had this problem last week, but fear not i fixed with a bit of glue and it's fine now !]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303326631.41";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:12:"crustycamper";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1458</wp_comment_id>
+      <wp_comment_author><![CDATA[strongwindsahead]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[claytondewey@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[97.122.219.113]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-20 16:42:25]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-21 00:42:25]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Ha.  My four year old was playing with it and the binding came loose.  I just played it off to typical kid wear and tear.  It's not a big deal at all though.  Fixed ours with some glue too! :)]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303346546.58";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:16:"strongwindsahead";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1459</wp_comment_id>
+      <wp_comment_author><![CDATA[HighKeeba]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[Highkeeba@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[74.137.210.99]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-21 03:17:10]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-21 11:17:10]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Having the same issue. All I did was put it beneath something heavy (a larger book in my case, but I'm sure a box or crate would work as well) for about twenty-four hours and the problem was fixed. I'm more interested in what's between the covers anyway, so to speak...]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303384630.75";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"HighKeeba";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1460</wp_comment_id>
+      <wp_comment_author><![CDATA[neverknowsbest]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[kidfromyesterday@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[68.110.251.212]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-21 21:09:34]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-22 05:09:34]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[man, that is a sucky thing!  i'm sorry you guys are having problems.  i haven't gotten to read my copy yet so i don't know if i'm affected.  sounds easily fixed though, and HighKeeba is totally right anyway.  (and pretty clever too!)]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303448975.51";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:14:"neverknowsbest";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1461</wp_comment_id>
+      <wp_comment_author><![CDATA[GO_OUTSIDE]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[evanmadeanemail@yahoo.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[68.81.125.129]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-23 17:45:26]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-24 01:45:26]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[So basically 13 and some odd dollars goes away for nothing but a raincheck?
 Damn, what an essential use of my hourly rate...]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303609526.29";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:10:"GO_OUTSIDE";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1462</wp_comment_id>
-			<wp_comment_author><![CDATA[pfm]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[pfm@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://crimethinc.com/blog</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[76.115.209.87]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-23 21:31:16]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-24 05:31:16]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Hey go_outside, yeah, we agree the whole situation really sucks, but there isn't much we can do about it until the books get fixed and sent back to us. We hope you can find a way to forgive us.  Anyway, it's not really a raincheck if you have the book in your hands, right? As folks have said above, it's really easy to return the book to a readable state while you wait for a brand-new replacement copy, so try to be patient and enjoy the book! Thanks.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>1461</wp_comment_parent>
-			<wp_comment_user_id>1</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303623076.16";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:3:"pfm";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1463</wp_comment_id>
-			<wp_comment_author><![CDATA[hdoskocil]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[hdoskocil@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[71.164.183.176]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-25 07:22:33]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-25 15:22:33]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[hah
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303609526.29";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:10:"GO_OUTSIDE";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1462</wp_comment_id>
+      <wp_comment_author><![CDATA[pfm]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[pfm@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://crimethinc.com/blog</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[76.115.209.87]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-23 21:31:16]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-24 05:31:16]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Hey go_outside, yeah, we agree the whole situation really sucks, but there isn't much we can do about it until the books get fixed and sent back to us. We hope you can find a way to forgive us.  Anyway, it's not really a raincheck if you have the book in your hands, right? As folks have said above, it's really easy to return the book to a readable state while you wait for a brand-new replacement copy, so try to be patient and enjoy the book! Thanks.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>1461</wp_comment_parent>
+      <wp_comment_user_id>1</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303623076.16";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:3:"pfm";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1463</wp_comment_id>
+      <wp_comment_author><![CDATA[hdoskocil]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[hdoskocil@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[71.164.183.176]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-25 07:22:33]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-25 15:22:33]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[hah
 you cant even tell its torn when you have it open to read. I bought 2, one for me one for my friend and we both had it happen but we both fixed it. just glue the binding back up and store it upside down. Great book guys. If you send me another one im just going to give it to one of my friends; i'm more than overjoyed with the first copy.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:12:"1303744954.2";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"hdoskocil";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1464</wp_comment_id>
-			<wp_comment_author><![CDATA[GO_OUTSIDE]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[evanmadeanemail@yahoo.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[68.81.125.129]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-25 21:50:39]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-26 05:50:39]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[I didn't get a book, though. That's the only reason the situation here sucks.
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:12:"1303744954.2";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"hdoskocil";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1464</wp_comment_id>
+      <wp_comment_author><![CDATA[GO_OUTSIDE]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[evanmadeanemail@yahoo.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[68.81.125.129]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-25 21:50:39]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-26 05:50:39]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[I didn't get a book, though. That's the only reason the situation here sucks.
 I ordered it, expected it in the mail, then found out (on this page) that it would be delayed.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:12:"1303797039.9";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:10:"GO_OUTSIDE";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1465</wp_comment_id>
-			<wp_comment_author><![CDATA[pfm]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[pfm@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://crimethinc.com/blog</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[71.193.245.138]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-26 06:38:58]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-26 14:38:58]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Go_Outside, If you ordered the book before the announcement (when the store link still said 'add to cart' instead of 'backorder' then your book has been shipped, and is in the mail currently. Only people who ordered after this announcement have their book orders on hold.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>1464</wp_comment_parent>
-			<wp_comment_user_id>1</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303828739.32";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:3:"pfm";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1466</wp_comment_id>
-			<wp_comment_author><![CDATA[GO_OUTSIDE]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[evanmadeanemail@yahoo.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[68.81.125.129]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-26 20:17:46]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-27 04:17:46]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Well that's reassuring. I wouldn't mind if there was no cover at all, it just seemed like I wasn't getting the book at all. I'll be patient—thanks.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303877868.78";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:10:"GO_OUTSIDE";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1467</wp_comment_id>
-			<wp_comment_author><![CDATA[kurtwisener]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[kurt.wisener@gmail.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[71.42.239.130]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-27 08:02:53]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-27 16:02:53]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[...I ran into this problem within 3 hours.  I pressed it back and ran a rolling pin over the contact point and ZAP!  Fixed with no further issue.  If someone can't DIY this issue they should re-read the above note on repair.  While I certainly applaud the extraordinary sensitivity of CrimeThinc Far East I wonder if it wouldn't have been a little less frustrating to allow the purchase and shipping of the book to those who acknowledge a disclaimer.  We are paying for the content, not the package itself.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303920175.62";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"kurtwisener";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1468</wp_comment_id>
-			<wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[201.52.101.122]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-27 11:31:11]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-27 19:31:11]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[I'm far away from this whole thing, but I'm guessing that part of the issue is that it's impossible to compel the printers to redress the problem if they go on selling the books. This is unfortunate, but hopefully it will be taken care of soon. Incidentally, it's really nice to see how capable and inventive the people getting these books are.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>2</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303932672.37";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1469</wp_comment_id>
-			<wp_comment_author><![CDATA[GCheetah88]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[GCheetah88@triad.rr.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://www.myspace.com/peaceloveanarchy</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[75.183.125.24]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-29 05:10:14]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-29 13:10:14]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[Any defective ones left?  Would you guys consider selling them for a discount like you have in the past?  That would be pretty damn cool, I don't mind "defective" things, not at all, haha...]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1304082614.21";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:10:"GCheetah88";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1470</wp_comment_id>
-			<wp_comment_author><![CDATA[pfm]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[pfm@crimethinc.com]]></wp_comment_author_email>
-			<wp_comment_author_url>http://crimethinc.com/blog</wp_comment_author_url>
-			<wp_comment_author_IP><![CDATA[76.115.209.87]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-04-30 12:57:42]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-04-30 20:57:42]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[hey GC,
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:12:"1303797039.9";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:10:"GO_OUTSIDE";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1465</wp_comment_id>
+      <wp_comment_author><![CDATA[pfm]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[pfm@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://crimethinc.com/blog</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[71.193.245.138]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-26 06:38:58]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-26 14:38:58]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Go_Outside, If you ordered the book before the announcement (when the store link still said 'add to cart' instead of 'backorder' then your book has been shipped, and is in the mail currently. Only people who ordered after this announcement have their book orders on hold.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>1464</wp_comment_parent>
+      <wp_comment_user_id>1</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303828739.32";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:3:"pfm";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1466</wp_comment_id>
+      <wp_comment_author><![CDATA[GO_OUTSIDE]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[evanmadeanemail@yahoo.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[68.81.125.129]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-26 20:17:46]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-27 04:17:46]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Well that's reassuring. I wouldn't mind if there was no cover at all, it just seemed like I wasn't getting the book at all. I'll be patient—thanks.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303877868.78";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:10:"GO_OUTSIDE";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1467</wp_comment_id>
+      <wp_comment_author><![CDATA[kurtwisener]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[kurt.wisener@gmail.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[71.42.239.130]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-27 08:02:53]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-27 16:02:53]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[...I ran into this problem within 3 hours.  I pressed it back and ran a rolling pin over the contact point and ZAP!  Fixed with no further issue.  If someone can't DIY this issue they should re-read the above note on repair.  While I certainly applaud the extraordinary sensitivity of CrimeThinc Far East I wonder if it wouldn't have been a little less frustrating to allow the purchase and shipping of the book to those who acknowledge a disclaimer.  We are paying for the content, not the package itself.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303920175.62";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"kurtwisener";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1468</wp_comment_id>
+      <wp_comment_author><![CDATA[b. traven]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[b@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://www.crimethinc.com</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[201.52.101.122]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-27 11:31:11]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-27 19:31:11]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[I'm far away from this whole thing, but I'm guessing that part of the issue is that it's impossible to compel the printers to redress the problem if they go on selling the books. This is unfortunate, but hopefully it will be taken care of soon. Incidentally, it's really nice to see how capable and inventive the people getting these books are.]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>2</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1303932672.37";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:9:"b. traven";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1469</wp_comment_id>
+      <wp_comment_author><![CDATA[GCheetah88]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[GCheetah88@triad.rr.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://www.myspace.com/peaceloveanarchy</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[75.183.125.24]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-29 05:10:14]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-29 13:10:14]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[Any defective ones left?  Would you guys consider selling them for a discount like you have in the past?  That would be pretty damn cool, I don't mind "defective" things, not at all, haha...]]></wp_comment_content>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1304082614.21";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:10:"GCheetah88";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1470</wp_comment_id>
+      <wp_comment_author><![CDATA[pfm]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[pfm@crimethinc.com]]></wp_comment_author_email>
+      <wp_comment_author_url>http://crimethinc.com/blog</wp_comment_author_url>
+      <wp_comment_author_IP><![CDATA[76.115.209.87]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-04-30 12:57:42]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-04-30 20:57:42]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[hey GC,
 
 Unfortunately we don't have a single copy left here with us, they've all been sent back to the printer to be inspected and hopefully fixed. If you can hold on for a bit, I'd suggest getting it from your local library, who can <a href="http://crimethinc.com/books/intolibraries.html" rel="nofollow">easily be encouraged to procure one</a>. Also, one aspect of raising our prices will be that occasionally we'll have 'sales' where books will be available at a discount, so stay tuned for that.]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>1469</wp_comment_parent>
-			<wp_comment_user_id>1</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1304197063.19";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:3:"pfm";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-		<wp_comment>
-			<wp_comment_id>1471</wp_comment_id>
-			<wp_comment_author><![CDATA[nolaanarchy]]></wp_comment_author>
-			<wp_comment_author_email><![CDATA[edelpirate@yahoo.com]]></wp_comment_author_email>
-			<wp_comment_author_url/>
-			<wp_comment_author_IP><![CDATA[98.164.95.1]]></wp_comment_author_IP>
-			<wp_comment_date><![CDATA[2011-05-20 20:36:27]]></wp_comment_date>
-			<wp_comment_date_gmt><![CDATA[2011-05-21 03:36:27]]></wp_comment_date_gmt>
-			<wp_comment_content><![CDATA[for those who like Work, bell hooks has an entire awesome and interesting chapter about Work in her book "The Will to Change"
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>1469</wp_comment_parent>
+      <wp_comment_user_id>1</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1304197063.19";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:3:"pfm";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+    <wp_comment>
+      <wp_comment_id>1471</wp_comment_id>
+      <wp_comment_author><![CDATA[nolaanarchy]]></wp_comment_author>
+      <wp_comment_author_email><![CDATA[edelpirate@yahoo.com]]></wp_comment_author_email>
+      <wp_comment_author_url/>
+      <wp_comment_author_IP><![CDATA[98.164.95.1]]></wp_comment_author_IP>
+      <wp_comment_date><![CDATA[2011-05-20 20:36:27]]></wp_comment_date>
+      <wp_comment_date_gmt><![CDATA[2011-05-21 03:36:27]]></wp_comment_date_gmt>
+      <wp_comment_content><![CDATA[for those who like Work, bell hooks has an entire awesome and interesting chapter about Work in her book "The Will to Change"
 
 fucking check that shit out!]]></wp_comment_content>
-			<wp_comment_approved><![CDATA[1]]></wp_comment_approved>
-			<wp_comment_type><![CDATA[]]></wp_comment_type>
-			<wp_comment_parent>0</wp_comment_parent>
-			<wp_comment_user_id>0</wp_comment_user_id>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
-				<wp_meta_value><![CDATA[false]]></wp_meta_value>
-			</wp_commentmeta>
-			<wp_commentmeta>
-				<wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
-				<wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1305948987.74";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"nolaanarchy";}]]></wp_meta_value>
-			</wp_commentmeta>
-		</wp_comment>
-	</item>
+      <wp_comment_approved><![CDATA[1]]></wp_comment_approved>
+      <wp_comment_type><![CDATA[]]></wp_comment_type>
+      <wp_comment_parent>0</wp_comment_parent>
+      <wp_comment_user_id>0</wp_comment_user_id>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_result]]></wp_meta_key>
+        <wp_meta_value><![CDATA[false]]></wp_meta_value>
+      </wp_commentmeta>
+      <wp_commentmeta>
+        <wp_meta_key><![CDATA[akismet_history]]></wp_meta_key>
+        <wp_meta_value><![CDATA[a:4:{s:4:"time";s:13:"1305948987.74";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:11:"nolaanarchy";}]]></wp_meta_value>
+      </wp_commentmeta>
+    </wp_comment>
+  </item>

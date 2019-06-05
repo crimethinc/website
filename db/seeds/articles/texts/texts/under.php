@@ -68,7 +68,7 @@ What would it look like to have a convergence that was designed to fulfill the s
 <span class="readinggallery"><a href="/texts/images/athens2big.jpg" rel="lightbox[athens]">
 <img src="/texts/images/athens2small.jpg" width="156" height="100" style="margin-bottom: 15px"></a>
 <a href="/texts/images/athens3big.jpg" rel="lightbox[athens]">
-<img src="/texts/images/athens3small.jpg" width="156" height="100" style="margin-bottom: 15px"></a></span>  
+<img src="/texts/images/athens3small.jpg" width="156" height="100" style="margin-bottom: 15px"></a></span>
 <div id="footnoteprint">
 <br />
 <br />

@@ -5,7 +5,7 @@ or Do Ideas Have You?</h1>
 <p align="right">&ldquo;The ideologist is a man who falls for the fraud perpetrated on him by his own intellect: that an idea, i.e. the symbol of a momentarily perceived reality,<br />
 can possess absolute reality.&rdquo;<br />
 &ndash;<em>Socrates, refuting Plato&rsquo;s interpretation of his ideas</em></p>
-<p align="right">&ldquo;The world eludes us because it becomes itself again.&rdquo;<br /> 
+<p align="right">&ldquo;The world eludes us because it becomes itself again.&rdquo;<br />
 <em>&ndash;Lewis Carroll</em></p>
 <p><em>Editor&rsquo;s introduction: Possibly the best text any of us have written on the subject of ideology is a letter Nadia once sent to a friend in response to an article he had written with her help (her original title for the piece had been &ldquo;The Political Struggle is the Struggle Against the Political,&rdquo; which he changed to &ldquo;Against the Shallowness of the Political&rdquo;)... so here is her letter, reprinted from his private collection. Remember, <strong>whatever you believe imprisons you.</strong></em></p>
 <p>&nbsp;</p>

@@ -1,46 +1,46 @@
 <item>
-		<title>Mobile Readability Feature Added to Library</title>
-		<link>http://www.crimethinc.com/blog/2012/07/03/mobile-readability-feature-added-to-library/</link>
-		<pubDate>Tue, 03 Jul 2012 17:44:05 +0000</pubDate>
-		<dc_creator><![CDATA[pfm]]></dc_creator>
-		<guid isPermaLink="false">http://www.crimethinc.com/blog/?p=2399</guid>
-		<description/>
-		<content_encoded><![CDATA[We’ve noticed more and more of you are using mobile devices to access this site, so we wanted to point out the increased readability feature we've added to our <a href="http://crimethinc.com/texts">reading library</a>. On each <a href="http://crimethinc.com/texts/recentfeatures">library page</a>, you will see the above icon in the far left menu column; click the icon and that page will be converted to a simple text version optimized for whatever device you are using, with tools to tweak the formatting to suit your tastes. <a href="http://www.instapaper.com" target="_blank">Instapaper</a> (a service we love the shit out of) users will find a link in the text underneath the icon that will save the article to your Instapaper account.
+    <title>Mobile Readability Feature Added to Library</title>
+    <link>http://www.crimethinc.com/blog/2012/07/03/mobile-readability-feature-added-to-library/</link>
+    <pubDate>Tue, 03 Jul 2012 17:44:05 +0000</pubDate>
+    <dc_creator><![CDATA[pfm]]></dc_creator>
+    <guid isPermaLink="false">http://www.crimethinc.com/blog/?p=2399</guid>
+    <description/>
+    <content_encoded><![CDATA[We’ve noticed more and more of you are using mobile devices to access this site, so we wanted to point out the increased readability feature we've added to our <a href="http://crimethinc.com/texts">reading library</a>. On each <a href="http://crimethinc.com/texts/recentfeatures">library page</a>, you will see the above icon in the far left menu column; click the icon and that page will be converted to a simple text version optimized for whatever device you are using, with tools to tweak the formatting to suit your tastes. <a href="http://www.instapaper.com" target="_blank">Instapaper</a> (a service we love the shit out of) users will find a link in the text underneath the icon that will save the article to your Instapaper account.
 
 <p>Of course, this is just a stopgap solution until we have time to create our own mobile versions, which is indeed on our very long to-do list. It was our bad luck we did our last major redesign in 2007, just before the iPhone was introduced and when no one was looking at websites on their phones yet—just five years later almost 10% of our page views are from mobile devices. So, we're working on it.</p>
 ]]></content_encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp_post_id>2399</wp_post_id>
-		<wp_post_date><![CDATA[2012-07-03 10:44:05]]></wp_post_date>
-		<wp_post_date_gmt><![CDATA[2012-07-03 17:44:05]]></wp_post_date_gmt>
-		<wp_comment_status><![CDATA[open]]></wp_comment_status>
-		<wp_ping_status><![CDATA[open]]></wp_ping_status>
-		<wp_post_name><![CDATA[mobile-readability-feature-added-to-library]]></wp_post_name>
-		<wp_status><![CDATA[publish]]></wp_status>
-		<wp_post_parent>0</wp_post_parent>
-		<wp_menu_order>0</wp_menu_order>
-		<wp_post_type><![CDATA[post]]></wp_post_type>
-		<wp_post_password><![CDATA[]]></wp_post_password>
-		<wp_is_sticky>0</wp_is_sticky>
-		<category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
-			<wp_meta_value><![CDATA[1]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
-			<wp_meta_value><![CDATA[2500]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://cwc.im/readability]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
-			<wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/readability/1b.jpg]]></wp_meta_value>
-		</wp_postmeta>
-		<wp_postmeta>
-			<wp_meta_key><![CDATA[readability]]></wp_meta_key>
-			<wp_meta_value><![CDATA[http://rdd.me/zxwr7sod]]></wp_meta_value>
-		</wp_postmeta>
-	</item>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp_post_id>2399</wp_post_id>
+    <wp_post_date><![CDATA[2012-07-03 10:44:05]]></wp_post_date>
+    <wp_post_date_gmt><![CDATA[2012-07-03 17:44:05]]></wp_post_date_gmt>
+    <wp_comment_status><![CDATA[open]]></wp_comment_status>
+    <wp_ping_status><![CDATA[open]]></wp_ping_status>
+    <wp_post_name><![CDATA[mobile-readability-feature-added-to-library]]></wp_post_name>
+    <wp_status><![CDATA[publish]]></wp_status>
+    <wp_post_parent>0</wp_post_parent>
+    <wp_menu_order>0</wp_menu_order>
+    <wp_post_type><![CDATA[post]]></wp_post_type>
+    <wp_post_password><![CDATA[]]></wp_post_password>
+    <wp_is_sticky>0</wp_is_sticky>
+    <category domain="category" nicename="internal-memos"><![CDATA[Internal Memos]]></category>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_edit_last]]></wp_meta_key>
+      <wp_meta_value><![CDATA[1]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[_thumbnail_id]]></wp_meta_key>
+      <wp_meta_value><![CDATA[2500]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[shorturl]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://cwc.im/readability]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[jumbo]]></wp_meta_key>
+      <wp_meta_value><![CDATA[https://cloudfront.crimethinc.com/images/readability/1b.jpg]]></wp_meta_value>
+    </wp_postmeta>
+    <wp_postmeta>
+      <wp_meta_key><![CDATA[readability]]></wp_meta_key>
+      <wp_meta_value><![CDATA[http://rdd.me/zxwr7sod]]></wp_meta_value>
+    </wp_postmeta>
+  </item>
