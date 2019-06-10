@@ -60,3 +60,7 @@ PostCommit:
 PostMerge:
   BundleInstall:
     enabled: true
+
+  NextStepsHelper:
+    enabled: true
+    description: 'Checking for next steps to run after a merge/pull'
