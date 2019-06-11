@@ -39,7 +39,7 @@ describe 'Navigating to special 1-off pages' do
   end
 
   context 'with a non-existing page path' do
-    it 'redirect to thee home page' do
+    it 'redirect to the home page' do
       visit '/blahblahblah'
       expect(page).to have_current_path '/'
     end
