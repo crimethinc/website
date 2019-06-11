@@ -175,5 +175,8 @@ Rails.application.routes.draw do
   get 'opensearch.xml', to: 'misc#opensearch_xml'
 
   # Pages
-  get '*path', to: 'pages#show', as: :page, via: :all
+  get '/faq', to: 'pages#show', as: :faq, via: :all
+  get '/about', to: 'pages#show', as: :about, via: :all
+  get '/start', to: 'pages#show', as: :start, via: :all
+  get '/contact', to: 'pages#show', as: :contact, via: :all
 end

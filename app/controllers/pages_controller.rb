@@ -29,12 +29,10 @@ class PagesController < ApplicationController
   def set_page
     @page =
       if params[:draft_code].present?
-        Page.find_by(draft_code: params[:draft_code])
+        Page.find_by!(draft_code: params[:draft_code])
       else
-        Page.find_by(slug: params[:path])
+        Page.find_by!(slug: request.path.split('/').last)
       end
-
-    redirect_to [:root] if @page.blank?
   end
 
   def page_redirects
