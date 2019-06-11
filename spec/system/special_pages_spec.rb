@@ -39,9 +39,8 @@ describe 'Navigating to special 1-off pages' do
   end
 
   context 'with a non-existing page path' do
-    it 'redirect to the home page' do
-      visit '/blahblahblah'
-      expect(page).to have_current_path '/'
+    it 'shows the 404 page' do
+      expect { get '/blahblahblah' }.to raise_error(ActionController::RoutingError)
     end
   end
 
