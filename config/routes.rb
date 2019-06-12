@@ -179,4 +179,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#show', as: :about, via: :all
   get '/start', to: 'pages#show', as: :start, via: :all
   get '/contact', to: 'pages#show', as: :contact, via: :all
+
+  # For redirection
+  get '*path', to: 'pages#show', as: :page, via: :all
 end
