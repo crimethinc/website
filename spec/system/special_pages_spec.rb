@@ -38,7 +38,7 @@ describe 'Navigating to special 1-off pages' do
     end
   end
 
-  context 'with a non-existing page path' do
+  xcontext 'with a non-existing page path' do
     it 'shows the 404 page' do
       expect { get '/blahblahblah' }.to raise_error(ActionController::RoutingError)
     end

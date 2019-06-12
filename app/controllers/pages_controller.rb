@@ -31,8 +31,11 @@ class PagesController < ApplicationController
       if params[:draft_code].present?
         Page.find_by!(draft_code: params[:draft_code])
       else
-        Page.find_by!(slug: request.path.split('/').last)
+        slug = params[:path] || request.path.split('/').last
+        Page.find_by(slug: slug)
       end
+
+    redirect_to [:root] if @page.blank?
   end
 
   def page_redirects
