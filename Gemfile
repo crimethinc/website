@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '~> 2.6.3'
 
 # app server
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 6.0.0.rc1'
 
 # database
 gem 'pg'
@@ -63,7 +63,7 @@ group :development, :test do
   gem 'nokogiri'
   gem 'overcommit'
   gem 'rails-controller-testing'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
   gem 'webdrivers'
