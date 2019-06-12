@@ -1,5 +1,5 @@
 module Publishable
-  PUBLICATION_STATUSES = %i[draft published].freeze
+  PUBLICATION_STATUSES = { draft: 0, published: 1 }.freeze
   extend ActiveSupport::Concern
 
   included do
@@ -23,9 +23,9 @@ module Publishable
   class << self
     def publication_statuses_for user:
       if user.can_publish?
-        PUBLICATION_STATUSES
+        PUBLICATION_STATUSES.keys
       else
-        PUBLICATION_STATUSES - %i[published]
+        PUBLICATION_STATUSES.keys - %i[published]
       end
     end
   end
