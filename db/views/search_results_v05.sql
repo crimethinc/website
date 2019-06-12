@@ -24,7 +24,7 @@ SELECT
     LEFT JOIN tags ON tags.id = taggings.tag_id
     LEFT JOIN categorizations ON categorizations.article_id = articles.id
     LEFT JOIN categories ON categories.id = categorizations.category_id
-    WHERE articles.published_at < now() AND articles.   publication_status = 1
+    WHERE articles.published_at < now() AND articles.publication_status = 1
     GROUP BY searchable_id, searchable_type
 
     UNION
