@@ -9,6 +9,12 @@
   </head>
 
   <body id="<%= body_id %>">
+    <% if FeatureFlag.enabled? :two_point_oh_yeah %>
+      <%= render "shared/redesign_header" %>
+    <% else %>
+      <!-- Nothing different here. -->
+    <% end %>
+
     <%= render "shared/admin_header" %>
     <%= render "shared/development_mode_banner" %>
     <%= render "shared/header" %>
