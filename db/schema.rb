@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_22_081347) do
+ActiveRecord::Schema.define(version: 2019_06_12_050243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "articles", id: :serial, force: :cascade do |t|
-    t.integer "status_id"
     t.text "title"
     t.text "subtitle"
     t.text "content"
@@ -46,7 +45,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.integer "canonical_id"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
-    t.index ["status_id"], name: "index_articles_on_status_id"
   end
 
   create_table "books", id: :serial, force: :cascade do |t|
@@ -93,7 +91,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
@@ -180,7 +177,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
@@ -217,12 +213,10 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
   create_table "pages", id: :serial, force: :cascade do |t|
-    t.integer "status_id"
     t.text "title"
     t.text "subtitle"
     t.text "content"
@@ -241,7 +235,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "publication_status", default: 0, null: false
-    t.index ["status_id"], name: "index_pages_on_status_id"
   end
 
   create_table "podcasts", id: :serial, force: :cascade do |t|
@@ -294,7 +287,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
@@ -311,12 +303,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.string "title"
     t.string "subtitle"
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "statuses", id: :serial, force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -346,7 +332,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -401,7 +386,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
@@ -441,7 +425,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
@@ -476,13 +459,12 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
                       WHEN (count(categories.*) = 0) THEN (ARRAY[]::text[])::character varying[]
                       ELSE array_remove(array_agg(categories.name), NULL::character varying)
                   END AS category_names
-             FROM (((((articles
-               JOIN statuses ON (((statuses.id = articles.status_id) AND ((statuses.name)::text = 'published'::text))))
+             FROM ((((articles
                LEFT JOIN taggings ON (((taggings.taggable_id = articles.id) AND ((taggings.taggable_type)::text = 'Article'::text))))
                LEFT JOIN tags ON ((tags.id = taggings.tag_id)))
                LEFT JOIN categorizations ON ((categorizations.article_id = articles.id)))
                LEFT JOIN categories ON ((categories.id = categorizations.category_id)))
-            WHERE (articles.published_at < now())
+            WHERE ((articles.published_at < now()) AND (articles.publication_status = 1))
             GROUP BY articles.id, 'Article'::text
           UNION
            SELECT pages.id AS searchable_id,
@@ -495,11 +477,10 @@ ActiveRecord::Schema.define(version: 2019_05_22_081347) do
                       ELSE array_agg(tags.name)
                   END AS tag_names,
               ARRAY[]::text[] AS category_names
-             FROM (((pages
-               JOIN statuses ON (((statuses.id = pages.status_id) AND ((statuses.name)::text = 'published'::text))))
+             FROM ((pages
                LEFT JOIN taggings ON (((taggings.taggable_id = pages.id) AND ((taggings.taggable_type)::text = 'Page'::text))))
                LEFT JOIN tags ON ((tags.id = taggings.tag_id)))
-            WHERE (pages.published_at < now())
+            WHERE ((pages.published_at < now()) AND (pages.publication_status = 1))
             GROUP BY pages.id, 'Page'::text
           UNION
            SELECT episodes.id AS searchable_id,
