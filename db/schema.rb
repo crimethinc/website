@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_031329) do
+ActiveRecord::Schema.define(version: 2019_06_12_045953) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "articles", id: :serial, force: :cascade do |t|
-    t.integer "status_id"
     t.text "title"
     t.text "subtitle"
     t.text "content"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.integer "canonical_id"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
-    t.index ["status_id"], name: "index_articles_on_status_id"
   end
 
   create_table "books", id: :serial, force: :cascade do |t|
@@ -86,7 +85,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
@@ -179,7 +177,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
@@ -216,12 +213,10 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
   create_table "pages", id: :serial, force: :cascade do |t|
-    t.integer "status_id"
     t.text "title"
     t.text "subtitle"
     t.text "content"
@@ -240,7 +235,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "publication_status", default: 0, null: false
-    t.index ["status_id"], name: "index_pages_on_status_id"
   end
 
   create_table "podcasts", id: :serial, force: :cascade do |t|
@@ -293,7 +287,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
@@ -345,7 +338,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -400,7 +392,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-    t.integer "status_id"
     t.integer "publication_status", default: 0, null: false
   end
 
@@ -440,7 +431,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_031329) do
     t.integer "gallery_images_count"
     t.boolean "epub_download_present"
     t.boolean "mobi_download_present"
-    t.integer "status_id"
     t.boolean "print_black_and_white_a4_download_present"
     t.boolean "print_color_a4_download_present"
     t.boolean "print_color_download_present"
