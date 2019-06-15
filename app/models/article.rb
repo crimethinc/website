@@ -9,7 +9,7 @@ class Article < ApplicationRecord
 
   # Collections / Nested Articles, used for live blogs
   has_many   :collection_posts, foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection, dependent: :destroy
-  belongs_to :collection,       foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection_posts, touch: true
+  belongs_to :collection,       foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection_posts, touch: true, optional: true
 
   before_validation :generate_published_dates, on: [:create, :update]
   before_validation :normalize_newlines,       on: [:create, :update]
