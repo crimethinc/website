@@ -41,7 +41,9 @@ describe 'Navigating to special 1-off pages' do
 
   context 'with a non-existing page path' do
     it 'shows the 404 page' do
-      expect { get '/blahblahblah' }.to raise_error(ActiveRecord::RecordNotFound)
+      response = get '/blahblahblah'
+
+      expect(response).to eq 404
     end
   end
 

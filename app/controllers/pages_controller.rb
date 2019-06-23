@@ -29,13 +29,15 @@ class PagesController < ApplicationController
   def set_page
     @page =
       if params[:draft_code].present?
-        Page.find_by!(draft_code: params[:draft_code])
+        Page.find_by(draft_code: params[:draft_code])
       else
-        Page.find_by!(slug: request.path.split('/').last)
+        Page.find_by(slug: request.path.split('/').last)
       end
   end
 
   def page_redirects
+    return render file: Rails.root.join('public', '404.html'), status: :not_found if @page.nil?
+
     return redirect_to @page.path if @page.published? && params[:draft_code].present?
   end
 
