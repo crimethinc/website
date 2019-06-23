@@ -31,9 +31,10 @@ describe 'Navigating to special 1-off pages' do
   context 'with path /faq' do
     it 'works' do
       visit '/faq'
-      expect(page).to have_current_path('/2016/09/28/feature-the-secret-is-to-be' \
-                                        'gin-getting-started-further-resources-f' \
-                                        'requently-asked-questions')
+
+      path = '/2016/09/28/feature-the-secret-is-to-begin-getting-started-further-resources-frequently-asked-questions'
+
+      expect(page).to have_current_path(path)
       expect(page).to have_content 'Frequently Asked Questions about Anarchism'
     end
   end
@@ -46,10 +47,11 @@ describe 'Navigating to special 1-off pages' do
 
   def create_page_with(slug)
     if slug == :faq
+      target_path = '/2016/09/28/feature-the-secret-is-to-begin-getting-started-further-resources-frequently-asked-questions#faq'
+
       Redirect.create!(
         source_path: '/faq',
-        target_path: '/2016/09/28/feature-the-secret-is-to-begin-getting' \
-                     '-started-further-resources-frequently-asked-questions#faq'
+        target_path: target_path
       )
 
       path = Rails.root.join('db', 'seeds', 'articles', 'features', 'begin', 'index.html')
