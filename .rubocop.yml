@@ -49,9 +49,6 @@ Metrics/MethodLength:
 Metrics/BlockLength:
   Max: 140
 
-  Exclude:
-    - 'spec/**/*'
-
 Metrics/AbcSize:
   Max: 65
 
@@ -76,6 +73,11 @@ Style/NestedParenthesizedCalls:
 Layout/IndentationWidth:
   Enabled: false
 
+# TEMP: Rubocop is wrongly marking hashes as not aligned that are in fact aligned
+# https://gist.github.com/veganstraightedge/2bfcd5e5eaacda9f0d9120fb2d285878
+Layout/AlignHash:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -97,8 +99,3 @@ RSpec/MessageSpies:
 RSpec/DescribeClass:
   Exclude:
     - 'spec/system/*'
-
-# TEMP: Rubocop is wrongly marking hashes as not aligned that are in fact aligned
-# https://gist.github.com/veganstraightedge/2bfcd5e5eaacda9f0d9120fb2d285878
-Layout/AlignHash:
-  Enabled: false
