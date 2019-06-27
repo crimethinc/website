@@ -1,6 +1,6 @@
 module Admin
   class RedirectsController < Admin::AdminController
-    before_action :set_redirect, only: [:show, :edit, :update, :destroy]
+    before_action :set_redirect, only: %i[show edit update destroy]
 
     def index
       redirects =
@@ -24,7 +24,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@redirect, [:id, :source_path])
+      @title = admin_title(@redirect, %i[id source_path])
     end
 
     def create
@@ -47,7 +47,7 @@ module Admin
 
     def destroy
       @redirect.destroy
-      redirect_to [:admin, :redirects], notice: 'Redirect was successfully destroyed.'
+      redirect_to %i[admin redirects], notice: 'Redirect was successfully destroyed.'
     end
 
     private

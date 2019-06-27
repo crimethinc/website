@@ -1,6 +1,6 @@
 module Admin
   class StickersController < Admin::AdminController
-    before_action :set_poster, only: [:show, :edit, :update, :destroy]
+    before_action :set_poster, only: %i[show edit update destroy]
 
     def index
       @posters = Sticker.order(slug: :asc).page(params[:page])
@@ -9,7 +9,7 @@ module Admin
     end
 
     def show
-      @title = admin_title(@poster, [:title, :subtitle])
+      @title = admin_title(@poster, %i[title subtitle])
       render 'admin/posters/show'
     end
 
@@ -20,7 +20,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@poster, [:id, :title, :subtitle])
+      @title = admin_title(@poster, %i[id title subtitle])
       render 'admin/posters/edit'
     end
 
@@ -44,7 +44,7 @@ module Admin
 
     def destroy
       @poster.destroy
-      redirect_to [:admin, :posters], notice: 'Sticker was successfully destroyed.'
+      redirect_to %i[admin posters], notice: 'Sticker was successfully destroyed.'
     end
 
     private

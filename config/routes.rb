@@ -162,7 +162,7 @@ Rails.application.routes.draw do
 
   # Auth + User signup
   namespace :auth do
-    resources :users,    only: [:create, :update, :destroy]
+    resources :users,    only: %i[create update destroy]
     resources :sessions, only: [:create]
   end
 

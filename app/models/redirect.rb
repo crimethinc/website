@@ -1,9 +1,9 @@
 class Redirect < ApplicationRecord
-  before_validation :strip_domain_from_source_path, on: [:create, :update]
-  before_validation :strip_domain_from_target_path, on: [:create, :update]
-  before_validation :add_leading_slash,             on: [:create, :update]
-  before_validation :strip_double_slashes,          on: [:create, :update]
-  before_validation :downcase_source_path,          on: [:create, :update]
+  before_validation :strip_domain_from_source_path, on: %i[create update]
+  before_validation :strip_domain_from_target_path, on: %i[create update]
+  before_validation :add_leading_slash,             on: %i[create update]
+  before_validation :strip_double_slashes,          on: %i[create update]
+  before_validation :downcase_source_path,          on: %i[create update]
 
   validates :source_path, presence: true, uniqueness: true
   validates :target_path, presence: true

@@ -2,8 +2,8 @@ module Slug
   extend ActiveSupport::Concern
 
   included do
-    before_validation :blank_slug,    on: [:create, :update]
-    before_validation :generate_slug, on: [:create, :update]
+    before_validation :blank_slug,    on: %i[create update]
+    before_validation :generate_slug, on: %i[create update]
   end
 
   def slug_exists?

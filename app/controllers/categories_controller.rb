@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
-  before_action :set_slug,     only: [:show, :feed]
-  before_action :set_category, only: [:show, :feed]
-  before_action :set_title,    only: [:show, :feed]
-  before_action :set_articles, only: [:show, :feed]
+  before_action :set_slug,     only: %i[show feed]
+  before_action :set_category, only: %i[show feed]
+  before_action :set_title,    only: %i[show feed]
+  before_action :set_articles, only: %i[show feed]
 
   def show
     @html_id = 'page'

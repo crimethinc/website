@@ -1,6 +1,6 @@
 module Admin
   class PodcastsController < Admin::AdminController
-    before_action :set_podcast, only: [:show, :edit, :update, :destroy]
+    before_action :set_podcast, only: %i[show edit update destroy]
 
     def index
       @podcasts = Podcast.all
@@ -8,7 +8,7 @@ module Admin
     end
 
     def show
-      @title = admin_title(@podcast, [:id, :title])
+      @title = admin_title(@podcast, %i[id title])
     end
 
     def new
@@ -17,7 +17,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@podcast, [:id, :title, :subtitle])
+      @title = admin_title(@podcast, %i[id title subtitle])
     end
 
     def create
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @podcast.destroy
-      redirect_to [:admin, :podcasts], notice: 'Podcast was successfully destroyed.'
+      redirect_to %i[admin podcasts], notice: 'Podcast was successfully destroyed.'
     end
 
     private

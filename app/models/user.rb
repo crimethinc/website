@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   enum role: ROLES
 
-  validates :username, presence: true, uniqueness: true, on: [:create, :update]
+  validates :username, presence: true, uniqueness: true, on: %i[create update]
 
   validates :password,
             presence: true,
@@ -22,7 +22,7 @@ class User < ApplicationRecord
 
   default_scope { order(username: :asc) }
 
-  before_validation :strip_whitespace, on: [:create, :update]
+  before_validation :strip_whitespace, on: %i[create update]
 
   class << self
     def options_for_select

@@ -1,7 +1,7 @@
 module Admin
   class VideosController < Admin::AdminController
-    before_action :set_video,        only: [:show, :edit, :update, :destroy]
-    before_action :set_published_at, only: [:create, :update]
+    before_action :set_video,        only: %i[show edit update destroy]
+    before_action :set_published_at, only: %i[create update]
 
     # /admin/videos
     def index
@@ -22,7 +22,7 @@ module Admin
 
     # /admin/videos/1/edit
     def edit
-      @title = admin_title(@video, [:id, :title, :subtitle])
+      @title = admin_title(@video, %i[id title subtitle])
     end
 
     # /admin/videos
@@ -48,7 +48,7 @@ module Admin
     # /admin/videos/1
     def destroy
       @video.destroy
-      redirect_to [:admin, :videos], notice: 'Video was successfully destroyed.'
+      redirect_to %i[admin videos], notice: 'Video was successfully destroyed.'
     end
 
     private

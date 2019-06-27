@@ -1,15 +1,15 @@
 module Admin
   class EpisodesController < Admin::AdminController
-    before_action :set_episode,      only: [:show, :edit, :update, :destroy]
-    before_action :set_published_at, only: [:create, :update]
-    before_action :set_podcasts,     only: [:new, :edit]
+    before_action :set_episode,      only: %i[show edit update destroy]
+    before_action :set_published_at, only: %i[create update]
+    before_action :set_podcasts,     only: %i[new edit]
 
     def index
-      redirect_to [:admin, :podcasts]
+      redirect_to %i[admin podcasts]
     end
 
     def show
-      @title = admin_title(@episode, [:title, :subtitle])
+      @title = admin_title(@episode, %i[title subtitle])
     end
 
     def new
@@ -18,7 +18,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@episode, [:id, :title, :subtitle])
+      @title = admin_title(@episode, %i[id title subtitle])
     end
 
     def create
@@ -41,7 +41,7 @@ module Admin
 
     def destroy
       @episode.destroy
-      redirect_to [:admin, :podcasts], notice: 'Episode was successfully destroyed.'
+      redirect_to %i[admin podcasts], notice: 'Episode was successfully destroyed.'
     end
 
     private
@@ -52,7 +52,7 @@ module Admin
 
     def set_episode
       @episode = Episode.find(params[:id])
-      return redirect_to [:admin, :podcasts] if @episode.blank?
+      return redirect_to %i[admin podcasts] if @episode.blank?
     end
 
     def episode_params

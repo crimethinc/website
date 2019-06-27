@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :extras]
+  before_action :set_book, only: %i[show extras]
 
   BOOK_SLUGS = %w[
     no-wall-they-can-build

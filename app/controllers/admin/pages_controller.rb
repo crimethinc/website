@@ -1,9 +1,9 @@
 module Admin
   class PagesController < Admin::AdminController
-    before_action :set_page,         only: [:show, :edit, :update, :destroy]
-    before_action :set_published_at, only: [:create, :update]
+    before_action :set_page,         only: %i[show edit update destroy]
+    before_action :set_published_at, only: %i[create update]
 
-    after_action :organize_page, only: [:create, :update]
+    after_action :organize_page, only: %i[create update]
 
     # /admin/pages
     def index
@@ -24,7 +24,7 @@ module Admin
 
     # /admin/pages/1/edit
     def edit
-      @title = admin_title(@page, [:id, :title, :subtitle])
+      @title = admin_title(@page, %i[id title subtitle])
     end
 
     # /admin/pages
@@ -50,7 +50,7 @@ module Admin
     # /admin/pages/1
     def destroy
       @page.destroy
-      redirect_to [:admin, :pages], notice: 'Page was successfully destroyed.'
+      redirect_to %i[admin pages], notice: 'Page was successfully destroyed.'
     end
 
     private

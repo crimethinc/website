@@ -1,6 +1,6 @@
 module Admin
   class ZinesController < Admin::ToolsController
-    before_action :set_zine, only: [:show, :edit, :update, :destroy]
+    before_action :set_zine, only: %i[show edit update destroy]
 
     def index
       @books = Zine.order(slug: :asc).page(params[:page])
@@ -9,7 +9,7 @@ module Admin
     end
 
     def show
-      @title = admin_title(@book, [:title, :subtitle])
+      @title = admin_title(@book, %i[title subtitle])
       render 'admin/books/show'
     end
 
@@ -21,7 +21,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@book, [:id, :title, :subtitle])
+      @title = admin_title(@book, %i[id title subtitle])
       render 'admin/books/edit'
     end
 
@@ -45,7 +45,7 @@ module Admin
 
     def destroy
       @book.destroy
-      redirect_to [:admin, :zines], notice: 'Zine was successfully destroyed.'
+      redirect_to %i[admin zines], notice: 'Zine was successfully destroyed.'
     end
 
     private

@@ -1,6 +1,6 @@
 module Admin
   class CategoriesController < Admin::AdminController
-    before_action :set_category, only: [:show, :edit, :update, :destroy]
+    before_action :set_category, only: %i[show edit update destroy]
 
     def index
       @categories = Category.page(params[:page])
@@ -8,7 +8,7 @@ module Admin
     end
 
     def show
-      redirect_to [:admin, :categories]
+      redirect_to %i[admin categories]
     end
 
     def new
@@ -17,7 +17,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@category, [:id, :name])
+      @title = admin_title(@category, %i[id name])
     end
 
     def create
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @category.destroy
-      redirect_to [:admin, :categories], notice: 'Category was successfully destroyed.'
+      redirect_to %i[admin categories], notice: 'Category was successfully destroyed.'
     end
 
     private

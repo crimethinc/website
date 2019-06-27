@@ -13,8 +13,8 @@ module Admin
       @html_id  = 'markdown'
       @body_id  = 'top'
       @sections = [
-        [:headings, :links, :horizontal_rules, :paragraphs],
-        [:lists, :bold_and_italics]
+        %i[headings links horizontal_rules paragraphs],
+        %i[lists bold_and_italics]
       ]
     end
   end

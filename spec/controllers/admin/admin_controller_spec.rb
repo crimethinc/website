@@ -9,7 +9,7 @@ RSpec.describe Admin::AdminController, type: :controller do
       expect(controller).to receive(:controller_path).and_return('admin/articles').at_least(:once)
       expect(controller).to receive(:action_name).and_return('edit').at_least(:once)
 
-      title = controller.admin_title(article, [:id, :title, :subtitle])
+      title = controller.admin_title(article, %i[id title subtitle])
       expect(title).to eq('Editing article 1 title : sub')
     end
 
@@ -20,7 +20,7 @@ RSpec.describe Admin::AdminController, type: :controller do
 
       expect(Rails.logger).to receive(:error).with('admin/articles:edit has an issue with the page title')
 
-      title = controller.admin_title(article, [:id, :foo])
+      title = controller.admin_title(article, %i[id foo])
 
       expect(title).to eq('')
     end
@@ -30,7 +30,7 @@ RSpec.describe Admin::AdminController, type: :controller do
       expect(controller).to receive(:controller_path).and_return('admin/articles').at_least(:once)
       expect(controller).to receive(:action_name).and_return('edit').at_least(:once)
 
-      title = controller.admin_title(article, [:id, :title, :subtitle, :year])
+      title = controller.admin_title(article, %i[id title subtitle year])
       expect(title).to eq('Editing article 1 title : sub')
     end
   end

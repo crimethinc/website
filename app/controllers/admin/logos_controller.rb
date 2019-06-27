@@ -1,6 +1,6 @@
 module Admin
   class LogosController < Admin::AdminController
-    before_action :set_logo, only: [:show, :edit, :update, :destroy]
+    before_action :set_logo, only: %i[show edit update destroy]
 
     def index
       @logos = Logo.order(slug: :asc).page(params[:page])
@@ -8,7 +8,7 @@ module Admin
     end
 
     def show
-      @title = admin_title(@logo, [:title, :subtitle])
+      @title = admin_title(@logo, %i[title subtitle])
     end
 
     def new
@@ -17,7 +17,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@logo, [:id, :title, :subtitle])
+      @title = admin_title(@logo, %i[id title subtitle])
     end
 
     def create
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @logo.destroy
-      redirect_to [:admin, :logos], notice: 'Logo was successfully destroyed.'
+      redirect_to %i[admin logos], notice: 'Logo was successfully destroyed.'
     end
 
     private

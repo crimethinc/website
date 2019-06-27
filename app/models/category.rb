@@ -6,7 +6,7 @@ class Category < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
-  before_validation :strip_whitespace, on: [:create, :update]
+  before_validation :strip_whitespace, on: %i[create update]
 
   default_scope { order(name: :asc) }
 

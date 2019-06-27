@@ -1,6 +1,6 @@
 class Locale < ApplicationRecord
-  before_validation :strip_whitespace, on: [:create, :update]
-  before_validation :downcase_abbreviation, on: [:create, :update]
+  before_validation :strip_whitespace, on: %i[create update]
+  before_validation :downcase_abbreviation, on: %i[create update]
 
   validates :abbreviation, uniqueness: true
   validates :name_in_english, uniqueness: true

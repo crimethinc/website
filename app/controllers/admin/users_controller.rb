@@ -1,7 +1,7 @@
 module Admin
   class UsersController < Admin::AdminController
     before_action :authorize_admin_role
-    before_action :set_user, only: [:show, :edit, :update, :destroy]
+    before_action :set_user, only: %i[show edit update destroy]
 
     def index
       @users = User.page(params[:page])
@@ -9,7 +9,7 @@ module Admin
     end
 
     def show
-      redirect_to [:admin, :users]
+      redirect_to %i[admin users]
     end
 
     def new
@@ -21,19 +21,19 @@ module Admin
       @user = User.new(user_params)
 
       if @user.save
-        redirect_to [:admin, :users], notice: 'User was successfully created.'
+        redirect_to %i[admin users], notice: 'User was successfully created.'
       else
         render :new
       end
     end
 
     def edit
-      @title = admin_title(@user, [:id, :username])
+      @title = admin_title(@user, %i[id username])
     end
 
     def update
       if @user.update(user_params)
-        redirect_to [:admin, :users], notice: 'User was successfully updated.'
+        redirect_to %i[admin users], notice: 'User was successfully updated.'
       else
         render :edit
       end
@@ -41,7 +41,7 @@ module Admin
 
     def destroy
       @user.destroy
-      redirect_to [:admin, :users], notice: 'User was successfully destroyed.'
+      redirect_to %i[admin users], notice: 'User was successfully destroyed.'
     end
 
     private

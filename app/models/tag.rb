@@ -9,7 +9,7 @@ class Tag < ApplicationRecord
   has_many :zines, through: :taggings, source: :taggable, source_type: Tagging::ZINE
   has_many :books, through: :taggings, source: :taggable, source_type: Tagging::BOOK
 
-  before_validation :strip_whitespace, on: [:create, :update]
+  before_validation :strip_whitespace, on: %i[create update]
 
   validates :name, uniqueness: true
 

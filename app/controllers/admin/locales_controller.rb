@@ -1,6 +1,6 @@
 module Admin
   class LocalesController < Admin::AdminController
-    before_action :set_locale, only: [:show, :edit, :update, :destroy]
+    before_action :set_locale, only: %i[show edit update destroy]
 
     def index
       @locales = Locale.page(params[:page]).per(100)
@@ -8,7 +8,7 @@ module Admin
     end
 
     def show
-      redirect_to [:admin, :locales]
+      redirect_to %i[admin locales]
     end
 
     def new
@@ -17,14 +17,14 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@locale, [:id, :source_path])
+      @title = admin_title(@locale, %i[id source_path])
     end
 
     def create
       @locale = Locale.new(locale_params)
 
       if @locale.save
-        redirect_to [:admin, :locales], notice: 'Locale was successfully created.'
+        redirect_to %i[admin locales], notice: 'Locale was successfully created.'
       else
         render :new
       end
@@ -32,7 +32,7 @@ module Admin
 
     def update
       if @locale.update(locale_params)
-        redirect_to [:admin, :locale], notice: 'Locale was successfully updated.'
+        redirect_to %i[admin locale], notice: 'Locale was successfully updated.'
       else
         render :edit
       end
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @locale.destroy
-      redirect_to [:admin, :locales], notice: 'Locale was successfully destroyed.'
+      redirect_to %i[admin locales], notice: 'Locale was successfully destroyed.'
     end
 
     private

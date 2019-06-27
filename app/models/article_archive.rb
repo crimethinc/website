@@ -2,7 +2,7 @@ class ArticleArchive
   extend Forwardable
   include Enumerable
 
-  delegate [:current_page, :total_pages, :limit_value] => :articles
+  delegate %i[current_page total_pages limit_value] => :articles
 
   attr_reader :day, :month, :page, :year
 

@@ -1,9 +1,9 @@
 module Admin
   class ArticlesController < Admin::AdminController
-    before_action :set_article,      only: [:show, :edit, :update, :destroy]
-    before_action :set_published_at, only: [:create, :update]
-    before_action :set_categories,   only: [:new, :edit]
-    after_action  :organize_article, only: [:create, :update]
+    before_action :set_article,      only: %i[show edit update destroy]
+    before_action :set_published_at, only: %i[create update]
+    before_action :set_categories,   only: %i[new edit]
+    after_action  :organize_article, only: %i[create update]
 
     def index
       @articles = Article.root.includes(:collection_posts).page(params[:page])
@@ -14,7 +14,7 @@ module Admin
       # TODO: this is a hack
       @collection = Article.find(@article.collection_id) if @article.collection_id.present?
 
-      @title   = admin_title(@article, [:title, :subtitle])
+      @title   = admin_title(@article, %i[title subtitle])
       @html_id = 'js-admin-article'
       @body_id = 'top'
     end
@@ -32,7 +32,7 @@ module Admin
       @article.update_columns(user_id: current_user)
 
       @collection = Article.find(@article.collection_id) if @article.in_collection?
-      @title      = admin_title(@article, [:id, :title, :subtitle])
+      @title      = admin_title(@article, %i[id title subtitle])
       @html_id    = 'js-admin-article'
     end
 
@@ -63,7 +63,7 @@ module Admin
       return redirect_to [:admin, @article] unless current_user.can_delete?
 
       @article.destroy
-      redirect_to [:admin, :articles], notice: 'Article was successfully destroyed.'
+      redirect_to %i[admin articles], notice: 'Article was successfully destroyed.'
     end
 
     private

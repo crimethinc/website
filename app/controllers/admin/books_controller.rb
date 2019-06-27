@@ -1,6 +1,6 @@
 module Admin
   class BooksController < Admin::ToolsController
-    before_action :set_book, only: [:show, :edit, :update, :destroy]
+    before_action :set_book, only: %i[show edit update destroy]
 
     def index
       @books = Book.order(slug: :asc).page(params[:page])
@@ -8,7 +8,7 @@ module Admin
     end
 
     def show
-      @title = admin_title(@book, [:title, :subtitle])
+      @title = admin_title(@book, %i[title subtitle])
     end
 
     def new
@@ -17,7 +17,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@book, [:id, :title, :subtitle])
+      @title = admin_title(@book, %i[id title subtitle])
     end
 
     def create
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @book.destroy
-      redirect_to [:admin, :books], notice: 'Book was successfully destroyed.'
+      redirect_to %i[admin books], notice: 'Book was successfully destroyed.'
     end
 
     private

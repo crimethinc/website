@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
-  before_action :set_podcast, only: [:show, :transcript]
-  before_action :set_episode, only: [:show, :transcript]
+  before_action :set_podcast, only: %i[show transcript]
+  before_action :set_episode, only: %i[show transcript]
 
   def show
     @html_id  = 'page'

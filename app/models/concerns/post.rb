@@ -10,7 +10,7 @@ module Post
   included do
     belongs_to :user, optional: true
 
-    before_validation :generate_draft_code, on: [:create, :update]
+    before_validation :generate_draft_code, on: %i[create update]
   end
 
   def meta_image
