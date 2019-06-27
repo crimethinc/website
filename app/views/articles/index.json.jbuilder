@@ -2,14 +2,14 @@ json.prettify!
 
 json.version        'https://jsonfeed.org/version/1'
 json.user_comment   <<~USER_COMMENT
-                      I support your decision, I believe in change and hope you find just
-                      what it is that you are looking for. If your heart is free, the
-                      ground you stand on is liberated territory. Defend it. This feed
-                      allows you to read the posts from this site in any feed reader that
-                      supports the JSON Feed format. To add this feed to your reader, copy
-                      the following URL — https://crimethinc.com/feed.json — and add it
-                      your reader. For more info on this format: https://jsonfeed.org
-                    USER_COMMENT
+  I support your decision, I believe in change and hope you find just
+  what it is that you are looking for. If your heart is free, the
+  ground you stand on is liberated territory. Defend it. This feed
+  allows you to read the posts from this site in any feed reader that
+  supports the JSON Feed format. To add this feed to your reader, copy
+  the following URL — https://crimethinc.com/feed.json — and add it
+  your reader. For more info on this format: https://jsonfeed.org
+USER_COMMENT
 
 json.title          page_title
 json.description    meta_title
