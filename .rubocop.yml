@@ -76,10 +76,6 @@ Style/NestedParenthesizedCalls:
 Layout/IndentationWidth:
   Enabled: false
 
-# README: the `begin` in BadRequestRescue seems to be required
-Style/RedundantBegin:
-  Enabled: false
-
 Style/FrozenStringLiteralComment:
   Enabled: false
 

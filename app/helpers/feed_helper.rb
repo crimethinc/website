@@ -6,14 +6,13 @@ module FeedHelper
     return if text.blank?
 
     result = Builder::XChar.encode(text)
-    begin
-      result.encode(XML_ENCODING)
-    rescue StandardError
-      # if the encoding can’t be supported, use numeric character references
-      result
-        .gsub(/[^\u0000-\u007F]/) { |c| "&##{c.ord};" }
-        .force_encoding('ascii')
-    end
+
+    result.encode(XML_ENCODING)
+  rescue StandardError
+    # if the encoding can’t be supported, use numeric character references
+    result
+      .gsub(/[^\u0000-\u007F]/) { |c| "&##{c.ord};" }
+      .force_encoding('ascii')
   end
 
   def strip_subdomain url
