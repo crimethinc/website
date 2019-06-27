@@ -90,9 +90,6 @@ RSpec/ExampleLength:
 RSpec/MultipleExpectations:
   Max: 10
 
-RSpec/VerifiedDoubles:
-  Enabled: false
-
 RSpec/MessageSpies:
   Enabled: false
 
