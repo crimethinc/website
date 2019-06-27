@@ -83,11 +83,6 @@ Style/RedundantBegin:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-# TEMP: Nokogiri’s use of `open` from `open-uri` is being
-# confused as Kernel#open by Rubocop
-Security/Open:
-  Enabled: false
-
 RSpec/NestedGroups:
   Max: 4
 
