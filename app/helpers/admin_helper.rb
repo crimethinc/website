@@ -9,7 +9,7 @@ module AdminHelper
       syndication:    'Syndication',
       appearance:     'Appearance'
     }.map do |id, display_text|
-       link_to "#{display_text} ↓", "##{id}", class: 'btn btn-outline-primary mb-2 mr-2'
+      link_to "#{display_text} ↓", "##{id}", class: 'btn btn-outline-primary mb-2 mr-2'
     end.join.html_safe
   end
 

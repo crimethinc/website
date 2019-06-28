@@ -14,12 +14,6 @@ Layout/AlignHash:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
 
-# TEMP: private and def foo() are at the same indentation level
-# This should NOT cause an offense but it does. ¯\_(ツ)_/¯
-# https://rubocop.readthedocs.io/en/latest/cops_layout/
-Layout/IndentationWidth:
-  Enabled: false
-
 Metrics/AbcSize:
   Max: 57
 
