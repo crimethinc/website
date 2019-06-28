@@ -8,7 +8,7 @@ require 'fileutils'
 include FileUtils
 
 # path to your application root.
-APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
+APP_ROOT = Pathname.new File.expand_path('..', __dir__)
 
 def system!(*args)
   system(*args) || abort("\n==> Command #{args} failed")
@@ -19,13 +19,13 @@ chdir APP_ROOT do
   system! 'script/update'
 
   # print output at the start of test run
-  puts "==> Tests started at: #{Time.now.strftime("%H:%M:%S")}"
+  puts "==> Tests started at: #{Time.now.strftime('%H:%M:%S')}"
 
   # run tests
   if ARGV[0].nil?
     system! 'bundle exec rspec'
 
-    puts "==> Running Rubocop…"
+    puts '==> Running Rubocop…'
     system! 'bundle exec rubocop'
   else
     # pass arguments to test call. This is useful for calling a single test.

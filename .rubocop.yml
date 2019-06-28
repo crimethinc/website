@@ -5,7 +5,6 @@ require:
 AllCops:
   Exclude:
     - 'db/**/*'
-    - 'script/*'
 
 Rails:
   Enabled: true
@@ -33,6 +32,10 @@ Metrics/BlockLength:
 
 Metrics/AbcSize:
   Max: 57
+
+Style/MixinUsage:
+  Exclude:
+    - 'script/*'
 
 Style/Documentation:
   Enabled: false
