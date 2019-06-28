@@ -10,9 +10,6 @@ AllCops:
   Exclude:
     - 'db/**/*'
 
-Rails:
-  Enabled: true
-
 Metrics/CyclomaticComplexity:
   Max: 15
 
