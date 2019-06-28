@@ -86,8 +86,8 @@ module AdminHelper
   def category_check_box form:, category:
     form.check_box :category_ids,
                    {
-                     id: "article_category_ids_#{category.id}",
-                     name: 'article[category_ids][]',
+                     id:    "article_category_ids_#{category.id}",
+                     name:  'article[category_ids][]',
                      class: 'form-check-input'
                    },
                    category.id,

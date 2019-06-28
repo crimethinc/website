@@ -10,10 +10,9 @@ AllCops:
   Exclude:
     - 'db/**/*'
 
-# TEMP: Rubocop is wrongly marking hashes as not aligned that are in fact aligned
-# https://gist.github.com/veganstraightedge/2bfcd5e5eaacda9f0d9120fb2d285878
 Layout/AlignHash:
-  Enabled: false
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
 
 # TEMP: private and def foo() are at the same indentation level
 # This should NOT cause an offense but it does. ¯\_(ツ)_/¯

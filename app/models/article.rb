@@ -55,10 +55,10 @@ class Article < ApplicationRecord
   def content_rendered include_media: true
     Kramdown::Document.new(
       MarkdownMedia.parse(content, include_media: include_media),
-      input: content_format.to_sym,
-      remove_block_html_tags: false,
+      input:                     content_format.to_sym,
+      remove_block_html_tags:    false,
       transliterated_header_ids: true,
-      html_to_native: true
+      html_to_native:            true
     ).to_html.html_safe
   end
 
