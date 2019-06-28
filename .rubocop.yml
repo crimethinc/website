@@ -10,41 +10,9 @@ AllCops:
   Exclude:
     - 'db/**/*'
 
-Metrics/CyclomaticComplexity:
-  Max: 15
-
-Metrics/PerceivedComplexity:
-  Max: 15
-
-Metrics/ClassLength:
-  Max: 210
-
-Metrics/ParameterLists:
-  Max: 6
-
-Metrics/LineLength:
-  Max: 200
-
-Metrics/MethodLength:
-  Max: 28
-
-Metrics/BlockLength:
-  Max: 123
-
-Metrics/AbcSize:
-  Max: 57
-
-Style/MixinUsage:
-  Exclude:
-    - 'script/*'
-
-Style/Documentation:
-  Enabled: false
-
-Style/MethodDefParentheses:
-  Enabled: false
-
-Style/AsciiComments:
+# TEMP: Rubocop is wrongly marking hashes as not aligned that are in fact aligned
+# https://gist.github.com/veganstraightedge/2bfcd5e5eaacda9f0d9120fb2d285878
+Layout/AlignHash:
   Enabled: false
 
 # TEMP: private and def foo() are at the same indentation level
@@ -53,26 +21,57 @@ Style/AsciiComments:
 Layout/IndentationWidth:
   Enabled: false
 
-# TEMP: Rubocop is wrongly marking hashes as not aligned that are in fact aligned
-# https://gist.github.com/veganstraightedge/2bfcd5e5eaacda9f0d9120fb2d285878
-Layout/AlignHash:
+Metrics/AbcSize:
+  Max: 57
+
+Metrics/BlockLength:
+  Max: 123
+
+Metrics/ClassLength:
+  Max: 210
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/LineLength:
+  Max: 200
+
+Metrics/MethodLength:
+  Max: 28
+
+Metrics/ParameterLists:
+  Max: 6
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/system/*'
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 10
+
+RSpec/NestedGroups:
+  Max: 4
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-RSpec/NestedGroups:
-  Max: 4
-
-RSpec/ExampleLength:
-  Max: 20
-
-RSpec/MultipleExpectations:
-  Max: 10
-
-RSpec/MessageSpies:
+Style/MethodDefParentheses:
   Enabled: false
 
-RSpec/DescribeClass:
+Style/MixinUsage:
   Exclude:
-    - 'spec/system/*'
+    - 'script/*'
