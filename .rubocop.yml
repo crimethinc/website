@@ -19,12 +19,6 @@ AllCops:
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
 
-Naming/FileName:
-  Exclude:
-    - 'Gemfile'
-    - 'Guardfile'
-    - 'Rakefile'
-
 Rails:
   Enabled: true
 
