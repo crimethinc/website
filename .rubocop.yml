@@ -6,12 +6,6 @@ AllCops:
   Exclude:
     - 'db/**/*'
     - 'script/*'
-    - 'log/**/*'
-    - 'node_modules/**/*'
-    - 'public/**/*'
-    - 'vendor/**/*'
-    - 'tmp/**/*'
-    - '.git/**/*'
 
 Rails:
   Enabled: true
