@@ -41,6 +41,7 @@ Metrics/PerceivedComplexity:
 RSpec/DescribeClass:
   Exclude:
     - 'spec/system/*'
+
 RSpec/ExampleLength:
   Max: 20
 
