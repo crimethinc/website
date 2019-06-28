@@ -51,9 +51,6 @@ RSpec/MessageSpies:
 RSpec/MultipleExpectations:
   Max: 10
 
-RSpec/NestedGroups:
-  Max: 4
-
 Style/AsciiComments:
   Enabled: false
 
