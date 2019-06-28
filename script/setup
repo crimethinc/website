@@ -25,11 +25,11 @@ chdir APP_ROOT do
   system! 'brew services start postgresql'
 
   puts '==> Preparing database'
-  system! 'bin/rails db:create'
-  system! 'bin/rails db:migrate'
+  system! 'bundle exec rails db:create'
+  system! 'bundle exec rails db:migrate'
 
   puts '==> Removing old logs and tempfiles'
-  system! 'bin/rails log:clear tmp:clear'
+  system! 'bundle exec rails log:clear tmp:clear'
 
   puts '==> App is now setup!'
   puts '==> Next step is:'

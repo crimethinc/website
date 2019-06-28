@@ -16,7 +16,7 @@ end
 
 chdir APP_ROOT do
   puts '==> Setting up DB...'
-  system! 'bin/rails db:create'
+  system! 'bundle exec rails db:create'
 
   puts "==> Tests started at: #{Time.now.strftime("%H:%M:%S")}"
 

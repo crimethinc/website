@@ -6,7 +6,6 @@ AllCops:
   Exclude:
     - 'db/**/*'
     - 'script/*'
-    - 'bin/*'
     - 'log/**/*'
     - 'node_modules/**/*'
     - 'public/**/*'

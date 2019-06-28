@@ -17,16 +17,16 @@ chdir APP_ROOT do
   system! 'script/bootstrap'
 
   puts '==> Dropping DB…'
-  system! 'bin/rails db:drop'
+  system! 'bundle exec rails db:drop'
 
   puts '==> Creating DB…'
-  system! 'bin/rails db:create'
+  system! 'bundle exec rails db:create'
 
   puts '==> Migrating DB…'
-  system! 'bin/rails db:migrate'
+  system! 'bundle exec rails db:migrate'
 
   puts '==> Seeding DB…'
-  system! 'bin/rails db:seed'
+  system! 'bundle exec rails db:seed'
 
   puts '==> DB is now ready to go!'
 end
