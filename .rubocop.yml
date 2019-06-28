@@ -16,9 +16,6 @@ AllCops:
     - 'tmp/**/*'
     - '.git/**/*'
 
-Layout/IndentationConsistency:
-  EnforcedStyle: indented_internal_methods
-
 Rails:
   Enabled: true
 
