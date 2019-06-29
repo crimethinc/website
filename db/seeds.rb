@@ -6,15 +6,15 @@ test_user.save!(validate: false)
 
 puts 'Trying dev seeds for each post-type...'
 %w[
-  articles
   books
-  episodes
-  journals
   pages
-  podcasts
   redirects
   videos
+  podcasts
+  episodes
+  journals
   featured_journals
+  articles
 ].each do |post_type|
   file_path = File.expand_path("../seeds/#{post_type}.rb", __FILE__)
 
