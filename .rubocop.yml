@@ -58,7 +58,9 @@ RSpec/MessageSpies:
   Enabled: false
 
 RSpec/MultipleExpectations:
-  Max: 10
+  Max: 5
+  Exclude:
+    - 'spec/system/*'
 
 Security/Eval:
   Exclude:
