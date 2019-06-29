@@ -3,3 +3,26 @@ version: '2'
 exclude_patterns:
   - 'config/'
   - 'public/'
+
+plugins:
+  brakeman:
+    enabled: true
+  flog:
+    enabled: true
+    config:
+      score_threshold: 20.0
+  reek:
+    enabled: true
+  fixme:
+    enabled: true
+    config:
+      strings:
+      - FIXME
+      - BUG
+      - HACK
+      - TODO
+      - TEMP
+  markdownlint:
+    enabled: true
+  scss-lint:
+    enabled: true
