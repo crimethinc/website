@@ -25,8 +25,6 @@ description_rolling_thunder_8 = <<~DESCRIPTION_ROLLING_THUNDER_8
   [Download Table of Contents PDF](https://cloudfront.crimethinc.com/assets/journals/rolling-thunder-8-fall-2009/rolling-thunder-8-fall-2009_table_of_contents.pdf) (822 kb).
 DESCRIPTION_ROLLING_THUNDER_8
 
-
-
 [
   {
     title:                'Rolling Thunder #12',

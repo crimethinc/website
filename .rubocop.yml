@@ -38,6 +38,8 @@ Metrics/LineLength:
 
 Metrics/MethodLength:
   Max: 28
+  Exclude:
+    - 'db/migrate/*'
 
 Metrics/ParameterLists:
   Max: 6
