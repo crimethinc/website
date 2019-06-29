@@ -231,6 +231,7 @@ GEM
     redis (4.1.2)
     redis-store (1.6.0)
       redis (>= 2.2, < 5)
+    referral (0.0.2)
     regexp_parser (1.5.1)
     request_store (1.4.1)
       rack (>= 1.4)
@@ -371,6 +372,7 @@ DEPENDENCIES
   rails-controller-testing
   redis
   redis-store
+  referral
   rspec-rails
   rubocop
   rubocop-performance
