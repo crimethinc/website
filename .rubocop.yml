@@ -27,7 +27,7 @@ Metrics/CyclomaticComplexity:
   Max: 11
 
 Metrics/LineLength:
-  Max: 200
+  Max: 186
   Exclude:
     - 'db/**/*'
 
