@@ -9,11 +9,11 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, on: %i[create update]
 
   validates :password,
-            presence: true,
-            on: :create,
-            length: { minimum: PASSWORD_MINIMUM_LENGTH },
+            presence:  true,
+            on:        :create,
+            length:    { minimum: PASSWORD_MINIMUM_LENGTH },
             exclusion: {
-              in: [
+              in:      [
                 'mickey fickie fire cracker soap on a rope',
                 'a long passphrase to meet the minimum length'
               ],

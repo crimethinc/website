@@ -1,5 +1,5 @@
 class TagAssigner
-  def self.parse_glob(glob)
+  def self.parse_glob glob
     return if glob.blank?
 
     names = glob.split(',').reject(&:blank?)
@@ -7,13 +7,13 @@ class TagAssigner
     new(*tags)
   end
 
-  def initialize(*tags)
+  def initialize *tags
     @tags = tags
   end
 
   attr_accessor :tags
 
-  def assign_tags_to!(taggable)
+  def assign_tags_to! taggable
     @tags.each do |tag|
       tag.assign_to!(taggable) unless tag.assigned_to?(taggable)
     end

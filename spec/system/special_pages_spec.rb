@@ -47,7 +47,7 @@ describe 'Navigating to special 1-off pages' do
     end
   end
 
-  def create_page_with(slug)
+  def create_page_with slug
     if slug == :faq
       target_path = '/2016/09/28/feature-the-secret-is-to-begin-getting-started-further-resources-frequently-asked-questions#faq'
 
@@ -74,11 +74,11 @@ describe 'Navigating to special 1-off pages' do
     end
 
     create(:page,
-           title: "title for #{slug}",
-           content: "content for #{slug}",
+           title:              "title for #{slug}",
+           content:            "content for #{slug}",
            publication_status: 'published',
-           published_at: Time.zone.parse('2017-01-01'),
-           slug: slug.to_s,
-           image: 'https://cloudfront.crimethinc.com/assets/pages/start/start-header.jpg')
+           published_at:       Time.zone.parse('2017-01-01'),
+           slug:               slug.to_s,
+           image:              'https://cloudfront.crimethinc.com/assets/pages/start/start-header.jpg')
   end
 end

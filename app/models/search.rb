@@ -5,7 +5,7 @@ class Search
 
   attr_reader :query, :term
 
-  def initialize(query)
+  def initialize query
     @filters = normalize_filters(query)
     @query   = query
     @scope   = SearchResult.select('search_results.*')
@@ -49,7 +49,7 @@ class Search
                  .order('ranking DESC')
   end
 
-  def normalize_filters(query)
+  def normalize_filters query
     filters = query
               .scan(FILTER_REGEX)
               .map(&:first)
@@ -60,7 +60,7 @@ class Search
     filters
   end
 
-  def strip_filters(query)
+  def strip_filters query
     filters = query.scan(FILTER_REGEX).map(&:first)
 
     filters.inject(query) { |q, match| q.sub(match, '') }.strip

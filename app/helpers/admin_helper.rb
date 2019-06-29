@@ -9,25 +9,25 @@ module AdminHelper
       syndication:    'Syndication',
       appearance:     'Appearance'
     }.map do |id, display_text|
-       link_to "#{display_text} ↓", "##{id}", class: 'btn btn-outline-primary mb-2 mr-2'
+      link_to "#{display_text} ↓", "##{id}", class: 'btn btn-outline-primary mb-2 mr-2'
     end.join.html_safe
   end
 
-  def admin_form_date(post)
+  def admin_form_date post
     tz = post&.published_at_tz
     return '' if tz.nil? || post.published_at.nil?
 
     post.published_at.in_time_zone(tz).strftime('%F')
   end
 
-  def admin_form_time(post)
+  def admin_form_time post
     tz = post&.published_at_tz
     return '' if tz.nil? || post.published_at.nil?
 
     post.published_at.in_time_zone(tz).strftime('%T')
   end
 
-  def nav_to(text, path, *options)
+  def nav_to text, path, *options
     classes = ['nav-link']
 
     if options.present?
@@ -86,8 +86,8 @@ module AdminHelper
   def category_check_box form:, category:
     form.check_box :category_ids,
                    {
-                     id: "article_category_ids_#{category.id}",
-                     name: 'article[category_ids][]',
+                     id:    "article_category_ids_#{category.id}",
+                     name:  'article[category_ids][]',
                      class: 'form-check-input'
                    },
                    category.id,

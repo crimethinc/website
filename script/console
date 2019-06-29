@@ -10,9 +10,9 @@ require 'fileutils'
 include FileUtils
 
 # path to your application root.
-APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
+APP_ROOT = Pathname.new File.expand_path('..', __dir__)
 
-def system!(*args)
+def system! *args
   system(*args) || abort("\n==> Command #{args} failed")
 end
 
@@ -32,6 +32,6 @@ chdir APP_ROOT do
     # no argument provided, so just run the local console in the development
     # environment. Ensure the application is up to date first.
     system! 'script/update'
-    system! 'bin/rails console'
+    system! 'bundle exec rails console'
   end
 end

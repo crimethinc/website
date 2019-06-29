@@ -3,7 +3,7 @@ module MetaHelper
     @find_the_thing ||= [@article, @page, @podcast, @episode, @book, @tool, @video].compact.first
   end
 
-  def meta_type(thing)
+  def meta_type thing
     thing.present? ? 'article' : 'website'
   end
 
@@ -12,11 +12,11 @@ module MetaHelper
     thing.present? ? thing.title : t('head.meta_title')
   end
 
-  def meta_description(thing)
+  def meta_description thing
     thing.present? ? thing.meta_description : t('head.meta_description')
   end
 
-  def meta_image(thing)
+  def meta_image thing
     if thing.present? && thing.image.present? && thing.respond_to?(:meta_image)
       thing.meta_image
     else

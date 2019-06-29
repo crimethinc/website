@@ -4,7 +4,7 @@ module Admin
 
     layout 'admin'
 
-    def admin_title(model = nil, keys = [])
+    def admin_title model = nil, keys = []
       return t(".#{action_name}_title", default: '') if model.blank?
 
       translation_vars = {}
