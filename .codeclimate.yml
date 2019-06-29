@@ -3,6 +3,7 @@ version: '2'
 exclude_patterns:
   - 'config/'
   - 'public/'
+  - 'db/seeds/'
 
 plugins:
   brakeman:
