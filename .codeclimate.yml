@@ -3,7 +3,11 @@ version: '2'
 exclude_patterns:
   - 'config/'
   - 'public/'
-  - 'db/seeds/'
+  - 'db/seeds/articles/'
+  - 'db/seeds/episodes/'
+  - 'db/seeds/videos/'
+  - 'db/seeds/books/'
+  - 'db/seeds/redirects/'
 
 plugins:
   brakeman:
