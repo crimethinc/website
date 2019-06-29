@@ -17,11 +17,11 @@ class Tag < ApplicationRecord
     self.name = name.strip
   end
 
-  def assigned_to?(taggable)
+  def assigned_to? taggable
     in? taggable.tags
   end
 
-  def assign_to!(taggable)
+  def assign_to! taggable
     save! if new_record?
     taggings.create!(taggable: taggable)
   end

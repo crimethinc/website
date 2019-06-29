@@ -10,8 +10,8 @@ module MarkdownHelper
 
     Kramdown::Document.new(
       MarkdownMedia.parse(text, include_media: media_mode?),
-      input: :kramdown,
-      remove_block_html_tags: false,
+      input:                     :kramdown,
+      remove_block_html_tags:    false,
       transliterated_header_ids: true
     ).to_html.html_safe
   end

@@ -11,15 +11,15 @@ Rails.application.routes.draw do
 
   # To Change Everything (TCE)
   get 'tce(/:lang)',
-      to: 'to_change_everything#show',
+      to:       'to_change_everything#show',
       defaults: { lang: 'english' },
-      as: :to_change_everything
+      as:       :to_change_everything
 
   # Steal Something from Work Day (SSfWD)
   get 'steal-something-from-work-day(/:locale)',
-      to: 'steal_something_from_work_day#show',
+      to:       'steal_something_from_work_day#show',
       defaults: { locale: 'english' },
-      as: :steal_something_from_work_day
+      as:       :steal_something_from_work_day
 
   # Articles
   # Article listings by year, optional month, optional day
@@ -39,8 +39,8 @@ Rails.application.routes.draw do
 
   # Article edit convenience route
   get ':year/:month/:day/:slug/edit',
-      controller: 'admin/articles',
-      action:     'edit',
+      controller:  'admin/articles',
+      action:      'edit',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
 
   # Draft Articles and Pages

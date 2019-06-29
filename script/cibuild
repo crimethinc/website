@@ -8,19 +8,18 @@ require 'fileutils'
 include FileUtils
 
 # path to your application root
-APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
+APP_ROOT = Pathname.new File.expand_path('..', __dir__)
 
-def system!(*args)
+def system! *args
   system(*args) || abort("\n==> Command #{args} failed")
 end
 
 chdir APP_ROOT do
   puts '==> Setting up DB...'
-  system! 'bin/rails db:create'
+  system! 'bundle exec rails db:create'
 
-  puts "==> Tests started at: #{Time.now.strftime("%H:%M:%S")}"
+  puts "==> Tests started at: #{Time.now.strftime('%H:%M:%S')}"
 
   system! 'bundle exec rspec'
   system! 'bundle exec rubocop'
 end
-

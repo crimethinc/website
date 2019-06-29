@@ -23,7 +23,7 @@ describe Article do
       new_article = build(
         :article,
         tweet:   "ab\r\ncd" * 50,
-        summary: "a\r\nbc"  * 50
+        summary: "a\r\nbc" * 50
       )
 
       expect(new_article).to be_valid

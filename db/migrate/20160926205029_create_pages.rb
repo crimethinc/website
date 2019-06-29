@@ -7,7 +7,7 @@ class CreatePages < ActiveRecord::Migration[5.0]
       t.text       :title, :subtitle, :content, :tweet, :summary
       t.text       :image, :image_description, :css
       t.string     :header_background_color, :header_text_color
-      t.string     :content_format, default: "kramdown"
+      t.string     :content_format, default: 'kramdown'
 
       t.string     :slug, :draft_code
       t.datetime   :published_at

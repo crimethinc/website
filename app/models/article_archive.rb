@@ -6,7 +6,7 @@ class ArticleArchive
 
   attr_reader :day, :month, :page, :year
 
-  def initialize(year:, month:, day: nil, page: 1)
+  def initialize year:, month:, day: nil, page: 1
     @year  = year
     @month = month
     @page  = page
@@ -46,7 +46,7 @@ class ArticleArchive
     @paginator ||= ArticleArchivePaginator.new(self)
   end
 
-  def each(&block)
+  def each &block
     calendar.sort.reverse.each(&block)
   end
 end

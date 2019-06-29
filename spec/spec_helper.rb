@@ -16,12 +16,14 @@ RSpec.configure do |config|
   config.example_status_persistence_file_path = 'tmp/rspec-failures.txt'
 end
 
-def login_user(_user)
+def login_user _user
   visit '/signin'
+
   within('main') do
     fill_in 'username', with: 'user1'
     fill_in 'password', with: 'c' * 31
   end
+
   click_button 'Sign In'
   expect(page).to have_content 'Logged in!'
 end

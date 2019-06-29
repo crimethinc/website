@@ -5,8 +5,8 @@ module MetaDescription
     if summary.blank?
       html = Kramdown::Document.new(
         content,
-        input: :kramdown,
-        remove_block_html_tags: false,
+        input:                     :kramdown,
+        remove_block_html_tags:    false,
         transliterated_header_ids: true
       ).to_html.to_s
 
