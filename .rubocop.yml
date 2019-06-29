@@ -8,7 +8,6 @@ inherit_mode:
 
 AllCops:
   Exclude:
-    # - 'db/**/*'
     - 'db/schema.rb'
 
 Style/UnneededPercentQ:
