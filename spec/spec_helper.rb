@@ -1,5 +1,5 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start 'rails'
 
 RSpec.configure do |config|
   config.before(:each, type: :system) do
