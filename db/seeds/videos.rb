@@ -11,9 +11,7 @@ Dir.glob("#{file_path}/*").each do |file|
 
   next if file_name =~ /.DS_Store/
 
-
   doc = File.open(file) { |f| Nokogiri::HTML(f) }
-  next
 
   title        = doc.css('.title').text
   slug         = title.to_slug
