@@ -385,7 +385,7 @@ end
 #####
 # First new style Article on new site
 
-content = %q{
+content = <<~CONTENT
   As 2017 opens, we face new challenges in an increasingly volatile world. Since last summer, we’ve been hard at work expanding our networks and updating our infrastructure to prepare for the global situation that is now unfolding. Over the next month, we’ll be announcing several ambitious new projects.
   The first of these is this website itself. We’ve assembled several new editorial groups and are in the process of overhauling the web design.
   Effective immediately, we’ll be publishing at least four new articles a week, extending our coverage to a much wider range of topics and formats. We’re not just proposing a subculture or a particular methodology of protest, but a total way of living. Accordingly, in addition to current events and analysis, we’ve established separate CrimethInc. cells to focus on technology, history, the arts, and more. Over the next two weeks, each of these groups will introduce itself here and outline its goals for this new phase of activity.
@@ -396,7 +396,7 @@ content = %q{
   The website is powered by an app built with [Ruby on Rails](http://rubyonrails.org).
   If you're a designer, a developer, or an adventurous explorer and want to help us build a better world, [send up a signal flare](https://github.com/crimethinc/website/issues)—we'll be waiting for you. There's still plenty of work to do (and always will be until we finally destroy empire). Front end HTML and CSS—backend Ruby and Rails—UI/UX design—copyediting—language translation. There's something for everyone.
   And we've only just begun. Stay tuned for several more surprises.
-}
+CONTENT
 
 articles = [
   {

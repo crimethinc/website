@@ -10,10 +10,6 @@ AllCops:
   Exclude:
     - 'db/schema.rb'
 
-Style/UnneededPercentQ:
-  Exclude:
-    - 'db/**/*'
-
 Layout/AlignHash:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
