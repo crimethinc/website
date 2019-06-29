@@ -5,14 +5,14 @@ test_user = User.new(username:              'tester',
 test_user.save!(validate: false)
 
 puts 'Trying dev seeds for each post-type...'
-  # articles
+# journals
+# featured_journals
+# pages
+%w[
+  articles
+].each do |post_type|
   # books
   # episodes
-%w[
-  journals
-  featured_journals
-].each do |post_type|
-  # pages
   # podcasts
   # redirects
   # videos
