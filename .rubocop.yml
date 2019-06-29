@@ -40,7 +40,7 @@ Metrics/ParameterLists:
   Max: 6
 
 Metrics/PerceivedComplexity:
-  Max: 15
+  Max: 12
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
