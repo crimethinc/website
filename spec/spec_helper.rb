@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 RSpec.configure do |config|
   config.before(:each, type: :system) do
     driven_by :chrome
