@@ -8,6 +8,11 @@ inherit_mode:
 
 AllCops:
   Exclude:
+    # - 'db/**/*'
+    - 'db/schema.rb'
+
+Style/UnneededPercentQ:
+  Exclude:
     - 'db/**/*'
 
 Layout/AlignHash:
@@ -28,6 +33,8 @@ Metrics/CyclomaticComplexity:
 
 Metrics/LineLength:
   Max: 200
+  Exclude:
+    - 'db/**/*'
 
 Metrics/MethodLength:
   Max: 28
@@ -37,6 +44,9 @@ Metrics/ParameterLists:
 
 Metrics/PerceivedComplexity:
   Max: 15
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
 
 RSpec/DescribeClass:
   Exclude:
@@ -50,6 +60,10 @@ RSpec/MessageSpies:
 
 RSpec/MultipleExpectations:
   Max: 10
+
+Security/Eval:
+  Exclude:
+    - 'db/seeds.rb'
 
 Style/AsciiComments:
   Enabled: false

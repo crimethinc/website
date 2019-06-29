@@ -1,54 +1,50 @@
-require "nokogiri"
-# TODO add TCE video
+require 'nokogiri'
+# TODO: add TCE video
 # TODO add Vimeo videos
 
 # Videos
-filepath = File.expand_path("../db/seeds/videos/", __FILE__)
+file_path = File.expand_path('db/seeds/videos', __dir__)
 
-Dir.glob("#{filepath}/*").each do |f|
-  path_pieces = f.strip.split("/")
-  filename    = path_pieces.last
+Dir.glob("#{file_path}/*").each do |file|
+  path_pieces = file.strip.split('/')
+  file_name   = path_pieces.last
 
-  unless filename =~ /.DS_Store/
-    doc   = File.open(f) { |f| Nokogiri::HTML(f) }
+  next if file_name =~ /.DS_Store/
 
-    title        = doc.css(".title").text
-    slug         = title.to_slug
 
-    info_pieces = doc.css(".info").text
-    quality, year, duration = info_pieces.split(" / ")
+  doc = File.open(file) { |f| Nokogiri::HTML(f) }
+  next
 
-    published_at = year
-    content      = doc.css(".desc").inner_html.gsub(/\s+/, " ")
-    vimeo_id     = doc.css("iframe").attribute("src").value.match(/video\/(\d+)/)[1]
+  title        = doc.css('.title').text
+  slug         = title.to_slug
 
-    # Save the Video
-    video = Video.create!(
-      title:              title,
-      subtitle:           nil,
-      content:            content,
-      tweet:              nil,
-      summary:            nil,
-      slug:               slug,
-      quality:            quality,
-      duration:           duration,
-      vimeo_id:           vimeo_id,
-      content_format:     'html',
-      publication_status: 'published',
-      published_at:       1.year.ago
-    )
+  info_pieces = doc.css('.info').text
+  quality, _year, duration = info_pieces.split(' / ')
 
-    puts "videos/#{filename}"
-    puts "videos/#{slug}"
-    puts
+  content      = doc.css('.desc').inner_html.gsub(/\s+/, ' ')
+  vimeo_id     = doc.css('iframe').attribute('src').value.match(%r{video/(\d+)})[1]
 
-    unless Redirect.find_by(source_path: "/movies/#{filename}").present?
-      Redirect.create! source_path: "movies/#{filename}", target_path: "videos/#{slug}", temporary: false
-    end
- end
+  # Save the Video
+  Video.create!(
+    title:              title,
+    subtitle:           nil,
+    content:            content,
+    tweet:              nil,
+    summary:            nil,
+    slug:               slug,
+    quality:            quality,
+    duration:           duration,
+    vimeo_id:           vimeo_id,
+    content_format:     'html',
+    publication_status: 'published',
+    published_at:       1.year.ago
+  )
 
+  puts "videos/#{file_name}"
+  puts "videos/#{slug}"
+  puts
+
+  Redirect.create! source_path: "movies/#{file_name}", target_path: "videos/#{slug}", temporary: false unless Redirect.find_by(source_path: "/movies/#{file_name}").present?
 end
 
-unless Redirect.find_by(source_path: "/movies").present?
-  Redirect.create! source_path: "movies", target_path: "watch", temporary: false
-end
+Redirect.create! source_path: 'movies', target_path: 'watch', temporary: false unless Redirect.find_by(source_path: '/movies').present?
