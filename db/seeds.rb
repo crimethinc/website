@@ -10,11 +10,11 @@ puts 'Trying dev seeds for each post-type...'
 # pages
 # videos
 # books
+# podcasts
+# episodes
 %w[
-  podcasts
-  episodes
+  redirects
 ].each do |post_type|
-  # redirects
   # articles
   file_path = File.expand_path("../seeds/#{post_type}.rb", __FILE__)
 
