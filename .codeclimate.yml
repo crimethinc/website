@@ -2,10 +2,27 @@ version: '2'
 
 exclude_patterns:
   - 'config/'
-  - 'db/'
-  - 'db/seeds/'
   - 'public/'
-  - 'script/'
-  - 'vendor/'
-  - 'spec/'
-  - 'app/middlewares/rack/redirect_pairs.rb'
+
+plugins:
+  brakeman:
+    enabled: true
+  flog:
+    enabled: true
+    config:
+      score_threshold: 20.0
+  reek:
+    enabled: true
+  fixme:
+    enabled: true
+    config:
+      strings:
+        - FIXME
+        - BUG
+        - HACK
+        - TODO
+        - TEMP
+  markdownlint:
+    enabled: true
+  scss-lint:
+    enabled: true

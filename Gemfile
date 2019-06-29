@@ -69,6 +69,11 @@ group :development, :test do
   gem 'webdrivers'
 end
 
+# testing / ci
+group :test do
+  gem 'simplecov', require: false
+end
+
 # dev
 group :development do
   gem 'guard-rspec', require: false

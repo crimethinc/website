@@ -2,9 +2,6 @@ dist: trusty
 sudo: false
 language: ruby
 cache: bundler
-script: "./script/cibuild"
-before_script:
-  - cp config/database.yml.travis config/database.yml
 
 services:
   - postgresql
@@ -20,6 +17,7 @@ addons:
 env:
   global:
     - CODECLIMATE_REPO_TOKEN: 70b1a0a5ca106d965eb0570c0e4b7577d76c352305fb5719aa984eeae4941bdf
+    - CC_TEST_REPORTER_ID: 70b1a0a5ca106d965eb0570c0e4b7577d76c352305fb5719aa984eeae4941bdf
     - PGPORT: 5433
 
 before_install:
@@ -30,6 +28,18 @@ before_install:
   - sudo chmod +x /usr/local/share/chromedriver
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
   - gem install bundler
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - ./script/cibuild
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 notifications:
   slack:
