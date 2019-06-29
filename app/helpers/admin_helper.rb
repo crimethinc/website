@@ -13,21 +13,21 @@ module AdminHelper
     end.join.html_safe
   end
 
-  def admin_form_date(post)
+  def admin_form_date post
     tz = post&.published_at_tz
     return '' if tz.nil? || post.published_at.nil?
 
     post.published_at.in_time_zone(tz).strftime('%F')
   end
 
-  def admin_form_time(post)
+  def admin_form_time post
     tz = post&.published_at_tz
     return '' if tz.nil? || post.published_at.nil?
 
     post.published_at.in_time_zone(tz).strftime('%T')
   end
 
-  def nav_to(text, path, *options)
+  def nav_to text, path, *options
     classes = ['nav-link']
 
     if options.present?

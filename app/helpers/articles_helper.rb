@@ -27,7 +27,7 @@ module ArticlesHelper
     end
   end
 
-  def figure_image_with_caption_tag(article)
+  def figure_image_with_caption_tag article
     return if article.image.blank?
 
     img        = image_tag article.image, class: 'u-photo', alt: ''
@@ -36,7 +36,7 @@ module ArticlesHelper
     tag.figure img + figcaption.to_s
   end
 
-  def article_tag(article, &block)
+  def article_tag article, &block
     klasses = ['h-entry']
     klasses << 'article-with-no-header-image' if article.image.blank?
 
@@ -47,15 +47,15 @@ module ArticlesHelper
     tag.article id: article.slug, class: klasses.join(' '), data: data, &block
   end
 
-  def display_date(datetime = nil)
+  def display_date datetime = nil
     datetime&.strftime('%Y-%m-%d')
   end
 
-  def display_time(datetime = nil)
+  def display_time datetime = nil
     datetime&.strftime('%l:%M&nbsp;%z')&.html_safe
   end
 
-  def link_to_dates(year: nil, month: nil, day: nil, show_year: true, show_month: true, show_day: true)
+  def link_to_dates year: nil, month: nil, day: nil, show_year: true, show_month: true, show_day: true
     show_month = false if month.nil?
     show_day   = false if day.nil?
 

@@ -127,7 +127,7 @@ class SupportController < ApplicationController
     }
   end
 
-  def customer_with_subscription(email)
+  def customer_with_subscription email
     customers = Stripe::Customer.list(email: email).data
 
     customers.each do |customer|

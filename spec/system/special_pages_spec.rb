@@ -47,7 +47,7 @@ describe 'Navigating to special 1-off pages' do
     end
   end
 
-  def create_page_with(slug)
+  def create_page_with slug
     if slug == :faq
       target_path = '/2016/09/28/feature-the-secret-is-to-begin-getting-started-further-resources-frequently-asked-questions#faq'
 

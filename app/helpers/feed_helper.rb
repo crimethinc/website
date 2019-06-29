@@ -2,7 +2,7 @@ module FeedHelper
   XML_ENCODING = ::Encoding.find('utf-8')
   require 'builder/xchar'
 
-  def xml_escape(text)
+  def xml_escape text
     return if text.blank?
 
     result = Builder::XChar.encode(text)

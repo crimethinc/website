@@ -61,7 +61,7 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 
 Style/MethodDefParentheses:
-  Enabled: false
+  EnforcedStyle: require_no_parentheses
 
 Style/MixinUsage:
   Exclude:
