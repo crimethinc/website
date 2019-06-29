@@ -20,11 +20,9 @@ describe Article do
     end
 
     it 'replace \r\n with \n in tweet and summary' do
-      new_article = build(
-        :article,
-        tweet:   "ab\r\ncd" * 50,
-        summary: "a\r\nbc" * 50
-      )
+      new_article = build(:article,
+                          tweet:   "ab\r\ncd" * 50,
+                          summary: "a\r\nbc" * 50)
 
       expect(new_article).to be_valid
       expect(new_article.tweet.length).to eq(250)

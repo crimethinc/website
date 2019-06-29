@@ -50,7 +50,9 @@ RSpec/DescribeClass:
     - 'spec/system/*'
 
 RSpec/ExampleLength:
-  Max: 20
+  Max: 10
+  Exclude:
+    - 'spec/system/*'
 
 RSpec/MessageSpies:
   Enabled: false
