@@ -1,7 +1,7 @@
 class ArticleArchivePaginator
   attr_reader :article_archive
 
-  def initialize(article_archive)
+  def initialize article_archive
     @article_archive = article_archive
 
     if article_archive.month.present?

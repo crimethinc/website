@@ -12,7 +12,7 @@ class Logo < ApplicationRecord
     [asset_base_url_prefix, 'preview.png'].join('/')
   end
 
-  def image_url(extension)
+  def image_url extension
     filename = [slug, '.', extension.to_s].join
     [asset_base_url_prefix, filename].join('/')
   end

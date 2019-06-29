@@ -23,7 +23,7 @@ module MultiPageTool
     image side: :front
   end
 
-  def download_url(type = nil, extension: 'pdf')
+  def download_url type = nil, extension: 'pdf'
     case type
     when :epub
       type = nil
@@ -41,7 +41,7 @@ module MultiPageTool
     [asset_base_url_prefix, filename].join('/')
   end
 
-  def image(side: :front, count: 0)
+  def image side: :front, count: 0
     case side
     when :front
       [asset_base_url_prefix, "#{slug}_front.jpg"].join('/')

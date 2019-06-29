@@ -2,80 +2,83 @@ require:
   - rubocop-performance
   - rubocop-rspec
 
+inherit_mode:
+  merge:
+    - Exclude
+
 AllCops:
   Exclude:
+    # - 'db/**/*'
+    - 'db/schema.rb'
+
+Style/UnneededPercentQ:
+  Exclude:
     - 'db/**/*'
-    - 'script/*'
-    - 'bin/*'
-    - 'log/**/*'
-    - 'node_modules/**/*'
-    - 'public/**/*'
-    - 'vendor/**/*'
-    - 'tmp/**/*'
-    - '.git/**/*'
 
-Rails:
-  Enabled: true
-
-Metrics/CyclomaticComplexity:
-  Max: 15
-
-Metrics/PerceivedComplexity:
-  Max: 15
-
-Metrics/ClassLength:
-  Max: 210
-
-Metrics/ParameterLists:
-  Max: 6
-
-Metrics/LineLength:
-  Max: 200
-
-Metrics/MethodLength:
-  Max: 28
-
-Metrics/BlockLength:
-  Max: 123
+Layout/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
 
 Metrics/AbcSize:
   Max: 57
 
-Style/Documentation:
+Metrics/BlockLength:
+  Max: 123
+
+Metrics/ClassLength:
+  Max: 210
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/LineLength:
+  Max: 200
+  Exclude:
+    - 'db/**/*'
+
+Metrics/MethodLength:
+  Max: 28
+  Exclude:
+    - 'db/migrate/*'
+
+Metrics/ParameterLists:
+  Max: 6
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/system/*'
+
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/MessageSpies:
   Enabled: false
 
-Style/MethodDefParentheses:
-  Enabled: false
+RSpec/MultipleExpectations:
+  Max: 10
+
+Security/Eval:
+  Exclude:
+    - 'db/seeds.rb'
 
 Style/AsciiComments:
   Enabled: false
 
-# TEMP: private and def foo() are at the same indentation level
-# This should NOT cause an offense but it does. ¯\_(ツ)_/¯
-# https://rubocop.readthedocs.io/en/latest/cops_layout/
-Layout/IndentationWidth:
-  Enabled: false
-
-# TEMP: Rubocop is wrongly marking hashes as not aligned that are in fact aligned
-# https://gist.github.com/veganstraightedge/2bfcd5e5eaacda9f0d9120fb2d285878
-Layout/AlignHash:
+Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-RSpec/NestedGroups:
-  Max: 4
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
 
-RSpec/ExampleLength:
-  Max: 20
-
-RSpec/MultipleExpectations:
-  Max: 10
-
-RSpec/MessageSpies:
-  Enabled: false
-
-RSpec/DescribeClass:
+Style/MixinUsage:
   Exclude:
-    - 'spec/system/*'
+    - 'script/*'

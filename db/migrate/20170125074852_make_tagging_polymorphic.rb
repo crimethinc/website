@@ -6,7 +6,7 @@ class MakeTaggingPolymorphic < ActiveRecord::Migration[5.0]
     end
 
     # All existing tags are applied to articles
-    Tagging.update_all(taggable_type: "Article")
+    Tagging.update_all(taggable_type: 'Article')
   end
 
   def down

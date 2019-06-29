@@ -1,11 +1,11 @@
 class AdvancedSearch
   include ActiveModel::Model
 
-  def initialize(query = '')
+  def initialize query = ''
     @query = query.to_s
   end
 
-  def update(attributes)
+  def update attributes
     attributes.each_pair do |key, value|
       send("#{key}=", value)
     end
@@ -17,7 +17,7 @@ class AdvancedSearch
     @query.strip
   end
 
-  def category=(categories)
+  def category= categories
     categories.to_s.split(',').map(&:strip).each do |category|
       @query += "category:#{category}" + ' '
     end
@@ -27,7 +27,7 @@ class AdvancedSearch
     filters.select { |filter| filter.first == 'category' }.map(&:last).map { |c| c.tr('"', '') }.join(', ')
   end
 
-  def content=(content)
+  def content= content
     content.to_s.split.map(&:strip).each do |c|
       @query += "content:#{c}" + ' '
     end
@@ -37,7 +37,7 @@ class AdvancedSearch
     filters.select { |filter| filter.first == 'content' }.map(&:last).join(' ')
   end
 
-  def tag=(tags)
+  def tag= tags
     tags.to_s.split(',').map(&:strip).each do |tag|
       tag = tag.inspect if tag.match?(/\s/)
 
@@ -49,7 +49,7 @@ class AdvancedSearch
     filters.select { |filter| filter.first == 'tag' }.map(&:last).map { |c| c.tr('"', '') }.join(', ')
   end
 
-  def term=(term)
+  def term= term
     @query += term + ' '
   end
 
@@ -57,7 +57,7 @@ class AdvancedSearch
     strip_filters(query)
   end
 
-  def title=(title)
+  def title= title
     title.to_s.split.map(&:strip).each do |t|
       @query += "title:#{t}" + ' '
     end
@@ -67,7 +67,7 @@ class AdvancedSearch
     filters.select { |filter| filter.first == 'title' }.map(&:last).join(' ')
   end
 
-  def subtitle=(subtitle)
+  def subtitle= subtitle
     subtitle.to_s.split.map(&:strip).each do |s|
       @query += "subtitle:#{s}" + ' '
     end
@@ -91,7 +91,7 @@ class AdvancedSearch
     @filters
   end
 
-  def strip_filters(query)
+  def strip_filters query
     filters = query.scan(Search::FILTER_REGEX).map(&:first)
 
     filters.inject(query) { |q, match| q.sub(match, '') }.strip

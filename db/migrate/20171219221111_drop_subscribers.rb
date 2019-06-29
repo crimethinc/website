@@ -6,7 +6,7 @@ class DropSubscribers < ActiveRecord::Migration[5.1]
   def down
     create_table :subscribers do |t|
       t.string :email
-      t.string :frequency, default: "weekly"
+      t.string :frequency, default: 'weekly'
 
       t.timestamps
     end

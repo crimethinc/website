@@ -5,7 +5,7 @@ class CreatePosters < ActiveRecord::Migration[5.1]
       t.text :title
       t.text :subtitle
       t.text :content
-      t.string :content_format, default: "kramdown"
+      t.string :content_format, default: 'kramdown'
       t.text :buy_info
       t.text :buy_url
       t.integer :price_in_cents

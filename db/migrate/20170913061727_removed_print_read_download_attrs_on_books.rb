@@ -4,5 +4,3 @@ class RemovedPrintReadDownloadAttrsOnBooks < ActiveRecord::Migration[5.1]
     remove_column :books, :print_download_present, :boolean
   end
 end
-
-

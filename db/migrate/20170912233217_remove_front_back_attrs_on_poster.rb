@@ -6,5 +6,3 @@ class RemoveFrontBackAttrsOnPoster < ActiveRecord::Migration[5.1]
     remove_column :posters, :back_download_present, :boolean
   end
 end
-
-
