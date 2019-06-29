@@ -17,11 +17,11 @@ plugins:
     enabled: true
     config:
       strings:
-      - FIXME
-      - BUG
-      - HACK
-      - TODO
-      - TEMP
+        - FIXME
+        - BUG
+        - HACK
+        - TODO
+        - TEMP
   markdownlint:
     enabled: true
   scss-lint:
