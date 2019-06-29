@@ -12,8 +12,8 @@ puts 'Trying dev seeds for each post-type...'
 # books
 %w[
   podcasts
+  episodes
 ].each do |post_type|
-  # episodes
   # redirects
   # articles
   file_path = File.expand_path("../seeds/#{post_type}.rb", __FILE__)
