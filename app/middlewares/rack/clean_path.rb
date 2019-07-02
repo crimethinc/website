@@ -7,6 +7,7 @@ module Rack
       '.html'                => '',
       'index.php'            => '',
       '.php'                 => '',
+      'comment-page-1'       => '',
       'texts/atoz'           => 'texts',
       'texts/days'           => 'texts',
       'texts/ex'             => 'texts',
