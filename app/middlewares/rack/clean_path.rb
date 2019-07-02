@@ -21,7 +21,10 @@ module Rack
       'texts/rollingthunder' => 'texts',
       'texts/selected'       => 'texts',
       'texts/ux'             => 'texts',
-      %r{/+\z}               => ''
+      %r{/+\z}               => '',
+      '%E2%80%99'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
+      '%E2%80%9C'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
+      '%E2%80'               => ''  # URLs from Wordpress sometimes encode ‘,’,“,” like this
     }.freeze
 
     def initialize app
@@ -37,7 +40,7 @@ module Rack
 
       # make subsitutions, from uncleaned to cleaned
       SUBSTITUTIONS.each do |uncleaned_path, cleaned_path|
-        path = path.sub(uncleaned_path, cleaned_path)
+        path = path.gsub(uncleaned_path, cleaned_path)
       end
 
       # convert Unicode to ASCII using transliteration
