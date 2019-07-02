@@ -6,6 +6,7 @@ require_relative '../app/middlewares/rack/apex_redirect'
 require_relative '../app/middlewares/rack/clean_path'
 require_relative '../app/middlewares/rack/pic_twitter_redirect'
 require_relative '../app/middlewares/rack/redirect'
+require_relative '../app/middlewares/rack/teapot'
 require 'rack/contrib'
 
 # Require the gems listed in Gemfile, including any gems
@@ -18,6 +19,7 @@ module Crimethinc
     config.middleware.use Rack::ApexRedirect
     config.middleware.use Rack::CleanPath
     config.middleware.use Rack::PicTwitterRedirect
+    config.middleware.use Rack::Teapot
     config.middleware.use Rack::Redirect
     config.middleware.use Rack::Attack
     config.middleware.use Rack::Locale
