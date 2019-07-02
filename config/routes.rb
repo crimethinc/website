@@ -32,7 +32,7 @@ Rails.application.routes.draw do
       as:          :article_archives
 
   # Article permalink
-  get ':year/:month/:day/:slug',
+  get ':year/:month/:day/:slug(/feed)',
       to:          'articles#show',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article

@@ -15,7 +15,6 @@ class ArticlesController < ApplicationController
       return redirect_to(@article.path) if @article&.published?
 
       @collection_posts = @article.collection_posts.chronological if @article.present?
-
     else
       @article = Article.live
                         .where(year:  params[:year])
@@ -33,6 +32,9 @@ class ArticlesController < ApplicationController
 
     # redirect to parent article, never show nested articles directly
     return redirect_to Article.find(@article.collection_id).path if @article.collection_id.present?
+
+    # redirect to proper URL, chomping /feed off of the end
+    return redirect_to @article.path if request.path.ends_with? '/feed'
 
     @title = @article.name
 
