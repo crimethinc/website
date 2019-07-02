@@ -51,6 +51,14 @@ RSpec.describe Redirect, type: :model do
 
     before { redirect.strip_domain_from_target_path }
 
+    context 'with crimethinc domain and subdomain' do
+      http_target_path = 'https://store.crimethinc.com/x/AddToCart?Item=democracy&Dest=books'
+
+      let(:redirect) { Redirect.new(source_path: 'source', target_path: http_target_path) }
+
+      it { is_expected.to eq(http_target_path) }
+    end
+
     context 'with leading domain' do
       let(:redirect) { Redirect.new(source_path: 'source', target_path: 'http://crimethinc.com/?query=true') }
 
