@@ -176,10 +176,10 @@ rolling_thunder_series = Series.create!(
     pages:                114
   }
 ].each do |rt|
-  journal           = Journal.new rt
-  journal.height    = '11"'
-  journal.width     = '8.5"'
-  journal.series_id = rolling_thunder_series.id
+  issue           = Issue.new rt
+  issue.height    = '11"'
+  issue.width     = '8.5"'
+  issue.series_id = rolling_thunder_series.id
 
   season, year = rt[:subtitle].split
   month = case season
@@ -193,14 +193,14 @@ rolling_thunder_series = Series.create!(
             '1'
           end
 
-  journal.screen_two_page_view_download_present = true
+  issue.screen_two_page_view_download_present = true
 
-  journal.published_at       = Time.parse("#{year}-#{month}-01T12:00 -0800")
-  journal.publication_status = 'published'
-  journal.ink                = 'Soy'
-  journal.issue              = journal.title.split('#').last
-  journal.description        = [journal.summary, journal.description].join("\n\n")
+  issue.published_at       = Time.parse("#{year}-#{month}-01T12:00 -0800")
+  issue.publication_status = 'published'
+  issue.ink                = 'Soy'
+  issue.issue              = issue.title.split('#').last
+  issue.description        = [issue.summary, issue.description].join("\n\n")
 
-  puts "    ==> Saving Journal: #{journal.name}"
-  journal.save!
+  puts "    ==> Saving Issue: #{issue.name}"
+  issue.save!
 end
