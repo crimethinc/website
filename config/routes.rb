@@ -148,6 +148,7 @@ Rails.application.routes.draw do
     resources :episodes,   concerns: :paginatable
     resources :links,      concerns: :paginatable
     resources :locales,    concerns: :paginatable
+    resources :issues,     concerns: :paginatable
     resources :journals,   concerns: :paginatable
     resources :logos,      concerns: :paginatable
     resources :pages,      concerns: :paginatable
