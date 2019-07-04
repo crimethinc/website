@@ -4,7 +4,7 @@ test_user = User.new(username:              'tester',
 
 test_user.save!(validate: false)
 
-puts 'Trying dev seeds for each post-type...'
+puts 'Trying dev seeds for each post-type…'
 %w[
   books
   pages
@@ -12,11 +12,11 @@ puts 'Trying dev seeds for each post-type...'
   videos
   podcasts
   episodes
-  issues
-  featured_issues
   journals
   featured_journals
   articles
+  issues
+  featured_issues
 ].each do |post_type|
   file_path = File.expand_path("../seeds/#{post_type}.rb", __FILE__)
 
@@ -27,6 +27,6 @@ puts 'Trying dev seeds for each post-type...'
 
   puts "  Found: #{post_type}"
   eval(File.open(file_path).read)
-  puts '...done'
+  puts '…done'
   puts
 end
