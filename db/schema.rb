@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_04_232203) do
+ActiveRecord::Schema.define(version: 2019_07_04_233335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -187,6 +187,14 @@ ActiveRecord::Schema.define(version: 2019_07_04_232203) do
     t.integer "publication_status", default: 0, null: false
   end
 
+  create_table "journals", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "locales", force: :cascade do |t|
     t.string "abbreviation"
     t.string "name_in_english"
@@ -296,14 +304,6 @@ ActiveRecord::Schema.define(version: 2019_07_04_232203) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "article_id"
-  end
-
-  create_table "series", force: :cascade do |t|
-    t.string "title"
-    t.string "subtitle"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "stickers", force: :cascade do |t|

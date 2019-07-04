@@ -1,9 +1,9 @@
 # These summaries and descriptions are in squiggly <<~HEREDOCS to preserve their Markdown formatting
 
-# Series
-rolling_thunder_series_description = <<~ROLLING_THUNDER_SERIES_DESCRIPTION
+# journal
+rolling_thunder_journal_description = <<~ROLLING_THUNDER_JOURNAL_DESCRIPTION
   _Rolling Thunder_ was a biannual journal covering passionate living and creative resistance in all the forms they take: from consensus process to streetfighting, from workplace struggles to graffiti art, from gender mutiny to subversive humor. Each issue runs the gamut from on-the-spot reporting, strategic analysis, and instructional guides to poetry, comics, and games. _Rolling Thunder_ was published from 2005 to 2015.
-ROLLING_THUNDER_SERIES_DESCRIPTION
+ROLLING_THUNDER_JOURNAL_DESCRIPTION
 
 # Issues
 rolling_thunder_summary_10 = <<~ROLLING_THUNDER_SUMMARY_10
@@ -96,10 +96,10 @@ rolling_thunder_description_1 = <<~ROLLING_THUNDER_DESCRIPTION_1
   Full issue PDF download: 13 MB.
 ROLLING_THUNDER_DESCRIPTION_1
 
-rolling_thunder_series = Series.create!(
+rolling_thunder_journal = journal.create!(
   title:       'Rolling Thunder',
   subtitle:    'An Anarchist Journal of Dangerous Living',
-  description: rolling_thunder_series_description
+  description: rolling_thunder_journal_description
 )
 
 [
@@ -179,7 +179,7 @@ rolling_thunder_series = Series.create!(
   issue           = Issue.new rt
   issue.height    = '11"'
   issue.width     = '8.5"'
-  issue.series_id = rolling_thunder_series.id
+  issue.journal_id = rolling_thunder_journal.id
 
   season, year = rt[:subtitle].split
   month = case season

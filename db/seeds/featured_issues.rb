@@ -1,4 +1,4 @@
-rolling_thunder_series = Series.find_by(title: 'Rolling Thunder')
+rolling_thunder_journal = Journal.find_by(title: 'Rolling Thunder')
 
 # These summaries and descriptions are in squiggly <<~HEREDOCS to preserve their Markdown formatting
 summary_rolling_thunder_12 = <<-SUMMARY
@@ -10,7 +10,7 @@ description_rolling_thunder_12 = <<~DESCRIPTION
 DESCRIPTION
 
 summary_rolling_thunder_11 = <<-SUMMARY_ROLLING_THUNDER_11
-  This one goes to eleven! The second series of _Rolling Thunder_ opens with an issue full of adventure and analysis. Whether you’re a committed revolutionary looking for the latest strategic reflections from the front lines, or you simply enjoy the gripping tales of suspense and subversion, you can’t get this stuff anywhere else. An epic account of prisoner resistance from Sean Swain—an exploration of the waning phase of social movements, including case studies of Occupy Oakland and the 2012 student strike in Québec—a narrative from the epicenter of the uprising that rocked Turkey in June 2013—devastating critiques of ally politics and the ideology coded into digital technology—a tell-all history of anarchism in Israel—a new look at gentrification, through the frame of one neighborhood’s struggle against development—a review of the forgotten insurrectionist text that taught Nietzsche, Borges, and Walter Benjamin about infinity. All this, plus our regular features, gorgeous artwork, 16 pages in full color, and [a completely new and improved format!](/blog/2014/04/05/presenting-rolling-thunder-11/) At 128 pages, this is our thickest issue yet.
+  This one goes to eleven! The second journal of _Rolling Thunder_ opens with an issue full of adventure and analysis. Whether you’re a committed revolutionary looking for the latest strategic reflections from the front lines, or you simply enjoy the gripping tales of suspense and subversion, you can’t get this stuff anywhere else. An epic account of prisoner resistance from Sean Swain—an exploration of the waning phase of social movements, including case studies of Occupy Oakland and the 2012 student strike in Québec—a narrative from the epicenter of the uprising that rocked Turkey in June 2013—devastating critiques of ally politics and the ideology coded into digital technology—a tell-all history of anarchism in Israel—a new look at gentrification, through the frame of one neighborhood’s struggle against development—a review of the forgotten insurrectionist text that taught Nietzsche, Borges, and Walter Benjamin about infinity. All this, plus our regular features, gorgeous artwork, 16 pages in full color, and [a completely new and improved format!](/blog/2014/04/05/presenting-rolling-thunder-11/) At 128 pages, this is our thickest issue yet.
 SUMMARY_ROLLING_THUNDER_11
 
 description_rolling_thunder_11 = <<~DESCRIPTION_ROLLING_THUNDER_11
@@ -74,7 +74,7 @@ DESCRIPTION_ROLLING_THUNDER_8
             '1'
           end
 
-  issue.series_id          = rolling_thunder_series.id
+  issue.journal_id         = rolling_thunder_journal.id
   issue.published_at       = Time.parse("#{year}-#{month}-01T12:00 -0800")
   issue.publication_status = 'published'
   issue.ink                = 'Soy'
