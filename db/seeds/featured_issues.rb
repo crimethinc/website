@@ -1,3 +1,4 @@
+# Journal
 rolling_thunder_journal = Journal.find_by(title: 'Rolling Thunder')
 
 # These summaries and descriptions are in squiggly <<~HEREDOCS to preserve their Markdown formatting
