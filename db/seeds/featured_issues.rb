@@ -1,3 +1,10 @@
+# TODO: Add namespace folders to /assets/journals, and move files to issues folders
+#       Example:
+#       /assets/journals/rolling-thunder-10-summer-2012/rolling-thunder-10-summer-2012_table_of_contents.pdf
+#       /assets/journals/rolling-thunder/10/rolling-thunder-10-summer-2012_table_of_contents.pdf
+
+# These summaries and descriptions are in squiggly <<~HEREDOCS to preserve their Markdown formatting
+
 rolling_thunder_series = Series.find_by(title: 'Rolling Thunder')
 
 # These summaries and descriptions are in squiggly <<~HEREDOCS to preserve their Markdown formatting
@@ -60,7 +67,7 @@ DESCRIPTION_ROLLING_THUNDER_8
   }
 
 ].each do |rt|
-  journal = Journal.new rt
+  issue = Issue.new rt
 
   season, year = rt[:subtitle].split
   month = case season
@@ -74,21 +81,21 @@ DESCRIPTION_ROLLING_THUNDER_8
             '1'
           end
 
-  journal.series_id          = rolling_thunder_series.id
-  journal.published_at       = Time.parse("#{year}-#{month}-01T12:00 -0800")
-  journal.publication_status = 'published'
-  journal.ink                = 'Soy'
-  journal.issue              = journal.title.split('#').last
-  journal.description        = [journal.summary, journal.description].join("\n\n")
+  issue.series_id          = rolling_thunder_series.id
+  issue.published_at       = Time.parse("#{year}-#{month}-01T12:00 -0800")
+  issue.publication_status = 'published'
+  issue.ink                = 'Soy'
+  issue.issue              = issue.title.split('#').last
+  issue.description        = [issue.summary, issue.description].join("\n\n")
 
-  if journal.issue.to_i == 8
-    journal.height    = '11"'
-    journal.width     = '8.5"'
+  if issue.issue.to_i == 8
+    issue.height    = '11"'
+    issue.width     = '8.5"'
   else
-    journal.height    = '10"'
-    journal.width     = '7"'
+    issue.height    = '10"'
+    issue.width     = '7"'
   end
 
-  puts "    ==> Saving Journal: #{journal.name}"
-  journal.save!
+  puts "    ==> Saving Issue: #{issue.name}"
+  issue.save!
 end

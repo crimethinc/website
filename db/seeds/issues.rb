@@ -101,7 +101,7 @@ rolling_thunder_description_1 = <<~ROLLING_THUNDER_DESCRIPTION_1
   Full issue PDF download: 13 MB.
 ROLLING_THUNDER_DESCRIPTION_1
 
-rolling_thunder_series = Series.create!(
+rolling_thunder_series = Series.find_or_create_by(
   title:       'Rolling Thunder',
   subtitle:    'An Anarchist Journal of Dangerous Living',
   description: rolling_thunder_series_description

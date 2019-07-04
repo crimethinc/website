@@ -12,6 +12,8 @@ puts 'Trying dev seeds for each post-type...'
   videos
   podcasts
   episodes
+  issues
+  featured_issues
   journals
   featured_journals
   articles
