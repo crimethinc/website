@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_04_233335) do
+ActiveRecord::Schema.define(version: 2019_07_04_235647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -182,7 +182,7 @@ ActiveRecord::Schema.define(version: 2019_07_04_233335) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "series_id"
+    t.integer "journals_id"
     t.integer "issue"
     t.integer "publication_status", default: 0, null: false
   end
