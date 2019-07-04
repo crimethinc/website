@@ -1,5 +1,5 @@
 class ToolsController < ApplicationController
-  ALL_TOOLS = %w[tools books zines journals posters stickers videos].freeze
+  ALL_TOOLS = %w[tools books zines issues journals posters stickers videos].freeze
 
   before_action :set_html_id
   before_action :set_body_id
