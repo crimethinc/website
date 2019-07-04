@@ -1,5 +1,5 @@
 class Issue < ApplicationRecord
   include MultiPageTool
 
-  belongs_to :series
+  belongs_to :journal
 end
