@@ -60,10 +60,10 @@ DESCRIPTION_ROLLING_THUNDER_8
     description:          description_rolling_thunder_8
   }
 
-].each do |rt|
-  issue = Issue.new rt
+].each do |rolling_thunder_issue_data|
+  issue = Issue.new rolling_thunder_issue_data
 
-  season, year = rt[:subtitle].split
+  season, year = rolling_thunder_issue_data[:subtitle].split
   month = case season
           when 'Spring'
             '04'

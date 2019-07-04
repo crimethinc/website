@@ -97,7 +97,7 @@ rolling_thunder_description_1 = <<~ROLLING_THUNDER_DESCRIPTION_1
 ROLLING_THUNDER_DESCRIPTION_1
 
 # Journal
-rolling_thunder_journal = journal.create!(
+rolling_thunder_journal = Journal.create!(
   title:       'Rolling Thunder',
   subtitle:    'An Anarchist Journal of Dangerous Living',
   description: rolling_thunder_journal_description
@@ -177,13 +177,13 @@ rolling_thunder_journal = journal.create!(
     gallery_images_count: 3,
     pages:                114
   }
-].each do |rt|
-  issue           = Issue.new rt
+].each do |rolling_thunder_issue_data|
+  issue           = Issue.new rolling_thunder_issue_data
   issue.height    = '11"'
   issue.width     = '8.5"'
   issue.journal_id = rolling_thunder_journal.id
 
-  season, year = rt[:subtitle].split
+  season, year = rolling_thunder_issue_data[:subtitle].split
   month = case season
           when 'Spring'
             '04'
