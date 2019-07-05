@@ -1,9 +1,9 @@
 module Admin
-  class JournalsController < Admin::ToolsController
+  class IssuesController < Admin::ToolsController
     before_action :set_journal, only: %i[show edit update destroy]
 
     def index
-      @books = Journal.order(slug: :asc).page(params[:page])
+      @books = Issue.order(slug: :asc).page(params[:page])
       @title = admin_title
       render 'admin/books/index'
     end
@@ -14,7 +14,7 @@ module Admin
     end
 
     def new
-      @book = Journal.new
+      @book = Issue.new
       @title = admin_title
       render 'admin/books/new'
     end
@@ -25,10 +25,10 @@ module Admin
     end
 
     def create
-      @book = Journal.new(journal_params)
+      @book = Issue.new(journal_params)
 
       if @book.save
-        redirect_to [:admin, @book], notice: 'Journal was successfully created.'
+        redirect_to [:admin, @book], notice: 'Issue was successfully created.'
       else
         render :new
       end
@@ -36,7 +36,7 @@ module Admin
 
     def update
       if @book.update(journal_params)
-        redirect_to [:admin, @book], notice: 'Journal was successfully updated.'
+        redirect_to [:admin, @book], notice: 'Issue was successfully updated.'
       else
         render :edit
       end
@@ -44,13 +44,13 @@ module Admin
 
     def destroy
       @book.destroy
-      redirect_to %i[admin journals], notice: 'Journal was successfully destroyed.'
+      redirect_to %i[admin journals], notice: 'Issue was successfully destroyed.'
     end
 
     private
 
     def set_journal
-      @book = Journal.find(params[:id])
+      @book = Issue.find(params[:id])
     end
 
     def journal_params
