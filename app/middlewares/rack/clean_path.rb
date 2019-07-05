@@ -22,10 +22,11 @@ module Rack
       'texts/rollingthunder' => 'texts',
       'texts/selected'       => 'texts',
       'texts/ux'             => 'texts',
-      %r{/+\z}               => '',
       '%E2%80%99'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
       '%E2%80%9C'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
-      '%E2%80'               => ''  # URLs from Wordpress sometimes encode ‘,’,“,” like this
+      '%E2%80%9D'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
+      '%E2%80'               => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
+      %r{/+\z}               => ''
     }.freeze
 
     def initialize app
