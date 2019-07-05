@@ -182,7 +182,7 @@ ActiveRecord::Schema.define(version: 2019_07_04_235647) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "journals_id"
+    t.integer "journal_id"
     t.integer "issue"
     t.integer "publication_status", default: 0, null: false
   end
