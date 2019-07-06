@@ -198,6 +198,7 @@ ActiveRecord::Schema.define(version: 2019_07_06_193709) do
     t.datetime "published_at"
     t.integer "publication_status", default: 0, null: false
     t.text "buy_url"
+    t.text "content"
     t.text "summary"
     t.text "buy_info"
     t.integer "price_in_cents"
