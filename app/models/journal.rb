@@ -1,6 +1,5 @@
 class Journal < ApplicationRecord
-  include Name
-  include Slug
+  include MultiPageTool
 
   has_many :issues, dependent: :destroy
 

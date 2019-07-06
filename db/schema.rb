@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_05_002554) do
+ActiveRecord::Schema.define(version: 2019_07_06_193709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -195,6 +195,12 @@ ActiveRecord::Schema.define(version: 2019_07_05_002554) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
+    t.datetime "published_at"
+    t.integer "publication_status", default: 0, null: false
+    t.text "buy_url"
+    t.text "summary"
+    t.text "buy_info"
+    t.integer "price_in_cents"
   end
 
   create_table "locales", force: :cascade do |t|
