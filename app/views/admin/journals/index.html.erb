@@ -9,7 +9,7 @@
       <% end %>
     </header>
 
-    <p><%= link_to "NEW Issue", [:new, :admin, :issue], class: "btn btn-primary btn-sm" %></p>
+    <p><%= link_to "NEW Issue", [:new, :admin, :issue, journal_id: journal.id], class: "btn btn-primary btn-sm" %></p>
 
 
     <table class="table table-striped table-sm mb-5">
