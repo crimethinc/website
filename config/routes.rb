@@ -92,18 +92,19 @@ Rails.application.routes.draw do
   get 'videos',          to: 'videos#index', as: :videos
   get 'videos/:slug',    to: 'videos#show',  as: :video
 
-  # Tools: Posters, Stickers, Zines, Journals, Logos, Music
-  get 'posters',        to: 'posters#index',  as: :posters
-  get 'posters/:slug',  to: 'posters#show',   as: :poster
-  get 'stickers',       to: 'stickers#index', as: :stickers
-  get 'stickers/:slug', to: 'stickers#show',  as: :sticker
-  get 'journals',       to: 'journals#index', as: :journals
-  get 'journals/:slug', to: 'journals#show',  as: :journal
-  get 'logos',          to: 'logos#index',    as: :logos
-  get 'logos/:slug',    to: 'logos#show',     as: :logo
-  get 'zines',          to: 'zines#index',    as: :zines
-  get 'zines/:slug',    to: 'zines#show',     as: :zine
-  get 'music',          to: 'music#index',    as: :music
+  # Tools: Posters, Stickers, Zines, Journals/Issues, Logos, Music
+  get 'posters',                      to: 'posters#index',  as: :posters
+  get 'posters/:slug',                to: 'posters#show',   as: :poster
+  get 'stickers',                     to: 'stickers#index', as: :stickers
+  get 'stickers/:slug',               to: 'stickers#show',  as: :sticker
+  get 'logos',                        to: 'logos#index',    as: :logos
+  get 'logos/:slug',                  to: 'logos#show',     as: :logo
+  get 'zines',                        to: 'zines#index',    as: :zines
+  get 'zines/:slug',                  to: 'zines#show',     as: :zine
+  get 'music',                        to: 'music#index',    as: :music
+  get 'journals',                     to: 'journals#index', as: :journals
+  get 'journals/:slug',               to: 'journals#show',  as: :journal
+  get 'journals/:slug/:issue_number', to: 'issues#show',    as: :issue
 
   # Tools
   get 'tools', to: 'tools#about', as: :tools
