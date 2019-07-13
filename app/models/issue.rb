@@ -6,4 +6,8 @@ class Issue < ApplicationRecord
   def namespace
     'journals'
   end
+
+  def path
+    "/journals/#{journal.slug}/#{issue}"
+  end
 end
