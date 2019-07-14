@@ -3,6 +3,8 @@ class Journal < ApplicationRecord
 
   has_many :issues, dependent: :destroy
 
+  default_scope { order(published_at: :desc) }
+
   def path
     "/journals/#{slug}"
   end
