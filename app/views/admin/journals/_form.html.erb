@@ -1,0 +1,9 @@
+<%= form_with(model: [:admin, @journal]) do |form| %>
+  <%= render "admin/form_errors", thing: @journal %>
+
+  <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
+  <%= render "admin/label_and_area_form_group",  form: form, attr: :description, rows: 5 %>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :podcasts] %>
+<% end %>

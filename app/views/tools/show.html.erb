@@ -2,13 +2,11 @@
   <div class="row">
     <div class="column column-one-third section meta">
 
-
       <% unless @tool.front_color_image_present? or @tool.front_black_and_white_image_present? %>
         <div class="tool-front">
           <%= image_tag @tool.front_image, alt: @tool.front_image_description, class: "u-image" %>
         </div>
       <% end %>
-
 
       <% %w(front back).each do |side| %>
         <% %w(color black_and_white).each do |color| %>
@@ -23,7 +21,6 @@
           <% end %>
         <% end %>
       <% end %>
-
 
       <% if @tool.price_in_cents.present? %>
         <div id="buy-now">
