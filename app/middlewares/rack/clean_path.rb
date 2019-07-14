@@ -30,7 +30,6 @@ module Rack
       %r{/+\z}               => ''
     }.freeze
 
-    # URL_TWEET_TEXT_UNICODE_SEPARATOR = '%E2%80%8E'.freeze
     SMOOSHED_TWEET_TEXT_UNICODE_SEPARATORS = %w[
       %E2%80%8E
       %EF%BF%BD
