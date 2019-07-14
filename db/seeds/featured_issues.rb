@@ -1,4 +1,5 @@
-rolling_thunder_series = Series.find_by(title: 'Rolling Thunder')
+# Journal
+rolling_thunder_journal = Journal.find_by(title: 'Rolling Thunder')
 
 # These summaries and descriptions are in squiggly <<~HEREDOCS to preserve their Markdown formatting
 summary_rolling_thunder_12 = <<-SUMMARY
@@ -59,10 +60,10 @@ DESCRIPTION_ROLLING_THUNDER_8
     description:          description_rolling_thunder_8
   }
 
-].each do |rt|
-  journal = Journal.new rt
+].each do |rolling_thunder_issue_data|
+  issue = Issue.new rolling_thunder_issue_data
 
-  season, year = rt[:subtitle].split
+  season, year = rolling_thunder_issue_data[:subtitle].split
   month = case season
           when 'Spring'
             '04'
@@ -74,21 +75,21 @@ DESCRIPTION_ROLLING_THUNDER_8
             '1'
           end
 
-  journal.series_id          = rolling_thunder_series.id
-  journal.published_at       = Time.parse("#{year}-#{month}-01T12:00 -0800")
-  journal.publication_status = 'published'
-  journal.ink                = 'Soy'
-  journal.issue              = journal.title.split('#').last
-  journal.description        = [journal.summary, journal.description].join("\n\n")
+  issue.journal_id         = rolling_thunder_journal.id
+  issue.published_at       = Time.parse("#{year}-#{month}-01T12:00 -0800")
+  issue.publication_status = 'published'
+  issue.ink                = 'Soy'
+  issue.issue              = issue.title.split('#').last
+  issue.description        = [issue.summary, issue.description].join("\n\n")
 
-  if journal.issue.to_i == 8
-    journal.height    = '11"'
-    journal.width     = '8.5"'
+  if issue.issue.to_i == 8
+    issue.height    = '11"'
+    issue.width     = '8.5"'
   else
-    journal.height    = '10"'
-    journal.width     = '7"'
+    issue.height    = '10"'
+    issue.width     = '7"'
   end
 
-  puts "    ==> Saving Journal: #{journal.name}"
-  journal.save!
+  puts "    ==> Saving Issue: #{issue.name}"
+  issue.save!
 end
