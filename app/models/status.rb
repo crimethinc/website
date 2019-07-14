@@ -4,10 +4,4 @@ class Status < ApplicationRecord
   has_many :logos, dependent: :destroy
   has_many :posters, dependent: :destroy
   has_many :videos, dependent: :destroy
-
-  class << self
-    def options_for_select
-      all.map { |s| [s.name.capitalize, s.id] }
-    end
-  end
 end

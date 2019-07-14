@@ -1,0 +1,12 @@
+<article class="mb-5">
+  <header>
+    <div class="p-name">
+      <h1><%= journal.title %></h1>
+      <h2><%= journal.subtitle %></h2>
+    </div>
+  </header>
+
+  <div class="e-content">
+    <%= render_markdown journal.description %>
+  </div>
+</article>

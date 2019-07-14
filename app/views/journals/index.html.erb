@@ -1,0 +1,13 @@
+<article>
+  <header>
+    <%= render "tools/nav" %>
+
+    <h1><%= t("views.tools.journals_heading_text") %></h1>
+  </header>
+
+  <div class="e-content intro">
+    <%= render_markdown t("views.tools.journals_intro_text") %>
+  </div>
+
+  <%= render @journals %>
+</article>
