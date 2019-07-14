@@ -26,9 +26,15 @@ module Rack
       '%E2%80%99'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
       '%E2%80%9C'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
       '%E2%80%9D'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
-      '%E2%80'               => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
+      '%E2%80%98'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
       %r{/+\z}               => ''
     }.freeze
+
+    # URL_TWEET_TEXT_UNICODE_SEPARATOR = '%E2%80%8E'.freeze
+    SMOOSHED_TWEET_TEXT_UNICODE_SEPARATORS = %w[
+      %E2%80%8E
+      %EF%BF%BD
+    ].freeze
 
     def initialize app
       @app = app
@@ -40,6 +46,10 @@ module Rack
 
       # source path
       path = req.path
+
+      # get path before Unicode character got smooshed into it
+      # /airportblockades�The airport…
+      path = unsmoosh_path_from_unicode_tweet_text path
 
       # make subsitutions, from uncleaned to cleaned
       SUBSTITUTIONS.each do |uncleaned_path, cleaned_path|
@@ -68,6 +78,17 @@ module Rack
         { 'Location' => location, 'Content-Type' => 'text/html' },
         ['Moved Permanently']
       ]
+    end
+
+    def unsmoosh_path_from_unicode_tweet_text path
+      SMOOSHED_TWEET_TEXT_UNICODE_SEPARATORS.each do |separator|
+        if path.match?(separator)
+          path = path.split(separator).first
+          break
+        end
+      end
+
+      path
     end
 
     def path_pieces path
