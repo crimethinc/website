@@ -1,7 +1,7 @@
 class JournalsController < ToolsController
   # See tools_controller.rb for inherited behavior
   def index
-    @journals = Journal.all.includes(:issues)
+    @journals = Journal.includes(:issues)
   end
 
   def show
