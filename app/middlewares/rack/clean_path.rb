@@ -121,7 +121,7 @@ module Rack
     # add original query params back to cleaned
     def add_query_params!
       args = "?#{@req.query_string}" if @req.query_string.present?
-      @path + args.to_s
+      @path += args.to_s
     end
 
     # don’t redirect the homepage to nowhere
