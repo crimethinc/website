@@ -20,7 +20,7 @@ module Slug
     if new_record? || slug_changed? || slug.blank?
       n = 0
 
-      self.slug = name&.to_slug if slug.blank?
+      self.slug = name.tr('/', ' ')&.to_slug if slug.blank?
 
       while slug_exists?
         n += 1

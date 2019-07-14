@@ -12,8 +12,8 @@ puts 'Trying dev seeds for each post-type...'
   videos
   podcasts
   episodes
-  journals
-  featured_journals
+  issues
+  featured_issues
   articles
 ].each do |post_type|
   file_path = File.expand_path("../seeds/#{post_type}.rb", __FILE__)
