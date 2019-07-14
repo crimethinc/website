@@ -24,12 +24,6 @@ class User < ApplicationRecord
 
   before_validation :strip_whitespace, on: %i[create update]
 
-  class << self
-    def options_for_select
-      all.map { |u| [u.username, u.id] }
-    end
-  end
-
   def name
     username
   end

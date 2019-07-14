@@ -1,0 +1,19 @@
+<div class="tool" id="<%= journal.slug %>">
+  <header style="display: block !important;">
+    <%= render "articles/titles", header: journal, linked: true %>
+
+    <%= render_markdown journal.description %>
+  </header>
+
+  <% journal.issues.in_groups_of(4) do |row| %>
+    <div class="e-content row">
+      <% row.each do |issue| %>
+        <% next if issue.blank? %>
+
+        <div class="tool-front column column-one-quarter">
+          <%= link_to image_tag(issue.front_image, alt: issue.front_image_description, class: "u-image"), issue.path %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

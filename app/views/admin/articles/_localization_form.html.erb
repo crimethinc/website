@@ -4,10 +4,12 @@
   <div class="col-12 col-lg-4">
     <div class="form-group">
       <%= form.label :locale, class: "h4" %><br>
-      <%= form.select :locale,
-                      options_for_select(Locale.options_for_select, @article.locale),
-                      {},
-                      class: "custom-select custom-select-lg" %>
+      <%= form.collection_select :locale,
+                                 Locale.all,
+                                 :abbreviation,
+                                 :display_name,
+                                 {},
+                                 class: "custom-select custom-select-lg" %>
 
       <p class="form-text text-muted">
         If it’s not here, you can

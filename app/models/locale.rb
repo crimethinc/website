@@ -6,12 +6,6 @@ class Locale < ApplicationRecord
   validates :name_in_english, uniqueness: true
   validates :name, uniqueness: true
 
-  class << self
-    def options_for_select
-      all.order(abbreviation: :asc).map { |l| [l.display_name, l.abbreviation] }
-    end
-  end
-
   def display_name
     "#{abbreviation.upcase} : #{name_in_english} / #{name}"
   end

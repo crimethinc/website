@@ -1,14 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe '.options_for_select' do
-    subject { User.options_for_select }
-
-    let!(:user) { User.create(username: 'example', password: 'x' * 30) }
-
-    it { is_expected.to eq([['example', user.id]]) }
-  end
-
   describe '#name' do
     subject { user.name }
 
