@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_050243) do
+ActiveRecord::Schema.define(version: 2019_07_06_193709) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "articles", id: :serial, force: :cascade do |t|
@@ -140,7 +141,7 @@ ActiveRecord::Schema.define(version: 2019_06_12_050243) do
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
 
-  create_table "journals", force: :cascade do |t|
+  create_table "issues", force: :cascade do |t|
     t.text "title"
     t.text "subtitle"
     t.text "content"
@@ -182,9 +183,25 @@ ActiveRecord::Schema.define(version: 2019_06_12_050243) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "series_id"
+    t.integer "journal_id"
     t.integer "issue"
     t.integer "publication_status", default: 0, null: false
+  end
+
+  create_table "journals", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slug"
+    t.datetime "published_at"
+    t.integer "publication_status", default: 0, null: false
+    t.text "buy_url"
+    t.text "content"
+    t.text "summary"
+    t.text "buy_info"
+    t.integer "price_in_cents"
   end
 
   create_table "locales", force: :cascade do |t|
@@ -296,14 +313,6 @@ ActiveRecord::Schema.define(version: 2019_06_12_050243) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "article_id"
-  end
-
-  create_table "series", force: :cascade do |t|
-    t.string "title"
-    t.string "subtitle"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "stickers", force: :cascade do |t|

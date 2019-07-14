@@ -1,6 +1,31 @@
 <%= form_with(model: [:admin, resource]) do |form| %>
   <%= render "admin/form_errors", thing: resource %>
 
+  <% if resource.is_a? Issue %>
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="form-group">
+          <%= form.label :journal_id, class: "h4" %><br>
+          <%= form.collection_select :journal_id,
+                                     Journal.all,
+                                     :id,
+                                     :name,
+                                     { include_blank: true },
+                                     class: "custom-select custom-select-lg" %>
+
+          <p class="form-text text-muted">
+            If it’s not here, you can
+            <%= link_to "create a new journal. →", [:new, :admin, :journal], target: "_blank" %>
+          </p>
+        </div>
+      </div><!-- .col -->
+
+      <div class="col-12 col-lg-4">
+        <%= render "admin/label_and_field_form_group", form: form, attr: :issue %>
+      </div><!-- .col -->
+    </div>
+  <% end %>
+
   <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
   <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
 
@@ -29,7 +54,6 @@
       </p>
     </div>
   </div>
-
   <%= render "admin/books/categories_form", form: form %>
 
   <%= render "admin/books/downloads_form", form: form, resource: resource %>

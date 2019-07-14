@@ -18,7 +18,9 @@ Metrics/AbcSize:
   Max: 62
 
 Metrics/BlockLength:
-  Max: 123
+  Exclude:
+    - 'config/routes.rb'
+  Max: 100
 
 Metrics/ClassLength:
   Max: 128
