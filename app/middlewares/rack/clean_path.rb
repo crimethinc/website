@@ -27,6 +27,7 @@ module Rack
       '%E2%80%9C'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
       '%E2%80%9D'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
       '%E2%80%98'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
+      '%E2%80%8E'            => '', # Smooshed into the URL by some Twitter app
       %r{/+\z}               => ''
     }.freeze
 
@@ -41,30 +42,22 @@ module Rack
 
     def call env
       # request
-      req = Rack::Request.new(env)
+      @req = Rack::Request.new(env)
 
       # source path
-      path = req.path
+      @path = @req.path
 
-      # get path before Unicode character got smooshed into it
-      # /airportblockades�The airport…
-      path = unsmoosh_path_from_unicode_tweet_text path
+      # no-op for root route and assets
+      return @app.call(env) if exit_early?
 
-      # make subsitutions, from uncleaned to cleaned
-      SUBSTITUTIONS.each do |uncleaned_path, cleaned_path|
-        path = path.gsub(uncleaned_path, cleaned_path)
-      end
+      unsmoosh_path_from_unicode_tweet_text!
+      make_subsitutions!
+      transliterate_unicode_to_ascii!
+      add_query_params!
+      fallback_to_default!
 
-      # convert Unicode to ASCII using transliteration
-      # Eg: /ameaça => /ameaca
-      path = transliterate_unicode_to_ascii_in path
-
-      # redirect to new cleaned path, but
-      # don’t redirect the homepage to nowhere
-      if req.path != path && path != ''
-        args = "?#{req.query_string}" if req.query_string.present?
-        return redirect(path + args.to_s)
-      end
+      # redirect to new cleaned path
+      return redirect(@path) unless @req.path == @path
 
       @app.call(env)
     end
@@ -79,30 +72,43 @@ module Rack
       ]
     end
 
-    def unsmoosh_path_from_unicode_tweet_text path
+    def exit_early?
+      @req.path == '/' || @req.path.starts_with?('/assets')
+    end
+
+    # get path before Unicode character got smooshed into it
+    # /airportblockades�The airport…
+    def unsmoosh_path_from_unicode_tweet_text!
       SMOOSHED_TWEET_TEXT_UNICODE_SEPARATORS.each do |separator|
-        if path.match?(separator)
-          path = path.split(separator).first
+        if @path.match?(separator)
+          @path = @path.split(separator).first
           break
         end
       end
-
-      path
     end
 
-    def path_pieces path
-      path.split('/')
+    # make subsitutions, from uncleaned to cleaned
+    def make_subsitutions!
+      SUBSTITUTIONS.each do |uncleaned_path, cleaned_path|
+        @path = @path.gsub(uncleaned_path, cleaned_path)
+      end
+    end
+
+    def path_pieces
+      @path.to_s.split('/')
     end
 
     def file_pieces path_piece
       path_piece.split('.')
     end
 
-    def transliterate_unicode_to_ascii_in path
-      return path if path.start_with?('/tce')
+    # convert Unicode to ASCII using transliteration
+    # Eg: /ameaça => /ameaca
+    def transliterate_unicode_to_ascii!
+      return @path if @path.start_with?('/tce')
 
-      result = path_pieces(path).map do |path_piece|
-        file_pieces(path_piece).map { |f| transliterate_unicode_to_ascii(f) }.join('.')
+      result = path_pieces.map do |path_piece|
+        file_pieces(path_piece).map { |fp| transliterate_unicode_to_ascii(fp) }.join('.')
       end
 
       result.join('/')
@@ -110,6 +116,17 @@ module Rack
 
     def transliterate_unicode_to_ascii str
       CGI.unescape(str).to_slug
+    end
+
+    # add original query params back to cleaned
+    def add_query_params!
+      args = "?#{@req.query_string}" if @req.query_string.present?
+      @path + args.to_s
+    end
+
+    # don’t redirect the homepage to nowhere
+    def fallback_to_default!
+      @path = @path.blank? ? '/' : @path
     end
   end
 end
