@@ -1,13 +1,12 @@
 version: '2'
 
 exclude_patterns:
-  - 'config/'
-  - 'public/'
-  - 'db/seeds/articles/'
-  - 'db/seeds/episodes/'
-  - 'db/seeds/videos/'
-  - 'db/seeds/books/'
-  - 'db/seeds/redirects/'
+  - config/
+  - db/migrate/*
+  - db/schema.rb
+  - db/seeds/*
+  - db/seeds/**/*
+  - public/
 
 plugins:
   brakeman:
@@ -25,7 +24,3 @@ plugins:
         - HACK
         - TODO
         - TEMP
-  markdownlint:
-    enabled: true
-  scss-lint:
-    enabled: true
