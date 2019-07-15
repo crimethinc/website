@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
   private
 
   def set_slug
-    @slug = params[:slug].tr('_', '-')
+    @slug = params[:slug].dasherize
 
     return redirect_to category_path(@slug) if @slug != params[:slug]
   end
