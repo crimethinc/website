@@ -23,7 +23,7 @@ module Tool
   end
 
   def namespace
-    self.class.to_s.downcase.pluralize
+    self.class.to_s.tableize
   end
 
   def asset_base_url_prefix
