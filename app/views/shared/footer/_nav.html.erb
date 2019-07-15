@@ -9,8 +9,8 @@
         <b><%= link_to t("footer.nav.articles.feed"), %i[feed]    %></b>
       </dt>
       <dd>
-        <% %i[arts adventure analysis current_events history how_to news technology].each do |category| %>
-          <%= link_to t("footer.nav.articles.#{category}"), [:category, slug: category.to_s.gsub('_', '-')] %>
+        <% %w[arts adventure analysis current_events history how_to news technology].each do |category| %>
+          <%= link_to t("footer.nav.articles.#{category}"), [:category, slug: category.dasherize] %>
         <% end %>
       </dd>
 
@@ -18,15 +18,15 @@
         <%= link_to t("footer.nav.tools.label"), %i[tools] %>
       </dt>
       <dd>
-        <% %i[zines journals posters stickers videos music logos to_change_everything steal_something_from_work_day].each do |tool| %>
+        <% %w[zines journals posters stickers videos music logos to_change_everything steal_something_from_work_day].each do |tool| %>
           <%= link_to t("footer.nav.tools.#{tool}"), [tool] %>
         <% end %>
       </dd>
 
       <dt class="nav-label nav-label-books"><%= link_to t("footer.nav.books.label"), %i[books] %></dt>
       <dd>
-        <% %i[from_democracy_to_freedom contradictionary work expect_resistance recipes_for_disaster days_of_war_nights_of_love no_wall_they_can_build off_the_map].each do |book| %>
-          <%= link_to t("footer.nav.books.#{book}"), [:book, slug: book.to_s.gsub('_', '-')] %>
+        <% %w[from_democracy_to_freedom contradictionary work expect_resistance recipes_for_disaster days_of_war_nights_of_love no_wall_they_can_build off_the_map].each do |book| %>
+          <%= link_to t("footer.nav.books.#{book}"), [:book, slug: book.dasherize] %>
         <% end %>
       </dd>
 
@@ -35,12 +35,8 @@
         <b><%= link_to t("footer.nav.podcast.feed"), %i[podcast_feed] %></b>
       </dt>
       <dd>
-        <% {
-          the_ex_worker:          'the-ex-worker',
-          no_wall_they_can_build: 'no-wall-they-can-build',
-          the_hotwire:            'the-hotwire',
-        }.each do |podcast, path|  %>
-          <%= link_to t("footer.nav.podcast.#{podcast}"), "/podcasts/#{path}" %>
+        <% %w[the_ex_worker no_wall_they_can_build the_hotwire].each do |podcast| %>
+          <%= link_to t("footer.nav.podcast.#{podcast}"), "/podcasts/#{podcast.dasherize}" %>
         <% end %>
       </dd>
 
