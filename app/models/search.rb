@@ -50,14 +50,12 @@ class Search
   end
 
   def normalize_filters query
-    filters = query
-              .scan(FILTER_REGEX)
-              .map(&:first)
-              .map { |filter| filter.split(':') }
-              .select { |filter| VALID_FILTERS.include?(filter.first) }
-              .map { |filter| [filter.first, filter.last.tr('"', '')] }
-
-    filters
+    query
+      .scan(FILTER_REGEX)
+      .map(&:first)
+      .map { |filter| filter.split(':') }
+      .select { |filter| VALID_FILTERS.include?(filter.first) }
+      .map { |filter| [filter.first, filter.last.delete('"')] }
   end
 
   def strip_filters query

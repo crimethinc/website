@@ -24,7 +24,11 @@ class AdvancedSearch
   end
 
   def category
-    filters.select { |filter| filter.first == 'category' }.map(&:last).map { |c| c.tr('"', '') }.join(', ')
+    filters
+      .select { |filter| filter.first == 'category' }
+      .map(&:last)
+      .map { |c| c.delete('"') }
+      .join(', ')
   end
 
   def content= content
@@ -46,7 +50,11 @@ class AdvancedSearch
   end
 
   def tag
-    filters.select { |filter| filter.first == 'tag' }.map(&:last).map { |c| c.tr('"', '') }.join(', ')
+    filters
+      .select { |filter| filter.first == 'tag' }
+      .map(&:last)
+      .map { |c| c.delete('"') }
+      .join(', ')
   end
 
   def term= term

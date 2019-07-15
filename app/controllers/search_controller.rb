@@ -38,7 +38,7 @@ class SearchController < ApplicationController
     #
     # There may be a way to handle single quotes in search terms that
     # doesn’t cause database-level concerns up to the controller
-    # level, but I didn't find any (see commit message for links)
-    params[:q].tr("'", '')
+    # level, but I didn’t find any (see commit message for links)
+    params[:q].delete "'"
   end
 end
