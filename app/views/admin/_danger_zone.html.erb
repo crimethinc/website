@@ -3,11 +3,11 @@
 
   <div class="card-body bg-light text-dark">
     <h2 class="card-title text-danger h5">
-      Want to delete this <%= label.gsub("_", " ").titleize %>?
+      Want to delete this <%= label.humanize.titleize %>?
     </h2>
 
     <p class="card-text">
-      You can delete this <%= label.gsub("_", " ").titleize %> at anytime.
+      You can delete this <%= label.humanize.titleize %> at anytime.
       All of its associated data will be immediately and permanently deleted.
       There is <b>NO UNDO</b>.
     </p>
