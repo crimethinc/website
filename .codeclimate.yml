@@ -16,8 +16,6 @@ plugins:
     enabled: true
     config:
       score_threshold: 20.0
-  reek:
-    enabled: true
   fixme:
     enabled: true
     config:
