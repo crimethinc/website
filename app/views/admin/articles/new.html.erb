@@ -1,6 +1,6 @@
 <% if @collection %>
   <h1>
-    <%= link_to current_resource_name.pluralize, [:admin, current_resource_name.pluralize.downcase] %>
+    <%= link_to current_resource_name.pluralize, [:admin, current_resource_name.tableize] %>
   </h1>
 
   <h2>

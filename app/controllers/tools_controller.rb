@@ -58,7 +58,7 @@ class ToolsController < ApplicationController
   end
 
   def set_type
-    @type = tool_class.to_s.pluralize.downcase
+    @type = tool_class.to_s.tableize
   end
 
   def set_tool
