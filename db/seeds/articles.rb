@@ -50,7 +50,7 @@ Dir.glob("#{file_path}/*/").each do |file|
   doc = File.open(file + '/index.html') { |f| Nokogiri::HTML(f) }
 
   slug         = path_pieces[-1]
-  title        = doc.css('title').text.gsub(" / CrimethInc. Ex-Workers' Collective", '')
+  title        = doc.css('title').text.delete("' / CrimethInc. Ex-Workers' Collective")
   subtitle     = ''
 
   title_pieces = title.split(':')
@@ -208,7 +208,7 @@ html_doc.css('.h-entry').each do |entry|
   title              = entry.css('.p-name').text
   published_at       = Time.parse(entry.css('.dt-published').text)
   content            = entry.css('.e-content').inner_html
-  content            = content.delete("\n").gsub(/\s{2,}/, ' ').gsub('<p>', '').gsub('</p>', "\n\n").gsub(" \n\n ", "\n\n")
+  content            = content.delete("\n").gsub(/\s{2,}/, ' ').delete('<p>').gsub('</p>', "\n\n").gsub(" \n\n ", "\n\n")
 
   # Save the Article
   article = Article.create!(title:              title,
@@ -313,7 +313,7 @@ Dir.glob("#{file_path}/*").each do |file|
   doc = File.open(file) { |f| Nokogiri::HTML(f) }
 
   # Create the Category for Text
-  file_name_slug = file_name.gsub('.php', '')
+  file_name_slug = file_name.delete('.php')
 
   # Set the right published_at date
   published_at_date = nil

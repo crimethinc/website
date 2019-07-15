@@ -68,7 +68,7 @@
             <% if @tool.send(spec).present? %>
               <li>
                 <b><%= spec.titleize %></b>
-                <span><%= render_markdown(@tool.send(spec)).gsub("<p>", "").gsub("</p>", "").html_safe %></span>
+                <span><%= render_markdown(@tool.send(spec)).delete("<p>").delete("</p>").html_safe %></span>
               </li>
             <% end %>
           <% end %>
