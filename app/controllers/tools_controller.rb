@@ -50,7 +50,7 @@ class ToolsController < ApplicationController
   def tool_class
     return unless ALL_TOOLS.include? request_namespace
 
-    @tool_class ||= Kernel.const_get request_namespace.capitalize.singularize
+    @tool_class ||= request_namespace.classify.constantize
   end
 
   def request_namespace
