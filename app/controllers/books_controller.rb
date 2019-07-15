@@ -27,14 +27,14 @@ class BooksController < ApplicationController
     @body_id  = 'tools'
     @type     = 'books'
     @editable = @book
-    @title    = title_for :books, @book.slug.tr('-', '_')
+    @title    = title_for :books, @book.slug.underscore
     @tool     = @book
   end
 
   def extras
     @html_id = 'page'
     @body_id = 'tools'
-    @title   = title_for :books, @book.slug.tr('-', '_'), :extras
+    @title   = title_for :books, @book.slug.underscore, :extras
   end
 
   def lit_kit
