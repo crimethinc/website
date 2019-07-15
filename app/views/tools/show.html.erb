@@ -8,8 +8,8 @@
         </div>
       <% end %>
 
-      <% %w(front back).each do |side| %>
-        <% %w(color black_and_white).each do |color| %>
+      <% %w[front back].each do |side| %>
+        <% %w[color black_and_white].each do |color| %>
           <% if @tool.send("#{side}_#{color}_image_present?") %>
 
             <div class="tool-<%= side %>">
@@ -30,8 +30,8 @@
 
       <div id="download">
 
-        <% %w(front back).each do |side| %>
-          <% %w(color black_and_white).each do |color| %>
+        <% %w[front back].each do |side| %>
+          <% %w[color black_and_white].each do |color| %>
             <% if @tool.send("#{side}_#{color}_download_present?") %>
 
               <div>
@@ -66,7 +66,7 @@
             </span>
           </li>
 
-          <% %w(weight pages words illustrations photographs printing ink definitions recipes cover_style binding_style).each do |spec| %>
+          <% %w[weight pages words illustrations photographs printing ink definitions recipes cover_style binding_style].each do |spec| %>
             <% if @tool.respond_to?(spec) && @tool.send(spec).present? %>
               <li>
                 <b><%= spec.titleize %></b>

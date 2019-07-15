@@ -15,9 +15,9 @@
   <div>
     <p>
 
-      <% %w(image download).each do |type| %>
-        <% %w(front back).each do |side| %>
-          <% %w(color black_and_white).each do |color| %>
+      <% %w[image download].each do |type| %>
+        <% %w[front back].each do |side| %>
+          <% %w[color black_and_white].each do |color| %>
 
             <% if @poster.send("#{side}_#{color}_#{type}_present?") %>
               <span class="badge badge-<%= color == 'color' ? 'success' : 'secondary' %>">
@@ -35,8 +35,8 @@
     <p><b>URL:</b> <%= link_to @poster.path, @poster.path %></p>
 
     <div class="row">
-      <% %w(front back).each do |side| %>
-        <% %w(color black_and_white).each do |color| %>
+      <% %w[front back].each do |side| %>
+        <% %w[color black_and_white].each do |color| %>
           <% if @poster.send("#{side}_#{color}_image_present?") %>
             <div class="col-sm-3">
               <%= image_tag @poster.send("#{side}_#{color}_image") %>
@@ -61,8 +61,8 @@
     </p>
 
 
-      <% %w(front back).each do |side| %>
-        <% %w(color black_and_white).each do |color| %>
+      <% %w[front back].each do |side| %>
+        <% %w[color black_and_white].each do |color| %>
           <% if @poster.send("#{side}_#{color}_image_present?") %>
             <p>
               <b>

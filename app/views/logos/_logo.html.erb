@@ -33,7 +33,7 @@
             </span>
           </p>
           <div class="buttons">
-            <% %w(jpg png pdf svg tif).each do |extension| %>
+            <% %w[jpg png pdf svg tif].each do |extension| %>
               <% if tool.send("#{extension}_url_present?") %>
                 <%= link_to "Download .#{extension.upcase}", tool.image_url(extension), class: "download button" %>
               <% end %>

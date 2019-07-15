@@ -28,7 +28,7 @@
       <div class="form-group">
         <label for="downloads">Downloads</label>
 
-        <% %w(jpg png pdf svg tif).each do |extension| %>
+        <% %w[jpg png pdf svg tif].each do |extension| %>
           <div class="form-check">
             <%= form.check_box "#{extension}_url_present", id: "logo_#{extension}_url_present", class: "form-check-input" %>
 

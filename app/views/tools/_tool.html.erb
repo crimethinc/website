@@ -52,8 +52,8 @@
 
 
         <% if tool.class == Poster %>
-          <% %w(front back).each do |side| %>
-            <% %w(color black_and_white).each do |color| %>
+          <% %w[front back].each do |side| %>
+            <% %w[color black_and_white].each do |color| %>
               <% if tool.send("#{side}_#{color}_download_present?") %>
 
                 <div>
