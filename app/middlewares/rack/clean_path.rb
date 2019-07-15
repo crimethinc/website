@@ -57,7 +57,7 @@ module Rack
       fallback_to_default!
 
       # redirect to new cleaned path
-      return redirect(@path) unless @req.path == @path
+      return redirect(@path) unless @req.fullpath == @path
 
       @app.call(env)
     end
