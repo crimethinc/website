@@ -21,15 +21,12 @@ best idea he has had in years and the Kit’s popularity seems to back that up.
 - [4 - No Wall They Can Build](/books/no-wall-they-can-build)
 - [4 - Off the Map](/books/off-the-map)
 - [2 - CrimethInc. Guerilla Film Series, Vol. 1 DVD](https://store.crimethinc.com/x/video.html)
+- [4 - Rolling Thunder #11](/journals/rolling-thunder/11)
 - [4 - Rolling Thunder #12](/journals/rolling-thunder-12-spring-2015)
-- [1 - Rolling Thunder Bundle (#8,11 &12)](https://store.crimethinc.com/x/journal.html)
 - [6 - Poster Mix Kit (150 posters total)](https://store.crimethinc.com/x/bulk.html)
 - [25 - Walls Are Alive](https://store.crimethinc.com/x/bulk.html)
-- [50 - To Change Everything](https://store.crimethinc.com/x/bulk.html)
-- [30 - PRISM Stickers](https://store.crimethinc.com/x/stickers.html)
 - [30 - Surveillance Stickers](https://store.crimethinc.com/x/stickers.html)
 - [30 - Police Stickers](https://store.crimethinc.com/x/stickers.html)
-- [30 - Immigrants Stickers](https://store.crimethinc.com/x/stickers.html)
 {: .list}
 
 ## How to Use the Lit Kit
