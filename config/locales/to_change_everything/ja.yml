@@ -1,4 +1,4 @@
-nihongo:
+日本人:
   layouts:
     to_change_everything:
       language_direction: ltr
@@ -12,7 +12,7 @@ nihongo:
           url: http://tochangeeverything.com/nihongo
       menu:
         toc: "目次"
-        language: nihongo
+        language: 日本人
         share: "シェア"
       toc:
         introduction: 前書き # google translate
