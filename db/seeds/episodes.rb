@@ -48,7 +48,7 @@ file_path = File.expand_path('db/seeds/episodes', __dir__)
 Dir.glob("#{file_path}/*").each do |file|
   file_name = file.strip.split('/').last
 
-  next if file_name =~ /.DS_Store|episodes.rss|episodes.html|transcripts/
+  next if /.DS_Store|episodes.rss|episodes.html|transcripts/.match?(file_name)
 
   doc = File.open(file) { |f| Nokogiri::HTML(f) }
 
@@ -84,7 +84,7 @@ file_path = File.expand_path('db/seeds/episodes/transcripts', __dir__)
 Dir.glob("#{file_path}/*").each do |file|
   file_name = file.strip.split('/').last
 
-  next if file_name =~ /.DS_Store/
+  next if /.DS_Store/.match?(file_name)
 
   doc = File.open(file) { |f| Nokogiri::HTML(f) }
 

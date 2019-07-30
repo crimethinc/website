@@ -9,7 +9,7 @@ Dir.glob("#{file_path}/*").each do |file|
   path_pieces = file.strip.split('/')
   file_name   = path_pieces.last
 
-  next if file_name =~ /.DS_Store/
+  next if /.DS_Store/.match?(file_name)
 
   doc = File.open(file) { |f| Nokogiri::HTML(f) }
 
