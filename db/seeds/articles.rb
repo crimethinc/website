@@ -45,7 +45,7 @@ Dir.glob("#{file_path}/*/").each do |file|
   path_pieces = file.strip.split('/')
   file_name = path_pieces.last
 
-  next if file_name =~ /.DS_Store/
+  next if /.DS_Store/.match?(file_name)
 
   doc = File.open(file + '/index.html') { |f| Nokogiri::HTML(f) }
 
@@ -114,7 +114,7 @@ file_path = File.expand_path('db/seeds/articles/posts', __dir__)
 Dir.glob("#{file_path}/*").each do |file|
   file_name = file.strip.split('/').last
 
-  next if file_name =~ /.DS_Store/
+  next if /.DS_Store/.match?(file_name)
 
   doc = File.open(file) { |f| Nokogiri::XML(f) }
 
@@ -308,7 +308,7 @@ Dir.glob("#{file_path}/*").each do |file|
   path_pieces = file.strip.split('/')
   file_name = path_pieces.last
 
-  next if file_name =~ /.DS_Store/
+  next if /.DS_Store/.match?(file_name)
 
   doc = File.open(file) { |f| Nokogiri::HTML(f) }
 
