@@ -4,13 +4,13 @@ RSpec.describe Poster, type: :model do
   describe '#published?' do
     subject { poster.published? }
 
-    let(:poster) { Poster.new(title: 'Poster', publication_status: 'published') }
+    let(:poster) { described_class.new(title: 'Poster', publication_status: 'published') }
 
     it { is_expected.to eq(true) }
   end
 
   describe '#tags' do
-    let(:poster) { Poster.create(title: 'title', subtitle: 'subtitle') }
+    let(:poster) { described_class.create(title: 'title', subtitle: 'subtitle') }
     let(:tag_1) { Tag.create(name: 'test 1', slug: 'test-1') }
 
     it 'returns the tag' do

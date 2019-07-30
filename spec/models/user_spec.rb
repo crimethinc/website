@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     subject { user.name }
 
     context 'without display_name' do
-      let(:user) { User.create(username: 'example', password: 'x' * 30) }
+      let(:user) { described_class.create(username: 'example', password: 'x' * 30) }
 
       it { is_expected.to eq('example') }
     end

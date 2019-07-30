@@ -4,7 +4,7 @@ RSpec.describe Video, type: :model do
   describe '#path' do
     subject { video.path }
 
-    let(:video) { Video.new(slug: 'slug') }
+    let(:video) { described_class.new(slug: 'slug') }
 
     it { is_expected.to eq('/videos/slug') }
   end
@@ -12,7 +12,7 @@ RSpec.describe Video, type: :model do
   describe '#published?' do
     subject { video.published? }
 
-    let(:video) { Video.new(publication_status: 'published') }
+    let(:video) { described_class.new(publication_status: 'published') }
 
     it { is_expected.to eq(true) }
   end
