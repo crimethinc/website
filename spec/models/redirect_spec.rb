@@ -4,7 +4,7 @@ RSpec.describe Redirect, type: :model do
   describe '#name' do
     subject { redirect.name }
 
-    let(:redirect) { Redirect.new(source_path: '/source', target_path: '/target') }
+    let(:redirect) { described_class.new(source_path: '/source', target_path: '/target') }
 
     it { is_expected.to eq('/source') }
   end
@@ -13,14 +13,14 @@ RSpec.describe Redirect, type: :model do
     before { redirect.add_leading_slash }
 
     context 'with absolute urls' do
-      let(:redirect) { Redirect.new(source_path: 'http://example.com/source', target_path: 'http://example.com/target') }
+      let(:redirect) { described_class.new(source_path: 'http://example.com/source', target_path: 'http://example.com/target') }
 
       specify { expect(redirect.source_path).to eq('http://example.com/source') }
       specify { expect(redirect.target_path).to eq('http://example.com/target') }
     end
 
     context 'with relative urls' do
-      let(:redirect) { Redirect.new(source_path: 'source', target_path: 'target') }
+      let(:redirect) { described_class.new(source_path: 'source', target_path: 'target') }
 
       specify { expect(redirect.source_path).to eq('/source') }
       specify { expect(redirect.target_path).to eq('/target') }
@@ -28,7 +28,7 @@ RSpec.describe Redirect, type: :model do
 
     context 'with relative source path and absolute target path' do
       https_target_path = 'https://example.com/foo/bar'
-      let(:redirect) { Redirect.new(source_path: 'source', target_path: https_target_path) }
+      let(:redirect) { described_class.new(source_path: 'source', target_path: https_target_path) }
 
       specify { expect(redirect.source_path).to eq('/source') }
       specify { expect(redirect.target_path).to eq(https_target_path) }
@@ -39,7 +39,7 @@ RSpec.describe Redirect, type: :model do
     before { redirect.downcase_source_path }
 
     context 'with mixed case' do
-      let(:redirect) { Redirect.new(source_path: 'SoUrCe', target_path: 'TaRgEt') }
+      let(:redirect) { described_class.new(source_path: 'SoUrCe', target_path: 'TaRgEt') }
 
       specify { expect(redirect.source_path).to eq('source') }
       specify { expect(redirect.target_path).to eq('TaRgEt') }
@@ -54,27 +54,27 @@ RSpec.describe Redirect, type: :model do
     context 'with crimethinc domain and subdomain' do
       http_target_path = 'https://store.crimethinc.com/x/AddToCart?Item=democracy&Dest=books'
 
-      let(:redirect) { Redirect.new(source_path: 'source', target_path: http_target_path) }
+      let(:redirect) { described_class.new(source_path: 'source', target_path: http_target_path) }
 
       it { is_expected.to eq(http_target_path) }
     end
 
     context 'with leading domain' do
-      let(:redirect) { Redirect.new(source_path: 'source', target_path: 'http://crimethinc.com/?query=true') }
+      let(:redirect) { described_class.new(source_path: 'source', target_path: 'http://crimethinc.com/?query=true') }
 
       it { is_expected.to eq('/?query=true') }
     end
 
     context 'with external http domain' do
       http_target_path = 'http://example.com/foo/bar'
-      let(:redirect) { Redirect.new(source_path: 'source', target_path: http_target_path) }
+      let(:redirect) { described_class.new(source_path: 'source', target_path: http_target_path) }
 
       it { is_expected.to eq(http_target_path) }
     end
 
     context 'with external https domain' do
       https_target_path = 'https://example.com/foo/bar'
-      let(:redirect) { Redirect.new(source_path: 'source', target_path: https_target_path) }
+      let(:redirect) { described_class.new(source_path: 'source', target_path: https_target_path) }
 
       it { is_expected.to eq(https_target_path) }
     end
@@ -83,9 +83,9 @@ RSpec.describe Redirect, type: :model do
   describe '#delete_duplicates' do
     let(:attributes) { { source_path: 'source', target_path: 'target' } }
 
-    before { 2.times { Redirect.create(attributes) } }
+    before { 2.times { described_class.create(attributes) } }
 
-    specify { expect(Redirect.count).to eq(1) }
+    specify { expect(described_class.count).to eq(1) }
   end
 
   describe '#noncircular_redirect' do
@@ -93,7 +93,7 @@ RSpec.describe Redirect, type: :model do
 
     before { redirect.valid? }
 
-    let(:redirect) { Redirect.new(source_path: 'source', target_path: 'source') }
+    let(:redirect) { described_class.new(source_path: 'source', target_path: 'source') }
 
     it { is_expected.to include('redirects to itself') }
   end
@@ -104,7 +104,7 @@ RSpec.describe Redirect, type: :model do
     context 'without creating a redirect if short path exists' do
       it 'raises error' do
         FactoryBot.create(:article, title: 'test', short_path: 'tester', publication_status: 'published', published_at: published_at)
-        redirect = Redirect.new(source_path: '/tester', target_path: '/test/test')
+        redirect = described_class.new(source_path: '/tester', target_path: '/test/test')
         expect { redirect.save! }.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Source path has already been taken, Source path is already taken by article short path')
       end
     end

@@ -5,20 +5,20 @@ RSpec.describe Podcast, type: :model do
     subject { podcast.name }
 
     context 'with a subtitle' do
-      let(:podcast) { Podcast.new(title: 'title', subtitle: 'subtitle') }
+      let(:podcast) { described_class.new(title: 'title', subtitle: 'subtitle') }
 
       it { is_expected.to eq('title : subtitle') }
     end
 
     context 'without a subtitle' do
-      let(:podcast) { Podcast.new(title: 'title') }
+      let(:podcast) { described_class.new(title: 'title') }
 
       it { is_expected.to eq('title') }
     end
   end
 
   describe '#path' do
-    subject { Podcast.new(slug: 'a-nice-podcast').path }
+    subject { described_class.new(slug: 'a-nice-podcast').path }
 
     it { is_expected.to eq('/podcasts/a-nice-podcast') }
   end
@@ -27,13 +27,13 @@ RSpec.describe Podcast, type: :model do
     subject { podcast.meta_description }
 
     context 'with subtitle' do
-      let(:podcast) { Podcast.new(subtitle: 'subtitle') }
+      let(:podcast) { described_class.new(subtitle: 'subtitle') }
 
       it { is_expected.to eq('subtitle') }
     end
 
     context 'without subtitle' do
-      let(:podcast) { Podcast.new(content: 'x' * 250) }
+      let(:podcast) { described_class.new(content: 'x' * 250) }
 
       it { is_expected.to eq('x' * 197 + '...') }
     end
