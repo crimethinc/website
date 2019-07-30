@@ -8,14 +8,14 @@
         title: "変更する すべて、アナキストの 訴え / CrimethInc. Ex-Workers' Collective"
         meta:
           title: 変更する すべて、アナキストの 訴え
-          description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart
-          url: http://tochangeeverything.com/nihongo
+          description: 完全な自己決定の論—ムカついた君、好奇心がある君や純粋な心をもつ君のための手引書
+          url: http://tochangeeverything.com/日本人
       menu:
         toc: "目次"
         language: 日本人
         share: "シェア"
       toc:
-        introduction: 前書き # google translate
+        introduction: はじめに
         self: "皮切りに 自己決定"
         answering: "始めて 答える 自分自身"
         power: "初めは権威じゃなくて、力を見つける"
@@ -32,9 +32,9 @@
         profit: "問題は 利益"
         property: "問題は プロパティ"
         lastcrime: "最後の犯罪"
-        anarchy: アナーキーの定義 # google translate
-        outro: 結論 # google translate
-        takeflight: 飛ぶ # google translate
+        anarchy: アナーキーとは
+        outro: アウトロ
+        takeflight: 飛んで行こう
         next: ''
   to_change_everything:
     show:
