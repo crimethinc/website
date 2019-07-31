@@ -15,8 +15,8 @@ espanol:
         language: Español
         share: Compartir
       bulk_get:
-         url: /tce/espanol/get/#order
-         text: Ordene al por Mayor
+        url: /tce/espanol/get/#order
+        text: Ordene al por Mayor
       toc:
         introduction: introducción
         self: comienza por autodeterminación
