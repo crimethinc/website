@@ -17,7 +17,7 @@ module Overcommit
             command = config[1]
             message = config[2]
 
-            [command, message] if changed_files.map { |file_name| file_name if file_name =~ regex }.compact.any?
+            [command, message] if changed_files.map { |file_name| file_name if file_name.match?(regex) }.compact.any?
           end
 
           if output_messages.any?
