@@ -5,5 +5,6 @@ class IssuesController < ToolsController
     @issue    = Issue.find_by(issue: params[:issue_number], journal_id: journal.id)
     @tool     = @issue
     @editable = @issue
+    render 'books/show'
   end
 end
