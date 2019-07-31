@@ -50,7 +50,7 @@ module Admin
     end
 
     def locale_params
-      params.require(:locale).permit(:abbreviation, :name, :name_in_english)
+      params.require(:locale).permit(:abbreviation, :name, :name_in_english, :language_direction)
     end
   end
 end
