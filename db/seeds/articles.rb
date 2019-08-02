@@ -5,7 +5,7 @@ Article.destroy_all
 
 # These timestamps were pulled from the cwc.im admin site since
 # the Feature HTML doesn't have any publishication datetime
-features_timestamps          = {
+features_timestamps = {
   'agitators'                => Time.parse('2014-08-20 09:30:00 -0700'),
   'battle'                   => Time.parse('2016-11-01 09:19:00 -0700'),
   'begin'                    => Time.parse('2016-09-28 08:11:00 -0700'),
