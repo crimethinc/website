@@ -3,6 +3,14 @@
 #
 # Use the FeatureFlag checker like this:
 #     FeatureFlag.enabled? :two_point_oh_yeah
+#
+# Or like this
+#
+# <% if FeatureFlag.enabled? :two_point_oh_yeah %>
+#   <%= render "shared/header_redesign" %>
+# <% else %>
+#   <%= render "shared/header" %>
+# <% end %>
 
 class FeatureFlag
   class << self
