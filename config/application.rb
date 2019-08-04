@@ -36,5 +36,12 @@ module Crimethinc
 
     # Allow nested diretories in locales
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
+    # TEMP: This deprecation warning showed up in Rails 6.rc2.
+    #       We're not using #content_type anywhere,
+    #       so I expect the need for this will go away on its own in time.
+    # DEPRECATION WARNING: Rails 6.1 will return Content-Type header without modification.
+    # If you want just the MIME type, please use `#media_type` instead.
+    config.action_dispatch.return_only_media_type_on_content_type = false
   end
 end
