@@ -1,3 +1,4 @@
+require "set"
 # Q: What do we say to the gods of pen testing?
 # A: Not today, kid!
 #
@@ -8,7 +9,7 @@
 
 module Rack
   class Teapot
-    PATHS = [
+    BANNED_SEGMENTS = Set.new([
       'ads.txt',
       'afacacaeusaaa',
       'asp.net',
@@ -17,7 +18,7 @@ module Rack
       'README.txt',
       'wp',
       'wp-login'
-    ].freeze
+    ]).freeze
 
     def initialize app
       @app = app
@@ -30,13 +31,8 @@ module Rack
       # source path
       path = req.path
 
-      # check if the requested path piecies
-      path.split('/').each do |path_piece|
-        PATHS.include? path_piece
-
-        # send a 418 code, if it looks like it’s a pen test kind of request
-        return i_am_a_teapot if PATHS.include? path_piece
-      end
+      # send a 418 code, if it looks like it’s a pen test kind of request
+      return i_am_a_teapot if path.split("/").any? { |segment| BANNED_SEGMENTS.member? segment }
 
       @app.call(env)
     end
