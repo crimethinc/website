@@ -9,16 +9,18 @@ require 'set'
 
 module Rack
   class Teapot
-    BANNED_SEGMENTS = Set.new([
-      'ads.txt',
-      'afacacaeusaaa',
-      'asp.net',
-      'error.asp',
-      'kindeditor',
-      'README.txt',
-      'wp',
-      'wp-login'
-    ]).freeze
+    BANNED_SEGMENTS = Set.new(
+      [
+        'ads.txt',
+        'afacacaeusaaa',
+        'asp.net',
+        'error.asp',
+        'kindeditor',
+        'README.txt',
+        'wp',
+        'wp-login'
+      ]
+    ).freeze
 
     def initialize app
       @app = app
