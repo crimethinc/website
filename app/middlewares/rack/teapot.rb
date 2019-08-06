@@ -1,4 +1,4 @@
-require "set"
+require 'set'
 # Q: What do we say to the gods of pen testing?
 # A: Not today, kid!
 #
@@ -32,7 +32,7 @@ module Rack
       path = req.path
 
       # send a 418 code, if it looks like it’s a pen test kind of request
-      return i_am_a_teapot if path.split("/").any? { |segment| BANNED_SEGMENTS.member? segment }
+      return i_am_a_teapot if path.split('/').any? { |segment| BANNED_SEGMENTS.member? segment }
 
       @app.call(env)
     end
