@@ -11,6 +11,11 @@ class BooksController < ApplicationController
     days-of-war-nights-of-love
     off-the-map
     no-habra-muro-que-nos-pare
+    da-democracia-a-liberdade
+    trabalho-edicao-resumida-de-emergencia
+    espere-resistencia
+    receitas-para-o-desastre
+    dias-de-guerra-noites-de-amor
   ].map(&:freeze).freeze
 
   def index
