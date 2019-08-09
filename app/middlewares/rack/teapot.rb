@@ -10,15 +10,16 @@ require 'set'
 module Rack
   class Teapot
     BANNED_SEGMENTS = Set.new(
-      [
-        'ads.txt',
-        'afacacaeusaaa',
-        'asp.net',
-        'error.asp',
-        'kindeditor',
-        'README.txt',
-        'wp',
-        'wp-login'
+      %w[
+        ads.txt
+        afacacaeusaaa
+        asp.net
+        error.asp
+        kindeditor
+        README.txt
+        wp
+        wp-login
+        cdnbuster
       ]
     ).freeze
 
@@ -31,10 +32,15 @@ module Rack
       req = Rack::Request.new(env)
 
       # source path
-      path = req.path
+      path_segments = req.path.split('/')
+
+      # query params
+      query_params = req.params.to_a.flatten
+
+      segments = [path_segments, query_params].flatten
 
       # send a 418 code, if it looks like it’s a pen test kind of request
-      return i_am_a_teapot if path.split('/').any? { |segment| BANNED_SEGMENTS.member? segment }
+      return i_am_a_teapot if segments.any? { |segment| BANNED_SEGMENTS.member? segment }
 
       @app.call(env)
     end
