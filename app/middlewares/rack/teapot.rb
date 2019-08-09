@@ -1,3 +1,4 @@
+require 'set'
 # Q: What do we say to the gods of pen testing?
 # A: Not today, kid!
 #
@@ -8,16 +9,19 @@
 
 module Rack
   class Teapot
-    PATHS = [
-      'ads.txt',
-      'afacacaeusaaa',
-      'asp.net',
-      'error.asp',
-      'kindeditor',
-      'README.txt',
-      'wp',
-      'wp-login'
-    ].freeze
+    BANNED_SEGMENTS = Set.new(
+      %w[
+        ads.txt
+        afacacaeusaaa
+        asp.net
+        error.asp
+        kindeditor
+        README.txt
+        wp
+        wp-login
+        cdnbuster
+      ]
+    ).freeze
 
     def initialize app
       @app = app
@@ -28,15 +32,15 @@ module Rack
       req = Rack::Request.new(env)
 
       # source path
-      path = req.path
+      path_segments = req.path.split('/')
 
-      # check if the requested path piecies
-      path.split('/').each do |path_piece|
-        PATHS.include? path_piece
+      # query params
+      query_params = req.params.to_a.flatten
 
-        # send a 418 code, if it looks like it’s a pen test kind of request
-        return i_am_a_teapot if PATHS.include? path_piece
-      end
+      segments = [path_segments, query_params].flatten
+
+      # send a 418 code, if it looks like it’s a pen test kind of request
+      return i_am_a_teapot if segments.any? { |segment| BANNED_SEGMENTS.member? segment }
 
       @app.call(env)
     end
