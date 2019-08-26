@@ -1,1 +1,0 @@
-[[ http://crimethinc.blogsport.de/images/wasmachstdu.JPG ]]
