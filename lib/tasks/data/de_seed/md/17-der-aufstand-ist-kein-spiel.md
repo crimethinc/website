@@ -1,16 +1,16 @@
 [[ http://crimethinc.blogsport.de/images/header_01.jpg ]]
 
-# Was ist ein anarchistisches Spiel? Ist es ein Spiel, das anarchistische Werte fördert? Ein Spiel, das anarchistische Aktivitäten darstellt? Ein Spiel, das Machtstrukturen untergräbt und destabilisiert? Was kann die Spieltheorie Anarchist*innen lehren – und was können Anarchist*innen durch Spiele lernen? Um diese und andere Fragen zu beantworten, führten wir das folgende Interview mit TL, Spieldesigner*in und Künstler*in von _Bloc by Bloc: The Insurrection Game_.
+Was ist ein anarchistisches Spiel? Ist es ein Spiel, das anarchistische Werte fördert? Ein Spiel, das anarchistische Aktivitäten darstellt? Ein Spiel, das Machtstrukturen untergräbt und destabilisiert? Was kann die Spieltheorie Anarchist*innen lehren – und was können Anarchist*innen durch Spiele lernen? Um diese und andere Fragen zu beantworten, führten wir das folgende Interview mit TL, Spieldesigner*in und Künstler*in von _Bloc by Bloc: The Insurrection Game_.
 
 (Das Interview wurde von der Gruppe Crimethinc gemacht und auf Deutsch und Französisch von dem [Evasions Projekt](https://evasions.blackblogs.org) übersetzt. Das Spiel gibt es bis jetzt nur auf English. Mehr Infos darüber auf [Kickstarter](http://kck.st/2L5gL9U), bestellbar in Deutschland bei [black-mosquito.org](https://black-mosquito.org/de/bloc-by-bloc-the-insurrection-game.html.html).)
 
-# Warum denkst du, dass kreative Tätigkeit für Anarchist*innen wichtig ist?
+**Warum denkst du, dass kreative Tätigkeit für Anarchist*innen wichtig ist?**
 
 Kreativer Widerstand ist eines der wesentlichen Elemente einer florierenden anarchistischen Bewegung. Spiel und Phantasie erlauben die Art von Experimente, die Risse in den Kontrollsystemen aufdecken können. Anarchist*innen müssen in der Lage sein, sich andere Welten und andere Lebensformen vorzustellen, um ihre Aktivitäten gegen die aktuelle Welt zu positionieren. Wenn Kreativität in anarchistischen Räumen blühen darf, ist es einfacher, erstickende und giftige Formen sozialer Organisation zu neutralisieren.
 
 [[ http://crimethinc.blogsport.de/images/1_01.jpg ]]
 
-# Ist _Bloc by Bloc_ nur eine Form der Unterhaltung? Oder gibt es andere Dimensionen des Projekts und was erhoffst du, damit in der Welt zu erreichen?
+**Ist _Bloc by Bloc_ nur eine Form der Unterhaltung? Oder gibt es andere Dimensionen des Projekts und was erhoffst du, damit in der Welt zu erreichen?**
 
 Bloc by Bloc ist ein Brettspiel, das die urbanen Rebellionen simuliert, die wir in den letzten 10 oder 15 Jahren in Städten auf der ganzen Welt erlebt haben. Das Ziel dieses Projektes ist es, ein unterhaltsames und lehrreiches Spielerlebnis zu schaffen. Ich will nicht so tun, als wäre das mehr als das. Das ist einer der Gründe, warum das Layout in _Bloc by Bloc_ verspielt ist und an bunte Cartoons erinnert. Es ist wichtig, dass wir das Projekt nicht zu ernst nehmen oder seine politische Wirkung überbewerten. Das wäre irreführend und respektlos gegenüber allen, die in echten Kämpfen auf der Straße waren und die sich echte Konsequenzen ausgesetzt haben.
 
@@ -22,7 +22,7 @@ Wenn wir Spiele spielen, erschaffen wir Geschichten aus der Interaktion zwischen
 
 _Bloc by Bloc_ schafft einen magischen Kreis, in dem die Spieler*innen Geschichten von zeitgenössischer Revolte und Widerstand erforschen können. Es ist eine Antwort und eine Herausforderung auf die allgegenwärtigen Erzählungen von Kolonialisierung, Industrialisierung, staatliche Verwaltung, autoritärer Heldenverehrung und chauvinistischer Gewalt, die einen Großteil des Brettpiels – und noch mehr des digitalen Spiels- dominieren. Auf diese Weise kann es als anarchistischer Eingriff in die Spielwelt verstanden werden.
 
-# Hat _Bloc by Bloc_ Vorläufer? Was waren die Bezugspunkte, als es entworfen wurde?
+**Hat _Bloc by Bloc_ Vorläufer? Was waren die Bezugspunkte, als es entworfen wurde?**
 
 Eine Gruppe von uns hat im Sommer 2010 mit dem Brainstorming für ein Aufstands-Brettspiel begonnen. Keine*r von uns war ein*e erfahrene*r Spieler*in; wir hatten nur sehr wenig Erfahrung in diesem Thema. Unsere Bezugspunkte waren die Kämpfe und Aufstände, die wir sehr genau verfolgt hatten. Der von einem Lehrer*innenstreik in Oaxaca, Mexiko, in der zweiten Jahreshälfte 2006 ausgelöste Aufstand hatte einen großen Einfluss auf diese frühen Gespräche, die schließlich die Konturen dessen prägten, was wir heute _Bloc by Bloc_ nennen. [Die Jugendrevolte](http://crimethinc.blogsport.de/2010/05/26/vom-organisieren-eines-aufstands), die sich nach der Ermordung des jungen Anarchisten Alexis Grigoropolous im Dezember 2008 im Exarcheia-Viertel von Athen über ganz Griechenland ausbreitete, war eine weitere Inspiration. Hier in Oakland haben uns die Proteste und Unruhen als Reaktion auf einen weißen Polizisten, der im Januar 2009 einen jungen schwarzen Mann namens Oscar Grant getötet hat, einige der Möglichkeiten, wie sich diese Momente entfalten können, aus erster Hand gezeigt.
 
@@ -36,7 +36,7 @@ Anfang 2015 haben wir begonnen, die ersten funktionierenden Prototypen von _Bloc
 
 Seitdem habe ich mehr über die Geschichte der subversiven und antiautoritären Brettspiele in der Welt gelernt. [Suffragetto](https://kotaku.com/there-was-a-1908-board-game-about-women-fighting-cops-i-1823346670) ist ein Spiel aus dem Jahr 1909, das Demonstrantinnen für das Frauenwahlrecht im Kampf mit der Polizei simuliert. Was wir jetzt als das Spiel _Monopoly_ kennen, war ursprünglich ein Spiel namens [The Landlord’s Game](https://www.theguardian.com/lifeandstyle/2015/apr/11/secret-history-monopoly-capitalist-game-leftwing-origins), es kritisierte Immobilienspekulation und Finanzkapitalismus. [Class Struggle](https://boardgamegeek.com/boardgame/1510/class-struggle), [Chicago Chicago](https://boardgamegeek.com/boardgame/11502/chicago-chicago/credits) und [Mai 68 Le jeu](https://boardgamegeek.com/boardgame/6907/mai-68-le-jeu) sind einige weitere Titel aus den 70er und 80er Jahren, die versuchten, Volksaufstände zu simulieren. Vor einigen Jahren schufen einige italienische Genoss*innen ein Spiel namens [Riot](http://riotboardgame.com), in dem Anarchist*innen, Autonome, Polizist*innen und Nationalist*innen auf der Straße gegeneinander kämpfen. Interessant ist, dass die meisten dieser Spiele davon ausgehen, dass ein*e Spieler*in die Rolle der Polizei übernehmen muss. Wir wussten von Anfang an, dass wir dies nicht in den Rahmen von _Bloc by Bloc_ aufnehmen würden.
 
-# Was sind die Vorteile des Brettspielformats, um diese Geschichten zu erzählen, im Gegensatz zu, sagen wir, einem Roman, einem Film, einem Videospiel, einer mündlichen Geschichte?
+**Was sind die Vorteile des Brettspielformats, um diese Geschichten zu erzählen, im Gegensatz zu, sagen wir, einem Roman, einem Film, einem Videospiel, einer mündlichen Geschichte?**
 
 _Bloc by Bloc_ ermöglichte es uns, den gesellschaftlichen Umbruch durch die Linse des Systemdenkens zu erforschen. Ein Spiel ist eine großartige Möglichkeit, die kybernetischen Formen der Kontrolle durch institutionalisierte Macht zu simulieren. Und es erlaubt den Spielenden mit neuen Formen kooperativer Strategie zu experimentieren, um sich von diesen repressiven Systemen zu befreien. Es gibt wirklich kein anderes Medium, welches eine solche Art von Systemen herausheben würde und so ermöglicht Geschichten zu erzählen.
 
@@ -46,7 +46,7 @@ Dieses Format hat aber auch Nachteile. Ein Spiel ist selbst eine Art kybernetisc
 
 [[ http://crimethinc.blogsport.de/images/5.jpg _Das Block by Block Spielbuch_ ]]
 
-# Erzähl uns über einige der spezifischen Komponenten und Dynamiken des Spiels und wie ihr diese entwickelt habt, um strategische Lektionen über das wirkliche Leben zu vermitteln.
+**Erzähl uns über einige der spezifischen Komponenten und Dynamiken des Spiels und wie ihr diese entwickelt habt, um strategische Lektionen über das wirkliche Leben zu vermitteln.**
 
 Eine der wichtigsten Änderungen in der zweiten Ausgabe des Spiels ist ein verbesserter semi-kooperativer Modus. Bei _Bloc by Bloc_ hat jede*r Spieler*in eine geheime Ziel-Karte. Die meisten dieser Karten sind soziale Ziele. Spieler*innnen mit sozialen Zielen sind solidarisch und müssen zusammenarbeiten, um den Staat zu besiegen und das Spiel gemeinsam zu gewinnen. Es gibt aber auch avantgardistische und nihilistische Ziel-Karten. Spielende mit diesen Karten müssen heimlich den sozialen Aufstand untergraben; sie spielen, um das Spiel allein zu gewinnen.
 
@@ -60,7 +60,7 @@ Eine andere Spielmechanik, von dem die Leute oft überrascht sind, ist das Funkt
 
 Fast jede Spielmechanik in _Bloc by Bloc_ kann als Schnittpunkt verstanden werden zwischen einer Art strategischer Lektion und der Notwendigkeit, das Spiel auszubalancieren, um ein stabiles System voller Potential zu schaffen. Es ist möglich, in jede dieser Mechaniken Rückschlüsse auf reale Aufstände zu ziehen. Aber man sollte irgendwann auch wieder daran denken, dass es nur ein Spiel ist! Ein [PDF des Regelwerks](https://kck.st/2s8gQkg) von _Bloc by Bloc 2_ ist online verfügbar für alle, die sich die Spielmechanik genauer ansehen möchten.
 
-# Wie prägen deine Werte die Art und Weise, wie du an das Spieldesign herangehst? Gibt es eine ideologische Dimension in diesem Projekt?
+**Wie prägen deine Werte die Art und Weise, wie du an das Spieldesign herangehst? Gibt es eine ideologische Dimension in diesem Projekt?**
 
 Ich bemühe mich sehr, eine dogmatische Herangehensweise bei dieser Arbeit zu vermeiden. Spiele sind eine großartige Möglichkeit um Menschen miteinander Ideen und Systeme erforschen zu lassen, ohne übermäßig didaktisch zu sein. Aber ich bin sicher, es ist jedem*r klar, dass dieses Projekt auf politischen Ideen beruht.
 
@@ -72,7 +72,7 @@ Ein weiteres wichtiges Element dieses Rahmens ist das Verständnis für die Bede
 
 Es ist auch wichtig, die Gewalt, die mit diesen Aufständen verbunden ist, nicht zu fetischisieren. Zerstörung und kollektive Enteignungen sind notwendige Bestandteile eines nachhaltigen Aufstands. Aber der Erfolg dieser Aufstände wird nicht von ihrer Fähigkeit bestimmt, zu zerstören oder zu töten. Urbaner Aufstand ist am effektivsten, wenn er soziale Beziehungen über eine ganze Stadt hinweg transformiert und den urbanen Raum neu nutzt. Das sehen wir am deutlichsten, wenn ein Aufstand Ausdruck des alltäglichen Widerstandes und Organisierens ist. So entsteht das soziale Gefüge, aus dem ein Aufstand die Kraft schöpfen kann, ganze Städte und Gesellschaften umzugestalten.
 
-# Ist _Bloc by Bloc_ ein anarchistisches Spiel ?
+**Ist _Bloc by Bloc_ ein anarchistisches Spiel?**
 
 Ich denke, das ist fraglich. _Bloc by Bloc_ ist ein Spiel für Spieler*innen mehr als ein Spiel für Anarchist*innen. Wir wollten schon immer, dass dieses Projekt für sich allein steht, als ein Spiel, das die Leute genießen können, auch wenn sie mit dem Thema nicht vertraut sind. Wie ich bereits sagte, ist es ein Eingriff in die Welt des Spiels, da es die dort üblichen Erzählungen von Unterdrückung und Ausbeutung in Frage stellt.
 
