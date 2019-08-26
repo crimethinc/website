@@ -265,9 +265,9 @@ es:
       download_front_button_text: "Descarga PDF : Fuente"
       download_back_button_text:  "Descarga PDF : Atrás"
       download_front_color_button_text:  "Descargar PDF : Color de fuente"
-      download_back_color_button_text:   "Descargar PDF : Color de fuente"
+      download_back_color_button_text:   "Descargar PDF : Color de atrás"
       download_front_black_and_white_button_text: "Descargar PDF : Fuente B/N"
-      download_back_black_and_white_button_text:  "Descargar PDF : Fuente B/N"
+      download_back_black_and_white_button_text:  "Descargar PDF : Atrás B/N"
 
       pdf_donate_button_text: Dona
       pdf_donate_button_label: Dona aquí para ayudarnos a mantener estos PDF's disponibles libremente y para seguir produciendo más.

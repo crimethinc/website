@@ -265,9 +265,9 @@ cz:
       download_front_button_text: "Download PDF : Front"
       download_back_button_text:  "Download PDF : Back"
       download_front_color_button_text:  "Download PDF : Front Color"
-      download_back_color_button_text:   "Download PDF : Front Color"
+      download_back_color_button_text:   "Download PDF : Back Color"
       download_front_black_and_white_button_text: "Download PDF : Front B/W"
-      download_back_black_and_white_button_text:  "Download PDF : Front B/W"
+      download_back_black_and_white_button_text:  "Download PDF : Back B/W"
 
       pdf_donate_button_text: Donate
       pdf_donate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.

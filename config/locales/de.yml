@@ -265,9 +265,9 @@ de:
       download_front_button_text: "Download PDF : Vorderseite"
       download_back_button_text:  "Download PDF : Rückseite"
       download_front_color_button_text:  "Download PDF : Vorderseite farbig"
-      download_back_color_button_text:   "Download PDF : Vorderseite farbig"
+      download_back_color_button_text:   "Download PDF : Rückseite farbig"
       download_front_black_and_white_button_text: "Download PDF : Vorderseite farbig schwarz/weiß"
-      download_back_black_and_white_button_text:  "Download PDF : Vorderseite farbig schwarz/weiß"
+      download_back_black_and_white_button_text:  "Download PDF : Rückseite farbig schwarz/weiß"
 
       pdf_donoate_button_text: Spenden
       pdf_donoate_button_label: Spende hier, damit wir diese PDFs weiterhin frei verfügbar halten und weiterhin neue erstellen können.
