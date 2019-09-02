@@ -39,7 +39,7 @@ RSpec.describe Podcast, type: :model do
     end
   end
 
-    describe '#slug' do
+  describe '#slug' do
     subject { podcast.slug }
 
     context 'with slug' do
