@@ -38,4 +38,20 @@ RSpec.describe Podcast, type: :model do
       it { is_expected.to eq('x' * 197 + '...') }
     end
   end
+
+    describe '#slug' do
+    subject { podcast.slug }
+
+    context 'with slug' do
+      let(:podcast) { described_class.new(slug: 'slug') }
+
+      it { is_expected.to eq('slug') }
+    end
+
+    context 'without slug' do
+      let(:podcast) { described_class.new(slug: nil) }
+
+      it { is_expected.to be_nil }
+    end
+  end
 end
