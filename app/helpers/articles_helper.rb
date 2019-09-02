@@ -1,4 +1,14 @@
 module ArticlesHelper
+  def localizations_for article
+    @localizations_for ||= displayable_localizations article
+  end
+
+  def displayable_localizations article
+    return article.localizations if signed_in?
+
+    article.localizations.map { |localization| localization if localization.published? }.compact
+  end
+
   def story_card_background_image article:
     "background-image: url(#{article.image})" unless lite_mode?
   end
