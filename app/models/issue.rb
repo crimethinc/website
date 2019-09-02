@@ -3,6 +3,8 @@ class Issue < ApplicationRecord
 
   belongs_to :journal
 
+  default_scope { order(published_at: :desc) }
+
   def namespace
     'journals'
   end
