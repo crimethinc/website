@@ -6,7 +6,7 @@
 <% end %>
 
 <%# JS for live blog articles %>
-<%  if controller_name == 'articles' && action_name == 'show' %>
+<%  if live_blog_article? %>
   <!-- JS -->
   <%= javascript_include_tag 'jquery' %>
   <%= javascript_include_tag 'live_blog' %>

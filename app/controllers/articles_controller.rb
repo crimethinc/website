@@ -37,6 +37,7 @@ class ArticlesController < ApplicationController
     return redirect_to @article.path if request.path.ends_with? '/feed'
 
     @title = @article.name
+    @live_blog = @article.collection_root?
 
     @previous_article = Article.previous(@article).first
     @next_article     = Article.next(@article).first

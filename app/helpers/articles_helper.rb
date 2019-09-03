@@ -1,4 +1,8 @@
 module ArticlesHelper
+  def live_blog_article?
+    @live_blog
+  end
+
   def localizations_for article
     @localizations_for ||= displayable_localizations article
   end
