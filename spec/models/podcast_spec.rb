@@ -57,9 +57,8 @@ RSpec.describe Podcast, type: :model do
 
   describe 'validations' do
 
-    
     it 'validates the presence of a slug' do
-      valid_podcast   = build(:podcast, slug: 'anarchy')
+      valid_podcast = build(:podcast, slug: 'anarchy')
 
       expect(valid_podcast).to be_valid
     end
@@ -71,7 +70,7 @@ RSpec.describe Podcast, type: :model do
     end
 
     it 'validates uniqueness of slug' do
-      valid_podcast  = build(:podcast, slug: 'anarchy')
+      valid_podcast = build(:podcast, slug: 'anarchy')
       invalid_podcast = build(:podcast, slug: 'anarchy')
       
       valid_podcast.save!
