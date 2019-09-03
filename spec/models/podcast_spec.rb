@@ -56,7 +56,6 @@ RSpec.describe Podcast, type: :model do
   end
 
   describe 'validations' do
-
     it 'validates the presence of a slug' do
       valid_podcast = build(:podcast, slug: 'anarchy')
 
