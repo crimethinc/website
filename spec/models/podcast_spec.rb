@@ -54,7 +54,7 @@ RSpec.describe Podcast, type: :model do
       it { is_expected.to be_nil }
     end
   end
-  
+
   describe 'validations' do
 
     
@@ -68,6 +68,15 @@ RSpec.describe Podcast, type: :model do
       invalid_podcast = build(:podcast, slug: nil)
 
       expect(invalid_podcast).not_to be_valid
+    end
+
+    it 'validates uniqueness of slug' do
+      valid_podcast  = build(:podcast, slug: 'anarchy')
+      invalid_podcast = build(:podcast, slug: 'anarchy')
+      
+      valid_podcast.save!
+      expect(valid_podcast).to be_valid
+      expect { invalid_podcast.save! }.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Slug has already been taken')
     end
   end
 end
