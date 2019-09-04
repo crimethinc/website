@@ -1,13 +1,20 @@
 App.articleQueue.onIncoming = function(data) {
-  var alertDiv = $('#floating-alert');
+  var alertDiv = document.getElementById('#floating-alert');
+  var body = document.querySelectorAll('body');
 
   if (alertDiv.length === 0) {
-    alertDiv = $('<div id="floating-alert" class="alert alert-floating alert-notice">)');
-    $('body').prepend(alertDiv);
+    alertDiv = document.querySelectorAll('<div id="floating-alert" class="alert alert-floating alert-notice">');
+    
+    body.insertBefore(alertDiv, body.firstChild); 
   }
 
   var postPlural = data.length > 1 ? 'posts' : 'post';
-  var closeLink = $('<a class="close">&#10006;</a>').click(function() { alertDiv.remove() });
-
-  alertDiv.html('Psst! Refresh for ' + data.length + ' new ' + postPlural).append(closeLink);
+  closeLink = document.querySelectorAll('<a class="close">&#10006;</a>');
+  closeLink.onclick = alertDivRemove();
+  function alertDivRemove() { 
+    alertDiv.remove()
+  };
+  
+  var refreshPost = `Psst! Refresh for ${data.length} new ${postPlural}`;
+  alertDiv.innerHTML(refreshPost).appendChild(closeLink);
 };
