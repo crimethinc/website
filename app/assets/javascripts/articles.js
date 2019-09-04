@@ -1,19 +1,20 @@
 App.articleQueue.onIncoming = function(data) {
-  var alertDiv = document.getElementById('#floating-alert');
-  var body = document.querySelectorAll('body');
+  var alertDiv = document.getElementById('floating-alert');
+  var body = document.getElementsByTagName("body")[0];
 
   if (alertDiv.length === 0) {
-    alertDiv = document.querySelectorAll('<div id="floating-alert" class="alert alert-floating alert-notice">');
-    
-    body.insertBefore(alertDiv, body.firstChild); 
+    alertDiv = document.createElement('div');
+    alertDiv.classList.add('alert', 'alert-floating', 'alert-notice');
+    alertDiv.setAttribute('id','floating-alert');
+    document.body.prepend(alertDiv);
   }
 
   var postPlural = data.length > 1 ? 'posts' : 'post';
-  closeLink = document.querySelectorAll('<a class="close">&#10006;</a>');
+  function alertDivRemove() {alertDiv.remove()};
+  var closeLink = document.createElement('a');
+  closeLink.className = 'close';
+  closeLink.innerHTML = '&#10006;';
   closeLink.onclick = alertDivRemove();
-  function alertDivRemove() { 
-    alertDiv.remove()
-  };
   
   var refreshPost = `Psst! Refresh for ${data.length} new ${postPlural}`;
   alertDiv.innerHTML(refreshPost).appendChild(closeLink);
