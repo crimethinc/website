@@ -1,14 +1,14 @@
 ;(function (){
   // hand rolled version of $(document).ready
-  function ready(fn) {
-    if (document.readyState !== 'loading'){
-      fn();
-    } else {
-      document.addEventListener('DOMContentLoaded', fn);
-    }
+  // If the DOM is loaded by the time this script is run, then call callback immedately
+  if (document.readyState !== 'loading'){
+    domReadyCallback();
+  } else {
+    // Otherwise attach a listener for for DOM loaded and call, callback then.
+    document.addEventListener('DOMContentLoaded', domReadyCallback);
   }
 
-  function readyCb() {
+  function domReadyCallback() {
     // Maps 'amount_slider' _values_ to Stripe dollar _amounts_ ('quantity')
     var mapping = {
       "1":    1, "2":    2, "3":    3, "4":    4, "5":    5, "6":    6, "7":     7, "8":    8, "9":    9, "10":  10,
@@ -52,6 +52,4 @@
     });
 
   }
-
-  ready(readyCb);
 })();
