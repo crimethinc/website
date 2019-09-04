@@ -33,7 +33,7 @@
         <% if @tool.ask_for_donation? %>
           <div>
             <%= link_to t("views.tools.pdf_donate_button_text"),
-                          "https://store.crimethinc.com/x/donate.html",
+                          [:support],
                           class: "download button" %>
           </div>
 

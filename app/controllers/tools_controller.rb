@@ -40,11 +40,11 @@ class ToolsController < ApplicationController
   end
 
   def set_featured_tools
-    @featured_tools = tools.where.not(buy_url: nil)
+    @featured_tools = tools.where.not(buy_url: nil).map { |tool| tool if tool.buy_url.present? }.compact
   end
 
   def set_tools
-    @tools = tools.where(buy_url: nil)
+    @tools = tools.map { |tool| tool if tool.buy_url.blank? }.compact
   end
 
   def tool_class

@@ -16,7 +16,7 @@
 
 <div class="h-feed">
   <% @article_archive.each do |year, months| %>
-    <% months.sort.reverse.each do |month, articles| %>
+    <% months.sort.reverse_each do |month, articles| %>
 
       <% unless @article_archive.day.present? || @article_archive.month.present? %>
         <h1 class="year-month"><%= link_to_dates(year: year, month: month) %></h1>
