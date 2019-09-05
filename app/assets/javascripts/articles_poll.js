@@ -36,7 +36,7 @@ function startPoller(articles) {
   // Poll every 1 minute (milliseconds * seconds * minutes)
   var refreshInterval = 1000 * 60 * 1;
 
-  var articleId = articles[0].dataset.id; //todo
+  var articleId = articles[0].dataset.id;
   var collectionPost = articles[0];
 
   setInterval(function() {
