@@ -32,12 +32,12 @@ function handleErrorOrNoResults(err) {
   return;
 }
 
-function startPoller(article) {
+function startPoller(articles) {
   // Poll every 1 minute (milliseconds * seconds * minutes)
   var refreshInterval = 1000 * 60 * 1;
 
-  var articleId = article.dataset.id; //todo
-  var collectionPost = article[0];
+  var articleId = articles[0].dataset.id; //todo
+  var collectionPost = articles[0];
 
   setInterval(function() {
     var articlePublishedAt = collectionPost.dataset.publishedAt;
@@ -50,11 +50,12 @@ function startPoller(article) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var article = document.querySelectorAll('article.h-entry[data-listen=true]');
+  var listeningArticles = document.querySelectorAll('article.h-entry[data-listen=true]');
 
   // Return early if no listening article is found
-  if (article.length === 0) { return }
+  if (listeningArticles.length === 0 ||
+      !listeningArticles[0].dataset.listen) { return }
   
-  startPoller(article);
+  startPoller(listeningArticles);
 });
 
