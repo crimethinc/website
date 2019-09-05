@@ -16,6 +16,6 @@ App.articleQueue.onIncoming = function(data) {
   closeLink.insertAdjacentHTML('afterbegin', '&#10006;');
   closeLink.addEventListener('click', function() { alertDiv.remove() });
   
-  alertDiv.insertAdjacentHTML('afterbegin', 'Psst! Refresh for ' + data.length + ' new ' + postPlural);
+  alertDiv.insertAdjacentHTML('afterbegin', `Psst! Refresh for ${data.length} new ${postPlural}`);
   alertDiv.appendChild(closeLink);
 };
