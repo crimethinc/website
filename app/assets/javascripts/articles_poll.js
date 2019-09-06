@@ -18,7 +18,7 @@ function handleUpdatedPost(collectionPost, data) {
   var i,
       posts = data.posts;
 
-  collectionPost.setAttribute('data-publishedAt', data.published_at);
+  collectionPost.dataset.publishedAt = data.published_at;
 
   for (i = 0; i < posts.length; i++) {
     App.articleQueue.push(posts[i]);
