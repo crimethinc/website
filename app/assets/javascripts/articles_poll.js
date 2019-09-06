@@ -50,7 +50,7 @@ function startPoller(articles) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var listeningArticles = document.querySelectorAll('article.h-entry[data-listen=true]');
+  var listeningArticles = document.querySelectorAll('article.h-entry[data-listen]');
 
   // Return early if no listening article is found
   if (listeningArticles.length === 0 ||
