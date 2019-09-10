@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_09_010348) do
+ActiveRecord::Schema.define(version: 2019_09_10_054754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -93,6 +93,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.boolean "screen_two_page_view_download_present"
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_books_on_canonical_id"
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|
@@ -116,6 +118,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
   end
 
   create_table "episodes", id: :serial, force: :cascade do |t|
@@ -141,6 +145,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.string "episode_number"
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_episodes_on_canonical_id"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
 
@@ -190,6 +196,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.integer "issue"
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_issues_on_canonical_id"
   end
 
   create_table "journals", force: :cascade do |t|
@@ -207,6 +215,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.text "buy_info"
     t.integer "price_in_cents"
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_journals_on_canonical_id"
   end
 
   create_table "locales", force: :cascade do |t|
@@ -237,6 +247,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.datetime "updated_at", null: false
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_logos_on_canonical_id"
   end
 
   create_table "pages", id: :serial, force: :cascade do |t|
@@ -259,6 +271,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_pages_on_canonical_id"
   end
 
   create_table "podcasts", id: :serial, force: :cascade do |t|
@@ -283,6 +297,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.datetime "updated_at", null: false
     t.string "episode_prefix"
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_podcasts_on_canonical_id"
   end
 
   create_table "posters", force: :cascade do |t|
@@ -314,6 +330,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.boolean "back_black_and_white_download_present"
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_posters_on_canonical_id"
   end
 
   create_table "redirects", id: :serial, force: :cascade do |t|
@@ -354,6 +372,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
   end
 
   create_table "support_sessions", force: :cascade do |t|
@@ -376,6 +396,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_tags_on_canonical_id"
   end
 
   create_table "users", id: :serial, force: :cascade do |t|
@@ -408,6 +430,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_videos_on_canonical_id"
   end
 
   create_table "zines", force: :cascade do |t|
@@ -456,6 +480,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_010348) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
+    t.integer "canonical_id"
+    t.index ["canonical_id"], name: "index_zines_on_canonical_id"
   end
 
 
