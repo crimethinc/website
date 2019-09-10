@@ -1,0 +1,32 @@
+actions:
+  - .github/**/*
+
+migrations:
+  - db/migrate/*
+  - db/schema.rb
+
+seeds:
+  - db/seeds/*
+  - db/seeds.rb
+
+docker:
+  - docker_files/*
+  - docker-compose.yml
+
+dependencies:
+  - Gemfile
+  - Gemfile.lock
+
+To Change Everything:
+  - app/assets/stylesheets/tochangeeverything.scss
+  - app/assets/stylesheets/to_change_everything/*
+  - app/assets/stylesheets/to_change_everything/**/*
+  - app/controllers/to_change_everything_controller.rb
+  - app/helpers/to_change_everything_helper.rb
+  - app/views/layouts/to_change_everything.html.erb
+  - app/views/to_change_everything/*
+  - config/locales/to_change_everything/*
+  - docs/to-change-everything-guide.md
+  - lib/generators/to_change_everything/*
+  - public/tce/*
+  - public/tce/**/*

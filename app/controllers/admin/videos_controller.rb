@@ -58,7 +58,7 @@ module Admin
     end
 
     def video_params
-      params.require(:video).permit(:title, :subtitle, :content, :slug, :vimeo_id, :image,
+      params.require(:video).permit(:title, :subtitle, :content, :slug, :vimeo_id, :image, :locale,
                                     :image_description, :published_at, :tweet, :summary,
                                     :quality, :duration, :published_at_tz, :publication_status)
     end
