@@ -47,6 +47,6 @@ class ArticleArchive
   end
 
   def each &block
-    calendar.sort.reverse.each(&block)
+    calendar.sort.reverse_each(&block)
   end
 end

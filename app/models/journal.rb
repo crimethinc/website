@@ -10,7 +10,15 @@ class Journal < ApplicationRecord
   end
 
   def meta_description
-    subtitle || description
+    description || subtitle
+  end
+
+  def first_published_in
+    issues.last.published_at.year
+  end
+
+  def last_published_in
+    issues.first.published_at.year
   end
 
   def false_for_missing_methods

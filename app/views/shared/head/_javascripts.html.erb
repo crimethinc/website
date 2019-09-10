@@ -1,4 +1,13 @@
-<% if media_mode? || controller_name == 'support' %>
+<%# JS for /support %>
+<%  if controller_name == 'support' %>
   <!-- JS -->
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'support' %>
+<% end %>
+
+<%# JS for live blog articles %>
+<%  if live_blog_article? %>
+  <!-- JS -->
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'live_blog' %>
 <% end %>
