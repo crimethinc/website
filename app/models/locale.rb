@@ -8,6 +8,8 @@ class Locale < ApplicationRecord
 
   enum language_direction: %i[ltr rtl]
 
+  default_scope { order(abbreviation: :asc) }
+
   def display_name
     "#{abbreviation.upcase} : #{name_in_english} / #{name}"
   end
