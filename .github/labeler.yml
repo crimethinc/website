@@ -1,15 +1,15 @@
-actions:
+✅ actions:
   - .github/**/*
 
-migrations:
+↔️ migrations:
   - db/migrate/*
   - db/schema.rb
 
-seeds:
+🌱 seeds:
   - db/seeds/*
   - db/seeds.rb
 
-docker:
+🐳 docker:
   - docker_files/*
   - docker-compose.yml
 
@@ -17,7 +17,7 @@ docker:
   - Gemfile
   - Gemfile.lock
 
-To Change Everything:
+💡 To Change Everything:
   - app/assets/stylesheets/tochangeeverything.scss
   - app/assets/stylesheets/to_change_everything/*
   - app/assets/stylesheets/to_change_everything/**/*
