@@ -13,7 +13,7 @@ docker:
   - docker_files/*
   - docker-compose.yml
 
-dependencies:
+🕸 dependencies:
   - Gemfile
   - Gemfile.lock
 
