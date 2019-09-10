@@ -70,7 +70,7 @@ module Admin
     end
 
     def page_params
-      params.require(:page).permit(:year, :month, :day, :css, :slug, :tags, :draft_code,
+      params.require(:page).permit(:year, :month, :day, :css, :slug, :tags, :draft_code, :locale,
                                    :published_at, :categories, :published_at_tz, :publication_status)
     end
   end

@@ -50,7 +50,7 @@ module Admin
     end
 
     def podcast_params
-      params.require(:podcast).permit(:title, :slug, :language, :copyright,
+      params.require(:podcast).permit(:title, :slug, :language, :copyright, :locale,
                                       :image, :content, :itunes_author, :itunes_categories, :itunes_owner_email,
                                       :itunes_explicit, :tags, :itunes_owner_name, :subtitle,
                                       :itunes_summary, :itunes_url, :episode_prefix)
