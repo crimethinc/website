@@ -1,13 +1,5 @@
 <%# JS for /support %>
-<%  if controller_name == 'support' %>
-  <!-- JS -->
-  <%= javascript_include_tag 'jquery' %>
-  <%= javascript_include_tag 'support' %>
-<% end %>
+<%= javascript_include_tag 'support' if controller_name == 'support' %>
 
 <%# JS for live blog articles %>
-<%  if live_blog_article? %>
-  <!-- JS -->
-  <%= javascript_include_tag 'jquery' %>
-  <%= javascript_include_tag 'live_blog' %>
-<% end %>
+<%= javascript_include_tag 'live_blog' if live_blog_article? %>
