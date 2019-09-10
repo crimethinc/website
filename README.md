@@ -238,7 +238,7 @@ Click this button to easily deploy to Heroku. (You must have a Heroku account.)
 * [@astronaut-wannabe](https://github.com/astronaut-wannabe)
 * Geoff Foley / [@GeoffFoley](https://github.com/geofffoley)
 * Eli Duke / [@eliduke](https://github.com/eliduke)
-* ( add yourself )
+* [ПΣЯDƧPΛЯ](https://github.com/nerdspar)
 
 
 ## Contributing
