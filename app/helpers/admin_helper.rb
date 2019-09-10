@@ -1,6 +1,10 @@
 module AdminHelper
   VIEW_COUNTER_GENESIS_DATE = '2017-08-23'.freeze
 
+  def current_item_class
+    controller.class.to_s.sub('Admin::', '').sub('Controller', '').singularize.constantize
+  end
+
   def link_to_article_form_sections
     {
       datetime:       'Date + Time',
