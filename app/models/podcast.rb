@@ -4,7 +4,7 @@ class Podcast < ApplicationRecord
 
   has_many :episodes, dependent: :destroy
 
-  validates :slug, presence: true
+  validates :slug, presence: true, uniqueness: true
 
   def path
     "/podcasts/#{slug}"
