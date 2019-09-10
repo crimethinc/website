@@ -4,8 +4,8 @@ class HomeController < ApplicationController
     @homepage = true
 
     # feed
-    @top_article = Article.includes(:categories).live.published.root.first if first_page?
-    @articles    = Article.includes(:categories).live.published.root.page(params[:page]).per(6).padding(1)
+    @top_article = Article.includes(:categories).english.live.published.root.first if first_page?
+    @articles    = Article.includes(:categories).english.live.published.root.page(params[:page]).per(6).padding(1)
   end
 
   private
