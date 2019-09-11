@@ -7,17 +7,17 @@ module Overcommit
           changed_files = execute(%w[git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD]).stdout.split("\n")
 
           configs = [
-            # regex            command            explanation
-            [/^Brewfile/,      'brew bundle',     'Brewfile changed'],
-            [%r{^db/migrate/}, 'rake db:migrate', 'new schema migrations']
+            # regex            command                        explanation
+            [/^Brewfile/,      'brew bundle',                 'Brewfile changed'],
+            [%r{^db/migrate/}, 'bundle exec rake db:migrate', 'new schema migrations']
           ]
 
-          output_messages = configs.map do |config|
+          output_messages = configs.select do |config|
             regex   = config[0]
             command = config[1]
             message = config[2]
 
-            [command, message] if changed_files.map { |file_name| file_name if file_name.match?(regex) }.compact.any?
+            [command, message] if changed_files.any? { |file_name| file_name =~ regex }
           end
 
           if output_messages.any?
@@ -26,7 +26,7 @@ module Overcommit
             puts
             puts '==> Post-merge follow-up commands to run'
 
-            output_messages.each do |command, message|
+            output_messages.each do |_, command, message|
               puts "==> Because #{message}, run:"
               puts "    #{command}"
               puts

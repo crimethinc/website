@@ -50,7 +50,7 @@ module Admin
     end
 
     def journal_params
-      params.require(:journal).permit(:title, :subtitle, :description)
+      params.require(:journal).permit(:title, :subtitle, :description, :locale)
     end
   end
 end

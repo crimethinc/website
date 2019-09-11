@@ -18,7 +18,7 @@ function handleUpdatedPost(collectionPost, data) {
   var i,
       posts = data.posts;
 
-  collectionPost.data('publishedAt', data.published_at);
+  collectionPost.dataset.publishedAt = data.published_at;
 
   for (i = 0; i < posts.length; i++) {
     App.articleQueue.push(posts[i]);
@@ -32,15 +32,15 @@ function handleErrorOrNoResults(err) {
   return;
 }
 
-function startPoller(article) {
+function startPoller(articles) {
   // Poll every 1 minute (milliseconds * seconds * minutes)
   var refreshInterval = 1000 * 60 * 1;
 
-  var articleId = article.data('id');
-  var collectionPost = article.find('article:first')
+  var articleId = articles[0].dataset.id;
+  var collectionPost = articles[0];
 
   setInterval(function() {
-    var articlePublishedAt = collectionPost.data('publishedAt');
+    var articlePublishedAt = collectionPost.dataset.publishedAt;
 
     getArticles(articleId, articlePublishedAt).then(function(data) {
       handleUpdatedPost(collectionPost, data);
@@ -49,12 +49,13 @@ function startPoller(article) {
   }, refreshInterval)
 }
 
-$(function() {
-  var article = $('article.h-entry[data-listen]')
+document.addEventListener('DOMContentLoaded', function() {
+  var listeningArticles = document.querySelectorAll('article.h-entry[data-listen]');
 
   // Return early if no listening article is found
-  if  (!article.data('listen')) { return }
-
-  startPoller(article);
+  if (listeningArticles.length === 0 ||
+      !listeningArticles[0].dataset.listen) { return }
+  
+  startPoller(listeningArticles);
 });
 

@@ -14,10 +14,10 @@ gem 'puma'
 # assets
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.3.1'
-gem 'jquery-rails'
-gem 'jquery-ui-rails'   # used for polyfilling forms in admin/articles
+gem 'jquery-rails'      # for bootstrap pages (admin, steal-something-from-work-day)
+gem 'jquery-ui-rails'   # for polyfilling forms in admin/articles
 gem 'sassc-rails'
-gem 'sitemap_generator' # generates compliant xml sitemap
+gem 'sitemap_generator' # for generating a compliant xml sitemap
 gem 'uglifier'
 
 # JSON views
