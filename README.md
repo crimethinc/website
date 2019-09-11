@@ -239,6 +239,8 @@ Click this button to easily deploy to Heroku. (You must have a Heroku account.)
 * Geoff Foley / [@GeoffFoley](https://github.com/geofffoley)
 * Eli Duke / [@eliduke](https://github.com/eliduke)
 * [ПΣЯDƧPΛЯ](https://github.com/nerdspar)
+* Okan Şahin / [@cilgintokatli](https://github.com/cilgintokatli)
+* ( add yourself )
 
 
 ## Contributing
