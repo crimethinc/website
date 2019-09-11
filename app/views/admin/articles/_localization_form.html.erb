@@ -1,5 +1,5 @@
 <div id="localization" class="pt-5">
-  <div class="row ">
+  <div class="row">
 
   <div class="col-12 col-lg-4">
     <div class="form-group">
@@ -20,10 +20,10 @@
 
   <div class="col-12 col-lg-8">
     <div class="form-group">
-      <%= form.label 'English Article', class: "h4" %><br>
+      <%= form.label "English #{current_item_class}", class: "h4" %><br>
 
       <%= form.collection_select :canonical_id,
-                                 Article.root.english,
+                                 current_item_class.english,
                                  :id,
                                  :id_and_name,
                                  { include_blank: true },
