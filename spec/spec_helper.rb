@@ -3,7 +3,7 @@ SimpleCov.start 'rails'
 
 RSpec.configure do |config|
   config.before(:each, type: :system) do
-    driven_by :chrome
+    driven_by :selenium_headless, using: :firefox
   end
 
   config.expect_with :rspec do |expectations|
