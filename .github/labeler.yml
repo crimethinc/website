@@ -13,7 +13,7 @@
   - docker_files/*
   - docker-compose.yml
 
-🕸 dependencies:
+":spider_web: dependencies":
   - Gemfile
   - Gemfile.lock
 
