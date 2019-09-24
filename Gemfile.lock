@@ -94,10 +94,10 @@ GEM
       railties (>= 3.2, < 6.1)
     erubi (1.8.0)
     execjs (2.7.0)
-    factory_bot (5.0.2)
+    factory_bot (5.1.0)
       activesupport (>= 4.2.0)
-    factory_bot_rails (5.0.2)
-      factory_bot (~> 5.0.2)
+    factory_bot_rails (5.1.0)
+      factory_bot (~> 5.1.0)
       railties (>= 4.2.0)
     fast_stack (0.2.0)
     ffi (1.11.1)
@@ -174,7 +174,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.11.3)
+    minitest (5.12.0)
     nenv (0.3.0)
     nio4r (2.5.1)
     nokogiri (1.10.4)
@@ -345,7 +345,7 @@ GEM
     websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.1.9)
+    zeitwerk (2.1.10)
 
 PLATFORMS
   ruby
