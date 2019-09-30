@@ -281,9 +281,10 @@ articles.each do |article_params|
 
   # Save the Article
   article = Article.create!(article_params)
+  article.update slug: "feature-#{article.slug}"
 
   # Find canonical Feature to Redirect to
-  feature = Article.find_by(slug: "feature-#{article.slug}")
+  feature = Article.find_by(slug: article.slug)
   article.content = "Redirect to Feature in feed: #{feature.path}"
 
   # Create Redirect
