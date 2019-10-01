@@ -46,6 +46,10 @@ class Episode < ApplicationRecord
     minutes =  (duration_in_seconds / 60 - hours * 60).to_i
     seconds =  (duration_in_seconds - (minutes * 60 + hours * 3600)).to_i
 
-    [format('%.2d', hours), format('%.2d', minutes), format('%.2d', seconds)].join(':')
+    [
+      hours.to_s.rjust(2, '0'),
+      minutes.to_s.rjust(2, '0'),
+      seconds.to_s.rjust(2, '0')
+    ].join(':')
   end
 end
