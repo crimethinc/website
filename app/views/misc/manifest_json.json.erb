@@ -1,21 +1,20 @@
-{
-  "lang":       "en",
-  "short_name": "<%= t(:site_name) %>",
-  "name":       "<%= t(:site_name) %>",
+json.prettify!
 
-  "icons": [
-    <% icon_sizes.each do |size| %>
-      {
-        "src":   "<%= asset_url "icons/icon-#{size}x#{size}.png" %>",
-        "sizes": "<%= size %>x<%= size %>",
-        "type":  "image/png"
-      }<%= "," unless size == "600" %>
-      <%# 600 is the last in the list of sizes, so should not get a comma after the hash %>
-    <% end %>
-  ],
+json.lang 'en'
+json.short_name t(:site_name)
+json.name       t(:site_name)
 
-  "start_url":        "/",
-  "display":          "minimal-ui",
-  "background_color": "#ffffff",
-  "theme_color":      "#ffffff"
-}
+json.icons icon_sizes.each do |size|
+  size_details = {
+    src:   asset_url("icons/icon-#{size}x#{size}.png"),
+    sizes: "#{size}x#{size}",
+    type:  'image/png'
+  }
+
+  json.merge! size_details
+end
+
+json.start_url        '/'
+json.display          'minimal-ui'
+json.background_color '#ffffff'
+json.theme_color      '#ffffff'
