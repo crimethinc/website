@@ -1,0 +1,33 @@
+<div class="footer-section footer-section-about">
+  <div class="footer-section-container">
+
+    <div class="about-us">
+      <h1 class="about-us-heading"><%= t("footer.about.heading") %></h1>
+
+      <div class="about-us-description">
+        <%= render_markdown t("footer.about.description") %>
+      </div>
+
+      <p class="about-us-link">
+        <%= link_to t("footer.about.more_link"), "/about" %>
+      </p>
+    </div>
+
+    <div class="first-time">
+      <div class="first-time-description">
+        <%= render_markdown t("footer.about.first_time_text") %>
+      </div>
+
+      <p class="first-time-link">
+        <%= link_to t("footer.about.first_time_link"), "/start" %>
+      </p>
+    </div>
+
+    <!--
+    <div class="support-site">
+      <%= link_to t("footer.about.donate_button_text"), "/support", class: "support-site button" %>
+    </div>
+    -->
+
+  </div>
+</div>

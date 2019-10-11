@@ -1,0 +1,17 @@
+<footer id="site-footer">
+  <div class="footer-sections">
+    <%= render_themed "shared/footer/nav" %>
+    <%= render_themed "shared/footer/about" %>
+    <%= render_themed "shared/footer/contact" %>
+  </div>
+
+  <% unless lite_mode? %>
+    <p class="site-mode-link-container">
+      <%= link_to(t("footer.site_mode"), url_for_current_path_with_subdomain(subdomain: :lite)) %>
+    </p>
+  <% end %>
+
+  <div rel="license" class="license">
+    <p><%= t("footer.mantra").sample %></p>
+  </div>
+</footer>

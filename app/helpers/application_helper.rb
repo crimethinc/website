@@ -13,4 +13,8 @@ module ApplicationHelper
 
     asset_url("icons/icon-#{dimensions}.png")
   end
+
+  def render_themed path
+    render "#{Theme.name}/#{path}"
+  end
 end
