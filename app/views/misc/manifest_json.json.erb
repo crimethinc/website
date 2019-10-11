@@ -6,7 +6,7 @@
   "icons": [
     <% icon_sizes.each do |size| %>
       {
-        "src":   "<%= asset_url "icons/icon-#{size}x#{size}" %>",
+        "src":   "<%= asset_url "icons/icon-#{size}x#{size}.png" %>",
         "sizes": "<%= size %>x<%= size %>",
         "type":  "image/png"
       }<%= "," unless size == "600" %>
