@@ -9,9 +9,9 @@
   </head>
 
   <body id="<%= body_id %>">
-    <%= render "shared/admin_header" %>
-    <%= render "shared/development_mode_banner" %>
-    <%= render "shared/header" %>
+    <%= render_themed "shared/admin_header" %>
+    <%= render_themed "shared/development_mode_banner" %>
+    <%= render_themed "shared/header" %>
 
     <main>
       <%= yield %>
