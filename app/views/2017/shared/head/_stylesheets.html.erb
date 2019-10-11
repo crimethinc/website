@@ -1,5 +1,5 @@
 <!-- CSS -->
-<%= stylesheet_link_tag "application", media: "all" unless lite_mode? %>
+<%= stylesheet_link_tag Theme.name, media: "all" unless lite_mode? %>
 
 <style>
   <% if @article.present? && @article.css.present? %>

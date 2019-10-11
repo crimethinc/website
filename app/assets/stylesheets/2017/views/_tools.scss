@@ -1,0 +1,328 @@
+#page {
+  #tools {
+    main{
+
+      hr {
+        border: $border-size-xsmall solid $color-gray-light;
+        margin: 3rem auto;
+        width: 80%;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-weight: 700;
+      }
+
+      h2 {
+        font-weight: lighter;
+        font-weight: 300;
+      }
+
+      .tool-header-image {
+        margin-bottom: 2rem;
+      }
+
+      .tool-series {
+        margin: 8rem 0 4rem 0;
+
+        .u-image {
+          margin-bottom: 1rem;
+        }
+      }
+
+      #contradictionary                       .tool-front img { width:  60%; }
+      #work                                   .tool-front img { width:  68%; }
+      #no-wall-they-can-build                 .tool-front img { width:  68%; }
+      #from-democracy-to-freedom              .tool-front img { width:  68%; }
+      #expect-resistance                      .tool-front img { width:  79%; }
+      #days-of-war-nights-of-love             .tool-front img { width:  79%; }
+      #recipes-for-disaster                   .tool-front img { width: 100%; }
+      #no-habra-muro-que-nos-pare             .tool-front img { width:  68%; }
+      #off-the-map                            .tool-front img { width:  68%; }
+      #da-democracia-a-liberdade              .tool-front img { width:  68%; }
+      #trabalho-edicao-resumida-de-emergencia .tool-front img { width:  68%; }
+      #espere-resistencia                     .tool-front img { width:  68%; }
+      #receitas-para-o-desastre               .tool-front img { width:  68%; }
+      #dias-de-guerra-noites-de-amor          .tool-front img { width:  68%; }
+
+      .tool-section {
+        margin-bottom: 3rem;
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .tools-logos {
+        img {
+          box-shadow: none !important;
+        }
+        .tool-main {
+          .logo-first-column {
+            margin-right: 1rem;
+          }
+          .logo-second-column {
+            margin-left: 1rem;
+          }
+        }
+      }
+
+
+      .tool {
+        margin-bottom: 4rem;
+
+        .p-name {
+          margin-bottom: 2rem;
+          font-size:   2rem;
+          line-height: 1.25em;
+
+          a {
+            text-decoration: none;
+          }
+        }
+
+        .tool-front,
+        .tool-back {
+          margin-bottom: 2rem;
+
+          figure {
+            text-align: left;
+          }
+
+          img {
+            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+          }
+
+          time {
+            margin-top: .5em;
+            display: block;
+            text-align: right;
+            color: $color-gray;
+            padding-right: .25em;
+          }
+        }
+      }
+
+      #extra {
+        margin-top: 2rem;
+        padding-top: 4rem;
+        border-top: 1px solid $color-gray-light;
+      }
+
+      #into-libraries,
+      #lit-kit {
+        h1 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .isbns {
+        h1 {
+          margin: .5rem 0 1.5rem 0;
+        }
+
+        p {
+          font-size: 1.25rem !important;
+        }
+      }
+
+      #buy-now {
+        margin-bottom: 1rem;
+      }
+
+      .buy-now.button {
+        display: inline-block;
+        text-align: center;
+      }
+
+      .buy-info {
+        background: $color-gray-light;
+        margin: 2rem 0;
+        padding: 1rem;
+
+        p {
+          color: $color-true-black;
+          line-height: 1.5em;
+          font-size: 1.2rem;
+          margin-bottom: 0;
+        }
+
+        p + p {
+          margin-top: 1rem;
+        }
+      }
+
+      #download a {
+        margin-top:     .5rem;
+        margin-bottom:  .5rem;
+      }
+
+      .tool-specs {
+        margin-top:     2rem;
+        margin-bottom:  2rem;
+        padding-bottom: 2rem;
+        border-bottom:  $border-size-xsmall solid $color-gray-light;
+
+        @media screen and (min-width: $large-phone) {
+          padding-bottom: 0;
+          border-bottom:  none;
+        }
+        ol, ul {
+          margin-left: 2rem;
+        }
+
+        li {
+          margin-bottom: .5em;
+        }
+
+        b {
+          padding-right: .25em;
+        }
+      }
+
+      .h-entry .e-content .table-of-contents,
+      .table-of-contents {
+        padding-top:  2rem;
+        border-top:  $border-size-xsmall solid $color-gray-light;
+
+        * {
+          font-size: 1rem;
+        }
+
+        h1 {
+          font-weight: bold;
+          font-weight: 700;
+          font-size:   1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        ul + h1 {
+          margin-top: 2rem;
+        }
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .tool-main header,
+      .meta .table-of-contents {
+        display: none;
+      }
+
+      .tool-main header {
+        h2 {
+          font-weight: lighter;
+          font-weight: 300;
+        }
+      }
+
+
+      .tool-content {
+        padding-top: 2rem;
+        border-top:  $border-size-xsmall solid $color-gray-light;
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+
+        blockquote {
+          background: $color-gray-light;
+          padding: 1em 1em 1em 1em;
+          margin-bottom: 1rem;
+
+          p:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        img {
+          width: 100%;
+          margin-bottom: 12px;
+        }
+      }
+
+      .list {
+        margin: 2rem 0;
+      }
+
+      // extras
+      h1 + .row {
+        margin-top: 2rem;
+      }
+
+      .main {
+        p {
+        font-size: 1rem;
+        }
+
+        a {
+          display: block;
+          text-align: center;
+        }
+
+        img {
+          width: 100%;
+          box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+          margin-bottom: 2rem;
+        }
+
+        .row {
+          margin-bottom: 3rem;
+        }
+      }
+
+      .aside {
+        img {
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        text-align: right;
+
+        .buy-info {
+          text-align: left;
+        }
+      }
+
+      .tool-photo {
+        margin-bottom: 2rem;
+
+        img {
+          width: 50%;
+        }
+      }
+
+      @media screen and (min-width: $small-tablet) {
+        .tool-series-books {
+          margin-bottom: 4rem;
+        }
+
+        .tool-main header,
+        .meta .table-of-contents {
+          display: block;
+        }
+
+        .tool > header,
+        .h-entry .e-content .table-of-contents {
+          display: none;
+        }
+
+        .column:last-child {
+          padding-right: 0px;
+        }
+      }
+
+    }
+  }
+}

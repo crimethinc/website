@@ -1,0 +1,83 @@
+.site-header {
+  position: relative;
+  background-color: $color-true-black;
+  padding: $border-size-large;
+
+  @media screen and (max-width: $small-tablet) {
+    padding: $border-size-medium;
+  }
+
+  .button {
+    background: $color-blue;
+    position: absolute;
+    top: $border-size-large;
+    right: $border-size-large;
+
+    @media screen and (max-width: $small-tablet) {
+      font-size: 12px;
+      padding: .5em;
+      top: $border-size-medium;
+      right: $border-size-medium;
+    }
+  }
+}
+
+.header-logo a {
+  @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 15rem, 3rem);
+  @include size(15rem, 3rem);
+  display: inline-block;
+
+  @media screen and (max-width: $small-tablet) {
+    @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 10rem, 2rem);
+    @include size(10rem, 2rem);
+  }
+}
+
+.language-switcher a,
+.language-switcher {
+  color: white !important;
+}
+
+// nav
+.primary-navigation {
+  margin: 1rem 0 0 0;
+  display: inline-block;
+}
+
+.nav-link {
+  display: inline-block;
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+
+  a {
+    text-decoration: none;
+
+    &:link, &:visited {
+      color: $color-white;
+    }
+
+    &:hover, &:active {
+      border-bottom: 1px solid $color-white;
+    }
+  }
+}
+
+@media screen and (max-width: $small-tablet) {
+  .site-header nav {
+    display: block;
+    margin-top: .4em;
+  }
+}
+
+// larger than $large-phone viewport
+@media screen and (min-width: $small-tablet) {
+  .site-header .nav-link {
+    font-size: 1.7rem;
+
+    a {
+      padding: 1rem 0;
+    }
+  }
+}

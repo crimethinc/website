@@ -1,0 +1,45 @@
+.h-feed {
+
+  .articles-list {
+    .h-entry {
+      margin-bottom: 6rem;
+
+      header {
+        margin: 0;
+      }
+
+      .p-name {
+        margin-bottom: 4rem;
+      }
+
+      .screen-reader-only  { display: none; }
+
+      .u-photo {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font: {
+          weight: bold;
+          weight: 800;
+          size: 3rem;
+        }
+        line-height: 1em;
+        margin-bottom: .1em;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+    } // .h-entry
+  } //.articles-list
+
+} // .h-feed
+
+// articles lists (/tags, /categories, /search)...
+.categories,
+.categories ul {
+  margin: 0 !important;
+}
+// ...articles lists (/tags, /categories, /search)

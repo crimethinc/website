@@ -1,0 +1,28 @@
+.simple-field {
+  border-radius: 0;
+  font: {
+    weight: normal;
+    weight: 100;
+    size: 1.5rem;
+  };
+
+  padding: $border-size-medium;
+  width: 66%;
+  text-transform: uppercase;
+  border: $border-size-xsmall solid #eee;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+form, fieldset {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+input[type="text"] {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}

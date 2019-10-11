@@ -1,0 +1,150 @@
+footer#site-footer {
+  background-color: $color-gray-light;
+  line-height: 1.25em;
+
+  .footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+  }
+
+  @media screen and (min-width: $small-tablet) {
+    .footer-section {
+      width: 33.33333333%;
+    }
+  }
+
+  .footer-section-container {
+    padding: $border-size-large;
+
+    @media screen and (min-width: $small-tablet) {
+      padding: $border-size-xlarge;
+    }
+  }
+
+  .footer-section-about .footer-section-container {
+    background: $color-true-black;
+    color: $color-white;
+  }
+
+  .simple-field {
+    width: 100%;
+    border-color: $color-gray-dark;
+    margin: 1rem 0;
+  }
+
+  .site-mode-link-container {
+    text-align: center;
+  }
+
+  .license {
+    text-align: center;
+    font-style: italic;
+    padding: $border-size-xlarge $border-size-large;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    line-height: 1em;
+  }
+
+
+  .footer-section.footer-section-nav {
+    a {
+      color: $color-true-black;
+      text-decoration: none;
+      line-height: 1.5em;
+
+      &:hover, &:active {
+        border-bottom: $border-size-xsmall solid $color-true-black;
+      }
+    }
+
+    dl {
+      font-size: 2rem;
+    }
+
+    dt {
+      font-weight: bold;
+
+      b {
+        font: {
+          weight: normal;
+          weight: 300;
+          size: .6em;
+        }
+      }
+    }
+
+    dd a:after            { content: ","; }
+    dd a:last-child:after { content: "";  }
+
+    dd {
+      font-weight: normal;
+      font-weight: 300;
+    }
+
+    .nav-label-journal + dd,
+    .nav-label-journal {
+      display: inline-block;
+    }
+  }
+
+
+  .footer-section.footer-section-about {
+
+    .about-us-heading {
+      @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 16rem, 3.2rem);
+    }
+
+    .first-time-link a,
+    .about-us-link a {
+      @extend .button;
+      background: $color-white;
+      color: $color-true-black !important;
+      text-decoration: none;
+      text-align: right;
+      display: block;
+    }
+
+
+    .first-time {
+      text-transform: uppercase;
+      margin: 3rem 0;
+
+      .first-time-description {
+        font-weight: bold;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .about-us {
+      .about-us-description p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .footer-section.footer-section-contact {
+    margin: 0 auto;
+
+    .newsletter-signup-form {
+      select {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        @extend .button;
+        font-size: 1.5rem;
+        float: right;
+        background: $color-blue;
+      }
+    }
+  }
+}
