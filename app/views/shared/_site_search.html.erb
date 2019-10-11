@@ -1,6 +1,6 @@
 <%= form_with url: :search, class: "article-archives-search-form", role: "search", method: "get", local: true do %>
-  <%= label_tag        :q, t("search.form_placeholder"), class: "screen-reader-only" %>
-  <%= search_field_tag :q, @search.try(:query), placeholder: t("search.form_placeholder"), class: "simple-field" %>
+  <%= label_tag        "q-#{location}", t("search.form_placeholder"), class: "screen-reader-only" %>
+  <%= search_field_tag "q", @search.try(:query), placeholder: t("search.form_placeholder"), class: "simple-field", id: "q-#{location}", autofocus: location == :top %>
 
   <% if @search %>
     <%= link_to t("search.advanced.heading"), advanced_search_path(q: @search.query), class: "advanced-search-link" %>
