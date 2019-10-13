@@ -26,7 +26,7 @@ jobs:
 
       - name: Configure databases
         run: |
-          psql -h localhost -c "create database crimethinc_test;" -U postgres
+          psql -h localhost -c "create database crimethinc_test;" -U runner
 
       - name: Checkout
         uses: actions/checkout@master
@@ -37,6 +37,10 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - name: Run tests
+        env:
+          PGHOST: 127.0.0.1
+          PGUSER: runner
+          RAILS_ENV: test
         run: |
           bundle exec rubocop
           bundle exec rspec
