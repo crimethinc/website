@@ -23,11 +23,11 @@ jobs:
       - name: Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 2.6.4
 
       - name: Configure databases
         run: |
-          psql -h localhost -c "create database eefio_www_test;" -U postgres
+          psql -h localhost -c "create database crimethinc_test;" -U postgres
 
       - name: Checkout
         uses: actions/checkout@master
