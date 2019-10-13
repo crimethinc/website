@@ -38,7 +38,7 @@ jobs:
 
       - name: Run tests
         env:
-           PGUSER: postgres
+          PGUSER: postgres
         run: |
           rails db:migrate RAILS_ENV=test
           rspec
