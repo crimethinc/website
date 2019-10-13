@@ -24,4 +24,7 @@ Rails.application.config.assets.precompile += %w[
 
   steal-something-from-work-day.css
   steal-something-from-work-day.js
+
+  2017.css
+  2020.css
 ]

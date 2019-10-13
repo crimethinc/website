@@ -1,0 +1,34 @@
+<div class="h-entry">
+  <header>
+    <nav class="crumbtrail"><%= link_to "Books", [:books] %></nav>
+
+    <div class="p-name">
+      <h1 class="p-x-title">CrimethInc. Literature Distribution Kit</h1>
+    </div>
+  </header>
+
+  <div class="row e-content">
+    <div class="column column-two-third">
+      <%= render_markdown_for page: :litkit_main %>
+    </div>
+
+    <div class="column column-one-third">
+      <div id="buy-now">
+        <%= button_to_buy_now price: 20000, url: "http://store.crimethinc.com/x/AddToCart?Item=litkit&Dest=books" %>
+      </div>
+
+      <div class="buy-info">
+        <p>Multiple kits are $190 each.</p>
+
+        <p>The Lit Kit has been modified since these photos were taken; the list to the left represents the exact contents.</p>
+      </div>
+
+      <div class="kit-photos">
+        <%= render_markdown '[[ https://cloudfront.crimethinc.com/assets/books/lit-kit/lit-kit-close-big.jpg Photo of Lit Kit #1 https://cloudfront.crimethinc.com/assets/books/lit-kit/lit-kit-close-big.jpg ]]' %>
+
+        <%= render_markdown '[[ https://cloudfront.crimethinc.com/assets/books/lit-kit/lit-kit-wide.jpg Photo of Lit Kit #2 https://cloudfront.crimethinc.com/assets/books/lit-kit/lit-kit-wide-big.jpg ]]' %>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+#page {
+  main {
+
+    p {
+      font-size: 2rem;
+      line-height: 1.25em;
+      margin-bottom: 1em;
+    }
+
+    #years a,
+    #categroies a {
+      border-right: 1px solid #ccc;
+      padding-right: .75em;
+      margin-right:  .5em;
+      font-weight: normal
+    }
+
+    #years a:last-child,
+    #categroies a:last-child {
+      border-right: none;
+    }
+
+    #theme,
+    #years,
+    #samples {
+      margin-top: 3em;
+    }
+
+    .h-entry {
+      margin: 0 0 2em 0;
+      padding: 0 0.65em;
+      h1 {
+        font: {
+          weight: lighter;
+          weight: 300;
+          size: 3rem;
+        }
+        border-bottom: 1px solid $color-gray-light;
+        padding-bottom: $border-size-small;
+      }
+
+      img {
+        margin-top: 1rem;
+
+        @media screen and (min-width: $small-tablet) {
+          width: auto;
+        }
+      }
+
+      ul {
+        margin-top: 2rem;
+      }
+
+      &.section li:first-child {
+        font: {
+          weight: bold;
+          weight: 700;
+          size: 1.5em;
+        }
+
+        line-height: 1.2em;
+        list-style-type: none;
+        margin-left: 0;
+      }
+
+      .video-info {
+        font-style: italic;
+        color: $color-gray;
+      }
+
+    } // .h-entry
+
+    #samples {
+      .column:first-child {
+        padding-left: 0;
+      }
+      .column:last-child {
+        padding-rigth: 0;
+      }
+
+      li {
+        margin-left: 1.5em;
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+    }
+
+  } // main
+} // #page
+
+#library header img {
+  margin-top: 2rem;
+}

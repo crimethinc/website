@@ -1,0 +1,25 @@
+.social {
+  margin-top: 4rem;
+  clear: both;
+}
+
+.social-links {
+  margin-top: 2rem;
+
+  .social-link {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      @include square(40px);
+      @include social-icon("rss");
+      margin: 0 $border-size-small $border-size-small 0;
+    }
+
+    .link-domain-facebook  { @include social-icon("facebook"); }
+    .link-domain-github    { @include social-icon("github"); }
+    .link-domain-instagram { @include social-icon("instagram"); }
+    .link-domain-tumblr    { @include social-icon("tumblr"); }
+    .link-domain-twitter   { @include social-icon("twitter"); }
+  }
+}

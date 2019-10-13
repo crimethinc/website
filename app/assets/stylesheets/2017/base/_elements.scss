@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  max-width: $large-desktop;
+  margin: 0 auto;
+}
+
+body {
+  margin-bottom: 0;
+  background: $color-white;
+  color: $color-black;
+  font: {
+    size: $base-font-size;
+    family: $font-body;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+}
+
+main {
+  clear: both;
+  width: 100%;
+  padding: 0 $border-size-medium;
+  margin: 0 auto $border-size-xlarge auto;
+}
+
+a {
+  &:link, &:visited, &:hover, &:active {
+    color: $color-true-black;
+  }
+}
+
+p > a {
+  &:link, &:visited, &:hover, &:active {
+    color: $color-gray-medium;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+  &:hover, &:active {
+    color: $color-true-black;
+  }
+}
+
+video,
+audio,
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+sup {
+  display: inline-block;
+  font: {
+    size: 0.625em;
+    weight: 500;
+  }
+  position: relative;
+  top: -0.625em;
+  left: -0.125em;
+
+  > a {
+    &:link, &:visited, &:hover, &:active {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+
+audio {
+  display: block;
+  margin: {
+    top: $border-size-large;
+    bottom: $border-size-xlarge;
+  }
+  min-height: $border-size-xlarge;
+}

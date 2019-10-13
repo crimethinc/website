@@ -1,0 +1,52 @@
+#home .categories {
+  .label {
+    display: none;
+  }
+
+  position: absolute;
+  bottom:  $border-size-medium;
+  right:   $border-size-medium;
+  text-transform: uppercase;
+  z-index: 20;
+
+  li {
+    display: inline-block;
+    padding: $border-size-medium;
+    background: $color-true-black;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#home           .theme,
+#article header .theme {
+  display: none;
+  position: absolute;
+  top:     $border-size-medium;
+  right:   $border-size-medium;
+  z-index: 20;
+  padding: $border-size-medium;
+  background: $color-true-black;
+  text-align: right;
+  line-height: 1.25em;
+
+
+  @media screen and (min-width: $small-tablet) {
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .label {
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .name {
+    font-style: italic;
+  }
+}

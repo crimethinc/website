@@ -1,0 +1,5 @@
+<%# JS for /support %>
+<%= javascript_include_tag 'support' if controller_name == 'support' %>
+
+<%# JS for live blog articles %>
+<%= javascript_include_tag 'live_blog' if live_blog_article? %>

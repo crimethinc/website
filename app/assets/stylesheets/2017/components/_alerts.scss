@@ -1,0 +1,24 @@
+.alert {
+  text-align: center;
+  text-transform: uppercase;
+  padding: $border-size-xlarge;
+  font-size:   2rem;
+  line-height: 1.25em;
+}
+
+.alert.alert-notice {
+  background: yellow;
+}
+
+.alert.alert-floating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
+.alert.alert-floating .close {
+  float: right;
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+.h-entry {
+  .tags,
+  .categories,
+  .localizations,
+  .dt-published {
+    ul,
+    li {
+      display: inline-block;
+    }
+
+    .label { font-weight: bold; }
+  }
+
+  .dt-published {
+    display: inline-block;
+    margin-top: .5em;
+  }
+
+  .tags,
+  .categories {
+    display: none;
+
+    @media screen and (min-width: $small-tablet) {
+      display: block;
+      margin-bottom: .5em;
+    }
+  }
+
+  .categories {
+    text-transform: uppercase;
+  }
+
+  #download-pdf {
+    margin-top: 1em;
+  }
+}

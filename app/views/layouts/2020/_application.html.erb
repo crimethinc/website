@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<%= tag.html dir:    html_dir,
+             lang:   html_lang,
+             class:  html_class,
+             prefix: html_prefix do %>
+  <head>
+    <%= stylesheet_link_tag Theme.name, media: "all" %>
+  </head>
+
+  <body>
+    <%= render_themed "shared/header" %>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+<% end %>
