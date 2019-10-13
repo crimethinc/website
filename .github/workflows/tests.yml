@@ -39,7 +39,7 @@ jobs:
       - name: Run tests
         env:
            PGHOST: 127.0.0.1
-           PGUSER: runner
+           PGUSER: postgres
            RAILS_ENV: test
         run: |
           rails db:migrate RAILS_ENV=test
