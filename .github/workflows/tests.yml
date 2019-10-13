@@ -26,8 +26,8 @@ jobs:
 
       - name: Configure databases
         run: |
-          bundle exec rails db:create
-          bundle exec rails db:migrate
+          rails db:create
+          rails db:migrate
 
       - name: Checkout
         uses: actions/checkout@master
@@ -43,5 +43,5 @@ jobs:
           PGUSER: postgres
           RAILS_ENV: test
         run: |
-          bundle exec rspec
-          bundle exec rubocop
+          rspec
+          rubocop
