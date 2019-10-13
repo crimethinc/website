@@ -1,0 +1,16 @@
+<!-- CSS -->
+<%= stylesheet_link_tag Theme.name, media: "all" unless lite_mode? %>
+
+<style>
+  <% if @article.present? && @article.css.present? %>
+    <!-- Custom Article CSS -->
+    <%= @article.css %>
+  <% end %>
+
+  <% if @page.present? && @page.css.present? %>
+    <!-- Custom Page CSS -->
+    <%= @page.css %>
+  <% end %>
+</style>
+
+<%= render "shared/head/lite_mode_css" if lite_mode? %>
