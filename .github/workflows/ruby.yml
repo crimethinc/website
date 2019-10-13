@@ -10,33 +10,33 @@ jobs:
       postgres:
         image: postgres:11
         ports:
-        - 5432:5432
+          - 5432:5432
         env:
           POSTGRES_PASSWORD: ""
 
     steps:
-    - name: Install libraries
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y postgresql-client libpq-dev
+      - name: Install libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client libpq-dev
 
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6.x
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
 
-    - name: Configure databases
-      run: |
-        psql -h localhost -c "create database eefio_www_test;" -U postgres
+      - name: Configure databases
+        run: |
+          psql -h localhost -c "create database eefio_www_test;" -U postgres
 
-    - name: Checkout
-      uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
 
-    - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
 
-    - name: Run tests
-      run: |
-        bundle exec rspec
+      - name: Run tests
+        run: |
+          bundle exec rspec
