@@ -33,13 +33,11 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - name: Configure database
-        env:
-          RAILS_ENV: test
         run: |
-          rails db:create
-          rails db:migrate
+          psql -h localhost -c "create database crimethinc_test;" -U postgres
 
       - name: Run tests
         run: |
+          rails db:migrate RAILS_ENV=test
           rspec
           rubocop
