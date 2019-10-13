@@ -3,8 +3,9 @@ name: Greetings
 on: [pull_request, issues]
 
 jobs:
-  greeting:
+  run:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/first-interaction@v1
       with:
