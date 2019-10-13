@@ -23,7 +23,7 @@ jobs:
       - name: Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.4
+          ruby-version: 2.6.3
 
       - name: Configure databases
         run: |
