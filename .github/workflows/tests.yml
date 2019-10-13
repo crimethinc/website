@@ -24,11 +24,6 @@ jobs:
         with:
           ruby-version: 2.6.3
 
-      - name: Configure databases
-        run: |
-          rails db:create
-          rails db:migrate
-
       - name: Checkout
         uses: actions/checkout@master
 
@@ -36,6 +31,11 @@ jobs:
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
+
+      - name: Configure database
+        run: |
+          rails db:create
+          rails db:migrate
 
       - name: Run tests
         env:
