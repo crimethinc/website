@@ -41,7 +41,7 @@ jobs:
 
       - name: Run tests
         run: |
-          # rspec
+          rspec
 
       - name: Run linter
         run: |
