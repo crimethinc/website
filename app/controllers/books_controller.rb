@@ -40,6 +40,8 @@ class BooksController < ApplicationController
     @html_id = 'page'
     @body_id = 'tools'
     @title   = title_for :books, @book.slug.underscore, :extras
+
+    render "#{Theme.name}/books/extras"
   end
 
   def lit_kit

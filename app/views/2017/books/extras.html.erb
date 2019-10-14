@@ -15,11 +15,11 @@
 
   <div class="row e-content">
     <div class="column column-two-third main">
-      <%= render "books/#{@book.slug}/main" %>
+      <%= render_themed "books/#{@book.slug}/main", book: @book %>
     </div>
 
     <div class="column column-one-third aside">
-      <%= render "books/#{@book.slug}/aside" %>
+      <%= render_themed "books/#{@book.slug}/aside", book: @book %>
     </div>
   </div>
 </div>
