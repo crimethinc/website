@@ -36,7 +36,8 @@ jobs:
         env:
           PGUSER: postgres
         run: |
-          psql -h localhost -c "create database crimethinc_test;" -U postgres
+          # psql -h localhost -c "create database crimethinc_test;" -U postgres
+          rails db:create RAILS_ENV=test
           rails db:migrate RAILS_ENV=test
 
       - name: Run tests
