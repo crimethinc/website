@@ -1,58 +1,68 @@
-<div id="book">
-  <h1>Book</h1><br>
-  <div class="tool-photo">
-    <%= link_to(image_tag("https://cloudfront.crimethinc.com/assets/books/work/photo.jpg",  alt: "Work book cover"), "https://cloudfront.crimethinc.com/assets/books/work/photo.jpg")  %>
+<div id='book'>
+  <h1>Book</h1>
+
+  <div class='tool-photo'>
+    <%= link_to image_tag(book.front_image, alt: book.front_image_description), book.front_image %>
   </div>
 
-  <div id="buy-now">
-    <%= button_to_buy_now price: 1000, url: "http://store.crimethinc.com/x/AddToCart?Item=litkit&Dest=books" %>
+  <div id='buy-now'>
+    <div id='buy-now'>
+      <%= button_to_buy_now price: book.price_in_cents, url: book.buy_url %>
+    </div>
   </div>
 
-  <div class="buy-info">
+  <div class='buy-info'>
     <p>
       From colonialism to the stock market, from the financial crisis to the upheavals taking place
       right now, our newest book offers an overview of how capitalism functions in the 21st century and
-      how we can get beyond it. 378 Pages, <a href="/books/work">more info here</a>.
+      how we can get beyond it. 378 Pages,
+      <%= link_to 'more info here.', book.path %>
     </p>
   </div>
 </div>
 
 
-<div id="poster">
-  <h1>Deluxe Poster</h1><br>
-  <div class="tool-photo">
-    <%= link_to(image_tag("https://cloudfront.crimethinc.com/assets/books/work/images/work-poster-small.jpg",  alt: "Work deluxe poster"), "https://cloudfront.crimethinc.com/assets/books/work/images/work-poster-large.jpg")  %>
+<div id='poster'>
+  <h1>Deluxe Poster</h1>
+
+  <div class='tool-photo'>
+    <%= link_to image_tag('https://cloudfront.crimethinc.com/assets/books/work/images/work-poster-small.jpg',  alt: 'Work deluxe poster'), 'https://cloudfront.crimethinc.com/assets/books/work/images/work-poster-large.jpg' %>
   </div>
 
-  <div id="buy-now">
-    <%= button_to_buy_now price: 800, url: "http://store.crimethinc.com/x/AddToCart?Item=litkit&Dest=books" %>
+  <div id='buy-now'>
+    <%= button_to_buy_now price: 800, url: 'https://store.crimethinc.com/x/AddToCart?Item=tubepyramid&Dest=posters' %>
   </div>
 
-  <div class="buy-info">
+  <div class='buy-info'>
     <p>
       We’ve created a new version of the classic illustration of the
-      <a href="https://cloudfront.crimethinc.com/assets/books/work/images/iww-poster-large.jpg">pyramid of the capitalist system</a>
+      <a href='https://cloudfront.crimethinc.com/assets/books/work/images/iww-poster-large.jpg'>pyramid of the capitalist system</a>
       published in 1911, more detailed and updated to account for all the transformations of the past
-      one hundred years. Fully 2'x3' in size. <a href="/tools/deluxe.html">More info here</a>.
+      one hundred years. Fully 2'x3' in size.
+      <%= link_to 'More info here.', [:posters] %>
     </p>
   </div>
 </div>
 
 
-<div id="bulk">
-  <h1>Bulk Poster : 25 kit</h1><br>
-  <div class="tool-photo">
-    <%= link_to(image_tag("https://cloudfront.crimethinc.com/assets/books/work/images/work-bulk-poster-small.jpg",  alt: "Work bulk poster"), "https://cloudfront.crimethinc.com/assets/books/work/images/work-bulk-poster-large.jpg")  %>
+<div id='bulk'>
+  <h1>Bulk Poster : 25 kit</h1>
+
+  <div class='tool-photo'>
+    <%= link_to image_tag('https://cloudfront.crimethinc.com/assets/books/work/images/work-bulk-poster-small.jpg',  alt: 'Work bulk poster'), 'https://cloudfront.crimethinc.com/assets/books/work/images/work-bulk-poster-large.jpg' %>
   </div>
 
-  <div id="buy-now">
-    <%= button_to_buy_now price: 300, url: "http://store.crimethinc.com/x/AddToCart?Item=litkit&Dest=books" %>
+  <div id='buy-now'>
+    <%= button_to_buy_now price: 300, url: 'https://store.crimethinc.com/x/AddToCart?Item=pyramid&Dest=posters' %>
   </div>
 
-  <div class="buy-info">
+  <div class='buy-info'>
     <p>
-      A 22"x14" full-color, stand-alone poster as well as a companion to our <a href="/books/work">Work</a> book, the back contains a concise essay dissecting capitalism as we live it. This bulk version is made for easy distribution and decoration of public spaces. <a href="/tools/posters.html" title="CWC Tools : Posters">More info here</a>.
+      A 22'x14' full-color, stand-alone poster as well as a companion to our
+      <%= link_to 'Work', book.path %>
+      book, the back contains a concise essay dissecting capitalism as we live it.
+      This bulk version is made for easy distribution and decoration of public spaces.
+      <%= link_to 'More info here.', [:posters] %>
     </p>
   </div>
 </div>
-
