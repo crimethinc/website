@@ -33,14 +33,14 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - name: Configure database
-        run: |
-          psql -h localhost -c "create database crimethinc_test;" -U postgres
-
-      - name: Run tests
         env:
           PGUSER: postgres
         run: |
+          psql -h localhost -c "create database crimethinc_test;" -U postgres
           rails db:migrate RAILS_ENV=test
+
+      - name: Run tests
+        run: |
           # rspec
 
       - name: Run linter
