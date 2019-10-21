@@ -1,0 +1,18 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  color: $color-true-black;
+  font-family: system, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $base-line-height;
+  font-feature-settings: 'lnum', 'pnum';
+}
+
+img,
+svg {
+  max-width: 100%;
+}
