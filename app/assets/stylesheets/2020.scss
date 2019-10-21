@@ -1,5 +1,19 @@
-@import "2020/colors";
+// Abstracts
+@import '2020/abstracts/variables';
+@import '2020/abstracts/functions';
+@import '2020/abstracts/mixins';
+@import '2020/abstracts/colors';
 
-body {
-  background: red;
-}
+// Base
+@import '2020/base/reset';
+@import '2020/base/base';
+@import '2020/base/utilities';
+
+// Layout
+@import '2020/layout/home';
+
+// Pages
+@import '2020/pages/about';
+
+// Themes
+@import '2020/themes/literary';
