@@ -33,13 +33,13 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - name: Configure database
-        env:
-          PGUSER: postgres
         run: |
           rails db:create RAILS_ENV=test
           rails db:migrate RAILS_ENV=test
 
       - name: Run tests
+        env:
+          PGUSER: postgres
         run: |
           # rspec
 
