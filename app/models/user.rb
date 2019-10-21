@@ -17,7 +17,7 @@ class User < ApplicationRecord
                 'mickey fickie fire cracker soap on a rope',
                 'a long passphrase to meet the minimum length'
               ],
-              message: 'The passphrase ‘%{value}’ is prohibited.'
+              message: 'The passphrase ‘%<value>{value}’ is prohibited.'
             }
 
   default_scope { order(username: :asc) }
