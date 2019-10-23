@@ -6,7 +6,7 @@ gem 'rails', '~> 6.0.0'
 
 # database
 gem 'pg'
-gem 'scenic', '~> 1.5'
+gem 'scenic', '~> 1.5', '>= 1.5.1'
 
 # webserver
 gem 'puma'
@@ -14,9 +14,9 @@ gem 'puma'
 # assets
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.3.1'
-gem 'jquery-rails'      # for bootstrap pages (admin, steal-something-from-work-day)
-gem 'jquery-ui-rails'   # for polyfilling forms in admin/articles
-gem 'sassc-rails'
+gem 'jquery-rails'      , '>= 4.3.5' # for bootstrap pages (admin, steal-something-from-work-day)
+gem 'jquery-ui-rails'   , '>= 6.0.1' # for polyfilling forms in admin/articles
+gem 'sassc-rails', '>= 2.1.2'
 gem 'sitemap_generator' # for generating a compliant xml sitemap
 gem 'uglifier'
 
@@ -34,7 +34,7 @@ gem 'stringex'       # for Markdown header IDs processing
 gem 'bcrypt', '~> 3.1.13'
 
 # pagination
-gem 'kaminari'
+gem 'kaminari', '>= 1.1.1'
 
 # memcache
 gem 'dalli'
@@ -48,7 +48,7 @@ gem 'rubocop-rspec'
 gem 'stripe'
 
 # observability
-gem 'lograge'
+gem 'lograge', '>= 0.11.2'
 gem 'logstash-event'
 
 # dev and testing
@@ -56,13 +56,13 @@ group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platform: :mri
   gem 'capybara'
-  gem 'dotenv-rails'
-  gem 'factory_bot_rails'
+  gem 'dotenv-rails', '>= 2.7.5'
+  gem 'factory_bot_rails', '>= 5.1.1'
   gem 'i18n-debug'
   gem 'launchy'
   gem 'nokogiri'
   gem 'overcommit'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.4'
   gem 'rspec-rails', '~> 4.0.0.beta3'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
@@ -81,7 +81,7 @@ group :development do
   gem 'referral', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console'
+  gem 'web-console', '>= 4.0.1'
 
   # For memory profiling
   gem 'memory_profiler'
