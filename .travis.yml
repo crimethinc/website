@@ -1,4 +1,3 @@
-# foo
 dist: xenial
 sudo: false
 language: ruby
