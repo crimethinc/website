@@ -5,7 +5,7 @@ RSpec.describe Book, type: :model do
     subject { book.name }
 
     context 'with a subtitle' do
-      let(:book) { described_class.new(title: 'title', subtitle: 'subtitle') }
+      let(:book) { described_class.new(title: 'title', subtitle: 'subtitle', publication_status: :published) }
 
       it { is_expected.to eq('title : subtitle') }
     end
@@ -50,7 +50,7 @@ RSpec.describe Book, type: :model do
   end
 
   describe '#tags' do
-    let(:book) { described_class.create(title: 'title', subtitle: 'subtitle') }
+    let(:book) { described_class.create(title: 'title', subtitle: 'subtitle', publication_status: :published) }
     let(:tag_1) { Tag.create(name: 'test 1', slug: 'test-1') }
 
     it 'returns the tag' do
