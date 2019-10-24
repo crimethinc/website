@@ -36,8 +36,7 @@ jobs:
         env:
           PGUSER: postgres
         run: |
-          rails db:create RAILS_ENV=test
-          rails db:migrate RAILS_ENV=test
+          bundle exec rails db:create
 
       - name: Run tests
         env:
