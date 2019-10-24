@@ -5,7 +5,7 @@ RSpec.describe Book, type: :model do
     subject { book.name }
 
     context 'with a subtitle' do
-      let(:book) { described_class.new(title: 'title', subtitle: 'subtitle', publication_status: :published) }
+      let(:book) { described_class.new(title: 'title', subtitle: 'subtitle') }
 
       it { is_expected.to eq('title : subtitle') }
     end
