@@ -27,7 +27,7 @@ To run the test suite:
 
 Submit tests for your changes. You can test your changes on your machine by [running the test suite](#testing).
 
-When you submit a PR, tests will also be run on the continuous integration environment [through Travis](https://travis-ci.org/crimethinc/website).
+When you submit a PR, tests will also be run on the [continuous integration environment](https://github.com/crimethinc/website/actions?query=workflow%3ATests).
 
 
 ## Reviews
