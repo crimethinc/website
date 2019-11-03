@@ -50,6 +50,9 @@ module Admin
       @article.tags.destroy_all
 
       if @article.update(updated_article_params)
+        # Bust the article cache to update list of translations on articles
+        @article.localizations.each(&:touch)
+
         # update_columns to avoid hitting callbacks, namely updating Search index
         @article.update_columns(user_id: nil)
 
