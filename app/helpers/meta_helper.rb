@@ -33,12 +33,4 @@ module MetaHelper
       @title
     end
   end
-
-  def title_prefix
-    prefix = []
-    prefix << ' '
-    prefix << t('admin.title_prepend') if controller_path.starts_with? 'admin'
-    prefix << ' : '
-    prefix.join
-  end
 end
