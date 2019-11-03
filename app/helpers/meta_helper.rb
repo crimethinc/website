@@ -25,7 +25,13 @@ module MetaHelper
   end
 
   def page_title
-    @title || PageTitle.new.content
+    if @title.nil?
+      PageTitle.new.content
+    elsif @title.is_a? PageTitle
+      @title.content
+    else
+      @title
+    end
   end
 
   def title_prefix
