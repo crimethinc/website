@@ -22,7 +22,7 @@ class BooksController < ApplicationController
     @html_id = 'page'
     @body_id = 'tools'
     @type    = 'books'
-    @title   = title_for :books
+    @title   = PageTitle.new title_for(:books)
 
     @bullet_books = BOOK_SLUGS.map { |slug| Book.find_by(slug: slug) }
   end
@@ -32,14 +32,14 @@ class BooksController < ApplicationController
     @body_id  = 'tools'
     @type     = 'books'
     @editable = @book
-    @title    = title_for :books, @book.slug.underscore
+    @title    = PageTitle.new title_for(:books, @book.slug.underscore)
     @tool     = @book
   end
 
   def extras
     @html_id = 'page'
     @body_id = 'tools'
-    @title   = title_for :books, @book.slug.underscore, :extras
+    @title   = PageTitle.new title_for(:books, @book.slug.underscore, :extras)
 
     render "#{Theme.name}/books/extras"
   end
@@ -47,13 +47,13 @@ class BooksController < ApplicationController
   def lit_kit
     @html_id = 'page'
     @body_id = 'tools'
-    @title   = title_for :books, :lit_kit
+    @title   = PageTitle.new title_for(:books, :lit_kit)
   end
 
   def into_libraries
     @html_id = 'page'
     @body_id = 'tools'
-    @title   = title_for :books, :into_libraries
+    @title   = PageTitle.new title_for(:books, :into_libraries)
   end
 
   private
