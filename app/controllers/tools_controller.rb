@@ -66,7 +66,7 @@ class ToolsController < ApplicationController
   end
 
   def set_title
-    @title = title_for [@type.capitalize.to_sym, @tool&.name].compact
+    @title = PageTitle.new title_for [@type.capitalize.to_sym, @tool&.name].compact
   end
 
   def set_editable
