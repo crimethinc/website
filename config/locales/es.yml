@@ -146,6 +146,8 @@ es:
 
   page_titles:
     about:
+      contact: Contact
+      about: About
       library: Biblioteca en línea
       store: Tienda
       post_order_success: Envíos Glow # I am not sure what you mean by Glow.

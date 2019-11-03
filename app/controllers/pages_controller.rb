@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def show
     @editable = @page
+    @title    = PageTitle.new I18n.t("page_titles.about.#{@page.slug}")
 
     # no layout
     render html: @page.content.html_safe, layout: false if @page.content_in_html?

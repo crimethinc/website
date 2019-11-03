@@ -177,9 +177,7 @@ Rails.application.routes.draw do
   get 'opensearch.xml', to: 'misc#opensearch_xml'
 
   # Pages
-  get '/faq', to: 'pages#show', as: :faq, via: :all
-  get '/about', to: 'pages#show', as: :about, via: :all
-  get '/start', to: 'pages#show', as: :start, via: :all
+  get '/about',   to: 'pages#show', as: :about,   via: :all
   get '/contact', to: 'pages#show', as: :contact, via: :all
 
   # For redirection
