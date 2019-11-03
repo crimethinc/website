@@ -12,13 +12,13 @@ class SearchController < ApplicationController
       @results = @search.perform.page(params[:page]).per(15)
     end
 
-    @title = title_for :search, :results, "“#{@query}”"
+    @title = PageTitle.new title_for :search, :results, "“#{@query}”"
   end
 
   def advanced
     @html_id = 'page'
     @body_id = 'search'
-    @title   = title_for :search, :advanced
+    @title   = PageTitle.new title_for :search, :advanced
 
     @advanced_search = AdvancedSearch.new(params[:q])
   end
