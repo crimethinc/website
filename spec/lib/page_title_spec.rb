@@ -11,10 +11,18 @@ RSpec.describe PageTitle, type: :model do
     end
 
     context 'with text' do
-      let(:title) { described_class.new(text: 'page title').content }
+      let(:title) { described_class.new(text: 'Page Title').content }
 
       it 'appends text with site name, separated by a colon' do
-        expect(title).to eq 'CrimethInc. : page title'
+        expect(title).to eq 'CrimethInc. : Page Title'
+      end
+    end
+
+    context 'with text pieces' do
+      let(:title) { described_class.new(text: ['Books', 'Page Title']).content }
+
+      it 'appends text with site name, separated by a colon' do
+        expect(title).to eq 'CrimethInc. : Books : Page Title'
       end
     end
 
