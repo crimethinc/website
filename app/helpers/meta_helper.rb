@@ -25,15 +25,7 @@ module MetaHelper
   end
 
   def page_title
-    title = []
-    title << t(:site_name)
-
-    if @title.present?
-      title << title_prefix
-      title << strip_tags(@title)
-    end
-
-    title.join
+    @title
   end
 
   def title_prefix
