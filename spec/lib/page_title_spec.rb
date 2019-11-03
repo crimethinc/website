@@ -1,28 +1,36 @@
 require 'rails_helper'
 
 RSpec.describe PageTitle, type: :model do
-  describe '.with' do
+  describe '#content' do
     context 'with no args' do
-      it 'falls back to default' do
-        title = described_class.with
+      let(:title) { described_class.new.content }
 
+      it 'falls back to default' do
         expect(title).to eq 'CrimethInc.'
       end
     end
 
     context 'with text' do
-      it 'appends text with site name, separated by a colon' do
-        title = described_class.with text: 'page title'
+      let(:title) { described_class.new(text: 'page title').content }
 
+      it 'appends text with site name, separated by a colon' do
         expect(title).to eq 'CrimethInc. : page title'
       end
     end
 
     context 'with path' do
-      it 'builds colon separated title from path pieces' do
-        title = described_class.with path: 'admin/books/new'
+      let(:title) { described_class.new(path: 'admin/books/new').content }
 
+      it 'builds colon separated title from path pieces' do
         expect(title).to eq 'CrimethInc. : Admin : Books : New'
+      end
+    end
+
+    context 'with HTML in text' do
+      let(:title) { described_class.new(text: 'This is <b>BOLD</b> text').content }
+
+      it 'strips out HTML tags' do
+        expect(title).to eq 'CrimethInc. : This is BOLD text'
       end
     end
   end

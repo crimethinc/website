@@ -1,16 +1,23 @@
 class PageTitle
-  class << self
-    def with text: nil, path: nil
-      prefix = I18n.t :site_name
-      suffix = text || path_pieces(path)
+  attr_reader :text, :path
 
-      [prefix, suffix].flatten.compact.join ' : '
-    end
+  def initialize text: nil, path: nil
+    @text = text
+    @path = path
+  end
 
-    private
+  def content
+    prefix = I18n.t :site_name
+    suffix = text || path_pieces(path)
 
-    def path_pieces path
-      String(path).split('/').map(&:capitalize)
-    end
+    title = [prefix, suffix].flatten.compact.join ' : '
+
+    Rails::Html::FullSanitizer.new.sanitize title
+  end
+
+  private
+
+  def path_pieces path
+    String(path).split('/').map(&:capitalize)
   end
 end
