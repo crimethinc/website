@@ -17,5 +17,13 @@ RSpec.describe PageTitle, type: :model do
         expect(title).to eq 'CrimethInc. : page title'
       end
     end
+
+    context 'with path' do
+      it 'builds colon separated title from path pieces' do
+        title = described_class.with path: 'admin/books/new'
+
+        expect(title).to eq 'CrimethInc. : Admin : Books : New'
+      end
+    end
   end
 end

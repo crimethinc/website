@@ -1,13 +1,16 @@
 class PageTitle
   class << self
-    def with text: nil
-      # , path: nil
-      title = []
+    def with text: nil, path: nil
+      prefix = I18n.t :site_name
+      suffix = text || path_pieces(path)
 
-      title << I18n.t(:site_name)
-      title << text
+      [prefix, suffix].flatten.compact.join ' : '
+    end
 
-      title.compact.join ' : '
+    private
+
+    def path_pieces path
+      String(path).split('/').map(&:capitalize)
     end
   end
 end
