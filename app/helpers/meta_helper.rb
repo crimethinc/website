@@ -25,7 +25,7 @@ module MetaHelper
   end
 
   def page_title
-    @title
+    @title || PageTitle.new.content
   end
 
   def title_prefix
