@@ -4,7 +4,7 @@ class SupportController < ApplicationController
   def new
     @html_id = 'page'
     @body_id = 'support'
-    @title   = t('views.support.new.heading')
+    @title   = PageTitle.new t('views.support.new.heading')
   end
 
   def create
@@ -24,7 +24,7 @@ class SupportController < ApplicationController
   def thanks
     @html_id = 'page'
     @body_id = 'support'
-    @title   = t('views.support.thanks.heading')
+    @title   = PageTitle.new t('views.support.thanks.heading')
   end
 
   def create_session
@@ -55,7 +55,7 @@ class SupportController < ApplicationController
   def edit
     @html_id = 'page'
     @body_id = 'support-edit'
-    @title   = t('views.support.edit.heading')
+    @title   = PageTitle.new t('views.support.edit.heading')
 
     @support_session = SupportSession.find_by token: params[:token]
 
