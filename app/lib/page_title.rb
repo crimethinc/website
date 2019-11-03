@@ -1,3 +1,5 @@
+require 'rails/html/sanitizer'
+
 class PageTitle
   attr_reader :text, :path
 
