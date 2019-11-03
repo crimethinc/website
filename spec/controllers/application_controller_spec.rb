@@ -32,28 +32,6 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-  describe '#page_title' do
-    it 'adds admin to the title in admin routes' do
-      expect(controller).to receive(:controller_path).and_return('admin/articles')
-
-      get :index, params: { title: 'title' }
-
-      expect(controller.page_title).to eq('CrimethInc. Admin : title')
-    end
-
-    it 'appends the set title' do
-      get :index, params: { title: 'title' }
-
-      expect(controller.page_title).to eq('CrimethInc. : title')
-    end
-
-    it 'has a default title' do
-      get :index
-
-      expect(controller.page_title).to eq('CrimethInc.')
-    end
-  end
-
   describe '#current_user' do
     let(:user) { User.create(username: 'example', password: 'x' * 30) }
 

@@ -5,7 +5,7 @@ module Admin
     layout 'admin'
 
     def admin_title model = nil, keys = []
-      return t(".#{action_name}_title", default: '') if model.blank?
+      return PageTitle.new(['Admin', t(".#{action_name}_title", default: '')]).content if model.blank?
 
       translation_vars = {}
 
@@ -13,7 +13,7 @@ module Admin
         hash[key] = model.send(key)
       end
 
-      t(".#{action_name}_title", translation_vars)
+      PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
     rescue NoMethodError
       logger.error "#{controller_path}:#{action_name} has an issue with the page title"
       ''

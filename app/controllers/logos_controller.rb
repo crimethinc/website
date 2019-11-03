@@ -3,7 +3,7 @@ class LogosController < ApplicationController
     @html_id = 'page'
     @body_id = 'tools'
     @tools   = Logo.live.published.page(params[:page]).per(100)
-    @title   = title_for :logos
+    @title   = PageTitle.new title_for :logos
   end
 
   def show
@@ -14,6 +14,6 @@ class LogosController < ApplicationController
     @body_id  = 'tools'
     @type     = 'logos'
     @editable = @tool
-    @title    = title_for :zines, @tool.name
+    @title    = PageTitle.new title_for :logos, @tool.name
   end
 end

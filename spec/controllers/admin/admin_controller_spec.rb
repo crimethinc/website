@@ -10,7 +10,7 @@ RSpec.describe Admin::AdminController, type: :controller do
       expect(controller).to receive(:action_name).and_return('edit').at_least(:once)
 
       title = controller.admin_title(article, %i[id title subtitle])
-      expect(title).to eq('Editing article 1 title : sub')
+      expect(title).to eq('CrimethInc. : Admin : Editing article 1 title : sub')
     end
 
     it 'logs error and does not blow up if invalid keys passed' do
@@ -31,7 +31,7 @@ RSpec.describe Admin::AdminController, type: :controller do
       expect(controller).to receive(:action_name).and_return('edit').at_least(:once)
 
       title = controller.admin_title(article, %i[id title subtitle year])
-      expect(title).to eq('Editing article 1 title : sub')
+      expect(title).to eq('CrimethInc. : Admin : Editing article 1 title : sub')
     end
   end
 
@@ -40,7 +40,7 @@ RSpec.describe Admin::AdminController, type: :controller do
       expect(controller).to receive(:controller_path).and_return('admin/articles').at_least(:once)
       expect(controller).to receive(:action_name).and_return('index').at_least(:once)
       title = controller.admin_title
-      expect(title).to eq('Articles')
+      expect(title).to eq('CrimethInc. : Admin : Articles')
     end
   end
 end

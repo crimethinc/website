@@ -81,6 +81,11 @@ fr:
       new_title: New Links
       show_title: "Links : %{name}"
       edit_title: "Editing link %{id} : %{name}"
+    locales:
+      index_title: Locales
+      new_title: New Locales
+      show_title: "Locales : %{name}"
+      edit_title: "Editing locale %{id} : %{abbreviation} : %{name_in_english} : %{name}"
     redirects:
       index_title: Redirects
       new_title: New Redirects

@@ -1,8 +1,14 @@
 <header>
-  <h1><%= @title %></h1>
+  <h1><%= t 'page_titles.categories.index' %></h1>
 </header>
-<uL>
+
+<ul>
   <% @categories.each do |category| %>
-    <li><a href="<%= category.path %>"><strong><%= category.name %></strong> (<%= category.articles.count %>)</a></li>
+    <li>
+      <a href="<%= category.path %>">
+        <strong><%= category.name %></strong>
+        (<%= category.articles.count %>)
+      </a>
+    </li>
   <% end %>
-</uL>
+</ul>

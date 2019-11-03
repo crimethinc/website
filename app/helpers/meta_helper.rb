@@ -23,4 +23,14 @@ module MetaHelper
       t('head.meta_image_url')
     end
   end
+
+  def page_title
+    if @title.nil?
+      PageTitle.new.content
+    elsif @title.is_a? PageTitle
+      @title.content
+    else
+      @title
+    end
+  end
 end

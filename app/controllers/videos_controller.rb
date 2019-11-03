@@ -2,7 +2,7 @@ class VideosController < ApplicationController
   def index
     @html_id = 'page'
     @body_id = 'watch'
-    @title   = title_for :videos
+    @title   = PageTitle.new title_for :videos
     @videos  = Video.live.published.page(params[:page]).per(20)
   end
 
@@ -13,6 +13,6 @@ class VideosController < ApplicationController
     @editable = @video
     @html_id  = 'page'
     @body_id  = 'video'
-    @title    = title_for :videos, @video.title
+    @title    = PageTitle.new title_for :videos, @video.title
   end
 end

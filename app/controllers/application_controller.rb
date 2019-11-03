@@ -80,16 +80,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_resource_name
 
-  # TODO: move to meta helper
-  def page_title
-    if @title.present?
-      t(:site_name) + prepend_admin_if_needed + @title
-    else
-      t(:site_name)
-    end
-  end
-  helper_method :page_title
-
   def title_for *page_keys
     pieces = []
 
@@ -105,16 +95,6 @@ class ApplicationController < ActionController::Base
 
     pieces.flatten.join ' : '
   end
-
-  # TODO: move to meta helper
-  def prepend_admin_if_needed
-    if controller_path.match(%r{\Aadmin\/.*\z}).present?
-      " #{t('admin.title_prepend')} : "
-    else
-      ' : '
-    end
-  end
-  helper_method :prepend_admin_if_needed
 
   # TODO: move to a helper
   def author

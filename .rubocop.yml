@@ -15,7 +15,7 @@ Layout/AlignHash:
   EnforcedColonStyle: table
 
 Metrics/AbcSize:
-  Max: 63
+  Max: 64
 
 Metrics/BlockLength:
   Exclude:

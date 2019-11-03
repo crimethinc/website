@@ -17,7 +17,7 @@ module Admin
     end
 
     def edit
-      @title = admin_title(@locale, %i[id source_path])
+      @title = admin_title(@locale, %i[id name abbreviation name_in_english])
     end
 
     def create

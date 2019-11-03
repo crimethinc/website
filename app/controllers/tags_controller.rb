@@ -22,7 +22,7 @@ class TagsController < ApplicationController
   end
 
   def set_title
-    @title = @tag.name
+    @title = PageTitle.new @tag.name
   end
 
   def set_articles
