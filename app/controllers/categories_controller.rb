@@ -7,14 +7,13 @@ class CategoriesController < ApplicationController
   def show
     @html_id = 'page'
     @body_id = 'category'
-    @title   = title_for :categories, @category.name
   end
 
   def index
     @html_id    = 'page'
     @body_id    = 'categories'
     @categories = Category.all
-    @title      = title_for :categories
+    @title      = PageTitle.new title_for(:categories)
   end
 
   def feed
@@ -37,7 +36,7 @@ class CategoriesController < ApplicationController
   end
 
   def set_title
-    @title = @category.name
+    @title = PageTitle.new title_for(:categories, @category.name)
   end
 
   def set_articles
