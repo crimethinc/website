@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
     return redirect_to @article.path if request.path.ends_with? '/feed'
 
     # Page title
-    @title = PageTitle.new text: @article.name
+    @title = PageTitle.new @article.name
 
     @live_blog = @article.collection_root?
 

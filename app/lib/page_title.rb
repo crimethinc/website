@@ -3,7 +3,7 @@ require 'rails/html/sanitizer'
 class PageTitle
   attr_reader :text, :path
 
-  def initialize text: nil, path: nil
+  def initialize text = nil, path: nil
     @text = text
     @path = path
   end
