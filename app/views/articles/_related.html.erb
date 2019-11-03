@@ -19,14 +19,10 @@
             <% end %>
 
             <header class="article-titles">
-              <h2 class="p-x-title">
-                <%= link_to article.title.html_safe, article.path %>
-              </h2>
+              <h2 class="p-x-title"><%= link_to article.title, article.path %></h2>
 
               <% if article.subtitle.present? %>
-                <h3 class="p-x-subtitle">
-                  <%= link_to article.subtitle.html_safe, article.path %>
-                </h3>
+                <h3 class="p-x-subtitle"><%= link_to article.subtitle, article.path %></h3>
               <% end %>
             </header>
             </div>
