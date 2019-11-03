@@ -1,5 +1,5 @@
 class Locale < ApplicationRecord
-  before_validation :strip_whitespace, on: %i[create update]
+  before_validation :strip_whitespace,      on: %i[create update]
   before_validation :downcase_abbreviation, on: %i[create update]
 
   validates :abbreviation, uniqueness: true
@@ -13,6 +13,8 @@ class Locale < ApplicationRecord
   def display_name
     "#{abbreviation.upcase} : #{name_in_english} / #{name}"
   end
+
+  private
 
   def strip_whitespace
     self.abbreviation    = abbreviation.strip

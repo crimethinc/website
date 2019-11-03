@@ -5,16 +5,23 @@
     <div class="col-12 col-md-2">
       <%= render "admin/label_and_field_form_group", form: form, attr: :abbreviation %>
     </div>
-    <div class="col-12 col-md-5">
-      <%= render "admin/label_and_field_form_group", form: form, attr: :name_in_english, label_text: "Name in English" %>
-    </div>
-    <div class="col-12 col-md-5">
-      <%= render "admin/label_and_field_form_group", form: form, attr: :name %>
+
+    <div class="col-12 col-md-2">
+      <div class="form-group">
+        <%= form.label :language_direction, "Direction" %>
+        <%= form.select :language_direction,
+                        Locale.language_directions.keys,
+                        {},
+                        class: "form-control form-control-lg text-uppercase" %>
+      </div>
     </div>
 
-    <div class="field">
-      <%= form.label :language_direction %><br>
-      <%= form.select :language_direction, Locale.language_directions.keys %>
+    <div class="col-12 col-md-4">
+      <%= render "admin/label_and_field_form_group", form: form, attr: :name_in_english, label_text: "Name in English" %>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <%= render "admin/label_and_field_form_group", form: form, attr: :name %>
     </div>
   </div>
 
