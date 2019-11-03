@@ -65,15 +65,6 @@ module AdminHelper
     'article-counter-genesis'
   end
 
-  def class_for_being_edited article
-    # When an article is being edited by another person, let others know,
-    # so they don’t overwrite each others’ edit.
-
-    return if article.user.blank?
-
-    'bg-warning'
-  end
-
   def class_for_article_precounter_views article
     # View counts started on 2017-08-23.
 
@@ -84,7 +75,7 @@ module AdminHelper
   end
 
   def admin_articles_table_row_classes article
-    [class_for_being_edited(article), class_for_article_counter_genesis(article)].join(' ')
+    class_for_article_counter_genesis article
   end
 
   def category_check_box form:, category:

@@ -28,9 +28,6 @@ module Admin
     end
 
     def edit
-      # update_columns to avoid hitting callbacks, namely updating Search index
-      @article.update_columns(user_id: current_user)
-
       @collection = Article.find(@article.collection_id) if @article.in_collection?
       @title      = admin_title(@article, %i[id title subtitle])
       @html_id    = 'js-admin-article'
@@ -50,8 +47,8 @@ module Admin
       @article.tags.destroy_all
 
       if @article.update(updated_article_params)
-        # update_columns to avoid hitting callbacks, namely updating Search index
-        @article.update_columns(user_id: nil)
+        # Bust the article cache to update list of translations on articles
+        @article.localizations.each(&:touch)
 
         redirect_to [:admin, @article], notice: 'Article was successfully updated.'
       else

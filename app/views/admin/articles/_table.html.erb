@@ -6,7 +6,6 @@
     <div class="col-sm-1 text-right"><b>Views</b></div>
   </div>
 
-
   <% articles.each do |article| %>
     <div class="articles-body row mb-3 py-2 <%= admin_articles_table_row_classes article %>">
       <div class="col-md-2 mb-2">
@@ -22,12 +21,6 @@
       </div>
 
       <div class="col-md-6">
-        <% if article.user.present? %>
-          <p>
-            <b><%= article.user.username %> started editing at <%= time_ago_in_words article.updated_at %> ago.</b>
-          </p>
-        <% end %>
-
         <b><%= link_to article.title, [:admin, article] %></b><br>
 
         <% if article.subtitle.present? %>
