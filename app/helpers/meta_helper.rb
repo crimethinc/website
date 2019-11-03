@@ -23,4 +23,24 @@ module MetaHelper
       t('head.meta_image_url')
     end
   end
+
+  def page_title
+    title = []
+    title << t(:site_name)
+
+    if @title.present?
+      title << title_prefix
+      title << strip_tags(@title)
+    end
+
+    title.join
+  end
+
+  def title_prefix
+    prefix = []
+    prefix << ' '
+    prefix << t('admin.title_prepend') if controller_path.starts_with? 'admin'
+    prefix << ' : '
+    prefix.join
+  end
 end
