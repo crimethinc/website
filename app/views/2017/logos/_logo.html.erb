@@ -1,16 +1,11 @@
 <div class="tool" id="<%= tool.slug %>">
 
   <header>
-    <%= render "articles/titles", header: tool, linked: true %>
+    <%= render_themed "articles/titles", header: tool, linked: true %>
   </header>
 
   <div class="e-content row">
     <div class="tool-main">
-      <!--<header>
-
-        <%= render "articles/titles", header: tool, linked: true %>
-      </header>-->
-
       <div class="row">
         <div class="column column-one-quarter logo-first-column">
           <div class="tool-front">
@@ -19,7 +14,7 @@
         </div> <!-- logo-first-column -->
         <div class="column column-three-quarter logo-second-column">
           <header>
-            <%= render "articles/titles", header: tool, linked: true %>
+            <%= render_themed "articles/titles", header: tool, linked: true %>
           </header>
           <div class="p-summary">
             <%= render_markdown tool.summary %>

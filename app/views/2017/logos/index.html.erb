@@ -1,6 +1,6 @@
 <article class="tools-logos">
   <header>
-    <%= render "tools/nav" %>
+    <%= render_themed "tools/nav" %>
 
     <h1><%= t("views.tools.logos_heading_text") %></h1>
   </header>
@@ -10,7 +10,7 @@
   </div>
 
   <% @tools.each do |tool| %>
-    <%= render "logos/logo", tool: tool %>
+    <%= render_themed "logos/logo", tool: tool %>
   <% end %>
 </article>
 
