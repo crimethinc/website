@@ -15,7 +15,7 @@
         <% unless video.blank? %>
           <h1 class="p-name"><%= link_to video.title, video_path(video.slug) %></h1>
 
-          <%= render video %>
+          <%= render_themed "videos/video", video: video %>
         <% end %>
       </div>
 
