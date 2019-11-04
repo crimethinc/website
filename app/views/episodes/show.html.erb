@@ -1,6 +1,6 @@
 <article class="h-entry" id="episode-<%= @episode.id %>">
   <header>
-    <%= render "articles/titles", header: @episode, linked: action_name == "transcript" %>
+    <%= render_themed "articles/titles", header: @episode, linked: action_name == "transcript" %>
   </header>
 
   <div class="row">
@@ -9,7 +9,7 @@
         <%= image_tag @episode.image, class: "u-photo" %>
       <% end %>
 
-      <%= render "articles/titles", header: @episode.podcast, linked: true %>
+      <%= render_themed "articles/titles", header: @episode.podcast, linked: true %>
 
       <%= render "podcast/subscribe_buttons", podcast: @episode.podcast %>
     </div> <!-- .column -->

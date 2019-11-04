@@ -1,7 +1,0 @@
-<% if article.image.present? && media_mode? %>
-  <div class="article-image">
-    <%= link_to_if linked,
-                   image_tag(article.image, class: "u-photo", alt: article.image_description),
-                   article.path %>
-  </div>
-<% end %>

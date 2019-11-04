@@ -1,6 +1,6 @@
 <%= article_tag article do %>
   <div class="meta">
-    <%= render "articles/titles", header: article, linked: false %>
+    <%= render_themed "articles/titles", header: article, linked: false %>
   </div>
 
   <%= figure_image_with_caption_tag article %>
@@ -8,7 +8,7 @@
   <%= render_content article %>
 
   <footer>
-    <%#= render "articles/published_on", article: article %>
+    <%#= render_themed "articles/published_on", article: article %>
 
     <%#= render "articles/categories",   article: article %>
     <%#= render "articles/tags",         article: article %>

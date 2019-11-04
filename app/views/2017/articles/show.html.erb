@@ -12,7 +12,7 @@
       <%= render "articles/image_media", article: @article, linked: false %>
 
       <div class="meta">
-        <%= render "articles/titles", header: @article, linked: false %>
+        <%= render_themed "articles/titles", header: @article, linked: false %>
 
         <%= render "articles/categories", article: @article %>
 
@@ -30,7 +30,7 @@
 
     <footer>
       <%= render "articles/share_on_social_networks", article: @article %>
-      <%= render "articles/published_on",             article: @article, linked: true %>
+      <%= render_themed "articles/published_on",             article: @article, linked: true %>
       <%= render "articles/categories",               article: @article %>
       <%= render "articles/tags",                     article: @article %>
 

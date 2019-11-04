@@ -1,6 +1,6 @@
 <% @podcasts.each do |podcast| %>
   <header>
-    <%= render "articles/titles", header: podcast, linked: true %>
+    <%= render_themed "articles/titles", header: podcast, linked: true %>
   </header>
 
   <div class="row" style="margin-bottom: 5rem;">
