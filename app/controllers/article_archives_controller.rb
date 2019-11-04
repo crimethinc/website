@@ -24,5 +24,7 @@ class ArticleArchivesController < ApplicationController
       end
 
     redirect_to path if path.present?
+
+    render "#{Theme.name}/article_archives/index"
   end
 end

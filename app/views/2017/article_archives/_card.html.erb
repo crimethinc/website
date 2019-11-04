@@ -8,8 +8,8 @@
                style="<%= story_card_background_image(article: article) %>">
     <% end %>
 
-    <%= render "articles/header",     article: article %>
-    <%= render "articles/categories", article: article %>
+    <%= render_themed "articles/header",     article: article %>
+    <%= render_themed "articles/categories", article: article %>
     </article>
   <% end %>
 <% end %>
