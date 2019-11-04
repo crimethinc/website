@@ -6,6 +6,8 @@ class HomeController < ApplicationController
     # feed
     @top_article = Article.includes(:categories).english.live.published.root.first if first_page?
     @articles    = Article.includes(:categories).english.live.published.root.page(params[:page]).per(6).padding(1)
+
+    render "#{Theme.name}/home/index"
   end
 
   private
