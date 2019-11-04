@@ -11,7 +11,7 @@
 
       <%= render_themed "articles/titles", header: @episode.podcast, linked: true %>
 
-      <%= render "podcast/subscribe_buttons", podcast: @episode.podcast %>
+      <%= render_themed "podcasts/subscribe_buttons", podcast: @episode.podcast %>
     </div> <!-- .column -->
 
     <div class="column column-two-third">
@@ -29,7 +29,7 @@
             <% end %>
           <% end %>
         </h3>
-        <%= render "podcast/player", episode: @episode unless lite_mode? %>
+        <%= render_themed "podcasts/player", episode: @episode unless lite_mode? %>
 
         <div class="episode-info">
           <div class="buttons">

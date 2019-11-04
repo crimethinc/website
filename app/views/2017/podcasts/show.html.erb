@@ -6,7 +6,7 @@
   <div class="column column-one-third meta">
     <%= image_tag @podcast.image, class: "u-photo" %>
 
-    <%= render "podcast/subscribe_buttons", podcast: @podcast %>
+    <%= render_themed "podcasts/subscribe_buttons", podcast: @podcast %>
   </div> <!-- .column -->
 
   <div class="column column-two-third e-content">
@@ -20,7 +20,7 @@
           <h1><%= link_to latest_episode.title, latest_episode.path, class: "p-name u-url" %></h1>
           <p class="e-content"><%= latest_episode.subtitle %></p>
 
-          <%= render "podcast/player", episode: latest_episode unless lite_mode? %>
+          <%= render_themed "podcasts/player", episode: latest_episode unless lite_mode? %>
         </article>
       </div> <!-- .latest-episodes -->
 

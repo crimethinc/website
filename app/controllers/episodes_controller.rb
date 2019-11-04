@@ -7,6 +7,8 @@ class EpisodesController < ApplicationController
     @body_id  = 'podcast'
     @editable = @episode
     @title    = PageTitle.new title_for :podcasts, @episode.name
+
+    render "#{Theme.name}/episodes/show"
   end
 
   def transcript
@@ -15,7 +17,7 @@ class EpisodesController < ApplicationController
     @editable = @episode
     @title    = PageTitle.new title_for :podcasts, @episode.name, :transcript
 
-    render 'episodes/show'
+    render "#{Theme.name}/episodes/show"
   end
 
   private
