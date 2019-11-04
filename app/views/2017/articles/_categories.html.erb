@@ -1,0 +1,15 @@
+<% if article.categories.present? %>
+  <div class="categories">
+    <b class="badge">Categories:</b>
+
+    <% if controller_name == 'articles' && action_name == 'show' %>
+      <%= image_tag 'library/tags.png', class: 'icon-image' %>
+    <% end %>
+
+    <ul>
+      <% article.categories.each do |category| %>
+        <li><%= link_to category.name, category_path(category.slug), rel: "tag", class: "p-category" %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

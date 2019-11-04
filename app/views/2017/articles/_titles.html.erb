@@ -1,0 +1,17 @@
+<div class="p-name <%= 'shadowed' if linked %>">
+  <% if linked %><a href='<%= header.path %>' class='article-titles'><% end %>
+
+    <h1 class="p-x-title">
+      <%= RubyPants.new(header.title).to_html.html_safe %>
+    </h1>
+
+    <% if header.subtitle.present? %>
+      <span class="screen-reader-only sr-only"> : </span>
+
+      <h2 class="p-x-subtitle">
+        <%= RubyPants.new(header.subtitle).to_html.html_safe %>
+      </h2>
+    <% end %>
+
+  <% if linked %></a><% end %>
+</div>

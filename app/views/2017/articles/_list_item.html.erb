@@ -1,0 +1,20 @@
+<% if article.present? %>
+  <article class="h-entry">
+    <div class="row">
+      <div class="<%= "column" if article.image.present? %> column-one-third">
+        <% if article.present? && article.image.present? %>
+          <%= link_to image_tag(article.image, class: "u-photo header-image", alt: article.image_description), article.path %>
+        <% end %>
+      </div>
+
+      <div class="<%= "column" if article.image.present? %> column-two-third">
+        <header>
+          <%= render "articles/titles", header: article, linked: true %>
+          <%= render "articles/published_on", article: article %>
+          <%= render "articles/categories", article: article %>
+          <%= render "articles/tags", article: article %>
+        </header>
+      </div>
+    </div>
+  </article>
+<% end %>

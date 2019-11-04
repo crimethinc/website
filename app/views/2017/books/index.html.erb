@@ -13,7 +13,7 @@
 
   <div class="tool-series tool-series-books">
     <% @bullet_books.each do |book| %>
-      <%= render "books/book", book: book %>
+      <%= render_themed "books/book", book: book %>
     <% end %>
   </div> <!-- .tool-series-books -->
 
@@ -34,5 +34,4 @@
       </div>
     </div>
   </div>
-
 </article>

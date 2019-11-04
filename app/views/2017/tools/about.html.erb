@@ -1,0 +1,27 @@
+<article>
+  <div class="tool-header-image">
+    <%= image_tag "https://cloudfront.crimethinc.com/assets/tools/images/header.jpg", alt: "CrimethInc. zines, posters, stickers" %>
+  </div>
+
+  <header>
+    <h1><%= t "views.tools.tools_heading_text" %></h1>
+  </header>
+
+  <div class="e-content">
+    <div class="intro">
+      <%= render_markdown t("views.tools.tools_intro_text") %>
+    </div>
+
+    <hr>
+
+    <% %i[zines journals posters stickers videos music logos].each do |tool| %>
+      <div class="tool-section">
+        <h1 class="p-name"><%= link_to_tool tool: tool, type: :link %></h1>
+        <%= render_markdown t("views.tools.#{tool}_intro_text") %>
+        <%= link_to_tool tool: tool, type: :button %>
+        <br><br>
+      </div>
+    <% end %>
+
+  </div><!-- .e-content -->
+</article>

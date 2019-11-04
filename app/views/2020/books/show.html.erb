@@ -82,14 +82,14 @@
         </ol>
       </div> <!-- .tool-specs -->
 
-      <%= render "books/table_of_contents", book: @tool %>
+      <%= render_themed "books/table_of_contents", book: @tool %>
     </div>
 
     <div class="column column-two-third section tool-main">
       <header>
-        <%= render "tools/nav" %>
+        <%= render_themed "tools/nav" %>
 
-        <%= render "articles/titles", header: @tool, linked: true %>
+        <%= render_themed "articles/titles", header: @tool, linked: true %>
 
         <% if @tool.published_at.present? %>
           <time datetime="<%= @tool.published_at.iso8601 %>"><%= @tool.published_at.year %></time>
@@ -116,7 +116,7 @@
           <% end %>
         </div>
 
-        <%= render "books/table_of_contents", book: @tool %>
+        <%= render_themed "books/table_of_contents", book: @tool %>
       </div>
     </div>
 

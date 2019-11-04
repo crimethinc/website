@@ -25,6 +25,8 @@ class BooksController < ApplicationController
     @title   = PageTitle.new title_for(:books)
 
     @bullet_books = BOOK_SLUGS.map { |slug| Book.find_by(slug: slug) }
+
+    render "#{Theme.name}/books/index"
   end
 
   def show
@@ -34,6 +36,8 @@ class BooksController < ApplicationController
     @editable = @book
     @title    = PageTitle.new title_for(:books, @book.slug.underscore)
     @tool     = @book
+
+    render "#{Theme.name}/books/show"
   end
 
   def extras
@@ -48,12 +52,16 @@ class BooksController < ApplicationController
     @html_id = 'page'
     @body_id = 'tools'
     @title   = PageTitle.new title_for(:books, :lit_kit)
+
+    render "#{Theme.name}/books/lit_kit"
   end
 
   def into_libraries
     @html_id = 'page'
     @body_id = 'tools'
     @title   = PageTitle.new title_for(:books, :into_libraries)
+
+    render "#{Theme.name}/books/into_libraries"
   end
 
   private
