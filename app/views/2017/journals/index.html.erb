@@ -1,6 +1,6 @@
 <article>
   <header>
-    <%= render "tools/nav" %>
+    <%= render_themed "tools/nav" %>
 
     <h1><%= t("views.tools.journals_heading_text") %></h1>
   </header>
@@ -9,5 +9,7 @@
     <%= render_markdown t("views.tools.journals_intro_text") %>
   </div>
 
-  <%= render @journals %>
+  <% @journals.each do |journal| %>
+    <%= render_themed "journals/journal", journal: journal %>
+  <% end %>
 </article>

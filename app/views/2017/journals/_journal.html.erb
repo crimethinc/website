@@ -1,6 +1,6 @@
 <div class="tool" id="<%= journal.slug %>">
   <header style="display: block !important;">
-    <%= render "articles/titles", header: journal, linked: true %>
+    <%= render_themed "articles/titles", header: journal, linked: true %>
 
     <p><%= journal.first_published_in %> – <%= journal.last_published_in %></p>
 
