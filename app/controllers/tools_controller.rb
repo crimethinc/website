@@ -15,14 +15,16 @@ class ToolsController < ApplicationController
   before_action :redirect_to_tool_namespace_if_no_tool, only: :show
 
   # GET /tools
-  def about; end
+  def about
+    render "#{Theme.name}/tools/about"
+  end
 
   def index
-    render 'tools/index'
+    render "#{Theme.name}/tools/index"
   end
 
   def show
-    render 'tools/show'
+    render "#{Theme.name}/tools/show"
   end
 
   private
