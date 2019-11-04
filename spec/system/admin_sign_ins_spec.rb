@@ -28,6 +28,6 @@ describe 'Signing in as an admin' do
     click_button 'Sign In'
 
     # TODO: is it weird that we don’t go back to /signin and there is no error message?
-    expect(page).to have_current_path(auth_sessions_path)
+    expect(page).to have_current_path(sessions_path)
   end
 end
