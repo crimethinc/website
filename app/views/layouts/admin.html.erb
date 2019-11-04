@@ -6,20 +6,59 @@
              prefix: html_prefix do %>
   <head>
     <title><%= page_title %></title>
-    <%= render "shared/head/meta_tags" %>
-    <%= render "shared/head/fav_and_touch_icons" %>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <%= csrf_meta_tags %>
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon"         href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon icon" href="/apple-touch-icon.png" sizes="180x180" type="image/png" />
+    <link rel="mask-icon"             href="/logo.svg" sizes="any" color="#000000" />
+
+    <!-- Windows, IE and Edge -->
+    <meta name="msapplication-TileImage" content="<%= asset_path "icons/icon-144x144.png" %>" />
+    <meta name="msapplication-TileColor" content="#000000" />
+
+    <meta name="msapplication-square70x70logo"   content="<%= asset_path "icons/icon-150x150.png" %>" />
+    <meta name="msapplication-square150x150logo" content="<%= asset_path "icons/icon-70x70.png"   %>" />
+    <meta name="msapplication-wide310x150logo"   content="<%= asset_path "icons/icon-310x150.png" %>" />
+    <meta name="msapplication-square310x310logo" content="<%= asset_path "icons/icon-310x310.png" %>" />
+
+    <!-- Icons and stuff for more browsers via manifest.json -->
+    <link rel="manifest" href="/manifest.json" />
 
     <%= stylesheet_link_tag    "admin", media: "all" %>
     <%= javascript_include_tag "admin" %>
   </head>
 
   <body id="<%= body_id %>">
-    <%= render "shared/development_mode_banner" %>
+    <% if Rails.env.development? %>
+      <style>
+        #development-mode-banner {
+          background: yellow;
+          text-align: center;
+          font-weight: bold;
+          padding: 2rem;
+        }
+      </style>
+
+      <div id="development-mode-banner">
+        DEVELOPMENT MODE
+      </div>
+    <% end %>
+
     <%= render "admin/nav" %>
 
     <div class="container">
       <main>
-        <%= render "shared/alerts" %>
+        <% if notice.present? %>
+          <div class="alert alert-info" role="alert">
+            <%= notice %>
+          </div>
+        <% end %>
 
         <%= yield %>
       </main>

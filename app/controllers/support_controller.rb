@@ -5,6 +5,8 @@ class SupportController < ApplicationController
     @html_id = 'page'
     @body_id = 'support'
     @title   = PageTitle.new t('views.support.new.heading')
+
+    render "#{Theme.name}/support/new"
   end
 
   def create
@@ -25,6 +27,8 @@ class SupportController < ApplicationController
     @html_id = 'page'
     @body_id = 'support'
     @title   = PageTitle.new t('views.support.thanks.heading')
+
+    render "#{Theme.name}/support/thanks"
   end
 
   def create_session
@@ -36,9 +40,9 @@ class SupportController < ApplicationController
       return redirect_to [:support]
     end
 
-    support_session = SupportSession.new(
-      stripe_customer_id: customer.id, token: SupportSession.generate_token, expires_at: 1.hour.from_now
-    )
+    support_session = SupportSession.new(stripe_customer_id: customer.id,
+                                         token:              SupportSession.generate_token,
+                                         expires_at:         1.hour.from_now)
 
     if support_session.save
       mailer_options = { email: email, support_session: support_session, host: request.host_with_port }
@@ -71,6 +75,8 @@ class SupportController < ApplicationController
       @subscription = @customer.subscriptions.data.first
       @next_invoice = Stripe::Invoice.upcoming(customer: @customer.id)
     end
+
+    render "#{Theme.name}/support/edit"
   end
 
   def update_subscription

@@ -7,9 +7,9 @@
 # Or like this
 #
 # <% if FeatureFlag.enabled? :two_point_oh_yeah %>
-#   <%= render "shared/header_redesign" %>
+#   <%= render_themed "shared/header_redesign" %>
 # <% else %>
-#   <%= render "shared/header" %>
+#   <%= render_themed "shared/header" %>
 # <% end %>
 
 class FeatureFlag

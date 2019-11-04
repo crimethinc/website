@@ -1,0 +1,28 @@
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags(@results) %>
+<% end %>
+
+<div class="h-feed">
+  <%= render_themed "shared/site_search", location: :top %>
+
+  <header>
+    <h1>
+      <% if @query.blank? %>
+        <%= t 'search.form_placeholder' %>
+      <% else %>
+        <%= t 'search.search_results', query: @query %>
+      <% end %>
+    </h1>
+
+  </header>
+
+  <div class="articles-list">
+    <ol>
+      <% @results.each do |result| %>
+        <%= render_themed "search/result", result: result %>
+      <% end %>
+    </ol>
+  </div>
+</div>
+
+<%= paginate @results %>

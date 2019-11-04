@@ -57,10 +57,6 @@ Rails.application.routes.draw do
   # Articles - Collection Items
   get 'articles/:id/collection_posts', to: 'collection_posts#index'
 
-  # Static pages
-  get 'library',                       to: 'pages#library', as: :library
-  get 'submission-guidelines',         to: 'pages#submission_guidelines'
-
   # Categories
   get 'categories',                    to: 'categories#index', as: :categories
   get 'categories/:slug/page(/1)',     to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
@@ -163,23 +159,24 @@ Rails.application.routes.draw do
   end
 
   # Auth + User signup
-  namespace :auth do
-    resources :users,    only: %i[create update destroy]
-    resources :sessions, only: [:create]
-  end
+  resources :users,    only: %i[create update destroy]
+  resources :sessions, only: [:create]
 
-  get 'settings', to: 'auth/users#edit',       as: :settings
-  get 'signin',   to: 'auth/sessions#new',     as: :signin
-  get 'signout',  to: 'auth/sessions#destroy', as: :signout
+  get 'settings', to: 'users#edit',       as: :settings
+  get 'signin',   to: 'sessions#new',     as: :signin
+  get 'signout',  to: 'sessions#destroy', as: :signout
 
   # Misc plumbing infrastructure
   get 'manifest.json',  to: 'misc#manifest_json'
   get 'opensearch.xml', to: 'misc#opensearch_xml'
 
   # Pages
-  get '/about',   to: 'pages#show', as: :about,   via: :all
-  get '/contact', to: 'pages#show', as: :contact, via: :all
+  get 'about',                 to: 'pages#about',   as: :about,   via: :all
+  get 'contact',               to: 'pages#contact', as: :contact, via: :all
+  get 'library',               to: 'pages#library', as: :library
+  get 'submission-guidelines', to: 'pages#submission_guidelines'
 
+  # TODO: Delete? Is this used by anything anymore?
   # For redirection
   get '*path', to: 'pages#show', as: :page, via: :all
 end

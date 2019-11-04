@@ -1,0 +1,74 @@
+<div class="tool" id="<%= tool.slug %>">
+  <header>
+    <%= render_themed "articles/titles", header: tool, linked: true %>
+  </header>
+
+  <div class="e-content row">
+    <div class="tool-front column column-one-quarter">
+      <%= link_to image_tag(tool.front_image, alt: tool.front_image_description, class: "u-image"), tool.path %>
+
+      <% if tool.published_at.present? %>
+        <time datetime="<%= tool.published_at.iso8601 %>"><%= tool.published_at.year %></time>
+      <% end %>
+    </div>
+
+    <div class="tool-main column column-three-quarter">
+      <header>
+        <%= render_themed "articles/titles", header: tool, linked: true %>
+      </header>
+
+      <div class="p-summary">
+        <%= render_markdown tool.summary %>
+      </div>
+
+      <div class="buttons">
+        <% if tool.price_in_cents.present? %>
+          <div><%= button_to_buy_now price: tool.price_in_cents, url: tool.buy_url %></div>
+        <% end %>
+
+        <% if tool.buy_info.present? %>
+          <%= render_markdown tool.buy_info %>
+        <% end %>
+
+
+        <% if tool.class == Book %>
+          <% {
+            screen_single_page_view:  "Screen Single Page View PDF",
+            screen_two_page_view:     "Screen Two Page View PDF",
+            print_color:              "Print Color PDF",
+            print_black_and_white:    "Print B/W PDF",
+            print_color_a4:           "Print Color A4 PDF",
+            print_black_and_white_a4: "Print B/W A4 PDF",
+            lite:                     "Lo Res PDF",
+            epub:                     "ePub",
+            mobi:                     "Mobi",
+          }.each do |type, label| %>
+
+            <% if tool.send("#{type}_download_present?") %>
+              <%= link_to label, tool.download_url(type), class: "download button" %>
+            <% end %>
+          <% end %>
+        <% end %>
+
+
+        <% if tool.class == Poster %>
+          <% %w[front back].each do |side| %>
+            <% %w[color black_and_white].each do |color| %>
+              <% if tool.send("#{side}_#{color}_download_present?") %>
+
+                <div>
+                  <%= link_to t("views.tools.download_#{side}_#{color}_button_text"),
+                              tool.download_url(side: side, color: color),
+                              class: "download button" %>
+                </div>
+
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+
+      </div><!-- .buttons -->
+    </div><!-- .tool-main -->
+  </div><!-- .e-content -->
+
+</div><!-- .tool -->

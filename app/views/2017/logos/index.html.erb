@@ -1,0 +1,19 @@
+<article class="tools-logos">
+  <header>
+    <%= render_themed "tools/nav" %>
+
+    <h1><%= t("views.tools.logos_heading_text") %></h1>
+  </header>
+
+  <div class="e-content intro">
+    <%= render_markdown t("views.tools.logos_intro_text") %>
+  </div>
+
+  <% @tools.each do |tool| %>
+    <%= render_themed "logos/logo", tool: tool %>
+  <% end %>
+</article>
+
+<div class="pagination-container">
+  <%= paginate @tools %>
+</div>

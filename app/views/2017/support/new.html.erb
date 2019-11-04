@@ -1,0 +1,93 @@
+<%= render_themed "support/notifications" %>
+
+<header>
+  <h1><%= t 'views.support.new.heading' %></h1>
+</header>
+
+<div class='row'>
+  <div class='column column-one-third'>
+    <%= form_tag [:support_create], id: :js_stripe_form do %>
+      <script src='https://checkout.stripe.com/checkout.js'></script>
+
+      <!-- These get populated by the token callback below -->
+      <%= hidden_field_tag :js_stripe_email %>
+      <%= hidden_field_tag :js_stripe_token %>
+
+      <div class='row buttons'>
+        <div class='column column-half'>
+          <%= radio_button_tag :monthly, true, checked: true %>
+          <%= label_tag :monthly_true, t('views.support.new.radio_label_monthly') %>
+        </div>
+
+        <div class='column column-half'>
+          <%= radio_button_tag :monthly, false %>
+          <%= label_tag :monthly_false, t('views.support.new.radio_label_one_time') %>
+        </div>
+      </div>
+
+      <!-- Check the mapping hash below to make sense of this -->
+      <%= range_field_tag 'amount_slider', 29, in: 1..67, step: 1 %>
+
+      <%= label_tag :amount, t('views.support.new.amount_label') %>
+      <span class="dollar-sign">$</span>
+      <%= number_field_tag :amount, '50', min: 1, max: 1000, step: 1, tabindex: '-1' %>
+
+      <div class='actions'>
+        <button id='js-stripe-button' class='button'>
+          <%= t 'views.support.new.button_text' %>
+        </button>
+      </div>
+    <% end %>
+  </div>
+
+  <div class='column column-two-third'>
+    <%= render_markdown t 'views.support.new.description' %>
+
+    <div class="support-request">
+      <p><strong><%= t('views.support.new.support_request.header') %></strong></p>
+      <p><%= t('views.support.new.support_request.description') %></p>
+
+      <%= form_tag [:support, :request] do %>
+        <%= label_tag :email, t('views.support.new.support_request.email_label'), class: "sr-only" %>
+        <%= email_field_tag :email, nil, placeholder: t('views.support.new.support_request.email_placeholder') %>
+        <%= submit_tag t('views.support.new.support_request.button_text') %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<script>
+  var handler = StripeCheckout.configure({
+    key:    '<%= Rails.configuration.stripe[:publishable_key] %>',
+    image:  '<%= asset_url 'icons/icon-1200x1200.png' %>',
+    locale: 'auto',
+    token:  function(token) {
+      document.getElementById('js_stripe_token').value = token.id;
+      document.getElementById('js_stripe_email').value = token.email;
+      document.getElementById('js_stripe_form').submit();
+    }
+  });
+
+  document.getElementById('js-stripe-button').addEventListener('click', function(e) {
+    var amount = document.getElementById('amount').value
+
+    if (document.getElementById('monthly_true').checked === true){
+      var description = '$' + amount + ' <%= t 'views.support.new.description_monthly' %>';
+    } else {
+      var description = '$' + amount + ' <%= t 'views.support.new.description_one_time' %>';
+    }
+
+    // Open Checkout with further options:
+    handler.open({
+      description: description,
+      amount: parseInt(amount) * 100
+    });
+
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation:
+  window.addEventListener('popstate', function() {
+    handler.close();
+  });
+</script>
