@@ -1,7 +1,7 @@
 <div class="mt-5 col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
   <h1 class="display-3">Sign In</h1>
 
-  <%= form_with url: [:auth, :sessions], local: true do |form| %>
+  <%= form_with url: [:sessions], local: true do |form| %>
     <div class="form-group">
       <%= form.label :username, t("auth.username_label"), class: "sr-only" %>
       <%= form.text_field :username, autofocus: true, class: "form-control form-control-lg", placeholder: t("auth.username_label") %>

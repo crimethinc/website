@@ -159,14 +159,12 @@ Rails.application.routes.draw do
   end
 
   # Auth + User signup
-  namespace :auth do
-    resources :users,    only: %i[create update destroy]
-    resources :sessions, only: [:create]
-  end
+  resources :users,    only: %i[create update destroy]
+  resources :sessions, only: [:create]
 
-  get 'settings', to: 'auth/users#edit',       as: :settings
-  get 'signin',   to: 'auth/sessions#new',     as: :signin
-  get 'signout',  to: 'auth/sessions#destroy', as: :signout
+  get 'settings', to: 'users#edit',       as: :settings
+  get 'signin',   to: 'sessions#new',     as: :signin
+  get 'signout',  to: 'sessions#destroy', as: :signout
 
   # Misc plumbing infrastructure
   get 'manifest.json',  to: 'misc#manifest_json'
