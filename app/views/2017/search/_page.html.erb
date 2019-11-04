@@ -8,12 +8,12 @@
 
     <div class="<%= "column" if result.searchable.image.present? %> column-two-third">
       <header>
-        <%= render "articles/titles", header: result.searchable, linked: true %>
-        <%= render "articles/published_on", article: result.searchable %>
+        <%= render_themed "articles/titles", header: result.searchable, linked: true %>
+        <%= render_themed "articles/published_on", article: result.searchable %>
       </header>
 
       <footer>
-        <%= render "articles/tags", article: result.searchable %>
+        <%= render_themed "articles/tags", article: result.searchable %>
       </footer>
     </div>
   </div>

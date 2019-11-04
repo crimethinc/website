@@ -13,6 +13,8 @@ class SearchController < ApplicationController
     end
 
     @title = PageTitle.new title_for :search, :results, "“#{@query}”"
+
+    render "#{Theme.name}/search/index"
   end
 
   def advanced
@@ -21,6 +23,8 @@ class SearchController < ApplicationController
     @title   = PageTitle.new title_for :search, :advanced
 
     @advanced_search = AdvancedSearch.new(params[:q])
+
+    render "#{Theme.name}/search/advanced"
   end
 
   def advanced_search

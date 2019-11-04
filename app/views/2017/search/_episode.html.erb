@@ -8,7 +8,7 @@
 
     <div class="<%= "column" if result.searchable.image.present? %> column-two-third">
       <header>
-        <%= render "articles/titles", header: result.searchable, linked: true %>
+        <%= render_themed "articles/titles", header: result.searchable, linked: true %>
 
         <p class="screen-reader-only">
           <time class="dt-published" datetime="<%= display_date result.searchable.published_at if result.searchable.published_at.present? %>">
