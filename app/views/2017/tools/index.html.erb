@@ -1,6 +1,6 @@
 <article>
   <header>
-    <%= render "tools/nav" %>
+    <%= render_themed "tools/nav" %>
 
     <h1><%= t("views.tools.#{@type}_heading_text") %></h1>
   </header>
@@ -11,7 +11,7 @@
 
   <% [@featured_tools, @tools].each do |collection| %>
     <% collection.each do |tool| %>
-      <%= render "tools/tool", tool: tool %>
+      <%= render_themed "tools/tool", tool: tool %>
     <% end %>
 
     <hr style="margin-bottom: 5rem">
