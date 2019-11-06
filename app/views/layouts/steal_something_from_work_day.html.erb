@@ -5,20 +5,20 @@
              class:  html_class,
              prefix: html_prefix do %>
   <head>
-    <%= render 'shared/head/license' %>
+    <%= render 'steal_something_from_work_day/head/license' %>
     <title><%= t 'steal_something_from_work_day.title' %> | <%= t 'steal_something_from_work_day.crimethinc' %></title>
-    <%= render 'shared/head/meta_tags' %>
-    <%= render 'shared/head/public_meta_tags' %>
-    <%= render 'shared/head/social_media_meta_tags' %>
-    <%= render 'shared/head/link_tags' %>
-    <%= render 'shared/head/fav_and_touch_icons' %>
+    <%= render 'steal_something_from_work_day/head/meta_tags' %>
+    <%= render 'steal_something_from_work_day/head/public_meta_tags' %>
+    <%= render 'steal_something_from_work_day/head/social_media_meta_tags' %>
+    <%= render 'steal_something_from_work_day/head/link_tags' %>
+    <%= render 'steal_something_from_work_day/head/fav_and_touch_icons' %>
 
     <%= stylesheet_link_tag 'steal-something-from-work-day', media: 'all' %>
     <%= javascript_include_tag 'steal-something-from-work-day' %>
   </head>
 
   <body id='<%= body_id %>' data-spy='scroll' data-target='#section-list' data-offset='0'>
-    <%= render 'shared/development_mode_banner' %>
+    <%= render 'steal_something_from_work_day/development_mode_banner' %>
 
     <header role='banner' id='hero' class='d-flex' style='<%= hero_background_image_css %>'>
       <div class='align-self-center col'>

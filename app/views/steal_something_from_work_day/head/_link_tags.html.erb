@@ -1,0 +1,27 @@
+<!-- Feeds: RSS/Atom and JSON Feed -->
+<% if content_for?(:auto_discovery) %>
+  <%= yield :auto_discovery %>
+<% else %>
+  <%= auto_discovery_link_tag(:atom, feed_url,        title: page_title) %>
+  <%= auto_discovery_link_tag(nil,   json_feed_url, { title: page_title, type: "application/json" }) %>
+<% end %>
+
+<!-- Canonical URLs -->
+<%#= TODO rel_canonical_link_tag @post %>
+<%#= TODO shorturl_link_tag      @post %>
+
+<!-- BIO -->
+<link rel="me"     href="mailto:help@crimethinc.com" />
+<link rel="author" href="/about" title="About <%= t(:site_name) %>" />
+
+<!-- Site search -->
+<link rel="search" type="application/opensearchdescription+xml" href="https://crimethinc.com/opensearch.xml" title="<%= t(:site_name) %>" />
+
+<!-- Sitemap -->
+<link rel="home"  href="https://crimethinc.com" />
+<link rel="index" href="https://crimethinc.com/sitemap" />
+
+<!-- Browser hints -->
+<link rel="dns-prefetch" href="https://assets.crimethinc.com" />
+
+<%= yield :head %>
