@@ -3,6 +3,8 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.includes(:tags, :categories).live.published.root.page(params[:page]).per(10)
+
+    render "#{Theme.name}/articles/index"
   end
 
   def show
@@ -48,6 +50,10 @@ class ArticlesController < ApplicationController
     # save view stats
     Article.increment_counter(:page_views, @article.id) unless signed_in?
 
-    render html: @article.content.html_safe, layout: false if @article.content_in_html?
+    if @article.content_in_html?
+      render html: @article.content.html_safe, layout: false
+    else
+      render "#{Theme.name}/articles/show"
+    end
   end
 end
