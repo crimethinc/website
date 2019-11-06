@@ -25,7 +25,7 @@
     <div class="e-content">
       <%= render_content @article %>
 
-      <%= render_themed partial: "collection_post", collection: @collection_posts, as: :article if @article.collection_root? %>
+      <%= render_themed "articles/collection_post", collection: @collection_posts if @article.collection_root? %>
     </div>
 
     <footer>
