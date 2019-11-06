@@ -15,7 +15,7 @@ Layout/AlignHash:
   EnforcedColonStyle: table
 
 Metrics/AbcSize:
-  Max: 64
+  Max: 67
 
 Metrics/BlockLength:
   Exclude:
@@ -42,7 +42,7 @@ Metrics/ParameterLists:
   Max: 6
 
 Metrics/PerceivedComplexity:
-  Max: 13
+  Max: 14
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
