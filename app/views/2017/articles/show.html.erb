@@ -9,30 +9,30 @@
 <% cache [@article, lite_mode?], expires_in: (Rails.env.development? ? 1.second : 1.day) do %>
   <%= article_tag @article do %>
     <header>
-      <%= render "articles/image_media", article: @article, linked: false %>
+      <%= render_themed "articles/image_media", article: @article, linked: false %>
 
       <div class="meta">
         <%= render_themed "articles/titles", header: @article, linked: false %>
 
-        <%= render "articles/categories", article: @article %>
+        <%= render_themed "articles/categories", article: @article %>
 
-        <%= render "articles/localizations", article: @article %>
+        <%= render_themed "articles/localizations", article: @article %>
       </div>
 
-      <%= render "articles/image_lite", article: @article, linked: false %>
+      <%= render_themed "articles/image_lite", article: @article, linked: false %>
     </header>
 
     <div class="e-content">
       <%= render_content @article %>
 
-      <%= render partial: "collection_post", collection: @collection_posts, as: :article if @article.collection_root? %>
+      <%= render_themed partial: "collection_post", collection: @collection_posts, as: :article if @article.collection_root? %>
     </div>
 
     <footer>
-      <%= render "articles/share_on_social_networks", article: @article %>
+      <%= render_themed "articles/share_on_social_networks", article: @article %>
       <%= render_themed "articles/published_on",             article: @article, linked: true %>
-      <%= render "articles/categories",               article: @article %>
-      <%= render "articles/tags",                     article: @article %>
+      <%= render_themed "articles/categories",               article: @article %>
+      <%= render_themed "articles/tags",                     article: @article %>
 
       <div>
         <ul class="pagination">
@@ -51,7 +51,7 @@
       </div>
     </footer>
 
-    <%= render "articles/related", article: @article %>
+    <%= render_themed "articles/related", article: @article %>
   <% end %>
 
 <% end %>

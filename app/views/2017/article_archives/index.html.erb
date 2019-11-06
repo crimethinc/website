@@ -22,7 +22,7 @@
         <h1 class="year-month"><%= link_to_dates(year: year, month: month) %></h1>
       <% end %>
 
-      <%= render "articles/list", articles: articles %>
+      <%= render_themed "articles/list", articles: articles %>
 
     <% end %>
   <% end %>

@@ -11,8 +11,8 @@
         <header>
           <%= render_themed "articles/titles", header: article, linked: true %>
           <%= render_themed "articles/published_on", article: article %>
-          <%= render "articles/categories", article: article %>
-          <%= render "articles/tags", article: article %>
+          <%= render_themed "articles/categories", article: article %>
+          <%= render_themed "articles/tags", article: article %>
         </header>
       </div>
     </div>
