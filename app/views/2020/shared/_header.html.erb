@@ -27,8 +27,8 @@
   <div>
     <%= render_markdown tt 'header.cards.share.description' %>
 
-    <h2><%= page_share_title %></h2>
-    <h3><%= page_share_subtitle %></h3>
+    <h2><%= @page_share.title %></h2>
+    <h3><%= @page_share.subtitle %></h3>
 
     <ul>
       <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter) %></li>
