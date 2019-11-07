@@ -9,7 +9,7 @@
       <li><%= link_to tt('header.tools'),    [:tools] %></li>
       <li><%= link_to tt('header.podcasts'), [:podcasts] %></li>
       <li><%= link_to tt('header.store'),    [:store] %></li>
-      <li><%= link_to tt('header.about'),    [:about] %></li>
+      <li><%= link_to tt('header.about'),    anchor: 'about' %></li>
     </ul>
 
     <hr>
@@ -17,9 +17,9 @@
     <hr>
 
     <ul>
-      <li><%= link_to tt('header.languages'), '#languages' %></li>
-      <li><%= link_to tt('header.search'),    '#search' %></li>
-      <li><%= link_to tt('header.share'),     '#share' %></li>
+      <li><%= link_to tt('header.languages'), anchor: 'languages' %></li>
+      <li><%= link_to tt('header.search'),    anchor: 'search' %></li>
+      <li><%= link_to tt('header.share'),     anchor: 'share' %></li>
     </ul>
   </nav>
 
