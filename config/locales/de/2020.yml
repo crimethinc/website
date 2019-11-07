@@ -8,19 +8,19 @@
 #  8. If a value has Markdown syntax characters in it, please keep those in your translation.
 #  9. Markdown examples: [link text](url), **bold**, _italics_, %{dynamic variable}, etc.
 # 10. If a value has <b>HTML</b> syntax characters in it, please keep those in your translation.
-en:
+de:
   '2020':
     theme: '2020'
-    name: English
+    name: Deutsche
     language_direction: ltr
     site_name: CrimethInc.
     site_author: CrimethInc. Ex-Workers Collective
 
     head:
       # meta_title is wrapped in quotes because it has a colon in its text value
-      meta_title: "CrimethInc. ex-Workers’ Collective: Your ticket to a world free of charge"
+      meta_title: "CrimethInc. ex-Workers’ Collective: Dein kostenloses Ticket in eine andere Welt"
       meta_image_url: https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png
-      meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+      meta_description: CrimethInc. ist ein dezentrales Netzwerk, das sich dem anonymen kollektiven Handeln verschrieben hat. Wir streben danach, unser Leben und unsere Welt nach den Prinzipien der Selbstbestimmung und der gegenseitigen Hilfe neu zu erfinden.
 
     header:
       books: Books
@@ -38,15 +38,10 @@ en:
 
       cards:
         languages:
-
         search:
-
         share:
           description: Everything conspires to suppress the voices of those who fight for a better world. Help us bring them to a wide audience.
           twitter: Twitter
           facebook: Facebook
           tumblr: Tumblr
           email: Email
-
-        about:
-          first_time: First Time? Start Here →

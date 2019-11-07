@@ -18,7 +18,7 @@ module ApplicationHelper
     render "#{Theme.name}/#{path}", options
   end
 
-  def tt path
-    t "#{Theme.name}.#{path}"
+  def tt path, options = {}
+    t "#{Theme.name}.#{path}", options
   end
 end

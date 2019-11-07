@@ -24,7 +24,26 @@
   </nav>
 
   <hr>
-  <div>
+  <div id='languages'>
+    <p><%= tt 'header.languages' %></p>
+
+    <ol>
+      <% Locales.supported.each do |locale| %>
+        <%= link_to t(:name, locale: locale),
+                    url_for_current_path_with_subdomain(subdomain: locale) %>
+      <% end %>
+    </ol>
+  </div>
+  <hr>
+
+  <hr>
+  <div id='search'>
+    <%# TODO %>
+  </div>
+  <hr>
+
+  <hr>
+  <div id='share'>
     <%= render_markdown tt 'header.cards.share.description' %>
 
     <h2><%= @page_share.title %></h2>
