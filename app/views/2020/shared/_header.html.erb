@@ -45,7 +45,7 @@
 
   <%= render_markdown tt 'header.cards.about.search_description' %>
 
-  <p>[____search field____]</p>
+  <%= render_themed 'shared/site_search' %>
 
   <%= render_markdown tt 'header.cards.about.description' %>
   <p><%= tt 'header.cards.about.more_link' %></p>
@@ -54,8 +54,7 @@
 
 <div id='search'>
   <%# TODO %>
-  <p>[____search field____]</p>
-  Search card here
+  <%= render_themed 'shared/site_search' %>
 </div>
 <hr>
 

@@ -40,6 +40,7 @@ en:
         languages:
 
         search:
+          form_placeholder: Search Archives…
 
         share:
           description: Everything conspires to suppress the voices of those who fight for a better world. Help us bring them to a wide audience.
