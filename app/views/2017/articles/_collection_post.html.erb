@@ -1,4 +1,4 @@
-<%= collection.each do |article| %>
+<% collection.each do |article| %>
   <%= article_tag article do %>
     <div class="meta">
       <%= render_themed "articles/titles", header: article, linked: false %>
