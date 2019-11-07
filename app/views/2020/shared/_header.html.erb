@@ -31,10 +31,10 @@
     <h3><%= page_share_subtitle %></h3>
 
     <ul>
-      <li><%= link_to tt('header.cards.share.twitter'),  Url.for_share_to(:twitter,  content: page_share_title, url: page_share_url, image: page_share_image) %></li>
-      <li><%= link_to tt('header.cards.share.facebook'), Url.for_share_to(:facebook, content: page_share_title, url: page_share_url, image: page_share_image) %></li>
-      <li><%= link_to tt('header.cards.share.tumblr'),   Url.for_share_to(:tumblr,   content: page_share_title, url: page_share_url, image: page_share_image) %></li>
-      <li><%= link_to tt('header.cards.share.email'),    Url.for_share_to(:email,    content: page_share_title, url: page_share_url, image: page_share_image) %></li>
+      <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter) %></li>
+      <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook) %></li>
+      <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr) %></li>
+      <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email) %></li>
     </ul>
   </div>
   <hr>

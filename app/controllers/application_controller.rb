@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
+  before_action :set_page_share
 
   helper :meta
 
@@ -106,4 +107,18 @@ class ApplicationController < ActionController::Base
     Rails.env.development? ? 'http://localhost:3000' : 'https://crimethinc.com'
   end
   helper_method :root_url
+
+  def set_page_share
+    url       = ''
+    title     = ''
+    subtitle  = ''
+    content   = ''
+    image_url = ''
+
+    @page_share = PageShare.new url:       url,
+                                title:     title,
+                                subtitle:  subtitle,
+                                content:   content,
+                                image_url: image_url
+  end
 end
