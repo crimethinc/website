@@ -1,19 +1,41 @@
-<nav>
-  <ul>
-    <li><%= link_to tt('site_name'),       [:root] %></li>
-    <li><%= link_to tt('header.books'),    [:books] %></li>
-    <li><%= link_to tt('header.library'),  [:library] %></li>
-    <li><%= link_to tt('header.tools'),    [:tools] %></li>
-    <li><%= link_to tt('header.podcasts'), [:podcasts] %></li>
-    <li><%= link_to tt('header.store'),    [:store] %></li>
-    <li><%= link_to tt('header.about'),    [:about] %></li>
-  </ul>
+<%# TEMP: <hr>s are just for visual separation during dev while there's no CSS. Remove at anytime. %>
 
-  <%= link_to tt('header.support'), [:support] %>
+<header>
+  <nav>
+    <ul>
+      <li><%= link_to tt('site_name'),       [:root] %></li>
+      <li><%= link_to tt('header.books'),    [:books] %></li>
+      <li><%= link_to tt('header.library'),  [:library] %></li>
+      <li><%= link_to tt('header.tools'),    [:tools] %></li>
+      <li><%= link_to tt('header.podcasts'), [:podcasts] %></li>
+      <li><%= link_to tt('header.store'),    [:store] %></li>
+      <li><%= link_to tt('header.about'),    [:about] %></li>
+    </ul>
 
-  <ul>
-    <li><%= link_to tt('header.languages'), '#languages' %></li>
-    <li><%= link_to tt('header.search'),    '#search' %></li>
-    <li><%= link_to tt('header.share'),     '#share' %></li>
-  </ul>
-</nav>
+    <hr>
+    <%= link_to tt('header.support'), [:support] %>
+    <hr>
+
+    <ul>
+      <li><%= link_to tt('header.languages'), '#languages' %></li>
+      <li><%= link_to tt('header.search'),    '#search' %></li>
+      <li><%= link_to tt('header.share'),     '#share' %></li>
+    </ul>
+  </nav>
+
+  <hr>
+  <div>
+    <%= render_markdown tt 'header.cards.share.description' %>
+
+    <h2><%= page_share_title %></h2>
+    <h3><%= page_share_subtitle %></h3>
+
+    <ul>
+      <li><%= link_to tt('header.cards.share.twitter'),  Url.for_share_to(:twitter,  content: page_share_title, url: page_share_url, image: page_share_image) %></li>
+      <li><%= link_to tt('header.cards.share.facebook'), Url.for_share_to(:facebook, content: page_share_title, url: page_share_url, image: page_share_image) %></li>
+      <li><%= link_to tt('header.cards.share.tumblr'),   Url.for_share_to(:tumblr,   content: page_share_title, url: page_share_url, image: page_share_image) %></li>
+      <li><%= link_to tt('header.cards.share.email'),    Url.for_share_to(:email,    content: page_share_title, url: page_share_url, image: page_share_image) %></li>
+    </ul>
+  </div>
+  <hr>
+</header>

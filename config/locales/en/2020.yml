@@ -35,3 +35,13 @@ en:
       languages: Languages
       search: Search
       share: Share
+
+      cards:
+        languages:
+        search:
+        share:
+          description: Everything conspires to suppress the voices of those who fight for a better world. Help us bring them to a wide audience.
+          twitter: Twitter
+          facebook: Facebook
+          tumblr: Tumblr
+          email: Email
