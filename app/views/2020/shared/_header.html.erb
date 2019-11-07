@@ -34,27 +34,42 @@
       <% end %>
     </ol>
   </div>
-  <hr>
-
-  <hr>
-  <div id='search'>
-    <%# TODO %>
-  </div>
-  <hr>
-
-  <hr>
-  <div id='share'>
-    <%= render_markdown tt 'header.cards.share.description' %>
-
-    <h2><%= @page_share.title %></h2>
-    <h3><%= @page_share.subtitle %></h3>
-
-    <ul>
-      <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter) %></li>
-      <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook) %></li>
-      <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr) %></li>
-      <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email) %></li>
-    </ul>
-  </div>
-  <hr>
 </header>
+
+<hr>
+<div id='share'>
+  <p><%= tt('site_name') %></p>
+
+  <%= tt 'header.cards.about.first_time_description' %>
+  <%= link_to tt('header.cards.about.first_time_link'), '/start' %>
+
+  <%= render_markdown tt 'header.cards.about.search_description' %>
+
+  <p>[____search field____]</p>
+
+  <%= render_markdown tt 'header.cards.about.description' %>
+  <p><%= tt 'header.cards.about.more_link' %></p>
+</div>
+<hr>
+
+<div id='search'>
+  <%# TODO %>
+  <p>[____search field____]</p>
+  Search card here
+</div>
+<hr>
+
+<div id='share'>
+  <%= render_markdown tt 'header.cards.share.description' %>
+
+  <h2><%= @page_share.title %></h2>
+  <h3><%= @page_share.subtitle %></h3>
+
+  <ul>
+    <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr),   target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email),    target: '_blank' %></li>
+  </ul>
+</div>
+<hr>

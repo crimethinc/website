@@ -49,4 +49,9 @@ en:
           email: Email
 
         about:
-          first_time: First Time? Start Here →
+          first_time_description: Is this your first time hearing about CrimethInc.?
+          first_time_link: Start here. →
+          search_description: Or you can **search** over two decades of archives
+          description: |
+            CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid. We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._
+          more_link: Read more →
