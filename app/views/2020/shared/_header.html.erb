@@ -1,3 +1,19 @@
 <nav>
-  Homepage
+  <ul>
+    <li><%= link_to tt('site_name'),       [:root] %></li>
+    <li><%= link_to tt('header.books'),    [:books] %></li>
+    <li><%= link_to tt('header.library'),  [:library] %></li>
+    <li><%= link_to tt('header.tools'),    [:tools] %></li>
+    <li><%= link_to tt('header.podcasts'), [:podcasts] %></li>
+    <li><%= link_to tt('header.store'),    [:store] %></li>
+    <li><%= link_to tt('header.about'),    [:about] %></li>
+  </ul>
+
+  <%= link_to tt('header.support'), [:support] %>
+
+  <ul>
+    <li><%= link_to tt('header.languages'), '#languages' %></li>
+    <li><%= link_to tt('header.search'),    '#search' %></li>
+    <li><%= link_to tt('header.share'),     '#share' %></li>
+  </ul>
 </nav>
