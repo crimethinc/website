@@ -1,3 +1,91 @@
-<nav>
-  Homepage
-</nav>
+<%# TEMP: <hr>s are just for visual separation during dev while there's no CSS. Remove at anytime. %>
+
+<header>
+  <nav>
+    <ul>
+      <li><%= link_to tt('site_name'),       [:root] %></li>
+      <li><%= link_to tt('header.books'),    [:books] %></li>
+      <li><%= link_to tt('header.library'),  [:library] %></li>
+      <li><%= link_to tt('header.tools'),    [:tools] %></li>
+      <li><%= link_to tt('header.podcasts'), [:podcasts] %></li>
+      <li><%= link_to tt('header.store'),    [:store] %></li>
+      <li><%= link_to tt('header.about'),    anchor: 'about' %></li>
+    </ul>
+
+    <hr>
+    <%= link_to tt('header.support'), [:support] %>
+    <hr>
+
+    <ul>
+      <li><%= link_to tt('header.languages'), anchor: 'languages' %></li>
+      <li><%= link_to tt('header.search'),    anchor: 'search' %></li>
+      <li><%= link_to tt('header.share'),     anchor: 'share' %></li>
+    </ul>
+  </nav>
+
+  <hr>
+  <div id='languages'>
+    <p><%= tt 'header.languages' %></p>
+
+    <ol>
+      <% Locales.supported.each do |locale| %>
+        <%= link_to t(:name, locale: locale),
+                    url_for_current_path_with_subdomain(subdomain: locale) %>
+      <% end %>
+    </ol>
+  </div>
+</header>
+
+<hr>
+<div id='about'>
+  <p><%= tt('site_name') %></p>
+
+  <%= tt 'header.cards.about.first_time_description' %>
+  <%= link_to tt('header.cards.about.first_time_link'), '/start' %>
+
+  <%= render_markdown tt 'header.cards.about.search_description' %>
+
+  <%= render_themed 'shared/site_search' %>
+
+  <%= render_markdown tt 'header.cards.about.description' %>
+  <p><%= tt 'header.cards.about.more_link' %></p>
+</div>
+<hr>
+
+<div id='search'>
+  <%= tt 'header.cards.search.description' %>
+
+  <%= render_themed 'shared/site_search' %>
+
+  <h2><%= tt 'header.cards.search.category_heading' %></h2>
+
+  <p>
+    <% Category.all.each do |category| %>
+      <%= link_to category.name, [:category, slug: category.slug] %>
+    <% end %>
+  </p>
+
+  <h2><%= tt 'header.cards.search.chronological_heading' %></h2>
+
+  <p>
+    <% (1996..Time.current.year).to_a.reverse_each do |year| %>
+      <%= link_to year, [:article_archives, year: year] %>
+    <% end %>
+  </p>
+</div>
+<hr>
+
+<div id='share'>
+  <%= render_markdown tt 'header.cards.share.description' %>
+
+  <h2><%= @page_share.title %></h2>
+  <h3><%= @page_share.subtitle %></h3>
+
+  <ul>
+    <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr),   target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email),    target: '_blank' %></li>
+  </ul>
+</div>
+<hr>

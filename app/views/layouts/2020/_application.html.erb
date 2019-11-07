@@ -5,6 +5,7 @@
              prefix: html_prefix do %>
   <head>
     <%= stylesheet_link_tag Theme.name, media: "all" %>
+    <%= render_themed "shared/translation_missing_css" %>
   </head>
 
   <body>

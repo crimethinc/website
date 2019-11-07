@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
+  before_action :set_page_share
 
   helper :meta
 
@@ -106,4 +107,43 @@ class ApplicationController < ActionController::Base
     Rails.env.development? ? 'http://localhost:3000' : 'https://crimethinc.com'
   end
   helper_method :root_url
+
+  # Page Share...
+  def set_page_share
+    @page_share = PageShare.new url:       page_share_url,
+                                title:     page_share_title,
+                                subtitle:  page_share_subtitle,
+                                content:   page_share_content,
+                                image_url: page_share_image_url
+  end
+
+  private
+
+  def page_share_url
+    # TODO: implement this algorithm
+    request.url
+    'https://crimethinc.com'
+  end
+
+  def page_share_title
+    # TODO: implement this algorithm
+    'TODO: Page Title That Will be Pre-populated in Form on Each Site'
+  end
+
+  def page_share_subtitle
+    # TODO: implement this algorithm
+    'TODO: And Its Related Subtitle'
+  end
+
+  def page_share_content
+    # TODO: implement this algorithm
+    'TODO: Page summary / description / tweet'
+  end
+
+  def page_share_image_url
+    # TODO: implement this algorithm
+    'https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png'
+  end
+
+  # ...Page Share
 end
