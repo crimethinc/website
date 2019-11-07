@@ -37,7 +37,7 @@
 </header>
 
 <hr>
-<div id='share'>
+<div id='about'>
   <p><%= tt('site_name') %></p>
 
   <%= tt 'header.cards.about.first_time_description' %>
@@ -53,8 +53,25 @@
 <hr>
 
 <div id='search'>
-  <%# TODO %>
+  <%= tt 'header.cards.search.description' %>
+
   <%= render_themed 'shared/site_search' %>
+
+  <h2><%= tt 'header.cards.search.category_heading' %></h2>
+
+  <p>
+    <% Category.all.each do |category| %>
+      <%= link_to category.name, [:category, slug: category.slug] %>
+    <% end %>
+  </p>
+
+  <h2><%= tt 'header.cards.search.category_heading' %></h2>
+
+  <p>
+    <% (1996..Time.current.year).to_a.reverse_each do |year| %>
+      <%= link_to year, [:article_archives, year: year] %>
+    <% end %>
+  </p>
 </div>
 <hr>
 

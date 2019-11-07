@@ -37,11 +37,6 @@ en:
       share: Share
 
       cards:
-        languages:
-
-        search:
-          form_placeholder: Search Archives…
-
         share:
           description: Everything conspires to suppress the voices of those who fight for a better world. Help us bring them to a wide audience.
           twitter: Twitter
@@ -52,7 +47,27 @@ en:
         about:
           first_time_description: Is this your first time hearing about CrimethInc.?
           first_time_link: Start here. →
-          search_description: Or you can **search** over two decades of archives
+          search_description: Or you can **search** over two decades of archives.
           description: |
             CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid. We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._
           more_link: Read more →
+
+        search:
+          description: You can search over two decades of archives.
+          category_heading: Browse by Category
+          chronological_heading: Browse Chronologically
+
+    search:
+      form_placeholder: Search Archives…
+      search_results: 'Search results for: %{query}'
+      advanced:
+        heading: Advanced Search
+        form:
+          term_label: Search
+          title_label: Title
+          subtitle_label: Subtitle
+          content_label: Content
+          tag_label: Tags
+          category_label: Categories
+          comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
+          button: Search
