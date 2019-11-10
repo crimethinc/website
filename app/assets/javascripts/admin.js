@@ -22,41 +22,6 @@ $(function() {
   });
 });
 
-// pad 0s (or whatever) on the left of strings
-$(function() {
-  function rjust(str, width, padding) {
-    padding = padding || " ";
-    padding = padding.substr(0, 1);
-
-    if (str.length < width) {
-      return padding.repeat(width - str.length) + str;
-    } else {
-      return str;
-    }
-  }
-
-  $("#js-admin-article #publish-now").click(function() {
-    var now    = new Date();
-    var year   = now.getUTCFullYear();
-    var month  = rjust((now.getUTCMonth() + 1).toString(), 2, "0");
-    var day    = rjust(now.getUTCDate().toString(),        2, "0");
-    var hour   = rjust(now.getUTCHours().toString(),       2, "0");
-    var minute = rjust(now.getUTCMinutes().toString(),     2, "0");
-
-    // set published_at date to utc.now
-    $("#article_published_at_tz").val("UTC");
-    $("#publication_date").val(year + "-" + month + "-" + day);
-    $("#publication_time").val(hour+":"+minute);
-
-    // set publication status to published
-    $("#publication_status_published").attr("checked", "checked");
-
-    // submit form to publish article
-    $("#article-form").submit();
-    return false;
-  });
-});
-
 $(function() {
   var date_and_time_supported = (Modernizr.inputtypes.time && Modernizr.inputtypes.date);
   // not-supported, so polyfill
