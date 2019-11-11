@@ -102,6 +102,8 @@ module Admin
       # to 'published'
       handle_publish_now_situation(permitted_params) if params[:publish_now].present?
 
+      handle_published_wo_datetime(permitted_params)
+
       return permitted_params if current_user.can_publish? || @article&.published?
 
       # Override publication_status from the submitted for,
@@ -109,15 +111,27 @@ module Admin
       permitted_params.merge(publication_status: 'draft') if @article.blank? || @article.draft?
     end
 
-    def handle_publish_now_situation permitted_params
+    def handle_publish_now_situation permitted_params, time: Time.zone.now, zone: Time.zone.name
       return permitted_params unless current_user.can_publish?
       return permitted_params if @article&.published?
 
       permitted_params.merge!(
         publication_status: 'published',
-        published_at:       Time.zone.now,
-        published_at_tz:    Time.zone.name
+        published_at:       time,
+        published_at_tz:    zone
       )
+    end
+
+    def handle_published_wo_datetime permitted_params
+      return if @article&.published?
+
+      publish_in_100_years = permitted_params[:publication_status] == 'published' &&
+                             permitted_params[:published_at].blank?
+
+      time = Time.zone.now + 100.years
+      tz = Time.zone.name
+
+      handle_publish_now_situation(permitted_params, time: time, zone: tz) if publish_in_100_years
     end
   end
 end
