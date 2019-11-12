@@ -102,7 +102,7 @@ module Admin
       # to 'published'
       handle_publish_now_situation(permitted_params) if params[:publish_now].present?
 
-      handle_published_wo_datetime(permitted_params)
+      handle_published_without_datetime permitted_params
 
       return permitted_params if current_user.can_publish? || @article&.published?
 
