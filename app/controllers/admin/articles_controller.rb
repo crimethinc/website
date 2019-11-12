@@ -122,7 +122,7 @@ module Admin
       )
     end
 
-    def handle_published_wo_datetime permitted_params
+    def handle_published_without_datetime permitted_params
       return if @article&.published?
 
       publish_in_100_years = permitted_params[:publication_status] == 'published' &&
