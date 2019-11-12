@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe 'Setting and changing an articles published_at date' do
+  include ActiveSupport::Testing::TimeHelpers
+
   let(:admin) do
     create(:user, username: 'user1', password: 'c' * 31, role: 'publisher')
   end
@@ -70,31 +72,40 @@ describe 'Setting and changing an articles published_at date' do
     expect(article.published_at).to be_nil
   end
 
-  it 'uses ‘PUBLISH NOW’ feature', :js do
-    # TODO: the 'publish now' feature relies on a JavaScript in
-    # the front-end to automatically set the form fields and submit the
-    # form. This makes testing time hard since we cannot
-    # Timecop.freeze the front-end. Consider making the 'Publish Now!'
-    # feature a back-end feature
-    login_user(admin)
-    visit '/admin/articles'
+  it 'uses ‘PUBLISH NOW’ feature' do
+    freeze_time do
+      login_user(admin)
+      visit '/admin/articles'
 
-    click_on 'NEW'
+      click_on 'NEW'
 
-    time = Time.now.utc
+      within('#datetime') { click_on 'Publish NOW!' }
 
-    within('#datetime') { click_on 'Publish NOW!' }
+      expect(page).to have_content 'Article was successfully created'
+      article = Article.last
 
-    expect(page).to have_content 'Article was successfully created'
-    article = Article.last
+      expect(article.reload.published_at_tz).to eq('UTC')
+      expect(article.published_at).to eq(Time.now.utc)
+      expect(article).to be_published
+    end
+  end
 
-    # rough approximation of 'now'
-    expect(article.published_at.day).to eq(time.day)
-    expect(article.published_at.month).to eq(time.month)
-    expect(article.published_at.year).to eq(time.year)
-    expect(article.published_at.hour).to eq(time.hour)
-    expect(article).to be_published
+  it 'Sets the publication date/time if article is `published` and fields are blank' do
+    freeze_time do
+      login_user(admin)
+      visit '/admin/articles'
 
-    expect(article.reload.published_at_tz).to eq('UTC')
+      click_on 'NEW'
+
+      within('#publication_status') { choose 'Published' }
+      find_button('Save', match: :first).click
+
+      expect(page).to have_content 'Article was successfully created'
+      article = Article.last
+
+      expect(article.reload.published_at_tz).to eq('UTC')
+      expect(article.published_at).to eq(Time.now.utc + 100.years)
+      expect(article).to be_published
+    end
   end
 end

@@ -34,7 +34,7 @@ module Admin
     end
 
     def create
-      @article = Article.new(updated_article_params)
+      @article = Article.new(article_params)
 
       if @article.save
         redirect_to [:admin, @article], notice: 'Article was successfully created.'
@@ -46,7 +46,7 @@ module Admin
     def update
       @article.tags.destroy_all
 
-      if @article.update(updated_article_params)
+      if @article.update(article_params)
         # Bust the article cache to update list of translations on articles
         @article.localizations.each(&:touch)
 
@@ -88,21 +88,50 @@ module Admin
     end
 
     def article_params
-      params.require(:article).permit(:title, :subtitle, :content, :year, :month, :day,
-                                      :tweet, :slug, :draft_code, :summary, :published_at,
-                                      :tags, :collection_id, :short_path, :image, :css,
-                                      :image_description, :image_mobile, :published_at_tz,
-                                      :locale, :canonical_id,
-                                      :publication_status, category_ids: [])
-    end
+      permitted_params = params.require(:article).permit(
+        :title, :subtitle, :content, :year, :month, :day, :tweet, :slug,
+        :draft_code, :summary, :published_at, :tags, :collection_id,
+        :short_path, :image, :css, :image_description, :image_mobile,
+        :published_at_tz, :locale, :canonical_id, :publication_status,
+        category_ids: []
+      )
 
-    def updated_article_params
-      return article_params if current_user.can_publish?
-      return article_params if @article&.published?
+      # if the `publish_now` submit button was used, we should see
+      # that name show up in the raw params, we will set the
+      # `published_at` to `Time.zone.now` and the `publication_status`
+      # to 'published'
+      handle_publish_now_situation(permitted_params) if params[:publish_now].present?
+
+      handle_published_without_datetime permitted_params
+
+      return permitted_params if current_user.can_publish? || @article&.published?
 
       # Override publication_status from the submitted for,
       # to prevent authors and editors from publishing a draft article
-      article_params.merge(publication_status: 'draft') if @article.blank? || @article.draft?
+      permitted_params.merge(publication_status: 'draft') if @article.blank? || @article.draft?
+    end
+
+    def handle_publish_now_situation permitted_params, time: Time.zone.now, zone: Time.zone.name
+      return permitted_params unless current_user.can_publish?
+      return permitted_params if @article&.published?
+
+      permitted_params.merge!(
+        publication_status: 'published',
+        published_at:       time,
+        published_at_tz:    zone
+      )
+    end
+
+    def handle_published_without_datetime permitted_params
+      return if @article&.published?
+
+      publish_in_100_years = permitted_params[:publication_status] == 'published' &&
+                             permitted_params[:published_at].blank?
+
+      time = Time.zone.now + 100.years
+      tz = Time.zone.name
+
+      handle_publish_now_situation(permitted_params, time: time, zone: tz) if publish_in_100_years
     end
   end
 end
