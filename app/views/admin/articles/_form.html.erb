@@ -26,20 +26,20 @@
 
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
-    <%= render "admin/articles/syndication_form", form: form %>
-    <%= render "admin/articles/appearance_form", form: form %>
+    <%= render "admin/articles/form/syndication", form: form %>
+    <%= render "admin/articles/form/appearance", form: form %>
 
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
   </section>
 
   <aside class="col-12 col-md-6">
-    <%= render "admin/articles/publication_status_form", form: form %>
-    <%= render "admin/articles/published_at_form", form: form %>
+    <%= render "admin/articles/form/publication_status", form: form %>
+    <%= render "admin/articles/form/published_at", form: form %>
 
-    <%= render "admin/articles/categories_form", form: form %>
-    <%= render "admin/articles/tags_form", form: form %>
-    <%= render "admin/articles/short_url_form", form: form %>
-    <%= render "admin/articles/localization_form", form: form %>
+    <%= render "admin/articles/form/categories", form: form %>
+    <%= render "admin/articles/form/tags", form: form %>
+    <%= render "admin/articles/form/short_url", form: form %>
+    <%= render "admin/articles/form/localization", form: form %>
 
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
   </aside>
