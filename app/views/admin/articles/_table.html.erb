@@ -1,8 +1,8 @@
 <div class="articles col-12 mb-5">
   <div class="articles-header row py-2 bg-dark text-white d-none d-md-flex">
     <div class="col-sm-2"><b>Status</b></div>
-    <div class="col-sm-6"><b>Title / Subtitle</b></div>
-    <div class="col-sm-3"><b>Published Date</b></div>
+    <div class="col-sm-5"><b>Title / Subtitle</b></div>
+    <div class="col-sm-3"><b>Published</b></div>
     <div class="col-sm-1 text-right"><b>Views</b></div>
   </div>
 
@@ -20,7 +20,7 @@
         </span>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <b><%= link_to article.title, [:admin, article] %></b><br>
 
         <% if article.subtitle.present? %>
