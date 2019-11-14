@@ -1,0 +1,3 @@
+<% unless @collection.present? %>
+  <%= render "admin/label_and_field_form_group", form: form, attr: :short_path, label_text: "Short URL Path" %>
+<% end %>

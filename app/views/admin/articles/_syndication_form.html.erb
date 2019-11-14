@@ -1,0 +1,25 @@
+<div id="syndication">
+  <fieldset>
+    <legend>Syndication</legend>
+
+    <div class="form-group">
+      <%= form.label :tweet %>
+      <%= form.text_area :tweet, class: "form-control form-control-lg", data: { 'max-length': '250', 'feedback-box': 'tweet-length' } %>
+      <div id="tweet-length">0</div>
+      <p class="form-text text-muted">
+        Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
+        Used for syndicated tweet for this Article.
+      </p>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :summary %>
+      <%= form.text_area :summary, class: "form-control form-control-lg", data: { 'max-length': '150', 'feedback-box': 'summary-length' } %>
+      <div id="summary-length">0</div>
+      <p class="form-text text-muted">
+        Maximum 150 characters.
+        Used for page description and previews in story cards on other sites.
+      </p>
+    </div>
+  </fieldset>
+</div><!-- #syndication -->

@@ -1,59 +1,31 @@
-<div id="categorization" class="pt-5">
-  <div class="row ">
-  <div class="col-12 col-sm-6">
-    <% unless @collection.present? %>
+<div id="categorization">
+  <% unless @collection.present? %>
 
-      <fieldset id="categories">
-        <label class="h4">Categories</label>
+    <fieldset id="categories">
+      <p class="m-0 font-weight-bold">Categories</p>
 
-        <div class="form-check">
-          <% @categories.in_groups_of(2).each do |group| %>
+      <div class="form-check">
+        <% @categories.in_groups_of(2).each do |group| %>
 
-            <div class="row">
-              <% group.each do |category| %>
-                <div class="col-6">
-                  <% if category.present? %>
+          <div class="row">
+            <% group.each do |category| %>
+              <div class="col-6">
+                <% if category.present? %>
 
-                    <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
-                      <%= category_check_box form: form, category: category %>
+                  <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
+                    <%= category_check_box form: form, category: category %>
 
-                      <b><%= category.name %></b>
-                    <% end %>
-
+                    <b><%= category.name %></b>
                   <% end %>
-                </div>
-              <% end %>
-            </div><!-- .row -->
 
-          <% end %>
-        </div><!-- .form-group -->
-      </fieldset>
+                <% end %>
+              </div>
+            <% end %>
+          </div><!-- .row -->
 
-    <% end %>
-  </div><!-- .col -->
+        <% end %>
+      </div><!-- .form-group -->
+    </fieldset>
 
-  <div class="col-12 col-sm-6">
-    <div class="form-group">
-      <%= form.label :tags, "Tags", class: "h4" %>
-      <%= text_field_tag :tags, @article.tags.map(&:name).join(", "), class: "form-control form-control-lg" %>
-      <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
-    </div>
-
-    <hr class="my-5">
-
-    <% unless @collection.present? %>
-      <%= render "admin/label_and_field_form_group", form: form, attr: :short_path, label_text: "Short URL Path" %>
-    <% end %>
-
-    <% if current_user.can_publish? || @article.draft? %>
-      <%= render 'admin/publication_status', form: form %>
-    <% elsif @article.published? %>
-      <b>Publication Status</b><br>
-      <span class='badge badge-success'>PUBLISHED</span>
-    <% end %>
-
-  </div><!-- .col -->
-
-  </div><!-- .row -->
-  <%= render "admin/articles/back_to_top" %>
+  <% end %>
 </div><!-- #categorization -->
