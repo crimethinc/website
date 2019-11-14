@@ -1,21 +1,7 @@
 <%= render "admin/page_header", thing: @article %>
 
-<br>
-
-<article>
-  <header>
-    <p>
-      <%= render "/admin/articles/publication_status_badge", resource: @article %>
-
-      <% if @article.content_in_html? %>
-      &nbsp;
-      <b class="badge badge-warning">HTML</b>
-      <% end %>
-
-      &nbsp;
-      <%= render_themed "articles/published_on_time_tag", article: @article %>
-    </p>
-
+<div class="row">
+  <header class="col-12 col-md-8">
     <h1>
       <%= link_to @article.path, class: "p-name" do %>
         <span class="h1 title"><%= @article.title %></span><br>
@@ -23,82 +9,105 @@
       <% end %>
     </h1>
 
+    <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
+  </header>
+</div>
+
+<article class="row">
+  <div class="col-12 col-md-8">
+    <% if @article.image.present? %>
+      <%= image_tag @article.image, class: "rounded mb-3" %>
+    <% end %>
+
+    <% if @article.image_description.present? %>
+      <%= render_markdown @article.image_description %>
+    <% end %>
+
+    <div class="e-content">
+      <% if @article.content_in_html? %>
+        <pre class='bg-light p-3'><code><%= @article.content.gsub("\t", "  ") %></code></pre>
+      <% else %>
+        <%= render_content @article %>
+      <% end %>
+    </div>
+
+    <% unless @article.content_in_html? %>
+
+        <% if @article.in_collection? %>
+      <hr class="my-5">
+      <h3 class="mt-3">
+          Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
+      </h3>
+        <% end %>
+
+      <% if @article.collection_root? %>
+        <div id="collection" style="margin-top: 6rem">
+          <h3 class="mb-3">
+            Nested Articles
+            <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-sm" %>
+          </h3>
+
+          <%= render "table", articles: @article.collection_posts %>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
+
+  <aside class="col-12 col-md-4">
+    <% unless @article.published? %>
+      <p>
+        <%= link_to "Preview Draft", @article.path, class: "btn btn-success" %>
+      </p>
+    <% end %>
+
+    <p>
+      Publication Status:<br>
+      <%= render "/admin/articles/publication_status_badge", resource: @article %>
+    </p>
+
+    <% if @article.content_in_html? %>
+      <p>
+        Content Format:
+        <b class="badge badge-warning">HTML</b>
+      </p>
+    <% end %>
+
+    <%= render_themed "articles/published_on_time_tag", article: @article %>
+
     <p>
       <% if @article.locale.present? %>
+        Locale:<br>
         <%= link_to @article.locale.upcase, [:admin, :locales], class: "badge badge-dark" %>
       <% end %>
+    </p>
 
+    <p>
+      Categories:<br>
       <% if @article.categories.present? %>
         <% @article.categories.each do |category| %>
           <%= link_to category.name, category_path(category.slug), class: "badge badge-primary" %>
         <% end %>
       <% end %>
 
+    <p>
+      Tags:<br>
       <% if @article.tags.present? %>
         <% @article.tags.each do |tag| %>
           <%= link_to tag.name, tag_path(tag.slug), class: "badge badge-info" %>
         <% end %>
       <% end %>
     </p>
-  </header>
-
-  <div>
-    <p><b>URL:</b> <b><%= link_to @article.path, @article.path %></b></p>
-
-    <% unless @article.in_collection? %>
-      <div class="my-5 sr-only">
-        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-danger btn-lg" %>
-      </div>
-    <% end %>
-
-    <% unless @article.published? %>
-      <p>
-        <%= link_to "Preview Draft", @article.path, class: "btn btn-success" %>
-      </p>
-    <% end %>
-  </div>
-
-  <% if @article.image.present? %>
-    <%= image_tag @article.image %>
-  <% end %>
-
-  <% if @article.image_description.present? %>
-    <p><%= @article.image_description %></p>
-  <% end %>
-
-  <hr>
-
-  <div class="e-content">
-    <% if @article.content_in_html? %>
-      <pre class='bg-light p-3'><code><%= @article.content.gsub("\t", "  ") %></code></pre>
-    <% else %>
-      <%= render_content @article %>
-    <% end %>
-  </div>
-
-  <% unless @article.content_in_html? %>
 
     <hr>
 
-    <h3 style="margin-top: 1rem">
+    <p>
       <% if @article.in_collection? %>
         Part of the <%= link_to @collection.title, [:admin, @collection] %> Collection
       <% else %>
-        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-lg" %>
+        For live blog articles:<br>
+        <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-sm" %>
       <% end %>
-    </h3>
-
-    <% if @article.collection_root? %>
-      <div id="collection" style="margin-top: 6rem">
-        <h3>
-          Nested Articles
-          <%= link_to "NEW Nested Article", new_collection_post_admin_article_path(@article), class: "btn btn-primary btn-sm" %>
-        </h3>
-
-        <%= render "table", articles: @article.collection_posts %>
-      </div>
-    <% end %>
-
-    <hr>
-  <% end %>
+    </p>
+  </aside>
 </article>
