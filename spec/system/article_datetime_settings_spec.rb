@@ -19,7 +19,7 @@ describe 'Setting and changing an articles published_at date' do
       select('UTC', from: 'article_published_at_tz')
     end
 
-    within('#publication_status') { choose 'Draft' }
+    within('#publication-status') { choose 'Draft' }
 
     find_button('Save', match: :first).click
 
@@ -48,7 +48,7 @@ describe 'Setting and changing an articles published_at date' do
       select('UTC', from: 'article_published_at_tz')
     end
 
-    within('#publication_status') { choose 'Draft' }
+    within('#publication-status') { choose 'Draft' }
 
     find_button('Save', match: :first).click
 
@@ -63,7 +63,7 @@ describe 'Setting and changing an articles published_at date' do
 
     click_on 'NEW'
 
-    within('#publication_status') { choose 'Draft' }
+    within('#publication-status') { choose 'Draft' }
 
     find_button('Save', match: :first).click
 
@@ -97,7 +97,7 @@ describe 'Setting and changing an articles published_at date' do
 
       click_on 'NEW'
 
-      within('#publication_status') { choose 'Published' }
+      within('#publication-status') { choose 'Published' }
       find_button('Save', match: :first).click
 
       expect(page).to have_content 'Article was successfully created'
