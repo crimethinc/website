@@ -1,19 +1,9 @@
-<div id="publication-status" class="row mb-5">
-  <div class='col'>
+<div id="publication-status" class="form-group">
+  <%= form.label :publication_status, "Publication Status" %><br>
 
-    <%= form.label :publication_status, "Publication Status" %><br>
+  <% Publishable.publication_statuses_for(user: current_user).each do |state| %>
+    <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "sr-only" %>
 
-    <div class="form-check row" id="publication_status">
-      <% Publishable.publication_statuses_for(user: current_user).each do |state| %>
-        <span class="col">
-          <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "form-check-input" %>
-
-          <%= form.label "publication_status_#{state}", class: "form-check-label", for: "publication_status_#{state}" do %>
-            <b><%= state.capitalize %></b>
-          <% end %>
-        </span>
-      <% end %>
-    </div>
-
-  </div>
-</div><!-- #categorization.row -->
+    <%= form.label "publication_status_#{state}", state.capitalize, for: "publication_status_#{state}" %>
+  <% end %>
+</div><!-- #publication-status -->
