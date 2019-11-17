@@ -9,160 +9,38 @@
   <% end %>
 </nav>
 
-<%= form_with(model: [:admin, @article], id: "article-form") do |form| %>
-  <%= render "admin/form_errors", thing: @article %>
-
+<%= form_with model: [:admin, @article], id: "article-form", class: "row" do |form| %>
   <%# For nested Articles, a la live blogs %>
   <%= form.hidden_field :collection_id, value: @collection&.id %>
 
-  <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
-  <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
+  <div class="col-12">
+    <%= render "admin/form_errors", thing: @article %>
+  </div>
 
-  <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
-  <p class="form-text text-muted">
-    You can apply color to any item by putting a CSS directive on the immediate line after it.
-    <code>{: .COLOR}</code>.<br>
+  <section class="col-12 col-md-6">
+    <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
+    <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
 
-    Allowed colors are:
-    <code> {: .darkgreen} {: .darkred} {: .deeppink} {: .goldenrod} {: .olive} {: .slategray} {: .steelblue} </code>
-  </p>
+    <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
+    <%= render "admin/articles/content_note", form: form %>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
-
-  <div id="datetime" class="py-5">
-    <% if @article.draft? %>
-      <div class="row">
-        <div class="col-12 col-lg-8">
-
-          <div class="card">
-            <h4 class="card-header bg-primary text-white"><b>To Future Publish…</b></h4>
-
-            <div class="card-body">
-              <p class="card-text">
-                <%= render "admin/datetime_group", form: form, post: @article, type: :article %>
-              </p>
-
-              <div class="text-right">
-                <%= button_tag "Save", class: "btn btn-primary btn-lg" %>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- .col -->
-
-        <div class="col-12 col-lg-4">
-
-          <% if current_user.can_publish? %>
-            <div class="card">
-              <h4 class="card-header bg-warning"><b>To Publish Now…</b></h4>
-
-              <div class="card-body">
-                <p class="card-text">
-                  If you want to publish this article <b>right now</b>, you can with one click.
-                  If you click the <b>Publish NOW!</b> button, this article will immediately
-                  show up in the homepage feed.
-                </p>
-
-                <div class="text-right">
-                  <%= form.submit "Publish NOW!", name: 'publish_now', id: "publish-now", class: "btn btn-warning btn-lg" %>
-                </div>
-              </div>
-            </div>
-          <% end %>
-
-        </div><!-- .col -->
-      </div><!-- .row -->
-
-    <% else %>
-      <%= render "admin/datetime_group", form: form, post: @article, type: :article %>
-    <% end %>
-
-    <%= render "admin/articles/back_to_top" %>
-  </div><!-- #datetime -->
-
-  <%= render "admin/articles/categories_form", form: form %>
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
-
-  <%= render "admin/articles/localization_form", form: form %>
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
-
-  <div id="syndication" class="pt-5">
-    <fieldset>
-      <legend>Syndication</legend>
-
-      <div class="row">
-        <div class="col-12 col-sm-6">
-          <div class="form-group">
-            <%= form.label :tweet %>
-            <%= form.text_area :tweet, class: "form-control form-control-lg", data: { 'max-length': '250', 'feedback-box': 'tweet-length' } %>
-            <div id="tweet-length">0</div>
-            <p class="form-text text-muted">
-              Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
-              Used for syndicated tweet for this Article.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6">
-          <div class="form-group">
-            <%= form.label :summary %>
-            <%= form.text_area :summary, class: "form-control form-control-lg", data: { 'max-length': '150', 'feedback-box': 'summary-length' } %>
-            <div id="summary-length">0</div>
-            <p class="form-text text-muted">
-              Maximum 150 characters.
-              Used for page description and previews in story cards on other sites.
-            </p>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-
-    <%= render "admin/articles/back_to_top" %>
-  </div><!-- #syndication -->
-
-  <% unless @collection.present? %>
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
-  <% end %>
 
-  <div id="appearance" class="py-5">
-    <fieldset>
-      <legend>Appearance</legend>
+    <%= render "admin/articles/form/syndication", form: form %>
+    <%= render "admin/articles/form/appearance", form: form %>
 
-      <%= render "admin/label_and_field_form_group", form: form, attr: :image %>
-      <p class="form-text text-muted">
-        This is the large image that will be front and center on the <i>Article</i> page,
-        on the homepage and when syndicated to other sites. Preferred size:
-        <code>2000px wide</code> by about <code>1000px tall or more</code>.
-      </p>
+    <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+  </section>
 
-      <%= render "admin/label_and_field_form_group", form: form, attr: :image_mobile %>
-      <p class="form-text text-muted">
-        This is a square image that is used on the mobile <i>Article</i> page,
-        on the mobile homepage and when syndicated to Instagram.
-        Minimum required size: <code>800x800</code> pixels.
-      </p>
+  <aside class="col-12 col-md-6">
+    <%= render "admin/articles/form/publication_status", form: form %>
+    <%= render "admin/articles/form/published_at", form: form %>
 
-      <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
-      <p class="form-text text-muted">
-        This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
-      </p>
+    <%= render "admin/articles/form/categories", form: form %>
+    <%= render "admin/articles/form/tags", form: form %>
+    <%= render "admin/articles/form/short_url", form: form %>
+    <%= render "admin/articles/form/localization", form: form %>
 
-      <% unless @collection.present? %>
-        <hr>
-
-        <%= render "admin/label_and_area_form_group", form: form, attr: :css, label_text: "CSS", rows: 6 %>
-
-        <p class="form-text text-muted">
-          Prefix your CSS selectors with <b><code>main article</code></b> to scope your styles to just this <i>Article</i>.
-          For example, <code>main article b { background: green }</code>.
-        </p>
-      <% end %>
-    </fieldset>
-
-    <%= render "admin/articles/back_to_top" %>
-  </div><!-- #appearance -->
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+    <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+  </aside>
 <% end %>

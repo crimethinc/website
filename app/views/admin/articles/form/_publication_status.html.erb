@@ -1,0 +1,6 @@
+<% if current_user.can_publish? || @article.draft? %>
+  <%= render 'admin/publication_status', form: form %>
+<% elsif @article.published? %>
+  <b>Publication Status</b><br>
+  <span class='badge badge-success'>PUBLISHED</span>
+<% end %>

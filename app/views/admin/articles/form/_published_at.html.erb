@@ -1,0 +1,29 @@
+<div id="datetime">
+  <% if @article.draft? %>
+    <%= render "admin/datetime_group", form: form, post: @article, type: :article %>
+    <p class="m-0 font-weight-bold">To Future Publish…</p>
+    <p>
+      Set a date and time above, then save this form.
+      But don’t click the <b><code>Publish NOW!</code></b> button.
+    </p>
+
+    <hr>
+
+    <% if current_user.can_publish? %>
+      <p class="m-0 font-weight-bold">To Publish Now…</p>
+
+      <p>
+        If you want to publish this article <b>right now</b>, you can with one click.
+        If you click the <b>Publish NOW!</b> button, this article will immediately
+        show up in the homepage feed.
+      </p>
+
+      <%= form.submit "Publish NOW!", name: 'publish_now', id: "publish-now", class: "btn btn-warning btn-sm" %>
+    <% end %>
+
+    <hr>
+
+  <% else %>
+    <%= render "admin/datetime_group", form: form, post: @article, type: :article %>
+  <% end %>
+</div><!-- #datetime -->

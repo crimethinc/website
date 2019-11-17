@@ -19,3 +19,15 @@ label  {
 .article-counter-genesis {
   border-bottom: 10px solid #666;
 }
+
+// Treat radio buttons as toggle buttons
+input + label {
+  @extend .btn;
+  @extend .btn-sm;
+  @extend .btn-outline-secondary;
+}
+
+input:checked + label {
+  @extend .btn;
+  @extend .btn-primary;
+}

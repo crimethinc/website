@@ -1,0 +1,30 @@
+<div id="appearance">
+  <fieldset>
+    <legend>Appearance</legend>
+
+    <%= render "admin/label_and_field_form_group", form: form, attr: :image, label_text: "Header Image" %>
+    <p class="form-text text-muted">
+      This is the large image that will be front and center on the <i>Article</i> page,
+      on the homepage and when syndicated to other sites. Preferred size:
+      <code>2000px wide</code> by about <code>1000px tall or more</code>.
+    </p>
+
+    <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
+    <p class="form-text text-muted">
+      This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
+    </p>
+
+    <% unless @collection.present? %>
+      <hr>
+
+      <% if @article.css.present? %>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :css, label_text: "CSS", rows: 6 %>
+      <% end %>
+
+      <p class="form-text text-muted">
+        Prefix your CSS selectors with <b><code>main article</code></b> to scope your styles to just this <i>Article</i>.
+        For example, <code>main article b { background: green }</code>.
+      </p>
+    <% end %>
+  </fieldset>
+</div><!-- #appearance -->

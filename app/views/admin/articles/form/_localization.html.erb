@@ -1,0 +1,27 @@
+<div id="localization">
+  <div class="form-group">
+    <%= form.label :locale %>
+    <%= form.collection_select :locale,
+                               Locale.all,
+                               :abbreviation,
+                               :display_name,
+                               {},
+                               class: "custom-select custom-select-lg" %>
+
+    <p class="form-text text-muted">
+      If it’s not here, you can
+      <%= link_to "create a new locale. →", [:new, :admin, :locale], target: "_blank" %>
+    </p>
+  </div>
+
+  <div class="form-group">
+    <%= form.label "English #{current_item_class}" %>
+
+    <%= form.collection_select :canonical_id,
+                               current_item_class.english,
+                               :id,
+                               :id_and_name,
+                               { include_blank: true },
+                               class: "custom-select custom-select-lg" %>
+  </div>
+</div><!-- #localization -->

@@ -1,0 +1,31 @@
+<div id="categorization">
+  <% unless @collection.present? %>
+
+    <fieldset id="categories">
+      <p class="m-0 font-weight-bold">Categories</p>
+
+      <div class="form-check">
+        <% @categories.in_groups_of(2).each do |group| %>
+
+          <div class="row">
+            <% group.each do |category| %>
+              <div class="col-6">
+                <% if category.present? %>
+
+                  <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
+                    <%= category_check_box form: form, category: category %>
+
+                    <b><%= category.name %></b>
+                  <% end %>
+
+                <% end %>
+              </div>
+            <% end %>
+          </div><!-- .row -->
+
+        <% end %>
+      </div><!-- .form-group -->
+    </fieldset>
+
+  <% end %>
+</div><!-- #categorization -->
