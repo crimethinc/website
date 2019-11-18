@@ -43,15 +43,21 @@ namespace :db do
   task scrub: :environment do
     puts '==> Scrubbing DB…'
     puts '==> Scrubbing Users…'
-    User.destroy_all
 
+    # delete all users except User ID #1, to reuse that ID
+    User.all.each do |user|
+      user.id == 1 ? next : user.destroy
+    end
+
+    # update the first user instead of creating a new one,
+    # so to not reveal how many production users there are
     password = '1234567890' * 3
     publisher_role = User::ROLES.index :publisher
 
-    User.create! username:              :publisher,
-                 password:              password,
-                 password_confirmation: password,
-                 role:                  publisher_role
+    User.find(1).update username:              :publisher,
+                        password:              password,
+                        password_confirmation: password,
+                        role:                  publisher_role
     puts
 
     puts '==> Scrubbing drafts…'
