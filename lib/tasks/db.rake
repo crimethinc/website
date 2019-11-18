@@ -1,6 +1,9 @@
 namespace :db do
-  desc "Dump production db, scrub private stuff, upload to S3. Used by 'rake db:seed'"
-  task export: :environment do
+  desc 'Pull production DB'
+  task export: %i[pull scrub dump upload]
+
+  desc 'Pull production DB'
+  task pull: :environment do
     puts '==> This requires that you have Heroku access to this production app'
     puts
 
@@ -15,7 +18,10 @@ namespace :db do
     puts '==> Creating local test DB…'
     sh 'rails db:create'
     puts
+  end
 
+  desc 'Scrub private production data from DB'
+  task scrub: :environment do
     puts '==> Scrubbing DB…'
     puts '==> Scrubbing Users…'
     User.destroy_all
@@ -34,6 +40,22 @@ namespace :db do
     [Article, Book, Issue, Journal, Logo, Page, Poster, Sticker, Video, Zine].each do |klass|
       klass.draft.destroy_all
     end
+    puts
+  end
+
+  desc 'Dump local development DB'
+  task dump: :environment do
+    puts '==> Dumping local development DB…'
+    sh 'pg_dump --dbname=crimethinc_development --file=tmp/crimethinc_production_db_dump.sql'
+    puts
+
+    puts '==> All done!'
+  end
+
+  desc 'Upload DB dump to S3'
+  task upload: :environment do
+    puts '==> Uploading local development DB dump to S3…'
+    # TODO: upload to S3
     puts
 
     puts '==> All done!'
