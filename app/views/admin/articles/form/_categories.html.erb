@@ -5,26 +5,16 @@
       <p class="m-0 font-weight-bold">Categories</p>
 
       <div class="form-check">
-        <% @categories.in_groups_of(2).each do |group| %>
+        <% @categories.each do |category| %>
+          <div>
+            <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
+              <%= category_check_box form: form, category: category %>
 
-          <div class="row">
-            <% group.each do |category| %>
-              <div class="col-6">
-                <% if category.present? %>
-
-                  <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
-                    <%= category_check_box form: form, category: category %>
-
-                    <b><%= category.name %></b>
-                  <% end %>
-
-                <% end %>
-              </div>
+              <b><%= category.name %></b>
             <% end %>
-          </div><!-- .row -->
-
+          </div>
         <% end %>
-      </div><!-- .form-group -->
+      </div><!-- .form-check -->
     </fieldset>
 
   <% end %>
