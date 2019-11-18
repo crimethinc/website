@@ -1,6 +1,23 @@
 require 'fileutils'
 
 namespace :db do
+  desc 'Import pg dump into local development DB'
+  task import: :environment do
+    puts '==> Dropping local development DB…'
+    sh 'DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rails db:drop'
+    puts
+
+    puts '==> Creating local test DB…'
+    sh 'rails db:create'
+    puts
+
+    puts '==> Populate DB from pg dump file…'
+    sh 'psql crimethinc_development < database-dumps/crimethinc_production_db_dump.sql'
+    puts
+
+    puts '==> All done!'
+  end
+
   desc 'Pull production DB'
   task export: %i[pull scrub dump upload]
 
