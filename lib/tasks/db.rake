@@ -108,13 +108,6 @@ namespace :db do
     bucket      = s_3.bucket(bucket_name)
     bucket_url  = bucket.url
 
-    # Sets a bucket to public-read
-    # puts 'Setting S3 bucket to public'
-    # client.put_bucket_acl(
-    #   acl:    'public-read',
-    #   bucket: bucket_name
-    # )
-
     # Get just the file name
     file_name = 'database-dumps/crimethinc_production_db_dump.sql'
 
