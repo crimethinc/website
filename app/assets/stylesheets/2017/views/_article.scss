@@ -19,6 +19,18 @@
   }
 
   .h-entry {
+    pre code {
+      font-size: inherit;
+      color: inherit;
+      word-break: normal;
+    }
+
+    pre, code {
+      font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 1em;
+    }
+
+
     header {
       color: red;
       color: $color-white;
