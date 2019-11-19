@@ -1,5 +1,3 @@
-require 'fileutils'
-
 namespace :db do
   namespace :dump do
     desc 'Download DB dump from S3'
