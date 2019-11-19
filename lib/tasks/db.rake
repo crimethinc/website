@@ -74,7 +74,6 @@ namespace :db do
                           password:              password,
                           password_confirmation: password,
                           role:                  publisher_role
-      puts
 
       puts '==> Scrubbing drafts…'
       # TODO: add #publication_status to these models: Definition Episode Podcast
