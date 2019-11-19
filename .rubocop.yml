@@ -70,7 +70,7 @@ Security/Eval:
 
 Security/Open:
   Exclude:
-    - 'lib/tasks/db.rake'
+    - 'lib/tasks/db/import.rake'
 
 Style/AsciiComments:
   Enabled: false
