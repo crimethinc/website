@@ -2,6 +2,21 @@ require 'fileutils'
 
 namespace :db do
   namespace :dump do
+    desc 'Download DB dump from S3'
+    task download: :environment do
+      # ensure that the db dump directory and file exist
+      FileUtils.mkdir_p Rails.root.join 'database-dumps'
+      FileUtils.touch Rails.root.join 'database-dumps', 'crimethinc_production_db_dump.sql'
+
+      # URL to download from
+      url = 'https://s3.amazonaws.com/thecloud.crimethinc.com/database-dumps/crimethinc_production_db_dump.sql'
+
+      puts '==> Downloading remote production DB dump from S3…'
+      open('database-dumps/crimethinc_production_db_dump.sql', 'wb') do |file|
+        file << open(url).read
+      end
+    end
+
     desc 'Import pg dump into local development DB'
     task import: :environment do
       puts '==> Dropping local development DB…'
@@ -129,21 +144,6 @@ namespace :db do
 
       download_url = [bucket_url, file_name].join('/')
       puts "SUCCESS! File written to S3: #{download_url}"
-    end
-
-    desc 'Download DB dump from S3'
-    task download: :environment do
-      # ensure that the db dump directory and file exist
-      FileUtils.mkdir_p Rails.root.join 'database-dumps'
-      FileUtils.touch Rails.root.join 'database-dumps', 'crimethinc_production_db_dump.sql'
-
-      # URL to download from
-      url = 'https://s3.amazonaws.com/thecloud.crimethinc.com/database-dumps/crimethinc_production_db_dump.sql'
-
-      puts '==> Downloading remote production DB dump from S3…'
-      open('database-dumps/crimethinc_production_db_dump.sql', 'wb') do |file|
-        file << open(url).read
-      end
     end
   end
 end
