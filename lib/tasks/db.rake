@@ -20,15 +20,15 @@ namespace :db do
     desc 'Import pg dump into local development DB'
     task import: :environment do
       puts '==> Dropping local development DB…'
-      sh 'DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rails db:drop'
+      sh 'DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop'
       puts
 
       puts '==> Creating local test DB…'
-      sh 'rails db:create'
+      sh 'rake db:create'
       puts
 
       puts '==> Migrating DB…'
-      sh 'rails db:migrate'
+      sh 'rake db:migrate'
       puts
 
       puts '==> Populate DB from pg dump file…'
@@ -44,7 +44,7 @@ namespace :db do
       puts
 
       puts '==> Dropping local development DB…'
-      sh 'DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rails db:drop'
+      sh 'DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop'
       puts
 
       puts '==> Pulling remote production DB…'
@@ -52,7 +52,7 @@ namespace :db do
       puts
 
       puts '==> Creating local test DB…'
-      sh 'rails db:create'
+      sh 'rake db:create'
     end
 
     desc 'Scrub private production data from DB'
