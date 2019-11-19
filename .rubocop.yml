@@ -68,6 +68,10 @@ Security/Eval:
   Exclude:
     - 'db/seeds.rb'
 
+Security/Open:
+  Exclude:
+    - 'lib/tasks/db.rake'
+
 Style/AsciiComments:
   Enabled: false
 
