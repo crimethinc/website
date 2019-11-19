@@ -14,8 +14,6 @@ def system! *args
 end
 
 chdir APP_ROOT do
-  system! 'script/bootstrap'
-
   puts '==> Dropping DB…'
   system! 'bundle exec rails db:drop'
 

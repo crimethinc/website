@@ -12,6 +12,10 @@ namespace :db do
       sh 'rails db:create'
       puts
 
+      puts '==> Migrating DB…'
+      sh 'rails db:migrate'
+      puts
+
       puts '==> Populate DB from pg dump file…'
       sh 'psql crimethinc_development < database-dumps/crimethinc_production_db_dump.sql'
     end
