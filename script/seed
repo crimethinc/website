@@ -20,11 +20,13 @@ chdir APP_ROOT do
   puts '==> Creating DB…'
   system! 'bundle exec rails db:create'
 
-  puts '==> Migrating DB…'
-  system! 'bundle exec rails db:migrate'
+  puts '==> Downloading DB dump from S3…'
+  system! 'bundle exec rake db:dump:download'
+  puts
 
-  puts '==> Seeding DB…'
-  system! 'bundle exec rails db:seed'
+  puts '==> Importing pg dump into local development DB…'
+  system! 'bundle exec rake db:dump:import'
+  puts
 
-  puts '==> DB is now ready to go!'
+  puts '==> All done!'
 end
