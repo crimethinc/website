@@ -1,15 +1,111 @@
 html {
-  font-size: 100%;
+  font-size: 112.5%;
 }
 
 body {
-  color: $color-true-black;
-  font-family: system, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  color: $color-text-body;
+  font-family: $body-font-family;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: $base-line-height;
   font-feature-settings: 'lnum', 'pnum';
+}
+
+a {
+  color: $color-text-body;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 500;
+}
+
+p {
+  max-width: $max-line-length;
+  margin-bottom: $base-spacing;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ol,
+ul {
+  &:not([class]) {
+    max-width: $max-line-length;
+    margin: 0 0 $base-spacing 0;
+    padding: 0 0 0 $base-spacing;
+    list-style-position: outside;
+
+    li {
+      margin-bottom: $small-spacing;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    p + & {
+      margin-top: -$small-spacing;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+ul:not([class]) {
+  list-style-type: disc;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+ol:not([class]) {
+  list-style-type: decimal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $base-spacing 0;
+  color: $color-text-heading;
+  font-family: $heading-font-family;
+  font-weight: 600;
+  line-height: $heading-line-height;
+}
+
+h1 {
+  font-size: ms(5);
+}
+
+h2 {
+  font-size: ms(4);
+}
+
+h3 {
+  font-size: ms(3);
+}
+
+h4 {
+  font-size: ms(2);
+}
+
+h5 {
+  font-size: ms(1);
+  line-height: $base-line-height;
+}
+
+h6 {
+  margin-bottom: $small-spacing;
+  font-size: ms(0);
 }
 
 img,
