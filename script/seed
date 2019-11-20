@@ -14,19 +14,19 @@ def system! *args
 end
 
 chdir APP_ROOT do
-  system! 'script/bootstrap'
-
   puts '==> Dropping DB…'
   system! 'bundle exec rails db:drop'
 
   puts '==> Creating DB…'
   system! 'bundle exec rails db:create'
 
-  puts '==> Migrating DB…'
-  system! 'bundle exec rails db:migrate'
+  puts '==> Downloading DB dump from S3…'
+  system! 'bundle exec rake db:import:download'
+  puts
 
-  puts '==> Seeding DB…'
-  system! 'bundle exec rails db:seed'
+  puts '==> Importing pg dump into local development DB…'
+  system! 'bundle exec rake db:import:populate'
+  puts
 
-  puts '==> DB is now ready to go!'
+  puts '==> All done!'
 end
