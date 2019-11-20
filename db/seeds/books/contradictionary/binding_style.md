@@ -1,1 +1,0 @@
-[Perfectbound w/ PUR glue](http://americanprinter.com/alt/pur-binding/printing_pur_perfect_binding/)

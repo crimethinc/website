@@ -1,1 +1,0 @@
-Otabind Layflat Bound Binding Details: [One](http://makeyourbookreal.wordpress.com/2012/07/02/bookbinding-otabind/) - [Two](http://www.webcomlink.com/tech/bind.htm)
