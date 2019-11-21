@@ -1,1 +1,27 @@
+// Typography
+
+$system-font-stack: system, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+
+$body-font-family: 'Alright Sans', $system-font-stack;
+$heading-font-family: 'Markazi Text', serif;
+
+$scale-ratio: 1.333;
 $base-line-height: 1.5;
+$heading-line-height: 1.2;
+$max-line-length: 35em;
+
+$color-text-body: #000000;
+$color-text-heading: #000000;
+
+// Spacing Variables
+
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$tiny-spacing: $small-spacing / 2;
+$big-spacing: $base-spacing * 2;
+$huge-spacing: $big-spacing * 2;
+
+$em-base-spacing: $base-line-height * 1em;
+$em-small-spacing: $em-base-spacing / 2;
+$em-tiny-spacing: $em-small-spacing / 2;
+$em-big-spacing: $em-base-spacing * 2;
