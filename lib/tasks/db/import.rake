@@ -20,13 +20,15 @@ namespace :db do
 
     desc 'Import pg dump into local development DB'
     task populate: :environment do
-      puts '==> Dropping local development DB…'
-      sh 'DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop'
-      puts
+      unless Rails.env.production?
+        puts '==> Dropping local development DB…'
+        sh 'DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop'
+        puts
 
-      puts '==> Creating local test DB…'
-      sh 'rake db:create'
-      puts
+        puts '==> Creating local test DB…'
+        sh 'rake db:create'
+        puts
+      end
 
       puts '==> Migrating DB…'
       sh 'rake db:migrate'
