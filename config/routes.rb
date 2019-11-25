@@ -69,9 +69,9 @@ Rails.application.routes.draw do
   get 'tags/:slug/feed',         to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
 
   # Podcast
-  get 'podcast/feed',                                       to: 'podcast#feed',        as: :podcast_feed, defaults: { format: 'rss' }
-  get 'podcasts',                                           to: 'podcast#index',       as: :podcasts
-  get 'podcasts/:slug',                                     to: 'podcast#show',        as: :podcast
+  get 'podcast/feed',                                       to: 'podcasts#feed',        as: :podcast_feed, defaults: { format: 'rss' }
+  get 'podcasts',                                           to: 'podcasts#index',       as: :podcasts
+  get 'podcasts/:slug',                                     to: 'podcasts#show',        as: :podcast
   get 'podcasts/:slug/episodes',                            to: redirect { |path_params, _| "/podcasts/#{path_params[:slug]}" }
   get 'podcasts/:slug/episodes/:episode_number',            to: 'episodes#show',       as: :episode
   get 'podcasts/:slug/episodes/:episode_number/transcript', to: 'episodes#transcript', as: :episode_transcript
