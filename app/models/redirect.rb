@@ -1,4 +1,5 @@
 class Redirect < ApplicationRecord
+  before_validation :strip_blank_space,             on: %i[create update]
   before_validation :strip_domain_from_source_path, on: %i[create update]
   before_validation :strip_domain_from_target_path, on: %i[create update]
   before_validation :add_leading_slash,             on: %i[create update]
@@ -14,6 +15,11 @@ class Redirect < ApplicationRecord
 
   def name
     source_path
+  end
+
+  def strip_blank_space
+    self.source_path = source_path.strip
+    self.target_path = target_path.strip
   end
 
   def add_leading_slash
