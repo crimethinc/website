@@ -1,5 +1,5 @@
 namespace :db do
-  desc 'Export (scrubbed) production DB to S3'
+  desc 'Import (scrubbed) production DB from S3'
   task import: %i[db:import:download db:import:populate]
 
   namespace :import do
