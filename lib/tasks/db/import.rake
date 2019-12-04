@@ -35,7 +35,10 @@ namespace :db do
       puts
 
       puts '==> Populate DB from pg dump file…'
-      sh 'psql crimethinc_development < database-dumps/crimethinc_production_db_dump.sql'
+      database_port = ENV.fetch('PORT')         { 5432 }
+      database_url  = ENV.fetch('DATABASE_URL') { crimethinc_development }
+
+      sh "psql #{database_url} --port=#{database_port} < database-dumps/crimethinc_production_db_dump.sql"
     end
   end
 end
