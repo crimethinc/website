@@ -262,7 +262,7 @@ Everyone interacting in all of CrimethInc. codebases, issue trackers, chat rooms
 
 **PUBLIC DOMAIN**
 
-Your heart is as free as the air you breathe. <br>
+Your heart is as free as the air you breathe. \\
 The ground you stand on is liberated territory.
 
 In legal text, **CrimethInc. website** is dedicated to the public domain
