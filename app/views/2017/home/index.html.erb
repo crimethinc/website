@@ -10,14 +10,14 @@
   </span>
 
   <% if @top_article.present? %>
-    <%= render_themed "article_archives/card", article: @top_article %>
+    <%= render_themed "article_archives/card", article: @top_article.preferred_localization %>
   <% end %>
 
   <% @articles.in_groups_of(2).each do |row| %>
     <div class="row">
       <% row.each do |article| %>
         <% unless article.blank? %>
-          <%= render_themed "article_archives/card", article: article %>
+          <%= render_themed "article_archives/card", article: article.preferred_localization %>
         <% end %>
       <% end %>
     </div>

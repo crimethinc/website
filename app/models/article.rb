@@ -99,6 +99,10 @@ class Article < ApplicationRecord
     Article.find_by locale: locale, canonical_id: id
   end
 
+  def preferred_localization
+    localization_in(I18n.locale).presence || self
+  end
+
   private
 
   def self_localizations
