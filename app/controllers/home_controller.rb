@@ -3,9 +3,13 @@ class HomeController < ApplicationController
     @body_id = 'home'
     @homepage = true
 
-    # feed
-    @top_article = Article.includes(:categories).english.live.published.root.first if first_page?
-    @articles    = Article.includes(:categories).english.live.published.root.page(params[:page]).per(6).padding(1)
+    articles_for_current_page = Article.includes(:categories).english.live.published.root
+
+    # Homepage featured article
+    @top_article = articles_for_current_page.first if first_page?
+
+    # Feed artciles
+    @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)
 
     render "#{Theme.name}/home/index"
   end
