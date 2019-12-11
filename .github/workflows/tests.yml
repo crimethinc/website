@@ -19,8 +19,8 @@ jobs:
     steps:
       - name: Install libraries
         run: |
-          sudo apt-get update
-          sudo apt-get install -y postgresql-client libpq-dev
+          apt-get update
+          apt-get install -y postgresql-client libpq-dev
 
       - name: Checkout
         uses: actions/checkout@master
