@@ -95,6 +95,10 @@ class Article < ApplicationRecord
     articles.sort_by(&:locale)
   end
 
+  def localization_in locale
+    Article.find_by locale: locale, canonical_id: id
+  end
+
   private
 
   def self_localizations
