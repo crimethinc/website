@@ -13,6 +13,9 @@ jobs:
         env:
           POSTGRES_PASSWORD: ""
 
+    container:
+      image: ruby:2.6.5
+
     steps:
       - name: Install libraries
         run: |
@@ -26,8 +29,6 @@ jobs:
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
-        container:
-          image: ruby:2.6.5
 
       - name: Configure database
         env:
