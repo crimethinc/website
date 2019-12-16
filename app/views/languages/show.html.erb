@@ -1,1 +1,14 @@
-<%= @locale.inspect %>
+<article>
+  <header>
+    <h1>
+      <%= @locale.name %>
+
+      <% unless @locale.abbreviation == "en" %>
+        (<%= @locale.name_in_english %>)
+      <% end %>
+    </h1>
+  </header>
+
+  <div class="e-content">
+  </div>
+</article>
