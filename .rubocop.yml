@@ -10,7 +10,7 @@ AllCops:
   Exclude:
     - 'db/schema.rb'
 
-Layout/HashAlignment:
+Layout/AlignHash:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
 
