@@ -1,22 +1,33 @@
 <article>
   <header>
-    <h1><%= t "views.tools.tools_heading_text" %></h1>
+    <h1><%= t "views.languages.heading" %></h1>
   </header>
 
   <div class="e-content">
     <div class="intro">
-
-      <ol>
-        <% @locales.each do |locale| %>
-        <li>
-          <%= link_to [:language, locale: locale.name.downcase.to_sym] do %>
-          <b><%= locale.name %></b>
-          (<%= locale.name_in_english %>)
-          <% end %>
-        </li>
-        <% end %>
-      </ol>
-
+      <p><%= t "views.languages.description" %></p>
     </div>
+
+    <table id="locales">
+      <% @locales.each do |locale| %>
+        <% articles_count = Article.where(locale: locale.abbreviation).count %>
+        <% next if articles_count.zero? %>
+
+        <tr>
+          <td class="articles-count">
+            <%= number_with_delimiter articles_count %>
+          </td>
+
+          <td>
+            <b><%= link_to locale.name, [:language, locale: locale.name.downcase.to_sym] %></b>
+          </td>
+
+          <td>
+            <%= locale.name_in_english %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+
   </div>
 </article>
