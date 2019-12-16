@@ -1,0 +1,22 @@
+<article>
+  <header>
+    <h1><%= t "views.tools.tools_heading_text" %></h1>
+  </header>
+
+  <div class="e-content">
+    <div class="intro">
+
+      <ol>
+        <% @locales.each do |locale| %>
+        <li>
+          <%= link_to [:language, locale: locale.name.downcase.to_sym] do %>
+          <b><%= locale.name %></b>
+          (<%= locale.name_in_english %>)
+          <% end %>
+        </li>
+        <% end %>
+      </ol>
+
+    </div>
+  </div>
+</article>
