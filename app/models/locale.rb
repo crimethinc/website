@@ -1,4 +1,7 @@
 class Locale < ApplicationRecord
+  # include Name
+  include Slug
+
   before_validation :strip_whitespace,      on: %i[create update]
   before_validation :downcase_abbreviation, on: %i[create update]
 
@@ -9,6 +12,10 @@ class Locale < ApplicationRecord
   enum language_direction: %i[ltr rtl]
 
   default_scope { order(abbreviation: :asc) }
+
+  def title
+    name
+  end
 
   def display_name
     "#{abbreviation.upcase} : #{name_in_english} / #{name}"

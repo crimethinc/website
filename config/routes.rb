@@ -176,6 +176,9 @@ Rails.application.routes.draw do
   get 'library',               to: 'pages#library', as: :library
   get 'submission-guidelines', to: 'pages#submission_guidelines'
 
+  get 'languages',         to: 'languages#index', as: :languages
+  get 'languages/:locale', to: 'languages#show',  as: :language
+
   # TODO: Delete? Is this used by anything anymore?
   # For redirection
   get '*path', to: 'pages#show', as: :page, via: :all

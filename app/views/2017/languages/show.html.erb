@@ -1,0 +1,18 @@
+<article>
+  <header>
+    <nav class="crumbtrail">
+      <%= link_to t("views.languages.heading"), [:languages] %>
+    </nav>
+
+    <h1>
+      <%= @locale.name %>
+
+      <% unless @locale.abbreviation == "en" %>
+        (<%= @locale.name_in_english %>)
+      <% end %>
+    </h1>
+  </header>
+
+  <div class="e-content">
+  </div>
+</article>
