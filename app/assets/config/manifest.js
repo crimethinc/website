@@ -2,7 +2,6 @@
 //= link_directory ../javascripts .js
 //= link_directory ../stylesheets .css
 
-//= link jquery.js
 //= link live_blog.js
 //= link support.js
 //= link tochangeeverything.css
