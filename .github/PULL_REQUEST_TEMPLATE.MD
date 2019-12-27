@@ -23,6 +23,6 @@ resolves `[link to github issue]`
 - [ ] Does the code you updated have tests?
 - [ ] Requires new server dependencies which need to be added to the build process. If so explain.
 
-# Acceptance Criteria:
+# Acceptance Criteria
 ## These should be checked by the reviewer(s).
 - [ ] Does not cause the db export script to become out of sync with the db schema
