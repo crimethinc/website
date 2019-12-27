@@ -1,0 +1,4 @@
+# Migrations must be approved in order to make sure the database export rake
+# task is still scrubbing sensitive info
+/lib/tasks/db/ @veganstraightedge @astronaut-wannabe
+/db/ @veganstraightedge @astronaut-wannabe
