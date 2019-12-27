@@ -19,7 +19,7 @@ resolves `[link to github issue]`
 ??
 
 # Questions for pull requests author (delete any that don't apply):
-- [ ] Have any needed readme/wiki/documentation updates been made?
+- [ ] Are any needed README/wiki/documentation updates needed for this pull request?
 - [ ] Does the code you updated have tests?
 - [ ] Requires new server dependencies which need to be added to the build process. If so explain.
 
