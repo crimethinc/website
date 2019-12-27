@@ -9,7 +9,9 @@ resolves `[link to github issue]`
 # What does this pull request do?
 
 ??
+
 # How should this be manually tested?
+
 ??
 # Any background context you want to provide?
 ??
