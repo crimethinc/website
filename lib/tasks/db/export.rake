@@ -1,3 +1,4 @@
+# coding: utf-8
 namespace :db do
   desc 'Export (scrubbed) production DB to S3'
   task export: %i[db:export:pull db:export:scrub db:export:dump db:export:upload]
@@ -24,6 +25,8 @@ namespace :db do
     task scrub: :environment do
       puts '==> Scrubbing DB…'
       puts '==> Scrubbing Users…'
+
+      # nefarious changes
 
       # delete all users except User ID #1, to reuse that ID
       User.all.each do |user|
