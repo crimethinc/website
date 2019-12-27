@@ -26,4 +26,4 @@ resolves `[link to github issue]`
 # Acceptance Criteria
 ## These should be checked by the reviewers
 
-- [ ] Does not cause the db export script to become out of sync with the db schema
+- [ ] This pull request does not cause the database export script to become out of sync with the db schema
