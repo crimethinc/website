@@ -1,6 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
+require_relative '../app/middlewares/rack/json_requests'
 require_relative '../app/middlewares/rack/domain_redirect'
 require_relative '../app/middlewares/rack/apex_redirect'
 require_relative '../app/middlewares/rack/clean_path'
@@ -15,6 +16,7 @@ Bundler.require(*Rails.groups)
 
 module Crimethinc
   class Application < Rails::Application
+    config.middleware.use Rack::JsonRequests
     config.middleware.use Rack::DomainRedirect
     config.middleware.use Rack::ApexRedirect
     config.middleware.use Rack::CleanPath
