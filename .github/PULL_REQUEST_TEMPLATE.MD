@@ -21,7 +21,7 @@ resolves `[link to github issue]`
 # Questions for pull requests author (delete any that don't apply):
 - [ ] Are any needed README/wiki/documentation updates needed for this pull request?
 - [ ] Does the code you updated have tests?
-- [ ] Requires new server dependencies which need to be added to the build process. If so explain.
+- [ ] Does this pull request require any new server dependencies which need to be added to the build process? If so, please explain what.
 
 # Acceptance Criteria
 ## These should be checked by the reviewer(s).
