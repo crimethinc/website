@@ -1,4 +1,5 @@
-# How does this PR make you feel (in animated GIF format)?
+# How does this pull request make you feel (in animated GIF format)?
+
 ![alt text](giphy link)
 
 # What are the relevant GH issues?
