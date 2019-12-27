@@ -6,7 +6,8 @@
 
 resolves `[link to github issue]`
 
-# What's this PR do?
+# What does this pull request do?
+
 ??
 # How should this be manually tested?
 ??
