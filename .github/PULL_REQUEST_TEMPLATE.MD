@@ -24,5 +24,6 @@ resolves `[link to github issue]`
 - [ ] Does this pull request require any new server dependencies which need to be added to the build process? If so, please explain what.
 
 # Acceptance Criteria
-## These should be checked by the reviewer(s).
+## These should be checked by the reviewers
+
 - [ ] Does not cause the db export script to become out of sync with the db schema
