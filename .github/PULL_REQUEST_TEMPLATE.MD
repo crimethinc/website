@@ -2,7 +2,8 @@
 
 ![alt text](giphy link)
 
-# What are the relevant GH issues?
+# What are the relevant GitHub issues?
+
 resolves `[link to github issue]`
 
 # What's this PR do?
