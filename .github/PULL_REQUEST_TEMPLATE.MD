@@ -13,7 +13,9 @@ resolves `[link to github issue]`
 # How should this be manually tested?
 
 ??
-# Any background context you want to provide?
+
+# Is there any background context you want to provide for reviewers?
+
 ??
 
 # Questions for PR author (delete any that don't apply):
