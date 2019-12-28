@@ -10,11 +10,6 @@ class ToChangeEverythingController < ApplicationController
     outro: %w[anarchy outro takeflight next].freeze
   }.freeze
 
-  SECTIONS_INTRO = %w[introduction].freeze
-  SECTIONS_FIRST = %w[self answering power relationships reconciling liberation revolt control].freeze
-  SECTIONS_LAST  = %w[hierarchy borders representation leaders government profit property lastcrime].freeze
-  SECTIONS_OUTRO = %w[anarchy outro takeflight next].freeze
-
   LANGUAGES_FIRST = {
     'العربية'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#arabic',
     'հայերեն'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#armenian',
