@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class LocaleService::Locale # rubocop:disable Style/ClassAndModuleChildren
   attr_reader :locale, :lang_code, :canonical
 

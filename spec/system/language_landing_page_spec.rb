@@ -14,7 +14,7 @@ describe 'Language Landing Page' do
     create(:article, :swedish)
     create(:article, :turkish)
     create(:article, :portuguese)
-    create(:article, :portuguese_br)
+    create(:article, :brazilian_portuguese)
   end
 
   it 'has a link for every language' do
@@ -37,5 +37,18 @@ describe 'Language Landing Page' do
       expect(page).to have_content text
       visit '/languages'
     end
+  end
+
+  it 'does NOT show a language if there are no published articles' do
+    visit '/languages'
+
+    within('#locales') { expect(page).to have_content 'Italian' }
+
+    # unpublish the italian article
+    Article.where(locale: 'it').first.update!(publication_status: 'draft')
+
+    visit '/languages'
+
+    within('#locales') { expect(page).not_to have_content 'Italian' }
   end
 end

@@ -1,6 +1,7 @@
-# frozen_string_literal: true
-
 class LocaleService
+  require 'locale_service/locale'
+  require 'locale_service/locales'
+
   class << self
     def find locale:, lang_code: nil
       new(locale, lang_code).locale
@@ -26,6 +27,3 @@ class LocaleService
     value.to_s.downcase.strip if value.present?
   end
 end
-
-require_relative 'locale_service/locale'
-require_relative 'locale_service/locales'

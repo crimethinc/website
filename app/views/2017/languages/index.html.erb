@@ -10,7 +10,7 @@
 
     <table id="locales">
       <% @locales.each do |locale| %>
-        <% articles_count = Article.where(locale: locale.abbreviation).count %>
+        <% articles_count = Article.live.published.where(locale: locale.abbreviation).count %>
         <% next if articles_count.zero? %>
 
         <tr>

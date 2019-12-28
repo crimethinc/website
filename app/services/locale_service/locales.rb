@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
   Locale = LocaleService::Locale
 
@@ -58,7 +56,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
 
   class << self
     def canonical locale:, lang_code: nil
-      return LOCALES.find { |loc| loc.locale == locale } if lang_code.blank?
+      return LOCALES.find { |locale_instance| locale_instance.locale == locale } if lang_code.blank?
 
       @indexed_locales.dig(lang_code) || raise_locale_error(locale)
     end

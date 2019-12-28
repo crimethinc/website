@@ -4,9 +4,14 @@
 
 <header>
   <h1><%=@locale.name%></h1>
+
   <% unless @locale.abbreviation == "en" %>
-  <h2>(<%= @locale.name_in_english %>)</h>
+    <h2>(<%= @locale.name_in_english %>)</h2 >
   <% end %>
+
+  <nav class="crumbtrail">
+    <%= link_to t("views.languages.heading"), [:languages] %>
+  </nav>
 </header>
 
 <div class="h-feed">
