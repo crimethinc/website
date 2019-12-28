@@ -1,5 +1,5 @@
 module ToChangeEverythingHelper
-  TCE_IMAGE_BASE_URL = 'https://cloudfront.crimethinc.com/assets/tce/images/'.freeze
+  IMAGE_BASE_URL = 'https://cloudfront.crimethinc.com/assets/tce/images/'.freeze
 
   SECTIONS = {
     intro: %w[introduction].freeze,
@@ -77,7 +77,7 @@ module ToChangeEverythingHelper
   end
 
   def url_for_tce_image *pieces
-    [TCE_IMAGE_BASE_URL, pieces].flatten.join
+    [IMAGE_BASE_URL, pieces].flatten.join
   end
 
   def tce_image_tag filename
