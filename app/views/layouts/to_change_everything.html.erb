@@ -77,7 +77,7 @@
               <span class="green"><a href="javascript:toggleDiv('tocdiv');"><span class="icon"></span><span class="label"> <%= t('.menu.toc').html_safe %></span></a></span>
 
               <ul id="toc">
-                <% [@sections_first_group, @sections_last_group].flatten.each do |section| %>
+                <% [@sections_first, @sections_last].flatten.each do |section| %>
                   <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
                 <% end %>
               </ul>
@@ -87,45 +87,12 @@
               <span class="pink"><a href="javascript:toggleDiv('languagediv');"><span class="icon"></span><span class="label"> <%= t('.menu.language').html_safe %></span></a></span>
 
               <ul id="language">
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#arabic">العربية</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#armenian">հայերեն</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#bulgarian">Български</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#cebuano">Cebuano</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#catalan">Català</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#chinese">中文</a></li>
-                <li><a href="/tce/czech">Czech</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#danish">Dansk</a></li>
-                <li><a href="/tce/deutsch">Deutsch</a></li>
-                <li><a href="/tce">English</a></li>
-                <li><a href="/tce/espanol">Español</a></li>
-                <li><a href="/tce/espanol-america-latina">Español<br />&nbsp;&nbsp;&nbsp;(América Latina)</a></li>
-                <li><a href="/tce/فارسی">فارسی</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#french">Français</a></li>
-                <li><a href="/tce/quebecois">Français (Québec)</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#greek">ελληνικά</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#italian">Italiano</a></li>
-                <li><a href="/tce/한국어">한국어</a></li>
-                <li><a href="/tce/lietuvos">Lietuvos</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#malay">Malay</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#maltese">Malti</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#dutch">Nederlands</a></li>
-                <li><a href="/tce/日本語">日本語</a></li>
-                <li><a href="/tce/polski">Polski</a></li>
-                <li><a href="/tce/portugues">Português</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#romanian">Română</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#russian">русский</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#serbocroatian"><!--српскохрватски-->Srpskohrvatski</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#slovakvideo">Slovenčina</a></li>
-                <li><a href="/tce/slovenscina">Slovenščina</a></li>
-                <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#swedish">Svenska</a></li>
-                <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#cebuano">Tagalog</a></li>
-                <%#
-                  <li class="inactive"><a href="#">العَرَبِيةُ</a></li>
-                  <li class="inactive"><a href="#">српскохрватски</a></li>
-                  <li class="inactive"><a href="#">Visayan</a></li>
-                %>
+                <% @language_links.each do |label, path| %>
+                  <li><%= link_to label.html_safe, path %></li>
+                <% end %>
               </ul>
             </li>
+
             <li>
               <span class="blue"><a href="javascript:toggleDiv('sharediv');"><span class="icon"></span><span class="label"> <%= t('.menu.share').html_safe %></span></a></span>
 
@@ -146,7 +113,7 @@
 
       <div id="sharediv">
         <% if @locale == 'espanol' %>
-        <li><a href="<%= t('.bulk_get.url').html_safe %>"><span class="icon"></span> <%= t('.bulk_get.text').html_safe %></a></li>
+          <li><a href="<%= t('.bulk_get.url').html_safe %>"><span class="icon"></span> <%= t('.bulk_get.text').html_safe %></a></li>
         <% end %>
 
         <li><a href="https://twitter.com/share?url=http%3A%2F%2Fwww.crimethinc.com%2Ftce&text=To%20Change%20Everything%2C%20an%20anarchist%20appeal&via=crimethinc" target="_blank"><span class="icon"></span> Twitter</a></li>
@@ -157,41 +124,15 @@
 
       <div id="languagediv">
         <div id="lang1">
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#arabic">العربية</a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#armenian">հայերեն</a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#bulgarian">Български</a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#cebuano">Cebuano</a></li>
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#catalan">Català</a></li>
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#chinese">中文</a></li>
-          <li><a href="/tce/czech">Czech <span class="check check-czech"></span></a></li>
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#danish">Dansk</a></li>
-          <li><a href="/tce/deutsch">Deutsch <span class="check check-deutsch"></span></a></li>
-          <li><a href="/tce">English <span class="check check-english"></span></a></li>
-          <li><a href="/tce/espanol">Español <span class="check check-espanol"></span></a></li>
-          <li><a href=" /tce/espanol-america-latina">Español<br />&nbsp;&nbsp;&nbsp;(América Latina)</a></li>
-          <li><a href="/tce/فارسی"> <span class="check check-farsi"></span> فارسی</a></li>
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#french">Français</a></li>
-          <li><a href="/tce/quebecois">Français (Québec) <span class="check check-quebecois"></span></a></li>
+          <% @language_links_first.each do |label, path| %>
+            <li><%= link_to label.html_safe, path %></li>
+          <% end %>
         </div>
 
         <div id="lang2">
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#greek">ελληνικά</a></li>
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#italian">Italiano</a></li>
-          <li><a href="/tce/한국어">한국어 <span class="check check-한국어"></span></a></li>
-          <li><a href="/tce/lietuvos">Lietuvos <span class="check check-lietuvos"></span></a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#malay">Malay</a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#maltese">Malti</a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#dutch">Nederlands</a></li>
-          <li><a href="/tce/日本語">日本語 <span class="check check-nihongo"></span></a></li>
-          <li><a href="/tce/polski">Polski <span class="check check-polski"></span></a></li>
-          <li><a href="/tce/portugues">Português <span class="check check-portugues"></span></a></li>
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#romanian">Română</a></li>
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#russian">русский</a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#serbocroatian"><!--српскохрватски-->Srpskohrvatski</a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#slovakvideo">Slovenčina</a></li>
-          <li><a href="/tce/slovenscina">Slovenščina <span class="check check-slovenscina"></span></a></li>
-          <li><a href="/2016/01/25/to-change-everything-in-ten-more-languages#swedish">Svenska</a></li>
-          <li><a href="/2016/09/21/to-change-everything-in-11-more-languages#cebuano">Tagalog</a></li>
+          <% @language_links_last.each do |label, path| %>
+            <li><%= link_to label.html_safe, path %></li>
+          <% end %>
         </div>
       </div>
 
@@ -199,13 +140,13 @@
         <h1><%= t('.menu.toc').html_safe %></h1>
 
         <div id="toc1">
-          <% @sections_first_group.each do |section| %>
+          <% @sections_first.each do |section| %>
             <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
           <% end %>
         </div>
 
         <div id="toc2">
-          <% @sections_last_group.each do |section| %>
+          <% @sections_last.each do |section| %>
             <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
           <% end %>
         </div>

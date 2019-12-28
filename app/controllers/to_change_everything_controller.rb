@@ -3,10 +3,10 @@ class ToChangeEverythingController < ApplicationController
 
   TO_CHANGE_ANYTHING_YAMLS = %w[日本語 portugues quebecois espanol-america-latina lietuvos 한국어 english espanol فارسی].freeze
 
-  SECTIONS_FIRST_GROUP = %w[introduction self answering power relationships reconciling liberation revolt control].freeze
-  SECTIONS_LAST_GROUP  = %w[hierarchy borders representation leaders government profit property lastcrime anarchy outro takeflight next].freeze
+  SECTIONS_FIRST = %w[introduction self answering power relationships reconciling liberation revolt control].freeze
+  SECTIONS_LAST  = %w[hierarchy borders representation leaders government profit property lastcrime anarchy outro takeflight next].freeze
 
-  LANGUAGES_FIRST_GROUP = {
+  LANGUAGES_FIRST = {
     'العربية'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#arabic',
     'հայերեն'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#armenian',
     'Български'                                       => '/2016/09/21/to-change-everything-in-11-more-languages#bulgarian',
@@ -24,7 +24,7 @@ class ToChangeEverythingController < ApplicationController
     'Français (Québec)'                               => '/tce/quebecois'
   }.freeze
 
-  LANGUAGES_LAST_GROUP = {
+  LANGUAGES_LAST = {
     'ελληνικά'                            => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
     'Italiano'                            => '/2016/01/25/to-change-everything-in-ten-more-languages#italian',
     '한국어'                                 => '/tce/한국어',
@@ -45,10 +45,13 @@ class ToChangeEverythingController < ApplicationController
   }.freeze
 
   def show
-    @locale = params[:lang]
+    @sections_first       = SECTIONS_FIRST
+    @sections_last        = SECTIONS_LAST
+    @language_links_first = LANGUAGES_FIRST
+    @language_links_last  = LANGUAGES_LAST
+    @language_links       = @language_links_first.merge @language_links_last
 
-    @sections_first_group = SECTIONS_FIRST_GROUP
-    @sections_last_group  = SECTIONS_LAST_GROUP
+    @locale = params[:lang]
 
     if TO_CHANGE_ANYTHING_YAMLS.include?(@locale)
       I18n.locale = @locale
