@@ -5,7 +5,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     # english
     Locale.new(locale: 'english', lang_code: :en, canonical: 'english'),
 
-    # english
+    # danish
     Locale.new(locale: 'danish', lang_code: :da, canonical: 'dansk'),
     Locale.new(locale: 'dansk',  lang_code: :da, canonical: 'dansk'),
 
