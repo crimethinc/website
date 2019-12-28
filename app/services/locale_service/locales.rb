@@ -24,6 +24,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
 
     # french
     Locale.new(locale: 'français', lang_code: :fr, canonical: 'francais'),
+    Locale.new(locale: 'francais', lang_code: :fr, canonical: 'francais'),
     Locale.new(locale: 'french',   lang_code: :fr, canonical: 'francais'),
 
     # greek
