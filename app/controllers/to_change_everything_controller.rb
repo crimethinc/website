@@ -3,8 +3,10 @@ class ToChangeEverythingController < ApplicationController
 
   TO_CHANGE_ANYTHING_YAMLS = %w[日本語 portugues quebecois espanol-america-latina lietuvos 한국어 english espanol فارسی].freeze
 
-  SECTIONS_FIRST = %w[introduction self answering power relationships reconciling liberation revolt control].freeze
-  SECTIONS_LAST  = %w[hierarchy borders representation leaders government profit property lastcrime anarchy outro takeflight next].freeze
+  SECTIONS_INTRO = %w[introduction].freeze
+  SECTIONS_FIRST = %w[self answering power relationships reconciling liberation revolt control].freeze
+  SECTIONS_LAST  = %w[hierarchy borders representation leaders government profit property lastcrime].freeze
+  SECTIONS_OUTRO = %w[anarchy outro takeflight next].freeze
 
   LANGUAGES_FIRST = {
     'العربية'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#arabic',
@@ -50,6 +52,7 @@ class ToChangeEverythingController < ApplicationController
     @language_links_first = LANGUAGES_FIRST
     @language_links_last  = LANGUAGES_LAST
     @language_links       = @language_links_first.merge @language_links_last
+    @table_of_contents_sections = [SECTIONS_INTRO, SECTIONS_FIRST, SECTIONS_LAST, SECTIONS_OUTRO].flatten
 
     @locale = params[:lang]
 
