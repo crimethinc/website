@@ -26,7 +26,7 @@ describe 'Language Landing Page' do
     end
   end
 
-  it 'Renders the landig page with counts and links to specific languages' do
+  it 'Renders the landing page with counts and links to specific languages' do
     visit '/languages'
     link_matcher = 'a[href*="languages/"]'
     links = all(link_matcher)
