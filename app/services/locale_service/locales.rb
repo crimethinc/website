@@ -16,6 +16,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
 
     # german
     Locale.new(locale: 'deutsch', lang_code: :de, canonical: 'deutsch'),
+    Locale.new(locale: 'german',  lang_code: :de, canonical: 'deutsch'),
 
     # finnish
     Locale.new(locale: 'suomen',  lang_code: :fi, canonical: 'suomen'),
