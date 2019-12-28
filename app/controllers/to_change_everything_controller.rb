@@ -54,8 +54,6 @@ class ToChangeEverythingController < ApplicationController
   }.freeze
 
   def show
-    @sections_first       = SECTIONS[:first]
-    @sections_last        = SECTIONS[:last]
     @language_links_first = LANGUAGES_FIRST
     @language_links_last  = LANGUAGES_LAST
     @language_links       = @language_links_first.merge @language_links_last

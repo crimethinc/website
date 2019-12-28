@@ -140,13 +140,13 @@
         <h1><%= t('.menu.toc').html_safe %></h1>
 
         <div id="toc1">
-          <% @sections_first.each do |section| %>
+          <% tce_body_sections_first.each do |section| %>
             <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
           <% end %>
         </div>
 
         <div id="toc2">
-          <% @sections_last.each do |section| %>
+          <% tce_body_sections_last.each do |section| %>
             <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
           <% end %>
         </div>

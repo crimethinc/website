@@ -18,7 +18,15 @@ module ToChangeEverythingHelper
   end
 
   def tce_body_sections
-    [SECTIONS[:first], SECTIONS[:last]].flatten
+    [tce_body_sections_first, tce_body_sections_last].flatten
+  end
+
+  def tce_body_sections_first
+    SECTIONS[:first]
+  end
+
+  def tce_body_sections_last
+    SECTIONS[:last]
   end
 
   def url_for_tce_image *pieces
