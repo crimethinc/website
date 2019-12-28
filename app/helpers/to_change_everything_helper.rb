@@ -8,42 +8,44 @@ module ToChangeEverythingHelper
     outro: %w[anarchy outro takeflight next].freeze
   }.freeze
 
-  LANGUAGE_LINKS_FIRST = {
-    'العربية'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#arabic',
-    'հայերեն'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#armenian',
-    'Български'                                       => '/2016/09/21/to-change-everything-in-11-more-languages#bulgarian',
-    'Cebuano'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano',
-    'Català'                                          => '/2016/01/25/to-change-everything-in-ten-more-languages#catalan',
-    '中文'                                              => '/2016/01/25/to-change-everything-in-ten-more-languages#chinese',
-    'Czech'                                           => '/tce/czech',
-    'Dansk'                                           => '/2016/01/25/to-change-everything-in-ten-more-languages#danish',
-    'Deutsch'                                         => '/tce/deutsch',
-    'English'                                         => '/tce',
-    'Español'                                         => '/tce/espanol',
-    'Español<br />&nbsp;&nbsp;&nbsp;(América Latina)' => '/tce/espanol-america-latina',
-    'فارسی'                                           => '/tce/فارسی',
-    'Français'                                        => '/2016/01/25/to-change-everything-in-ten-more-languages#french',
-    'Français (Québec)'                               => '/tce/quebecois'
-  }.freeze
+  LANGUAGE_LINKS = {
+    first: {
+      'العربية'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#arabic',
+      'հայերեն'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#armenian',
+      'Български'                                       => '/2016/09/21/to-change-everything-in-11-more-languages#bulgarian',
+      'Cebuano'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano',
+      'Català'                                          => '/2016/01/25/to-change-everything-in-ten-more-languages#catalan',
+      '中文'                                              => '/2016/01/25/to-change-everything-in-ten-more-languages#chinese',
+      'Czech'                                           => '/tce/czech',
+      'Dansk'                                           => '/2016/01/25/to-change-everything-in-ten-more-languages#danish',
+      'Deutsch'                                         => '/tce/deutsch',
+      'English'                                         => '/tce',
+      'Español'                                         => '/tce/espanol',
+      'Español<br />&nbsp;&nbsp;&nbsp;(América Latina)' => '/tce/espanol-america-latina',
+      'فارسی'                                           => '/tce/فارسی',
+      'Français'                                        => '/2016/01/25/to-change-everything-in-ten-more-languages#french',
+      'Français (Québec)'                               => '/tce/quebecois'
+    }.freeze,
 
-  LANGUAGE_LINKS_LAST = {
-    'ελληνικά'                            => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
-    'Italiano'                            => '/2016/01/25/to-change-everything-in-ten-more-languages#italian',
-    '한국어'                                 => '/tce/한국어',
-    'Lietuvos'                            => '/tce/lietuvos',
-    'Malay'                               => '/2016/09/21/to-change-everything-in-11-more-languages#malay',
-    'Malti'                               => '/2016/09/21/to-change-everything-in-11-more-languages#maltese',
-    'Nederlands'                          => '/2016/09/21/to-change-everything-in-11-more-languages#dutch',
-    '日本語'                                 => '/tce/日本語',
-    'Polski'                              => '/tce/polski',
-    'Português'                           => '/tce/portugues',
-    'Română'                              => '/2016/01/25/to-change-everything-in-ten-more-languages#romanian',
-    'русский'                             => '/2016/01/25/to-change-everything-in-ten-more-languages#russian',
-    '<!--српскохрватски-->Srpskohrvatski' => '/2016/09/21/to-change-everything-in-11-more-languages#serbocroatian',
-    'Slovenčina'                          => '/2016/09/21/to-change-everything-in-11-more-languages#slovakvideo',
-    'Slovenščina'                         => '/tce/slovenscina',
-    'Svenska'                             => '/2016/01/25/to-change-everything-in-ten-more-languages#swedish',
-    'Tagalog'                             => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano'
+    last:  {
+      'ελληνικά'                            => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
+      'Italiano'                            => '/2016/01/25/to-change-everything-in-ten-more-languages#italian',
+      '한국어'                                 => '/tce/한국어',
+      'Lietuvos'                            => '/tce/lietuvos',
+      'Malay'                               => '/2016/09/21/to-change-everything-in-11-more-languages#malay',
+      'Malti'                               => '/2016/09/21/to-change-everything-in-11-more-languages#maltese',
+      'Nederlands'                          => '/2016/09/21/to-change-everything-in-11-more-languages#dutch',
+      '日本語'                                 => '/tce/日本語',
+      'Polski'                              => '/tce/polski',
+      'Português'                           => '/tce/portugues',
+      'Română'                              => '/2016/01/25/to-change-everything-in-ten-more-languages#romanian',
+      'русский'                             => '/2016/01/25/to-change-everything-in-ten-more-languages#russian',
+      '<!--српскохрватски-->Srpskohrvatski' => '/2016/09/21/to-change-everything-in-11-more-languages#serbocroatian',
+      'Slovenčina'                          => '/2016/09/21/to-change-everything-in-11-more-languages#slovakvideo',
+      'Slovenščina'                         => '/tce/slovenscina',
+      'Svenska'                             => '/2016/01/25/to-change-everything-in-ten-more-languages#swedish',
+      'Tagalog'                             => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano'
+    }.freeze
   }.freeze
 
   def tce_table_of_contents_sections
@@ -51,11 +53,11 @@ module ToChangeEverythingHelper
   end
 
   def tce_language_links_first
-    LANGUAGE_LINKS_FIRST
+    LANGUAGE_LINKS[:first]
   end
 
   def tce_language_links_last
-    LANGUAGE_LINKS_LAST
+    LANGUAGE_LINKS[:last]
   end
 
   def tce_language_links
