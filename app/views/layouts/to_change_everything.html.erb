@@ -87,7 +87,7 @@
               <span class="pink"><a href="javascript:toggleDiv('languagediv');"><span class="icon"></span><span class="label"> <%= t('.menu.language').html_safe %></span></a></span>
 
               <ul id="language">
-                <% @language_links.each do |label, path| %>
+                <% tce_language_links.each do |label, path| %>
                   <li><%= link_to label.html_safe, path %></li>
                 <% end %>
               </ul>
@@ -124,13 +124,13 @@
 
       <div id="languagediv">
         <div id="lang1">
-          <% @language_links_first.each do |label, path| %>
+          <% tce_language_links_first.each do |label, path| %>
             <li><%= link_to label.html_safe, path %></li>
           <% end %>
         </div>
 
         <div id="lang2">
-          <% @language_links_last.each do |label, path| %>
+          <% tce_language_links_last.each do |label, path| %>
             <li><%= link_to label.html_safe, path %></li>
           <% end %>
         </div>
