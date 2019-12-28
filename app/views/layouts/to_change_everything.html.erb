@@ -77,7 +77,7 @@
               <span class="green"><a href="javascript:toggleDiv('tocdiv');"><span class="icon"></span><span class="label"> <%= t('.menu.toc').html_safe %></span></a></span>
 
               <ul id="toc">
-                <% @table_of_contents_sections.each do |section| %>
+                <% tce_table_of_contents_sections.each do |section| %>
                   <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
                 <% end %>
               </ul>

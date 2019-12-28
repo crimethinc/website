@@ -52,7 +52,6 @@ class ToChangeEverythingController < ApplicationController
     @language_links_first = LANGUAGES_FIRST
     @language_links_last  = LANGUAGES_LAST
     @language_links       = @language_links_first.merge @language_links_last
-    @table_of_contents_sections = [SECTIONS_INTRO, SECTIONS_FIRST, SECTIONS_LAST, SECTIONS_OUTRO].flatten
 
     @locale = params[:lang]
 
