@@ -12,13 +12,21 @@ module Rack
 
     def call env
       request = Rack::Request.new(env)
-      content_type = request.env['HTTP_ACCEPT']
-      return json_406_error if content_type.start_with?('application/json')
+      return json_406_error if invalid_api_request? request
 
       @app.call(env)
     end
 
     private
+
+    def invalid_api_request? request
+      return false if request.path.include?('collection_posts') ||
+                      request.path.include?('manifest.json') ||
+                      request.path.include?('feed.json')
+
+      http_accept = request.env['HTTP_ACCEPT']
+      http_accept&.start_with?('application/json')
+    end
 
     def json_406_error
       [
