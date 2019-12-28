@@ -3,6 +3,13 @@ class ToChangeEverythingController < ApplicationController
 
   TO_CHANGE_ANYTHING_YAMLS = %w[日本語 portugues quebecois espanol-america-latina lietuvos 한국어 english espanol فارسی].freeze
 
+  SECTIONS = {
+    intro: %w[introduction].freeze,
+    first: %w[self answering power relationships reconciling liberation revolt control].freeze,
+    last:  %w[hierarchy borders representation leaders government profit property lastcrime].freeze,
+    outro: %w[anarchy outro takeflight next].freeze
+  }.freeze
+
   SECTIONS_INTRO = %w[introduction].freeze
   SECTIONS_FIRST = %w[self answering power relationships reconciling liberation revolt control].freeze
   SECTIONS_LAST  = %w[hierarchy borders representation leaders government profit property lastcrime].freeze
@@ -47,8 +54,8 @@ class ToChangeEverythingController < ApplicationController
   }.freeze
 
   def show
-    @sections_first       = SECTIONS_FIRST
-    @sections_last        = SECTIONS_LAST
+    @sections_first       = SECTIONS[:first]
+    @sections_last        = SECTIONS[:last]
     @language_links_first = LANGUAGES_FIRST
     @language_links_last  = LANGUAGES_LAST
     @language_links       = @language_links_first.merge @language_links_last
