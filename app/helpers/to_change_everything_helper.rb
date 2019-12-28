@@ -81,6 +81,6 @@ module ToChangeEverythingHelper
   end
 
   def tce_image_tag filename
-    image_tag url_for_tce_image(filename)
+    image_tag url_for_tce_image filename
   end
 end
