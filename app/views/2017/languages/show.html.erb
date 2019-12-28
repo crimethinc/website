@@ -1,18 +1,16 @@
-<article>
-  <header>
-    <nav class="crumbtrail">
-      <%= link_to t("views.languages.heading"), [:languages] %>
-    </nav>
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags(@articles) %>
+<% end %>
 
-    <h1>
-      <%= @locale.name %>
+<header>
+  <h1><%=@locale.name%></h1>
+  <% unless @locale.abbreviation == "en" %>
+  <h2>(<%= @locale.name_in_english %>)</h>
+  <% end %>
+</header>
 
-      <% unless @locale.abbreviation == "en" %>
-        (<%= @locale.name_in_english %>)
-      <% end %>
-    </h1>
-  </header>
+<div class="h-feed">
+  <%= render_themed "articles/list", articles: @articles %>
+</div>
 
-  <div class="e-content">
-  </div>
-</article>
+<%= paginate @articles %>
