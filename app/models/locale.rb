@@ -1,5 +1,4 @@
 class Locale < ApplicationRecord
-  # include Name
   include Slug
 
   before_validation :strip_whitespace,      on: %i[create update]
