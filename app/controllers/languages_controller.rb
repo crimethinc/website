@@ -24,8 +24,8 @@ class LanguagesController < ApplicationController
   end
 
   def set_articles
-    abbreviation = canonical_locale.lang_code
+    abbreviation = canonical_locale&.lang_code
     @articles = Article.live.published.where(locale: abbreviation).page(params[:page]).per(25)
-    return redirect_to root_path if @articles.empty?
+    return redirect_to languages_path if @articles.empty?
   end
 end

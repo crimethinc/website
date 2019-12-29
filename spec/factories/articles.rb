@@ -27,5 +27,6 @@ FactoryBot.define do
   trait(:swedish) { locale { 'sv' } }
   trait(:turkish) { locale { 'tr' } }
   trait(:portuguese) { locale { 'pt' } }
+  trait(:polish) { locale { 'pl' } }
   trait(:brazilian_portuguese) { locale { 'pt-br' } }
 end

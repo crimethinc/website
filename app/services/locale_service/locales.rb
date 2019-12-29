@@ -29,10 +29,12 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
 
     # greek
     Locale.new(locale: 'ελληνικά', lang_code: :gr, canonical: 'ellenika'),
+    Locale.new(locale: 'ellenika', lang_code: :gr, canonical: 'ellenika'),
     Locale.new(locale: 'greek',    lang_code: :gr, canonical: 'ellenika'),
 
     # hebrew
     Locale.new(locale: 'hebrew',   lang_code: :he, canonical: 'ibriyt'),
+    Locale.new(locale: 'ibriyt',   lang_code: :he, canonical: 'ibriyt'),
     Locale.new(locale: 'עִבְרִית', lang_code: :he, canonical: 'ibriyt'),
 
     # italian
@@ -42,10 +44,12 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     # portuguese
     Locale.new(locale: 'portuguese', lang_code: :pt, canonical: 'portugues'),
     Locale.new(locale: 'portugués',  lang_code: :pt, canonical: 'portugues'),
+    Locale.new(locale: 'portugues',  lang_code: :pt, canonical: 'portugues'),
 
     # brazilian portuguese
     Locale.new(locale: 'brazilian portuguese', lang_code: :'pt-br', canonical: 'portugues-brasileiro'),
     Locale.new(locale: 'português brasileiro', lang_code: :'pt-br', canonical: 'portugues-brasileiro'),
+    Locale.new(locale: 'portugues-brasileiro', lang_code: :'pt-br', canonical: 'portugues-brasileiro'),
 
     # swedish
     Locale.new(locale: 'swedish', lang_code: :sv, canonical: 'svenska'),
@@ -53,7 +57,12 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
 
     # turkish
     Locale.new(locale: 'turkish', lang_code: :tr, canonical: 'turkce'),
-    Locale.new(locale: 'türkçe',  lang_code: :tr, canonical: 'turkce')
+    Locale.new(locale: 'türkçe',  lang_code: :tr, canonical: 'turkce'),
+    Locale.new(locale: 'turkce',  lang_code: :tr, canonical: 'turkce'),
+
+    # polish
+    Locale.new(locale: 'polski', lang_code: :pl, canonical: 'polski'),
+    Locale.new(locale: 'polish', lang_code: :pl, canonical: 'polski')
   ].freeze
 
   class << self
