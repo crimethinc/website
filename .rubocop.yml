@@ -28,7 +28,7 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Max: 12
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 186
   Exclude:
     - 'db/**/*'
