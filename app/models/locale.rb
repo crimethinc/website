@@ -20,6 +20,10 @@ class Locale < ApplicationRecord
     "#{abbreviation.upcase} : #{name_in_english} / #{name}"
   end
 
+  def english?
+    abbreviation == 'en'
+  end
+
   private
 
   def strip_whitespace
