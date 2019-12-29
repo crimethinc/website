@@ -390,11 +390,15 @@ en:
     languages:
       heading: Languages
       description: |
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        CrimethInc. material has appeared in over three dozen languages; our introductory
+        primer, [To Change Everything](/tce), is available in 30. We have
+        [long](/2010/08/18/non-english-crimethinc-projects) aspired to collect all the different
+        translations on this site. If you would like to translate our material—or if you can
+        help us to collect translations for this archive or help us maintain communication
+        between related projects around the world—please
+        [contact us](mailto:foreignlegion@crimethinc.com).
+
+        Here, you can find all the articles on this site categorized according to language.
 
   helpers:
     page_entries_info:
