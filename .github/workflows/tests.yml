@@ -19,10 +19,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y postgresql-client libpq-dev
 
-      - name: Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
+      - name: Install Ruby
+        uses: MSP-Greg/actions-ruby@master
         with:
-          ruby-version: 2.6.3
+          ruby-version: 2.6.5
 
       - name: Checkout
         uses: actions/checkout@master
