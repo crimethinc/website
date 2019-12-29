@@ -14,6 +14,7 @@ describe 'Language Landing Page' do
     create(:article, :swedish)
     create(:article, :turkish)
     create(:article, :portuguese)
+    create(:article, :polish)
     create(:article, :brazilian_portuguese)
   end
 
@@ -50,5 +51,11 @@ describe 'Language Landing Page' do
     visit '/languages'
 
     within('#locales') { expect(page).not_to have_content 'Italian' }
+  end
+
+  it 'redirects to the language index page if a language is not found' do
+    visit '/languages/foo'
+
+    expect(page).to have_current_path languages_path
   end
 end
