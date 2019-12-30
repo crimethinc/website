@@ -23,20 +23,30 @@ describe 'Language Landing Page' do
 
     within '#locales' do
       links = all('a')
-      expect(links.count).to eq Article.count
+
+      # 3 versions of every language's link
+      expect(links.count).to eq(Article.count * 3)
     end
   end
 
   it 'Renders the landing page with counts and links to specific languages' do
     visit '/languages'
-    link_matcher = 'a[href*="languages/"]'
-    links = all(link_matcher)
-    links_text = links.map(&:text)
 
-    links_text.each do |text|
-      click_on text, match: :first
-      expect(page).to have_content text
-      visit '/languages'
+    # 3 links per row, collect text for each into an array of arrays
+    link_triplets = []
+    within '#locales' do
+      all('tr').each do |row|
+        link_triplets << row.all('a').map(&:text)
+      end
+    end
+
+    link_triplets.each do |triple|
+      english = triple.last
+      triple.each do |link_text|
+        click_on link_text, match: :first
+        expect(page).to have_content english
+        visit '/languages'
+      end
     end
   end
 
