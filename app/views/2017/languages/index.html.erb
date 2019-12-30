@@ -10,17 +10,24 @@
 
     <table id="locales">
       <% @locales.each do |locale| %>
+        <%
+          unicode_link = link_to locale.name, [:language, locale: locale.name.downcase.to_sym]
+          slug_link    = link_to locale.slug, [:language, locale: locale.slug.to_sym]
+          english_link = link_to locale.name_in_english, [:language, locale: locale.name_in_english.downcase.to_sym]
+        %>
+        <% next if locale.articles_count.zero? %>
+
         <tr>
           <td class="articles-count">
             <%= number_with_delimiter locale.articles_count %>
           </td>
 
           <td>
-            <b><%= link_to locale.name, [:language, locale: locale.name.downcase.to_sym] %></b>
+            <b><%= unicode_link %></b> (<%= slug_link %>)
           </td>
 
           <td>
-            <%= locale.name_in_english %>
+            <%= english_link %>
           </td>
         </tr>
       <% end %>
