@@ -1,5 +1,4 @@
 class Locale < ApplicationRecord
-  # include Name
   include Slug
 
   before_validation :strip_whitespace,      on: %i[create update]
@@ -19,6 +18,10 @@ class Locale < ApplicationRecord
 
   def display_name
     "#{abbreviation.upcase} : #{name_in_english} / #{name}"
+  end
+
+  def english?
+    abbreviation == 'en'
   end
 
   private

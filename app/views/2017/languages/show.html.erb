@@ -5,7 +5,7 @@
 <header>
   <h1><%=@locale.name%></h1>
 
-  <% unless @locale.abbreviation == "en" %>
+  <% unless @locale.english? %>
     <h2>(<%= @locale.name_in_english %>)</h2 >
   <% end %>
 
