@@ -4,16 +4,7 @@ class LanguagesController < ApplicationController
   def index
     @html_id = 'page'
     @body_id = 'languages'
-    @locales = Locale.all
-
-    @locales.each do |locale|
-      locale.articles_count = Article.live.published.where(locale: locale.abbreviation).count
-    end
-
-    @locales = @locales
-               .reject { |locale| locale.articles_count.zero? }
-               .sort_by(&:articles_count)
-               .reverse
+    @locales = live_locales
 
     render "#{Theme.name}/languages/index"
   end

@@ -48,6 +48,22 @@ class ApplicationController < ActionController::Base
     redirect_to [:signin], alert: 'You need to sign in to view that page.' unless signed_in?
   end
 
+  def live_locales
+    return @live_locales if @live_locales.present?
+
+    @live_locales = Locale.all
+
+    @live_locales.each do |locale|
+      locale.articles_count = Article.live.published.where(locale: locale.abbreviation).count
+    end
+
+    @live_locales = @live_locales
+                    .reject { |locale| locale.articles_count.zero? }
+                    .sort_by(&:articles_count)
+                    .reverse
+  end
+  helper_method :live_locales
+
   def set_locale_from_subdomain
     locale = request.subdomain
     I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
