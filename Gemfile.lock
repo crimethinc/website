@@ -294,7 +294,7 @@ GEM
     rubocop-rspec (1.37.1)
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
-    rubypants (0.7.0)
+    rubypants (0.7.1)
     rubyzip (2.0.0)
     sassc (2.2.1)
       ffi (~> 1.9)
