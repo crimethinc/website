@@ -45,11 +45,11 @@
         <%= link_to t("footer.nav.store.description"), "/store" %>
       </dd>
 
-      <dt class="nav-label nav-label-languages" id="languages"><%= link_to t("header.languages"), "#languages" %></dt>
+      <dt class="nav-label nav-label-languages" id="languages"><%= link_to t("header.languages"), [:languages] %></dt>
       <dd>
-        <% Locales.supported.each do |locale| %>
-          <%= link_to t(:name, locale: locale),
-                      url_for_current_path_with_subdomain(subdomain: locale) %>
+        <% live_locales.each do |locale| %>
+          <% next if locale.abbreviation == I18n.locale.to_s %>
+          <%= link_to locale.name, [:language, locale: locale.name.downcase.gsub(' ', '-')] %>
         <% end %>
       </dd>
     </dl>
