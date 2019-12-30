@@ -2,8 +2,9 @@
 
 <nav class="mb-5">
   <p class="h6 text-muted">Jump to</p>
-  <%= link_to "Draft Articles",              "#draft",  class: "btn btn-outline-primary mb-2 mr-2" %>
-  <%= link_to "Recently Published Articles", "#recent", class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Draft Articles",              "#draft",              class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Recently Published Articles", "#recent",             class: "btn btn-outline-primary mb-2 mr-2" %>
+  <%= link_to "Draft Translations",          "#draft-translations", class: "btn btn-outline-primary mb-2 mr-2" %>
 </nav>
 
 <h2 id="draft">Draft Articles</h2>
@@ -12,4 +13,8 @@
 
 <h2 id="recent">Recently Published Articles</h2>
 <%= render "admin/articles/table", articles: @recent_articles %>
+<%= render "admin/articles/back_to_top" %>
+
+<h2 id="draft-translations">Draft Translations</h2>
+<%= render "admin/articles/table", articles: @draft_translated_articles %>
 <%= render "admin/articles/back_to_top" %>

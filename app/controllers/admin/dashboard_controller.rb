@@ -2,9 +2,10 @@ module Admin
   class DashboardController < Admin::AdminController
     # /admin/dashboard
     def index
-      @draft_articles  = Article.draft
-      @recent_articles = Article.last_2_weeks
-      @title           = admin_title
+      @draft_articles            = Article.draft.english
+      @recent_articles           = Article.last_2_weeks
+      @draft_translated_articles = Article.draft.translation
+      @title                     = admin_title
     end
 
     # /admin/markdown
