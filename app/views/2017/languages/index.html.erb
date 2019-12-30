@@ -15,7 +15,6 @@
           slug_link    = link_to locale.slug, [:language, locale: locale.slug.to_sym]
           english_link = link_to locale.name_in_english, [:language, locale: locale.name_in_english.downcase.to_sym]
         %>
-        <% next if locale.articles_count.zero? %>
 
         <tr>
           <td class="articles-count">
