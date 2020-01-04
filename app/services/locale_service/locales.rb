@@ -47,11 +47,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'portugues',  lang_code: :pt, canonical: 'portugues'),
 
     # brazilian portuguese
-    Locale.new(locale: 'brazilian portuguese', lang_code: :'pt-br', canonical: 'portugues-brasileiro'),
-    Locale.new(locale: 'brazilian-portuguese', lang_code: :'pt-br', canonical: 'portugues-brasileiro'),
-    Locale.new(locale: 'português brasileiro', lang_code: :'pt-br', canonical: 'portugues-brasileiro'),
-    Locale.new(locale: 'português-brasileiro', lang_code: :'pt-br', canonical: 'portugues-brasileiro'),
-    Locale.new(locale: 'portugues-brasileiro', lang_code: :'pt-br', canonical: 'portugues-brasileiro'),
+    Locale.new(locale: 'brazilian portuguese', lang_code: :pt, canonical: 'portugues-brasileiro'),
+    Locale.new(locale: 'brazilian-portuguese', lang_code: :pt, canonical: 'portugues-brasileiro'),
+    Locale.new(locale: 'português brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
+    Locale.new(locale: 'português-brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
+    Locale.new(locale: 'portugues-brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
 
     # swedish
     Locale.new(locale: 'swedish', lang_code: :sv, canonical: 'svenska'),
