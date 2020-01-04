@@ -39,7 +39,19 @@ module Crimethinc
     config.i18n.default_locale = :en
 
     # Whitelist locales available for the application
-    config.i18n.available_locales = %i[日本語 cz de en es fr portugues quebecois espanol-america-latina lietuvos 한국어 english espanol فارسی]
+    subdomain_locales = %i[cz de en es fr pt]
+    path_ltr_locales  = %i[
+      english
+      espanol
+      espanol-america-latina
+      lietuvos
+      portugues
+      quebecois
+      日本語
+      한국어
+    ]
+    path_rtl_locales = %i[فارسی]
+    config.i18n.available_locales = [subdomain_locales, path_ltr_locales, path_rtl_locales].flatten
 
     # Allow nested diretories in locales
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
