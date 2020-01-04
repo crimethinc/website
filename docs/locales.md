@@ -7,7 +7,7 @@ A runbook
 1. Determine the 2-letter language code for the language you are adding
   - `xx`
   - https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-  - For example, `pt`
+  - For example, `pt` for
 
 ## DNS concerns
 
