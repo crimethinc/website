@@ -9,7 +9,7 @@
 #  9. Markdown examples: [link text](url), **bold**, _italics_, %{dynamic variable}, etc.
 # 10. If a value has <b>HTML</b> syntax characters in it, please keep those in your translation.
 pt:
-  name: English
+  name: Português Brasileiro
   language_direction: ltr
   site_name: CrimethInc.
   site_author: CrimethInc. Ex-Workers Collective
