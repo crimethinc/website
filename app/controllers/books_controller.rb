@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[show extras]
 
-  BOOK_SLUGS = %w[
+  INDEX_BOOK_SLUGS = %w[
     no-wall-they-can-build
     from-democracy-to-freedom
     contradictionary
@@ -18,18 +18,26 @@ class BooksController < ApplicationController
     dias-de-guerra-noites-de-amor
   ].map(&:freeze).freeze
 
+  NON_INDEX_BOOK_SLUGS = %w[
+    days-of-war-nights-of-love-ne-plus-ultra-edition
+  ].map(&:freeze).freeze
+
+  BOOK_SLUGS = INDEX_BOOK_SLUGS + NON_INDEX_BOOK_SLUGS
+
   def index
     @html_id = 'page'
     @body_id = 'tools'
     @type    = 'books'
     @title   = PageTitle.new title_for(:books)
 
-    @bullet_books = BOOK_SLUGS.map { |slug| Book.find_by(slug: slug) }
+    @bullet_books = INDEX_BOOK_SLUGS.map { |slug| Book.find_by(slug: slug) }
 
     render "#{Theme.name}/books/index"
   end
 
   def show
+    return redirect_to [:books] unless BOOK_SLUGS.include?(@book.slug)
+
     @html_id  = 'page'
     @body_id  = 'tools'
     @type     = 'books'
@@ -68,6 +76,6 @@ class BooksController < ApplicationController
 
   def set_book
     @book = Book.find_by(slug: params[:slug])
-    return redirect_to [:books] if @book.blank? || !BOOK_SLUGS.include?(@book.slug)
+    return redirect_to [:books] if @book.blank?
   end
 end
