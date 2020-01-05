@@ -45,6 +45,9 @@ namespace :db do
       [Article, Book, Issue, Journal, Logo, Page, Poster, Sticker, Video, Zine].each do |klass|
         klass.draft.destroy_all
       end
+
+      puts '==> Scrubbing article page view counts…'
+      Article.update_all(page_views: 0)
     end
 
     desc 'Dump local development DB'
