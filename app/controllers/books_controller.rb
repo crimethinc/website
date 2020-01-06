@@ -30,7 +30,7 @@ class BooksController < ApplicationController
     @type    = 'books'
     @title   = PageTitle.new title_for(:books)
 
-    @bullet_books = INDEX_BOOK_SLUGS.map { |slug| Book.find_by(slug: slug) }
+    @books = INDEX_BOOK_SLUGS.map { |slug| Book.find_by(slug: slug) }
 
     render "#{Theme.name}/books/index"
   end

@@ -12,7 +12,7 @@
   </div>
 
   <div class="tool-series tool-series-books">
-    <% @bullet_books.each do |book| %>
+    <% @books.each do |book| %>
       <%= render_themed "books/book", book: book %>
     <% end %>
   </div> <!-- .tool-series-books -->
