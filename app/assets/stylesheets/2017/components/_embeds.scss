@@ -55,5 +55,5 @@ figcaption {
   }
 }
 
-.video-container {
-}
+figure.video-container > iframe.instagram-media { display: unset !important; }
+
