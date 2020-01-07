@@ -5,7 +5,7 @@
     <%= render_themed "shared/footer/contact" %>
   </div>
 
-  <% unless lite_mode? %>
+  <% if media_mode? && I18n.locale == :en %>
     <p class="site-mode-link-container">
       <%= link_to(t("footer.site_mode"), url_for_current_path_with_subdomain(subdomain: :lite)) %>
     </p>
