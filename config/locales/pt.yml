@@ -21,62 +21,62 @@ pt:
     meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
   header:
-    languages: Languages
+    languages: Idiomas
     books: Livros
-    library: Library
-    tools: Tools
+    library: Biblioteca
+    tools: Ferramentas
     audio: Podcasts
-    video: Video
-    store: Store
-    subscribe: Subscribe
-    support: Support Us
-    search: Search
-    about: About
+    video: Vídeos
+    store: Loja
+    subscribe: Inscrever
+    support: Apoie
+    search: Buscar
+    about: Sobre
 
-    first_time: First Time? Start Here →
-    site_mode: Switch to the full version of the site →
+    first_time: Primeira vez aqui? Comece aqui →
+    site_mode: Mudar para a versão completa do site →
 
   search:
-    form_placeholder: Search Archives…
-    search_results: 'Search results for: %{query}'
+    form_placeholder: Buscar nos Arquivos…
+    search_results: 'Buscar Resultados por: %{query}'
     advanced:
-      heading: Advanced Search
+      heading: Busca Acançada
       form:
-        term_label: Search
-        title_label: Title
-        subtitle_label: Subtitle
-        content_label: Content
+        term_label: Buscar
+        title_label: Título
+        subtitle_label: Subtítulo
+        content_label: Conteúdo
         tag_label: Tags
-        category_label: Categories
-        comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
-        button: Search
+        category_label: Categorias
+        comma_separated_note: Separados por vírgula. Por exemplo, _cães, gatos, etc_.
+        button: Buscar
 
   footer:
     nav:
-      heading: Site Map
+      heading: Mapa do Site
       articles:
         label: Artigos
         feed: RSS
-        adventure: Adventure
-        analysis: Analysis
-        arts: Arts
-        current_events: Current Events
-        geography: Geography
-        how_to: How To
-        history: History
-        news: News
-        technology: Technology
+        adventure: Aventura
+        analysis: Análises
+        arts: Artess
+        current_events: Eventos Atuais
+        geography: Geografia
+        how_to: Como Fazer
+        history: História
+        news: Notícias
+        technology: Tecnologia
 
       books:
         label: Livros
         contradictionary: Contradictionary
-        days_of_war_nights_of_love: Days of War Nights of Love
-        expect_resistance: Expect Resistance
-        from_democracy_to_freedom: From Democracy to Freedom
+        days_of_war_nights_of_love: Dias de Guerra Noites de Amor
+        expect_resistance: Espere Resistência
+        from_democracy_to_freedom: Da Democracia à Liberdade
         no_wall_they_can_build: No Wall They Can Build
         off_the_map: Off the Map
-        recipes_for_disaster: Recipes for Disaster
-        work: Work
+        recipes_for_disaster: Receitas para o Desastre
+        work: Trabalho
 
       podcast:
         label: Podcast
@@ -86,97 +86,98 @@ pt:
         no_wall_they_can_build: No Wall They can Build
 
       videos:
-        label: Videos
+        label: Vídeos
 
       tools:
-        label:    Tools
+        label:    Ferramentas
         zines:    Zines
-        journals: Journals
+        journals: Jornais
         posters:  Posters
-        stickers: Stickers
-        videos:   Videos
-        music:    Music
+        stickers: Adesivos
+        videos:   Vídeos
+        music:    Música
         logos:    Logos
-        to_change_everything:          To Change Everything
-        steal_something_from_work_day: Steal Something from Work Day
+        to_change_everything:          Para Mudar Tudo
+        steal_something_from_work_day: Dia de Roubar Algo do Trabalho
 
       store:
-        label: Store
-        description: Livros, Posters, Stickers, and more…
+        label: Loja
+        description: Livros, Posters, Adesivos, e mais…
 
       projects:
-        label: Projects
+        label: Projetos
         kickstarter: Kickstarter
 
     about:
-      first_time_text: Is this your first time hearing about CrimethInc.?
-      first_time_link: Start here. →
-      heading: About CrimethInc.
+      first_time_text: Primeiro contato com CrimethInc.?
+      first_time_link: Comece aqui. →
+      heading: Sobre CrimethInc.
       description: |
-        CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+        CrimethInc. é uma aliança rebelde – uma rede descentralizada comprometida com ações coletivas anônimas – escapando das prisões de nossa época. Nos esforçamos para reinventar nossas vidas e nosso mundo de acordo com os princípios da autodeterminação e da apoio mútua.
 
-        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._
-      more_link: More about CrimethInc. →
-      donate_button_text: Support this site
+        Acreditamos que você deve ter a liberdade de dispor de seu potencial ilimitado em seus próprios termos: que nenhum governo, mercado ou ideologia seja capaz de ditar o que sua vida pode ser. Se você concorda, _ vamos fazer algo a respeito._
+      more_link: Mais Sobre CrimethInc.. →
+      donate_button_text: Apoie esse site
 
     contact:
       newsletter:
-        heading: Email Updates
-        description: Sign up here to receive regular email updates. _(Processed by Mailchimp.)_
-        signup_form_placeholder: What’s your email address?
-        signup_form_select_placeholder: You want a lot of emails? Or a little?
-        signup_form_select_option_lot:    Every little thing. (Many emails)
-        signup_form_select_option_little: Just the big stuff! (Fewer emails)
-        signup_button_text: Sign Up
+        heading: Atualização por Email
+        description: Assine para receber atualizações por email. _(Processed by Mailchimp.)_
+        signup_form_placeholder: Qual o seu email?
+        signup_form_select_placeholder: Você quer muitos emails? Ou só um pouco?
+        signup_form_select_option_lot:    Tudo que vocês tiverem. (Muitos emails)
+        signup_form_select_option_little: Só as melhores coisas! (Menos emails)
+        signup_button_text: Assinar
       social:
-        heading: Find Us Elsewhere
-        description: Keep up with our activities on the following additional platforms.
+        heading: Encontre-nos em outro lugar
+        description: Acompanhe nossas atividades em outras plataformas.
 
     mantra:
-      - If your heart is free, the ground you stand on is liberated territory. Defend it.
-      - Only those prepared to go too far will learn how far they can go.
-      - Desperate measures are long overdue.
-      - Cradle the seed, even in the volcano’s mouth.
-      - The future is in chains within you — set it free.
-      - A spark for every powder keg.
-      - Esperanza no espera.
+      - Se seu coração é livre, o chão onde você pisa é um território libertado. Defenda-o.
+      - Só as pessoas que se preparam para ir longe demais vão aprender o quão longe podem ir.
+      - Medidas desesperadas estão ultrapassadas.
+      - Cuide das sementes, mesmo que na boca do vulcão.
+      - Gasolina, garrafa, pedaço de pano.
+      - Uma faísca para cada barril de pólvora.
+      - Esperança não espera.
+      - Para mudar tudo, começe de algum lugar!
       - Mobilis in mobili
-      - Fighting the next war.
+      - Lutando a próxima guerra.
 
     site_mode: Switch to the lite version of the site →
 
   page_titles:
     about:
-      contact: Contact
-      about: About
-      library: Online Reading Library
-      store: Store
+      contact: Contato
+      about: Sobre
+      library: Biblioteca Online
+      store: Loja
       post_order_success: Post-Order Glow
       submission_guidelines: Submission Guidelines
       steal_something_from_work_day: Steal Something from Work Day
     search:
-      index: Search
-      results: Results for
-      advanced: Advanced Search
+      index: Busca
+      results: Resultados Para
+      advanced: Busca Avançada
     videos:
-      index: Videos
+      index: Vídeos
     tools:
-      index: Tools
+      index: Ferramentas
     posters:
       index: Posters
     journals:
-      index: Journals
+      index: Jornais
     zines:
       index: Zines
     stickers:
-      index: Stickers
+      index: Adesivos
     logos:
       index: Logos
     podcasts:
       index: Podcasts
-      transcript: Transcript
+      transcript: Transcrição
     categories:
-      index: Categories
+      index: Categorias
     books:
       index: Livros
       extras: Extras
@@ -192,15 +193,15 @@ pt:
       work: Work
 
   podcast:
-    latest_episode: Latest Episode
-    other_episodes: All Episodes
-    listen: Listen to the Episode
+    latest_episode: Últimos Espisódios
+    other_episodes: Todos os Episódios
+    listen: Ouvir Episódio
     download: Download
-    summary: Summary
-    show_notes: Show Notes
-    transcript: Transcript
-    notes_and_links: Notes and Links
-    full_episode_transcript: Full Episode Transcript
+    summary: Sumário
+    show_notes: Mostrar Notas
+    transcript: Transcrição
+    notes_and_links: Notas e Links
+    full_episode_transcript: Episódio Completo Transcrito
 
   tools:
     poster:
