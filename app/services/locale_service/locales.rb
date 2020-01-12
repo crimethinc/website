@@ -2,6 +2,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
   Locale = LocaleService::Locale
 
   LOCALES = [
+    # arabic
+    Locale.new(locale: 'arabic',      lang_code: :ar, canonical: 'alarabiyawu'),
+    Locale.new(locale: 'alarabiyawu', lang_code: :ar, canonical: 'alarabiyawu'),
+    Locale.new(locale: 'اَلْعَرَبِيَّةُ‎', lang_code: :ar, canonical: 'alarabiyawu'),
+
     # english
     Locale.new(locale: 'english', lang_code: :en, canonical: 'english'),
 
