@@ -1,3 +1,7 @@
+// Move SUPPORT US button to left or right based on language direction
+html[dir=ltr] .site-header .button { right: $border-size-large; }
+html[dir=rtl] .site-header .button { left:  $border-size-large; }
+
 .site-header {
   position: relative;
   background-color: $color-true-black;
@@ -11,7 +15,6 @@
     background: $color-blue;
     position: absolute;
     top: $border-size-large;
-    right: $border-size-large;
 
     @media screen and (max-width: $small-tablet) {
       font-size: 12px;
