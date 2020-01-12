@@ -11,6 +11,8 @@ class HomeController < ApplicationController
     # Feed artciles
     @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)
 
+    @locale = LocaleService.find(locale: nil, lang_code: I18n.locale)
+
     render "#{Theme.name}/home/index"
   end
 
