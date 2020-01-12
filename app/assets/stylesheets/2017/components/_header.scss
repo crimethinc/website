@@ -2,6 +2,11 @@
 html[dir=ltr] .site-header .button { right: $border-size-large; }
 html[dir=rtl] .site-header .button { left:  $border-size-large; }
 
+@media screen and (max-width: $small-tablet) {
+  html[dir=ltr] .site-header .button { right: $border-size-medium; }
+  html[dir=rtl] .site-header .button { left:  $border-size-medium; }
+}
+
 .site-header {
   position: relative;
   background-color: $color-true-black;
@@ -20,7 +25,6 @@ html[dir=rtl] .site-header .button { left:  $border-size-large; }
       font-size: 12px;
       padding: .5em;
       top: $border-size-medium;
-      right: $border-size-medium;
     }
   }
 }
