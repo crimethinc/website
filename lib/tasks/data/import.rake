@@ -1,14 +1,13 @@
 require 'yaml'
 
-LOCALE             = 'pl'.freeze
-PUBLICATION_STATUS = 'draft'.freeze
-
 # IMPORTANT One time use data import / migration tasks
 #           Delete each rake task and its support files after its run in production
 namespace :data do
   namespace :translations do
     desc 'Import translated articles'
-    task import: :environment do
+    task :import, [:locale_lang_code] => :environment do |_, args|
+      locale = args[:locale_lang_code]
+
       article_from_data_files.each do |translated_article|
         english_article_id = translated_article.with_indifferent_access[:canonical_id]
         english_article    = Article.find(english_article_id)
@@ -26,7 +25,7 @@ namespace :data do
         article = Article.new translated_article
 
         article.locale             = locale
-        article.publication_status = publication_status
+        article.publication_status = 'draft'
 
         article.image             = english_article.image
         article.image_description = english_article.image_description
@@ -42,14 +41,6 @@ namespace :data do
       end
     end
   end
-end
-
-def locale
-  LOCALE
-end
-
-def publication_status
-  PUBLICATION_STATUS
 end
 
 def article_from_data_files
