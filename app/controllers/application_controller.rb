@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
   before_action :set_page_share
+  before_action :set_current_locale
 
   helper :meta
 
@@ -159,6 +160,10 @@ class ApplicationController < ActionController::Base
   def page_share_image_url
     # TODO: implement this algorithm
     'https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png'
+  end
+
+  def set_current_locale
+    @locale = LocaleService.find(locale: nil, lang_code: I18n.locale)
   end
 
   # ...Page Share
