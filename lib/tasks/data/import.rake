@@ -1,7 +1,12 @@
 require 'yaml'
 
 # IMPORTANT One time use data import / migration tasks
-#           Delete each rake task and its support files after its run in production
+#           Delete its support files after its run in production
+#           This task needs a folder of YAML and Markdown file pairs
+#           Eg, 1.yml 1.md
+#           MD: Only the article's content in Markdown
+#           YAML: Flat key/value pairs of article's meta data
+
 namespace :data do
   namespace :translations do
     desc 'Import translated articles'
