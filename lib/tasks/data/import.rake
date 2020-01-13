@@ -28,11 +28,17 @@ namespace :data do
         article.locale             = locale
         article.publication_status = publication_status
 
-        article.image        = english_article.image
-        article.published_at = english_article.published_at
-        article.short_path   = "#{english_article.short_path}-#{locale}"
+        article.image             = english_article.image
+        article.image_description = english_article.image_description
+        article.published_at      = english_article.published_at
+        article.short_path        = "#{english_article.short_path}-#{locale}"
 
         article.save!
+
+        puts "==> Saved article: #{article.id}"
+
+        article.tags       << english_article.tags
+        article.categories << english_article.categories
       end
     end
   end
@@ -47,7 +53,7 @@ def publication_status
 end
 
 def article_from_data_files
-  data_dir = Dir.new File.expand_path('polish_import', __dir__)
+  data_dir = Dir.new File.expand_path(locale, __dir__)
   articles = {}
 
   data_dir.each do |data_file|
