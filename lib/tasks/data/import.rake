@@ -1,17 +1,15 @@
 require 'yaml'
+attr_reader :locale
 
-# IMPORTANT One time use data import / migration tasks
-#           Delete its support files after its run in production
-#           This task needs a folder of YAML and Markdown file pairs
-#           Eg, 1.yml 1.md
-#           MD: Only the article's content in Markdown
-#           YAML: Flat key/value pairs of article's meta data
+# IMPORTANT!
+# One time use data import / migration tasks
+# Delete its support files after its run in production
 
 namespace :data do
   namespace :translations do
     desc 'Import translated articles'
     task :import, [:locale_lang_code] => :environment do |_, args|
-      locale = args[:locale_lang_code]
+      assign_locale! args
 
       article_from_data_files.each do |translated_article|
         english_article_id = translated_article.with_indifferent_access[:canonical_id]
@@ -41,6 +39,7 @@ namespace :data do
 
         puts "==> Saved article: #{article.id}"
 
+        # Add tags and categories
         article.tags       << english_article.tags
         article.categories << english_article.categories
       end
@@ -49,7 +48,6 @@ namespace :data do
 end
 
 def article_from_data_files
-  data_dir = Dir.new File.expand_path(locale, __dir__)
   articles = {}
 
   data_dir.each do |data_file|
@@ -74,3 +72,33 @@ def article_from_data_files
 
   articles.values
 end
+
+def print_missing_data_files_error
+  error = <<~ERROR
+    ==> ERROR: Missing data files directory at: lib/tasks/#{locale}
+        ----------------------------------------------------
+    ==> This task needs a folder of YAML and Markdown file pairs
+    ==> Eg, 1.yml 1.md
+    ==> MD:   Only the article's content in Markdown
+    ==> YAML: Flat key/value pairs of article's meta data
+  ERROR
+
+  puts
+  puts error
+  puts
+  exit 1
+end
+
+def data_dir
+  Dir.new File.expand_path(locale, __dir__)
+rescue Errno::ENOENT
+  print_missing_data_files_error
+end
+
+def assign_locale! args
+  @locale = args[:locale_lang_code]
+end
+
+# def locale
+#   @locale
+# end
