@@ -51,9 +51,9 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'italiano', lang_code: :it, canonical: 'italiano'),
 
     # portuguese
-    Locale.new(locale: 'portuguese', lang_code: :pt, canonical: 'portugues'),
-    Locale.new(locale: 'portugués',  lang_code: :pt, canonical: 'portugues'),
-    Locale.new(locale: 'portugues',  lang_code: :pt, canonical: 'portugues'),
+    Locale.new(locale: 'portuguese', lang_code: :pt, canonical: 'portugues-brasileiro'),
+    Locale.new(locale: 'portugués',  lang_code: :pt, canonical: 'portugues-brasileiro'),
+    Locale.new(locale: 'portugues',  lang_code: :pt, canonical: 'portugues-brasileiro'),
 
     # brazilian portuguese
     Locale.new(locale: 'brazilian portuguese', lang_code: :pt, canonical: 'portugues-brasileiro'),
