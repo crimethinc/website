@@ -15,14 +15,13 @@
       <li class="nav-link"><%= link_to t("header.search"),  "/search" %></li>
       <li class="nav-link"><%= link_to t("header.about"),   "/about" %></li>
     </ul>
+
     <% unless I18n.locale == I18n.default_locale %>
       <ul>
-        <% @locale = LocaleService.find(locale: nil, lang_code: I18n.locale) %>
         <li class="nav-link"><%= link_to t('header.locale_articles'), "languages/#{@locale.canonical}" %></li>
       </ul>
     <% end %>
   </nav>
-
 
   <%= link_to t("header.support"), [:support], class: "button" %>
 
