@@ -18,7 +18,7 @@
 
     <% unless I18n.locale == I18n.default_locale %>
       <ul>
-        <li class="nav-link"><%= link_to t('header.locale_articles'), "languages/#{@site_locale.canonical}" %></li>
+        <li class="nav-link"><%= link_to t('header.locale_articles'), language_path(@site_locale.canonical) %></li>
       </ul>
     <% end %>
   </nav>
