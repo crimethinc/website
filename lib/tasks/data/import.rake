@@ -1,5 +1,4 @@
 require 'yaml'
-attr_reader :locale
 
 # IMPORTANT!
 # One time use data import / migration tasks
@@ -99,6 +98,8 @@ def assign_locale! args
   @locale = args[:locale_lang_code]
 end
 
-# def locale
-#   @locale
-# end
+# rubocop:disable Style/TrivialAccessors
+def locale
+  @locale
+end
+# rubocop:enable Style/TrivialAccessors
