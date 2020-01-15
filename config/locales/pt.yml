@@ -114,9 +114,9 @@ pt:
       first_time_link: Comece aqui. →
       heading: Sobre CrimethInc.
       description: |
-        CrimethInc. é uma aliança rebelde – uma rede descentralizada comprometida com ações coletivas anônimas – escapando das prisões de nossa época. Nos esforçamos para reinventar nossas vidas e nosso mundo de acordo com os princípios da autodeterminação e da apoio mútua.
+        CrimethInc. é uma aliança rebelde – uma rede descentralizada comprometida com ações coletivas anônimas – escapando das prisões de nossa época. Nos esforçamos para reinventar nossas vidas e nosso mundo de acordo com os princípios de autodeterminação e de apoio mútuo.
 
-        Acreditamos que você deve ter a liberdade de dispor de seu potencial ilimitado em seus próprios termos: que nenhum governo, mercado ou ideologia seja capaz de ditar o que sua vida pode ser. Se você concorda, _ vamos fazer algo a respeito._
+        Acreditamos que você deve ter a liberdade de dispor de seu potencial ilimitado em seus próprios termos: que nenhum governo, mercado ou ideologia seja capaz de ditar o que sua vida pode ser. Se você concorda, _vamos fazer algo a respeito._
       more_link: Mais Sobre CrimethInc.. →
       donate_button_text: Apoie esse site
 
@@ -277,55 +277,54 @@ pt:
       pdf_donate_button_text: Donate
       pdf_donate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
 
-      journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
-      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
-      music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
+      journals_intro_text: Aqui, você pode fazer o download de PDFs do Rolling Thunder, nosso aclamado jornal de análise e ação direta, Harbinger (Arauto), nosso clássico tabloide que divulga “a propaganda do desejo” e outras séries de publicações ambiciosas das últimas duas décadas.
+      logos_intro_text:    CrimethInc. pra você! Logos disponíveis para seus próprios projetos com o coletivo CrimethInc.
+      music_intro_text:    Baixe uma variedade de discos que [lançamos](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) desde 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) e outros.
       posters_intro_text:  Dê vida às paredes da sua casa, sua escola, cidade ou centro comunitário! Recomendamos o uso de cola branca ou grude caseiro de trigo ou amido de milho para colar em locais públicos.
-      stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
-      tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
-      videos_intro_text:   Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
+      stickers_intro_text: Ajude os objetos ao seu redor a se comunicarem de maneira mais eloquente! Faça o pedido em massa ou imprima-os em papel adesivo.
+      tools_intro_text:    Com mais de duas décadas de atividade, oferecemos uma ampla gama de materiais para você baixar ou adquirir em grandes quantidades. Use-os para educar, agitar e transformar os espaços ao seu redor.
+      videos_intro_text:   Sistema de Transmissão de Emergência - Uma seleção de vídeos do núcleo CrimethInc. Imagens em Eterno Movimento.
       zines_intro_text:    Zines são publicações baratas e fáceis de se reproduzir para distribuir de graça ou por um preço módico. Amamos livros mas amamos ainda mais que todo mundo possa fazer circular e ter contato com informação e conhecimento de qualidade de graça. Baixe, imprima, difunda e distribua à vontade em seu bairro, universidade, entre amigas, colegas ou no local de trabalho.
-      # zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [_To Change Everything_ site](/tce).
       books_intro_text: |
-        Desde escrita apaixonada e edição meticulosa, design caprichoso e único até chegar às gráficas e suas engrenagens, esses livros são o resultado de muito amor e carinho. Estamos nisso há mais de duas décadas e você pode perceber isso nos menores detalhes e resultados que só podem ser alcançados com papel coberto de tinta.
+        Desde a escrita apaixonada e a edição meticulosa, design caprichoso e único até chegar às gráficas e suas engrenagens, esses livros são o resultado de muito amor e carinho. Estamos nisso há mais de duas décadas e você pode perceber isso nos menores detalhes e resultados que só podem ser alcançados com papel coberto de tinta.
 
         Todos os nossos livros são impressos com tinta à base de soja e em papel 100% reciclado e confeccionados por artesãos especializados em Louisville, Quebec, Canadá, utilizando as melhores impressoras offset.
 
       books_heading_text:    Amamos fazer livros.
-      journals_heading_text: Journals
+      journals_heading_text: Jornais
       logos_heading_text:    Logos
       posters_heading_text:  Posters
-      stickers_heading_text: Stickers
-      tools_heading_text:    Tools
+      stickers_heading_text: Adesivos
+      tools_heading_text:    Ferramentas
       zines_heading_text:    Zines
 
       buttons:
-        browse_journals_text: Browse All Journals
-        browse_logos_text: Browse All Logos
-        browse_music_text: Browse All Music
-        browse_posters_text: Browse All Posters
-        browse_stickers_text: Browse All Stickers
-        browse_videos_text: Browse All Videos
-        browse_zines_text: Browse All Zines
+        browse_journals_text: Buscar todos os Jornais
+        browse_logos_text: Buscar todos os Logos
+        browse_music_text: Buscar todos as Músicas
+        browse_posters_text: Buscar todos os Posters
+        browse_stickers_text: Buscar todos os Adesivos
+        browse_videos_text: Buscar todos os Vídeos
+        browse_zines_text: Buscar todos os Zines
 
     books:
-      crimethinc_into_libraries_heading: CrimethInc. Into Libraries
-      crimethinc_into_libraries_intro: For those who don’t have the extra resources with which to buy books or who just aren’t excited about acquiring more possessions, we have good news for you—the [CrimethInc. Into Libraries program](/books/into-libraries). Our books are [in more libraries than you might guess](/2007/10/09/crimethinc-into-libraries-progress-report), and if not, you can probably get them onto the shelves, for free. [Find out how!](/books/into-libraries)
+      crimethinc_into_libraries_heading: CrimethInc. nas Bibliotecas.
+      crimethinc_into_libraries_intro: Para quem não tem um dinheiro extra para comprar nossos livros ou não está afim de acumular mais materiais, temos uma ótima notícia [Projeto CrimethInc. nas Bibliotecas Libraries](/books/into-libraries). Nossos livros estão [em mais bibliotecas do que você imagina](/2007/10/09/crimethinc-into-libraries-progress-report), e se não, você provavelmente pode colocá-los nas prateleiras, de graça. [Descubra como!](/books/into-libraries)
 
-      literature_distro_kit_heading: Literature Distro Kit
-      literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
+      literature_distro_kit_heading: Kit de Distribuição Literária
+      literature_distro_kit_intro: Nossos livros são a pedra angular de nosso [Kit de Distribuição Literária](/books/lit-kit), uma mesa de materiais completa de literatura para você distribuir como achar melhor. Ele contém uma mistura de livros para vender e coisas para dar de graça, tudo o que você precisa para montar uma mesa em um show, participar de uma turnê ou espalhar novas ideias.
 
     support:
       new:
-        heading: Invest Your Money in CrimethInc.—!
+        heading: Invista seu dinheiro no CrimethInc.—!
         description: |
-          _Use the slider to adjust your donation. No amount is too big to be needed or too small to be helpful! If you can, sign up to donate on a monthly basis, so we can count on you to sustain us for the long haul._
+          _Use a barra para ajustar sua doação. Nenhuma quantia é tão grande para ser necessária ou tão pequena para ser relevante! Se puder, assine para doar mensalmente, para que possamos contar com você para nos apoiar a longo prazo._
 
-          CrimethInc. is an all-volunteer project with no outside sources of funding. We offer everything we do for free or at break-even prices while maintaining some of the highest quality standards in our field. We publish constantly, circulating material in [over 30 languages](/tce) on [all seven continents](/2008/01/06/now-serving-seven-continents). We’ve kept this up for a quarter of a century.
+          CrimethInc. é um projeto totalmente voluntário sem qualquer fonte externa de financiamento. Oferecemos tudo o que fazemos de graça ou a preço de custo ao mesmo tempo em que mantemos um padrão de alta qualidade em nosso campo de atuação. Publicamos constantemente, circulando materiais em [mais de 30 línguas](/tce) e nos [sete continentes](/2008/01/06/now-serving-seven-continents). Temos mantido tudo isso assim por mais de um quarto de século.
 
-          We do all this on a shoestring budget—but despite our ingenuity, some expenses are unavoidable. We depend on your assistance to cover those. With more resources, we could expand to utilize more formats and free up time to publish even more frequently.
+          Fazemos tudo isso com um orçamento apertado - mas, apesar de nossa engenhosidade, algumas despesas são inevitáveis. Dependemos da sua ajuda para cobri-las. Com mais recursos, poderemos crescer para utilizar mais formatos e ter mais tempo para investir em publicar com mais frequência.
 
-          As always, of course, the very best way to support what we are doing is to _do it yourself._
+          Como sempre, é claro, a melhor forma de nos apoiar e _fazendo você mesmx._
 
         radio_label_monthly: Monthly
         radio_label_one_time: One-time
@@ -334,11 +333,11 @@ pt:
         description_one_time: One-Time Support
         button_text: Next →
         support_request:
-          header: Existing Monthly Subscribers
-          description: Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.
+          header: Assinantes Mensais Atuais
+          description: Precisa atualizar ou cancelar sua assinatura? Digite o endereço de e-mail que você usou para se inscrever e nós lhe enviaremos um e-mail com um link super secreto, onde você poderá fazer alterações.
           email_label: Email Address
-          email_placeholder: you@email.com
-          button_text: Send Super Secret Link
+          email_placeholder: voce@email.com
+          button_text: Enviar Link Super Secreto
 
       create:
         repeat_subscriber_error: We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!
