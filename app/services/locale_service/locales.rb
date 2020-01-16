@@ -63,7 +63,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'portugues-brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
 
     # russian
-    Locale.new(locale: 'pусский', lang_code: :ru, canonical: 'russkii'),
+    Locale.new(locale: 'русский', lang_code: :ru, canonical: 'russkii'),
     Locale.new(locale: 'russian', lang_code: :ru, canonical: 'russkii'),
     Locale.new(locale: 'russkii', lang_code: :ru, canonical: 'russkii'),
 
