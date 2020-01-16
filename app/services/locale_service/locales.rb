@@ -11,12 +11,12 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'czech', lang_code: :cs, canonical: 'czech'),
     Locale.new(locale: 'czech', lang_code: :cz, canonical: 'czech'),
 
-    # english
-    Locale.new(locale: 'english', lang_code: :en, canonical: 'english'),
-
     # danish
     Locale.new(locale: 'danish', lang_code: :da, canonical: 'dansk'),
     Locale.new(locale: 'dansk',  lang_code: :da, canonical: 'dansk'),
+
+    # english
+    Locale.new(locale: 'english', lang_code: :en, canonical: 'english'),
 
     # spanish
     Locale.new(locale: 'espanol', lang_code: :es, canonical: 'espanol'),
@@ -61,6 +61,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'português brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
     Locale.new(locale: 'português-brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
     Locale.new(locale: 'portugues-brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
+
+    # russian
+    Locale.new(locale: 'русский', lang_code: :ru, canonical: 'russkii'),
+    Locale.new(locale: 'russian', lang_code: :ru, canonical: 'russkii'),
+    Locale.new(locale: 'russkii', lang_code: :ru, canonical: 'russkii'),
 
     # swedish
     Locale.new(locale: 'swedish', lang_code: :sv, canonical: 'svenska'),
