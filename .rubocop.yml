@@ -48,7 +48,7 @@ RSpec/DescribeClass:
     - 'spec/system/*'
 
 RSpec/ExampleLength:
-  Max: 10
+  Max: 9
   Exclude:
     - 'spec/system/*'
 
