@@ -64,10 +64,6 @@ RSpec/MultipleExpectations:
   Exclude:
     - 'spec/system/*'
 
-Security/Eval:
-  Exclude:
-    - 'db/seeds.rb'
-
 Security/Open:
   Exclude:
     - 'lib/tasks/db/import.rake'
