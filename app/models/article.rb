@@ -98,7 +98,10 @@ class Article < ApplicationRecord
   end
 
   def localization_in locale
-    Article.find_by locale: locale, canonical_id: id
+    [
+      Article.find_by(locale: locale, canonical_id: id),
+      Article.find_by(locale: locale, id: canonical_id)
+    ].compact.first
   end
 
   def preferred_localization
