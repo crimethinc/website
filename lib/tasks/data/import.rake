@@ -10,8 +10,10 @@ namespace :data do
     task :import, [:locale_lang_code] => :environment do |_, args|
       assign_locale! args
 
-      article_from_data_files.each do |translated_article|
-        english_article_id = translated_article.with_indifferent_access[:canonical_id]
+      article_from_data_files do |translated_article|
+        next if translated_article.blank?
+
+        english_article_id = translated_article['canonical_id']
         english_article    = Article.find(english_article_id)
 
         if english_article.blank?
@@ -23,6 +25,11 @@ namespace :data do
 
         next if english_article.localizations.pluck(:locale).include?(locale)
 
+        # Clean YAML before making a new article
+        # translation_tags = TODO
+        translated_article.delete 'tags'
+        translated_article.delete 'canonical_url'
+
         # Create the translated article draft
         article = Article.new translated_article
 
@@ -32,9 +39,11 @@ namespace :data do
         article.image             = english_article.image
         article.image_description = english_article.image_description
         article.published_at      = english_article.published_at
-        article.short_path        = "#{english_article.short_path}-#{locale}"
 
         article.save!
+
+        # Only set a new short path if there is one on the EN article
+        article.update short_path: "#{english_article.short_path}-#{locale}" if english_article.short_path.present?
 
         puts "==> Saved article: #{article.id}"
 
