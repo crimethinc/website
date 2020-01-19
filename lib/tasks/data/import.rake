@@ -10,7 +10,7 @@ namespace :data do
     task :import, [:locale_lang_code] => :environment do |_, args|
       assign_locale! args
 
-      article_from_data_files do |translated_article|
+      article_from_data_files.each do |translated_article|
         next if translated_article.blank?
 
         english_article_id = translated_article['canonical_id']
