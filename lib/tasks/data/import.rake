@@ -26,8 +26,7 @@ namespace :data do
         next if english_article.localizations.pluck(:locale).include?(locale)
 
         # Clean YAML before making a new article
-        # translation_tags = TODO
-        translated_article.delete 'tags'
+        translation_tags = translated_article.delete 'tags'
         translated_article.delete 'canonical_url'
 
         # Create the translated article draft
@@ -48,8 +47,12 @@ namespace :data do
         puts "==> Saved article: #{article.id}"
 
         # Add tags and categories
-        article.tags       << english_article.tags
         article.categories << english_article.categories
+        article.tags       << english_article.tags
+
+        translation_tags.each do |translation_tag|
+          article.tags << Tag.find_or_create_by(name: translation_tag)
+        end
       end
     end
   end
