@@ -1,14 +1,14 @@
 class CodeArchiver
   class << self
-    def put_it_on_ice
+    def put_it_on_ice # rubocop:disable Metrics/MethodLength
       # make all the directories
       system 'mkdir', '-p', html_prefix
       system 'mkdir', '-p', md_prefix
-      system 'mkdir', '-p', pdf_prefix
+      system 'mkdir', '-p', html_prefix(type: 'pages')
+      system 'mkdir', '-p', md_prefix(type: 'pages')
 
       puts '**********************************************************************'
       puts 'Making html article files'
-
       Article.published.live.in_batches.each_record do |article|
         make_article_dir article, type: :html
         make_html_article article
@@ -21,17 +21,19 @@ class CodeArchiver
         make_md_article article
       end
 
-      # TODO: this will generate tex files, but those then need to be
-      # converted into PDF. I messed around with that manually and
-      # couldn't get image loading and unicode looked bad, so not worth
-      # it unless i figure those things out
+      puts '**********************************************************************'
+      puts 'Making html page files'
+      Page.where(slug: %i[about faq]).each do |page|
+        make_page_dir page, type: :html
+        make_html_page page
+      end
 
-      # puts '**********************************************************************'
-      # puts 'Making pdf article files'
-      # Article.published.live.in_batches.each_record do |article|
-      #   make_article_dir article, type: :pdf
-      #   make_pdf_article article
-      # end
+      puts '**********************************************************************'
+      puts 'Making markdown page files'
+      Page.where(slug: %i[about faq]).each do |page|
+        make_page_dir page, type: :md
+        make_md_page page
+      end
 
       puts '**********************************************************************'
       puts 'here are some git commands that might work for updating the archive repo:'
@@ -43,7 +45,11 @@ class CodeArchiver
     def make_article_dir article, type: :html
       system 'mkdir', '-p', "#{html_prefix}/#{article_dir(article)}" if type == :html
       system 'mkdir', '-p', "#{md_prefix}/#{article_dir(article)}" if type == :md
-      system 'mkdir', '-p', "#{pdf_prefix}/#{article_dir(article)}" if type == :pdf
+    end
+
+    def make_page_dir page, type: :html
+      system 'mkdir', '-p', "#{html_prefix(type: 'pages')}/#{page.slug}}" if type == :html
+      system 'mkdir', '-p', "#{md_prefix(type: 'pages')}/#{page.slug}" if type == :md
     end
 
     def make_html_article article
@@ -62,9 +68,19 @@ class CodeArchiver
       end
     end
 
-    def make_pdf_article article
-      File.open("#{pdf_prefix}/#{article_dir(article)}/#{article.slug}.tex", 'w') do |file|
-        file.puts to_pdf article
+    def make_html_page page
+      File.open("#{html_prefix(type: 'pages')}/#{page.slug}.html", 'w') do |file|
+        file.puts "<h1>#{page.title}</h1>"
+        file.puts "<h2>#{page.subtitle}</h2>" unless page.subtitle.blank?
+        file.puts to_html page
+      end
+    end
+
+    def make_md_page page
+      File.open("#{md_prefix(type: 'pages')}/#{page.slug}.md", 'w') do |file|
+        file.puts "# #{page.title}"
+        file.puts "## #{page.subtitle}" unless page.subtitle.blank?
+        file.puts to_markdown page
       end
     end
 
@@ -113,16 +129,12 @@ class CodeArchiver
       HEREDOC
     end
 
-    def html_prefix
-      'website-content/html/articles'
+    def html_prefix type: 'articles'
+      "website-content/html/#{type}"
     end
 
-    def md_prefix
-      'website-content/markdown/articles'
-    end
-
-    def pdf_prefix
-      'website-content/pdf/articles'
+    def md_prefix type: 'articles'
+      "website-content/markdown/#{type}"
     end
   end
 end
