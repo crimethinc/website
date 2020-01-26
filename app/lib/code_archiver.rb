@@ -86,7 +86,7 @@ class CodeArchiver
 
     def to_html article
       Kramdown::Document.new(
-        MarkdownMedia.parse(article.content, include_media: false),
+        MarkdownMedia.parse(article.content, include_media: true),
         input:                     :kramdown,
         remove_block_html_tags:    false,
         transliterated_header_ids: true
@@ -95,7 +95,7 @@ class CodeArchiver
 
     def to_markdown article
       Kramdown::Document.new(
-        MarkdownMedia.parse(article.content, include_media: false),
+        MarkdownMedia.parse(article.content, include_media: true),
         input:                     :kramdown,
         remove_block_html_tags:    false,
         transliterated_header_ids: true
