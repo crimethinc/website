@@ -34,6 +34,14 @@ class CodeArchiver
       end
 
       puts '**********************************************************************'
+      if ENV['STATIC_EXPORT_IMAGES'].present?
+        puts 'downloading local copies of article images. this will take a while...'
+        download_article_images
+      else
+        puts 'SKIPPING IMAGE DOWNLOADS: use env variable STATIC_EXPORT_IMAGES=1 to include images'
+      end
+
+      puts '**********************************************************************'
       puts 'here are some git commands that might work for updating the archive repo:'
       puts git_steps
     end
@@ -86,7 +94,7 @@ class CodeArchiver
 
     def to_html article
       Kramdown::Document.new(
-        MarkdownMedia.parse(article.content, include_media: false),
+        MarkdownMedia.parse(article.content, include_media: true),
         input:                     :kramdown,
         remove_block_html_tags:    false,
         transliterated_header_ids: true
@@ -95,7 +103,7 @@ class CodeArchiver
 
     def to_markdown article
       Kramdown::Document.new(
-        MarkdownMedia.parse(article.content, include_media: false),
+        MarkdownMedia.parse(article.content, include_media: true),
         input:                     :kramdown,
         remove_block_html_tags:    false,
         transliterated_header_ids: true
@@ -122,6 +130,26 @@ class CodeArchiver
 
     def pages_prefix
       'website-content/pages'
+    end
+
+    def download_article_images
+      files = `grep -hrioE '"http[s]?:\/\/cloudfront\.crimethinc\.com.*"' website-content/articles/ | sort | uniq`
+      count = `grep -hrioE '"http[s]?:\/\/cloudfront\.crimethinc\.com.*"' website-content/articles/ | sort | uniq| wc -l`.to_i
+
+      files = files.tr('\"', '').split("\n")
+
+      files.each_with_index do |url, index|
+        puts "#{count - index} files left"
+        uri = URI.parse(url)
+        next unless uri.path.start_with?('/assets/articles/')
+
+        filepath = uri.path.split('/')[2..].join('/')
+        `curl -s --create-dirs -o "website-content/#{filepath}" "#{url}"`
+      rescue URI::InvalidURIError
+        puts "#{url} is not a valid asset URL"
+      end
+
+      :done
     end
   end
 end
