@@ -21,8 +21,10 @@
     <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
     <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
 
-    <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
-    <%= render "admin/articles/content_note", form: form %>
+    <%= tag.div dir: html_dir do %>
+      <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
+      <%= render "admin/articles/content_note", form: form %>
+    <% end %>
 
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
