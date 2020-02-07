@@ -70,7 +70,7 @@ class Article < ApplicationRecord
     if categories.present?
       categories.each do |category|
         articles = []
-        category.articles.published[0..7].each do |article|
+        category.articles.english.published[0..7].each do |article|
           next unless article != self &&
                       articles.length < 3 &&
                       !related_articles.values.flatten.include?(article)

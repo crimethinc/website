@@ -8,6 +8,8 @@
 
         <div class="row">
           <% articles.each do |article| %>
+            <% article = article.preferred_localization %>
+
             <% if article == articles.last %>
               <div class="related-article column column-one-third third-related-article">
             <% else %>
