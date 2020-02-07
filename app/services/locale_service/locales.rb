@@ -50,6 +50,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'italian',  lang_code: :it, canonical: 'italiano'),
     Locale.new(locale: 'italiano', lang_code: :it, canonical: 'italiano'),
 
+    # polish
+    Locale.new(locale: 'polski', lang_code: :pl, canonical: 'polski'),
+    Locale.new(locale: 'polish', lang_code: :pl, canonical: 'polski'),
+
     # portuguese
     Locale.new(locale: 'portuguese', lang_code: :pt, canonical: 'portugues-brasileiro'),
     Locale.new(locale: 'portugués',  lang_code: :pt, canonical: 'portugues-brasileiro'),
@@ -74,11 +78,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     # turkish
     Locale.new(locale: 'turkish', lang_code: :tr, canonical: 'turkce'),
     Locale.new(locale: 'türkçe',  lang_code: :tr, canonical: 'turkce'),
-    Locale.new(locale: 'turkce',  lang_code: :tr, canonical: 'turkce'),
-
-    # polish
-    Locale.new(locale: 'polski', lang_code: :pl, canonical: 'polski'),
-    Locale.new(locale: 'polish', lang_code: :pl, canonical: 'polski')
+    Locale.new(locale: 'turkce',  lang_code: :tr, canonical: 'turkce')
   ].freeze
 
   class << self

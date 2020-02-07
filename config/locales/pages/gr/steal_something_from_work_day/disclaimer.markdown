@@ -1,0 +1,1 @@
+**Disclaimer:** This website is intended as a rhetorical device only; in simple terms, it aims to uncover the already prevalent phenomenon of workplace theft, not to encourage those who otherwise would not commit such illegal acts. Neither the host, nor the developers, are responsible for people navigating to it, or what they do afterwards.
