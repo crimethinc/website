@@ -46,6 +46,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'ibriyt',   lang_code: :he, canonical: 'ibriyt'),
     Locale.new(locale: 'עִבְרִית', lang_code: :he, canonical: 'ibriyt'),
 
+    # indonesian
+    Locale.new(locale: 'indonesian',       lang_code: :id, canonical: 'bahasa-indonesia'),
+    Locale.new(locale: 'bahasa-indonesia', lang_code: :id, canonical: 'bahasa-indonesia'),
+
     # italian
     Locale.new(locale: 'italian',  lang_code: :it, canonical: 'italiano'),
     Locale.new(locale: 'italiano', lang_code: :it, canonical: 'italiano'),
