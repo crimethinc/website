@@ -35,10 +35,10 @@ module Crimethinc
     config.action_view.form_with_generates_remote_forms = false
 
     # Set default locale to English
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :id
 
     # Whitelist locales available for the application
-    subdomain_locales = %i[cs cz de en es fr pt]
+    subdomain_locales = %i[ar cs cz da de en es fi fr gr he id it pl pt ru sv tr]
     path_ltr_locales  = %i[
       english
       espanol
