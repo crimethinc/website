@@ -12,6 +12,16 @@ class Locale < ApplicationRecord
 
   default_scope { order(abbreviation: :asc) }
 
+  class << self
+    def current
+      I18n.locale
+    end
+
+    def english?
+      I18n.locale == :en
+    end
+  end
+
   def title
     name
   end
