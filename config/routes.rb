@@ -176,6 +176,8 @@ Rails.application.routes.draw do
   get 'library',               to: 'pages#library', as: :library
   get 'submission-guidelines', to: 'pages#submission_guidelines'
 
+  get 'key.pub',               to: 'pages#pgp_public_key', as: :pgp_public_key, via: :all
+
   get 'languages',         to: 'languages#index', as: :languages
   get 'languages/:locale', to: 'languages#show',  as: :language
 

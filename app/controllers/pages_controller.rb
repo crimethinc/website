@@ -46,6 +46,12 @@ class PagesController < ApplicationController
     render "#{Theme.name}/pages/submission_guidelines"
   end
 
+  def pgp_public_key
+    content = File.read [Rails.root, 'app', 'assets', 'pgp_public_key.asc'].join('/')
+
+    render plain: content
+  end
+
   private
 
   def set_page
