@@ -79,3 +79,12 @@ Style/MethodDefParentheses:
 Style/MixinUsage:
   Exclude:
     - 'script/*'
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
