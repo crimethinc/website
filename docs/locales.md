@@ -23,7 +23,7 @@ Everyone reading this will need to know that language code for language you're w
 
 1. Edit this file to add your translations (more on YAML file formatting below)
 
-1. Send the updated files to the code collective
+1. Send the updated file to the code collective
     - If you know how to use git / GitHub, you can make a pull reqest
     - If not, that's ok! You can email them to the code collective instead (see the _Emailing the CrimethInc. Code Collective_ section below)
 
@@ -49,6 +49,10 @@ Everyone reading this will need to know that language code for language you're w
 
 1. Then, translate only the values (see the _Working with YAML files_ section below)
     - Please, don't translate or change any of the keys
+
+1. Send the updated file to the code collective
+    - If you know how to use git / GitHub, you can make a pull reqest
+    - If not, that's ok! You can email them to the code collective instead (see the _Emailing the CrimethInc. Code Collective_ section below)
 
 ## Working with YAML files
 
