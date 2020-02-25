@@ -13,7 +13,7 @@ module MultiPageTool
 
   def downloads_available?
     downloads = []
-    I18n.t('downloads.formats').keys.each do |format, _|
+    I18n.t('downloads.formats').each_key do |format, _|
       downloads << send("#{format}_download_present")
     end
     downloads.compact.any?
