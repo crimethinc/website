@@ -335,7 +335,7 @@ it:
           header: Contributi mensili esistenti
           description: Devi aggiornare o cancellare la tua iscrizione? Inserisci l indirizzo email che hai utilizzato per iscriverti, e t invieremo un link supersegreto dove potrai apportare le modifiche.
           email_label: indirizzo email
-          email_placeholder: tu@@example.com
+          email_placeholder: tu@example.com
           button_text: Inviare il link supersegreto
 
       create:
