@@ -43,7 +43,3 @@ jobs:
           PGUSER: postgres
         run: |
           rspec
-
-      - name: Run linter
-        run: |
-          rubocop
