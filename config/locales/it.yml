@@ -39,7 +39,7 @@ it:
 
   search:
     form_placeholder: Cerca nei nostri archivi
-    search_results: 'Cerca risultati per: %{ricerca}'
+    search_results: 'Cerca risultati per: %{query}'
     advanced:
       heading: Ricerca avanzata
       form:
@@ -233,8 +233,8 @@ it:
       next_page: "Successivo &rsaquo;"
       previous_page: "&lsaquo; Precedente"
       next_article: "%{title}: Successivo &rsaquo;"
-      previous_article: "&lsaquo; Precedente: %{titolo}"
-      next_month: "&lsaquo; Mese successivo (%{mese})"
+      previous_article: "&lsaquo; Precedente: %{title}"
+      next_month: "&lsaquo; Mese successivo (%{month})"
       previous_month: "(%{month}) Mese precedente &rsaquo;"
       next_year: "&lsaquo; Anno successivo (%{year})"
       previous_year: "(%{year}) Anno precedente &rsaquo;"
