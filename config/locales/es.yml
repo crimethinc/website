@@ -334,7 +334,7 @@ es:
           header: Si ya eres suscriptor mensual
           description: ¿Necesitas actualizar o cancelar tu subscripción? Ingresa el email que usaste para suscribirte, y te enviaremos un link súper secreto donde puedes hacer los cambios.
           email_label: Email
-          email_placeholder: you@email.com
+          email_placeholder: you@example.com
           button_text: Enviar link súper secreto
 
       create:

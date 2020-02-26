@@ -335,7 +335,7 @@ he:
           header: Existing Monthly Subscribers
           description: Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.
           email_label: Email Address
-          email_placeholder: you@email.com
+          email_placeholder: you@example.com
           button_text: Send Super Secret Link
 
       create:

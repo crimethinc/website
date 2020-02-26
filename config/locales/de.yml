@@ -335,7 +335,7 @@ de:
           header: Verwalte deine monatliche Unterstützung
           description: Möchtest du deine Unterstützung aktualisieren oder kündigen? Gib die E-Mail-Adresse ein, mit der du dich angemeldet hast, und wir senden dir eine E-Mail mit einem supergeheimen Link, über den du Änderungen vornehmen kannst.
           email_label: Email Addresse
-          email_placeholder: you@email.com
+          email_placeholder: you@example.com
           button_text: Schickt mir den supergeheimen Link
 
       create:
