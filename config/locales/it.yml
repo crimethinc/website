@@ -32,7 +32,7 @@ it:
     support: Sostienici
     search: Ricerca
     about: Su di noi
-    locale_articles: Vedi tutti gli articoli in italiano ?
+    locale_articles: Vuoi vedere tutti gli articoli in italiano?
 
     first_time: La tua prima volta? Inizia qui ?
     site_mode: Passa alla versione completa del sito ?
@@ -116,8 +116,8 @@ it:
       description: |
         CrimethInc. è un network decentralizzato impegnato in azioni collettive anonime. Lottiamo per reinventare le nostre vite e il nostro mondo seguendo i princìpi di autodeterminazione e mutuo aiuto.
 
-        Crediamo che dovresti essere libero di disporre del tuo potenziale illimitato alle tue condizioni: che nessun governo, mercato o ideologia dovrebbero importi come potrebbe essere la tua vita. Se sei daccordo, _facciamo qualcosa._
-      more_link: Maggiori informazioni su CrimethInc. ?
+        Crediamo che dovresti essere libero di disporre del tuo potenziale illimitato alle tue condizioni: che nessun governo, mercato o ideologia dovrebbe importi come potrebbe essere la tua vita. Se sei daccordo, _facciamo qualcosa._
+      more_link: Vuoi maggiori informazioni su CrimethInc. →
       donate_button_text: Sostienici
 
     contact:
@@ -131,7 +131,7 @@ it:
         signup_button_text: Iscriviti
       social:
         heading: Trovaci altrove
-        description: Tieniti aggiornato sulle nostre attività seguendoci anche su.
+        description: Tieniti aggiornato sulle nostre attività seguendoci seguendoci anche su.
 
     mantra:
       - Se il tuo cuore è libero, il terreno su cui poggia è un territorio liberato. Difendilo.
@@ -228,7 +228,7 @@ it:
       previous: "&lsaquo;"
       previous_screen_reader: Precedente
       next: "&rsaquo;"
-      next_screen_reader: Successivo
+      next_screen_reader: Continuare
       truncate: "&hellip;"
       next_page: "Successivo &rsaquo;"
       previous_page: "&lsaquo; Precedente"
@@ -276,16 +276,16 @@ it:
       pdf_donate_button_text: Fai una donazione
       pdf_donate_button_label: Fai una donazione qui per aiutarci a continuare a diffondere questo PDF gratuitamente e per continuare a crearne di nuovi.
 
-      journals_intro_text: Qui puoi scaricare i PDF di _Rolling Thunder,_ la nostra celebre rivista di analisi e azione diretta, _Harbinger_, il nostro storico tabloid che diffonde “la propaganda del deisderio,” e altre ambiziose pubblicazioni periodiche degli ultimi ventanni.
+      journals_intro_text: Qui puoi scaricare i PDF di _Rolling Thunder,_ la nostra celebre rivista di analisi e azione diretta, _Harbinger_, il nostro storico tabloid che diffonde “la propaganda del desiderio,” e altre ambiziose pubblicazioni periodiche degli ultimi vent’anni.
       logos_intro_text:    CrimethInc. per te! Loghi per i tuoi progetti CrimethInc.
       music_intro_text:    Scarica una vasta gamma di album che abbiamo [pubblicato](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) dal 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) e non solo.
       posters_intro_text:  Dai vita ai muri di casa, della scuola, della città o dei centri sociali! Ti consigliamo di utilizzare colla per carta da parati o [colla di farina](/poster) per affiggerli in luoghi pubblici.
       stickers_intro_text: Aiuta gli oggetti inanimati che ti circondano a comunicare in modo più eloquente! Ordinali sfusi o stampali su carta adesiva.
-      tools_intro_text:    Attingendo a oltre ventanni dattività, ti offriamo una vasta gamma di materiali da scaricare o ordinare all ingrosso. Usali per educare, scuotere e trasformare gli spazi intorno a te.
+      tools_intro_text:    Attingendo a oltre vent’anni d’attività, ti offriamo una vasta gamma di materiali da scaricare o ordinare all’ingrosso. Usali per educare, scuotere e trasformare gli spazi intorno a te.
       videos_intro_text:   Emergency Broadcast System — Una selezione di video da CrimethInc. Perpetual Motion Pictures
-      zines_intro_text:    Buona parte dei nostri testi è scaricabile qui in formato pamphlet. Stampali o fotocopiali per distribuirli a scuola, manifestazioni, concerti, eventi sociali, mercati degli agricoltori e in qualsiasi altro luogo dove ci sia fame d idee. Puoi anche ottenere i PDF di _Per cambiare tutto,_ la nostra introduzione all anarchismo, in decine di lingue a [_To Change Everything_ site](/tce).
+      zines_intro_text:    Buona parte dei nostri testi è scaricabile qui in formato pamphlet. Stampali o fotocopiali per distribuirli a scuola, manifestazioni, concerti, eventi sociali, mercati degli agricoltori e in qualsiasi altro luogo dove ci sia fame d’idee. Puoi anche ottenere i PDF di _Per cambiare tutto,_ la nostra introduzione all’anarchismo, in decine di lingue a [_To Change Everything_ site](/tce).
       books_intro_text: |
-        Dalla scrittura appassionata al design unico e accattivante, dall editing meticoloso a una produzione curata e professionale, questi libri sono il frutto di tanto amore e attenzione. Ce ne occupiamo da oltre dieci anni, e potrai trovarne la prova in tutti quei minimi dettagli e quei momenti orchestrati che possono essere ottenuti solo grazie alla carta stampata.
+        Dalla scrittura appassionata al design unico e accattivante, dall’editing meticoloso a una produzione curata e professionale, questi libri sono il frutto di tanto amore e attenzione. Ce ne occupiamo da oltre dieci anni, e potrai trovarne la prova in tutti quei minimi dettagli e quei momenti orchestrati che possono essere ottenuti solo grazie alla carta stampata.
 
         Tutti i nostri libri sono stampati con inchiostro di soia su carta riciclata al 100% da esperti artigiani di Louisville (Quebec, Canada) che utilizzano le migliori macchine da stampa offset.
 
@@ -304,14 +304,14 @@ it:
         browse_posters_text: Sfoglia tutti i poster
         browse_stickers_text: Sfoglia tutti gli adesivi
         browse_videos_text: Sfoglia tutti i video
-        browse_zines_text: Sfolgia tutte le zine
+        browse_zines_text: Sfoglia tutte le zine
 
     books:
       crimethinc_into_libraries_heading: CrimethInc. nelle biblioteche
-      crimethinc_into_libraries_intro: Per coloro che non hanno le possibilità per acquistare libri o che, semplicemente, non sono entusiasti all idea di accumulare altri beni, ci sono buone notizie il [Programma CrimethInc. nelle biblioteche](/books/into-libraries). Puoi trovare i nostri libri [in più biblioteche di quelle che pensi](/2007/10/09/crimethinc-into-libraries-progress-report) e, se così non fosse, potresti trovarli, gratis, sugli scaffali. [Scopri come!](/books/into-libraries)
+      crimethinc_into_libraries_intro: Per coloro che non hanno le possibilità per acquistare libri o che, semplicemente, non sono entusiasti all’idea di accumulare altri beni, ci sono buone notizie il [Programma CrimethInc. nelle biblioteche](/books/into-libraries). Puoi trovare i nostri libri [in più biblioteche di quelle che pensi](/2007/10/09/crimethinc-into-libraries-progress-report) e, se così non fosse, potresti trovarli, gratis, sugli scaffali. [Scopri come!](/books/into-libraries)
 
       literature_distro_kit_heading: Kit di distribuzione della letteratura
-      literature_distro_kit_intro: I nostri libri sono la pietra miliare del nostro [Kit di distribuzione della letteratura), un kit completo di distribuzione di letteratura da utilizzare come meglio credi. Contiene un mix di libri da vendere e di oggetti da regalare, tutto ciò di cui hai bisogno per allestire un banchetto a uno spettacolo, fare un tour, o spargere la voce dal tuo zaino o dalla sala ristoro.
+      literature_distro_kit_intro: I nostri libri sono la pietra miliare del nostro [Kit di distribuzione della letteratura](/books/lit-kit), un kit completo di distribuzione di letteratura da utilizzare come meglio credi. Contiene un mix di libri da vendere e di oggetti da regalare, tutto ciò di cui hai bisogno per allestire un banchetto a uno spettacolo, fare un tour, o spargere la voce dal tuo zaino o dalla sala ristoro.
 
     support:
       new:
@@ -323,7 +323,7 @@ it:
 
           Facciamo tutto questo con un budget ridotto—ma nonostante i nostri sforzi, alcune spese sono inevitabili. Abbiamo bisogno di te per coprirle. Con più risorse, potremmo espanderci per utilizzare altri formati e potremmo avere più tempo per pubblicare ancor più di frequente.
 
-          Come sempre, ovviamente, il modo migliore per sostenere ciò che facciamo _il tuo aiuto._
+          Come sempre, ovviamente, il modo migliore per sostenere ciò che facciamo è _il tuo aiuto._
 
         radio_label_monthly: Mensile
         radio_label_one_time: Una volta
@@ -333,7 +333,7 @@ it:
         button_text: Successivo ?
         support_request:
           header: Contributi mensili esistenti
-          description: Devi aggiornare o cancellare la tua iscrizione? Inserisci l indirizzo email che hai utilizzato per iscriverti, e t invieremo un link supersegreto dove potrai apportare le modifiche.
+          description: Devi aggiornare o cancellare la tua iscrizione? Inserisci l’indirizzo email che hai utilizzato per iscriverti, e t invieremo un link supersegreto dove potrai apportare le modifiche.
           email_label: indirizzo email
           email_placeholder: tu@example.com
           button_text: Inviare il link supersegreto
