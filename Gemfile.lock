@@ -335,7 +335,7 @@ GEM
     sterile (1.0.14)
       nokogiri
     stringex (2.8.5)
-    stripe (5.15.0)
+    stripe (5.17.0)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
