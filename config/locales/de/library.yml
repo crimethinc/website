@@ -1,212 +1,237 @@
 de:
   library:
-    Current Events:
+    title: Online Reading Library
 
-      - name: 'The Threat to Rojava: An Anarchist in Syria Speaks on the Real Meaning of Trump’s Withdrawal'
-        path: /2018/12/28/the-threat-to-rojava-an-anarchist-in-syria-speaks-on-the-real-meaning-of-trumps-withdrawal
+    intro: |
+      This online archive includes essays, stories, accounts, and other texts
+      that have appeared under the CrimethInc. insignia over the past quarter of a century.
+      It is extensive, but by no means comprehensive.
 
-      - name: 'The Yellow Vest Movement in France: Between "Ecological" Neoliberalism and "Apolitical" Movements'
-        path: /2018/11/27/the-yellow-vest-movement-in-france-between-ecological-neoliberalism-and-apolitical-movements
+      Some of these texts are available as PDFs in our [Tools](/tools) section. You’ll
+      find zines, magazines, papers, and posters on a wide range of topics, ready for you
+      to print them out and distribute them to everyone in your path. You can also
+      download back issues of [journals](/journals) we have published, including
+      _[Rolling Thunder](/journals/rolling-thunder)_, _[Harbinger](/journals/harbinger)_,
+      and _[Inside Front](/journals/inside-front)_.
 
-      - name: 'Anarchist Resistance to the Trump Inauguration: Understanding the Events of January 20, 2017'
-        path: /2019/01/22/analysis-anarchist-resistance-to-the-trump-inauguration-learning-from-the-events-of-january-20-2017
+    sections:
+      theme:
+        title: Navigate by Theme
 
-      - name: 'We’ve Got Your Back: The Story of the J20 Defense'
-        path: /2019/01/30/weve-got-your-back-the-story-of-the-j20-defense-an-epic-tale-of-repression-and-solidarity
+      chronological:
+        title: Navigate Chronologically
 
-      - name: 'Tearing Down the Monuments to Thieves: How the Confederate Statue Came Down in Chapel Hill'
-        path: /2018/08/21/tear-down-the-monuments-to-thieves-how-the-confederate-statue-came-down-in-chapel-hill
+      sample:
+        title: Sample Reading Lists
 
-      - name: 'La ZAD: Another End of the World Is Possible'
-        path: /2018/04/09/la-zad-another-end-of-the-world-is-possible-learning-from-50-years-of-struggle-at-notre-dame-des-landes
+    links:
+      Current Events:
 
-      - name: 'DON’T TRY TO BREAK US–WE’LL EXPLODE: The 2017 G20 and the Battle of Hamburg'
-        path: /2017/08/08/total-policing-total-defiance-the-2017-g20-and-the-battle-of-hamburg-a-full-account-and-analysis
+        - name: 'The Threat to Rojava: An Anarchist in Syria Speaks on the Real Meaning of Trump’s Withdrawal'
+          path: /2018/12/28/the-threat-to-rojava-an-anarchist-in-syria-speaks-on-the-real-meaning-of-trumps-withdrawal
 
-    Strategy and Analysis:
+        - name: 'The Yellow Vest Movement in France: Between "Ecological" Neoliberalism and "Apolitical" Movements'
+          path: /2018/11/27/the-yellow-vest-movement-in-france-between-ecological-neoliberalism-and-apolitical-movements
 
-      - name: 'Anarchists in the Trump Era: Scorecard, Year One'
-        path: /2018/01/24/anarchists-in-the-trump-era-scorecard-year-one-achievements-failures-and-the-struggles-ahead
+        - name: 'Anarchist Resistance to the Trump Inauguration: Understanding the Events of January 20, 2017'
+          path: /2019/01/22/analysis-anarchist-resistance-to-the-trump-inauguration-learning-from-the-events-of-january-20-2017
 
-      - name: 'How Anti-Fascists Won the Battles of Berkeley: 2017 in the Bay and Beyond'
-        path: /2018/01/03/how-anti-fascists-won-the-battles-of-berkeley-2017-in-the-bay-and-beyond-a-play-by-play-analysis
+        - name: 'We’ve Got Your Back: The Story of the J20 Defense'
+          path: /2019/01/30/weve-got-your-back-the-story-of-the-j20-defense-an-epic-tale-of-repression-and-solidarity
 
-      - name: 'Diagnostic of the Future: Between the Crisis of Democracy and the Crisis of Capitalism'
-        path: /2018/11/05/diagnostic-of-the-future-between-the-crisis-of-democracy-and-the-crisis-of-capitalism-a-forecast
+        - name: 'Tearing Down the Monuments to Thieves: How the Confederate Statue Came Down in Chapel Hill'
+          path: /2018/08/21/tear-down-the-monuments-to-thieves-how-the-confederate-statue-came-down-in-chapel-hill
 
-      - name: 'Take Your Pick: Law or Freedom—How “Nobody Is above the Law” Abets the Rise of Tyranny'
-        path: /2018/11/09/take-your-pick-law-or-freedom-how-nobody-is-above-the-law-abets-the-rise-of-tyranny
+        - name: 'La ZAD: Another End of the World Is Possible'
+          path: /2018/04/09/la-zad-another-end-of-the-world-is-possible-learning-from-50-years-of-struggle-at-notre-dame-des-landes
 
-      - name: 'Fuck Abuse, Kill Power: Addressing the Root Causes of Sexual Harassment and Assault'
-        path: /2017/12/14/fuck-abuse-kill-power-addressing-the-root-causes-of-sexual-harassment-and-assault
+        - name: 'DON’T TRY TO BREAK US–WE’LL EXPLODE: The 2017 G20 and the Battle of Hamburg'
+          path: /2017/08/08/total-policing-total-defiance-the-2017-g20-and-the-battle-of-hamburg-a-full-account-and-analysis
 
-      - name: 'Nativism and the Foundations of US Xenophobia: An Old Doctrine of Hatred and Bigotry Reemerges'
-        path: /2017/07/03/nativism-one-of-the-foundations-of-us-xenophobia-an-old-doctrine-of-bigotry-and-hatred-reemerges-today
+      Strategy and Analysis:
 
-      - name: 'Democracy, Red in Tooth and Claw: On the Catalan Referendum—The Old State, a New State, or No State at All?'
-        path: /2017/10/04/democracy-red-in-tooth-and-claw-on-the-catalan-referendum-the-old-state-a-new-state-or-no-state-at-all
+        - name: 'Anarchists in the Trump Era: Scorecard, Year One'
+          path: /2018/01/24/anarchists-in-the-trump-era-scorecard-year-one-achievements-failures-and-the-struggles-ahead
 
-    Theory and Critique:
+        - name: 'How Anti-Fascists Won the Battles of Berkeley: 2017 in the Bay and Beyond'
+          path: /2018/01/03/how-anti-fascists-won-the-battles-of-berkeley-2017-in-the-bay-and-beyond-a-play-by-play-analysis
 
-      - name: 'From Democracy to Freedom'
-        path: /2012/04/29/feature-from-democracy-to-freedom
+        - name: 'Diagnostic of the Future: Between the Crisis of Democracy and the Crisis of Capitalism'
+          path: /2018/11/05/diagnostic-of-the-future-between-the-crisis-of-democracy-and-the-crisis-of-capitalism-a-forecast
 
-      - name: 'The Thin Blue Line Is a Burning Fuse: Why Every Struggle Is Now a Struggle against the Police'
-        path: /2014/11/25/feature-the-thin-blue-line-is-a-burning-fuse'
+        - name: 'Take Your Pick: Law or Freedom—How “Nobody Is above the Law” Abets the Rise of Tyranny'
+          path: /2018/11/09/take-your-pick-law-or-freedom-how-nobody-is-above-the-law-abets-the-rise-of-tyranny
 
-      - name: 'The Making of “Outside Agitators”'
-        path: /2014/08/20/feature-the-making-of-outside-agitators'
+        - name: 'Fuck Abuse, Kill Power: Addressing the Root Causes of Sexual Harassment and Assault'
+          path: /2017/12/14/fuck-abuse-kill-power-addressing-the-root-causes-of-sexual-harassment-and-assault
 
-      - name: 'What They Mean when They Say Peace'
-        path: /2014/08/18/feature-what-they-mean-when-they-say-peace'
+        - name: 'Nativism and the Foundations of US Xenophobia: An Old Doctrine of Hatred and Bigotry Reemerges'
+          path: /2017/07/03/nativism-one-of-the-foundations-of-us-xenophobia-an-old-doctrine-of-bigotry-and-hatred-reemerges-today
 
-      - name: 'Deserting the Digital Utopia: Computers against Computing'
-        path: /2013/10/04/feature-deserting-the-digital-utopia'
+        - name: 'Democracy, Red in Tooth and Claw: On the Catalan Referendum—The Old State, a New State, or No State at All?'
+          path: /2017/10/04/democracy-red-in-tooth-and-claw-on-the-catalan-referendum-the-old-state-a-new-state-or-no-state-at-all
 
-      - name: 'For All We Care: Reconsidering Self-Care'
-        path: /2013/05/31/for-all-we-care-reconsidering-self-care'
+      Theory and Critique:
 
-      - name: 'Accounting for Ourselves: Breaking the Impasse Around Assault and Abuse in Anarchist Scenes'
-        path: /2013/04/17/accounting-for-ourselves-breaking-the-impasse-around-assault-and-abuse-in-anarchist-scenes'
+        - name: 'From Democracy to Freedom'
+          path: /2012/04/29/feature-from-democracy-to-freedom
 
-      - name: 'Against Ideology?'
-        path: /2010/08/11/against-ideology'
+        - name: 'The Thin Blue Line Is a Burning Fuse: Why Every Struggle Is Now a Struggle against the Police'
+          path: /2014/11/25/feature-the-thin-blue-line-is-a-burning-fuse
 
-      - name: 'There’s No Such Thing as Revolutionary Government: Why You Can’t Use the State to Abolish Class'
-        path: /2018/05/29/theres-no-such-thing-as-revolutionary-government-why-you-cant-use-the-state-to-abolish-class'
+        - name: 'The Making of “Outside Agitators”'
+          path: /2014/08/20/feature-the-making-of-outside-agitators
 
-      - name: 'The Mythology of Work: Eight Myths that Keep Your Eyes on the Clock and Your Nose to the Grindstone'
-        path: /2018/09/03/the-mythology-of-work-eight-myths-that-keep-your-eyes-on-the-clock-and-your-nose-to-the-grindstone'
+        - name: 'What They Mean when They Say Peace'
+          path: /2014/08/18/feature-what-they-mean-when-they-say-peace
 
-    History:
+        - name: 'Deserting the Digital Utopia: Computers against Computing'
+          path: /2013/10/04/feature-deserting-the-digital-utopia
 
-      - name: 'Love, Anarchy, and Drama: The Classical Anarchists’ Adventures and Misadventures in Polyamory'
-        path: /2019/02/14/love-anarchy-and-drama-the-classical-anarchists-adventures-and-misadventures-in-polyamory
+        - name: 'For All We Care: Reconsidering Self-Care'
+          path: /2013/05/31/for-all-we-care-reconsidering-self-care
 
-      - name: 'Gaetano Bresci: Tyrannicide and Defender of the People'
-        path: /2018/07/29/gaetano-bresci-tyrannicide-and-defender-of-the-people-with-remarks-by-malatesta-and-tolstoy
+        - name: 'Accounting for Ourselves: Breaking the Impasse Around Assault and Abuse in Anarchist Scenes'
+          path: /2013/04/17/accounting-for-ourselves-breaking-the-impasse-around-assault-and-abuse-in-anarchist-scenes
 
-      - name: 'Escaping Washington for Freedom: Let’s not Celebrate George Washington, but the Slaves Who Escaped Him'
-        path: /2018/02/19/escaping-washington-for-freedom-lets-not-celebrate-george-washington-but-the-slaves-who-escaped-him
+        - name: 'Against Ideology?'
+          path: /2010/08/11/against-ideology
 
-      - name: 'Restless Specters of the Anarchist Dead: A Few Words from the Undead of 1917'
-        path: /2017/10/30/restless-specters-of-the-anarchist-dead-a-few-words-from-the-undead-of-1917
+        - name: 'There’s No Such Thing as Revolutionary Government: Why You Can’t Use the State to Abolish Class'
+          path: /2018/05/29/theres-no-such-thing-as-revolutionary-government-why-you-cant-use-the-state-to-abolish-class
 
-      - name: 'The Power is Running: A Memoir of the 1999 WTO Summit in Seattle'
-        path: /2017/11/30/the-power-is-running-a-memoir-of-n30-shutting-down-the-wto-summit-in-seattle-1999
+        - name: 'The Mythology of Work: Eight Myths that Keep Your Eyes on the Clock and Your Nose to the Grindstone'
+          path: /2018/09/03/the-mythology-of-work-eight-myths-that-keep-your-eyes-on-the-clock-and-your-nose-to-the-grindstone
 
-      - name: 'June 11: The History of a Day of Anarchist Prisoner Solidarity'
-        path: /2017/06/07/june-11-the-history-of-a-day-of-solidarity-strategizing-to-support-long-term-anarchist-prisoners
+      History:
 
-      - name: 'The May Days: Snapshots from the History of May Day'
-        path: /2017/05/01/mayday2017
+        - name: 'Love, Anarchy, and Drama: The Classical Anarchists’ Adventures and Misadventures in Polyamory'
+          path: /2019/02/14/love-anarchy-and-drama-the-classical-anarchists-adventures-and-misadventures-in-polyamory
 
-      - name: 'Slave Patrols and Civil Servants: A History of Policing in Two Modes'
-        path: /2017/03/15/slave-patrols-and-civil-servants-a-history-of-policing-in-two-modes
+        - name: 'Gaetano Bresci: Tyrannicide and Defender of the People'
+          path: /2018/07/29/gaetano-bresci-tyrannicide-and-defender-of-the-people-with-remarks-by-malatesta-and-tolstoy
 
-      - name: 'The Battle for Ungdomshuset: The Defense of a Squatted Social Center and the Strategy of Autonomy'
-        path: /2019/03/01/the-battle-for-ungdomshuset-the-defense-of-a-squatted-social-center-and-the-strategy-of-autonomy
+        - name: 'Escaping Washington for Freedom: Let’s not Celebrate George Washington, but the Slaves Who Escaped Him'
+          path: /2018/02/19/escaping-washington-for-freedom-lets-not-celebrate-george-washington-but-the-slaves-who-escaped-him
 
-    How To:
+        - name: 'Restless Specters of the Anarchist Dead: A Few Words from the Undead of 1917'
+          path: /2017/10/30/restless-specters-of-the-anarchist-dead-a-few-words-from-the-undead-of-1917
 
-      - name: 'A Step-by-Step Guide to Direct Action: What It Is, What It’s Good for, How It Works'
-        path: /2017/03/14/direct-action-guide
+        - name: 'The Power is Running: A Memoir of the 1999 WTO Summit in Seattle'
+          path: /2017/11/30/the-power-is-running-a-memoir-of-n30-shutting-down-the-wto-summit-in-seattle-1999
 
-      - name: 'What Is Security Culture?'
-        path: /2004/11/01/what-is-security-culture
+        - name: 'June 11: The History of a Day of Anarchist Prisoner Solidarity'
+          path: /2017/06/07/june-11-the-history-of-a-day-of-solidarity-strategizing-to-support-long-term-anarchist-prisoners
 
-      - name: 'How to Form an Affinity Group: The Essential Building Block of Anarchist Organization'
-        path: /2017/02/06/how-to-form-an-affinity-group-the-essential-building-block-of-anarchist-organization
+        - name: 'The May Days: Snapshots from the History of May Day'
+          path: /2017/05/01/mayday2017
 
-      - name: 'Blocs, Black and Otherwise'
-        path: /2003/11/20/blocs-black-and-otherwise
+        - name: 'Slave Patrols and Civil Servants: A History of Policing in Two Modes'
+          path: /2017/03/15/slave-patrols-and-civil-servants-a-history-of-policing-in-two-modes
 
-      - name: 'The Femme’s Guide to Riot Fashion'
-        path: /2017/10/16/the-femmes-guide-to-riot-fashion-this-seasons-hottest-looks-for-the-discerning-anarchist-femme
+        - name: 'The Battle for Ungdomshuset: The Defense of a Squatted Social Center and the Strategy of Autonomy'
+          path: /2019/03/01/the-battle-for-ungdomshuset-the-defense-of-a-squatted-social-center-and-the-strategy-of-autonomy
 
-      - name: 'The Spiders of Mutual Aid, Solidarity, and Direct Action: A Report and How-To Guide from May Day in Portland, Oregon'
-        path: /2017/05/03/the-spiders-of-mutual-aid-solidarity-and-direct-action-a-report-and-how-to-guide-from-may-day-in-portland-oregon
+      How To:
 
-      - name: 'A Field Guide to Wheatpasting: Everything You Need to Know to Blanket the World in Posters'
-        path: /2017/07/18/a-field-guide-to-wheatpasting-everything-you-need-to-know-to-blanket-the-world-in-posters
+        - name: 'A Step-by-Step Guide to Direct Action: What It Is, What It’s Good for, How It Works'
+          path: /2017/03/14/direct-action-guide
 
-    Arts:
+        - name: 'What Is Security Culture?'
+          path: /2004/11/01/what-is-security-culture
 
-      - name: 'We Will Remember Freedom: Why It Matters that Ursula K. Le Guin Was an Anarchist'
-        path: /2018/01/25/we-will-remember-freedom-why-it-matters-that-ursula-k-le-guin-was-an-anarchist
+        - name: 'How to Form an Affinity Group: The Essential Building Block of Anarchist Organization'
+          path: /2017/02/06/how-to-form-an-affinity-group-the-essential-building-block-of-anarchist-organization
 
-      - name: 'Music as a Weapon: The Contentious Symbiosis of Punk Rock and Anarchism'
-        path: /2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism
+        - name: 'Blocs, Black and Otherwise'
+          path: /2003/11/20/blocs-black-and-otherwise
 
-      - name: 'Insurrection is Not a Game: Play, Resistance, and Designing the Game "Bloc by Bloc"'
-        path: /2018/06/04/insurrection-is-not-a-game-play-resistance-and-designing-the-game-bloc-by-bloc
+        - name: 'The Femme’s Guide to Riot Fashion'
+          path: /2017/10/16/the-femmes-guide-to-riot-fashion-this-seasons-hottest-looks-for-the-discerning-anarchist-femme
 
-      - name: 'The Secret World of Duvbo: A Magical Story about a Perfectly Ordinary World'
-        path: /2018/10/25/the-secret-world-of-duvbo-a-magical-story-about-a-perfectly-ordinary-world
+        - name: 'The Spiders of Mutual Aid, Solidarity, and Direct Action: A Report and How-To Guide from May Day in Portland, Oregon'
+          path: /2017/05/03/the-spiders-of-mutual-aid-solidarity-and-direct-action-a-report-and-how-to-guide-from-may-day-in-portland-oregon
 
-      - name: 'Put the Bots in Charge: Towards the Abolition of Human Authorship'
-        path: /2018/04/01/we-put-the-bots-in-charge-towards-the-abolition-of-human-authorship
+        - name: 'A Field Guide to Wheatpasting: Everything You Need to Know to Blanket the World in Posters'
+          path: /2017/07/18/a-field-guide-to-wheatpasting-everything-you-need-to-know-to-blanket-the-world-in-posters
 
-      - name: 'Anarchism through the Silver Screen: Why Are Anarchists Suddenly Showing up in so many Korean Films?'
-        path: /2017/11/09/korean-anarchism-through-the-silver-screen-what-are-anarchists-doing-in-korean-films-today
+      Arts:
 
-      - name: 'Gord Hill, Indigenous Artist and Anarchist: An Interview'
-        path: /2017/08/01/an-interview-with-gord-hill
+        - name: 'We Will Remember Freedom: Why It Matters that Ursula K. Le Guin Was an Anarchist'
+          path: /2018/01/25/we-will-remember-freedom-why-it-matters-that-ursula-k-le-guin-was-an-anarchist
 
-      - name: 'The Spiral of Police Violence: A Work of Art Criticism'
-        path: /2017/09/15/the-spiral-of-police-violence-a-work-of-art-criticism
+        - name: 'Music as a Weapon: The Contentious Symbiosis of Punk Rock and Anarchism'
+          path: /2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism
 
-    Narratives:
+        - name: 'Insurrection is Not a Game: Play, Resistance, and Designing the Game "Bloc by Bloc"'
+          path: /2018/06/04/insurrection-is-not-a-game-play-resistance-and-designing-the-game-bloc-by-bloc
 
-      - name: 'Anarchist Relief Efforts for Hurricane Florence'
-        path: /2018/10/10/anarchist-relief-efforts-for-hurricane-florence-three-on-the-ground-accounts
+        - name: 'The Secret World of Duvbo: A Magical Story about a Perfectly Ordinary World'
+          path: /2018/10/25/the-secret-world-of-duvbo-a-magical-story-about-a-perfectly-ordinary-world
 
-      - name: 'I Was a J20 Street Medic and Defendant: How We Survived the First J20 Trial and What We Learned along the Way'
-        path: /2019/01/20/i-was-a-j20-street-medic-and-defendant-how-we-survived-the-first-j20-trial-block-and-what-we-learned-along-the-way
+        - name: 'Put the Bots in Charge: Towards the Abolition of Human Authorship'
+          path: /2018/04/01/we-put-the-bots-in-charge-towards-the-abolition-of-human-authorship
 
-      - name: 'Riders on the Storm: A Blow-by-Blow Report from May Day 2018 in Paris'
-        path: /2018/05/15/riders-on-the-storm-a-blow-by-blow-report-and-analysis-of-may-day-2018-in-paris
+        - name: 'Anarchism through the Silver Screen: Why Are Anarchists Suddenly Showing up in so many Korean Films?'
+          path: /2017/11/09/korean-anarchism-through-the-silver-screen-what-are-anarchists-doing-in-korean-films-today
 
-      - name: 'Why We Fought in Charlottesville: A Letter from an Anti-Fascist on the Dangers Ahead'
-        path: /2017/08/17/why-we-fought-in-charlottesville-a-letter-from-an-anti-fascist-on-the-dangers-ahead
+        - name: 'Gord Hill, Indigenous Artist and Anarchist: An Interview'
+          path: /2017/08/01/an-interview-with-gord-hill
 
-      - name: 'Reportback from the Battle for Sacred Ground'
-        path: /2016/11/01/feature-report-back-from-the-battle-for-sacred-ground
+        - name: 'The Spiral of Police Violence: A Work of Art Criticism'
+          path: /2017/09/15/the-spiral-of-police-violence-a-work-of-art-criticism
 
-      - name: 'Reflections on the Ferguson Uprising'
-        path: /2015/08/10/feature-reflections-on-the-ferguson-uprising
+      Narratives:
 
-      - name: 'UNControllables: The Story of an Anarchist Student Group'
-        path: /2017/08/16/uncontrollables-the-story-of-an-anarchist-student-group-and-how-to-organize-your-own
+        - name: 'Anarchist Relief Efforts for Hurricane Florence'
+          path: /2018/10/10/anarchist-relief-efforts-for-hurricane-florence-three-on-the-ground-accounts
 
-    Classics:
+        - name: 'I Was a J20 Street Medic and Defendant: How We Survived the First J20 Trial and What We Learned along the Way'
+          path: /2019/01/20/i-was-a-j20-street-medic-and-defendant-how-we-survived-the-first-j20-trial-block-and-what-we-learned-along-the-way
 
-      - name: 'Fighting for Our Lives: An Anarchist Primer'
-        path: /2017/11/28/fighting-for-our-lives-an-anarchist-primer
+        - name: 'Riders on the Storm: A Blow-by-Blow Report from May Day 2018 in Paris'
+          path: /2018/05/15/riders-on-the-storm-a-blow-by-blow-report-and-analysis-of-may-day-2018-in-paris
 
-      - name: 'The Contents of Your Daily Life'
-        path: /2000/09/11/the-contents-of-your-daily-life
+        - name: 'Why We Fought in Charlottesville: A Letter from an Anti-Fascist on the Dangers Ahead'
+          path: /2017/08/17/why-we-fought-in-charlottesville-a-letter-from-an-anti-fascist-on-the-dangers-ahead
 
-      - name: 'Do You Have Ideas, or Do Ideas Have You?'
-        path: /2000/06/02/do-you-have-ideas-or-do-ideas-have-you
+        - name: 'Reportback from the Battle for Sacred Ground'
+          path: /2016/11/01/feature-report-back-from-the-battle-for-sacred-ground
 
-      - name: 'One Dimensional Man in the Three Dimensional World'
-        path: /2000/09/11/one-dimensional-man-in-the-three-dimensional-world
+        - name: 'Reflections on the Ferguson Uprising'
+          path: /2015/08/10/feature-reflections-on-the-ferguson-uprising
 
-      - name: 'Product Is the Excrement of Action'
-        path: /2000/09/11/product-is-the-excrement-of-action
+        - name: 'UNControllables: The Story of an Anarchist Student Group'
+          path: /2017/08/16/uncontrollables-the-story-of-an-anarchist-student-group-and-how-to-organize-your-own
 
-      - name: 'There Is a Difference between Life and Survival'
-        path: /2000/09/11/there-is-a-difference-between-life-and-survival
+      Classics:
 
-      - name: 'Ultimatum'
-        path: /2000/09/11/ultimatum
+        - name: 'Fighting for Our Lives: An Anarchist Primer'
+          path: /2017/11/28/fighting-for-our-lives-an-anarchist-primer
 
-      - name: 'Forward!'
-        path: /2000/09/11/forward
+        - name: 'The Contents of Your Daily Life'
+          path: /2000/09/11/the-contents-of-your-daily-life
 
-      - name: 'Join the Resistance: Fall in Love'
-        path: /2000/09/11/join-the-resistance-fall-in-love
+        - name: 'Do You Have Ideas, or Do Ideas Have You?'
+          path: /2000/06/02/do-you-have-ideas-or-do-ideas-have-you
 
-      - name: 'There is a Secret World Concealed Within this One'
-        path: /2000/09/11/there-is-a-secret-world-concealed-within-this-one
+        - name: 'One Dimensional Man in the Three Dimensional World'
+          path: /2000/09/11/one-dimensional-man-in-the-three-dimensional-world
+
+        - name: 'Product Is the Excrement of Action'
+          path: /2000/09/11/product-is-the-excrement-of-action
+
+        - name: 'There Is a Difference between Life and Survival'
+          path: /2000/09/11/there-is-a-difference-between-life-and-survival
+
+        - name: 'Ultimatum'
+          path: /2000/09/11/ultimatum
+
+        - name: 'Forward!'
+          path: /2000/09/11/forward
+
+        - name: 'Join the Resistance: Fall in Love'
+          path: /2000/09/11/join-the-resistance-fall-in-love
+
+        - name: 'There is a Secret World Concealed Within this One'
+          path: /2000/09/11/there-is-a-secret-world-concealed-within-this-one
