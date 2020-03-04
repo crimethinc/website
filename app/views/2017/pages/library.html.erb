@@ -1,33 +1,17 @@
 <div class="h-feed">
   <header>
-    <h1>Online Reading Library</h1>
+    <h1><%= t "library.title" %></h1>
 
     <%= image_tag 'https://cloudfront.crimethinc.com/assets/pages/library/header.jpg' %>
   </header>
 
   <div class="intro">
-    <p>
-      This online archive includes essays, stories, accounts, and other texts
-      that have appeared under the CrimethInc. insignia over the past quarter of a century.
-      It is extensive, but by no means comprehensive.
-    </p>
-
-    <p>
-      Some of these texts are available as PDFs in our <a href="/tools">Tools</a> section.
-      You’ll find zines, magazines, papers, and posters on a wide range of topics,
-      ready for you to print them out and distribute them to everyone in your path.
-      You can also download back issues of
-      <a href="/journals">journals</a>
-      we have published, including
-      <i><a href="/journals#rolling-thunder">Rolling Thunder</a></i>,
-      <i><a href="/journals#harbinger">Harbinger</a></i>, and
-      <i><a href="/journals#inside-front">Inside Front</a></i>.
-    </p>
+    <%= render_markdown t("library.intro") %>
   </div>
 
   <div id="theme">
     <header>
-      <h2><b>Navigate by Theme</b></h2>
+      <h2><b><%= t "library.sections.theme.title" %></b></h2>
     </header>
 
     <div class="intro">
@@ -41,7 +25,7 @@
 
   <div id="years">
     <header>
-      <h2><b>Navigate Chronologically</b></h2>
+      <h2><b><%= t "library.sections.chronological.title" %></b></h2>
     </header>
 
     <div class="intro">
@@ -55,10 +39,10 @@
 
   <div id="samples">
     <header>
-      <h2><b>Sample Reading Lists</b></h2>
+      <h2><b><%= t "library.sections.sample.title" %></b></h2>
     </header>
 
-    <% t("library").to_a.in_groups_of(2) do |group| %>
+    <% t("library.links").to_a.in_groups_of(2) do |group| %>
       <div class="row">
 
         <% group.each do |section, links| %>
