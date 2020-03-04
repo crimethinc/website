@@ -6,7 +6,8 @@ module Rack
       ['',    '/tce',                           /tochangeeverything.com/],
       ['',    '',                               /cwc|crimethinc.herokuapp.com$/],
       ['es.', '',                               /crimethinc.es/],
-      ['de.', '',                               /crimethinc.de/]
+      ['de.', '',                               /crimethinc.de/],
+      ['cs.', '',                               /cz.crimethinc.com/]
     ].freeze
 
     PROTOCOL = 'https://'.freeze
