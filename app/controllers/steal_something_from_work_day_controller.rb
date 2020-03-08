@@ -2,7 +2,7 @@ class StealSomethingFromWorkDayController < ApplicationController
   layout 'steal_something_from_work_day'
 
   STEAL_SOMETHING_FROM_WORK_DAY_LOCALES = {
-    cz: 'Czech',
+    cs: 'Czech',
     de: 'Deutsche',
     en: 'English',
     fr: 'Français'
