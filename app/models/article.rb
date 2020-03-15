@@ -99,8 +99,8 @@ class Article < ApplicationRecord
 
   def localization_in locale
     [
-      Article.find_by(locale: locale, canonical_id: id),
-      Article.find_by(locale: locale, id: canonical_id)
+      Article.published.live.find_by(locale: locale, canonical_id: id),
+      Article.published.live.find_by(locale: locale, id: canonical_id)
     ].compact.first
   end
 
@@ -111,7 +111,7 @@ class Article < ApplicationRecord
   private
 
   def self_localizations
-    Article.where(canonical_id: id)
+    Article.published.live.where(canonical_id: id)
   end
 
   def canonical_article
