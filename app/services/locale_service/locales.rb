@@ -8,7 +8,9 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'اَلْعَرَبِيَّةُ', lang_code: :ar, canonical: 'alarabiyawu'),
 
     # czech
-    Locale.new(locale: 'czech', lang_code: :cs, canonical: 'czech'),
+    Locale.new(locale: 'czech', lang_code: :cs, canonical: 'cestina'),
+    Locale.new(locale: 'čeština', lang_code: :cs, canonical: 'cestina'),
+    Locale.new(locale: 'cestina', lang_code: :cs, canonical: 'cestina'),
 
     # danish
     Locale.new(locale: 'danish', lang_code: :da, canonical: 'dansk'),

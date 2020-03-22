@@ -18,7 +18,7 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
   end
 
   trait(:cs) do
-    abbreviation { 'cd' }
+    abbreviation { 'cs' }
     name_in_english { 'Czech' }
     name { 'čeština' }
     language_direction { 'ltr' }
