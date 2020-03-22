@@ -4,8 +4,7 @@ describe 'Language Landing Page' do
   before do
     create(:article)
     create(:article, :arabic)
-    # TODO: fix czech
-    # create(:article, :czech)
+    create(:article, :czech)
     create(:article, :spanish)
     create(:article, :german)
     create(:article, :danish)
