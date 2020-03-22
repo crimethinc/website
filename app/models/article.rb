@@ -89,7 +89,7 @@ class Article < ApplicationRecord
     all_localizations = [
       canonical_article,
       canonical_article_localizations,
-      self_localizations
+      localizations_of_self
     ]
 
     articles = all_localizations.flatten.compact - [self]
@@ -108,9 +108,9 @@ class Article < ApplicationRecord
     localization_in(I18n.locale).presence || self
   end
 
-  private
+  # private
 
-  def self_localizations
+  def localizations_of_self
     Article.published.live.where(canonical_id: id)
   end
 
