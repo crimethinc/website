@@ -16,6 +16,8 @@ FactoryBot.define do
     end
   end
 
+  trait(:arabic)  { locale { 'ar' } }
+  trait(:czech)   { locale { 'cs' } }
   trait(:spanish) { locale { 'es' } }
   trait(:danish)  { locale { 'da' } }
   trait(:german)  { locale { 'de' } }
@@ -25,6 +27,7 @@ FactoryBot.define do
   trait(:hebrew)  { locale { 'he' } }
   trait(:italian) { locale { 'it' } }
   trait(:swedish) { locale { 'sv' } }
+  trait(:thai)    { locale { 'th' } }
   trait(:turkish) { locale { 'tr' } }
   trait(:portuguese) { locale { 'pt' } }
   trait(:polish) { locale { 'pl' } }

@@ -78,6 +78,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'swedish', lang_code: :sv, canonical: 'svenska'),
     Locale.new(locale: 'svenska', lang_code: :sv, canonical: 'svenska'),
 
+    # thai
+    Locale.new(locale: 'thai', lang_code: :th, canonical: 'phaasaaaithy'),
+    Locale.new(locale: 'ภาษาไทย', lang_code: :th, canonical: 'phaasaaaithy'),
+
     # turkish
     Locale.new(locale: 'turkish', lang_code: :tr, canonical: 'turkce'),
     Locale.new(locale: 'türkçe',  lang_code: :tr, canonical: 'turkce'),

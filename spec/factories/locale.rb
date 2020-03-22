@@ -1,4 +1,4 @@
-FactoryBot.define do
+FactoryBot.define do # rubocop:disable Metrics/BlockLength
   factory :locale do
     abbreviation { 'en' }
     name_in_english { 'English' }
@@ -8,6 +8,22 @@ FactoryBot.define do
   end
 
   trait(:en) {}
+
+  trait(:ar) do
+    abbreviation { 'ar' }
+    name_in_english { 'Arabic' }
+    name { 'اَلْعَرَبِيَّةُ' }
+    language_direction { 'rtl' }
+    slug { 'alarabiyawu' }
+  end
+
+  trait(:cs) do
+    abbreviation { 'cd' }
+    name_in_english { 'Czech' }
+    name { 'čeština' }
+    language_direction { 'ltr' }
+    slug { 'cestina' }
+  end
 
   trait(:da) do
     abbreviation { 'da' }
@@ -110,5 +126,13 @@ FactoryBot.define do
     name { 'Türkçe' }
     language_direction { 'ltr' }
     slug { 'turkce' }
+  end
+
+  trait(:th) do
+    abbreviation { 'th' }
+    name_in_english { 'Thai' }
+    name { 'ภาษาไทย' }
+    language_direction { 'ltr' }
+    slug { 'phaasaaaithy' }
   end
 end
