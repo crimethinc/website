@@ -15,23 +15,35 @@ def system! *args
 end
 
 chdir APP_ROOT do
-  # ensure everything in the app is up to date
-  system! 'script/update'
+  # Run tests fast! (lightweight opts parser)
+  # script/test -f  OR  script/test --fast
+  run_fast = ARGV.include?('-f') || ARGV.include?('--fast')
 
-  # print output at the start of test run
+  if run_fast
+    ARGV.delete '-f'
+    ARGV.delete '--fast'
+  else
+    # Ensure everything in the app is up to date
+    system! 'script/update'
+  end
+
+  # Print output at the start of test run
   puts "==> Tests started at: #{Time.now.strftime('%H:%M:%S')}"
 
-  # run tests
+  # Run tests
   if ARGV[0].nil?
-    system! 'bundle exec rspec'
+    # TEMP: RUBYOPT is to silence warning between Ruby 2.7.0 and Rails 6.0.2.2
+    system! "RUBYOPT='-W:no-deprecated -W:no-experimental' bundle exec rspec"
 
     puts '==> Running Rubocop…'
-    system! 'bundle exec rubocop'
+    system! "RUBYOPT='-W:no-deprecated -W:no-experimental' bundle exec rubocop"
   else
-    # pass arguments to test call. This is useful for calling a single test.
-    system! "bundle exec rspec #{ARGV[0]}"
+    # Pass arguments to script/test. This is useful for calling a single test.
+    system! "RUBYOPT='-W:no-deprecated -W:no-experimental' bundle exec rspec #{ARGV[0]}"
 
     puts "==> Running Rubocop on file: #{ARGV[0]}"
-    system! "bundle exec rubocop #{ARGV[0]}"
+    system! "RUBYOPT='-W:no-deprecated -W:no-experimental' bundle exec rubocop #{ARGV[0]}"
   end
+
+  puts "==> Tests finished at: #{Time.now.strftime('%H:%M:%S')}"
 end

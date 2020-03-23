@@ -17,13 +17,14 @@ chdir APP_ROOT do
   system! 'script/bootstrap'
 
   puts '==> Installing dependencies'
-  system! 'gem install bundler --conservative'
+  system! 'gem install bundler'
   system('bundle check') || system!('bundle install')
 
   puts '==> Updating database'
-  system! 'bundle exec rails db:create'
-  system! 'bundle exec rails db:migrate'
-  system! 'bundle exec rails db:migrate RAILS_ENV=test'
+  # TEMP: RUBYOPT is to silence warning between Ruby 2.7.0 and Rails 6.0.2.2
+  system! "RUBYOPT='-W:no-deprecated -W:no-experimental' bundle exec rails db:create"
+  system! "RUBYOPT='-W:no-deprecated -W:no-experimental' bundle exec rails db:migrate"
+  system! "RUBYOPT='-W:no-deprecated -W:no-experimental' bundle exec rails db:migrate RAILS_ENV=test"
 
   puts '==> Removing old logs and tempfiles'
   system! 'bundle exec rails log:clear tmp:clear'

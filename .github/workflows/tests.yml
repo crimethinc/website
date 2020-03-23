@@ -54,5 +54,6 @@ jobs:
       - name: Run tests
         env:
           PGUSER: postgres
+        # TEMP: RUBYOPT is to silence warning between Ruby 2.7.0 and Rails 6.0.2.2
         run: |
-          bundle exec rspec
+          RUBYOPT='-W:no-deprecated -W:no-experimental' bundle exec rspec
