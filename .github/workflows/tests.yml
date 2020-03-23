@@ -10,6 +10,7 @@ jobs:
       postgres:
         image: postgres:11.6-alpine
         env:
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
         ports:
           - 5432:5432
@@ -41,7 +42,7 @@ jobs:
 
       - name: Configure database
         env:
-          PGUSER: postgres
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
         run: |
           bundle exec rails db:create
