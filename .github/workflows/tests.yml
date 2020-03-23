@@ -29,9 +29,6 @@ jobs:
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gem-use-ruby-${{ hashFiles('**/Gemfile.lock') }}
-      - name: Read Node.js version to install from `.nvmrc`
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-        id: nvm
       - name: Bundle install
         run: |
           bundle config path vendor/bundle
