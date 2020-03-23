@@ -1,6 +1,6 @@
 on: [push]
 
-name: (Non-system) Tests
+name: System Tests
 
 jobs:
   run:
@@ -55,4 +55,4 @@ jobs:
         env:
           PGUSER: postgres
         run: |
-          bundle exec rspec --exclude-pattern="spec/system/*"
+          bundle exec rspec spec/system
