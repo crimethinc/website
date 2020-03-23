@@ -55,4 +55,4 @@ jobs:
         env:
           PGUSER: postgres
         run: |
-          bundle exec rspec
+          bundle exec rspec --exclude-pattern="spec/system/*"
