@@ -25,8 +25,9 @@ jobs:
         uses: actions/checkout@master
 
         # This uses .ruby-version file to set the version
-      - name: Set up Ruby 2.6
-        uses: eregon/use-ruby-action@master
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@master
+        # uses: eregon/use-ruby-action@master
 
       - name: Install Ruby gems
         run: |
