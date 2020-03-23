@@ -42,6 +42,7 @@ jobs:
       - name: Configure database
         env:
           PGUSER: postgres
+          POSTGRES_PASSWORD: password
         run: |
           bundle exec rails db:create
 
