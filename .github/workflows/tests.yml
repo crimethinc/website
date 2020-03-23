@@ -41,5 +41,5 @@ jobs:
 
       - name: Run tests
         run: |
-          rake db:create
-          rspec
+          bundle exec rake db:create
+          bundle exec rspec
