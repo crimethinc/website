@@ -7,13 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '2.6.x'
-
       - name: Checkout
         uses: actions/checkout@master
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@master
 
       - name: Install dependencies
         run: |

@@ -8,26 +8,31 @@ jobs:
 
     services:
       postgres:
-        image: postgres:11
+        image: postgres:11.6-alpine
         ports: ['5432:5432']
         env:
-          POSTGRES_PASSWORD: ""
+          PGUSER: postgres
+          PGPASSWORD: ''
+        # Ensure Postgres container passes a health check
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
 
     steps:
-      - name: Install libraries
+      - name: Install system libraries
         run: |
-          sudo apt-get update
-          sudo apt-get install -y postgresql-client libpq-dev
+          sudo apt-get -y install libpq-dev
 
-      - name: Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '2.6.x'
-
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@master
 
-      - name: Install dependencies
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@master
+
+      - name: Install Ruby gems
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
@@ -42,4 +47,4 @@ jobs:
         env:
           PGUSER: postgres
         run: |
-          rspec
+          bundle exec rspec
