@@ -408,7 +408,7 @@ DEPENDENCIES
   rubocop-rspec
   rubypants
   sassc-rails
-  scenic (~> 1.5)
+  scenic
   selenium-webdriver
   simplecov
   sitemap_generator
