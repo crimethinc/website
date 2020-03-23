@@ -39,11 +39,6 @@ gem 'kaminari'
 # memcache
 gem 'dalli'
 
-# codestyle guide and linting
-gem 'rubocop', require: false
-gem 'rubocop-performance'
-gem 'rubocop-rspec'
-
 # Stripe for /support
 gem 'stripe'
 
@@ -68,6 +63,11 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
   gem 'webdrivers'
+
+  # codestyle guide and linting
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 # testing / ci
