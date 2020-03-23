@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby File.read '.ruby-version'
 
 # app server
-gem 'rails', '~> 6.0.2'
+gem 'rails'
 
 # database
 gem 'pg'

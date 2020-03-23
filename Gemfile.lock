@@ -397,7 +397,7 @@ DEPENDENCIES
   rack-attack
   rack-contrib
   rack-timeout
-  rails (~> 6.0.2)
+  rails
   rails-controller-testing
   redis
   redis-store
