@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-
-ruby File.read '.ruby-version'
+ruby '~> 2.7.0'
 
 # app server
 gem 'rails'
