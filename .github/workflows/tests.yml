@@ -21,12 +21,12 @@ jobs:
         run: |
           sudo apt-get -y install libpq-dev
 
+      - name: Checkout repository
+        uses: actions/checkout@master
+
         # This uses .ruby-version file to set the version
       - name: Set up Ruby 2.6
         uses: eregon/use-ruby-action@master
-
-      - name: Checkout repository
-        uses: actions/checkout@master
 
       - name: Install Ruby gems
         run: |
