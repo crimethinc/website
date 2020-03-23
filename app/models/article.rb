@@ -108,7 +108,7 @@ class Article < ApplicationRecord
     localization_in(I18n.locale).presence || self
   end
 
-  # private
+  private
 
   def self_localizations
     Article.published.live.where(canonical_id: id)
