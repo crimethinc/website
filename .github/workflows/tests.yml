@@ -1,6 +1,6 @@
-name: Tests
-
 on: [push]
+
+name: Tests
 
 jobs:
   run:
@@ -9,36 +9,29 @@ jobs:
     services:
       postgres:
         image: postgres:11.6-alpine
+        ports: ['5432:5432']
         env:
           PGUSER: postgres
           PGPASSWORD: password
-        ports:
-          - 5432:5432
         # needed because the postgres container does not provide a healthcheck
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Install Ruby
-        uses: eregon/use-ruby-action@master # this will use by default the .ruby-version file in your repository
-
       - name: Install system libraries
         run: |
           sudo apt-get -y install libpq-dev
 
-      # - name: Cache gems
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: vendor/bundle
-      #     key: ${{ runner.os }}-gem-use-ruby-${{ hashFiles('**/Gemfile.lock') }}
+        # This uses .ruby-version file to set the version
+      - name: Set up Ruby 2.6
+        uses: eregon/use-ruby-action@master
 
-      - name: Bundle install Ruby gems
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Install Ruby gems
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
-          # bundle config path vendor/bundle
 
       - name: Configure database
         env:
