@@ -89,7 +89,7 @@ class Article < ApplicationRecord
     all_localizations = [
       canonical_article,
       canonical_article_localizations,
-      localizations_of_self
+      self_localizations
     ]
 
     articles = all_localizations.flatten.compact - [self]
@@ -110,7 +110,7 @@ class Article < ApplicationRecord
 
   # private
 
-  def localizations_of_self
+  def self_localizations
     Article.published.live.where(canonical_id: id)
   end
 
