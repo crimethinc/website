@@ -1,9 +1,9 @@
-on: [push]
-
 name: Tests
 
+on: [push]
+
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
 
     services:
@@ -17,34 +17,26 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-      - name: Install libraries
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Ruby version specified in `.ruby-version`
+        uses: eregon/use-ruby-action@master # this will use by default the .ruby-version file in your repository
+      - name: Install required apt packages
         run: |
-          sudo apt-get update
-          sudo apt-get install -y postgresql-client libpq-dev
-
-      - name: Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
+          sudo apt-get -y install libpq-dev
+      - name: Setup cache key and directory for gems cache
+        uses: actions/cache@v1
         with:
-          ruby-version: '2.6.x'
-
-      - name: Checkout
-        uses: actions/checkout@master
-
-      - name: Install dependencies
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-use-ruby-${{ hashFiles('**/Gemfile.lock') }}
+      - name: Read Node.js version to install from `.nvmrc`
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
+      - name: Bundle install
         run: |
-          gem install bundler
+          bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
-
-      - name: Configure database
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: password
-
+      - name: Rails test
         run: |
-          bundle exec rails db:create
-
-      # - name: Run tests
-      #   env:
-      #     PGUSER: postgres
-      #   run: |
-      #     rspec
+          bundle exec rails db:setup
+          bundle exec rails test
