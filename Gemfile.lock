@@ -367,8 +367,8 @@ DEPENDENCIES
   autoprefixer-rails
   awesome_print
   aws-sdk-s3
-  bcrypt
-  bootstrap
+  bcrypt (~> 3.1.13)
+  bootstrap (~> 4.4.1)
   bugsnag
   byebug
   capybara
@@ -379,13 +379,13 @@ DEPENDENCIES
   flamegraph
   guard-rspec
   i18n-debug
-  jbuilder
+  jbuilder (~> 2.10)
   jquery-rails
   jquery-ui-rails
   kaminari
   kramdown
   launchy
-  listen
+  listen (~> 3.2.1)
   lograge
   logstash-event
   markdown_media
@@ -397,7 +397,7 @@ DEPENDENCIES
   rack-attack
   rack-contrib
   rack-timeout
-  rails
+  rails (~> 6.0.2)
   rails-controller-testing
   redis
   redis-store
@@ -408,13 +408,13 @@ DEPENDENCIES
   rubocop-rspec
   rubypants
   sassc-rails
-  scenic
+  scenic (~> 1.5)
   selenium-webdriver
   simplecov
   sitemap_generator
   spring
   spring-commands-rspec
-  spring-watcher-listen
+  spring-watcher-listen (~> 2.0.0)
   stackprof
   sterile
   stringex
