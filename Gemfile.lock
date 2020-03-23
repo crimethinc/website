@@ -385,7 +385,7 @@ DEPENDENCIES
   kaminari
   kramdown
   launchy
-  listen (~> 3.2.1)
+  listen
   lograge
   logstash-event
   markdown_media
