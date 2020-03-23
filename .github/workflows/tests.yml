@@ -43,7 +43,8 @@ jobs:
       - name: Install Ruby gems
         run: |
           gem install bundler
-          bundle install --path vendor/bundle --jobs 4 --retry 3
+          bundle config set path 'vendor/bundle
+          bundle install --jobs 4 --retry 3
 
       - name: Configure database
         env:
