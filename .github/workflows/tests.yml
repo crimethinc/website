@@ -20,7 +20,6 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
-
     steps:
       - name: Install system libraries
         run: |
