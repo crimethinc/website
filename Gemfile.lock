@@ -368,7 +368,7 @@ DEPENDENCIES
   awesome_print
   aws-sdk-s3
   bcrypt (~> 3.1.13)
-  bootstrap (~> 4.4.1)
+  bootstrap
   bugsnag
   byebug
   capybara
