@@ -3,18 +3,18 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version').chomp
 
 # app server
-gem 'rails', '~> 6.0.2'
+gem 'rails'
 
 # database
 gem 'pg'
-gem 'scenic', '~> 1.5'
+gem 'scenic'
 
 # webserver
 gem 'puma'
 
 # assets
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 4.4.1'
+gem 'bootstrap'
 gem 'jquery-rails'      # for bootstrap pages (admin, steal-something-from-work-day)
 gem 'jquery-ui-rails'   # for polyfilling forms in admin/articles
 gem 'sassc-rails'
@@ -22,7 +22,7 @@ gem 'sitemap_generator' # for generating a compliant xml sitemap
 gem 'uglifier'
 
 # JSON views
-gem 'jbuilder', '~> 2.10'
+gem 'jbuilder'
 
 # text utilities
 gem 'kramdown'       # for Markdown processing
@@ -32,18 +32,13 @@ gem 'sterile'        # for slugs
 gem 'stringex'       # for Markdown header IDs processing
 
 # auth
-gem 'bcrypt', '~> 3.1.13'
+gem 'bcrypt'
 
 # pagination
 gem 'kaminari'
 
 # memcache
 gem 'dalli'
-
-# codestyle guide and linting
-gem 'rubocop', require: false
-gem 'rubocop-performance'
-gem 'rubocop-rspec'
 
 # Stripe for /support
 gem 'stripe'
@@ -69,6 +64,11 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
   gem 'webdrivers'
+
+  # codestyle guide and linting
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 # testing / ci
@@ -79,10 +79,10 @@ end
 # dev
 group :development do
   gem 'guard-rspec', require: false
-  gem 'listen', '~> 3.2.1'
+  gem 'listen'
   gem 'referral', require: false
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
   gem 'web-console'
 
   # For memory profiling
