@@ -31,6 +31,15 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@master
 
+      - name: Cache bundled gems
+        id: gem-cache
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+
       - name: Install Ruby gems
         run: |
           gem install bundler
