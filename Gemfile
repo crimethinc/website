@@ -81,7 +81,7 @@ group :development do
   gem 'listen'
   gem 'referral', require: false
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
   gem 'web-console'
 
   # For memory profiling

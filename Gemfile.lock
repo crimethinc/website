@@ -414,7 +414,7 @@ DEPENDENCIES
   sitemap_generator
   spring
   spring-commands-rspec
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen
   stackprof
   sterile
   stringex
