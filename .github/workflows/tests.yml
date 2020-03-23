@@ -12,7 +12,7 @@ jobs:
         ports: ['5432:5432']
         env:
           PGUSER: postgres
-          PGPASSWORD: password
+          PGPASSWORD: ''
         # Ensure Postgres container passes a health check
         options: >-
           --health-cmd pg_isready
@@ -40,13 +40,11 @@ jobs:
       - name: Configure database
         env:
           PGUSER: postgres
-          PGPASSWORD: password
         run: |
           bundle exec rails db:create
 
       - name: Run tests
         env:
           PGUSER: postgres
-          PGPASSWORD: password
         run: |
           bundle exec rspec
