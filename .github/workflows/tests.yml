@@ -48,5 +48,8 @@ jobs:
           bundle exec rails db:create
 
       - name: Run tests
+        env:
+          PGUSER: postgres
+          PGPASSWORD: password
         run: |
           bundle exec rspec
