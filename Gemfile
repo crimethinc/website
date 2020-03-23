@@ -64,7 +64,7 @@ group :development, :test do
   gem 'nokogiri'
   gem 'overcommit'
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 4.0.0.beta4'
+  gem 'rspec-rails', '~> 4.0.0.rc1'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
   gem 'webdrivers'
