@@ -13,8 +13,13 @@ jobs:
         env:
           PGUSER: postgres
           PGPASSWORD: password
-        # needed because the postgres container does not provide a healthcheck
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        # Ensure Postgres container passes a health check
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
 
     steps:
       - name: Install system libraries
@@ -24,10 +29,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
 
-        # This uses .ruby-version file to set the version
       - name: Set up Ruby
         uses: ruby/setup-ruby@master
-        # uses: eregon/use-ruby-action@master
 
       - name: Install Ruby gems
         run: |
