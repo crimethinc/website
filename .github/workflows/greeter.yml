@@ -1,4 +1,4 @@
-name: Greetings
+name: Greeter
 
 on: [pull_request, issues]
 
