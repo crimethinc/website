@@ -13,7 +13,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@master
 
-      - name: Install dependencies
+      - name: Install Ruby gems
         run: |
           gem install rubocop rubocop-performance rubocop-rspec --no-document
 
