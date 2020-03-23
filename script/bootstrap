@@ -28,10 +28,10 @@ ruby_version=`cat .ruby-version`
 
 echo "==> Installing Ruby: $ruby_version"
 if command_exists rbenv; then
-  echo '==> Using rbenv for install'
+  echo '==> using rbenv for install'
   rbenv install -s $ruby_version
 elif command_exists ruby-install; then
-  echo '==> Using ruby-install for install'
+  echo '==> using ruby-install for install'
   ruby-install ruby $ruby_version --no-reinstall
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   chruby $ruby_version
