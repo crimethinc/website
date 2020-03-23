@@ -31,7 +31,7 @@ gem 'sterile'        # for slugs
 gem 'stringex'       # for Markdown header IDs processing
 
 # auth
-gem 'bcrypt', '~> 3.1.13'
+gem 'bcrypt'
 
 # pagination
 gem 'kaminari'
