@@ -20,26 +20,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Ruby version specified in `.ruby-version`
+      - name: Install Ruby
         uses: eregon/use-ruby-action@master # this will use by default the .ruby-version file in your repository
 
-      - name: Install required apt packages
+      - name: Install system libraries
         run: |
           sudo apt-get -y install libpq-dev
 
-      - name: Setup cache key and directory for gems cache
+      - name: Cache gems
         uses: actions/cache@v1
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gem-use-ruby-${{ hashFiles('**/Gemfile.lock') }}
 
-      - name: Bundle install
+      - name: Bundle install Ruby gems
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
           bundle config path vendor/bundle
 
-      - name: Rails test
+      - name: Run tests
         run: |
-          bundle exec rails db:setup
-          bundle exec rails test
+          bundle exec rake db:create
+          bundle exec rspec
