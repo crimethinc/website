@@ -4,7 +4,7 @@ module Rack
     REDIRECT_CONFIGS = [
       ['',    '/steal-something-from-work-day', /stealfromwork.crimethinc.com|stealfromworkday.com|stealsomethingfromworkday.com$/],
       ['',    '/tce',                           /tochangeeverything.com/],
-      ['id',  '',                               /id.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
+      ['id.', '',                               /id.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
       ['',    '',                               /cwc|crimethinc.herokuapp.com$/],
       ['es.', '',                               /crimethinc.es/],
       ['de.', '',                               /crimethinc.de/],
