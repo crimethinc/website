@@ -5,6 +5,7 @@ module Rack
       ['',    '/steal-something-from-work-day', /stealfromwork.crimethinc.com|stealfromworkday.com|stealsomethingfromworkday.com$/],
       ['',    '/tce',                           /tochangeeverything.com/],
       ['',    '',                               /cwc|crimethinc.herokuapp.com$/],
+      ['id',  '',                               /id.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
       ['es.', '',                               /crimethinc.es/],
       ['de.', '',                               /crimethinc.de/],
       ['cs.', '',                               /cz.crimethinc.com/]
