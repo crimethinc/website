@@ -1,6 +1,6 @@
 on: [push]
 
-name: Linter
+name: Rubocop Linter
 
 jobs:
   run:
@@ -17,6 +17,6 @@ jobs:
         run: |
           gem install rubocop rubocop-performance rubocop-rspec --no-document
 
-      - name: Run linter
+      - name: Run Rubocop linter
         run: |
           rubocop
