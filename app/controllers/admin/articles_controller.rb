@@ -7,12 +7,11 @@ module Admin
 
     def index
       @articles = Article.published.english.root.includes(:collection_posts).page(params[:page])
-      @drafts   = Article.draft.english.root.page.per(100)
       @title    = admin_title
     end
 
     def draft
-      @articles = Article.draft.english.root.page.per(100)
+      @articles = Article.draft.english.root.page(params[:page])
       @title    = admin_title
     end
 
