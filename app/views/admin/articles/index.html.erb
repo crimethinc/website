@@ -30,15 +30,23 @@
         </span>
       </div>
 
-      <div class="col-md-7 h5">
-        <b><%= link_to article.title, [:admin, article] %></b><br>
+      <div class="col-md-7">
+        <div class="h5 mb-0">
+          <b><%= link_to article.title, [:admin, article] %></b><br>
 
-        <% if article.subtitle.present? %>
-          <%= link_to article.subtitle, [:admin, article] %>
+          <% if article.subtitle.present? %>
+            <%= link_to article.subtitle, [:admin, article] %>
+          <% end %>
+
+          <%= render "/admin/articles/content_format_badge",    article: article %>
+          <%= render "/admin/articles/children_articles_badge", article: article %>
+        </div>
+
+        <% if article.english? %>
+          <br>
+          <%= render 'admin/translate_this', article: article %>
         <% end %>
 
-        <%= render "/admin/articles/content_format_badge",     article: article %>
-        <%= render "/admin/articles/children_articles_badge",  article: article %>
       </div>
 
       <div class="col-md-3">
