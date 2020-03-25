@@ -1,0 +1,11 @@
+<%= render 'admin/page_header', thing: @articles %>
+
+<% unless params[:page].present? %>
+  <h2 id='draft' class='font-weight-light pt-3'>
+    <%= link_to 'NEW', [:new, :admin, :article], class: 'btn btn btn-outline-primary' %>
+    Draft Articles
+  </h2>
+  <%= render 'list', articles: @articles %>
+<% end %>
+
+<%= paginate @articles, views_prefix: 'admin', theme: 'twitter-bootstrap-4' %>

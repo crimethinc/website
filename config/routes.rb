@@ -138,6 +138,9 @@ Rails.application.routes.draw do
       member do
         get 'new', as: :new_collection_post
       end
+      collection do
+        get 'draft', as: :draft
+      end
     end
 
     resources :books,      concerns: :paginatable

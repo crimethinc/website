@@ -1,21 +1,10 @@
 <%= render 'admin/page_header', thing: @articles %>
 
-<% unless params[:page].present? %>
-  <h2 id='draft' class='font-weight-light pt-3'>
-    Draft Articles
-    <%= link_to 'Published Articles ⬇️', '#published', class: 'btn btn-sm btn-outline-primary' %>
-  </h2>
-  <%= render 'list', articles: @drafts %>
-<% end %>
-
-  <% if params[:page].present? %>
-    <%= link_to 'Draft Articles ⬅️', '/admin/articles/#draft', class: 'btn btn-lg btn-outline-primary mb-3' %>
-  <% else %>
   <h2 id='published' class='font-weight-light pt-3'>
     Published Articles
-    <%= link_to 'Draft Articles ⬆️', '#draft', class: 'btn btn-sm btn-outline-primary' %>
+    <%= link_to 'Draft Articles ➡️', [:draft, :admin, :articles], class: 'btn btn-sm btn-outline-primary' %>
   </h2>
-  <% end %>
+
 <%= render 'list', articles: @articles %>
 
 <%= paginate @articles, views_prefix: 'admin', theme: 'twitter-bootstrap-4' %>

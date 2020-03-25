@@ -11,6 +11,11 @@ module Admin
       @title    = admin_title
     end
 
+    def draft
+      @articles = Article.draft.english.root.page.per(100)
+      @title    = admin_title
+    end
+
     def show
       # TODO: this is a hack
       @collection = Article.find(@article.collection_id) if @article.collection_id.present?
