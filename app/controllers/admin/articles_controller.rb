@@ -84,6 +84,7 @@ module Admin
       @article.publication_status = :draft
 
       @article.tags = canonical_article.tags
+      @article.categories = canonical_article.categories
     end
 
     def set_article
