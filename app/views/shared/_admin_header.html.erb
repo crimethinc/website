@@ -22,7 +22,7 @@
         <p>Translate this to</p>
 
         <% Locale.all.each do |locale| %>
-          <%= link_to locale.abbreviation, [:new, :admin, :article], class: "button button-buy" %>
+          <%= link_to locale.abbreviation, [:new, :admin, :article, canonical_id: @article.id, locale: locale.abbreviation], class: "button button-buy" %>
         <% end %>
       <% end %>
     </div>
