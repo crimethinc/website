@@ -79,6 +79,14 @@ GEM
     aws-sigv4 (1.1.1)
       aws-eventstream (~> 1.0, >= 1.0.2)
     bcrypt (3.1.13)
+    better_html (1.0.14)
+      actionview (>= 4.0)
+      activesupport (>= 4.0)
+      ast (~> 2.0)
+      erubi (~> 1.4)
+      html_tokenizer (~> 0.0.6)
+      parser (>= 2.4)
+      smart_properties
     bindex (0.8.1)
     bootstrap (4.4.1)
       autoprefixer-rails (>= 9.1.0)
@@ -107,6 +115,13 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
+    erb_lint (0.0.30)
+      activesupport
+      better_html (~> 1.0.7)
+      html_tokenizer
+      rainbow
+      rubocop (~> 0.51)
+      smart_properties
     erubi (1.9.0)
     execjs (2.7.0)
     factory_bot (5.1.1)
@@ -134,6 +149,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    html_tokenizer (0.0.7)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     i18n-debug (1.2.0)
@@ -318,6 +334,7 @@ GEM
     simplecov-html (0.12.2)
     sitemap_generator (6.1.0)
       builder (~> 3.0)
+    smart_properties (1.15.0)
     spring (2.1.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -374,6 +391,7 @@ DEPENDENCIES
   capybara
   dalli
   dotenv-rails
+  erb_lint
   factory_bot_rails
   fast_stack
   flamegraph

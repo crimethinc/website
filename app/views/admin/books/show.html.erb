@@ -34,7 +34,6 @@
     <%= render_markdown @book.description %>
   <% end %>
 
-
   <p>
     <strong>Size:</strong>
     <% if @book.depth.present? %>
@@ -46,7 +45,6 @@
     x
     <%= @book.height %>
   </p>
-
 
   <% {
     screen_single_page_view:  "Screen Single Page View",
@@ -143,7 +141,6 @@
       <%= @book.table_of_contents %>
     </p>
 
-
     <p>
       <strong>Printing</strong>
       <%= @book.printing %>
@@ -169,9 +166,7 @@
       <%= @book.has_index %>
     </p>
 
-
   <% end %>
-
 
   <% if @book.content.present? %>
     <h2>Content</h2>

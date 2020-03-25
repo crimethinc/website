@@ -20,7 +20,7 @@ function handleUpdatedPost(collectionPost, data) {
 
   collectionPost.dataset.publishedAt = data.published_at;
 
-  for (i = 0; i < posts.length; i++) {
+  for (i = 0; i <posts.length; i++) {
     App.articleQueue.push(posts[i]);
   }
 }
@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Return early if no listening article is found
   if (listeningArticles.length === 0 ||
       !listeningArticles[0].dataset.listen) { return }
-  
+
   startPoller(listeningArticles);
 });
-

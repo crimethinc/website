@@ -1,6 +1,6 @@
 on: [push]
 
-name: (Non-system) Tests
+name: Tests (non-system)
 
 jobs:
   run:

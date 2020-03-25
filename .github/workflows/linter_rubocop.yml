@@ -1,0 +1,22 @@
+on: [push]
+
+name: Rubocop Linter
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@master
+
+      - name: Install Ruby gems
+        run: |
+          gem install rubocop rubocop-performance rubocop-rspec --no-document
+
+      - name: Run Rubocop linter
+        run: |
+          rubocop
