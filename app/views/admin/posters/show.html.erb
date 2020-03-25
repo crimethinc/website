@@ -60,7 +60,6 @@
       <%= @poster.height %>
     </p>
 
-
       <% %w[front back].each do |side| %>
         <% %w[color black_and_white].each do |color| %>
           <% if @poster.send("#{side}_#{color}_image_present?") %>

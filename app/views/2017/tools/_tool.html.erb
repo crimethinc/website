@@ -30,7 +30,6 @@
           <%= render_markdown tool.buy_info %>
         <% end %>
 
-
         <% if tool.class == Book %>
           <% {
             screen_single_page_view:  "Screen Single Page View PDF",
@@ -49,7 +48,6 @@
             <% end %>
           <% end %>
         <% end %>
-
 
         <% if tool.class == Poster %>
           <% %w[front back].each do |side| %>

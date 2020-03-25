@@ -3,10 +3,10 @@
 <% end %>
 
 <header>
-  <h1><%=@locale.name%></h1>
+  <h1><%= @locale.name %></h1>
 
   <% unless @locale.english? %>
-    <h2>(<%= @locale.name_in_english %>)</h2 >
+    <h2>(<%= @locale.name_in_english %>)</h2>
   <% end %>
 
   <nav class="crumbtrail">
