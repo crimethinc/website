@@ -4,6 +4,9 @@
       padding: 2rem;
       background: #ff8300;
     }
+
+    .translate-this p { margin: 1rem 0; }
+    .translate-this a { margin-bottom: .5rem; }
   </style>
 
   <nav id="admin-header">
@@ -13,5 +16,15 @@
     <% if @editable.present? %>
       <b><%= link_to "Edit #{@editable.class}", [:edit, :admin, @editable], class: "button button-buy" %></b>
     <% end %>
+
+    <div class="translate-this">
+      <% if @article.present? %>
+        <p>Translate this to</p>
+
+        <% Locale.all.each do |locale| %>
+          <%= link_to locale.abbreviation, [:new, :admin, :article], class: "button button-buy" %>
+        <% end %>
+      <% end %>
+    </div>
   </nav>
 <% end %>
