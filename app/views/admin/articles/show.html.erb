@@ -17,7 +17,7 @@
           <div class="card mb-3">
             <div class="card-header">
               <% if @article.canonical_article.locale.present? %>
-              <%= link_to @article.canonical_article.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
+                <%= link_to @article.canonical_article.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
               <% end %>
 
               English Article
@@ -91,22 +91,15 @@
     </p>
 
     <p>
-      Publication Status:<br>
+      <b><%= render_themed "articles/published_on_time_tag", article: @article %></b>
+      <br>
       <%= render "/admin/articles/publication_status_badge", resource: @article %>
-    </p>
 
-    <% if @article.content_in_html? %>
-      <p>
-        Content Format:
+      <% if @article.content_in_html? %>
         <b class="badge badge-warning">HTML</b>
-      </p>
-    <% end %>
+      <% end %>
 
-    <%= render_themed "articles/published_on_time_tag", article: @article %>
-
-    <p>
       <% if @article.locale.present? %>
-        Locale:<br>
         <%= link_to @article.locale.upcase, [:admin, :locales], class: "badge badge-dark" %>
       <% end %>
     </p>
