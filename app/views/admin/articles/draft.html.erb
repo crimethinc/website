@@ -48,7 +48,10 @@
       </div>
 
       <div class="col-md-5">
-        <% unless article.english? %>
+        <% if article.english? %>
+          <br>
+          <%= render 'admin/translate_this', article: article %>
+        <% else %>
           <% if article.canonical_id.present? %>
             <% if article.canonical_article.locale.present? %>
               <%= link_to article.canonical_article.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
