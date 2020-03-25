@@ -28,6 +28,18 @@ module Admin
       @collection = Article.find(params[:id]) if params[:id]
       @article    = Article.new
 
+      # Prefill and clean article for translation
+      if params[:canonical_id].present?
+        canonical_article = Article.find(params[:canonical_id])
+        @article = canonical_article.dup
+
+        @article.canonical_id = canonical_article.id
+        @article.locale = params[:locale]
+
+        @article.short_path = nil
+        @article.draft!
+      end
+
       @title   = admin_title
       @html_id = 'js-admin-article'
     end
