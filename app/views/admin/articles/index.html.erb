@@ -1,5 +1,15 @@
-<%= render "admin/page_header", thing: @articles %>
+<%= render 'admin/page_header', thing: @articles %>
 
-<%= render "table", articles: @articles %>
+<h2 id='draft' class='font-weight-light pt-3'>
+  Draft
+  <%= link_to 'Published ⬇️', '#published', class: 'btn btn-sm btn-outline-primary' %>
+</h2>
+<%= render 'list', articles: @drafts %>
 
-<%= paginate @articles, views_prefix: "admin", theme: "twitter-bootstrap-4" %>
+<h2 id='published' class='font-weight-light pt-3'>
+  Published
+  <%= link_to 'Draft ⬆️', '#draft', class: 'btn btn-sm btn-outline-primary' %>
+</h2>
+<%= render 'list', articles: @articles %>
+
+<%= paginate @articles, views_prefix: 'admin', theme: 'twitter-bootstrap-4' %>
