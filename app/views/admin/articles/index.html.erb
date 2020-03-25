@@ -1,9 +1,14 @@
-<%= render 'admin/page_header', thing: @articles %>
+<h2>
+  <%= link_to "NEW", [:new, :admin, :article], class: 'btn btn-outline-primary btn-sm mb-2' %>
 
-  <h2 id='published' class='font-weight-light pt-3'>
-    Published Articles
-    <%= link_to 'Draft Articles ➡️', [:draft, :admin, :articles], class: 'btn btn-sm btn-outline-primary' %>
-  </h2>
+  <span class='font-weight-light'>Articles</span>
+  <span class="text-muted">:</span>
+  <b>Published</b>
+
+  <span class="float-right">
+    <%= link_to_unless_current "Draft ➡️", [:draft, :admin, :articles], class: 'btn btn-outline-primary mb-2' %>
+  </span>
+</h2>
 
 <%= render 'list', articles: @articles %>
 

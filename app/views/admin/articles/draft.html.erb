@@ -1,11 +1,50 @@
-<%= render 'admin/page_header', thing: @articles %>
+<h2>
+  <%= link_to "NEW", [:new, :admin, :article], class: 'btn btn-outline-primary btn-sm mb-2' %>
 
-<% unless params[:page].present? %>
-  <h2 id='draft' class='font-weight-light pt-3'>
-    <%= link_to 'NEW', [:new, :admin, :article], class: 'btn btn btn-outline-primary' %>
-    Draft Articles
-  </h2>
-  <%= render 'list', articles: @articles %>
-<% end %>
+  <span class='font-weight-light'>Articles</span>
+  <span class="text-muted">:</span>
+  <b><%= link_to_unless_current "Draft", [:draft, :admin, :articles] %></b>
+
+  <span class="float-right">
+    <%= link_to_unless_current "Published ➡️", [:admin, :articles], class: 'btn btn-outline-primary mb-2' %>
+  </span>
+</h2>
+
+<div class="articles col-12 mb-5">
+  <div class="articles-header row py-2 bg-dark text-white d-none d-md-flex">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6"><b>Title / Subtitle</b></div>
+    <div class="col-sm-5"><b>Translation Info</b></div>
+  </div>
+
+  <% @articles.each do |article| %>
+    <div class="articles-body row mb-3 py-2 <%= admin_articles_table_row_classes article %>">
+      <div class="col-md-1">
+        <%= link_to "Edit", [:edit, :admin, article], class: "btn btn-lgx btn-outline-primary" %>
+      </div>
+
+      <div class="col-md-6">
+        <b><%= link_to article.title, [:admin, article] %></b><br>
+
+        <% if article.subtitle.present? %>
+          <%= link_to article.subtitle, [:admin, article] %>
+        <% end %>
+        <br>
+
+        <%= render "/admin/articles/content_format_badge",     article: article %>
+        <%= render "/admin/articles/children_articles_badge",  article: article %>
+        <%= render "/admin/articles/publication_status_badge", resource: article %>
+      </div>
+
+      <div class="col-md-5">
+      </div>
+    </div>
+  <% end %>
+
+  <div class="articles-footer row">
+    <p class="col text-right text-muted p2-3">View counts started on <code>2017-08-23</code></p>
+  </div>
+</div>
+
 
 <%= paginate @articles, views_prefix: 'admin', theme: 'twitter-bootstrap-4' %>
