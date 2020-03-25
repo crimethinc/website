@@ -21,6 +21,11 @@
               <% end %>
 
               English Article
+
+              <span class="float-right">
+                <%= number_with_delimiter @article.canonical_article.page_views %> Views
+                <b><%= number_with_delimiter @article.aggregate_translation_page_views %> Total</b>
+              </span>
             </div>
 
             <div class="card-body text-dark">
@@ -102,6 +107,11 @@
       <% if @article.locale.present? %>
         <%= link_to @article.locale.upcase, [:admin, :locales], class: "badge badge-dark" %>
       <% end %>
+    </p>
+
+    <p>
+      Page views:<br>
+      <b><%= number_with_delimiter @article.page_views %></b>
     </p>
 
     <p>
