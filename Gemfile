@@ -54,6 +54,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara'
   gem 'dotenv-rails'
+  gem 'erb_lint', require: false
   gem 'factory_bot_rails'
   gem 'i18n-debug'
   gem 'launchy'
