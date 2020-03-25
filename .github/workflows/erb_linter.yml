@@ -19,4 +19,4 @@ jobs:
 
       - name: Run ERB linter
         run: |
-          erb_lint app
+          erblint app
