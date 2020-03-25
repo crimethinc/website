@@ -27,18 +27,7 @@ module Admin
     def new
       @collection = Article.find(params[:id]) if params[:id]
       @article    = Article.new
-
-      # Prefill and clean article for translation
-      if params[:canonical_id].present?
-        canonical_article = Article.find(params[:canonical_id])
-        @article = canonical_article.dup
-
-        @article.canonical_id = canonical_article.id
-        @article.locale = params[:locale]
-
-        @article.short_path = nil
-        @article.publication_status = :draft
-      end
+      prepare_article_for_translation
 
       @title   = admin_title
       @html_id = 'js-admin-article'
@@ -81,6 +70,21 @@ module Admin
     end
 
     private
+
+    def prepare_article_for_translation
+      # Prefill and clean article for translation
+      return unless params[:canonical_id].present?
+
+      canonical_article = Article.find(params[:canonical_id])
+      @article          = canonical_article.dup
+
+      @article.canonical_id       = canonical_article.id
+      @article.locale             = params[:locale]
+      @article.short_path         = nil
+      @article.publication_status = :draft
+
+      @article.tags = canonical_article.tags
+    end
 
     def set_article
       if params[:year] && params[:slug]
