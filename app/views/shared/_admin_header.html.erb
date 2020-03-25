@@ -13,14 +13,8 @@
       <b><%= link_to "Edit #{@editable.class}", [:edit, :admin, @editable], class: "button button-buy" %></b>
     <% end %>
 
-    <div class="translate-this">
-      <% if @article.present? %>
-        <p>Translate this to</p>
-
-        <% Locale.all.each do |locale| %>
-          <%= link_to locale.abbreviation, [:new, :admin, :article, canonical_id: @article.id, locale: locale.abbreviation], class: "button button-buy" %>
-        <% end %>
-      <% end %>
-    </div>
+    <% if @article.present? %>
+      <%= render 'admin/translate_this', article: @article %>
+    <% end %>
   </nav>
 <% end %>
