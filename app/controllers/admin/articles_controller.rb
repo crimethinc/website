@@ -6,7 +6,12 @@ module Admin
     after_action  :organize_article, only: %i[create update]
 
     def index
-      @articles = Article.root.includes(:collection_posts).page(params[:page])
+      @articles = Article.published.english.root.includes(:collection_posts).page(params[:page])
+      @title    = admin_title
+    end
+
+    def draft
+      @articles = Article.draft.root.page(params[:page])
       @title    = admin_title
     end
 

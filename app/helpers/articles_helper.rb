@@ -4,7 +4,7 @@ module ArticlesHelper
   end
 
   def localizations_for article
-    @localizations_for ||= displayable_localizations article
+    displayable_localizations article
   end
 
   def displayable_localizations article

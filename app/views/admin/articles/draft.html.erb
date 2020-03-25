@@ -1,0 +1,76 @@
+<h2 class="mb-3">
+  <%= link_to "NEW", [:new, :admin, :article], class: 'btn btn-outline-primary mb-2' %>
+
+  <span class='font-weight-light'><%= link_to_unless_current "Articles", [:admin, :articles] %></span>
+  <span class="text-muted">:</span>
+  <b><%= link_to_unless_current "Draft", [:draft, :admin, :articles] %></b>
+
+  <span class="float-right">
+    <%= link_to_unless_current "Published ➡️", [:admin, :articles], class: 'btn btn-outline-primary mb-2' %>
+  </span>
+</h2>
+
+<div class="articles col-12 mb-5">
+  <div class="articles-header row py-2 bg-dark text-white d-none d-md-flex">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6"><b>Title / Subtitle</b></div>
+    <div class="col-sm-5"><b>Translation Info</b></div>
+  </div>
+
+  <% @articles.each do |article| %>
+    <div class="articles-body row mb-3 py-0 <%= admin_articles_table_row_classes article %>">
+      <div class="col-md-1 d-md-none my-3">
+        <%= link_to "Edit", [:edit, :admin, article], class: "btn btn-block btn-outline-primary" %>
+      </div>
+
+      <div class="col-md-1 d-none d-md-block">
+        <br>
+        <%= link_to "Edit", [:edit, :admin, article], class: "btn btn-outline-primary" %>
+      </div>
+
+      <div class="col-md-6 pb-3">
+        <br class="d-none d-md-block">
+        <b><%= link_to article.title, [:admin, article] %></b>
+
+        <% if article.subtitle.present? %>
+          <br>
+          <%= link_to article.subtitle, [:admin, article] %>
+        <% end %>
+        <br>
+
+        <%= render "/admin/articles/content_format_badge",     article: article %>
+        <%= render "/admin/articles/children_articles_badge",  article: article %>
+        <%= render "/admin/articles/publication_status_badge", resource: article %>
+
+        <% if article.locale.present? %>
+          <%= link_to article.locale.upcase, [:admin, :locales], class: "badge badge-dark" %>
+        <% end %>
+      </div>
+
+      <div class="col-md-5">
+        <% unless article.english? %>
+          <% if article.canonical_id.present? %>
+            <% if article.canonical_article.locale.present? %>
+              <%= link_to article.canonical_article.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
+            <% end %>
+            <span class="text-muted">English Article</span>
+            <br>
+
+            <b><%= link_to article.canonical_article.title, [:admin, article.canonical_article] %></b>
+
+            <% if article.canonical_article.subtitle.present? %>
+              <br>
+              <%= link_to article.canonical_article.subtitle, [:admin, article.canonical_article] %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="articles-footer row">
+    <p class="col text-right text-muted p2-3">View counts started on <code>2017-08-23</code></p>
+  </div>
+</div>
+
+<%= paginate @articles, views_prefix: 'admin', theme: 'twitter-bootstrap-4' %>

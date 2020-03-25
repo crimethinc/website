@@ -26,6 +26,10 @@ class Article < ApplicationRecord
   scope :english,      -> { where(locale: 'en') }
   scope :translation,  -> { where.not(locale: 'en') }
 
+  def english?
+    locale == 'en'
+  end
+
   def id_and_name
     "#{id} — #{name}"
   end
@@ -108,14 +112,18 @@ class Article < ApplicationRecord
     localization_in(I18n.locale).presence || self
   end
 
+  def canonical_article
+    Article.find_by(id: canonical_id)
+  end
+
+  def aggregate_translation_page_views
+    [page_views, localizations.map(&:page_views)].flatten.sum
+  end
+
   private
 
   def self_localizations
     Article.published.live.where(canonical_id: id)
-  end
-
-  def canonical_article
-    Article.find_by(id: canonical_id)
   end
 
   def canonical_article_localizations
