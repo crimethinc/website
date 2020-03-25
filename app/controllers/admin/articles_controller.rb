@@ -83,7 +83,7 @@ module Admin
       @article.short_path         = nil
       @article.publication_status = :draft
 
-      @article.tags = canonical_article.tags
+      @article.tags       = canonical_article.tags
       @article.categories = canonical_article.categories
     end
 
