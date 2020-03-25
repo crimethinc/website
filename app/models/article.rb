@@ -116,6 +116,10 @@ class Article < ApplicationRecord
     Article.find_by(id: canonical_id)
   end
 
+  def aggregate_translation_page_views
+    [page_views, localizations.map(&:page_views)].flatten.sum
+  end
+
   private
 
   def self_localizations
