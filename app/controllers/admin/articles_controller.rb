@@ -37,7 +37,7 @@ module Admin
         @article.locale = params[:locale]
 
         @article.short_path = nil
-        @article.draft!
+        @article.publication_status = :draft
       end
 
       @title   = admin_title
