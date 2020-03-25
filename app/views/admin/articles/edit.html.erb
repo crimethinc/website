@@ -1,5 +1,9 @@
 <%= render "admin/page_header", thing: @article %>
 
+<% if @article.english? %>
+  <%= render 'admin/translate_this', article: @article %>
+<% end %>
+
 <%= render "form" %>
 
 <div class="row">
