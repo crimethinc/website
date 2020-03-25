@@ -30,6 +30,8 @@
       <div class="col-md-3">
         <%= display_date article.published_at %>
         <span class="text-muted"><%= display_time article.published_at %></span>
+
+        <%= render "/admin/articles/publication_status_badge", resource: article if article.draft? %>
       </div>
 
       <div class="d-none d-md-block col-md-1 text-right <%= 'text-muted' if article.published_at.present? && article.published_at.strftime('%Y-%m-%d') < '2017-08-23' %>">

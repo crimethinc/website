@@ -11,7 +11,7 @@ module Admin
     end
 
     def draft
-      @articles = Article.draft.english.root.page(params[:page])
+      @articles = Article.draft.root.page(params[:page])
       @title    = admin_title
     end
 
