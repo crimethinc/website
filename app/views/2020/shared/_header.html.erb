@@ -30,7 +30,7 @@
     <ol>
       <% Locales.live.each do |locale| %>
         <li>
-          <%= link_to t(:name, locale: locale), url_for_current_path_with_subdomain(subdomain: locale.abbreviation) %>
+          <%= link_to locale.name, url_for_current_path_with_subdomain(subdomain: locale.abbreviation) %>
         </li>
       <% end %>
     </ol>
