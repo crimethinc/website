@@ -120,6 +120,11 @@ class Article < ApplicationRecord
     [page_views, localizations.map(&:page_views)].flatten.sum
   end
 
+  # TEMP: TODO: move to database column and form field
+  def lede
+    content.strip.split("\n").first
+  end
+
   private
 
   def self_localizations

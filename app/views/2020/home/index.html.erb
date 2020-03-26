@@ -1,1 +1,20 @@
-<h1>Homepage content goes here</h1>
+<section>
+  <p>Latest article</p>
+
+  <article>
+    <div class='TEMP' style='max-width: 500px'>
+    <%= render_markdown "[[#{@top_article.image} #{@top_article.image_description}]]" %>
+    </div>
+
+    <%= link_to @top_article.path do %>
+      <h2><%= @top_article.title %></h2>
+      <h3><%= @top_article.subtitle %></h3>
+    <% end %>
+
+    <div>
+      <%= render_markdown @top_article.lede %>
+    </div>
+
+    <p><%= link_to 'KEEP READING →', @top_article.path %></p>
+  </article>
+</section>
