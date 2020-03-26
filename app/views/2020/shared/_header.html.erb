@@ -25,13 +25,12 @@
 
   <hr>
   <div id='languages'>
-    <p><%= tt 'header.languages' %></p>
-
     <ol>
       <% Locales.live.each do |locale| %>
-        <li>
-          <%= link_to locale.name, url_for_current_path_with_subdomain(subdomain: locale.abbreviation) %>
-        </li>
+        <%= tag.li class: locale_nav_item_classes_for(locale) do %>
+          <%= link_to locale.name,
+                      url_for_current_path_with_subdomain(subdomain: locale.abbreviation) %>
+        <% end %>
       <% end %>
     </ol>
   </div>
