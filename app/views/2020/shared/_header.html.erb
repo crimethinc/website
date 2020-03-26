@@ -28,8 +28,10 @@
     <p><%= tt 'header.languages' %></p>
 
     <ol>
-      <% live_locales.each do |locale| %>
-        <li><%= link_to locale.name, [:language, locale: locale.name.downcase.gsub(' ', '-')] %></li>
+      <% Locales.live.each do |locale| %>
+        <li>
+          <%= link_to t(:name, locale: locale), url_for_current_path_with_subdomain(subdomain: locale.abbreviation) %>
+        </li>
       <% end %>
     </ol>
   </div>

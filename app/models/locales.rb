@@ -1,9 +1,18 @@
 class Locales
-  SUPPORTED = %i[de en es].freeze
-
   class << self
-    def supported
-      SUPPORTED - [I18n.locale]
+    def live
+      return @live if @live.present?
+
+      @live = Locale.all
+
+      @live.each do |locale|
+        locale.articles_count = Article.live.published.where(locale: locale.abbreviation).count
+      end
+
+      @live = @live
+              .reject { |locale| locale.articles_count.zero? }
+              .sort_by(&:articles_count)
+              .reverse
     end
   end
 end
