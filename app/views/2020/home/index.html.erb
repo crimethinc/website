@@ -31,7 +31,7 @@
         <%= image_tag article.image, style: 'max-width: 200px' %>
 
         <p>
-          <% article.categories.each do |category|  %>
+          <% article.categories.each do |category| %>
             <%= link_to category.name, category.path %>
           <% end %>
         </p>
