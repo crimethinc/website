@@ -1,18 +1,16 @@
 class Locales
   class << self
     def live
-      return @live if @live.present?
+      locales = Locale.all
 
-      @live = Locale.all
-
-      @live.each do |locale|
+      locales.each do |locale|
         locale.articles_count = Article.live.published.where(locale: locale.abbreviation).count
       end
 
-      @live = @live
-              .reject { |locale| locale.articles_count.zero? }
-              .sort_by(&:articles_count)
-              .reverse
+      locales
+        .reject { |locale| locale.articles_count.zero? }
+        .sort_by(&:articles_count)
+        .reverse
     end
   end
 end
