@@ -21,7 +21,7 @@
 
   <div id='languages' style='display: none;'>
     <ol>
-      <% Locales.live.each do |locale| %>
+      <% Locale.live.each do |locale| %>
         <%= tag.li class: locale_nav_item_classes_for(locale) do %>
           <%= link_to locale.name,
                       url_for_current_path_with_subdomain(subdomain: locale.abbreviation) %>

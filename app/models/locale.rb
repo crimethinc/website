@@ -20,6 +20,19 @@ class Locale < ApplicationRecord
     def english?
       I18n.locale == :en
     end
+
+    def live
+      locales = all
+
+      locales.each do |locale|
+        locale.articles_count = Article.live.published.where(locale: locale.abbreviation).count
+      end
+
+      locales
+        .reject { |locale| locale.articles_count.zero? }
+        .sort_by(&:articles_count)
+        .reverse
+    end
   end
 
   def title
