@@ -1,3 +1,4 @@
+<!-- Latest article -->
 <section>
   <p>Latest article</p>
 
@@ -18,3 +19,50 @@
     <p><%= link_to 'KEEP READING →', @top_article.path %></p>
   </article>
 </section>
+<!-- /Latest article -->
+
+<!-- Recent articles -->
+<section>
+  <p>Recent articles</p>
+
+  <ol>
+    <% @recent_articles.each do |article| %>
+      <li>
+        <%= image_tag article.image, style: 'max-width: 200px' %>
+
+        <p>
+          <% article.categories.each do |category|  %>
+            <%= link_to category.name, category.path %>
+          <% end %>
+        </p>
+
+        <%= link_to article.path do %>
+          <b><%= article.title %></b><br>
+          <%= article.subtitle %>
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+
+  <p><%= link_to_next_page @articles, 'More articles →' %></p>
+</section>
+<!-- /Recent articles -->
+
+<!-- Previous articles -->
+<section>
+  <p>Previous articles</p>
+
+  <ol>
+    <% @previous_articles.each do |article| %>
+      <li>
+        <%= link_to article.path do %>
+          <b><%= article.title %></b><br>
+          <%= article.subtitle %>
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+
+  <p><%= link_to_next_page @articles, 'More articles →' %></p>
+</section>
+<!-- /Previous articles -->
