@@ -43,6 +43,9 @@ module Admin
       @article = Article.new(article_params)
 
       if @article.save
+        # Update article count on this article’s locale
+        update_locale_articles_count
+
         redirect_to [:admin, @article], notice: 'Article was successfully created.'
       else
         render :new
@@ -55,6 +58,9 @@ module Admin
       if @article.update(article_params)
         # Bust the article cache to update list of translations on articles
         @article.localizations.each(&:touch)
+
+        # Update article count on this article’s locale
+        update_locale_articles_count
 
         redirect_to [:admin, @article], notice: 'Article was successfully updated.'
       else
@@ -154,6 +160,18 @@ module Admin
       tz = Time.zone.name
 
       handle_publish_now_situation(permitted_params, time: time, zone: tz) if publish_in_100_years
+    end
+
+    def update_locale_articles_count
+      return unless @article.locale.present?
+
+      locale = Locale.find_by(abbreviation: @article.locale)
+
+      return if locale.blank?
+
+      articles_count = Article.live.published.where(locale: locale.abbreviation).count
+
+      locale.update(articles_count: articles_count)
     end
   end
 end
