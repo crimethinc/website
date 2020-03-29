@@ -22,7 +22,7 @@ class Locale < ApplicationRecord
     end
 
     def live
-      Locale.unscoped.order('articles_count desc, abbreviation asc').where.not(articles_count: 0)
+      Locale.unscoped.order(articles_count: :desc, abbreviation: :asc).where.not(articles_count: 0)
     end
   end
 
