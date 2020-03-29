@@ -29,9 +29,7 @@
     <div class="primary-navigation language-switcher">
       <%= t 'header.languages' %>:
 
-      <% Locales.supported.each do |locale| %>
-        <%= link_to t(:name, locale: locale),
-                    url_for_current_path_with_subdomain(subdomain: locale) %>
+      <% Locale.live.each do |locale| %>
       <% end %>
     </div>
   <% end %>

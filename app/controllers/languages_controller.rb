@@ -4,7 +4,7 @@ class LanguagesController < ApplicationController
   def index
     @html_id = 'page'
     @body_id = 'languages'
-    @locales = live_locales
+    @locales = Locale.live
 
     render "#{Theme.name}/languages/index"
   end

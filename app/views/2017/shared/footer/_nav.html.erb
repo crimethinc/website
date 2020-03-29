@@ -47,7 +47,7 @@
 
       <dt class="nav-label nav-label-languages" id="languages"><%= link_to t("header.languages"), [:languages] %></dt>
       <dd>
-        <% live_locales.each do |locale| %>
+        <% Locale.live.each do |locale| %>
           <%= link_to locale.name, [:language, locale: locale.name.downcase.gsub(' ', '-')] %>
         <% end %>
       </dd>

@@ -8,8 +8,19 @@ class HomeController < ApplicationController
     # Homepage featured article
     @top_article = articles_for_current_page.first if first_page?
 
-    # Feed artciles
-    @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)
+    if Theme.name == '2020'
+      # Feed artciles
+      @articles = articles_for_current_page.page(params[:page]).per(14).padding(1)
+
+      # Recent article
+      @recent_articles = @articles[0..3]
+
+      # Previous article
+      @previous_articles = @articles[4..15]
+    else
+      # Feed artciles
+      @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)
+    end
 
     render "#{Theme.name}/home/index"
   end
