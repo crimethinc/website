@@ -166,6 +166,9 @@ module Admin
       return unless @article.locale.present?
 
       locale = Locale.find_by(abbreviation: @article.locale)
+
+      return if locale.blank?
+
       articles_count = Article.live.published.where(locale: locale.abbreviation).count
 
       locale.update(articles_count: articles_count)
