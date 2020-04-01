@@ -19,6 +19,7 @@ class Article < ApplicationRecord
   validates :summary, length: { maximum: 200 }
 
   before_save :update_or_create_redirect
+  after_save  :update_locale_articles_count
 
   default_scope { order(published_at: :desc) }
 
@@ -158,5 +159,16 @@ class Article < ApplicationRecord
     elsif publication_status == 'published'
       Redirect.create(source_path: '/' + short_path, target_path: path, article_id: id)
     end
+  end
+
+  def update_locale_articles_count
+    return if locale.blank?
+
+    article_locale = Locale.find_by(abbreviation: locale)
+
+    return if article_locale.blank?
+
+    articles_count = Article.live.published.where(locale: article_locale.abbreviation).count
+    article_locale.update(articles_count: articles_count)
   end
 end
