@@ -22,16 +22,7 @@ class Locale < ApplicationRecord
     end
 
     def live
-      locales = all
-
-      locales.each do |locale|
-        locale.articles_count = Article.live.published.where(locale: locale.abbreviation).count
-      end
-
-      locales
-        .reject { |locale| locale.articles_count.zero? }
-        .sort_by(&:articles_count)
-        .reverse
+      Locale.unscoped.order(articles_count: :desc, abbreviation: :asc).where.not(articles_count: 0)
     end
   end
 
