@@ -62,7 +62,7 @@ module Admin
           temp_file.write uploaded_word_doc.read
 
           word_doc_content   = File.read temp_file.path
-          html_from_word_doc = PandocRuby.convert(word_doc_content, from: :docx, to: :html)
+          html_from_word_doc = PandocRuby.convert word_doc_content, from: :docx, to: :html
           markdown_from_html = ReverseMarkdown.convert html_from_word_doc
           markdown_from_html = markdown_from_html.strip.prepend("\n").gsub("\n**", "\n# **").strip
 
