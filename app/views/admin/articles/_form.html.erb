@@ -17,6 +17,10 @@
     <%= render "admin/form_errors", thing: @article %>
   </div>
 
+  <div class="col-12">
+    <%= form.file_field :word_doc %>
+  </div>
+
   <section class="col-12 col-md-9">
     <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
     <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
