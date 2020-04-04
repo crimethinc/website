@@ -1,25 +1,46 @@
+<!-- TEMP: for development only -->
+<style>
+  section {
+    background: #efefef;
+    margin: 50px 0;
+  }
+</style>
+
 <!-- Latest article -->
 <section>
   <p>Latest article</p>
 
   <article>
-    <div class='TEMP' style='max-width: 500px'>
-    <%= render_markdown "[[#{@top_article.image} #{@top_article.image_description}]]" %>
+    <div class='TEMP-one-half' style='max-width: 500px'>
+      <%= render_markdown "[[#{@top_article.image} #{@top_article.image_description}]]" %>
     </div>
 
-    <%= link_to @top_article.path do %>
-      <h2><%= @top_article.title %></h2>
-      <h3><%= @top_article.subtitle %></h3>
-    <% end %>
+    <div class="TEMP-one-half">
+      <%= link_to @top_article.path do %>
+        <h2><%= @top_article.title %></h2>
+        <h3><%= @top_article.subtitle %></h3>
+      <% end %>
+      <div>
+        <%= render_markdown @top_article.lede %>
+      </div>
 
-    <div>
-      <%= render_markdown @top_article.lede %>
+      <p><%= link_to 'KEEP READING →', @top_article.path %></p>
     </div>
-
-    <p><%= link_to 'KEEP READING →', @top_article.path %></p>
   </article>
 </section>
 <!-- /Latest article -->
+
+<!-- Latest and recent podcast episodes -->
+<section>
+  <div class="TEMP-one-half">
+    <p>Latest podcast episode</p>
+  </div>
+
+  <div class="TEMP-one-half">
+    <p>Recent podcast episodes</p>
+  </div>
+</section>
+<!-- /Latest and recent podcast episodes -->
 
 <!-- Recent articles -->
 <section>
