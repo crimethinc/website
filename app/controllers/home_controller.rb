@@ -35,6 +35,9 @@ class HomeController < ApplicationController
         Zine.all.sample,
         Poster.all.sample
       ]
+
+      # Ex-Workers’ Collection
+      @ex_workers_collection = Article.limit(5)[3..4]
     else
       # Feed artciles
       @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)

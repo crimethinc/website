@@ -5,26 +5,10 @@
 <div class="container">
 
   <!-- Latest article -->
+  <h1><%= link_to "Latest Article", @latest_article.path %></h1>
+
   <section>
-    <h1><%= link_to "Latest Article", @latest_article.path %></h1>
-
-    <article class="row">
-      <div class='column column-50'>
-        <%= render_markdown "[[#{@latest_article.image} #{@latest_article.image_description}]]" %>
-      </div><!-- /.column.column-50 -->
-
-      <div class="column column-50">
-        <%= link_to @latest_article.path do %>
-          <h2><%= @latest_article.title %></h2>
-          <h3><%= @latest_article.subtitle %></h3>
-        <% end %>
-        <div>
-          <%= render_markdown @latest_article.lede %>
-        </div><!-- /.column.column-50 -->
-
-        <p><%= link_to 'KEEP READING →', @latest_article.path %></p>
-      </div><!-- /.row -->
-    </article>
+    <%= render_themed 'home/sections/article', article: @latest_article %>
   </section>
   <!-- /Latest article -->
 
@@ -159,6 +143,16 @@
     </div><!-- /.row -->
   </section>
   <!-- /Latest books -->
+
+  <!-- Ex-Workers’ Collection -->
+  <section>
+    <h1>Ex-Workers’ Collection</h1>
+
+    <% @ex_workers_collection.each do |pick| %>
+      <%= render_themed 'home/sections/article', article: pick %>
+    <% end %>
+  </section>
+  <!-- /Ex-Workers’ Collection -->
 
   <!-- Selected tools -->
   <section>
