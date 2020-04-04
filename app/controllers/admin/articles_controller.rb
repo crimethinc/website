@@ -53,19 +53,27 @@ module Admin
       # TEMP: Spike to explore .docx uploads for article content
       #       This will get moved out to its own object
       if params[:article][:word_doc].present?
+        # Create a temp file in tmp/
         prefix = "article-#{@article.id}-uploaded"
         suffix = '.docx'
         temp_file = Tempfile.new [prefix, suffix], "#{Rails.root}/tmp", encoding: 'ascii-8bit'
 
         begin
+          # Write the uploaded file contents into the temp file
           uploaded_word_doc = params[:article][:word_doc]
           temp_file.write uploaded_word_doc.read
 
+          # Convert the temp file to HTML first to make for better conversion to Markdown
           word_doc_content   = File.read temp_file.path
           html_from_word_doc = PandocRuby.convert word_doc_content, from: :docx, to: :html
+
+          # Convert using ReverseMarkdown because it does a better job than pandoc
           markdown_from_html = ReverseMarkdown.convert html_from_word_doc
+
+          # Groom the markdown a bit to be easier for author to work with
           markdown_from_html = markdown_from_html.strip.prepend("\n").gsub("\n**", "\n# **").strip
 
+          # Populate Aricle#content with the markdown
           params[:article][:content] = markdown_from_html
         ensure
           # Delete the temp file
