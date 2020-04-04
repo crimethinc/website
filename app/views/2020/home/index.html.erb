@@ -10,7 +10,7 @@
 
   <!-- Latest article -->
   <section>
-    <p>Latest article</p>
+    <h1>Latest article</h1>
 
     <article class="row">
       <div class='column column-50'>
@@ -35,13 +35,41 @@
   <!-- Latest and recent podcast episodes -->
   <section class="row">
     <div class="column column-50">
-      <p>Latest podcast episode</p>
-      <%= @latest_podcast_episode.inspect %>
-    </div>
+      <h1>Latest podcast episode</h1>
+
+      <div class="row">
+        <div class="column column-25">
+          <%= link_to image_tag(@latest_podcast_episode.image), @latest_podcast_episode.path %>
+        </div><!-- /.column.column-25 -->
+
+        <div class="column column-75">
+          <p>
+            <%= @latest_podcast_episode.podcast.title %>
+            #<%= @latest_podcast_episode.episode_number %>
+            —
+            <%= display_date @latest_podcast_episode.published_at %>
+          </p>
+
+          <h2><%= @latest_podcast_episode.title %></h2>
+          <h3><%= @latest_podcast_episode.subtitle %></h3>
+
+          <%= link_to "Listen to episode →", @latest_podcast_episode.path %>
+        </div><!-- /.column.column-75 -->
+      </div><!-- /.row -->
+    </div><!-- /.column.column-50 -->
 
     <div class="column column-50">
-      <p>Recent podcast episodes</p>
-      <%= @recent_podcast_episode.inspect %>
+      <h1>Recent podcast episodes</h1>
+
+      <div class="row">
+        <% @recent_podcast_episodes.each do |podcast_episode| %>
+          <div class="column column-25">
+            <%= link_to image_tag(podcast_episode.image), podcast_episode.path %>
+          </div><!-- /.column.column-25 -->
+        <% end %>
+      </div>
+
+      <%= link_to "More podcast episodes →", [:podcasts] %>
     </div>
   </section>
   <!-- /Latest and recent podcast episodes -->
@@ -49,7 +77,7 @@
   <section class="row">
     <!-- Recent articles -->
     <div class="column column-50">
-      <p>Recent articles</p>
+      <h1>Recent articles</h1>
 
       <ol>
         <% @recent_articles.each do |article| %>
