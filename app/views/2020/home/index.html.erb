@@ -6,7 +6,7 @@
 
   <!-- Latest article -->
   <section>
-    <h1><%= link_to "Latest article", @latest_article.path %></h1>
+    <h1><%= link_to "Latest Article", @latest_article.path %></h1>
 
     <article class="row">
       <div class='column column-50'>
@@ -31,7 +31,7 @@
   <!-- Latest and recent podcast episodes -->
   <section class="row">
     <div class="column column-50">
-      <h1><%= link_to "Latest podcast episode", @latest_podcast_episode.path %></h1>
+      <h1><%= link_to "Latest Podcast Episode", @latest_podcast_episode.path %></h1>
 
       <div class="row">
         <div class="column column-25">
@@ -57,7 +57,7 @@
     </div><!-- /.column.column-50 -->
 
     <div class="column column-50">
-      <h1><%= link_to "Recent podcast episodes", [:podcasts] %></h1>
+      <h1><%= link_to "Recent Podcast Episodes", [:podcasts] %></h1>
 
       <div class="row">
         <% @recent_podcast_episodes.each do |podcast_episode| %>
@@ -76,7 +76,7 @@
   <section class="row">
     <!-- Recent articles -->
     <div class="column column-50">
-      <h1><%= link_to_next_page @articles, 'Recent articles' %></h1>
+      <h1><%= link_to_next_page @articles, 'Recent Articles' %></h1>
 
       <ol>
         <% @recent_articles.each do |article| %>
@@ -109,7 +109,7 @@
 
     <!-- Previous articles -->
     <div class="column column-50">
-      <h1><%= link_to_next_page @articles, 'Previous articles' %></h1>
+      <h1><%= link_to_next_page @articles, 'Previous Articles' %></h1>
 
       <ol>
         <% @previous_articles.each do |article| %>
@@ -130,7 +130,7 @@
 
   <!-- Latest books -->
   <section>
-    <h1><%= link_to 'Latest books', [:books] %></h1>
+    <h1><%= link_to 'Latest Books', [:books] %></h1>
 
     <div class="row">
       <% @latest_books.each do |book| %>
@@ -160,6 +160,38 @@
   </section>
   <!-- /Latest books -->
 
+  <!-- Selected tools -->
+  <section>
+    <div class="row">
+      <div class='column column-50'>
+        <h1><%= link_to 'Selected Tools', [:tools] %></h1>
+      </div>
 
+      <div class='column column-50'>
+        <%= link_to 'More Tools →', [:tools] %>
+      </div>
+    </div>
+
+    <div class="row">
+      <% @selected_tools.each do |tool| %>
+        <div class='column column-25'>
+          <%= link_to image_tag(tool.image), tool.path %>
+
+          <p>
+            <%= link_to tool.class, [tool.class.to_s.downcase.pluralize] %>
+          </p>
+
+          <%= link_to tool.path do %>
+            <h2><%= tool.title %></h2>
+
+            <% if tool.subtitle.present? %>
+              <h3><%= tool.subtitle %></h3>
+            <% end %>
+          <% end %>
+        </div><!-- /.column.column-25 -->
+      <% end %>
+    </div><!-- /.row -->
+  </section>
+  <!-- /Selected tools -->
 
 </div><!-- /.container -->

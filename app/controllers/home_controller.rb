@@ -27,6 +27,14 @@ class HomeController < ApplicationController
 
       # Latest books
       @latest_books = Book.where title: LATEST_BOOK_TITLES
+
+      # Selected tools
+      @selected_tools = [
+        Sticker.order('RANDOM()').first,
+        Poster.order('RANDOM()').first,
+        Zine.order('RANDOM()').first,
+        Poster.order('RANDOM()').first
+      ]
     else
       # Feed artciles
       @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)
