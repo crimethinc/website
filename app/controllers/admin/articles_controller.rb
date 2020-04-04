@@ -93,7 +93,7 @@ module Admin
         html_from_word_doc = PandocRuby.convert word_doc_content, from: :docx, to: :html
 
         # Convert using ReverseMarkdown because it does a better job than pandoc
-        markdown_from_html = ReverseMarkdown.convert html_from_word_doc
+        markdown_from_html = ReverseMarkdown.convert html_from_word_doc, github_flavored: true
 
         # Groom the markdown a bit to be easier for author to work with
         markdown_from_html = markdown_from_html.strip.prepend("\n").gsub("\n**", "\n# **").strip
