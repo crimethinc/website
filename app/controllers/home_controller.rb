@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     articles_for_current_page = Article.includes(:categories).english.live.published.root
 
     # Homepage featured article
-    @top_article = articles_for_current_page.first if first_page?
+    @latest_article = articles_for_current_page.first if first_page?
 
     if Theme.name == '2020'
       # Feed artciles, needed for pagination
