@@ -50,6 +50,31 @@ module Admin
     end
 
     def update
+      # TEMP: Spike to explore .docx uploads for article content
+      #       This will get moved out to its own object
+      if params[:article][:word_doc].present?
+        prefix = "article-#{@article.id}-uploaded"
+        suffix = '.docx'
+        temp_file = Tempfile.new [prefix, suffix], "#{Rails.root}/tmp", encoding: 'ascii-8bit'
+
+        begin
+          uploaded_word_doc = params[:article][:word_doc]
+          temp_file.write uploaded_word_doc.read
+
+          word_doc_content   = File.read temp_file.path
+          html_from_word_doc = PandocRuby.convert(word_doc_content, from: :docx, to: :html)
+          markdown_from_html = ReverseMarkdown.convert html_from_word_doc
+          markdown_from_html = markdown_from_html.strip.prepend("\n").gsub("\n**", "\n# **").strip
+
+          params[:article][:content] = markdown_from_html
+        ensure
+          # Delete the temp file
+          temp_file.close
+          temp_file.unlink
+        end
+      end
+      # /TEMP
+
       @article.tags.destroy_all
 
       if @article.update(article_params)
@@ -115,7 +140,7 @@ module Admin
         :draft_code, :summary, :published_at, :tags, :collection_id,
         :short_path, :image, :css, :image_description, :image_mobile,
         :published_at_tz, :locale, :canonical_id, :publication_status,
-        category_ids: []
+        :word_doc, category_ids: []
       )
 
       # if the `publish_now` submit button was used, we should see
