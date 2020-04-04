@@ -21,7 +21,6 @@
     <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
     <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
 
-
     <!-- TEMP: move to partial -->
     <%# TEMP: enable for alpha tolerant users, only on unpublished articles %>
     <% if (1..4).include?(current_user.id) && @article.draft? %>
@@ -39,7 +38,6 @@
       </fieldset>
     <% end %>
     <!-- /TEMP -->
-
 
     <%= tag.div dir: html_dir do %>
       <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
