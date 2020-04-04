@@ -4,7 +4,9 @@ tap 'heroku/brew'
 brew 'rbenv' unless system 'command -v ruby-install >/dev/null 2>&1'
 
 brew 'heroku'
+brew 'pandoc'
 brew 'postgresql'
 brew 'xpdf'
 brew 'yamllint'
+
 cask 'chromedriver'
