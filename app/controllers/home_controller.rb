@@ -30,10 +30,10 @@ class HomeController < ApplicationController
 
       # Selected tools
       @selected_tools = [
-        Sticker.order('RANDOM()').first,
-        Poster.order('RANDOM()').first,
-        Zine.order('RANDOM()').first,
-        Poster.order('RANDOM()').first
+        Sticker.all.sample,
+        Poster.all.sample,
+        Zine.all.sample,
+        Poster.all.sample
       ]
     else
       # Feed artciles
