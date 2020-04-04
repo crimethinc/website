@@ -74,6 +74,7 @@
   </section>
   <!-- /Latest and recent podcast episodes -->
 
+  <!-- Recent and previous articles -->
   <section class="row">
     <!-- Recent articles -->
     <div class="column column-50">
@@ -82,18 +83,24 @@
       <ol>
         <% @recent_articles.each do |article| %>
           <li>
-            <%= image_tag article.image, style: 'max-width: 200px' %>
+            <div class="row">
+              <div class="column column-33">
+                <%= image_tag article.image, style: 'max-width: 200px' %>
+              </div>
 
-            <p>
-              <% article.categories.each do |category| %>
-                <%= link_to category.name, category.path %>
-              <% end %>
-            </p>
+              <div class="column column-66">
+                <p>
+                  <% article.categories.each do |category| %>
+                    <%= link_to category.name, category.path %>
+                  <% end %>
+                </p>
 
-            <%= link_to article.path do %>
-              <b><%= article.title %></b><br>
-              <%= article.subtitle %>
-            <% end %>
+                <%= link_to article.path do %>
+                  <b><%= article.title %></b><br>
+                  <%= article.subtitle %>
+                <% end %>
+              </div>
+            </div>
           </li>
         <% end %>
       </ol>
@@ -104,7 +111,7 @@
 
     <!-- Previous articles -->
     <div class="column column-50">
-      <p>Previous articles</p>
+      <h1>Previous articles</h1>
 
       <ol>
         <% @previous_articles.each do |article| %>
@@ -121,5 +128,6 @@
     </div>
     <!-- /Previous articles -->
   </section>
+  <!-- /Recent and previous articles -->
 
 </div><!-- /.container -->
