@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_29_192638) do
+ActiveRecord::Schema.define(version: 2020_04_04_041023) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "articles", id: :serial, force: :cascade do |t|
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_12_29_192638) do
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.text "word_doc"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
   end
