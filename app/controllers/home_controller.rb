@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  LATEST_BOOK_TITLES = ['From Democracy to Freedom', 'No Wall They Can Build'].map(&:freeze).freeze
+
   def index
     @body_id = 'home'
     @homepage = true
@@ -24,7 +26,7 @@ class HomeController < ApplicationController
       @recent_podcast_episodes = podcast_episodes[1..4]
 
       # Latest books
-      @latest_books = Book.published.limit(2)
+      @latest_books = Book.where title: LATEST_BOOK_TITLES
     else
       # Feed artciles
       @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)
