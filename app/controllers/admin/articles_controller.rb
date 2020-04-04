@@ -90,7 +90,7 @@ module Admin
 
         # Convert the temp file to HTML first to make for better conversion to Markdown
         word_doc_content   = File.read temp_file.path
-        html_from_word_doc = PandocRuby.docx(word_doc_content).to_html
+        html_from_word_doc = PandocRuby.convert word_doc_content, from: :docx, to: :html
 
         # Convert using ReverseMarkdown because it does a better job than pandoc
         markdown_from_html = ReverseMarkdown.convert html_from_word_doc
