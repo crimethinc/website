@@ -1,3 +1,13 @@
+# TEMP: TODO
+
+- [ ] Confirm pandoc installs on Heroku
+- [ ] Confirm pandoc works
+- [ ] Confirm pandoc can get called from ruby
+- [ ] Confirm pandoc converts word to html
+- [ ] Confirm reverse_markdown converts word to html
+- [ ] Read upload file, ensure that it's a word file
+- [ ] Read upload word file
+
 # CrimethInc. website
 
 Ruby on Rails app that powers https://crimethinc.com
