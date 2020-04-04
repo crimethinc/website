@@ -12,3 +12,8 @@ input[type=checkbox] {
   padding-bottom: 1em;
   border-bottom: $border-size-xsmall solid #eee;
 }
+
+input[type="file"]::-webkit-file-upload-button {
+  @extend .btn;
+  @extend .btn-outline-primary;
+}

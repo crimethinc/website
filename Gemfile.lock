@@ -215,6 +215,7 @@ GEM
     overcommit (0.52.1)
       childprocess (>= 0.6.3, < 4)
       iniparse (~> 1.4)
+    pandoc-ruby (2.1.4)
     parallel (1.19.1)
     parser (2.7.0.5)
       ast (~> 2.4.0)
@@ -276,6 +277,8 @@ GEM
     regexp_parser (1.7.0)
     request_store (1.5.0)
       rack (>= 1.4)
+    reverse_markdown (2.0.0)
+      nokogiri
     rexml (3.2.4)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
@@ -410,6 +413,7 @@ DEPENDENCIES
   memory_profiler
   nokogiri
   overcommit
+  pandoc-ruby
   pg
   puma
   rack-attack
@@ -420,6 +424,7 @@ DEPENDENCIES
   redis
   redis-store
   referral
+  reverse_markdown
   rspec-rails
   rubocop
   rubocop-performance

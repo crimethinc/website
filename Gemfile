@@ -25,11 +25,13 @@ gem 'uglifier'
 gem 'jbuilder'
 
 # text utilities
-gem 'kramdown'       # for Markdown processing
-gem 'markdown_media' # for [[ media embeds ]]
-gem 'rubypants'      # for smart quotes
-gem 'sterile'        # for slugs
-gem 'stringex'       # for Markdown header IDs processing
+gem 'kramdown'         # for Markdown processing
+gem 'markdown_media'   # for [[ media embeds ]]
+gem 'pandoc-ruby'      # for Word to HTML conversion
+gem 'reverse_markdown' # for HTML to Markdown conversion
+gem 'rubypants'        # for smart quotes
+gem 'sterile'          # for slugs
+gem 'stringex'         # for Markdown header IDs processing
 
 # auth
 gem 'bcrypt'

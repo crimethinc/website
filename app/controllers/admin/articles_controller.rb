@@ -41,6 +41,7 @@ module Admin
 
     def create
       @article = Article.new(article_params)
+      populate_content_from_docx_upload!
 
       if @article.save
         redirect_to [:admin, @article], notice: 'Article was successfully created.'
@@ -50,6 +51,7 @@ module Admin
     end
 
     def update
+      populate_content_from_docx_upload!
       @article.tags.destroy_all
 
       if @article.update(article_params)
@@ -70,6 +72,42 @@ module Admin
     end
 
     private
+
+    def populate_content_from_docx_upload!
+      # TEMP: Spike to explore .docx uploads for article content
+      #       This will get moved out to its own object
+      return unless params[:article][:word_doc].present?
+
+      # Create a temp file in tmp/
+      prefix = "article-#{@article.id}-uploaded"
+      suffix = '.docx'
+      temp_file = Tempfile.new [prefix, suffix], "#{Rails.root}/tmp", encoding: 'ascii-8bit'
+
+      begin
+        # Write the uploaded file contents into the temp file
+        uploaded_word_doc = params[:article][:word_doc]
+        temp_file.write uploaded_word_doc.read
+
+        # Convert the temp file to HTML first to make for better conversion to Markdown
+        word_doc_content   = File.read temp_file.path
+        html_from_word_doc = PandocRuby.convert word_doc_content, from: :docx, to: :html
+
+        # Convert using ReverseMarkdown because it does a better job than pandoc
+        markdown_from_html = ReverseMarkdown.convert html_from_word_doc, github_flavored: true
+
+        # Groom the markdown a bit to be easier for author to work with
+        markdown_from_html = markdown_from_html.strip.prepend("\n").gsub("\n**", "\n# **").strip
+
+        # Populate Aricle#content with the markdown
+        params[:article][:content] = markdown_from_html
+        @article.content = markdown_from_html
+      ensure
+        # Delete the temp file
+        temp_file.close
+        temp_file.unlink
+      end
+      # /TEMP
+    end
 
     def prepare_article_for_translation
       # Prefill and clean article for translation
@@ -115,7 +153,7 @@ module Admin
         :draft_code, :summary, :published_at, :tags, :collection_id,
         :short_path, :image, :css, :image_description, :image_mobile,
         :published_at_tz, :locale, :canonical_id, :publication_status,
-        category_ids: []
+        :word_doc, category_ids: []
       )
 
       # if the `publish_now` submit button was used, we should see
