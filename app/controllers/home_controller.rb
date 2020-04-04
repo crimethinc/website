@@ -22,6 +22,9 @@ class HomeController < ApplicationController
       podcast_episodes         = Episode.live.limit(5)
       @latest_podcast_episode  = podcast_episodes.first
       @recent_podcast_episodes = podcast_episodes[1..4]
+
+      # Latest books
+      @latest_books = Book.published.limit(2)
     else
       # Feed artciles
       @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)

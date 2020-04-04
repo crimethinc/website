@@ -1,9 +1,5 @@
 <!-- TEMP: for development only -->
-<style>
-  .row {
-    margin: 50px 0;
-  }
-</style>
+<style> .row { margin: 50px 0; } </style>
 <!-- /TEMP: for development only -->
 
 <div class="container">
@@ -15,7 +11,7 @@
     <article class="row">
       <div class='column column-50'>
         <%= render_markdown "[[#{@top_article.image} #{@top_article.image_description}]]" %>
-      </div>
+      </div><!-- /.column.column-50 -->
 
       <div class="column column-50">
         <%= link_to @top_article.path do %>
@@ -24,10 +20,10 @@
         <% end %>
         <div>
           <%= render_markdown @top_article.lede %>
-        </div>
+        </div><!-- /.column.column-50 -->
 
         <p><%= link_to 'KEEP READING →', @top_article.path %></p>
-      </div>
+      </div><!-- /.row -->
     </article>
   </section>
   <!-- /Latest article -->
@@ -67,10 +63,10 @@
             <%= link_to image_tag(podcast_episode.image), podcast_episode.path %>
           </div><!-- /.column.column-25 -->
         <% end %>
-      </div>
+      </div><!-- /.row -->
 
       <%= link_to "More podcast episodes →", [:podcasts] %>
-    </div>
+    </div><!-- /.column.column-50 -->
   </section>
   <!-- /Latest and recent podcast episodes -->
 
@@ -86,7 +82,7 @@
             <div class="row">
               <div class="column column-33">
                 <%= image_tag article.image, style: 'max-width: 200px' %>
-              </div>
+              </div><!-- /.column.column-33 -->
 
               <div class="column column-66">
                 <p>
@@ -99,14 +95,14 @@
                   <b><%= article.title %></b><br>
                   <%= article.subtitle %>
                 <% end %>
-              </div>
-            </div>
+              </div><!-- /.column.column-66 -->
+            </div><!-- /.row -->
           </li>
         <% end %>
       </ol>
 
       <p><%= link_to_next_page @articles, 'More articles →' %></p>
-    </div>
+    </div><!-- /.column.column-50 -->
     <!-- /Recent articles -->
 
     <!-- Previous articles -->
@@ -125,9 +121,40 @@
       </ol>
 
       <p><%= link_to_next_page @articles, 'More articles →' %></p>
-    </div>
+    </div><!-- /.column.column-50 -->
     <!-- /Previous articles -->
   </section>
   <!-- /Recent and previous articles -->
+
+  <!-- Latest books -->
+  <section>
+    <h1>Latest books</h1>
+
+    <div class="row">
+      <!-- <%= @latest_books.first.inspect %> -->
+
+      <% @latest_books.each do |book| %>
+        <div class='column column-50'>
+
+          <div class='row'>
+            <div class='column column-25'>
+              <%= image_tag book.image %>
+            </div><!-- /.column.column-25 -->
+
+            <div class='column column-75'>
+              <h2><%= book.title %></h2>
+              <h3><%= book.subtitle %></h3>
+              <%= render_markdown book.summary %>
+
+              <%= link_to "Learn more →", book.path %>
+            </div><!-- /.column.column-75 -->
+          </div><!-- /.row -->
+
+        </div><!-- /.column.column-50 -->
+      <% end %>
+
+    </div><!-- /.row -->
+  </section>
+  <!-- /Latest books -->
 
 </div><!-- /.container -->
