@@ -17,6 +17,12 @@ class HomeController < ApplicationController
 
       # Previous article
       @previous_articles = @articles[4..15]
+
+      # Latest and recent podcast episodes
+      podcast_episodes = Episode.live.limit(5)
+      @latest_podcast_episode = podcast_episodes.first
+      @recent_podcast_episode = podcast_episodes[1..4]
+
     else
       # Feed artciles
       @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)

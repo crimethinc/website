@@ -1,21 +1,15 @@
-<!-- TEMP: for development only -->
-<style>
-  section {
-    background: #efefef;
-    margin: 50px 0;
-  }
-</style>
+<div class="container">
 
 <!-- Latest article -->
 <section>
   <p>Latest article</p>
 
-  <article>
-    <div class='TEMP-one-half' style='max-width: 500px'>
+  <article class="row">
+    <div class='column column-50'>
       <%= render_markdown "[[#{@top_article.image} #{@top_article.image_description}]]" %>
     </div>
 
-    <div class="TEMP-one-half">
+    <div class="column column-50">
       <%= link_to @top_article.path do %>
         <h2><%= @top_article.title %></h2>
         <h3><%= @top_article.subtitle %></h3>
@@ -31,59 +25,65 @@
 <!-- /Latest article -->
 
 <!-- Latest and recent podcast episodes -->
-<section>
-  <div class="TEMP-one-half">
+<section class="row">
+  <div class="column column-50">
     <p>Latest podcast episode</p>
+    <%= @latest_podcast_episode.inspect %>
   </div>
 
-  <div class="TEMP-one-half">
+  <div class="column column-50">
     <p>Recent podcast episodes</p>
+    <%= @recent_podcast_episode.inspect %>
   </div>
 </section>
 <!-- /Latest and recent podcast episodes -->
 
-<!-- Recent articles -->
-<section>
-  <p>Recent articles</p>
+<section class="row">
+  <!-- Recent articles -->
+  <div class="column column-50">
+    <p>Recent articles</p>
 
-  <ol>
-    <% @recent_articles.each do |article| %>
-      <li>
-        <%= image_tag article.image, style: 'max-width: 200px' %>
+    <ol>
+      <% @recent_articles.each do |article| %>
+        <li>
+          <%= image_tag article.image, style: 'max-width: 200px' %>
 
-        <p>
-          <% article.categories.each do |category| %>
-            <%= link_to category.name, category.path %>
+          <p>
+            <% article.categories.each do |category| %>
+              <%= link_to category.name, category.path %>
+            <% end %>
+          </p>
+
+          <%= link_to article.path do %>
+            <b><%= article.title %></b><br>
+            <%= article.subtitle %>
           <% end %>
-        </p>
+        </li>
+      <% end %>
+    </ol>
 
-        <%= link_to article.path do %>
-          <b><%= article.title %></b><br>
-          <%= article.subtitle %>
-        <% end %>
-      </li>
-    <% end %>
-  </ol>
+    <p><%= link_to_next_page @articles, 'More articles →' %></p>
+  </div>
+  <!-- /Recent articles -->
 
-  <p><%= link_to_next_page @articles, 'More articles →' %></p>
+  <!-- Previous articles -->
+  <div class="column column-50">
+    <p>Previous articles</p>
+
+    <ol>
+      <% @previous_articles.each do |article| %>
+        <li>
+          <%= link_to article.path do %>
+            <b><%= article.title %></b><br>
+            <%= article.subtitle %>
+          <% end %>
+        </li>
+      <% end %>
+    </ol>
+
+    <p><%= link_to_next_page @articles, 'More articles →' %></p>
+  </div>
+  <!-- /Previous articles -->
 </section>
-<!-- /Recent articles -->
 
-<!-- Previous articles -->
-<section>
-  <p>Previous articles</p>
-
-  <ol>
-    <% @previous_articles.each do |article| %>
-      <li>
-        <%= link_to article.path do %>
-          <b><%= article.title %></b><br>
-          <%= article.subtitle %>
-        <% end %>
-      </li>
-    <% end %>
-  </ol>
-
-  <p><%= link_to_next_page @articles, 'More articles →' %></p>
-</section>
-<!-- /Previous articles -->
+</div><!-- /.container -->
