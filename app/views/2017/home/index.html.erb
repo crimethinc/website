@@ -9,8 +9,8 @@
     <span class="p-author"><%= t("site_author") %></span>
   </span>
 
-  <% if @top_article.present? %>
-    <%= render_themed "article_archives/card", article: @top_article.preferred_localization %>
+  <% if @latest_article.present? %>
+    <%= render_themed "article_archives/card", article: @latest_article.preferred_localization %>
   <% end %>
 
   <% @articles.in_groups_of(2).each do |row| %>
