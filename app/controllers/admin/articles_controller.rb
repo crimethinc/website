@@ -51,9 +51,8 @@ module Admin
     end
 
     def update
-      @article.tags.destroy_all
-
       populate_content_from_docx_upload!
+      @article.tags.destroy_all
 
       if @article.update(article_params)
         # Bust the article cache to update list of translations on articles
