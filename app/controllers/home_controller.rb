@@ -37,7 +37,7 @@ class HomeController < ApplicationController
       ]
 
       # Ex-Workers’ Collection
-      @ex_workers_collection = Article.limit(5)[3..4]
+      @ex_workers_collection = Article.featured
     else
       # Feed artciles
       @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)

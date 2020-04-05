@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_04_041023) do
+ActiveRecord::Schema.define(version: 2020_04_04_221214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_041023) do
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.text "word_doc"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
   end

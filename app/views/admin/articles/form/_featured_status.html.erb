@@ -1,0 +1,11 @@
+<% if @article.published? # TODO: && Theme.name == '2020' %>
+  <div id="featured_status" class="form-group">
+    <%= form.label :featured_status, "Add to Ex-Workers’ Collection" %><br>
+
+    <%= form.radio_button :featured_status, false, class: "sr-only" %>
+    <%= form.label :featured_status_false, 'Not featured', for: "article_featured_status_false" %>
+
+    <%= form.radio_button :featured_status, true, class: "sr-only" %>
+    <%= form.label :featured_status_true, 'Featured', for: "article_featured_status_true" %>
+  </div><!-- #featured_status -->
+<% end %>

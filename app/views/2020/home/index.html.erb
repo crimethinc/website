@@ -149,8 +149,8 @@
     <section>
       <h1>Ex-Workers’ Collection</h1>
 
-      <% @ex_workers_collection.each do |pick| %>
-        <%= render_themed 'home/sections/article', article: pick %>
+      <% @ex_workers_collection.each do |article| %>
+        <%= render_themed 'home/sections/article', article: article %>
       <% end %>
     </section>
   <% end %>

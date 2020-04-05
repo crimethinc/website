@@ -26,6 +26,7 @@ class Article < ApplicationRecord
   scope :last_2_weeks, -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.weeks, Time.now.utc) }
   scope :english,      -> { where(locale: 'en') }
   scope :translation,  -> { where.not(locale: 'en') }
+  scope :featured,     -> { where.not(featured_at: nil) }
 
   def english?
     locale == 'en'
