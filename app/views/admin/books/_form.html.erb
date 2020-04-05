@@ -26,7 +26,7 @@
     </div>
   <% end %>
 
-  <%= render "admin/articles/form/featured_status", form: form, klass: resource.class.to_s.downcase, title: "Add to “Selected Tools” on Homepage" %>
+  <%= render "admin/articles/form/featured_status", form: form, klass: resource.class.to_s.downcase %>
 
   <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
   <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>

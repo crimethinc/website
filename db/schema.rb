@@ -96,6 +96,8 @@ ActiveRecord::Schema.define(version: 2020_04_05_003649) do
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_books_on_canonical_id"
   end
 
