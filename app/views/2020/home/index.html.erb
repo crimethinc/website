@@ -112,12 +112,12 @@
   </section>
   <!-- /Recent and previous articles -->
 
-  <!-- Latest books -->
+  <!-- Featured books -->
   <section>
-    <h1><%= link_to 'Latest Books', [:books] %></h1>
+    <h1><%= link_to 'Featured Books', [:books] %></h1>
 
     <div class="row">
-      <% @latest_books.each do |book| %>
+      <% @featured_books.each do |book| %>
         <div class='column column-50'>
 
           <div class='row'>
@@ -142,7 +142,7 @@
 
     </div><!-- /.row -->
   </section>
-  <!-- /Latest books -->
+  <!-- /Featured books -->
 
   <!-- Ex-Workers’ Collection -->
   <% if @ex_workers_collection.present? %>
@@ -157,37 +157,39 @@
   <!-- /Ex-Workers’ Collection -->
 
   <!-- Selected tools -->
-  <section>
-    <div class="row">
-      <div class='column column-50'>
-        <h1><%= link_to 'Selected Tools', [:tools] %></h1>
+  <% if @selected_tools.present? %>
+    <section>
+      <div class="row">
+        <div class='column column-50'>
+          <h1><%= link_to 'Selected Tools', [:tools] %></h1>
+        </div>
+
+        <div class='column column-50'>
+          <%= link_to 'More Tools →', [:tools] %>
+        </div>
       </div>
 
-      <div class='column column-50'>
-        <%= link_to 'More Tools →', [:tools] %>
-      </div>
-    </div>
+      <div class="row">
+        <% @selected_tools.each do |tool| %>
+          <div class='column column-25'>
+            <%= link_to image_tag(tool.image), tool.path %>
 
-    <div class="row">
-      <% @selected_tools.each do |tool| %>
-        <div class='column column-25'>
-          <%= link_to image_tag(tool.image), tool.path %>
+            <p>
+              <%= link_to tool.class, [tool.class.to_s.downcase.pluralize] %>
+            </p>
 
-          <p>
-            <%= link_to tool.class, [tool.class.to_s.downcase.pluralize] %>
-          </p>
+            <%= link_to tool.path do %>
+              <h2><%= tool.title %></h2>
 
-          <%= link_to tool.path do %>
-            <h2><%= tool.title %></h2>
-
-            <% if tool.subtitle.present? %>
-              <h3><%= tool.subtitle %></h3>
+              <% if tool.subtitle.present? %>
+                <h3><%= tool.subtitle %></h3>
+              <% end %>
             <% end %>
-          <% end %>
-        </div><!-- /.column.column-25 -->
-      <% end %>
-    </div><!-- /.row -->
-  </section>
+          </div><!-- /.column.column-25 -->
+        <% end %>
+      </div><!-- /.row -->
+    </section>
+  <% end %>
   <!-- /Selected tools -->
 
 </div><!-- /.container -->

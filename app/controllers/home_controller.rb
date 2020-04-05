@@ -1,6 +1,4 @@
 class HomeController < ApplicationController
-  LATEST_BOOK_TITLES = ['From Democracy to Freedom', 'No Wall They Can Build'].map(&:freeze).freeze
-
   def index
     @body_id = 'home'
     @homepage = true
@@ -25,8 +23,8 @@ class HomeController < ApplicationController
       @latest_podcast_episode  = podcast_episodes.first
       @recent_podcast_episodes = podcast_episodes[1..4]
 
-      # Latest books
-      @latest_books = Book.where title: LATEST_BOOK_TITLES
+      # Featured books
+      @featured_books = Book.published.featured.limit(2).order(featured_at: :desc)
 
       # Selected tools
       @selected_tools = [
