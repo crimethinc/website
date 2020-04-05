@@ -58,7 +58,8 @@ module Admin
                                      :front_black_and_white_image_present, :back_color_image_present,
                                      :back_black_and_white_image_present, :front_color_download_present,
                                      :front_black_and_white_download_present, :back_color_download_present,
-                                     :back_black_and_white_download_present, :publication_status)
+                                     :back_black_and_white_download_present, :publication_status,
+                                     :featured_status, :featured_at)
     end
   end
 end

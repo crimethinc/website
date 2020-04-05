@@ -33,7 +33,7 @@ class HomeController < ApplicationController
         Sticker.all.sample,
         Poster.all.sample,
         Zine.all.sample,
-        Poster.all.sample
+        Issue.all.sample
       ]
 
       # Ex-Workers’ Collection

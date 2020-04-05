@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_04_221214) do
+ActiveRecord::Schema.define(version: 2020_04_05_003649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -199,6 +199,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_221214) do
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_issues_on_canonical_id"
   end
 
@@ -335,6 +337,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_221214) do
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_posters_on_canonical_id"
   end
 
@@ -377,6 +381,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_221214) do
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
   end
 
@@ -485,6 +491,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_221214) do
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_zines_on_canonical_id"
   end
 

@@ -101,6 +101,7 @@ Rails.application.routes.draw do
   get 'journals',                     to: 'journals#index', as: :journals
   get 'journals/:slug',               to: 'journals#show',  as: :journal
   get 'journals/:slug/:issue_number', to: 'issues#show',    as: :issue
+  get 'journals',                     to: 'journals#index', as: :issues
 
   # Tools
   get 'tools', to: 'tools#about', as: :tools
