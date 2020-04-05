@@ -1,6 +1,7 @@
 module SinglePageTool
   extend ActiveSupport::Concern
   include Tool
+  include Featureable
 
   def image_description
     I18n.t('tools.poster.image_description', title: title)
@@ -28,8 +29,30 @@ module SinglePageTool
   end
 
   def image side: :front, color: :color
-    filename = [slug, '_', side, '_', color, '.', send("#{side}_image_format")].join
-    [asset_base_url_prefix, filename].join('/')
+    if send("#{side}_#{color}_image_present?")
+      filename = [slug, '_', side, '_', color, '.', send("#{side}_image_format")].join
+      return [asset_base_url_prefix, filename].join('/')
+    end
+
+    file_name = []
+    file_name << slug
+    file_name << '_'
+
+    file_name <<
+      if front_color_image_present?
+        'front_color'
+      elsif front_black_and_white_image_present?
+        'front_black_and_white'
+      elsif back_color_image_present?
+        'back_color'
+      elsif back_black_and_white_image_present?
+        'back_black_and_white'
+      end
+
+    file_name << '.'
+    file_name << send("#{side}_image_format")
+
+    [asset_base_url_prefix, file_name.join].join('/')
   end
 
   def front_image

@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   include Post
+  include Featureable
 
   has_one  :redirect, dependent: :destroy
   has_many :taggings, dependent: :destroy, as: :taggable

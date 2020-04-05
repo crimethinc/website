@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_04_041023) do
+ActiveRecord::Schema.define(version: 2020_04_05_003649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_041023) do
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.text "word_doc"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
   end
@@ -94,6 +96,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_041023) do
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_books_on_canonical_id"
   end
 
@@ -197,6 +201,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_041023) do
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_issues_on_canonical_id"
   end
 
@@ -333,6 +339,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_041023) do
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_posters_on_canonical_id"
   end
 
@@ -375,6 +383,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_041023) do
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
   end
 
@@ -483,6 +493,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_041023) do
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "featured_status", default: false
+    t.datetime "featured_at"
     t.index ["canonical_id"], name: "index_zines_on_canonical_id"
   end
 

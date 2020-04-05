@@ -1,0 +1,9 @@
+<div id="featured_status" class="form-group">
+  <%= form.label :featured_status, "Feature this on homepage?" %><br>
+
+  <%= form.radio_button :featured_status, false, class: "sr-only" %>
+  <%= form.label :featured_status_false, 'Not featured', for: "#{klass}_featured_status_false" %>
+
+  <%= form.radio_button :featured_status, true, class: "sr-only" %>
+  <%= form.label :featured_status_true, 'Featured', for: "#{klass}_featured_status_true" %>
+</div><!-- #featured_status -->

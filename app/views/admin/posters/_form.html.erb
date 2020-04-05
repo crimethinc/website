@@ -1,6 +1,8 @@
 <%= form_with(model: [:admin, resource]) do |form| %>
   <%= render "admin/form_errors", thing: resource %>
 
+  <%= render "admin/articles/form/featured_status", form: form, klass: resource.class.to_s.downcase %>
+
   <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
   <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
 

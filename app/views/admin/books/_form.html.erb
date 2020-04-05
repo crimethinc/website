@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-12 col-lg-8">
         <div class="form-group">
-          <%= form.label :journal_id, class: "h4" %><br>
+          <%= form.label :journal_id %><br>
           <%= form.collection_select :journal_id,
                                      Journal.all,
                                      :id,
@@ -25,6 +25,8 @@
       </div><!-- .col -->
     </div>
   <% end %>
+
+  <%= render "admin/articles/form/featured_status", form: form, klass: resource.class.to_s.downcase %>
 
   <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
   <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
