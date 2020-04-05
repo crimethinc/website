@@ -42,7 +42,6 @@ module Admin
     def create
       @article = Article.new(article_params)
       populate_content_from_docx_upload!
-      set_featured_at!
 
       if @article.save
         redirect_to [:admin, @article], notice: 'Article was successfully created.'
@@ -55,7 +54,6 @@ module Admin
       @article.tags.destroy_all
 
       populate_content_from_docx_upload!
-      set_featured_at!
 
       if @article.update(article_params)
         # Bust the article cache to update list of translations on articles
@@ -75,13 +73,6 @@ module Admin
     end
 
     private
-
-    def set_featured_at!
-      timestamp = article_params[:featured_status] == 'true' ? Time.current : nil
-
-      params[:article][:featured_at] = timestamp
-      @article.featured_at = timestamp
-    end
 
     def populate_content_from_docx_upload!
       # TEMP: Spike to explore .docx uploads for article content
