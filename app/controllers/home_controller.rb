@@ -30,11 +30,14 @@ class HomeController < ApplicationController
 
       # Selected tools
       @selected_tools = [
-        Sticker.all.sample,
-        Poster.all.sample,
-        Zine.all.sample,
-        Issue.all.sample
-      ]
+        Sticker.published.featured.limit(4),
+        Poster.published.featured.limit(4),
+        Zine.published.featured.limit(4),
+        Issue.published.featured.limit(4)
+      ].flatten
+
+      # Four most recently featured selected tools
+      @selected_tools = @selected_tools.sort_by(&:featured_at).reverse[0..3]
 
       # Ex-Workers’ Collection
       @ex_workers_collection = Article.featured
