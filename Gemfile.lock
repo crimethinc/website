@@ -115,12 +115,12 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
-    erb_lint (0.0.30)
+    erb_lint (0.0.32)
       activesupport
       better_html (~> 1.0.7)
       html_tokenizer
       rainbow
-      rubocop (~> 0.51)
+      rubocop (~> 0.79)
       smart_properties
     erubi (1.9.0)
     execjs (2.7.0)
@@ -189,7 +189,7 @@ GEM
       railties (>= 4)
       request_store (~> 1.0)
     logstash-event (1.2.02)
-    loofah (2.4.0)
+    loofah (2.5.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.2.4)
@@ -217,7 +217,7 @@ GEM
       iniparse (~> 1.4)
     pandoc-ruby (2.1.4)
     parallel (1.19.1)
-    parser (2.7.0.5)
+    parser (2.7.1.0)
       ast (~> 2.4.0)
     pg (1.2.3)
     popper_js (1.16.0)
@@ -359,7 +359,7 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
