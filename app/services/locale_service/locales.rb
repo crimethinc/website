@@ -55,6 +55,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'italian',  lang_code: :it, canonical: 'italiano'),
     Locale.new(locale: 'italiano', lang_code: :it, canonical: 'italiano'),
 
+    # japanese
+    Locale.new(locale: 'japanese',  lang_code: :ja, canonical: 'ri-ben-yu'),
+    Locale.new(locale: 'ri-ben-yu', lang_code: :ja, canonical: 'ri-ben-yu'),
+    Locale.new(locale: '日本語', lang_code: :ja, canonical: 'ri-ben-yu'),
+
     # polish
     Locale.new(locale: 'polski', lang_code: :pl, canonical: 'polski'),
     Locale.new(locale: 'polish', lang_code: :pl, canonical: 'polski'),
