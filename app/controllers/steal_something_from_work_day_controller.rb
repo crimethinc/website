@@ -9,11 +9,6 @@ class StealSomethingFromWorkDayController < ApplicationController
   }.freeze
 
   def show
-    unless STEAL_SOMETHING_FROM_WORK_DAY_LOCALES.key? I18n.locale
-      I18n.locale = I18n.default_locale
-      redirect_to [:steal_something_from_work_day]
-    end
-
     # Remove current locale from language switcher in the view
     @locales = STEAL_SOMETHING_FROM_WORK_DAY_LOCALES.dup
     @locales.delete I18n.locale
