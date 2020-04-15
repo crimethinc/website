@@ -1,5 +1,7 @@
 # Analysis
 
+- [**Stealing from Work at the End of the World**](#stealing-from-work-at-the-end-of-the-world)—Workplace theft in the age of the COVID-19 pandemic, economic collapse, and "essential" and "remote" labor.
+
 - [**The Team is Real**](#the-team-is-real)—A model for how employees at a variety of businesses can support each other beyond networks of kinship or affinity.
 
 - [**A Theft or Work?**](#a-theft-or-work)—A grad student brings poststructuralist theory to bear on time theft, why the master’s degrees will never dismantle the master’s house, and how to resist work when it has spread so far beyond the workplace.
@@ -11,6 +13,73 @@
 
 ---
 
+## Stealing from Work at the End of the World
+{: #stealing-from-work-at-the-end-of-the-world}
+
+For ten years now, we have observed April 15 as [Steal Something from Work Day](https://crimethinc.com/steal-something-from-work-day). Coinciding with tax day—when the government robs workers of a portion of their earnings to fund the police, the military, and various welfare programs [for the ultra-rich](https://www.commondreams.org/news/2020/04/14/analysis-reveals-rotten-un-american-giveaway-gop-buried-covid-19-relief-package)—Steal Something from Work Day celebrates the creativity of workers who take a swipe at the economy that exploits them.
+
+Yet today, the consequences of the global rip-off called capitalism have gone so far that nearly a quarter of us have no employment or source of income whatsoever. Many of those who still have jobs are being forced to [risk death on a daily basis](https://crimethinc.com/2020/04/10/and-after-the-virus-the-perils-ahead-resistance-in-the-year-of-the-plague-and-beyond#three-programs) just to bring home a paycheck, while more privileged workers have seen their jobs invade their very homes. Tax day is pushed back to July—it’s difficult to rob those who have no income, though our oppressors aim to squeeze it out of us sooner or later.
+
+The crisis triggered by the COVID-19 pandemic should put things in proportion. While executives and loss prevention experts wring their hands about workplace theft, sticky-fingered employees are not the ones responsible for systematically draining resources from hospitals or accelerating catastrophic climate change. It’s not *stealing from work* that is outrageous—the outrageous thing is how much capitalism has stolen from us.
+
+## But How Do We *Steal from Work* in a Pandemic?
+
+As history accelerates, the humble little gesture of workplace theft, via which so many workers have asserted their autonomy and made ends meet, has almost become outmoded. In a global disaster that is [just a taste of things to come](https://crimethinc.com/2020/04/10/and-after-the-virus-the-perils-ahead-resistance-in-the-year-of-the-plague-and-beyond), we have to become more ambitious about what we aim to seize.
+
+## “Essential” Workers
+
+The workforce has been divided into “essential” workers, “remote” workers, and the unemployed. In many cases, “essential” simply means “disposable”—along with doctors and nurses, it describes a range of low-paid jobs that involve a high risk of exposure to COVID-19. Of course, if you are working one of these jobs, you still have access to material goods; you can still [steal from a grocery store](https://crimethinc.com/2012/04/13/steal-something-from-work-day-2012#out-of-stock) or warehouse.
+
+**When so many people have no access to resources whatsoever—while employers and the politicians above them are conspiring to force us to risk a million deaths to re-start the economy—stealing to support those who cannot buy products becomes a solemn duty to humanity.**
+{: .darkred}
+
+What can “essential workers” do besides sneaking food, medical supplies, and cleaning products out of workplaces? Can we set our sights on something more systematic?
+
+Last month, facing layoffs, General Electric employees [demanded](https://www.commondreams.org/news/2020/03/30/facing-layoffs-general-electric-workers-demand-company-put-them-work-producing) to be kept on to build ventilators for the treatment of COVID-19. This points to the possibilities for workers to steal back their entire workplaces. Yet [making demands](https://crimethinc.com/2015/05/05/feature-why-we-dont-make-demands) of corporations like General Electric will produce few results unless we are able to find ways to exert leverage on them.
+
+In Greece, unpaid workers in Thessaloniki went further, [seizing the factory](https://unicornriot.ninja/2019/occupy-resist-produce-inside-the-self-managed-factory-of-vio-me/) they had worked in and using it to manufacture their own line of ecological cleaning supplies. This is an example of *workplace theft* writ large, one we can aspire to emulate in the United States over the coming years.
+
+Could we steal the existing infrastructure and use it to produce a different society? Should we aspire to take over the global supply chain and run it *more efficiently* than its current overlords do?
+
+[[https://cloudfront.crimethinc.com/assets/articles/2020/04/15/4.jpg]]
+
+The quintessential 21st century work environment is the Amazon warehouse. [Surveillance devices and software](https://www.nytimes.com/2019/07/03/business/economy/amazon-warehouse-labor-robots.html) force humans to behave like robots. In some Amazon warehouses, gigantic screens [display footage](https://time.com/4251122/amazon-surveillance-footage-thieves/) of employees who were caught stealing to terrorize workers into obedience. Cashing in on the pandemic, Amazon has added over 100,000 new positions, but all the profits are still concentrating at the top. Signs in Amazon warehouses instruct workers to remain three feet apart at all times as an anti-viral measure, when their work stations [are actually two feet apart](https://www.businessinsider.com/amazon-warehouse-modifications-during-coronavirus-2020-3). Is there a place for such places in our dreams of the future?
+
+Before we decide what aspects of the global supply chain to keep, let’s look closer at the meaning of the word “essential.” Police in some parts of the US have explicitly stated that “[protesting is not listed as an essential function](https://twitter.com/raleighpolice/status/1250211595663421443)”; they aim to take advantage of the pandemic to suppress any dissent, though dissent is the only means by which we can assert our needs and defend our safety. Freedom is inessential, along with the lives of [frontline workers](https://crimethinc.com/2020/04/13/all-we-have-is-us-a-call-from-a-delivery-driver-in-manhattan-for-a-solidarity-of-condition-and-position). Meanwhile, the governor of Florida has [deemed professional wrestling an essential function](https://www.theguardian.com/sport/2020/apr/14/wwe-raw-florida-tv-shows-ron-desantis-wrestling-coronavirus) along with all other “professional sports and media production[s] with a national audience.” As in ancient Rome, what is essential is *bread and circuses.*
+
+So we should not accept the concept of “essential workers” at face value. Capitalism has monopolized activities like food production that used to take place on a more decentralized basis. We are among the first human beings to be born into a society in which the only way to obtain food is to go to a grocery store staffed by employees. Most of us have no other option today; this monopoly is what makes grocery store workers “essential.” In almost any other model, these workers wouldn’t be the only line between us and starvation.
+
+On a fundamental level, Amazon warehouses and corporate grocery store chains are like police: they are essential to the maintenance of *this* social order, but they are not *necessarily* essential to life itself. We depend upon them because—through centuries of successive [enclosures of the commons](https://www.thelandmagazine.org.uk/articles/short-history-enclosure-britain)—we have been robbed of everything that sustained our species through the first million years of our existence.
+
+When we are thinking about how to *steal our lives back from work,* this suggests another point of departure, alongside individual workplace theft and collective workplace occupations. We can begin to re-establish means of subsistence outside the economy—for example, via occupied urban and suburban gardens. Especially for those who are now unemployed, this is a way to steal the possibility of subsistence from a world optimized for employment alone. Perhaps, one day, where there are currently Amazon fulfillment centers, there can be community gardens complete with collective dining areas and childcare bungalows.
+
+## Remote Workers
+
+In the age of surveillance technology, some of the differences are eroding between warehouse workers who are monitored by drones and white-collar workers who are monitored by technologies that take screenshots at random throughout the workday. All of us are being “optimized” according to capitalist control mechanisms and criteria. In remote or “smart” working, our employers invade our bedrooms, ruthlessly fixing our most intimate activities to the demands of the market. Middle-class workers have to worry about whether the décor of our bedrooms and the behavior of our children will be acceptable to our employers. Nothing is sacred.
+
+[[https://cloudfront.crimethinc.com/assets/articles/2020/04/15/2.jpg Camera-bearing drones maintain surveillance inside warehouses, just as the camera on the device you are using to read this article can be used to surveil you.]]
+
+At the same time, as more and more of our lives become dependent on digital technologies, some of the differences between the employed and the unemployed are also eroding. Among those of us who are unemployed, many of us also spend our days in Zoom meetings and clicking around on phones and computers. Our behaviors—paid or not—can be almost identical. Our online activity continues to provide income to corporations employing a profit model based on the attention economy, harvesting data, and the like.
+
+Presciently, for Steal Something from Work Day 2013, one of our authors [analyzed](https://crimethinc.com/2013/04/15/steal-something-from-work-day-2013#a-theft-or-work) the ways that time theft alone can fail to take us beyond the regimes of capitalism:
+
+> Workers who engage in tactics of la perruque [i.e., time theft], but use the reclaimed hours to participate in a digital capitalism that commodifies user attention, merely sneak from one job to do another. In 2013, we call it “social media”—in thirty years, it will have no name. […] We add stars and comments to Amazon products improving their sales; we self-surveil with Facebook; and we help search engines anticipate human desires by performing as a human test audience for them.
+
+So while time theft is the one ostensible remaining means of *stealing something from work* for an entire social class now under de facto house arrest, we should not assume that it will suffice to get us beyond the logic we are trying to escape. That goes for the unemployed as well as for those working remotely.
+
+What is the solution? To return to the wisdom of [our forebears](https://crimethinc.com/books/days-of-war-nights-of-love), we should never use any tool produced by the capitalist system for its intended purpose. To quote “[Deserting the Digital Utopia](https://crimethinc.com/2013/10/04/feature-deserting-the-digital-utopia),”[^1]
+
+> “There is an invisible world connected at the handle to every tool—use the tool as it is intended, and it fits you to the mold of all who do the same; disconnect the tool from that world, and you can set out to chart others.”
+
+[^1]: The text continues, “The ideal capitalist product would derive its value from the ceaseless unpaid labor of the entire human race. We would be dispensable; it would be indispensable. It would integrate all human activity into a single unified terrain, accessible only via additional corporate products, in which sweatshop and marketplace merged.” Now we are seeing sweatshop, office, and even bedroom merged.
+
+For those confined to working or playing online from home, this offers a way to think about our little individual revolts. When you are engaging in time theft, don’t just click around on the internet, delivering additional information to the corporations and governments that are spying on all of us. We have to use this time creatively and effectively to prepare for the next phase of global collapse. Teach yourself a skill that you can use away from the computer, something that can help you heal or nourish people, whether biologically or psychologically. Create new connections and networks that can assume an untraceable offline form in the near future. Print out letters and deliver them to all the tenants around you inviting them to participate in the unfolding [rent strike](https://crimethinc.com/2020/03/27/immunity-for-all-invitation-to-a-strike-a-poster-and-a-call-for-collective-self-defense) and offering them support. Remember, [you must always have a secret plan](https://crimethinc.com/books/recipes-for-disaster).
+
+Now more than ever, *stealing something from work* has to mean assaulting the system that forces work on us in the first place.
+
+[[https://cloudfront.crimethinc.com/assets/articles/2020/04/15/5.jpg class:portrait]]
+
+---
 
 ## The Team is Real
 {: #the-team-is-real}
