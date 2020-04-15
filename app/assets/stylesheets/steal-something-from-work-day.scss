@@ -24,6 +24,12 @@ figure {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  em {
+    font-family: inherit;
+  }
+}
+
 // TODO: delete
 dt {
   @include font-bold;
