@@ -1,5 +1,7 @@
 # Narratives
 
+- [**Time is Always the Best Thing to Steal from Work**](#time-is-always-the-best-thing-to-steal-from-work)—A narrative covering a lifetime of workplace theft.
+
 - [**Out Of Stock: Confessions Of A Grocery Store Guerrilla**](#out-of-stock)—A former Whole Foods employee recounts his efforts to run his employer out of business by means of sabotage, graffiti, and insubordination, reinterpreting William Butler Yeats’ line “The falcon cannot hear the falconer” from a bird’s-eye view.
 
 - [**Steal from Work to Create Autonomous Zones**](#steal-from-work-to-create-autonomous-zones)—The shocking true story of how a photocopy scam nearly escalated into global revolution.
@@ -14,9 +16,109 @@
 
 - [**Like Most Workplace Thieves, I Am an Exceptional Worker**](#like-most-workplace-thieves)—Being a small-time criminal, demystified.
 
-
 ---
 
+## Time is Always the Best Thing to Steal from Work
+
+I’m writing this on company time under stay-at-home orders.
+
+I want to share an incomplete list of all of the things I’ve stolen from work over the course of my two and half decades as part of *the work force.* I want to start by acknowledging that my situation is likely different than yours. When and where we grew up, where we are living now. The kind of work we do. The relative privilege that each of us benefits from.
+
+This is not a prescription or playbook. You might have access to opportunities I have not. The time and place and situation may be different, but the bosses are still the bosses and the fight is still the fight. Look for the cracks and squeeze through them.
+
+### Paper Delivery
+
+When I was in junior high school, I had a paper route. I delivered the paper every day after school. Once a week, there was a coupon day. An extra stack of little papers arrived at my house with the bundle of newspapers. I was supposed to stuff these coupons into all the newspapers before delivering them. I was a good kid. At the beginning, I did what I was supposed to. It made the load of papers in my satchel weigh twice as much.
+
+Still, I couldn’t help suspecting that most people didn’t care about the coupons. So I performed an experiment. I stopped stuffing the paper with coupons and waited to hear who complained. I made a mental list of the few houses at which people really wanted the coupons. I’d include the coupons in the papers I delivered to those houses. All the rest of them went straight into the recycle bin.
+
+This saved me a literal weight off of my shoulders. It also freed up an extra hour of precious post-school daylight hours to play with neighborhood friends. The paper route was supposed to teach me the value of a job well done—and it did.
+
+### High School Tech Support
+
+In high school, I was in a computer class. We students had free rein to use whatever we wanted, as long as we did tech support for teachers who were having issues. Jammed printer. Dead network. Missing mouse. We would come fix it.
+
+Most of the time, though, I was in the corner using the high-speed audiocassette dubbing machine. It could transfer one tape to three others at the same time, at four times normal speed. I started a little do-it-yourself record label using that machine. This changed my life, connecting me to other young people around the world in the days when the internet was just getting off the ground.
+
+I also designed, printed, and mass-produced countless zines on those high school computers, printers, and copiers.
+
+### Pool Admissions Desk and Concession Stand
+
+Around the same time, I worked in a concession stand at a fancy pool serving upscale neighborhoods. I made minimum wage. I never paid for nachos or slushees, and neither did my coworkers, friends, or casual acquaintances.
+
+In subsequent years, I also worked at the admissions desk. I operated the cash register. People who came to swim paid me and went on their way. Dollar fifty for kids. Two dollars for adults. Fifty cents extra for the water slide. All day. Over and over.
+
+On hot summer days, the pool brought in several hundreds of dollars per day. Some days, a group would come in from a day care or camp. Those were big days.
+
+It’s hard to skim off the top of a $1.50 charge. If you’re keeping the change, your pockets get heavy and jingly. There’s also a paper trail of receipts.
+
+But not if the cash register is broken. Weirdly, every summer I worked there, the cash register would stop working the first or second week. In effect, this reduced the cash register to a money drawer, abolishing the paper trail of receipts. I would do the math in my head, pop the drawer open, make change, and keep a running count in my head. *How many customers have come through the door today? How much can I skim without anyone noticing?*
+
+The answer: I bought a new computer, printer, monitor, and scanner to take with me to college. And a lot of records!
+
+Learning to do math in your head can be an important skill if you weren’t born with a silver spoon under your tongue.
+
+### Grocery Store
+
+Every shift during my lunch break, I’d wander over to the juice aisle, pick out a bottle, then go to the hot foods bar and heap up a pile of French fries. If my friend was working the hot foods register, we talk for a bit, putting on a little performance for any potential spectators. If not, I’d just go sit down and start eating.
+
+As a cashier, I had a lot of discretion and prerogative. If something didn’t ring up properly, or lacked a barcode, or neither I nor the customer knew the produce code… they got it for free. Or, if I didn’t get the feeling that they were down, I’d ring it up for twenty-five cents. That way, they still saw me ring up something and weren’t forced to make a decision about the ethics of workplace theft.
+
+Any time friends came through my checkout line, I pantomimed ringing up their groceries, turning each so the barcode was facing up, away from the scanner. I’d say “boop” out loud with my voice. We’d share a nod, a wink. Then I’d ask them to buy me a pack of gum. Total bill: twenty-five cents.
+
+Once, I made the mistake of trying to pass along those savings to my best friend’s dad. He was pretty cool on most accounts. For example, during Sunday church, rather than making them listen to sermons, he taught his kids algebra and other math that was advanced for their respective ages.
+
+But on this day, I grossly misread his sense of ethics. When he noticed that I was scanning items upside down, he started making a stink, raising his voice about his principles. Luckily, I was able to recover the situation before anyone figured out what was going on.
+
+I was the slyest employee thief when taking food off the shelf; I always left with something tucked down my pants. A meal or two to tide me over from one shift to the next.
+
+I also stole pantloads of film, processing, and prints. I would drop off a few rolls of photos from punk rock shows at the film developing desk, checking the boxes for all the upgrades: oversized prints, duplicates, fancy finish. When I picked them up, I’d say I had some other shopping to do before checking out. They just let me walk away with them. I never once paid for film, processing, or prints there. The good ol’ days.
+
+### College Computer Lab
+
+In college, I worked in the computer lab. The university had a really fancy computer sitting unused in storage. I took all its internal parts home with me one by one. Later, I bought a case and reassembled them into a new computer to serve the general public in a shared computer lab at a DIY collective space.
+
+[[https://cloudfront.crimethinc.com/assets/articles/2020/04/15/3.jpg Like many other things, *stealing from work* was easier in the 1990s.]]
+
+### Web Design Internship
+
+It turned out I was good at web design. I’d crank out the work really quickly, then spend the rest of the time designing zines and working on other creative projects.
+
+### Every Computer-Focused Office Job
+
+I have always stolen time from office jobs. It was especially useful to be good at keyboard shortcuts in order to hide or destroy whatever I was up to when the bosses came around.
+
+I also took all the normal office things: cables, paper, printouts, photocopies, staplers, staples, tape, keyboards, mice, laptop stands, chairs. I’ve stolen a few computers from jobs. Once, I traded a couple such computers for a car that I then drove around the country on a Great American Road Trip.
+
+When it’s provided, I always load up on food. Snacks for myself now, snacks for myself later when I’m not in the office. If friends come visit me at work, they eat for free, too, but they should also load up their bags and pockets. I try to make a point of using office-provided food to channel meals, snacks, and drinks to the houseless.
+
+### In the Time of Global Pandemic
+
+This trip down memoir lane is all fine and good, even if some of the particulars aren’t necessarily useful anymore. But what does it mean to *steal something from work* when many people are working from home or out of work entirely?
+
+If you still have a job at a physical place and still have access to physical stuff, you can continue to steal. Food, supplies… toilet paper! Take some for yourself, for your friends and family, for your [mutual aid network](https://itsgoingdown.org/c19-mutual-aid/). Don’t just hoard it—everything you pass on to those in need will be returned to you fourfold.
+
+You can also steal for others so that they don’t have to. Do it without them knowing, if you think knowing might make them anxious. Cashiers still have the prerogative to selectively miss ringing up items for customers buying supplies during the pandemic. People loading bags of food for delivery can slip in an extra of this or that.
+
+If your workplace is now your living room couch, dining room table, or bedroom, there are still ways you can *steal something from work.*
+
+If you’re lucky enough to have “unlimited” paid time off (PTO), then for goodness’ sake, take paid time off! Use it to focus on your physical and mental health. Use it to care for your friends and neighbors. Use it to volunteer in mutual aid projects.
+
+If you have flexibility to take some time away from the computer while on the clock, do it! Even if you don’t actually go anywhere, just step away from the computer for a while.
+
+You can steal time.
+
+You can take time during your workday, between Zoom meetings and Slack channel discussions, to do whatever you want. You can put some time on your calendar as “quiet working hours” to protect your calendar from meeting invitations. You can watch movies, educate yourself, or even write an article for an anarchist website about stealing from work! If you need it, take a nap or stare out the window.
+
+It’s OK not to be productive™ in this situation. This time is not simply *working remotely.* We are *working remotely during a global pandemic that has already killed over 100,000 people, an ongoing fascist takeover, and large-scale economic failure*. You have permission to forgive yourself for not writing the next *King Lear,* discovering the next calculus, learning another language, or mastering a musical instrument.
+
+If you want to do these things, you should. If not, that’s OK too. Just take care of yourself out there. Remember, your time is the most valuable non-renewable resource that you’ll ever have.
+
+> If your heart is free, the time you spend is liberated territory. Defend it!
+
+[[https://cloudfront.crimethinc.com/assets/articles/2020/04/15/1.jpg]]
+
+---
 
 ## Out Of Stock
 {: #out-of-stock}
@@ -78,9 +180,7 @@ All good things come to an end, however. Cameras were installed throughout the s
 - [How to quit your job at Whole Foods](http://gothamist.com/2011/07/25/how_to_quit_your_whole_foods_job_in.php)
 - [How to quit your job at Taco Bell](http://gothamist.com/2011/07/16/taco_bell_manager_who_worked_22_day.php)
 
-
 ---
-
 
 ## Steal from Work to Create Autonomous Zones
 {: #steal-from-work-to-create-autonomous-zones}
@@ -113,9 +213,7 @@ A lot of water has passed under the bridge, but I’ll always treasure memories 
 
 “You see those two people who just came in? Whatever they ask for, _give it to them for free.”_
 
-
 ---
-
 
 ## A Cashier’s Guide to Putting Yourself Through College via Workplace Theft
 {: #a-cashiers-guide}
@@ -138,9 +236,7 @@ For a long time I only took one three-credit course per semester, because that w
 
 Over the span of less than a year after that decision I successfully embezzled more than twenty-five thousand dollars from my place of employment: a hardware store, owned by two Huffmanville businessmen, where I worked as a cashier. I was never caught or fired. And I graduated from college one year later.
 
-
 ---
-
 
 The store in which I worked was part of a regional chain of between ten and twenty others, all based out of a flagship store in Huffmanville. Definitely not a mom-and-pop operation, but not Wal-Mart, either. In fact, looking back, the size of the company was probably ideal: if it had been much smaller (a single store, or even a handful), I might have felt guilty about stealing from them—making things even tougher for the little guy than they already are. On the other hand, if it had been a big multinational corporation, there probably would have been too many security measures in place for me to do what I did. As it was, the chain was wholly owned by a father-and-son team, both big shots in the local Huffmanville business elite—there was even a building at my college named after them. The father had started the chain with the main store in Huffmanville, and the son was now president. This was also something that suited me: unlike many cases of workplace theft, I knew exactly who I was stealing from—I had _looked them both in the eye_ when they dropped by our store one time for a surprise inspection. And I knew they could afford it.
 
@@ -150,9 +246,7 @@ The standard wage for grunts like me was seven dollars per hour—just enough ov
 
 To my benefit, they seemed never to consider that this same problem-solving ability of mine could be put to uses contrary to theirs.
 
-
 ---
-
 
 I am what you’d call good with numbers. Remembering them, adding and subtracting them, keeping accurate running totals, all in my head—a skill which would prove to be quite useful, given the fact that my job involved handling a nearly ceaseless flow of cash every hour of every day, with minimal supervision. In some ways it’s one of the oldest stories in capitalism—the savvy accountant ripping off his less-mathematically-inclined wealthy clients—but there were also important differences. By this time in my life I was already familiar with anarchist principles, and I therefore considered all of my interests and those of the store owners to be in polar opposition. I wanted to inflict as many losses on the store as I could possibly get away with, even in ways that did not directly benefit me.
 
@@ -176,9 +270,7 @@ During this period, the store was robbed. The robbers were smart: they hit the s
 
 I truly felt bad for the assistant manager who had a gun stuck in her face; she didn't deserve it. To my knowledge she never received any acknowledgement from the owners that she had had her life threatened on behalf of _their_ money. She even had to open the next day.
 
-
 ---
-
 
 As far as I know, no member of the management at the store ever discovered what I was up to—or if they did, they had no way of proving it. I was too careful. But my guess is they had no clue. Anyone who is familiar with hourly-wage-work power relationships knows that even the weakest circumstantial evidence is sufficient for a boss to terminate an employee at will. If they had known about something like what I was doing, they’d have done _something_ about it. Realistically, they probably assumed I engaged in some minor theft (try finding an employee—especially in a place like New Stolp—who doesn’t!), but they clearly had no inkling about the scale, or else I would have been given the boot in two seconds flat, and possibly brought up on charges.
 
@@ -189,7 +281,6 @@ Bittersweet: I may have pulled one over on my employer, but in the end the bursa
 _—The Angry Po-Boy Collective, March 29, 2010_
 
 ---
-
 
 [[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/employee-theft.jpg ]]
 
@@ -213,7 +304,6 @@ So it became a routine: some time after lunch, I would load up the little dolly,
 Was this theft? I don’t know. I mean, if I got caught, I would have been charged with that, but it just seemed different when I didn’t keep or even want the stuff. It was my time, my effort, and some sense of control that I was trying to steal back. All that shit was just trash to begin with.
 
 ---
-
 
 [[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-everything.jpg ]]
 
@@ -272,9 +362,7 @@ I experienced none of the feelings I project to be associated with gambling—I 
 
 The money I made came and went, as money does. But the feeling of getting yet another one over on the company that had engineered nothing but failure for its workers is something that I'll carry with me forever. It reminds me that if I divert the energy and time that my bosses want me to invest in the job towards the more strategic goal of subverting my workplace, my fellow employees and I will come out ahead.
 
-
 ---
-
 
 ## Don’t Beg for a Piece of the Pie—Take the Whole Pizza for Yourself!
 {: #dont-beg-for-a-piece-of-the-pie}
@@ -309,9 +397,7 @@ Sometimes the boss would say we were using too much cheese or tomato sauce. Then
 
 Nowadays, looking back, I remember those times as less risky than my adult life has been, in which (like many people in this country) in order to survive I have to be officially unemployed while I make a living under the table, supplemented by shoplifting and insurance frauds. It’s too bad the customers had to eat those thin little pizzas, but hey, I’m not the one who came up with this social order or the incentives that drive it! If you want thick crust pizza, abolish capitalism!
 
-
 ---
-
 
 [[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/good-theft-vs-bad-theft.jpg ]]
 
