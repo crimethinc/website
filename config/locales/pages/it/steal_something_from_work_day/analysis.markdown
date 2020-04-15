@@ -1,6 +1,6 @@
 # Analysis
 
-- [**Stealing from Work at the End of the World**](#stealing-from-work-at-the-end-of-the-world)—Workplace Theft in the Age of the COVID-19 Pandemic, Economic Collapse, and “Essential” and “Remote” Labor
+- [**Stealing from Work at the End of the World**](#stealing-from-work-at-the-end-of-the-world)—Workplace theft in the age of the COVID-19 pandemic, economic collapse, and "essential" and "remote" labor.
 
 - [**The Team is Real**](#the-team-is-real)—A model for how employees at a variety of businesses can support each other beyond networks of kinship or affinity.
 
