@@ -6,10 +6,6 @@ AllCops:
   Exclude:
     - 'db/schema.rb'
 
-Layout/HashAlignment:
-  EnforcedHashRocketStyle: table
-  EnforcedColonStyle: table
-
 Lint/RaiseException:
   Enabled: true
 
@@ -30,10 +26,17 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Max: 12
 
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
 Layout/LineLength:
   Max: 186
   Exclude:
     - 'db/**/*'
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
 
 Metrics/MethodLength:
   Max: 27
@@ -75,6 +78,9 @@ Style/AsciiComments:
 
 Style/Documentation:
   Enabled: false
+
+Style/ExponentialNotation:
+  Enabled: true
 
 Style/FrozenStringLiteralComment:
   Enabled: false

@@ -13,7 +13,7 @@ describe LocaleService::Locales do
   end
 
   context 'when given an existing lang_code' do
-    it { is_expected. to eq 'espanol' }
+    it { is_expected.to eq 'espanol' }
 
     it 'skips the long lookup and uses the precomputed hash' do
       expect(LocaleService::Locales::LOCALES).not_to have_received(:find)
