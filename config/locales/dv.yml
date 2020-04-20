@@ -8,8 +8,8 @@
 #  8. If a value has Markdown syntax characters in it, please keep those in your translation.
 #  9. Markdown examples: [link text](url), **bold**, _italics_, %{dynamic variable}, etc.
 # 10. If a value has <b>HTML</b> syntax characters in it, please keep those in your translation.
-ar:
-  name: اَلْعَرَبِيَّةُ
+dv:
+  name: ދިވެހި
   language_direction: ltr
   site_name: CrimethInc.
   site_author: CrimethInc. Ex-Workers Collective
@@ -32,7 +32,7 @@ ar:
     support: Support Us
     search: Search
     about: About
-    locale_articles: See all articles in Arabic →
+    locale_articles: See all articles in English →
 
     first_time: First Time? Start Here →
     site_mode: Switch to the full version of the site →
