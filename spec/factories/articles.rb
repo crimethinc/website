@@ -16,20 +16,28 @@ FactoryBot.define do
     end
   end
 
-  trait(:arabic)  { locale { 'ar' } }
-  trait(:czech)   { locale { 'cs' } }
-  trait(:spanish) { locale { 'es' } }
-  trait(:danish)  { locale { 'da' } }
-  trait(:german)  { locale { 'de' } }
-  trait(:finnish) { locale { 'fi' } }
-  trait(:french)  { locale { 'fr' } }
-  trait(:greek)   { locale { 'gr' } }
-  trait(:hebrew)  { locale { 'he' } }
-  trait(:italian) { locale { 'it' } }
-  trait(:swedish) { locale { 'sv' } }
-  trait(:thai)    { locale { 'th' } }
-  trait(:turkish) { locale { 'tr' } }
+  trait(:arabic)     { locale { 'ar' } }
+  trait(:bengali)    { locale { 'bn' } }
+  trait(:czech)      { locale { 'cs' } }
+  trait(:chinese)    { locale { 'zh' } }
+  trait(:danish)     { locale { 'da' } }
+  trait(:german)     { locale { 'de' } }
+  trait(:maldivian)  { locale { 'dv' } }
+  trait(:english)    { locale { 'en' } }
+  trait(:spanish)    { locale { 'es' } }
+  trait(:finnish)    { locale { 'fi' } }
+  trait(:french)     { locale { 'fr' } }
+  trait(:greek)      { locale { 'gr' } }
+  trait(:hebrew)     { locale { 'he' } }
+  trait(:indonesian) { locale { 'id' } }
+  trait(:italian)    { locale { 'it' } }
+  trait(:japanese)   { locale { 'ja' } }
+  trait(:polish)     { locale { 'pl' } }
   trait(:portuguese) { locale { 'pt' } }
-  trait(:polish) { locale { 'pl' } }
+  trait(:russian)    { locale { 'ru' } }
+  trait(:swedish)    { locale { 'sv' } }
+  trait(:thai)       { locale { 'th' } }
+  trait(:turkish)    { locale { 'tr' } }
+  # and
   trait(:brazilian_portuguese) { locale { 'pt-br' } }
 end
