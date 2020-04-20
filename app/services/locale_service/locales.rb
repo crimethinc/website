@@ -105,9 +105,9 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'türkçe',  lang_code: :tr, canonical: 'turkce'),
     Locale.new(locale: 'turkce',  lang_code: :tr, canonical: 'turkce'),
 
-    # cz: chinese
-    Locale.new(locale: 'chinese', lang_code: :th, canonical: 'pu-tong-hua'),
-    Locale.new(locale: 'pu-tong-hua', lang_code: :th, canonical: 'pu-tong-hua'),
+    # zh: chinese
+    Locale.new(locale: 'chinese',     lang_code: :zh, canonical: 'pu-tong-hua'),
+    Locale.new(locale: 'pu-tong-hua', lang_code: :zh, canonical: 'pu-tong-hua'),
     Locale.new(locale: '普通話', lang_code: :th, canonical: 'pu-tong-hua')
   ].freeze
 
