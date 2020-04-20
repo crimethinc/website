@@ -17,6 +17,14 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'alarabiyawu' }
   end
 
+  trait(:bn) do
+    abbreviation { 'bn' }
+    name_in_english { 'Bengali' }
+    name { 'বাংলা' }
+    language_direction { 'ltr' }
+    slug { 'baanlaa' }
+  end
+
   trait(:cs) do
     abbreviation { 'cs' }
     name_in_english { 'Czech' }
@@ -39,6 +47,14 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     name { 'Deutsch' }
     language_direction { 'ltr' }
     slug { 'deutsch' }
+  end
+
+  trait(:dv) do
+    abbreviation { 'dv' }
+    name_in_english { 'Maldivian' }
+    name { 'ދިވެހި' }
+    language_direction { 'rtl' }
+    slug { 'dhivehi' }
   end
 
   trait(:es) do
@@ -81,6 +97,14 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'ibriyt' }
   end
 
+  trait(:id) do
+    abbreviation { 'id' }
+    name_in_english { 'Indonesian' }
+    name { 'Bahasa Indonesia' }
+    language_direction { 'ltr' }
+    slug { 'bahasa-indonesia' }
+  end
+
   trait(:it) do
     abbreviation { 'it' }
     name_in_english { 'Italian' }
@@ -88,6 +112,15 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     language_direction { 'ltr' }
     slug { 'italiano' }
   end
+
+  trait(:ja) do
+    abbreviation { 'ja' }
+    name_in_english { 'Japanese' }
+    name { '日本語' }
+    language_direction { 'ltr' }
+    slug { 'ri-ben-yu' }
+  end
+
   trait(:pl) do
     abbreviation { 'pl' }
     name_in_english { 'Polish' }
@@ -112,12 +145,28 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'portugues-brasileiro' }
   end
 
+  trait(:ru) do
+    abbreviation { 'ru' }
+    name_in_english { 'Russian' }
+    name { 'русский' }
+    language_direction { 'ltr' }
+    slug { 'russkii' }
+  end
+
   trait(:sv) do
     abbreviation { 'sv' }
     name_in_english { 'Swedish' }
     name { 'Svenska' }
     language_direction { 'ltr' }
     slug { 'svenska' }
+  end
+
+  trait(:th) do
+    abbreviation { 'th' }
+    name_in_english { 'Thai' }
+    name { 'ภาษาไทย' }
+    language_direction { 'ltr' }
+    slug { 'phaasaaaithy' }
   end
 
   trait(:tr) do
@@ -128,11 +177,11 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'turkce' }
   end
 
-  trait(:th) do
-    abbreviation { 'th' }
-    name_in_english { 'Thai' }
-    name { 'ภาษาไทย' }
+  trait(:zh) do
+    abbreviation { 'zh' }
+    name_in_english { 'Chinese' }
+    name { '普通話' }
     language_direction { 'ltr' }
-    slug { 'phaasaaaithy' }
+    slug { 'pu-tong-hua' }
   end
 end
