@@ -7,8 +7,18 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'alarabiyawu', lang_code: :ar, canonical: 'alarabiyawu'),
     Locale.new(locale: 'اَلْعَرَبِيَّةُ', lang_code: :ar, canonical: 'alarabiyawu'),
 
+    # bengali
+    Locale.new(locale: 'bengali', lang_code: :bn, canonical: 'baanlaa'),
+    Locale.new(locale: 'baanlaa', lang_code: :bn, canonical: 'baanlaa'),
+    Locale.new(locale: 'বাংলা', lang_code: :bn, canonical: 'baanlaa'),
+
+    # chinese
+    Locale.new(locale: 'chinese', lang_code: :th, canonical: 'pu-tong-hua'),
+    Locale.new(locale: 'pu-tong-hua', lang_code: :th, canonical: 'pu-tong-hua'),
+    Locale.new(locale: '普通話', lang_code: :th, canonical: 'pu-tong-hua'),
+
     # czech
-    Locale.new(locale: 'czech', lang_code: :cs, canonical: 'cestina'),
+    Locale.new(locale: 'czech',   lang_code: :cs, canonical: 'cestina'),
     Locale.new(locale: 'čeština', lang_code: :cs, canonical: 'cestina'),
     Locale.new(locale: 'cestina', lang_code: :cs, canonical: 'cestina'),
 
@@ -19,15 +29,6 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     # english
     Locale.new(locale: 'english', lang_code: :en, canonical: 'english'),
 
-    # spanish
-    Locale.new(locale: 'espanol', lang_code: :es, canonical: 'espanol'),
-    Locale.new(locale: 'spanish', lang_code: :es, canonical: 'espanol'),
-    Locale.new(locale: 'español', lang_code: :es, canonical: 'espanol'),
-
-    # german
-    Locale.new(locale: 'deutsch', lang_code: :de, canonical: 'deutsch'),
-    Locale.new(locale: 'german',  lang_code: :de, canonical: 'deutsch'),
-
     # finnish
     Locale.new(locale: 'suomen',  lang_code: :fi, canonical: 'suomen'),
     Locale.new(locale: 'finnish', lang_code: :fi, canonical: 'suomen'),
@@ -36,6 +37,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'français', lang_code: :fr, canonical: 'francais'),
     Locale.new(locale: 'francais', lang_code: :fr, canonical: 'francais'),
     Locale.new(locale: 'french',   lang_code: :fr, canonical: 'francais'),
+
+    # german
+    Locale.new(locale: 'deutsch', lang_code: :de, canonical: 'deutsch'),
+    Locale.new(locale: 'german',  lang_code: :de, canonical: 'deutsch'),
 
     # greek
     Locale.new(locale: 'ελληνικά', lang_code: :gr, canonical: 'ellenika'),
@@ -60,6 +65,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'ri-ben-yu', lang_code: :ja, canonical: 'ri-ben-yu'),
     Locale.new(locale: '日本語', lang_code: :ja, canonical: 'ri-ben-yu'),
 
+    # maldivian
+    Locale.new(locale: 'maldivian', lang_code: :dv, canonical: 'dhivehi'),
+    Locale.new(locale: 'dhivehi',   lang_code: :dv, canonical: 'dhivehi'),
+    Locale.new(locale: 'ދިވެހި', lang_code: :dv, canonical: 'dhivehi'),
+
     # polish
     Locale.new(locale: 'polski', lang_code: :pl, canonical: 'polski'),
     Locale.new(locale: 'polish', lang_code: :pl, canonical: 'polski'),
@@ -69,7 +79,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'portugués',  lang_code: :pt, canonical: 'portugues-brasileiro'),
     Locale.new(locale: 'portugues',  lang_code: :pt, canonical: 'portugues-brasileiro'),
 
-    # brazilian portuguese
+    # portuguese, brazilian
     Locale.new(locale: 'brazilian portuguese', lang_code: :pt, canonical: 'portugues-brasileiro'),
     Locale.new(locale: 'brazilian-portuguese', lang_code: :pt, canonical: 'portugues-brasileiro'),
     Locale.new(locale: 'português brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
@@ -81,13 +91,19 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'russian', lang_code: :ru, canonical: 'russkii'),
     Locale.new(locale: 'russkii', lang_code: :ru, canonical: 'russkii'),
 
+    # spanish
+    Locale.new(locale: 'espanol', lang_code: :es, canonical: 'espanol'),
+    Locale.new(locale: 'spanish', lang_code: :es, canonical: 'espanol'),
+    Locale.new(locale: 'español', lang_code: :es, canonical: 'espanol'),
+
     # swedish
     Locale.new(locale: 'swedish', lang_code: :sv, canonical: 'svenska'),
     Locale.new(locale: 'svenska', lang_code: :sv, canonical: 'svenska'),
 
     # thai
-    Locale.new(locale: 'thai', lang_code: :th, canonical: 'phaasaaaithy'),
-    Locale.new(locale: 'ภาษาไทย', lang_code: :th, canonical: 'phaasaaaithy'),
+    Locale.new(locale: 'thai',         lang_code: :th, canonical: 'phaasaaaithy'),
+    Locale.new(locale: 'phaasaaaithy', lang_code: :th, canonical: 'phaasaaaithy'),
+    Locale.new(locale: 'ภาษาไทย',      lang_code: :th, canonical: 'phaasaaaithy'),
 
     # turkish
     Locale.new(locale: 'turkish', lang_code: :tr, canonical: 'turkce'),
