@@ -108,7 +108,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     # zh: chinese
     Locale.new(locale: 'chinese',     lang_code: :zh, canonical: 'pu-tong-hua'),
     Locale.new(locale: 'pu-tong-hua', lang_code: :zh, canonical: 'pu-tong-hua'),
-    Locale.new(locale: '普通話', lang_code: :th, canonical: 'pu-tong-hua')
+    Locale.new(locale: '普通話', lang_code: :zh, canonical: 'pu-tong-hua')
   ].freeze
 
   class << self
