@@ -24,9 +24,8 @@ best idea he has had in years and the Kit’s popularity seems to back that up.
 - [5 - Rolling Thunder #11](/journals/rolling-thunder/11)
 - [5 - Poster Mix Kit (125 posters total)](https://store.crimethinc.com/x/bulk.html)
 - [50 - Walls Are Alive](https://store.crimethinc.com/x/bulk.html)
-- [30 - Immigrants Welcome Stickers](https://store.crimethinc.com/x/stickers.html)
-- [30 - Surveillance Stickers](https://store.crimethinc.com/x/stickers.html)
-- [30 - Police Stickers](https://store.crimethinc.com/x/stickers.html)
+- [50 - Immigrants Welcome Stickers](https://store.crimethinc.com/x/stickers.html)
+- [50 - Police Stickers](https://store.crimethinc.com/x/stickers.html)
 {: .list}
 
 ## How to Use the Lit Kit
