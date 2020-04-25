@@ -5,7 +5,7 @@ module Admin
     layout 'admin'
 
     def admin_title model = nil, keys = []
-      return PageTitle.new(['Admin', t(".#{action_name}_title", default: '')]).content if model.blank?
+      return PageTitle.new(['Admin', t(".#{action_name}_title")]).content if model.blank?
 
       translation_vars = {}
 
