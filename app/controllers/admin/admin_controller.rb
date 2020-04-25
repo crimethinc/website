@@ -8,10 +8,7 @@ module Admin
       return PageTitle.new(['Admin', t(".#{action_name}_title")]).content if model.blank?
       return '' unless keys.all? { |key| model.respond_to? key }
 
-      translation_vars = {}
-      keys.each do |key|
-        translation_vars[key] = model.send(key)
-      end
+      translation_vars = keys.map { |key| [key, model.send(key)] }.to_h
 
       PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
     end
