@@ -6,18 +6,14 @@ module Admin
 
     def admin_title model = nil, keys = []
       return PageTitle.new(['Admin', t(".#{action_name}_title")]).content if model.blank?
+      return '' unless keys.all? { |key| model.respond_to? key }
 
       translation_vars = {}
-
-      if keys.all? { |key| model.respond_to? key }
-        keys.each do |key|
-          translation_vars[key] = model.send(key)
-        end
-
-        PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
-      else
-        ''
+      keys.each do |key|
+        translation_vars[key] = model.send(key)
       end
+
+      PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
     end
 
     def set_published_at
