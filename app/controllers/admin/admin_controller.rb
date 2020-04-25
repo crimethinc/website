@@ -13,9 +13,9 @@ module Admin
         hash[key] = model.send(key)
       end
 
-      page_title = PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)])
-      return page_title.content if page_title.respond_to?(:content)
-
+      PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
+    rescue NoMethodError
+      logger.error "#{controller_path}:#{action_name} has an issue with the page title"
       ''
     end
 
