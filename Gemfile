@@ -58,6 +58,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'erb_lint', require: false
   gem 'factory_bot_rails'
+  gem 'fasterer', require: false
   gem 'i18n-debug'
   gem 'launchy'
   gem 'nokogiri'
