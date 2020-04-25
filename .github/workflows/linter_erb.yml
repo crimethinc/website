@@ -1,6 +1,6 @@
 on: [push]
 
-name: ERB Linter
+name: Linter, ERB
 
 jobs:
   run:

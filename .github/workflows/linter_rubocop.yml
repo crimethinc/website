@@ -1,6 +1,6 @@
 on: [push]
 
-name: Rubocop Linter
+name: Linter, Rubocop
 
 jobs:
   run:

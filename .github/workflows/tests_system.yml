@@ -1,6 +1,6 @@
 on: [push]
 
-name: System Tests
+name: Tests, System
 
 jobs:
   run:
