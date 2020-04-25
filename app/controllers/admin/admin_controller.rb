@@ -9,14 +9,15 @@ module Admin
 
       translation_vars = {}
 
-      keys.each do |key|
-        translation_vars[key] = model.send(key)
-      end
+      if keys.all? { |key| model.respond_to? key }
+        keys.each do |key|
+          translation_vars[key] = model.send(key)
+        end
 
-      PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
-    rescue NoMethodError
-      logger.error "#{controller_path}:#{action_name} has an issue with the page title"
-      ''
+        PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
+      else
+        ''
+      end
     end
 
     def set_published_at

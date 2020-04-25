@@ -13,13 +13,7 @@ RSpec.describe Admin::AdminController, type: :controller do
       expect(title).to eq('CrimethInc. : Admin : Editing article 1 title : sub')
     end
 
-    it 'logs error and does not blow up if invalid keys passed' do
-      # these expectations are used to stub out contoller cals and return expected values
-      expect(controller).to receive(:controller_path).and_return('admin/articles').at_least(:once)
-      expect(controller).to receive(:action_name).and_return('edit').at_least(:once)
-
-      expect(Rails.logger).to receive(:error).with('admin/articles:edit has an issue with the page title')
-
+    it 'does not blow up if invalid keys passed' do
       title = controller.admin_title(article, %i[id foo])
 
       expect(title).to eq('')
