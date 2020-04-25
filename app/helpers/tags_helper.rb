@@ -1,4 +1,7 @@
 module TagsHelper
+  attr_accessor :body_id
+  attr_accessor :html_id
+
   def html_dir
     article_locale&.language_direction.presence || t('language_direction')
   end
@@ -12,16 +15,8 @@ module TagsHelper
     'og: http://ogp.me/ns#'
   end
 
-  def html_id
-    @html_id
-  end
-
   def html_class
     "#{site_mode}-mode"
-  end
-
-  def body_id
-    @body_id
   end
 
   private

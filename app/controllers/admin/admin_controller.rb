@@ -5,18 +5,12 @@ module Admin
     layout 'admin'
 
     def admin_title model = nil, keys = []
-      return PageTitle.new(['Admin', t(".#{action_name}_title", default: '')]).content if model.blank?
+      return PageTitle.new(['Admin', t(".#{action_name}_title")]).content if model.blank?
+      return '' unless keys.all? { |key| model.respond_to? key }
 
-      translation_vars = {}
-
-      keys.each_with_object(translation_vars) do |key, hash|
-        hash[key] = model.send(key)
-      end
+      translation_vars = keys.map { |key| [key, model.send(key)] }.to_h
 
       PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
-    rescue NoMethodError
-      logger.error "#{controller_path}:#{action_name} has an issue with the page title"
-      ''
     end
 
     def set_published_at
@@ -33,7 +27,8 @@ module Admin
       # that DST toggles
       tz_offset = Time.parse("#{date} #{time}").in_time_zone(tz).strftime('%z')
       datetime  = Time.zone.parse("#{date} #{time}#{tz_offset}")
-      params[controller_name.singularize.to_sym].merge!(published_at: datetime)
+
+      params[controller_name.singularize.to_sym][:published_at] = datetime
     end
   end
 end
