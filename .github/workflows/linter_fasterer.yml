@@ -1,6 +1,6 @@
 on: [push]
 
-name: 'Linter : Fasterer'
+name: Fasterer Linter
 
 jobs:
   run:
