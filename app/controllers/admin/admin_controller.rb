@@ -9,8 +9,8 @@ module Admin
 
       translation_vars = {}
 
-      keys.each_with_object(translation_vars) do |key, hash|
-        hash[key] = model.send(key)
+      keys.each do |key|
+        translation_vars[key] = model.send(key)
       end
 
       PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
