@@ -91,6 +91,8 @@
 
         <%= render_themed "articles/titles", header: @tool, linked: true %>
 
+        <%= render_themed "articles/localizations", article: @tool %>
+
         <% if @tool.published_at.present? %>
           <time datetime="<%= @tool.published_at.iso8601 %>"><%= @tool.published_at.year %></time>
         <% end %>

@@ -59,7 +59,7 @@ module Admin
                                    :print_black_and_white_a4_download_present, :print_color_a4_download_present,
                                    :print_color_download_present, :print_black_and_white_download_present,
                                    :screen_single_page_view_download_present, :screen_two_page_view_download_present,
-                                   :featured_status, :featured_at)
+                                   :featured_status, :featured_at, :canonical_id)
     end
   end
 end
