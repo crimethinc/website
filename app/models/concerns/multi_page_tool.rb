@@ -2,19 +2,7 @@ module MultiPageTool
   extend ActiveSupport::Concern
   include Tool
   include Featureable
-
-  included do
-    scope :english,      -> { where(locale: 'en') }
-    scope :translation,  -> { where.not(locale: 'en') }
-  end
-
-  def english?
-    locale == 'en'
-  end
-
-  def id_and_name
-    "#{id} — #{name}"
-  end
+  include Translatable
 
   def gallery_images
     if gallery_images_count.present? && gallery_images_count.positive?
@@ -85,41 +73,5 @@ module MultiPageTool
 
   def back_image
     image side: :back
-  end
-
-  def preferred_localization
-    localization_in(I18n.locale).presence || self
-  end
-
-  def localization_in locale
-    # binding.pry
-    [
-      self.class.published.live.find_by(locale: locale, canonical_id: id),
-      self.class.published.live.find_by(locale: locale, id: canonical_id)
-    ].compact.first
-  end
-
-  def localizations
-    all_localizations = [
-      canonical_tool,
-      canonical_tool_localizations,
-      self_localizations
-    ]
-
-    tools = all_localizations.flatten.compact - [self]
-
-    tools.sort_by(&:locale)
-  end
-
-  def canonical_tool
-    self.class.find_by(id: canonical_id)
-  end
-
-  def canonical_tool_localizations
-    canonical_tool&.localizations
-  end
-
-  def self_localizations
-    self.class.published.live.where(canonical_id: id)
   end
 end
