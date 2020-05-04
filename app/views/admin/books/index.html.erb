@@ -34,6 +34,11 @@
           <%= link_to [:admin, book] do %>
             <b><%= book.title %></b><br>
             <%= book.subtitle %>
+
+            <% if book.english? %>
+              <br>
+              <%= render 'admin/translate_this', article: book %>
+            <% end %>
           <% end %>
         </td>
 

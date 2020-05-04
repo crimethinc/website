@@ -24,6 +24,11 @@
         <td>
           <b><%= link_to poster.title, [:admin, poster] %></b><br>
           <%= poster.subtitle %>
+
+          <% if poster.english? %>
+            <br>
+            <%= render 'admin/translate_this', article: poster %>
+          <% end %>
         </td>
 
         <td>
