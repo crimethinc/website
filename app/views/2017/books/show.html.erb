@@ -17,6 +17,8 @@
         </div>
       <% end %>
 
+      <%= render_themed "articles/localizations", article: @tool %>
+
       <div id="download">
         <% if @tool.downloads_available? %>
           <p><%= t "downloads.heading" %>:</p>
@@ -90,8 +92,6 @@
         <%= render_themed "tools/nav" %>
 
         <%= render_themed "articles/titles", header: @tool, linked: true %>
-
-        <%= render_themed "articles/localizations", article: @tool %>
 
         <% if @tool.published_at.present? %>
           <time datetime="<%= @tool.published_at.iso8601 %>"><%= @tool.published_at.year %></time>

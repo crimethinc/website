@@ -4,7 +4,8 @@
       .badge { display: none; }
 
       .icon-image {
-        height: 1.3rem;
+        height: 1.3rem !important;
+        width: auto !important;
         opacity: .5;
         margin-right: .25rem;
       }
