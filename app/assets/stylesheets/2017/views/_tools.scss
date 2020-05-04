@@ -12,23 +12,23 @@
 
       .localizations,
       .categories {
-          display: block;
+        display: block;
 
-          a {
-              text-transform: capitalize;
-              text-decoration: underline;
-              font-style: italic;
-              font-weight: normal;
-              color: $color-gray;
-          }
+        a {
+            text-transform: capitalize;
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: normal;
+            color: $color-gray;
+        }
 
-          li {
-            border-right: 1px solid #ccc;
-            padding-right: .5em;
-            margin-right: .25em;
-          }
+        li {
+          border-right: 1px solid #ccc;
+          padding-right: .5em;
+          margin-right: .25em;
+        }
 
-          li:last-child { border-right: none; }
+        li:last-child { border-right: none; }
       }
 
       hr {
