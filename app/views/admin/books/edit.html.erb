@@ -1,4 +1,9 @@
 <%= render "admin/page_header", thing: @book %>
+
+<% if @book.english? %>
+  <%= render 'admin/translate_this', article: @book %>
+<% end %>
+
 <%= render "admin/books/form",  resource: @book %>
 
 <%= render "admin/danger_zone",

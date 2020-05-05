@@ -1,6 +1,35 @@
 #page {
   #tools {
     main{
+      .badge { display: none; }
+
+      .icon-image {
+        height: 1.3rem !important;
+        width: auto !important;
+        opacity: .5;
+        margin-right: .25rem;
+      }
+
+      .localizations,
+      .categories {
+        display: block;
+
+        a {
+            text-transform: capitalize;
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: normal;
+            color: $color-gray;
+        }
+
+        li {
+          border-right: 1px solid #ccc;
+          padding-right: .5em;
+          margin-right: .25em;
+        }
+
+        li:last-child { border-right: none; }
+      }
 
       hr {
         border: $border-size-xsmall solid $color-gray-light;

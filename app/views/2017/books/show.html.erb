@@ -17,6 +17,8 @@
         </div>
       <% end %>
 
+      <%= render_themed "articles/localizations", article: @tool %>
+
       <div id="download">
         <% if @tool.downloads_available? %>
           <p><%= t "downloads.heading" %>:</p>

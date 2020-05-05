@@ -2,6 +2,7 @@ module MultiPageTool
   extend ActiveSupport::Concern
   include Tool
   include Featureable
+  include Translatable
 
   def gallery_images
     if gallery_images_count.present? && gallery_images_count.positive?

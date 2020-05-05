@@ -59,7 +59,7 @@ module Admin
                                    :description, :buy_url, :buy_info, :slug, :series, :published_at,
                                    :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,
                                    :photographs, :printing, :ink, :definitions, :recipes, :has_index, :cover_style,
-                                   :binding_style, :table_of_contents, :back_image_present,
+                                   :binding_style, :table_of_contents, :back_image_present, :canonical_id,
                                    :lite_download_present, :epub_download_present, :mobi_download_present,
                                    :print_black_and_white_a4_download_present, :print_color_a4_download_present,
                                    :print_color_download_present, :print_black_and_white_download_present,

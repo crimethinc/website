@@ -2,6 +2,7 @@ module SinglePageTool
   extend ActiveSupport::Concern
   include Tool
   include Featureable
+  include Translatable
 
   def image_description
     I18n.t('tools.poster.image_description', title: title)

@@ -11,7 +11,7 @@
 
   <% [@featured_tools, @tools].each do |collection| %>
     <% collection.each do |tool| %>
-      <%= render_themed "tools/tool", tool: tool %>
+      <%= render_themed "tools/tool", tool: tool.preferred_localization %>
     <% end %>
 
     <hr style="margin-bottom: 5rem">
