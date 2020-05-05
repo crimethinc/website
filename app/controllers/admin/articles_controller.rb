@@ -2,7 +2,7 @@ module Admin
   class ArticlesController < Admin::AdminController
     before_action :set_article,      only: %i[show edit update destroy]
     before_action :set_published_at, only: %i[create update]
-    before_action :set_categories,   only: %i[new edit]
+    before_action :set_categories,   only: %i[new edit update]
     after_action  :organize_article, only: %i[create update]
 
     def index
