@@ -91,6 +91,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'russian', lang_code: :ru, canonical: 'russkii'),
     Locale.new(locale: 'russkii', lang_code: :ru, canonical: 'russkii'),
 
+    # sl: slovenian
+    locale.new(locale: 'slovenian',   lang_code: :sl, canonical: 'slovenscina'),
+    locale.new(locale: 'slovenščina', lang_code: :sl, canonical: 'slovenscina'),
+    locale.new(locale: 'slovenscina', lang_code: :sl, canonical: 'slovenscina'),
+
     # sv: swedish
     Locale.new(locale: 'swedish', lang_code: :sv, canonical: 'svenska'),
     Locale.new(locale: 'svenska', lang_code: :sv, canonical: 'svenska'),
