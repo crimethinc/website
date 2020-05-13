@@ -14,7 +14,10 @@
   </nav>
 
   <div class="subdomain-switcher">
-    <%= render_markdown t("views.languages.view_site_in_locale", locale: @locale.abbreviation) %>
+    <% unless @locale.abbreviation == I18n.locale.to_s %>
+      <%= render_markdown t("views.languages.view_site_in_locale", locale: @locale.abbreviation) %>
+    <% end %>
+
     <%= render_markdown t("views.languages.view_tools_in_locale", locale: @locale.abbreviation) %>
     <%= render_markdown t("views.languages.view_books_in_locale", locale: @locale.abbreviation) %>
   </div>
