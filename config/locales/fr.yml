@@ -16,60 +16,60 @@ fr:
 
   head:
     # meta_title is wrapped in quotes because it has a colon in its text value
-    meta_title: "CrimethInc. ex-Workers’ Collective: Your ticket to a world free of charge"
+    meta_title: "CrimethInc. ex-Workers’ Collective : Ton ticket vers un monde libre"
     meta_image_url: https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png
-    meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+    meta_description: CrimethInc. est un réseau décentralisé qui s'engage à mener des actions collectives anonymes. Nous nous efforçons de réinventer nos vies et notre monde selon les principes d'autodétermination et d'entraide.
 
   header:
-    languages: Languages
-    books: Books
-    library: Library
-    tools: Tools
+    languages: Langues
+    books: Livres
+    library: Bibliothèque
+    tools: Outils
     audio: Podcasts
-    video: Video
-    store: Store
-    subscribe: Subscribe
-    support: Support Us
-    search: Search
-    about: About
+    video: Vidéos
+    store: Boutique
+    subscribe: Abonne-toi
+    support: Nous soutenir
+    search: Rechercher
+    about: À propos
     locale_articles: Voir tous les articles en Français →
 
-    first_time: First Time? Start Here →
-    site_mode: Switch to the full version of the site →
+    first_time: C'est la première fois que tu entends parler de Crimethinc. ? Commence par ici →
+    site_mode: Passer à la version complète du site →
 
   search:
-    form_placeholder: Search Archives…
-    search_results: 'Search results for: %{query}'
+    form_placeholder: Rechercher dans les archives…
+    search_results: 'Résultats de la recherche pour : %{query}'
     advanced:
-      heading: Advanced Search
+      heading: Recherche avancée
       form:
-        term_label: Search
-        title_label: Title
-        subtitle_label: Subtitle
-        content_label: Content
-        tag_label: Tags
-        category_label: Categories
-        comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
-        button: Search
+        term_label: Recherche
+        title_label: Titre
+        subtitle_label: Sous-titre
+        content_label: Contenu
+        tag_label: Mots-clés
+        category_label: Catégories
+        comma_separated_note: Séparer par une virgule. Par exemple, _chiens, chats, etc_.
+        button: Rechercher
 
   footer:
     nav:
-      heading: Site Map
+      heading: Carte du site
       articles:
         label: Articles
         feed: RSS
-        adventure: Adventure
-        analysis: Analysis
+        adventure: Aventure
+        analysis: Analyse
         arts: Arts
-        current_events: Current Events
-        geography: Geography
-        how_to: How To
-        history: History
-        news: News
-        technology: Technology
+        current_events: Actualité
+        geography: Géographie
+        how_to: Comment faire
+        history: Histoire
+        news: Nouvelles
+        technology: Technologie
 
       books:
-        label: Books
+        label: Livres
         contradictionary: Contradictionary
         days_of_war_nights_of_love: Days of War Nights of Love
         expect_resistance: Expect Resistance
@@ -87,101 +87,102 @@ fr:
         no_wall_they_can_build: No Wall They can Build
 
       videos:
-        label: Videos
+        label: Vidéos
 
       tools:
-        label:    Tools
+        label:    Outils
         zines:    Zines
-        journals: Journals
-        posters:  Posters
-        stickers: Stickers
-        videos:   Videos
-        music:    Music
+        journals: Revues
+        posters:  Affiches
+        stickers: Autocollants
+        videos:   Vidéos
+        music:    Musique
         logos:    Logos
-        to_change_everything:          To Change Everything
-        steal_something_from_work_day: Steal Something from Work Day
+        to_change_everything:          Pour Tout Changer
+        steal_something_from_work_day: La Journée « Vole Quelque Chose au Travail »
 
       store:
-        label: Store
-        description: Books, Posters, Stickers, and more…
+        label: Boutique
+        description: Livres, Affiches, Autocollants, et plus encore…
 
       projects:
-        label: Projects
+        label: Projets
         kickstarter: Kickstarter
 
     about:
-      first_time_text: Is this your first time hearing about CrimethInc.?
-      first_time_link: Start here. →
-      heading: About CrimethInc.
+      first_time_text: C'est la première fois que tu entends parler de Crimethinc.?
+      first_time_link: Commence par ici. →
+      heading: À propos de CrimethInc.
       description: |
-        CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+        CrimethInc. est une alliance rebelle – un réseau décentralisé qui s'engage dans une action collective anonyme – qui s'est échappée des prisons de notre époque. Nous nous efforçons de réinventer nos vies et notre monde selon les principes de l'autodétermination et de l'entraide.
 
-        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._
-      more_link: More about CrimethInc. →
-      donate_button_text: Support this site
+        Nous pensons que tu devrais être libre de disposer de ton potentiel illimité selon tes propres conditions : aucun gouvernement, marché ou idéologie ne devrait pouvoir te dicter ce que doit être ta vie. Si tu es d'accord avec cela, _faisons ensemble quelque chose à ce sujet._
+      more_link: Plus d'informations à propos de CrimethInc. →
+      donate_button_text: Soutenir ce site
 
     contact:
       newsletter:
-        heading: Email Updates
-        description: Sign up here to receive regular email updates. _(Processed by Mailchimp.)_
-        signup_form_placeholder: What’s your email address?
-        signup_form_select_placeholder: You want a lot of emails? Or a little?
-        signup_form_select_option_lot:    Every little thing. (Many emails)
-        signup_form_select_option_little: Just the big stuff! (Fewer emails)
-        signup_button_text: Sign Up
+        heading: Mises à jour par email
+        description: Inscris-toi ici pour recevoir des mises à jour régulières par email. _(Processed by Mailchimp.)_
+        signup_form_placeholder:          Quelle est ton adresse email ?
+        signup_form_select_placeholder:   Tu veux recevoir beaucoup d'emails ? Ou un peu ?
+        signup_form_select_option_lot:    Chaque petite information. (Beaucoup d'emails)
+        signup_form_select_option_little: Juste le principal ! (Moins d'emails)
+        signup_button_text: S'inscrire
       social:
-        heading: Find Us Elsewhere
-        description: Keep up with our activities on the following additional platforms.
+        heading: Retrouve nous ailleurs
+        description: Suis nos activités sur ces autres plateformes.
 
     mantra:
-      - If your heart is free, the ground you stand on is liberated territory. Defend it.
-      - Only those prepared to go too far will learn how far they can go.
-      - Desperate measures are long overdue.
-      - Cradle the seed, even in the volcano’s mouth.
-      - The future is in chains within you — set it free.
-      - A spark for every powder keg.
-      - Esperanza no espera.
-      - Mobilis in mobili
+      - Si ton cœur est libre, le terrain sur lequel tu te tiens est un territoire libéré. Défends-le.
+      - Seul·e·s celles et ceux qui sont prêt·e·s à aller trop loin apprendront jusqu'où ils et elles peuvent aller.
+      - Des mesures désespérées sont attendues depuis longtemps.
+      - Prends soin de la graine, même dans la bouche du volcan.
+      - L'avenir est enchaîné en toi - libère-le.
+      - Une étincelle pour chaque baril de poudre.
+      - L'espoir n'attend pas.
+      - Mobilis in mobili – Mobile dans l'élément mobile.
+      - Dansons tou·te·s ensemble sur les cendres du vieux monde.
 
-    site_mode: Switch to the lite version of the site →
+    site_mode: Passer à la version allégée du site →
 
   page_titles:
     about:
       contact: Contact
-      about: About
-      library: Online Reading Library
-      store: Store
-      post_order_success: Post-Order Glow
-      submission_guidelines: Submission Guidelines
-      steal_something_from_work_day: Steal Something from Work Day
+      about: À propos
+      library: Bibliothèque de lecture en ligne
+      store: Boutique
+      post_order_success: La joie d'après-commande
+      submission_guidelines: Lignes directrices pour soumettre un article
+      steal_something_from_work_day: La Journée « Vole Quelque Chose au Travail »
     search:
-      index: Search
-      results: Results for
-      advanced: Advanced Search
+      index: Rechercher
+      results: Résultats pour
+      advanced: Recherche avancée
     videos:
-      index: Videos
+      index: Vidéos
     tools:
-      index: Tools
+      index: Outils
     posters:
-      index: Posters
+      index: Affiches
     journals:
-      index: Journals
+      index: Revues
     zines:
       index: Zines
     stickers:
-      index: Stickers
+      index: Autocollants
     logos:
       index: Logos
     podcasts:
       index: Podcasts
-      transcript: Transcript
+      transcript: Transcription
     categories:
-      index: Categories
+      index: Catégories
     books:
-      index: Books
+      index: Livres
       extras: Extras
-      lit_kit: Literature Distribution Kit
-      into_libraries: CrimethInc. Into Libraries
+      lit_kit: Kit de distribution de littérature
+      into_libraries: CrimethInc. dans les bibliothèques
       contradictionary: Contradictionary
       days_of_war_nights_of_love: Days of War Nights of Love
       expect_resistance: Expect Resistance
@@ -192,31 +193,31 @@ fr:
       work: Work
 
   podcast:
-    latest_episode: Latest Episode
-    other_episodes: All Episodes
-    listen: Listen to the Episode
-    download: Download
-    summary: Summary
-    show_notes: Show Notes
-    transcript: Transcript
-    notes_and_links: Notes and Links
-    full_episode_transcript: Full Episode Transcript
+    latest_episode: Dernier épisode
+    other_episodes: Tous les épisodes
+    listen: Écouter l'épisode
+    download: Télécharger
+    summary: Sommaire
+    show_notes: Montrer les notes
+    transcript: Transcription
+    notes_and_links: Notes et liens
+    full_episode_transcript: Transcription entière de l'épisode
 
   tools:
     poster:
-      image_description:      Photo of ‘%{title}’ front side
-      back_image_description: Photo of ‘%{title}’ back side
+      image_description:      Photo recto de ‘%{title}’
+      back_image_description: Photo verso de ‘%{title}’
 
   downloads:
-    heading: Downloads
+    heading: Téléchargements
     formats:
-      screen_single_page_view:  Screen Single Page View PDF
-      screen_two_page_view:     Screen Two Page View PDF
-      print_color:              Print Color PDF
-      print_black_and_white:    Print B/W PDF
-      print_color_a4:           Print Color A4 PDF
-      print_black_and_white_a4: Print B/W A4 PDF
-      lite:                     Lo Res PDF
+      screen_single_page_view:  Afficher PDF vue page simple
+      screen_two_page_view:     Afficher PDF vue deux pages
+      print_color:              Imprimer PDF en couleur
+      print_black_and_white:    Imprimer PDF en N/B
+      print_color_a4:           Imprimer PDF en couleur format A4
+      print_black_and_white_a4: Imprimer PDF en N/B format A4
+      lite:                     PDF faible résolution
       epub:                     ePub
       mobi:                     Mobi
 
@@ -225,191 +226,191 @@ fr:
       first: "&laquo;"
       last: "&raquo;"
       previous: "&lsaquo;"
-      previous_screen_reader: Previous
+      previous_screen_reader: Précédent
       next: "&rsaquo;"
-      next_screen_reader: Next
+      next_screen_reader: Suivant
       truncate: "&hellip;"
-      next_page: "Next &rsaquo;"
-      previous_page: "&lsaquo; Previous"
-      next_article: "%{title}: Next &rsaquo;"
-      previous_article: "&lsaquo; Previous: %{title}"
-      next_month: "&lsaquo; Next Month (%{month})"
-      previous_month: "(%{month}) Previous Month &rsaquo;"
-      next_year: "&lsaquo; Next Year (%{year})"
-      previous_year: "(%{year}) Previous Year &rsaquo;"
+      next_page: "Suivant &rsaquo;"
+      previous_page: "&lsaquo; Précédent"
+      next_article: "%{title}: Suivant &rsaquo;"
+      previous_article: "&lsaquo; Précédent : %{title}"
+      next_month: "&lsaquo; Mois suivant (%{month})"
+      previous_month: "(%{month}) Mois précédent &rsaquo;"
+      next_year: "&lsaquo; Année suivante (%{year})"
+      previous_year: "(%{year}) Année précédente &rsaquo;"
 
     tools:
-      buy_now_button_text:             Buy Now
-      zine_download_read_button_text:  Download PDF for Reading
-      zine_download_print_button_text: Download PDF for Printing
-      zine_download_lite_button_text:  Download Lo Res PDF
-      zine_download_epub_button_text:  Download ePub eBook
-      zine_download_mobi_button_text:  Download Mobi eBook
+      buy_now_button_text:             Acheter maintenant
+      zine_download_read_button_text:  Télécharger PDF pour lecture
+      zine_download_print_button_text: Télécharger PDF pour impression
+      zine_download_lite_button_text:  Télécharger PDF en faible résolution
+      zine_download_epub_button_text:  Télécharger ePub eBook
+      zine_download_mobi_button_text:  Télécharger Mobi eBook
 
-      book_download_read_button_text:  Download Two Page View PDF
-      book_download_print_button_text: Download Print PDF
-      book_download_lite_button_text:  Download Single Page View PDF
-      book_download_epub_button_text:  Download ePub eBook
-      book_download_mobi_button_text:  Download Mobi eBook
+      book_download_read_button_text:  Télécharger PDF vue deux pages
+      book_download_print_button_text: Télécharger PDF prêt à l'impression
+      book_download_lite_button_text:  Télécharger PDF vue page simple
+      book_download_epub_button_text:  Télécharger ePub eBook
+      book_download_mobi_button_text:  Télécharger Mobi eBook
 
-      admin_book_read_download_text:  Two Up PDF
-      admin_book_print_download_text: Print PDF
-      admin_book_lite_download_text:  One Up PDF
+      admin_book_read_download_text:  Imprimer 2 PDFs par page
+      admin_book_print_download_text: Imprimer PDF
+      admin_book_lite_download_text:  Imprimer 1 PDF par page
       admin_book_epub_download_text:  Mobi
       admin_book_mobi_download_text:  ePub
 
-      admin_zine_read_download_text:  Read PDF
-      admin_zine_print_download_text: Print PDF
-      admin_zine_lite_download_text:  Lo-Res PDF
+      admin_zine_read_download_text:  Lire PDF
+      admin_zine_print_download_text: Imprimer PDF
+      admin_zine_lite_download_text:  PDF faible résolution
       admin_zine_epub_download_text:  Mobi
       admin_zine_mobi_download_text:  ePub
 
       # these text values are wrapped in quotes because each has a colon in its text value
-      download_front_button_text: "Download PDF : Front"
-      download_back_button_text:  "Download PDF : Back"
-      download_front_color_button_text:  "Download PDF : Front Color"
-      download_back_color_button_text:   "Download PDF : Front Back"
-      download_front_black_and_white_button_text: "Download PDF : Front B/W"
-      download_back_black_and_white_button_text:  "Download PDF : Back B/W"
+      download_front_button_text: "Télécharger PDF : recto"
+      download_back_button_text:  "Télécharger PDF : verso"
+      download_front_color_button_text:  "Télécharger PDF : recto couleur"
+      download_back_color_button_text:   "Télécharger PDF : verso couleur"
+      download_front_black_and_white_button_text: "Télécharger PDF : recto N/B"
+      download_back_black_and_white_button_text:  "Télécharger PDF : verso N/B"
 
-      pdf_donate_button_text: Donate
-      pdf_donate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
+      pdf_donate_button_text: Faire un don
+      pdf_donate_button_label: Fais un don ici pour nous aider à maintenir ce PDF en libre accès et continuer à en créer de nouveaux.
 
-      journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
-      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
-      music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
-      posters_intro_text:  Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
-      stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
-      tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
-      videos_intro_text:   Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
-      zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [_To Change Everything_ site](/tce).
+      journals_intro_text: Ici, tu peux télécharger des PDFs de _Rolling Thunder,_ notre célèbre revue d'analyse et d'action directe, _Harbinger_, notre tabloïd classique propageant « la propagande du désir », ainsi que d'autres séries de publications ambitieuses de ces deux dernières décennies.
+      logos_intro_text:    CrimethInc. pour toi-même ! Logos à utiliser pour tes propres projets CrimethInc..
+      music_intro_text:    Télécharge un large choix d'albums que nous avons [sortis](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) depuis 1996, que ce soit du [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) ou autre.
+      posters_intro_text:  Donne vie aux murs de ta maison, de ton établissement scolaire ou d'enseignement supérieur, de ta ville ou de ton centre communautaire et social ! Nous recommandons d'utiliser de la colle à papier ou de la [colle à base de farine](/posters) pour recouvrir l'espace public avec ces affiches.
+      stickers_intro_text: Aide les objets muets qui t'entourent à communiquer de manière plus éloquente ! Commande-les en gros ou imprime-les sur du papier adhésif.
+      tools_intro_text:    S'appuyant sur plus de deux décennies d'activité, nous proposons un large éventail de matériels que tu peux télécharger ou commander en grande quantité. Utilise-les pour éduquer, agiter et transformer les espaces qui t'entourent.
+      videos_intro_text:   Système de diffusion d'urgence – Une sélection de vidéos de CrimethInc. Perpetual Motion Pictures.
+      zines_intro_text:    Un grand nombre de nos textes sont disponibles ici sous forme de brochure. Imprime-les ou photocopie-les pour les distribuer dans les établissements scolaires et universitaires, lors des manifestations, pendant des concerts, lors d'événements sociaux, sur les marchés de producteur·rice·s et partout ailleurs où les gens pourraient avoir faim d'idées. Tu peux également obtenir des PDFs de _Pour Tout Changer,_ notre introduction à l'anarchisme, dans une douzaine de langues différentes sur notre [site _Pour Tout Changer_](/tce).
       books_intro_text: |
-        From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
+        D'une écriture passionnée et d'une édition méticuleuse, à une conception complexe et unique, en passant par une production experte et soignée, ces livres sont le résultat de beaucoup d'amour et de soin. Nous y travaillons depuis plus de dix ans, et tu en trouveras la preuve dans tous les petits détails et les moments orchestrés qui ne peuvent être réalisés qu'avec du papier imbibé d'encre.
 
-        All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
+        Tous nos livres sont imprimés avec de l'encre de soja sur du papier 100 % recyclé par des artisan·e·s qualifié·e·s de Louisville, au Québec (Canada), qui utilisent les meilleures presses offset.
 
-      books_heading_text:    We love making books.
-      journals_heading_text: Journals
+      books_heading_text:    Nous aimons faire des livres.
+      journals_heading_text: Revues
       logos_heading_text:    Logos
-      posters_heading_text:  Posters
-      stickers_heading_text: Stickers
-      tools_heading_text:    Tools
+      posters_heading_text:  Affiches
+      stickers_heading_text: Autocollants
+      tools_heading_text:    Outils
       zines_heading_text:    Zines
 
       buttons:
-        browse_journals_text: Browse All Journals
-        browse_logos_text: Browse All Logos
-        browse_music_text: Browse All Music
-        browse_posters_text: Browse All Posters
-        browse_stickers_text: Browse All Stickers
-        browse_videos_text: Browse All Videos
-        browse_zines_text: Browse All Zines
+        browse_journals_text: Consulter toutes les revues
+        browse_logos_text: Consulter tous les logos
+        browse_music_text: Consulter toute la musique
+        browse_posters_text: Consulter toutes les affiches
+        browse_stickers_text: Consulter tous les autocollants
+        browse_videos_text: Consulter toutes les vidéos
+        browse_zines_text: Consulter tous les zines
 
     books:
-      crimethinc_into_libraries_heading: CrimethInc. Into Libraries
-      crimethinc_into_libraries_intro: For those who don’t have the extra resources with which to buy books or who just aren’t excited about acquiring more possessions, we have good news for you—the [CrimethInc. Into Libraries program](/books/into-libraries). Our books are [in more libraries than you might guess](/2007/10/09/crimethinc-into-libraries-progress-report), and if not, you can probably get them onto the shelves, for free. [Find out how!](/books/into-libraries)
+      crimethinc_into_libraries_heading: CrimethInc. dans les bibliothèques
+      crimethinc_into_libraries_intro: Pour celles et ceux qui ne disposent pas suffisamment de ressources pour acheter des livres ou qui ne sont tout simplement pas enthousiastes à l'idée d'acquérir d'autres biens, nous avons de bonnes nouvelles pour vous – le [programme CrimethInc. dans les bibliothèques](/books/into-libraries). Nos livres sont disponibles [dans plus de bibliothèques que tu ne pourrais le croire](/2007/10/09/crimethinc-into-libraries-progress-report), et si ce n'est malheureusement pas le cas pour celle située à côté de chez toi, tu peux probablement les obtenir gratuitement pour les mettre dans les rayons. [Découvre comment faire !](/books/into-libraries)
 
-      literature_distro_kit_heading: Literature Distro Kit
-      literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
+      literature_distro_kit_heading: Kit de distribution de littérature
+      literature_distro_kit_intro: Nos livres sont la pierre angulaire de notre [Kit de distribution de littérature](/books/lit-kit), une distro de littérature tout-en-un que tu peux déployer comme bon te semble. Il contient un assortiment de livres à vendre et d'objets à donner, tout ce dont tu as besoin pour tenir une table à un concert, partir en tournée ou faire passer le mot depuis ton sac à dos ou depuis la salle de pause de ton lieu de travail.
 
     support:
       new:
-        heading: Invest Your Money in CrimethInc.—!
+        heading: Investir son argent dans CrimethInc.—!
         description: |
-          _Use the slider to adjust your donation. No amount is too big to be needed or too small to be helpful! If you can, sign up to donate on a monthly basis, so we can count on you to sustain us for the long haul._
+          _Utilise le curseur pour ajuster le montant de ton don. Aucun montant n'est ni trop important pour être nécessaire ni trop faible pour être utile ! Si tu le peux, inscris-toi pour faire un don mensuel, afin que nous puissions compter sur toi pour nous soutenir sur le long terme._
 
-          CrimethInc. is an all-volunteer project with no outside sources of funding. We offer everything we do for free or at break-even prices while maintaining some of the highest quality standards in our field. We publish constantly, circulating material in [over 30 languages](/tce) on [all seven continents](/2008/01/06/now-serving-seven-continents). We’ve kept this up for a quarter of a century.
+          CrimethInc. est un projet entièrement bénévole, sans aucune source de financement externe. Nous offrons tout ce que nous faisons gratuitement ou au prix d'équilibre tout en maintenant des normes de qualité parmi les plus élevées dans notre domaine. Nous publions constamment, faisons circuler du matériel dans [plus de 30 langues](/tce) sur [les sept continents](/2008/01/06/now-serving-seven-continents). Et ça fait un quart de siècle que cela dure.
 
-          We do all this on a shoestring budget—but despite our ingenuity, some expenses are unavoidable. We depend on your assistance to cover those. With more resources, we could expand to utilize more formats and free up time to publish even more frequently.
+          Nous faisons tout cela avec un budget très restreint – mais malgré notre ingéniosité, certaines dépenses sont inévitables. Nous dépendons de ton aide pour les couvrir. Avec plus de ressources, nous pourrions nous développer pour utiliser plus de formats et libérer du temps pour publier encore plus souvent.
 
-          As always, of course, the very best way to support what we are doing is to _do it yourself._
+          Comme toujours, bien sûr, la meilleure façon de nous soutenir est que tu fasses _toi-même_ ce que nous faisons.
 
-        radio_label_monthly: Monthly
-        radio_label_one_time: One-time
-        amount_label: Support Amount
-        description_monthly: Monthly Subscription
-        description_one_time: One-Time Support
-        button_text: Next →
+        radio_label_monthly: Mensuel
+        radio_label_one_time: Unique
+        amount_label: Montant du don
+        description_monthly: Abonnement mensuel
+        description_one_time: Don unique
+        button_text: Suivant →
         support_request:
-          header: Existing Monthly Subscribers
-          description: Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.
-          email_label: Email Address
+          header: Abonné·e·s mensuel·le·s existant·e·s
+          description: Besoin de mettre à jour ou d'annuler ton abonnement ? Saisis l'adresse électronique que tu as utilisée pour t'inscrire, et nous t'enverrons un email avec un lien super secret où tu pourras faire des modifications.
+          email_label: Addresse mail
           email_placeholder: you@example.com
-          button_text: Send Super Secret Link
+          button_text: Envoyer le lien super secret
 
       create:
-        repeat_subscriber_error: We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!
+        repeat_subscriber_error: Nous avons déjà un·e abonné·e mensuel·le avec cette adresse électronique. Si tu veux quand même donner plus, essaie de faire un don unique. Merci !
 
       create_session:
-        no_existing_customer_error: We can't find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.
-        success_notice: We sent an email to _%{email}_ with a link where you can make changes to your subscription.
-        repeat_customer_error: You already submitted a request! Look for an email from _info@crimethinc.com_. If you never got the email or you've lost your super secret link, wait an hour and try again.
+        no_existing_customer_error: Nous ne trouvons aucun·e abonné·e mensuel·le ayant cette adresse électronique. Si tu penses qu'il s'agit d'une erreur, s'il te plait [envoie nous un email](mailto:info@crimethinc.com) pour que l'on puisse t'aider.
+        success_notice: Nous avons envoyé un _%{email}_ avec un lien pour que tu puisses apporter des modifications à ton abonnement.
+        repeat_customer_error: Tu as déjà envoyé une demande ! Cherche un email venant de _info@crimethinc.com_. Si tu n'as jamais reçu l'email ou si tu as perdu ton lien super secret, attends une heure et essaie à nouveau.
 
       edit:
-        heading: Your Subscription
-        description: Thank you so much for your ongoing support. We count on contributions like yours to do what we do.
-        expired_link_error: That link has expired. Please try again.
-        expires_at: This page will expire in about %{minutes} minutes.
+        heading: Ton abonnement
+        description: Merci beaucoup pour ton soutien continu. Nous comptons sur des contributions comme la tienne pour continuer de faire ce que nous faisons.
+        expired_link_error: Ce lien a expiré. Veuillez réessayer.
+        expires_at: Cette page expirera dans environ %{minutes} minutes.
         update:
-          amount_label: Monthly Support
-          amount_slider_label: Drag the slider to change your subscription amount.
-          button_text: Update Subscription
-          button_confirm: Are you sure you want to update your subscription amount?
-          start_date: Subscribed since
-          next_date: Next charge
+          amount_label: Soutien mensuel
+          amount_slider_label: Fais glisser le curseur pour modifier le montant de ton abonnement.
+          button_text: Mettre à jour l'abonnement
+          button_confirm: Es-tu sûr·e de vouloir mettre à jour le montant de ton abonnement ?
+          start_date: Abonné·e depuis
+          next_date: Prochain montant
         cancel:
-          header: If you want to cancel your subscription, click the big red button!
-          button_text: Cancel Subscription
-          button_confirm: Are you sure you want to completely cancel your subscription?
+          header: Si tu souhaites résilier ton abonnement, clique sur le gros bouton rouge !
+          button_text: Résilier l'abonnement
+          button_confirm: Es-tu sûr·e de vouloir résilier complètement ton abonnement ?
 
       update_subscription:
-        notice: Your subscription amount has been updated!
-        error: There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+        notice: Le montant de ton abonnement a été mis à jour !
+        error: Il y a eu un problème lors de la mise à jour de ton abonnement. Essaie encore ! Si le problème persiste, s'il te plaît [envoie nous un email](mailto:info@crimethinc.com) pour que l'on puisse t'aider.
 
       cancel_subscription:
-        notice: Your subscription has been canceled.
-        error: There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+        notice: Ton abonnement a été résilié.
+        error: Il y a eu un problème lors de la résiliation de ton abonnement. Essaie encore ! Si le problème persiste, s'il te plaît [envoie nous un email](mailto:info@crimethinc.com) pour que l'on puisse t'aider.
 
       thanks:
-        heading: Thanks for your help!
+        heading: Merci pour ton aide !
         description: |
-          We welcome your [feedback](mailto:info@crimethinc.com) about our efforts and your [participation](mailto:info@crimethinc.com) in them.
+          Nous t'invitons à nous faire part de tes [commentaires](mailto:info@crimethinc.com) concernant nos initiatives ainsi que sur ta [participation](mailto:info@crimethinc.com) dans ces dernières.
 
-          You’ll receive an email confirmation soon.
+          Tu vas bientôt recevoir un mail de confirmation.
 
-          If you signed up for a monthly subscription, you can update or cancel your subscription at any time by submitting your email address in the form at the bottom of the [support](/support) page.
+          Si tu as souscrit à un abonnement mensuel, tu peux mettre à jour ou annuler ton abonnement à tout moment en indiquant ton adresse électronique dans le formulaire qui se trouve au bas de la page de [soutien](/support).
 
       mailers:
         edit_subscription:
-          subject: Request for Super Secret Support Link
-          header: Your Super Secret Support Link has arrived!
-          link_description: Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe.
-          repeat_request: If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link.
-          more_help: You can also reply to this email if need more assistance.
+          subject: Demande de lien de soutien super secret
+          header: Ton lien de soutien super secret est arrivé !
+          link_description: Toute personne disposant du lien ci-dessus peut l'utiliser pour apporter des modifications à son abonnement. Le lien expirera dans une heure. Garde le secret, garde le en sécurité.
+          repeat_request: Si tu n'arrives pas à faire les changements souhaités à temps, ne t'inquiète pas. Nous pouvons toujours t'envoyer un autre lien super secret.
+          more_help: Tu peux également répondre à ce mail si tu as besoin d'une aide supplémentaire.
 
     languages:
-      heading: Languages
+      heading: Langues
       description: |
-        CrimethInc. material has appeared in over three dozen languages; our introductory
-        primer, [To Change Everything](/tce), is available in 30. We have
-        [long](/2010/08/18/non-english-crimethinc-projects) aspired to collect all the different
-        translations on this site. If you would like to translate our material—or if you can
-        help us to collect translations for this archive or help us maintain communication
-        between related projects around the world—please
-        [contact us](mailto:foreignlegion@crimethinc.com).
+        Les différents matériels de CrimethInc. ont été publiés dans plus de trente langues différentes ; notre texte introductif,
+        [Pour Tout Changer](/tce), est quant à lui disponible dans trente langues. Nous aspirons
+        depuis [longtemps](/2010/08/18/non-english-crimethinc-projects) à rassembler toutes les différentes
+        traductions existantes sur ce site. Si tu souhaites participer à la traduction de nos textes – ou si tu peux
+        nous aider à rassembler des traductions pour nos archives ou nous aider à maintenir le contact et assurer la communication
+        entre les différents projets connexes à travers le monde – s'il te plaît
+        [contacte nous](mailto:foreignlegion@crimethinc.com).
 
-        Here, you can find all the articles on this site categorized according to language.
+        Ici, tu peux trouver tous les articles de ce site classés par langue.
 
   helpers:
     page_entries_info:
       entry:
-        zero: entries
-        one: entry
-        other: entries
+        zero: entrées
+        one: entrée
+        other: entrées
       one_page:
         display_entries:
-          zero: "No %{entry_name} found"
-          one: "Displaying <b>1</b> %{entry_name}"
-          other: "Displaying <b>all %{count}</b> %{entry_name}"
+          zero: "%{entry_name} non trouvé"
+          one: "Afficher <b>1</b> %{entry_name}"
+          other: "Afficher <b>all %{count}</b> %{entry_name}"
       more_pages:
-        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+        display_entries: "Afficher %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> au total"
