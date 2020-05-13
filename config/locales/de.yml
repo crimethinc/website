@@ -21,7 +21,7 @@ de:
     meta_description: CrimethInc. ist ein dezentrales Netzwerk, das sich dem anonymen kollektiven Handeln verschrieben hat. Wir streben danach, unser Leben und unsere Welt nach den Prinzipien der Selbstbestimmung und der gegenseitigen Hilfe neu zu erfinden.
 
   header:
-    languages: Languages
+    languages: Sprachen
     books: Bücher
     library: Textsammlung
     tools: Materialien
@@ -389,21 +389,21 @@ de:
           more_help: Du kannst auch auf diese E-Mail antworten, wenn du weitere Unterstützung benötigst.
 
     languages:
-      view_site_in_locale:  Sehen Sie sich diese Seite auf Englisch an [hier](https://de.crimethinc.com).
-      view_tools_in_locale: Sie können auf eine Reihe von Postern, Zines und anderen Materialien in englischer Sprache zugreifen [hier](https://de.crimethinc.com/tools).
-      view_books_in_locale: Sie können auf unsere Bücher in englischer Sprache zugreifen [hier](https://de.crimethinc.com/books).
+      view_site_in_locale:  "[Hier](https://de.crimethinc.com) kannst du dir die gesamte Seite auf deutsch anzeigen lassen."
+      view_tools_in_locale: "[Hier](https://de.crimethinc.com/tools) kannst du auf eine Sammlung Poster, Zines und weiteres Material auf deutsch zugreifen."
+      view_books_in_locale: "[Hier](https://de.crimethinc.com/books) findest du unsere deutschsprachigen Bücher."
 
-      heading: Languages
+      heading: Sprachen
       description: |
-        CrimethInc. material has appeared in over three dozen languages; our introductory
-        primer, [To Change Everything](/tce), is available in 30. We have
-        [long](/2010/08/18/non-english-crimethinc-projects) aspired to collect all the different
-        translations on this site. If you would like to translate our material—or if you can
-        help us to collect translations for this archive or help us maintain communication
-        between related projects around the world—please
-        [contact us](mailto:foreignlegion@crimethinc.com).
+        CrimethInc. Material ist auf über drei dutzend Sprachen erschienen; unser
+        Einleitungstext [Alles verändern](/tce) ist auf 30 Sprachen verfügbar. Wir arbeiten
+        [seit langem](/2010/08/18/non-english-crimethinc-projects) daran, alle Übersetzungen
+        auf dieser Seite zu sammeln. Wenn du gerne etwas übersetzen möchtest – oder uns dabei
+        helfen kannst das Archiv auf dieser Seite zu erweitern oder bei der Kommunikation mit
+        damit verbundenen Projekten aus aller Welt aushelfen möchtest –
+        [schreib uns gerne](mailto:foreignlegion@crimethinc.com).
 
-        Here, you can find all the articles on this site categorized according to language.
+        Hier findest du alle Artikel dieser Seite nach Sprache sortiert.
 
   helpers:
     page_entries_info:
