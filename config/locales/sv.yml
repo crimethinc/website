@@ -389,6 +389,10 @@ sv:
           more_help: You can also reply to this email if need more assistance.
 
     languages:
+      view_site_in_locale:  View this site in Swedish [here](https://sv.crimethinc.com).
+      view_tools_in_locale: You can access an array of posters, zines, and other materials in Swedish [here](https://sv.crimethinc.com/tools).
+      view_books_in_locale: You can access our books in Swedish [here](https://sv.crimethinc.com/books).
+
       heading: Languages
       description: |
         CrimethInc. material has appeared in over three dozen languages; our introductory
