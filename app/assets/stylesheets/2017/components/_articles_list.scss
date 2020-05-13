@@ -1,8 +1,16 @@
-.h-feed {
+#page {
+  .articles-list {
+    .h-entry {
+      padding: 0;
+    }
+  }
+}
 
+.h-feed {
   .articles-list {
     .h-entry {
       margin-bottom: 6rem;
+      padding: 0;
 
       header {
         margin: 0;
