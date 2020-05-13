@@ -389,6 +389,10 @@ de:
           more_help: Du kannst auch auf diese E-Mail antworten, wenn du weitere Unterstützung benötigst.
 
     languages:
+      view_site_in_locale:  Sehen Sie sich diese Seite auf Englisch an [hier](https://de.crimethinc.com).
+      view_tools_in_locale: Sie können auf eine Reihe von Postern, Zines und anderen Materialien in englischer Sprache zugreifen [hier](https://de.crimethinc.com/tools).
+      view_books_in_locale: Sie können auf unsere Bücher in englischer Sprache zugreifen [hier](https://de.crimethinc.com/books).
+
       heading: Languages
       description: |
         CrimethInc. material has appeared in over three dozen languages; our introductory

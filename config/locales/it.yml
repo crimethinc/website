@@ -389,6 +389,10 @@ it:
           more_help: Puoi anche rispondere a questa email se hai bisogno di altro aiuto.
 
     languages:
+      view_site_in_locale:  Visita il sito in italiano [qui](https://it.crimethinc.com).
+      view_tools_in_locale: Puoi avere accesso a una vasta gamma di poster, zine e altro materiale in italiano [qui](https://it.crimethinc.com/tools).
+      view_books_in_locale: Puoi avere accesso ai nostri libri in italiano [qui](https://it.crimethinc.com/books).
+
       heading: Lingue
       description: |
         Tutto il materiale di CrimethInc. è stato pubblicato in oltre tre dozzine di lingue; il nostro manuale

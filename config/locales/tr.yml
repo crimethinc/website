@@ -389,6 +389,10 @@ tr:
           more_help: You can also reply to this email if need more assistance.
 
     languages:
+      view_site_in_locale:  View this site in Turkish [here](https://tr.crimethinc.com).
+      view_tools_in_locale: You can access an array of posters, zines, and other materials in Turkish [here](https://tr.crimethinc.com/tools).
+      view_books_in_locale: You can access our books in Turkish [here](https://tr.crimethinc.com/books).
+
       heading: Languages
       description: |
         CrimethInc. material has appeared in over three dozen languages; our introductory
