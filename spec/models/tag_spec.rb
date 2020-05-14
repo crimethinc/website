@@ -4,7 +4,7 @@ describe Tag do
   subject(:tag) { described_class.new(name: 'test') }
 
   describe 'validation' do
-    context 'when two tag has the same name with case difference' do
+    context 'when two tags have the same name with case difference' do
       it 'makes the second tag invalid' do
         described_class.create!(name: 'anarchism')
         second_tag = described_class.new(name: 'Anarchism')
