@@ -3,6 +3,17 @@ require 'rails_helper'
 describe Tag do
   subject(:tag) { described_class.new(name: 'test') }
 
+  describe 'validation' do
+    context 'when two tags have the same name with case difference' do
+      it 'makes the second tag invalid' do
+        described_class.create!(name: 'anarchism')
+        second_tag = described_class.new(name: 'Anarchism')
+
+        expect(second_tag).to be_invalid
+      end
+    end
+  end
+
   describe 'assigned_to?' do
     let(:page) { Page.create(title: 'about') }
 

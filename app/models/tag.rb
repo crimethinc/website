@@ -11,7 +11,7 @@ class Tag < ApplicationRecord
 
   before_validation :strip_whitespace, on: %i[create update]
 
-  validates :name, uniqueness: true
+  validates :name, uniqueness: { case_sensitive: false }
 
   def strip_whitespace
     self.name = name.strip
