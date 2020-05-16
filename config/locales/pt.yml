@@ -392,7 +392,7 @@ pt:
     languages:
       view_site_in_locale:  Para ver este site em português clique [aqui](https://pt.crimethinc.com).
       view_tools_in_locale: Acesse uma variedade de pôsteres, zines e outros materiais em português clicando [aqui](https://pt.crimethinc.com/tools).
-      view_books_in_locale: Acessar nossos livros em português clicando [aqui](https://pt.crimethinc.com/books).
+      view_books_in_locale: Veja nossos livros em português clicando [aqui](https://pt.crimethinc.com/books).
 
       heading: Languages
       description: |
