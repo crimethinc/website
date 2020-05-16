@@ -1,28 +1,28 @@
 fr:
   library:
-    title: Online Reading Library
+    title: Bibliothèque de lecture en ligne
 
     intro: |
-      This online archive includes essays, stories, accounts, and other texts
-      that have appeared under the CrimethInc. insignia over the past quarter of a century.
-      It is extensive, but by no means comprehensive.
+      Ces archives en ligne comprennent des essais, des histoires, des récits, et d'autres textes
+      qui ont paru sous l'insigne CrimethInc. au cours de ce dernier quart de siècle.
+      Il s'agit d'une longue liste, mais elle n'est en aucun cas exhaustive.
 
-      Some of these texts are available as PDFs in our [Tools](/tools) section. You’ll
-      find zines, magazines, papers, and posters on a wide range of topics, ready for you
-      to print them out and distribute them to everyone in your path. You can also
-      download back issues of [journals](/journals) we have published, including
+      Certains de ces textes sont disponibles au format PDFs dans notre rubrique [Outils](/tools). Tu
+      trouveras des zines, des magazines, des journaux, et des affiches sur un large éventail de sujets, prêts à être
+      imprimés et distribués à tou·te·s celles et ceux qui se trouvent sur ton chemin. Tu peux également
+      télécharger les anciens numéraux des [revues](/journals) que nous avons publiées, notamment
       _[Rolling Thunder](/journals/rolling-thunder)_, _[Harbinger](/journals/harbinger)_,
-      and _[Inside Front](/journals/inside-front)_.
+      et _[Inside Front](/journals/inside-front)_.
 
     sections:
       theme:
-        title: Navigate by Theme
+        title: Naviguer par thème
 
       chronological:
-        title: Navigate Chronologically
+        title: Naviguer par ordre chronologique
 
       sample:
-        title: Sample Reading Lists
+        title: Exemple de listes de lecture
 
     links:
       Current Events:
