@@ -1,11 +1,13 @@
 class ToChangeEverythingGenerator < Rails::Generators::Base
   source_root File.expand_path('templates', __dir__)
   argument :lang_code, type: :string, require: true
-  argument :url, type: :string, require: true
-  argument :lang_direction, type: :string, require: false, default: 'ltr',
-                            description: 'the direction the language is' \
-                                         'written/read: either ltr or rtl' \
-                                         ' (default is ltr)'
+  argument :url,       type: :string, require: true
+
+  argument :lang_direction,
+           type:        :string,
+           require:     false,
+           default:     'ltr',
+           description: 'Direction the language is written/read: either ltr or rtl (default is ltr)'
 
   def add_tce_url_to_controller
     controller = 'app/controllers/to_change_everything_controller.rb'
