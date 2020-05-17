@@ -5,47 +5,50 @@ czech:
       lang_code: cs
       video_url: https://player.vimeo.com/video/111159930
       head:
-        title: "To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers' Collective"
+        title: "Změň Vše! anarchistický apel / CrimethInc. Ex-Workers' Collective"
         meta:
-          title: To Change Everything, an anarchist appeal
+          title: Změň Vše! anarchistický apel
           description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart
-          url: http://tochangeeverything.com/
+          url: http://tochangeeverything.com/czech
       menu:
-        toc: Table of Contents
+        toc: Obsah
         language: czech
-        share: Share
+        share: Sdílej
       toc:
-        introduction: introduction
-        self: start with self-determination
-        answering: start by answering to ourselves
-        power: start by seeking power, not authority
-        relationships: start with relationships built on trust
-        reconciling: start by reconciling the individual<br />&nbsp; &nbsp;and the whole
-        liberation: start with the liberation of desire
-        revolt: start with revolt
-        control: the problem is control
-        hierarchy: the problem is hierarchy
-        borders: the problem is borders
-        representation: the problem is representation
-        leaders: the problem is leaders
-        government: the problem is government
-        profit: the problem is profit
-        property: the problem is property
-        lastcrime: the last crime
-        anarchy: anarchy is
-        outro: outro
-        takeflight: take flight
-        next: next
+        introduction: úvod
+        self: začni sebeurčením
+        answering: začni odpovědností za sebe
+        power: začni hledáním moci, ne autority
+        relationships: začni vztahy budovanými na důvěře
+        reconciling: začni usmířením osobního i celku
+        liberation: začni osvobozením touhy
+        revolt: začni vzpourou
+        control: problémem je kontrola
+        hierarchy: problémem je hierarchie
+        borders: problémem jsou hranice
+        representation: problémem je reprezentace
+        leaders: problémem jsou vůdčí představitelé
+        government: problémem je vláda
+        profit: problémem je zisk
+        property: problémem je  majetek
+        lastcrime: poslední zločin
+        anarchy: anarchie
+        outro: závěr
+        takeflight: vzlétnout
+        next: ''
   to_change_everything:
     show:
-      title_html: '&nbsp;To Change<br />Everything'
-      subtitle_html: <span class="green">an</span> <span class="pink">anarchist</span> <span class="blue">appeal</span>
-      video_cte: Watch Video
-      pdf_cte_html: Download<br />&nbsp;PDF
-      pdf_get_url: /tce/get
-      pdf_image: tce-cover-200.png
+      title_html: 'Změň<br />&nbsp;&nbsp;Vše!'
+      subtitle_html: <span class="green">anarchistický</span> <span class="pink subbreak"><br>apel</span>
+      video_cte: Watch Video # TODO
+      pdf_cte_html: PDF ke<br />&nbsp;stažení
+      pdf_get_url: 'http://tcecz.noblogs.org/sample-page'
+      pdf_image: tce-cover-200-czech.png
       intro:
-        left_text_html: <p>If you could change anything, what would you change?  Would you go on vacation for the rest of your life? Make fossil fuels stop causing climate change? Ask for ethical banks and politicians? Surely nothing could be more unrealistic than to keep everything the way it is and expect different results.</p><p>Our private financial and emotional struggles mirror global upheaval and disaster. We could spend the rest of our days trying to douse these fires one by one, but they stem from the same source. No piecemeal solution will serve; we need to rethink everything according to a different logic.</p>
+        left_text_html: <p>Kdybychom mohli něco změnit, co by to bylo? Udělali bychom si prázdniny do konce života? Skoncovali s fosilními palivy, která způsobují změnu klimatu? Požadovali od bank a politiků etické jednání? Ať tak či tak, nic by nebylo pošetilejší, než nechat vše tak, jak to je a zároveň očekávat změnu.</p><p>Naše osobní, finanční a emocionální problémy do velké míry jen odrážejí celosvětové společenské otřesy a pohromy. Můžeme klidně strávit zbytek života hašením jednoho malého požáru po druhém, ale vzhledem k tomu, že všechny drobné požáry zakládá jeden žhář, žádné postupné řešení nám už nepomůže. Musíme vše přehodnotit novou optikou (podle nové logiky):</p>
+
+        # # # # # # # # # # # # # # # # # START HERE # # # # # # # # # # # # # # # # #
+
         right_text_html: To&#8200;<br />change&#8200;<br />anything,<br />start&#8200;<br />everywhere.
       self:
         left_text_html: start with<br /><span class="bold">self-determination</span>
