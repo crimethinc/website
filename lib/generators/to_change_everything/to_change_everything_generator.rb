@@ -1,7 +1,7 @@
 class ToChangeEverythingGenerator < Rails::Generators::Base
   source_root File.expand_path('templates', __dir__)
   argument :lang_code, type: :string, require: true
-  argument :url,       type: :string, require: true
+  argument :lang_name, type: :string, require: true
 
   argument :lang_direction,
            type:        :string,
@@ -9,17 +9,26 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
            default:     'ltr',
            description: 'Direction the language is written/read: either ltr or rtl (default is ltr)'
 
-  def add_tce_url_to_controller
+  def add_lang_name_to_tce_controller
     controller = 'app/controllers/to_change_everything_controller.rb'
     inject_into_file controller, after: "TO_CHANGE_ANYTHING_YAMLS = %w[\n" do
-      "    #{url}\n"
+      "    #{lang_name}\n"
     end
   end
 
-  def add_tce_url_to_application_config
+  def add_lang_name_to_application_config
     app_config = 'config/application.rb'
-    inject_into_file app_config, after: '%i[' do
-      "#{url} "
+
+    if lang_direction.casecmp('ltr').zero?
+      after_this_text  = "path_ltr_locales  = %i[\n"
+      inject_this_text = "      #{lang_name}\n"
+    else
+      after_this_text  = 'path_rtl_locales = %i['
+      inject_this_text = "#{lang_name} "
+    end
+
+    inject_into_file app_config, after: after_this_text do
+      inject_this_text
     end
   end
 
@@ -29,7 +38,7 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
       <<-ERB
 
                 <%# TODO: make sure this div doesn’t have duplicate URLs %>
-                <li><a href='/tce/#{url}'>#{url}</a></li>
+                <li><a href='/tce/#{lang_name}'>#{lang_name}</a></li>
       ERB
     end
   end
@@ -40,16 +49,16 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
       <<-ERB
 
           <%# TODO: make sure this div doesn’t have duplicate URLs %>
-          <li><a href='/tce/#{url}'>#{url} <span class='check check-#{url}'></span></a></li>
+          <li><a href='/tce/#{lang_name}'>#{lang_name} <span class='check check-#{lang_name}'></span></a></li>
       ERB
     end
   end
 
   def create_tce_css_file
     file_path = 'app/assets/stylesheets/to_change_everything/'
-    template    'to_change_everything.scss.template', "#{file_path}_#{url}.scss"
+    template    'to_change_everything.scss.template', "#{file_path}_#{lang_name}.scss"
     append_file 'app/assets/stylesheets/to_change_everything.scss',
-                "@import 'to_change_everything/#{url}';\n"
+                "@import 'to_change_everything/#{lang_name}';\n"
   end
 
   def copy_tce_en_file
