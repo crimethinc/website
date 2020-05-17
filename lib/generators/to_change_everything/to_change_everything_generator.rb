@@ -11,8 +11,8 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
 
   def add_tce_url_to_controller
     controller = 'app/controllers/to_change_everything_controller.rb'
-    inject_into_file controller, after: '%w[' do
-      "#{url} "
+    inject_into_file controller, after: "TO_CHANGE_ANYTHING_YAMLS = %w[\n" do
+      "    #{url}\n"
     end
   end
 
