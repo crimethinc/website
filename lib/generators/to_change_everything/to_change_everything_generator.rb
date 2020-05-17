@@ -55,8 +55,9 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
   end
 
   def create_tce_css_file
-    file_path = 'app/assets/stylesheets/to_change_everything/'
-    template    'to_change_everything.scss.template', "#{file_path}_#{lang_name}.scss"
+    template 'to_change_everything.scss.template',
+             "app/assets/stylesheets/to_change_everything/_#{lang_name}.scss"
+
     append_file 'app/assets/stylesheets/to_change_everything.scss',
                 "@import 'to_change_everything/#{lang_name}';\n"
   end
