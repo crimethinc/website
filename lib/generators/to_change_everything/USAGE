@@ -1,7 +1,7 @@
 Description:
     This generator is used to help automate some of the
-    wiring needed to create a new language version of "To Change
-    Everything".
+    wiring needed to create a new language version of
+    "To Change Everything".
 
 Example 1:
     rails generate to_change_everything es espanol
