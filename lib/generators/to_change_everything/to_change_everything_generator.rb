@@ -27,8 +27,8 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
     layout = 'app/views/layouts/to_change_everything.html.erb'
     inject_into_file layout, after: '<ul id="language">' do
       "\n" \
-      "              <%# TODO: make sure this div doesn't have duplicate urls %>\n" \
-      "              <li><a href=\"/tce/#{url}\">#{url}</a></li>"
+      "              <%# TODO: make sure this div doesn’t have duplicate URLs %>\n" \
+      "              <li><a href='/tce/#{url}'>#{url}</a></li>"
     end
   end
 
@@ -36,8 +36,8 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
     layout = 'app/views/layouts/to_change_everything.html.erb'
     inject_into_file layout, after: '<div id="lang1">' do
       "\n" \
-      "        <%# TODO: make sure this div doesn't have duplicate urls %>\n" \
-      "        <li><a href=\"/tce/#{url}\">#{url} <span class=\"check check-#{url}\"></span></a></li>"
+      "        <%# TODO: make sure this div doesn’t have duplicate URLs %>\n" \
+      "        <li><a href='/tce/#{url}'>#{url} <span class='check check-#{url}'></span></a></li>"
     end
   end
 
@@ -45,7 +45,7 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
     filepath = 'app/assets/stylesheets/to_change_everything/'
     template   'to_change_everything.scss.template', "#{filepath}_#{url}.scss"
     append_file 'app/assets/stylesheets/to_change_everything.scss',
-                "@import \"to_change_everything/#{url}\";\n"
+                "@import 'to_change_everything/#{url}';\n"
   end
 
   def copy_tce_en_file
