@@ -40,6 +40,7 @@ module Crimethinc
     # Whitelist locales available for the application
     subdomain_locales = %i[ar bn cs cz da de dv en es fa fi fr gr he id it ja pl pt ru sv th tr zh]
     path_ltr_locales  = %i[
+      czech
       english
       espanol
       espanol-america-latina

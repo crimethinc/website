@@ -2,14 +2,15 @@ class ToChangeEverythingController < ApplicationController
   layout 'to_change_everything', only: [:show]
 
   TO_CHANGE_ANYTHING_YAMLS = %w[
-    日本語
-    portugues
-    quebecois
-    espanol-america-latina
-    lietuvos
-    한국어
+    czech
     english
     espanol
+    espanol-america-latina
+    lietuvos
+    portugues
+    quebecois
+    日本語
+    한국어
     فارسی
   ].freeze
 
