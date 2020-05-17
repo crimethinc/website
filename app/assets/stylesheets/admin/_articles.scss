@@ -16,18 +16,18 @@ label  {
 
 // Border on this article (2017-08-23) indicates when the view counter started.
 // Everything below it was published pre-counter.
-.article-counter-genesis {
-  border-bottom: 10px solid #666;
-}
+.article-counter-genesis { border-bottom: 10px solid #666; }
 
-// Treat radio buttons as toggle buttons
-input + label {
-  @extend .btn;
-  @extend .btn-sm;
-  @extend .btn-outline-secondary;
-}
+#admin-article-form-page {
+  // Treat radio buttons as toggle buttons
+  input + label {
+    @extend .btn;
+    @extend .btn-sm;
+    @extend .btn-outline-secondary;
+  }
 
-input:checked + label {
-  @extend .btn;
-  @extend .btn-primary;
+  input:checked + label {
+    @extend .btn;
+    @extend .btn-primary;
+  }
 }
