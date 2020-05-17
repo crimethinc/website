@@ -22,8 +22,8 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
   end
 
   def add_language_to_nav_menu_desktop
-    controller = 'app/views/layouts/to_change_everything.html.erb'
-    inject_into_file controller, after: '<ul id="language">' do
+    layout = 'app/views/layouts/to_change_everything.html.erb'
+    inject_into_file layout, after: '<ul id="language">' do
       "\n" \
       "              <%# TODO: make sure this div doesn't have duplicate urls %>\n" \
       "              <li><a href=\"/tce/#{url}\">#{url}</a></li>"
@@ -31,8 +31,8 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
   end
 
   def add_language_to_nav_menu_mobile
-    controller = 'app/views/layouts/to_change_everything.html.erb'
-    inject_into_file controller, after: '<div id="lang1">' do
+    layout = 'app/views/layouts/to_change_everything.html.erb'
+    inject_into_file layout, after: '<div id="lang1">' do
       "\n" \
       "        <%# TODO: make sure this div doesn't have duplicate urls %>\n" \
       "        <li><a href=\"/tce/#{url}\">#{url} <span class=\"check check-#{url}\"></span></a></li>"
