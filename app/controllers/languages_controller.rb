@@ -5,6 +5,7 @@ class LanguagesController < ApplicationController
     @html_id = 'page'
     @body_id = 'languages'
     @locales = Locale.live
+    @title = PageTitle.new t 'header.languages'
 
     render "#{Theme.name}/languages/index"
   end
@@ -13,6 +14,7 @@ class LanguagesController < ApplicationController
     @html_id = 'page'
     @body_id = 'languages'
     @locale  = Locale.find_by(slug: canonical_locale.canonical)
+    @title = PageTitle.new "#{@locale.name} / #{@locale.name_in_english} (#{@locale.slug})"
 
     render "#{Theme.name}/languages/show"
   end
