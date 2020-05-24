@@ -18,6 +18,9 @@ Layout/LineLength:
   Exclude:
     - 'db/**/*'
 
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
 Layout/SpaceAroundMethodCallOperator:
   Enabled: true
 
