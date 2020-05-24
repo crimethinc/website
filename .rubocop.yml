@@ -75,10 +75,6 @@ RSpec/MultipleExpectations:
   Exclude:
     - 'spec/system/*'
 
-Security/Open:
-  Exclude:
-    - 'lib/tasks/db/import.rake'
-
 Style/AsciiComments:
   Enabled: false
 
