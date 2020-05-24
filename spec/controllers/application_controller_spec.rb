@@ -33,6 +33,10 @@ RSpec.describe ApplicationController, type: :controller do
   end
 
   describe '#current_user' do
+    after do
+      Current.user = nil
+    end
+
     let(:user) { User.create(username: 'example', password: 'x' * 30) }
 
     it 'loads from session' do
@@ -40,13 +44,13 @@ RSpec.describe ApplicationController, type: :controller do
 
       get :index
 
-      expect(assigns[:current_user]).to eq(user)
+      expect(Current.user).to eq(user)
     end
 
     it 'doesn’t break with no session' do
       get :index
 
-      expect(assigns[:current_user]).to be_nil
+      expect(Current.user).to be_nil
     end
   end
 
