@@ -1,7 +1,7 @@
-<h1>Settings for @<%= @user.username %></h1>
+<h1>Settings for @<%= Current.user.username %></h1>
 
-<%= form_with model: [@user], local: true do |form| %>
-  <%= render "admin/form_errors", thing: @user %>
+<%= form_with model: [Current.user], local: true do |form| %>
+  <%= render "admin/form_errors", thing: Current.user %>
 
   <div class="row">
     <div class="col-12">

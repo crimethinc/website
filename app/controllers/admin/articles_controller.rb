@@ -64,7 +64,7 @@ module Admin
     end
 
     def destroy
-      return redirect_to [:admin, @article] unless current_user.can_delete?
+      return redirect_to [:admin, @article] unless Current.user.can_delete?
 
       @article.destroy
       redirect_to %i[admin articles], notice: 'Article was successfully destroyed.'
@@ -148,7 +148,7 @@ module Admin
 
       handle_published_without_datetime permitted_params
 
-      return permitted_params if current_user.can_publish? || @article&.published?
+      return permitted_params if Current.user.can_publish? || @article&.published?
 
       # Override publication_status from the submitted for,
       # to prevent authors and editors from publishing a draft article
@@ -156,7 +156,7 @@ module Admin
     end
 
     def handle_publish_now_situation permitted_params, time: Time.zone.now, zone: Time.zone.name
-      return permitted_params unless current_user.can_publish?
+      return permitted_params unless Current.user.can_publish?
       return permitted_params if @article&.published?
 
       permitted_params.merge!(

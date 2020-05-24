@@ -36,14 +36,9 @@ class ApplicationController < ActionController::Base
   helper_method :render_content
 
   def signed_in?
-    current_user
+    Current.user ||= User.find(session[:user_id]) if session[:user_id]
   end
   helper_method :signed_in?
-
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
-  helper_method :current_user
 
   def authorize
     redirect_to [:signin], alert: 'You need to sign in to view that page.' unless signed_in?
