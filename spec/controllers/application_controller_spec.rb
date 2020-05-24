@@ -32,30 +32,12 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-  describe '#current_user' do
+  describe '#signed_in?' do
+    let(:user) { User.create(username: 'example', password: 'x' * 30) }
+
     after do
       Current.user = nil
     end
-
-    let(:user) { User.create(username: 'example', password: 'x' * 30) }
-
-    it 'loads from session' do
-      session[:user_id] = user.id
-
-      get :index
-
-      expect(Current.user).to eq(user)
-    end
-
-    it 'doesn’t break with no session' do
-      get :index
-
-      expect(Current.user).to be_nil
-    end
-  end
-
-  describe '#signed_in?' do
-    let(:user) { User.create(username: 'example', password: 'x' * 30) }
 
     it 'is true with a user' do
       session[:user_id] = user.id
