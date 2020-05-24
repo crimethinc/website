@@ -13,7 +13,7 @@
 
   <div class="tool-series tool-series-books">
     <% @books.each do |book| %>
-      <%= render_themed "books/book", book: book %>
+      <%= render_themed "books/book", book: book.preferred_localization %>
     <% end %>
   </div> <!-- .tool-series-books -->
 
