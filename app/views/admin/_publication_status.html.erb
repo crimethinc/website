@@ -1,7 +1,7 @@
 <div id="publication-status" class="form-group">
   <%= form.label :publication_status, "Publication Status" %><br>
 
-  <% Publishable.publication_statuses_for(user: current_user).each do |state| %>
+  <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
     <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "sr-only" %>
 
     <%= form.label "publication_status_#{state}", state.capitalize, for: "publication_status_#{state}" %>

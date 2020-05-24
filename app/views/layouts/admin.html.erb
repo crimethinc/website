@@ -67,7 +67,7 @@
         <footer class="my-5 text-center" style="padding-top: 10rem">
           <hr class="my-5">
 
-          <% if current_user.can_admin_users? %>
+          <% if Current.user.can_admin_users? %>
             <%= link_to "Users", [:admin, :users], class: "text-muted mx-2" %>
           <% end %>
 
