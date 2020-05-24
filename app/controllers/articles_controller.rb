@@ -8,10 +8,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @body_id = 'article'
-
     # get the article
-    if %r{^/drafts}.match?(request.path)
+    if request.path.starts_with? '/draft'
       @article = Article.find_by(draft_code: params[:draft_code])
 
       return redirect_to(@article.path) if @article&.published?
