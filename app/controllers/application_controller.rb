@@ -4,7 +4,7 @@ require 'json'
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :set_locale_from_subdomain
+  before_action :set_current_locale
   before_action :set_site_locale
   before_action :check_for_redirection
   before_action :strip_file_extension
@@ -44,7 +44,7 @@ class ApplicationController < ActionController::Base
     redirect_to [:signin], alert: 'You need to sign in to view that page.' unless signed_in?
   end
 
-  def set_locale_from_subdomain
+  def set_current_locale
     locale = request.subdomain
     I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
 
