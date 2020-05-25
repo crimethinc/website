@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
 
   before_action :set_current_locale
   before_action :set_current_locale_from_subdomain
-  before_action :set_current_theme
   before_action :redirect_to_locale_subdomain
 
   before_action :set_site_locale
@@ -129,10 +128,6 @@ class ApplicationController < ActionController::Base
     return if Rails.env.production?
 
     redirect_to({ subdomain: I18n.locale }.merge(params.permit!))
-  end
-
-  def set_current_theme
-    Current.theme = ENV.fetch('THEME') { '2017' }
   end
 
   def page_share_url
