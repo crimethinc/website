@@ -7,6 +7,6 @@ class IssuesController < ToolsController
     @editable = @issue
 
     @title = PageTitle.new title_for :journals, journal.name, @issue.issue
-    render "#{Theme.name}/books/show"
+    render "#{Current.theme}/books/show"
   end
 end

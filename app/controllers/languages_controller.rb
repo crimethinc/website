@@ -7,7 +7,7 @@ class LanguagesController < ApplicationController
     @locales = Locale.live
     @title = PageTitle.new t 'header.languages'
 
-    render "#{Theme.name}/languages/index"
+    render "#{Current.theme}/languages/index"
   end
 
   def show
@@ -16,7 +16,7 @@ class LanguagesController < ApplicationController
     @locale  = Locale.find_by(slug: canonical_locale.canonical)
     @title = PageTitle.new "#{@locale.name} / #{@locale.name_in_english} (#{@locale.slug})"
 
-    render "#{Theme.name}/languages/show"
+    render "#{Current.theme}/languages/show"
   end
 
   private

@@ -7,11 +7,11 @@ class TagsController < ApplicationController
     @html_id = 'page'
     @body_id = 'tag'
 
-    render "#{Theme.name}/tags/show"
+    render "#{Current.theme}/tags/show"
   end
 
   def feed
-    render "#{Theme.name}/articles/index"
+    render "#{Current.theme}/articles/index"
   end
 
   private

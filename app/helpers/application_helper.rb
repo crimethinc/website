@@ -15,10 +15,10 @@ module ApplicationHelper
   end
 
   def render_themed path, options = {}
-    render "#{Theme.name}/#{path}", options
+    render "#{Current.theme}/#{path}", options
   end
 
   def tt path, options = {}
-    t "#{Theme.name}.#{path}", options
+    t "#{Current.theme}.#{path}", options
   end
 end

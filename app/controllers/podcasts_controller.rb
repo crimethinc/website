@@ -6,7 +6,7 @@ class PodcastsController < ApplicationController
     @editable = @podcasts.first
     @title    = PageTitle.new title_for :podcasts
 
-    render "#{Theme.name}/podcasts/index"
+    render "#{Current.theme}/podcasts/index"
   end
 
   def show
@@ -15,7 +15,7 @@ class PodcastsController < ApplicationController
     @podcast = Podcast.find_by(slug: params[:slug])
     @title   = PageTitle.new title_for @podcast.name
 
-    render "#{Theme.name}/podcasts/show"
+    render "#{Current.theme}/podcasts/show"
   end
 
   def feed; end

@@ -5,7 +5,7 @@ class LogosController < ApplicationController
     @tools   = Logo.live.published.page(params[:page]).per(100)
     @title   = PageTitle.new title_for :logos
 
-    render "#{Theme.name}/logos/index"
+    render "#{Current.theme}/logos/index"
   end
 
   def show
@@ -18,6 +18,6 @@ class LogosController < ApplicationController
     @editable = @tool
     @title    = PageTitle.new title_for :logos, @tool.name
 
-    render "#{Theme.name}/logos/show"
+    render "#{Current.theme}/logos/show"
   end
 end

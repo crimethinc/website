@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.includes(:tags, :categories).live.published.root.page(params[:page]).per(10)
 
-    render "#{Theme.name}/articles/index"
+    render "#{Current.theme}/articles/index"
   end
 
   def show
@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
     if @article.content_in_html?
       render html: @article.content.html_safe, layout: false
     else
-      render "#{Theme.name}/articles/show"
+      render "#{Current.theme}/articles/show"
     end
   end
 end
