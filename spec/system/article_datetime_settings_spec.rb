@@ -3,6 +3,10 @@ require 'rails_helper'
 describe 'Setting and changing an articles published_at date' do
   include ActiveSupport::Testing::TimeHelpers
 
+  before do
+    Current.theme = '2017'
+  end
+
   let(:admin) do
     create(:user, username: 'user1', password: 'c' * 31, role: 'publisher')
   end

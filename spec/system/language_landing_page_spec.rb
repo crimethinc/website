@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe 'Language Landing Page' do
   before do
+    Current.theme = '2017'
+
     create(:article)
     create(:article, :arabic)
     create(:article, :bengali)
