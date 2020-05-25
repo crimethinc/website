@@ -33,6 +33,8 @@ FactoryBot.define do
   trait(:indonesian) { locale { 'id' } }
   trait(:italian)    { locale { 'it' } }
   trait(:japanese)   { locale { 'ja' } }
+  trait(:korean)     { locale { 'ko' } }
+  trait(:dutch)      { locale { 'nl' } }
   trait(:polish)     { locale { 'pl' } }
   trait(:portuguese) { locale { 'pt' } }
   trait(:russian)    { locale { 'ru' } }
