@@ -8,6 +8,7 @@ require_relative '../app/middlewares/rack/clean_path'
 require_relative '../app/middlewares/rack/pic_twitter_redirect'
 require_relative '../app/middlewares/rack/redirect'
 require_relative '../app/middlewares/rack/teapot'
+require_relative '../app/middlewares/rack/current_locale'
 require_relative '../app/middlewares/rack/current_theme'
 require 'rack/contrib'
 
@@ -26,6 +27,7 @@ module Crimethinc
     config.middleware.use Rack::Redirect
     config.middleware.use Rack::Attack
     config.middleware.use Rack::Locale
+    config.middleware.use Rack::CurrentLocale
     config.middleware.use Rack::CurrentTheme
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
