@@ -15,11 +15,11 @@ module Translatable
   end
 
   def preferred_localization
-    localization_in(I18n.locale).presence || self
+    localization_in(Current.locale).presence || self
   end
 
   def localization_in locale
-    self.class.published.live.where(locale: locale).where('id = ? OR canonical_id = ?', canonical_id, id).limit(1).first
+    self.class.published.live.where(locale: locale.abbreviation).where('id = ? OR canonical_id = ?', canonical_id, id).limit(1).first
   end
 
   def localizations

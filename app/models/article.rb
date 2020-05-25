@@ -105,13 +105,13 @@ class Article < ApplicationRecord
 
   def localization_in locale
     [
-      Article.published.live.find_by(locale: locale, canonical_id: id),
-      Article.published.live.find_by(locale: locale, id: canonical_id)
+      Article.published.live.find_by(locale: locale.abbreviation, canonical_id: id),
+      Article.published.live.find_by(locale: locale.abbreviation, id: canonical_id)
     ].compact.first
   end
 
   def preferred_localization
-    localization_in(I18n.locale).presence || self
+    localization_in(Current.locale).presence || self
   end
 
   def canonical_article
