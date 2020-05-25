@@ -25,6 +25,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'deutsch', lang_code: :de, canonical: 'deutsch'),
     Locale.new(locale: 'german',  lang_code: :de, canonical: 'deutsch'),
 
+    # dv: maldivian
+    Locale.new(locale: 'maldivian', lang_code: :dv, canonical: 'dhivehi'),
+    Locale.new(locale: 'dhivehi',   lang_code: :dv, canonical: 'dhivehi'),
+    Locale.new(locale: 'ދިވެހި', lang_code: :dv, canonical: 'dhivehi'),
+
     # en: english
     Locale.new(locale: 'english', lang_code: :en, canonical: 'english'),
 
@@ -70,10 +75,14 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'ri-ben-yu', lang_code: :ja, canonical: 'ri-ben-yu'),
     Locale.new(locale: '日本語', lang_code: :ja, canonical: 'ri-ben-yu'),
 
-    # dv: maldivian
-    Locale.new(locale: 'maldivian', lang_code: :dv, canonical: 'dhivehi'),
-    Locale.new(locale: 'dhivehi',   lang_code: :dv, canonical: 'dhivehi'),
-    Locale.new(locale: 'ދިވެހި', lang_code: :dv, canonical: 'dhivehi'),
+    # ko: korean
+    Locale.new(locale: 'korean',   lang_code: :ko, canonical: 'hangugeo'),
+    Locale.new(locale: 'hangugeo', lang_code: :ko, canonical: 'hangugeo'),
+    Locale.new(locale: '한국어', lang_code: :ko, canonical: 'hangugeo'),
+
+    # nl: dutch
+    Locale.new(locale: 'dutch',      lang_code: :nl, canonical: 'nederlands'),
+    Locale.new(locale: 'nederlands', lang_code: :nl, canonical: 'nederlands'),
 
     # pl: polish
     Locale.new(locale: 'polski', lang_code: :pl, canonical: 'polski'),
