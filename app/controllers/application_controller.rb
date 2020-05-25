@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_current_locale
+  before_action :set_current_theme
+
   before_action :set_site_locale
   before_action :check_for_redirection
   before_action :strip_file_extension
@@ -57,6 +59,10 @@ class ApplicationController < ActionController::Base
 
       redirect_to({ subdomain: I18n.locale }.merge(params.permit!))
     end
+  end
+
+  def set_current_theme
+    Current.theme = ENV.fetch('THEME') { '2017' }
   end
 
   def check_for_redirection
