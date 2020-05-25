@@ -16,15 +16,15 @@ class ToolsController < ApplicationController
 
   # GET /tools
   def about
-    render "#{Theme.name}/tools/about"
+    render "#{Current.theme}/tools/about"
   end
 
   def index
-    render "#{Theme.name}/tools/index"
+    render "#{Current.theme}/tools/index"
   end
 
   def show
-    render "#{Theme.name}/tools/show"
+    render "#{Current.theme}/tools/show"
   end
 
   private

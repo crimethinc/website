@@ -16,34 +16,34 @@ class PagesController < ApplicationController
     @editable = @page
     @title = PageTitle.new I18n.t('page_titles.about.about')
 
-    render "#{Theme.name}/pages/about"
+    render "#{Current.theme}/pages/about"
   end
 
   def contact
     @editable = @page
     @title = PageTitle.new I18n.t('page_titles.about.contact')
 
-    render "#{Theme.name}/pages/contact"
+    render "#{Current.theme}/pages/contact"
   end
 
   def library
     @title = PageTitle.new I18n.t('page_titles.about.library')
 
-    render "#{Theme.name}/pages/library"
+    render "#{Current.theme}/pages/library"
   end
 
   def post_order_success
     @title    = PageTitle.new title_for I18n.t('page_titles.about.store'), I18n.t('page_titles.about.post_order_success')
     @order_id = params[:ordernum]
 
-    render "#{Theme.name}/pages/post_order_success"
+    render "#{Current.theme}/pages/post_order_success"
   end
 
   # TODO: make this view localizable
   def submission_guidelines
     @title = PageTitle.new I18n.t('page_titles.about.submission_guidelines')
 
-    render "#{Theme.name}/pages/submission_guidelines"
+    render "#{Current.theme}/pages/submission_guidelines"
   end
 
   def pgp_public_key

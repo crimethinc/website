@@ -9,7 +9,7 @@ class BooksController < ApplicationController
 
     @books = Book.english.for_index
 
-    render "#{Theme.name}/books/index"
+    render "#{Current.theme}/books/index"
   end
 
   def show
@@ -20,7 +20,7 @@ class BooksController < ApplicationController
     @title    = PageTitle.new title_for(:books, @book.slug.underscore)
     @tool     = @book
 
-    render "#{Theme.name}/books/show"
+    render "#{Current.theme}/books/show"
   end
 
   def extras
@@ -28,7 +28,7 @@ class BooksController < ApplicationController
     @body_id = 'tools'
     @title   = PageTitle.new title_for(:books, @book.slug.underscore, :extras)
 
-    render "#{Theme.name}/books/extras"
+    render "#{Current.theme}/books/extras"
   end
 
   def lit_kit
@@ -36,7 +36,7 @@ class BooksController < ApplicationController
     @body_id = 'tools'
     @title   = PageTitle.new title_for(:books, :lit_kit)
 
-    render "#{Theme.name}/books/lit_kit"
+    render "#{Current.theme}/books/lit_kit"
   end
 
   def into_libraries
@@ -44,7 +44,7 @@ class BooksController < ApplicationController
     @body_id = 'tools'
     @title   = PageTitle.new title_for(:books, :into_libraries)
 
-    render "#{Theme.name}/books/into_libraries"
+    render "#{Current.theme}/books/into_libraries"
   end
 
   private
