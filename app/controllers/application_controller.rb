@@ -48,7 +48,11 @@ class ApplicationController < ActionController::Base
 
   def set_current_locale
     locale = request.subdomain
-    I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
+
+    if I18n.available_locales.include?(locale.to_sym)
+      I18n.locale    = locale
+      Current.locale = locale
+    end
 
     # Force the subdomain to match the locale.
     # Don’t do this in development, because typically local development
