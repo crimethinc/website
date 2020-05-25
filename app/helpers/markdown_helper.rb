@@ -1,6 +1,13 @@
 module MarkdownHelper
   def render_markdown_for page:
-    content = File.read [Rails.root, "config/locales/pages/#{I18n.locale}", "#{page}.markdown"].join('/')
+    content = File.read [
+      Rails.root,
+      'config',
+      'locales',
+      'pages',
+      Current.locale.abbreviation,
+      "#{page}.markdown"
+    ].join('/')
 
     render_markdown content
   end
