@@ -14,7 +14,7 @@
   </nav>
 
   <div class="subdomain-switcher">
-    <% unless @locale.abbreviation == I18n.locale.to_s %>
+    <% unless Current.locale == @locale %>
       <%= render_markdown t("views.languages.view_site_in_locale", locale: @locale.abbreviation) %>
     <% end %>
 
