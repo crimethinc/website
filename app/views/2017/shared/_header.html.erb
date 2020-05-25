@@ -16,7 +16,7 @@
       <li class="nav-link"><%= link_to t("header.about"),   "/about" %></li>
     </ul>
 
-    <% unless Locale.english? %>
+    <% unless Current.locale.english? %>
       <ul>
         <li class="nav-link"><%= link_to t('header.locale_articles'), language_path(Current.locale.name) %></li>
       </ul>

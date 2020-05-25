@@ -13,10 +13,6 @@ class Locale < ApplicationRecord
   default_scope { order(abbreviation: :asc) }
 
   class << self
-    def english?
-      I18n.locale == :en
-    end
-
     def live
       Locale.unscoped.order(articles_count: :desc, abbreviation: :asc).where.not(articles_count: 0)
     end
