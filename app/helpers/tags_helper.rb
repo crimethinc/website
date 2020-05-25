@@ -3,11 +3,11 @@ module TagsHelper
   attr_accessor :html_id
 
   def html_dir
-    article_locale&.language_direction.presence || t('language_direction')
+    article_locale&.language_direction.presence || Current.locale.language_direction
   end
 
   def html_lang
-    article_locale&.abbreviation.presence || I18n.locale
+    article_locale&.abbreviation.presence || Current.locale.abbreviation
   end
 
   def html_prefix
