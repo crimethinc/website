@@ -104,7 +104,7 @@
     </div><!-- .column column-25 -->
   </div><!-- .row -->
 
-  <% if media_mode? && I18n.locale == :en %>
+  <% if media_mode? && Current.locale.english? %>
     <p class='site-mode-link-container'>
       <%= link_to(t('footer.site_mode'), url_for_current_path_with_subdomain(subdomain: :lite)) %>
     </p>
