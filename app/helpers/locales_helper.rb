@@ -6,7 +6,7 @@ module LocalesHelper
   def locale_nav_item_classes_for locale
     classes = []
     classes << locale.abbreviation
-    classes << 'current' if I18n.locale.to_s == locale.abbreviation
+    classes << 'current' if Current.locale == locale
     classes
   end
 end
