@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe 'Tools Pages' do
+  before do
+    Current.theme = '2017'
+  end
+
   it 'Renders published logos calling /logos' do
     FactoryBot.create(:logo,
                       title:              'published',

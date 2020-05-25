@@ -13,3 +13,5 @@ TAGS
 .env
 database-dumps
 Brewfile.lock.json
+node_modules
+yarn.lock
