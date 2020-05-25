@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :set_current_locale
   before_action :set_current_locale_from_subdomain
   before_action :set_current_theme
+  before_action :redirect_to_locale_subdomain
 
   before_action :set_site_locale
   before_action :check_for_redirection
@@ -45,30 +46,6 @@ class ApplicationController < ActionController::Base
 
   def authorize
     redirect_to [:signin], alert: 'You need to sign in to view that page.' unless signed_in?
-  end
-
-  def set_current_locale
-    Current.locale = I18n.locale
-  end
-
-  def set_current_locale_from_subdomain
-    locale = request.subdomain
-
-    Current.locale = locale if I18n.available_locales.include?(locale.to_sym)
-
-    # Force the subdomain to match the locale.
-    # Don’t do this in development, because typically local development
-    # environments don’t support subdomains (en.localhost doesn’t resolve).
-    if (I18n.locale != I18n.default_locale) && # Don’t redirect to en.crimethinc.com
-       request.subdomain.empty? &&             # Don’t redirect if there’s a subdomain
-       Rails.env.production?                   # Don’t redirect in development
-
-      redirect_to({ subdomain: I18n.locale }.merge(params.permit!))
-    end
-  end
-
-  def set_current_theme
-    Current.theme = ENV.fetch('THEME') { '2017' }
   end
 
   def check_for_redirection
@@ -126,6 +103,37 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def set_current_locale
+    Current.locale = Locale.find_by abbreviation: I18n.locale
+  end
+
+  def set_current_locale_from_subdomain
+    locale_abbreviation = request.subdomain
+
+    Current.locale = Locale.find_by abbreviation: locale_abbreviation if I18n.available_locales.include? locale_abbreviation.to_sym
+  end
+
+  def redirect_to_locale_subdomain
+    # Force the subdomain to match the locale.
+    # Don’t do this in development, because typically local development
+    # environments don’t support subdomains (en.localhost doesn’t resolve).
+
+    # Don’t redirect to en.crimethinc.com
+    return if Current.locale.english?
+
+    # Don’t redirect if there’s a subdomain
+    return if request.subdomain.present?
+
+    # Don’t redirect in development
+    return if Rails.env.production?
+
+    redirect_to({ subdomain: I18n.locale }.merge(params.permit!))
+  end
+
+  def set_current_theme
+    Current.theme = ENV.fetch('THEME') { '2017' }
+  end
 
   def page_share_url
     # TODO: implement this algorithm
