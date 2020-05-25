@@ -11,7 +11,7 @@ class StealSomethingFromWorkDayController < ApplicationController
   def show
     # Remove current locale from language switcher in the view
     @locales = STEAL_SOMETHING_FROM_WORK_DAY_LOCALES.dup
-    @locales.delete I18n.locale
+    @locales.delete Current.locale
 
     @sections = [
       'Introduction',

@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_current_locale
+  before_action :set_current_locale_from_subdomain
   before_action :set_current_theme
 
   before_action :set_site_locale
@@ -47,12 +48,13 @@ class ApplicationController < ActionController::Base
   end
 
   def set_current_locale
+    Current.locale = I18n.locale
+  end
+
+  def set_current_locale_from_subdomain
     locale = request.subdomain
 
-    if I18n.available_locales.include?(locale.to_sym)
-      I18n.locale    = locale
-      Current.locale = locale
-    end
+    Current.locale = locale if I18n.available_locales.include?(locale.to_sym)
 
     # Force the subdomain to match the locale.
     # Don’t do this in development, because typically local development
