@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'Tools Pages' do
   before do
+    Current.locale = FactoryBot.build_stubbed :locale
     Current.theme = '2017'
   end
 
