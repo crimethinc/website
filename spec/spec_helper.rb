@@ -6,6 +6,10 @@ RSpec.configure do |config|
     driven_by :selenium_headless, using: :firefox
   end
 
+  config.before do
+    Current.theme = '2017'
+  end
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
