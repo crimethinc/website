@@ -7,6 +7,7 @@ RSpec.configure do |config|
   end
 
   config.before do
+    Current.locale = FactoryBot.build_stubbed :locale
     Current.theme = '2017'
   end
 
