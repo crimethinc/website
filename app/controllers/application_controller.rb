@@ -98,6 +98,10 @@ class ApplicationController < ActionController::Base
     pieces.flatten.join ' : '
   end
 
+  def new_method
+    # TEMP
+  end
+
   # TODO: move to a helper
   def author
     t(:site_author)
