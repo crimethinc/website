@@ -20,7 +20,6 @@ module Admin
       @collection = Article.find(@article.collection_id) if @article.collection_id.present?
 
       @title   = admin_title(@article, %i[title subtitle])
-      @html_id = 'js-admin-article'
       @body_id = 'top'
     end
 
@@ -30,13 +29,13 @@ module Admin
       prepare_article_for_translation
 
       @title   = admin_title
-      @html_id = 'js-admin-article'
+      @html_id = 'admin-article-form-page'
     end
 
     def edit
       @collection = Article.find(@article.collection_id) if @article.in_collection?
       @title      = admin_title(@article, %i[id title subtitle])
-      @html_id    = 'js-admin-article'
+      @html_id    = 'admin-article-form-page'
     end
 
     def create
@@ -65,7 +64,7 @@ module Admin
     end
 
     def destroy
-      return redirect_to [:admin, @article] unless current_user.can_delete?
+      return redirect_to [:admin, @article] unless Current.user.can_delete?
 
       @article.destroy
       redirect_to %i[admin articles], notice: 'Article was successfully destroyed.'
@@ -149,7 +148,7 @@ module Admin
 
       handle_published_without_datetime permitted_params
 
-      return permitted_params if current_user.can_publish? || @article&.published?
+      return permitted_params if Current.user.can_publish? || @article&.published?
 
       # Override publication_status from the submitted for,
       # to prevent authors and editors from publishing a draft article
@@ -157,7 +156,7 @@ module Admin
     end
 
     def handle_publish_now_situation permitted_params, time: Time.zone.now, zone: Time.zone.name
-      return permitted_params unless current_user.can_publish?
+      return permitted_params unless Current.user.can_publish?
       return permitted_params if @article&.published?
 
       permitted_params.merge!(

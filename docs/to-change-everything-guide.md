@@ -2,17 +2,16 @@
 
 
 ## Prerequisites
-
 ### Data Gathering
 
-1. determine the 2-letter language code for the language you are adding
+1. Determine the 2-letter language code for the language you are adding.
   - https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 
-2. decide on the new URL (`crimethinc.com/tce/foobar`)
-  - we go with the name of the language _in that language_. For example, Spanish is `crimethinc.com/tce/espanol`
+2. Decide on the new URL (`crimethinc.com/tce/foobar`).
+  - We use the name of the language _in that language_. For example, Spanish is `crimethinc.com/tce/espanol`.
 
-3. determine if the language is written left-to-right or right-to-left (`ltr` or `rtl`)
-  - Wikipedia is a good way to figure this out
+3. Determine if the language is written left-to-right or right-to-left (`ltr` or `rtl`).
+  - Wikipedia is a good way to figure this out.
 
 ### Software needed
 
@@ -33,7 +32,7 @@ You will need a few tools mostly for processing the PDF and creating the image a
 You can run the `to_change_everything` generator to get some of the basic wiring set up:
 
 ```
-rails generate to_change_everything LANG_CODE URL [LANG_DIRECTION] [options]
+rails generate to_change_everything LANG_CODE LANG_NAME [LANG_DIRECTION] [options]
 ```
 
 For example, `rails generate to_change_everything es espanol` or `rails generate to_change_everything es espanol rtl`
@@ -41,15 +40,14 @@ For example, `rails generate to_change_everything es espanol` or `rails generate
 This generator will:
 
 - Create a language-specific CSS file
-- Add URL to `to_change_everything_controller`
-- Add a translation yaml
+- Add language name to `to_change_everything_controller`
+- Add a translation YAML
 
-After running the generator run the server (**you will need to restart the server if it was already running**) and try navigating to your new page.
+After running the generator, run the server (**you will need to restart the server if it was already running**) and try navigating to your new page.
 
 ## Slotting in the text
 
 1. Obtain the PDF version of the language
-
 2. Run this command in the terminal to extract the text:
 
 ```
@@ -76,7 +74,8 @@ Woof.
 
 ## Polish
 
-There are certain things that vary from language to language. We will just try to work through them on the PR, but some examples are:
+There are certain things that vary from language to language.
+We will just try to work through them on the PR, but some examples are:
 
 ### PDF has a custom font
 

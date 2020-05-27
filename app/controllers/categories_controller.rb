@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
     @html_id = 'page'
     @body_id = 'category'
 
-    render "#{Theme.name}/categories/show"
+    render "#{Current.theme}/categories/show"
   end
 
   def index
@@ -17,11 +17,11 @@ class CategoriesController < ApplicationController
     @categories = Category.all
     @title      = PageTitle.new title_for(:categories)
 
-    render "#{Theme.name}/categories/index"
+    render "#{Current.theme}/categories/index"
   end
 
   def feed
-    render "#{Theme.name}/articles/index"
+    render "#{Current.theme}/articles/index"
   end
 
   private

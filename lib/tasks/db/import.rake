@@ -13,8 +13,8 @@ namespace :db do
       url = 'https://s3.amazonaws.com/thecloud.crimethinc.com/database-dumps/crimethinc_production_db_dump.sql'
 
       puts '==> Downloading remote production DB dump from S3…'
-      open('database-dumps/crimethinc_production_db_dump.sql', 'wb') do |file|
-        file << open(url).read
+      File.open('database-dumps/crimethinc_production_db_dump.sql', 'wb') do |file|
+        file << URI.open(url).read
       end
     end
 

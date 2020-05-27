@@ -23,7 +23,7 @@
 
     <!-- TEMP: move to partial -->
     <%# TEMP: enable for alpha tolerant users, only on unpublished articles %>
-    <% if (1..4).include?(current_user.id) && @article.draft? %>
+    <% if Current.user.id == 1 && @article.draft? %>
       <fieldset class="card mb-3">
         <div class="card-body">
           <%= form.label :word_doc, "Upload a Word Doc file", class: "card-title m-0" %>

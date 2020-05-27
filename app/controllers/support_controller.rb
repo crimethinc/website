@@ -6,7 +6,7 @@ class SupportController < ApplicationController
     @body_id = 'support'
     @title   = PageTitle.new t('views.support.new.heading')
 
-    render "#{Theme.name}/support/new"
+    render "#{Current.theme}/support/new"
   end
 
   def create
@@ -28,7 +28,7 @@ class SupportController < ApplicationController
     @body_id = 'support'
     @title   = PageTitle.new t('views.support.thanks.heading')
 
-    render "#{Theme.name}/support/thanks"
+    render "#{Current.theme}/support/thanks"
   end
 
   def create_session
@@ -76,7 +76,7 @@ class SupportController < ApplicationController
       @next_invoice = Stripe::Invoice.upcoming(customer: @customer.id)
     end
 
-    render "#{Theme.name}/support/edit"
+    render "#{Current.theme}/support/edit"
   end
 
   def update_subscription

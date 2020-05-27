@@ -4,7 +4,7 @@
 
 //= link live_blog.js
 //= link support.js
-//= link tochangeeverything.css
+//= link to_change_everything.css
 //= link admin.js
 //= link admin.css
 //= link steal-something-from-work-day.css

@@ -61,6 +61,21 @@
 
   <%= render "admin/books/categories_form", form: form %>
 
+  <div class="row">
+    <div class="col-6">
+      <%= render "admin/books/form/position", form: form %>
+      <p class="form-text text-muted">This will set the order that
+      this book shows up on <a href="/books">crimethinc.com/books</a>.</p>
+    </div>
+
+    <div class="col-6">
+      <%= form.check_box :hide_from_index %>
+      <%= form.label :has_index, "Hide this book from the index page?" %><br>
+      <p class="form-text text-muted">This will prevent the book from
+      showing up on <a href="/books">crimethinc.com/books</a>.</p>
+    </div>
+  </div>
+
   <%= render "admin/books/downloads_form", form: form, resource: resource %>
 
   <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>

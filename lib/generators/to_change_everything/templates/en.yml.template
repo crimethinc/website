@@ -1,5 +1,5 @@
-<%# encoding: utf-8 %>
-<%= url %>:
+<%# encoding: utf-8 -%>
+<%= lang_name %>:
   layouts:
     to_change_everything:
       language_direction: <%= lang_direction %>
@@ -13,7 +13,7 @@
           url: http://tochangeeverything.com/
       menu:
         toc: Table of Contents
-        language: <%= url %>
+        language: <%= lang_name %>
         share: Share
       toc:
         introduction: introduction

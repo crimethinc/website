@@ -1,13 +1,13 @@
-<%# encoding: utf-8 %>
-.<%= url %> {
-    @import "common/font_styling";
-    /*--- Highlight language in mobile language menu ---*/
-    #lang1  li  > a[href="/tce/<%= url %>"],
-    #lang2  li  > a[href="/tce/<%= url %>"] {
-        color: #d62d34 !important;
-    }
+<%# encoding: utf-8 -%>
+.<%= lang_name %> {
+  @import "common/font_styling";
+  /*--- Highlight language in mobile language menu ---*/
+  #lang1  li  > a[href="/tce/<%= lang_name %>"],
+  #lang2  li  > a[href="/tce/<%= lang_name %>"] {
+    color: #d62d34 !important;
+  }
 
-    .check-<%= url %>:before {
-        content: '';
-    }
+  .check-<%= lang_name %>:before {
+    content: '';
+  }
 }

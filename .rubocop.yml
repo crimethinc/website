@@ -6,6 +6,24 @@ AllCops:
   Exclude:
     - 'db/schema.rb'
 
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Layout/LineLength:
+  Max: 186
+  Exclude:
+    - 'db/**/*'
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
 Lint/RaiseException:
   Enabled: true
 
@@ -21,22 +39,10 @@ Metrics/BlockLength:
   Max: 99
 
 Metrics/ClassLength:
-  Max: 140
+  Max: 131
 
 Metrics/CyclomaticComplexity:
   Max: 12
-
-Layout/HashAlignment:
-  EnforcedHashRocketStyle: table
-  EnforcedColonStyle: table
-
-Layout/LineLength:
-  Max: 186
-  Exclude:
-    - 'db/**/*'
-
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
 
 Metrics/MethodLength:
   Max: 27
@@ -69,10 +75,6 @@ RSpec/MultipleExpectations:
   Exclude:
     - 'spec/system/*'
 
-Security/Open:
-  Exclude:
-    - 'lib/tasks/db/import.rake'
-
 Style/AsciiComments:
   Enabled: false
 
@@ -85,13 +87,6 @@ Style/ExponentialNotation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/MethodDefParentheses:
-  EnforcedStyle: require_no_parentheses
-
-Style/MixinUsage:
-  Exclude:
-    - 'script/*'
-
 Style/HashEachMethods:
   Enabled: true
 
@@ -99,4 +94,14 @@ Style/HashTransformKeys:
   Enabled: true
 
 Style/HashTransformValues:
+  Enabled: true
+
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
+
+Style/MixinUsage:
+  Exclude:
+    - 'script/*'
+
+Style/SlicingWithRange:
   Enabled: true

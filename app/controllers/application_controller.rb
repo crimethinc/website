@@ -4,7 +4,9 @@ require 'json'
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :set_locale_from_subdomain
+  before_action :set_current_locale
+  before_action :set_current_theme
+
   before_action :set_site_locale
   before_action :check_for_redirection
   before_action :strip_file_extension
@@ -36,20 +38,15 @@ class ApplicationController < ActionController::Base
   helper_method :render_content
 
   def signed_in?
-    current_user
+    Current.user ||= User.find(session[:user_id]) if session[:user_id]
   end
   helper_method :signed_in?
-
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
-  helper_method :current_user
 
   def authorize
     redirect_to [:signin], alert: 'You need to sign in to view that page.' unless signed_in?
   end
 
-  def set_locale_from_subdomain
+  def set_current_locale
     locale = request.subdomain
     I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
 
@@ -62,6 +59,10 @@ class ApplicationController < ActionController::Base
 
       redirect_to({ subdomain: I18n.locale }.merge(params.permit!))
     end
+  end
+
+  def set_current_theme
+    Current.theme = ENV.fetch('THEME') { '2017' }
   end
 
   def check_for_redirection

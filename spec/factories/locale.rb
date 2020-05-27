@@ -65,6 +65,14 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'espanol' }
   end
 
+  trait(:fa) do
+    abbreviation { 'fa' }
+    name_in_english { 'Farsi' }
+    name { 'فارسی' }
+    language_direction { 'rtl' }
+    slug { 'frsy' }
+  end
+
   trait(:fi) do
     abbreviation { 'fi' }
     name_in_english { 'Finnish' }
@@ -119,6 +127,22 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     name { '日本語' }
     language_direction { 'ltr' }
     slug { 'ri-ben-yu' }
+  end
+
+  trait(:ko) do
+    abbreviation { 'ko' }
+    name_in_english { 'Korean' }
+    name { '한국어' }
+    language_direction { 'ltr' }
+    slug { 'hangugeo' }
+  end
+
+  trait(:nl) do
+    abbreviation { 'nl' }
+    name_in_english { 'Dutch' }
+    name { 'Nederlands' }
+    language_direction { 'ltr' }
+    slug { 'nederlands' }
   end
 
   trait(:pl) do

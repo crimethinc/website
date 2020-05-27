@@ -388,6 +388,10 @@ es:
           more_help: También puedes responder a este correo si necesitas más ayuda.
 
     languages:
+      view_site_in_locale:  Ver el sitio en español [aquí](https://es.crimethinc.com).
+      view_tools_in_locale: Se puede acceder nuestros afiches, fanzines, y otros materiales en español [aquí](https://es.crimethinc.com/tools).
+      view_books_in_locale: Se puede acceder nuestros libros en español [aquí](https://es.crimethinc.com/books).
+
       heading: Languages
       description: |
         CrimethInc. material has appeared in over three dozen languages; our introductory
