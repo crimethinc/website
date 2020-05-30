@@ -1,5 +1,5 @@
 <div class="articles-list">
   <% articles.each do |article| %>
-    <%= render_themed "articles/list_item", article: article %>
+    <%= render_themed "articles/list_item", article: article.preferred_localization %>
   <% end %>
 </div>
