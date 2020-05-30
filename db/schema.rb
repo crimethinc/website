@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_11_024239) do
+ActiveRecord::Schema.define(version: 2020_05_30_232342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -205,6 +205,8 @@ ActiveRecord::Schema.define(version: 2020_05_11_024239) do
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
     t.datetime "featured_at"
+    t.integer "position"
+    t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_issues_on_canonical_id"
   end
 
@@ -224,6 +226,8 @@ ActiveRecord::Schema.define(version: 2020_05_11_024239) do
     t.integer "price_in_cents"
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.integer "position"
+    t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_journals_on_canonical_id"
   end
 
@@ -258,6 +262,8 @@ ActiveRecord::Schema.define(version: 2020_05_11_024239) do
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.integer "position"
+    t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_logos_on_canonical_id"
   end
 
@@ -343,6 +349,8 @@ ActiveRecord::Schema.define(version: 2020_05_11_024239) do
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
     t.datetime "featured_at"
+    t.integer "position"
+    t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_posters_on_canonical_id"
   end
 
@@ -387,6 +395,8 @@ ActiveRecord::Schema.define(version: 2020_05_11_024239) do
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
     t.datetime "featured_at"
+    t.integer "position"
+    t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
   end
 
@@ -497,6 +507,8 @@ ActiveRecord::Schema.define(version: 2020_05_11_024239) do
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
     t.datetime "featured_at"
+    t.integer "position"
+    t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_zines_on_canonical_id"
   end
 
