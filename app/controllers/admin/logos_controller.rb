@@ -53,7 +53,8 @@ module Admin
       params.require(:logo).permit(:title, :subtitle, :description, :slug, :height,
                                    :width, :summary, :published_at, :locale,
                                    :jpg_url_present, :png_url_present, :pdf_url_present,
-                                   :svg_url_present, :tif_url_present, :publication_status)
+                                   :svg_url_present, :tif_url_present, :publication_status,
+                                   :position, :hide_from_index)
     end
   end
 end
