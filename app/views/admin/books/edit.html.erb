@@ -8,5 +8,5 @@
 
 <%= render "admin/danger_zone",
            thing: @book,
-           label: "book",
+           label: @book.namespace.singularize,
            path: [:admin, @book] %>

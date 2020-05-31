@@ -5,13 +5,13 @@
     <div class="row">
       <div class="col-12 col-lg-8">
         <div class="form-group">
-          <%= form.label :journal_id %><br>
+          <%= form.label :journal_id %>
           <%= form.collection_select :journal_id,
                                      Journal.all,
                                      :id,
                                      :name,
                                      { include_blank: true },
-                                     class: "custom-select custom-select-lg" %>
+                                     class: "form-control form-control-lg" %>
 
           <p class="form-text text-muted">
             If it’s not here, you can
@@ -63,16 +63,24 @@
 
   <div class="row">
     <div class="col-6">
-      <%= render "admin/books/form/position", form: form %>
-      <p class="form-text text-muted">This will set the order that
-      this book shows up on <a href="/books">crimethinc.com/books</a>.</p>
+      <%= render "admin/books/form/position", form: form, resource: resource %>
+      <p class="form-text text-muted">
+        This will set the order that this
+        <%= resource.namespace.singularize %>
+        shows up on
+        <%= link_to "crimethinc.com/#{resource.namespace}", resource.namespace %>.
+      </p>
     </div>
 
     <div class="col-6">
       <%= form.check_box :hide_from_index %>
-      <%= form.label :has_index, "Hide this book from the index page?" %><br>
-      <p class="form-text text-muted">This will prevent the book from
-      showing up on <a href="/books">crimethinc.com/books</a>.</p>
+      <%= form.label :has_index, "Hide this #{resource.namespace.singularize} from the index page?" %>
+      <p class="form-text text-muted">
+        This will prevent this
+        <%= resource.namespace.singularize %>
+        from showing up on
+        <%= link_to "crimethinc.com/#{resource.namespace}", resource.namespace %>.
+      </p>
     </div>
   </div>
 
@@ -150,7 +158,7 @@
 
         <div class="row">
           <div class="col-6">
-            <%= form.label :has_index, "Has Index?" %><br>
+            <%= form.label :has_index, "Has Index?" %>
 
             <div class="form-check">
               <span class="d-inline-block mr-3">

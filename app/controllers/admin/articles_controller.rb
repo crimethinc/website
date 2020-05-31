@@ -28,14 +28,12 @@ module Admin
       @article    = Article.new
       prepare_article_for_translation
 
-      @title   = admin_title
-      @html_id = 'admin-article-form-page'
+      @title = admin_title
     end
 
     def edit
       @collection = Article.find(@article.collection_id) if @article.in_collection?
       @title      = admin_title(@article, %i[id title subtitle])
-      @html_id    = 'admin-article-form-page'
     end
 
     def create
