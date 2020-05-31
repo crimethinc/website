@@ -18,7 +18,7 @@ label  {
 // Everything below it was published pre-counter.
 .article-counter-genesis { border-bottom: 10px solid #666; }
 
-#admin-article-form-page {
+.toggle {
   // Treat radio buttons as toggle buttons
   input + label {
     @extend .btn;
