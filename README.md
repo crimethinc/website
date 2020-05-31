@@ -233,17 +233,6 @@ Click this button to easily deploy to Heroku. (You must have a Heroku account.)
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 
-## Authors
-
-* Shane Becker / [@veganstraightedge](https://github.com/veganstraightedge)
-* [@astronaut-wannabe](https://github.com/astronaut-wannabe)
-* Geoff Foley / [@GeoffFoley](https://github.com/geofffoley)
-* Eli Duke / [@eliduke](https://github.com/eliduke)
-* [ПΣЯDƧPΛЯ](https://github.com/nerdspar)
-* Okan Şahin / [@cilgintokatli](https://github.com/cilgintokatli)
-* ( add yourself )
-
-
 ## Contributing
 
 See [CONTRIBUTING.md](https://github.com/crimethinc/website/blob/master/CONTRIBUTING.md).
