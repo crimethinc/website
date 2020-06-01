@@ -2,8 +2,14 @@ class TagAssigner
   def self.parse_glob glob
     return if glob.blank?
 
-    names = glob.split(',').reject(&:blank?)
-    tags = names.map { |name| Tag.find_or_initialize_by(name: name.strip) }
+    names = glob.split(',').reject(&:blank?).map { |n| n.strip.downcase }.uniq
+    tags = names.map do |name|
+      # postgres treats everything as case-sensitive by default, so we
+      # cannot use find_or_initialize_by until we clean up the tags
+      # table and only have lowercase tag.names
+      existing_tag = Tag.where('lower(name) = ?', name).first
+      existing_tag || Tag.new(name: name)
+    end
     new(*tags)
   end
 

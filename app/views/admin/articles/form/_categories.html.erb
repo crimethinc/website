@@ -5,7 +5,7 @@
       <p class="m-0 font-weight-bold">Categories</p>
 
       <div class="form-check">
-        <% @categories.each do |category| %>
+        <% @categories&.each do |category| %>
           <div>
             <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
               <%= category_check_box form: form, category: category %>
