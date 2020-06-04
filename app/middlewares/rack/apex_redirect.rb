@@ -5,19 +5,14 @@ module Rack
     end
 
     def call env
-      request = Rack::Request.new(env)
+      request = Rack::Request.new env
 
-      if request.host.start_with?('www.')
+      if request.host.start_with? 'www.'
         location = request.scheme + '://' + request.host.sub('www.', '') + request.path
-        return redirect(location)
+        return redirect location
       end
 
-      if request.host.start_with?('en.')
-        location = request.scheme + '://' + request.host.sub('en.', '') + request.path
-        return redirect(location)
-      end
-
-      @app.call(env)
+      @app.call env
     end
 
     private
