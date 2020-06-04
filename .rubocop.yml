@@ -18,10 +18,13 @@ Layout/LineLength:
   Exclude:
     - 'db/**/*'
 
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
 
-Layout/SpaceAroundMethodCallOperator:
+Lint/MixedRegexpCaptureTypes:
   Enabled: true
 
 Lint/RaiseException:
@@ -102,6 +105,12 @@ Style/MethodDefParentheses:
 Style/MixinUsage:
   Exclude:
     - 'script/*'
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+
+Style/RedundantRegexpEscape:
+  Enabled: true
 
 Style/SlicingWithRange:
   Enabled: true
