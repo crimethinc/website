@@ -40,7 +40,7 @@ Noi utilizziamo filtri antispam superaggressivi perché odiamo lo spam e ricevia
 
 ### Assicuratevi che le _nostre_ e-mail non vengano contrassegnate come spam:
 
-Per qualche motivo, potrebbe capitare che i servizi di posta elettronica come Hotmail, Yahoo, AOL e Gmail (e anche altri più piccoli) decidano che tutte le e-mail inviate da crimethinc.com siano spam. Pensiamo che questo abbia a che fare con utenti che sbagliano a contrassegnare le e-mail di ordine come spam - per favore, non fatelo. Per essere sicuri di ricevere le nostre e-mail, impostate un filtro per la parola “crimethinc” o salvate *@crimethinc.com in rubrica o in una whitelist - insomma, fate tutto ciò che è necessario per assicurarvi che non vengano contrassegnate come spam.
+Per qualche motivo, potrebbe capitare che i servizi di posta elettronica come Hotmail, Yahoo, AOL e Gmail (e anche altri più piccoli) decidano che tutte le e-mail inviate da crimethinc.com siano spam. Pensiamo che questo abbia a che fare con utenti che sbagliano a contrassegnare le e-mail di ordine come spam - per favore, non fatelo. Per essere sicuri di ricevere le nostre e-mail, impostate un filtro per la parola “crimethinc” o salvate *@crimethinc.com in rubrica o in una allowed list - insomma, fate tutto ciò che è necessario per assicurarvi che non vengano contrassegnate come spam.
 
 ## Distribuzione attiva
 

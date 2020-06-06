@@ -37,7 +37,7 @@ module Crimethinc
     # Set default locale to English
     config.i18n.default_locale = :en
 
-    # Whitelist locales available for the application
+    # Allowed list locales available for the application
     subdomain_locales = %i[ar bn cs cz da de dv en es fa fi fr gr he id it ja ko nl pl pt ru sv th tr zh]
     path_ltr_locales  = %i[
       english

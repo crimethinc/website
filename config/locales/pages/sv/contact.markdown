@@ -37,7 +37,7 @@ Salem, OR 97302
 We use super-aggressive spam filtering because we hate spam and we get more than a thousand a day. That said, we receive nearly every real email sent to us. However, on very, very rare occasions, real emails get filtered out and we never receive them. To make absolutely certain we get your email, **do not** attach a GIF, use the words spam, penis, viagra, etc.; **and do** put this exact phrase anywhere in the body of your email (minus the quotes): "Magic Anarchist Text".
 
 **Make sure _our_ emails don't get marked as spam:**
-For some reason, email services such as Hotmail, Yahoo, AOL and Gmail (and some small ones, too) occasionally decide that all email sent from crimethinc.com is spam. We suspect it has to do with errant users marking their order emails as spam—please people, don't do that. To ensure you get emails from us, please set-up a filter for the word "crimethinc" or put *@crimethinc.com in your address book or whitelist—whatever you need to do to ensure they don't get marked as spam.
+For some reason, email services such as Hotmail, Yahoo, AOL and Gmail (and some small ones, too) occasionally decide that all email sent from crimethinc.com is spam. We suspect it has to do with errant users marking their order emails as spam—please people, don't do that. To ensure you get emails from us, please set-up a filter for the word "crimethinc" or put *@crimethinc.com in your address book or allowed list—whatever you need to do to ensure they don't get marked as spam.
 
 ## European Distro [Active Distribution]
 

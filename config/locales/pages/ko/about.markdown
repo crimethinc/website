@@ -40,7 +40,7 @@ We use super-aggressive spam filtering because we hate spam and we get more than
 
 ### Make sure _our_ emails don’t get marked as spam:
 
-For some reason, email services such as Hotmail, Yahoo, AOL, and Gmail (and some small ones, too) occasionaly decide that all email sent from crimethinc.com is spam. We suspect it has to do with errant users marking their order emails as spam — please people, don’t do that. To ensure you get emails from us, please set-up a filter for the word “crimethinc” or put *@crimethinc.com in your address book or whitelist — whatever you need to do to ensure they don’t get marked as spam.
+For some reason, email services such as Hotmail, Yahoo, AOL, and Gmail (and some small ones, too) occasionaly decide that all email sent from crimethinc.com is spam. We suspect it has to do with errant users marking their order emails as spam — please people, don’t do that. To ensure you get emails from us, please set-up a filter for the word “crimethinc” or put *@crimethinc.com in your address book or allowed list — whatever you need to do to ensure they don’t get marked as spam.
 
 ## Active Distribution
 
