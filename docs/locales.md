@@ -17,7 +17,7 @@ Everyone reading this will need to know that language code for language you're w
 
 ## Updating an existing translation
 
-1. Find the language file in this folder https://github.com/crimethinc/website/tree/master/config/locales
+1. Find the language file in this folder https://github.com/crimethinc/website/tree/main//config/locales
     - The file will have a name in the format of `[xx].yml`
     - For example, `pt.yml` for Portuguese
 
@@ -29,7 +29,7 @@ Everyone reading this will need to know that language code for language you're w
 
 ## Creating a new translation
 
-1. Double check for the language file in this folder https://github.com/crimethinc/website/tree/master/config/locales
+1. Double check for the language file in this folder https://github.com/crimethinc/website/tree/main//config/locales
     - The file will have a name in the format of `[xx].yml`
     - For example, `pt.yml` for Portuguese
     - If it exists, follow the steps in the _Updating an existing translation_ section above
@@ -37,8 +37,8 @@ Everyone reading this will need to know that language code for language you're w
 
 1. Download the English language file
     - `en.yml`
-    - For easier viewing: https://github.com/crimethinc/website/blob/master/config/locales/en.yml
-    - For downloading: https://raw.githubusercontent.com/crimethinc/website/master/config/locales/en.yml
+    - For easier viewing: https://github.com/crimethinc/website/blob/main//config/locales/en.yml
+    - For downloading: https://raw.githubusercontent.com/crimethinc/website/main//config/locales/en.yml
     - Either save the file from your browser to your computer, or copy all of the text on that webpage and then paste it into a text editor on your computer
 
 1. Name your new file using the two letter language code, with a `.yml` file extension

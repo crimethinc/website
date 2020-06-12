@@ -235,7 +235,7 @@ Click this button to easily deploy to Heroku. (You must have a Heroku account.)
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/crimethinc/website/blob/master/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/crimethinc/website/blob/main/CONTRIBUTING.md).
 
 If you find bugs, have feature requests or questions, please
 [file an issue](https://github.com/crimethinc/website/issues).
@@ -244,7 +244,7 @@ If you find bugs, have feature requests or questions, please
 ## Code of Conduct
 
 Everyone interacting in all of CrimethInc. codebases, issue trackers, chat rooms, and mailing lists is expected to follow the
-[CrimethInc. development code of conduct](https://github.com/crimethinc/website/blob/master/CODE_OF_CONDUCT.md).
+[CrimethInc. development code of conduct](https://github.com/crimethinc/website/blob/main/CODE_OF_CONDUCT.md).
 
 
 ## License
