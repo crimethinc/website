@@ -83,7 +83,18 @@ module Admin
       markdown_from_html = ReverseMarkdown.convert html_from_word_doc, github_flavored: true
 
       # Groom the markdown a bit to be easier for author to work with
-      markdown_from_html = markdown_from_html.strip.prepend("\n").gsub("\n**", "\n# **").strip
+      markdown_from_html = markdown_from_html
+                           .strip
+                           .prepend("\n")
+                           .gsub("\n**", "\n# **")
+                           .gsub("\n_ ", "\n_")
+                           .gsub(" _\n", "_\n")
+                           .gsub('_\>', '> _')
+                           .gsub('\>', '>')
+                           .gsub('\\_', '_')
+                           .gsub('\*', '*')
+                           .gsub("- \n\n> ", '- ')
+                           .strip
 
       # Populate Aricle#content with the markdown
       params[:article][:content] = markdown_from_html
