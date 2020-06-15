@@ -52,7 +52,7 @@ gem 'logstash-event'
 # dev and testing
 group :development, :test do
   gem 'awesome_print'
-  gem 'aws-sdk-s3'
+  gem 'aws-sdk-s3', require: false
   gem 'byebug', platform: :mri
   gem 'capybara'
   gem 'dotenv-rails'
