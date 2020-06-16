@@ -158,6 +158,9 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n-debug (1.2.0)
       i18n (< 2)
+    image_processing (1.11.0)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     iniparse (1.5.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
@@ -206,6 +209,7 @@ GEM
     memory_profiler (0.9.14)
     method_source (1.0.0)
     mimemagic (0.3.5)
+    mini_magick (4.10.1)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.1)
@@ -321,6 +325,8 @@ GEM
     rubocop-rspec (1.40.0)
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
+    ruby-vips (2.0.17)
+      ffi (~> 1.9)
     ruby_parser (3.14.2)
       sexp_processor (~> 4.9)
     rubypants (0.7.1)
@@ -411,6 +417,7 @@ DEPENDENCIES
   flamegraph
   guard-rspec
   i18n-debug
+  image_processing (~> 1.2)
   jbuilder
   jquery-rails
   jquery-ui-rails

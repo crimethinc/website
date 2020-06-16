@@ -49,10 +49,13 @@ gem 'stripe'
 gem 'lograge'
 gem 'logstash-event'
 
+# uploads using Active Storage
+gem 'aws-sdk-s3', require: false
+gem 'image_processing', '~> 1.2'
+
 # dev and testing
 group :development, :test do
   gem 'awesome_print'
-  gem 'aws-sdk-s3', require: false
   gem 'byebug', platform: :mri
   gem 'capybara'
   gem 'dotenv-rails'
