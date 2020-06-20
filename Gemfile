@@ -50,8 +50,10 @@ gem 'lograge'
 gem 'logstash-event'
 
 # uploads using Active Storage
-gem 'aws-sdk-s3', require: false
-gem 'image_processing', '~> 1.2'
+gem 'aws-sdk-s3',           require: false
+gem 'azure-storage',        require: false
+gem 'google-cloud-storage', require: false
+gem 'image_processing'
 
 # dev and testing
 group :development, :test do

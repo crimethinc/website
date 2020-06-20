@@ -1,10 +1,10 @@
-test:
-  service: Disk
-  root: <%= Rails.root.join 'tmp', 'storage' %>
-
 local:
   service: Disk
   root: <%= Rails.root.join 'storage' %>
+
+test:
+  service: Disk
+  root: <%= Rails.root.join 'tmp', 'storage' %>
 
 amazon:
   service: S3
@@ -13,29 +13,44 @@ amazon:
   bucket:            <%= ENV.fetch('AWS_BUCKET')            { 'TODO' } %>
   region:            <%= ENV.fetch('AWS_REGION')            { 'TODO' } %>
 
-# Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
-# amazon:
-#   service: S3
-#   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
-#   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-#   region: us-east-1
-#   bucket: your_own_bucket
+google:
+  service: GCS
+  credentials:
+    type: service_account
+    project_id:     <%= ENV.fetch('GCP_PROJECT_ID') { 'TODO' } %>
+    private_key_id: <%= ENV.fetch('GCP_PRIVATE_KEY_ID') { 'TODO' } %>
+    private_key:    <%= ENV.fetch('GCP_PRIVATE_KEY') { 'TODO' } %>
+    client_email:   <%= ENV.fetch('GCP_CLIENT_EMAIL') { 'TODO' } %>
+    client_id:      <%= ENV.fetch('GCP_CLIENT_ID') { 'TODO' } %>
+    auth_uri: "https://accounts.google.com/o/oauth2/auth"
+    token_uri: "https://accounts.google.com/o/oauth2/token"
+    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+    client_x509_cert_url: <%= ENV.fetch('GCP_CLIENT_X509_CERT_URL') { 'TODO' } %>
+  project: <%= ENV.fetch('GCP_PROJECT') { 'TODO' } %>
+  bucket: <%= ENV.fetch('GCP_BUCKET') { 'TODO' } %>
 
-# Remember not to checkin your GCS keyfile to a repository
-# google:
-#   service: GCS
-#   project: your_project
-#   credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
-#   bucket: your_own_bucket
+microsoft:
+  service: AzureStorage
+  storage_account_name: <%= ENV.fetch('AZURE_STORAGE_ACCOUNT_NAME') { 'TODO' } %>
+  storage_access_key:   <%= ENV.fetch('AZURE_STORAGE_ACCESS_KEY')   { 'TODO' } %>
+  container:            <%= ENV.fetch('AZURE_CONTAINER')            { 'TODO' } %>
 
-# Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
-# microsoft:
-#   service: AzureStorage
-#   storage_account_name: your_account_name
-#   storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :storage_access_key) %>
-#   container: your_container_name
+production:
+  service: Mirror
+  primary: amazon
+  mirrors:
+    - google
+    - microsoft
 
-# mirror:
-#   service: Mirror
-#   primary: local
-#   mirrors: [ amazon, google, microsoft ]
+# To test mirroring setup from local development,
+# Edit development.rb, chaging this:
+# config.active_storage.service = :local
+# to this:
+# config.active_storage.service = :development_mirrors
+development_mirrors:
+  service: Mirror
+  primary: local
+  mirrors:
+    - amazon
+    - google
+    - microsoft
