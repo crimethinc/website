@@ -1,10 +1,10 @@
-test:
-  service: Disk
-  root: <%= Rails.root.join 'tmp', 'storage' %>
-
 local:
   service: Disk
   root: <%= Rails.root.join 'storage' %>
+
+test:
+  service: Disk
+  root: <%= Rails.root.join 'tmp', 'storage' %>
 
 amazon:
   service: S3
@@ -35,7 +35,17 @@ microsoft:
   storage_access_key:   <%= ENV.fetch('AZURE_STORAGE_ACCESS_KEY')   { 'TODO' } %>
   container:            <%= ENV.fetch('AZURE_CONTAINER')            { 'TODO' } %>
 
-mirror:
+production:
+  service: Mirror
+  primary: amazon
+  mirrors:
+    - google
+    - microsoft
+
+development_mirror:
   service: Mirror
   primary: local
-  mirrors: [amazon, google, microsoft]
+  mirrors:
+    - amazon
+    - google
+    - microsoft
