@@ -1,0 +1,33 @@
+<%= render "admin/page_header", thing: @media %>
+
+<table class="table table-striped table-sm mb-5 table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Description</th>
+      <th>Slug</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @media.each do |medium| %>
+      <tr>
+        <td>
+          <%= link_to "EDIT", [:edit, :admin, medium], class: "btn btn-light border-secondary btn-sm" %>
+        </td>
+        <td>
+          <%= link_to [:admin, medium] do %>
+            <b><%= medium.title %></b><br>
+            <%= medium.subtitle %>
+          <% end %>
+        </td>
+        <td><%= medium.content %></td>
+        <td><%= medium.slug %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @media, views_prefix: "admin", theme: "twitter-bootstrap-4" %>
