@@ -25,13 +25,13 @@ namespace :db do
       puts '==> Scrubbing DB…'
       puts '==> Scrubbing Users…'
 
-      # delete all users except User ID #1, to reuse that ID
+      # Delete all users except User ID #1, to reuse that ID
       User.all.each do |user|
         user.id == 1 ? next : user.destroy
       end
 
-      # update the first user instead of creating a new one,
-      # so to not reveal how many production users there are
+      # Update the first user instead of creating a new one,
+      #   so to not reveal how many production users there are
       password = '1234567890' * 3
       publisher_role = User::ROLES.index :publisher
 
@@ -52,11 +52,11 @@ namespace :db do
 
     desc 'Dump local development DB'
     task dump: :environment do
-      # ensure that the db dumps directory exists
+      # Ensure that the db dumps directory exists
       FileUtils.mkdir_p Rails.root.join 'database-dumps'
 
       puts '==> Dumping local development DB…'
-      # create a PG dump and save it to the db dumps directory
+      # Create a PG dump and save it to the db dumps directory
       sh 'pg_dump --dbname=crimethinc_development --file=database-dumps/crimethinc_production_db_dump.sql'
     end
 
@@ -64,40 +64,45 @@ namespace :db do
     task upload: :environment do
       puts '==> Uploading local development DB dump to S3…'
 
-      # check for required env vars
+      # Check for required env vars
       env_vars = [
-        aws_access_key_id     = ENV.fetch('AWS_ACCESS_KEY_ID')     { 'TODO' },
-        aws_secret_access_key = ENV.fetch('AWS_SECRET_ACCESS_KEY') { 'TODO' },
-        s_3_bucket = ENV.fetch('S3_BUCKET') { 'TODO' }
+        aws_access_key_id     = ENV.fetch('AWS_ACCESS_KEY_ID_FOR_DB_EXPORT')     { 'TODO' },
+        aws_secret_access_key = ENV.fetch('AWS_SECRET_ACCESS_KEY_FOR_DB_EXPORT') { 'TODO' },
+        aws_bucket            = ENV.fetch('AWS_BUCKET_FOR_DB_EXPORT')            { 'TODO' },
+        aws_region            = ENV.fetch('AWS_REGION_FOR_DB_EXPORT')            { 'TODO' }
       ]
 
-      # exit if any env vars aren't set
+      # Exit if any env vars aren't set
       if env_vars.include? 'TODO'
         puts 'You need to set these as environment variables or in a .env file:'
-        puts 'AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET'
+        puts '  AWS_ACCESS_KEY_ID_FOR_DB_EXPORT'
+        puts '  AWS_SECRET_ACCESS_KEY_FOR_DB_EXPORT'
+        puts '  AWS_BUCKET_FOR_DB_EXPORT'
+        puts '  AWS_REGION_FOR_DB_EXPORT'
         exit
       end
 
-      # config AWS
+      # Configure AWS
       Aws.config.update(
-        region:      'us-east-1',
+        region:      aws_region,
         credentials: Aws::Credentials.new(aws_access_key_id, aws_secret_access_key)
       )
 
-      # client is for making file public. s_3 is for file upload.
+      # For making file public
       client = Aws::S3::Client.new
-      s_3    = Aws::S3::Resource.new
+      # for file upload
+      aws_s_3 = Aws::S3::Resource.new
 
-      # reference an existing bucket by name
-      bucket_name = s_3_bucket
-      bucket      = s_3.bucket(bucket_name)
+      # Reference an existing bucket by name
+      bucket_name = aws_bucket
+      bucket      = aws_s_3.bucket(bucket_name)
       bucket_url  = bucket.url
 
       # Get just the file name
       file_name = 'database-dumps/crimethinc_production_db_dump.sql'
 
       # Create the object to upload
-      obj = s_3.bucket(bucket_name).object(file_name)
+      obj = aws_s_3.bucket(bucket_name).object(file_name)
 
       # Upload it
       obj.upload_file file_name
