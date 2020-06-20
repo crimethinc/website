@@ -42,7 +42,12 @@ production:
     - google
     - microsoft
 
-development_mirror:
+# To test mirroring setup from local development,
+# Edit development.rb, chaging this:
+# config.active_storage.service = :local
+# to this:
+# config.active_storage.service = :development_mirrors
+development_mirrors:
   service: Mirror
   primary: local
   mirrors:
