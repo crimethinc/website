@@ -7,7 +7,7 @@
       <th>Status</th>
       <th>Name</th>
 
-      <% Logo.image_formats.keys.each do |extension| %>
+      <% Logo.image_formats_map.keys.each do |extension| %>
         <th class="text-center"><%= extension.upcase %></td>
       <% end %>
     </tr>
@@ -32,7 +32,7 @@
           <% end %>
         </td>
 
-        <% Logo.image_formats.each do |extension, attr_name| %>
+        <% Logo.image_formats_map.each do |extension, attr_name| %>
           <td class="text-center align-middle">
             <% if logo.send(attr_name).attached? %>
               <%= image_tag url_for(logo.send(attr_name)), class: "rounded w-25" %>

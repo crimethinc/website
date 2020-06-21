@@ -27,7 +27,7 @@
           <div class="buttons">
             <% if tool.image_jpg.present? %>
 
-              <% Logo.image_formats.each do |extension, attr_name| %>
+              <% Logo.image_formats_map.each do |extension, attr_name| %>
                 <% if tool.send(attr_name).attached? %>
                   <%= link_to "Download .#{extension.upcase}", url_for(tool.send(attr_name)), class: "download button" %>
                 <% end %>

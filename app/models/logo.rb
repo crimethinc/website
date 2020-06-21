@@ -8,15 +8,17 @@ class Logo < ApplicationRecord
 
   IMAGE_FORMATS = %w[jpg png pdf svg tif].freeze
 
+  IMAGE_FORMATS_MAP = {
+    jpg: :image_jpg,
+    png: :image_png,
+    pdf: :image_pdf,
+    svg: :image_svg,
+    tif: :image_tif
+  }.freeze
+
   class << self
-    def image_formats
-      {
-        jpg: :image_jpg,
-        png: :image_png,
-        pdf: :image_pdf,
-        svg: :image_svg,
-        tif: :image_tif
-      }
+    def image_formats_map
+      IMAGE_FORMATS_MAP
     end
   end
 
