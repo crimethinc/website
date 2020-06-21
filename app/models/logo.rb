@@ -6,8 +6,6 @@ class Logo < ApplicationRecord
   has_one_attached :image_svg
   has_one_attached :image_tif
 
-  IMAGE_FORMATS = %w[jpg png pdf svg tif].freeze
-
   IMAGE_FORMATS_MAP = {
     jpg: :image_jpg,
     png: :image_png,

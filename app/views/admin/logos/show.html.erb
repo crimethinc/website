@@ -37,7 +37,7 @@
       <% end %>
 
       <%# TEMP transitional %>
-      <% Logo::IMAGE_FORMATS.each do |extension| %>
+      <% Logo.image_formats_map.keys.each do |extension| %>
         <% if @logo.send("#{extension}_url_present?") %>
           <div class="col-3">
 
