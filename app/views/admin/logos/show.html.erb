@@ -4,40 +4,59 @@
   <header>
     <h1><%= @logo.title %></h1>
 
-    <%= render "/admin/articles/publication_status_badge", resource: @logo %>
+    <p><%= render "/admin/articles/publication_status_badge", resource: @logo %></p>
+    <p><%= link_to @logo.path, @logo.path %></p>
   </header>
 
   <div>
-    <p>
-      <% Logo.image_formats.each do |extension, attr_name| %>
-        <% if @logo.send(attr_name).attached? %>
-          <span class="badge badge-success">✔ <%= extension.upcase %> Image</span>
-        <% end %>
-      <% end %>
-    </p>
-
-    <p><b>URL:</b> <b><%= link_to @logo.path, @logo.path %></b></p>
 
     <div class="row">
-      <% Logo.image_formats.each do |extension, attr_name| %>
-        <% if @logo.send(attr_name).attached? %>
-          <div class="col">
+
+      <% if @logo.image_jpg.present? %><%# TEMP transitional %>
+
+        <% Logo.image_formats.each do |extension, attr_name| %>
+          <% if @logo.send(attr_name).attached? %>
+            <div class="col-3">
+
+              <div class="card">
+                <div class="card-body">
+                  <%= link_to url_for @logo.send(attr_name) do %>
+                    <%= image_tag url_for @logo.send(attr_name) %>
+                  <% end %>
+                </div>
+
+                <div class="card-footer text-right">
+                  <span class="badge badge-info"><%= extension.upcase %></span>
+                </div>
+              </div>
+
+            </div>
+          <% end %>
+        <% end %>
+
+      <% end %>
+
+      <%# TEMP transitional %>
+      <% Logo::IMAGE_FORMATS.each do |extension| %>
+        <% if @logo.send("#{extension}_url_present?") %>
+          <div class="col-3">
 
             <div class="card">
               <div class="card-body">
-                <%= link_to url_for @logo.send(attr_name) do %>
-                  <%= image_tag url_for @logo.send(attr_name) %>
+                <%= link_to url_for @logo.image_url(extension) do %>
+                  <%= image_tag @logo.image_url(extension) %>
                 <% end %>
               </div>
 
-              <div class="card-footer">
-                <%= extension.upcase %>
+              <div class="card-footer text-right">
+                <span class="badge badge-info"><%= extension.upcase %></span>
               </div>
             </div>
 
           </div>
         <% end %>
       <% end %>
+
     </div>
 
     <hr>
