@@ -6,8 +6,6 @@ class Logo < ApplicationRecord
   has_one_attached :image_svg
   has_one_attached :image_tif
 
-  validates :image_jpg, presence: true
-
   IMAGE_FORMATS = %w[jpg png pdf svg tif].freeze
 
   class << self
