@@ -1,7 +1,24 @@
 class Logo < ApplicationRecord
   include Tool
+  has_one_attached :image_jpg
+  has_one_attached :image_png
+  has_one_attached :image_pdf
+  has_one_attached :image_svg
+  has_one_attached :image_tif
 
-  IMAGE_FORMATS = %w[jpg png pdf svg tif].freeze
+  IMAGE_FORMATS_MAP = {
+    jpg: :image_jpg,
+    png: :image_png,
+    pdf: :image_pdf,
+    svg: :image_svg,
+    tif: :image_tif
+  }.freeze
+
+  class << self
+    def image_formats_map
+      IMAGE_FORMATS_MAP
+    end
+  end
 
   def image_description
     "Photo of ‘#{title}’ logo"
@@ -9,7 +26,12 @@ class Logo < ApplicationRecord
   alias front_image_description image_description
 
   def front_image
-    [asset_base_url_prefix, 'preview.png'].join('/')
+    if image_jpg.present?
+      Rails.application.routes.url_helpers.rails_blob_path(image_jpg, only_path: true)
+    else
+      # TEMP transitional
+      [asset_base_url_prefix, 'preview.png'].join('/')
+    end
   end
 
   def image_url extension

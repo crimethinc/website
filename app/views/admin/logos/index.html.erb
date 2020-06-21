@@ -4,10 +4,10 @@
   <thead class="thead-dark">
     <tr>
       <th></th>
-      <th>Name</th>
       <th>Status</th>
+      <th>Name</th>
 
-      <% Logo::IMAGE_FORMATS.each do |extension| %>
+      <% Logo.image_formats_map.keys.each do |extension| %>
         <th class="text-center"><%= extension.upcase %></td>
       <% end %>
     </tr>
@@ -21,6 +21,10 @@
         </td>
 
         <td>
+          <%= render "/admin/articles/publication_status_badge", resource: logo %>
+        </td>
+
+        <td>
           <b><%= link_to logo.title, [:admin, logo] %></b>
           <% if logo.subtitle.present? %>
             <br>
@@ -28,12 +32,24 @@
           <% end %>
         </td>
 
-        <td>
-          <%= render "/admin/articles/publication_status_badge", resource: logo %>
-        </td>
+        <% Logo.image_formats_map.each do |extension, attr_name| %>
+          <td class="text-center align-middle">
+            <% if logo.send(attr_name).attached? %>
 
-        <% Logo::IMAGE_FORMATS.each do |extension| %>
-          <td class="text-center align-middle"><%= "✔️" if logo.send"#{extension}_url_present?" %></td>
+              <% case extension %>
+              <% when :pdf %>
+                <%= image_tag logo.image_pdf.preview(resize_to_limit: [320, 320]), class: "rounded h-25" %>
+              <% when :svg %>
+                <%= image_tag url_for(logo.image_svg) %>
+              <% else %>
+                <%= image_tag url_for(image_variant_by_width(logo.send(attr_name), 320)), class: "rounded h-25" %>
+              <% end %>
+
+            <% else %>
+              <%# TEMP transitional %>
+              <%= "✔️" if logo.send"#{extension}_url_present?" %>
+            <% end %>
+          </td>
         <% end %>
       </tr>
     <% end %>

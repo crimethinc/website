@@ -1,17 +1,120 @@
-<%= form_with(model: [:admin, resource]) do |form| %>
+<%= form_with model: [:admin, resource] do |form| %>
   <%= render "admin/form_errors", thing: resource %>
 
-  <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
-  <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
-
-  <div class="row">
+  <div class="row mb-5">
     <div class="col-12 col-sm-6">
-      <%= render "admin/label_and_area_form_group", form: form, attr: :description, rows: 8 %>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <%= render "admin/label_and_area_form_group", form: form, attr: :description, rows: 3 %>
       <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
     </div>
-  </div> <!-- .row -->
+  </div>
 
-  <div class="row">
+  <fieldset>
+    <legend>Uploads</legend>
+    <div class="row">
+      <div class="col-12 col-md-4 form-group">
+        <div class="card">
+          <div class="card-body">
+            <%= form.label :image_jpg, "JPEG Image" %>
+            <%= form.file_field :image_jpg, class: "form-control-file", accept: "image/jpeg" %>
+
+            <% if resource.image_jpg.attached? %>
+              <p><%= image_tag url_for(image_variant_by_width(resource.image_jpg, 320)), class: "w-50 mt-3 rounded d-block" %></p>
+            <% else %>
+              <p class="form-text text-danger font-weight-bold">Required.</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 form-group">
+        <div class="card">
+          <div class="card-body">
+            <%= form.label :image_png, "PNG Image" %>
+            <%= form.file_field :image_png, class: "form-control-file", accept: "image/png" %>
+
+            <% if resource.image_png.attached? %>
+              <p><%= image_tag url_for(image_variant_by_width(resource.image_png, 320)), class: "w-50 mt-3 rounded d-block" %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 form-group">
+        <div class="card">
+          <div class="card-body">
+            <%= form.label :image_tif, "TIFF Image" %>
+            <%= form.file_field :image_tif, class: "form-control-file", accept: "image/tiff", class: "w-50 mt-3 rounded d-block" %>
+
+            <% if resource.image_tif.attached? %>
+              <p><%= image_tag url_for(image_variant_by_width(resource.image_tif, 320)), class: "w-50 mt-3 rounded d-block" %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 form-group">
+        <div class="card">
+          <div class="card-body">
+            <%= form.label :image_pdf, "PDF Image" %>
+            <%= form.file_field :image_pdf, class: "form-control-file", accept: "application/pdf" %>
+
+            <% if resource.image_svg.attached? %>
+              <p><%= image_tag url_for(resource.image_svg), class: "w-50 mt-3 rounded d-block" %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 form-group">
+          <div class="card">
+            <div class="card-body">
+              <%= form.label :image_svg, "SVG Image" %>
+              <%= form.file_field :image_svg, class: "form-control-file", accept: "image/svg+xml", class: "w-50 mt-3 rounded d-block" %>
+
+              <% if resource.image_pdf.attached? %>
+                <p><%= image_tag resource.image_pdf.preview(resize_to_limit: [100, 100]), class: "w-50 mt-3 rounded d-block" %></p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+    </div>
+  </fieldset> <!-- .row -->
+
+  <fieldset id="syndication">
+    <legend>Syndication</legend>
+    <div class="row">
+
+      <div class="col-12 col-sm-6">
+        <%= render "admin/label_and_area_form_group", form: form, attr: :summary %>
+
+        <p class="form-text text-muted">
+          Maximum 200 characters.
+          Used for page description and previews in story cards on other sites.
+        </p>
+      </div>
+
+      <div class="col-12 col-sm-6">
+        <%= render "admin/books/categories_form", form: form %>
+
+        <div class="form-group">
+          <%= form.label :published_at %>
+          <%= form.date_select :published_at,
+                               { start_year: Time.now.utc.year, end_year: 1995, include_blank: true },
+                               class: "form-control form-control-lg" %>
+        </div>
+      </div>
+
+    </div> <!-- .row -->
+  </fieldset>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :logos] %>
+
+  <div class="row mt-5 pt-5">
     <div class="col-12 col-sm-6">
       <div class="row">
         <div class="col-12 col-sm-6">
@@ -63,35 +166,6 @@
       </div>
     </div>
   </div> <!-- .row -->
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :logos] %>
-
-  <fieldset id="syndication">
-    <legend>Syndication</legend>
-    <div class="row">
-
-      <div class="col-12 col-sm-6">
-        <%= render "admin/label_and_area_form_group", form: form, attr: :summary %>
-
-        <p class="form-text text-muted">
-          Maximum 200 characters.
-          Used for page description and previews in story cards on other sites.
-        </p>
-      </div>
-
-      <div class="col-12 col-sm-6">
-        <%= render "admin/books/categories_form", form: form %>
-
-        <div class="form-group">
-          <%= form.label :published_at %>
-          <%= form.date_select :published_at,
-                               { start_year: Time.now.utc.year, end_year: 1995, include_blank: true },
-                               class: "form-control form-control-lg" %>
-        </div>
-      </div>
-
-    </div> <!-- .row -->
-  </fieldset>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :logos] %>
 <% end %>

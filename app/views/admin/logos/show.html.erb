@@ -4,50 +4,8 @@
   <header>
     <h1><%= @logo.title %></h1>
 
-    <%= render "/admin/articles/publication_status_badge", resource: @logo %>
-  </header>
-
-  <div>
-    <p>
-      <% Logo::IMAGE_FORMATS.each do |extension| %>
-        <% if @logo.send("#{extension}_url_present?") %>
-          <span class="badge badge-success">✔ <%= extension.upcase %> Image</span>
-        <% end %>
-      <% end %>
-    </p>
-
-    <p><b>URL:</b> <b><%= link_to @logo.path, @logo.path %></b></p>
-
-    <div class="row">
-      <% Logo::IMAGE_FORMATS.each do |extension| %>
-        <% if @logo.send("#{extension}_url_present?") %>
-          <div class="col">
-
-            <div class="card">
-              <div class="card-body">
-                <%= link_to @logo.download_url(extension) do %>
-                  <%= image_tag @logo.image_url(extension) %>
-                <% end %>
-              </div>
-
-              <div class="card-footer">
-                <%= extension.upcase %>
-              </div>
-            </div>
-
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-
-    <hr>
-
-    <p>
-      <strong>Size:</strong>
-      <%= @logo.width %>
-      x
-      <%= @logo.height %>
-    </p>
+    <p><%= render "/admin/articles/publication_status_badge", resource: @logo %></p>
+    <p><%= link_to @logo.path, @logo.path %></p>
 
     <p>
       <strong>Description:</strong>
@@ -58,5 +16,71 @@
       <strong>Summary</strong> <span class="text-muted">(used for link previews in Facebook, Twitter, etc)</span>:<br>
       <%= @logo.summary %>
     </p>
-  </div>
+  </header>
+
+  <% if @logo.image_jpg.present? %><%# TEMP transitional %>
+
+    <% Logo.image_formats_map.each do |extension, attr_name| %>
+      <% if @logo.send(attr_name).attached? %>
+        <h2><%= extension.upcase %></h2>
+        <div class="row mb-5">
+          <% [nil, 2000, 1024, 640, 320].each do |width| %>
+            <div class="col-12 col-md-<%= width.blank? ? '4' : '2 d-none d-md-block' %> mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <%= link_to url_for @logo.send(attr_name) do %>
+                    <% case extension %>
+                    <% when :pdf %>
+                      <%= image_tag @logo.image_pdf.preview(resize_to_limit: [width || 320, width || 320]) %>
+                    <% when :svg %>
+                      <%= image_tag url_for(@logo.image_svg) %>
+                    <% else %>
+                      <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), width)) %>
+                    <% end %>
+                  <% end %>
+                </div>
+
+                <div class="card-footer">
+                  <% if width.blank? %>
+                    <span class="badge badge-success">Original</span>
+                    <%= @logo.image_jpg.metadata[:width] %>px
+                  <% else %>
+                    <%= width %>px
+                  <% end %>
+                </div>
+
+              </div><!-- .card -->
+            </div><!-- .col-2 -->
+          <% end %>
+        </div><!-- .row -->
+      <% end %>
+    <% end %>
+
+  <% else %>
+
+    <%# TEMP transitional %>
+    <div class="row">
+      <% Logo.image_formats_map.keys.each do |extension| %>
+        <% if @logo.send("#{extension}_url_present?") %>
+          <div class="col-3">
+
+            <div class="card">
+              <div class="card-body">
+                <%= link_to url_for @logo.image_url(extension) do %>
+                  <%= image_tag @logo.image_url(extension) %>
+                <% end %>
+              </div>
+
+              <div class="card-footer text-right">
+                <span class="badge badge-info"><%= extension.upcase %></span>
+              </div>
+            </div>
+
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+  <% end %>
+
 </article>
