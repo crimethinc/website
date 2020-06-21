@@ -185,7 +185,8 @@ Rails.application.routes.draw do
   get 'languages',         to: 'languages#index', as: :languages
   get 'languages/:locale', to: 'languages#show',  as: :language
 
-  # TODO: Delete? Is this used by anything anymore?
-  # For redirection
-  get '*path', to: 'pages#show', as: :page, via: :all
+  # For redirection, exempts Active Storage upload paths
+  get '*path', to: 'pages#show', as: :page, via: :all, constraints: lambda { |req|
+    req.path.exclude? 'rails/active_storage'
+  }
 end
