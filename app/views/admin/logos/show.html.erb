@@ -25,22 +25,30 @@
         <h2><%= extension.upcase %></h2>
         <div class="row mb-5">
           <% [nil, 2000, 1024, 640, 320].each do |width| %>
-            <div class="col-<%= width.blank? ? 4 : 2 %>">
+            <div class="col-12 col-md-<%= width.blank? ? '4' : '2 d-none d-md-block' %> mb-3">
               <div class="card">
                 <div class="card-body">
                   <%= link_to url_for @logo.send(attr_name) do %>
-                    <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), width)) %>
+                    <% case extension %>
+                    <% when :pdf %>
+                      <%= image_tag @logo.image_pdf.preview(resize_to_limit: [width || 320, width || 320]) %>
+                    <% when :svg %>
+                      <%= image_tag url_for(@logo.image_svg) %>
+                    <% else %>
+                      <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), width)) %>
+                    <% end %>
                   <% end %>
                 </div>
 
                 <div class="card-footer">
                   <% if width.blank? %>
-                    <%= @logo.send(attr_name).metadata[:width] %>px
                     <span class="badge badge-success">Original</span>
+                    <%= @logo.image_jpg.metadata[:width] %>px
                   <% else %>
                     <%= width %>px
                   <% end %>
                 </div>
+
               </div><!-- .card -->
             </div><!-- .col-2 -->
           <% end %>
