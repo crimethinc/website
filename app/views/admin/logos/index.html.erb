@@ -35,7 +35,7 @@
         <% Logo.image_formats_map.each do |extension, attr_name| %>
           <td class="text-center align-middle">
             <% if logo.send(attr_name).attached? %>
-              <%= image_tag url_for(logo.send(attr_name)), class: "rounded w-25" %>
+              <%= image_tag url_for(image_variant_by_width(logo.send(attr_name), 320)), class: "rounded w-25" %>
             <% else %>
               <%# TEMP transitional %>
               <%= "✔️" if logo.send"#{extension}_url_present?" %>

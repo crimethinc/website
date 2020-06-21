@@ -6,37 +6,52 @@
 
     <p><%= render "/admin/articles/publication_status_badge", resource: @logo %></p>
     <p><%= link_to @logo.path, @logo.path %></p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @logo.description %>
+    </p>
+
+    <p>
+      <strong>Summary</strong> <span class="text-muted">(used for link previews in Facebook, Twitter, etc)</span>:<br>
+      <%= @logo.summary %>
+    </p>
   </header>
 
-  <div>
+  <% if @logo.image_jpg.present? %><%# TEMP transitional %>
 
-    <div class="row">
-
-      <% if @logo.image_jpg.present? %><%# TEMP transitional %>
-
-        <% Logo.image_formats_map.each do |extension, attr_name| %>
-          <% if @logo.send(attr_name).attached? %>
-            <div class="col-3">
-
+    <% Logo.image_formats_map.each do |extension, attr_name| %>
+      <% if @logo.send(attr_name).attached? %>
+        <h2><%= extension.upcase %></h2>
+        <div class="row mb-5">
+          <% [nil, 2000, 1024, 640, 320].each do |width| %>
+            <div class="col-<%= width.blank? ? 4 : 2 %>">
               <div class="card">
                 <div class="card-body">
                   <%= link_to url_for @logo.send(attr_name) do %>
-                    <%= image_tag url_for @logo.send(attr_name) %>
+                    <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), width)) %>
                   <% end %>
                 </div>
 
-                <div class="card-footer text-right">
-                  <span class="badge badge-info"><%= extension.upcase %></span>
+                <div class="card-footer">
+                  <% if width.blank? %>
+                    <%= @logo.send(attr_name).metadata[:width] %>px
+                    <span class="badge badge-success">Original</span>
+                  <% else %>
+                    <%= width %>px
+                  <% end %>
                 </div>
-              </div>
-
-            </div>
+              </div><!-- .card -->
+            </div><!-- .col-2 -->
           <% end %>
-        <% end %>
-
+        </div><!-- .row -->
       <% end %>
+    <% end %>
 
-      <%# TEMP transitional %>
+  <% else %>
+
+    <%# TEMP transitional %>
+    <div class="row">
       <% Logo.image_formats_map.keys.each do |extension| %>
         <% if @logo.send("#{extension}_url_present?") %>
           <div class="col-3">
@@ -56,24 +71,8 @@
           </div>
         <% end %>
       <% end %>
-
     </div>
 
-    <hr>
+  <% end %>
 
-    <p>
-      <strong>Size:</strong>
-      <%= render_themed "tools/dimensions", tool: @logo %>
-    </p>
-
-    <p>
-      <strong>Description:</strong>
-      <%= @logo.description %>
-    </p>
-
-    <p>
-      <strong>Summary</strong> <span class="text-muted">(used for link previews in Facebook, Twitter, etc)</span>:<br>
-      <%= @logo.summary %>
-    </p>
-  </div>
 </article>
