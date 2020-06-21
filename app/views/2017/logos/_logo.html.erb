@@ -22,11 +22,7 @@
           </div>
           <p>
             <b>Size</b>
-            <span>
-            <%= tool.width %>
-            x
-            <%= tool.height %>
-            </span>
+            <%= render_themed "tools/dimensions", tool: tool %>
           </p>
           <div class="buttons">
             <% if tool.image_jpg.present? %>

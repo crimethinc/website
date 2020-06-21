@@ -44,15 +44,7 @@
 
     <p>
       <strong>Size:</strong>
-      <% if @logo.image_jpg.present? %>
-        <%= @logo.image_jpg.metadata[:width] %>px
-        x
-        <%= @logo.image_jpg.metadata[:height] %>px
-      <% else %>
-        <%= @logo.width %>
-        x
-        <%= @logo.height %>
-      <% end %>
+      <%= render_themed "tools/dimensions", tool: @logo %>
     </p>
 
     <p>
