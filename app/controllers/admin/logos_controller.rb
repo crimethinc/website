@@ -50,11 +50,14 @@ module Admin
     end
 
     def logo_params
-      params.require(:logo).permit(:title, :subtitle, :description, :slug, :height,
-                                   :width, :summary, :published_at, :locale,
-                                   :jpg_url_present, :png_url_present, :pdf_url_present,
-                                   :svg_url_present, :tif_url_present, :publication_status,
-                                   :position, :hide_from_index)
+      params.require(:logo).permit %i[
+        title subtitle description slug height
+        width summary published_at locale
+        jpg_url_present png_url_present pdf_url_present
+        svg_url_present tif_url_present publication_status
+        position hide_from_index
+        image_jpg image_png image_pdf image_svg image_tif
+      ]
     end
   end
 end
