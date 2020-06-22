@@ -63,25 +63,25 @@
             <%= form.label :image_pdf, "PDF Image" %>
             <%= form.file_field :image_pdf, class: "form-control-file", accept: "application/pdf" %>
 
-            <% if resource.image_svg.attached? %>
-              <p><%= image_tag url_for(resource.image_svg), class: "w-50 mt-3 rounded d-block" %></p>
+            <% if resource.image_pdf.attached? %>
+              <p><%= image_tag resource.image_pdf.preview(resize_to_limit: [100, 100]), class: "w-50 mt-3 rounded d-block" %></p>
             <% end %>
           </div>
         </div>
       </div>
 
       <div class="col-12 col-md-4 form-group">
-          <div class="card">
-            <div class="card-body">
-              <%= form.label :image_svg, "SVG Image" %>
-              <%= form.file_field :image_svg, class: "form-control-file", accept: "image/svg+xml", class: "w-50 mt-3 rounded d-block" %>
+        <div class="card">
+          <div class="card-body">
+            <%= form.label :image_svg, "SVG Image" %>
+            <%= form.file_field :image_svg, class: "form-control-file", accept: "image/svg+xml", class: "w-50 mt-3 rounded d-block" %>
 
-              <% if resource.image_pdf.attached? %>
-                <p><%= image_tag resource.image_pdf.preview(resize_to_limit: [100, 100]), class: "w-50 mt-3 rounded d-block" %></p>
-              <% end %>
-            </div>
+            <% if resource.image_svg.attached? %>
+              <p><%= image_tag url_for(resource.image_svg), class: "w-50 mt-3 rounded d-block" %></p>
+            <% end %>
           </div>
         </div>
+      </div>
     </div>
   </fieldset> <!-- .row -->
 
