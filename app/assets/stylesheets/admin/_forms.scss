@@ -17,3 +17,7 @@ input[type="file"]::-webkit-file-upload-button {
   @extend .btn;
   @extend .btn-outline-primary;
 }
+
+.table img {
+  max-width: 100px;
+}

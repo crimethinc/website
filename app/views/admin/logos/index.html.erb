@@ -38,11 +38,11 @@
 
               <% case extension %>
               <% when :pdf %>
-                <%= image_tag logo.image_pdf.preview(resize_to_limit: [320, 320]), class: "rounded h-25" %>
+                <%= image_tag logo.image_pdf.preview(resize_to_limit: [320, 320]), class: "rounded" %>
               <% when :svg %>
-                <%= image_tag url_for(logo.image_svg) %>
+                <%= image_tag url_for(logo.image_svg), class: "rounded" %>
               <% else %>
-                <%= image_tag url_for(image_variant_by_width(logo.send(attr_name), 320)), class: "rounded h-25" %>
+                <%= image_tag url_for(image_variant_by_width(logo.send(attr_name), 320)), class: "rounded" %>
               <% end %>
 
             <% else %>
