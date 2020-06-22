@@ -38,9 +38,9 @@ microsoft:
 production:
   service: Mirror
   primary: amazon
-  mirrors:
-    - google
-    - microsoft
+  # mirrors:
+  #   - google
+  #   - microsoft
 
 # To test mirroring setup from local development,
 # Edit development.rb, chaging this:
