@@ -45,7 +45,7 @@ Metrics/ClassLength:
   Max: 131
 
 Metrics/CyclomaticComplexity:
-  Max: 12
+  Max: 13
 
 Metrics/MethodLength:
   Max: 27
@@ -105,6 +105,9 @@ Style/MethodDefParentheses:
 Style/MixinUsage:
   Exclude:
     - 'script/*'
+
+Style/RedundantFetchBlock:
+  Enabled: true
 
 Style/RedundantRegexpCharacterClass:
   Enabled: true
