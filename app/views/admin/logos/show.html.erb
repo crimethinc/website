@@ -35,7 +35,13 @@
                     <% when :svg %>
                       <%= image_tag url_for(@logo.image_svg) %>
                     <% else %>
-                      <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), width)) %>
+
+                      <% if width.present? %>
+                        <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), width)) %>
+                      <% else %>
+                        <%= image_tag url_for(@logo.send(attr_name)) %>
+                      <% end %>
+
                     <% end %>
                   <% end %>
                 </div>
