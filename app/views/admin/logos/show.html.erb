@@ -18,69 +18,34 @@
     </p>
   </header>
 
-  <% if @logo.image_jpg.present? %><%# TEMP transitional %>
-
   <div class="row mb-5">
     <% Logo.image_formats_map.each do |extension, attr_name| %>
       <% if @logo.send(attr_name).attached? %>
-            <div class="col-12 col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <%= link_to url_for @logo.send(attr_name) do %>
-                    <% case extension %>
-                    <% when :pdf %>
-                      <%= image_tag @logo.image_pdf.preview(resize_to_limit: [640 || 320, 640 || 320]) %>
-                    <% when :svg %>
-                      <%= image_tag url_for(@logo.image_svg) %>
-                    <% else %>
+        <div class="col-12 col-md-3 mb-4">
 
-                      <% if 640.present? %>
-                        <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), 640)) %>
-                      <% else %>
-                        <%= image_tag url_for(@logo.send(attr_name)) %>
-                      <% end %>
+          <div class="card">
+            <div class="card-body">
+              <%= link_to url_for @logo.send(attr_name) do %>
+                <% case extension %>
+                <% when :pdf %>
+                  <%= image_tag @logo.image_pdf.preview(resize_to_limit: [@preview_width, @preview_width]) %>
+                <% when :svg %>
+                  <%= image_tag url_for(@logo.image_svg) %>
+                <% else %>
+                  <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), @preview_width)) %>
+                <% end %>
+              <% end %>
+            </div>
 
-                    <% end %>
-                  <% end %>
-                </div>
+            <div class="card-footer">
+              <b><%= extension.upcase %></b>
 
-                <div class="card-footer">
-                  <%= extension.upcase %>
+              <%= @logo.image_jpg.metadata[:width] %>px
+            </div>
+          </div><!-- .card -->
 
-                  <%= @logo.image_jpg.metadata[:width] %>px
-                </div>
-
-              </div><!-- .card -->
-            </div><!-- .col-2 -->
+        </div><!-- .col-4 -->
       <% end %>
     <% end %>
   </div><!-- .row -->
-
-  <% else %>
-
-    <%# TEMP transitional %>
-    <div class="row">
-      <% Logo.image_formats_map.keys.each do |extension| %>
-        <% if @logo.send("#{extension}_url_present?") %>
-          <div class="col-3">
-
-            <div class="card">
-              <div class="card-body">
-                <%= link_to url_for @logo.image_url(extension) do %>
-                  <%= image_tag @logo.image_url(extension) %>
-                <% end %>
-              </div>
-
-              <div class="card-footer text-right">
-                <span class="badge badge-info"><%= extension.upcase %></span>
-              </div>
-            </div>
-
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-
-  <% end %>
-
 </article>
