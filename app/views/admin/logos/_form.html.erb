@@ -23,7 +23,7 @@
             <%= form.file_field :image_jpg, class: "form-control-file", accept: "image/jpeg" %>
 
             <% if resource.image_jpg.attached? %>
-              <p><%= image_tag url_for(image_variant_by_width(resource.image_jpg, 320)), class: "w-50 mt-3 rounded d-block" %></p>
+              <p><%= image_tag url_for(image_variant_by_width(resource.image_jpg, 240)), class: "w-50 mt-3 rounded d-block" %></p>
             <% else %>
               <p class="form-text text-danger font-weight-bold">Required.</p>
             <% end %>
@@ -38,7 +38,7 @@
             <%= form.file_field :image_png, class: "form-control-file", accept: "image/png" %>
 
             <% if resource.image_png.attached? %>
-              <p><%= image_tag url_for(image_variant_by_width(resource.image_png, 320)), class: "w-50 mt-3 rounded d-block" %></p>
+              <p><%= image_tag url_for(image_variant_by_width(resource.image_png, 240)), class: "w-50 mt-3 rounded d-block" %></p>
             <% end %>
           </div>
         </div>
@@ -51,7 +51,7 @@
             <%= form.file_field :image_tif, class: "form-control-file", accept: "image/tiff", class: "w-50 mt-3 rounded d-block" %>
 
             <% if resource.image_tif.attached? %>
-              <p><%= image_tag url_for(image_variant_by_width(resource.image_tif, 320)), class: "w-50 mt-3 rounded d-block" %></p>
+              <p><%= image_tag url_for(image_variant_by_width(resource.image_tif, 240)), class: "w-50 mt-3 rounded d-block" %></p>
             <% end %>
           </div>
         </div>
@@ -64,7 +64,7 @@
             <%= form.file_field :image_pdf, class: "form-control-file", accept: "application/pdf" %>
 
             <% if resource.image_pdf.attached? %>
-              <p><%= image_tag resource.image_pdf.preview(resize_to_limit: [100, 100]), class: "w-50 mt-3 rounded d-block" %></p>
+              <p><%= image_tag resource.image_pdf.preview(resize_to_limit: [240, 240]), class: "w-50 mt-3 rounded d-block" %></p>
             <% end %>
           </div>
         </div>
