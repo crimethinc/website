@@ -45,7 +45,7 @@ Metrics/ClassLength:
   Max: 131
 
 Metrics/CyclomaticComplexity:
-  Max: 12
+  Max: 13
 
 Metrics/MethodLength:
   Max: 27
@@ -86,6 +86,9 @@ Style/Documentation:
 
 Style/ExponentialNotation:
   Enabled: true
+
+Style/RedundantFetchBlock:
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
