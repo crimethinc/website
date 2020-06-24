@@ -3,21 +3,25 @@ module Admin
     before_action :set_logo, only: %i[show edit update destroy]
 
     def index
-      @logos = Logo.order(slug: :asc).page(params[:page])
-      @title = admin_title
+      @logos         = Logo.order(slug: :asc).page(params[:page])
+      @title         = admin_title
+      @preview_width = 240
     end
 
     def show
-      @title = admin_title(@logo, %i[title subtitle])
+      @title         = admin_title(@logo, %i[title subtitle])
+      @preview_width = 640
     end
 
     def new
-      @logo  = Logo.new
-      @title = admin_title
+      @logo          = Logo.new
+      @title         = admin_title
+      @preview_width = 240
     end
 
     def edit
-      @title = admin_title(@logo, %i[id title subtitle])
+      @title         = admin_title(@logo, %i[id title subtitle])
+      @preview_width = 240
     end
 
     def create

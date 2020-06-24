@@ -11,7 +11,7 @@
           <div class="tool-front">
             <% if tool.image_jpg.present? %>
               <%= link_to tool.path do %>
-                <%= image_tag url_for(image_variant_by_width(tool.image_jpg, 240)), class: "u-image" %>
+                <%= image_tag url_for(image_variant_by_width(tool.image_jpg, @preview_width)), class: "u-image" %>
               <% end %>
             <% else %>
               <%= link_to image_tag(tool.front_image, alt: tool.front_image_description, class: "u-image"), tool.path %>

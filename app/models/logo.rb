@@ -9,9 +9,9 @@ class Logo < ApplicationRecord
   IMAGE_FORMATS_MAP = {
     jpg: :image_jpg,
     png: :image_png,
-    pdf: :image_pdf,
+    tif: :image_tif,
     svg: :image_svg,
-    tif: :image_tif
+    pdf: :image_pdf
   }.freeze
 
   class << self
