@@ -8,38 +8,44 @@ test:
 
 amazon:
   service: S3
-  access_key_id:     <%= ENV.fetch('AWS_ACCESS_KEY_ID')     { 'TODO' } %>
-  secret_access_key: <%= ENV.fetch('AWS_SECRET_ACCESS_KEY') { 'TODO' } %>
-  bucket:            <%= ENV.fetch('AWS_BUCKET')            { 'TODO' } %>
-  region:            <%= ENV.fetch('AWS_REGION')            { 'TODO' } %>
+  access_key_id:     <%= ENV.fetch('HDRIVE_S3_ACCESS_KEY') { 'TODO' } %>
+  secret_access_key: <%= ENV.fetch('HDRIVE_S3_SECRET_KEY') { 'TODO' } %>
+  bucket:            <%= ENV.fetch('HDRIVE_S3_BUCKET')     { 'TODO' } %>
+  region:            <%= ENV.fetch('HDRIVE_S3_REGION')     { 'TODO' } %>
 
 google:
   service: GCS
   credentials:
     type: service_account
-    project_id:     <%= ENV.fetch('GCP_PROJECT_ID') { 'TODO' } %>
-    private_key_id: <%= ENV.fetch('GCP_PRIVATE_KEY_ID') { 'TODO' } %>
-    private_key:    <%= ENV.fetch('GCP_PRIVATE_KEY') { 'TODO' } %>
-    client_email:   <%= ENV.fetch('GCP_CLIENT_EMAIL') { 'TODO' } %>
-    client_id:      <%= ENV.fetch('GCP_CLIENT_ID') { 'TODO' } %>
+    project_id:     <%= JSON.parse(ENV.fetch('HDRIVE_GOOGLE_JSON_KEY') { '{"todo": "TODO"}' } )['project_id'] %>
+    private_key_id: <%= JSON.parse(ENV.fetch('HDRIVE_GOOGLE_JSON_KEY') { '{"todo": "TODO"}' } )['private_key_id'] %>
+    private_key:    <%= JSON.parse(ENV.fetch('HDRIVE_GOOGLE_JSON_KEY') { '{"todo": "TODO"}' } )['private_key'] %>
+    client_email:   <%= JSON.parse(ENV.fetch('HDRIVE_GOOGLE_JSON_KEY') { '{"todo": "TODO"}' } )['client_email'] %>
+    client_id:      <%= JSON.parse(ENV.fetch('HDRIVE_GOOGLE_JSON_KEY') { '{"todo": "TODO"}' } )['client_id'] %>
     auth_uri: "https://accounts.google.com/o/oauth2/auth"
     token_uri: "https://accounts.google.com/o/oauth2/token"
     auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
-    client_x509_cert_url: <%= ENV.fetch('GCP_CLIENT_X509_CERT_URL') { 'TODO' } %>
-  project: <%= ENV.fetch('GCP_PROJECT') { 'TODO' } %>
-  bucket: <%= ENV.fetch('GCP_BUCKET') { 'TODO' } %>
+    client_x509_cert_url: <%= JSON.parse(ENV.fetch('HDRIVE_GOOGLE_JSON_KEY') { '{"todo": "TODO"}' } )['client_x509_cert_url'] %>
+  project: <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET') { 'TODO' } %>
+  bucket: <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET')  { 'TODO' } %>
 
 microsoft:
   service: AzureStorage
-  storage_account_name: <%= ENV.fetch('AZURE_STORAGE_ACCOUNT_NAME') { 'TODO' } %>
-  storage_access_key:   <%= ENV.fetch('AZURE_STORAGE_ACCESS_KEY')   { 'TODO' } %>
-  container:            <%= ENV.fetch('AZURE_CONTAINER')            { 'TODO' } %>
+  storage_account_name: <%= ENV.fetch('HDRIVE_AZURE_STORAGE')     { 'TODO' } %>
+  storage_access_key:   <%= ENV.fetch('HDRIVE_AZURE_PRIMARY_KEY') { 'TODO' } %>
+  container:            <%= ENV.fetch('HDRIVE_AZURE_CONTAINER')   { 'TODO' } %>
 
 production:
   service: Mirror
   primary: amazon
   mirrors:
     - google
+    - microsoft
+
+staging:
+  service: Mirror
+  primary: amazon
+  mirrors:
     - microsoft
 
 # To test mirroring setup from local development,
