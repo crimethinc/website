@@ -42,6 +42,12 @@ production:
     - google
     - microsoft
 
+staging:
+  service: Mirror
+  primary: amazon
+  mirrors:
+    - microsoft
+
 # To test mirroring setup from local development,
 # Edit development.rb, chaging this:
 # config.active_storage.service = :local
