@@ -1,4 +1,8 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
+
   # Store Redirect and support page
   get 'store/order-success', to: 'pages#post_order_success', as: :post_order_success
   get 'store', to: redirect('https://store.crimethinc.com')
