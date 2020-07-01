@@ -117,6 +117,7 @@ GEM
     coderay (1.1.2)
     colorize (0.8.1)
     concurrent-ruby (1.1.6)
+    connection_pool (2.2.3)
     crass (1.0.6)
     dalli (2.7.10)
     declarative (0.0.10)
@@ -402,6 +403,10 @@ GEM
       rubyzip (>= 1.2.2)
     sexp_processor (4.14.1)
     shellany (0.0.1)
+    sidekiq (6.1.0)
+      connection_pool (>= 2.2.2)
+      rack (~> 2.0)
+      redis (>= 4.2.0)
     signet (0.14.0)
       addressable (~> 2.3)
       faraday (>= 0.17.3, < 2.0)
@@ -514,6 +519,7 @@ DEPENDENCIES
   sassc-rails
   scenic
   selenium-webdriver
+  sidekiq
   simplecov
   sitemap_generator
   spring
