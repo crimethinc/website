@@ -33,8 +33,6 @@
     "heroku-postgresql:hobby-dev"
   ],
 
-  "image": "heroku/cedar",
-
   "environments": {
     "test": {
       "buildpacks": [
