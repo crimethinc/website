@@ -33,14 +33,10 @@
     "heroku-postgresql:hobby-dev"
   ],
 
-  "image": "heroku/cedar",
-
   "environments": {
     "test": {
       "buildpacks": [
         { "url": "heroku/ruby" },
-        { "url": "https://github.com/heroku/heroku-buildpack-chromedriver" },
-        { "url": "https://github.com/heroku/heroku-buildpack-google-chrome" },
         { "url": "https://github.com/heroku/heroku-buildpack-apt" },
         { "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview" }
       ]
