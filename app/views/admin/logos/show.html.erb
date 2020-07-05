@@ -40,7 +40,9 @@
             <div class="card-footer">
               <b><%= extension.upcase %></b>
 
-              <%= @logo.image_jpg.metadata[:width] %>px
+              <% if @logo.image_jpg.analyzed? %>
+                <%= @logo.image_jpg.metadata[:width] %>px
+              <% end %>
             </div>
           </div><!-- .card -->
 
