@@ -24,7 +24,7 @@
 </header>
 
 <div class="h-feed">
-  <%= render_themed "articles/list", articles: @articles %>
+  <%= render_themed "articles/list", articles: @articles, skip_preferred_localization: true %>
 </div>
 
 <%= paginate @articles %>
