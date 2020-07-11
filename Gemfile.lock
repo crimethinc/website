@@ -428,7 +428,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     stackprof (0.2.15)
-    sterile (1.0.16)
+    sterile (1.0.17)
       nokogiri (>= 1.10.8)
     stringex (2.8.5)
     stripe (5.22.0)
