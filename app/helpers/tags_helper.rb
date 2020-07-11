@@ -1,6 +1,5 @@
 module TagsHelper
-  attr_accessor :body_id
-  attr_accessor :html_id
+  attr_accessor :body_id, :html_id
 
   def html_dir
     article_locale&.language_direction.presence || t('language_direction')
