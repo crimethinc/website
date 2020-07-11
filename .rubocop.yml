@@ -87,9 +87,6 @@ Style/Documentation:
 Style/ExponentialNotation:
   Enabled: true
 
-Style/RedundantFetchBlock:
-  Enabled: false
-
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -109,6 +106,9 @@ Style/MixinUsage:
   Exclude:
     - 'script/*'
 
+Style/RedundantFetchBlock:
+  Enabled: false
+
 Style/RedundantRegexpCharacterClass:
   Enabled: true
 
@@ -116,4 +116,13 @@ Style/RedundantRegexpEscape:
   Enabled: true
 
 Style/SlicingWithRange:
+  Enabled: true
+
+Style/AccessorGrouping:
+  Enabled: true
+
+Style/BisectedAttrAccessor:
+  Enabled: true
+
+Style/RedundantAssignment:
   Enabled: true
