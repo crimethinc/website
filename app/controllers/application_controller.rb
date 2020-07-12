@@ -93,7 +93,7 @@ class ApplicationController < ActionController::Base
 
     page_keys.each do |key|
       piece = I18n.t("page_titles.#{namespace}.#{key}")
-      pieces << (piece.match?(/translation missing/) ? key : piece)
+      pieces << (piece.include?('translation missing') ? key : piece)
     end
 
     pieces.flatten.join ' : '

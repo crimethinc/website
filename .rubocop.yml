@@ -61,6 +61,30 @@ Metrics/PerceivedComplexity:
 Naming/VariableNumber:
   EnforcedStyle: snake_case
 
+Performance/AncestorsInclude:
+  Enabled: true
+
+Performance/BigDecimalWithNumericArgument:
+  Enabled: true
+
+Performance/RedundantSortBlock:
+  Enabled: true
+
+Performance/RedundantStringChars:
+  Enabled: true
+
+Performance/ReverseFirst:
+  Enabled: true
+
+Performance/SortReverse:
+  Enabled: true
+
+Performance/Squeeze:
+  Enabled: true
+
+Performance/StringInclude:
+  Enabled: true
+
 RSpec/DescribeClass:
   Exclude:
     - 'spec/system/*'
@@ -87,9 +111,6 @@ Style/Documentation:
 Style/ExponentialNotation:
   Enabled: true
 
-Style/RedundantFetchBlock:
-  Enabled: false
-
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -109,6 +130,9 @@ Style/MixinUsage:
   Exclude:
     - 'script/*'
 
+Style/RedundantFetchBlock:
+  Enabled: false
+
 Style/RedundantRegexpCharacterClass:
   Enabled: true
 
@@ -116,4 +140,13 @@ Style/RedundantRegexpEscape:
   Enabled: true
 
 Style/SlicingWithRange:
+  Enabled: true
+
+Style/AccessorGrouping:
+  Enabled: true
+
+Style/BisectedAttrAccessor:
+  Enabled: true
+
+Style/RedundantAssignment:
   Enabled: true

@@ -1,4 +1,4 @@
-<% if tool.image_jpg.present? %>
+<% if tool.image_jpg.present? && tool.image_jpg.analyzed? %>
   <%= tool.image_jpg.metadata[:width] %>px
   x
   <%= tool.image_jpg.metadata[:height] %>px
