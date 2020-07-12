@@ -26,8 +26,8 @@ google:
     token_uri: "https://accounts.google.com/o/oauth2/token"
     auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
     client_x509_cert_url: <%= ENV.fetch('HDRIVE_GOOGLE_CLIENT_X509_CERT_URL') { 'TODO' }%>
-  project: <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET') { 'TODO' } %>
-  bucket: <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET')  { 'TODO' } %>
+  project: <%= ENV.fetch('HDRIVE_GOOGLE_PROJECT_ID') { 'TODO' } %>
+  bucket: <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET')      { 'TODO' } %>
 
 microsoft:
   service: AzureStorage
