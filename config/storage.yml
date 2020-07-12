@@ -19,7 +19,7 @@ google:
     type: service_account
     project_id:     <%=  ENV.fetch('HDRIVE_GOOGLE_PROJECT_ID')     { 'TODO' } %>
     private_key_id: <%=  ENV.fetch('HDRIVE_GOOGLE_PRIVATE_KEY_ID') { 'TODO' } %>
-    private_key:    "<%= ENV.fetch('HDRIVE_GOOGLE_PRIVATE_KEY')    { 'TODO' }.gsub("\\n", "\n") %>"
+    private_key:    "<%= JSON.parse(ENV.fetch('HDRIVE_GOOGLE_JSON_KEY') { '{ "todo": "TODO" }' })['private_key'] %>"
     client_email:   <%=  ENV.fetch('HDRIVE_GOOGLE_CLIENT_EMAIL')   { 'TODO' } %>
     client_id:      <%=  ENV.fetch('HDRIVE_GOOGLE_CLIENT_ID')      { 'TODO' } %>
     auth_uri: "https://accounts.google.com/o/oauth2/auth"
