@@ -55,6 +55,9 @@ gem 'azure-storage',        require: false
 gem 'google-cloud-storage', require: false
 gem 'image_processing'
 
+# job queue using Active Job
+gem 'sidekiq'
+
 # dev and testing
 group :development, :test do
   gem 'awesome_print'

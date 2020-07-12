@@ -1,4 +1,19 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+  # TODO: After switching the site auth to Devise, enable this auth protected route
+  # # Sidekiq admin interface to monitor background jobs
+  # authenticate :user, ->(user) { user.admin? } do
+  #   mount Sidekiq::Web => '/sidekiq'
+  # end
+
+  # TEMP: Delete after switching the site auth to Devise, enable this auth protected route
+  # # Sidekiq admin interface to monitor background jobs
+  mount Sidekiq::Web => '/sidekiq',
+        constraints: lambda { |request|
+                       User.where(id: request.session['user_id']).first&.role&.in? %w[publisher developer]
+                     }
+
   # Store Redirect and support page
   get 'store/order-success', to: 'pages#post_order_success', as: :post_order_success
   get 'store', to: redirect('https://store.crimethinc.com')
