@@ -17,11 +17,11 @@ google:
   service: GCS
   credentials:
     type: service_account
-    project_id:     <%= ENV.fetch('HDRIVE_GOOGLE_PROJECT_ID')     { 'TODO' }%>
-    private_key_id: <%= ENV.fetch('HDRIVE_GOOGLE_PRIVATE_KEY_ID') { 'TODO' }%>
-    private_key:    <%= ENV.fetch('HDRIVE_GOOGLE_PRIVATE_KEY')    { 'TODO' }%>
-    client_email:   <%= ENV.fetch('HDRIVE_GOOGLE_CLIENT_EMAIL')   { 'TODO' }%>
-    client_id:      <%= ENV.fetch('HDRIVE_GOOGLE_CLIENT_ID')      { 'TODO' }%>
+    project_id:     <%=  ENV.fetch('HDRIVE_GOOGLE_PROJECT_ID')     { 'TODO' } %>
+    private_key_id: <%=  ENV.fetch('HDRIVE_GOOGLE_PRIVATE_KEY_ID') { 'TODO' } %>
+    private_key:    "<%= ENV.fetch('HDRIVE_GOOGLE_PRIVATE_KEY')    { 'TODO' }.gsub("\\n", "\n") %>"
+    client_email:   <%=  ENV.fetch('HDRIVE_GOOGLE_CLIENT_EMAIL')   { 'TODO' } %>
+    client_id:      <%=  ENV.fetch('HDRIVE_GOOGLE_CLIENT_ID')      { 'TODO' } %>
     auth_uri: "https://accounts.google.com/o/oauth2/auth"
     token_uri: "https://accounts.google.com/o/oauth2/token"
     auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
