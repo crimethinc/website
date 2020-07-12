@@ -39,8 +39,8 @@ production:
   service: Mirror
   primary: amazon
   mirrors:
-    - google
     - microsoft
+    - google
 
 staging:
   service: Mirror
