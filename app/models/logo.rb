@@ -1,10 +1,10 @@
 class Logo < ApplicationRecord
   include Tool
-  has_one_attached :image_jpg
-  has_one_attached :image_png
-  has_one_attached :image_pdf
-  has_one_attached :image_svg
-  has_one_attached :image_tif
+  has_one_attached :image_jpg, dependent: :destroy
+  has_one_attached :image_png, dependent: :destroy
+  has_one_attached :image_pdf, dependent: :destroy
+  has_one_attached :image_svg, dependent: :destroy
+  has_one_attached :image_tif, dependent: :destroy
 
   IMAGE_FORMATS_MAP = {
     jpg: :image_jpg,
