@@ -23,28 +23,22 @@
           <header>
             <%= render_themed "articles/titles", header: tool, linked: true %>
           </header>
+
           <div class="p-summary">
             <%= render_markdown tool.summary %>
           </div>
+
           <p>
             <b>Size</b>
             <%= render_themed "tools/dimensions", tool: tool %>
           </p>
+
           <div class="buttons">
             <% if tool.image_jpg.present? %>
 
               <% Logo.image_formats_map.each do |extension, attr_name| %>
                 <% if tool.send(attr_name).attached? %>
                   <%= link_to "Download .#{extension.upcase}", url_for(tool.send(attr_name)), class: "download button" %>
-                <% end %>
-              <% end %>
-
-            <% else %>
-
-              <%# TEMP transitional %>
-              <% Logo.image_formats_map.keys.each do |extension| %>
-                <% if tool.send("#{extension}_url_present?") %>
-                  <%= link_to "Download .#{extension.upcase}", tool.image_url(extension), class: "download button" %>
                 <% end %>
               <% end %>
 
