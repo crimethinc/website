@@ -22,9 +22,9 @@ amazon_backup:
 
 google:
   service:     GCS
-  project:     <%= ENV.fetch('HDRIVE_GOOGLE_PROJECT_ID') %>
-  credentials: <%= ENV.fetch('HDRIVE_GOOGLE_JSON_KEY').as_json %>
-  bucket:      <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET') %>
+  project:     <%= ENV.fetch('HDRIVE_GOOGLE_PROJECT_ID') { 'TODO' } %>
+  credentials: <%= ENV.fetch('HDRIVE_GOOGLE_JSON_KEY')   { "TODO" }.as_json %>
+  bucket:      <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET')     { 'TODO' } %>
 
 microsoft:
   service:              AzureStorage
