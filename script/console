@@ -20,9 +20,10 @@ chdir APP_ROOT do
   if !ARGV[0].nil?
     # use first argument as an environment name.
     # Use this to decide how to connect to the appropriate console.
-    if ARGV[0] == 'production'
+    case ARGV[0]
+    when 'production'
       system! 'heroku run rails console --app crimethinc'
-    elsif ARGV[0] == 'staging'
+    when 'staging'
       system! 'heroku run rails console --app crimethinc-staging'
     else
       puts "Sorry, I don’t know how to connect to the #{ARGV[0]} environment."

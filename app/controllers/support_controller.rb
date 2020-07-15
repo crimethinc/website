@@ -89,7 +89,7 @@ class SupportController < ApplicationController
       flash[:error] = t('views.support.update_subscription.error')
     end
 
-    redirect_to [:support_edit, token: params[:token]]
+    redirect_to [:support_edit, { token: params[:token] }]
   end
 
   def cancel_subscription
