@@ -16,7 +16,7 @@ amazon:
 google:
   service: GCS
   project:     <%= ENV.fetch('HDRIVE_GOOGLE_PROJECT_ID') %>
-  credentials: <%= ENV['HDRIVE_GOOGLE_JSON_KEY'].as_json %>
+  credentials: <%= ENV.fetch('HDRIVE_GOOGLE_JSON_KEY').as_json %>
   bucket:      <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET') %>
 
 microsoft:
