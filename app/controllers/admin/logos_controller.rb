@@ -57,9 +57,6 @@ module Admin
       params.require(:logo).permit %i[
         title subtitle description slug summary published_at locale publication_status
         position hide_from_index image_jpg image_png image_pdf image_svg image_tif
-
-        jpg_url_present png_url_present pdf_url_present svg_url_present tif_url_present
-        height width
       ]
     end
   end
