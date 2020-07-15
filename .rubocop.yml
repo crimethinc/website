@@ -24,6 +24,9 @@ Layout/SpaceAroundMethodCallOperator:
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
 
+Lint/DuplicateElsifCondition:
+  Enabled: true
+
 Lint/MixedRegexpCaptureTypes:
   Enabled: true
 
@@ -102,8 +105,20 @@ RSpec/MultipleExpectations:
   Exclude:
     - 'spec/system/*'
 
+Style/AccessorGrouping:
+  Enabled: true
+
+Style/ArrayCoercion:
+  Enabled: true
+
 Style/AsciiComments:
   Enabled: false
+
+Style/BisectedAttrAccessor:
+  Enabled: true
+
+Style/CaseLikeIf:
+  Enabled: true
 
 Style/Documentation:
   Enabled: false
@@ -114,7 +129,13 @@ Style/ExponentialNotation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/HashAsLastArrayItem:
+  Enabled: true
+
 Style/HashEachMethods:
+  Enabled: true
+
+Style/HashLikeCase:
   Enabled: true
 
 Style/HashTransformKeys:
@@ -130,8 +151,14 @@ Style/MixinUsage:
   Exclude:
     - 'script/*'
 
+Style/RedundantAssignment:
+  Enabled: true
+
 Style/RedundantFetchBlock:
   Enabled: false
+
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
 
 Style/RedundantRegexpCharacterClass:
   Enabled: true
@@ -140,13 +167,4 @@ Style/RedundantRegexpEscape:
   Enabled: true
 
 Style/SlicingWithRange:
-  Enabled: true
-
-Style/AccessorGrouping:
-  Enabled: true
-
-Style/BisectedAttrAccessor:
-  Enabled: true
-
-Style/RedundantAssignment:
   Enabled: true
