@@ -45,9 +45,6 @@
                 <%= image_tag url_for(image_variant_by_width(logo.send(attr_name), @preview_width)), class: "rounded" %>
               <% end %>
 
-            <% else %>
-              <%# TEMP transitional %>
-              <%= "✔️" if logo.send"#{extension}_url_present?" %>
             <% end %>
           </td>
         <% end %>

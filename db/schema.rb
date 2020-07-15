@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_16_065947) do
+ActiveRecord::Schema.define(version: 2020_07_15_082914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -268,14 +268,7 @@ ActiveRecord::Schema.define(version: 2020_06_16_065947) do
     t.string "title"
     t.string "subtitle"
     t.text "description"
-    t.string "height"
-    t.string "width"
     t.string "content_format"
-    t.boolean "jpg_url_present"
-    t.boolean "png_url_present"
-    t.boolean "pdf_url_present"
-    t.boolean "svg_url_present"
-    t.boolean "tif_url_present"
     t.datetime "published_at"
     t.text "summary"
     t.datetime "created_at", null: false

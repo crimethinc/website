@@ -29,8 +29,7 @@ class Logo < ApplicationRecord
     if image_jpg.present?
       Rails.application.routes.url_helpers.rails_blob_path(image_jpg, only_path: true)
     else
-      # TEMP transitional
-      [asset_base_url_prefix, 'preview.png'].join('/')
+      ''
     end
   end
 
@@ -41,7 +40,7 @@ class Logo < ApplicationRecord
   alias download_url image_url
 
   def meta_description
-    "CrimethInc. logo: #{title}. Size: #{width} x #{height}."
+    "CrimethInc. logo: #{title}"
   end
 
   def meta_image

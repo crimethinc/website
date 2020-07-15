@@ -2,8 +2,11 @@
   <%= tool.image_jpg.metadata[:width] %>px
   x
   <%= tool.image_jpg.metadata[:height] %>px
-<% elsif tool.width.present? %>
+
+<% elsif tool.respond_to?(:width) && tool.present? %>
+  <%# TEMP transitional %>
   <%= tool.width %>
   x
   <%= tool.height %>
+
 <% end %>
