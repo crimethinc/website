@@ -40,9 +40,7 @@
             <div class="card-footer">
               <b><%= extension.upcase %></b>
 
-              <% if @logo.image_jpg.analyzed? %>
-                <%= @logo.image_jpg.metadata[:width] %>px
-              <% end %>
+              <%= render_themed "tools/dimensions", tool: @logo %>
             </div>
           </div><!-- .card -->
 
