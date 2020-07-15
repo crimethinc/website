@@ -54,8 +54,5 @@ module Crimethinc
 
     # Allow nested diretories in locales
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
-
-    # Background jobs
-    config.active_job.queue_adapter = :sidekiq
   end
 end
