@@ -41,7 +41,7 @@ class Logo < ApplicationRecord
   alias download_url image_url
 
   def meta_description
-    "CrimethInc. logo: #{title}. Size: #{width} x #{height}."
+    "CrimethInc. logo: #{title}"
   end
 
   def meta_image
