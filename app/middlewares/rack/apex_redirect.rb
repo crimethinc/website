@@ -8,7 +8,11 @@ module Rack
       request = Rack::Request.new env
 
       if request.host.start_with? 'www.'
-        location = request.scheme + '://' + request.host.sub('www.', '') + request.path
+        domain = request.host.sub('www.', '')
+        # location = "#{request.scheme}://#{domain}#{request.path}"
+        protocol_separator = '://'
+        location = [request.scheme, protocol_separator, domain, request.path].join
+        # location = request.scheme + '://' + domain + request.path
         return redirect location
       end
 
