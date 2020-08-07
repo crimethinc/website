@@ -134,7 +134,7 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     def canonical locale:, lang_code: nil
       return LOCALES.find { |locale_instance| locale_instance.locale == locale } if lang_code.blank?
 
-      @indexed_locales.dig(lang_code) || raise_locale_error(locale)
+      @indexed_locales[lang_code] || raise_locale_error(locale)
     end
 
     private
