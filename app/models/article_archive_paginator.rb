@@ -17,8 +17,12 @@ class ArticleArchivePaginator
     previous_value.present?
   end
 
+  def relative_previous_path
+    Array(previous_value).join('/')
+  end
+
   def previous_path
-    '/' + Array(previous_value).join('/')
+    "/#{relative_previous_path}"
   end
 
   def previous_label
@@ -33,8 +37,12 @@ class ArticleArchivePaginator
     next_value.present?
   end
 
+  def relative_next_path
+    Array(next_value).join('/')
+  end
+
   def next_path
-    '/' + Array(next_value).join('/')
+    "/#{relative_next_path}"
   end
 
   def next_label

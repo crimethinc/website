@@ -65,8 +65,8 @@ class Redirect < ApplicationRecord
     url_pieces = []
     url_pieces << "#{url.scheme}://#{url.host}" unless url.host.blank? || crimethinc_apex_domain_url?(url)
     url_pieces << url.path
-    url_pieces << '?' + url.query    if url.query.present?
-    url_pieces << '#' + url.fragment if url.fragment.present?
+    url_pieces << "?#{url.query}"    if url.query.present?
+    url_pieces << "##{url.fragment}" if url.fragment.present?
     url_pieces.join
   end
 

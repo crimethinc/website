@@ -19,7 +19,7 @@ class AdvancedSearch
 
   def category= categories
     categories.to_s.split(',').map(&:strip).each do |category|
-      @query += "category:#{category}" + ' '
+      @query += "category:#{category} "
     end
   end
 
@@ -33,7 +33,7 @@ class AdvancedSearch
 
   def content= content
     content.to_s.split.map(&:strip).each do |c|
-      @query += "content:#{c}" + ' '
+      @query += "content:#{c} "
     end
   end
 
@@ -45,7 +45,7 @@ class AdvancedSearch
     tags.to_s.split(',').map(&:strip).each do |tag|
       tag = tag.inspect if tag.match?(/\s/)
 
-      @query += "tag:#{tag}" + ' '
+      @query += "tag:#{tag} "
     end
   end
 
@@ -58,7 +58,7 @@ class AdvancedSearch
   end
 
   def term= term
-    @query += term + ' '
+    @query += "#{term} "
   end
 
   def term
@@ -67,7 +67,7 @@ class AdvancedSearch
 
   def title= title
     title.to_s.split.map(&:strip).each do |t|
-      @query += "title:#{t}" + ' '
+      @query += "title:#{t} "
     end
   end
 
@@ -77,7 +77,7 @@ class AdvancedSearch
 
   def subtitle= subtitle
     subtitle.to_s.split.map(&:strip).each do |s|
-      @query += "subtitle:#{s}" + ' '
+      @query += "subtitle:#{s} "
     end
   end
 

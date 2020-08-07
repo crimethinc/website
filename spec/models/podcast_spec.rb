@@ -35,7 +35,7 @@ RSpec.describe Podcast, type: :model do
     context 'without subtitle' do
       let(:podcast) { described_class.new(content: 'x' * 250) }
 
-      it { is_expected.to eq('x' * 197 + '...') }
+      it { is_expected.to eq("#{'x' * 197}...") }
     end
   end
 
