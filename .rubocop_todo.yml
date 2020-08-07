@@ -21,4 +21,3 @@ Style/StringConcatenation:
     - 'app/models/article.rb'
     - 'app/models/article_archive_paginator.rb'
     - 'app/models/redirect.rb'
-    - 'spec/models/episode_spec.rb'
