@@ -129,6 +129,10 @@ class Article < ApplicationRecord
 
   private
 
+  def absolute_short_path
+    "/#{short_path}"
+  end
+
   def self_localizations
     Article.published.live.where(canonical_id: id)
   end
@@ -154,11 +158,11 @@ class Article < ApplicationRecord
     return if short_path.blank?
 
     if redirect.present? && (short_path_changed? || slug_changed? || published_at_changed? || publication_status_changed?)
-      redirect.update(source_path: '/' + short_path, target_path: path)
-    elsif Redirect.where(source_path: '/' + short_path).exists?
+      redirect.update(source_path: absolute_short_path, target_path: path)
+    elsif Redirect.where(source_path: absolute_short_path).exists?
       errors.add(:short_path, ' is a path that already points to a redirect')
     elsif publication_status == 'published'
-      Redirect.create(source_path: '/' + short_path, target_path: path, article_id: id)
+      Redirect.create(source_path: absolute_short_path, target_path: path, article_id: id)
     end
   end
 

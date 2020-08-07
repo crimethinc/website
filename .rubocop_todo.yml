@@ -18,4 +18,3 @@ Style/SingleArgumentDig:
 Style/StringConcatenation:
   Exclude:
     - 'app/models/advanced_search.rb'
-    - 'app/models/article.rb'
