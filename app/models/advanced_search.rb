@@ -58,7 +58,7 @@ class AdvancedSearch
   end
 
   def term= term
-    @query += term + ' '
+    @query += "#{term} "
   end
 
   def term

@@ -12,9 +12,3 @@ Style/SingleArgumentDig:
   Exclude:
     - 'app/services/locale_service/locales.rb'
     - 'spec/requests/json_requests_spec.rb'
-
-# Offense count: 10
-# Cop supports --auto-correct.
-Style/StringConcatenation:
-  Exclude:
-    - 'app/models/advanced_search.rb'
