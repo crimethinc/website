@@ -3,7 +3,7 @@ module Rack
     API_REQUEST_ERROR = {
       status: '406',
       title:  'Content Type Not Acceptable',
-      detail: 'Y\'all requested JSON, but we don\'t do that'
+      detail: 'Y’all requested JSON, but we don’t do that'
     }.freeze
 
     def initialize app

@@ -11,4 +11,3 @@
 Style/SingleArgumentDig:
   Exclude:
     - 'app/services/locale_service/locales.rb'
-    - 'spec/requests/json_requests_spec.rb'
