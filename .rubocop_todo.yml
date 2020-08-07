@@ -22,4 +22,3 @@ Style/StringConcatenation:
     - 'app/models/article_archive_paginator.rb'
     - 'app/models/redirect.rb'
     - 'spec/models/episode_spec.rb'
-    - 'spec/models/podcast_spec.rb'
