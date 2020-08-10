@@ -3,6 +3,7 @@
 
 Ruby on Rails app that powers https://crimethinc.com
 
+
 ## Development
 
 [![GitHub Actions CI Build Status](https://github.com/crimethinc/website/workflows/Tests/badge.svg)](https://github.com/crimethinc/website/actions?workflow=Tests)
