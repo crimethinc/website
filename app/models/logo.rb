@@ -26,11 +26,7 @@ class Logo < ApplicationRecord
   alias front_image_description image_description
 
   def front_image
-    if image_jpg.present?
-      Rails.application.routes.url_helpers.rails_blob_path(image_jpg, only_path: true)
-    else
-      ''
-    end
+    Rails.application.routes.url_helpers.rails_blob_path(image_jpg, only_path: true)
   end
 
   def image_url extension
