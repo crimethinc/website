@@ -6,17 +6,11 @@ class Logo < ApplicationRecord
   has_one_attached :image_svg, dependent: :destroy
   has_one_attached :image_tif, dependent: :destroy
 
-  IMAGE_FORMATS_MAP = {
-    jpg: :image_jpg,
-    png: :image_png,
-    tif: :image_tif,
-    svg: :image_svg,
-    pdf: :image_pdf
-  }.freeze
+  IMAGE_FORMATS = %i[jpg png tif svg pdf].freeze
 
   class << self
-    def image_formats_map
-      IMAGE_FORMATS_MAP
+    def image_formats
+      IMAGE_FORMATS
     end
   end
 
