@@ -24,7 +24,6 @@ class Logo < ApplicationRecord
     puts '*' * 80
     Rails.application.routes.url_helpers.rails_blob_url(image_jpg)
   end
-  alias download_url image_url
 
   def meta_description
     "CrimethInc. logo: #{title}"
@@ -33,33 +32,18 @@ class Logo < ApplicationRecord
   def meta_image
     Rails.application.routes.url_helpers.rails_blob_url(image_jpg)
   end
-  alias image meta_image
 
-  def price_in_cents
-    nil
-  end
+  def back_download_present?; end
 
-  def buy_info
-    nil
-  end
+  def back_image_present?; end
 
-  def back_image_present?
-    nil
-  end
+  def buy_info; end
 
-  def front_download_present?
-    nil
-  end
+  def content; end
 
-  def back_download_present?
-    nil
-  end
+  def depth; end
 
-  def depth
-    nil
-  end
+  def front_download_present?; end
 
-  def content
-    nil
-  end
+  def price_in_cents; end
 end
