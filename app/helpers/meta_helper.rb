@@ -17,7 +17,7 @@ module MetaHelper
   end
 
   def meta_image thing
-    if thing.present? && thing&.image&.present? && thing.respond_to?(:meta_image)
+    if thing.present? && thing.image.present? && thing.respond_to?(:meta_image)
       thing.meta_image
     else
       t 'head.meta_image_url'

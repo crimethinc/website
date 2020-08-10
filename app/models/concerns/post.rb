@@ -14,7 +14,7 @@ module Post
   end
 
   def meta_image
-    image.presence || t('head.meta_image_url')
+    image.presence || I18n.t('head.meta_image_url')
   end
 
   def content_in_html?

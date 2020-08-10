@@ -32,6 +32,7 @@ class Logo < ApplicationRecord
   def meta_image
     Rails.application.routes.url_helpers.rails_blob_url image_jpg
   end
+  alias image meta_image
 
   def back_download_present?; end
 
