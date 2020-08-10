@@ -36,6 +36,7 @@
           <td class="text-center align-middle">
             <% if logo.send("image_#{extension}").attached? %>
 
+              <%# TODO: refactor extract method: image_tag_for %>
               <% case extension %>
               <% when :pdf %>
                 <%= image_tag logo.image_pdf.preview(resize_to_limit: [@preview_width, @preview_width]), class: "rounded" %>
