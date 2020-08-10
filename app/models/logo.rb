@@ -21,6 +21,8 @@ class Logo < ApplicationRecord
   def image_url extension
     filename = [slug, '.', extension.to_s].join
     [asset_base_url_prefix, filename].join('/')
+
+    Rails.application.routes.url_helpers.rails_blob_path(image_jpg, only_path: true)
   end
   alias download_url image_url
 
@@ -30,6 +32,8 @@ class Logo < ApplicationRecord
 
   def meta_image
     image_url :png
+
+    Rails.application.routes.url_helpers.rails_blob_path(image_jpg, only_path: true)
   end
   alias image meta_image
 
