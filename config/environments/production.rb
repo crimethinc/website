@@ -91,4 +91,12 @@ Rails.application.configure do
 
   # Background jobs
   config.active_job.queue_adapter = :sidekiq
+
+  # For using #url_for et al in non-views/helpers
+  Rails.application.routes.default_url_options[:host] =
+    if ENV['ON_STAGING'] == 'TRUE'
+      'crimethincstaging.com'
+    else
+      'crimethinc.com'
+    end
 end

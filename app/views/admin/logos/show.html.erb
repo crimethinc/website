@@ -19,20 +19,20 @@
   </header>
 
   <div class="row mb-5">
-    <% Logo.image_formats_map.each do |extension, attr_name| %>
-      <% if @logo.send(attr_name).attached? %>
+    <% Logo.image_formats.each do |extension| %>
+      <% if @logo.send("image_#{extension}").attached? %>
         <div class="col-12 col-md-3 mb-4">
 
           <div class="card">
             <div class="card-body">
-              <%= link_to url_for @logo.send(attr_name) do %>
+              <%= link_to url_for @logo.send("image_#{extension}") do %>
                 <% case extension %>
                 <% when :pdf %>
                   <%= image_tag @logo.image_pdf.preview(resize_to_limit: [@preview_width, @preview_width]) %>
                 <% when :svg %>
                   <%= image_tag url_for(@logo.image_svg) %>
                 <% else %>
-                  <%= image_tag url_for(image_variant_by_width(@logo.send(attr_name), @preview_width)) %>
+                  <%= image_tag url_for(image_variant_by_width(@logo.send("image_#{extension}"), @preview_width)) %>
                 <% end %>
               <% end %>
             </div>

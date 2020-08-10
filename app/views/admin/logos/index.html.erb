@@ -7,7 +7,7 @@
       <th>Status</th>
       <th>Name</th>
 
-      <% Logo.image_formats_map.keys.each do |extension| %>
+      <% Logo.image_formats.each do |extension| %>
         <th class="text-center"><%= extension.upcase %></td>
       <% end %>
     </tr>
@@ -32,17 +32,18 @@
           <% end %>
         </td>
 
-        <% Logo.image_formats_map.each do |extension, attr_name| %>
+        <% Logo.image_formats.each do |extension| %>
           <td class="text-center align-middle">
-            <% if logo.send(attr_name).attached? %>
+            <% if logo.send("image_#{extension}").attached? %>
 
+              <%# TODO: refactor extract method: image_tag_for %>
               <% case extension %>
               <% when :pdf %>
                 <%= image_tag logo.image_pdf.preview(resize_to_limit: [@preview_width, @preview_width]), class: "rounded" %>
               <% when :svg %>
                 <%= image_tag url_for(logo.image_svg), class: "rounded" %>
               <% else %>
-                <%= image_tag url_for(image_variant_by_width(logo.send(attr_name), @preview_width)), class: "rounded" %>
+                <%= image_tag url_for(image_variant_by_width(logo.send("image_#{extension}"), @preview_width)), class: "rounded" %>
               <% end %>
 
             <% end %>
