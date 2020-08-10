@@ -14,11 +14,6 @@ class Logo < ApplicationRecord
     end
   end
 
-  def image_description
-    "Photo of ‘#{title}’ logo"
-  end
-  alias front_image_description image_description
-
   def front_image
     Rails.application.routes.url_helpers.rails_blob_path(image_jpg, only_path: true)
   end
