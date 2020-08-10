@@ -20,7 +20,7 @@
         <div class="card">
           <div class="card-body">
             <%= form.label :image_jpg, "JPEG Image" %>
-            <%= form.file_field :image_jpg, class: "form-control-file", accept: "image/jpeg" %>
+            <%= form.file_field :image_jpg, class: "form-control-file", accept: "image/jpeg", required: true %>
 
             <% if resource.image_jpg.attached? %>
               <p><%= image_tag url_for(image_variant_by_width(resource.image_jpg, @preview_width)), class: "mt-3 rounded d-block" %></p>
