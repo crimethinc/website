@@ -1,8 +1,16 @@
-<% %w[front back].each do |side| %>
-  <div class="row">
-    <% %w[download image].each do |kind| %>
+<% %w[download image].each do |kind| %>
+  <% if kind == "image" %>
+  <h5 class="alert alert-warning">
+      A preview image will be generated from the uploaded PDF.
+      You only need to upload a separate image if the generated one isn’t good enough.
+      An uploaded image will be used instead of the generated preview image.
+  </h5>
+  <% end %>
 
-      <fieldset class="col-12 col-md-6 mb-5">
+  <div class="row">
+    <% %w[front back].each do |side| %>
+
+    <fieldset class="col-12 col-md-6 mb-5">
         <legend><%= side.capitalize %> <%= kind.capitalize.pluralize %></legend>
 
         <div class="row">
