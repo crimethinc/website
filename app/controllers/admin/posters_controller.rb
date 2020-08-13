@@ -5,10 +5,12 @@ module Admin
     def index
       @posters = Poster.order(slug: :asc).page(params[:page]).per(50)
       @title = admin_title
+      @preview_width = 240
     end
 
     def show
       @title = admin_title(@poster, %i[title subtitle])
+      @preview_width = 640
     end
 
     def new
