@@ -1,7 +1,7 @@
 <%= render "admin/page_header", thing: @poster %>
 
 <% if @poster.english? %>
-  <%= render 'admin/translate_this', article: @poster %>
+  <%= render 'admin/translate_this', resource: @poster %>
 <% end %>
 
 <%= render "admin/posters/form", resource: @poster %>

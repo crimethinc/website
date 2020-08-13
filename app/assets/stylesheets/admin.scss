@@ -1,7 +1,7 @@
 /*
- *= require jquery-ui/datepicker
- *= require timepicker
- */
+*= require jquery-ui/datepicker
+*= require timepicker
+*/
 
 @import "base/variables/borders";
 @import "base/variables/colors";
@@ -9,3 +9,6 @@
 @import "bootstrap";
 @import "admin/forms";
 @import "admin/articles";
+
+// helpers, extract to file when it makes sense
+.rotated { transform: rotate(-2deg); }

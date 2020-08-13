@@ -2,114 +2,101 @@
 
 <article>
   <header>
-    <h1>
-      <%= link_to [:admin, @poster], class: "p-name" do %>
-      <span class="h1 title"><%= @poster.title %></span><br>
-      <span class="h2 subtitle"><%= @poster.subtitle %></span>
-      <% end %>
-    </h1>
-
     <%= render "/admin/articles/publication_status_badge", resource: @poster %>
+    <%= link_to [:admin, @poster], class: "p-name" do %>
+      <h1><%= @poster.title %></h1>
+      <h2><%= @poster.subtitle %></h2>
+    <% end %>
   </header>
 
   <div>
-    <p>
-
-      <% %w[image download].each do |type| %>
-        <% %w[front back].each do |side| %>
-          <% %w[color black_and_white].each do |color| %>
-
-            <% if @poster.send("#{side}_#{color}_#{type}_present?") %>
-              <span class="badge badge-<%= color == 'color' ? 'success' : 'secondary' %>">
-                ✔ <%= side.capitalize %> <%= color.titleize %> <%= type.capitalize %>
-              </span>
-            <% end %>
-
-          <% end %>
-        <% end %>
-        <br>
-      <% end %>
-
-    </p>
-
     <p><b>URL:</b> <%= link_to @poster.path, @poster.path %></p>
 
-    <div class="row">
+    <div class="row my-3">
       <% %w[front back].each do |side| %>
         <% %w[color black_and_white].each do |color| %>
-          <% if @poster.send("#{side}_#{color}_image_present?") %>
-            <div class="col-sm-3">
-              <%= image_tag @poster.send("#{side}_#{color}_image") %>
-            </div>
-          <% end %>
+
+          <div class="col-12 col-md-6 col-lg-3 mb-5">
+            <p class="font-weight-bold">
+              <%= side.titleize %>
+              <%= color.titleize %>
+            </p>
+
+            <% if @poster.send("image_#{side}_#{color}_image").attached? %>
+              <%= image_tag url_for(image_variant_by_width(@poster.send("image_#{side}_#{color}_image"), @preview_width)), class: "shadow rotated rounded" %>
+            <% elsif @poster.send("image_#{side}_#{color}_download").attached? %>
+              <%= image_tag @poster.send("image_#{side}_#{color}_download").preview(resize_to_limit: [@preview_width, @preview_width]), class: "shadow rotated rounded" %>
+            <% else %>
+              <% if @poster.send("#{side}_#{color}_image_present?") %>
+                <%= image_tag @poster.send("#{side}_#{color}_image"), class: "shadow rotated rounded" %>
+              <% end %>
+            <% end %>
+
+            <% if @poster.send("image_#{side}_#{color}_download").attached? %>
+              <p class="mt-4">
+                <%= link_to 'Download PDF ↓',
+                            @poster.send("image_#{side}_#{color}_download"),
+                            class: "btn btn-primary" %>
+              </p>
+            <% end %>
+          </div>
+
         <% end %>
       <% end %>
-    </div>
+    </div><!-- .row -->
 
     <hr>
 
-    <p>
-      <strong>Size:</strong>
-      <% if @poster.depth.present? %>
-        <%= @poster.depth %>
-        on
-      <% end %>
+    <div class="row my-3">
+      <div class="col-12 col-md-6">
+        <p>
+          <strong>Size:</strong>
+          <% if @poster.depth.present? %>
+            <%= @poster.depth %>
+            on
+          <% end %>
 
-      <%= @poster.width %>
-      x
-      <%= @poster.height %>
-    </p>
+          <%= @poster.width %>
+          x
+          <%= @poster.height %>
+        </p>
 
-      <% %w[front back].each do |side| %>
-        <% %w[color black_and_white].each do |color| %>
-          <% if @poster.send("#{side}_#{color}_image_present?") %>
+        <p>
+          <strong>Description:</strong>
+          <%= @poster.description %>
+        </p>
+
+        <p>
+          <strong>Summary</strong> <span class="text-muted">(used for link previews in Facebook, Twitter, etc)</span>:<br>
+          <%= @poster.summary %>
+        </p>
+
+        <% if @poster.buy_url.present? %>
+          <h2>Purchasing</h2>
+
+          <% if @poster.price_in_cents.present? %>
             <p>
-              <b>
-                <%= side.capitalize %>
-                <%= color.titleize %>
-                PDF Download URL:
-              </b>
-              <br>
-
-              <%= link_to @poster.download_url(side: side, color: color), @poster.download_url(side: side, color: color) %>
+              <strong>Price in Cents:</strong>
+              <%= number_to_currency @poster.price_in_cents / 100 %>
             </p>
           <% end %>
+
+          <p>
+            <strong>Buy info:</strong>
+            <%= @poster.buy_info %>
+          </p>
+
+          <p>
+            <strong>Buy URL:</strong>
+            <%= link_to @poster.buy_url, @poster.buy_url %>
+          </p>
         <% end %>
-      <% end %>
+      </div>
 
-    <p>
-      <strong>Description:</strong>
-      <%= @poster.description %>
-    </p>
+      <div class="col-12 col-md-6">
+        <h2>Content</h2>
+        <%= render_markdown @poster.content %>
+      </div>
+    </div><!-- .row -->
 
-    <p>
-      <strong>Summary</strong> <span class="text-muted">(used for link previews in Facebook, Twitter, etc)</span>:<br>
-      <%= @poster.summary %>
-    </p>
-
-    <% if @poster.buy_url.present? %>
-      <h2>Purchasing</h2>
-
-      <% if @poster.price_in_cents.present? %>
-        <p>
-          <strong>Price in Cents:</strong>
-          <%= number_to_currency @poster.price_in_cents / 100 %>
-        </p>
-      <% end %>
-
-      <p>
-        <strong>Buy info:</strong>
-        <%= @poster.buy_info %>
-      </p>
-
-      <p>
-        <strong>Buy URL:</strong>
-        <%= link_to @poster.buy_url, @poster.buy_url %>
-      </p>
-    <% end %>
-
-    <h2>Content</h2>
-
-    <%= render_markdown @poster.content %>
-  </div>
 </article>

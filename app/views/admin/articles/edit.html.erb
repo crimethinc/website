@@ -1,7 +1,7 @@
 <%= render "admin/page_header", thing: @article %>
 
 <% if @article.english? %>
-  <%= render 'admin/translate_this', article: @article %>
+  <%= render 'admin/translate_this', resource: @article %>
 <% end %>
 
 <%= render "form" %>
