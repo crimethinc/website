@@ -3,8 +3,8 @@
 
   <% Locale.all.each do |locale| %>
     <% next if locale.english? %>
-    <% next if article.localizations.map(&:locale).include? locale.abbreviation %>
+    <% next if resource.localizations.map(&:locale).include? locale.abbreviation %>
 
-    <%= link_to locale.abbreviation.upcase, [:new, :admin, :article, canonical_id: article.id, locale: locale.abbreviation], class: "button button-buy btn btn-outline-primary mb-2" %>
+    <%= link_to locale.abbreviation.upcase, [:new, :admin, resource.class.to_s.downcase.to_sym, canonical_id: resource.id, locale: locale.abbreviation], class: "button button-buy btn btn-outline-primary mb-2" %>
   <% end %>
 </div>

@@ -50,7 +50,7 @@
       <div class="col-md-5">
         <% if article.english? %>
           <br>
-          <%= render 'admin/translate_this', article: article %>
+          <%= render 'admin/translate_this', resource: article %>
         <% else %>
           <% if article.canonical_id.present? %>
             <% if article.canonical_article.locale.present? %>

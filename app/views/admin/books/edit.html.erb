@@ -1,7 +1,7 @@
 <%= render "admin/page_header", thing: @book %>
 
 <% if @book.english? %>
-  <%= render 'admin/translate_this', article: @book %>
+  <%= render 'admin/translate_this', resource: @book %>
 <% end %>
 
 <%= render "admin/books/form",  resource: @book %>
