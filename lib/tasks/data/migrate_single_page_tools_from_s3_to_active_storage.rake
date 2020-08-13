@@ -46,6 +46,7 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
             # delete tmp file
             puts "==>    Deleting file: tmp/#{file_name}"
             File.delete("tmp/#{file_name}") if File.exist? "tmp/#{file_name}"
+            sleep 5 # try to not fail in production
             puts
           end
         end
