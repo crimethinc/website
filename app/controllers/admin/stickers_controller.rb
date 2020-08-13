@@ -10,6 +10,7 @@ module Admin
     end
 
     def show
+      @preview_width = 640
       @title = admin_title(@poster, %i[title subtitle])
       render 'admin/posters/show'
     end
