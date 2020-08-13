@@ -36,7 +36,7 @@
           </div><!-- .media -->
         </td>
 
-        <td class="text-center align-middle">
+        <td class="text-center align-top py-3">
           <% if poster.image_front_color_image.attached? %>
             <%= image_tag url_for(image_variant_by_width(poster.image_front_color_image, @preview_width)), class: "rounded mb-3" %>
           <% end %>
@@ -46,7 +46,7 @@
           <% end %>
         </td>
 
-        <td class="text-center align-middle">
+        <td class="text-center align-top py-3">
           <% if poster.image_back_color_image.attached? %>
             <%= image_tag url_for(image_variant_by_width(poster.image_back_color_image, @preview_width)), class: "rounded mb-3" %>
           <% end %>
@@ -56,7 +56,7 @@
           <% end %>
         </td>
 
-        <td class="text-center align-middle">
+        <td class="text-center align-top py-3">
           <% if poster.image_front_black_and_white_image.attached? %>
             <%= image_tag url_for(image_variant_by_width(poster.image_front_black_and_white_image, @preview_width)), class: "rounded mb-3" %>
           <% end %>
@@ -66,7 +66,7 @@
           <% end %>
         </td>
 
-        <td class="text-center align-middle">
+        <td class="text-center align-top py-3">
           <% if poster.image_back_black_and_white_image.attached? %>
             <%= image_tag url_for(image_variant_by_width(poster.image_back_black_and_white_image, @preview_width)), class: "rounded mb-3" %>
           <% end %>
