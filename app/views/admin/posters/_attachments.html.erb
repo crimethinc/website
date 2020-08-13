@@ -10,7 +10,7 @@
   <div class="row">
     <% %w[front back].each do |side| %>
 
-    <fieldset class="col-12 col-md-6 mb-5">
+      <fieldset class="col-12 col-md-6 mb-5">
         <legend><%= side.capitalize %> <%= kind.capitalize.pluralize %></legend>
 
         <div class="row">
@@ -48,6 +48,6 @@
 
       </fieldset>
 
-    <% end %><%# kind %>
+    <% end %><%# side %>
   </div><!-- .row -->
-<% end %><%# side %>
+<% end %><%# kind %>
