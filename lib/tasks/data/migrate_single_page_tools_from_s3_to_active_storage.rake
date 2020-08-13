@@ -18,7 +18,7 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
           %i[color black_and_white].each do |color|
             next unless tool.send("#{side}_#{color}_#{kind}_present?")
 
-            puts "==> Working on: #{tool.name} - #{side} / #{color} / #{kind}"
+            puts "==>       Working on: #{tool.name} - #{side} / #{color} / #{kind}"
             # asset URL
             url = if kind == :image
                     tool.image side: side, color: color
@@ -32,21 +32,19 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
             puts "==> Downloading from: #{url}"
             puts "==>        Saving to: tmp/#{file_name}"
             open("tmp/#{file_name}", 'wb') do |file|
-              # rubocop:disable Security/Open
-              file << open(url).read
-              # rubocop:enable Security/Open
+              file << URI.parse(url).open.read
             end
 
             # attach asset to new attribute
             attr_name = kind == :image ? "image_#{side}_#{color}_image" : "image_#{side}_#{color}_download"
 
-            puts "==> Attaching file: #{file_name}"
-            puts "==>             to: #{attr_name}"
+            puts "==>   Attaching file: #{file_name}"
+            puts "==>               to: #{attr_name}"
 
             tool.send(attr_name).attach io: File.open("tmp/#{file_name}"), filename: file_name
 
             # delete tmp file
-            puts "==> Deleting file from tmp/: #{file_name}"
+            puts "==>    Deleting file: tmp/#{file_name}"
             File.delete("tmp/#{file_name}") if File.exist? "tmp/#{file_name}"
             puts
           end
