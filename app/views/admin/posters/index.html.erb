@@ -14,53 +14,63 @@
   <tbody>
     <% @posters.each do |poster| %>
       <tr>
-        <td>
-          <p>
-          <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-light border-secondary btn-sm" %>
-            <%= render "/admin/articles/publication_status_badge", resource: poster %>
-            <time class="text-muted"><%= display_date poster.published_at %></time>
-          </p>
+        <td class="p-3">
+          <div class="media">
+            <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-outline-primary btn-sm mr-3" %>
 
-          <%= link_to [:admin, poster] do %>
-            <p>
-              <b><%= poster.title %></b><br>
-              <%= poster.subtitle %>
-            </p>
-          <% end %>
+            <div class="media-body">
+              <%= link_to [:admin, poster] do %>
+                <h2 class="h4"><%= poster.title %></h2>
+                <h3 class="h5"><%= poster.subtitle %></h3>
+              <% end %>
 
-          <% if poster.english? %>
-            <%= render 'admin/translate_this', resource: poster %>
-          <% end %>
+              <p>
+                <%= render "/admin/articles/publication_status_badge", resource: poster %>
+                <time class="text-muted"><%= display_date poster.published_at %></time>
+              </p>
+
+              <% if poster.english? %>
+                <%= render 'admin/translate_this', resource: poster %>
+              <% end %>
+            </div>
+          </div><!-- .media -->
         </td>
 
         <td class="text-center align-middle">
           <% if poster.image_front_color_image.attached? %>
             <%= image_tag url_for(image_variant_by_width(poster.image_front_color_image, @preview_width)), class: "rounded mb-3" %>
           <% end %>
+
           <% if poster.image_front_color_download.attached? %>
             <%= image_tag poster.image_front_color_download.preview(resize_to_limit: [@preview_width, @preview_width]), class: "rounded" %>
           <% end %>
         </td>
+
         <td class="text-center align-middle">
           <% if poster.image_back_color_image.attached? %>
             <%= image_tag url_for(image_variant_by_width(poster.image_back_color_image, @preview_width)), class: "rounded mb-3" %>
           <% end %>
+
           <% if poster.image_back_color_download.attached? %>
             <%= image_tag poster.image_back_color_download.preview(resize_to_limit: [@preview_width, @preview_width]), class: "rounded" %>
           <% end %>
         </td>
+
         <td class="text-center align-middle">
           <% if poster.image_front_black_and_white_image.attached? %>
             <%= image_tag url_for(image_variant_by_width(poster.image_front_black_and_white_image, @preview_width)), class: "rounded mb-3" %>
           <% end %>
+
           <% if poster.image_front_black_and_white_download.attached? %>
             <%= image_tag poster.image_front_black_and_white_download.preview(resize_to_limit: [@preview_width, @preview_width]), class: "rounded" %>
           <% end %>
         </td>
+
         <td class="text-center align-middle">
           <% if poster.image_back_black_and_white_image.attached? %>
             <%= image_tag url_for(image_variant_by_width(poster.image_back_black_and_white_image, @preview_width)), class: "rounded mb-3" %>
           <% end %>
+
           <% if poster.image_back_black_and_white_download.attached? %>
             <%= image_tag poster.image_back_black_and_white_download.preview(resize_to_limit: [@preview_width, @preview_width]), class: "rounded" %>
           <% end %>
