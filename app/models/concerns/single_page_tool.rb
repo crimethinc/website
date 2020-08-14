@@ -91,6 +91,8 @@ module SinglePageTool
     filename << '.pdf'
     filename = filename.join
     [asset_base_url_prefix, filename].join('/')
+
+    # Rails.application.routes.url_helpers.rails_blob_url self.send("image_#{side}_#{color}_download")
   end
 
   def meta_image

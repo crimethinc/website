@@ -52,7 +52,13 @@
         <% if tool.class == Poster %>
           <% %w[front back].each do |side| %>
             <% %w[color black_and_white].each do |color| %>
-              <% if tool.send("#{side}_#{color}_download_present?") %>
+              <% if tool.send("image_#{side}_#{color}_download").attached? %>
+
+              <%# TEMP %>
+              <%#= Rails.application.routes.url_helpers.rails_blob_url tool.send("image_#{side}_#{color}_download") %>
+              <%# if false %>
+              <%#= Rails.application.routes.url_helpers.rails_blob_url tool.send("image_front_color_download") %>
+              <%# end %>
 
                 <div>
                   <%= link_to t("views.tools.download_#{side}_#{color}_button_text"),
