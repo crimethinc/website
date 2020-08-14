@@ -31,7 +31,7 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
             attr_name = kind == :image ? "image_#{side}_#{color}_image" : "image_#{side}_#{color}_download"
 
             # don't reupload tools that're already uploaded
-            if tool.send(attr_name).attached?
+            if !Rails.env.development? && tool.send(attr_name).attached?
               puts "==>         Skipping: #{tool.slug} - #{side} / #{color} / #{kind}"
               puts
               next
@@ -58,7 +58,7 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
             puts
 
             # try to not fail in production
-            sleep 5
+            sleep 5 unless Rails.env.development?
           end
         end
       end
