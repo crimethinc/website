@@ -85,14 +85,7 @@ module SinglePageTool
   end
 
   def download_url side: nil, color: nil
-    filename = [slug]
-    filename << "_#{side}"  if side.present?
-    filename << "_#{color}" if color.present?
-    filename << '.pdf'
-    filename = filename.join
-    [asset_base_url_prefix, filename].join('/')
-
-    # Rails.application.routes.url_helpers.rails_blob_url self.send("image_#{side}_#{color}_download")
+    Rails.application.routes.url_helpers.rails_blob_url send("image_#{side}_#{color}_download")
   end
 
   def meta_image
