@@ -226,12 +226,6 @@ docker stop postgres
 docker rm postgres
 ```
 
-## Deploy to Heroku
-
-Click this button to easily deploy to Heroku. (You must have a Heroku account.)
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
 
 ## Contributing
 
