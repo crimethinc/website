@@ -12,13 +12,14 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
       Poster.find_each  { |poster|  migrate_assets(poster) }
     end
 
+    # rubocop:disable Metrics/MethodLength
     def migrate_assets tool
       %i[image download].each do |kind|
         %i[front back].each do |side|
           %i[color black_and_white].each do |color|
             next unless tool.send("#{side}_#{color}_#{kind}_present?")
 
-            puts "==>       Working on: #{tool.name} - #{side} / #{color} / #{kind}"
+            puts "==>       Working on: #{tool.slug} - #{side} / #{color} / #{kind}"
             # asset URL
             url = if kind == :image
                     tool.image side: side, color: color
@@ -26,6 +27,17 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
                     tool.download_url side: side, color: color
                   end
 
+            # attach asset to new attribute
+            attr_name = kind == :image ? "image_#{side}_#{color}_image" : "image_#{side}_#{color}_download"
+
+            # don't reupload tools that're already uploaded
+            if tool.send(attr_name).attached?
+              puts "==>         Skipping: #{tool.slug} - #{side} / #{color} / #{kind}"
+              puts
+              next
+            end
+
+            # file name
             file_name = url.split('/').last
 
             # fetch asset, save to tmp
@@ -35,9 +47,6 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
               file << URI.parse(url).open.read
             end
 
-            # attach asset to new attribute
-            attr_name = kind == :image ? "image_#{side}_#{color}_image" : "image_#{side}_#{color}_download"
-
             puts "==>   Attaching file: #{file_name}"
             puts "==>               to: #{attr_name}"
 
@@ -46,12 +55,15 @@ class MigrateSinglePageToolsFromS3ToActiveStorage
             # delete tmp file
             puts "==>    Deleting file: tmp/#{file_name}"
             File.delete("tmp/#{file_name}") if File.exist? "tmp/#{file_name}"
-            sleep 5 # try to not fail in production
             puts
+
+            # try to not fail in production
+            sleep 5
           end
         end
       end
     end
+    # rubocop:enable Metrics/MethodLength
   end
 end
 
