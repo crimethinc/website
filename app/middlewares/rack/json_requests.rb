@@ -22,10 +22,13 @@ module Rack
     def invalid_api_request? request
       return false if request.path.include?('collection_posts') ||
                       request.path.include?('manifest.json') ||
-                      request.path.include?('feed.json')
+                      request.path.include?('feed.json') ||
+                      request.path.start_with?('/logos') ||
+                      request.path.start_with?('/posters') ||
+                      request.path.start_with?('/stickers')
 
       http_accept = request.env['HTTP_ACCEPT']
-      http_accept&.start_with?('application/json')
+      http_accept&.start_with? 'application/json'
     end
 
     def json_406_error
