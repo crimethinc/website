@@ -14,22 +14,27 @@ module SinglePageTool
   end
 
   def front_image
-    # TODO
-    image_url side: :front, color: preferred_front_image_color
+    image side: :front, color: preferred_front_image_color
   end
   alias meta_image front_image
-  alias image front_image
 
   def download_url side: nil, color: nil
     url_of side: side, color: color, kind: :download
   end
 
-  private
-
-  # URL builders
-  def image_url side: :front, color: :color
-    url_of side: side, color: color, kind: :image
+  def image side: :front, color: :color
+    if prefer_image_for_preview?
+      send("image_#{side}_#{color}_image")
+    else
+      url_of side: side, color: color, kind: preferred_front_image_kind
+    end
   end
+
+  def prefer_image_for_preview?
+    preferred_front_image_kind == :image
+  end
+
+  private
 
   def url_of side:, color:, kind:
     Rails.application.routes.url_helpers.rails_blob_url send("image_#{side}_#{color}_#{kind}")
@@ -50,19 +55,19 @@ module SinglePageTool
   end
 
   def front_color_image
-    image_url side: :front, color: :color
+    image side: :front, color: :color
   end
 
   def front_black_and_white_image
-    image_url side: :front, color: :black_and_white
+    image side: :front, color: :black_and_white
   end
 
   def back_color_image
-    image_url side: :back, color: :color
+    image side: :back, color: :color
   end
 
   def back_black_and_white_image
-    image_url side: :back, color: :black_and_white
+    image side: :back, color: :black_and_white
   end
 
   def front_image_present?
