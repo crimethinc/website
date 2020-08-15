@@ -1,7 +1,7 @@
 json.prettify!
 
 json.logo do
-  json.WARNING "WARNING: This JSON API is experimental and subject to change without notice!"
+  json.WARNING 'WARNING: This JSON API is experimental and subject to change without notice!'
   json.name @tool.name
   json.title @tool.title
   json.subtitle @tool.subtitle
