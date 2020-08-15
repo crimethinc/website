@@ -1,6 +1,8 @@
 class ProductionAssetsSyncer
   attr_reader :klass
 
+  API_URL_BASE = 'https://crimethinc.com'.freeze
+
   def initialize klass
     @klass = klass
   end
@@ -18,6 +20,9 @@ class ProductionAssetsSyncer
 
   # rubocop:disable Metrics/MethodLength
   def migrate_assets tool
+    puts "#{API_URL_BASE}#{tool.path}.json"
+
+    return
     %i[image download].each do |kind|
       %i[front back].each do |side|
         %i[color black_and_white].each do |color|
