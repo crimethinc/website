@@ -9,7 +9,7 @@ json.logo do
   json.slug @tool.slug
   json.path @tool.path
   json.url  root_url + @tool.path
-  json.published_at @tool.published_at
+  json.published_at @tool.published_at.iso8601
 
   json.locale @tool.locale
 
