@@ -27,7 +27,7 @@ class ProductionAssetsImporter
     remote_tool_data = JSON.parse(remote_tool_json).with_indifferent_access
 
     puts "==> #{remote_tool_url}"
-    puts "*"*80
+    puts '*' * 80
     puts
 
     remote_tool_data[:attachments].each do |key, url|
