@@ -1,4 +1,4 @@
-class ProductionAssetsSyncer
+class ProductionAssetsImporter
   attr_reader :klass
 
   API_URL_BASE = 'https://crimethinc.com'.freeze
@@ -15,78 +15,89 @@ class ProductionAssetsSyncer
       Poster.find_each  { |poster|  migrate_assets(poster) }
     when :stickers
       Sticker.find_each { |sticker| migrate_assets(sticker) }
+    when :logos
+      Logo.find_each { |logo| migrate_assets(logo) }
     end
   end
 
   # rubocop:disable Metrics/MethodLength
-  def migrate_assets tool
-    json_api_url = "#{API_URL_BASE}#{tool.path}.json"
-    tool_json    = HTTP.get(json_api_url).to_s
-    tool         = JSON.parse(tool_json)
+  def migrate_assets local_tool
+    remote_tool_url  = "#{API_URL_BASE}#{local_tool.path}.json"
+    remote_tool_json = HTTP.get(remote_tool_url).to_s
+    remote_tool_data = JSON.parse(remote_tool_json).with_indifferent_access
 
-    puts "==> #{json_api_url}"
-    puts "==> #{klass}"
-    pp tool
+    puts "==> #{remote_tool_url}"
+    puts "*"*80
     puts
 
-    return
-    %i[image download].each do |kind|
-      %i[front back].each do |side|
-        %i[color black_and_white].each do |color|
-          next unless tool.send("image_#{side}_#{color}_#{kind}").attached?
+    remote_tool_data[:attachments].each do |key, url|
+      attr_name = "image_#{key}"
 
-          puts "==>       Working on: #{tool.slug} - #{side} / #{color} / #{kind}"
-          # asset URL
-          url = if kind == :image
-                  tool.image side: side, color: color
-                else
-                  tool.download_url side: side, color: color
-                end
+      # nothing to import from production
+      next if url.blank?
 
-                puts url
-                next
+      puts "==> Working on: #{local_tool.slug} - #{attr_name}"
 
-          # attach asset to new attribute
-          attr_name = kind == :image ? "image_#{side}_#{color}_image" : "image_#{side}_#{color}_download"
-
-          # don't reupload tools that're already uploaded
-          if !Rails.env.development? && tool.send(attr_name).attached?
-            puts "==>         Skipping: #{tool.slug} - #{side} / #{color} / #{kind}"
-            puts
-            next
-          end
-
-          # file name
-          file_name = url.split('/').last
-
-          # fetch asset, save to tmp
-          puts "==> Downloading from: #{url}"
-          puts "==>        Saving to: tmp/#{file_name}"
-          open("tmp/#{file_name}", 'wb') do |file|
-            file << URI.parse(url).open.read
-          end
-
-          puts "==>   Attaching file: #{file_name}"
-          puts "==>               to: #{attr_name}"
-
-          tool.send(attr_name).attach io: File.open("tmp/#{file_name}"), filename: file_name
-
-          # delete tmp file
-          puts "==>    Deleting file: tmp/#{file_name}"
-          File.delete("tmp/#{file_name}") if File.exist? "tmp/#{file_name}"
-          puts
-
-          # try to not fail in production
-          sleep 5 unless Rails.env.development?
-        end
+      # don't reupload tools that're already uploaded
+      if local_tool.send(attr_name).attached?
+        puts "==> Skipping: #{attr_name}"
+        next
       end
+
+      # file name
+      file_name = url.split('/').last
+
+      # fetch asset, save to tmp
+      puts "==> Downloading from: #{url}"
+      puts "==>        Saving to: tmp/#{file_name}"
+      open("tmp/#{file_name}", 'wb') do |file|
+        file << URI.parse(url).open.read
+      end
+
+      puts "==>   Attaching file: #{file_name}"
+      puts "==>               to: #{attr_name}"
+
+      local_tool.send(attr_name).attach io: File.open("tmp/#{file_name}"), filename: file_name
+
+      # delete tmp file
+      puts "==>    Deleting file: tmp/#{file_name}"
+      File.delete("tmp/#{file_name}") if File.exist? "tmp/#{file_name}"
+      puts
+
+      # try to not fail in production
+      sleep 2 unless Rails.env.development?
     end
+
+    sleep 5
   end
   # rubocop:enable Metrics/MethodLength
 end
 
 namespace :seed do
   namespace :uploads do
+    desc 'Delete all uploads/attachments from all tools in local database'
+    task purge: :environment do
+      attr_names = %i[
+        image_jpg image_png image_pdf image_svg image_tif
+        image_front_color_image image_front_black_and_white_image
+        image_back_color_image image_back_black_and_white_image
+        image_front_color_download image_front_black_and_white_download
+        image_back_color_download image_back_black_and_white_download
+      ]
+      klasses = [Logo, Poster, Sticker]
+
+      klasses.each do |klass|
+        klass.find_each do |tool|
+          attr_names.each do |attr_name|
+            if tool.respond_to? attr_name
+              puts "==> Purging: #{attr_name} from #{tool.slug}"
+              tool.send(attr_name).purge
+            end
+          end
+        end
+      end
+    end
+
     desc 'Import ActiveStorage uploads from Production to Development'
     task import: %i[
       seed:uploads:import:books
@@ -101,37 +112,37 @@ namespace :seed do
     namespace :import do
       desc 'Import books from Production to Development'
       task books: :environment do
-        ProductionAssetsSyncer.new(:books).run
+        ProductionAssetsImporter.new(:books).run
       end
 
       desc 'Import issues from Production to Development'
       task issues: :environment do
-        ProductionAssetsSyncer.new(:issues).run
+        ProductionAssetsImporter.new(:issues).run
       end
 
       desc 'Import journals from Production to Development'
       task journals: :environment do
-        ProductionAssetsSyncer.new(:journals).run
+        ProductionAssetsImporter.new(:journals).run
       end
 
       desc 'Import logos from Production to Development'
       task logos: :environment do
-        ProductionAssetsSyncer.new(:logos).run
+        ProductionAssetsImporter.new(:logos).run
       end
 
       desc 'Import posters from Production to Development'
       task posters: :environment do
-        ProductionAssetsSyncer.new(:posters).run
+        ProductionAssetsImporter.new(:posters).run
       end
 
       desc 'Import stickers from Production to Development'
       task stickers: :environment do
-        ProductionAssetsSyncer.new(:stickers).run
+        ProductionAssetsImporter.new(:stickers).run
       end
 
       desc 'Import zines from Production to Development'
       task zines: :environment do
-        ProductionAssetsSyncer.new(:zines).run
+        ProductionAssetsImporter.new(:zines).run
       end
     end
   end
