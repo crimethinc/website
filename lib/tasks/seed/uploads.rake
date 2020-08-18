@@ -26,8 +26,8 @@ class ProductionAssetsImporter
     remote_tool_json = HTTP.get(remote_tool_url).to_s
     remote_tool_data = JSON.parse(remote_tool_json).with_indifferent_access
 
-    puts "==> #{remote_tool_url}"
     puts '*' * 80
+    puts "==> #{remote_tool_url}"
     puts
 
     remote_tool_data[:attachments].each do |key, url|
@@ -36,7 +36,7 @@ class ProductionAssetsImporter
       # nothing to import from production
       next if url.blank?
 
-      puts "==> Working on: #{local_tool.slug} - #{attr_name}"
+      puts "==>       Working on: #{local_tool.slug} - #{attr_name}"
 
       # don't reupload tools that're already uploaded
       if local_tool.send(attr_name).attached?
