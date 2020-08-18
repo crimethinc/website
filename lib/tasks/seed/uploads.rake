@@ -20,7 +20,14 @@ class ProductionAssetsSyncer
 
   # rubocop:disable Metrics/MethodLength
   def migrate_assets tool
-    puts "#{API_URL_BASE}#{tool.path}.json"
+    json_api_url = "#{API_URL_BASE}#{tool.path}.json"
+    tool_json    = HTTP.get(json_api_url).to_s
+    tool         = JSON.parse(tool_json)
+
+    puts "==> #{json_api_url}"
+    puts "==> #{klass}"
+    pp tool
+    puts
 
     return
     %i[image download].each do |kind|
@@ -82,13 +89,13 @@ namespace :seed do
   namespace :uploads do
     desc 'Import ActiveStorage uploads from Production to Development'
     task import: %i[
-      seed:uploads:books
-      seed:uploads:issues
-      seed:uploads:journals
-      seed:uploads:logos
-      seed:uploads:posters
-      seed:uploads:stickers
-      seed:uploads:zines
+      seed:uploads:import:books
+      seed:uploads:import:issues
+      seed:uploads:import:journals
+      seed:uploads:import:logos
+      seed:uploads:import:posters
+      seed:uploads:import:stickers
+      seed:uploads:import:zines
     ]
 
     namespace :import do
