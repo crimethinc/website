@@ -113,16 +113,19 @@ namespace :seed do
     namespace :import do
       desc 'Import books from Production to Development'
       task books: :environment do
+        # TODO
         ProductionAssetsImporter.new(:books).run
       end
 
       desc 'Import issues from Production to Development'
       task issues: :environment do
+        # TODO
         ProductionAssetsImporter.new(:issues).run
       end
 
       desc 'Import journals from Production to Development'
       task journals: :environment do
+        # TODO
         ProductionAssetsImporter.new(:journals).run
       end
 
@@ -143,6 +146,7 @@ namespace :seed do
 
       desc 'Import zines from Production to Development'
       task zines: :environment do
+        # TODO
         ProductionAssetsImporter.new(:zines).run
       end
     end
