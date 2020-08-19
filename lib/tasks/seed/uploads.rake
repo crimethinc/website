@@ -26,6 +26,7 @@ class ProductionAssetsImporter
     remote_tool_json = HTTP.get(remote_tool_url).to_s
     remote_tool_data = JSON.parse(remote_tool_json).with_indifferent_access
 
+    puts
     puts '*' * 80
     puts "==> #{remote_tool_url}"
     puts
@@ -40,7 +41,7 @@ class ProductionAssetsImporter
 
       # don't reupload tools that're already uploaded
       if local_tool.send(attr_name).attached?
-        puts "==> Skipping: #{attr_name}"
+        puts "==>         Skipping: #{attr_name}"
         next
       end
 
