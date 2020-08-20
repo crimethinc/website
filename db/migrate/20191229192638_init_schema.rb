@@ -1,9 +1,8 @@
-class InitSchema < ActiveRecord::Migration[5.2]
+class InitSchema < ActiveRecord::Migration[6.0]
   def up
     # These are extensions that must be enabled in order to support this database
     enable_extension "plpgsql"
     create_table "articles", id: :serial do |t|
-      t.integer "status_id"
       t.text "title"
       t.text "subtitle"
       t.text "content"
@@ -26,10 +25,11 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.text "image_mobile"
       t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
       t.integer "page_views", default: 0
-      t.integer "user_id"
-      t.integer "publication_status", null: false
+      t.integer "publication_status", default: 0, null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_articles_on_canonical_id"
       t.index ["collection_id"], name: "index_articles_on_collection_id"
-      t.index ["status_id"], name: "index_articles_on_status_id"
     end
     create_table "books", id: :serial do |t|
       t.text "title"
@@ -69,14 +69,16 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.integer "gallery_images_count"
       t.boolean "epub_download_present"
       t.boolean "mobi_download_present"
-      t.integer "status_id"
       t.boolean "print_black_and_white_a4_download_present"
       t.boolean "print_color_a4_download_present"
       t.boolean "print_color_download_present"
       t.boolean "print_black_and_white_download_present"
       t.boolean "screen_single_page_view_download_present"
       t.boolean "screen_two_page_view_download_present"
-      t.integer "publication_status", null: false
+      t.integer "publication_status", default: 0, null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_books_on_canonical_id"
     end
     create_table "categories", id: :serial do |t|
       t.string "name"
@@ -96,6 +98,9 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.boolean "image_present"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
     end
     create_table "episodes", id: :serial do |t|
       t.integer "podcast_id", default: 1
@@ -118,9 +123,13 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.datetime "updated_at", null: false
       t.string "slug"
       t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
+      t.string "episode_number"
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_episodes_on_canonical_id"
       t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
     end
-    create_table "journals" do |t|
+    create_table "issues" do |t|
       t.text "title"
       t.text "subtitle"
       t.text "content"
@@ -156,16 +165,46 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.integer "gallery_images_count"
       t.boolean "epub_download_present"
       t.boolean "mobi_download_present"
-      t.integer "status_id"
       t.boolean "print_black_and_white_a4_download_present"
       t.boolean "print_color_a4_download_present"
       t.boolean "print_color_download_present"
       t.boolean "print_black_and_white_download_present"
       t.boolean "screen_single_page_view_download_present"
       t.boolean "screen_two_page_view_download_present"
-      t.integer "series_id"
+      t.integer "journal_id"
       t.integer "issue"
-      t.integer "publication_status", null: false
+      t.integer "publication_status", default: 0, null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_issues_on_canonical_id"
+    end
+    create_table "journals" do |t|
+      t.string "title"
+      t.string "subtitle"
+      t.text "description"
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+      t.string "slug"
+      t.datetime "published_at"
+      t.integer "publication_status", default: 0, null: false
+      t.text "buy_url"
+      t.text "content"
+      t.text "summary"
+      t.text "buy_info"
+      t.integer "price_in_cents"
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_journals_on_canonical_id"
+    end
+    create_table "locales" do |t|
+      t.string "abbreviation"
+      t.string "name_in_english"
+      t.string "name"
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+      t.integer "language_direction", default: 0
+      t.string "slug"
+      t.integer "articles_count", default: 0
     end
     create_table "logos" do |t|
       t.string "slug"
@@ -184,11 +223,12 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.text "summary"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
-      t.integer "status_id"
-      t.integer "publication_status", null: false
+      t.integer "publication_status", default: 0, null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_logos_on_canonical_id"
     end
     create_table "pages", id: :serial do |t|
-      t.integer "status_id"
       t.text "title"
       t.text "subtitle"
       t.text "content"
@@ -206,8 +246,10 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
       t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-      t.integer "publication_status", null: false
-      t.index ["status_id"], name: "index_pages_on_status_id"
+      t.integer "publication_status", default: 0, null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_pages_on_canonical_id"
     end
     create_table "podcasts", id: :serial do |t|
       t.string "title"
@@ -230,6 +272,9 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
       t.string "episode_prefix"
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_podcasts_on_canonical_id"
     end
     create_table "posters" do |t|
       t.text "title"
@@ -258,8 +303,10 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.boolean "front_black_and_white_download_present"
       t.boolean "back_color_download_present"
       t.boolean "back_black_and_white_download_present"
-      t.integer "status_id"
-      t.integer "publication_status", null: false
+      t.integer "publication_status", default: 0, null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_posters_on_canonical_id"
     end
     create_table "redirects", id: :serial do |t|
       t.string "source_path"
@@ -268,18 +315,6 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
       t.integer "article_id"
-    end
-    create_table "series" do |t|
-      t.string "title"
-      t.string "subtitle"
-      t.text "description"
-      t.datetime "created_at", null: false
-      t.datetime "updated_at", null: false
-    end
-    create_table "statuses", id: :serial do |t|
-      t.string "name"
-      t.datetime "created_at", null: false
-      t.datetime "updated_at", null: false
     end
     create_table "stickers" do |t|
       t.text "title"
@@ -306,10 +341,12 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.boolean "front_black_and_white_download_present"
       t.boolean "back_color_download_present"
       t.boolean "back_black_and_white_download_present"
-      t.integer "status_id"
       t.integer "publication_status", default: 0, null: false
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
     end
     create_table "support_sessions" do |t|
       t.string "stripe_customer_id"
@@ -328,12 +365,16 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.string "slug"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_tags_on_canonical_id"
     end
     create_table "users", id: :serial do |t|
       t.string "username"
       t.string "password_digest"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.integer "role", default: 0, null: false
     end
     create_table "videos", id: :serial do |t|
       t.text "title"
@@ -355,8 +396,10 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
       t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-      t.integer "status_id"
-      t.integer "publication_status", null: false
+      t.integer "publication_status", default: 0, null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_videos_on_canonical_id"
     end
     create_table "zines" do |t|
       t.text "title"
@@ -394,7 +437,6 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.integer "gallery_images_count"
       t.boolean "epub_download_present"
       t.boolean "mobi_download_present"
-      t.integer "status_id"
       t.boolean "print_black_and_white_a4_download_present"
       t.boolean "print_color_a4_download_present"
       t.boolean "print_color_download_present"
@@ -404,6 +446,9 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.integer "publication_status", default: 0, null: false
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.string "locale", default: "en"
+      t.integer "canonical_id"
+      t.index ["canonical_id"], name: "index_zines_on_canonical_id"
     end
     create_view "search_results", materialized: true, sql_definition: <<-SQL
         SELECT a.searchable_id,
@@ -421,19 +466,18 @@ class InitSchema < ActiveRecord::Migration[5.2]
                 to_tsvector(COALESCE(articles.content, ''::text)) AS content,
                     CASE
                         WHEN (count(tags.*) = 0) THEN (ARRAY[]::text[])::character varying[]
-                        ELSE array_agg(tags.name)
+                        ELSE array_remove(array_agg(tags.name), NULL::character varying)
                     END AS tag_names,
                     CASE
                         WHEN (count(categories.*) = 0) THEN (ARRAY[]::text[])::character varying[]
-                        ELSE array_agg(categories.name)
+                        ELSE array_remove(array_agg(categories.name), NULL::character varying)
                     END AS category_names
-               FROM (((((articles
-                 JOIN statuses ON (((statuses.id = articles.status_id) AND ((statuses.name)::text = 'published'::text))))
+               FROM ((((articles
                  LEFT JOIN taggings ON (((taggings.taggable_id = articles.id) AND ((taggings.taggable_type)::text = 'Article'::text))))
                  LEFT JOIN tags ON ((tags.id = taggings.tag_id)))
                  LEFT JOIN categorizations ON ((categorizations.article_id = articles.id)))
                  LEFT JOIN categories ON ((categories.id = categorizations.category_id)))
-              WHERE (articles.published_at < now())
+              WHERE ((articles.published_at < now()) AND (articles.publication_status = 1))
               GROUP BY articles.id, 'Article'::text
             UNION
              SELECT pages.id AS searchable_id,
@@ -446,11 +490,10 @@ class InitSchema < ActiveRecord::Migration[5.2]
                         ELSE array_agg(tags.name)
                     END AS tag_names,
                 ARRAY[]::text[] AS category_names
-               FROM (((pages
-                 JOIN statuses ON (((statuses.id = pages.status_id) AND ((statuses.name)::text = 'published'::text))))
+               FROM ((pages
                  LEFT JOIN taggings ON (((taggings.taggable_id = pages.id) AND ((taggings.taggable_type)::text = 'Page'::text))))
                  LEFT JOIN tags ON ((tags.id = taggings.tag_id)))
-              WHERE (pages.published_at < now())
+              WHERE ((pages.published_at < now()) AND (pages.publication_status = 1))
               GROUP BY pages.id, 'Page'::text
             UNION
              SELECT episodes.id AS searchable_id,
