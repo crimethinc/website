@@ -424,7 +424,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_082914) do
     t.integer "taggable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "taggable_type", default: "Article"
+    t.string "taggable_type"
   end
 
   create_table "tags", id: :serial, force: :cascade do |t|
