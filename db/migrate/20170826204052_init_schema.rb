@@ -30,6 +30,9 @@ class InitSchema < ActiveRecord::Migration[5.1]
       t.integer "collection_id"
       t.string "short_path"
       t.boolean "header_shadow_text"
+      t.text "image_mobile"
+      t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
+      t.integer "page_views", default: 0
       t.index ["collection_id"], name: "index_articles_on_collection_id"
       t.index ["status_id"], name: "index_articles_on_status_id"
       t.index ["theme_id"], name: "index_articles_on_theme_id"
@@ -74,6 +77,8 @@ class InitSchema < ActiveRecord::Migration[5.1]
       t.boolean "print_download_present", default: false
       t.boolean "lite_download_present", default: false
       t.integer "gallery_images_count"
+      t.boolean "epub_download_present"
+      t.boolean "mobi_download_present"
     end
     create_table "categories", id: :serial do |t|
       t.string "name"
@@ -107,7 +112,7 @@ class InitSchema < ActiveRecord::Migration[5.1]
       t.index ["slug"], name: "index_contributors_on_slug", unique: true
     end
     create_table "episodes", id: :serial do |t|
-      t.integer "podcast_id"
+      t.integer "podcast_id", default: 1
       t.string "title"
       t.string "subtitle"
       t.text "image"
@@ -125,6 +130,8 @@ class InitSchema < ActiveRecord::Migration[5.1]
       t.datetime "published_at"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.string "slug"
+      t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
       t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
     end
     create_table "links", id: :serial do |t|
@@ -175,6 +182,7 @@ class InitSchema < ActiveRecord::Migration[5.1]
       t.boolean "hide_layout", default: false
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
       t.index ["status_id"], name: "index_pages_on_status_id"
       t.index ["user_id"], name: "index_pages_on_user_id"
     end
@@ -198,6 +206,7 @@ class InitSchema < ActiveRecord::Migration[5.1]
       t.text "pocketcasts_url"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.string "episode_prefix"
     end
     create_table "posters" do |t|
       t.boolean "sticker"
@@ -281,10 +290,7 @@ class InitSchema < ActiveRecord::Migration[5.1]
     end
     create_table "users", id: :serial do |t|
       t.string "username"
-      t.string "email"
-      t.string "display_name"
       t.string "password_digest"
-      t.text "avatar"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
     end
@@ -307,11 +313,19 @@ class InitSchema < ActiveRecord::Migration[5.1]
       t.string "day"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+      t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
+    end
+    create_table "views" do |t|
+      t.bigint "article_id"
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+      t.index ["article_id"], name: "index_views_on_article_id"
     end
     add_foreign_key "contributions", "articles"
     add_foreign_key "contributions", "contributors"
     add_foreign_key "contributions", "roles"
     add_foreign_key "links", "users"
+    add_foreign_key "views", "articles"
     create_view "search_results", materialized: true, sql_definition: <<-SQL
         SELECT a.searchable_id,
         a.searchable_type,
