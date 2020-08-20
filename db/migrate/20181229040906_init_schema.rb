@@ -3,7 +3,6 @@ class InitSchema < ActiveRecord::Migration[5.2]
     # These are extensions that must be enabled in order to support this database
     enable_extension "plpgsql"
     create_table "articles", id: :serial do |t|
-      t.integer "user_id"
       t.integer "status_id"
       t.text "title"
       t.text "subtitle"
@@ -13,9 +12,6 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.text "image"
       t.text "image_description"
       t.text "css"
-      t.text "download_url"
-      t.string "header_background_color"
-      t.string "header_text_color"
       t.string "content_format", default: "kramdown"
       t.string "slug"
       t.string "draft_code"
@@ -23,18 +19,17 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.string "year"
       t.string "month"
       t.string "day"
-      t.boolean "hide_layout", default: false
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
       t.integer "collection_id"
       t.string "short_path"
-      t.boolean "header_shadow_text", default: true
       t.text "image_mobile"
       t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
       t.integer "page_views", default: 0
+      t.integer "user_id"
+      t.integer "publication_status", null: false
       t.index ["collection_id"], name: "index_articles_on_collection_id"
       t.index ["status_id"], name: "index_articles_on_status_id"
-      t.index ["user_id"], name: "index_articles_on_user_id"
     end
     create_table "books", id: :serial do |t|
       t.text "title"
@@ -68,7 +63,6 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.text "table_of_contents"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
-      t.boolean "zine", default: false
       t.boolean "back_image_present", default: false
       t.boolean "front_image_present", default: false
       t.boolean "lite_download_present", default: false
@@ -82,6 +76,7 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.boolean "print_black_and_white_download_present"
       t.boolean "screen_single_page_view_download_present"
       t.boolean "screen_two_page_view_download_present"
+      t.integer "publication_status", null: false
     end
     create_table "categories", id: :serial do |t|
       t.string "name"
@@ -92,6 +87,13 @@ class InitSchema < ActiveRecord::Migration[5.2]
     create_table "categorizations", id: :serial do |t|
       t.integer "category_id"
       t.integer "article_id"
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+    end
+    create_table "definitions" do |t|
+      t.string "name"
+      t.text "content"
+      t.boolean "image_present"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
     end
@@ -118,6 +120,53 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
       t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
     end
+    create_table "journals" do |t|
+      t.text "title"
+      t.text "subtitle"
+      t.text "content"
+      t.text "tweet"
+      t.text "summary"
+      t.text "description"
+      t.text "buy_url"
+      t.text "buy_info"
+      t.string "content_format", default: "kramdown"
+      t.string "slug"
+      t.string "series"
+      t.datetime "published_at"
+      t.integer "price_in_cents"
+      t.string "height"
+      t.string "width"
+      t.string "depth"
+      t.string "weight"
+      t.string "pages"
+      t.string "words"
+      t.string "illustrations"
+      t.string "photographs"
+      t.string "printing"
+      t.string "ink"
+      t.string "definitions"
+      t.string "recipes"
+      t.boolean "has_index"
+      t.text "cover_style"
+      t.text "binding_style"
+      t.text "table_of_contents"
+      t.boolean "back_image_present", default: false
+      t.boolean "front_image_present", default: false
+      t.boolean "lite_download_present", default: false
+      t.integer "gallery_images_count"
+      t.boolean "epub_download_present"
+      t.boolean "mobi_download_present"
+      t.integer "status_id"
+      t.boolean "print_black_and_white_a4_download_present"
+      t.boolean "print_color_a4_download_present"
+      t.boolean "print_color_download_present"
+      t.boolean "print_black_and_white_download_present"
+      t.boolean "screen_single_page_view_download_present"
+      t.boolean "screen_two_page_view_download_present"
+      t.integer "series_id"
+      t.integer "issue"
+      t.integer "publication_status", null: false
+    end
     create_table "logos" do |t|
       t.string "slug"
       t.string "title"
@@ -136,9 +185,9 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
       t.integer "status_id"
+      t.integer "publication_status", null: false
     end
     create_table "pages", id: :serial do |t|
-      t.integer "user_id"
       t.integer "status_id"
       t.text "title"
       t.text "subtitle"
@@ -154,14 +203,11 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.string "slug"
       t.string "draft_code"
       t.datetime "published_at"
-      t.boolean "hide_header", default: false
-      t.boolean "hide_footer", default: false
-      t.boolean "hide_layout", default: false
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
       t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
+      t.integer "publication_status", null: false
       t.index ["status_id"], name: "index_pages_on_status_id"
-      t.index ["user_id"], name: "index_pages_on_user_id"
     end
     create_table "podcasts", id: :serial do |t|
       t.string "title"
@@ -186,7 +232,6 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.string "episode_prefix"
     end
     create_table "posters" do |t|
-      t.boolean "sticker"
       t.text "title"
       t.text "subtitle"
       t.text "content"
@@ -214,6 +259,7 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.boolean "back_color_download_present"
       t.boolean "back_black_and_white_download_present"
       t.integer "status_id"
+      t.integer "publication_status", null: false
     end
     create_table "redirects", id: :serial do |t|
       t.string "source_path"
@@ -223,10 +269,52 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.datetime "updated_at", null: false
       t.integer "article_id"
     end
+    create_table "series" do |t|
+      t.string "title"
+      t.string "subtitle"
+      t.text "description"
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+    end
     create_table "statuses", id: :serial do |t|
       t.string "name"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
+    end
+    create_table "stickers" do |t|
+      t.text "title"
+      t.text "subtitle"
+      t.text "content"
+      t.string "content_format", default: "kramdown"
+      t.text "buy_info"
+      t.text "buy_url"
+      t.integer "price_in_cents"
+      t.text "summary"
+      t.text "description"
+      t.text "slug"
+      t.string "height"
+      t.string "width"
+      t.string "depth"
+      t.string "front_image_format", default: "jpg"
+      t.string "back_image_format", default: "jpg"
+      t.datetime "published_at"
+      t.boolean "front_color_image_present"
+      t.boolean "front_black_and_white_image_present"
+      t.boolean "back_color_image_present"
+      t.boolean "back_black_and_white_image_present"
+      t.boolean "front_color_download_present"
+      t.boolean "front_black_and_white_download_present"
+      t.boolean "back_color_download_present"
+      t.boolean "back_black_and_white_download_present"
+      t.integer "status_id"
+      t.integer "publication_status", default: 0, null: false
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+    end
+    create_table "support_sessions" do |t|
+      t.string "stripe_customer_id"
+      t.string "token"
+      t.datetime "expires_at"
     end
     create_table "taggings", id: :serial do |t|
       t.integer "tag_id"
@@ -268,6 +356,54 @@ class InitSchema < ActiveRecord::Migration[5.2]
       t.datetime "updated_at", null: false
       t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
       t.integer "status_id"
+      t.integer "publication_status", null: false
+    end
+    create_table "zines" do |t|
+      t.text "title"
+      t.text "subtitle"
+      t.text "content"
+      t.text "tweet"
+      t.text "summary"
+      t.text "description"
+      t.text "buy_url"
+      t.text "buy_info"
+      t.string "content_format", default: "kramdown"
+      t.string "slug"
+      t.string "series"
+      t.datetime "published_at"
+      t.integer "price_in_cents"
+      t.string "height"
+      t.string "width"
+      t.string "depth"
+      t.string "weight"
+      t.string "pages"
+      t.string "words"
+      t.string "illustrations"
+      t.string "photographs"
+      t.string "printing"
+      t.string "ink"
+      t.string "definitions"
+      t.string "recipes"
+      t.boolean "has_index"
+      t.text "cover_style"
+      t.text "binding_style"
+      t.text "table_of_contents"
+      t.boolean "back_image_present", default: false
+      t.boolean "front_image_present", default: false
+      t.boolean "lite_download_present", default: false
+      t.integer "gallery_images_count"
+      t.boolean "epub_download_present"
+      t.boolean "mobi_download_present"
+      t.integer "status_id"
+      t.boolean "print_black_and_white_a4_download_present"
+      t.boolean "print_color_a4_download_present"
+      t.boolean "print_color_download_present"
+      t.boolean "print_black_and_white_download_present"
+      t.boolean "screen_single_page_view_download_present"
+      t.boolean "screen_two_page_view_download_present"
+      t.integer "publication_status", default: 0, null: false
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
     end
     create_view "search_results", materialized: true, sql_definition: <<-SQL
         SELECT a.searchable_id,
