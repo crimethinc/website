@@ -96,6 +96,7 @@ group :development do
   gem 'referral', require: false
   gem 'spring'
   gem 'spring-watcher-listen'
+  gem 'squasher'
   gem 'web-console'
 
   # For memory profiling

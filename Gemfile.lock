@@ -449,6 +449,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    squasher (0.6.2)
     stackprof (0.2.15)
     sterile (1.0.17)
       nokogiri (>= 1.10.8)
@@ -546,6 +547,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   spring-watcher-listen
+  squasher
   stackprof
   sterile
   stringex
