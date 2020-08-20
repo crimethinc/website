@@ -64,12 +64,9 @@ class ProductionAssetsImporter
       puts "==>    Deleting file: tmp/#{file_name}"
       File.delete("tmp/#{file_name}") if File.exist? "tmp/#{file_name}"
       puts
-
-      # try to not fail in production
-      sleep 2 unless Rails.env.development?
     end
 
-    sleep 5
+    sleep 2
   end
   # rubocop:enable Metrics/MethodLength
 end
