@@ -6,4 +6,8 @@ puts '==> Importing pg dump into local development DB…'
 sh 'rake db:import:populate'
 puts
 
+puts '==> Importing uploads into local development DB…'
+system! 'rake seed:uploads:import'
+puts
+
 puts '==> All done!'

@@ -28,5 +28,9 @@ chdir APP_ROOT do
   system! 'bundle exec rake db:import:populate'
   puts
 
+  puts '==> Importing uploads into local development DB…'
+  system! 'bundle exec rake seed:uploads:import'
+  puts
+
   puts '==> All done!'
 end
