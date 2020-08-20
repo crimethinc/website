@@ -7,7 +7,7 @@ sh 'rake db:import:populate'
 puts
 
 puts '==> Importing uploads into local development DB…'
-system! 'rake data:uploads:import'
+system! 'rake seed:uploads:import'
 puts
 
 puts '==> All done!'

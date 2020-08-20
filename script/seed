@@ -29,7 +29,7 @@ chdir APP_ROOT do
   puts
 
   puts '==> Importing uploads into local development DB…'
-  system! 'bundle exec rake data:uploads:import'
+  system! 'bundle exec rake seed:uploads:import'
   puts
 
   puts '==> All done!'
