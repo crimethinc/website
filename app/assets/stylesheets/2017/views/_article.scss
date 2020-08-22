@@ -88,7 +88,7 @@
           margin-right: .25em;
         }
 
-        li:last-child {
+        li:last-child, li:first-child {
           border-right: none;
         }
       }

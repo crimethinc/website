@@ -4,7 +4,7 @@
 
     <ul>
       <% if action_name == 'show' %>
-        <%= image_tag 'library/localizations.png', class: 'icon-image' %>
+        <li><%= image_tag 'library/localizations.png', class: 'icon-image' %></li>
       <% end %>
       <% localizations_for(article).each do |article| %>
         <li><%= link_to locale(article.locale).name, article.path %></li>
