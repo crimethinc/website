@@ -30,6 +30,7 @@ overcommit --install
 ./script/server
 ```
 
+
 ## Scripts to Rule Them All
 
 The CrimethInc. website uses the [Scripts to Rule Them All](https://githubengineering.com/scripts-to-rule-them-all) pattern.
