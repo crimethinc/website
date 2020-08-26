@@ -2,7 +2,7 @@
 
 ## What Is Crimethink?
 
-**Crimethink is everything that evades control:** the daydream in the classroom, the renegade breaking ranks, the spray-painted walls that continue to speak even under martial law. It is the persistent sense that things could be otherwise, that there is nothing natural or inevitable about the prevailing social order. In a world optimized for administration, everything that cannot be classified or displayed on a screen is crimethink. It is the spirit of rebellion without which freedom is literally [unthinkable](https://moxie.org/blog/we-should-all-have-something-to-hide).
+**Crimethink is everything that evades control:** the daydream in the classroom, the renegade breaking ranks, the spray-painted walls that continue to speak even under martial law. It is the persistent sense that things could be otherwise, that there is nothing natural or inevitable about the prevailing social order. In a world optimized for administration, everything that cannot be classified or displayed on a screen is crimethink. It is the spirit of rebellion without which freedom is literally [unthinkable](https://moxie.org/2013/06/12/we-should-all-have-something-to-hide.html).
 
 ## What Is CrimethInc.?
 

@@ -2,7 +2,7 @@
 
 ## Cos’è lo psicoreato?
 
-**Lo psicoreato è tutto ciò che sfugge al controllo:** il sogno a occhi aperti in classe, la voce fuori dal coro, i murales che non smettono di parlare nemmeno sotto le leggi marziali. È quell’idea persistente che le cose potrebbero essere differenti, che non vi è nulla di naturale o inevitabile nell’ordine sociale dominante in cui l’amministrazione la fa da padrone, tutto ciò che non può essere catalogato o mostrato su schermo è psicoreato. È quello spirito di ribellione senza il quale la libertà è letteralmente [impensabile](https://moxie.org/blog/we-should-all-have-something-to-hide).
+**Lo psicoreato è tutto ciò che sfugge al controllo:** il sogno a occhi aperti in classe, la voce fuori dal coro, i murales che non smettono di parlare nemmeno sotto le leggi marziali. È quell’idea persistente che le cose potrebbero essere differenti, che non vi è nulla di naturale o inevitabile nell’ordine sociale dominante in cui l’amministrazione la fa da padrone, tutto ciò che non può essere catalogato o mostrato su schermo è psicoreato. È quello spirito di ribellione senza il quale la libertà è letteralmente [impensabile](https://moxie.org/2013/06/12/we-should-all-have-something-to-hide.html).
 
 ## Cos’è CrimethInc.?
 
