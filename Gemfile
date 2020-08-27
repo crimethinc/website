@@ -51,8 +51,23 @@ gem 'logstash-event'
 
 # uploads using Active Storage
 gem 'aws-sdk-s3'
-gem 'azure-storage',        require: false
-gem 'google-cloud-storage', require: false
+
+# TEMP
+# gem 'azure-storage',        require: false
+
+# TEMP
+github 'Azure/azure-storage-ruby' do
+  gem 'azure-storage-blob',   require: false
+  gem 'azure-storage-common', require: false
+  gem 'azure-storage-file',   require: false
+  gem 'azure-storage-queue',  require: false
+  gem 'azure-storage-table',  require: false
+end
+
+# TEMP
+# gem 'google-cloud-storage', require: false
+gem 'google-cloud-storage', github: 'googleapis/google-cloud-ruby', branch: 'master', glob: 'google-cloud-storage/*.gemspec', require: false
+
 gem 'image_processing'
 
 # job queue using Active Job
