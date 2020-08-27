@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version').chomp
 
 # app server
-gem 'rails'
+gem 'rails', github: 'rails/rails', branch: :master
 
 # database
 gem 'pg'
