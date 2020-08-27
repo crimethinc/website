@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version').chomp
 
 # app server
-gem 'rails', github: 'rails/rails', branch: :master
+gem 'rails'
 
 # database
 gem 'pg'
@@ -51,22 +51,8 @@ gem 'logstash-event'
 
 # uploads using Active Storage
 gem 'aws-sdk-s3'
-
-# TEMP
-# gem 'azure-storage',        require: false
-
-# TEMP
-github 'Azure/azure-storage-ruby' do
-  gem 'azure-storage-blob',   require: false
-  gem 'azure-storage-common', require: false
-  gem 'azure-storage-file',   require: false
-  gem 'azure-storage-queue',  require: false
-  gem 'azure-storage-table',  require: false
-end
-
-# TEMP
-# gem 'google-cloud-storage', require: false
-gem 'google-cloud-storage', github: 'googleapis/google-cloud-ruby', branch: 'master', glob: 'google-cloud-storage/*.gemspec', require: false
+gem 'azure-storage',        require: false
+gem 'google-cloud-storage', require: false
 
 gem 'image_processing'
 
