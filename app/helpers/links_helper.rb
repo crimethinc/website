@@ -5,6 +5,7 @@ module LinksHelper
       'CrimethincDotCom on Facebook'     => 'https://www.facebook.com/To-Change-Everything-103734818122357',
       'CrimethincDotCom on Instagram'    => 'https://instagram.com/CrimethincDotCom',
       'CrimethInc.com on Github'         => 'https://github.com/crimethinc',
+      'CrimethInc.com on Tumblr'         => 'https://crimethinc.tumblr.com',
       'CrimethInc.com Articles RSS feed' => 'https://crimethinc.com/feed'
     }
   end
@@ -13,8 +14,9 @@ module LinksHelper
     domain = URI.parse(url).host.downcase.split('.')[-2]
     domain = "link-domain-#{domain}"
 
-    name   = name.downcase.to_slug
-    name   = "link-name-#{name}"
+    name = name.downcase.to_slug
+    name = "link-name-#{name}"
+
     [name, domain].join(' ')
   end
 end
