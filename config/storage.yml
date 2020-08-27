@@ -15,7 +15,7 @@ amazon_backup:
   region:            <%= ENV.fetch('BACKUP_S3_REGION')     { 'TODO' } %>
 
 # Primary TEMP
-amazon:
+old_amazon:
   service:           S3
   access_key_id:     <%= ENV.fetch('OLD_HDRIVE_S3_ACCESS_KEY') { 'TODO' } %>
   secret_access_key: <%= ENV.fetch('OLD_HDRIVE_S3_SECRET_KEY') { 'TODO' } %>
@@ -23,7 +23,7 @@ amazon:
   region:            <%= ENV.fetch('OLD_HDRIVE_S3_REGION')     { 'TODO' } %>
 
 # Mirror
-amazon_s3:
+amazon:
   service:           S3
   access_key_id:     <%= ENV.fetch('HDRIVE_S3_ACCESS_KEY') { 'TODO' } %>
   secret_access_key: <%= ENV.fetch('HDRIVE_S3_SECRET_KEY') { 'TODO' } %>
@@ -46,9 +46,9 @@ microsoft:
 
 production:
   service: Mirror
-  primary: amazon
+  primary: old_amazon
   mirrors:
-    - amazon_s3
+    - amazon
     - microsoft
     - google
     - amazon_backup
