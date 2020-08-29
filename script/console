@@ -22,9 +22,9 @@ chdir APP_ROOT do
     # Use this to decide how to connect to the appropriate console.
     case ARGV[0]
     when 'production'
-      system! 'heroku run rails console --app crimethinc'
+      system! 'heroku run rails console --app the-crimethinc-production'
     when 'staging'
-      system! 'heroku run rails console --app crimethinc-staging'
+      system! 'heroku run rails console --app the-crimethinc-staging'
     else
       puts "Sorry, I don’t know how to connect to the #{ARGV[0]} environment."
       `exit 1`

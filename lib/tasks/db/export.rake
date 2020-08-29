@@ -13,7 +13,7 @@ namespace :db do
       puts
 
       puts '==> Pulling remote production DB…'
-      sh 'heroku pg:pull DATABASE_URL crimethinc_development --app crimethinc'
+      sh 'heroku pg:pull DATABASE_URL crimethinc_development --app the-crimethinc-production'
       puts
 
       puts '==> Creating local test DB…'
