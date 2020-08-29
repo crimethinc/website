@@ -52,7 +52,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = ENV['ON_PRODUCTION'] == 'TRUE' ? :production : :staging
+  config.active_storage.service = :production
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
@@ -92,6 +92,7 @@ Rails.application.configure do
   # Background jobs
   config.active_job.queue_adapter = :sidekiq
 
+  # TODO: Extract to ENV var in .env and staging/production environments
   # For using #url_for et al in non-views/helpers
   Rails.application.routes.default_url_options[:host] =
     if ENV['ON_STAGING'] == 'TRUE'
