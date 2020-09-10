@@ -87,7 +87,7 @@ GEM
       faraday (~> 0.9)
       faraday_middleware (~> 0.10)
       nokogiri (~> 1.6, >= 1.6.8)
-    bcrypt (3.1.15)
+    bcrypt (3.1.16)
     better_html (1.0.15)
       actionview (>= 4.0)
       activesupport (>= 4.0)
