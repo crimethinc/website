@@ -64,6 +64,18 @@ Lint/TopLevelReturnWithArgument:
 Lint/UnreachableLoop:
   Enabled: true
 
+Lint/DuplicateRequire:
+  Enabled: true
+
+Lint/EmptyFile:
+  Enabled: true
+
+Lint/TrailingCommaInAttributeDeclaration:
+  Enabled: true
+
+Lint/UselessMethodDefinition:
+  Enabled: true
+
 Metrics/AbcSize:
   Max: 67
 
@@ -114,6 +126,9 @@ Performance/Squeeze:
   Enabled: true
 
 Performance/StringInclude:
+  Enabled: true
+
+Performance/Sum:
   Enabled: true
 
 RSpec/DescribeClass:
@@ -210,4 +225,16 @@ Style/SlicingWithRange:
   Enabled: true
 
 Style/StringConcatenation:
+  Enabled: true
+
+Style/CombinableLoops:
+  Enabled: true
+
+Style/KeywordParametersOrder:
+  Enabled: true
+
+Style/RedundantSelfAssignment:
+  Enabled: false
+
+Style/SoleNestedConditional:
   Enabled: true

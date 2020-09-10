@@ -60,9 +60,9 @@ end
 
 def article_from_data_files
   articles = {}
-
+  dots = %w[. ..]
   data_dir.each do |data_file|
-    next if %w[. ..].include? data_file
+    next if dots.include? data_file
 
     file_path = File.expand_path(data_file, data_dir)
     file_name, extension = data_file.split '.'

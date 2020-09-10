@@ -1,7 +1,7 @@
 class LocaleService::Locale # rubocop:disable Style/ClassAndModuleChildren
   attr_reader :locale, :lang_code, :canonical
 
-  def initialize locale:, lang_code: nil, canonical:
+  def initialize locale:, lang_code: nil, canonical: # rubocop:disable Style/KeywordParametersOrder
     @locale = locale
     @lang_code = lang_code
     @canonical = canonical
