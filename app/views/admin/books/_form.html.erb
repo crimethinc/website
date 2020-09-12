@@ -61,28 +61,7 @@
 
   <%= render "admin/books/categories_form", form: form %>
 
-  <div class="row">
-    <div class="col-6">
-      <%= render "admin/books/form/position", form: form, resource: resource %>
-      <p class="form-text text-muted">
-        This will set the order that this
-        <%= resource.namespace.singularize %>
-        shows up on
-        <%= link_to "crimethinc.com/#{resource.namespace}", resource.namespace %>.
-      </p>
-    </div>
-
-    <div class="col-6">
-      <%= form.check_box :hide_from_index %>
-      <%= form.label :has_index, "Hide this #{resource.namespace.singularize} from the index page?" %>
-      <p class="form-text text-muted">
-        This will prevent this
-        <%= resource.namespace.singularize %>
-        from showing up on
-        <%= link_to "crimethinc.com/#{resource.namespace}", resource.namespace %>.
-      </p>
-    </div>
-  </div>
+  <%= render "admin/shared/position", form: form, resource: resource %>
 
   <%= render "admin/books/downloads_form", form: form, resource: resource %>
 
