@@ -15,3 +15,15 @@
     <hr style="margin-bottom: 5rem">
   <% end %>
 </article>
+
+<div class="pagination-container">
+  <ul class="pagination">
+    <li class="page">
+      <%= link_to_previous_page @tools, t("views.pagination.previous_page").html_safe %>
+    </li>
+
+    <li class="page">
+      <%= link_to_next_page @tools, t("views.pagination.next_page").html_safe %>
+    </li>
+  </ul>
+</div>
