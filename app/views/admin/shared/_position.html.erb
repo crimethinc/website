@@ -1,0 +1,24 @@
+<%# journals are a special case we aren't ready for yet %>
+<% return if resource.namespace == "journals" %>
+
+<% resource_name = resource.namespace.singularize %>
+<% resource_link = link_to "crimethinc.com/#{resource_name.pluralize}", "/#{resource_name.pluralize}", target: "_blank" %>
+
+<div class="row">
+  <div class="col-6">
+    <div id="position" class="form-group">
+      <%= form.label :position, "Position this #{resource_name} on the index page" %>
+      <%= form.number_field :position, step: 1, class: 'form-control' %>
+    </div>
+    <p class="form-text text-muted">This will set the order that
+      this <%= resource_name %> shows up on <%= resource_link %>.</p>
+  </div>
+
+  <div class="col-6">
+    <%= form.check_box :hide_from_index %>
+    <%= form.label :has_index, "Hide this #{resource_name} from the index page?" %><br>
+
+    <p class="form-text text-muted">This will prevent the <%= resource_name %> from
+      showing up on <%= resource_link %>.</p>
+  </div>
+</div>
