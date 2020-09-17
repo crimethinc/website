@@ -6,7 +6,6 @@ class ToolsController < ApplicationController
   before_action :set_type
 
   before_action :set_tool,           except: :about
-  before_action :set_featured_tools, except: :about
   before_action :set_tools,          except: :about
 
   before_action :set_title
@@ -37,16 +36,8 @@ class ToolsController < ApplicationController
     @body_id = 'tools'
   end
 
-  def tools
-    tool_class.order(published_at: :desc).live.published
-  end
-
-  def set_featured_tools
-    @featured_tools = tools.english.where.not(buy_url: nil).map { |tool| tool if tool.buy_url.present? }.compact
-  end
-
   def set_tools
-    @tools = tools.english.map { |tool| tool if tool.buy_url.blank? }.compact
+    @tools = tool_class.english.reorder(position: :asc).order(published_at: :desc).live.published.page(params[:page]).per(10)
   end
 
   def tool_class
