@@ -74,20 +74,29 @@ class Article < ApplicationRecord
     related_articles = {}
 
     if categories.present?
+      # for each category on this article
       categories.each do |category|
         articles = []
+        # get the last 7 articles
         category.articles.english.published[0..7].each do |article|
+          # if the article is 1) not this article, 2) not included via
+          # another category, and 3) currently don't have 3 articles
+          # yet for this category
           next unless article != self &&
                       articles.length < 3 &&
                       !related_articles.values.flatten.include?(article)
 
+          # then save this article in a temp array
           articles << article
         end
 
+        # store that array for the current category in a hash keyed
+        # off of the category name
         related_articles[category] = articles
       end
     end
 
+    # return the built hash map for the UI
     related_articles
   end
 
