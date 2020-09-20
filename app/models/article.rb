@@ -73,16 +73,17 @@ class Article < ApplicationRecord
   def related
     return {} if categories.blank?
 
-    related_articles = {}
-    # for each category on this article
-    categories.each do |category|
-      current_related_article_ids = related_articles.values.flatten.pluck(:id)
-      current_related_article_ids << id
-      related_articles[category] = category.articles.english.published.limit(3).where.not(id: current_related_article_ids)
-    end
+    # we do not want the current article to show up in related articles
+    articles_to_exclude = [id]
+    categories.each_with_object({}) do |category, hash|
+      # get 3 articles that we haven't seen yet in a previous iteration of this loop
+      related_articles = category.articles.english.published.limit(3).where.not(id: articles_to_exclude)
 
-    # return the built hash map for the UI
-    related_articles
+      # save the IDs of these articles so we can exclude them in the next iteration of this loop
+      articles_to_exclude += related_articles.pluck(:id)
+
+      hash[category] = related_articles
+    end
   end
 
   def localizations
