@@ -77,15 +77,13 @@ class Article < ApplicationRecord
     # for each category on this article
     categories.each do |category|
       articles = []
-      # get the last 7 articles
-      category.articles.english.published.limit(8).where.not(id: id).each do |article|
-        # 1) not included via another category, and 2) currently don't
-        # have 3 articles yet for this category
-        next unless articles.length < 3 &&
-                    !related_articles.values.flatten.include?(article)
-
-        # then save this article in a temp array
-        articles << article
+      current_related_article_ids = related_articles.values.flatten.pluck(:id)
+      current_related_article_ids << id
+      # get the last 8 articles
+      category.articles.english.published.limit(8).where.not(id: current_related_article_ids).each do |article|
+        # 1)currently don't have 3 articles yet for this category then
+        # save this article in a temp array
+        articles << article if articles.length < 3
       end
 
       # store that array for the current category in a hash keyed
