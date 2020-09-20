@@ -76,19 +76,9 @@ class Article < ApplicationRecord
     related_articles = {}
     # for each category on this article
     categories.each do |category|
-      articles = []
       current_related_article_ids = related_articles.values.flatten.pluck(:id)
       current_related_article_ids << id
-      # get the last 8 articles
-      category.articles.english.published.limit(8).where.not(id: current_related_article_ids).each do |article|
-        # 1)currently don't have 3 articles yet for this category then
-        # save this article in a temp array
-        articles << article if articles.length < 3
-      end
-
-      # store that array for the current category in a hash keyed
-      # off of the category name
-      related_articles[category] = articles
+      related_articles[category] = category.articles.english.published.limit(3).where.not(id: current_related_article_ids)
     end
 
     # return the built hash map for the UI
