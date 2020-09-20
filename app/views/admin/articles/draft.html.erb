@@ -53,17 +53,17 @@
           <%= render 'admin/translate_this', resource: article %>
         <% else %>
           <% if article.canonical_id.present? %>
-            <% if article.canonical_article.locale.present? %>
-              <%= link_to article.canonical_article.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
+            <% if article.canonical_record.locale.present? %>
+              <%= link_to article.canonical_record.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
             <% end %>
             <span class="text-muted">English Article</span>
             <br>
 
-            <b><%= link_to article.canonical_article.title, [:admin, article.canonical_article] %></b>
+            <b><%= link_to article.canonical_record.title, [:admin, article.canonical_record] %></b>
 
-            <% if article.canonical_article.subtitle.present? %>
+            <% if article.canonical_record.subtitle.present? %>
               <br>
-              <%= link_to article.canonical_article.subtitle, [:admin, article.canonical_article] %>
+              <%= link_to article.canonical_record.subtitle, [:admin, article.canonical_record] %>
             <% end %>
           <% end %>
         <% end %>

@@ -24,22 +24,21 @@ module Translatable
 
   def localizations
     all_localizations = [
-      canonical_tool,
-      canonical_tool_localizations,
+      canonical_record,
+      canonical_record_localizations,
       self_localizations
     ]
 
-    tools = all_localizations.flatten.compact - [self]
-
-    tools.sort_by(&:locale)
+    records = all_localizations.flatten.compact - [self]
+    records.sort_by(&:locale)
   end
 
-  def canonical_tool
+  def canonical_record
     self.class.find_by(id: canonical_id)
   end
 
-  def canonical_tool_localizations
-    canonical_tool&.localizations
+  def canonical_record_localizations
+    canonical_record&.localizations
   end
 
   def self_localizations

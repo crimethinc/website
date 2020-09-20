@@ -1,6 +1,7 @@
 class Article < ApplicationRecord
   include Post
   include Featureable
+  include Translatable
 
   has_one  :redirect, dependent: :destroy
   has_many :taggings, dependent: :destroy, as: :taggable
@@ -25,16 +26,6 @@ class Article < ApplicationRecord
   default_scope { order(published_at: :desc) }
 
   scope :last_2_weeks, -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.weeks, Time.now.utc) }
-  scope :english,      -> { where(locale: 'en') }
-  scope :translation,  -> { where.not(locale: 'en') }
-
-  def english?
-    locale == 'en'
-  end
-
-  def id_and_name
-    "#{id} — #{name}"
-  end
 
   def path
     if published?
@@ -91,33 +82,6 @@ class Article < ApplicationRecord
     related_articles
   end
 
-  def localizations
-    all_localizations = [
-      canonical_article,
-      canonical_article_localizations,
-      self_localizations
-    ]
-
-    articles = all_localizations.flatten.compact - [self]
-
-    articles.sort_by(&:locale)
-  end
-
-  def localization_in locale
-    [
-      Article.published.live.find_by(locale: locale, canonical_id: id),
-      Article.published.live.find_by(locale: locale, id: canonical_id)
-    ].compact.first
-  end
-
-  def preferred_localization
-    localization_in(I18n.locale).presence || self
-  end
-
-  def canonical_article
-    Article.find_by(id: canonical_id)
-  end
-
   def aggregate_translation_page_views
     [page_views, localizations.map(&:page_views)].flatten.sum
   end
@@ -131,14 +95,6 @@ class Article < ApplicationRecord
 
   def absolute_short_path
     "/#{short_path}"
-  end
-
-  def self_localizations
-    Article.published.live.where(canonical_id: id)
-  end
-
-  def canonical_article_localizations
-    canonical_article&.localizations
   end
 
   def generate_published_dates
