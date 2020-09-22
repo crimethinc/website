@@ -149,29 +149,11 @@ RSpec/MultipleExpectations:
   Exclude:
     - 'spec/system/*'
 
-Style/AccessorGrouping:
-  Enabled: true
-
-Style/ArrayCoercion:
-  Enabled: true
-
 Style/AsciiComments:
   Enabled: false
 
-Style/BisectedAttrAccessor:
-  Enabled: true
-
-Style/CaseLikeIf:
-  Enabled: true
-
 Style/Documentation:
   Enabled: false
-
-Style/ExplicitBlockArgument:
-  Enabled: true
-
-Style/ExponentialNotation:
-  Enabled: true
 
 Style/FrozenStringLiteralComment:
   Enabled: false
