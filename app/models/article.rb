@@ -62,24 +62,7 @@ class Article < ApplicationRecord
   end
 
   def related
-    related_articles = {}
-
-    if categories.present?
-      categories.each do |category|
-        articles = []
-        category.articles.english.published[0..7].each do |article|
-          next unless article != self &&
-                      articles.length < 3 &&
-                      !related_articles.values.flatten.include?(article)
-
-          articles << article
-        end
-
-        related_articles[category] = articles
-      end
-    end
-
-    related_articles
+    @related ||= find_related_articles
   end
 
   def aggregate_translation_page_views
@@ -92,6 +75,22 @@ class Article < ApplicationRecord
   end
 
   private
+
+  def find_related_articles
+    return {} if categories.blank?
+
+    # we do not want the current article to show up in related articles
+    articles_to_exclude = [id]
+    categories.each_with_object({}) do |category, hash|
+      # get 3 articles that we haven't seen yet in a previous iteration of this loop
+      related_articles = category.articles.english.live.published.limit(3).where.not(id: articles_to_exclude)
+
+      # save the IDs of these articles so we can exclude them in the next iteration of this loop
+      articles_to_exclude += related_articles.pluck(:id)
+
+      hash[category] = related_articles
+    end
+  end
 
   def absolute_short_path
     "/#{short_path}"
