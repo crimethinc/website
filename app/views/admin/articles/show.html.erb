@@ -18,25 +18,25 @@
         <div class="col-12 col-md-8">
           <div class="card mb-3">
             <div class="card-header">
-              <% if @article.canonical_article.locale.present? %>
-                <%= link_to @article.canonical_article.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
+              <% if @article.canonical_record.locale.present? %>
+                <%= link_to @article.canonical_record.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
               <% end %>
 
               English Article
 
               <span class="float-right">
-                <%= number_with_delimiter @article.canonical_article.page_views %> Views
+                <%= number_with_delimiter @article.canonical_record.page_views %> Views
                 <b><%= number_with_delimiter @article.aggregate_translation_page_views %> Total</b>
               </span>
             </div>
 
             <div class="card-body text-dark">
               <h6 class="card-title">
-                <b><%= link_to @article.canonical_article.title, [:admin, @article.canonical_article] %></b>
+                <b><%= link_to @article.canonical_record.title, [:admin, @article.canonical_record] %></b>
 
-                <% if @article.canonical_article.subtitle.present? %>
+                <% if @article.canonical_record.subtitle.present? %>
                 <br>
-                <%= link_to @article.canonical_article.subtitle, [:admin, @article.canonical_article] %>
+                <%= link_to @article.canonical_record.subtitle, [:admin, @article.canonical_record] %>
                 <% end %>
               </h6>
             </div>
