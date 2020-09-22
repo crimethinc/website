@@ -176,24 +176,6 @@ Style/ExponentialNotation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/GlobalStdStream:
-  Enabled: true
-
-Style/HashAsLastArrayItem:
-  Enabled: true
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashLikeCase:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
-
 Style/MethodDefParentheses:
   EnforcedStyle: require_no_parentheses
 
