@@ -8,9 +8,6 @@ AllCops:
     - 'db/schema.rb'
     - 'db/migrate/20200715082914_init_schema.rb'
 
-Layout/EmptyLinesAroundAttributeAccessor:
-  Enabled: true
-
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
@@ -20,70 +17,13 @@ Layout/LineLength:
   Exclude:
     - 'db/**/*'
 
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
-
-Lint/BinaryOperatorWithIdenticalOperands:
-  Enabled: true
-
-Lint/DeprecatedOpenSSLConstant:
-  Enabled: true
-
-Lint/DuplicateElsifCondition:
-  Enabled: true
-
-Lint/DuplicateRescueException:
-  Enabled: true
-
-Lint/EmptyConditionalBody:
-  Enabled: true
-
-Lint/FloatComparison:
-  Enabled: true
-
-Lint/MissingSuper:
-  Enabled: true
-
-Lint/MixedRegexpCaptureTypes:
-  Enabled: true
-
-Lint/OutOfRangeRegexpRef:
-  Enabled: true
-
-Lint/RaiseException:
-  Enabled: true
-
-Lint/SelfAssignment:
-  Enabled: true
-
-Lint/StructNewOverride:
-  Enabled: true
-
-Lint/TopLevelReturnWithArgument:
-  Enabled: true
-
-Lint/UnreachableLoop:
-  Enabled: true
-
-Lint/DuplicateRequire:
-  Enabled: true
-
-Lint/EmptyFile:
-  Enabled: true
-
-Lint/TrailingCommaInAttributeDeclaration:
-  Enabled: true
-
-Lint/UselessMethodDefinition:
-  Enabled: true
-
 Metrics/AbcSize:
   Max: 67
 
 Metrics/BlockLength:
+  Max: 99
   Exclude:
     - 'config/routes.rb'
-  Max: 99
 
 Metrics/ClassLength:
   Max: 131
