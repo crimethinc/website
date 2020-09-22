@@ -105,33 +105,6 @@ Metrics/PerceivedComplexity:
 Naming/VariableNumber:
   EnforcedStyle: snake_case
 
-Performance/AncestorsInclude:
-  Enabled: true
-
-Performance/BigDecimalWithNumericArgument:
-  Enabled: true
-
-Performance/RedundantSortBlock:
-  Enabled: true
-
-Performance/RedundantStringChars:
-  Enabled: true
-
-Performance/ReverseFirst:
-  Enabled: true
-
-Performance/SortReverse:
-  Enabled: true
-
-Performance/Squeeze:
-  Enabled: true
-
-Performance/StringInclude:
-  Enabled: true
-
-Performance/Sum:
-  Enabled: true
-
 RSpec/DescribeClass:
   Exclude:
     - 'spec/system/*'
