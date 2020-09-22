@@ -3,12 +3,10 @@ require:
   - rubocop-rspec
 
 AllCops:
+  NewCops: enable
   Exclude:
     - 'db/schema.rb'
     - 'db/migrate/20200715082914_init_schema.rb'
-
-Layout/EmptyLinesAroundAttributeAccessor:
-  Enabled: true
 
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
@@ -19,70 +17,13 @@ Layout/LineLength:
   Exclude:
     - 'db/**/*'
 
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
-
-Lint/BinaryOperatorWithIdenticalOperands:
-  Enabled: true
-
-Lint/DeprecatedOpenSSLConstant:
-  Enabled: true
-
-Lint/DuplicateElsifCondition:
-  Enabled: true
-
-Lint/DuplicateRescueException:
-  Enabled: true
-
-Lint/EmptyConditionalBody:
-  Enabled: true
-
-Lint/FloatComparison:
-  Enabled: true
-
-Lint/MissingSuper:
-  Enabled: true
-
-Lint/MixedRegexpCaptureTypes:
-  Enabled: true
-
-Lint/OutOfRangeRegexpRef:
-  Enabled: true
-
-Lint/RaiseException:
-  Enabled: true
-
-Lint/SelfAssignment:
-  Enabled: true
-
-Lint/StructNewOverride:
-  Enabled: true
-
-Lint/TopLevelReturnWithArgument:
-  Enabled: true
-
-Lint/UnreachableLoop:
-  Enabled: true
-
-Lint/DuplicateRequire:
-  Enabled: true
-
-Lint/EmptyFile:
-  Enabled: true
-
-Lint/TrailingCommaInAttributeDeclaration:
-  Enabled: true
-
-Lint/UselessMethodDefinition:
-  Enabled: true
-
 Metrics/AbcSize:
   Max: 67
 
 Metrics/BlockLength:
+  Max: 99
   Exclude:
     - 'config/routes.rb'
-  Max: 99
 
 Metrics/ClassLength:
   Max: 131
@@ -104,33 +45,6 @@ Metrics/PerceivedComplexity:
 Naming/VariableNumber:
   EnforcedStyle: snake_case
 
-Performance/AncestorsInclude:
-  Enabled: true
-
-Performance/BigDecimalWithNumericArgument:
-  Enabled: true
-
-Performance/RedundantSortBlock:
-  Enabled: true
-
-Performance/RedundantStringChars:
-  Enabled: true
-
-Performance/ReverseFirst:
-  Enabled: true
-
-Performance/SortReverse:
-  Enabled: true
-
-Performance/Squeeze:
-  Enabled: true
-
-Performance/StringInclude:
-  Enabled: true
-
-Performance/Sum:
-  Enabled: true
-
 RSpec/DescribeClass:
   Exclude:
     - 'spec/system/*'
@@ -148,50 +62,14 @@ RSpec/MultipleExpectations:
   Exclude:
     - 'spec/system/*'
 
-Style/AccessorGrouping:
-  Enabled: true
-
-Style/ArrayCoercion:
-  Enabled: true
-
 Style/AsciiComments:
   Enabled: false
-
-Style/BisectedAttrAccessor:
-  Enabled: true
-
-Style/CaseLikeIf:
-  Enabled: true
 
 Style/Documentation:
   Enabled: false
 
-Style/ExplicitBlockArgument:
-  Enabled: true
-
-Style/ExponentialNotation:
-  Enabled: true
-
 Style/FrozenStringLiteralComment:
   Enabled: false
-
-Style/GlobalStdStream:
-  Enabled: true
-
-Style/HashAsLastArrayItem:
-  Enabled: true
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashLikeCase:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
 
 Style/MethodDefParentheses:
   EnforcedStyle: require_no_parentheses
@@ -200,41 +78,5 @@ Style/MixinUsage:
   Exclude:
     - 'script/*'
 
-Style/OptionalBooleanParameter:
-  Enabled: true
-
-Style/RedundantAssignment:
-  Enabled: true
-
 Style/RedundantFetchBlock:
   Enabled: false
-
-Style/RedundantFileExtensionInRequire:
-  Enabled: true
-
-Style/RedundantRegexpCharacterClass:
-  Enabled: true
-
-Style/RedundantRegexpEscape:
-  Enabled: true
-
-Style/SingleArgumentDig:
-  Enabled: true
-
-Style/SlicingWithRange:
-  Enabled: true
-
-Style/StringConcatenation:
-  Enabled: true
-
-Style/CombinableLoops:
-  Enabled: true
-
-Style/KeywordParametersOrder:
-  Enabled: true
-
-Style/RedundantSelfAssignment:
-  Enabled: false
-
-Style/SoleNestedConditional:
-  Enabled: true
