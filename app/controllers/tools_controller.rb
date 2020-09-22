@@ -5,8 +5,8 @@ class ToolsController < ApplicationController
   before_action :set_body_id
   before_action :set_type
 
-  before_action :set_tool,           except: :about
-  before_action :set_tools,          except: :about
+  before_action :set_tool,  except: :about
+  before_action :set_tools, except: :about
 
   before_action :set_title
   before_action :set_editable, only: :show
