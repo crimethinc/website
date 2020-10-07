@@ -1,6 +1,9 @@
 Honeycomb.configure do |config|
   config.write_key = ENV.fetch 'HONEYCOMB_WRITE_KEY', 'TODO'
-  config.dataset   = 'crimethinc-website'
+
+  # Environment specific dataset
+  rails_environment = ENV['ON_STAGING'] == 'TRUE' ? 'staging' : Rails.env
+  config.dataset    = "crimethinc-website-#{rails_environment}"
 
   config.presend_hook do |fields|
     if fields['name'] == 'redis' && fields.key?('redis.command') && fields['redis.command'].respond_to?(:split)
