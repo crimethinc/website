@@ -1,5 +1,5 @@
 Honeycomb.configure do |config|
-  config.write_key = ENV.fetch 'HONEYCOMB_WRITE_KEY', 'TODO'
+  config.write_key = ENV.fetch('HONEYCOMB_WRITE_KEY') { 'TODO' }
 
   # Environment specific dataset
   rails_environment = ENV['ON_STAGING'] == 'TRUE' ? 'staging' : Rails.env
