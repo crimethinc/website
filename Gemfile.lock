@@ -206,6 +206,8 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    honeycomb-beeline (2.2.0)
+      libhoney (~> 1.14, >= 1.14.2)
     html_tokenizer (0.0.7)
     http (4.4.1)
       addressable (~> 2.3)
@@ -252,6 +254,9 @@ GEM
       rexml
     launchy (2.5.0)
       addressable (~> 2.7)
+    libhoney (1.14.6)
+      addressable (~> 2.0)
+      http (>= 2.0, < 5.0)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -507,6 +512,7 @@ DEPENDENCIES
   flamegraph
   google-cloud-storage
   guard-rspec
+  honeycomb-beeline
   http
   i18n-debug
   image_processing

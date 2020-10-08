@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
   before_action :set_page_share
+  before_action :add_global_event_fields
 
   helper :meta
 
@@ -120,6 +121,10 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def add_global_event_fields
+    Event.add_field :current_theme, Current.theme
+  end
 
   def page_share_url
     # TODO: implement this algorithm
