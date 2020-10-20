@@ -336,7 +336,7 @@ cs:
           header: Existující měsíční předplatné.
           description: Potřebuješ upravit nebo zrušit předplatné? Vlož email kterým se přihlašuješ, A my ti na něj pošleme supertajný odkaz kde ho můžeš upravit .
           email_label: Emailová adresa
-          email_placeholder: ty@příklad.com
+          email_placeholder: ty@example.com
           button_text: Pošli supertajný odkaz
 
       create:
