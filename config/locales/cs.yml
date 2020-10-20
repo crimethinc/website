@@ -16,30 +16,30 @@ cs:
 
   head:
     # meta_title is wrapped in quotes because it has a colon in its text value
-    meta_title: "CrimethInc. ex-Workers’ Collective: Your ticket to a world free of charge"
+    meta_title: "CrimethInc. ex-Workers’ Collective: Tvůj lístek ke změně světa"
     meta_image_url: https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png
-    meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+    meta_description: CrimethInc. je decentralizovaná síť která se zavázala k anonymní kolektivní akci. Usilujeme o znovuobjevení našich životů a světa dle principů sebeurčení a vzájemné pomoci.
 
   header:
-    languages: Languages
-    books: Books
-    library: Library
-    tools: Tools
-    audio: Podcasts
+    languages: Jazyky
+    books: Knihy
+    library: Knihovna
+    tools: Nástroje
+    audio: Podcasty
     video: Video
-    store: Store
-    subscribe: Subscribe
-    support: Support Us
-    search: Search
-    about: About
-    locale_articles: See all articles in Czech →
+    store: Obchod
+    subscribe: Odebírej
+    support: Podpoř nás
+    search: Hledej
+    about: O nás 
+    locale_articles: Všechny články v českém jazyce →
 
-    first_time: First Time? Start Here →
-    site_mode: Switch to the full version of the site →
+    first_time: Jsi tu poprvé? Začni tady →
+    site_mode: Přepni pro plnou verzi stránky →
 
   search:
-    form_placeholder: Search Archives…
-    search_results: 'Search results for: %{query}'
+    form_placeholder: Prohledej Archiv…
+    search_results: 'Výsledky vyhledávání pro: %{query}'
     advanced:
       heading: Advanced Search
       form:
@@ -54,22 +54,22 @@ cs:
 
   footer:
     nav:
-      heading: Site Map
+      heading: Mapa stránky
       articles:
-        label: Articles
+        label: Články
         feed: RSS
-        adventure: Adventure
-        analysis: Analysis
-        arts: Arts
-        current_events: Current Events
-        geography: Geography
-        how_to: How To
-        history: History
-        news: News
-        technology: Technology
+        adventure: Dobrodružné
+        analysis: Analýza
+        arts: Umění
+        current_events: Současné události
+        geography: Zeměpisné
+        how_to: Ńávody
+        history: Historie
+        news: Novinky
+        technology: Technologie
 
       books:
-        label: Books
+        label: Knihy
         contradictionary: Contradictionary
         days_of_war_nights_of_love: Days of War Nights of Love
         expect_resistance: Expect Resistance
@@ -80,106 +80,107 @@ cs:
         work: Work
 
       podcast:
-        label: Podcast
+        label: Podcasty
         feed: RSS
         the_ex_worker: The Ex-Worker
         the_hotwire: The Hotwire
         no_wall_they_can_build: No Wall They can Build
 
       videos:
-        label: Videos
+        label: Videa
 
       tools:
-        label:    Tools
-        zines:    Zines
-        journals: Journals
-        posters:  Posters
-        stickers: Stickers
-        videos:   Videos
-        music:    Music
-        logos:    Logos
-        to_change_everything:          To Change Everything
-        steal_something_from_work_day: Steal Something from Work Day
+        label:    Nástroje
+        zines:    Ziny
+        journals: Deníky
+        posters:  Plakáty
+        stickers: Samolepky
+        videos:   Videa
+        music:    Hudba
+        logos:    Loga
+        to_change_everything:          Změň vše
+        steal_something_from_work_day: Ukradni něco v práci
 
       store:
-        label: Store
-        description: Books, Posters, Stickers, and more…
+        label: Obchod
+        description: Knihy, Plakáty, Samolepky, a víc..
 
       projects:
-        label: Projects
+        label: Projekty
         kickstarter: Kickstarter
 
     about:
-      first_time_text: Is this your first time hearing about CrimethInc.?
-      first_time_link: Start here. →
-      heading: About CrimethInc.
+      first_time_text: Slyšíš o CrimethInc poprvé. ?
+      first_time_link: Začni tady. →
+      heading: O CrimethInc.
       description: |
-        CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+        CrimethInc. Je odbojová allince a decentralizovaná síť která se zavázala k anonymní kolektivní akci a útěku z vězení našeho času. Snažíme se znovuobjevit náš život ve světe s ohledem na principy sebeurčení a vzájemné pomoci.
 
-        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._
-      more_link: More about CrimethInc. →
-      donate_button_text: Support this site
+        Věříme že by si měl mít možnost volně využít svůj nekonečný potenciál tak jak uznáš za vhodné. Žádná vláda, trh , nebo ideologie by ti neměla diktovat jaký bude tvůj život. Jestli souhlasíš, _Tak s tím pojďme něco udělat._
+      more_link: Víc o CrimethInc. →
+      donate_button_text: Podpoř nás.
 
     contact:
       newsletter:
-        heading: Email Updates
-        description: Sign up here to receive regular email updates. _(Processed by Mailchimp.)_
-        signup_form_placeholder: What’s your email address?
-        signup_form_select_placeholder: You want a lot of emails? Or a little?
-        signup_form_select_option_lot:    Every little thing. (Many emails)
-        signup_form_select_option_little: Just the big stuff! (Fewer emails)
+        heading: Aktualizace Emailem
+        description: Přihlaš se pro odběr pravidelných zpráv z našeho webu. _(Zpracováno přes MailChimp.)_
+        signup_form_placeholder: Jaký je tvůj email?
+        signup_form_select_placeholder: Chceš hodně emailů? Nebo málo?
+        signup_form_select_option_lot:    Každou maličkost! (Many emails)
+        signup_form_select_option_little:  Jen to důležité! (Fewer emails)
         signup_button_text: Sign Up
       social:
-        heading: Find Us Elsewhere
-        description: Keep up with our activities on the following additional platforms.
+        heading: Sleduj nás jinde
+        description:  Sleduj naše aktivity na následujících platformách.
 
     mantra:
-      - If your heart is free, the ground you stand on is liberated territory. Defend it.
-      - Only those prepared to go too far will learn how far they can go.
-      - Desperate measures are long overdue.
-      - Cradle the seed, even in the volcano’s mouth.
-      - The future is in chains within you — set it free.
-      - A spark for every powder keg.
-      - Esperanza no espera.
+      - Máš li svobodné srdce, zem na které stojíš je již osvobozená. Braň jí.
+      - Jen ti připraveni dojít příliš daleko zjistí jak daleko mohou jít 
+      - Zoufalé časy už dávno skončily
+      - Starej se o semínko, i ve chřtánu sopky.
+      - Budoucnost máš spoutanou v sobě — osvoboď ji.
+      - Jiskra pro každý sud střelného prachu.
+      - Bojujeme příští bitvu.
       - Mobilis in mobili
+      - Bojujeme další válku.
 
-    site_mode: Switch to the lite version of the site →
+    site_mode: Přepni na odlehčenou verzi stránky →
 
   page_titles:
     about:
-      contact: Contact
-      about: About
-      library: Online Reading Library
-      store: Store
+      contact: Kontakt
+      about: O nás 
+      library: Online knihovna
+      store: Obchod
       post_order_success: Post-Order Glow
       submission_guidelines: Submission Guidelines
       steal_something_from_work_day: Steal Something from Work Day
     search:
-      index: Search
-      results: Results for
-      advanced: Advanced Search
+      index: Hledat
+      results: Výslekdy pro
+      advanced: Pokročilé vyhledávání
     videos:
-      index: Videos
+      index: Videa
     tools:
-      index: Tools
+      index: Nástroje
     posters:
-      index: Posters
+      index: Plakáty
     journals:
-      index: Journals
+      index: Deníky
     zines:
-      index: Zines
+      index: Ziny
     stickers:
-      index: Stickers
+      index: Samolepky
     logos:
-      index: Logos
+      index: Loga
     podcasts:
-      index: Podcasts
-      transcript: Transcript
+      index: Podcasty
+      transcript: Přepisy
     categories:
-      index: Categories
+      index: Kategorie
     books:
-      index: Books
-      extras: Extras
+      index: Knihy
+      extras: Extra
       lit_kit: Literature Distribution Kit
       into_libraries: CrimethInc. Into Libraries
       contradictionary: Contradictionary
@@ -192,31 +193,31 @@ cs:
       work: Work
 
   podcast:
-    latest_episode: Latest Episode
-    other_episodes: All Episodes
-    listen: Listen to the Episode
-    download: Download
-    summary: Summary
-    show_notes: Show Notes
-    transcript: Transcript
-    notes_and_links: Notes and Links
-    full_episode_transcript: Full Episode Transcript
+    latest_episode: Poslední epizoda
+    other_episodes: Všechny epizody
+    listen: Poslechni si epizodu
+    download: Stáhnout
+    summary: Shrnutí
+    show_notes: Ukaž poznámky
+    transcript: Přepis
+    notes_and_links: Poznámky a Odkazy
+    full_episode_transcript: Přepis Celé Epizody
 
   tools:
     poster:
-      image_description:      Photo of ‘%{title}’ front side
-      back_image_description: Photo of ‘%{title}’ back side
+      image_description:      Fotka  ‘%{title}’ přední strana
+      back_image_description: Fotka ‘%{title}’ zadní strana
 
   downloads:
-    heading: Downloads
+    heading: Ke stažení
     formats:
-      screen_single_page_view:  Screen Single Page View PDF
-      screen_two_page_view:     Screen Two Page View PDF
-      print_color:              Print Color PDF
-      print_black_and_white:    Print B/W PDF
-      print_color_a4:           Print Color A4 PDF
-      print_black_and_white_a4: Print B/W A4 PDF
-      lite:                     Lo Res PDF
+      screen_single_page_view:  Ofoť jednu stranu PDF
+      screen_two_page_view:     Ofoť dvě strany PDF
+      print_color:              Vytisknout Barevně PDF
+      print_black_and_white:    Vytisknout Černobíle PDF
+      print_color_a4:           Vytisknout Barevně A4 PDF
+      print_black_and_white_a4: Vytisknout Černobíle A4 PDF
+      lite:                     Nízké Rozlišení PDF
       epub:                     ePub
       mobi:                     Mobi
 
@@ -225,184 +226,180 @@ cs:
       first: "&laquo;"
       last: "&raquo;"
       previous: "&lsaquo;"
-      previous_screen_reader: Previous
+      previous_screen_reader: Předchozí
       next: "&rsaquo;"
-      next_screen_reader: Next
+      next_screen_reader: Další
       truncate: "&hellip;"
-      next_page: "Next &rsaquo;"
+      next_page: "Další &rsaquo;"
       previous_page: "&lsaquo; Previous"
-      next_article: "%{title}: Next &rsaquo;"
+      next_article: "%{title}: Další &rsaquo;"
       previous_article: "&lsaquo; Previous: %{title}"
-      next_month: "&lsaquo; Next Month (%{month})"
-      previous_month: "(%{month}) Previous Month &rsaquo;"
-      next_year: "&lsaquo; Next Year (%{year})"
-      previous_year: "(%{year}) Previous Year &rsaquo;"
+      next_month: "&lsaquo; Další měsíc (%{month})"
+      previous_month: "(%{month}) Předchozí měsíc &rsaquo;"
+      next_year: "&lsaquo; Další rok (%{year})"
+      previous_year: "(%{year}) Předchozí rok &rsaquo;"
 
     tools:
-      buy_now_button_text:             Buy Now
-      zine_download_read_button_text:  Download PDF for Reading
-      zine_download_print_button_text: Download PDF for Printing
-      zine_download_lite_button_text:  Download Lo Res PDF
-      zine_download_epub_button_text:  Download ePub eBook
-      zine_download_mobi_button_text:  Download Mobi eBook
+      buy_now_button_text:             Kup zde
+      zine_download_read_button_text:  Stáhni PDF pro Čtení
+      zine_download_print_button_text: Stáhni PDF pro Tisk
+      zine_download_lite_button_text:  Stáhni Lo Res PDF
+      zine_download_epub_button_text:  Stáhni ePub eKnihu
+      zine_download_mobi_button_text:  Stáhni Mobi eKnihu
 
-      book_download_read_button_text:  Download Two Page View PDF
-      book_download_print_button_text: Download Print PDF
-      book_download_lite_button_text:  Download Single Page View PDF
-      book_download_epub_button_text:  Download ePub eBook
-      book_download_mobi_button_text:  Download Mobi eBook
+      book_download_read_button_text:  Stáhni Oboustraný náhled PDF
+      book_download_print_button_text: Stáhni PDF na tisk
+      book_download_lite_button_text:  Stáhni Jednostraný náhled PDF
+      book_download_epub_button_text:  Stáhni ePub eBook
+      book_download_mobi_button_text:  Stáhni Mobi eBook
 
       admin_book_read_download_text:  Two Up PDF
-      admin_book_print_download_text: Print PDF
+      admin_book_print_download_text: Vytisknout PDF
       admin_book_lite_download_text:  One Up PDF
       admin_book_epub_download_text:  Mobi
       admin_book_mobi_download_text:  ePub
 
-      admin_zine_read_download_text:  Read PDF
-      admin_zine_print_download_text: Print PDF
-      admin_zine_lite_download_text:  Lo-Res PDF
+      admin_zine_read_download_text:  Zobrazit PDF
+      admin_zine_print_download_text: Vytisknout PDF
+      admin_zine_lite_download_text:  Lo Res PDF
       admin_zine_epub_download_text:  Mobi
       admin_zine_mobi_download_text:  ePub
 
       # these text values are wrapped in quotes because each has a colon in its text value
-      download_front_button_text: "Download PDF : Front"
-      download_back_button_text:  "Download PDF : Back"
-      download_front_color_button_text:  "Download PDF : Front Color"
-      download_back_color_button_text:   "Download PDF : Back Color"
-      download_front_black_and_white_button_text: "Download PDF : Front B/W"
-      download_back_black_and_white_button_text:  "Download PDF : Back B/W"
+      download_front_button_text: "Stáhni PDF : Front"
+      download_back_button_text:  "Stáhni PDF : Back"
+      download_front_color_button_text:  "Stáhni PDF : Front Color"
+      download_back_color_button_text:   "Stáhni PDF : Back Color"
+      download_front_black_and_white_button_text: "Stáhni PDF : Front B/W"
+      download_back_black_and_white_button_text:  "Stáhni PDF : Back B/W"
 
-      pdf_donate_button_text: Donate
-      pdf_donate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
+      pdf_donate_button_text: Přispěj
+      pdf_donate_button_label:Přispěj zde aby si nám pomohl udržet toto PDF volně dostupné a podpořil nás ve vytváření dalších.
 
-      journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
-      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
-      music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
-      posters_intro_text:  Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
-      stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
-      tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
-      videos_intro_text:   Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
-      zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [_To Change Everything_ site](/tce).
+      journals_intro_text: Tady, si můžeš stáhnout PDF _Rolling Thunder,_ našeho uznávaného deníku a analýzy přímé akce, _Harbinger_, náš klasický tabloid šířící "propagandu chtíče," a da,ší ambiciozní piblikace za uplynulé dvě dekády.
+      logos_intro_text:    CrimethInc. pro sebe! Loga pro tvé vlastní CrimethInc. projekty.
+      music_intro_text:    Vyber si z širokého výběru alb které jsme [vydali](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) od roku 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
+      posters_intro_text:  Přiveď zdi tvého domu, školy, města, nebo komunitního centra k životu! Doporučujeme používát Taposu nebo [lepidlo z mouky](/posters) na vylepení v ulicích .
+      stickers_intro_text: Nech němé objekty mluvit nahlas. Objednej si je ve velkém nebo si je vytiskni na samolepící papír.
+      tools_intro_text:    Na základě více než dvaceti let našich aktivit, ti nabízíme spoustu materiálů ke stažení nebo objednání. Použij je ke vzdělávání, agitaci a přetvoření míst ve tvém okolí.
+      videos_intro_text:   Nouzový přenosový systém — Výběr videí pro  CrimethInc. Perpetual Motion Pictures
+      zines_intro_text:    Velká část našich textů je dostupná jako pamflety. Vytiskni je a použij k distribuci ve školách, na prostestech, koncertech, společenských událostech, farmářských trzích, a všude jinde kde budou lidé hladový po nových nápadech. Můžeš taky využít PDF  _Změnit všechno,_ náš úvod k anarchismu, dostupný v mnoha jazycích zde [_To Change Everything_ site](/tce).
       books_intro_text: |
-        From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
+        Od zapáleného psaní a pečlivé editiace , ke komplikovaným a jedinečným nápadům, k profesionální a opatrné produkci, tyto knihy jsou výsledkem velké lásky a péče. Děláme to přes deset let, a důkaz najdete ve všech těch malých detailech a pečlivě připravených momentech kterých lze dosáhnout pouze na papíru zmáčeném inkoustem.
 
-        All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
+        Všechny naše knihy, jsou vytisknuty sojovým inkoustem na 100% recyklovaný papír, který udělali zruční řemeslníci v Luisville, Qubec, Kanadě za použití nejkvalitnějších tiskáren.
 
-      books_heading_text:    We love making books.
-      journals_heading_text: Journals
-      logos_heading_text:    Logos
-      posters_heading_text:  Posters
-      stickers_heading_text: Stickers
-      tools_heading_text:    Tools
+      books_heading_text:    Milujeme dělat knihy.
+      journals_heading_text: Deníky
+      logos_heading_text:    Loga
+      posters_heading_text:  Plakáty
+      stickers_heading_text: Samolepky
+      tools_heading_text:    Nástroje
       zines_heading_text:    Zines
 
       buttons:
-        browse_journals_text: Browse All Journals
-        browse_logos_text: Browse All Logos
-        browse_music_text: Browse All Music
-        browse_posters_text: Browse All Posters
-        browse_stickers_text: Browse All Stickers
-        browse_videos_text: Browse All Videos
-        browse_zines_text: Browse All Zines
+        browse_journals_text: Prohlédni si všechny Deníky 
+        browse_logos_text: Prohlédni si všechny Loga 
+        browse_music_text: Prohlédni si všechnu Hudbu 
+        browse_posters_text: Prohlédni si všechny Plakáty
+        browse_stickers_text: Prohlédni si všechny Samolepky
+        browse_videos_text: Prohlédni si všechny Videa
+        browse_zines_text: Prohlédni si všechny Ziny
 
     books:
-      crimethinc_into_libraries_heading: CrimethInc. Into Libraries
-      crimethinc_into_libraries_intro: For those who don’t have the extra resources with which to buy books or who just aren’t excited about acquiring more possessions, we have good news for you—the [CrimethInc. Into Libraries program](/books/into-libraries). Our books are [in more libraries than you might guess](/2007/10/09/crimethinc-into-libraries-progress-report), and if not, you can probably get them onto the shelves, for free. [Find out how!](/books/into-libraries)
+      crimethinc_into_libraries_heading: CrimethInc. Do knihovny 
+      crimethinc_into_libraries_intro: Pro ty z vás kteří zrovna nemají zdroje navíc aby si mohli koupit knihy, nebo se prostě jen nehrnou do toho vlastnit další věci, máme dobré zprávy [CrimethInc. Into Libraries program](/books/into-libraries). Naše knihy jsou [Ve více knihovnách než by tě napadlo](/2007/10/09/crimethinc-into-libraries-progress-report), A jestli ne, pravděpodobně je tam můžes doustat zadarmo, zjisti jak. [Zjisti jak!](/books/into-libraries)
 
-      literature_distro_kit_heading: Literature Distro Kit
-      literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
+      literature_distro_kit_heading: Sada Pro Distribuci Literatury 
+      literature_distro_kit_intro: Naše knihy jsou základním kamenem naší [Sady Pro Distribuci Literatury](/books/lit-kit), Je to sada ve které je vše co potřebuješ pro to, aby si mohl prodávat naše knihy na koncertech nebo je šířil kdekoliv chceš. Je to mix věcí na prodej a na rozdávání.
+      
 
     support:
       new:
-        heading: Invest Your Money in CrimethInc.—!
+        heading: Investuj svoje peníze do CrimethInc.—!
         description: |
-          _Use the slider to adjust your donation. No amount is too big to be needed or too small to be helpful! If you can, sign up to donate on a monthly basis, so we can count on you to sustain us for the long haul._
+          _Použij tenhle slider pro úpravu konečné částky. Každá částka nám pomůže! Jestli chceš můžeš se stát pravidelným dárcem, takže se můžeme spolehnout že budeme mít finance i do budoucna._
 
-          CrimethInc. is an all-volunteer project with no outside sources of funding. We offer everything we do for free or at break-even prices while maintaining some of the highest quality standards in our field. We publish constantly, circulating material in [over 30 languages](/tce) on [all seven continents](/2008/01/06/now-serving-seven-continents). We’ve kept this up for a quarter of a century.
+          CrimethInc. je čistě dobrovolnický projekt bez vnějšího financování. Vše co nabízíme, nabízíme zadarmo nebo za ceny na pokrytí nákladů. Stále vydáváme něco nového, a náš materiál je dostupný [ve více než 30 jazycích](/tce) na [všech sedmi kontinentech](/2008/01/06/now-serving-seven-continents). A takhle to děláme už čtvt století.
 
-          We do all this on a shoestring budget—but despite our ingenuity, some expenses are unavoidable. We depend on your assistance to cover those. With more resources, we could expand to utilize more formats and free up time to publish even more frequently.
+          Všechno tohle děláme s minimálním rozpočtem, ale navzdory naší důmyslnosti, se nevyhneme výdajům. A na jejich pokrytí jsme závislí na vaši pomoci. S více zdroji, se můžeme rozšířit na víc formatů a uvolnit čas tak abychom mohli vydávat ještě častěji. 
 
-          As always, of course, the very best way to support what we are doing is to _do it yourself._
+          A jako vždy, nejlepší způsob jak podpořit to co děláme je _D.I.Y._
 
-        radio_label_monthly: Monthly
-        radio_label_one_time: One-time
-        amount_label: Support Amount
-        description_monthly: Monthly Subscription
-        description_one_time: One-Time Support
-        button_text: Next →
+        radio_label_monthly: Měšíční.
+        radio_label_one_time: Jednorázové.
+        amount_label: Částka
+        description_monthly: Měsíční podpora
+        description_one_time: Jednorázová podpora
+        button_text: Další →
         support_request:
-          header: Existing Monthly Subscribers
-          description: Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.
-          email_label: Email Address
-          email_placeholder: you@example.com
-          button_text: Send Super Secret Link
+          header: Existující měsíční předplatné.
+          description: Potřebuješ upravit nebo zrušit předplatné? Vlož email kterým se přihlašuješ, A my ti na něj pošleme supertajný odkaz kde ho můžeš upravit .
+          email_label: Emailová adresa
+          email_placeholder: ty@example.com
+          button_text: Pošli supertajný odkaz
 
       create:
-        repeat_subscriber_error: We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!
+        repeat_subscriber_error: Už máme měsíčního podporovatele s touto emailovou adresou. Jestli chceš přispět víc, zkus jednorázový příspěvek. Díky! 
 
       create_session:
-        no_existing_customer_error: We can't find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:info@crimethinc.com) so we can help you.
-        success_notice: We sent an email to _%{email}_ with a link where you can make changes to your subscription.
-        repeat_customer_error: You already submitted a request! Look for an email from _info@crimethinc.com_. If you never got the email or you've lost your super secret link, wait an hour and try again.
+        no_existing_customer_error: Nemůžeme najít podporovatele s touto emailovou adresou. Jestli si myslíš že jde o chybu napiš nám prosím[email na ](mailto:info@crimethinc.com) ať ti můžeme pomoct.
+        success_notice: Poslali jsme na email  _%{email}_ odkaz ze kterého můžeš změnit své předplatné.
+        repeat_customer_error: O svůj odkaz už jsi požádal! Hledej email od  _info@crimethinc.com_. Jestli jsi email nikdy nedostal nebo si ztratil svůj supertajný odkaz, počkej hodinu a zkus to znovu.
 
       edit:
-        heading: Your Subscription
-        description: Thank you so much for your ongoing support. We count on contributions like yours to do what we do.
-        expired_link_error: That link has expired. Please try again.
-        expires_at: This page will expire in about %{minutes} minutes.
+        heading: Tvé předplatné
+        description: Děkujeme ti moc za tvou pravidelnou podporu. Spoléháme na přispěvatele jako jsi ty pro to abychom mohli dělat to co děláme. 
+        expired_link_error: Odkaz vypršel. Zkus to prosím znovu.
+        expires_at: Tato stránka vyprší za  %{minutes} minut.
         update:
-          amount_label: Monthly Support
-          amount_slider_label: Drag the slider to change your subscription amount.
-          button_text: Update Subscription
-          button_confirm: Are you sure you want to update your subscription amount?
-          start_date: Subscribed since
-          next_date: Next charge
+          amount_label: Měsíční Podpora 
+          amount_slider_label: Potáhni slider aby si změnil výši podpory.
+          button_text: Uprav předplatné
+          button_confirm: Jsi si jistý že chceš upravit výši tvé podpory?
+          start_date: Podporuješ nás od
+          next_date: Další platba
         cancel:
-          header: If you want to cancel your subscription, click the big red button!
-          button_text: Cancel Subscription
-          button_confirm: Are you sure you want to completely cancel your subscription?
+          header: Jestli chceš zrušit své předplatné, Klikni na velké červené tlačítko!
+          button_text: Zrušit předplatné
+          button_confirm: Jsi si jistý že chceš zrušit své předplatné?
 
       update_subscription:
-        notice: Your subscription amount has been updated!
-        error: There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+        notice: Částka tvého předplatného byla změněna!
+        error: Při úpravě částky se něco nepovedlo. Zkus to znovu! Jestli problém přetrvává, prosím [pošli nám email na](mailto:info@crimethinc.com) abychom ti mohli pomoct.
 
       cancel_subscription:
-        notice: Your subscription has been canceled.
-        error: There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:info@crimethinc.com) so we can help you.
+        notice: Tvé předplatné bylo zrušeno.
+        error: Při rušení tvého předplatného se něco nepovedlo. Zkus to znovu! Jestli problém přetrvává, prosím [pošli nám email na](mailto:info@crimethinc.com) abychom ti mohli pomoct.
 
       thanks:
-        heading: Thanks for your help!
+        heading: Díky za pomoc!
         description: |
-          We welcome your [feedback](mailto:info@crimethinc.com) about our efforts and your [participation](mailto:info@crimethinc.com) in them.
+          Uvítáme tvou [zpětnou vazbu](mailto:info@crimethinc.com) tykající se naší snahy a tvé [účasti](mailto:info@crimethinc.com) v ní.
+          Brzy ti přijde potvrzovací email.
 
-          You’ll receive an email confirmation soon.
-
-          If you signed up for a monthly subscription, you can update or cancel your subscription at any time by submitting your email address in the form at the bottom of the [support](/support) page.
+          Jestli si se přihlásil k měsíčnímu předplatnému, můžeš ho upravit nebo zrušit kdykoliv chceš vyplněním tvé emailové adresy ve formuláři na spodu stránky [Podpora](/support) page.
 
       mailers:
         edit_subscription:
-          subject: Request for Super Secret Support Link
-          header: Your Super Secret Support Link has arrived!
-          link_description: Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe.
-          repeat_request: If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link.
-          more_help: You can also reply to this email if need more assistance.
+          subject: Požádej o svů supertajný link na podporu
+          header:  Tvůj supertajný kód dorazil!
+          link_description: Kdokoliv kdo má přístup k odkazu nahoře, ho může použít k tomu aby změnil částku tvého předplatného. Za hodinu vyprší, udržuj ho v tajnosti a bezpečí
+          repeat_request: Jestli nestihneš co si potřeboval, není se čeho bát, vždy ti můžeme poslad další odkaz
+          more_help: Můžeš taky odpovědět na tento email jestli potřebuješ s něčím pomoct.
 
     languages:
-      view_site_in_locale:  View this site in Czech [here](https://cs.crimethinc.com).
-      view_tools_in_locale: You can access an array of posters, zines, and other materials in Czech [here](https://cs.crimethinc.com/tools).
-      view_books_in_locale: You can access our books in Czech [here](https://cs.crimethinc.com/books).
+      view_site_in_locale:  Podívej se na tuto stránku v angličtině [zde](https://cs.crimethinc.com).
+      view_tools_in_locale: Tady najdeš řadu plakátů, zinů, a dalších materiálů v Angličtině  [zde](https://cs.crimethinc.com/tools).
+      view_books_in_locale: Přístup k našim knihám v angličtině [zde](https://cs.crimethinc.com/books).
 
-      heading: Languages
+      heading: Jazyky
       description: |
-        CrimethInc. material has appeared in over three dozen languages; our introductory
-        primer, [To Change Everything](/tce), is available in 30. We have
-        [long](/2010/08/18/non-english-crimethinc-projects) aspired to collect all the different
-        translations on this site. If you would like to translate our material—or if you can
-        help us to collect translations for this archive or help us maintain communication
-        between related projects around the world—please
-        [contact us](mailto:foreignlegion@crimethinc.com).
+        CrimethInc. materiály se objevily ve více než třech desítkách jazyků; náš úvodní text, [Změňit vše](/tce), je dostupný ve třiceti.
+        [Dlouho dobu](/2010/08/18/non-english-crimethinc-projects) se snažíme přeložit tuto stránku. Jestli by si chtěl přeložit náš materiál—nebo jestli nám můžeš pomoct najít překlady, nebo nám můžes pomoct v udržení komunikace s příbuznými projekty na celém.
+        [Napiš nám](mailto:foreignlegion@crimethinc.com).
 
-        Here, you can find all the articles on this site categorized according to language.
+        Tady můžeš najít všechny články na této stránce seřazeny dle jazyka 
 
   helpers:
     page_entries_info:
