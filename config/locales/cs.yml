@@ -383,7 +383,7 @@ cs:
       mailers:
         edit_subscription:
           subject: Požádej o svů supertajný link na podporu
-          header:  Tvůj supertajný kod dorazil!
+          header:  Tvůj supertajný kód dorazil!
           link_description: Kdokoliv kdo má přístup k odkazu nahoře, ho může použít k tomu aby změnil částku tvého předplatného. Za hodinu vyprší, udržuj ho v tajnosti a bezpečí
           repeat_request: Jestli nestihneš co si potřeboval, není se čeho bát, vždy ti můžeme poslad další odkaz
           more_help: Můžeš taky odpovědět na tento email jestli potřebuješ s něčím pomoct.
