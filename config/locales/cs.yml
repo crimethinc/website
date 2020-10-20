@@ -31,7 +31,7 @@ cs:
     subscribe: Odebírej
     support: Podpoř nás
     search: Hledej
-    about: O nás 
+    about: O nás
     locale_articles: Všechny články v českém jazyce →
 
     first_time: Jsi tu poprvé? Začni tady →
@@ -135,7 +135,7 @@ cs:
 
     mantra:
       - Máš li svobodné srdce, zem na které stojíš je již osvobozená. Braň jí.
-      - Jen ti připraveni dojít příliš daleko zjistí jak daleko mohou jít 
+      - Jen ti připraveni dojít příliš daleko zjistí jak daleko mohou jít
       - Zoufalé časy už dávno skončily
       - Starej se o semínko, i ve chřtánu sopky.
       - Budoucnost máš spoutanou v sobě — osvoboď ji.
@@ -149,7 +149,7 @@ cs:
   page_titles:
     about:
       contact: Kontakt
-      about: O nás 
+      about: O nás
       library: Online knihovna
       store: Obchod
       post_order_success: Post-Order Glow
@@ -274,7 +274,7 @@ cs:
       download_back_black_and_white_button_text:  "Stáhni PDF : Back B/W"
 
       pdf_donate_button_text: Přispěj
-      pdf_donate_button_label:Přispěj zde aby si nám pomohl udržet toto PDF volně dostupné a podpořil nás ve vytváření dalších.
+      pdf_donate_button_label: Přispěj zde aby si nám pomohl udržet toto PDF volně dostupné a podpořil nás ve vytváření dalších.
 
       journals_intro_text: Tady, si můžeš stáhnout PDF _Rolling Thunder,_ našeho uznávaného deníku a analýzy přímé akce, _Harbinger_, náš klasický tabloid šířící "propagandu chtíče," a da,ší ambiciozní piblikace za uplynulé dvě dekády.
       logos_intro_text:    CrimethInc. pro sebe! Loga pro tvé vlastní CrimethInc. projekty.
@@ -298,21 +298,21 @@ cs:
       zines_heading_text:    Zines
 
       buttons:
-        browse_journals_text: Prohlédni si všechny Deníky 
-        browse_logos_text: Prohlédni si všechny Loga 
-        browse_music_text: Prohlédni si všechnu Hudbu 
+        browse_journals_text: Prohlédni si všechny Deníky
+        browse_logos_text: Prohlédni si všechny Loga
+        browse_music_text: Prohlédni si všechnu Hudbu
         browse_posters_text: Prohlédni si všechny Plakáty
         browse_stickers_text: Prohlédni si všechny Samolepky
         browse_videos_text: Prohlédni si všechny Videa
         browse_zines_text: Prohlédni si všechny Ziny
 
     books:
-      crimethinc_into_libraries_heading: CrimethInc. Do knihovny 
+      crimethinc_into_libraries_heading: CrimethInc. Do knihovny
       crimethinc_into_libraries_intro: Pro ty z vás kteří zrovna nemají zdroje navíc aby si mohli koupit knihy, nebo se prostě jen nehrnou do toho vlastnit další věci, máme dobré zprávy [CrimethInc. Into Libraries program](/books/into-libraries). Naše knihy jsou [Ve více knihovnách než by tě napadlo](/2007/10/09/crimethinc-into-libraries-progress-report), A jestli ne, pravděpodobně je tam můžes doustat zadarmo, zjisti jak. [Zjisti jak!](/books/into-libraries)
 
-      literature_distro_kit_heading: Sada Pro Distribuci Literatury 
+      literature_distro_kit_heading: Sada Pro Distribuci Literatury
       literature_distro_kit_intro: Naše knihy jsou základním kamenem naší [Sady Pro Distribuci Literatury](/books/lit-kit), Je to sada ve které je vše co potřebuješ pro to, aby si mohl prodávat naše knihy na koncertech nebo je šířil kdekoliv chceš. Je to mix věcí na prodej a na rozdávání.
-      
+
 
     support:
       new:
@@ -322,7 +322,7 @@ cs:
 
           CrimethInc. je čistě dobrovolnický projekt bez vnějšího financování. Vše co nabízíme, nabízíme zadarmo nebo za ceny na pokrytí nákladů. Stále vydáváme něco nového, a náš materiál je dostupný [ve více než 30 jazycích](/tce) na [všech sedmi kontinentech](/2008/01/06/now-serving-seven-continents). A takhle to děláme už čtvt století.
 
-          Všechno tohle děláme s minimálním rozpočtem, ale navzdory naší důmyslnosti, se nevyhneme výdajům. A na jejich pokrytí jsme závislí na vaši pomoci. S více zdroji, se můžeme rozšířit na víc formatů a uvolnit čas tak abychom mohli vydávat ještě častěji. 
+          Všechno tohle děláme s minimálním rozpočtem, ale navzdory naší důmyslnosti, se nevyhneme výdajům. A na jejich pokrytí jsme závislí na vaši pomoci. S více zdroji, se můžeme rozšířit na víc formatů a uvolnit čas tak abychom mohli vydávat ještě častěji.
 
           A jako vždy, nejlepší způsob jak podpořit to co děláme je _D.I.Y._
 
@@ -340,7 +340,7 @@ cs:
           button_text: Pošli supertajný odkaz
 
       create:
-        repeat_subscriber_error: Už máme měsíčního podporovatele s touto emailovou adresou. Jestli chceš přispět víc, zkus jednorázový příspěvek. Díky! 
+        repeat_subscriber_error: Už máme měsíčního podporovatele s touto emailovou adresou. Jestli chceš přispět víc, zkus jednorázový příspěvek. Díky!
 
       create_session:
         no_existing_customer_error: Nemůžeme najít podporovatele s touto emailovou adresou. Jestli si myslíš že jde o chybu napiš nám prosím[email na ](mailto:info@crimethinc.com) ať ti můžeme pomoct.
@@ -349,11 +349,11 @@ cs:
 
       edit:
         heading: Tvé předplatné
-        description: Děkujeme ti moc za tvou pravidelnou podporu. Spoléháme na přispěvatele jako jsi ty pro to abychom mohli dělat to co děláme. 
+        description: Děkujeme ti moc za tvou pravidelnou podporu. Spoléháme na přispěvatele jako jsi ty pro to abychom mohli dělat to co děláme.
         expired_link_error: Odkaz vypršel. Zkus to prosím znovu.
         expires_at: Tato stránka vyprší za  %{minutes} minut.
         update:
-          amount_label: Měsíční Podpora 
+          amount_label: Měsíční Podpora
           amount_slider_label: Potáhni slider aby si změnil výši podpory.
           button_text: Uprav předplatné
           button_confirm: Jsi si jistý že chceš upravit výši tvé podpory?
@@ -399,7 +399,7 @@ cs:
         [Dlouho dobu](/2010/08/18/non-english-crimethinc-projects) se snažíme přeložit tuto stránku. Jestli by si chtěl přeložit náš materiál—nebo jestli nám můžeš pomoct najít překlady, nebo nám můžes pomoct v udržení komunikace s příbuznými projekty na celém.
         [Napiš nám](mailto:foreignlegion@crimethinc.com).
 
-        Tady můžeš najít všechny články na této stránce seřazeny dle jazyka 
+        Tady můžeš najít všechny články na této stránce seřazeny dle jazyka
 
   helpers:
     page_entries_info:
