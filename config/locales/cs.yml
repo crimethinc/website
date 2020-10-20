@@ -99,7 +99,7 @@ cs:
         music:    Hudba
         logos:    Loga
         to_change_everything:          Změň vše
-        steal_something_from_work_day: Seber něco v práci
+        steal_something_from_work_day: Ukradni něco v práci
 
       store:
         label: Obchod
