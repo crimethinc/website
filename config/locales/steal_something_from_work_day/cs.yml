@@ -115,8 +115,8 @@ cs:
         -
           name: Germany
           description: "[BEKLAU-DEINEN-ARBEITSPLATZ-TAG](http://crimethinc.blogsport.de/2013/11/01/beklau-deinen-arbeitsplatz-tag/)"
-          preview_url: http://minijob.cc/wp-content/uploads/2013/04/steal-from-work-day.jpg
-          download_url: http://minijob.cc/wp-content/uploads/2013/04/steal-from-work-day.jpg
+          preview_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/de/steal-from-work-day-minijob-cc.jpg
+          download_url: https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/de/steal-from-work-day-minijob-cc.jpg
 
         -
           name: Sweden
