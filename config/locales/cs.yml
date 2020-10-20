@@ -389,9 +389,9 @@ cs:
           more_help: Můžeš taky odpovědět na tento email jestli potřebuješ s něčím pomoct.
 
     languages:
-      view_site_in_locale:  Podívej se na tuto stránku v angličtině [zde](https://crimethinc.com).
-      view_tools_in_locale: Tady najdeš řadu plakátů, zinů, a dalších materiálů v Angličtině  [zde](https://crimethinc.com/tools).
-      view_books_in_locale: Přístup k našim knihám v angličtině [zde](https://crimethinc.com/books).
+      view_site_in_locale:  Podívej se na tuto stránku v angličtině [zde](https://cs.crimethinc.com).
+      view_tools_in_locale: Tady najdeš řadu plakátů, zinů, a dalších materiálů v Angličtině  [zde](https://cs.crimethinc.com/tools).
+      view_books_in_locale: Přístup k našim knihám v angličtině [zde](https://cs.crimethinc.com/books).
 
       heading: Jazyky
       description: |
