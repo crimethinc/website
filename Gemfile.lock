@@ -458,7 +458,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     squasher (0.6.2)
-    stackprof (0.2.15)
+    stackprof (0.2.16)
     sterile (1.0.17)
       nokogiri (>= 1.10.8)
     stringex (2.8.5)
