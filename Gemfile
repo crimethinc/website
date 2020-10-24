@@ -83,7 +83,7 @@ group :development, :test do
   # codestyle guide and linting
   gem 'rubocop', '1.0.0', require: false
   gem 'rubocop-performance', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop-rails', require: false
 end
 
 # testing / ci
