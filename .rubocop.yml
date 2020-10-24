@@ -1,6 +1,7 @@
 require:
   - rubocop-performance
-  - rubocop-rspec
+  # TODO: Uncomment when rubocop-rspec is compatible with rubocop <= 1.0
+  # - rubocop-rspec
 
 AllCops:
   NewCops: enable
@@ -45,22 +46,23 @@ Metrics/PerceivedComplexity:
 Naming/VariableNumber:
   EnforcedStyle: snake_case
 
-RSpec/DescribeClass:
-  Exclude:
-    - 'spec/system/*'
-
-RSpec/ExampleLength:
-  Max: 9
-  Exclude:
-    - 'spec/system/*'
-
-RSpec/MessageSpies:
-  Enabled: false
-
-RSpec/MultipleExpectations:
-  Max: 5
-  Exclude:
-    - 'spec/system/*'
+# TODO: Uncomment when rubocop-rspec is compatible with rubocop <= 1.0
+# RSpec/DescribeClass:
+#   Exclude:
+#     - 'spec/system/*'
+#
+# RSpec/ExampleLength:
+#   Max: 9
+#   Exclude:
+#     - 'spec/system/*'
+#
+# RSpec/MessageSpies:
+#   Enabled: false
+#
+# RSpec/MultipleExpectations:
+#   Max: 5
+#   Exclude:
+#     - 'spec/system/*'
 
 Style/AsciiComments:
   Enabled: false
