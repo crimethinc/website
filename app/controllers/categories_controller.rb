@@ -44,7 +44,7 @@ class CategoriesController < ApplicationController
   end
 
   def set_articles
-    @articles = @category.articles.live.published.page(params[:page]).per(25)
+    @articles = @category.articles.english.live.published.page(params[:page]).per(25)
 
     return redirect_to root_path if @articles.blank?
   end
