@@ -6,8 +6,6 @@ threads min_threads_count, max_threads_count
 port        ENV.fetch('PORT') { 3000 }
 environment ENV.fetch('RAILS_ENV') { 'development' }
 
-preload_app!
-
 # Puma 5 experiment
 # https://github.com/puma/puma/issues/2258
 wait_for_less_busy_worker
