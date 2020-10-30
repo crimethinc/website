@@ -7,7 +7,13 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'english' }
   end
 
-  trait(:en) {}
+  trait(:en) do
+    abbreviation { 'en' }
+    name_in_english { 'English' }
+    name { 'English' }
+    language_direction { 'ltr' }
+    slug { 'english' }
+  end
 
   trait(:ar) do
     abbreviation { 'ar' }
