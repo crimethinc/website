@@ -15,10 +15,12 @@
     <% @posters.each do |poster| %>
       <tr>
         <td class="p-3">
-          <div class="media">
-            <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-outline-primary btn-sm mr-3" %>
+          <div class="d-flex">
+            <div>
+              <%= link_to "EDIT", [:edit, :admin, poster], class: "btn btn-outline-primary btn-sm mr-3" %>
+            </div>
 
-            <div class="media-body">
+            <div>
               <%= link_to [:admin, poster] do %>
                 <h2 class="h4"><%= poster.title %></h2>
                 <h3 class="h5"><%= poster.subtitle %></h3>
@@ -33,7 +35,7 @@
                 <%= render 'admin/translate_this', resource: poster %>
               <% end %>
             </div>
-          </div><!-- .media -->
+          </div><!-- .d-flex -->
         </td>
 
         <td class="text-center align-top py-3">
