@@ -10,8 +10,12 @@ label  {
   font-weight: normal;
 }
 
-.articles-body:nth-child(even) {
-  background: #f3f3f3;
+.articles > article {
+  background: $color-gray-light;
+}
+
+.localizations article {
+  @extend .border-bottom;
 }
 
 // Border on this article (2017-08-23) indicates when the view counter started.
