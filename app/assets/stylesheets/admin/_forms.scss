@@ -22,6 +22,7 @@ input[type="file"]::-webkit-file-upload-button {
   max-height: 100px;
 }
 
+// Transitional for Bootstrap 5
 .form-group {
   @extend .mb-3;
 }
