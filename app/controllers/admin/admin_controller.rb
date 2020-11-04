@@ -1,6 +1,7 @@
 module Admin
   class AdminController < ApplicationController
     before_action :authorize
+    before_action :set_current_theme
 
     layout 'admin'
 
@@ -29,6 +30,10 @@ module Admin
       datetime  = Time.zone.parse("#{date} #{time}#{tz_offset}")
 
       params[controller_name.singularize.to_sym][:published_at] = datetime
+    end
+
+    def set_current_theme
+      Current.theme = 2017
     end
   end
 end
