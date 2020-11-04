@@ -110,6 +110,6 @@ module AdminHelper
   end
 
   def badge_color_class role:
-    { publisher: 'success', editor: 'warning', author: 'danger' }[role.to_sym]
+    { publisher: 'success text-white', editor: 'warning', author: 'danger text-white' }[role.to_sym]
   end
 end
