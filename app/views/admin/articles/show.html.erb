@@ -19,7 +19,7 @@
           <div class="card mb-3">
             <div class="card-header">
               <% if @article.canonical_record.locale.present? %>
-                <%= link_to @article.canonical_record.locale.upcase, [:admin, :locales], class: "badge badge-secondary" %>
+                <%= link_to @article.canonical_record.locale.upcase, [:admin, :locales], class: "badge bg-secondary text-white" %>
               <% end %>
 
               English Article
@@ -103,11 +103,11 @@
       <%= render "/admin/articles/publication_status_badge", resource: @article %>
 
       <% if @article.content_in_html? %>
-        <b class="badge badge-warning">HTML</b>
+        <b class="badge bg-warning">HTML</b>
       <% end %>
 
       <% if @article.locale.present? %>
-        <%= link_to @article.locale.upcase, [:admin, :locales], class: "badge badge-dark" %>
+        <%= link_to @article.locale.upcase, [:admin, :locales], class: "badge bg-dark text-white" %>
       <% end %>
     </p>
 
@@ -120,7 +120,7 @@
       Categories:<br>
       <% if @article.categories.present? %>
         <% @article.categories.each do |category| %>
-          <%= link_to category.name, category_path(category.slug), class: "badge badge-primary" %>
+          <%= link_to category.name, category_path(category.slug), class: "badge bg-primary text-white" %>
         <% end %>
       <% end %>
     </p>
@@ -129,7 +129,7 @@
       Tags:<br>
       <% if @article.tags.present? %>
         <% @article.tags.each do |tag| %>
-          <%= link_to tag.name, tag_path(tag.slug), class: "badge badge-info" %>
+          <%= link_to tag.name, tag_path(tag.slug), class: "badge bg-info text-white" %>
         <% end %>
       <% end %>
     </p>
