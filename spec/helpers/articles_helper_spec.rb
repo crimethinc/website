@@ -69,7 +69,7 @@ RSpec.describe ArticlesHelper, type: :helper do
 
       let(:date) { Date.parse('2017-01-01') }
 
-      it { is_expected.to eq('12:00&nbsp;+0000') }
+      it { is_expected.to eq('12:00') }
     end
 
     context 'without a datetime' do
