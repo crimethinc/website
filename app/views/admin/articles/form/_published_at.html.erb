@@ -1,6 +1,7 @@
 <div id="datetime">
   <% if @article.draft? %>
     <%= render "admin/datetime_group", form: form, post: @article, type: :article %>
+
     <p class="m-0 font-weight-bold">To Future Publish…</p>
     <p>
       Set a date and time above, then save this form.
