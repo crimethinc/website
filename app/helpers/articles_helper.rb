@@ -66,7 +66,7 @@ module ArticlesHelper
   end
 
   def display_time datetime = nil
-    datetime&.strftime('%l:%M&nbsp;%z')&.html_safe
+    datetime&.strftime('%l:%M')&.html_safe
   end
 
   def link_to_dates year: nil, month: nil, day: nil, show_year: true, show_month: true, show_day: true

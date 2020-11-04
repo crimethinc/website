@@ -1,0 +1,65 @@
+<article class="p-2 mb-3 rounded">
+
+  <%# mobile header… %>
+  <div class="articles-header row d-md-none mb-3">
+    <div class="col-8">
+      <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm mr-2" %>
+      <% unless article.english? %><span class="badge bg-secondary"><%= article.locale.upcase %></span><% end %>
+      <%= render "/admin/articles/publication_status_badge", resource: article if article.draft? %>
+      <%= render "/admin/articles/children_articles_badge", article: article %>
+    </div>
+
+    <div class="col-4 text-right">
+      <%= number_with_delimiter article.page_views %> Views
+
+      <% if article.english? %>
+        <b><%= number_with_delimiter article.aggregate_translation_page_views %> Total</b>
+      <% end %>
+    </div>
+  </div>
+  <%# …mobile header %>
+
+  <div class="row">
+    <div class="col d-none d-md-block col-md-2">
+      <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm mr-2" %><br>
+      <% unless article.english? %><span class="badge bg-secondary"><%= article.locale.upcase %></span><% end %>
+      <%= render "/admin/articles/publication_status_badge", resource: article if article.draft? %><br>
+      <%= render "/admin/articles/children_articles_badge", article: article %><br>
+      <%= render "/admin/articles/content_format_badge",    article: article %>
+    </div>
+
+    <div class="col">
+      <div class="row">
+
+        <div class="col-12 col-md-10">
+          <h2 class="h5 mb-0 font-weight-bold"><%= link_to article.title, [:admin, article] %></h2>
+
+          <% if article.subtitle.present? %>
+            <h3 class="h6 mb-1 font-weight-light"><%= link_to article.subtitle, [:admin, article] %></h3>
+          <% end %>
+
+          <%= time_tag article.published_at do %>
+            <b><%= display_date article.published_at %></b>
+            <span class="text-muted"><%= display_time article.published_at %></span>
+          <% end %>
+        </div>
+
+        <div class="col-md-2 d-none d-md-block text-right">
+          <p class="m-0"><%= number_with_delimiter article.page_views %> Views</p>
+
+          <% if article.english? %>
+            <p class="m-0"><b><%= number_with_delimiter article.aggregate_translation_page_views %> Total</b></p>
+          <% end %>
+        </div>
+      </div><!-- .col -->
+
+      <% if article.english? %>
+        <div class="mt-5">
+          <%= render "admin/translate_this", resource: article %>
+        </div>
+      <% end %>
+
+    </div><!-- .row -->
+  </div><!-- .col -->
+
+</article>
