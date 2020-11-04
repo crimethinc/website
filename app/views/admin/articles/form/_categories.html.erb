@@ -7,9 +7,9 @@
       <div class="form-check">
         <% @categories&.each do |category| %>
           <div>
-            <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
-              <%= category_check_box form: form, category: category %>
+            <%= category_check_box form: form, category: category %>
 
+            <%= form.label "category_ids_#{category.id}", class: "form-check-label" do %>
               <b><%= category.name %></b>
             <% end %>
           </div>
