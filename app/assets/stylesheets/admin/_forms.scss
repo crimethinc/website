@@ -21,3 +21,7 @@ input[type="file"]::-webkit-file-upload-button {
 .table img {
   max-height: 100px;
 }
+
+.form-group {
+  @extend .mb-3;
+}
