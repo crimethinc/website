@@ -81,7 +81,7 @@ group :development, :test do
   gem 'webdrivers'
 
   # codestyle guide and linting
-  gem 'rubocop', '1.1.0', require: false
+  gem 'rubocop', '1.2.0', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
 end
