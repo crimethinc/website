@@ -35,7 +35,7 @@ describe TagAssigner do
 
       expect(tag_1).to receive(:assign_to!).with(taggable)
       expect(tag_2).not_to receive(:assign_to!).with(taggable)
-      expect(tag3).to receive(:assign_to!).with(taggable)
+      expect(tag_3).to receive(:assign_to!).with(taggable)
 
       tag_assigner.assign_tags_to!(taggable)
     end
