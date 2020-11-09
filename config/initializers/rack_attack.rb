@@ -1,4 +1,4 @@
-unless Rails.env.test?
+if Rails.env.production?
   # Only enable throttling if REDIS_URL is set
   if ENV['REDIS_URL']
     Redis.current = Redis.new(url: ENV['REDIS_URL'])
