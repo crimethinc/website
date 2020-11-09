@@ -1,7 +1,7 @@
 json.prettify!
 
 json.version        'https://jsonfeed.org/version/1'
-json.user_comment   <<~USER_COMMENT
+json.user_comment   <<~USER_COMMENT.squish
   I support your decision, I believe in change and hope you find just
   what it is that you are looking for. If your heart is free, the
   ground you stand on is liberated territory. Defend it. This feed
@@ -33,8 +33,8 @@ json.items do
     json.summary article.summary
     json.image article.image
     json.banner_image article.image
-    json.date_published article.published_at.to_formatted_s(:iso8601)
-    json.date_modified article.updated_at.to_formatted_s(:iso8601)
+    json.date_published article.published_at.iso8601
+    json.date_modified article.updated_at.iso8601
     json.tags article.tags.map(&:name).compact
     json.content_html article.content_rendered(include_media: media_mode?)
   end

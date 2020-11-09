@@ -17,7 +17,12 @@ def system! *args
 end
 
 chdir APP_ROOT do
-  if !ARGV[0].nil?
+  if ARGV[0].nil?
+    # no argument provided, so just run the local console in the development
+    # environment. Ensure the application is up to date first.
+    system! 'script/update'
+    system! 'bundle exec rails console'
+  else
     # use first argument as an environment name.
     # Use this to decide how to connect to the appropriate console.
     case ARGV[0]
@@ -29,10 +34,5 @@ chdir APP_ROOT do
       puts "Sorry, I don’t know how to connect to the #{ARGV[0]} environment."
       `exit 1`
     end
-  else
-    # no argument provided, so just run the local console in the development
-    # environment. Ensure the application is up to date first.
-    system! 'script/update'
-    system! 'bundle exec rails console'
   end
 end
