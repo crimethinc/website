@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-12 col-lg-8">
         <div class="form-group">
-          <%= form.label :journal_id %>
+          <%= form.label :journal_id, class: "form-label" %>
           <%= form.collection_select :journal_id,
                                      Journal.all,
                                      :id,
@@ -99,7 +99,7 @@
 
       <div class="col-12 col-sm-6">
         <div class="form-group">
-          <%= form.label :published_at %>
+          <%= form.label :published_at, class: "form-label" %>
           <%= form.date_select :published_at,
                                { start_year: Time.now.utc.year, end_year: 1995, include_blank: true },
                                class: "form-control form-control-lg" %>
@@ -137,7 +137,7 @@
 
         <div class="row">
           <div class="col-6">
-            <%= form.label :has_index, "Has Index?" %>
+            <%= form.label :has_index, "Has Index?", class: "form-label" %>
 
             <div class="form-check">
               <span class="d-inline-block mr-3">

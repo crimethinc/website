@@ -8,7 +8,7 @@
 
     <div class="col-12 col-md-2">
       <div class="form-group">
-        <%= form.label :language_direction, "Direction" %>
+        <%= form.label :language_direction, "Direction", class: "form-label" %>
         <%= form.select :language_direction,
                         Locale.language_directions.keys,
                         {},

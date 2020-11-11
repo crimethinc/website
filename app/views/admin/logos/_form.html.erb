@@ -21,7 +21,7 @@
       <div class="col-12 col-md-4 form-group">
         <div class="card">
           <div class="card-body">
-            <%= form.label :image_jpg, "JPEG Image" %>
+            <%= form.label :image_jpg, "JPEG Image", class: "form-label" %>
             <%= form.file_field :image_jpg, accept: "image/jpeg", required: !resource.image_jpg.attached? %>
 
             <% if resource.image_jpg.attached? %>
@@ -36,7 +36,7 @@
       <div class="col-12 col-md-4 form-group">
         <div class="card">
           <div class="card-body">
-            <%= form.label :image_png, "PNG Image" %>
+            <%= form.label :image_png, "PNG Image", class: "form-label" %>
             <%= form.file_field :image_png, accept: "image/png" %>
 
             <% if resource.image_png.attached? %>
@@ -49,7 +49,7 @@
       <div class="col-12 col-md-4 form-group">
         <div class="card">
           <div class="card-body">
-            <%= form.label :image_tif, "TIFF Image" %>
+            <%= form.label :image_tif, "TIFF Image", class: "form-label" %>
             <%= form.file_field :image_tif, accept: "image/tiff", class: "mt-3 rounded d-block" %>
 
             <% if resource.image_tif.attached? %>
@@ -62,7 +62,7 @@
       <div class="col-12 col-md-4 form-group">
         <div class="card">
           <div class="card-body">
-            <%= form.label :image_pdf, "PDF Image" %>
+            <%= form.label :image_pdf, "PDF Image", class: "form-label" %>
             <%= form.file_field :image_pdf, accept: "application/pdf" %>
 
             <% if resource.image_pdf.attached? %>
@@ -75,7 +75,7 @@
       <div class="col-12 col-md-4 form-group">
         <div class="card">
           <div class="card-body">
-            <%= form.label :image_svg, "SVG Image" %>
+            <%= form.label :image_svg, "SVG Image", class: "form-label" %>
             <%= form.file_field :image_svg, accept: "image/svg+xml", class: "mt-3 rounded d-block" %>
 
             <% if resource.image_svg.attached? %>
@@ -104,7 +104,7 @@
         <%= render "admin/books/categories_form", form: form %>
 
         <div class="form-group">
-          <%= form.label :published_at %>
+          <%= form.label :published_at, class: "form-label" %>
           <%= form.date_select :published_at,
                                { start_year: Time.now.utc.year, end_year: 1995, include_blank: true },
                                class: "form-control form-control-lg" %>

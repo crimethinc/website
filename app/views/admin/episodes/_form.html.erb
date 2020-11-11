@@ -2,7 +2,7 @@
   <%= render "admin/form_errors", thing: @episode %>
 
   <div class="form-group">
-    <%= form.label :podcast_id %>
+    <%= form.label :podcast_id, class: "form-label" %>
 
     <% @podcasts.each do |podcast| %>
       <div class="form-check">

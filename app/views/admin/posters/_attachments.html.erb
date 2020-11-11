@@ -20,7 +20,7 @@
               <div class="form-group">
                 <div class="card">
                   <div class="card-body">
-                    <%= form.label attachement_form_attr_for(side, kind, color), "#{color.titleize} #{attachment_display_name_for(kind)}" %>
+                    <%= form.label attachement_form_attr_for(side, kind, color), "#{color.titleize} #{attachment_display_name_for(kind)}", class: "form-label" %>
                     <%= form.file_field attachement_form_attr_for(side, kind, color), accept: acceptable_mime_types_for(kind) %>
 
                     <% if resource.send(attachement_form_attr_for(side, kind, color)).attached? %>
