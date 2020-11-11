@@ -20,7 +20,7 @@
 
     <div class="toggle">
       <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
-        <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "sr-only" %>
+        <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "visually-hidden sr-only" %>
 
         <%= form.label "publication_status_#{state}", state.capitalize, for: "publication_status_#{state}", class: "form-label" %>
       <% end %>

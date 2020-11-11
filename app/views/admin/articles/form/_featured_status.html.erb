@@ -1,6 +1,6 @@
 <% if FeatureFlag.enabled? :bootstrap5 %>
 
-  <div id="featured_status" class="form-group sr-only">
+  <div id="featured_status" class="form-group visually-hidden sr-only">
     <%= form.label :featured_status, "Feature this on homepage?", class: "form-label" %><br>
 
     <%= form.radio_button :featured_status, false, class: "btn-check" %>
@@ -12,13 +12,13 @@
 
 <% else %>
 
-  <div id="featured_status" class="form-group toggle sr-only">
+  <div id="featured_status" class="form-group toggle visually-hidden sr-only">
     <%= form.label :featured_status, "Feature this on homepage?", class: "form-label" %><br>
 
-    <%= form.radio_button :featured_status, false, class: "sr-only" %>
+    <%= form.radio_button :featured_status, false, class: "visually-hidden sr-only" %>
     <%= form.label :featured_status_false, 'Not featured', for: "#{klass}_featured_status_false", class: "form-label" %>
 
-    <%= form.radio_button :featured_status, true, class: "sr-only" %>
+    <%= form.radio_button :featured_status, true, class: "visually-hidden sr-only" %>
     <%= form.label :featured_status_true, 'Featured', for: "#{klass}_featured_status_true", class: "form-label" %>
   </div><!-- #featured_status -->
 
