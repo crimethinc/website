@@ -1,4 +1,4 @@
-<% if ENV["BOOTSTRAP5"] == "true" %>
+<% if FeatureFlag.enabled? :bootstrap5 %>
 
   <div id="publication-status" class="form-group">
     <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>

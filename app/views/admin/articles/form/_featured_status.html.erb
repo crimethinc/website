@@ -1,4 +1,4 @@
-<% if ENV["BOOTSTRAP5"] == "true" %>
+<% if FeatureFlag.enabled? :bootstrap5 %>
 
   <div id="featured_status" class="form-group sr-only">
     <%= form.label :featured_status, "Feature this on homepage?", class: "form-label" %><br>
