@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-6">
     <div id="position" class="form-group">
-      <%= form.label :position, "Position this #{resource_name} on the index page" %>
+      <%= form.label :position, "Position this #{resource_name} on the index page", class: "form-label" %>
       <%= form.number_field :position, step: 1, min: 0, class: 'form-control' %>
     </div>
 

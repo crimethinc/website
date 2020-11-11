@@ -1,11 +1,11 @@
 <div id="publication-status" class="form-group">
-  <%= form.label :publication_status, "Publication Status" %><br>
+  <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>
 
   <div class="toggle">
     <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
       <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "sr-only" %>
 
-      <%= form.label "publication_status_#{state}", state.capitalize, for: "publication_status_#{state}" %>
+      <%= form.label "publication_status_#{state}", state.capitalize, for: "publication_status_#{state}", class: "form-label" %>
     <% end %>
   </div><!-- .toggle -->
 </div><!-- #publication-status -->
