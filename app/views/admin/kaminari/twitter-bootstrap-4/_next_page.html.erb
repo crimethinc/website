@@ -10,7 +10,7 @@
 
     <%= link_to url, rel: "next", class: "page-link" do %>
       <span aria-hidden="true"><%= t("views.pagination.next").html_safe %></span>
-      <span class="sr-only"><%= t("views.pagination.next_screen_reader").html_safe %></span>
+      <span class="visually-hidden sr-only"><%= t("views.pagination.next_screen_reader").html_safe %></span>
     <% end %>
 
   <% end %>
