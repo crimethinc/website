@@ -18,8 +18,8 @@ describe 'Setting and changing an articles published_at date' do
     click_on 'NEW'
 
     within '#publication_datetime' do
-      execute_script("$('#publication_date').val('2018-12-24')")
-      execute_script("$('#publication_time').val('11:59:00')")
+      execute_script("document.getElementById('publication_date').value = '2018-12-24';")
+      execute_script("document.getElementById('publication_time').value = '11:59:00';")
       select('UTC', from: 'article_published_at_tz')
     end
 
@@ -47,8 +47,8 @@ describe 'Setting and changing an articles published_at date' do
       expect(find_field('published_at_time').value).to eq '03:59:00'
       expect(find_field('article_published_at_tz').value).to eq 'Pacific Time (US & Canada)'
 
-      execute_script("$('#publication_date').val('2018-12-26')")
-      execute_script("$('#publication_time').val('22:59:00')")
+      execute_script("document.getElementById('publication_date').value = '2018-12-26';")
+      execute_script("document.getElementById('publication_time').value = '22:59:00';")
       select('UTC', from: 'article_published_at_tz')
     end
 
