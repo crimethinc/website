@@ -10,10 +10,25 @@ module LinksHelper
     'CrimethInc.com Articles RSS feed' => 'https://crimethinc.com/feed'
   }.freeze
 
+  # For 2020 theme
+  def social_links_by_domain
+    {
+      'Twitter'   => 'https://twitter.com/crimethinc',
+      'Facebook'  => 'https://www.facebook.com/To-Change-Everything-103734818122357',
+      'Instagram' => 'https://instagram.com/CrimethincDotCom',
+      'Github'    => 'https://github.com/crimethinc',
+      'Tumblr'    => 'https://crimethinc.tumblr.com',
+      'Mastodon'  => 'https://mastodon.online/@crimethinc',
+      'RSS feed'  => 'https://crimethinc.com/feed'
+    }
+  end
+
+  # For 2017 theme
   def social_links
     SOCIAL_LINKS
   end
 
+  # For 2017 theme
   def social_link_classes url:, name:
     # Telegram is a special case because its domain is just t.me, not telegram.[anything]
     domain = case URI.parse(url).host.downcase
