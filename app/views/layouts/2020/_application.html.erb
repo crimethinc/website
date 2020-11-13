@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <%= tag.html dir:    html_dir,
              lang:   html_lang,
+
              class:  html_class,
              prefix: html_prefix do %>
   <head>
@@ -10,6 +11,9 @@
   </head>
 
   <body>
+    <%= render_themed "shared/admin_header" %>
+    <%= render_themed "shared/development_mode_banner" %>
+
     <%= render_themed "shared/header" %>
 
     <h1>CrimethInc. Ex-Workers’ Collective</h1>
@@ -19,7 +23,6 @@
     </main>
 
     <%= render_themed "shared/footer" %>
-
     <%= render_themed "shared/javascripts" %>
   </body>
 <% end %>
