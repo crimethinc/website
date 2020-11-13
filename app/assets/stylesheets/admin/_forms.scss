@@ -3,7 +3,11 @@ input[type=checkbox] {
 }
 
 .datetime-select {
-  margin-bottom: 1rem;
+  // TODO: Re-enable when Safari supports date/time pickers
+  //       and we drop the form text examples:
+  //       <p class="form-text text-muted">Example: 23:59</p>
+  //       <p class="form-text text-muted">Example: 1999-11-30</p>
+  // margin-bottom: 1rem;
 }
 
 .actions {
