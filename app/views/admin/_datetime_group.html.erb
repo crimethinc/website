@@ -4,21 +4,24 @@
   <div class="row">
     <div class="col-12">
       <input id="publication_date"
+             placeholder="YYYY-MM-DD"
              type="date"
              name="published_at_date"
              value="<%= admin_form_date(post) %>"
              class="form-control form-control-lg datetime-select">
+      <p class="form-text text-muted">Example: 1999-11-30</p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
       <input id="publication_time"
-             placeholder="hh:mm"
+             placeholder="HH:MM"
              type="time"
              name="published_at_time"
              value="<%= admin_form_time(post) %>"
              class="form-control form-control-lg datetime-select timepicker">
+      <p class="form-text text-muted">Example: 23:59</p>
     </div>
   </div>
 
