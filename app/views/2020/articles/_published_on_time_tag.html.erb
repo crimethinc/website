@@ -1,0 +1,11 @@
+<% linked ||= false %>
+
+<time class="dt-published" datetime="<%= display_date article.published_at if article.dated? %>">
+  <% if article.draft? %>
+    <%= link_to display_date(article.published_at), article.path %>
+  <% elsif article.dated? %>
+    <%= display_date article.published_at %>
+  <% else %>
+    Publication date not yet set.
+  <% end %>
+</time>
