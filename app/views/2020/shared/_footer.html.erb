@@ -1,8 +1,8 @@
-<footer class="container">
+<footer class="container mt-5">
   <div class='row'>
-    <div class='column column-50'>
+    <div class='col-12 col-md-6'>
       <nav>
-        <h1><%= t 'footer.nav.heading' %></h1>
+        <h2><%= t 'footer.nav.heading' %></h2>
 
         <dl>
           <dt class='nav-label nav-label-articles'>
@@ -54,24 +54,30 @@
           </dd>
         </dl>
       </nav>
-    </div><!-- .column column-50 -->
+    </div><!-- .col-12 col-md-6 -->
 
-    <div class='column column-25'>
-      <h1><%= t('footer.contact.social.heading') %></h1>
+    <div class='col-12 col-md-3'>
+      <h2><%= t('footer.contact.social.heading') %></h2>
       <%= render_markdown t('footer.contact.social.description') %>
 
-      <ul class='social-links'>
-        <% social_links.each do |name, url| %>
-          <li class='social-link'>
-            <%= link_to name, url, class: social_link_classes(url: url, name: name), target: '_blank', rel: 'noopener' %>
+      <ul class='list-unstyled'>
+        <% social_links_by_domain.each do |domain, url| %>
+          <li class='mb-2'>
+            <%= image_tag "social-icons/#{domain.parameterize}.svg", size: "40x40" %>
+
+            <%= link_to domain,
+                        url,
+                        class: "m-2 text-decoration-none",
+                        target: '_blank',
+                        rel: 'noopener' %>
           </li>
         <% end %>
       </ul>
-    </div><!-- .column column-25 -->
+    </div><!-- .col-12 col-md-3 -->
 
-    <div class='column column-25'>
+    <div class='col-12 col-md-3'>
       <div id='mc_embed_signup'><!-- Begin MailChimp Signup Form -->
-        <h1 class='newsletter-signup-label'><%= t('footer.contact.newsletter.heading') %></h1>
+        <h2 class='newsletter-signup-label'><%= t('footer.contact.newsletter.heading') %></h2>
         <div class='newsletter-signup-description'><%= render_markdown t('footer.contact.newsletter.description') %></div>
 
         <%= form_with url: '//crimethinc.us2.list-manage.com/subscribe/post?u=cb48383602b7373f496e9ba33&amp;id=344714b249', id: 'mc-embedded-subscribe-form', class: 'newsletter-signup-form validate', name: 'mc-embedded-subscribe-form', target: '_blank', rel: 'noopener', novalidate: true do |form| %>
@@ -101,7 +107,7 @@
           <div id='a-thing-with-an-id' style='<%= left_or_right %>' aria-hidden='true'><input type='text' name='b_cb48383602b7373f496e9ba33_344714b249' tabindex='-1' value=''></div>
         <% end %>
       </div><!--End mc_embed_signup-->
-    </div><!-- .column column-25 -->
+    </div><!-- .col-12 col-md-3 -->
   </div><!-- .row -->
 
   <% if media_mode? && I18n.locale == :en %>
@@ -110,7 +116,7 @@
     </p>
   <% end %>
 
-  <div rel='license' class='license'>
+  <div rel='license' class='text-secondary text-center my-5 py-5'>
     <p><%= t('footer.mantra').sample %></p>
   </div>
 </footer>
