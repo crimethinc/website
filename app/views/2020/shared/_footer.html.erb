@@ -1,13 +1,13 @@
-<footer class="container mt-5">
+<footer id='site-footer' class='container mt-5' role='contentinfo'>
   <div class='row'>
-    <div class='col-12 col-md-6'>
+    <div class='col-12 col-md-6 pr-5 mb-5'>
       <nav>
         <h2><%= t 'footer.nav.heading' %></h2>
 
         <dl>
           <dt class='nav-label nav-label-articles'>
             <%= link_to t('footer.nav.articles.label'),   %i[library] %>
-            <b><%= link_to t('footer.nav.articles.feed'), %i[feed] %></b>
+            <small class='text-muted font-weight-normal'><%= link_to t('footer.nav.articles.feed'), %i[feed] %></small>
           </dt>
           <dd>
             <% %w[arts adventure analysis current_events history how_to news technology].each do |category| %>
@@ -33,7 +33,7 @@
 
           <dt class='nav-label nav-label-podcast'>
             <%= link_to t('footer.nav.podcast.label'),   %i[podcasts] %>
-            <b><%= link_to t('footer.nav.podcast.feed'), %i[podcast_feed] %></b>
+            <small class='text-muted font-weight-normal'><%= link_to t('footer.nav.podcast.feed'), %i[podcast_feed] %></small>
           </dt>
           <dd>
             <% %w[the_ex_worker no_wall_they_can_build the_hotwire].each do |podcast| %>
@@ -53,25 +53,34 @@
             <% end %>
           </dd>
         </dl>
+
+        <% if media_mode? && I18n.locale == :en %>
+          <p>
+            <%= link_to(t('footer.site_mode'), url_for_current_path_with_subdomain(subdomain: :lite)) %>
+          </p>
+        <% end %>
+
       </nav>
     </div><!-- .col-12 col-md-6 -->
 
-    <div class='col-12 col-md-3'>
+    <div class='col-12 col-md-3 mb-5'>
       <h2><%= t('footer.contact.social.heading') %></h2>
       <%= render_markdown t('footer.contact.social.description') %>
 
       <ul class='list-unstyled'>
         <% social_links_by_domain.each do |domain, url| %>
           <li class='mb-2'>
-            <%= image_tag "social-icons/#{domain.parameterize}.svg", size: "40x40" %>
+            <%= link_to url, class: 'my-2', target: '_blank', rel: 'noopener' do %>
+              <%= image_tag "social-icons/#{domain.parameterize}.svg", size: '40x40', class: 'mr-2' %>
+              <%= domain %>
+            <% end %>
 
-            <%= link_to domain, url, class: 'm-2 text-decoration-none', target: '_blank', rel: 'noopener' %>
           </li>
         <% end %>
       </ul>
     </div><!-- .col-12 col-md-3 -->
 
-    <div class='col-12 col-md-3'>
+    <div class='col-12 col-md-3 mb-5'>
       <div id='mc_embed_signup'><!-- Begin MailChimp Signup Form -->
         <h2 class='newsletter-signup-label'><%= t('footer.contact.newsletter.heading') %></h2>
         <div class='newsletter-signup-description'><%= render_markdown t('footer.contact.newsletter.description') %></div>
@@ -96,7 +105,7 @@
             <div class='response' id='mce-success-response'></div>
           </div>
 
-          <div class="text-right mt-3">
+          <div class='text-right mt-3'>
             <%= button_tag t('footer.contact.newsletter.signup_button_text'), name: 'subscribe', id: 'mc-embedded-subscribe', class: 'btn btn-outline-success btn-lg' %>
           </div>
 
@@ -107,12 +116,6 @@
       </div><!--End mc_embed_signup-->
     </div><!-- .col-12 col-md-3 -->
   </div><!-- .row -->
-
-  <% if media_mode? && I18n.locale == :en %>
-    <p class='site-mode-link-container'>
-      <%= link_to(t('footer.site_mode'), url_for_current_path_with_subdomain(subdomain: :lite)) %>
-    </p>
-  <% end %>
 
   <div rel='license' class='text-secondary text-center my-5 py-5'>
     <p><%= t('footer.mantra').sample %></p>
