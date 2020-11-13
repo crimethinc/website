@@ -525,7 +525,7 @@ DEPENDENCIES
   referral
   reverse_markdown
   rspec-rails
-  rubocop (= 1.3.0)
+  rubocop
   rubocop-performance
   rubocop-rails
   rubypants
