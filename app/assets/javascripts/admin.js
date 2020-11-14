@@ -1,7 +1,4 @@
 //= require jquery3
-//= require jquery-ui/widgets/datepicker
-//= require timepicker
-//= require modernizr
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
@@ -23,31 +20,7 @@ function updateCounter(e) {
   return counter;
 }
 
-function polyfillDateAndTime() {
-  // Check if the browser supports the native date/time input types
-  // This should be all browsers besides IE11 and the desktop version
-  // of safari If the browser doesn't support it, we polyfill the
-  // widgets (this uses JQuery)
-  var date_and_time_supported = (Modernizr.inputtypes.time && Modernizr.inputtypes.date);
-  // not-supported, so polyfill
-  if (!date_and_time_supported) {
-    // use jquery for date picker
-    $("#publication_date").datepicker({ dateFormat: "yy-mm-dd" });
-
-    // use jquery for time picker
-    $("input.timepicker").timepicker({
-      timeFormat: "h:mm p",
-      interval: 30,
-      startTime: "10:00",
-      dynamic: false,
-      dropdown: true,
-      scrollbar: true
-    });
-  }
-}
-
 ready(() => {
   // Add the callback needed to update the text area character counters (e.g. for tweets)
   document.querySelectorAll("textarea[data-max-length]").forEach(textArea => { textArea.addEventListener("keyup", updateCounter) });
-  polyfillDateAndTime();
 });

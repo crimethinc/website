@@ -16,7 +16,6 @@ gem 'puma'
 gem 'autoprefixer-rails'
 gem 'bootstrap'
 gem 'jquery-rails'      # for bootstrap pages (admin, steal-something-from-work-day)
-gem 'jquery-ui-rails'   # for polyfilling forms in admin/articles
 gem 'sassc-rails'
 gem 'sitemap_generator' # for generating a compliant xml sitemap
 gem 'uglifier'
