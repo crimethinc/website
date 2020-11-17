@@ -143,7 +143,7 @@ class CodeArchiver
         uri = URI.parse(url)
         next unless uri.path.start_with?('/assets/articles/')
 
-        filepath = uri.path.split('/')[2..].join('/')
+        filepath = uri.path.split('/').drop(2).join('/')
         `curl -s --create-dirs -o "website-content/#{filepath}" "#{url}"`
       rescue URI::InvalidURIError
         puts "#{url} is not a valid asset URL"
