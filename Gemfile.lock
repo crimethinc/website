@@ -333,7 +333,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.2.2)
+    redis (4.2.3)
     redis-store (1.9.0)
       redis (>= 4, < 5)
     referral (0.0.5)
