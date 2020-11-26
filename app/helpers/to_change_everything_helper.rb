@@ -44,7 +44,8 @@ module ToChangeEverythingHelper
       'Slovenčina'     => '/2016/09/21/to-change-everything-in-11-more-languages#slovakvideo',
       'Slovenščina'    => '/tce/slovenscina',
       'Svenska'        => '/2016/01/25/to-change-everything-in-ten-more-languages#swedish',
-      'Tagalog'        => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano'
+      'Tagalog'        => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano',
+      'ภาษาไทย'        => '/tce/ภาษาไทย'
     }.freeze
   }.freeze
 
