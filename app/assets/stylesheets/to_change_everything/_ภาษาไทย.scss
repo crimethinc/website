@@ -13,6 +13,15 @@
 
   #cwc { position: absolute; }
 
+  // the video image/link
+  .cte-video {
+      img { @media (min-width: 104.4375rem) { width: 11rem; } }
+  }
+  .cte-pdf {
+      img { @media (min-width: 104.4375rem) { width: 7rem; } }
+  }
+
+
   #answering h2 { padding: 9% 0 0 25%; }
   #power h2 { padding: 10% 0 0 2%; }
   #relationships h2 {
