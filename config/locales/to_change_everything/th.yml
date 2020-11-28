@@ -11,11 +11,11 @@
           description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart
           url: http://tochangeeverything.com/
       menu:
-        toc: Table of Contents
+        toc: สารบัญ
         language: ภาษาไทย
-        share: Share
+        share: แบ่งปัน
       toc:
-        introduction: introduction
+        introduction: บทนำ
         self: เริ่มด้วย ตัดสินใจด้วยตนเอง
         answering: เริ่มโดย ตอบคำถามตนเอง
         power: เริ่มโดยแสวงหา อำนาจ มิใช่ อำนาจสั่งการ
@@ -34,14 +34,14 @@
         lastcrime: อาชญากรรมสุดท้าย
         anarchy: anarchy is
         outro: outro
-        takeflight: take flight
-        next: next
+        takeflight: ขึ้นเครื่องบิน
+        next: ต่อไป
   to_change_everything:
     show:
       title_html: '&nbsp;เพื่อ<br />เปลี่ยนแปลง<br />ทุกสิ่ง'
       subtitle_html: <span class="green">คำวิงวอน</span><span class="pink">จาก</span><span class="blue">ผู้นิยมลัทธิอนาธิปไตย</span>
-      video_cte: Watch Video
-      pdf_cte_html: Download<br />&nbsp;PDF
+      video_cte: ดูวีดีโอ
+      pdf_cte_html: ดาวน์โหลด <br />&nbsp;PDF
       pdf_get_url: /tce/get
       pdf_image: tce-cover-200.png
       intro:
