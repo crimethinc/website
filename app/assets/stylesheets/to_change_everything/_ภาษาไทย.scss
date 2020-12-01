@@ -1,0 +1,46 @@
+.ภาษาไทย {
+  @import "thai/font_overrides";
+
+  /*--- Highlight language in mobile language menu ---*/
+  #lang1  li  > a[href="/tce/ภาษาไทย"],
+  #lang2  li  > a[href="/tce/ภาษาไทย"] {
+    color: #d62d34 !important;
+  }
+
+  .check-ภาษาไทย:before {
+    content: '';
+  }
+
+  #cwc { position: absolute; }
+
+  // the video image/link
+  .cte-video {
+      img { @media (min-width: 104.4375rem) { width: 11rem; } }
+  }
+  .cte-pdf {
+      img { @media (min-width: 104.4375rem) { width: 7rem; } }
+  }
+
+
+  #answering h2 { padding: 9% 0 0 25%; }
+  #power h2 { padding: 10% 0 0 2%; }
+  #relationships h2 {
+      padding: 5% 0 0 20%;
+      line-height: 1.3;
+  }
+  #reconciling h2 {
+      padding: 10% 0 0 5%;
+      line-height: 1.3;
+  }
+  #liberation h2 { padding: 11% 0 0 5%; }
+  #control h2 { padding: 8% 0 0 5%; }
+  #hierarchy h2 {
+      padding: 7% 0 0 5%;
+      line-height: 1.3;
+      span { &:before { content: "\00a0\00a0\00a0\00a0"; } }
+  }
+  #borders h2 { padding: 10% 0 0 5%; }
+  #representation h2 { padding: 17% 0 0 13%; }
+  #leaders h2 { padding: 10% 0 0 15%; }
+  #government h2 { padding: 20% 0 0 10%; }
+}
