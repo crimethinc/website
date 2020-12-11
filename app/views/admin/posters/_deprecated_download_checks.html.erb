@@ -36,7 +36,7 @@
 
                   <%= form.label "#{side}_#{color}_#{type}_present", class: "form-check-label" do %>
                     <b><%= side.capitalize %> <%= color.titleize %></b>
-                    <span class="form-text text-muted font-weight-normal">
+                    <span class="form-text text-muted fw-normal">
                       Is there a <%= file %> of the <%= side %> in <%= color.titleize.downcase %> of the poster uploaded?
                     </span>
                   <% end %>
@@ -62,7 +62,7 @@
               <%= form.label "#{side}_image_format_#{filetype}", class: "form-check-label" do %>
                 <%= form.radio_button "#{side}_image_format", filetype, id: "poster_#{side}_image_format_#{filetype}", class: "form-check-input" %>
                 <b><%= filetype.upcase %></b>
-                <span class="text-muted font-weight-normal">Are the <%= side %> side images <%= filetype.upcase %>s?</span>
+                <span class="text-muted fw-normal">Are the <%= side %> side images <%= filetype.upcase %>s?</span>
               <% end %>
             </div>
           <% end %>

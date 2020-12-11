@@ -32,10 +32,10 @@
       <div class="row">
 
         <div class="col-12 col-md-10">
-          <h2 class="h5 mb-0 font-weight-bold"><%= link_to article.title, [:admin, article] %></h2>
+          <h2 class="h5 mb-0 fw-bold"><%= link_to article.title, [:admin, article] %></h2>
 
           <% if article.subtitle.present? %>
-            <h3 class="h6 mb-1 font-weight-light"><%= link_to article.subtitle, [:admin, article] %></h3>
+            <h3 class="h6 mb-1 fw-light"><%= link_to article.subtitle, [:admin, article] %></h3>
           <% end %>
 
           <%= time_tag article.published_at do %>
