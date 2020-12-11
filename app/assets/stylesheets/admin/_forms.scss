@@ -12,8 +12,3 @@ input[type=checkbox] {
 .table img {
   max-height: 100px;
 }
-
-// TODO: Transitional for Bootstrap 5
-.form-group {
-  @extend .mb-3;
-}

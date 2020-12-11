@@ -21,7 +21,7 @@
     <div class="col-12 col-sm-6">
       <fieldset id="meta">
         <legend>Meta</legend>
-        <div class="form-group">
+        <div class="mb-3">
           <%= form.label :tags, class: "form-label", class: "form-label" %>
           <%= text_area_tag :tags, @page.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
           <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>

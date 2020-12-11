@@ -18,7 +18,7 @@
   <fieldset>
     <legend>Uploads</legend>
     <div class="row">
-      <div class="col-12 col-md-4 form-group">
+      <div class="col-12 col-md-4 mb-3">
         <div class="card">
           <div class="card-body">
             <%= form.label :image_jpg, "JPEG Image", class: "form-label" %>
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-4 form-group">
+      <div class="col-12 col-md-4 mb-3">
         <div class="card">
           <div class="card-body">
             <%= form.label :image_png, "PNG Image", class: "form-label" %>
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-4 form-group">
+      <div class="col-12 col-md-4 mb-3">
         <div class="card">
           <div class="card-body">
             <%= form.label :image_tif, "TIFF Image", class: "form-label" %>
@@ -59,7 +59,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-4 form-group">
+      <div class="col-12 col-md-4 mb-3">
         <div class="card">
           <div class="card-body">
             <%= form.label :image_pdf, "PDF Image", class: "form-label" %>
@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-4 form-group">
+      <div class="col-12 col-md-4 mb-3">
         <div class="card">
           <div class="card-body">
             <%= form.label :image_svg, "SVG Image", class: "form-label" %>
@@ -103,7 +103,7 @@
       <div class="col-12 col-sm-6">
         <%= render "admin/books/categories_form", form: form %>
 
-        <div class="form-group">
+        <div class="mb-3">
           <%= form.label :published_at, class: "form-label" %>
           <%= form.date_select :published_at,
                                { start_year: Time.now.utc.year, end_year: 1995, include_blank: true },

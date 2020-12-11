@@ -1,4 +1,4 @@
-<div id="publication-status" class="form-group">
+<div id="publication-status" class="mb-3">
   <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>
 
   <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>

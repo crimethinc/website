@@ -1,7 +1,7 @@
 <%= form_with(model: [:admin, @episode]) do |form| %>
   <%= render "admin/form_errors", thing: @episode %>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= form.label :podcast_id, class: "form-label" %>
 
     <% @podcasts.each do |podcast| %>

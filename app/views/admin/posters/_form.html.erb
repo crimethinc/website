@@ -82,7 +82,7 @@
       <div class="col-12 col-sm-6">
         <%= render "admin/posters/categories_form", form: form %>
 
-        <div class="form-group">
+        <div class="mb-3">
           <%= form.label :published_at, class: "form-label" %>
           <%= form.date_select :published_at,
                                { start_year: Time.now.utc.year, end_year: 1995, include_blank: true },
