@@ -21,6 +21,6 @@ function updateCounter(e) {
 }
 
 ready(() => {
-  // Add the callback needed to update the text area character counters (e.g. for tweets)
+  // Add the callback needed to update the textarea character counters (e.g. for tweets)
   document.querySelectorAll("textarea[data-max-length]").forEach(textArea => { textArea.addEventListener("keyup", updateCounter) });
 });
