@@ -2,6 +2,7 @@ input[type=checkbox] {
   margin-right: .5rem;
 }
 
+// TODO: Transitional for Bootstrap 5
 .datetime-select {
   margin-bottom: 1rem;
 }
@@ -17,7 +18,6 @@ input[type=checkbox] {
   max-height: 100px;
 }
 
-// TODO: Transitional for Bootstrap 5
 .form-group {
   @extend .mb-3;
 }
