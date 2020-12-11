@@ -13,12 +13,6 @@ input[type=checkbox] {
   border-bottom: $border-size-xsmall solid #eee;
 }
 
-// Upload button
-input[type="file"]::-webkit-file-upload-button {
-  @extend .btn;
-  @extend .btn-outline-primary;
-}
-
 .table img {
   max-height: 100px;
 }
