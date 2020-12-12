@@ -4,14 +4,14 @@
   <% if resource.is_a? Issue %>
     <div class="row">
       <div class="col-12 col-lg-8">
-        <div class="form-group">
+        <div class="mb-3">
           <%= form.label :journal_id, class: "form-label" %>
           <%= form.collection_select :journal_id,
                                      Journal.all,
                                      :id,
                                      :name,
                                      { include_blank: true },
-                                     class: "form-control form-control-lg" %>
+                                     class: "form-select form-select-lg" %>
 
           <p class="form-text text-muted">
             If it’s not here, you can
@@ -98,11 +98,11 @@
       </div>
 
       <div class="col-12 col-sm-6">
-        <div class="form-group">
+        <div class="mb-3">
           <%= form.label :published_at, class: "form-label" %>
           <%= form.date_select :published_at,
                                { start_year: Time.now.utc.year, end_year: 1995, include_blank: true },
-                               class: "form-control form-control-lg" %>
+                               class: "form-select form-select-lg mb-2" %>
         </div>
       </div>
 

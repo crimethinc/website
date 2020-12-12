@@ -1,7 +1,7 @@
 <h2 class="mb-3">
   <%= link_to "NEW", [:new, :admin, :article], class: 'btn btn-outline-primary mb-2' %>
 
-  <span class='font-weight-light'><%= link_to_unless_current "Articles", [:admin, :articles] %></span>
+  <span class='fw-light'><%= link_to_unless_current "Articles", [:admin, :articles] %></span>
   <span class="text-muted">:</span>
   <b><%= link_to_unless_current "Draft", [:draft, :admin, :articles] %></b>
 
@@ -20,12 +20,14 @@
   <% @articles.each do |article| %>
     <div class="articles-body row mb-3 py-0 <%= admin_articles_table_row_classes article %>">
       <div class="col-md-1 d-md-none my-3">
-        <%= link_to "Edit", [:edit, :admin, article], class: "btn btn-block btn-outline-primary" %>
+        <%= link_to "Edit", [:edit, :admin, article], class: "btn btn-outline-primary" %>
       </div>
 
       <div class="col-md-1 d-none d-md-block">
         <br>
+        <div class="d-grid gap-2">
         <%= link_to "Edit", [:edit, :admin, article], class: "btn btn-outline-primary" %>
+        </div>
       </div>
 
       <div class="col-md-6 pb-3">

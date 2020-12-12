@@ -6,7 +6,7 @@
       <% extension = type == "image" ? "[filetype]" : "pdf" %>
 
       <div class="col-12 col-sm-6">
-        <div class="form-group">
+        <div class="mb-3">
           <label for="downloads"><%= type.capitalize.pluralize %></label>
 
           <p class="form-text text-muted">
@@ -27,7 +27,7 @@
             <% end %>
           </p>
 
-          <div class="form-group">
+          <div class="mb-3">
             <% %w[front back].each do |side| %>
               <% %w[color black_and_white].each do |color| %>
 
@@ -36,7 +36,7 @@
 
                   <%= form.label "#{side}_#{color}_#{type}_present", class: "form-check-label" do %>
                     <b><%= side.capitalize %> <%= color.titleize %></b>
-                    <span class="form-text text-muted font-weight-normal">
+                    <span class="form-text text-muted fw-normal">
                       Is there a <%= file %> of the <%= side %> in <%= color.titleize.downcase %> of the poster uploaded?
                     </span>
                   <% end %>
@@ -54,7 +54,7 @@
   <div class="row">
     <% %w[front back].each do |side| %>
       <div class="col-12 col-sm-6">
-        <div class="form-group">
+        <div class="mb-3">
           <label for="downloads">Preview <%= side.capitalize %> Images Format</label>
 
           <% %w[jpg gif png].each do |filetype| %>
@@ -62,7 +62,7 @@
               <%= form.label "#{side}_image_format_#{filetype}", class: "form-check-label" do %>
                 <%= form.radio_button "#{side}_image_format", filetype, id: "poster_#{side}_image_format_#{filetype}", class: "form-check-input" %>
                 <b><%= filetype.upcase %></b>
-                <span class="text-muted font-weight-normal">Are the <%= side %> side images <%= filetype.upcase %>s?</span>
+                <span class="text-muted fw-normal">Are the <%= side %> side images <%= filetype.upcase %>s?</span>
               <% end %>
             </div>
           <% end %>

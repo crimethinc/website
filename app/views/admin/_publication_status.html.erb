@@ -1,30 +1,12 @@
-<% if FeatureFlag.enabled? :bootstrap5 %>
+<div id="publication-status" class="mb-3">
+  <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>
 
-  <div id="publication-status" class="form-group">
-    <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>
+  <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
+    <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "btn-check" %>
 
-    <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
-      <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "btn-check" %>
-
-      <%= form.label "publication_status_#{state}",
-                     state.capitalize,
-                     for: "publication_status_#{state}",
-                     class: "btn btn-outline-#{state == :draft ? :secondary : 'primary'}" %>
-    <% end %>
-  </div><!-- #publication-status -->
-
-<% else %>
-
-  <div id="publication-status" class="form-group">
-    <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>
-
-    <div class="toggle">
-      <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
-        <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "visually-hidden sr-only" %>
-
-        <%= form.label "publication_status_#{state}", state.capitalize, for: "publication_status_#{state}", class: "form-label" %>
-      <% end %>
-    </div><!-- .toggle -->
-  </div><!-- #publication-status -->
-
-<% end %>
+    <%= form.label "publication_status_#{state}",
+                   state.capitalize,
+                   for: "publication_status_#{state}",
+                   class: "btn btn-outline-#{state == :draft ? :secondary : 'primary'}" %>
+  <% end %>
+</div><!-- #publication-status -->

@@ -17,11 +17,11 @@
           <% %w[color black_and_white].each do |color| %>
             <div class="col-12 col-sm-6 mb-3">
 
-              <div class="form-group">
+              <div class="mb-3">
                 <div class="card">
                   <div class="card-body">
                     <%= form.label attachement_form_attr_for(side, kind, color), "#{color.titleize} #{attachment_display_name_for(kind)}", class: "form-label" %>
-                    <%= form.file_field attachement_form_attr_for(side, kind, color), accept: acceptable_mime_types_for(kind) %>
+                    <%= form.file_field attachement_form_attr_for(side, kind, color), accept: acceptable_mime_types_for(kind), class: "form-control" %>
 
                     <% if resource.send(attachement_form_attr_for(side, kind, color)).attached? %>
                       <% if kind == 'download' %>

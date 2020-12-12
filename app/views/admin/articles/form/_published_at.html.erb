@@ -2,7 +2,7 @@
   <% if @article.draft? %>
     <%= render "admin/datetime_group", form: form, post: @article, type: :article %>
 
-    <p class="m-0 font-weight-bold">To Future Publish…</p>
+    <p class="m-0 fw-bold">To Future Publish…</p>
     <p>
       Set a date and time above, then save this form.
       But don’t click the <b><code>Publish NOW!</code></b> button.
@@ -11,7 +11,7 @@
     <hr>
 
     <% if Current.user.can_publish? %>
-      <p class="m-0 font-weight-bold">To Publish Now…</p>
+      <p class="m-0 fw-bold">To Publish Now…</p>
 
       <p>
         If you want to publish this article <b>right now</b>, you can with one click.

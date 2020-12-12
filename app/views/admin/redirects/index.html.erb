@@ -20,7 +20,7 @@
 <div class="row my-5">
   <div class="col">
     <%= form_with url: [:admin, :redirects], method: "get" do %>
-      <div class="form-group">
+      <div class="mb-3">
         <%= text_field_tag :source_path, params[:source_path], class: "form-control form-control-lg", placeholder: "FROM" %>
       </div>
 
@@ -32,7 +32,7 @@
 
   <div class="col">
     <%= form_tag [:admin, :redirects], method: "get" do %>
-      <div class="form-group">
+      <div class="mb-3">
         <%= text_field_tag :target_path, params[:target_path], class: "form-control form-control-lg", placeholder: "TO" %>
       </div>
 

@@ -1,25 +1,9 @@
-<% if FeatureFlag.enabled? :bootstrap5 %>
+<div id="featured_status" class="mb-3 visually-hidden sr-only">
+  <%= form.label :featured_status, "Feature this on homepage?", class: "form-label" %><br>
 
-  <div id="featured_status" class="form-group visually-hidden sr-only">
-    <%= form.label :featured_status, "Feature this on homepage?", class: "form-label" %><br>
+  <%= form.radio_button :featured_status, false, class: "btn-check" %>
+  <%= form.label :featured_status_false, 'Not featured', for: "#{klass}_featured_status_false", class: "btn btn-outline-secondary" %>
 
-    <%= form.radio_button :featured_status, false, class: "btn-check" %>
-    <%= form.label :featured_status_false, 'Not featured', for: "#{klass}_featured_status_false", class: "btn btn-outline-secondary" %>
-
-    <%= form.radio_button :featured_status, true, class: "btn-check" %>
-    <%= form.label :featured_status_true, 'Featured', for: "#{klass}_featured_status_true", class: "btn btn-outline-primary" %>
-  </div><!-- #featured_status -->
-
-<% else %>
-
-  <div id="featured_status" class="form-group toggle visually-hidden sr-only">
-    <%= form.label :featured_status, "Feature this on homepage?", class: "form-label" %><br>
-
-    <%= form.radio_button :featured_status, false, class: "visually-hidden sr-only" %>
-    <%= form.label :featured_status_false, 'Not featured', for: "#{klass}_featured_status_false", class: "form-label" %>
-
-    <%= form.radio_button :featured_status, true, class: "visually-hidden sr-only" %>
-    <%= form.label :featured_status_true, 'Featured', for: "#{klass}_featured_status_true", class: "form-label" %>
-  </div><!-- #featured_status -->
-
-<% end %>
+  <%= form.radio_button :featured_status, true, class: "btn-check" %>
+  <%= form.label :featured_status_true, 'Featured', for: "#{klass}_featured_status_true", class: "btn btn-outline-primary" %>
+</div><!-- #featured_status -->

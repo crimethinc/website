@@ -2,10 +2,6 @@ input[type=checkbox] {
   margin-right: .5rem;
 }
 
-.datetime-select {
-  margin-bottom: 1rem;
-}
-
 .actions {
   text-align: right;
   margin: 2em 0 3em 0;
@@ -13,17 +9,6 @@ input[type=checkbox] {
   border-bottom: $border-size-xsmall solid #eee;
 }
 
-// Upload button
-input[type="file"]::-webkit-file-upload-button {
-  @extend .btn;
-  @extend .btn-outline-primary;
-}
-
 .table img {
   max-height: 100px;
-}
-
-// TODO: Transitional for Bootstrap 5
-.form-group {
-  @extend .mb-3;
 }

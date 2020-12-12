@@ -1,12 +1,12 @@
 <div id="localization">
-  <div class="form-group">
+  <div class="mb-3">
     <%= form.label :locale, class: "form-label" %>
     <%= form.collection_select :locale,
                                Locale.all,
                                :abbreviation,
                                :display_name,
                                {},
-                               class: "form-select todo-forward-delete-after-bootstrap-5-upgrade form-control form-control-lg" %>
+                               class: "form-select form-select-lg" %>
 
     <p class="form-text text-muted">
       If it’s not here, you can
@@ -14,7 +14,7 @@
     </p>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= form.label "English #{current_item_class}", class: "form-label" %>
 
     <%= form.collection_select :canonical_id,
@@ -22,6 +22,6 @@
                                :id,
                                :id_and_name,
                                { include_blank: true },
-                               class: "form-select todo-forward-delete-after-bootstrap-5-upgrade form-control form-control-lg" %>
+                               class: "form-select form-select-lg" %>
   </div>
 </div><!-- #localization -->
