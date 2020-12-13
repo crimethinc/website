@@ -1,8 +1,7 @@
-//= require jquery3
-//= require jquery_ujs
 //= require popper
 //= require bootstrap
 //= require dom_ready
+//= require rails-ujs
 
 // character counter on textareas
 function updateCounter(e) {
