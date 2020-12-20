@@ -40,7 +40,6 @@ module Crimethinc
     # Allowed list locales available for the application
     subdomain_locales = %i[ar bn cs cz da de dv en es fa fi fr gr he id it ja ko nl pl pt ru sv th tr zh]
     path_ltr_locales  = %i[
-      ภาษาไทย
       english
       espanol
       espanol-america-latina
@@ -48,6 +47,7 @@ module Crimethinc
       portugues
       quebecois
       日本語
+      ภาษาไทย
       한국어
     ]
     path_rtl_locales = %i[فارسی]
