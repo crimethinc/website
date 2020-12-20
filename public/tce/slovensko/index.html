@@ -9,21 +9,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-    $(window).resize(function() {
-      $("h1,h2,h4,blockquote").css("z-index", 1);
-    });
+      $(window).resize(function() {
+        $("h1,h2,h4,blockquote").css("z-index", 1);
+      });
 
-    function toggleDiv(tocdiv) {
-       $("#"+tocdiv).toggle();
-    }
-
-    function toggleDiv(languagediv) {
-       $("#"+languagediv).toggle();
-    }
-
-    function toggleDiv(sharediv) {
-       $("#"+sharediv).toggle();
-    }
+      function toggleDiv(div) {
+        $("#"+div).toggle();
+      }
     </script>
 
     <script src="https://cloudfront.crimethinc.com/assets/tce/js/jquery.responsImg.min.js"></script>
