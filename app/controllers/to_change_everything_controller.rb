@@ -1,18 +1,25 @@
 class ToChangeEverythingController < ApplicationController
   layout 'to_change_everything', only: [:show]
 
-  TO_CHANGE_ANYTHING_YAMLS = %w[
-    ภาษาไทย
-    日本語
-    portugues
-    quebecois
-    espanol-america-latina
-    lietuvos
-    한국어
+  LTR_TO_CHANGE_ANYTHING_YAMLS = %w[
     english
     espanol
+    espanol-america-latina
+    lietuvos
+    portugues
+    quebecois
+    日本語
+    ภาษาไทย
+    한국어
+  ].freeze
+
+  RTL_TO_CHANGE_ANYTHING_YAMLS = %w[
     فارسی
   ].freeze
+
+  TO_CHANGE_ANYTHING_YAMLS = [
+    LTR_TO_CHANGE_ANYTHING_YAMLS + RTL_TO_CHANGE_ANYTHING_YAMLS
+  ].flatten.freeze
 
   def show
     @locale = params[:lang]
