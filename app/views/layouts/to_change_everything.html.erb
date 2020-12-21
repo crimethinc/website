@@ -9,15 +9,26 @@
   <%= stylesheet_link_tag "to_change_everything", media: "screen" %>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script>
-    $(window).resize(function() {
-      $("h1,h2,h4,blockquote").css("z-index", 1);
-    });
+  <script>    // For IE < 9
+    if(window.attachEvent) {
+        window.attachEvent('onresize', function() {
+      document.querySelectorAll("h1,h2,h4,blockquote").forEach( el => el.style.zIndex = '1')
+        });
+    }
+    // For IE9+
+    else if(window.addEventListener) {
+        window.addEventListener('resize', function() {
+      document.querySelectorAll("h1,h2,h4,blockquote").forEach( el => el.style.zIndex = '1')
+        }, true);
+    }
+    else {
+        //The browser does not support Javascript event binding
+    }
 
     function toggleDiv(div) {
-      $("#"+div).toggle();
+      document.querySelector("#"+div).style.display = document.querySelector("#"+div).style.display === "none" ? "flex" : "none"
     }
-  </script>
+</script>
 
   <link rel="stylesheet" href="https://cloudfront.crimethinc.com/assets/tce/css/jquery.fancybox.css" media="screen">
 
