@@ -6,6 +6,7 @@ module LinksHelper
     'CrimethInc. on Github'            => 'https://github.com/crimethinc',
     'CrimethInc. on Tumblr'            => 'https://crimethinc.tumblr.com',
     'CrimethInc. on Mastodon'          => 'https://mastodon.online/@crimethinc',
+    'CrimethInc. on Telegram'          => 'https://t.me/ExWorkers',
     'CrimethInc.com Articles RSS feed' => 'https://crimethinc.com/feed'
   }.freeze
 
@@ -14,12 +15,18 @@ module LinksHelper
   end
 
   def social_link_classes url:, name:
-    domain = URI.parse(url).host.downcase.split('.')[-2]
-    domain = "link-domain-#{domain}"
+    # Telegram is a special case because its domain is just t.me, not telegram.[anything]
+    domain = case URI.parse(url).host.downcase
+             when 't.me'
+               'telegram'
+             else
+               URI.parse(url).host.downcase.split('.')[-2]
+             end
+    domain_class = "link-domain-#{domain}"
 
     name = name.downcase.to_slug
-    name = "link-name-#{name}"
+    name_class = "link-name-#{name}"
 
-    [name, domain].join(' ')
+    [name_class, domain_class].join(' ')
   end
 end
