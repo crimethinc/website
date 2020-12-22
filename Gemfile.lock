@@ -86,10 +86,12 @@ GEM
       faraday (~> 0.9)
       faraday_middleware (~> 0.10)
       nokogiri (~> 1.6)
-    azure-storage (0.15.0.preview)
-      azure-core (~> 0.1)
-      faraday (~> 0.9)
-      faraday_middleware (~> 0.10)
+    azure-storage-blob (1.1.0)
+      azure-core (~> 0.1.13)
+      azure-storage-common (~> 1.0)
+      nokogiri (~> 1.6, >= 1.6.8)
+    azure-storage-common (1.1.0)
+      azure-core (~> 0.1.13)
       nokogiri (~> 1.6, >= 1.6.8)
     bcrypt (3.1.16)
     bindex (0.8.1)
@@ -484,7 +486,7 @@ DEPENDENCIES
   autoprefixer-rails
   awesome_print
   aws-sdk-s3
-  azure-storage
+  azure-storage-blob
   bcrypt
   bootstrap (= 5.0.0.alpha3)
   bugsnag
