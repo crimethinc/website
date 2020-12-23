@@ -25,7 +25,7 @@ Rails.application.configure do
                            :mem_cache_store,
                            ENV['MEMCACHEDCLOUD_SERVERS'].split(','),
                            {
-                             username: ENV['MEMCACHEDCLOUD _USERNAME'],
+                             username: ENV['MEMCACHEDCLOUD_USERNAME'],
                              password: ENV['MEMCACHEDCLOUD_PASSWORD']
                            }
                          ]
