@@ -22,7 +22,7 @@ Rails.application.configure do
   # Pulled from https://devcenter.heroku.com/articles/memcachedcloud
   config.cache_store = if ENV['MEMCACHEDCLOUD_SERVERS']
                          [
-                           :dalli_store,
+                           :mem_cache_store,
                            ENV['MEMCACHEDCLOUD_SERVERS'].split(','),
                            {
                              username: ENV['MEMCACHEDCLOUD_USERNAME'],
