@@ -2,8 +2,8 @@ inherit_from: .rubocop_todo.yml
 
 require:
   - rubocop-performance
-  # TODO: Uncomment when rubocop-rspec is compatible with rubocop <= 1.0
-  # - rubocop-rspec
+  - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
