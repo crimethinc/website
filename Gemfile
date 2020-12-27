@@ -51,7 +51,7 @@ gem 'logstash-event'
 
 # uploads using Active Storage
 gem 'aws-sdk-s3'
-gem 'azure-storage',        require: false
+gem 'azure-storage-blob',   require: false
 gem 'google-cloud-storage', require: false
 
 gem 'image_processing'
@@ -83,6 +83,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 # testing / ci
