@@ -25,7 +25,7 @@ _Twitter:_ \\
 ## Mailorder
 
 **_Mail:_** \\
-CrimethInc. Far East \\
+CrimethInc. ex-Workers’ Collective \\
 PO Box 1902\\
 Olympia, WA 98507
 
