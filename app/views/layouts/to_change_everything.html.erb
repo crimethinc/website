@@ -13,26 +13,9 @@
     function toggleDiv(div) {
       document.querySelector("#"+div).style.display = document.querySelector("#"+div).style.display === "none" ? "flex" : "none"
     }
-</script>
 
-  <link rel="stylesheet" href="https://cloudfront.crimethinc.com/assets/tce/css/jquery.fancybox.css" media="screen">
-
-  <script src="https://cloudfront.crimethinc.com/assets/tce/js/jquery.fancybox.pack.js"></script>
-  <script>
     $(document).ready(function() {
-      $(".fancybox").fancybox({
-        maxWidth:    1334,
-        autoHeight:  true,
-        padding:     0,
-        fitToView:   false,
-        width:       '100%',
-        autoSize:    false,
-        closeClick:  false,
-        openEffect:  'elastic',
-        closeEffect: 'elastic',
-        openSpeed:   'fast',
-        closeSpeed:  'fast'
-      });
+      console.log($(".fancybox"))
     });
   </script>
 
@@ -130,10 +113,6 @@
     <%= yield %>
 
     <footer></footer>
-
-    <div id="video-container">
-      <iframe src="<%= t('.video_url') %>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
   </div><!-- .grandwrapper -->
 
 </body>

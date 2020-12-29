@@ -4,9 +4,9 @@ quebecois:
     to_change_everything:
       language_direction: ltr
       lang_code: fr
-      video_url: "http://player.vimeo.com/video/111589483"
       head:
-        title: Pour Tout Transformer, un appel à l’anarchie / CrimethInc. Ex-Workers'
+        title:
+          Pour Tout Transformer, un appel à l’anarchie / CrimethInc. Ex-Workers'
           Collective
         meta:
           title: Pour Tout Transformer, un appel à l’anarchie
@@ -41,9 +41,11 @@ quebecois:
   to_change_everything:
     show:
       title_html: Pour Tout<br>Transformer
-      subtitle_html: <span class="green">un</span> <span class="pink">appel à</span>
+      subtitle_html:
+        <span class="green">un</span> <span class="pink">appel à</span>
         <span class="blue">l’anarchie</span>
       video_cte: Visionner la Vidéo
+      video_url: "http://player.vimeo.com/video/111589483"
       pdf_cte_html: Télécharger<br> le PDF
       pdf_get_url: https://cloudfront.crimethinc.com/tce/images/Pour-Tout-Transformer.pdf
       pdf_image: tce-cover-200-quebecois.png
@@ -67,7 +69,8 @@ quebecois:
         image_name: self
         image_alt: shadow of a person climbing over a barbed-wire fence
       answering:
-        left_text_html: à commencer par<br><span class="bold">ne devoir compte<br>qu’à
+        left_text_html:
+          à commencer par<br><span class="bold">ne devoir compte<br>qu’à
           soi-même</span>
         right_text_html: |-
           <p>Les gestionnaires et les percepteurs d’impôts adorent parler de responsabilité personnelle. Mais si nous assumions entièrement la responsabilité de nos propres actions, quelle attention porterions-nous à leurs directives?</p>
@@ -75,13 +78,15 @@ quebecois:
           <p>Cela vaut également pour les systèmes de valeurs personnelles. D’innombrables dirigeants et règlements exigent notre soumission absolue. Mais même si tu es disposée à abdiquer la responsabilité de tes décisions à tel dieu ou tel dogme, comment décider lequel choisir? Que tu le veuilles ou non, tu es la seule à pouvoir choisir. La plupart du temps, les gens font ces choix en fonction de ce qui leur est le plus familier ou leur semble le plus pratique.</p>
           <p>Nous ne pouvons échapper à la responsabilité de nos convictions et de nos décisions. Lorsqu’on ne doit de comptes qu’à soi-même, qu’on refuse de se soumettre à tel chef ou tel commandement, il se peut encore que nous entrions en conflit les uns contre les autres, mais au moins nous le faisons sous nos propres conditions, sans subir inutilement telle ou telle tragédie au service d’intérêts qui nous échappent.</p>
         image_name: answering
-        image_alt: 1968 Olympics Black Power salute raised by the African-American
+        image_alt:
+          1968 Olympics Black Power salute raised by the African-American
           athletes Tommie Smith and John Carlos during their medal ceremony at the
           1968 Summer Olympics in the Olympic Stadium in Mexico City. As they turned
           to face their flags and hear the American national anthem, they each raised
           a black-gloved fist and kept them raised until the anthem had finished
       power:
-        left_text_html: à commencer par<br><span class="bold">rechercher le pouvoir
+        left_text_html:
+          à commencer par<br><span class="bold">rechercher le pouvoir
           d’agir, et non l’autorité</span>
         right_text_html: |-
           <p>L’ouvrier qui effectue un travail a un certain pouvoir; le patron qui lui dit quoi faire détient l’autorité. La locataire qui entretient son logis a un certain pouvoir; le propriétaire de l’édifice détient l’autorité. Une rivière a « du pouvoir »; le permis de construire un barrage confère de l’autorité.</p>
@@ -93,21 +98,25 @@ quebecois:
           <p>Le patriarcat, la suprématie blanche, la propriété : aucun tyran ne trône au sommet de ces pyramides. Ce sont des construits sociaux, des spectres qui maintiennent l’humanité sous hypnose.</p>
           <p>Tant que nous chercherons le pouvoir dans l’autorité, il échappera à nos aspirations. En hiérarchie, l’autorité découle de l’obéissance : le pouvoir et l’autorité sont tellement imbriqués qu’il est devenu pratiquement impossible de les distinguer. Et pourtant, sans liberté, le pouvoir n’a aucune valeur.</p>
         image_name: power
-        image_alt: a worker in a gold mine confronts soldier keeping guard and grabs
+        image_alt:
+          a worker in a gold mine confronts soldier keeping guard and grabs
           his rifle by the barrel as a crowd of workers watch
       relationships:
-        left_text_html: à commencer par<br><span class="bold">onder nos relations<br>sur
+        left_text_html:
+          à commencer par<br><span class="bold">onder nos relations<br>sur
           la confiance</span>
         right_text_html: |-
           <p>Contrairement à l’autorité, la confiance place le pouvoir dans les mains de qui la donne, et non de qui la reçoit. Qui a gagné la confiance n’a que faire de l’autorité. Et qui n’est pas digne de confiance ne mérite certainement pas l’autorité! Et pourtant, à qui fait-on moins confiance qu’aux politiciens et capitaines d’industrie?</p>
           <p>Lorsque le pouvoir est distribué également, chaque individu est incité à régler ses conflits, à gagner la confiance des autres. La hiérarchie invalide cet incitatif et permet à ceux qui sont en position d’autorité de réprimer les conflits.</p>
           <p>L’amitié, dans le meilleur des cas, est un rapport entre égaux qui se soutiennent et se remettent en question réciproquement. L’autonomie de chacunE y est  respectée. C’est un excellent modèle de comparaison pour évaluer <em>toutes</em> nos relations. Sans les contraintes qui nous sont imposées aujourd’hui, comme la citoyenneté et la « légalité », la propriété et les dettes ou les chaines de commandement militaires et d’entreprise, rien ne nous empêcherait de refonder nos relations sur l’entraide et la libre association.</p>
         image_name: relationships
-        image_alt: at night, lit by streetlights, young protestors in Turkey form
+        image_alt:
+          at night, lit by streetlights, young protestors in Turkey form
           a fire-brigade-line to transport cobblestones to the front lines of a conforntation
           with police
       reconciling:
-        left_text_html: à commencer par<br><span class="bold">réconcilier<br>l’individu<br>et
+        left_text_html:
+          à commencer par<br><span class="bold">réconcilier<br>l’individu<br>et
           la totalité</span>
         right_text_html: |-
           <p>« Tes droits s’arrêtent là où ceux des autres commencent ». Si l’on donne foi à cette logique, plus nous sommes nombreux, plus la liberté s’amenuise.</p>
@@ -123,7 +132,8 @@ quebecois:
           <p>Dans cette société où nous évoluons, même nos passions ne nous appartiennent pas. Elles sont cultivées par la publicité et la propagande pour nous faire tourner en rond sur les manèges du consumérisme. Endoctrinés, les gens se complaisent et se félicitent de choix qui les rendront toujours plus misérables avec le temps. Nous sommes prisonniers de nos plaisirs autant que de nos souffrances.</p>
           <p>Pour être réellement libres, il faut que nous ayons prise sur les procédés qui définissent nos désirs. La libération ne se limite pas à la réalisation des désirs qui nous habitent aujourd’hui. Il faut encore que nous puissions élargir l’horizon des possibles pour que nos désirs évoluent avec les réalités qu’ils nous poussent à produire. Cela implique de se défaire du plaisir que nous procurent la domination, l’imposition et l’appropriation, et de chercher les plaisirs qui nous extirpent de la mécanique d’obéissance et de compétition. Quiconque s’est déjà défait d’une dépendance sait ce qu’implique la transformation des désirs.</p>
         image_name: liberation
-        image_alt: two protestors, adorned with gas masks and balaclavas, dance the
+        image_alt:
+          two protestors, adorned with gas masks and balaclavas, dance the
           tango together in the street
       revolt:
         left_text_html: à commencer par<br><span class="bold">se révolter</span>
@@ -133,7 +143,8 @@ quebecois:
           <p>L’idéal serait de se débarrasser une fois pour toutes de la domination plutôt que d’en gérer les détails plus équitablement, de mettre ceux qui la subissent à la place de ceux qui l’infligent ou de stabiliser le système en le réformant. L’objet de la contestation n’est pas de réclamer des lois et des législateurs plus justes, mais de montrer que nous pouvons agir en nos noms, d’encourager les autres à faire de même et de décourager les autorités de s’interposer. Ce n’est pas tant une guerre, soit un conflit binaire entre deux camps militarisés, qu’une forme de <em>désobéissance contagieuse</em>.</p>
           <p>Il ne suffit pas d’éduquer et de discuter, d’attendre que les autres révisent leur sentiment et leur opinion. Tant et aussi longtemps que les idées ne sont pas traduites en action, que les gens ne sont pas confrontés à des choix concrets, la conversation demeure abstraite. La plupart des gens tendent à s’éloigner des discussions théoriques, mais lorsque quelque chose se produit, que les enjeux sont importants et qu’ils perçoivent des différences marquées entre parties opposées, ils prennent position. L’unanimité n’est pas nécessaire, pas plus qu’une compréhension approfondie de l’univers ou qu’un plan détaillé vers une destination précise. Tout ce qu’il faut, c’est le courage de s’avancer sur un sentier inconnu.</p>
         image_name: revolt
-        image_alt: A anonymous man stands in front of a column of tanks on June 5,
+        image_alt:
+          A anonymous man stands in front of a column of tanks on June 5,
           1989, the morning after the Chinese military had suppressed the Tiananmen
           Square protests of 1989 by force, who later became known as the Tank Man.
           The tanks manoeuvred to pass by the man, and he moved to continue to obstruct
@@ -155,7 +166,8 @@ quebecois:
           <p>Tous ces mécanismes se sont développés ensemble, se renforçant mutuellement. L’histoire du racisme, par exemple, est indissociable de celle du capitalisme, et ni l’un ni l’autre n’est concevable sans la colonisation, l’esclavage et les autres lignes de partage racistes qui divisent la classe ouvrière et déterminent encore aujourd’hui qui occupe les prisons et bidonvilles du monde. De la même manière, sans l’infrastructure que garantissent l’État et les autres formes de hiérarchie, l’intolérance et les préjugés personnels ne suffiraient pas à maintenir en place la suprématie blanche. Qu’un homme à la peau noire accède à la présidence de ces structures, pour prendre l’exemple des États-Unis, ne sert en fait qu’à les stabiliser : c’est la proverbiale exception qui confirme la règle.</p>
           <p>En d’autres termes, tant qu’il y aura de la police, qui selon toi harcèlera-t-elle? Tant qu’il y aura des prisons, qui y enfermera-t-on? Tant qu’il y aura de la pauvreté, qui vivra dans la misère?  Il est naïf de croire que l’on peut atteindre l’égalité dans une société fondée sur la hiérarchie. On peut bien brasser les cartes, c’est toujours le même jeu.</p>
         image_name: hierarchy
-        image_alt: a mustachioed cop in riot gear wearing aviator sunglasses stands
+        image_alt:
+          a mustachioed cop in riot gear wearing aviator sunglasses stands
           guard in fron of severl Ku Klux Klan members in full robes, one of whom
           carries a American flag
       borders:
@@ -174,7 +186,8 @@ quebecois:
           <p>À l’ère numérique, alors que chaque individu doit constamment se servir à soi-même de secrétaire pour soigner son image publique, nos réputations elles-mêmes nous échappent, comme des vampires se nourrissant de nous. Si nous n’étions pas isolées les unes des autres, en compétition pour nous vendre sur de nombreux marchés sociaux et professionnels, investirions-nous autant d’énergie dans la composition des ces « profils », autant de veaux d’or créés à notre image? </p>
           <p>Nous sommes pourtant irréductibles. Aucun délégué ni aucune abstraction ne peut prendre notre place. En réduisant les êtres humains à leur profil sociodémographique et les expériences vécues à des données abstraites, nous perdons de vue tout ce qui est précieux et unique dans le monde. Nous avons besoin de présence, d’immédiateté, de contact direct avec autrui, d’emprise directe sur nos vies. Autant de choses qu’aucun représentant ni aucune représentation ne peut offrir.</p>
         image_name: representation
-        image_alt: a woman of asian ethnicity works as a mannequin factory stocking
+        image_alt:
+          a woman of asian ethnicity works as a mannequin factory stocking
           a shelves that are full of caucasian mannequin heads
       leaders:
         left_text_html: le problème, c’est<br><span class="bold">les dirigeants</span>
@@ -194,7 +207,8 @@ quebecois:
           <p>Partout où il y a de la hiérarchie, celle-ci favorise ceux qui se trouvent au sommet. En intégrant au système des mécanismes d’imputabilité, nous confions la tâche de nous protéger… à ceux de qui nous devons le plus être protégés. La seule façon d’avoir une quelconque emprise sur les autorités sans être aspiré dans leur jeu est de développer des réseaux horizontaux autonomes qui correspondent à nos aspirations. Ironiquement, quand nous serons assez puissants pour forcer les autorités à nous prendre au sérieux, nous serons également assez puissants pour régler nos problèmes sans elles.</p>
           <p>La seule voie vers la liberté est la liberté elle-même. Plutôt qu’un seul portail vers le pouvoir d’agir de tous et toutes, il nous faut un vaste choix de milieux où exercer notre pouvoir. Plutôt qu’un seul faisceau étroit de légitimité, il nous faut assez d’espace pour une multitude de récits. Au lieu de la coercition inhérente au gouvernement, il nous faut des structures de prise de décision qui favorisent l’autonomie et des pratiques d’autodéfense qui permettent de garder à distance tous les prétendants à l’autorité.</p>
         image_name: government
-        image_alt: large conference table at which world leaders are seated, surrounded
+        image_alt:
+          large conference table at which world leaders are seated, surrounded
           by press and their minions, a summitt meeting with greek columns of marble
           and a traditional fresco in the dome above
       profit:
@@ -205,7 +219,8 @@ quebecois:
           <p><em>Faire du profit</em>, c’est accroitre, par rapport à autrui, son emprise sur les ressources de la société. Il est impossible que nous fassions tous du profit en même temps; pour qu’une personne puisse faire du profit, d’autres doivent proportionnellement perdre leurs moyens. Lorsque des investisseurs tirent profit du travail des salariéEs, cela signifie que plus ces derniers travaillent, plus l’écart financier entre eux se creuse.</p>
           <p>Un système motivé par le profit crée de la pauvreté au même rythme qu’il concentre la richesse. La pression de la compétition favorise l’innovation plus que tout autre système, mais elle aggrave en même temps les inégalités. Et puisque tout le monde cherche le profit au lieu de réaliser des choses pour le plaisir, le résultat de tous ces efforts peut s’avérer désastreux. Les changements climatiques actuels ne sont que la plus récente d’une longue série de catastrophes que même les plus puissants capitalistes n’ont pas été capables d’empêcher. En fait, le capitalisme n’a que faire des solutions aux crises mais récompense largement ceux qui en tirent profit.</p>
         image_name: profit
-        image_alt: a chauffeur holds open the door to a large Audi as a wealthy businessman
+        image_alt:
+          a chauffeur holds open the door to a large Audi as a wealthy businessman
           exits a helicopter and proceeds across the helipad towards the car
       property:
         left_text_html: le problème, c’est<br><span class="bold">la propriété</span>
@@ -216,7 +231,8 @@ quebecois:
           <p>Sans argent ou droit de propriété, nos rapports aux biens matériels seraient déterminés par nos rapports les uns avec les autres. Aujourd’hui, c’est l’inverse qui prévaut : nos rapports avec les autres sont déterminés par nos rapports aux biens. Abolir la propriété, ce n’est pas faire une croix sur nos biens; c’est faire en sorte qu’aucune loi ni aucun krach boursier ne pourra nous arracher ce dont nous avons vraiment besoin. Au lieu de dépendre de la bureaucratie, nous pourrions partir des besoins humains; au lieu de s’exploiter les uns les autres, nous pourrions tirer avantage de l’interdépendance.</p>
           <p>La plus grande crainte des escrocs est de voir émerger une société sans propriété, parce que sans elle, ils seraient condamnés au mépris qu’ils méritent. En l’absence d’argent, la valeur des personnes se mesure à ce qu’elles apportent de bon dans la vie des autres, et non pas à sa capacité de les acheter ou de les soudoyer. Sans le motif de profit, chaque effort est sa propre récompense. On laisse ainsi de côté tout incitatif à mener des activités insensées ou destructrices. Les choses qui comptent vraiment dans la vie, comme la passion, l’amitié et la générosité, se trouvent en abondance. Il faut littéralement des légions de policiers et d’arpenteurs de propriété pour imposer la rareté qui nous enferme toutes et tous dans cette grotesque course au profit.</p>
         image_name: property
-        image_alt: an abandoned building, now occupied, with protest banners in the
+        image_alt:
+          an abandoned building, now occupied, with protest banners in the
           window, being used as community organizing location
       lastcrime:
         left_text_html: <span class="bold">le crime ultime</span>
@@ -225,7 +241,8 @@ quebecois:
           <p>La catégorie du crime contient tout ce qui excède les limites d’une société donnée, autant le pire que le meilleur. Chaque système est menacé par tout ce qu’il ne peut incorporer ou maintenir sous son contrôle. Chaque ordre contient le germe de sa propre destruction.</p>
           <p>Rien ne dure éternellement. Cette règle vaut également pour les empires et les civilisations. Mais qu’est-ce qui pourrait remplacer celle-ci? Peut-on imaginer un ordre fondé sur autre chose que la division de la vie entre légitimité et illégitimité, légalité et criminalité, dirigeants et dirigés? Quel pourrait être le crime ultime?</p>
         image_name: lastcrime
-        image_alt: a protestor with his face concealed in the act of throwing a lit
+        image_alt:
+          a protestor with his face concealed in the act of throwing a lit
           molotov cocktail during a protest, in front of a huge concrete wall
       anarchy:
         first_html: |-
@@ -237,7 +254,8 @@ quebecois:
         third_html: |-
           <p><span class="blue black">Les anarchistes</span> s’opposent à toute forme de hiérarchie, à tout modèle servant à concentrer le pouvoir dans les mains d’un groupe sélect, à tout mécanisme servant à nous éloigner de notre potentiel. Contre les systèmes fermés, nous savourons l’inconnu qui s’étend devant nous et le chaos qui nous habite, en vertu duquel nous pouvons être libres.</p>
       outro:
-        left_text_html: "<p>Quand nous constatons tout ce que les différents mécanismes
+        left_text_html:
+          "<p>Quand nous constatons tout ce que les différents mécanismes
           et institutions de domination ont en commun, il devient évident que nos
           luttes individuelles sont également part intégrale d’un tout qui nous dépasse,
           mais qui pourrait nous rassembler. Lorsque nous agissons ensemble, sur la
@@ -250,5 +268,5 @@ quebecois:
           transformer,<br>il faut <br>
           commencer <br>partout.
       take_flight_html: Défaisons-nous du vieux monde
-      next_path: ''
-      next_text: ''
+      next_path: ""
+      next_text: ""

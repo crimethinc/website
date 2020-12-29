@@ -3,12 +3,12 @@ portugues:
     to_change_everything:
       language_direction: ltr
       lang_code: pt
-      video_url: "//player.vimeo.com/video/111151623"
       head:
         title: Para Mudar Tudo, um chamado anarquista / CrimethInc. Ex-Workers' Collective
         meta:
           title: Para Mudar Tudo, um chamado anarquista
-          description: Uma introdução aos pensamentos e ações libertárias, para colocá-lo
+          description:
+            Uma introdução aos pensamentos e ações libertárias, para colocá-lo
             em contato com grupos e pessoas agindo para resistir e transformar a realidade
             em que vivemos.
           url: http://tochangeeverything.com/portugues
@@ -41,9 +41,11 @@ portugues:
   to_change_everything:
     show:
       title_html: "  Para<br>Mudar Tudo"
-      subtitle_html: <span class="green">um</span> <span class="pink">chamado</span>
+      subtitle_html:
+        <span class="green">um</span> <span class="pink">chamado</span>
         <span class="blue">anarquista</span>
       video_cte: Assista ao Vídeo
+      video_url: "https://player.vimeo.com/video/111151623"
       pdf_cte_html: Baixe o<br> PDF
       pdf_get_url: https://cloudfront.crimethinc.com/tce/images/Para-Mudar-Tudo.pdf
       pdf_image: tce-cover-200-portugues.png
@@ -78,7 +80,8 @@ portugues:
 
                     <p>“Não posso deixar de me questionar se você é a pessoa certa a quem devo obedecer.”</p>
         image_name: answering
-        image_alt: 1968 Olympics Black Power salute raised by the African-American
+        image_alt:
+          1968 Olympics Black Power salute raised by the African-American
           athletes Tommie Smith and John Carlos during their medal ceremony at the
           1968 Summer Olympics in the Olympic Stadium in Mexico City. As they turned
           to face their flags and hear the American national anthem, they each raised
@@ -104,10 +107,12 @@ portugues:
 
                     <p>O preço da autoridade é a subserviência.</p>
         image_name: power
-        image_alt: a worker in a gold mine confronts soldier keeping guard and grabs
+        image_alt:
+          a worker in a gold mine confronts soldier keeping guard and grabs
           his rifle by the barrel as a crowd of workers watch
       relationships:
-        left_text_html: comece com<br><span class="bold">relações construídas<br>com
+        left_text_html:
+          comece com<br><span class="bold">relações construídas<br>com
           confiança</span>
         right_text_html: |-
           <p>Uma pessoa que conquista confiança não precisa de autoridade. Ao contrário da autoridade, a confiança deposita o poder nas mãos de quem a concede, não nas de quem a recebe. Se alguém não merece nossa confiança, por que ela deveria ter autoridade sobre nós? Aliás, existe alguém que mereça menos nossa confiança do que políticos, executivos e policiais?</p>
@@ -116,11 +121,13 @@ portugues:
 
                     <p>A amizade, nos seus melhores momentos, pode ser um laço entre pessoas que se apoiam e se estimulam mutuamente enquanto reforçam sua autonomia. Além de ser uma ótima referência para avaliarmos todas as nossas relações. Sem as restrições a que nos submetem hoje em dia – cidadania e clandestinidade, propriedade e dívida, hierarquias corporativas ou militares –, nós poderíamos reconstruir nossas relações baseadas em respeito mútuo e cooperação.</p>
         image_name: relationships
-        image_alt: at night, lit by streetlights, young protestors in Turkey form
+        image_alt:
+          at night, lit by streetlights, young protestors in Turkey form
           a fire-brigade-line to transport cobblestones to the front lines of a conforntation
           with police
       reconciling:
-        left_text_html: comece por<br><span class="bold">reconectar o<br>individual
+        left_text_html:
+          comece por<br><span class="bold">reconectar o<br>individual
           e o todo</span>
         right_text_html: |-
           <p>“Meu direito acaba quando o seu direito começa.” De acordo com essa lógica, quanto mais gente houver, menos direito você terá.</p>
@@ -140,7 +147,8 @@ portugues:
 
                     <p>Para sermos realmente livres, precisamos tomar controle dos processos que produzem nossos desejos. Nos libertar não será apenas atender aos desejos que temos hoje em dia, mas expandir nosso senso do que é possível para que nossos desejos possam se transformar junto com a realidade que eles nos levam a criar. Isso significa nos afastar dos prazeres que temos de exercer força, posse ou dominação, para buscarmos prazeres que nos arranquem da máquina da obediência e da competição. Se você já se libertou de algum vício, sabe qual é o sabor de transformar seus desejos.</p>
         image_name: liberation
-        image_alt: two protestors, adorned with gas masks and balaclavas, dance the
+        image_alt:
+          two protestors, adorned with gas masks and balaclavas, dance the
           tango together in the street
       revolt:
         left_text_html: comece pela<br><span class="bold">revolta</span>
@@ -153,7 +161,8 @@ portugues:
 
                     <p>Apenas nos educar ou debater não é o suficiente. Nem mesmo esperar que outros corações e outras mentes comecem a mudar. Até começarmos a expressar nossas ideias em ações que confrontem outras pessoas com ideias concretas, a conversa vai se manter em um nível teórico. A maioria das pessoas se mantém distante de discussões teóricas, mas quando algo está acontecendo, quando os limites são claros e é possível ver diferenças significativas entre lados opostos, elas vão tomar partido. Não precisamos de unanimidade, nem de um entendimento completo sobre o mundo todo, nem mesmo um mapa para um destino certo. Precisamos apenas da coragem para escolher um caminho diferente.</p>
         image_name: revolt
-        image_alt: A anonymous man stands in front of a column of tanks on June 5,
+        image_alt:
+          A anonymous man stands in front of a column of tanks on June 5,
           1989, the morning after the Chinese military had suppressed the Tiananmen
           Square protests of 1989 by force, who later became known as the Tank Man.
           The tanks manoeuvred to pass by the man, and he moved to continue to obstruct
@@ -180,7 +189,8 @@ portugues:
 
                     <p>Para colocar de outro jeito: enquanto houver polícia, quem você acha que eles vão perseguir, prender e matar? Enquanto houver prisões, quem você acha que vai estar dentro delas? Enquanto houver pobreza, quem você acha que vai ser pobre? Enquanto houver um sistema binário de gênero, quem você acha que não terá voz ou visibilidade? É uma ingenuidade acreditar que nós podemos alcançar igualdade em uma sociedade baseada na hierarquia.</p>
         image_name: hierarquia
-        image_alt: a mustachioed cop in riot gear wearing aviator sunglasses stands
+        image_alt:
+          a mustachioed cop in riot gear wearing aviator sunglasses stands
           guard in fron of severl Ku Klux Klan members in full robes, one of whom
           carries a American flag
       borders:
@@ -205,7 +215,8 @@ portugues:
 
                     <p>Não cabemos em números e estatísticas. Nem representantes nem abstrações podem nos substituir. Perdemos visão de tudo o que é precioso e único no mundo reduzindo a experiência bruta a dados e os seres humanos a demografia. Nós precisamos de presença, imediação, contato mútuo direto, controle direto de nossas vidas – coisas que nenhum representante pode trazer.</p>
         image_name: representation
-        image_alt: a woman of asian ethnicity works as a mannequin factory stocking
+        image_alt:
+          a woman of asian ethnicity works as a mannequin factory stocking
           a shelves that are full of caucasian mannequin heads
       leaders:
         left_text_html: para dar<br>um fim aos<br><span class="bold">líderes</span>
@@ -233,7 +244,8 @@ portugues:
 
                     <p>Não há caminho para a liberdade, mas através da liberdade. Em vez de apenas um funil que exclui a maioria de ter autonomia para atuar, nós precisamos de vários locais nos quais possamos exercitar o poder. Em vez de uma única moeda de legitimidade, nós precisamos de espaço para múltiplas narrativas. No lugar da coerção inerente do governo, nós precisamos de estruturas para tomada de decisão que promovam autonomia e, por fim, práticas de autodefesa que possam nos proteger daqueles que no futuro queiram se tornar nossos líderes.</p>
         image_name: government
-        image_alt: large conference table at which world leaders are seated, surrounded
+        image_alt:
+          large conference table at which world leaders are seated, surrounded
           by press and their minions, a summitt meeting with greek columns of marble
           and a traditional fresco in the dome above
       profit:
@@ -247,7 +259,8 @@ portugues:
 
                     <p>Um sistema guiado pelo lucro produz pobreza na mesma medida em que concentra riqueza. A pressão para competir gera inovações mais rápido que qualquer sistema do passado, mas junto a isso também produz disparidades cada vez maiores: se em uma época carruagens dominavam sobre pedestres, hoje, aviões bombardeiros sobrevoam motoristas e pessoas sem teto. E por todas as pessoas terem de buscar o lucro, ao invés de realizarem seus objetivos por valorizarem eles em si – e não simplesmente um pagamento – , os resultados de todo esse trabalho pode ser desastroso. As mudanças climáticas são apenas a última de uma série de catástrofes a que até mesmo os mais poderosos capitalistas e as mais poderosas corporações se mostram incapazes de pôr fim. De fato, o capitalismo não recompensa empresas e iniciativas empreendedoras por remediar crises mas por monetizar sobre elas.</p>
         image_name: profit
-        image_alt: a chauffeur holds open the door to a large Audi as a wealthy businessman
+        image_alt:
+          a chauffeur holds open the door to a large Audi as a wealthy businessman
           exits a helicopter and proceeds across the helipad towards the car
       property:
         left_text_html: vamos dar um fim à<br><span class="bold">propriedade</span>
@@ -262,7 +275,8 @@ portugues:
 
                     <p>O pior medo dos magnatas e de outros oportunistas é a sociedade sem propriedade – pois sem ela, uma pessoa só teria o respeito que merecesse. Sem dinheiro, as pessoas são valorizadas pelo que contribuem para a vida de outras, não pelo que conseguem suborná-las a fazerem. Sem lucro, cada esforço deve ser sua própria recompensa, não existindo nenhum incentivo para atividades sem sentido ou destrutivas. As coisas que realmente importam na vida – paixão, camaradagem, generosidade – são disponíveis em abundância. São necessárias legiões de policiais e fiscais da propriedade para impor a escassez que nos prende nessa competição voraz.</p>
         image_name: property
-        image_alt: an abandoned building, now occupied, with protest banners in the
+        image_alt:
+          an abandoned building, now occupied, with protest banners in the
           window, being used as community organizing location
       lastcrime:
         left_text_html: <span class="bold">o último crime</span>
@@ -275,7 +289,8 @@ portugues:
 
                     <p>E já podemos sentir a lei ruindo ao nosso redor.</p>
         image_name: lastcrime
-        image_alt: a protestor with his face concealed in the act of throwing a lit
+        image_alt:
+          a protestor with his face concealed in the act of throwing a lit
           molotov cocktail during a protest, in front of a huge concrete wall
       anarchy:
         first_html: |-
@@ -300,5 +315,5 @@ portugues:
           mudar tudo,<br>comece <br>
           por todos <br>os lugares.
       take_flight_html: NÃO SE APEGUE AO VELHO MUNDO
-      next_path: ''
-      next_text: ''
+      next_path: ""
+      next_text: ""

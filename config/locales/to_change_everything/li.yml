@@ -3,7 +3,6 @@ lietuvos:
     to_change_everything:
       language_direction: ltr
       lang_code: li
-      video_url: https://player.vimeo.com/video/111159930 # todo
       head:
         title: "Tam, kad viską pakeistum: Anarchisto užduotis / CrimethInc. Ex-Workers' Collective"
         meta:
@@ -34,13 +33,14 @@ lietuvos:
         lastcrime: Paskutinis nusikaltimas
         anarchy: Anarchija - tai
         outro: Išvados
-        takeflight: '' # TODO (translations dont really work)
+        takeflight: "" # TODO (translations dont really work)
         next: Kitas
   to_change_everything:
     show:
-      title_html: 'Tam, kad viską pakeistum'
+      title_html: "Tam, kad viską pakeistum"
       subtitle_html: <span class="green">Anarchisto</span> <span class="pink">užduotis</span>
       video_cte: Žiūrėti video
+      video_url: https://player.vimeo.com/video/111159930 # todo
       pdf_cte_html: Atsisiųskite<br />&nbsp;PDF
       pdf_get_url: /tce/get
       pdf_image: tce-cover-200.png
@@ -49,7 +49,7 @@ lietuvos:
         right_text_html: Tam, kad kažkas pasikeistų - pokeičių reikia reikia visur.
       self:
         left_text_html: Pradėk nuo<br /><span class="bold">savimonės</span>
-        right_text_html: '<p>Laisvės iliuzija tebėra gyva. Mum buvo pažadėta savivalda, apsisprendimo teisė ir valdžios institucijos tariamai turėjo tai įgalinti.</p><p>Jei turėtum neribotas galimybes - ką šiandien nuveiktum? Susimąstyk apie savo gyvenimo potencialą: žmonės kuriuos galėtum sutikti, dalykus kuriuos galėtum patirti, būdus suteikti savo gyvenimui prasmę. Vaikui gimus atrodo, kad nėra ribų tam kuo jis galėtų tapti, ko jis galėtų pasiekti. Naujagymis - lyg neribotų galimybių išraiška. Dauguma mūsu niekada nenustoja apie tas galimybes svajoti. Bet tik pačiais įsimintiniausiais gyvenimo momentais: kai įsimylime, išpinldome seną svajonę, apsilankonkome nežinomame krašte - pajuntame tikro gyvenimo skonį.</p><p>Kas išties riboja tavo pasiekimus? Ar leidiesi įtakojamas aplinkos? Ar pats nusprendi kaip leidi savo laiką, kokių tikslų sieki? Institucijos kurios mus priima tik jei nualankiai laikomės taisyklių, ekonomika, kurioje esi vertinamas tik pagal tai kiek sukuri pelno, armijos atstovai tvirtinantys kad geriausias būdas išpildyti savo potencialą yra aklai vykdyti jų komandas. Ar sekdamas tokiais visuotinai priimtinais principais iš tiesų paversi savo gyvenimą prasmingu?</p><p>Vieša paslaptis yra tai jog Iš tiesų mes visi turime neribotą galią bei laisvę priimti asmeninius sprendimus ne todėl kad ji mums suteikta, bet todėl, kad net pats nežmogiškiausias valdžios rėžimas jos iš tavęs neatims. Bet vos tik pabandai eiti savo asmeniniu, unikaliu keliu susiduri su kliūtimis, sukurtomis tų pačių institucijų, kurios turėtų užtikrinti mūsų laisvę.</p>'
+        right_text_html: "<p>Laisvės iliuzija tebėra gyva. Mum buvo pažadėta savivalda, apsisprendimo teisė ir valdžios institucijos tariamai turėjo tai įgalinti.</p><p>Jei turėtum neribotas galimybes - ką šiandien nuveiktum? Susimąstyk apie savo gyvenimo potencialą: žmonės kuriuos galėtum sutikti, dalykus kuriuos galėtum patirti, būdus suteikti savo gyvenimui prasmę. Vaikui gimus atrodo, kad nėra ribų tam kuo jis galėtų tapti, ko jis galėtų pasiekti. Naujagymis - lyg neribotų galimybių išraiška. Dauguma mūsu niekada nenustoja apie tas galimybes svajoti. Bet tik pačiais įsimintiniausiais gyvenimo momentais: kai įsimylime, išpinldome seną svajonę, apsilankonkome nežinomame krašte - pajuntame tikro gyvenimo skonį.</p><p>Kas išties riboja tavo pasiekimus? Ar leidiesi įtakojamas aplinkos? Ar pats nusprendi kaip leidi savo laiką, kokių tikslų sieki? Institucijos kurios mus priima tik jei nualankiai laikomės taisyklių, ekonomika, kurioje esi vertinamas tik pagal tai kiek sukuri pelno, armijos atstovai tvirtinantys kad geriausias būdas išpildyti savo potencialą yra aklai vykdyti jų komandas. Ar sekdamas tokiais visuotinai priimtinais principais iš tiesų paversi savo gyvenimą prasmingu?</p><p>Vieša paslaptis yra tai jog Iš tiesų mes visi turime neribotą galią bei laisvę priimti asmeninius sprendimus ne todėl kad ji mums suteikta, bet todėl, kad net pats nežmogiškiausias valdžios rėžimas jos iš tavęs neatims. Bet vos tik pabandai eiti savo asmeniniu, unikaliu keliu susiduri su kliūtimis, sukurtomis tų pačių institucijų, kurios turėtų užtikrinti mūsų laisvę.</p>"
         image_name: self
         image_alt: shadow of a person climbing over a barbed-wire fence
       answering:
@@ -124,7 +124,7 @@ lietuvos:
         image_alt: an abandoned building, now occupied, with protest banners in the window, being used as community organizing location
       lastcrime:
         left_text_html: <span class="bold">Paskutinis nusikaltimas</span>
-        right_text_html: '<p>Kiekvienas įstatymas yra nusikaltimas prieš anksčiau egzistavusį įstatymą, nusikaltimas kuris jį anuliavo. Amerikos sukūrimo nusikaltimas buvo sukilimas prieš Anglijos karalių. Nusikaltimas, kuris sufomuos ateinančią kartą, pagaliau galutinai panaikins šiandieninius įstatymus ir institucijas.</p><p>Nusikaltimo apibūdinimas apima viską kas už visuomenės normų ribų - tiek blogiausią, bet tiek ir geriausią. Kiekviena sistema yra persekiojama to, ko ji negali įtraukti ar kontroliuoti. Kiekviena santvarka iš prigimties yra nulemta susinaikinimui.</p><p>Niekas nesitęsia amžinai; taip pat imperijos bei civilizacijos. Klausimas yra į ką mes išmainysime tvyrojančia sistemą. Ar galim įsivaizduoti pasaulį kuriame nesiskirstysime į teisėtus ir neteisėtus, paklusnius ir nusikalstančius, valdančius ir valdomus.</p>'
+        right_text_html: "<p>Kiekvienas įstatymas yra nusikaltimas prieš anksčiau egzistavusį įstatymą, nusikaltimas kuris jį anuliavo. Amerikos sukūrimo nusikaltimas buvo sukilimas prieš Anglijos karalių. Nusikaltimas, kuris sufomuos ateinančią kartą, pagaliau galutinai panaikins šiandieninius įstatymus ir institucijas.</p><p>Nusikaltimo apibūdinimas apima viską kas už visuomenės normų ribų - tiek blogiausią, bet tiek ir geriausią. Kiekviena sistema yra persekiojama to, ko ji negali įtraukti ar kontroliuoti. Kiekviena santvarka iš prigimties yra nulemta susinaikinimui.</p><p>Niekas nesitęsia amžinai; taip pat imperijos bei civilizacijos. Klausimas yra į ką mes išmainysime tvyrojančia sistemą. Ar galim įsivaizduoti pasaulį kuriame nesiskirstysime į teisėtus ir neteisėtus, paklusnius ir nusikalstančius, valdančius ir valdomus.</p>"
         image_name: lastcrime
         image_alt: a protestor with his face concealed in the act of throwing a lit molotov cocktail during a protest, in front of a huge concrete wall
       anarchy:
@@ -134,6 +134,6 @@ lietuvos:
       outro:
         left_text_html: '<p>Kai suprantame ką skirtingos institucijos bei dominavimo mechanizmai turi bendro, pasidaro aišku, kad ir mūsų asmeniniai iššūkiai yra bendro "paveikslo" dalis, kuris iš tiesų galėtų žmoniją suvienyti. Kai mes pradedame veikti kaip visumos dalis, viskas pasikeičia: ne tik mūsų problemos, bet ir atsakomybės pojūtis, sugebėjimas džiaugtis, suvokimas kad mūsų gyvenimai yra prasmingi. Tam kad iš naujo atrastumėm save bei kitus, privalome pradėti grįsti savo veiksmus kitokia logika.</p>'
         right_text_html: Tam, kad viską pakeisti, reikia pradėti visur.
-      take_flight_html: '' # TODO  (translations not quite right)
+      take_flight_html: "" # TODO  (translations not quite right)
       next_path: /begin
       next_text: Paslaptis yra pradėti.
