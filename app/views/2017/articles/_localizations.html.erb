@@ -1,9 +1,10 @@
+<% show_icon ||= false %>
 <% if localizations_for(article).present? %>
   <div class="localizations">
     <b class="badge">Localizations:</b>
 
     <ul>
-      <% if action_name == 'show' %>
+      <% if (action_name == 'show' || show_icon) %>
         <li><%= image_tag 'library/localizations.png', class: 'icon-image' %></li>
       <% end %>
       <% localizations_for(article).each do |article| %>
