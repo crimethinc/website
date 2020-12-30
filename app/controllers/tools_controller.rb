@@ -37,7 +37,7 @@ class ToolsController < ApplicationController
   end
 
   def set_tools
-    @tools = tool_class.english.reorder(position: :asc).order(published_at: :desc).live.published.page(params[:page]).per(10)
+    @tools = tool_class.for_index(published_at: :desc).page(params[:page]).per(10)
   end
 
   def tool_class

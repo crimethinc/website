@@ -7,7 +7,7 @@ class BooksController < ApplicationController
     @type    = 'books'
     @title   = PageTitle.new title_for(:books)
 
-    @books = Book.english.for_index
+    @books = Book.for_index
 
     render "#{Current.theme}/books/index"
   end
