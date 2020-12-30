@@ -42,7 +42,6 @@ espanol:
     show:
       title_html: "&nbsp;&nbsp;&nbsp;Para<br />Cambiar Todo"
       subtitle_html: <span class="green">un</span> <span class="pink">llamamiento</span> <span class="blue">anarquista</span>
-      video_cte: Ver Video
       video_url: https://player.vimeo.com/video/111658785
       pdf_cte_html: Descargar<br />&nbsp;PDF
       pdf_get_url: /tce/espanol/get

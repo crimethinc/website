@@ -44,7 +44,6 @@ quebecois:
       subtitle_html:
         <span class="green">un</span> <span class="pink">appel à</span>
         <span class="blue">l’anarchie</span>
-      video_cte: Visionner la Vidéo
       video_url: "http://player.vimeo.com/video/111589483"
       pdf_cte_html: Télécharger<br> le PDF
       pdf_get_url: https://cloudfront.crimethinc.com/tce/images/Pour-Tout-Transformer.pdf

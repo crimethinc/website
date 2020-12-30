@@ -39,7 +39,6 @@
     show:
       title_html: "変更する<br />すべて"
       subtitle_html: <span class="pink">アナキスト</span><span class="green">の</span> <span class="blue">訴え</span>
-      video_cte: ビデオを見る
       pdf_cte_html: PDF<br />をダウンロード
       video_url: https://player.vimeo.com/video/111159930
       pdf_get_url: https://cloudfront.crimethinc.com/assets/tce/images/to-change-everything-japanese.pdf

@@ -39,7 +39,6 @@
     show:
       title_html: "دگرگون<br />کردن<br />همه چیز"
       subtitle_html: <span class="green"> فراخوانی</span> <span class="blue">آنارشیستی</span>
-      video_cte: تماشای ویدیو # Google translate "Watch Video"
       video_url: https://www.youtube.com/embed/BSPxNZSJroI
       pdf_cte_html: دانلود<br />&nbsp;PDF # Google translate "Download PDF"
       pdf_get_url: http://www.crimethinc.com/blog/2016/09/21/to-change-everything-in-11-more-languages/#farsi

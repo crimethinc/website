@@ -39,7 +39,6 @@ english:
     show:
       title_html: "&nbsp;To Change<br />Everything"
       subtitle_html: <span class="green">an</span> <span class="pink">anarchist</span> <span class="blue">appeal</span>
-      video_cte: Watch Video
       pdf_cte_html: Download<br />&nbsp;PDF
       pdf_get_url: /tce/get
       pdf_image: tce-cover-200.png
