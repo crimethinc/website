@@ -8,15 +8,10 @@
   <meta charset="utf-8">
   <%= stylesheet_link_tag "to_change_everything", media: "screen" %>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
     function toggleDiv(div) {
       document.querySelector("#"+div).style.display = document.querySelector("#"+div).style.display === "none" ? "flex" : "none"
     }
-
-    $(document).ready(function() {
-      console.log($(".fancybox"))
-    });
   </script>
 
   <meta name="viewport" content="initial-scale=1">
