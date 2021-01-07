@@ -32,6 +32,7 @@ class PagesController < ApplicationController
     render "#{Current.theme}/pages/library"
   end
 
+  # TODO: Delete and all of its views and translation locale YAMLs
   def post_order_success
     @title    = PageTitle.new title_for I18n.t('page_titles.about.store'), I18n.t('page_titles.about.post_order_success')
     @order_id = params[:ordernum]
