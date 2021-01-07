@@ -1,16 +1,7 @@
 class PagesController < ApplicationController
-  before_action :set_page,       only: %i[show about contact]
-  before_action :page_redirects, only: %i[show about contact]
+  before_action :set_page,       only: %i[about contact]
+  before_action :page_redirects, only: %i[about contact]
   before_action :set_html_id
-
-  # TODO: Delete? Is this used by anything anymore?
-  def show
-    @editable = @page
-    @title    = PageTitle.new I18n.t("page_titles.about.#{@page.slug}")
-
-    # no layout
-    render html: @page.content.html_safe, layout: false if @page.content_in_html?
-  end
 
   def about
     @editable = @page
