@@ -16,7 +16,7 @@
 
     <% User::ROLES.each do |role| %>
       <div class="form-check form-check-inline">
-        <span class="d-inline-block mr-3">
+        <span class="d-inline-block me-3">
           <%= form.radio_button :role, role, id: "user_role_#{role}", class: "form-check-input" %>
 
           <%= form.label :role, role.capitalize, class: "form-check-label", for: "user_role_#{role}" %>
