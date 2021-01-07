@@ -201,7 +201,7 @@ Rails.application.routes.draw do
   get 'languages/:locale', to: 'languages#show',  as: :language
 
   # For redirection, exempts Active Storage upload paths
-  get '*path', to: 'redirects#show', as: :page, via: :all, constraints: lambda { |req|
+  get '*path', to: 'redirects#show', via: :all, constraints: lambda { |req|
     req.path.exclude? 'rails/active_storage'
   }
 end
