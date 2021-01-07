@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
   before_action :set_current_theme
 
   before_action :set_site_locale
-  before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
   before_action :set_page_share
@@ -64,13 +63,6 @@ class ApplicationController < ActionController::Base
 
   def set_current_theme
     Current.theme = ENV.fetch('THEME') { '2017' }
-  end
-
-  def check_for_redirection
-    redirect = Redirect.where(source_path: request.path.downcase).last
-    redirect = Redirect.where(source_path: "#{request.path.downcase}/").last if redirect.blank?
-
-    return redirect_to(redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301) if redirect.present?
   end
 
   # TODO: move to rack middleware
