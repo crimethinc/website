@@ -72,24 +72,6 @@ RSpec.describe ApplicationController, type: :controller do
     end
   end
 
-  describe '#check_for_redirection' do
-    it 'redirects temporarily when present' do
-      Redirect.create(source_path: '/anonymous', target_path: 'http://example.com', temporary: true)
-
-      get :index
-
-      expect(response.status).to eq(302)
-    end
-
-    it 'redirects permanently when present' do
-      Redirect.create(source_path: '/anonymous', target_path: 'http://example.com', temporary: false)
-
-      get :index
-
-      expect(response.status).to eq(301)
-    end
-  end
-
   describe '#strip_file_extension' do
     it 'strips .html' do
       get :index, format: 'html'
