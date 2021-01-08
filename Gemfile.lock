@@ -196,7 +196,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    honeycomb-beeline (2.3.0)
+    honeycomb-beeline (2.4.0)
       libhoney (~> 1.14, >= 1.14.2)
     http (4.4.1)
       addressable (~> 2.3)
@@ -206,8 +206,8 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.1)
-      ffi-compiler (>= 1.0, < 2.0)
+    http-parser (1.2.2)
+      ffi-compiler
     httpclient (2.8.3)
     i18n (1.8.7)
       concurrent-ruby (~> 1.0)
@@ -241,7 +241,7 @@ GEM
       rexml
     launchy (2.5.0)
       addressable (~> 2.7)
-    libhoney (1.15.0)
+    libhoney (1.17.0)
       addressable (~> 2.0)
       http (>= 2.0, < 5.0)
     listen (3.4.0)
