@@ -18,13 +18,6 @@ class Logo < ApplicationRecord
     Rails.application.routes.url_helpers.rails_blob_path image_jpg, only_path: true
   end
 
-  # TODO: delete on 2020-08-15 if unused until then
-  def image_url _
-    puts "#{'*' * 80} Logo#image_url used by #{caller} #{'*' * 80}"
-
-    Rails.application.routes.url_helpers.rails_blob_url image_jpg
-  end
-
   def meta_description
     "CrimethInc. logo: #{title}"
   end
