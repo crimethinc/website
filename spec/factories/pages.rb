@@ -5,6 +5,6 @@ FactoryBot.define do
     publication_status { 'published' }
     published_at { Time.zone.parse '2017-01-01' }
     sequence(:slug) { |n| "slug#{n}" }
-    image { 'https://cloudfront.crimethinc.com/assets/pages/start/start-header.jpg' }
+    image { 'https://cdn.crimethinc.com/assets/pages/start/start-header.jpg' }
   end
 end

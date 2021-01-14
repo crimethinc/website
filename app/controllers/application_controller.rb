@@ -149,7 +149,7 @@ class ApplicationController < ActionController::Base
 
   def page_share_image_url
     # TODO: implement this algorithm
-    'https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png'
+    'https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png'
   end
 
   def set_site_locale

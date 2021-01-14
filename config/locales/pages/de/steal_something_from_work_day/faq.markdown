@@ -17,7 +17,7 @@ Es tut mir echt Leid, es dir zu sagen, Boss, aber deine Angestellten bestehlen d
 
 Nicht wirklich. Das gravierendste Hindernis, das überwunden werden muss, sind nicht etwa deine Bosse oder die Kameras, sondern fehlgeleitete ArbeitskollegInnen. Der BEKLAU DEINEN ARBEITSPLATZ TAG will die Solidarität unter den Arbeitenden und die Neuverteilung des Reichtums durch die Basis fördern.
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
 
 **Für einige ist es schwierig, ihren ARBEITSPLATZ ZU BEKLAUEN. Manche Lokalitäten sind vollständig überwacht und viele Leute können es sich nicht leisten, in Schwierigkeiten zu geraten.**
 
@@ -43,7 +43,7 @@ Nicht zwangsweise! Vielleicht fällt es dir ja leichter, etwas zu teilen, wenn d
 
 Akademische Theologen wie der deutsche Gelehrte des Alten Testaments A. Alt, Autor von _Das Verbot des Diebstahls im Dekalog,_ legen nahe, dass das Gebot "Du sollst nicht stehlen" ursprünglich gegen das Stehlen von _Menschen_, also gegen Entführungen und Sklaverei gedacht war. Dies entspricht der jüdischen Interpretation der Aussage: "Du sollst nicht entführen" - wie zum Beispiel Rabbi Shlomo Yitzhaki konstantierte. Er ist als Autor des ersten umfassenden Kommentars zum Talmud bekannt. Wenn dies der Fall ist, ist das wirkliche Verbrechen nicht die Arbeiterin, die einen Teil der Früchte ihrer Arbeit zurücknimmt, sondern das Wirtschaftssystem, das sie überhaupt in die Lohnsklaverei zwingt. Außerdem erklärte Jesus: "Es ist einfacher für ein Kamel, durch das Nadelöhr zu gehen, als für einen reichen Mann, in das Reich Gottes einzutreten" (Matthäus 19,24) - setze deinen Arbeitgeber nicht einer solchen Gefahr aus!
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
 
 **Was passiert, wenn ich MEINEN ARBEITSPLATZ BEKLAUE und meine Firma Konkurs geht? Säge ich nicht am Ast, auf dem ich sitze?**
 
@@ -71,4 +71,4 @@ In den USA ist der 15. April der Steuertag (Tax Day), also ein passender Termin,
 
 Nimm das nicht einfach hin. **Klau was von deiner Arbeit**
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Erinnere dich daran, wer dich beklaut! ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Erinnere dich daran, wer dich beklaut! ]]

@@ -17,7 +17,7 @@ cs:
   head:
     # meta_title is wrapped in quotes because it has a colon in its text value
     meta_title: "CrimethInc. ex-Workers’ Collective: Tvůj lístek ke změně světa"
-    meta_image_url: https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png
+    meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
     meta_description: CrimethInc. je decentralizovaná síť která se zavázala k anonymní kolektivní akci. Usilujeme o znovuobjevení našich životů a světa dle principů sebeurčení a vzájemné pomoci.
 
   header:

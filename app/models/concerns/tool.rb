@@ -12,7 +12,7 @@ module Tool
     default_scope { order(slug: :asc) }
   end
 
-  ASSET_BASE_URL = 'https://cloudfront.crimethinc.com/assets'.freeze
+  ASSET_BASE_URL = 'https://cdn.crimethinc.com/assets'.freeze
 
   def path
     [nil, namespace, slug].join('/')

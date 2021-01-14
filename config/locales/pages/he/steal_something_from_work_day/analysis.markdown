@@ -41,7 +41,7 @@ In Greece, unpaid workers in Thessaloniki went further, [seizing the factory](ht
 
 Could we steal the existing infrastructure and use it to produce a different society? Should we aspire to take over the global supply chain and run it *more efficiently* than its current overlords do?
 
-[[https://cloudfront.crimethinc.com/assets/articles/2020/04/15/4.jpg]]
+[[https://cdn.crimethinc.com/assets/articles/2020/04/15/4.jpg]]
 
 The quintessential 21st century work environment is the Amazon warehouse. [Surveillance devices and software](https://www.nytimes.com/2019/07/03/business/economy/amazon-warehouse-labor-robots.html) force humans to behave like robots. In some Amazon warehouses, gigantic screens [display footage](https://time.com/4251122/amazon-surveillance-footage-thieves/) of employees who were caught stealing to terrorize workers into obedience. Cashing in on the pandemic, Amazon has added over 100,000 new positions, but all the profits are still concentrating at the top. Signs in Amazon warehouses instruct workers to remain three feet apart at all times as an anti-viral measure, when their work stations [are actually two feet apart](https://www.businessinsider.com/amazon-warehouse-modifications-during-coronavirus-2020-3). Is there a place for such places in our dreams of the future?
 
@@ -57,7 +57,7 @@ When we are thinking about how to *steal our lives back from work,* this suggest
 
 In the age of surveillance technology, some of the differences are eroding between warehouse workers who are monitored by drones and white-collar workers who are monitored by technologies that take screenshots at random throughout the workday. All of us are being “optimized” according to capitalist control mechanisms and criteria. In remote or “smart” working, our employers invade our bedrooms, ruthlessly fixing our most intimate activities to the demands of the market. Middle-class workers have to worry about whether the décor of our bedrooms and the behavior of our children will be acceptable to our employers. Nothing is sacred.
 
-[[https://cloudfront.crimethinc.com/assets/articles/2020/04/15/2.jpg Camera-bearing drones maintain surveillance inside warehouses, just as the camera on the device you are using to read this article can be used to surveil you.]]
+[[https://cdn.crimethinc.com/assets/articles/2020/04/15/2.jpg Camera-bearing drones maintain surveillance inside warehouses, just as the camera on the device you are using to read this article can be used to surveil you.]]
 
 At the same time, as more and more of our lives become dependent on digital technologies, some of the differences between the employed and the unemployed are also eroding. Among those of us who are unemployed, many of us also spend our days in Zoom meetings and clicking around on phones and computers. Our behaviors—paid or not—can be almost identical. Our online activity continues to provide income to corporations employing a profit model based on the attention economy, harvesting data, and the like.
 
@@ -77,7 +77,7 @@ For those confined to working or playing online from home, this offers a way to 
 
 Now more than ever, *stealing something from work* has to mean assaulting the system that forces work on us in the first place.
 
-[[https://cloudfront.crimethinc.com/assets/articles/2020/04/15/5.jpg class:portrait]]
+[[https://cdn.crimethinc.com/assets/articles/2020/04/15/5.jpg class:portrait]]
 
 ---
 
@@ -92,7 +92,7 @@ Now more than ever, *stealing something from work* has to mean assaulting the sy
 
 3. **Step three: Build the team. Talk to your friends and trusted coworkers. The more people on the team, the better.**
 
-[[https://cloudfront.crimethinc.com/assets/articles/2013/04/15/1b1.jpg]]
+[[https://cdn.crimethinc.com/assets/articles/2013/04/15/1b1.jpg]]
 
 We are line cooks and bartenders, waitresses and bakers. We sell produce at farmers’ markets; we operate cash registers, we stock shelves and make espresso drinks. We take commodities, rearrange them and move them around, adding value so that our employers may make a profit. We are workers in the service industry, in essence no different from those who work on construction sites or in the few remaining factories of our post-industrial cities.
 
@@ -114,7 +114,7 @@ These words have been written with the hope that others beside ourselves might t
 
 —_Committee for Attacks Against the World of Work (CAAWW - Birds of the Coming Storm)_
 
-[[https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/if-you-dont-steal-from-your-boss.jpg]]
+[[https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/if-you-dont-steal-from-your-boss.jpg]]
 
 
 ---
@@ -157,7 +157,7 @@ For worker/theorists who both enjoy the ruse of workplace theft and refuse a "re
 
 Or, to use de Certeau's metaphor, though our tactic is inevitably immersed in and permeated by its surroundings, can we insinuate ourselves _like worms_ into a place from which _la perruque_ could constitute revolutionary sabotage?
 
-[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/2b.jpg]]
+[[https://cdn.crimethinc.com/blog/wp-content/uploads/2013/04/2b.jpg]]
 
 #### Can the Master's Degree Dismantle the Master's House?
 
@@ -192,7 +192,7 @@ Elsewhere, de Certeau seemed to understand this tendency of the university to re
 
 There was a graduate student from the anthropology department, a self-described Marxist, who came frequently to our Occupy encampment. He would tell us that if we really wanted to change things we would go home and read more theory.
 
-[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/3b.jpg This is not a diploma.]]
+[[https://cdn.crimethinc.com/blog/wp-content/uploads/2013/04/3b.jpg This is not a diploma.]]
 
 #### 100% Time
 
@@ -240,7 +240,7 @@ Recent historians have suggested that the potlatch only reached this immolative 
 >
 > “Ah! that accounts for it,” said the Hatter. “He won't stand beating.”
 
-[[https://cloudfront.crimethinc.com/blog/wp-content/uploads/2013/04/4b.jpg]]
+[[https://cdn.crimethinc.com/blog/wp-content/uploads/2013/04/4b.jpg]]
 
 #### Resources
 
@@ -251,7 +251,7 @@ Recent historians have suggested that the potlatch only reached this immolative 
 
 ---
 
-[[https://cloudfront.crimethinc.com/assets/articles/2017/04/15/header.jpg]]
+[[https://cdn.crimethinc.com/assets/articles/2017/04/15/header.jpg]]
 
 ## Yes, We Even Stole from Work under Socialism
 {: #yes-we-even-stole-from-work-under-socialism}
@@ -261,7 +261,7 @@ We present this extract from the book _A Worker in a Worker’s State,_ written 
 
 At a time when young people in the West who did not experience the horrors of state socialism are spreading nostalgia for it while fascists gain legitimacy in [Eastern Europe](/2017/03/09/the-light-revolution-in-romania-when-toppling-the-government-isnt-enough) by presenting themselves as its foes, it’s important to remember that state socialism never gave workers the freedom or abundance it promised—and that its true opponents are not the nationalists who would inflict still worse horrors, but anarchists and other ordinary working people who resist all forms of imposed authority. Likewise, Haraszti’s text is prescient in anticipating how artisanal craftsmanship would be further commodified in the post-industrial economy, offering the illusion of free activity as yet another facet of the market. Instead of peddling nostalgia for state control of industry, factory work, or any other specter of the 20th century—or seeking to monetize our autonomous activity after the fashion of the 21st century—let’s take immediate action against against capitalism, socialism, and work itself.
 
-[[https://cloudfront.crimethinc.com/assets/articles/2017/04/15/02.jpg]]
+[[https://cdn.crimethinc.com/assets/articles/2017/04/15/02.jpg]]
 
 #### In Search of the Great Homer
 
@@ -331,7 +331,7 @@ Connoisseurs of folklore may look on homers as a native, decorative art. As yet,
 
 > The tiny gaps that the factory allows us become natural islands where, like free men, we can mine hidden riches, gather fruits, and pick up treasures at our feet. We transform what we find with a disinterested pleasure free from the compulsion to make a living. It brings us an intense joy, enough to let us forget the constant race: the joy of autonomous, uncontrolled activity.
 
-[[https://cloudfront.crimethinc.com/assets/articles/2017/04/15/01.jpg]]
+[[https://cdn.crimethinc.com/assets/articles/2017/04/15/01.jpg]]
 
 #### Epilogue
 
@@ -358,7 +358,7 @@ A workforce that organized in this way would be impossible to co-opt or dupe. No
 
 We might also ask what would it look like to go about stealing from work as if it were a way to try to change the world, rather than simply survive in it. So long as we solve our problems individually, we can only confront them individually as well. Stealing in secret keeps class struggle a private affair—the question is how to make it into a public project that gathers momentum. This shifts the focus from _What_ to _How_. A small item stolen with the knowledge and support of one’s coworkers is more significant than a huge heist carried out in secret. Stolen goods shared in such a way that they build workers’ collective power are worth more than a high-dollar embezzlement that only benefits one employee, the same way a raise or promotion does.
 
-[[https://cloudfront.crimethinc.com/assets/articles/2010/02/27/fbi_b.jpg]]
+[[https://cdn.crimethinc.com/assets/articles/2010/02/27/fbi_b.jpg]]
 
 Remember the story of the hardware store employee who embezzled enough money to get a college degree, only to find himself back behind the cash register afterwards! When it was too late, he wished he’d done something with the money to create a community that could fight against the world of cash registers and college degrees. Even as he broke the laws of his society, he had still accepted its basic values, investing in status that could only advance him on the bosses’ terms. Better we invest ourselves in breaking its values as well as its laws!
 

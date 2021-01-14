@@ -16,7 +16,7 @@ Désolé de vous l’apprendre, patron·ne, mais vos employé·e·s vous volent 
 
 Pas significativement. L’obstacle numéro un du vol commis par un·e employé·e n’est pas les patron·ne·s ou les caméras, mais les collègues malavisé·e·s. La JOURNÉE « VOLE QUELQUE CHOSE AU TRAVAIL » est une fête de sensibilisation promouvant la solidarité entre les travailleur·euse·s et légitimant la redistribution des richesses entre les employé·e·s.
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg Vole au travail ! ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg Vole au travail ! ]]
 
 **Tout le monde ne peut pas voler au travail aussi facilement. Certaines personnes font plus l’objet d’une surveillance que d’autres, et beaucoup ne peuvent pas se permettre le risque d’avoir des ennuis !**
 
@@ -42,7 +42,7 @@ Pas nécessairement ! Dans l’ensemble, les personnes trouvent qu’il est plus
 
 Des théologiens universitaires tels que le spécialiste du Vieux Testament allemand A. Alt, auteur de _Das Verbot des Diebstahls im Dekalog,_ suggère que le commandement « Tu ne voleras point ! » était originellement dirigé contre le vol de personnes — contre les enlèvements et l’esclavage. Par exemple, cela s’aligne sur les interprétations juives de la déclaration « tu n’enlèveras point, » comme l’explique le rabbin Shlomo Yitzhaki, célèbre pour avoir été l’auteur du premier commentaire détaillé du Talmud. Si tel est le cas, le véritable crime n’est pas que le·la travailleur·euse reprenne une partie du fruit de son labeur, mais bien le système économique qui, en premier lieu, l’oblige à l’esclavage salarial. De même, comme Jésus l’explique, « il est plus facile à un chameau de passer par le trou d’une aiguille qu’à un riche d’entrer dans le royaume de Dieu » (Matthieu 19 :24) — ne fais pas courir de tels risques à ton employeur !
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg Vole au travail ! ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg Vole au travail ! ]]
 
 **Et si je VOLE QUELQUE CHOSE AU TRAVAIL et que mon entreprise fait faillite ? N’est-ca pas mordre la main qui me nourrit ?**
 
@@ -68,4 +68,4 @@ Dans le contexte étatsunien, s’il y avait bien un jour idéal pour VOLER QUEL
 
 Ne passe pas cette journée en restant assis·e. **Vole quelque chose au travail.**
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Souviens-toi de qui te vole ? ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Souviens-toi de qui te vole ? ]]
