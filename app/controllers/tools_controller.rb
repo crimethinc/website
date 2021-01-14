@@ -23,6 +23,7 @@ class ToolsController < ApplicationController
   end
 
   def show
+    @preview_width = 400
     render "#{Current.theme}/tools/show"
   end
 

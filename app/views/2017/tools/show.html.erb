@@ -2,17 +2,19 @@
   <div class="row">
     <div class="column column-one-third section meta">
 
-      <% %w[color black_and_white].each do |color| %>
-        <% %w[front back].each do |side| %>
-          <% if @tool.send("image_#{side}_#{color}_image").attached? %>
+      <% %w[front back].each do |side| %>
+        <% %w[color black_and_white].each do |color| %>
 
-            <div class="tool-<%= side %>">
-              <%= image_tag @tool.send("#{side}_#{color}_image"),
-                            alt: @tool.send("#{side}_image_description"),
-                            class: "u-image" %>
-            </div>
+          <div class="tool-<%= side %>">
+            <% if @tool.send("image_#{side}_#{color}_image").attached? %>
+              <%= image_tag url_for(image_variant_by_width(@tool.send("image_#{side}_#{color}_image"), @preview_width)), class: "shadow rotated rounded" %>
+            <% elsif @tool.send("image_#{side}_#{color}_download").attached? %>
+              <%= image_tag @tool.send("image_#{side}_#{color}_download").preview(resize_to_limit: [@preview_width, @preview_width]), class: "shadow rotated rounded" %>
+            <% elsif @tool.send("#{side}_#{color}_image_present?") %>
+              <%= image_tag @tool.send("#{side}_#{color}_image"), class: "shadow rotated rounded" %>
+            <% end %>
+          </div>
 
-          <% end %>
         <% end %>
       <% end %>
 
