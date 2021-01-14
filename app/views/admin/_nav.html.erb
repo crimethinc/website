@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-md navbar-light bg-light border border-secondary border-top-0 border-right-0 border-left-0 mb-5" style="background-color: x#e3f2fd;">
 
     <div class="container">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#adminNavbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -13,7 +13,7 @@
           <%= nav_to "📝 New Article", [:new, :admin, :article] %>
 
           <li class="nav-item dropdown">
-            <%= link_to "#", class: "nav-link dropdown-toggle", data: {toggle: "dropdown"}, role: "button", aria: {haspopup: "true", expanded: "false"} do %>
+            <%= link_to "#", class: "nav-link dropdown-toggle", data: { "bs-toggle" => "dropdown" }, role: "button", aria: { haspopup: "true", expanded: "false" } do %>
               ⬇️ Content <span class="caret"></span>
             <% end %>
 
