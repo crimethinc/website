@@ -39,8 +39,9 @@ namespace :cdn do
     desc 'Migrate redirects to new CDN'
     task redirects: :environment do
       Redirect.find_each do |redirect|
-        puts "==> Migrating CDN: Redirect: #{redirect.id}"
+        puts "==> Checking if CDN migration needed Redirect #{redirect.id}"
         if redirect.source_path =~ /cloudfront/i || redirect.target_path =~ /cloudfront/i
+          puts "==> Migrating CDN: Redirect: #{redirect.id}"
           redirect.update source_path: redirect.source_path.gsub('cloudfront.', 'cdn.'), target_path: redirect.target_path.gsub('cloudfront.', 'cdn.')
         end
       end
