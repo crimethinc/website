@@ -46,7 +46,7 @@ portugues:
         <span class="blue">anarquista</span>
       video_url: "https://player.vimeo.com/video/111151623"
       pdf_cte_html: Baixe o<br> PDF
-      pdf_get_url: https://cloudfront.crimethinc.com/tce/images/Para-Mudar-Tudo.pdf
+      pdf_get_url: https://cdn.crimethinc.com/tce/images/Para-Mudar-Tudo.pdf
       pdf_image: tce-cover-200-portugues.png
       intro:
         left_text_html: |-

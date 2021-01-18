@@ -1,5 +1,5 @@
 module ToChangeEverythingHelper
-  IMAGE_BASE_URL = 'https://cloudfront.crimethinc.com/assets/tce/images/'.freeze
+  IMAGE_BASE_URL = 'https://cdn.crimethinc.com/assets/tce/images/'.freeze
 
   SECTIONS = {
     intro: %w[introduction].freeze,
