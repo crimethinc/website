@@ -1,6 +1,6 @@
 # If This Is Your First Time Here…
 
-[[ https://cloudfront.crimethinc.com/assets/pages/start/start-header.jpg ]]
+[[ https://cdn.crimethinc.com/assets/pages/start/start-header.jpg ]]
 
 - [Who we are and what we do](/about)
 - [A basic introduction to anarchist values](/tce)

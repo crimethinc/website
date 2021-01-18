@@ -45,7 +45,7 @@ quebecois:
         <span class="blue">l’anarchie</span>
       video_cte: Visionner la Vidéo
       pdf_cte_html: Télécharger<br> le PDF
-      pdf_get_url: https://cloudfront.crimethinc.com/tce/images/Pour-Tout-Transformer.pdf
+      pdf_get_url: https://cdn.crimethinc.com/tce/images/Pour-Tout-Transformer.pdf
       pdf_image: tce-cover-200-quebecois.png
       intro:
         left_text_html: |-

@@ -13,13 +13,13 @@ RSpec.describe MetaHelper, type: :helper do
     context 'with a thing with no image' do
       let(:thing) { OpenStruct.new(image: nil) }
 
-      it { is_expected.to eq('https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png') }
+      it { is_expected.to eq('https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png') }
     end
 
     context 'without a thing' do
       let(:thing) { nil }
 
-      it { is_expected.to eq('https://cloudfront.crimethinc.com/assets/share/crimethinc-site-share.png') }
+      it { is_expected.to eq('https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png') }
     end
   end
 end

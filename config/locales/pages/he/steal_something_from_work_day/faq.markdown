@@ -16,7 +16,7 @@ Hate to break it to you, boss, but your employees steal from you every day. By e
 
 Not significantly. The number one obstacle to employee theft is not bosses or cameras, but misguided coworkers. STEAL SOMETHING FROM WORK DAY is a consciousness-raising holiday promoting worker solidarity and legitimizing employee redistribution of wealth.
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
 
 **Not everyone has an easy time stealing from the workplace. Some demographics are singled out for surveillance, and many people can’t afford to risk getting into trouble!**
 
@@ -42,7 +42,7 @@ Not necessarily! By and large, people find it easier to share things when they d
 
 Academic theologians such as German Old Testament scholar A. Alt, author of _Das Verbot des Diebstahls im Dekalog,_ suggest that the commandment “thou shalt not steal” was originally intended against stealing _people_—against abductions and slavery. This lines up with Jewish interpretations of the statement as “thou shalt not kidnap”—for example, as stated by Rabbi Shlomo Yitzhaki, famed as the author of the first comprehensive commentary on the Talmud. If this is so, the real crime is not the worker taking back a part of the fruit of his labor, but the economic system that forces him into wage slavery in the first place. Likewise, as Jesus explains, “It is easier for a camel to pass through the eye of a needle than for a rich man to enter the kingdom of God” (Matthew 19:24)—don’t put your employer at such risk!
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
 
 **What if I STEAL SOMETHING FROM WORK and my company goes out of business? Is this biting the hand that feeds me?**
 
@@ -68,4 +68,4 @@ If there was ever a good day to Steal Something From Work, it has to be April 15
 
 Don’t take it sitting down. **Steal something from work.**
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Remember who’s stealing from you! ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Remember who’s stealing from you! ]]

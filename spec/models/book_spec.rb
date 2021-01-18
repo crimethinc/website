@@ -30,7 +30,7 @@ RSpec.describe Book, type: :model do
 
     let(:book) { described_class.new(slug: 'slug') }
 
-    it { is_expected.to eq('https://cloudfront.crimethinc.com/assets/books/slug/slug_front.jpg') }
+    it { is_expected.to eq('https://cdn.crimethinc.com/assets/books/slug/slug_front.jpg') }
   end
 
   describe '#image_description' do

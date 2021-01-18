@@ -16,7 +16,7 @@ Mrzí nás, že to musíte slyšet zrovna od nás, šéfe, ale ano, zaměstnanci
 
 Ne významně. Překážkou pro zaměstnance není šéf ani kamery, ale neuvědomělí kolegové. Den „Ukradni něco v práci!“ povzbuzuje solidaritu mezi zaměstnanci a legitimizuje jejich redistribuci bohatství.
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-fortune-cookie.jpg ]]
 
 **Ne každý si může snadno dovolit v práci krást. Někteří jsou pod neustálým dohledem anebo si opravdu nemůžou dovolit dostat se do problémů!**
 
@@ -42,7 +42,7 @@ Ne nutně! Ukazuje se, že lidé snáze sdílejí věci, které dostanou zdarma,
 
 Akademičtí teologové jako například Albrecht Alt, autor _Das Verbot des Diebstahls im Dekalog,_ míní, že přikázání „nepokradeš“ bylo původně vztaženo na krádež  _lidí_  – proti únosům a otroctví. To se shoduje s židovskou interpretací „neuneseš“ – jakou udělal například rabín Shlomo Yitzhaki, známý jako autor prvního obsáhlejšího komentáře k _Talmudu_. Pokud tomu tak je, skutečným zločinem není, když si zaměstnanci berou zpět část plodů své práce. Zločinný je ekonomický systém, který je nutí k námezdnímu otroctví. A jak také říká Ježíš: _„Spíš projde velbloud uchem jehly, než vejde bohatý do Božího království.“_ Nevystavuj svého šéfa takovému nebezpečí!
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/steal-from-work-bart-station.jpg ]]
 
 **Co když ukradnu něco z práce a firma zkrachuje? Není to nevděčné vůči mým chlebodárcům?**
 
@@ -66,4 +66,4 @@ Jak většina zaměstnanců ví, každý den může být „dnem kradení v prá
 
 Pokud tady byl někdy vhodný den, byl to 15. duben, kdy se podává daňové přiznání (pozn. v ČR by to byl 1. duben). Pro vládu je každý 15. duben Dnem okrádání tebe. Vezmou tvoje těžce vydělané peníze a nacpou je do nějaké války o ropu nebo zákulisních obchodů – to je další způsob, jak korporace profitují z našich nákladů. Nenech si to líbit. Ukradni něco z práce.
 
-[[ https://cloudfront.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Remember who’s stealing from you! ]]
+[[ https://cdn.crimethinc.com/assets/steal-something-from-work-day/images/suit-pocket-money.jpg Remember who’s stealing from you! ]]

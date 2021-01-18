@@ -97,35 +97,35 @@
 // The background image of the title section
 .title-container {
   background-color: grey;
-  background-image: url('https://cloudfront.crimethinc.com/tce/images/cover-phone.jpg');
+  background-image: url('https://cdn.crimethinc.com/tce/images/cover-phone.jpg');
   background-size: cover;
   background-position: center top;
 
-  @media (min-device-width: 12.5rem) and (max-width: 37.5rem) { background-image: url('https://cloudfront.crimethinc.com/tce/images/cover-phone.jpg'); }
-  @media (min-width: 37.5625rem) and (max-width: 63.9375rem) { background-image: url('https://cloudfront.crimethinc.com/tce/images/cover-tablet.jpg'); }
-  @media (min-width: 64rem) and (max-width: 75rem) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tiny.jpg'); }
-  @media (min-width: 75.0625rem) and (max-width: 104.375rem) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-small.jpg'); }
-  @media (min-width: 104.4375rem) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-large.gif'); }
+  @media (min-device-width: 12.5rem) and (max-width: 37.5rem) { background-image: url('https://cdn.crimethinc.com/tce/images/cover-phone.jpg'); }
+  @media (min-width: 37.5625rem) and (max-width: 63.9375rem) { background-image: url('https://cdn.crimethinc.com/tce/images/cover-tablet.jpg'); }
+  @media (min-width: 64rem) and (max-width: 75rem) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-tiny.jpg'); }
+  @media (min-width: 75.0625rem) and (max-width: 104.375rem) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-small.jpg'); }
+  @media (min-width: 104.4375rem) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-large.gif'); }
 
   // Retina backgrounds
   @media
   (-webkit-min-device-pixel-ratio: 2) and (min-width:200px),
-  (min-resolution: 192dpi) and (min-width:200px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-phonesmall@2x.jpg'); }
+  (min-resolution: 192dpi) and (min-width:200px) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-phonesmall@2x.jpg'); }
   @media
   (-webkit-min-device-pixel-ratio: 2) and (min-width:321px),
-  (min-resolution: 192dpi) and (min-width:321px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-phone@2x.jpg'); }
+  (min-resolution: 192dpi) and (min-width:321px) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-phone@2x.jpg'); }
   @media
   (-webkit-min-device-pixel-ratio: 2) and (min-width:601px),
-  (min-resolution: 192dpi) and (min-width:601px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tablet@2x.jpg'); }
+  (min-resolution: 192dpi) and (min-width:601px) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-tablet@2x.jpg'); }
   @media
   (-webkit-min-device-pixel-ratio: 2) and (min-width:1024px),
-  (min-resolution: 192dpi) and (min-width:1024px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-tiny@2x.jpg'); }
+  (min-resolution: 192dpi) and (min-width:1024px) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-tiny@2x.jpg'); }
   @media
   (-webkit-min-device-pixel-ratio: 2) and (min-width:1201px),
-  (min-resolution: 192dpi) and (min-width:1201px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-small@2x.jpg'); }
+  (min-resolution: 192dpi) and (min-width:1201px) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-small@2x.jpg'); }
   @media
   (-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
-  (min-resolution: 192dpi) and (min-width:1670px) { background-image: url('https://cloudfront.crimethinc.com/assets/tce/images/cover-large@2x.jpg'); }
+  (min-resolution: 192dpi) and (min-width:1670px) { background-image: url('https://cdn.crimethinc.com/assets/tce/images/cover-large@2x.jpg'); }
 }
 
 // ie11 needs a height with flexbox (rather than a min-height)
