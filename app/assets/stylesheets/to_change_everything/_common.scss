@@ -52,9 +52,9 @@
   max-width: 1285px;
   height: 40vh;
 
-@media (min-width: 576px) {
-  height: 50vh;
-}
+  @media (min-width: 576px) {
+    height: 50vh;
+  }
 
   @media (min-width: 900px) {
     height: 70vh;
