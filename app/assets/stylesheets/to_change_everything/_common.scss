@@ -49,10 +49,20 @@
   display: block;
   margin: 0 auto;
   width: 100%;
-  height: 38vh;
+  max-width: 1285px;
+  height: 40vh;
 
-  @media (min-width: 600px) {
-    height: 67vh;
+  @media (min-width: 576px) {
+    height: 50vh;
+  }
+
+  @media (min-width: 900px) {
+    height: 70vh;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 30px;
+    height: 95vh;
   }
 }
 
