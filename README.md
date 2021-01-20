@@ -42,6 +42,7 @@ Development setup on a Windows or Linux computer will likely vary.
 If any of these scripts fail for you, [file an issue](https://github.com/crimethinc/website/issues)
 with as much detail about your setup and any errors you got from the script, and we’ll try to fix whatever’s happening.
 
+
 ## Development Scripts
 
 The rest of these instructions assume that you’ve [strapped your computer](https://macos-strap.herokuapp.com) already. If you haven’t, you’ll need to install somethings manually. (But really, you’re better off using [Strap](https://macos-strap.herokuapp.com).)
