@@ -17,7 +17,7 @@
 
         <div class='stat'>
           <h3><%= t('views.support.edit.update.next_date') %></h3>
-          <p><%= Time.at(@next_invoice.date).strftime("%F") %></p>
+          <p><%= Time.at(@next_invoice.next_payment_attempt).strftime("%F") %></p>
         </div>
       </div>
 
