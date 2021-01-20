@@ -1,5 +1,5 @@
 class SupportMailer < ApplicationMailer
-  default from: 'CrimethInc. Support <info@crimethinc.com>'
+  default from: 'CrimethInc. Support <contact@crimethinc.com>'
 
   def edit_subscription
     @email = params[:email]

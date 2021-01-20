@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'info@crimethinc.com'
+  default from: 'contact@crimethinc.com'
   layout 'mailer'
 end
