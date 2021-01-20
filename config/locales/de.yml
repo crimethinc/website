@@ -342,9 +342,9 @@ de:
         repeat_subscriber_error: Wir haben bereits eine*n monatlichen Unterstützer*in mit dieser E-Mail-Adresse. Wenn du noch mehr geben möchtest, versuche eine einmalige Spende. Danke!
 
       create_session:
-        no_existing_customer_error: Wir können keine*n monatlichen Unterstützer*in mit dieser E-Mail-Adresse finden. Wenn du denkst, dass dies ein Fehler ist, schicke uns bitte eine E-Mail an](mailto:info@crimethinc.com), damit wir dir helfen können.
+        no_existing_customer_error: Wir können keine*n monatlichen Unterstützer*in mit dieser E-Mail-Adresse finden. Wenn du denkst, dass dies ein Fehler ist, schicke uns bitte eine E-Mail an](mailto:contact@crimethinc.com), damit wir dir helfen können.
         success_notice: Wir haben eine E-Mail an _%{email}_ mit einem Link geschickt, über den du Änderungen an deiner Unterstützung vornehmen kannst.
-        repeat_customer_error: Du hast bereits eine Anfrage gestellt! Suche nach einer E-Mail von _info@crimethinc.com_. Wenn du die E-Mail nie bekommen hast oder deinen supergeheimen Link verloren hast, warte eine Stunde und versuche es erneut.
+        repeat_customer_error: Du hast bereits eine Anfrage gestellt! Suche nach einer E-Mail von _contact@crimethinc.com_. Wenn du die E-Mail nie bekommen hast oder deinen supergeheimen Link verloren hast, warte eine Stunde und versuche es erneut.
 
       edit:
         heading: Deine Unterstützung
@@ -365,16 +365,16 @@ de:
 
       update_subscription:
         notice: Dein Unterstützungsbetrag wurde aktualisiert!
-        error: Es gab ein Problem bei der Aktualisierung deines Abonnements. Versuche es bitte noch einmal! Wenn das Problem weiterhin besteht, schick uns bitte eine E-Mail an](mailto:info@crimethinc.com), damit wir weiter helfen können.
+        error: Es gab ein Problem bei der Aktualisierung deines Abonnements. Versuche es bitte noch einmal! Wenn das Problem weiterhin besteht, schick uns bitte eine E-Mail an](mailto:contact@crimethinc.com), damit wir weiter helfen können.
 
       cancel_subscription:
         notice: Dein Abonnement wurde gekündigt.
-        error: Es gab ein Problem bei der Kündigung deines Abonnements. Versuchen es bitte noch einmal! Wenn das Problem weiterhin besteht, schick uns bitte eine E-Mail an](mailto:info@crimethinc.com), damit wir weiter helfen können.
+        error: Es gab ein Problem bei der Kündigung deines Abonnements. Versuchen es bitte noch einmal! Wenn das Problem weiterhin besteht, schick uns bitte eine E-Mail an](mailto:contact@crimethinc.com), damit wir weiter helfen können.
 
       thanks:
         heading: Danke für deine Hilfe!
         description: |
-          Wir freuen uns über dein [Feedback](mailto:info@crimethinc.com) zu unseren Bemühungen und deine [Teilnahme](mailto:info@crimethinc.com) daran.
+          Wir freuen uns über dein [Feedback](mailto:contact@crimethinc.com) zu unseren Bemühungen und deine [Teilnahme](mailto:contact@crimethinc.com) daran.
 
           Du bekommst bald eine Bestätigungsmail.
 

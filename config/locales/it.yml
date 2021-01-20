@@ -342,9 +342,9 @@ it:
         repeat_subscriber_error: Esiste già un contribuente mensile con questo indirizzo email. Se vuoi dare di più, prova con la donazione una tantum. Grazie!
 
       create_session:
-        no_existing_customer_error: Non riusciamo a trovare alcun contribuente mensile con questo indirizzo email. Se pensi ci sia un errore, [inviaci una email](mailto:info@crimethinc.com) cosicché potremo aiutarti.
+        no_existing_customer_error: Non riusciamo a trovare alcun contribuente mensile con questo indirizzo email. Se pensi ci sia un errore, [inviaci una email](mailto:contact@crimethinc.com) cosicché potremo aiutarti.
         success_notice: Abbiamo inviato una mail a _%{email}_ con un link dove potrai modificare il tuo contributo.
-        repeat_customer_error: Hai già inviato una richiesta! Cerca un email da _info@crimethinc.com_. Se non l hai mai ricevuta o se hai perso il tuo link supersegreto, aspetta un ora e riprova.
+        repeat_customer_error: Hai già inviato una richiesta! Cerca un email da _contact@crimethinc.com_. Se non l hai mai ricevuta o se hai perso il tuo link supersegreto, aspetta un ora e riprova.
 
       edit:
         heading: Il tuo contributo
@@ -365,16 +365,16 @@ it:
 
       update_subscription:
         notice: La somma del tuo contributo è stata aggiornata!
-        error: Abbiamo riscontrato un problema durante l aggiornamento della tua iscrizione. Prova ancora! Se il problema persiste, [inviaci un email](mailto:info@crimethinc.com) così potremo aiutarti.
+        error: Abbiamo riscontrato un problema durante l aggiornamento della tua iscrizione. Prova ancora! Se il problema persiste, [inviaci un email](mailto:contact@crimethinc.com) così potremo aiutarti.
 
       cancel_subscription:
         notice: La tua iscrizione è stata cancellata.
-        error: Abbiamo riscontrato un problema durante la cancellazione della tua iscrizione. Prova ancora! Se il problema persiste, [inviaci un email](mailto:info@crimethinc.com) così potremo aiutarti.
+        error: Abbiamo riscontrato un problema durante la cancellazione della tua iscrizione. Prova ancora! Se il problema persiste, [inviaci un email](mailto:contact@crimethinc.com) così potremo aiutarti.
 
       thanks:
         heading: Grazie per il tuo aiuto!
         description: |
-          Aspettiamo un tuo [feedback](mailto:info@crimethinc.com) per un tuo parere sui nostri sforzi e sulla tua [partecipazione](mailto:info@crimethinc.com).
+          Aspettiamo un tuo [feedback](mailto:contact@crimethinc.com) per un tuo parere sui nostri sforzi e sulla tua [partecipazione](mailto:contact@crimethinc.com).
 
           A breve riceverai un email di conferma.
 

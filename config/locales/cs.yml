@@ -343,9 +343,9 @@ cs:
         repeat_subscriber_error: Už máme měsíčního podporovatele s touto emailovou adresou. Jestli chceš přispět víc, zkus jednorázový příspěvek. Díky!
 
       create_session:
-        no_existing_customer_error: Nemůžeme najít podporovatele s touto emailovou adresou. Jestli si myslíš že jde o chybu napiš nám prosím[email na ](mailto:info@crimethinc.com) ať ti můžeme pomoct.
+        no_existing_customer_error: Nemůžeme najít podporovatele s touto emailovou adresou. Jestli si myslíš že jde o chybu napiš nám prosím[email na ](mailto:contact@crimethinc.com) ať ti můžeme pomoct.
         success_notice: Poslali jsme na email  _%{email}_ odkaz ze kterého můžeš změnit své předplatné.
-        repeat_customer_error: O svůj odkaz už jsi požádal! Hledej email od  _info@crimethinc.com_. Jestli jsi email nikdy nedostal nebo si ztratil svůj supertajný odkaz, počkej hodinu a zkus to znovu.
+        repeat_customer_error: O svůj odkaz už jsi požádal! Hledej email od  _contact@crimethinc.com_. Jestli jsi email nikdy nedostal nebo si ztratil svůj supertajný odkaz, počkej hodinu a zkus to znovu.
 
       edit:
         heading: Tvé předplatné
@@ -366,16 +366,16 @@ cs:
 
       update_subscription:
         notice: Částka tvého předplatného byla změněna!
-        error: Při úpravě částky se něco nepovedlo. Zkus to znovu! Jestli problém přetrvává, prosím [pošli nám email na](mailto:info@crimethinc.com) abychom ti mohli pomoct.
+        error: Při úpravě částky se něco nepovedlo. Zkus to znovu! Jestli problém přetrvává, prosím [pošli nám email na](mailto:contact@crimethinc.com) abychom ti mohli pomoct.
 
       cancel_subscription:
         notice: Tvé předplatné bylo zrušeno.
-        error: Při rušení tvého předplatného se něco nepovedlo. Zkus to znovu! Jestli problém přetrvává, prosím [pošli nám email na](mailto:info@crimethinc.com) abychom ti mohli pomoct.
+        error: Při rušení tvého předplatného se něco nepovedlo. Zkus to znovu! Jestli problém přetrvává, prosím [pošli nám email na](mailto:contact@crimethinc.com) abychom ti mohli pomoct.
 
       thanks:
         heading: Díky za pomoc!
         description: |
-          Uvítáme tvou [zpětnou vazbu](mailto:info@crimethinc.com) tykající se naší snahy a tvé [účasti](mailto:info@crimethinc.com) v ní.
+          Uvítáme tvou [zpětnou vazbu](mailto:contact@crimethinc.com) tykající se naší snahy a tvé [účasti](mailto:contact@crimethinc.com) v ní.
           Brzy ti přijde potvrzovací email.
 
           Jestli si se přihlásil k měsíčnímu předplatnému, můžeš ho upravit nebo zrušit kdykoliv chceš vyplněním tvé emailové adresy ve formuláři na spodu stránky [Podpora](/support) page.

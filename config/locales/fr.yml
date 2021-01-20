@@ -342,9 +342,9 @@ fr:
         repeat_subscriber_error: Nous avons déjà un·e abonné·e mensuel·le avec cette adresse électronique. Si tu veux quand même donner plus, essaie de faire un don unique. Merci !
 
       create_session:
-        no_existing_customer_error: Nous ne trouvons aucun·e abonné·e mensuel·le ayant cette adresse électronique. Si tu penses qu'il s'agit d'une erreur, s'il te plait [envoie nous un email](mailto:info@crimethinc.com) pour que l'on puisse t'aider.
+        no_existing_customer_error: Nous ne trouvons aucun·e abonné·e mensuel·le ayant cette adresse électronique. Si tu penses qu'il s'agit d'une erreur, s'il te plait [envoie nous un email](mailto:contact@crimethinc.com) pour que l'on puisse t'aider.
         success_notice: Nous avons envoyé un _%{email}_ avec un lien pour que tu puisses apporter des modifications à ton abonnement.
-        repeat_customer_error: Tu as déjà envoyé une demande ! Cherche un email venant de _info@crimethinc.com_. Si tu n'as jamais reçu l'email ou si tu as perdu ton lien super secret, attends une heure et essaie à nouveau.
+        repeat_customer_error: Tu as déjà envoyé une demande ! Cherche un email venant de _contact@crimethinc.com_. Si tu n'as jamais reçu l'email ou si tu as perdu ton lien super secret, attends une heure et essaie à nouveau.
 
       edit:
         heading: Ton abonnement
@@ -365,16 +365,16 @@ fr:
 
       update_subscription:
         notice: Le montant de ton abonnement a été mis à jour !
-        error: Il y a eu un problème lors de la mise à jour de ton abonnement. Essaie encore ! Si le problème persiste, s'il te plaît [envoie nous un email](mailto:info@crimethinc.com) pour que l'on puisse t'aider.
+        error: Il y a eu un problème lors de la mise à jour de ton abonnement. Essaie encore ! Si le problème persiste, s'il te plaît [envoie nous un email](mailto:contact@crimethinc.com) pour que l'on puisse t'aider.
 
       cancel_subscription:
         notice: Ton abonnement a été résilié.
-        error: Il y a eu un problème lors de la résiliation de ton abonnement. Essaie encore ! Si le problème persiste, s'il te plaît [envoie nous un email](mailto:info@crimethinc.com) pour que l'on puisse t'aider.
+        error: Il y a eu un problème lors de la résiliation de ton abonnement. Essaie encore ! Si le problème persiste, s'il te plaît [envoie nous un email](mailto:contact@crimethinc.com) pour que l'on puisse t'aider.
 
       thanks:
         heading: Merci pour ton aide !
         description: |
-          Nous t'invitons à nous faire part de tes [commentaires](mailto:info@crimethinc.com) concernant nos initiatives ainsi que sur ta [participation](mailto:info@crimethinc.com) dans ces dernières.
+          Nous t'invitons à nous faire part de tes [commentaires](mailto:contact@crimethinc.com) concernant nos initiatives ainsi que sur ta [participation](mailto:contact@crimethinc.com) dans ces dernières.
 
           Tu vas bientôt recevoir un mail de confirmation.
 
