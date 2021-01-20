@@ -146,8 +146,12 @@ class SupportController < ApplicationController
   def create_stripe_subscription
     Stripe::Subscription.create(
       customer: stripe_customer.id,
-      plan:     STRIPE_MONTHLY_PLAN_ID,
-      quantity: stripe_options[:amount]
+      items:    [
+        {
+          price:    STRIPE_MONTHLY_PRICE_ID,
+          quantity: stripe_options[:amount]
+        }
+      ]
     )
   end
 
