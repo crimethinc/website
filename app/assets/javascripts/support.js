@@ -47,7 +47,7 @@
       if (this.value === startingValueForSlider) {
         updateButtonEl.setAttribute("disabled", "");
       } else {
-        updateButtonEl.removeAttribute();
+        updateButtonEl.removeAttribute("disabled");
       }
     });
 
