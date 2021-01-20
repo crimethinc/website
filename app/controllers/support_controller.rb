@@ -70,7 +70,7 @@ class SupportController < ApplicationController
     else
       @customer = Stripe::Customer.retrieve(
         id:     @support_session.stripe_customer_id,
-        expand: ['default_source'] # for future credit card updates
+        expand: %w[default_source subscriptions] # for future credit card updates
       )
       @subscription = @customer.subscriptions.data.first
       @next_invoice = Stripe::Invoice.upcoming(customer: @customer.id)
