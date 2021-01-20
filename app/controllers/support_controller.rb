@@ -134,7 +134,7 @@ class SupportController < ApplicationController
   end
 
   def customer_with_subscription email
-    customers = Stripe::Customer.list(email: email).data
+    customers = Stripe::Customer.list(email: email, expand: %w[data.subscriptions]).data
 
     customers.each do |customer|
       customers.delete(customer) if customer.subscriptions.data.empty?
