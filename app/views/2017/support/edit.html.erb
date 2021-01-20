@@ -7,7 +7,7 @@
 <div class="subscription-update">
   <p><%= t('views.support.edit.description') %></p>
 
-  <%= form_tag [:support_update_subscription, token: params[:token], subscription_id: @subscription.id] do %>
+  <%= form_tag [:support_update_subscription, token: params[:token], subscription_id: @subscription.id], id: :js_stripe_form do %>
     <div class='row'>
       <div class='column column-half'>
         <div class='stat'>
