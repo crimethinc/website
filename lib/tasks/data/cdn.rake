@@ -1,7 +1,28 @@
 namespace :data do
   namespace :cdn do
+    # Helper method to DRY these tasks
+    def migrate_table klass:, attrs:
+      klass.find_each do |obj|
+        puts "==> Checking if CDN migration needed #{klass}: #{obj.id}"
+        update_obj = false
+
+        attrs.each do |attr|
+          if obj.send(attr) =~ /cloudfront/i
+            update_obj = true
+          end
+        end
+
+        attrs.each do |attr|
+          if update_obj == true
+            puts "==> Migrating CDN: #{klass}: #{obj.id}"
+            obj.update attr => obj.send(attr).gsub('cloudfront.', 'cdn.')
+          end
+        end
+      end
+    end
+
     desc 'Migrate everything to new CDN'
-    task migrate: %i[migrate:stickers migrate:redirects]
+    task migrate: %i[migrate:posters migrate:stickers migrate:redirects]
 
     namespace :migrate do
       desc 'Migrate articles to new CDN'
@@ -30,34 +51,22 @@ namespace :data do
 
       desc 'Migrate episodes to new CDN'
       task episodes: :environment do
+        migrate_table klass: Episode, attrs: %i[image content show_notes transcript]
       end
 
       desc 'Migrate posters to new CDN'
       task posters: :environment do
+        migrate_table klass: Poster, attrs: %i[summary description]
       end
 
       desc 'Migrate stickers to new CDN'
       task stickers: :environment do
-        Sticker.find_each do |sticker|
-          puts "==> Checking if CDN migration needed Sticker: #{sticker.id}"
-          if sticker.summary =~ /cloudfront/i || sticker.description =~ /cloudfront/i
-            puts "==> Migrating CDN: Sticker: #{sticker.id}"
-            sticker.update summary:     sticker.summary.gsub('cloudfront.', 'cdn.'),
-                           description: sticker.description.gsub('cloudfront.', 'cdn.')
-          end
-        end
+        migrate_table klass: Sticker, attrs: %i[summary description]
       end
 
       desc 'Migrate redirects to new CDN'
       task redirects: :environment do
-        Redirect.find_each do |redirect|
-          puts "==> Checking if CDN migration needed Redirect: #{redirect.id}"
-          if redirect.source_path =~ /cloudfront/i || redirect.target_path =~ /cloudfront/i
-            puts "==> Migrating CDN: Redirect: #{redirect.id}"
-            redirect.update source_path: redirect.source_path.gsub('cloudfront.', 'cdn.'),
-                            target_path: redirect.target_path.gsub('cloudfront.', 'cdn.')
-          end
-        end
+        migrate_table klass: Redirect, attrs: %i[source_path target_path]
       end
 
     end
