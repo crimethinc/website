@@ -7,12 +7,8 @@ namespace :data do
         update_obj = false
 
         attrs.each do |attr|
-          if obj.send(attr) =~ /cloudfront/i
-            update_obj = true
-          end
-        end
+          update_obj = true if obj.send(attr) =~ /cloudfront/i # rubocop:disable Performance/RegexpMatch
 
-        attrs.each do |attr|
           if update_obj == true
             puts "==> Migrating CDN: #{klass}: #{obj.id}"
             obj.update attr => obj.send(attr).gsub('cloudfront.', 'cdn.')
@@ -22,31 +18,48 @@ namespace :data do
     end
 
     desc 'Migrate everything to new CDN'
-    task migrate: %i[migrate:posters migrate:stickers migrate:redirects]
+    task migrate: %i[
+      migrate:articles
+      migrate:books
+      migrate:zines
+      migrate:journals
+      migrate:issues
+      migrate:podcasts
+      migrate:episodes
+      migrate:posters
+      migrate:stickers
+      migrate:redirects
+    ]
 
     namespace :migrate do
       desc 'Migrate articles to new CDN'
       task articles: :environment do
+        migrate_table klass: Article, attrs: %i[content description image image_description image_mobile summary summary]
       end
 
       desc 'Migrate books to new CDN'
       task books: :environment do
+        migrate_table klass: Book, attrs: %i[content description summary]
       end
 
       desc 'Migrate zines to new CDN'
       task zines: :environment do
+        migrate_table klass: Zine, attrs: %i[content description summary]
       end
 
       desc 'Migrate journals to new CDN'
       task journals: :environment do
+        migrate_table klass: Journal, attrs: %i[content description summary]
       end
 
       desc 'Migrate issues to new CDN'
       task issues: :environment do
+        migrate_table klass: Issue, attrs: %i[content description summary]
       end
 
       desc 'Migrate podcasts to new CDN'
       task podcasts: :environment do
+        migrate_table klass: Podcast, attrs: %i[image content copyright]
       end
 
       desc 'Migrate episodes to new CDN'
@@ -68,7 +81,6 @@ namespace :data do
       task redirects: :environment do
         migrate_table klass: Redirect, attrs: %i[source_path target_path]
       end
-
     end
   end
 end
