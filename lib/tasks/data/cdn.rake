@@ -9,7 +9,7 @@ namespace :data do
         attrs.each do |attr|
           update_obj = true if obj.send(attr) =~ /cloudfront/i # rubocop:disable Performance/RegexpMatch
 
-          if update_obj == true
+          if update_obj == true && obj.send(attr).present?
             puts "==> Migrating CDN: #{klass}: #{obj.id}"
             obj.update attr => obj.send(attr).gsub('cloudfront.', 'cdn.')
           end
@@ -34,7 +34,7 @@ namespace :data do
     namespace :migrate do
       desc 'Migrate articles to new CDN'
       task articles: :environment do
-        migrate_table klass: Article, attrs: %i[content description image image_description image_mobile summary summary]
+        migrate_table klass: Article, attrs: %i[content image image_description image_mobile summary summary]
       end
 
       desc 'Migrate books to new CDN'
