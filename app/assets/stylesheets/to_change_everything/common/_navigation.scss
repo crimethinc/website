@@ -171,12 +171,13 @@ nav ul ul {
 }
 
 .menuItem > a {
-  display: flex;
+  display: inline-block;
 }
 
 .icon {
   width: 2vw;
-  height: 2vh;
+  height: auto;
+  display: none;
 }
 
 #tocdiv {
@@ -226,7 +227,6 @@ nav ul ul {
   margin-bottom: -10%;
 
   .icon {
-    margin: 0;
     color: #3cbce9;
   }
 
@@ -321,17 +321,14 @@ li.selected a:visited {
   }
 }
 
-/*-------------PHONE CSS------------------*/
-@media (min-device-width: 200px) and (max-width: 600px) {
-  .pink .icon {
-    margin: 0 45% 0 0;
-  }
-}
-
 /*-------------TABLET CSS------------------*/
 @media (min-width: 601px) and (max-width: 1023px) {
   nav {
     padding-top: 5%;
+  }
+
+  .icon {
+    display: inline;
   }
 
   .label {
@@ -364,13 +361,6 @@ li.selected a:visited {
     }
   }
 
-  .icon {
-    font-size: 3vw;
-    line-height: 3vw;
-    font-family: "tcesymbols", Helvetica, Arial, sans-serif;
-    margin: 0;
-  }
-
   #languagediv {
     font-size: 4vw;
     line-height: 4vw;
@@ -387,6 +377,11 @@ li.selected a:visited {
 @media (min-width: 1024px) and (max-width: 1200px) {
   nav {
     padding-top: 3.2%;
+  }
+
+  .icon {
+    display: inline;
+    width: 1.2vw;
   }
 
   .label {
@@ -417,13 +412,6 @@ li.selected a:visited {
     li {
       padding-left: 10%;
     }
-  }
-
-  .icon {
-    font-size: 2vw;
-    line-height: 2vw;
-    font-family: "tcesymbols", Helvetica, Arial, sans-serif;
-    margin: 0;
   }
 
   #tocdiv {
@@ -498,6 +486,13 @@ li.selected a:visited {
     padding: 0;
     position: absolute;
   }
+
+  .icon {
+    display: inline;
+    padding-right: 5px;
+    width: 1vw;
+  }
+
   .label {
     display: inline;
   }
@@ -537,7 +532,7 @@ li.selected a:visited {
       display: block;
       font-size: 18px;
       line-height: 32px;
-      padding: 4px 15px 0px 35px;
+      padding: 4px 15px 0px;
     }
   }
 
@@ -563,14 +558,6 @@ li.selected a:visited {
     position: fixed;
     top: -10000px;
     left: -10000px;
-  }
-
-  .icon {
-    font-size: 18px;
-    line-height: 32px;
-    font-family: "tcesymbols", Helvetica, Arial, sans-serif;
-    padding-right: 5px;
-    margin: 0;
   }
 }
 /*-------------DESKTOP SMALL CSS------------------*/
