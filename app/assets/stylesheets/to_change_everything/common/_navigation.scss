@@ -175,9 +175,9 @@ nav ul ul {
 }
 
 .icon {
-  width: 2vw;
+  width: 5vw;
   height: auto;
-  display: none;
+  padding-left: 5px;
 }
 
 #tocdiv {
@@ -328,7 +328,7 @@ li.selected a:visited {
   }
 
   .icon {
-    display: inline;
+    width: 2vw;
   }
 
   .label {
@@ -380,7 +380,6 @@ li.selected a:visited {
   }
 
   .icon {
-    display: inline;
     width: 1.2vw;
   }
 
@@ -488,7 +487,6 @@ li.selected a:visited {
   }
 
   .icon {
-    display: inline;
     padding-right: 5px;
     width: 1vw;
   }
