@@ -62,7 +62,12 @@
         <div id="menus">
           <ul>
             <li>
-              <span class="green"><a href="javascript:toggleDiv('tocdiv');"><span class="icon"></span><span class="label"> <%= t('.menu.toc').html_safe %></span></a></span>
+              <span class="menuItem green">
+                <a href="javascript:toggleDiv('tocdiv');">
+                  <%= image_tag('to-change-everything/icons/list-green.svg', class: 'icon') %>
+                  <span class="label"> <%= t('.menu.toc').html_safe %></span>
+                </a>
+              </span>
 
               <ul id="toc">
                 <% tce_table_of_contents_sections.each do |section| %>
@@ -72,7 +77,12 @@
             </li>
 
             <li>
-              <span class="pink"><a href="javascript:toggleDiv('languagediv');"><span class="icon"></span><span class="label"> <%= t('.menu.language').html_safe %></span></a></span>
+              <span class="menuItem pink">
+                <a href="javascript:toggleDiv('languagediv');">
+                  <%= image_tag('to-change-everything/icons/globe-pink.svg', class: 'icon') %>
+                  <span class="label"> <%= t('.menu.language').html_safe %></span>
+                </a>
+              </span>
 
               <ul id="language">
                 <% tce_language_links.each do |label, path| %>
@@ -82,7 +92,12 @@
             </li>
 
             <li>
-              <span class="blue"><a href="javascript:toggleDiv('sharediv');"><span class="icon"></span><span class="label"> <%= t('.menu.share').html_safe %></span></a></span>
+              <span class="menuItem blue">
+                <a href="javascript:toggleDiv('sharediv');">
+                  <%= image_tag('to-change-everything/icons/share-blue.svg', class: 'icon') %>
+                  <span class="label"> <%= t('.menu.share').html_safe %></span>
+                </a>
+              </span>
 
               <ul id="share">
                 <%= render 'to_change_everything/share_links', locale: @locale %>

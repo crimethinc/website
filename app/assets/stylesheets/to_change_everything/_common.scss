@@ -23,22 +23,22 @@
 
 #video-container {
   width: 96%;
-    position: relative;
-    padding-bottom: 52%;
-    margin: 2%;
-    padding-top: 2%;
-    overflow: hidden;
-    display: none;
+  position: relative;
+  padding-bottom: 52%;
+  margin: 2%;
+  padding-top: 2%;
+  overflow: hidden;
+  display: none;
 }
 
 #video-container iframe,
 #video-container object,
 #video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .green, .green a {
@@ -72,16 +72,16 @@
 }
 
 .b-lazy {
-     -webkit-transition: opacity 500ms ease-in-out;
-        -moz-transition: opacity 500ms ease-in-out;
-          -o-transition: opacity 500ms ease-in-out;
-             transition: opacity 500ms ease-in-out;
-              max-width: 100%;
-                opacity: 0;
- }
- .b-lazy.b-loaded {
-                opacity: 1;
- }
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+.b-lazy.b-loaded {
+  opacity: 1;
+}
 
 
 
@@ -94,975 +94,975 @@
 /*-------------PHONE CSS------------------*/
 /*@media (min-device-width:200px) and (max-device-width:600px) OR  (max-width:600px) ORIGINAL COMBINED {*/
 @media (min-device-width:200px) and (max-width:600px) {
-    .spread {
-      width: 100%;
-      clear: both;
-    }
+  .spread {
+    width: 100%;
+    clear: both;
+  }
 
-    .left {
-      position: relative;
-      width: 100%;
-      padding-top: 100%;
-      background-color: grey;
-      float: left;
-    }
+  .left {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: grey;
+    float: left;
+  }
 
-    .right {
-      position: relative;
-      width: 100%;
-      float: left;
-    }
+  .right {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-    .left img {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-    }
+  .left img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+  }
 
-    .left h2 {
-      position: absolute;
-      top: 0; left: 0;
-    }
+  .left h2 {
+    position: absolute;
+    top: 0; left: 0;
+  }
 
-    .lefttext {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 85%;
-      padding: 8% 7% 0% 8%;
-    }
+  .lefttext {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 85%;
+    padding: 8% 7% 0% 8%;
+  }
 
-    .righttext {
-      position: relative;
-      width: 88%;
-      padding: 7% 5% 7% 7%;
-    }
+  .righttext {
+    position: relative;
+    width: 88%;
+    padding: 7% 5% 7% 7%;
+  }
 
-    .right h3 {
-      position: absolute;
-      top: 0; left: 0;
-      width: 50%;
-    }
+  .right h3 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50%;
+  }
 
-    .leftintro {
-      position: relative;
-      width: 100%;
-      float: left;
-    }
+  .leftintro {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-    .rightintro {
-      position: relative;
-      width: 100%;
-      float: left;
-    }
+  .rightintro {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-    .rightintro h3 {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 95%;
-      padding: 16% 5% 0% 0%;
-    }
+  .rightintro h3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 95%;
+    padding: 16% 5% 0% 0%;
+  }
 
-    #intro {
-      width: 100%;
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-phone.jpg');
-      background-size: 100%;
-      padding-bottom: 200%;
-      background-position:center top;
-      position: relative;
-    }
+  #intro {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-phone.jpg');
+    background-size: 100%;
+    padding-bottom: 200%;
+    background-position:center top;
+    position: relative;
+  }
 
-    #outro {
-      width: 100%;
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-phone.jpg');
-      background-size: 100%;
-      padding-bottom: 200%;
-      background-position:center top;
-      position: relative;
-    }
+  #outro {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-phone.jpg');
+    background-size: 100%;
+    padding-bottom: 200%;
+    background-position:center top;
+    position: relative;
+  }
 
-    #takeflight {
-      width: 100%;
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-phone.jpg');
-      background-size: 100%;
-      padding-bottom: 177%;
-      background-position:center top;
-      position: relative;
-    }
+  #takeflight {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-phone.jpg');
+    background-size: 100%;
+    padding-bottom: 177%;
+    background-position:center top;
+    position: relative;
+  }
 
-    #takeflight h1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 99%;
-      padding: 55% 0 0 1%;
-    }
+  #takeflight h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    padding: 55% 0 0 1%;
+  }
 
-    .inlinequote {
-      padding: 1% 5% 1% 5%;
-      text-indent: 0px !important;
-    }
+  .inlinequote {
+    padding: 1% 5% 1% 5%;
+    text-indent: 0px !important;
+  }
 
-    #self h2 {
-      padding: 6% 0 0 10%;
-    }
+  #self h2 {
+    padding: 6% 0 0 10%;
+  }
 
 
-    #answering h2 {
-      padding: 5% 0 0 33%;
-    }
+  #answering h2 {
+    padding: 5% 0 0 33%;
+  }
 
-    #power h2 {
-      padding: 6% 0 0 5%;
-    }
+  #power h2 {
+    padding: 6% 0 0 5%;
+  }
 
-    #relationships h2 {
-      padding: 7% 0 0 15%;
-    }
+  #relationships h2 {
+    padding: 7% 0 0 15%;
+  }
 
-    #reconciling h2 {
-      padding: 7% 0 0 19%;
-    }
+  #reconciling h2 {
+    padding: 7% 0 0 19%;
+  }
 
-    #liberation h2 {
-      padding: 4% 0 0 32%;
-    }
+  #liberation h2 {
+    padding: 4% 0 0 32%;
+  }
 
-    #revolt h2 {
-      padding: 10% 0 0 12%;
-    }
+  #revolt h2 {
+    padding: 10% 0 0 12%;
+  }
 
-    #control h2 {
-      padding: 10% 0 0 25%;
-    }
+  #control h2 {
+    padding: 10% 0 0 25%;
+  }
 
-    #hierarchy h2 {
-      padding: 10% 0 0 23%;
-    }
+  #hierarchy h2 {
+    padding: 10% 0 0 23%;
+  }
 
-    #borders h2 {
-      padding: 7% 0 0 17%;
-    }
+  #borders h2 {
+    padding: 7% 0 0 17%;
+  }
 
-    #representation h2 {
-      padding: 10% 0 0 13%;
-    }
+  #representation h2 {
+    padding: 10% 0 0 13%;
+  }
 
-    #leaders h2 {
-      padding: 6% 0 0 27%;
-    }
+  #leaders h2 {
+    padding: 6% 0 0 27%;
+  }
 
-    #government h2 {
-      padding: 10% 0 0 21%;
-    }
+  #government h2 {
+    padding: 10% 0 0 21%;
+  }
 
-    #profit h2 {
-      padding: 10% 0 0 25%;
-    }
+  #profit h2 {
+    padding: 10% 0 0 25%;
+  }
 
-    #property h2 {
-      padding: 4% 0 0 20%;
-    }
+  #property h2 {
+    padding: 4% 0 0 20%;
+  }
 
-    #lastcrime h2 {
-      padding: 8% 0 0 10%;
-    }
+  #lastcrime h2 {
+    padding: 8% 0 0 10%;
+  }
 
-    #anarchy {
-      width: 100%;
-      clear: both;
-      background-color: black;
-      overflow: auto;
-      padding-top: 3%;
-    }
+  #anarchy {
+    width: 100%;
+    clear: both;
+    background-color: black;
+    overflow: auto;
+    padding-top: 3%;
+  }
 
-    #anarchy img {
-      width: 50%;
-      padding: 9% 0 0 24%;
-    }
+  #anarchy img {
+    width: 50%;
+    padding: 9% 0 0 24%;
+  }
 
-    .first {
-      position: relative;
-      width: 85%;
-      padding: 5% 7% 5% 8%;
-      float: left;
-    }
+  .first {
+    position: relative;
+    width: 85%;
+    padding: 5% 7% 5% 8%;
+    float: left;
+  }
 
-    .second {
-      position: relative;
-      width: 85%;
-      padding: 1% 7% 5% 8%;
-      float: left;
-    }
+  .second {
+    position: relative;
+    width: 85%;
+    padding: 1% 7% 5% 8%;
+    float: left;
+  }
 
-    .third {
-      position: relative;
-      width: 85%;
-      padding: 1% 7% 7% 8%;
-      float: left;
-    }
+  .third {
+    position: relative;
+    width: 85%;
+    padding: 1% 7% 7% 8%;
+    float: left;
+  }
 
-    #next h1 {
-      text-align: center;
-      padding: 90% 10% 90% 10% !important;
-    }
+  #next h1 {
+    text-align: center;
+    padding: 90% 10% 90% 10% !important;
+  }
 }
 
 /*-------------TABLET CSS------------------*/
 @media (min-width:601px) and (max-width:1023px) {
-      .spread {
-        width: 100%;
-        clear: both;
-      }
+  .spread {
+    width: 100%;
+    clear: both;
+  }
 
-      .left {
-        position: relative;
-        width: 100%;
-        padding-top: 100%;
-        background-color: grey;
-        float: left;
-      }
+  .left {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: grey;
+    float: left;
+  }
 
-      .right {
-        position: relative;
-        width: 100%;
-        float: left;
-      }
+  .right {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-      .left img {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-      }
+  .left img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+  }
 
-      .left h2 {
-        position: absolute;
-        top: 0; left: 0;
-      }
+  .left h2 {
+    position: absolute;
+    top: 0; left: 0;
+  }
 
-      .lefttext {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 85%;
-        padding: 8% 7% 0% 8%;
-      }
+  .lefttext {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 85%;
+    padding: 8% 7% 0% 8%;
+  }
 
-      .righttext {
-        position: relative;
-        width: 81%;
-        padding: 7% 9% 7% 10%;
-      }
+  .righttext {
+    position: relative;
+    width: 81%;
+    padding: 7% 9% 7% 10%;
+  }
 
-      .right h3 {
-        position: absolute;
-        top: 0; left: 0;
-        width: 50%;
-      }
+  .right h3 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50%;
+  }
 
-      .leftintro {
-        position: relative;
-        width: 100%;
-        float: left;
-      }
+  .leftintro {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-      .rightintro {
-        position: relative;
-        width: 100%;
-        float: left;
-      }
+  .rightintro {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-      .rightintro h3 {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 95%;
-        padding: 16% 5% 0% 0%;
-      }
+  .rightintro h3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 95%;
+    padding: 16% 5% 0% 0%;
+  }
 
-      #intro {
-        width: 100%;
-        background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-tablet.jpg');
-        background-size: 100%;
-        padding-bottom: 200%;
-        background-position:center top;
-        position: relative;
-      }
+  #intro {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-tablet.jpg');
+    background-size: 100%;
+    padding-bottom: 200%;
+    background-position:center top;
+    position: relative;
+  }
 
-      #outro {
-        width: 100%;
-        background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-tablet.jpg');
-        background-size: 100%;
-        padding-bottom: 200%;
-        background-position:center top;
-        position: relative;
-      }
+  #outro {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-tablet.jpg');
+    background-size: 100%;
+    padding-bottom: 200%;
+    background-position:center top;
+    position: relative;
+  }
 
-      #takeflight {
-        width: 100%;
-        background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg');
-        background-size: 100%;
-        padding-bottom: 177%;
-        background-position:center top;
-        position: relative;
-      }
+  #takeflight {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg');
+    background-size: 100%;
+    padding-bottom: 177%;
+    background-position:center top;
+    position: relative;
+  }
 
-      #takeflight h1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 99%;
-        padding: 55% 0 0 1%;
-      }
+  #takeflight h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    padding: 55% 0 0 1%;
+  }
 
-      .inlinequote {
-        padding: 1% 5% 1% 5%;
-        text-indent: 0px !important;
-      }
+  .inlinequote {
+    padding: 1% 5% 1% 5%;
+    text-indent: 0px !important;
+  }
 
-      #self h2 {
-        padding: 6% 0 0 10%;
-      }
+  #self h2 {
+    padding: 6% 0 0 10%;
+  }
 
 
-      #answering h2 {
-        padding: 5% 0 0 33%;
-      }
+  #answering h2 {
+    padding: 5% 0 0 33%;
+  }
 
-      #power h2 {
-        padding: 6% 0 0 5%;
-      }
+  #power h2 {
+    padding: 6% 0 0 5%;
+  }
 
-      #relationships h2 {
-        padding: 7% 0 0 15%;
-      }
+  #relationships h2 {
+    padding: 7% 0 0 15%;
+  }
 
-      #reconciling h2 {
-        padding: 7% 0 0 19%;
-      }
+  #reconciling h2 {
+    padding: 7% 0 0 19%;
+  }
 
-      #liberation h2 {
-        padding: 4% 0 0 32%;
-      }
+  #liberation h2 {
+    padding: 4% 0 0 32%;
+  }
 
-      #revolt h2 {
-        padding: 10% 0 0 12%;
-      }
+  #revolt h2 {
+    padding: 10% 0 0 12%;
+  }
 
-      #control h2 {
-        padding: 10% 0 0 25%;
-      }
+  #control h2 {
+    padding: 10% 0 0 25%;
+  }
 
-      #hierarchy h2 {
-        padding: 10% 0 0 23%;
-      }
+  #hierarchy h2 {
+    padding: 10% 0 0 23%;
+  }
 
-      #borders h2 {
-        padding: 7% 0 0 17%;
-      }
+  #borders h2 {
+    padding: 7% 0 0 17%;
+  }
 
-      #representation h2 {
-        padding: 10% 0 0 13%;
-      }
+  #representation h2 {
+    padding: 10% 0 0 13%;
+  }
 
-      #leaders h2 {
-        padding: 6% 0 0 27%;
-      }
+  #leaders h2 {
+    padding: 6% 0 0 27%;
+  }
 
-      #government h2 {
-        padding: 10% 0 0 21%;
-      }
+  #government h2 {
+    padding: 10% 0 0 21%;
+  }
 
-      #profit h2 {
-        padding: 10% 0 0 25%;
-      }
+  #profit h2 {
+    padding: 10% 0 0 25%;
+  }
 
-      #property h2 {
-        padding: 4% 0 0 20%;
-      }
+  #property h2 {
+    padding: 4% 0 0 20%;
+  }
 
-      #lastcrime h2 {
-        padding: 8% 0 0 10%;
-      }
+  #lastcrime h2 {
+    padding: 8% 0 0 10%;
+  }
 
-      #anarchy {
-        width: 100%;
-        clear: both;
-        background-color: black;
-        overflow: auto;
-        padding-top: 3%;
-      }
+  #anarchy {
+    width: 100%;
+    clear: both;
+    background-color: black;
+    overflow: auto;
+    padding-top: 3%;
+  }
 
-      #anarchy img {
-        width: 50%;
-        padding: 9% 0 0 24%;
-      }
+  #anarchy img {
+    width: 50%;
+    padding: 9% 0 0 24%;
+  }
 
-      .first {
-        position: relative;
-        width: 81%;
-        padding: 7% 9% 7% 10%;
-        float: left;
-      }
+  .first {
+    position: relative;
+    width: 81%;
+    padding: 7% 9% 7% 10%;
+    float: left;
+  }
 
-      .second {
-        position: relative;
-        width: 81%;
-        padding: 2% 9% 7% 10%;
-        float: left;
-      }
+  .second {
+    position: relative;
+    width: 81%;
+    padding: 2% 9% 7% 10%;
+    float: left;
+  }
 
-      .third {
-        position: relative;
-        width: 81%;
-        padding: 2% 9% 7% 10%;
-        float: left;
-      }
+  .third {
+    position: relative;
+    width: 81%;
+    padding: 2% 9% 7% 10%;
+    float: left;
+  }
 
-      #next h1 {
-        text-align: center;
-        padding: 30% 10% 30% 10% !important;
-      }
+  #next h1 {
+    text-align: center;
+    padding: 30% 10% 30% 10% !important;
+  }
 }
 
 /*-------------TABLET LANDSCAPE------------------*/
 @media (min-width:1024px) and (max-width:1200px) {
-    .spread {
-      width: 100%;
-      clear: both;
-    }
+  .spread {
+    width: 100%;
+    clear: both;
+  }
 
-      .left {
-        position: relative;
-        width: 100%;
-        padding-top: 100%;
-        background-color: grey;
-        float: left;
-      }
+  .left {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: grey;
+    float: left;
+  }
 
-      .right {
-        position: relative;
-        width: 100%;
-        float: left;
-      }
+  .right {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-      .left img {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-      }
+  .left img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+  }
 
-      .left h2 {
-        position: absolute;
-        top: 0; left: 0;
-      }
+  .left h2 {
+    position: absolute;
+    top: 0; left: 0;
+  }
 
-      .lefttext {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 85%;
-        padding: 8% 7% 0% 8%;
-      }
+  .lefttext {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 85%;
+    padding: 8% 7% 0% 8%;
+  }
 
-      .righttext {
-        position: relative;
-        width: 81%;
-        padding: 7% 9% 7% 10%;
-      }
+  .righttext {
+    position: relative;
+    width: 81%;
+    padding: 7% 9% 7% 10%;
+  }
 
-      .right h3 {
-        position: absolute;
-        top: 0; left: 0;
-        width: 50%;
-      }
+  .right h3 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50%;
+  }
 
-      .leftintro {
-        position: relative;
-        width: 100%;
-        float: left;
-      }
+  .leftintro {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-      .rightintro {
-        position: relative;
-        width: 100%;
-        float: left;
-      }
+  .rightintro {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
 
-      .rightintro h3 {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 95%;
-        padding: 16% 5% 0% 0%;
-      }
+  .rightintro h3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 95%;
+    padding: 16% 5% 0% 0%;
+  }
 
-      #intro {
-        width: 100%;
-        background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-tablet.jpg');
-        background-size: 100%;
-        padding-bottom: 200%;
-        background-position:center top;
-        position: relative;
-      }
+  #intro {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-tablet.jpg');
+    background-size: 100%;
+    padding-bottom: 200%;
+    background-position:center top;
+    position: relative;
+  }
 
-      #outro {
-        width: 100%;
-        background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-tablet.jpg');
-        background-size: 100%;
-        padding-bottom: 200%;
-        background-position:center top;
-        position: relative;
-      }
+  #outro {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-tablet.jpg');
+    background-size: 100%;
+    padding-bottom: 200%;
+    background-position:center top;
+    position: relative;
+  }
 
-      #takeflight {
-        width: 100%;
-        background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg');
-        background-size: 100%;
-        padding-bottom: 177%;
-        background-position:center top;
-        position: relative;
-      }
+  #takeflight {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg');
+    background-size: 100%;
+    padding-bottom: 177%;
+    background-position:center top;
+    position: relative;
+  }
 
-      #takeflight h1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 99%;
-        padding: 55% 0 0 1%;
-      }
+  #takeflight h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    padding: 55% 0 0 1%;
+  }
 
-      .inlinequote {
-        padding: 1% 5% 1% 5%;
-        text-indent: 0px !important;
-      }
+  .inlinequote {
+    padding: 1% 5% 1% 5%;
+    text-indent: 0px !important;
+  }
 
-      #self h2 {
-        padding: 6% 0 0 10%;
-      }
+  #self h2 {
+    padding: 6% 0 0 10%;
+  }
 
-      #answering h2 {
-        padding: 5% 0 0 33%;
-      }
+  #answering h2 {
+    padding: 5% 0 0 33%;
+  }
 
-      #power h2 {
-        padding: 6% 0 0 5%;
-      }
+  #power h2 {
+    padding: 6% 0 0 5%;
+  }
 
-      #relationships h2 {
-        padding: 7% 0 0 15%;
-      }
+  #relationships h2 {
+    padding: 7% 0 0 15%;
+  }
 
-      #reconciling h2 {
-        padding: 7% 0 0 19%;
-      }
+  #reconciling h2 {
+    padding: 7% 0 0 19%;
+  }
 
-      #liberation h2 {
-        padding: 4% 0 0 32%;
-      }
+  #liberation h2 {
+    padding: 4% 0 0 32%;
+  }
 
-      #revolt h2 {
-        padding: 10% 0 0 12%;
-      }
+  #revolt h2 {
+    padding: 10% 0 0 12%;
+  }
 
-      #control h2 {
-        padding: 10% 0 0 25%;
-      }
+  #control h2 {
+    padding: 10% 0 0 25%;
+  }
 
-      #hierarchy h2 {
-        padding: 10% 0 0 23%;
-      }
+  #hierarchy h2 {
+    padding: 10% 0 0 23%;
+  }
 
-      #borders h2 {
-        padding: 7% 0 0 17%;
-      }
+  #borders h2 {
+    padding: 7% 0 0 17%;
+  }
 
-      #representation h2 {
-        padding: 10% 0 0 13%;
-      }
+  #representation h2 {
+    padding: 10% 0 0 13%;
+  }
 
-      #leaders h2 {
-        padding: 6% 0 0 27%;
-      }
+  #leaders h2 {
+    padding: 6% 0 0 27%;
+  }
 
-      #government h2 {
-        padding: 10% 0 0 21%;
-      }
+  #government h2 {
+    padding: 10% 0 0 21%;
+  }
 
-      #profit h2 {
-        padding: 10% 0 0 25%;
-      }
+  #profit h2 {
+    padding: 10% 0 0 25%;
+  }
 
-      #property h2 {
-        padding: 4% 0 0 20%;
-      }
+  #property h2 {
+    padding: 4% 0 0 20%;
+  }
 
-      #lastcrime h2 {
-        padding: 8% 0 0 10%;
-      }
+  #lastcrime h2 {
+    padding: 8% 0 0 10%;
+  }
 
-      #anarchy {
-        width: 100%;
-        clear: both;
-        background-color: black;
-        overflow: auto;
-        padding-top: 3%;
-      }
+  #anarchy {
+    width: 100%;
+    clear: both;
+    background-color: black;
+    overflow: auto;
+    padding-top: 3%;
+  }
 
-      #anarchy img {
-        width: 50%;
-        padding: 9% 0 0 24%;
-      }
+  #anarchy img {
+    width: 50%;
+    padding: 9% 0 0 24%;
+  }
 
-      #anarchy p:first-of-type {
-        text-indent: 0px;
-        }
+  #anarchy p:first-of-type {
+    text-indent: 0px;
+  }
 
-      .first {
-        position: relative;
-        width: 81%;
-        padding: 7% 9% 7% 10%;
-        float: left;
-      }
+  .first {
+    position: relative;
+    width: 81%;
+    padding: 7% 9% 7% 10%;
+    float: left;
+  }
 
-      .second {
-        position: relative;
-        width: 81%;
-        padding: 2% 9% 7% 10%;
-        float: left;
-      }
+  .second {
+    position: relative;
+    width: 81%;
+    padding: 2% 9% 7% 10%;
+    float: left;
+  }
 
-      .third {
-        position: relative;
-        width: 81%;
-        padding: 2% 9% 7% 10%;
-        float: left;
-      }
+  .third {
+    position: relative;
+    width: 81%;
+    padding: 2% 9% 7% 10%;
+    float: left;
+  }
 
-      #next h1 {
-        text-align: center;
-        padding: 30% 10% 30% 10% !important;
-      }
+  #next h1 {
+    text-align: center;
+    padding: 30% 10% 30% 10% !important;
+  }
 }
 
 
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width:1201px) and (max-width:1670px) {
-    .spread {
-      width: 100%;
-      clear: both;
-    }
+  .spread {
+    width: 100%;
+    clear: both;
+  }
 
-    .left {
-      position: relative;
-      width: 50%;
-      padding-top: 50%;
-      background-color: grey;
-      float: left;
-    }
+  .left {
+    position: relative;
+    width: 50%;
+    padding-top: 50%;
+    background-color: grey;
+    float: left;
+  }
 
-    .right {
-      position: relative;
-      width: 50%;
-      padding-top: 50%;
-      float: left;
-    }
+  .right {
+    position: relative;
+    width: 50%;
+    padding-top: 50%;
+    float: left;
+  }
 
-    .left img {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-    }
+  .left img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+  }
 
-    .left h2 {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-    }
+  .left h2 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+  }
 
-    .lefttext {
-      position: absolute;
-      top: 0; left: 0;
-      width: 65%;
-      padding: 8% 20% 0% 15%;
-    }
+  .lefttext {
+    position: absolute;
+    top: 0; left: 0;
+    width: 65%;
+    padding: 8% 20% 0% 15%;
+  }
 
-    .righttext {
-      position: absolute;
-      top: 0; left: 0;
-      width: 78%;
-      padding: 8% 12% 0% 10%;
-    }
+  .righttext {
+    position: absolute;
+    top: 0; left: 0;
+    width: 78%;
+    padding: 8% 12% 0% 10%;
+  }
 
-    .right h3 {
-      position: absolute;
-      top: 0; left: 0;
-      width: 50%;
-    }
+  .right h3 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50%;
+  }
 
-    .leftintro {
-      position: relative;
-      width: 50%;
-      float: left;
-    }
+  .leftintro {
+    position: relative;
+    width: 50%;
+    float: left;
+  }
 
-    .rightintro {
-      position: relative;
-      width: 50%;
-      float: right;
-    }
+  .rightintro {
+    position: relative;
+    width: 50%;
+    float: right;
+  }
 
-    .rightintro h3 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 90%;
-      padding: 12% 10% 0% 0%;
-    }
+  .rightintro h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 12% 10% 0% 0%;
+  }
 
-    #intro {
-      width: 100%;
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-small.gif');
-      background-size: 100%;
-      padding-bottom: 39.5%;
-      background-position:center top;
-      position: relative;
-    }
+  #intro {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-small.gif');
+    background-size: 100%;
+    padding-bottom: 39.5%;
+    background-position:center top;
+    position: relative;
+  }
 
-    #outro {
-      width: 100%;
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-small.jpg');
-      background-size: 100%;
-      padding-bottom: 39.5%;
-      background-position:center top;
-      position: relative;
-    }
+  #outro {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-small.jpg');
+    background-size: 100%;
+    padding-bottom: 39.5%;
+    background-position:center top;
+    position: relative;
+  }
 
-    #outro .lefttext {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 66%;
-      padding: 8% 19% 0% 15%;
-    }
+  #outro .lefttext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 66%;
+    padding: 8% 19% 0% 15%;
+  }
 
-    #takeflight {
-      width: 100%;
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-small.jpg');
-      background-size: 100%;
-      padding-bottom: 55%;
-      background-position:center top;
-      position: relative;
-    }
+  #takeflight {
+    width: 100%;
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-small.jpg');
+    background-size: 100%;
+    padding-bottom: 55%;
+    background-position:center top;
+    position: relative;
+  }
 
-    #takeflight h1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 99%;
-      padding: 3% 0 0 1%;
-    }
+  #takeflight h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    padding: 3% 0 0 1%;
+  }
 
-    .inlinequote {
-      padding: 1% 5% 1% 5%;
-      text-indent: 0px !important;
-    }
+  .inlinequote {
+    padding: 1% 5% 1% 5%;
+    text-indent: 0px !important;
+  }
 
-    #self h2 {
-      padding: 6% 0 0 10%;
-    }
+  #self h2 {
+    padding: 6% 0 0 10%;
+  }
 
-    #self .righttext {
-      width: 75%;
-      padding: 13% 15% 0% 10%;
-    }
+  #self .righttext {
+    width: 75%;
+    padding: 13% 15% 0% 10%;
+  }
 
-    #answering h2 {
-      padding: 5% 0 0 33%;
-    }
+  #answering h2 {
+    padding: 5% 0 0 33%;
+  }
 
-    #answering .righttext {
-      width: 72%;
-      padding: 15% 18% 0% 10%;
-    }
+  #answering .righttext {
+    width: 72%;
+    padding: 15% 18% 0% 10%;
+  }
 
-    #power h2 {
-      padding: 6% 0 0 5%;
-    }
+  #power h2 {
+    padding: 6% 0 0 5%;
+  }
 
-    #power .righttext {
-      width: 76%;
-      padding: 7% 14% 0% 10%;
-    }
+  #power .righttext {
+    width: 76%;
+    padding: 7% 14% 0% 10%;
+  }
 
-    #relationships h2 {
-      padding: 7% 0 0 15%;
-    }
+  #relationships h2 {
+    padding: 7% 0 0 15%;
+  }
 
-    #relationships .righttext {
-      width: 70%;
-      padding: 15% 20% 0% 10%;
-    }
+  #relationships .righttext {
+    width: 70%;
+    padding: 15% 20% 0% 10%;
+  }
 
-    #reconciling .left {
-      padding-top: 57%;
-    }
+  #reconciling .left {
+    padding-top: 57%;
+  }
 
-    #reconciling h2 {
-      padding: 7% 0 0 19%;
-    }
+  #reconciling h2 {
+    padding: 7% 0 0 19%;
+  }
 
-    #reconciling .righttext {
-      width: 78%;
-      padding: 5% 12% 0% 10%;
-    }
+  #reconciling .righttext {
+    width: 78%;
+    padding: 5% 12% 0% 10%;
+  }
 
-    #liberation h2 {
-      padding: 4% 0 0 32%;
-    }
+  #liberation h2 {
+    padding: 4% 0 0 32%;
+  }
 
-    #liberation .righttext {
-      width: 70%;
-      padding: 15% 20% 0% 10%;
-    }
+  #liberation .righttext {
+    width: 70%;
+    padding: 15% 20% 0% 10%;
+  }
 
-    #revolt h2 {
-      padding: 10% 0 0 12%;
-    }
+  #revolt h2 {
+    padding: 10% 0 0 12%;
+  }
 
-    #revolt .righttext {
-      width: 79%;
-      padding: 5% 11% 0% 10%;
-    }
+  #revolt .righttext {
+    width: 79%;
+    padding: 5% 11% 0% 10%;
+  }
 
-    #control h2 {
-      padding: 10% 0 0 25%;
-    }
+  #control h2 {
+    padding: 10% 0 0 25%;
+  }
 
-    #control .righttext {
-      width: 78%;
-      padding: 11% 12% 0% 10%;
-    }
+  #control .righttext {
+    width: 78%;
+    padding: 11% 12% 0% 10%;
+  }
 
-    #hierarchy h2 {
-      padding: 10% 0 0 23%;
-    }
+  #hierarchy h2 {
+    padding: 10% 0 0 23%;
+  }
 
-    #hierarchy .righttext {
-      width: 78%;
-      padding: 11% 12% 0% 10%;
-    }
+  #hierarchy .righttext {
+    width: 78%;
+    padding: 11% 12% 0% 10%;
+  }
 
-    #borders h2 {
-      padding: 7% 0 0 17%;
-    }
+  #borders h2 {
+    padding: 7% 0 0 17%;
+  }
 
-    #borders .righttext {
-      width: 78%;
-      padding: 11% 12% 0% 10%;
-    }
+  #borders .righttext {
+    width: 78%;
+    padding: 11% 12% 0% 10%;
+  }
 
-    #representation h2 {
-      padding: 10% 0 0 13%;
-    }
+  #representation h2 {
+    padding: 10% 0 0 13%;
+  }
 
-    #representation .righttext {
-      width: 78%;
-      padding: 11% 12% 0% 10%;
-    }
+  #representation .righttext {
+    width: 78%;
+    padding: 11% 12% 0% 10%;
+  }
 
-    #leaders h2 {
-      padding: 6% 0 0 27%;
-    }
+  #leaders h2 {
+    padding: 6% 0 0 27%;
+  }
 
-    #leaders .righttext {
-      width: 78%;
-      padding: 11% 12% 0% 10%;
-    }
+  #leaders .righttext {
+    width: 78%;
+    padding: 11% 12% 0% 10%;
+  }
 
-    #government h2 {
-      padding: 15% 0 0 16%;
-    }
+  #government h2 {
+    padding: 15% 0 0 16%;
+  }
 
-    #government .righttext {
-      width: 80%;
-      padding: 8% 10% 0% 10%;
-    }
+  #government .righttext {
+    width: 80%;
+    padding: 8% 10% 0% 10%;
+  }
 
-    #government .left {
-      padding-top: 78%;
-    }
+  #government .left {
+    padding-top: 78%;
+  }
 
-    #profit h2 {
-      padding: 10% 0 0 25%;
-    }
+  #profit h2 {
+    padding: 10% 0 0 25%;
+  }
 
-    #profit .righttext {
-      width: 78%;
-      padding: 8% 12% 0% 10%;
-    }
+  #profit .righttext {
+    width: 78%;
+    padding: 8% 12% 0% 10%;
+  }
 
-    #property h2 {
-      padding: 12% 0 0 20%;
-    }
+  #property h2 {
+    padding: 12% 0 0 20%;
+  }
 
-    #property .righttext {
-      width: 76%;
-      padding: 8% 12% 0% 10%;
-    }
+  #property .righttext {
+    width: 76%;
+    padding: 8% 12% 0% 10%;
+  }
 
-    #property .left {
-      padding-top: 62%;
-    }
+  #property .left {
+    padding-top: 62%;
+  }
 
-    #lastcrime h2 {
-      padding: 8% 0 0 10%;
-    }
+  #lastcrime h2 {
+    padding: 8% 0 0 10%;
+  }
 
-    #lastcrime .righttext {
-      width: 72%;
-      padding: 12% 18% 0% 10%;
-    }
+  #lastcrime .righttext {
+    width: 72%;
+    padding: 12% 18% 0% 10%;
+  }
 
-    #anarchy {
-      width: 100%;
-      clear: both;
-      background-color: black;
-      overflow: auto;
-    }
+  #anarchy {
+    width: 100%;
+    clear: both;
+    background-color: black;
+    overflow: auto;
+  }
 
-    #anarchy img {
-      width: 50%;
-      padding: 15% 0 0 20%;
-    }
+  #anarchy img {
+    width: 50%;
+    padding: 15% 0 0 20%;
+  }
 
-    .first {
-      position: relative;
-      width: 23%;
-      padding: 5% 7% 5% 8%;
-      float: left;
-    }
+  .first {
+    position: relative;
+    width: 23%;
+    padding: 5% 7% 5% 8%;
+    float: left;
+  }
 
-    .second {
-      position: relative;
-      width: 25.5%;
-      padding: 5% 7.5% 5% 0%;
-      float: left;
-    }
+  .second {
+    position: relative;
+    width: 25.5%;
+    padding: 5% 7.5% 5% 0%;
+    float: left;
+  }
 
-    .third {
-      position: relative;
-      width: 22%;
-      padding: 5% 7% 5% 0%;
-      float: left;
-    }
+  .third {
+    position: relative;
+    width: 22%;
+    padding: 5% 7% 5% 0%;
+    float: left;
+  }
 
-    #next h1 {
-      text-align: center;
-      padding: 30% 10% 30% 10% !important;
-    }
+  #next h1 {
+    text-align: center;
+    padding: 30% 10% 30% 10% !important;
+  }
 }
 
 
@@ -1358,49 +1358,49 @@
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:200px),
 (min-resolution: 192dpi) and (min-width:200px) {
-    #intro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-phonesmall@2x.jpg');
-    }
+  #intro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-phonesmall@2x.jpg');
+  }
 
-    #outro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-phonesmall@2x.jpg');
-    }
+  #outro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-phonesmall@2x.jpg');
+  }
 
-    #takeflight {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-phonesmall@2x.jpg');
-    }
+  #takeflight {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-phonesmall@2x.jpg');
+  }
 }
 
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:321px),
 (min-resolution: 192dpi) and (min-width:321px) {
-    #intro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-phone@2x.jpg');
-    }
+  #intro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-phone@2x.jpg');
+  }
 
-    #outro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-phone@2x.jpg');
-    }
+  #outro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-phone@2x.jpg');
+  }
 
-    #takeflight {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-phone@2x.jpg');
-    }
+  #takeflight {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-phone@2x.jpg');
+  }
 }
 
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:601px),
 (min-resolution: 192dpi) and (min-width:601px) {
-    #intro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-tablet@2x.jpg');
-    }
+  #intro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-tablet@2x.jpg');
+  }
 
-    #outro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-tablet@2x.jpg');
-    }
+  #outro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-tablet@2x.jpg');
+  }
 
-    #takeflight {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet@2x.jpg');
-    }
+  #takeflight {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet@2x.jpg');
+  }
 }
 
 @media
@@ -1422,31 +1422,31 @@
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:1201px),
 (min-resolution: 192dpi) and (min-width:1201px) {
-    #intro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-small@2x.gif');
-    }
+  #intro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-small@2x.gif');
+  }
 
-    #outro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-small@2x.jpg');
-    }
+  #outro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-small@2x.jpg');
+  }
 
-    #takeflight {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-small@2x.jpg');
-    }
+  #takeflight {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-small@2x.jpg');
+  }
 }
 
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-width:1670px),
 (min-resolution: 192dpi) and (min-width:1670px) {
-    #intro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-large@2x.gif');
-    }
+  #intro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/intro-large@2x.gif');
+  }
 
-    #outro {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-large@2x.jpg');
-    }
+  #outro {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/outro-large@2x.jpg');
+  }
 
-    #takeflight {
-      background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg');
-    }
+  #takeflight {
+    background-image: url('https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg');
+  }
 }
