@@ -17,7 +17,7 @@
 /*------------------COLOURS----------------------------------*/
 
 .green,
-.green a {
+  .green a {
   color: #9ac149;
 }
 
@@ -52,9 +52,9 @@
   max-width: 1285px;
   height: 40vh;
 
-  @media (min-width: 576px) {
-    height: 50vh;
-  }
+@media (min-width: 576px) {
+  height: 50vh;
+}
 
   @media (min-width: 900px) {
     height: 70vh;
@@ -189,6 +189,7 @@
   #self h2 {
     padding: 6% 0 0 10%;
   }
+
 
   #answering h2 {
     padding: 5% 0 0 33%;
@@ -408,6 +409,7 @@
   #self h2 {
     padding: 6% 0 0 10%;
   }
+
 
   #answering h2 {
     padding: 5% 0 0 33%;
