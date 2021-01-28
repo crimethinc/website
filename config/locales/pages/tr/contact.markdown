@@ -23,7 +23,7 @@ PO Box 4671 \\
 Salem, OR 97302
 
 **E-Mail:** \\
-[house@crimethinc.com](mailto:house@crimethinc.com)
+[store@crimethinc.com](mailto:store@crimethinc.com)
 
 ## Rolling Thunder Journal
 

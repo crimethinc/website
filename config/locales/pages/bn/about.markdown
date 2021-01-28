@@ -30,7 +30,7 @@ PO Box 1902\\
 Olympia, WA 98507
 
 **_Email:_** \\
-[house@crimethinc.com](mailto:house@crimethinc.com)
+[store@crimethinc.com](mailto:store@crimethinc.com)
 
 ## A Note About Spam
 

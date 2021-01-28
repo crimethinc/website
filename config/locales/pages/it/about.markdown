@@ -30,7 +30,7 @@ PO Box 4671\\
 Salem OR, 97302
 
 **_E-mail:_** \\
-[house@crimethinc.com](mailto:house@crimethinc.com)
+[store@crimethinc.com](mailto:store@crimethinc.com)
 
 ## Una nota sullo spam
 
