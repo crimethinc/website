@@ -16,7 +16,6 @@ best idea he has had in years and the Kit’s popularity seems to back that up.
 - [4 - Expect Resistance](/books/expect-resistance)
 - [4 - Days of War, Nights of Love](/books/days-of-war-nights-of-love)
 - [4 - Work](/books/work)
-- [4 - Contradictionary](/books/contradictionary)
 - [4 - From Democracy to Freedom](/books/from-democracy-to-freedom)
 - [4 - No Wall They Can Build](/books/no-wall-they-can-build)
 - [4 - Off the Map](/books/off-the-map)
