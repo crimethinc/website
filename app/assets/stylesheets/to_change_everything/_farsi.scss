@@ -1,13 +1,17 @@
-@import 'notokufiarabic';
+@import "notokufiarabic";
 .فارسی {
   @import "farsi/font_overrides";
 
   /*--- Highlight language in mobile language menu ---*/
-  #lang1  li  > a[href="/tce/farsi"] { color: #d62d34 !important; }
-  .check-farsi:before { content: ''; }
+  #lang1 li > a[href="/tce/farsi"] {
+    color: #d62d34 !important;
+  }
+  .check-farsi:before {
+    content: "";
+  }
 
   /*-------------PHONE CSS------------------*/
-  @media (min-device-width:200px) and (max-width:600px) {
+  @media (min-device-width: 200px) and (max-width: 600px) {
     #intro h3,
     #self h2,
     #answering h2,
@@ -62,7 +66,7 @@
   }
 
   /*-------------TABLET CSS------------------*/
-  @media (min-width:601px) and (max-width:1023px) {
+  @media (min-width: 601px) and (max-width: 1023px) {
     #intro h3,
     #self h2,
     #answering h2,
@@ -110,7 +114,7 @@
   }
 
   /*-------------TABLET LANDSCAPE------------------*/
-  @media (min-width:1024px) and (max-width:1200px) {
+  @media (min-width: 1024px) and (max-width: 1200px) {
     #intro h3,
     #self h2,
     #answering h2,
@@ -155,8 +159,10 @@
   }
 
   /*-------------DESKTOP SMALL CSS------------------*/
-  @media (min-width:1201px) and (max-width:1670px) {
-    ul#share { width: 280px; }
+  @media (min-width: 1201px) and (max-width: 1670px) {
+    ul#share {
+      width: 280px;
+    }
     #intro h3 {
       padding: 0;
       padding-top: 5%;
@@ -216,7 +222,9 @@
       }
     }
     #property {
-      .left { padding-top: 50%; }
+      .left {
+        padding-top: 50%;
+      }
       h2 {
         padding-top: 5%;
       }
@@ -238,8 +246,10 @@
   }
 
   /*-------------DESKTOP BIG CSS------------------*/
-  @media (min-width:1671px) {
-    ul#share { width: 280px; }
+  @media (min-width: 1671px) {
+    ul#share {
+      width: 280px;
+    }
     #intro h3 {
       padding: 0;
       padding-top: 5%;
@@ -295,7 +305,9 @@
       padding-top: 5%;
     }
     #property {
-      .left { padding-top: 50%; }
+      .left {
+        padding-top: 50%;
+      }
       h2 {
         padding-top: 5%;
       }

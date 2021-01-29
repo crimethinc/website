@@ -20,7 +20,9 @@
         margin-bottom: 4rem;
       }
 
-      .screen-reader-only  { display: none; }
+      .screen-reader-only {
+        display: none;
+      }
 
       .u-photo {
         width: 100%;
@@ -34,7 +36,7 @@
           size: 3rem;
         }
         line-height: 1em;
-        margin-bottom: .1em;
+        margin-bottom: 0.1em;
       }
 
       h2 {
@@ -42,7 +44,6 @@
       }
     } // .h-entry
   } //.articles-list
-
 } // .h-feed
 
 // articles lists (/tags, /categories, /search)...

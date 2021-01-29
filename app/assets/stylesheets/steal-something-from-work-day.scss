@@ -1,14 +1,16 @@
 // vendor library
-@import 'bootstrap';
+@import "bootstrap";
 
 // text
-@import 'steal-something-from-work-day/fonts';
-@import 'steal-something-from-work-day/typography';
+@import "steal-something-from-work-day/fonts";
+@import "steal-something-from-work-day/typography";
 
 // header / hero
-@import 'steal-something-from-work-day/header';
+@import "steal-something-from-work-day/header";
 
-img { max-width: 100%; }
+img {
+  max-width: 100%;
+}
 
 figure {
   @extend .my-5;
@@ -24,7 +26,12 @@ figure {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   em {
     font-family: inherit;
   }
@@ -53,7 +60,9 @@ blockquote {
 }
 
 main {
-  img { width: 100%; }
+  img {
+    width: 100%;
+  }
 
   // TODO: delete
   header {
@@ -96,7 +105,8 @@ header,
 
 #analysis,
 #narratives {
-  h1, h2 {
+  h1,
+  h2 {
     @include font-black;
     @extend .h1;
   }

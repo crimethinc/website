@@ -4,7 +4,7 @@
     weight: normal;
     weight: 100;
     size: 1.5rem;
-  };
+  }
 
   padding: $border-size-medium;
   width: 66%;
@@ -16,7 +16,8 @@
   }
 }
 
-form, fieldset {
+form,
+fieldset {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

@@ -8,12 +8,14 @@
       display: inline-block;
     }
 
-    .label { font-weight: bold; }
+    .label {
+      font-weight: bold;
+    }
   }
 
   .dt-published {
     display: inline-block;
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   .tags,
@@ -22,7 +24,7 @@
 
     @media screen and (min-width: $small-tablet) {
       display: block;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
     }
   }
 

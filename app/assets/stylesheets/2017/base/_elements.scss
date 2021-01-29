@@ -19,7 +19,15 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -35,7 +43,7 @@ em {
   font-style: italic;
 }
 
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: textfield;
 }
 
@@ -47,19 +55,26 @@ main {
 }
 
 a {
-  &:link, &:visited, &:hover, &:active {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
     color: $color-true-black;
   }
 }
 
 p > a {
-  &:link, &:visited, &:hover, &:active {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
     color: $color-gray-medium;
     text-decoration: underline;
     font-weight: 700;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: $color-true-black;
   }
 }
@@ -82,7 +97,10 @@ sup {
   left: -0.125em;
 
   > a {
-    &:link, &:visited, &:hover, &:active {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
       display: block;
       text-decoration: none;
     }

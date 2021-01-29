@@ -3,7 +3,7 @@
   margin-bottom: 80px;
   color: white;
   text-align: center;
-  width:  100vw;
+  width: 100vw;
   height: 100vh;
   background-size: cover;
   background-color: black;
@@ -34,10 +34,10 @@
     line-height: 1em;
     margin: 0 0 20px 0;
 
-    letter-spacing: -.02em;
+    letter-spacing: -0.02em;
     font-size: 3rem;
 
-    text-shadow: 0 0 10px rgba(0,0,0,.1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     span {
       @include font-light;
@@ -51,22 +51,42 @@
   }
 
   @include media-breakpoint-up(sm) {
-    h1        { font-size: 4rem; }
-    p, p span { font-size: 1.6rem; }
+    h1 {
+      font-size: 4rem;
+    }
+    p,
+    p span {
+      font-size: 1.6rem;
+    }
   }
 
   @include media-breakpoint-up(md) {
-    h1        { font-size: 4.5rem; }
-    p, p span { font-size: 1.8rem; }
+    h1 {
+      font-size: 4.5rem;
+    }
+    p,
+    p span {
+      font-size: 1.8rem;
+    }
   }
 
   @include media-breakpoint-up(lg) {
-    h1        { font-size: 5rem; }
-    p, p span { font-size: 2rem; }
+    h1 {
+      font-size: 5rem;
+    }
+    p,
+    p span {
+      font-size: 2rem;
+    }
   }
 
   @include media-breakpoint-up(xl) {
-    h1        { font-size: 5.5rem; }
-    p, p span { font-size: 2.2rem; }
+    h1 {
+      font-size: 5.5rem;
+    }
+    p,
+    p span {
+      font-size: 2.2rem;
+    }
   }
 }

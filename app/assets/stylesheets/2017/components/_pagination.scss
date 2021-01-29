@@ -1,27 +1,30 @@
 ul.pagination {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 
-    li {
-      display: inline;
+  li {
+    display: inline;
 
-      &.current div {
-        font-weight: bold;
-      }
-
-      a, div {
-        color: $color-black;
-        float: left;
-        padding: 8px 13px;
-        text-decoration: none;
-      }
-
-      a:hover:not(.current) {
-        background-color: $color-gray-light;
-      }
+    &.current div {
+      font-weight: bold;
     }
+
+    a,
+    div {
+      color: $color-black;
+      float: left;
+      padding: 8px 13px;
+      text-decoration: none;
+    }
+
+    a:hover:not(.current) {
+      background-color: $color-gray-light;
+    }
+  }
 }
 
-.pagination-container { text-align: center; }
+.pagination-container {
+  text-align: center;
+}
