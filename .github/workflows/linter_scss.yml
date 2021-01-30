@@ -1,0 +1,17 @@
+  on: [push]
+
+name: Linter, SCSS
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Run stylelint
+        uses: actions-hub/stylelint@master
+        env:
+          PATTERN: "/app/assets/stylesheets/**/**/*.scss"
+          INDENT_SPACES: 2
