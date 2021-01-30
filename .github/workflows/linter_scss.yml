@@ -12,4 +12,4 @@ jobs:
       - name: stylelint
         uses: actions-hub/stylelint@master
         env:
-          PATTERN: "*.scss"
+          PATTERN: app/assets/stylesheets/**/**/*.scss"
