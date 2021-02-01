@@ -13,5 +13,5 @@ jobs:
       - name: Run stylelint
         uses: actions-hub/stylelint@master
         env:
-          PATTERN: "/app/assets/stylesheets/**/**/*.scss"
+          PATTERN: "app/assets/stylesheets/**/**/*.scss"
           INDENT_SPACES: 2
