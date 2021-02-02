@@ -51,14 +51,14 @@ footer#site-footer {
     line-height: 1em;
   }
 
-
   .footer-section.footer-section-nav {
     a {
       color: $color-true-black;
       text-decoration: none;
       line-height: 1.5em;
 
-      &:hover, &:active {
+      &:hover,
+      &:active {
         border-bottom: $border-size-xsmall solid $color-true-black;
       }
     }
@@ -74,13 +74,17 @@ footer#site-footer {
         font: {
           weight: normal;
           weight: 300;
-          size: .6em;
+          size: 0.6em;
         }
       }
     }
 
-    dd a:after            { content: ","; }
-    dd a:last-child:after { content: "";  }
+    dd a:after {
+      content: ",";
+    }
+    dd a:last-child:after {
+      content: "";
+    }
 
     dd {
       font-weight: normal;
@@ -93,11 +97,14 @@ footer#site-footer {
     }
   }
 
-
   .footer-section.footer-section-about {
-
     .about-us-heading {
-      @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 16rem, 3.2rem);
+      @include image-replacement-graphic(
+        "crimethinc-logo-type-white.svg",
+        "crimethinc-logo-type-white.svg",
+        16rem,
+        3.2rem
+      );
     }
 
     .first-time-link a,
@@ -109,7 +116,6 @@ footer#site-footer {
       text-align: right;
       display: block;
     }
-
 
     .first-time {
       text-transform: uppercase;

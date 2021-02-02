@@ -1,17 +1,16 @@
 .espanol-america-latina {
   @import "common/font_styling";
   /*--- Highlight language in mobile language menu ---*/
-  #lang1  li  > a[href="/tce/espanol-america-latina"] {
+  #lang1 li > a[href="/tce/espanol-america-latina"] {
     color: #d62d34 !important;
   }
 
   .check-espanol-america-latina:before {
-    content: '';
+    content: "";
   }
 
   /* Eveerything below here copied from espanol.scss */
-  @media (min-device-width:200px) and (max-width:600px) {
-
+  @media (min-device-width: 200px) and (max-width: 600px) {
     #sharediv {
       padding: 7% 5% 10% 20%;
       width: 70%;
@@ -28,7 +27,7 @@
     }
 
     .leftintro p {
-      padding: .5% 0 0 0;
+      padding: 0.5% 0 0 0;
     }
 
     .rightintro h3 {
@@ -66,12 +65,10 @@
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
 
   /*-------------TABLET CSS------------------*/
-  @media (min-width:601px) and (max-width:1023px) {
-
+  @media (min-width: 601px) and (max-width: 1023px) {
     #toc1 {
       width: 50%;
       margin: 0 10% 0 5%;
@@ -104,15 +101,15 @@
        }*/
 
     #videopdf p {
-      padding: .5% 0 0 8.8%;
+      padding: 0.5% 0 0 8.8%;
     }
 
     #pdfright p {
-      padding: 12% 0 0 .5%;
+      padding: 12% 0 0 0.5%;
     }
 
     .leftintro p {
-      padding: .5% 0 0 0;
+      padding: 0.5% 0 0 0;
     }
 
     .rightintro h3 {
@@ -143,19 +140,16 @@
     }
 
     #outro .leftintro p {
-
     }
 
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
 
   /*-------------TABLET LANDSCAPE------------------*/
-  @media (min-width:1024px) and (max-width:1200px) {
-
+  @media (min-width: 1024px) and (max-width: 1200px) {
     .title {
       padding-left: 13%;
       padding-top: 5%;
@@ -176,15 +170,14 @@
     }
 
     #videopdf p {
-      padding: .5% 0 0 4.4%;
+      padding: 0.5% 0 0 4.4%;
     }
 
     #pdfright p {
-      padding: 6% 0 0 .5%;
+      padding: 6% 0 0 0.5%;
     }
 
     .leftintro p {
-
     }
 
     .rightintro h3 {
@@ -215,19 +208,16 @@
     }
 
     #outro .leftintro p {
-
     }
 
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
 
   /*-------------DESKTOP SMALL CSS------------------*/
-  @media (min-width:1201px) and (max-width:1670px) {
-
+  @media (min-width: 1201px) and (max-width: 1670px) {
     ul#toc {
       width: 465px;
     }
@@ -256,11 +246,11 @@
     }
 
     #videopdf p {
-      padding: .5% 0 0 4.6%;
+      padding: 0.5% 0 0 4.6%;
     }
 
     #pdfright p {
-      padding: 4% 0 0 .5%;
+      padding: 4% 0 0 0.5%;
     }
 
     .leftintro p {
@@ -313,7 +303,7 @@
     }
 
     #hierarchy .righttext {
-      width:  78%;
+      width: 78%;
       padding: 7% 12% 0% 10%;
     }
 
@@ -361,13 +351,10 @@
       font-size: 13vw;
       line-height: 10.75vw;
     }
-
   }
 
-
   /*-------------DESKTOP BIG CSS------------------*/
-  @media (min-width:1671px) {
-
+  @media (min-width: 1671px) {
     #toc a {
       width: 555px;
     }
@@ -389,11 +376,11 @@
     }
 
     #videopdf p {
-      padding: .5% 0 0 3.9%;
+      padding: 0.5% 0 0 3.9%;
     }
 
     #pdfright p {
-      padding: 4% 0 0 .5%;
+      padding: 4% 0 0 0.5%;
     }
 
     .leftintro p {
@@ -489,7 +476,5 @@
       font-size: 13vw;
       line-height: 10.75vw;
     }
-
   }
-
 }

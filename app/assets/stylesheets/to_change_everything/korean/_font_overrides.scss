@@ -2,7 +2,9 @@
 
 .right p,
 #anarchy p,
-.leftintro p { text-indent: 0 !important; }
+.leftintro p {
+  text-indent: 0 !important;
+}
 
 // flip a character for a visual wordplay
 .title-container {
@@ -14,7 +16,7 @@
     }
     span.drop-word-2 {
       top: 0.4em;
-      left: .4em;
+      left: 0.4em;
       position: relative;
     }
 
@@ -30,5 +32,7 @@
 }
 
 .title-container h1 {
-  @media (min-device-width: 200px) and (max-width: 600px) { @include title-text(14.5vw, 13.5vw); }
+  @media (min-device-width: 200px) and (max-width: 600px) {
+    @include title-text(14.5vw, 13.5vw);
+  }
 }

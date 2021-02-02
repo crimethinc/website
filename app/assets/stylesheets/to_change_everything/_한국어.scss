@@ -2,21 +2,33 @@
   @import "korean/font_overrides";
 
   /*--- Highlight language in mobile language menu ---*/
-  #lang2  li  > a[href="/tce/한국어"] { color: #d62d34 !important; }
-  .check-한국어:before { content: ''; }
+  #lang2 li > a[href="/tce/한국어"] {
+    color: #d62d34 !important;
+  }
+  .check-한국어:before {
+    content: "";
+  }
 
-  p { margin-bottom: 2vw; }
+  p {
+    margin-bottom: 2vw;
+  }
 
   .title-container {
     padding-top: 1.5rem;
-    @media (min-width: 75.0625rem) { padding-top: 5rem; }
+    @media (min-width: 75.0625rem) {
+      padding-top: 5rem;
+    }
 
     // the title
     h1 {
       // make sure subtitle clears any descenders
       padding-bottom: 1.5rem;
-      @media (min-width: 37.5625rem) and (max-width: 63.9375rem) { padding-bottom: 5rem; }
-      @media (min-width: 64rem) { padding-bottom: 7rem; }
+      @media (min-width: 37.5625rem) and (max-width: 63.9375rem) {
+        padding-bottom: 5rem;
+      }
+      @media (min-width: 64rem) {
+        padding-bottom: 7rem;
+      }
     }
   }
 
@@ -48,17 +60,25 @@
     top: 10%;
     left: -4%;
 
-    div.right div.righttext { padding-top: 25%; }
+    div.right div.righttext {
+      padding-top: 25%;
+    }
   }
 
   #representation h2 {
     top: 10%;
     left: -30%;
   }
-  #leaders h2 { left: -10%; }
+  #leaders h2 {
+    left: -10%;
+  }
   #property {
-    .left { padding-top: 50%; }
-    .right .righttext { padding-top: 3%; }
+    .left {
+      padding-top: 50%;
+    }
+    .right .righttext {
+      padding-top: 3%;
+    }
   }
   #hierarchy h2 {
     top: unset;
@@ -78,7 +98,9 @@
       left: 5%;
     }
     #property {
-      .left { padding-top: 100%; }
+      .left {
+        padding-top: 100%;
+      }
     }
   }
 
@@ -94,7 +116,9 @@
       left: 5%;
     }
     #property {
-      .left { padding-top: 100%; }
+      .left {
+        padding-top: 100%;
+      }
     }
   }
 
@@ -110,19 +134,23 @@
       left: 5%;
     }
     #property {
-      .left { padding-top: 100%; }
+      .left {
+        padding-top: 100%;
+      }
     }
   }
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width: 1201px) and (max-width: 1670px) {
-    ul#share { width: 308px; }
+    ul#share {
+      width: 308px;
+    }
     #self h2 {
       top: 22%;
       left: -20%;
       text-align: right;
     }
-    
+
     #control h2 {
       top: unset;
       left: -20%;
@@ -135,18 +163,26 @@
       bottom: 5%;
     }
 
-    #lastcrime h2 { padding: 1vh 0 0 4vw; }
-    #representation h2 { left: unset; }
+    #lastcrime h2 {
+      padding: 1vh 0 0 4vw;
+    }
+    #representation h2 {
+      left: unset;
+    }
 
     #hierarchy div.right div.righttext {
       padding-top: 5%;
-      p { margin-bottom: .5vw; }
+      p {
+        margin-bottom: 0.5vw;
+      }
     }
   }
 
   /*-------------DESKTOP BIG CSS------------------*/
-  @media (min-width:1671px) {
-    ul#share { width: 400px; }
+  @media (min-width: 1671px) {
+    ul#share {
+      width: 400px;
+    }
     #self h2 {
       top: 22%;
       left: -20%;
@@ -164,19 +200,31 @@
       left: -20%;
       bottom: 5%;
     }
-    
+
     .title {
-      h1 span.drop-word-1 { top: 0.3em; }
-      h1 span.drop-word-2 { top: 0.6em; }
+      h1 span.drop-word-1 {
+        top: 0.3em;
+      }
+      h1 span.drop-word-2 {
+        top: 0.6em;
+      }
     }
 
     #hierarchy div.right div.righttext {
       padding-top: 5%;
-      p { margin-bottom: .5vw; }
+      p {
+        margin-bottom: 0.5vw;
+      }
     }
 
-    #borders div.right div.righttext { padding-top: 25%; }
-    #representation h2 { left: unset; }
-    #lastcrime h2 { padding: 1vh 0 0 4vw; }
+    #borders div.right div.righttext {
+      padding-top: 25%;
+    }
+    #representation h2 {
+      left: unset;
+    }
+    #lastcrime h2 {
+      padding: 1vh 0 0 4vw;
+    }
   }
 }

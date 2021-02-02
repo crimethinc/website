@@ -1,10 +1,18 @@
 // Move SUPPORT US button to left or right based on language direction
-html[dir=ltr] .site-header .button { right: $border-size-large; }
-html[dir=rtl] .site-header .button { left:  $border-size-large; }
+html[dir="ltr"] .site-header .button {
+  right: $border-size-large;
+}
+html[dir="rtl"] .site-header .button {
+  left: $border-size-large;
+}
 
 @media screen and (max-width: $small-tablet) {
-  html[dir=ltr] .site-header .button { right: $border-size-medium; }
-  html[dir=rtl] .site-header .button { left:  $border-size-medium; }
+  html[dir="ltr"] .site-header .button {
+    right: $border-size-medium;
+  }
+  html[dir="rtl"] .site-header .button {
+    left: $border-size-medium;
+  }
 }
 
 .site-header {
@@ -23,19 +31,29 @@ html[dir=rtl] .site-header .button { left:  $border-size-large; }
 
     @media screen and (max-width: $small-tablet) {
       font-size: 12px;
-      padding: .5em;
+      padding: 0.5em;
       top: $border-size-medium;
     }
   }
 }
 
 .header-logo a {
-  @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 15rem, 3rem);
+  @include image-replacement-graphic(
+    "crimethinc-logo-type-white.svg",
+    "crimethinc-logo-type-white.svg",
+    15rem,
+    3rem
+  );
   @include size(15rem, 3rem);
   display: inline-block;
 
   @media screen and (max-width: $small-tablet) {
-    @include image-replacement-graphic("crimethinc-logo-type-white.svg", "crimethinc-logo-type-white.svg", 10rem, 2rem);
+    @include image-replacement-graphic(
+      "crimethinc-logo-type-white.svg",
+      "crimethinc-logo-type-white.svg",
+      10rem,
+      2rem
+    );
     @include size(10rem, 2rem);
   }
 }
@@ -54,18 +72,20 @@ html[dir=rtl] .site-header .button { left:  $border-size-large; }
 .nav-link {
   display: inline-block;
   font-size: 1.6rem;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   margin-bottom: 1rem;
   margin-right: 1rem;
 
   a {
     text-decoration: none;
 
-    &:link, &:visited {
+    &:link,
+    &:visited {
       color: $color-white;
     }
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       border-bottom: 1px solid $color-white;
     }
   }
@@ -74,7 +94,7 @@ html[dir=rtl] .site-header .button { left:  $border-size-large; }
 @media screen and (max-width: $small-tablet) {
   .site-header nav {
     display: block;
-    margin-top: .4em;
+    margin-top: 0.4em;
   }
 }
 
