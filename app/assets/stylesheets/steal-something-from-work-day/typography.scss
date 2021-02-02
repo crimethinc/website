@@ -36,6 +36,7 @@
   @include font-regular;
 }
 
-b, strong {
+b,
+strong {
   @include font-bold;
 }

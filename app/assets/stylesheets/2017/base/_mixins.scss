@@ -39,17 +39,21 @@
 }
 
 @mixin social-icon($domain) {
-  @include image-replacement-graphic("social-icons/#{$domain}.svg",
-                                     "social-icons/#{$domain}.svg",
-                                     40px,
-                                     40px);
+  @include image-replacement-graphic(
+    "social-icons/#{$domain}.svg",
+    "social-icons/#{$domain}.svg",
+    40px,
+    40px
+  );
 }
 
 @mixin podcast-subscribe-button($domain) {
-  @include image-replacement-graphic("podcast-subscribe-buttons/#{$domain}.png",
-                                     "podcast-subscribe-buttons/#{$domain}.png",
-                                     110px,
-                                      40px);
+  @include image-replacement-graphic(
+    "podcast-subscribe-buttons/#{$domain}.png",
+    "podcast-subscribe-buttons/#{$domain}.png",
+    110px,
+    40px
+  );
 }
 
 @mixin size($w, $h) {
@@ -62,7 +66,9 @@
 }
 
 @mixin selection($color, $background) {
-  ::selection, ::-moz-selection, ::-webkit-selection {
+  ::selection,
+  ::-moz-selection,
+  ::-webkit-selection {
     color: $color;
     background: $background;
   }

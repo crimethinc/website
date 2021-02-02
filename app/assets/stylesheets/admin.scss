@@ -6,4 +6,6 @@
 @import "admin/articles";
 
 // helpers, extract to file when it makes sense
-.rotated { transform: rotate(-2deg); }
+.rotated {
+  transform: rotate(-2deg);
+}

@@ -1,12 +1,20 @@
 .lietuvos {
   @import "lietuvos/font_overrides";
-  #lang2  li  > a[href="/tce/lietuvos"] { color: #d62d34 !important; }
-  .check-lietuvos:before { content: ''; }
+  #lang2 li > a[href="/tce/lietuvos"] {
+    color: #d62d34 !important;
+  }
+  .check-lietuvos:before {
+    content: "";
+  }
 
   /*-------------DESKTOP SMALL CSS------------------*/
-  @media (min-width:1201px) and (max-width:1670px) {
-    #answering h2 { padding: 5% 0 0 20%; }
-    #reconciling h2 { padding: 7% 0 0 3%; }
+  @media (min-width: 1201px) and (max-width: 1670px) {
+    #answering h2 {
+      padding: 5% 0 0 20%;
+    }
+    #reconciling h2 {
+      padding: 7% 0 0 3%;
+    }
 
     #share a {
       width: 83%;
@@ -15,9 +23,13 @@
   }
 
   /*-------------DESKTOP BIG CSS------------------*/
-  @media (min-width:1671px) {
-    #answering h2 { padding: 5% 0 0 20%; }
-    #reconciling h2 { padding: 7% 0 0 3%; }
+  @media (min-width: 1671px) {
+    #answering h2 {
+      padding: 5% 0 0 20%;
+    }
+    #reconciling h2 {
+      padding: 7% 0 0 3%;
+    }
 
     #share a {
       width: 83%;
