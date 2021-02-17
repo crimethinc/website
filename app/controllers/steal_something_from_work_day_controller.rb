@@ -3,7 +3,7 @@ class StealSomethingFromWorkDayController < ApplicationController
 
   STEAL_SOMETHING_FROM_WORK_DAY_LOCALES = {
     cs: 'Czech',
-    de: 'Deutsche',
+    de: 'Deutsch',
     en: 'English',
     fr: 'Français'
   }.freeze
