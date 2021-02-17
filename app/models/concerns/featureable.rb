@@ -12,7 +12,8 @@ module Featureable
            .reorder(position: :asc)
            .order(fallback_sort)
            .where(locale: fallback_locale)
-           .published.live
+           .published
+           .live
     end
   end
 
