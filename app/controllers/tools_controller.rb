@@ -51,11 +51,11 @@ class ToolsController < ApplicationController
   end
 
   def language_filter
-    { fallback_locale: filter_params.dig(:filter, :lang).presence&.to_s }
+    { fallback_locale: filter_params[:lang].presence&.to_s }
   end
 
   def filter_params
-    params.permit(filter: [:lang])
+    params.permit(:lang)
   end
 
   def tool_class

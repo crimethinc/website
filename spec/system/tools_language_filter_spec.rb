@@ -14,7 +14,7 @@ describe 'filter[lang] for Tools Pages' do # rubocop:disable RSpec/DescribeClass
   let(:filters) { {} }
 
   context 'when filtered with a valid value' do
-    let(:filters) { { filter: { lang: :es } } }
+    let(:filters) { { lang: :es } }
 
     it 'is expected to only shpow the filtered zines' do
       visit zines_path(filters)
@@ -26,7 +26,7 @@ describe 'filter[lang] for Tools Pages' do # rubocop:disable RSpec/DescribeClass
   end
 
   context 'when filtered with a invalid locale' do
-    let(:filters) { { filter: { lang: 'foo' } } }
+    let(:filters) { { lang: 'foo' } }
 
     it 'is expected to show no zines' do
       visit zines_path(filters)
