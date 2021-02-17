@@ -10,7 +10,7 @@ namespace :db do
       FileUtils.touch Rails.root.join 'database-dumps', 'crimethinc_production_db_dump.sql'
 
       # URL to download from
-      url = 'https://s3.amazonaws.com/thecloud.crimethinc.com/database-dumps/crimethinc_production_db_dump.sql'
+      url = 'https://crimethinc-production.s3.us-west-2.amazonaws.com/database-dumps/crimethinc_production_db_dump.sql'
 
       puts '==> Downloading remote production DB dump from S3…'
       File.open('database-dumps/crimethinc_production_db_dump.sql', 'wb') do |file|
