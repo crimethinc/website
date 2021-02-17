@@ -43,7 +43,8 @@ class ToolsController < ApplicationController
 
   def filters
     {}.merge(sort)
-      .merge(language_filter).compact
+      .merge(language_filter)
+      .compact
   end
 
   def sort
