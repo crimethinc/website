@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'filter[lang] for Tools Pages' do # rubocop:disable RSpec/DescribeClass
   after(:all) { Zine.destroy_all } # rubocop:disable RSpec/BeforeAfterAll
 
-  before(:context) do
+  before(:all) do # rubocop:disable RSpec/BeforeAfterAll
     Current.theme = '2017'
 
     create(:zine, :english, :live, title: 'english_zine')
