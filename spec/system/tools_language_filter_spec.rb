@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe 'filter[lang] for Tools Pages' do # rubocop:disable RSpec/DescribeClass
-  after(:all) { Zine.destroy_all } # rubocop:disable RSpec/BeforeAfterAll
+describe 'lang param for Tools Pages' do
+  after(:all) { Zine.destroy_all }
 
-  before(:all) do # rubocop:disable RSpec/BeforeAfterAll
+  before(:all) do
     Current.theme = '2017'
 
     create(:zine, :english, :live, title: 'english_zine')
@@ -16,7 +16,7 @@ describe 'filter[lang] for Tools Pages' do # rubocop:disable RSpec/DescribeClass
   context 'when filtered with a valid value' do
     let(:filters) { { lang: :es } }
 
-    it 'is expected to only shpow the filtered zines' do
+    it 'is expected to only show the filtered zines' do
       visit zines_path(filters)
 
       expect(page).to have_content 'spanish_zine'
