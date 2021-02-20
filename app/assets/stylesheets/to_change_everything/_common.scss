@@ -17,24 +17,31 @@
 /*------------------RESPONSIVE VIDEO EMBED------------------*/
 
 #video-container {
-  width: 96%;
-  position: relative;
-  padding-bottom: 52%;
-  margin: 2%;
-  padding-top: 2%;
-  overflow: hidden;
-  display: none;
+  background-color: black;
 }
 
-#video-container iframe,
-#video-container object,
-#video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
+#video-container iframe {
+  display: block;
+  margin: 0 auto;
   width: 100%;
-  height: 100%;
+  max-width: 1285px;
+  height: 40vh;
+
+  @media (min-width: 576px) {
+    height: 50vh;
+  }
+
+  @media (min-width: 900px) {
+    height: 70vh;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 30px;
+    height: 95vh;
+  }
 }
+
+/*------------------COLOURS------------------*/
 
 .green,
 .green a {
@@ -57,29 +64,6 @@
 
 .black {
   font-weight: 800;
-}
-
-.inactive a {
-  color: #9b9b9b !important;
-  text-decoration: none;
-}
-
-.inactive a:hover,
-.inactive a:active {
-  color: #9b9b9b !important;
-  text-decoration: none;
-}
-
-.b-lazy {
-  -webkit-transition: opacity 500ms ease-in-out;
-  -moz-transition: opacity 500ms ease-in-out;
-  -o-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
-  max-width: 100%;
-  opacity: 0;
-}
-.b-lazy.b-loaded {
-  opacity: 1;
 }
 
 /*----------------------------------------------------------*/
