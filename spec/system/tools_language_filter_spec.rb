@@ -1,7 +1,10 @@
 require 'rails_helper'
 
-describe 'lang param for Tools Pages' do
-  after(:all) { Zine.destroy_all }
+describe 'lang param for Tools Pages', read_only_spec: true do
+  after(:all) do
+    Zine.destroy_all
+    Locale.destroy_all
+  end
 
   before(:all) do
     Current.theme = '2017'

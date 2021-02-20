@@ -20,6 +20,11 @@ chdir APP_ROOT do
 
   puts "==> Tests started at: #{Time.now.strftime('%H:%M:%S')}"
 
-  system! 'bundle exec rspec'
+  puts '==> Running isolated specs'
+  system! 'bundle exec rspec --tag=~read_only_spec'
+
+  puts '==> Running non-isolated, read-only specs'
+  system! 'bundle exec rspec --tag=read_only_spec'
+
   system! 'bundle exec rubocop'
 end
