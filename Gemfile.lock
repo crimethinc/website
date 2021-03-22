@@ -92,9 +92,9 @@ GEM
       nokogiri (~> 1.11.0.rc2)
     bcrypt (3.1.16)
     bindex (0.8.1)
-    bootstrap (5.0.0.beta1)
+    bootstrap (5.0.0.beta2)
       autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
+      popper_js (>= 2.8.6, < 3)
       sassc-rails (>= 2.0.0)
     bugsnag (6.19.0)
       concurrent-ruby (~> 1.0)
@@ -298,7 +298,7 @@ GEM
     parser (3.0.0.0)
       ast (~> 2.4.1)
     pg (1.2.3)
-    popper_js (1.16.0)
+    popper_js (2.8.6)
     pry (0.13.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -503,7 +503,7 @@ DEPENDENCIES
   aws-sdk-s3
   azure-storage-blob
   bcrypt
-  bootstrap (= 5.0.0.beta1)
+  bootstrap (= 5.0.0.beta2)
   bugsnag
   byebug
   capybara
