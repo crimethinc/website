@@ -42,4 +42,4 @@ production:
   mirrors:
     - microsoft
     - google
-    - amazon_backup
+    # - amazon_backup
