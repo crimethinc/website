@@ -35,7 +35,7 @@ json.items do
     json.banner_image article.image
     json.date_published article.published_at.iso8601
     json.date_modified article.updated_at.iso8601
-    json.tags article.tags.map(&:name).compact
+    json.tags article.tags.filter_map(&:name)
     json.content_html article.content_rendered(include_media: media_mode?)
   end
 end
