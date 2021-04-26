@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_26_234329) do
+ActiveRecord::Schema.define(version: 2021_04_26_235038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -152,6 +152,12 @@ ActiveRecord::Schema.define(version: 2021_04_26_234329) do
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.string "filed_under"
+    t.string "draft_code"
+    t.string "slug"
+    t.string "string"
+    t.integer "publication_status"
+    t.datetime "published_at"
     t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
   end
 
