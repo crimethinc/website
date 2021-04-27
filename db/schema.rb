@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_26_235038) do
+ActiveRecord::Schema.define(version: 2021_04_27_004357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -146,7 +146,7 @@ ActiveRecord::Schema.define(version: 2021_04_26_235038) do
   end
 
   create_table "definitions", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -155,23 +155,12 @@ ActiveRecord::Schema.define(version: 2021_04_26_235038) do
     t.string "filed_under"
     t.string "draft_code"
     t.string "slug"
-    t.string "string"
     t.integer "publication_status"
     t.datetime "published_at"
+    t.datetime "featured_at"
+    t.boolean "featured_status", default: false
+    t.string "subtitle"
     t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
-  end
-
-  create_table "defintions", force: :cascade do |t|
-    t.string "term"
-    t.text "content"
-    t.string "filed_under"
-    t.datetime "published_at"
-    t.string "draft_code"
-    t.string "slug"
-    t.integer "publication_status"
-    t.string "localea"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "episodes", id: :serial, force: :cascade do |t|
