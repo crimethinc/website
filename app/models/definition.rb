@@ -4,4 +4,8 @@ class Definition < ApplicationRecord
   include Translatable
 
   default_scope { order(slug: :asc) }
+
+  def path
+    "/definitions/#{slug}"
+  end
 end

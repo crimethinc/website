@@ -15,7 +15,7 @@
           <%= link_to "EDIT", "[:edit, :admin, definition]", class: "btn btn-light border-secondary btn-sm" %>
         </td>
         <td>
-          <b><%= link_to definition.name, "definition" %></b>
+          <b><%= link_to definition.name, [:admin, definition] %></b>
         </td>
         <td class="text-end">
           <% if definition.published_at.blank? %>

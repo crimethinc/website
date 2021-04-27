@@ -8,7 +8,7 @@ module Admin
     end
 
     def show
-      @title = admin_title(@book, %i[title subtitle])
+      @title = admin_title(@book, %i[name])
     end
 
     def new

@@ -1,0 +1,72 @@
+<%= render "admin/page_header", thing: @definition %>
+
+<header class="mb-3">
+  <h1>
+    <%= link_to @definition.path, class: "p-name" do %>
+      <span class="h1 title"><%= @definition.title %></span><br>
+      <span class="h2 subtitle"><%= @definition.subtitle %></span>
+    <% end %>
+  </h1>
+
+  <p><b>URL:</b> <b><%= link_to @definition.path, @definition.path %></b></p>
+
+  <% if @definition.english? %>
+    <%= render 'admin/translate_this', resource: @definition %>
+  <% else %>
+    <% if @definition.canonical_id.present? %>
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <div class="card mb-3">
+            <div class="card-header">
+              <% if @definition.canonical_record.locale.present? %>
+                <%= link_to @definition.canonical_record.locale.upcase, [:admin, :locales], class: "badge bg-secondary text-white" %>
+              <% end %>
+
+              English Definition
+            </div>
+
+            <div class="card-body text-dark">
+              <h6 class="card-title">
+                <b><%= link_to @definition.canonical_record.title, [:admin, @definition.canonical_record] %></b>
+
+                <% if @definition.canonical_record.subtitle.present? %>
+                <br>
+                <%= link_to @definition.canonical_record.subtitle, [:admin, @definition.canonical_record] %>
+                <% end %>
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</header>
+
+<article class="row">
+  <div class="col-12 col-md-8">
+    <div class="border-top">
+      <%= render_markdown @definition.content %>
+    </div>
+  </div>
+
+  <aside class="col-12 col-md-4">
+    <p>
+      <% if @definition.published? %>
+        <%= link_to "Edit Definition", [:edit, :admin, @definition], class: "btn btn-outline-primary btn-lg" %>
+        <hr>
+      <% else %>
+        <%= link_to "Preview Draft", @definition.path, class: "btn btn-lg btn-success" %>
+      <% end %>
+    </p>
+
+    <p>
+      <b><%= render_themed "articles/published_on_time_tag", article: @definition %></b>
+      <br>
+      <%= render "/admin/articles/publication_status_badge", resource: @definition %>
+
+      <% if @definition.locale.present? %>
+        <%= link_to @definition.locale.upcase, [:admin, :locales], class: "badge bg-dark text-white" %>
+      <% end %>
+    </p>
+  </aside>
+</article>

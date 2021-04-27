@@ -11,7 +11,8 @@
 
 <div class='definitions'>
   <% @definitions.group_by(&:filed_under).each do |letter, definition| %>
-    <h1 id='<%= letter %>'> <%= letter.upcase %> </h1>
+    <h2 id='<%= letter %>'> <%= letter.upcase %> </h2>
+
     <%= render 'definition', definition: definition %>
   <% end %>
 
