@@ -1,0 +1,16 @@
+<%= render "admin/page_header", thing: @definition %>
+
+<% if @definition.english? %>
+  <%= render 'admin/translate_this', resource: @definition %>
+<% end %>
+
+<%= render "form" %>
+
+<div class="row">
+  <div class="col-12 col-lg-9">
+    <%= render "admin/danger_zone",
+               thing: @definition,
+               label: "definition",
+               path: [:admin, @definition] if Current.user.can_delete? %>
+  </div>
+</div>
