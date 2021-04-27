@@ -10,10 +10,12 @@
 </div>
 
 <div class='definitions'>
-  <% @definitions.group_by(&:filed_under).each do |letter, definition| %>
+  <% @definitions.group_by(&:filed_under).each do |letter, definitions| %>
     <h2 id='<%= letter %>'> <%= letter.upcase %> </h2>
 
-    <%= render 'definition', definition: definition %>
+    <% definitions.each do |definition| %>
+      <%= render definition, definitions: definitions %>
+    <% end %>
   <% end %>
 
   <%= render 'back_to_top' %>
