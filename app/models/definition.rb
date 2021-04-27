@@ -1,4 +1,7 @@
 class Definition < ApplicationRecord
-  validates :name,    presence: true, uniqueness: true
-  validates :content, presence: true, uniqueness: true
+  include Post
+  include Featureable
+  include Translatable
+
+  default_scope { order(slug: :asc) }
 end
