@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_22_045040) do
+ActiveRecord::Schema.define(version: 2021_04_27_004357) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -145,13 +146,20 @@ ActiveRecord::Schema.define(version: 2020_12_22_045040) do
   end
 
   create_table "definitions", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.text "content"
-    t.boolean "image_present"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.string "filed_under"
+    t.string "draft_code"
+    t.string "slug"
+    t.integer "publication_status"
+    t.datetime "published_at"
+    t.datetime "featured_at"
+    t.boolean "featured_status", default: false
+    t.string "subtitle"
     t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
   end
 

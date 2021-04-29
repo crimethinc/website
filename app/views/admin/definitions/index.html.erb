@@ -1,0 +1,24 @@
+<h2 class='mb-3'>
+  <%= link_to 'NEW', [:new, :admin, :definition], class: 'btn btn-outline-primary mb-2' %>
+
+  <span class='fw-light'><%= link_to_unless_current 'Definitions', [:admin, :definitions] %></span>
+</h2>
+
+<div class='my-5'>
+  <p class='h6'>Click a letter to scroll down to its words<p>
+  <%= link_to_alphabet.html_safe %>
+</div>
+
+<div class='definitions'>
+  <% @definitions.group_by(&:filed_under).each do |letter, definitions| %>
+    <h2 id='<%= letter %>'> <%= letter.upcase %> </h2>
+
+    <% definitions.each do |definition| %>
+      <%= render definition, definitions: definitions %>
+    <% end %>
+  <% end %>
+
+  <%= render 'back_to_top' %>
+</div><!-- .definitions -->
+
+<%= paginate @definitions, views_prefix: 'admin', theme: 'twitter-bootstrap-4' %>
