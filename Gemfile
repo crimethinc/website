@@ -14,7 +14,7 @@ gem 'puma'
 
 # assets
 gem 'autoprefixer-rails'
-gem 'bootstrap', '5.0.0.beta3'
+gem 'bootstrap', '5.0.0'
 gem 'jquery-rails'      # for bootstrap pages (admin, steal-something-from-work-day)
 gem 'sassc-rails'
 gem 'sitemap_generator' # for generating a compliant xml sitemap
