@@ -60,23 +60,22 @@ Naming/VariableNumber:
 Rails/EnvironmentVariableAccess:
   Enabled: false
 
-# TODO: Uncomment when rubocop-rspec is compatible with rubocop <= 1.0
-# RSpec/DescribeClass:
-#   Exclude:
-#     - 'spec/system/*'
-#
-# RSpec/ExampleLength:
-#   Max: 9
-#   Exclude:
-#     - 'spec/system/*'
-#
-# RSpec/MessageSpies:
-#   Enabled: false
-#
-# RSpec/MultipleExpectations:
-#   Max: 5
-#   Exclude:
-#     - 'spec/system/*'
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/system/*'
+
+RSpec/ExampleLength:
+  Max: 9
+  Exclude:
+    - 'spec/system/*'
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 5
+  Exclude:
+    - 'spec/system/*'
 
 Style/AsciiComments:
   Enabled: false

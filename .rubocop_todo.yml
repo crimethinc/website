@@ -19,38 +19,6 @@ Naming/MemoizedInstanceVariableName:
   Exclude:
     - 'app/models/article_archive_paginator.rb'
 
-# Offense count: 4
-# Configuration parameters: IgnoredMetadata.
-RSpec/DescribeClass:
-  Exclude:
-    - 'spec/system/admin_sign_ins_spec.rb'
-    - 'spec/system/article_datetime_settings_spec.rb'
-    - 'spec/system/language_landing_page_spec.rb'
-    - 'spec/system/tools_index_pages_spec.rb'
-
-# Offense count: 15
-# Configuration parameters: Max.
-RSpec/ExampleLength:
-  Exclude:
-    - 'spec/models/article_spec.rb'
-    - 'spec/services/tag_assigner_spec.rb'
-    - 'spec/system/admin_sign_ins_spec.rb'
-    - 'spec/system/article_datetime_settings_spec.rb'
-    - 'spec/system/language_landing_page_spec.rb'
-    - 'spec/system/tools_index_pages_spec.rb'
-
-# Offense count: 9
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: have_received, receive
-RSpec/MessageSpies:
-  Exclude:
-    - 'spec/controllers/admin/admin_controller_spec.rb'
-    - 'spec/services/tag_assigner_spec.rb'
-
-# Offense count: 28
-RSpec/MultipleExpectations:
-  Max: 8
-
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: NilOrEmpty, NotPresent, UnlessPresent.
