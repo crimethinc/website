@@ -5,7 +5,7 @@
     <%= link_to "Tools", [:tools] %>
 
     <% if action_name == 'show' %>
-      : <%= link_to @type.capitalize, [@type] %>
+      : <%= link_to @type.capitalize.to_sym, [@type.to_sym] %>
     <% end %>
   <% end %>
 </nav>
