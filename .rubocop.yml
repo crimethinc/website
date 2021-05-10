@@ -55,6 +55,11 @@ Metrics/PerceivedComplexity:
 Naming/VariableNumber:
   EnforcedStyle: snake_case
 
+# TODO: https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsenvironmentvariableaccess
+#       Consider using `Rails.application.config.foo` instead of `ENV["FOO"]`
+Rails/EnvironmentVariableAccess:
+  Enabled: false
+
 # TODO: Uncomment when rubocop-rspec is compatible with rubocop <= 1.0
 # RSpec/DescribeClass:
 #   Exclude:
