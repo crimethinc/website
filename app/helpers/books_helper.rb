@@ -5,8 +5,8 @@ module BooksHelper
     link_to(image_tag(small_url), large_url)
   end
 
-  def button_to_buy_now price: 0, url: nil
-    link_to [t('views.tools.buy_now_button_text'), number_to_currency(price / 100.0)].join(' : '), url, class: 'buy-now button'
+  def button_to_buy_now url: nil
+    link_to t('views.tools.buy_now_button_text'), url, class: 'buy-now button'
   end
 
   def extension_for_ebook type

@@ -13,7 +13,7 @@
 
       <% if @tool.price_in_cents.present? %>
         <div id="buy-now">
-          <%= button_to_buy_now price: @tool.price_in_cents, url: @tool.buy_url %>
+          <%= button_to_buy_now url: @tool.buy_url %>
         </div>
       <% end %>
 

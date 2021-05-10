@@ -8,7 +8,7 @@
       <%= render_markdown "[[ #{book.front_image} #{book.front_image_description} #{book.path} ]]" %>
 
       <% if book.price_in_cents.present? %>
-        <div><%= button_to_buy_now price: book.price_in_cents, url: book.buy_url %></div>
+        <div><%= button_to_buy_now url: book.buy_url %></div>
       <% end %>
     </div>
 
