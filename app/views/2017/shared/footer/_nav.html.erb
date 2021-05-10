@@ -19,7 +19,7 @@
       </dt>
       <dd>
         <% %w[zines journals posters stickers videos music logos to_change_everything steal_something_from_work_day].each do |tool| %>
-          <%= link_to t("footer.nav.tools.#{tool}"), [tool] %>
+          <%= link_to t("footer.nav.tools.#{tool.to_sym}"), [tool.to_sym] %>
         <% end %>
       </dd>
 
