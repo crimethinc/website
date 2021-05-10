@@ -5,6 +5,6 @@
     <% next if locale.english? %>
     <% next if resource.localizations.map(&:locale).include? locale.abbreviation %>
 
-    <%= link_to locale.abbreviation.upcase, [:new, :admin, resource.class.to_s.downcase, canonical_id: resource.id, locale: locale.abbreviation], class: "button button-buy btn btn-outline-primary btn-sm mb-2" %>
+    <%= link_to locale.abbreviation.upcase, [:new, :admin, resource.class.to_s.downcase.to_sym, canonical_id: resource.id, locale: locale.abbreviation], class: "button button-buy btn btn-outline-primary btn-sm mb-2" %>
   <% end %>
 </div>
