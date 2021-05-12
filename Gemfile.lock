@@ -460,7 +460,7 @@ GEM
       sprockets (>= 3.0.0)
     squasher (0.6.2)
     stackprof (0.2.17)
-    sterile (1.0.21)
+    sterile (1.0.22)
       nokogiri (>= 1.11.0)
     stringex (2.8.5)
     stripe (5.32.1)
