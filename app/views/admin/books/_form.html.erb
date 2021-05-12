@@ -65,7 +65,7 @@
 
   <%= render "admin/books/downloads_form", form: form, resource: resource %>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace.to_sym] %>
 
   <fieldset id="purchasing">
     <legend>Purchasing</legend>
@@ -83,7 +83,7 @@
     </div>
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace.to_sym] %>
 
   <fieldset id="syndication">
     <legend>Syndication</legend>
@@ -109,7 +109,7 @@
     </div> <!-- .row -->
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace.to_sym] %>
 
   <div class="row">
     <div class="col-12 col-sm-6">
@@ -173,5 +173,5 @@
     </div>
   </div> <!-- .row -->
 
-  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace.to_sym] %>
 <% end %>

@@ -47,7 +47,7 @@
 
   <%= render "admin/posters/deprecated_download_checks", form: form, resource: resource %>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace.to_sym] %>
 
   <fieldset id="purchasing">
     <legend>Purchasing</legend>
@@ -65,7 +65,7 @@
     </div>
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace.to_sym] %>
 
   <fieldset id="syndication">
     <legend>Syndication</legend>
@@ -93,5 +93,5 @@
     </div> <!-- .row -->
   </fieldset>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace] %>
+  <%= render "admin/form_actions", cancel_url: [:admin, resource.namespace.to_sym] %>
 <% end %>
