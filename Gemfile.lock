@@ -92,7 +92,7 @@ GEM
       nokogiri (~> 1.11.0.rc2)
     bcrypt (3.1.16)
     bindex (0.8.1)
-    bootstrap (5.0.0)
+    bootstrap (5.0.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.9.2, < 3)
       sassc-rails (>= 2.0.0)
@@ -501,7 +501,7 @@ DEPENDENCIES
   aws-sdk-s3
   azure-storage-blob
   bcrypt
-  bootstrap (= 5.0.0)
+  bootstrap (= 5.0.1)
   bugsnag
   byebug
   capybara
