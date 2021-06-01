@@ -127,6 +127,7 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.10.0)
+    excon (0.82.0)
     execjs (2.8.1)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -148,7 +149,7 @@ GEM
     fasterer (0.9.0)
       colorize (~> 0.7)
       ruby_parser (>= 3.14.1)
-    ffi (1.15.0)
+    ffi (1.15.1)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -205,7 +206,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    honeycomb-beeline (2.4.0)
+    honeycomb-beeline (2.4.1)
       libhoney (~> 1.14, >= 1.14.2)
     http (4.4.1)
       addressable (~> 2.3)
@@ -215,8 +216,8 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.2)
-      ffi-compiler
+    http-parser (1.2.3)
+      ffi-compiler (>= 1.0, < 2.0)
     httpclient (2.8.3)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
@@ -250,8 +251,9 @@ GEM
       rexml
     launchy (2.5.0)
       addressable (~> 2.7)
-    libhoney (1.17.0)
+    libhoney (1.18.0)
       addressable (~> 2.0)
+      excon
       http (>= 2.0, < 5.0)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
