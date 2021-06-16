@@ -6,15 +6,6 @@ test:
   service: Disk
   root:    <%= Rails.root.join 'tmp', 'storage' %>
 
-# Mirror and for DB export/import scripts
-amazon_backup:
-  service:           S3
-  access_key_id:     <%= ENV.fetch('BACKUP_S3_ACCESS_KEY') { 'TODO' } %>
-  secret_access_key: <%= ENV.fetch('BACKUP_S3_SECRET_KEY') { 'TODO' } %>
-  bucket:            <%= ENV.fetch('BACKUP_S3_BUCKET')     { 'TODO' } %>
-  region:            <%= ENV.fetch('BACKUP_S3_REGION')     { 'TODO' } %>
-
-# Mirror
 amazon_s3:
   service:           S3
   access_key_id:     <%= ENV.fetch('HDRIVE_S3_ACCESS_KEY') { 'TODO' } %>
@@ -22,24 +13,5 @@ amazon_s3:
   bucket:            <%= ENV.fetch('HDRIVE_S3_BUCKET')     { 'TODO' } %>
   region:            <%= ENV.fetch('HDRIVE_S3_REGION')     { 'TODO' } %>
 
-# Mirror
-google:
-  service:     GCS
-  project:     <%= ENV.fetch('HDRIVE_GOOGLE_PROJECT_ID') { 'TODO' } %>
-  credentials: <%= ENV.fetch('HDRIVE_GOOGLE_JSON_KEY')   { "TODO" }.as_json %>
-  bucket:      <%= ENV.fetch('HDRIVE_GOOGLE_BUCKET')     { 'TODO' } %>
-
-# Mirror
-microsoft:
-  service:              AzureStorage
-  storage_account_name: <%= ENV.fetch('HDRIVE_AZURE_STORAGE')     { 'TODO' } %>
-  storage_access_key:   <%= ENV.fetch('HDRIVE_AZURE_PRIMARY_KEY') { 'TODO' } %>
-  container:            <%= ENV.fetch('HDRIVE_AZURE_CONTAINER')   { 'TODO' } %>
-
 production:
-  service: Mirror
-  primary: amazon_s3
-  mirrors:
-    - microsoft
-    - google
-    # - amazon_backup
+  service: amazon_s3
