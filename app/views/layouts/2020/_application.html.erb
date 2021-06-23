@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <%= tag.html dir:    html_dir,
              lang:   html_lang,
+
              class:  html_class,
              prefix: html_prefix do %>
   <head>
-    <!-- TEMP: for development only -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
-    <!-- /TEMP: for development only -->
-
     <%= stylesheet_link_tag Current.theme, media: "all" %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Markazi+Text:400,500,600,700&display=swap", media: "all" %>
     <%= render_themed "shared/translation_missing_css" %>
   </head>
 
   <body>
+    <%= render_themed "shared/admin_header" %>
+    <%= render_themed "shared/development_mode_banner" %>
+
     <%= render_themed "shared/header" %>
 
     <h1>CrimethInc. Ex-Workers’ Collective</h1>
@@ -24,7 +23,6 @@
     </main>
 
     <%= render_themed "shared/footer" %>
-
     <%= render_themed "shared/javascripts" %>
   </body>
 <% end %>

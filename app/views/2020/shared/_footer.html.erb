@@ -1,13 +1,13 @@
-<footer class="container">
+<footer id='site-footer' class='container mt-5' role='contentinfo'>
   <div class='row'>
-    <div class='column column-50'>
+    <div class='col-12 col-md-6 pr-5 mb-5'>
       <nav>
-        <h1><%= t 'footer.nav.heading' %></h1>
+        <h2><%= t 'footer.nav.heading' %></h2>
 
         <dl>
           <dt class='nav-label nav-label-articles'>
             <%= link_to t('footer.nav.articles.label'),   %i[library] %>
-            <b><%= link_to t('footer.nav.articles.feed'), %i[feed] %></b>
+            <small class='text-muted font-weight-normal'><%= link_to t('footer.nav.articles.feed'), %i[feed] %></small>
           </dt>
           <dd>
             <% %w[arts adventure analysis current_events history how_to news technology].each do |category| %>
@@ -20,7 +20,7 @@
           </dt>
           <dd>
             <% %w[zines journals posters stickers videos music logos to_change_everything steal_something_from_work_day].each do |tool| %>
-              <%= link_to t("footer.nav.tools.#{tool}"), [tool] %>
+              <%= link_to t("footer.nav.tools.#{tool.to_sym}"), [tool.to_sym] %>
             <% end %>
           </dd>
 
@@ -33,7 +33,7 @@
 
           <dt class='nav-label nav-label-podcast'>
             <%= link_to t('footer.nav.podcast.label'),   %i[podcasts] %>
-            <b><%= link_to t('footer.nav.podcast.feed'), %i[podcast_feed] %></b>
+            <small class='text-muted font-weight-normal'><%= link_to t('footer.nav.podcast.feed'), %i[podcast_feed] %></small>
           </dt>
           <dd>
             <% %w[the_ex_worker no_wall_they_can_build the_hotwire].each do |podcast| %>
@@ -53,64 +53,70 @@
             <% end %>
           </dd>
         </dl>
-      </nav>
-    </div><!-- .column column-50 -->
 
-    <div class='column column-25'>
-      <h1><%= t('footer.contact.social.heading') %></h1>
+        <% if media_mode? && I18n.locale == :en %>
+          <p>
+            <%= link_to(t('footer.site_mode'), url_for_current_path_with_subdomain(subdomain: :lite)) %>
+          </p>
+        <% end %>
+
+      </nav>
+    </div><!-- .col-12 col-md-6 -->
+
+    <div class='col-12 col-md-3 mb-5'>
+      <h2><%= t('footer.contact.social.heading') %></h2>
       <%= render_markdown t('footer.contact.social.description') %>
 
-      <ul class='social-links'>
-        <% social_links.each do |name, url| %>
-          <li class='social-link'>
-            <%= link_to name, url, class: social_link_classes(url: url, name: name), target: '_blank', rel: 'noopener' %>
+      <ul class='list-unstyled'>
+        <% social_links_by_domain.each do |domain, url| %>
+          <li class='mb-2'>
+            <%= link_to url, class: 'my-2', target: '_blank', rel: 'noopener' do %>
+              <%= image_tag "social-icons/#{domain.parameterize}.svg", size: '40x40', class: 'mr-2' %>
+              <%= domain %>
+            <% end %>
           </li>
         <% end %>
       </ul>
-    </div><!-- .column column-25 -->
+    </div><!-- .col-12 col-md-3 -->
 
-    <div class='column column-25'>
+    <div class='col-12 col-md-3 mb-5'>
       <div id='mc_embed_signup'><!-- Begin MailChimp Signup Form -->
-        <h1 class='newsletter-signup-label'><%= t('footer.contact.newsletter.heading') %></h1>
+        <h2 class='newsletter-signup-label'><%= t('footer.contact.newsletter.heading') %></h2>
         <div class='newsletter-signup-description'><%= render_markdown t('footer.contact.newsletter.description') %></div>
 
         <%= form_with url: '//crimethinc.us2.list-manage.com/subscribe/post?u=cb48383602b7373f496e9ba33&amp;id=344714b249', id: 'mc-embedded-subscribe-form', class: 'newsletter-signup-form validate', name: 'mc-embedded-subscribe-form', target: '_blank', rel: 'noopener', novalidate: true do |form| %>
           <div class='mc-field-group'>
-            <%= form.label       'mce-EMAIL',                                         t('footer.contact.newsletter.signup_form_placeholder'), class: 'screen-reader-only', class: "form-label" %>
-            <%= form.email_field :email, name: 'EMAIL', id: 'mce-EMAIL', placeholder: t('footer.contact.newsletter.signup_form_placeholder'), class: 'simple-field' %>
+            <%= form.label       'mce-EMAIL',                                         t('footer.contact.newsletter.signup_form_placeholder'), class: 'visually-hidden' %>
+            <%= form.email_field :email, name: 'EMAIL', id: 'mce-EMAIL', placeholder: t('footer.contact.newsletter.signup_form_placeholder'), class: 'form-control mb-3' %>
           </div>
 
           <div class='mc-field-group'>
-            <%= form.label 'mce-MMERGE3', t('footer.contact.newsletter.signup_form_select_placeholder'), class: 'screen-reader-only', class: "form-label" %>
+            <%= form.label 'mce-MMERGE3', t('footer.contact.newsletter.signup_form_select_placeholder'), class: 'visually-hidden' %>
 
-            <select name='MMERGE3' class='required' id='mce-MMERGE3'>
+            <select name='MMERGE3' class='required form-select' id='mce-MMERGE3'>
               <option value='<%= t('footer.contact.newsletter.signup_form_select_option_lot') %>'><%= t('footer.contact.newsletter.signup_form_select_option_lot') %></option>
               <option value='<%= t('footer.contact.newsletter.signup_form_select_option_little') %>'><%= t('footer.contact.newsletter.signup_form_select_option_little') %></option>
             </select>
           </div>
 
-          <div id='mce-responses' class='clear screen-reader-only'>
+          <div id='mce-responses' class='clear visually-hidden'>
             <div class='response' id='mce-error-response'>  </div>
             <div class='response' id='mce-success-response'></div>
           </div>
 
-          <%= button_tag t('footer.contact.newsletter.signup_button_text'), name: 'subscribe', id: 'mc-embedded-subscribe' %>
+          <div class='text-right mt-3'>
+            <%= button_tag t('footer.contact.newsletter.signup_button_text'), name: 'subscribe', id: 'mc-embedded-subscribe', class: 'btn btn-outline-success btn-lg' %>
+          </div>
 
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <% left_or_right = html_dir == 'ltr' ? 'position: absolute; left: -5000px;' : 'position: absolute; right: -5000px;' %>
           <div id='a-thing-with-an-id' style='<%= left_or_right %>' aria-hidden='true'><input type='text' name='b_cb48383602b7373f496e9ba33_344714b249' tabindex='-1' value=''></div>
         <% end %>
       </div><!--End mc_embed_signup-->
-    </div><!-- .column column-25 -->
+    </div><!-- .col-12 col-md-3 -->
   </div><!-- .row -->
 
-  <% if media_mode? && I18n.locale == :en %>
-    <p class='site-mode-link-container'>
-      <%= link_to(t('footer.site_mode'), url_for_current_path_with_subdomain(subdomain: :lite)) %>
-    </p>
-  <% end %>
-
-  <div rel='license' class='license'>
+  <div rel='license' class='text-secondary text-center my-5 py-5'>
     <p><%= t('footer.mantra').sample %></p>
   </div>
 </footer>
