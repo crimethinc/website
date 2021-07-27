@@ -64,6 +64,12 @@
         }
       }
 
+      // Contradictionary rounded corners
+      // books#index
+      #contradictionary .tool-front img { border-radius: 0 10px 10px 0; }
+      // books#show
+      .tool-front.contradictionary-cover img { border-radius: 0 20px 20px 0; }
+
       // Custom size
       #recipes-for-disaster       .tool-front img { width: 100%; }
       #expect-resistance          .tool-front img { width:  79%; }

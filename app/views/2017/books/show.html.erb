@@ -1,7 +1,7 @@
 <div class="h-entry tool">
   <div class="row">
     <div class="column column-one-third section meta">
-      <div class="tool-front">
+      <div class="tool-front <%= "#{@tool.slug}-cover" %>">
         <%= render_markdown "[[ #{@tool.front_image} #{@tool.front_image_description} ]]" %>
       </div>
 
