@@ -51,14 +51,8 @@ jobs:
         run: |
           bundle exec rails db:create
 
-      - name: Run isolated tests
+      - name: Run tests
         env:
           PGUSER: postgres
         run: |
-          bundle exec rspec --tag=~read_only_spec spec/system
-
-      - name: Run non-isolated, read-only tests
-        env:
-          PGUSER: postgres
-        run: |
-          bundle exec rspec --tag=read_only_spec spec/system
+          bundle exec rspec spec/system

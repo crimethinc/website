@@ -23,11 +23,7 @@ chdir APP_ROOT do
 
   # run tests
   if ARGV[0].nil?
-    puts '==> Running isolated specs'
-    system! 'bundle exec rspec --tag=~read_only_spec'
-
-    puts '==> Running non-isolated, read-only specs'
-    system! 'bundle exec rspec --tag=read_only_spec'
+    system! 'bundle exec rspec'
 
     puts '==> Running Rubocop…'
     system! 'bundle exec rubocop'
