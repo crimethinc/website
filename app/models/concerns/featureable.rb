@@ -7,8 +7,13 @@ module Featureable
   end
 
   module ClassMethods
-    def for_index fallback_sort = { title: :asc }
-      where.not(hide_from_index: true).reorder(position: :asc).order(fallback_sort).english.published.live
+    def for_index fallback_sort: { title: :asc }, fallback_locale: 'en'
+      where.not(hide_from_index: true)
+           .reorder(position: :asc)
+           .order(fallback_sort)
+           .where(locale: fallback_locale)
+           .published
+           .live
     end
   end
 

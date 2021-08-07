@@ -38,7 +38,25 @@ class ToolsController < ApplicationController
   end
 
   def set_tools
-    @tools = tool_class.for_index(published_at: :desc).page(params[:page]).per(10)
+    @tools = tool_class.for_index(**filters).page(params[:page]).per(10)
+  end
+
+  def filters
+    {}.merge(sort)
+      .merge(language_filter)
+      .compact
+  end
+
+  def sort
+    { fallback_sort: { published_at: :desc } }
+  end
+
+  def language_filter
+    { fallback_locale: filter_params[:lang].presence&.to_s }
+  end
+
+  def filter_params
+    params.permit(:lang)
   end
 
   def tool_class
