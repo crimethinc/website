@@ -126,7 +126,7 @@ module Rack
 
     # don’t redirect the homepage to nowhere
     def fallback_to_default!
-      @path = @path.blank? ? '/' : @path
+      @path = '/' if @path.blank?
     end
   end
 end
