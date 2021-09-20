@@ -458,7 +458,7 @@ GEM
     simplecov_json_formatter (0.1.2)
     sitemap_generator (6.1.2)
       builder (~> 3.0)
-    spring (2.1.1)
+    spring (2.2.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
     spring-watcher-listen (2.0.1)
