@@ -76,7 +76,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
-  gem 'spring-commands-rspec'
   gem 'webdrivers'
 
   # codestyle guide and linting
@@ -96,8 +95,6 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'listen'
   gem 'referral', require: false
-  gem 'spring'
-  gem 'spring-watcher-listen'
   gem 'squasher'
   gem 'web-console'
 
