@@ -1,33 +1,7 @@
 version: 2
 updates:
-- package-ecosystem: bundler
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "23:30"
-  open-pull-requests-limit: 10
-  versioning-strategy: increase
-  ignore:
-  - dependency-name: rubocop
-    versions:
-    - ">= 0.67.2.a, < 0.67.3"
-  - dependency-name: stripe
-    versions:
-    - 5.31.0
-    - 5.32.0
-  - dependency-name: rubocop
-    versions:
-    - 1.12.1
-  - dependency-name: rspec-rails
-    versions:
-    - 4.1.0
-    - 4.1.1
-  - dependency-name: aws-sdk-s3
-    versions:
-    - 1.90.0
-  - dependency-name: rubocop-performance
-    versions:
-    - 1.10.0
-  - dependency-name: rails
-    versions:
-    - 6.1.2
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
