@@ -1,6 +1,6 @@
 class Search
   ARRAY_FILTERS = %w[tag category].freeze
-  FILTER_REGEX  = /(\w+:(\w+|"[^"]+"))/.freeze
+  FILTER_REGEX  = /(\w+:(\w+|"[^"]+"))/
   VALID_FILTERS = %w[title subtitle content tag category].freeze
 
   attr_reader :query, :term
