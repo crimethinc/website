@@ -11,7 +11,7 @@ module Admin
 
       translation_vars = keys.map { |key| [key, model.send(key)] }.to_h
 
-      PageTitle.new(['Admin', t(".#{action_name}_title", translation_vars)]).content
+      PageTitle.new(['Admin', t(".#{action_name}_title", **translation_vars)]).content
     end
 
     def set_published_at

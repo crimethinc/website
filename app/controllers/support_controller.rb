@@ -166,7 +166,7 @@ class SupportController < ApplicationController
   end
 
   def stripe_customer
-    stripe_options_without_amount = stripe_options.reject { |k, _v| k == :amount }
+    stripe_options_without_amount = stripe_options.except(:amount)
 
     @stripe_customer ||= Stripe::Customer.create stripe_options_without_amount
   end
