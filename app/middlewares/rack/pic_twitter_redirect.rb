@@ -7,7 +7,7 @@ module Rack
     def call env
       request = Rack::Request.new(env)
 
-      if request.path.include?('twitter')
+      if request.path.include?('pic.twitter.com')
         location = request.path.split('pic.twitter.com').first
 
         encoding_options = {
