@@ -15,7 +15,6 @@ class DefinitionsController < ApplicationController
   def show
     @html_id    = 'definitions'
     @body_id    = 'article'
-    @type       = 'definitions'
     @editable   = @definition
     @definition = Definition.find_by(slug: params[:slug])
     @title      = PageTitle.new title_for(:definitions, @definition.slug.underscore)
