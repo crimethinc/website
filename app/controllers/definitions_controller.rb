@@ -1,9 +1,10 @@
 class DefinitionsController < ApplicationController
+  before_action :set_book
   before_action :set_definition, only: %i[show]
 
   def index
-    @html_id = 'page'
-    @body_id = 'definitions'
+    @html_id = 'definitions'
+    @body_id = 'article'
     @title   = PageTitle.new title_for(:definitions)
 
     @definitions = Definition.live.published
@@ -12,8 +13,8 @@ class DefinitionsController < ApplicationController
   end
 
   def show
-    @html_id    = 'page'
-    @body_id    = 'tools'
+    @html_id    = 'definitions'
+    @body_id    = 'article'
     @type       = 'definitions'
     @editable   = @definition
     @definition = Definition.find_by(slug: params[:slug])
@@ -23,6 +24,10 @@ class DefinitionsController < ApplicationController
   end
 
   private
+
+  def set_book
+    @book = Book.find_by(slug: 'contradictionary')
+  end
 
   def set_definition
     @definition = Definition.find_by(slug: params[:slug])
