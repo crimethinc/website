@@ -191,6 +191,8 @@ en:
       off_the_map: Off the Map
       recipes_for_disaster: Recipes for Disaster
       work: Work
+    definitions:
+      index: Definitions
 
   podcast:
     latest_episode: Latest Episode
