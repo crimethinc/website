@@ -6,13 +6,48 @@
       </nav>
 
       <h1>Definitions</h1>
+
+      <blockquote id="introduction">
+        <p>
+          From our mother tongues to the letter of the law, our lives are made of language.
+          Words write our world; they are the elementary particles of social relations.
+          We can’t escape their dominion, but we can play with them, we can subvert them,
+          turning them against the forces that would fix us alongside them in a matrix of control.
+          There is a war within every word, and this little lexicon is a legion rising in mutiny.
+        </p>
+      </blockquote>
     </div>
   </header>
 
   <div class="e-content">
+    <hr>
+
     <div class='alphabet'>
       <%= link_to_alphabet.html_safe %>
     </div>
+
+    <hr>
+
+    <p>
+      As usual, we looted the crypts of Percy Shelley, Oscar Wilde, Fredy Perlman, and other unfortunates too dead to defend themselves (see Plagiarism), as well as some who still draw breath: Alphonso Lingis, Eduardo Galeano, Ursula K. le Guin, Bob Black, Loesje. Let no one say we do not give credit where it is due. Above all, we would like to thank those whose names have not been recorded, predominantly women and poor people and people of color, who provide most of the raw material that reaches us through the works of the acclaimed.
+    </p>
+
+    <p>
+      We are all the collective authors of our language and our world, in a continuous collaboration that goes largely unheralded. Those who wish there to be great literature, like those who desire to lead fulfilling lives, have a stake in removing all obstacles to this collaboration, including property rights and coercive power. The foundation of communication itself is the common, that which can be shared. For the sake of this principle, we offer this book, like all our works, for the free use of all.
+    </p>
+
+    <blockquote>
+      <p><b>The sheep and the wolf are not agreed upon a definition of liberty.</b></p>
+      <p><b>– Abraham Lincoln</b></p>
+    </blockquote>
+
+    <p>That is to say—the lexicographer presides over a field of struggle as decisive as the workplace or the street.</p>
+
+    <p>Dictionaries are closed systems: they are prisons for words. Like human beings, words have to escape or else stifle and die—they must continually reenter circulation beyond the jurisdiction of the experts. Like us, words never fit neatly into the structures designed for them—they always exceed their roles, coming into contradiction with each other and with the logic of the system. There is more in any text than an army of grammarians could name, tame, or codify. </p>
+
+    <p>As partisans of free speech in the profoundest sense, our task is not to demarcate and police new territories within language, but to blur the lines and offer new points of departure, revealing the antithesis within every thesis and the conflict behind the façade of the commonplace. Refine and redefine: our language, our lives, our world.</p>
+
+    <p>—CrimethInc. Writers’ Bloc</p>
 
     <div class='definitions'>
       <% @definitions.group_by(&:filed_under).each do |letter, definitions| %>
@@ -24,9 +59,13 @@
             <%= link_to definition.name, definition.path %>
           <% end %>
         </p>
-      <% end %>
 
-      <%= link_to "↑", "#top" %>
+        <%= link_to "↑", "#top" %>
+      <% end %>
     </div><!-- .definitions -->
   </div>
+
+  <footer>
+    <p>Produced anonymously by CrimethInc. Writers’ Bloc collective authorship in pursuit of a world without prestige or property</p>
+  </footer>
 </article>

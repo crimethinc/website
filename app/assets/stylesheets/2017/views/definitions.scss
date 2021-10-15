@@ -15,5 +15,19 @@ html#definitions {
       max-width: $large-tablet;
     }
 
+    #introduction {
+      margin-top: 2rem;
+      width: 66%;
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 1.33em;
+    }
+
+    .alphabet {
+      font-size: 1.25em;
+      margin-top: 6rem;
+      text-align: center;
+    }
+
   }
 }
