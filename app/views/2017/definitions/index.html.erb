@@ -1,9 +1,25 @@
-<h1>Definitions</h1>
+<article class="h-entry definition">
+  <header>
+    <div class="meta">
+      <nav class="crumbtrail">
+        <%= link_to "Contradictionary", @book.path %>
+      </nav>
 
-<ul>
-  <% @definitions.each do |definition| %>
-    <li>
-      <%= definition.inspect %>
-    </li>
-  <% end %>
-</ul>
+      <h1>Definitions</h1>
+
+    </div>
+  </header>
+
+  <div class="e-content">
+    <ul>
+      <% @definitions.each do |definition| %>
+        <li>
+          <%= link_to definition.name, definition.path %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</article>
+
+
+
