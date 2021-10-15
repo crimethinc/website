@@ -10,7 +10,7 @@
 
   <p><b>URL:</b> <b><%= link_to @definition.path, @definition.path %></b></p>
 
-  <% if @definition.english? %>
+  <% if false && @definition.english? %>
     <%= render 'admin/translate_this', resource: @definition %>
   <% else %>
     <% if @definition.canonical_id.present? %>

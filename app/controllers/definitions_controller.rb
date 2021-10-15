@@ -5,7 +5,7 @@ class DefinitionsController < ApplicationController
   end
 
   def index
-    @definitions = Definition.published
+    @definitions = Definition.live.published
     render "#{Current.theme}/definitions/index"
   end
 end
