@@ -16,9 +16,17 @@ html#definitions {
     }
 
     #introduction {
+      margin-top: 2rem;
+      width: 66%;
       font-size: 2.5rem;
-      line-height: 1.25em;
-      font-style: italic;
+      font-weight: bold;
+      line-height: 1.33em;
+    }
+
+    .alphabet {
+      font-size: 1.25em;
+      margin-top: 6rem;
+      text-align: center;
     }
 
   }
