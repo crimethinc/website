@@ -1,0 +1,19 @@
+html#definitions {
+  .h-entry.definition {
+
+    margin-bottom: 10rem;
+
+    .crumbtrail {
+      margin-bottom: 2rem;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .e-content > * {
+      max-width: $large-tablet;
+    }
+
+  }
+}

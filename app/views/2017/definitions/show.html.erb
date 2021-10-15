@@ -1,0 +1,19 @@
+<article class="h-entry definition">
+  <header>
+    <div class="meta">
+      <nav class="crumbtrail">
+        <%= link_to "Contradictionary", @book.path %>
+
+        <% if action_name == 'show' %>
+          : <%= link_to "Definitions", [:definitions] %>
+        <% end %>
+      </nav>
+
+      <%= render_themed "articles/titles", header: @definition, linked: false %>
+    </div>
+  </header>
+
+  <div class="e-content">
+    <%= render_markdown @definition.content %>
+  </div>
+</article>

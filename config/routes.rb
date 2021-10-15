@@ -92,6 +92,9 @@ Rails.application.routes.draw do
   get 'podcasts/:slug/episodes/:episode_number/transcript', to: 'episodes#transcript', as: :episode_transcript
 
   # Books
+  get 'books/contradictionary/definitions/:slug', to: 'definitions#show',  as: :definition
+  get 'books/contradictionary/definitions',       to: 'definitions#index', as: :definitions
+
   get 'books/lit-kit',        to: 'books#lit_kit',        as: :books_lit_kit
   get 'books/into-libraries', to: 'books#into_libraries', as: :books_into_libraries
   get 'books/:slug/extras',   to: 'books#extras',         as: :books_extras

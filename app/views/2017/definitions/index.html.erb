@@ -1,0 +1,32 @@
+<article class="h-entry definition">
+  <header>
+    <div class="meta">
+      <nav class="crumbtrail">
+        <%= link_to "Contradictionary", @book.path %>
+      </nav>
+
+      <h1>Definitions</h1>
+    </div>
+  </header>
+
+  <div class="e-content">
+    <div class='alphabet'>
+      <%= link_to_alphabet.html_safe %>
+    </div>
+
+    <div class='definitions'>
+      <% @definitions.group_by(&:filed_under).each do |letter, definitions| %>
+        <h2 id='<%= letter %>'>
+          <%= link_to letter.upcase, "##{letter}" %> </h2>
+
+        <p>
+          <% definitions.each do |definition| %>
+            <%= link_to definition.name, definition.path %>
+          <% end %>
+        </p>
+      <% end %>
+
+      <%= link_to "↑", "#top" %>
+    </div><!-- .definitions -->
+  </div>
+</article>

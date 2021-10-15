@@ -8,6 +8,6 @@ module AlphabetHelper
       link_to letter.upcase, "##{letter}", class: 'btn btn-outline-primary me-1 mb-1'
     end
 
-    links.join
+    links.join ' '
   end
 end
