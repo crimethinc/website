@@ -9,7 +9,7 @@ class Definition < ApplicationRecord
   before_save :set_publication_status
 
   def path
-    "/definitions/#{slug}"
+    "/books/contradictionary/definitions/#{slug}"
   end
 
   private
