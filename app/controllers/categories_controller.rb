@@ -44,8 +44,26 @@ class CategoriesController < ApplicationController
   end
 
   def set_articles
-    @articles = @category.articles.english.live.published.page(params[:page]).per(25)
+    @articles = @category.articles.for_index(**filters).page(params[:page]).per(25)
 
     return redirect_to root_path if @articles.blank?
+  end
+
+  def filters
+    {}.merge(sort)
+      .merge(language_filter)
+      .compact
+  end
+
+  def sort
+    { fallback_sort: { published_at: :desc } }
+  end
+
+  def language_filter
+    { fallback_locale: filter_params[:lang].presence&.to_s }
+  end
+
+  def filter_params
+    params.permit(:lang, :format)
   end
 end

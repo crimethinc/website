@@ -2,9 +2,31 @@ class ArticlesController < ApplicationController
   skip_before_action :check_for_redirection, only: :index
 
   def index
-    @articles = Article.includes(:tags, :categories).live.published.root.page(params[:page]).per(10)
+    @articles = Article.includes(:tags, :categories)
+                       .for_index(**filters)
+                       .root
+                       .page(params[:page])
+                       .per(10)
 
     render "#{Current.theme}/articles/index"
+  end
+
+  def filters
+    {}.merge(sort)
+      .merge(language_filter)
+      .compact
+  end
+
+  def sort
+    { fallback_sort: { published_at: :desc } }
+  end
+
+  def language_filter
+    { fallback_locale: filter_params[:lang].presence&.to_s }
+  end
+
+  def filter_params
+    params.permit(:lang, :format)
   end
 
   def show

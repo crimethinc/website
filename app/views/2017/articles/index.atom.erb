@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:thr="http://purl.org/syndication/thread/1.0" xml:base="<%= strip_subdomain request.original_url %>" xml:lang="en-us">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:thr="http://purl.org/syndication/thread/1.0" xml:base="<%= strip_subdomain request.original_url %>" xml:lang="<%= params[:lang] || "en-us" %>">
   <id><%= strip_subdomain request.original_url %></id>
 
   <link rel="alternate" type="text/html" href="<%= strip_subdomain request.original_url.sub('/feed', '') %>" />
