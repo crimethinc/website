@@ -3,7 +3,6 @@ portugues:
     to_change_everything:
       language_direction: ltr
       lang_code: pt
-      video_url: "//player.vimeo.com/video/111151623"
       head:
         title: Para Mudar Tudo, um chamado anarquista / CrimethInc. Ex-Workers' Collective
         meta:
@@ -44,6 +43,7 @@ portugues:
       subtitle_html: <span class="green">um</span> <span class="pink">chamado</span>
         <span class="blue">anarquista</span>
       video_cte: Assista ao Vídeo
+      video_url: "https://player.vimeo.com/video/111151623"
       pdf_cte_html: Baixe o<br> PDF
       pdf_get_url: https://cdn.crimethinc.com/tce/images/Para-Mudar-Tudo.pdf
       pdf_image: tce-cover-200-portugues.png

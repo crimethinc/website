@@ -3,7 +3,6 @@ lietuvos:
     to_change_everything:
       language_direction: ltr
       lang_code: li
-      video_url: https://player.vimeo.com/video/111159930 # todo
       head:
         title: "Tam, kad viską pakeistum: Anarchisto užduotis / CrimethInc. Ex-Workers' Collective"
         meta:
@@ -41,6 +40,7 @@ lietuvos:
       title_html: 'Tam, kad viską pakeistum'
       subtitle_html: <span class="green">Anarchisto</span> <span class="pink">užduotis</span>
       video_cte: Žiūrėti video
+      video_url: https://player.vimeo.com/video/111159930 # todo
       pdf_cte_html: Atsisiųskite<br />&nbsp;PDF
       pdf_get_url: /tce/get
       pdf_image: tce-cover-200.png

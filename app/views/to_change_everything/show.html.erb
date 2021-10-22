@@ -3,20 +3,16 @@
   <h4><%= t '.subtitle_html' %></h4>
 
   <div class="call-to-action">
-    <%= link_to '#video-container', class: 'cte-video fancybox' do %>
-      <%= tce_image_tag 'video-play-icon-300.png' %>
-
-      <p><%= t '.video_cte' %></p>
-    <% end %>
-
-    <div class="cte-spacer"></div>
-
     <%= link_to t('.pdf_get_url'), class: 'cte-pdf' do %>
       <%= tce_image_tag t('.pdf_image') %>
 
       <p><%= t '.pdf_cte_html' %></p>
     <% end %>
   </div>
+</div>
+
+<div class="spread" id="video-container">
+  <iframe src="<%= t('.video_url') %>" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
 <div class="primary">

@@ -3,7 +3,6 @@
     to_change_everything:
       language_direction: ltr
       lang_code: ja
-      video_url: https://player.vimeo.com/video/111159930
       head:
         title: "変更する すべて、アナキストの 訴え / CrimethInc. Ex-Workers' Collective"
         meta:
@@ -41,6 +40,7 @@
       title_html: '変更する<br />すべて'
       subtitle_html: <span class="pink">アナキスト</span><span class="green">の</span> <span class="blue">訴え</span>
       video_cte: ビデオを見る
+      video_url: https://player.vimeo.com/video/111159930
       pdf_cte_html: PDF<br />をダウンロード
       pdf_get_url: https://cdn.crimethinc.com/assets/tce/images/to-change-everything-japanese.pdf
       pdf_image: tce-cover-200.png

@@ -8,32 +8,10 @@
   <meta charset="utf-8">
   <%= stylesheet_link_tag "to_change_everything", media: "screen" %>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
     function toggleDiv(div) {
       document.querySelector("#"+div).style.display = document.querySelector("#"+div).style.display === "none" ? "flex" : "none"
     }
-</script>
-
-  <link rel="stylesheet" href="https://cdn.crimethinc.com/assets/tce/css/jquery.fancybox.css" media="screen">
-
-  <script src="https://cdn.crimethinc.com/assets/tce/js/jquery.fancybox.pack.js"></script>
-  <script>
-    $(document).ready(function() {
-      $(".fancybox").fancybox({
-        maxWidth:    1334,
-        autoHeight:  true,
-        padding:     0,
-        fitToView:   false,
-        width:       '100%',
-        autoSize:    false,
-        closeClick:  false,
-        openEffect:  'elastic',
-        closeEffect: 'elastic',
-        openSpeed:   'fast',
-        closeSpeed:  'fast'
-      });
-    });
   </script>
 
   <meta name="viewport" content="initial-scale=1">
@@ -145,10 +123,6 @@
     <%= yield %>
 
     <footer></footer>
-
-    <div id="video-container">
-      <iframe src="<%= t('.video_url') %>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
   </div><!-- .grandwrapper -->
 
 </body>
