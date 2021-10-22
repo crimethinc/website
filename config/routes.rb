@@ -47,7 +47,7 @@ Rails.application.routes.draw do
       as:          :article_archives
 
   # Article permalink
-  get ':year/:month/:day/:slug(/feed)',
+  get ':year/:month/:day/:slug(/feed)', # no (/:lang) since slug should encompass that
       to:          'articles#show',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
@@ -66,8 +66,8 @@ Rails.application.routes.draw do
   get 'drafts/articles/:draft_code/edit', controller: 'admin/articles', action: 'edit'
 
   # Articles Atom Feed
-  get 'feed.json', to: 'articles#index', defaults: { format: 'json' }, as: :json_feed
-  get 'feed',      to: 'articles#index', defaults: { format: 'atom' }, as: :feed
+  get 'feed(/:lang).json', to: 'articles#index', defaults: { format: 'json' }, as: :json_feed
+  get 'feed(/:lang)',      to: 'articles#index', defaults: { format: 'atom' }, as: :feed
 
   # Articles - Collection Items
   get 'articles/:id/collection_posts', to: 'collection_posts#index'
@@ -76,15 +76,15 @@ Rails.application.routes.draw do
   get 'categories',                    to: 'categories#index', as: :categories
   get 'categories/:slug/page(/1)',     to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
   get 'categories/:slug(/page/:page)', to: 'categories#show', as: :category
-  get 'categories/:slug/feed',         to: 'categories#feed', defaults: { format: 'atom' }, as: :category_feed
+  get 'categories/:slug/feed(/:lang)', to: 'categories#feed', defaults: { format: 'atom' }, as: :category_feed
 
   # Tags
   get 'tags/:slug/page(/1)',     to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
   get 'tags/:slug(/page/:page)', to: 'tags#show', as: :tag
-  get 'tags/:slug/feed',         to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
+  get 'tags/:slug/feed(/:lang)', to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
 
   # Podcast
-  get 'podcast/feed',                                       to: 'podcasts#feed',        as: :podcast_feed, defaults: { format: 'rss' }
+  get 'podcast/feed(/:lang)',                               to: 'podcasts#feed',        as: :podcast_feed, defaults: { format: 'rss' }
   get 'podcasts',                                           to: 'podcasts#index',       as: :podcasts
   get 'podcasts/:slug',                                     to: 'podcasts#show',        as: :podcast
   get 'podcasts/:slug/episodes',                            to: redirect { |path_params, _| "/podcasts/#{path_params[:slug]}" }

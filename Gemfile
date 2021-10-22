@@ -73,6 +73,7 @@ group :development, :test do
   gem 'launchy'
   gem 'nokogiri'
   gem 'overcommit'
+  gem 'pry-byebug', platform: :mri
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
