@@ -215,7 +215,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    honeycomb-beeline (2.7.0)
+    honeycomb-beeline (2.7.1)
       libhoney (~> 1.14, >= 1.14.2)
     http (5.0.4)
       addressable (~> 2.8)
