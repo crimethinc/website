@@ -7,7 +7,13 @@
 
   <% if media_mode? && I18n.locale == :en %>
     <p class="site-mode-link-container">
-      <%= link_to(t("footer.site_mode"), url_for_current_path_with_subdomain(subdomain: :lite)) %>
+      <%=
+        # the encode/decode stuff is to get international, unicode URIs to be url-encoded
+        current_uri_with_subdomain = url_for_current_path_with_subdomain(subdomain: :lite)
+        uri = Addressable::URI.parse(current_uri_with_subdomain).display_uri.to_s
+
+        link_to(t("footer.site_mode"), uri)
+        %>
     </p>
   <% end %>
 
