@@ -6,6 +6,6 @@ module LocalizationHelper
     uri_with_subdomain = [request.protocol, subdomain, request.domain, port, request.path].join
 
     # the encode/decode stuff is to get international, unicode URIs to be url-encoded
-    Addressable::URI.parse(uri_with_subdomain).display_uri.to_s
+    ::Addressable::URI.parse(uri_with_subdomain).display_uri.to_s
   end
 end
