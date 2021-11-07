@@ -45,7 +45,6 @@ gem 'dalli'
 gem 'stripe'
 
 # observability
-gem 'honeycomb-beeline'
 gem 'lograge'
 gem 'logstash-event'
 
