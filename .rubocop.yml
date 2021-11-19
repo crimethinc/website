@@ -95,3 +95,6 @@ Style/MixinUsage:
 
 Style/RedundantFetchBlock:
   Enabled: false
+
+Style/OpenStructUse:
+  Enabled: false
