@@ -478,7 +478,7 @@ GEM
     sterile (1.0.23)
       nokogiri (>= 1.11.7)
     stringex (2.8.5)
-    stripe (5.40.0)
+    stripe (5.41.0)
     thor (1.1.0)
     tilt (2.0.10)
     trailblazer-option (0.1.2)
