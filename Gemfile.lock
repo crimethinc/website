@@ -166,7 +166,7 @@ GEM
       rake
     flamegraph (0.9.5)
     formatador (0.3.0)
-    globalid (0.5.2)
+    globalid (0.6.0)
       activesupport (>= 5.0)
     google-apis-core (0.4.1)
       addressable (~> 2.5, >= 2.5.1)
