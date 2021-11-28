@@ -19,6 +19,3 @@ RSpec.configure do |config|
 end
 
 Capybara.javascript_driver = :selenium_headless
-
-# from https://github.com/rspec/rspec-rails/issues/1897
-Capybara.server = :puma, { Silent: true }
