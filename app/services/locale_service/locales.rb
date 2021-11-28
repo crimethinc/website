@@ -133,6 +133,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'türkçe',  lang_code: :tr, canonical: 'turkce'),
     Locale.new(locale: 'turkce',  lang_code: :tr, canonical: 'turkce'),
 
+    # uk: ukranian
+    Locale.new(locale: 'ukrainian',       lang_code: :uk, canonical: 'ukrayinska-mova'),
+    Locale.new(locale: 'ukrayinska-mova', lang_code: :uk, canonical: 'ukrayinska-mova'),
+    Locale.new(locale: 'українська мова', lang_code: :uk, canonical: 'ukrayinska-mova'),
+
     # zh: chinese (mandarin)
     Locale.new(locale: 'chinese',   lang_code: :zh, canonical: 'zhong-wen'),
     Locale.new(locale: 'zhong-wen', lang_code: :zh, canonical: 'zhong-wen'),

@@ -32,6 +32,7 @@ describe 'Language Landing Page' do
     create(:article, :tagalog)
     create(:article, :thai)
     create(:article, :turkish)
+    create(:article, :ukranian)
     create(:article, :brazilian_portuguese)
   end
 

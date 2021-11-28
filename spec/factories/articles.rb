@@ -44,6 +44,7 @@ FactoryBot.define do
   trait(:tagalog)        { locale { 'tl' } }
   trait(:thai)           { locale { 'th' } }
   trait(:turkish)        { locale { 'tr' } }
+  trait(:ukranian)       { locale { 'uk' } }
   # and
   trait(:brazilian_portuguese) { locale { 'pt-br' } }
 end
