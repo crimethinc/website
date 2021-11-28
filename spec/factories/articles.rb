@@ -35,14 +35,15 @@ FactoryBot.define do
   trait(:japanese)       { locale { 'ja' } }
   trait(:korean)         { locale { 'ko' } }
   trait(:dutch)          { locale { 'nl' } }
+  trait(:norwegian)      { locale { 'no' } }
   trait(:polish)         { locale { 'pl' } }
   trait(:portuguese)     { locale { 'pt' } }
   trait(:russian)        { locale { 'ru' } }
   trait(:slovenian)      { locale { 'sl' } }
   trait(:serbo_croatian) { locale { 'sh' } }
   trait(:swedish)        { locale { 'sv' } }
-  trait(:tagalog)        { locale { 'tl' } }
   trait(:thai)           { locale { 'th' } }
+  trait(:tagalog)        { locale { 'tl' } }
   trait(:turkish)        { locale { 'tr' } }
   trait(:ukranian)       { locale { 'uk' } }
   # and
