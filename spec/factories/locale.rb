@@ -199,6 +199,14 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'svenska' }
   end
 
+  trait(:tl) do
+    abbreviation { 'tl' }
+    name_in_english { 'Tagalog' }
+    name { 'ᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔' }
+    language_direction { 'ltr' }
+    slug { 'tagalog' }
+  end
+
   trait(:th) do
     abbreviation { 'th' }
     name_in_english { 'Thai' }
