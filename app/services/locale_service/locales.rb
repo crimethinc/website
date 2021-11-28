@@ -85,6 +85,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'dutch',      lang_code: :nl, canonical: 'nederlands'),
     Locale.new(locale: 'nederlands', lang_code: :nl, canonical: 'nederlands'),
 
+    # no: dutch
+    Locale.new(locale: 'norwegian', lang_code: :no, canonical: 'norsk'),
+    Locale.new(locale: 'norsk',     lang_code: :no, canonical: 'norsk'),
+
     # pl: polish
     Locale.new(locale: 'polski', lang_code: :pl, canonical: 'polski'),
     Locale.new(locale: 'polish', lang_code: :pl, canonical: 'polski'),
