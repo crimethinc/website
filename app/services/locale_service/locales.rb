@@ -110,6 +110,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'ᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔', lang_code: :tl, canonical: 'tagalog'),
     Locale.new(locale: 'tagalog', lang_code: :tl, canonical: 'tagalog'),
 
+    # sh: serbo-croatian
+    Locale.new(locale: 'serbo-croatian',  lang_code: :sh, canonical: 'srpskohrvatski'),
+    Locale.new(locale: 'srpskohrvatski',  lang_code: :sh, canonical: 'srpskohrvatski'),
+
     # sl: slovenian
     Locale.new(locale: 'slovenian',   lang_code: :sl, canonical: 'slovenscina'),
     Locale.new(locale: 'slovenščina', lang_code: :sl, canonical: 'slovenscina'),

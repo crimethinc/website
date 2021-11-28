@@ -16,33 +16,34 @@ FactoryBot.define do
     end
   end
 
-  trait(:arabic)     { locale { 'ar' } }
-  trait(:bengali)    { locale { 'bn' } }
-  trait(:czech)      { locale { 'cs' } }
-  trait(:chinese)    { locale { 'zh' } }
-  trait(:danish)     { locale { 'da' } }
-  trait(:german)     { locale { 'de' } }
-  trait(:maldivian)  { locale { 'dv' } }
-  trait(:english)    { locale { 'en' } }
-  trait(:spanish)    { locale { 'es' } }
-  trait(:farsi)      { locale { 'fa' } }
-  trait(:finnish)    { locale { 'fi' } }
-  trait(:french)     { locale { 'fr' } }
-  trait(:greek)      { locale { 'gr' } }
-  trait(:hebrew)     { locale { 'he' } }
-  trait(:indonesian) { locale { 'id' } }
-  trait(:italian)    { locale { 'it' } }
-  trait(:japanese)   { locale { 'ja' } }
-  trait(:korean)     { locale { 'ko' } }
-  trait(:dutch)      { locale { 'nl' } }
-  trait(:polish)     { locale { 'pl' } }
-  trait(:portuguese) { locale { 'pt' } }
-  trait(:russian)    { locale { 'ru' } }
-  trait(:slovenian)  { locale { 'sl' } }
-  trait(:swedish)    { locale { 'sv' } }
-  trait(:tagalog)    { locale { 'tl' } }
-  trait(:thai)       { locale { 'th' } }
-  trait(:turkish)    { locale { 'tr' } }
+  trait(:arabic)         { locale { 'ar' } }
+  trait(:bengali)        { locale { 'bn' } }
+  trait(:czech)          { locale { 'cs' } }
+  trait(:chinese)        { locale { 'zh' } }
+  trait(:danish)         { locale { 'da' } }
+  trait(:german)         { locale { 'de' } }
+  trait(:maldivian)      { locale { 'dv' } }
+  trait(:english)        { locale { 'en' } }
+  trait(:spanish)        { locale { 'es' } }
+  trait(:farsi)          { locale { 'fa' } }
+  trait(:finnish)        { locale { 'fi' } }
+  trait(:french)         { locale { 'fr' } }
+  trait(:greek)          { locale { 'gr' } }
+  trait(:hebrew)         { locale { 'he' } }
+  trait(:indonesian)     { locale { 'id' } }
+  trait(:italian)        { locale { 'it' } }
+  trait(:japanese)       { locale { 'ja' } }
+  trait(:korean)         { locale { 'ko' } }
+  trait(:dutch)          { locale { 'nl' } }
+  trait(:polish)         { locale { 'pl' } }
+  trait(:portuguese)     { locale { 'pt' } }
+  trait(:russian)        { locale { 'ru' } }
+  trait(:slovenian)      { locale { 'sl' } }
+  trait(:serbo_croatian) { locale { 'sh' } }
+  trait(:swedish)        { locale { 'sv' } }
+  trait(:tagalog)        { locale { 'tl' } }
+  trait(:thai)           { locale { 'th' } }
+  trait(:turkish)        { locale { 'tr' } }
   # and
   trait(:brazilian_portuguese) { locale { 'pt-br' } }
 end
