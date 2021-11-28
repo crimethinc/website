@@ -25,6 +25,7 @@ describe 'Language Landing Page' do
     create(:article, :polish)
     create(:article, :portuguese)
     create(:article, :russian)
+    create(:article, :serbo_croatian)
     create(:article, :slovenian)
     create(:article, :spanish)
     create(:article, :swedish)
