@@ -3,7 +3,7 @@ class Definition < ApplicationRecord
   include Featureable
   include Translatable
 
-  default_scope { order(slug: :asc) }
+  default_scope { unscoped.order(slug: :asc) }
 
   before_save :set_filed_under
   before_save :set_publication_status

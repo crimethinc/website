@@ -54,9 +54,8 @@
     <p>—CrimethInc. Writers’ Bloc</p>
 
     <div class='definitions'>
-      <% @definitions.group_by(&:filed_under).each do |letter, definitions| %>
-        <h2 id='<%= letter %>'>
-          <%= link_to letter.upcase, "##{letter}" %> </h2>
+      <% @definitions.each do |letter, definitions| %>
+        <h2 id='<%= letter %>'> <%= link_to letter.upcase, "##{letter}" %> </h2>
 
         <ul>
           <% definitions.each do |definition| %>

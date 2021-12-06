@@ -7,7 +7,7 @@ class DefinitionsController < ApplicationController
     @body_id = 'article'
     @title   = PageTitle.new title_for(:definitions)
 
-    @definitions = Definition.live.published
+    @definitions = Definition.live.published.group_by(&:filed_under)
 
     render "#{Current.theme}/definitions/index"
   end
