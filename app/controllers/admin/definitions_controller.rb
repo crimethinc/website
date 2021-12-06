@@ -3,7 +3,7 @@ module Admin
     before_action :set_definition, only: %i[show edit update destroy]
 
     def index
-      @definitions = Definition.page(params[:page])
+      @definitions = Definition.page(params[:page]).per(10_000)
       @title = admin_title
     end
 
