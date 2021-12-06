@@ -58,11 +58,11 @@
         <h2 id='<%= letter %>'>
           <%= link_to letter.upcase, "##{letter}" %> </h2>
 
-        <p>
+        <ul>
           <% definitions.each do |definition| %>
-            <%= link_to definition.name, definition.path %>
+            <li><%= link_to definition.name, definition.path %></li>
           <% end %>
-        </p>
+        </ul>
 
         <%= link_to "↑", "#top" %>
       <% end %>
