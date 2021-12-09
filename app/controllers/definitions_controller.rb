@@ -7,9 +7,17 @@ class DefinitionsController < ApplicationController
     @body_id = 'article'
     @title   = PageTitle.new title_for(:definitions)
 
-    @definitions = Definition.live.published.group_by(&:filed_under)
+    if params[:letter].present?
+      @definitions = Definition.live.published.where(filed_under: params[:letter])
+      @letter = params[:letter]
 
-    render "#{Current.theme}/definitions/index"
+      return redirect_to :definitions if @definitions.blank?
+
+      render "#{Current.theme}/definitions/letter"
+    else
+      @definitions = Definition.live.published.group_by(&:filed_under)
+      render "#{Current.theme}/definitions/index"
+    end
   end
 
   def show
