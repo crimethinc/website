@@ -9,7 +9,11 @@ class Definition < ApplicationRecord
   before_save :set_publication_status
 
   def path
-    "/books/contradictionary/definitions/#{slug}"
+    "/books/contradictionary/definitions/#{filed_under}/#{slug}"
+  end
+
+  def path_for_letter_scoped_slug
+    "/books/contradictionary/definitions/#{filed_under}##{slug}"
   end
 
   private

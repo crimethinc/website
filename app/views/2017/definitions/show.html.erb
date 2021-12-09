@@ -3,10 +3,10 @@
     <div class="meta">
       <nav class="crumbtrail">
         <%= link_to "Contradictionary", @book.path %>
-
-        <% if action_name == 'show' %>
-          : <%= link_to "Definitions", [:definitions] %>
-        <% end %>
+        :
+        <%= link_to "Definitions", :definitions %>
+        :
+        <%= link_to_definition_letter @definition %>
       </nav>
 
       <%= render_themed "articles/titles", header: @definition, linked: false %>

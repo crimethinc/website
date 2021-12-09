@@ -27,7 +27,7 @@
     </div>
 
     <div>
-      <img src='https://cdn.crimethinc.com/assets/defintions/intro.jpg' style='margin-top: 2rem'>
+      <img src='https://cdn.crimethinc.com/assets/defintions/intro.jpg' id='intro-image'>
     </div>
 
     <hr>
@@ -55,11 +55,13 @@
 
     <div class='definitions'>
       <% @definitions.each do |letter, definitions| %>
-        <h2 id='<%= letter %>'> <%= link_to letter.upcase, "##{letter}" %> </h2>
+        <h2 id='<%= letter %>'>
+          <%= link_to_definition_letter definitions.first %>
+        </h2>
 
         <ul>
           <% definitions.each do |definition| %>
-            <li><%= link_to definition.name, definition.path %></li>
+            <li><%= link_to definition.name, definition.path_for_letter_scoped_slug, id: definition.slug %></li>
           <% end %>
         </ul>
 
@@ -68,7 +70,5 @@
     </div><!-- .definitions -->
   </div>
 
-  <footer>
-    <p>Produced anonymously by CrimethInc. Writers’ Bloc collective authorship in pursuit of a world without prestige or property</p>
-  </footer>
+  <%= render_themed 'definitions/footer' %>
 </article>

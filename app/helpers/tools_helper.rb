@@ -19,4 +19,8 @@ module ToolsHelper
   def link_target_for_tool tool:
     '_blank' if tool == :music
   end
+
+  def link_to_definition_letter definition
+    link_to definition.filed_under.upcase, [:letter, { letter: definition.filed_under.to_sym }]
+  end
 end

@@ -100,7 +100,7 @@ Rails.application.routes.draw do
 
   ## Contradictionary definitions
   get 'books/contradictionary/definitions',               to: 'definitions#index',  as: :definitions
-  get 'books/contradictionary/definitions/:letter',       to: 'definitions#index',  as: :letter
+  get 'books/contradictionary/definitions/:letter',       to: 'definitions#letter', as: :letter
   get 'books/contradictionary/definitions/:letter/:slug', to: 'definitions#show',   as: :definition
 
   # Videos
