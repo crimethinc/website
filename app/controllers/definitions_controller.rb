@@ -12,6 +12,19 @@ class DefinitionsController < ApplicationController
     render "#{Current.theme}/definitions/index"
   end
 
+  def letter
+    @html_id = 'definitions'
+    @body_id = 'article'
+    @title   = PageTitle.new title_for(:definitions)
+    @letter  = params[:letter]
+
+    @definitions = Definition.live.published.where(filed_under: params[:letter])
+
+    return redirect_to :definitions if @definitions.blank?
+
+    render "#{Current.theme}/definitions/letter"
+  end
+
   def show
     @html_id    = 'definitions'
     @body_id    = 'article'

@@ -1,0 +1,46 @@
+<article class="h-entry definition">
+  <header>
+    <div class="meta">
+      <nav class="crumbtrail">
+        <%= link_to "Contradictionary", @book.path %>
+        :
+        <%= link_to "Definitions", :definitions %>
+      </nav>
+
+      <h1>
+        Definitions :
+        <%= @letter.upcase %>
+      </h1>
+
+      <p id='intro'>
+        <b><%= @letter.upcase %></b> for
+
+        <% @definitions.each do |definition| %>
+          <% if definition != @definitions.last %>
+            <%= link_to definition.name.downcase, definition.path_for_letter_scoped_slug %>,
+          <% else %>
+            and <%= link_to definition.name.downcase, definition.path_for_letter_scoped_slug %>.
+          <% end %>
+        <% end %>
+      </p>
+    </div>
+  </header>
+
+  <div class="e-content">
+    <div class='definitions'>
+
+      <% @definitions.each do |definition| %>
+        <%= tag.article id: definition.slug do %>
+          <%= render_themed "articles/titles", header: definition, linked: true %>
+
+          <%= render_markdown definition.content %>
+
+          <%= link_to "↑", "#top" %>
+        <% end %>
+      <% end %>
+
+    </div><!-- .definitions -->
+  </div><!-- .e-content -->
+
+  <%= render_themed 'definitions/footer' %>
+</article>

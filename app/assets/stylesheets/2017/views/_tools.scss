@@ -1,3 +1,20 @@
+// Contradictionary definitions
+.h-entry.definition {
+  #intro a {
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #intro-image {
+    margin-top: 2rem
+  }
+}
+
+.definitions article {
+  padding-top: 1em
+}
+
 #page {
   #tools {
     main{
