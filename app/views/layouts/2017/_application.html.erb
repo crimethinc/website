@@ -13,6 +13,12 @@
     <%= render "shared/development_mode_banner" %>
     <%= render_themed "shared/header" %>
 
+    <div class='alert alert-notice'>
+      <%= link_to 'https://www.kickstarter.com/projects/crimethinc/help-reprint-days-of-war-nights-of-love-and-contradictionary' do %>
+        Help us reprint <i>Days of War, Nights of Love</i> and the <i>Contradictionary</i> →
+      <% end %>
+    </div>
+
     <main>
       <%= yield %>
     </main>
