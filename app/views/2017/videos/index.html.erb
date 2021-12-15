@@ -9,7 +9,7 @@
   </header>
 
   <div class="video-flexbox-container">
-    <% @videos.sort_by{ |v| v.content.length }.each do |video| %>
+    <% @videos.each do |video| %>
 
       <div class="column column-half section h-entry">
         <% unless video.blank? %>
