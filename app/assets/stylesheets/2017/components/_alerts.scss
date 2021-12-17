@@ -3,10 +3,12 @@
   padding: $border-size-xlarge;
   font-size: 3rem;
   line-height: 1.25em;
+  border-bottom: 10px solid black;
 
   a {
-    color: white;
-    text-shadow: 10px 10px 5px rgba(0,0,0,.25);
+    color: black;
+    font-weight: bold;
+    text-shadow: 8px 8px 5px rgba(0,0,0,.3);
   }
 
   a i {
@@ -15,7 +17,7 @@
 }
 
 .alert.alert-notice {
-  background: #ff69b4;
+  background: #FFAF19;
 }
 
 .alert.alert-floating {
