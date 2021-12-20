@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_16_190705) do
+ActiveRecord::Schema.define(version: 2021_12_20_010100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_10_16_190705) do
     t.string "content_type"
     t.text "metadata"
     t.bigint "byte_size", null: false
-    t.string "checksum", null: false
+    t.string "checksum"
     t.datetime "created_at", null: false
     t.string "service_name", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
@@ -546,6 +546,11 @@ ActiveRecord::Schema.define(version: 2021_10_16_190705) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 
+  create_view "pg_stat_statements_info", sql_definition: <<-SQL
+      SELECT pg_stat_statements_info.dealloc,
+      pg_stat_statements_info.stats_reset
+     FROM pg_stat_statements_info() pg_stat_statements_info(dealloc, stats_reset);
+  SQL
   create_view "search_results", materialized: true, sql_definition: <<-SQL
       SELECT a.searchable_id,
       a.searchable_type,
