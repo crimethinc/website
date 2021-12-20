@@ -14,6 +14,8 @@
     <%= render_themed "shared/header" %>
 
     <div class='alert alert-notice'>
+      <%= render_markdown t(:site_banner) %>
+
       <%= link_to 'https://www.gofundme.com/f/fire-destroyed-the-crimethinc-mailorder-space' do %>
         Help us recover from the fire that destroyed our mailorder space →
       <% end %>
