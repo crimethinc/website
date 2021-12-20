@@ -28,7 +28,7 @@ module Crimethinc
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults 6.1
 
     # By default `form_with` generates remote forms. We don't really
     # use this right now, so it is easier to have it default to `false`.
