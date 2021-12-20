@@ -1,5 +1,5 @@
 module Rack
-  class JsonRequests
+  class JSONRequests
     API_REQUEST_ERROR = {
       status: '406',
       title:  'Content Type Not Acceptable',

@@ -16,7 +16,7 @@ Bundler.require(*Rails.groups)
 
 module Crimethinc
   class Application < Rails::Application
-    config.middleware.use Rack::JsonRequests
+    config.middleware.use Rack::JSONRequests
     config.middleware.use Rack::ApexRedirect
     config.middleware.use Rack::DomainRedirect
     config.middleware.use Rack::CleanPath
