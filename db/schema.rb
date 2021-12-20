@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2021_12_20_010100) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -546,11 +545,6 @@ ActiveRecord::Schema.define(version: 2021_12_20_010100) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 
-  create_view "pg_stat_statements_info", sql_definition: <<-SQL
-      SELECT pg_stat_statements_info.dealloc,
-      pg_stat_statements_info.stats_reset
-     FROM pg_stat_statements_info() pg_stat_statements_info(dealloc, stats_reset);
-  SQL
   create_view "search_results", materialized: true, sql_definition: <<-SQL
       SELECT a.searchable_id,
       a.searchable_type,
