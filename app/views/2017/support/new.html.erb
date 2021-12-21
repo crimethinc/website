@@ -6,32 +6,32 @@
 
 <div class='row'>
   <div class='column column-one-third'>
-    <%= form_tag [:support_create], id: :js_stripe_form do %>
+    <%= form_with url: :support_create, id: :js_stripe_form do |form| %>
       <script src='https://checkout.stripe.com/checkout.js'></script>
 
       <!-- These get populated by the token callback below -->
-      <%= hidden_field_tag :js_stripe_email %>
-      <%= hidden_field_tag :js_stripe_token %>
+      <%= form.hidden_field :js_stripe_email %>
+      <%= form.hidden_field :js_stripe_token %>
 
       <div class='row buttons'>
         <div class='column column-half'>
-          <%= radio_button_tag :monthly, true, checked: true %>
-          <%= label_tag :monthly_true, t('views.support.new.radio_label_monthly') %>
+          <%= form.radio_button :monthly, true, checked: true %>
+          <%= form.label        :monthly_true, t('views.support.new.radio_label_monthly') %>
         </div>
 
         <div class='column column-half'>
-          <%= radio_button_tag :monthly, false %>
-          <%= label_tag :monthly_false, t('views.support.new.radio_label_one_time') %>
+          <%= form.radio_button :monthly, false %>
+          <%= form.label        :monthly_false, t('views.support.new.radio_label_one_time') %>
         </div>
       </div>
 
       <!-- Check the mapping hash in support.js to make sense of this -->
-      <%= range_field_tag 'amount_slider', 29, in: 1..85, step: 1 %>
+      <%= form.range_field :amount_slider, value: 29, in: 1..85, step: 1 %>
 
-      <%= label_tag :amount, t('views.support.new.amount_label') %>
+      <%= form.label :amount, t('views.support.new.amount_label') %>
 
       <div id="dollar-sign-amount-wrapper">
-        <%= number_field_tag :amount, '50', min: 1, max: 1000, step: 1, tabindex: '-1' %>
+        <%= form.number_field :amount, value: 50, min: 1, max: 1000, step: 1, tabindex: '-1' %>
       </div>
 
       <div class='actions'>
@@ -46,13 +46,14 @@
     <%= render_markdown t 'views.support.new.description' %>
 
     <div class="support-request">
-      <p><strong><%= t('views.support.new.support_request.header') %></strong></p>
-      <p><%= t('views.support.new.support_request.description') %></p>
+      <p><strong><%= t 'views.support.new.support_request.header' %></strong></p>
+      <p><%= t 'views.support.new.support_request.description' %></p>
 
-      <%= form_tag [:support, :request] do %>
-        <%= label_tag :email, t('views.support.new.support_request.email_label'), class: "visually-hidden sr-only" %>
-        <%= email_field_tag :email, nil, placeholder: t('views.support.new.support_request.email_placeholder') %>
-        <%= submit_tag t('views.support.new.support_request.button_text') %>
+      <%= form_with url: [:support, :request] do |form| %>
+        <%= form.label :email, t('views.support.new.support_request.email_label'), class: "visually-hidden sr-only" %>
+        <%= form.email_field :email, placeholder: t('views.support.new.support_request.email_placeholder') %>
+
+        <%= form.submit t 'views.support.new.support_request.button_text' %>
       <% end %>
     </div>
   </div>
