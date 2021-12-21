@@ -211,9 +211,23 @@
   }
 }
 
+#dollar-sign-amount-wrapper::before {
+  content: '$';
+}
+
+#dollar-sign-amount-wrapper {
+  font-size: 7.5rem;
+  display: inline-block;
+  width: 100%;
+}
+
 #amount {
   border: 0;
+  display: inline-block;
+  font-size: 7.5rem;
+  font-weight: 600;
   pointer-events: none;
+  width: 75%;
 }
 
 // removes little up and down arrows in number field
@@ -223,19 +237,11 @@
   margin: 0;
 }
 
-label[for=amount], label[for=amount_slider]  {
+label[for=amount],
+label[for=amount_slider]  {
   display: block;
   font-size: 110%;
   color: #444;
-}
-
-.dollar-sign, #amount {
-  font-size: 7.5rem;
-  font-weight: 600;
-}
-
-.dollar-sign {
-  color: #000;
 }
 
 .visually-hidden,

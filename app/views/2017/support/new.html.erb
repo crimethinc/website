@@ -25,12 +25,14 @@
         </div>
       </div>
 
-      <!-- Check the mapping hash below to make sense of this -->
-      <%= range_field_tag 'amount_slider', 29, in: 1..67, step: 1 %>
+      <!-- Check the mapping hash in support.js to make sense of this -->
+      <%= range_field_tag 'amount_slider', 29, in: 1..85, step: 1 %>
 
       <%= label_tag :amount, t('views.support.new.amount_label') %>
-      <span class="dollar-sign">$</span>
-      <%= number_field_tag :amount, '50', min: 1, max: 1000, step: 1, tabindex: '-1' %>
+
+      <div id="dollar-sign-amount-wrapper">
+        <%= number_field_tag :amount, '50', min: 1, max: 1000, step: 1, tabindex: '-1' %>
+      </div>
 
       <div class='actions'>
         <button id='js-stripe-button' class='button'>
