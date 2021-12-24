@@ -128,7 +128,6 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.10.0)
-    excon (0.89.0)
     execjs (2.8.1)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -216,8 +215,6 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    honeycomb-beeline (2.7.1)
-      libhoney (~> 1.14, >= 1.14.2)
     http (5.0.4)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
@@ -260,10 +257,6 @@ GEM
       rexml
     launchy (2.5.0)
       addressable (~> 2.7)
-    libhoney (1.21.0)
-      addressable (~> 2.0)
-      excon
-      http (>= 2.0, < 6.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -530,7 +523,6 @@ DEPENDENCIES
   flamegraph
   google-cloud-storage
   guard-rspec
-  honeycomb-beeline
   http
   i18n-debug
   image_processing
