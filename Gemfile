@@ -24,6 +24,7 @@ gem 'uglifier'
 gem 'jbuilder'
 
 # text utilities
+gem 'addressable'      # for current URL with a subdomain
 gem 'kramdown'         # for Markdown processing
 gem 'markdown_media'   # for [[ media embeds ]]
 gem 'pandoc-ruby'      # for Word to HTML conversion
@@ -52,7 +53,6 @@ gem 'logstash-event'
 gem 'aws-sdk-s3'
 gem 'azure-storage-blob',   require: false
 gem 'google-cloud-storage', require: false
-
 gem 'image_processing'
 
 # job queue using Active Job
