@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_12_20_010100) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -609,4 +610,9 @@ ActiveRecord::Schema.define(version: 2021_12_20_010100) do
   add_index "search_results", ["tag"], name: "index_search_results_on_tag", using: :gin
   add_index "search_results", ["title"], name: "index_search_results_on_title", using: :gist
 
+  create_view "pg_stat_statements_info", sql_definition: <<-SQL
+      SELECT pg_stat_statements_info.dealloc,
+      pg_stat_statements_info.stats_reset
+     FROM pg_stat_statements_info() pg_stat_statements_info(dealloc, stats_reset);
+  SQL
 end
