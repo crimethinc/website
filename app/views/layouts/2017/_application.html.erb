@@ -13,9 +13,14 @@
     <%= render "shared/development_mode_banner" %>
     <%= render_themed "shared/header" %>
 
-    <div class='alert alert-notice'>
-      <%= render_markdown t("header.site_banner") %>
-    </div>
+    <% if false %>
+      <%# Keep this around to easily re-add the site banner %>
+      <%#    1. Update text in locale YAML files %>
+      <%#    2. Change false to true for the duration of the banner time %>
+      <div class='alert alert-notice'>
+        <%= render_markdown t("header.site_banner") %>
+      </div>
+    <% end %>
 
     <main>
       <%= yield %>
