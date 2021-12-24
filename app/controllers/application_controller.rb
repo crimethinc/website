@@ -66,10 +66,11 @@ class ApplicationController < ActionController::Base
   end
 
   def check_for_redirection
-    redirect = Redirect.where(source_path: request.path.downcase).last
-    redirect = Redirect.where(source_path: "#{request.path.downcase}/").last if redirect.blank?
+    redirect = Redirect.where(source_path: [request.path.downcase, "#{request.path.downcase}/"]).last if redirect.blank?
 
-    return redirect_to(redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301) if redirect.present?
+    return if redirect.blank?
+
+    redirect_to(redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301, allow_other_host: true)
   end
 
   # TODO: move to rack middleware

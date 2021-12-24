@@ -28,7 +28,7 @@ module Crimethinc
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults 6.1
 
     # By default `form_with` generates remote forms. We don't really
     # use this right now, so it is easier to have it default to `false`.
@@ -55,5 +55,13 @@ module Crimethinc
 
     # Allow nested diretories in locales
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    # config.time_zone = "Central Time (US & Canada)"
+    # config.eager_load_paths << Rails.root.join("extras")
   end
 end
