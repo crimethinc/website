@@ -57,7 +57,7 @@ class ApplicationController < ActionController::Base
        request.subdomain.empty? &&             # Don’t redirect if there’s a subdomain
        Rails.env.production?                   # Don’t redirect in development
 
-      redirect_to({ subdomain: I18n.locale, allow_other_host: true }.merge(params.permit!))
+      redirect_to({ subdomain: I18n.locale }.merge(params.permit!), allow_other_host: true)
     end
   end
 
