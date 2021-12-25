@@ -19,7 +19,7 @@ class TagsController < ApplicationController
   def set_tag
     @tag = Tag.where(slug: params['slug'])
 
-    return redirect_to :root if @tag.blank?
+    return redirect_to :root, allow_other_host: true if @tag.blank?
 
     @tag = @tag.first
   end
