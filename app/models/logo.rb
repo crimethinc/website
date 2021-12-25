@@ -23,7 +23,7 @@ class Logo < ApplicationRecord
   end
 
   def meta_image
-    Rails.application.routes.url_helpers.rails_blob_url image_jpg
+    Rails.application.routes.url_helpers.rails_blob_url image_jpg, only_path: true
   end
   alias image meta_image
 
