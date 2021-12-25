@@ -19,7 +19,7 @@ class TagsController < ApplicationController
   def set_tag
     @tag = Tag.where(slug: params['slug'])
 
-    return redirect_to url_for_current_path_with_subdomain(subdomain: I18n.locale) if @tag.blank?
+    return redirect_to :root if @tag.blank?
 
     @tag = @tag.first
   end
