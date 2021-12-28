@@ -609,10 +609,4 @@ ActiveRecord::Schema.define(version: 2021_12_20_010100) do
   add_index "search_results", ["subtitle"], name: "index_search_results_on_subtitle", using: :gist
   add_index "search_results", ["tag"], name: "index_search_results_on_tag", using: :gin
   add_index "search_results", ["title"], name: "index_search_results_on_title", using: :gist
-
-  create_view "pg_stat_statements_info", sql_definition: <<-SQL
-      SELECT pg_stat_statements_info.dealloc,
-      pg_stat_statements_info.stats_reset
-     FROM pg_stat_statements_info() pg_stat_statements_info(dealloc, stats_reset);
-  SQL
 end
