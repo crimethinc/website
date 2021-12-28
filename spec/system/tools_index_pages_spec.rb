@@ -6,19 +6,19 @@ describe 'Tools Pages' do
   end
 
   it 'Renders published logos calling /logos' do
-    FactoryBot.create(:logo,
-                      title:              'published',
-                      published_at:       1.day.ago,
-                      publication_status: 'published')
+    create(:logo,
+           title:              'published',
+           published_at:       1.day.ago,
+           publication_status: 'published')
 
-    FactoryBot.create(:logo,
-                      title:              'not live',
-                      published_at:       1.day.from_now,
-                      publication_status: 'published')
+    create(:logo,
+           title:              'not live',
+           published_at:       1.day.from_now,
+           publication_status: 'published')
 
-    FactoryBot.create(:logo,
-                      title:              'draft',
-                      publication_status: 'draft')
+    create(:logo,
+           title:              'draft',
+           publication_status: 'draft')
 
     # TEMP: re-enable after figuring out tests with Active Storage assets
     # visit '/logos'
@@ -29,19 +29,19 @@ describe 'Tools Pages' do
   end
 
   it 'Renders published stickers calling /stickers' do
-    FactoryBot.create(:sticker,
-                      title:              'published',
-                      published_at:       1.day.ago,
-                      publication_status: 'published')
+    create(:sticker,
+           title:              'published',
+           published_at:       1.day.ago,
+           publication_status: 'published')
 
-    FactoryBot.create(:sticker,
-                      title:              'not live',
-                      published_at:       1.day.from_now,
-                      publication_status: 'published')
+    create(:sticker,
+           title:              'not live',
+           published_at:       1.day.from_now,
+           publication_status: 'published')
 
-    FactoryBot.create(:sticker,
-                      title:              'draft',
-                      publication_status: 'draft')
+    create(:sticker,
+           title:              'draft',
+           publication_status: 'draft')
 
     # TEMP: re-enable after figuring out tests with Active Storage assets
     # visit '/stickers'
@@ -52,19 +52,19 @@ describe 'Tools Pages' do
   end
 
   it 'Renders published zines calling /zines' do
-    FactoryBot.create(:zine,
-                      title:              'published',
-                      published_at:       1.day.ago,
-                      publication_status: 'published')
+    create(:zine,
+           title:              'published',
+           published_at:       1.day.ago,
+           publication_status: 'published')
 
-    FactoryBot.create(:zine,
-                      title:              'not live',
-                      published_at:       1.day.from_now,
-                      publication_status: 'published')
+    create(:zine,
+           title:              'not live',
+           published_at:       1.day.from_now,
+           publication_status: 'published')
 
-    FactoryBot.create(:zine,
-                      title:              'draft',
-                      publication_status: 'draft')
+    create(:zine,
+           title:              'draft',
+           publication_status: 'draft')
 
     visit '/zines'
 
@@ -74,19 +74,19 @@ describe 'Tools Pages' do
   end
 
   it 'Renders published posters calling /posters' do
-    FactoryBot.create(:poster,
-                      title:              'published',
-                      published_at:       1.day.ago,
-                      publication_status: 'published')
+    create(:poster,
+           title:              'published',
+           published_at:       1.day.ago,
+           publication_status: 'published')
 
-    FactoryBot.create(:poster,
-                      title:              'not live',
-                      published_at:       1.day.from_now,
-                      publication_status: 'published')
+    create(:poster,
+           title:              'not live',
+           published_at:       1.day.from_now,
+           publication_status: 'published')
 
-    FactoryBot.create(:poster,
-                      title:              'draft',
-                      publication_status: 'draft')
+    create(:poster,
+           title:              'draft',
+           publication_status: 'draft')
 
     # TEMP: re-enable after figuring out tests with Active Storage assets
     # visit '/posters'
@@ -97,19 +97,19 @@ describe 'Tools Pages' do
   end
 
   it 'Renders published videos calling /videos' do
-    FactoryBot.create(:video,
-                      title:              'published',
-                      published_at:       1.day.ago,
-                      publication_status: 'published')
+    create(:video,
+           title:              'published',
+           published_at:       1.day.ago,
+           publication_status: 'published')
 
-    FactoryBot.create(:video,
-                      title:              'not live',
-                      published_at:       1.day.from_now,
-                      publication_status: 'published')
+    create(:video,
+           title:              'not live',
+           published_at:       1.day.from_now,
+           publication_status: 'published')
 
-    FactoryBot.create(:video,
-                      title:              'draft',
-                      publication_status: 'draft')
+    create(:video,
+           title:              'draft',
+           publication_status: 'draft')
 
     visit '/videos'
 
