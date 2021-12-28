@@ -11,6 +11,5 @@ class Tagging < ApplicationRecord
   belongs_to :tag
   belongs_to :taggable, polymorphic: true, touch: true
 
-  validates :tag, :taggable, presence: true
   validates :taggable_type, inclusion: { in: TAGGABLES }
 end
