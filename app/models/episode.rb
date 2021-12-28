@@ -24,7 +24,7 @@ class Episode < ApplicationRecord
   end
 
   def generate_slug
-    update slug: [podcast.episode_prefix, episode_id_in_podcast].reject(&:blank?).join('-')
+    update slug: [podcast.episode_prefix, episode_id_in_podcast].compact_blank.join('-')
   end
 
   def generate_episode_number
