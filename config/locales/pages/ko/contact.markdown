@@ -5,22 +5,22 @@ The best we can offer here is a partial listing—most CrimethInc. cells remain 
 ## General Inquiries
 
 **Mail:** \\
-CrimethInc. Far East \\
-PO Box 4671 \\
-Salem, OR 97302
+CrimethInc. ex-Workers’ Collective \\
+PO Box 1902\\
+Olympia, WA 98507
 
 **E-Mail:** \\
-[hello@crimethinc.com](mailto:hello@crimethinc.com)
+[contact@crimethinc.com](mailto:contact@crimethinc.com)
 
 **Twitter:** \\
-[@crimethinc](https://twitter.com/#!/crimethinc)
+[@crimethinc](https://twitter.com/crimethinc)
 
 ## Mailorder Inquiries
 
 **Mail:** \\
-CrimethInc. Far East \\
-PO Box 4671 \\
-Salem, OR 97302
+CrimethInc. ex-Workers’ Collective \\
+PO Box 1902\\
+Olympia, WA 98507
 
 **E-Mail:** \\
 [store@crimethinc.com](mailto:store@crimethinc.com)

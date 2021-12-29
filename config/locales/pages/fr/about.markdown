@@ -17,7 +17,7 @@
 ## General Inquiries
 
 _Email:_ \\
-[hello@crimethinc.com](mailto:hello@crimethinc.com)
+[contact@crimethinc.com](mailto:contact@crimethinc.com)
 
 _Twitter:_ \\
 [@crimethinc](https://twitter.com/crimethinc)
