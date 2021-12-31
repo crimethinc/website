@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2021_12_20_010100) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -609,4 +608,5 @@ ActiveRecord::Schema.define(version: 2021_12_20_010100) do
   add_index "search_results", ["subtitle"], name: "index_search_results_on_subtitle", using: :gist
   add_index "search_results", ["tag"], name: "index_search_results_on_tag", using: :gin
   add_index "search_results", ["title"], name: "index_search_results_on_title", using: :gist
+
 end
