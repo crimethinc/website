@@ -473,7 +473,7 @@ GEM
       nokogiri (>= 1.11.7)
     stringex (2.8.5)
     stripe (5.42.0)
-    thor (1.1.0)
+    thor (1.2.1)
     tilt (2.0.10)
     trailblazer-option (0.1.2)
     tzinfo (2.0.4)
