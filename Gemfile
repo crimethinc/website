@@ -51,8 +51,6 @@ gem 'logstash-event'
 
 # uploads using Active Storage
 gem 'aws-sdk-s3'
-gem 'azure-storage-blob',   require: false
-gem 'google-cloud-storage', require: false
 gem 'image_processing'
 
 # job queue using Active Job
