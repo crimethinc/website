@@ -3,6 +3,7 @@ module SinglePageTool
   include Tool
   include Featureable
   include Translatable
+  include Publishable
 
   def image_description
     I18n.t 'tools.poster.image_description', title: title
