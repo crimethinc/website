@@ -3,6 +3,7 @@ module MultiPageTool
   include Tool
   include Featureable
   include Translatable
+  include Publishable
 
   def gallery_images
     if gallery_images_count.present? && gallery_images_count.positive?
