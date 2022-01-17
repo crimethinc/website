@@ -1,4 +1,6 @@
 class RandomTool
+  TOOL_CLASSES = %w[Book Logo Poster Sticker Video Zine].freeze
+
   class << self
     delegate :sample, to: :new
   end
@@ -6,9 +8,10 @@ class RandomTool
   def initialize; end
 
   def sample
-    tool  = all.sample
-    klass = tool.keys.first
-    id    = tool.values.first
+    random_tool = all.shift
+
+    klass = random_tool.first
+    id    = random_tool.last
 
     klass.constantize.readonly.find id
   end
@@ -16,42 +19,9 @@ class RandomTool
   private
 
   def all
-    [sample_book, sample_logo, sample_poster, sample_sticker, sample_video, sample_zine]
-  end
-
-  def sample_book
-    klass = Book
-    id = Book.readonly.live.published.pluck(:id).sample
-    { klass.name => id }
-  end
-
-  def sample_logo
-    klass = Logo
-    id = Logo.readonly.live.published.pluck(:id).sample
-    { klass.name => id }
-  end
-
-  def sample_poster
-    klass = Poster
-    id = Poster.readonly.live.published.pluck(:id).sample
-    { klass.name => id }
-  end
-
-  def sample_sticker
-    klass = Sticker
-    id = Sticker.readonly.live.published.pluck(:id).sample
-    { klass.name => id }
-  end
-
-  def sample_video
-    klass = Video
-    id = Video.readonly.live.published.pluck(:id).sample
-    { klass.name => id }
-  end
-
-  def sample_zine
-    klass = Zine
-    id = Zine.readonly.live.published.pluck(:id).sample
-    { klass.name => id }
+    TOOL_CLASSES.shuffle.map do |klass|
+      id = klass.constantize.readonly.live.published.pluck(:id).sample
+      [klass, id]
+    end
   end
 end
