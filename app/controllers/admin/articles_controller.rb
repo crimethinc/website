@@ -180,7 +180,7 @@ module Admin
       publish_in_100_years = permitted_params[:publication_status] == 'published' &&
                              permitted_params[:published_at].blank?
 
-      time = Time.zone.now + 100.years
+      time = 100.years.from_now
       tz = Time.zone.name
 
       handle_publish_now_situation(permitted_params, time: time, zone: tz) if publish_in_100_years
