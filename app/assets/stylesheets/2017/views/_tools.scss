@@ -32,11 +32,11 @@
         display: block;
 
         a {
-            text-transform: capitalize;
-            text-decoration: underline;
-            font-style: italic;
-            font-weight: normal;
-            color: $color-gray;
+          text-transform: capitalize;
+          text-decoration: underline;
+          font-style: italic;
+          font-weight: normal;
+          color: $color-gray;
         }
 
         li {
@@ -87,26 +87,17 @@
       // books#show
       .tool-front.contradictionary-cover img { border-radius: 0 20px 20px 0; }
 
-      // Custom size
-      #recipes-for-disaster       .tool-front img { width: 100%; }
-      #expect-resistance          .tool-front img { width:  79%; }
-      #days-of-war-nights-of-love .tool-front img { width:  79%; }
-      #contradictionary           .tool-front img { width:  60%; }
+      // Cover image sizes on /books
+      .book {
+        // Custom size
+        &#recipes-for-disaster         .tool-front img { width: 100%; }
+        &#contradictionary             .tool-front img { width:  60%; }
 
-      // Default size
-      #da-democracia-a-liberdade,
-      #dias-de-guerra-noites-de-amor,
-      #espere-resistencia,
-      #from-democracy-to-freedom,
-      #from-democracy-to-freedom-der-unterschied-zwischen-regierung-und-selbstbestimmung,
-      #no-habra-muro-que-nos-pare,
-      #no-wall-they-can-build,
-      #off-the-map,
-      #receitas-para-o-desastre,
-      #trabalho-edicao-resumida-de-emergencia,
-      #work-kapitalismus-wirtschaft-widerstand,
-      #work {
-        .tool-front img { width:  68%; }
+        &#expect-resistance,
+        &#days-of-war-nights-of-love { .tool-front img { width:  79%; } }
+
+        // Default size
+        & .tool-front img { width:  68%; }
       }
 
       .tool-section {
