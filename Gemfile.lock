@@ -316,7 +316,7 @@ GEM
       redis (>= 4, < 5)
     referral (0.0.5)
     regexp_parser (2.2.0)
-    request_store (1.5.0)
+    request_store (1.5.1)
       rack (>= 1.4)
     reverse_markdown (2.1.1)
       nokogiri
