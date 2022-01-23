@@ -15,9 +15,6 @@ def system! *args
 end
 
 chdir APP_ROOT do
-  # ensure everything in the app is up to date
-  system! 'script/update'
-
   # print output at the start of test run
   puts "==> Tests started at: #{Time.now.strftime('%H:%M:%S')}"
 
@@ -34,4 +31,6 @@ chdir APP_ROOT do
     puts "==> Running Rubocop on file: #{ARGV[0]}"
     system! "bundle exec rubocop #{ARGV[0]}"
   end
+
+  puts "==> Tests finished at: #{Time.now.strftime('%H:%M:%S')}"
 end
