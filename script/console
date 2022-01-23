@@ -18,12 +18,11 @@ end
 
 chdir APP_ROOT do
   if ARGV[0].nil?
-    # no argument provided, so just run the local console in the development
-    # environment. Ensure the application is up to date first.
-    system! 'script/update'
+    # No argument provided.
+    # So run local console in the development environment.
     system! 'bundle exec rails console'
   else
-    # use first argument as an environment name.
+    # Use first argument as an environment name.
     # Use this to decide how to connect to the appropriate console.
     case ARGV[0]
     when 'production'
