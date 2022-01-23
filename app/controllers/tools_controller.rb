@@ -66,7 +66,7 @@ class ToolsController < ApplicationController
   end
 
   def request_namespace
-    request.path.split('/')[1]
+    controller_path
   end
 
   def set_type
