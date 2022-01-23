@@ -14,14 +14,11 @@ def system! *args
 end
 
 chdir APP_ROOT do
-  # ensure everything in the app is up to date.
-  system! 'script/update'
-
   puts '==> Opening site in browser'
   puts '==> README: Refresh your browser after server is started'
   system! 'open http://localhost:3000'
 
   puts '==> Starting Server'
-  system! 'rails server -p 3000'
+  system! 'bundle exec rails server -p 3000'
   puts
 end
