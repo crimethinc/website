@@ -16,8 +16,10 @@ json.description    meta_title
 json.home_page_url  root_url
 json.feed_url       "#{root_url}/#{controller_path}.json"
 
-next_path     = path_to_next_page @tools
-previous_path = path_to_previous_page @tools
+json.feed_url       "#{root_url}/#{controller_path}.json"
+
+next_path           = path_to_next_page @tools
+previous_path       = path_to_previous_page @tools
 json.next_url       "#{root_url}#{next_path}" if next_path.present?
 json.previous_url   "#{root_url}#{previous_path}" if previous_path.present?
 
