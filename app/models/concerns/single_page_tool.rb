@@ -29,6 +29,28 @@ module SinglePageTool
     else
       url_of side: side, color: color, kind: preferred_front_image_kind
     end
+
+  # in development/staging we often download production data and load
+  # it into our local database to facilitate development and
+  # debugging. This causes an error with image and resources that are
+  # uploaded via ActiveStorage. We get the below error whenever trying
+  # to generate an image url:
+  #
+  #  ActionView::Template::Error (undefined method `signed_id' for nil:NilClass):
+  #
+  # This is because the development/staging ActiveStorage tables don't
+  # (and cannot) match up with the actual ActiveStorage storage used
+  # in these environments (e.g. the staging env points to aa different
+  # # AWS instance than the production env)
+  #
+  # This is a bit of a stopgap until we figure out a better way of
+  # handling this issue.
+  rescue StandardError => e
+    # Rails environment is production in our staging environment for
+    # heroku reasons. We have environment variables set to distinguish
+    # between the two.
+    throw e if Rails.env.production? && ENV['ON_PRODUCTION'] == 'TRUE'
+    ''
   end
 
   def prefer_image_for_preview?
