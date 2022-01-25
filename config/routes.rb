@@ -124,7 +124,8 @@ Rails.application.routes.draw do
   get 'journals',                     to: 'journals#index', as: :issues
 
   # Tools
-  get 'tools', to: 'tools#about', as: :tools
+  get 'tools',        to: 'tools#about',  as: :tools
+  get 'tools/random', to: 'tools#random', as: :random_tool
 
   # Site search
   get 'search',           to: 'search#index'
