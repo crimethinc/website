@@ -5,8 +5,8 @@ class ToolsController < ApplicationController
   before_action :set_body_id
   before_action :set_type
 
-  before_action :set_tool,  except: :about
-  before_action :set_tools, except: :about
+  before_action :set_tool,  except: %i[about random]
+  before_action :set_tools, except: %i[about random]
 
   before_action :set_title
   before_action :set_editable, only: :show
@@ -18,13 +18,19 @@ class ToolsController < ApplicationController
     render "#{Current.theme}/tools/about"
   end
 
+  # Inherited by each kind of tool
   def index
     render "#{Current.theme}/tools/index"
   end
 
+  # Inherited by each kind of tool
   def show
     @preview_width = 400
     render "#{Current.theme}/tools/show"
+  end
+
+  def random
+    redirect_to RandomTool.new.sample.path
   end
 
   private
