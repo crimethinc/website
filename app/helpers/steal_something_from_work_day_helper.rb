@@ -7,8 +7,11 @@ module StealSomethingFromWorkDayHelper
   end
 
   def card_tag options
-    options[:download_button] = t('steal_something_from_work_day.outreach_materials.download_button')
-    card = OpenStruct.new options
+    card_options = {
+      download_button: t('steal_something_from_work_day.outreach_materials.download_button')
+    }.merge options
+
+    card = OpenStruct.new card_options
 
     tag.div class: 'card' do
       card_image(card: card) + card_body(card: card)
