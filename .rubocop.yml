@@ -98,3 +98,11 @@ Style/RedundantFetchBlock:
 
 Style/OpenStructUse:
   Enabled: false
+
+# For now we disable this, since explicit hash value sounds better to use
+Style/HashSyntax:
+  Enabled: false
+
+# For now we disable this, since I prefer explicit block name
+Naming/BlockForwarding:
+  Enabled: false
