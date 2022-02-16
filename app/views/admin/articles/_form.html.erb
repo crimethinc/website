@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mb-5">
     <div class="col-12 col-md-7">
       <%= tag.div dir: html_dir do %>
         <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
@@ -39,6 +39,20 @@
         <%= render "admin/label_and_area_form_group", form: form, attr: :notes, rows: 10 %>
         <%= render "admin/articles/notes_note" %>
       <% end %>
+    </div>
+  </div>
+
+  <hr class="mb-5">
+
+  <div class="row mb-5">
+    <div class="col-12 col-md-7">
+      <%= render "admin/articles/form/published_at", form: form %>
+    </div>
+
+    <div class="col-12 col-md-5">
+      <%= render "admin/articles/form/short_url", form: form %>
+      <%#= render "admin/articles/form/featured_status", form: form, klass: :article %>
+      <%#= render "admin/articles/form/publication_status", form: form %>
     </div>
   </div>
 <% end %>
