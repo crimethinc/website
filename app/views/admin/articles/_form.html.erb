@@ -51,8 +51,26 @@
 
     <div class="col-12 col-md-5">
       <%= render "admin/articles/form/short_url", form: form %>
-      <%#= render "admin/articles/form/featured_status", form: form, klass: :article %>
-      <%#= render "admin/articles/form/publication_status", form: form %>
+      <%= render "admin/articles/form/featured_status", form: form, klass: :article %>
+      <%= render "admin/articles/form/publication_status", form: form %>
     </div>
   </div>
+
+  <hr class="mb-5">
+
+  <div class="row mb-5">
+    <div class="col-12 col-md-7">
+      <%= render "admin/articles/form/tags", form: form %>
+      <%= render "admin/articles/form/localization", form: form %>
+    </div>
+
+    <div class="col-12 col-md-5">
+      <%= render "admin/articles/form/categories", form: form %>
+    </div>
+  </div>
+
+  <hr class="mb-5">
+
+
+
 <% end %>
