@@ -1,0 +1,13 @@
+<%= form.label :word_doc, "Upload a Word Doc file", class: "form-label" %>
+
+<fieldset class="card mb-3">
+  <div class="card-body">
+
+    <p class="card-text form-text text-muted">
+      An uploaded <code>.docx</code> file will get converted to Markdown and used in the <code>content</code> textarea, over-writing any content that is already there.
+      <b>ONLY .docx files will work!</b>
+    </p>
+
+    <%= form.file_field :word_doc, class: "form-control" %>
+  </div>
+</fieldset>

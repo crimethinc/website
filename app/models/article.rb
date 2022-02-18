@@ -51,9 +51,13 @@ class Article < ApplicationRecord
 
   delegate :blank?, to: :short_path, prefix: true
 
+  def content_and_notes
+    [content, notes].join "\n\n"
+  end
+
   def content_rendered include_media: true
     Kramdown::Document.new(
-      MarkdownMedia.parse(content, include_media: include_media),
+      MarkdownMedia.parse(content_and_notes, include_media: include_media),
       input:                     content_format.to_sym,
       remove_block_html_tags:    false,
       transliterated_header_ids: true,

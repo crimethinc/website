@@ -9,54 +9,75 @@
   <% end %>
 </nav>
 
-<%= form_with model: [:admin, @article], id: "article-form", class: "row" do |form| %>
+<%= form_with model: [:admin, @article], id: "article-form" do |form| %>
   <%# For nested Articles, a la live blogs %>
   <%= form.hidden_field :collection_id, value: @collection&.id %>
 
-  <div class="col-12">
-    <%= render "admin/form_errors", thing: @article %>
+  <%= render "admin/form_errors", thing: @article %>
+
+  <div class="row">
+    <div class="col-12 col-md-7">
+      <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
+    </div>
+
+    <div class="col-12 col-md-5">
+      <%= render "admin/articles/upload_word_doc", form: form %>
+    </div>
   </div>
 
-  <section class="col-12 col-md-9">
-    <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
-    <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
+  <div class="row mb-5">
+    <div class="col-12 col-md-7">
+      <%= tag.div dir: html_dir do %>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
+        <%= render "admin/articles/content_note" %>
+      <% end %>
+    </div>
 
-    <fieldset class="card mb-3">
-      <div class="card-body">
-        <%= form.label :word_doc, "Upload a Word Doc file", class: "card-title m-0 form-label" %>
+    <div class="col-12 col-md-5">
+      <%= tag.div dir: html_dir do %>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :notes, rows: 10 %>
+        <%= render "admin/articles/notes_note" %>
+      <% end %>
+    </div>
+  </div>
 
-        <p class="card-text form-text text-muted">
-          An uploaded <code>.docx</code> file will get converted to Markdown and used in the <code>content</code> textarea, over-writing any content that is already there.
-          <b>ONLY .docx files will work!</b>
-        </p>
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
-        <%= form.file_field :word_doc, class: "form-control" %>
-      </div>
-    </fieldset>
+  <div class="row mb-5">
+    <div class="col-12 col-md-7">
+      <%= render "admin/articles/form/published_at", form: form %>
+    </div>
 
-    <%= tag.div dir: html_dir do %>
-      <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
-      <%= render "admin/articles/content_note", form: form %>
-    <% end %>
+    <div class="col-12 col-md-5">
+      <%= render "admin/articles/form/short_url", form: form %>
+      <%= render "admin/articles/form/featured_status", form: form, klass: :article %>
+      <%= render "admin/articles/form/publication_status", form: form %>
+    </div>
+  </div>
 
-    <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+  <div class="row mb-5">
+    <div class="col-12 col-md-7">
+      <%= render "admin/articles/form/tags", form: form %>
+      <%= render "admin/articles/form/localization", form: form %>
+    </div>
 
-    <%= render "admin/articles/form/syndication", form: form %>
-    <%= render "admin/articles/form/appearance", form: form %>
+    <div class="col-12 col-md-5">
+      <%= render "admin/articles/form/categories", form: form %>
+    </div>
+  </div>
 
-    <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
-  </section>
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 
-  <aside class="col-12 col-md-3">
-    <%= render "admin/articles/form/featured_status", form: form, klass: :article %>
-    <%= render "admin/articles/form/publication_status", form: form %>
-    <%= render "admin/articles/form/published_at", form: form %>
+  <div class="row mb-5">
+    <div class="col-12 col-md-7">
+      <%= render "admin/articles/form/appearance", form: form %>
+    </div>
 
-    <%= render "admin/articles/form/categories", form: form %>
-    <%= render "admin/articles/form/tags", form: form %>
-    <%= render "admin/articles/form/short_url", form: form %>
-    <%= render "admin/articles/form/localization", form: form %>
+    <div class="col-12 col-md-5">
+      <%= render "admin/articles/form/syndication", form: form %>
+    </div>
+  </div>
 
-    <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
-  </aside>
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
 <% end %>

@@ -1,9 +1,14 @@
-<div id="featured_status" class="mb-3 visually-hidden sr-only">
-  <%= form.label :featured_status, "Feature this on homepage?", class: "form-label" %><br>
+<div class="card mb-3 bg-light visually-hiddenXsr-only">
+  <div class="card-body">
+    <div id="featured_status">
+      <%= form.label :featured_status, "Feature this #{klass} on the homepage?", class: "form-label mb-0" %><br>
+      <p class="form-text text-muted">In the <i>Ex-Workers’ Collection</i></p>
 
-  <%= form.radio_button :featured_status, false, class: "btn-check" %>
-  <%= form.label :featured_status_false, 'Not featured', for: "#{klass}_featured_status_false", class: "btn btn-outline-secondary" %>
+      <%= form.radio_button :featured_status, false, class: "btn-check" %>
+      <%= form.label :featured_status_false, 'Not featured', for: "#{klass}_featured_status_false", class: "btn btn-outline-secondary" %>
 
-  <%= form.radio_button :featured_status, true, class: "btn-check" %>
-  <%= form.label :featured_status_true, 'Featured', for: "#{klass}_featured_status_true", class: "btn btn-outline-primary" %>
-</div><!-- #featured_status -->
+      <%= form.radio_button :featured_status, true, class: "btn-check" %>
+      <%= form.label :featured_status_true, 'Featured', for: "#{klass}_featured_status_true", class: "btn btn-outline-primary" %>
+    </div><!-- #featured_status -->
+  </div>
+</div>

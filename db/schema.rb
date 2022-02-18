@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_20_010100) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -74,6 +73,7 @@ ActiveRecord::Schema.define(version: 2021_12_20_010100) do
     t.datetime "featured_at"
     t.integer "position"
     t.boolean "hide_from_index", default: false
+    t.text "notes"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
   end
