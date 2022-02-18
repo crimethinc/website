@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -19,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -31,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.text "metadata"
     t.bigint "byte_size", null: false
     t.string "checksum"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "service_name", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
@@ -54,12 +55,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "content_format", default: "kramdown"
     t.string "slug"
     t.string "draft_code"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.string "year"
     t.string "month"
     t.string "day"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "collection_id"
     t.string "short_path"
     t.text "image_mobile"
@@ -70,7 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.integer "canonical_id"
     t.text "word_doc"
     t.boolean "featured_status", default: false
-    t.datetime "featured_at"
+    t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
     t.text "notes"
@@ -90,7 +91,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "content_format", default: "kramdown"
     t.string "slug"
     t.string "series"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.integer "price_in_cents"
     t.string "height"
     t.string "width"
@@ -108,8 +109,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.text "cover_style"
     t.text "binding_style"
     t.text "table_of_contents"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.boolean "back_image_present", default: false
     t.boolean "front_image_present", default: false
     t.boolean "lite_download_present", default: false
@@ -126,7 +127,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
-    t.datetime "featured_at"
+    t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_books_on_canonical_id"
@@ -135,22 +136,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
   create_table "categories", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "categorizations", id: :serial, force: :cascade do |t|
     t.integer "category_id"
     t.integer "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "definitions", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.string "subtitle"
@@ -158,8 +159,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "draft_code"
     t.string "slug"
     t.integer "publication_status"
-    t.datetime "published_at"
-    t.datetime "featured_at"
+    t.datetime "published_at", precision: nil
+    t.datetime "featured_at", precision: nil
     t.boolean "featured_status", default: false
     t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
   end
@@ -180,9 +181,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "duration"
     t.string "audio_type", default: "audio/mpeg"
     t.string "tags"
-    t.datetime "published_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "published_at", precision: nil
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "slug"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.string "episode_number"
@@ -204,7 +205,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "content_format", default: "kramdown"
     t.string "slug"
     t.string "series"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.integer "price_in_cents"
     t.string "height"
     t.string "width"
@@ -240,7 +241,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
-    t.datetime "featured_at"
+    t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_issues_on_canonical_id"
@@ -250,10 +251,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "title"
     t.string "subtitle"
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "slug"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.integer "publication_status", default: 0, null: false
     t.text "buy_url"
     t.text "content"
@@ -271,8 +272,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "abbreviation"
     t.string "name_in_english"
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "language_direction", default: 0
     t.string "slug"
     t.integer "articles_count", default: 0
@@ -284,10 +285,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "subtitle"
     t.text "description"
     t.string "content_format"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.text "summary"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
@@ -310,9 +311,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "content_format", default: "kramdown"
     t.string "slug"
     t.string "draft_code"
-    t.datetime "published_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "published_at", precision: nil
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
@@ -338,8 +339,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.text "itunes_url"
     t.text "overcast_url"
     t.text "pocketcasts_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "episode_prefix"
     t.string "locale", default: "en"
     t.integer "canonical_id"
@@ -359,12 +360,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.text "slug"
     t.string "height"
     t.string "width"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "depth"
     t.string "front_image_format", default: "jpg"
     t.string "back_image_format", default: "jpg"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.boolean "front_color_image_present"
     t.boolean "front_black_and_white_image_present"
     t.boolean "back_color_image_present"
@@ -377,7 +378,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
-    t.datetime "featured_at"
+    t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_posters_on_canonical_id"
@@ -387,8 +388,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "source_path"
     t.string "target_path"
     t.boolean "temporary"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "article_id"
   end
 
@@ -408,7 +409,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "depth"
     t.string "front_image_format", default: "jpg"
     t.string "back_image_format", default: "jpg"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.boolean "front_color_image_present"
     t.boolean "front_black_and_white_image_present"
     t.boolean "back_color_image_present"
@@ -418,12 +419,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
     t.integer "publication_status", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
-    t.datetime "featured_at"
+    t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
@@ -432,22 +433,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
   create_table "support_sessions", force: :cascade do |t|
     t.string "stripe_customer_id"
     t.string "token"
-    t.datetime "expires_at"
+    t.datetime "expires_at", precision: nil
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
     t.integer "tag_id"
     t.integer "taggable_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "taggable_type"
   end
 
   create_table "tags", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.index ["canonical_id"], name: "index_tags_on_canonical_id"
@@ -457,8 +458,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
   create_table "users", id: :serial, force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "role", default: 0, null: false
   end
 
@@ -475,12 +476,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "quality"
     t.string "duration"
     t.string "vimeo_id"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.string "year"
     t.string "month"
     t.string "day"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "publication_status", default: 0, null: false
     t.string "locale", default: "en"
@@ -500,7 +501,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.string "content_format", default: "kramdown"
     t.string "slug"
     t.string "series"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.integer "price_in_cents"
     t.string "height"
     t.string "width"
@@ -531,12 +532,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
     t.integer "publication_status", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
-    t.datetime "featured_at"
+    t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
     t.index ["canonical_id"], name: "index_zines_on_canonical_id"
