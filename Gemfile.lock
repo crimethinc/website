@@ -410,7 +410,7 @@ GEM
     sterile (1.0.23)
       nokogiri (>= 1.11.7)
     stringex (2.8.5)
-    stripe (5.43.0)
+    stripe (5.44.0)
     strscan (3.0.1)
     thor (1.2.1)
     tilt (2.0.10)
