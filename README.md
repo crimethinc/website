@@ -72,14 +72,14 @@ It will install the proper Ruby and PostgreSQL database versions.
 
 Clone this repo.
 
-```
+```sh
 git clone https://github.com/crimethinc/website.git
 cd website
 ```
 
 Then run the `bootstrap` script.
 
-```
+```sh
 ./script/bootstrap
 ```
 
@@ -88,17 +88,7 @@ Then run the `bootstrap` script.
 After you’ve `bootstrap`ed, you’ll need to `setup`.
 The `setup` setups the Rails environment (creates, migrates and seeds databases, then clears logs and tmp).
 
-```
-./script/setup
-```
-
-#### Can’t Load Gem from /vendor Error
-
-If you get an error that some gem can’t be loaded, like `bcrypt_ext`, follow these steps to rebuild this repo’s dev setup. From the root directory of this repo:
-
-```
-rm -rf vendor/gems
-rm -rf .bundle
+```sh
 ./script/setup
 ```
 
@@ -106,29 +96,15 @@ rm -rf .bundle
 
 The `server` script starts the Rails server on port `3000` (which uses **Puma**).
 
-```
+```sh
 ./script/server
 ```
-
-#### Site’s running but no articles?
-
-Stop the server, [seed the database](#database-seed-script), then run the server script again.
-This will import (scrubbed) production data into your local development database.
-
-```
-./script/seed
-./script/server
-```
-
-#### Can’t Find Postgresql Error
-
-See [Postgres](/blob/main/docs/docker.md) docs here.
 
 ### Update script
 
 Periodically, you can run the `update` script to check for new versions of dependencies and to update the database schema. If you ever get a `PendingMigrationError`, run this script to migrate your database.
 
-```
+```sh
 ./script/update
 ```
 
@@ -136,7 +112,7 @@ Periodically, you can run the `update` script to check for new versions of depen
 
 Run the test suite using the `test` script.
 
-```
+```sh
 ./script/test
 ```
 
@@ -144,7 +120,7 @@ Run the test suite using the `test` script.
 
 To run a process which runs tests on file change
 
-```
+```sh
 ./script/test_server
 ```
 
@@ -152,19 +128,19 @@ To run a process which runs tests on file change
 
 If you need to use the app’s console (in any environment), use the `console` script.
 
-```
+```sh
 ./script/console
 ```
 
 If you need to use the console on a remote instance of the app, specific its environment name as the first argument.
 
-```
+```sh
 ./script/console production
 ```
 
 Or
 
-```
+```sh
 ./script/console staging
 ```
 
@@ -172,7 +148,7 @@ Or
 
 Setup environment for CI to run tests. This is primarily designed to run on the continuous integration server.
 
-```
+```sh
 ./script/cibuild
 ```
 
@@ -180,13 +156,20 @@ Setup environment for CI to run tests. This is primarily designed to run on the 
 
 Drop the database, rebuild it, and fill it with seed data.
 
-```
+```sh
 ./script/seed
 ```
 
-## Development Setup with Docker
+---
 
-See [Docker based development](/blob/main/docs/docker.md) docs here.
+## Additional documentaion
+
+- For Docker based development, see [Docker based development](/blob/main/docs/docker.md) docs here
+- "Can’t Find Postgresql" Error, see [Postgres](/blob/main/docs/docker.md) docs here
+- "Can’t Load Gem from /vendor" Error, see [Postgres](/blob/main/docs/gem-vendor.md) docs here
+- Site’s running locally, but there are no articles?, see [Postgres](/blob/main/docs/development-data.md) docs here
+
+---
 
 ## Contributing
 
