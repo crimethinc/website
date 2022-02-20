@@ -75,7 +75,10 @@ class ArticlesController < ApplicationController
     if @article.content_in_html?
       render html: @article.content.html_safe, layout: false
     else
-      render "#{Current.theme}/articles/show"
+      respond_to do |format|
+        format.html     { render "#{Current.theme}/articles/show" }
+        format.markdown { render "#{Current.theme}/articles/show" }
+      end
     end
   end
 end
