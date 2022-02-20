@@ -162,12 +162,16 @@ Drop the database, rebuild it, and fill it with seed data.
 
 ***
 
+## How to…
+
+- [Add a new language to `/languages`](/blob/main/docs/languages.md)
+
 ## Additional documentaion
 
-- For Docker based development, see [Docker based development](/blob/main/docs/docker.md) docs here
-- "Can’t Find Postgresql" Error, see [Postgres](/blob/main/docs/docker.md) docs here
-- "Can’t Load Gem from /vendor" Error, see [Postgres](/blob/main/docs/gem-vendor.md) docs here
-- Site’s running locally, but there are no articles?, see [Postgres](/blob/main/docs/development-data.md) docs here
+- [For Docker based development](/blob/main/docs/docker.md) docs here
+- ["Can’t Find Postgresql" Error](/blob/main/docs/docker.md) docs here
+- ["Can’t Load Gem from /vendor" Error](/blob/main/docs/gem-vendor.md) docs here
+- [Site’s running locally, but there are no articles?](/blob/main/docs/development-data.md) docs here
 
 ***
 
