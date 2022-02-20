@@ -160,7 +160,7 @@ Drop the database, rebuild it, and fill it with seed data.
 ./script/seed
 ```
 
----
+***
 
 ## Additional documentaion
 
@@ -169,7 +169,7 @@ Drop the database, rebuild it, and fill it with seed data.
 - "Can’t Load Gem from /vendor" Error, see [Postgres](/blob/main/docs/gem-vendor.md) docs here
 - Site’s running locally, but there are no articles?, see [Postgres](/blob/main/docs/development-data.md) docs here
 
----
+***
 
 ## Contributing
 
