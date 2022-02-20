@@ -5,6 +5,7 @@ module Rack
       '/blog'                => '',
       'index.html'           => '',
       '.html'                => '',
+      '.xml'                 => '',
       'index.php'            => '',
       '.php'                 => '',
       'comment-page-1'       => '',
