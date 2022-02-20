@@ -28,7 +28,7 @@ Layout/SpaceBeforeBrackets:
   Enabled: false
 
 Metrics/AbcSize:
-  Max: 71
+  Max: 72
 
 Metrics/BlockLength:
   Max: 99
