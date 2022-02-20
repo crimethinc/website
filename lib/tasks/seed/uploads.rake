@@ -20,7 +20,6 @@ class ProductionAssetsImporter
     end
   end
 
-  # rubocop:disable Metrics/MethodLength
   def migrate_assets local_tool
     remote_tool_url  = "#{API_URL_BASE}#{local_tool.path}.json"
     remote_tool_json = HTTP.get(remote_tool_url).to_s
@@ -68,7 +67,6 @@ class ProductionAssetsImporter
 
     sleep 2
   end
-  # rubocop:enable Metrics/MethodLength
 end
 
 namespace :seed do

@@ -8,6 +8,7 @@ module Rack
       '.xml'                 => '',
       'index.php'            => '',
       '.php'                 => '',
+      '.md'                  => '.markdown',
       'comment-page-1'       => '',
       'texts/atoz'           => 'texts',
       'texts/days'           => 'texts',
