@@ -162,9 +162,12 @@ Drop the database, rebuild it, and fill it with seed data.
 
 ***
 
-## How to…
+## How to guides…
 
 - [Add a new language to `/languages`](/blob/main/docs/languages.md)
+- [Add a new locale](/blob/main/docs/locales.md)
+- [Publishing workflow](/blob/main/docs/publishing.md)
+- [To Change Everything, language translations](/blob/main/docs/to-change-everything-guide.md)
 
 ## Additional documentaion
 
