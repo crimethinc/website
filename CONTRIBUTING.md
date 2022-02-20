@@ -11,8 +11,8 @@ cd website
 ./script/setup
 ./script/server
 ```
-[Run the test suite](#testing) to check everything works as expected.
 
+[Run the test suite](#testing) to check everything works as expected.
 
 ## Testing
 
@@ -22,19 +22,16 @@ To run the test suite:
 ./script/test
 ```
 
-
 ## Tests
 
 Submit tests for your changes. You can test your changes on your machine by [running the test suite](#testing).
 
 When you submit a PR, tests will also be run on the [continuous integration environment](https://github.com/crimethinc/website/actions?query=workflow%3ATests).
 
-
 ## Reviews
 
 Submit a pull request of your fork or branch. Someone else will review it and either approve it or ask questions / for changes.
 Try to reference the issue number that the pull request is addressing in the title or body of your pull request.
-
 
 ## Not Sure?
 

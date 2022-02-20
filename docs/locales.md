@@ -2,9 +2,9 @@
 
 A runbook for translating https://crimethinc.com into another language
 
-# For everyone
+## For everyone
 
-## Language code
+### Language code
 
 Everyone reading this will need to know that language code for language you're working on.
 
@@ -13,9 +13,9 @@ Everyone reading this will need to know that language code for language you're w
     - https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
     - For example, `pt` for Portuguese
 
-# For translators
+## For translators
 
-## Updating an existing translation
+### Updating an existing translation
 
 1. Find the language file in this folder https://github.com/crimethinc/website/tree/main//config/locales
     - The file will have a name in the format of `[xx].yml`
@@ -27,7 +27,7 @@ Everyone reading this will need to know that language code for language you're w
     - If you know how to use git / GitHub, you can make a pull reqest
     - If not, that's ok! You can email them to the code collective instead (see the _Emailing the CrimethInc. Code Collective_ section below)
 
-## Creating a new translation
+### Creating a new translation
 
 1. Double check for the language file in this folder https://github.com/crimethinc/website/tree/main//config/locales
     - The file will have a name in the format of `[xx].yml`
@@ -54,7 +54,7 @@ Everyone reading this will need to know that language code for language you're w
     - If you know how to use git / GitHub, you can make a pull reqest
     - If not, that's ok! You can email them to the code collective instead (see the _Emailing the CrimethInc. Code Collective_ section below)
 
-## Working with YAML files
+### Working with YAML files
 
 1. This format is called YAML.
     - The left side of the colon is called a "key", the right side is that key's "value".
@@ -67,7 +67,7 @@ Everyone reading this will need to know that language code for language you're w
     - Please, don't translate or change any of the keys
 
 1. A `#` character starts a comment, which will only be read by humans, not computers.
-    - You can leave notes to yourself or others as comments. (Example: `# meta_title is wrapped in…`)
+    - You can leave notes to yourself or others as comments. (Example: `## meta_title is wrapped in…`)
 
 1. Please retain any formatting syntax characters that are in the YAML.
     - If a value has **Markdown** syntax characters in it, please keep those in your translation.
@@ -75,7 +75,7 @@ Everyone reading this will need to know that language code for language you're w
     - If a value has **HTML** syntax characters in it, please keep those in your translation.
     - HTML examples: `<b>bold</b>`, `<a href='http://example.com'>Link text</a>`, etc.
 
-## Emailing the CrimethInc. Code Collective
+### Emailing the CrimethInc. Code Collective
 
 1. Send those files to the code collective at [tech@crimethinc.com](mailto:tech@crimethinc.com)
     - If PGP/GPG is imporant to you, email them to [crimethinc.ex.workers.collective@protonmail.com](mailto:crimethinc.ex.workers.collective@protonmail.com)
@@ -85,9 +85,9 @@ Everyone reading this will need to know that language code for language you're w
 ***
 ***
 
-# For code collective
+## For code collective
 
-## DNS concerns
+### DNS concerns
 
 1. Add the domain to the Heroku app
     - `heroku domains:add [2-letter language code].crimethinc.com`
@@ -97,10 +97,10 @@ Everyone reading this will need to know that language code for language you're w
 
 1. Add the subdomain to DNS host with a `CNAME` record matching the `HerokuDNS.com` URL from the previous step
 
-## Files
+### Files
 
 TODO
 
-## Locales Service
+### Locales Service
 
 TODO

@@ -4,7 +4,7 @@ First, you need a CMS account for https://crimethinc.com/admin. To see if you do
 
 If you don't, contact someone who already does. They can create an account for you.
 
-# Creating a New CMS Account for Someone
+## Creating a New CMS Account for Someone
 
 Firstly, this isn't necessary for every author, especially people who just write a one off thing. This is only for people who need / want to be responsible for publishing articles to the live site.
 
@@ -20,7 +20,7 @@ Firstly, this isn't necessary for every author, especially people who just write
 
 ***
 
-# First Time Signing In
+## First Time Signing In
 
 After someone creates a CMS account for you and gives you your temporary password, you can sign in and change that to a real password.
 
@@ -36,7 +36,7 @@ After someone creates a CMS account for you and gives you your temporary passwor
 
 ***
 
-# Creating an Article Draft
+## Creating an Article Draft
 
 1. Sign in. Go to the Articles admin. https://crimethinc.com/admin/articles
 2. Click `New Article` in the header navbar
@@ -46,7 +46,7 @@ After someone creates a CMS account for you and gives you your temporary passwor
 6. Click any of the `Save` buttons. They all do the same thing.
 7. An article has now be created with the `Publication Status` of `Draft`. Great job!
 
-## A Description of Article CMS Fields
+### A Description of Article CMS Fields
 
 - `Title` is required
 - `Subtitle` is optional, but encouraged
@@ -65,7 +65,7 @@ After someone creates a CMS account for you and gives you your temporary passwor
 - `Header Image` is required. How and where to upload an image is covered in another document.
 - `Article Specific CSS` is almost never needed either and should not be used as a hammer. If an article has some truly unique requirements, you can write some CSS here to fulfill them. But be very careful to scope the CSS to only this article and not affect the whole site.
 
-# Editing an Article Draft
+## Editing an Article Draft
 
 1. Sign in.
 2. Go to articles admin. https://crimethinc.com/admin/articles
@@ -73,14 +73,14 @@ After someone creates a CMS account for you and gives you your temporary passwor
 4. Click the `Edit`.
 5. Fill out any missing fields that you're able to. Edit the `Title`/`Subtitle`/`Content`.
 
-# Publishing an Article
+## Publishing an Article
 
 1. Make sure that the `Publication Date & Time` is set properly to what you want. (I.e., not in the past. Not in the distant future.)
   - Or you can use "now", instead of setting a specific date/time, you can click the `Publish NOW!` button which will set the `Publication Date & Time` to right now, and the `Publication Status` of `Published`
 2. Change the `Publication Status` of `Published` and click `Save`.
 3. That's it! At that date and time, the article will show up on the homepage and in our RSS feeds.
 
-# Creating a Redirect
+## Creating a Redirect
 
 Eventually, this will happen automatically. But as long as these instructions are here, it's still necessary to do manually. It helps to have the CMS open in two browser tabs or windows and to switch back and forth. One with the Redirect form, one with the Article show page.
 
@@ -106,4 +106,3 @@ Eventually, this will happen automatically. But as long as these instructions ar
 - `From` has to be unique. If you try to create a Redirect with a `From` that already exists, you'll get an error saying "Source path has already been taken." and you'll need to use something else instead.
   - If whatever you end up using is different from the `Short URL Path` saved on the Article, you should go back to the article and update its `Short URL Path` to match.
 - Again, eventually all of this will be automated.
-

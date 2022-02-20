@@ -1,29 +1,29 @@
 # Add a new language to /languages
 
-# Create a new Locale in /admin
+## Create a new Locale in /admin
 
 https://crimethinc.com/admin/locales
 
-# Add articles/et al in that Locale
+## Add articles/et al in that Locale
 
 When creating an Article, choose the Locale in the Article admin form. After there's at least one Article in a Locale, it'll show up on the `/languages`.
 
 https://crimethinc.com/languages
 
-## Add variations to LocaleService::Locales::LOCALES
+### Add variations to LocaleService::Locales::LOCALES
 
 In: `app/services/locale_service/locales.rb`.
 
 For example:
 
 ```
-# cs: czech
+## cs: czech
 Locale.new(locale: 'czech',   lang_code: :cs, canonical: 'cestina'),
 Locale.new(locale: 'čeština', lang_code: :cs, canonical: 'cestina'),
 Locale.new(locale: 'cestina', lang_code: :cs, canonical: 'cestina'),
 ```
 
-## Duplicate, rename, and edit locale YAML files
+### Duplicate, rename, and edit locale YAML files
 
 Duplicate these files:
 
@@ -45,7 +45,7 @@ Continuing with CS as the example:
 
 `  name: Czech`
 
-## Add the new locale to the tests
+### Add the new locale to the tests
 
 In these files:
 
@@ -55,7 +55,7 @@ In these files:
 
 Follow the pattern in each file to add the new locale too.
 
-## Add the locale abbreviation to application.rb
+### Add the locale abbreviation to application.rb
 
 `config/application.rb`
 

@@ -1,7 +1,7 @@
 #  To Change Everything, language translations
 
-
 ## Prerequisites
+
 ### Data Gathering
 
 1. Determine the 2-letter language code for the language you are adding.
