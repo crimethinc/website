@@ -1,6 +1,10 @@
 class Video < ApplicationRecord
   include Tool
 
+  has_one_attached :image_poster_frame
+
+  alias image image_poster_frame
+
   def meta_image
     ''
   end
