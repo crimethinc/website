@@ -23,6 +23,8 @@ namespace :tweet do
                   puts tool.image
                 end
 
+    tempfile = Down.download image_url
+
     twitter_client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV.fetch('SYNDICATION_TWITTER_KEY')           { 'TODO' }
       config.consumer_secret     = ENV.fetch('SYNDICATION_TWITTER_SECRET')        { 'TODO' }
@@ -30,6 +32,6 @@ namespace :tweet do
       config.access_token_secret = ENV.fetch('SYNDICATION_TWITTER_ACCESS_SECRET') { 'TODO' }
     end
 
-    twitter_client.update_with_media(tweet_text, File.new('/path/to/media.png'))
+    twitter_client.update_with_media(tweet_text, tempfile)
   end
 end
