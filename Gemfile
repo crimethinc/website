@@ -56,6 +56,9 @@ gem 'image_processing'
 # job queue using Active Job
 gem 'sidekiq'
 
+# syndication
+gem 'twitter', '~> 7'
+
 # dev and testing
 group :development, :test do
   gem 'awesome_print'
