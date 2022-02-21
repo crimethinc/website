@@ -2,14 +2,22 @@
 
 <article>
   <header>
-    <h1>
-      <%= link_to [:admin, @video], class: "p-name" do %>
-        <span class="h1 title"><%= @video.title %></span><br>
-        <span class="h2 subtitle"><%= @video.subtitle %></span>
-      <% end %>
-    </h1>
+    <div class="d-flex">
+      <div class="flex-shrink-0">
+        <%= link_to "EDIT", [:edit, :admin, @video], class: "btn btn-outline-primary btn-smx" %>
+      </div>
 
-    <p><b>URL:</b> <b><%= link_to @video.path, @video.path %></b></p>
+      <div class="flex-grow-1 ms-3">
+        <h1>
+          <%= link_to [:admin, @video], class: "p-name" do %>
+            <span class="h1 fw-bold"><%= @video.title %></span><br>
+            <span class="h2 fw-light"><%= @video.subtitle %></span>
+          <% end %>
+        </h1>
+
+        <p><b>URL</b> <%= link_to @video.path, @video.path %></p>
+      </div>
+    </div>
 
     <%= render "/admin/articles/publication_status_badge", resource: @video %>
   </header>
@@ -17,19 +25,13 @@
   <hr>
 
   <div class="row mb-3">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-7">
       <b>Video</b>
-      for Vimeo ID: <%= @video.vimeo_id %>
 
       <%= render_markdown("[[ https://vimeo.com/#{@video.vimeo_id} ]]")
             .sub('video-container', 'ratio ratio-16x9')
             .html_safe %>
 
-      Download URL
-      <%= link_to @video.download_url, @video.download_url, target: '_blank' %>
-    </div>
-
-    <div class="col-12 col-md-6">
       <b>Image</b>
 
       <% if @video.image_poster_frame.attached? %>
@@ -41,20 +43,24 @@
          </p>
       <% end %>
     </div>
+
+    <div class="col-12 col-md-5">
+      <dl>
+        <dt>Vimeo ID</dt>
+        <dd><%= @video.vimeo_id %></dd>
+
+        <dt>Download URL</dt>
+        <dd><%= link_to @video.download_url, @video.download_url, target: '_blank' %></dd>
+
+        <dt>Summary</dt>
+        <dd><%= render_markdown @video.summary %></dd>
+
+        <dt>Duration</dt>
+        <dd><%= @video.duration %></dd>
+
+        <dt>Quality</dt>
+        <dd><%= @video.quality %></dd>
+      </dl>
+    </div>
   </div>
-
-  <p>
-    <strong>Summary</strong>
-    <%= @video.summary %>
-  </p>
-
-  <p>
-    <strong>Duration</strong>
-    <%= @video.duration %>
-  </p>
-
-  <p>
-    <strong>Quality</strong>
-    <%= @video.quality %>
-  </p>
 </article>

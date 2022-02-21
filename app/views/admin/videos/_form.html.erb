@@ -1,102 +1,66 @@
 <%= form_with(model: [:admin, @video]) do |form| %>
   <%= render "admin/form_errors", thing: @video %>
 
-  <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
-  <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
-
   <div class="row">
-    <div class="col-12 col-sm-6">
-      <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 8 %>
-    </div>
+    <div class="col-12 col-md-7">
+      <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
 
-    <div class="col-12 col-sm-6">
+      <%= render "admin/label_and_field_form_group", form: form, attr: :vimeo_id, label_text: "Vimeo ID" %>
+      <p class="form-text text-muted">
+        https://vimeo.com/<code class="fw-bold">676634993</code>
+        The number part of the Vimeo URL imediately after the
+        <code>.com/</code>.
+      </p>
+
       <%= form.label :image_poster_frame, "Poster Frame Image", class: "form-label" %>
 
-      <%= form.file_field :image_poster_frame, accept: acceptable_mime_types_for(:image), class: "form-control form-control-lg mb-3" %>
-
-      <% if @video.image_poster_frame.attached? %>
-        <%= video_image_tag @video %>
-      <% end %>
+      <%= form.file_field :image_poster_frame,
+                          accept: acceptable_mime_types_for(:image),
+                          class: "form-control form-control-lg mb-3" %>
 
       <p class="form-text text-muted">
         You can create this image by taking a screenshot of the video,
         then cropping out everything that isn't the video frame itself.
       </p>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-6">
-      <%= render "admin/label_and_field_form_group", form: form, attr: :slug %>
-    </div>
+      <% if @video.image_poster_frame.attached? %>
+        <%= video_image_tag @video %>
 
-    <div class="col-6">
-      <%= render "admin/label_and_field_form_group", form: form, attr: :vimeo_id, label_text: "Vimeo ID" %>
-    </div>
-  </div>
+        <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
+        <p class="form-text text-muted">
+          This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
+        </p>
+      <% end %>
 
-  <div class="row">
-    <div class="col-12 col-sm-6">
-      <%= render "admin/label_and_field_form_group", form: form, attr: :image %>
-    </div>
-
-    <div class="col-12 col-sm-6">
-      <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
+      <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 6 %>
       <p class="form-text text-muted">
-        This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
+        A description of what this video is and is about.
       </p>
+
+      <%= render "admin/label_and_area_form_group", form: form, attr: :summary, rows: 6 %>
+      <p class="form-text text-muted">
+        Maximum 200 characters.
+        Used for video description and link previews in story cards on other sites and in messaging apps.
+      </p>
+
+      <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
+    </div>
+
+    <div class="col-12 col-md-5">
+      <%= render "admin/publication_status", form: form %>
+
+      <%= render "admin/datetime_group", form: form, post: @video, type: :video %>
+
+      <%= form.label :quality, class: "form-label" %>
+      <%= form.select :quality,
+                      %w[SD HD 4K],
+                      { include_blank: true },
+                      class: "form-select form-select-lg mb-3" %>
+
+      <%= render "admin/label_and_field_form_group", form: form, attr: :duration %>
+
+      <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
     </div>
   </div>
-
-  <%= render "admin/books/categories_form", form: form %>
-  <%= render "admin/datetime_group", form: form, post: @video, type: :video %>
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
-
-  <fieldset id="syndication">
-    <legend>Syndication</legend>
-    <div class="row">
-
-      <div class="col-12 col-sm-6">
-        <%= render "admin/label_and_area_form_group", form: form, attr: :tweet %>
-
-        <p class="form-text text-muted">
-          Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
-          Used for syndicated tweet for this Video.
-        </p>
-      </div>
-
-      <div class="col-12 col-sm-6">
-        <%= render "admin/label_and_area_form_group", form: form, attr: :summary %>
-        <p class="form-text text-muted">
-          Maximum 200 characters.
-          Used for video description and previews in story cards on other sites.
-        </p>
-      </div>
-
-    </div>
-  </fieldset>
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
-
-  <div class="row">
-    <div class="col-12 col-sm-6">
-      <fieldset id="specs">
-        <legend>Specs</legend>
-
-        <div class="row">
-          <div class="col-6">
-            <%= render "admin/label_and_field_form_group", form: form, attr: :quality %>
-          </div>
-
-          <div class="col-6">
-            <%= render "admin/label_and_field_form_group", form: form, attr: :duration %>
-          </div>
-        </div>
-
-      </fieldset> <!-- #specs -->
-    </div>
-  </div> <!-- .row -->
-
-  <%= render "admin/form_actions", cancel_url: [:admin, :videos] %>
 <% end %>

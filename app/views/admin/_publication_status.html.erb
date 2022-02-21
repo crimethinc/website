@@ -1,12 +1,16 @@
-<div id="publication-status" class="mb-3">
-  <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>
+<div class="card mb-3 bg-light">
+  <div class="card-body">
+    <div id="publication-status">
+      <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>
 
-  <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
-    <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "btn-check" %>
+      <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
+        <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "btn-check" %>
 
-    <%= form.label "publication_status_#{state}",
-                   state.capitalize,
-                   for: "publication_status_#{state}",
-                   class: "btn btn-outline-#{state == :draft ? :secondary : 'primary'}" %>
-  <% end %>
-</div><!-- #publication-status -->
+        <%= form.label "publication_status_#{state}",
+                       state.capitalize,
+                       for: "publication_status_#{state}",
+                       class: "btn btn-outline-#{state == :draft ? :secondary : 'primary'}" %>
+      <% end %>
+    </div><!-- #publication-status -->
+  </div>
+</div>
