@@ -10,10 +10,16 @@ namespace :tweet do
   desc 'Find and tweet a random tool'
   task random_tool: :environment do
     tool = RandomTool.sample
+
     puts
     puts tweet_text = "#{tool.class.name}: #{tool.name}"
     puts tweet_url  = "https://crimethinc.com#{tool.path}"
-    puts tool.image
+
+    if tool.image.is_a? ActiveStorage::Attached::One
+      puts tool.image.url
+    else
+      puts tool.image
+    end
     puts
   end
 end
