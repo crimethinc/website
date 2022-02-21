@@ -30,7 +30,7 @@ class ToolsController < ApplicationController
   end
 
   def random
-    redirect_to RandomTool.new.sample.path
+    redirect_to RandomTool.sample.path
   end
 
   private

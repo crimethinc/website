@@ -125,12 +125,12 @@ Rails.application.routes.draw do
   get 'journals',                     to: 'journals#index', as: :issues
 
   # Tools
-  get 'tools',        to: 'tools#about',  as: :tools
-  get 'tools/random', to: 'tools#random', as: :random_tool
+  get 'tools',  to: 'tools#about',  as: :tools
+  get 'random', to: 'tools#random', as: :random_tool
 
   # Site search
-  get 'search',           to: 'search#index'
-  get 'search/advanced',  to: 'search#advanced', as: :advanced_search
+  get  'search',          to: 'search#index'
+  get  'search/advanced', to: 'search#advanced', as: :advanced_search
   post 'search/advanced', to: 'search#advanced_search', as: :advanced_searches
 
   # Support
