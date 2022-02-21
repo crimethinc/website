@@ -57,6 +57,7 @@ gem 'image_processing'
 gem 'sidekiq'
 
 # syndication
+gem 'down' # downloading images from ActiveStorage/S3
 gem 'twitter', '~> 7'
 
 # dev and testing
