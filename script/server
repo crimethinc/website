@@ -14,9 +14,7 @@ def system! *args
 end
 
 chdir APP_ROOT do
-  puts '==> Opening site in browser'
-  puts '==> README: Refresh your browser after server is started'
-  system! 'open http://localhost:3000'
+  puts '==> README: open http://localhost:3000 in your browser after server is started'
 
   puts '==> Starting Server'
   system! 'bundle exec rails server -p 3000'
