@@ -11,8 +11,8 @@ namespace :tweet do
   task random_tool: :environment do
     tool = RandomTool.sample
     puts
-    puts tool.class.name
-    puts tool.name
+    puts tweet_text = "#{tool.class.name}: #{tool.name}"
+    puts tweet_url  = "https://crimethinc.com#{tool.path}"
     puts tool.image
     puts
   end
