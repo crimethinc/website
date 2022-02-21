@@ -8,20 +8,16 @@ class RandomTool
   def initialize; end
 
   def sample
-    random_tool = all.shift
-
-    klass = random_tool.first
-    id    = random_tool.last
-
-    klass.constantize.readonly.find id
+    random_tool_class.constantize.readonly.find random_tool_id
   end
 
   private
 
-  def all
-    TOOL_CLASSES.shuffle.map do |klass|
-      id = klass.constantize.readonly.live.published.pluck(:id).sample
-      [klass, id]
-    end
+  def random_tool_class
+    @random_tool_class ||= TOOL_CLASSES.sample
+  end
+
+  def random_tool_id
+    random_tool_class.constantize.readonly.live.published.pluck(:id).sample
   end
 end
