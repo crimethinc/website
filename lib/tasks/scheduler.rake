@@ -11,15 +11,25 @@ namespace :tweet do
   task random_tool: :environment do
     tool = RandomTool.sample
 
-    puts
-    puts tweet_text = "#{tool.class.name}: #{tool.name}"
-    puts tweet_url  = "https://crimethinc.com#{tool.path}"
+    tweet_text = <<~TWEET_TEXT
+      #{tool.class.name}: #{tool.name}
 
-    if tool.image.is_a? ActiveStorage::Attached::One
-      puts tool.image.url
-    else
-      puts tool.image
+      https://cwc.im#{tool.path}
+    TWEET_TEXT
+
+    image_url = if tool.image.is_a? ActiveStorage::Attached::One
+                  puts tool.image.url
+                else
+                  puts tool.image
+                end
+
+    twitter_client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV.fetch('SYNDICATION_TWITTER_KEY')           { 'TODO' }
+      config.consumer_secret     = ENV.fetch('SYNDICATION_TWITTER_SECRET')        { 'TODO' }
+      config.access_token        = ENV.fetch('SYNDICATION_TWITTER_ACCESS_TOKEN')  { 'TODO' }
+      config.access_token_secret = ENV.fetch('SYNDICATION_TWITTER_ACCESS_SECRET') { 'TODO' }
     end
-    puts
+
+    twitter_client.update_with_media(tweet_text, File.new('/path/to/media.png'))
   end
 end
