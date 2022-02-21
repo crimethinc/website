@@ -25,7 +25,10 @@ module SinglePageTool
 
   def image side: :front, color: :color
     if prefer_image_for_preview?
-      send("image_#{side}_#{color}_image")
+      image_permutation = send("image_#{side}_#{color}_image")
+      send("image_#{side}_black_and_white_image") unless image_permutation.attached?
+
+      image_permutation
     else
       url_of side: side, color: color, kind: preferred_front_image_kind
     end

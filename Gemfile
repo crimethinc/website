@@ -56,6 +56,10 @@ gem 'image_processing'
 # job queue using Active Job
 gem 'sidekiq'
 
+# syndication
+gem 'down' # downloading images from ActiveStorage/S3
+gem 'twitter', '~> 7'
+
 # dev and testing
 group :development, :test do
   gem 'awesome_print'
