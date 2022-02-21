@@ -8,6 +8,21 @@
     <div class="col-12 col-sm-6">
       <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 8 %>
     </div>
+
+    <div class="col-12 col-sm-6">
+      <%= form.label :image_poster_frame, "Poster Frame Image", class: "form-label" %>
+
+      <%= form.file_field :image_poster_frame, accept: acceptable_mime_types_for(:image), class: "form-control form-control-lg mb-3" %>
+
+      <% if @video.image_poster_frame.attached? %>
+        <%= video_image_tag @video %>
+      <% end %>
+
+      <p class="form-text text-muted">
+        You can create this image by taking a screenshot of the video,
+        then cropping out everything that isn't the video frame itself.
+      </p>
+    </div>
   </div>
 
   <div class="row">
