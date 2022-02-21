@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_21_055149) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
@@ -469,7 +469,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_024113) do
     t.text "content"
     t.text "tweet"
     t.text "summary"
-    t.text "image"
     t.text "image_description"
     t.string "content_format", default: "kramdown"
     t.string "slug"
