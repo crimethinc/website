@@ -60,8 +60,10 @@ Rails.application.routes.draw do
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
 
   # Draft Articles and Pages
-  get 'drafts/articles/:draft_code', to: 'articles#show', as: :article_draft
-  get 'drafts/pages/:draft_code',    to: 'pages#show',    as: :page_draft
+  get 'drafts/articles/:draft_code',            to: 'articles#show',       as: :article_draft
+  get 'drafts/pages/:draft_code',               to: 'pages#show',          as: :page_draft
+  get 'drafts/episodes/:draft_code',            to: 'episodes#show',       as: :episode_draft
+  get 'drafts/episodes/:draft_code/transcript', to: 'episodes#transcript', as: :episode_draft_transcript
 
   # Draft Articles and Pages /edit convenience routes
   get 'drafts/articles/:draft_code/edit', controller: 'admin/articles', action: 'edit'

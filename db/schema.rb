@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_21_055149) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_25_090158) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
@@ -189,6 +189,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_21_055149) do
     t.string "episode_number"
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.string "draft_code"
+    t.integer "publication_status", default: 0, null: false
     t.index ["canonical_id"], name: "index_episodes_on_canonical_id"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end

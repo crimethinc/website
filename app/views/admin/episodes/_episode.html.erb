@@ -27,6 +27,7 @@
         <% end %>
 
         <p><%= link_to episode.path, episode.path %></p>
+        <p><%= render "/admin/articles/publication_status_badge", resource: episode %></p>
 
         <%= link_to "#{episode.audio_mp3_file_size}mb .MP3", episode.audio_mp3_url, class: "btn btn-outline-primary btn-sm" %>
         <%= link_to "#{episode.audio_ogg_file_size}mb .OGG", episode.audio_ogg_url, class: "btn btn-outline-primary btn-sm" %>

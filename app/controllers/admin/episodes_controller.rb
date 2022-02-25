@@ -59,7 +59,8 @@ module Admin
       params.require(:episode).permit(:podcast_id, :title, :subtitle, :image, :content, :locale,
                                       :audio_mp3_url, :audio_mp3_file_size, :audio_ogg_url,
                                       :audio_ogg_file_size, :show_notes, :transcript, :audio_length,
-                                      :duration, :audio_type, :tags, :published_at, :published_at_tz)
+                                      :duration, :audio_type, :tags, :published_at, :published_at_tz,
+                                      :publication_status, :draft_code)
     end
   end
 end

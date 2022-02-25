@@ -5,9 +5,9 @@
     <%= form.label :podcast_id, class: "form-label d-block" %>
 
     <% @podcasts.each do |podcast| %>
-        <%= form.radio_button :podcast_id, podcast.id, id: "episode_podcast_id_#{podcast.id}", class: "btn-check" %>
+      <%= form.radio_button :podcast_id, podcast.id, id: "episode_podcast_id_#{podcast.id}", class: "btn-check" %>
 
-        <%= form.label "podcast_id_#{podcast.id}", podcast.title, class: "btn btn-outline-dark" %>
+      <%= form.label "podcast_id_#{podcast.id}", podcast.title, class: "btn btn-outline-dark" %>
     <% end %>
   </div>
 
@@ -19,6 +19,8 @@
     </div>
 
     <div class="col-12 col-md-6 col-lg-4">
+      <%= render "admin/articles/form/publication_status", form: form %>
+
       <%= render "admin/datetime_group", form: form, post: @episode, type: :episode %>
     </div>
   </div>

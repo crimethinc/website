@@ -27,10 +27,16 @@ class EpisodesController < ApplicationController
   end
 
   def set_episode
-    @episode = Episode.find_by(podcast_id: @podcast, episode_number: params[:episode_number])
-    return @episode if @episode.present?
+    if request.path.starts_with? '/draft'
+      @episode = Episode.find_by(draft_code: params[:draft_code])
 
-    redirect_to_podcast
+      return redirect_to(@episode.path) if @episode&.published?
+    else
+      @episode = Episode.live.find_by(podcast_id: @podcast, episode_number: params[:episode_number])
+      return @episode if @episode.present?
+
+      redirect_to_podcast
+    end
   end
 
   def redirect_to_podcast
