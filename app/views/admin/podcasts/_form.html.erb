@@ -28,7 +28,10 @@
     </div>
   </div>
 
-  <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 6 %>
+  <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 6, label_text: "Description" %>
+  <p class="form-text text-muted">
+    Plain text, no formatting.
+  </p>
 
   <div class="mb-3">
     <%= render "admin/label_and_field_form_group", form: form, attr: :tags %>
