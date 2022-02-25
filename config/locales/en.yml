@@ -194,6 +194,8 @@ en:
       work: Work
     definitions:
       index: Definitions
+    archives:
+      index: Archives
 
   podcast:
     latest_episode: Latest Episode

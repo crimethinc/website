@@ -192,6 +192,8 @@ fr:
       off_the_map: Off the Map
       recipes_for_disaster: Recipes for Disaster
       work: Work
+    archives:
+      index: Archives
 
   podcast:
     latest_episode: Dernier épisode
