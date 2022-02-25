@@ -13,68 +13,19 @@
     <% end %>
   </div>
 
-  <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
-  <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
-  <%= render "admin/label_and_field_form_group", form: form, attr: :image %>
-
-  <fieldset class="my-5">
-    <legend>Audio</legend>
-    <div class="row">
-      <div class="col-12 col-sm-9">
-        <%= render "admin/label_and_field_form_group", form: form, attr: :audio_mp3_url, label_text: "MP3 URL" %>
-      </div>
-
-      <div class="col-12 col-sm-3">
-        <%= render "admin/label_and_field_form_group", form: form, attr: :audio_mp3_file_size, label_text: "MP3 file size in MB" %>
-
-        <p class="form-text text-muted">
-          Just the number.
-        </p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12 col-sm-9">
-        <%= render "admin/label_and_field_form_group", form: form, attr: :audio_ogg_url, label_text: "OGG URL" %>
-      </div>
-
-      <div class="col-12 col-sm-3">
-        <%= render "admin/label_and_field_form_group", form: form, attr: :audio_ogg_file_size, label_text: "OGG file size in MB" %>
-
-        <p class="form-text text-muted">
-          Just the number.
-        </p>
-      </div>
-    </div>
-  </fieldset>
-
   <div class="row">
-    <div class="col-12 col-sm-4">
-      <%= render "admin/label_and_field_form_group", form: form, attr: :audio_length %>
-
-      <p class="form-text text-muted">
-        In seconds.
-      </p>
+    <div class="col-12 col-md-6 col-lg-8">
+      <%= render "admin/label_and_field_form_group", form: form, attr: :title %>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :subtitle %>
+      <%= render "admin/label_and_field_form_group", form: form, attr: :image %>
     </div>
 
-    <div class="col-12 col-sm-4">
-      <%= render "admin/label_and_field_form_group", form: form, attr: :duration %>
-
-      <p class="form-text text-muted">
-        In minutes, rounded.
-      </p>
-    </div>
-
-    <div class="col-12 col-sm-4">
-      <%= render "admin/label_and_field_form_group", form: form, attr: :audio_type %>
-
-      <p class="form-text text-muted">
-        Defaults to MP3.
-      </p>
+    <div class="col-12 col-md-6 col-lg-4">
+      <%= render "admin/datetime_group", form: form, post: @episode, type: :episode %>
     </div>
   </div>
 
-  <div class="mb-5">
+  <div class="mb-5 pb-5">
     <%= render "admin/label_and_field_form_group", form: form, attr: :tags %>
 
     <p class="form-text text-muted">
@@ -82,30 +33,95 @@
     </p>
   </div>
 
-  <%= render "admin/datetime_group", form: form, post: @episode, type: :episode %>
+  <fieldset class="my-5 card">
+    <h5 class="card-header">Audio</h5>
 
-  <div class="mt-5">
-    <%= render "admin/label_and_area_form_group", form: form, attr: :content, label_text: "Description", rows: 5 %>
+    <div class="card-body bg-light">
+      <div class="row">
+        <div class="col-12 col-sm-9">
+          <%= render "admin/label_and_field_form_group", form: form, attr: :audio_mp3_url, label_text: "MP3 URL" %>
+        </div>
 
-    <p class="form-text text-muted">
-      Formatted as HTML.
-    </p>
-  </div>
+        <div class="col-12 col-sm-3">
+          <%= render "admin/label_and_field_form_group", form: form, attr: :audio_mp3_file_size, label_text: "MP3 file size in MB" %>
 
-  <div class="mt-5">
-    <%= render "admin/label_and_area_form_group", form: form, attr: :show_notes, rows: 5 %>
+          <p class="form-text text-muted">
+            Just the number.
+          </p>
+        </div>
+      </div>
 
-    <p class="form-text text-muted">
-      Formatted as HTML.
-    </p>
-  </div>
+      <div class="row">
+        <div class="col-12 col-sm-9">
+          <%= render "admin/label_and_field_form_group", form: form, attr: :audio_ogg_url, label_text: "OGG URL" %>
+        </div>
 
-  <div class="mt-5">
-    <%= render "admin/label_and_area_form_group", form: form, attr: :transcript, rows: 5 %>
+        <div class="col-12 col-sm-3">
+          <%= render "admin/label_and_field_form_group", form: form, attr: :audio_ogg_file_size, label_text: "OGG file size in MB" %>
 
-    <p class="form-text text-muted">
-      Formatted as HTML.
-    </p>
+          <p class="form-text text-muted">
+            Just the number.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <%= render "admin/label_and_field_form_group", form: form, attr: :audio_length %>
+
+            <p class="form-text text-muted">
+              In seconds.
+            </p>
+          </div>
+
+          <div class="col-12 col-sm-4">
+            <%= render "admin/label_and_field_form_group", form: form, attr: :duration %>
+
+            <p class="form-text text-muted">
+              In minutes, rounded.
+            </p>
+          </div>
+
+          <div class="col-12 col-sm-4">
+            <%= render "admin/label_and_field_form_group", form: form, attr: :audio_type %>
+
+            <p class="form-text text-muted">
+              Defaults to MP3.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <div class="row pt-5">
+    <div class="col-12 col-md-6">
+      <div class="mb-5">
+        <%= render "admin/label_and_area_form_group", form: form, attr: :content, label_text: "Summary", rows: 4 %>
+
+        <p class="form-text text-muted">
+          Formatted as Markdown.
+        </p>
+      </div>
+
+      <div class="mb-5">
+        <%= render "admin/label_and_area_form_group", form: form, attr: :show_notes, rows: 7 %>
+
+        <p class="form-text text-muted">
+          Formatted as Markdown.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="mb-5">
+        <%= render "admin/label_and_area_form_group", form: form, attr: :transcript, rows: 15 %>
+
+        <p class="form-text text-muted">
+          Formatted as Markdown.
+        </p>
+      </div>
+    </div>
   </div>
 
   <%= render "admin/form_actions", cancel_url: [:admin, :episodes] %>
