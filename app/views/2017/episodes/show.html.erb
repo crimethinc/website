@@ -69,23 +69,21 @@
             <% if @episode.transcript.present? %>
               <h3><%= t("podcast.transcript") %></h3>
               <div class="transcript">
-                <%= raw @episode.transcript %>
+                <%= render_markdown @episode.transcript %>
               </div>
             <% end %>
           <% else %>
             <% if @episode.content.present? %>
               <h3><%= t("podcast.summary") %></h3>
               <div class="summary">
-                <%= raw @episode.content.
-                  gsub("-------SHOW NOTES------", "<h3>#{t('podcast.show_notes')}</h3>").
-                  gsub("<p> </p>", "").html_safe %>
+                <%= render_markdown @episode.content %>
               </div>
             <% end %>
 
             <% if @episode.show_notes.present? %>
               <h3><%= t("podcast.notes_and_links") %></h3>
               <div class="notes">
-                <%= raw @episode.show_notes %>
+                <%= render_markdown @episode.show_notes %>
               </div>
             <% end %>
           <% end %>
