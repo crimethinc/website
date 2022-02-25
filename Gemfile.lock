@@ -415,7 +415,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     squasher (0.6.2)
-    stackprof (0.2.18)
+    stackprof (0.2.19)
     sterile (1.0.23)
       nokogiri (>= 1.11.7)
     stringex (2.8.5)
