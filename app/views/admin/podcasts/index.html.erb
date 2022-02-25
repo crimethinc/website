@@ -1,41 +1,41 @@
 <%= render "admin/page_header", thing: @podcasts %>
 
 <% @podcasts.each do |podcast| %>
-<div class="mb-5">
-  <header class="mt-5 mb-3">
-    <%= link_to [:admin, podcast] do %>
-      <h1><%= podcast.title %></h1>
-      <h2 class="lead"><%= podcast.subtitle %></h2>
-    <% end %>
-  </header>
-
-<p><%= link_to "NEW Episode", [:new, :admin, :episode], class: "btn btn-outline-primary btn-sm" %></p>
-
-<table class="table table-striped table-sm mb-5">
-    <thead class="table-dark">
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Published At</th>
-        <th>Path</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% podcast.episodes.each do |episode| %>
-        <tr>
-          <td><%= link_to "EDIT", [:edit, :admin, episode], class: "btn btn-light border-secondary btn-sm" %></td>
-          <td>
-            <%= link_to [:admin, episode] do %>
-              <b><%= episode.title %></b><br>
-              <%= episode.subtitle %>
-            <% end %>
-          </td>
-          <td><%= episode.published_at %></td>
-          <td><%= link_to episode.path, episode.path %></td>
-        </tr>
+  <div class="mb-5">
+    <header class="mt-5 mb-3">
+      <%= link_to [:admin, podcast] do %>
+        <h1><%= podcast.title %></h1>
+        <h2 class="lead"><%= podcast.subtitle %></h2>
       <% end %>
-    </tbody>
-  </table>
-</div>
+    </header>
+
+    <p><%= link_to "NEW Episode", [:new, :admin, :episode], class: "btn btn-outline-primary btn-sm" %></p>
+
+    <table class="table table-striped table-sm mb-5">
+      <thead class="table-dark">
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Published At</th>
+          <th>Path</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% podcast.episodes.each do |episode| %>
+          <tr>
+            <td><%= link_to "EDIT", [:edit, :admin, episode], class: "btn btn-light border-secondary btn-sm" %></td>
+            <td>
+              <%= link_to [:admin, episode] do %>
+                <b><%= episode.title %></b><br>
+                <%= episode.subtitle %>
+              <% end %>
+            </td>
+            <td><%= episode.published_at %></td>
+            <td><%= link_to episode.path, episode.path %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 <% end %>
