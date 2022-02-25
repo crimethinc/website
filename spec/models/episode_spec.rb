@@ -21,7 +21,7 @@ RSpec.describe Episode, type: :model do
     subject { episode.path }
 
     let(:podcast) { Podcast.create(slug: 'a-nice-podcast') }
-    let(:episode) { described_class.create(id: 1, slug: 'test-slug', podcast: podcast) }
+    let(:episode) { described_class.create(id: 1, slug: 'test-slug', podcast: podcast, publication_status: :published) }
 
     it { is_expected.to eq('/podcasts/a-nice-podcast/episodes/1') }
   end
