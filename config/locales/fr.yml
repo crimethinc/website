@@ -192,6 +192,8 @@ fr:
       off_the_map: Off the Map
       recipes_for_disaster: Recipes for Disaster
       work: Work
+    definitions:
+      index: Définitions
     archives:
       index: Archives
 
