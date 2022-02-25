@@ -15,6 +15,6 @@ class Podcast < ApplicationRecord
   end
 
   def latest_episode
-    episodes.first
+    episodes.live.published.first
   end
 end

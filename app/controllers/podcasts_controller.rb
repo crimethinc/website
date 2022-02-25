@@ -3,7 +3,6 @@ class PodcastsController < ApplicationController
     @html_id  = 'page'
     @body_id  = 'podcast'
     @podcasts = Podcast.all.sort_by { |podcast| podcast.latest_episode.published_at }.reverse
-    @episodes = @podcast.episodes.live.published
     @editable = @podcasts.first
     @title    = PageTitle.new title_for :podcasts
 
@@ -11,10 +10,11 @@ class PodcastsController < ApplicationController
   end
 
   def show
-    @html_id = 'page'
-    @body_id = 'podcast'
-    @podcast = Podcast.find_by! slug: params[:slug]
-    @title   = PageTitle.new title_for @podcast.name
+    @html_id  = 'page'
+    @body_id  = 'podcast'
+    @podcast  = Podcast.find_by! slug: params[:slug]
+    @episodes = @podcast.episodes.live.published
+    @title    = PageTitle.new title_for @podcast.name
 
     render "#{Current.theme}/podcasts/show"
   end
