@@ -3,6 +3,7 @@ class PodcastsController < ApplicationController
     @html_id  = 'page'
     @body_id  = 'podcast'
     @podcasts = Podcast.all.sort_by { |podcast| podcast.latest_episode.published_at }.reverse
+    @episodes = @podcast.episodes.live.published
     @editable = @podcasts.first
     @title    = PageTitle.new title_for :podcasts
 

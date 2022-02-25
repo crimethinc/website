@@ -12,7 +12,7 @@
   <div class="column column-two-third e-content">
     <div class="h-feed">
 
-      <% latest_episode = @podcast.episodes.first %>
+      <% latest_episode = @episodes.first %>
 
       <div class="latest-episode">
         <h3><%= t("podcast.latest_episode") %></h3>
@@ -27,7 +27,7 @@
       <div class="other-episodes">
         <h3><%= t("podcast.other_episodes") %></h3>
         <ul>
-          <% @podcast.episodes[1..-1].each do |episode| %>
+          <% @episodes[1..-1].each do |episode| %>
             <li>
               <article class="h-entry" id="episode-<%= episode.id %>">
                 <h1><%= link_to episode.title, episode.path, class: "p-name u-url" %></h1>
