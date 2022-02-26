@@ -247,6 +247,14 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'ukrayinska-mova' }
   end
 
+  trait(:vi) do
+    abbreviation { 'vi' }
+    name_in_english { 'Vietnamese' }
+    name { 'Tiếng Việt' }
+    language_direction { 'ltr' }
+    slug { 'tieng-viet' }
+  end
+
   trait(:zh) do
     abbreviation { 'zh' }
     name_in_english { 'Chinese' }
