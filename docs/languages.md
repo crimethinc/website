@@ -70,3 +70,17 @@ Duplicate this folder:
 Rename them to match the locale abbreviation:
 
 - `config/locales/pages/cs`
+
+### Add the abbreviation to array of allowed subdomains
+
+In the application config file:
+
+`config/application.rb`
+
+Add the locale abbreviation to the `subdomain_locales` array.
+
+Before:
+`subdomain_locales = subdomain_locales = %i[ar bn … zh]`
+
+After:
+`subdomain_locales = subdomain_locales = %i[ar bn cs … zh]`
