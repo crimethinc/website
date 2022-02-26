@@ -114,6 +114,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'ᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔', lang_code: :tl, canonical: 'tagalog'),
     Locale.new(locale: 'tagalog', lang_code: :tl, canonical: 'tagalog'),
 
+    # vi: vietnamese
+    Locale.new(locale: 'vietnamese', lang_code: :vi, canonical: 'tieng-viet'),
+    Locale.new(locale: 'tiếng việt', lang_code: :vi, canonical: 'tieng-viet'),
+    Locale.new(locale: 'tieng viet', lang_code: :vi, canonical: 'tieng-viet'),
+
     # sh: serbo-croatian
     Locale.new(locale: 'serbo-croatian',  lang_code: :sh, canonical: 'srpskohrvatski'),
     Locale.new(locale: 'srpskohrvatski',  lang_code: :sh, canonical: 'srpskohrvatski'),

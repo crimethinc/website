@@ -60,3 +60,13 @@ Follow the pattern in each file to add the new locale too.
 `config/application.rb`
 
 Add the locale abbreviation to the `subdomain_locales` array.
+
+### Duplicate, rename, and edit locale Steal Something from Work Day files
+
+Duplicate this folder:
+
+- `config/locales/pages/en`
+
+Rename them to match the locale abbreviation:
+
+- `config/locales/pages/cs`
