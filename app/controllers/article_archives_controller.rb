@@ -2,7 +2,7 @@ class ArticleArchivesController < ApplicationController
   def index
     @html_id = 'page'
     @body_id = 'article-archives'
-    @title   = PageTitle.new 'Articles'
+    @title   = PageTitle.new title_for :archives
 
     @article_archive = ArticleArchive.new(year:  params[:year],
                                           month: params[:month],
