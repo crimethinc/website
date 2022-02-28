@@ -9,13 +9,15 @@ if Rails.env.production?
     class Attack
       throttle('limit requests per IP', limit: 60, period: 1.minute) do |req|
         # Allow trusted requests through unthrottled
-        return if ENV['RACK_ATTACK_ALLOWED_USER_AGENT'].present? &&
-                  req.user_agent&.starts_with?(ENV['RACK_ATTACK_ALLOWED_USER_AGENT'])
+        trusted_request =
+          ENV['RACK_ATTACK_ALLOWED_USER_AGENT'].present? &&
+          req.user_agent&.starts_with?(ENV['RACK_ATTACK_ALLOWED_USER_AGENT'])
 
         # Allow Asset Pipeline and ActiveStorage requests through unthrottled
-        return if req.path.start_with? '/assets', '/rails/active_storage'
+        asset_pipeline = req.path.start_with? '/assets'
+        active_storage = req.path.start_with? '/rails/active_storage'
 
-        req.ip
+        req.ip unless trusted_request || asset_pipeline || active_storage
       end
     end
   end
