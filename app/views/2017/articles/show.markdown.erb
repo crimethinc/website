@@ -1,8 +1,8 @@
 ---
-lang:     <%= @article.locale %>
-title:    <%= @article.title %>
-subtitle: <%= @article.subtitle %>
-tags:     <%= @article.tags.map(&:name).join ", " %>
+lang: <%= @article.locale %>
+title: <%= raw @article.title %>
+subtitle: <%= raw @article.subtitle %>
+tags: <%= @article.tags.map(&:name).join ", " %>
 
 # for cwc.im short URL in tweets
 short_path: <%= "/#{@article.short_path}" %>
@@ -13,6 +13,11 @@ summary: <%= @article.summary %>
 
 # for image caption
 header_image_description: <%= @article.image_description %>
+<%- end -%>
+<%- if @article.tweet.present? -%>
+
+# for publishing to Twitter
+tweet: <%= @article.tweet %>
 <%- end -%>
 ---
 
