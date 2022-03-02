@@ -14,6 +14,6 @@ RSpec.describe Video, type: :model do
 
     let(:video) { described_class.new(publication_status: 'published') }
 
-    it { is_expected.to eq(true) }
+    it { is_expected.to be(true) }
   end
 end

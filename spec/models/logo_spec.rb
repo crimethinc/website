@@ -6,6 +6,6 @@ RSpec.describe Logo, type: :model do
 
     let(:logo) { described_class.new(title: 'Logo', publication_status: 'published') }
 
-    it { is_expected.to eq(true) }
+    it { is_expected.to be(true) }
   end
 end

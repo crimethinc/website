@@ -6,7 +6,7 @@ RSpec.describe Poster, type: :model do
 
     let(:poster) { described_class.new(title: 'Poster', publication_status: 'published') }
 
-    it { is_expected.to eq(true) }
+    it { is_expected.to be(true) }
   end
 
   describe '#tags' do

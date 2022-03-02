@@ -8,7 +8,7 @@ RSpec.describe Post, type: :model do
       context "with status of #{status_name}" do
         let(:post) { Page.new(publication_status: status_name) }
 
-        it { is_expected.to eq(true) }
+        it { is_expected.to be(true) }
       end
     end
   end

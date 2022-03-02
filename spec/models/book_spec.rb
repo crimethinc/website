@@ -46,7 +46,7 @@ RSpec.describe Book, type: :model do
 
     let(:book) { described_class.new(title: 'Contradictionary', publication_status: 'published') }
 
-    it { is_expected.to eq(true) }
+    it { is_expected.to be(true) }
   end
 
   describe '#tags' do

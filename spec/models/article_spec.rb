@@ -114,7 +114,7 @@ describe Article do
         collection = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
         create(:article, title: 'test', collection_id: collection.id, publication_status: 'published', published_at: published_at)
 
-        expect(collection.collection_root?).to eq true
+        expect(collection.collection_root?).to be true
       end
     end
 
@@ -122,7 +122,7 @@ describe Article do
       it 'returns false' do
         article = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
 
-        expect(article.collection_root?).to eq false
+        expect(article.collection_root?).to be false
       end
     end
   end
@@ -135,7 +135,7 @@ describe Article do
         collection = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
         article = create(:article, title: 'test', collection_id: collection.id, publication_status: 'published', published_at: published_at)
 
-        expect(article.in_collection?).to eq true
+        expect(article.in_collection?).to be true
       end
     end
 
@@ -143,7 +143,7 @@ describe Article do
       it 'returns false' do
         article = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
 
-        expect(article.in_collection?).to eq false
+        expect(article.in_collection?).to be false
       end
     end
   end
