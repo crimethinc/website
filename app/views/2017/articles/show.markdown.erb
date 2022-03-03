@@ -11,7 +11,7 @@ tags: <%= @article.tags.map(&:name).join ", " %>
 short_path: <%= "/#{@article.short_path}" %>
 
 # for link previews in social media / messaging apps
-summary: <%= @article.summary %>
+summary: <%= raw @article.summary %>
 <%- if @article.image_description.present? -%>
 
 # for image caption
