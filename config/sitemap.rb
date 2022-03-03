@@ -70,7 +70,7 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
     add "/#{year}/"
   end
 
-  [Book, Episode, Page, Podcast, Video, Tools].each do |model|
+  [Book, Episode, Page, Podcast, Video, Zine, Journal, Issue, Episode, Poster, Sticker, Logo].each do |model|
     model.find_each do |page|
       add page.path, lastmod: page.updated_at
     end

@@ -17,7 +17,7 @@ RSpec.describe 'Rack::CleanPath', type: :request do
     get 'http://example.com/sitemap.xml'
 
     expect(response.status).to eq(200)
-    expect(response.header['Location']).to eq(nil)
+    expect(response.header['Location']).to be_nil
     expect(response.body).to eq('<sitemap>test</sitemap>')
   end
 end
