@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'rake'
+Rails.application.load_tasks
 
 RSpec.describe 'Rack::CleanPath', type: :request do
   it 'redirects according to path clean up rules' do
@@ -14,10 +16,14 @@ RSpec.describe 'Rack::CleanPath', type: :request do
   end
 
   it 'do not strip .xml extension for sitemap.xml' do
-    get 'http://example.com/sitemap.xml'
+    Rake::Task['sitemap:refresh:no_ping'].invoke
+
+    get 'http://example.com/sitemap.xml.gz'
 
     expect(response.status).to eq(200)
     expect(response.header['Location']).to be_nil
-    expect(response.body).to eq('<sitemap>test</sitemap>')
+    expect(response.body).not_to be_empty
+
+    Rake::Task['sitemap:clean'].invoke
   end
 end
