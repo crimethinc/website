@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_25_090158) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_05_063227) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
@@ -246,6 +246,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_25_090158) do
     t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.index ["canonical_id"], name: "index_issues_on_canonical_id"
   end
 
