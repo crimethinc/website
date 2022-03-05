@@ -53,6 +53,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'francais', lang_code: :fr, canonical: 'francais'),
     Locale.new(locale: 'french',   lang_code: :fr, canonical: 'francais'),
 
+    # gl: galician
+    Locale.new(locale: 'galician', lang_code: :gl, canonical: 'galego'),
+    Locale.new(locale: 'gallego',  lang_code: :gl, canonical: 'gallego'),
+
     # gr: greek
     Locale.new(locale: 'ελληνικά', lang_code: :gr, canonical: 'ellenika'),
     Locale.new(locale: 'ellenika', lang_code: :gr, canonical: 'ellenika'),

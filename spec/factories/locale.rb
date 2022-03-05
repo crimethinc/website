@@ -95,6 +95,14 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     slug { 'francais' }
   end
 
+  trait(:gl) do
+    abbreviation { 'gl' }
+    name_in_english { 'Galician' }
+    name { 'Gallego' }
+    language_direction { 'ltr' }
+    slug { 'gallego' }
+  end
+
   trait(:gr) do
     abbreviation { 'gr' }
     name_in_english { 'Greek' }

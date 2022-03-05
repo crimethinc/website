@@ -28,6 +28,7 @@ FactoryBot.define do
   trait(:farsi)          { locale { 'fa' } }
   trait(:finnish)        { locale { 'fi' } }
   trait(:french)         { locale { 'fr' } }
+  trait(:galician)       { locale { 'gl' } }
   trait(:greek)          { locale { 'gr' } }
   trait(:hebrew)         { locale { 'he' } }
   trait(:indonesian)     { locale { 'id' } }
