@@ -46,11 +46,11 @@ module Rack
       # request
       @req = Rack::Request.new(env)
 
+      # no-op for root route, assets and sitemap.xml
+      return @app.call(env) if exit_early?
+
       # source path
       @path = @req.path
-
-      # no-op for root route and assets
-      return @app.call(env) if exit_early?
 
       unsmoosh_path_from_unicode_tweet_text!
       make_subsitutions!

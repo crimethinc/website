@@ -27,22 +27,28 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
   static_paths = [
     '/about/',
     '/arts/submission-guidelines',
-    '/books/into-libraries/', '/books/lit-kit/',
+    '/books/into-libraries/',
+    '/books/lit-kit/',
     '/categories/',
     '/faq/',
+    'games/j20',
     '/get/',
     '/kickstarter/2017/',
     '/listen/',
     '/library/',
     '/read/',
-    '/rt/', '/rt/archives/',
+    '/rt/',
+    '/rt/archives/',
     '/start/',
-    '/store/', '/store/audio/', '/store/added/',
+    '/steal-something-from-work-day',
+    '/store/',
+    '/store/audio/',
+    '/store/added/',
     '/tce/',
     '/tools/',
     '/watch/'
   ]
-  tce_languages = %w[czech deutsch espanol polski portugues quebecois slovenscina slovensko]
+  tce_languages = %w[czech deutsch espanol espanol-america-latina polski portugues quebecois slovenscina slovensko فارسی 日本語 한국어 lietuvos portugues ภาษาไทย]
 
   tce_languages.each do |lang|
     static_paths.push("/tce/#{lang}/", "/tce/#{lang}/get/")
@@ -60,11 +66,11 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
     add "/categories/#{category.slug}/"
   end
 
-  [2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1997, 1996].each do |year|
+  [1996..Time.zone.today.year].to_a.each do |year|
     add "/#{year}/"
   end
 
-  [Book, Episode, Page, Podcast, Video].each do |model|
+  [Book, Episode, Page, Podcast, Video, Zine, Journal, Issue, Episode, Poster, Sticker, Logo].each do |model|
     model.find_each do |page|
       add page.path, lastmod: page.updated_at
     end
