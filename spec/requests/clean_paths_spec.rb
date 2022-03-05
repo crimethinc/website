@@ -15,7 +15,7 @@ RSpec.describe 'Rack::CleanPath', type: :request do
     expect(response.header['Location']).to eq('/about/faq?test=true')
   end
 
-  it 'do not strip .xml extension for sitemap.xml' do
+  it 'does not strip .xml extension from sitemap.xml' do
     Rake::Task['sitemap:refresh:no_ping'].invoke
 
     get 'http://example.com/sitemap.xml.gz'
