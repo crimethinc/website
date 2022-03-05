@@ -14,6 +14,7 @@ describe 'Language Landing Page' do
     create(:article, :farsi)
     create(:article, :finnish)
     create(:article, :french)
+    create(:article, :galician)
     create(:article, :german)
     create(:article, :greek)
     create(:article, :hebrew)
