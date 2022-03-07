@@ -20,6 +20,12 @@
 
     <%= render_markdown t("views.languages.view_tools_in_locale", locale: @locale.abbreviation) %>
     <%= render_markdown t("views.languages.view_books_in_locale", locale: @locale.abbreviation) %>
+
+    <p>
+      <%= link_to [:feed, lang: @locale.abbreviation] do %>
+        <%= @locale.name %> RSS
+      <% end %>
+    </p>
   </div>
 </header>
 
