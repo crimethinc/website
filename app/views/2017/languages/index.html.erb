@@ -21,8 +21,12 @@
             <li>
               <h2>
                 <%= english_link %>
-                <small style="font-size: .5em"><%= number_with_delimiter locale.articles_count %></small>
+                <small style="font-size: .5em">
+                  <%= number_with_delimiter locale.articles_count %>
+                  <%= link_to "RSS", [:feed, lang: locale.abbreviation] %>
+                </small>
               </h2>
+
               <b><%= unicode_link %></b> (<%= slug_link %>)
             </li>
           <% end %>
