@@ -69,6 +69,7 @@ Rails.application.routes.draw do
   get 'drafts/articles/:draft_code/edit', controller: 'admin/articles', action: 'edit'
 
   # Articles Atom Feed
+  get 'feeds',             to: 'pages#feeds',                                  as: :feeds
   get 'feed(/:lang).json', to: 'articles#index', defaults: { format: 'json' }, as: :json_feed
   get 'feed(/:lang)',      to: 'articles#index', defaults: { format: 'atom' }, as: :feed
 
