@@ -8,6 +8,9 @@ class ArticlesController < ApplicationController
                        .page(params[:page])
                        .per(10)
 
+    locale = Locale.find_by(abbreviation: params[:lang])
+    @lang = locale.abbreviation if locale.present?
+
     render "#{Current.theme}/articles/index"
   end
 

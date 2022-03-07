@@ -1,0 +1,33 @@
+<article id="page-feeds" class="h-entry">
+  <header>
+    <h1><%= t "feeds.title" %></h1>
+  </header>
+
+  <%# TODO %>
+  <% if false %>
+  <div class="intro">
+    <%= render_markdown t("feeds.intro") %>
+  </div>
+  <% end %>
+
+  <div class="e-content">
+
+    <% @locales.each do |locale| %>
+      <%
+        unicode_link = link_to locale.name,            [:feed, lang: locale.abbreviation.to_sym]
+        slug_link    = link_to locale.slug,            [:feed, lang: locale.abbreviation.to_sym]
+        english_link = link_to locale.name_in_english, [:feed, lang: locale.abbreviation.to_sym]
+      %>
+
+      <ul>
+        <li>
+          <%= english_link %>
+          <b><%= unicode_link %></b>
+          (<%= slug_link %>)
+          <small><%= number_with_delimiter locale.articles_count %></small>
+        </li>
+      </ul>
+    <% end %>
+
+  </div>
+</article>

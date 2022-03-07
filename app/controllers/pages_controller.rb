@@ -26,6 +26,14 @@ class PagesController < ApplicationController
     render "#{Current.theme}/pages/contact"
   end
 
+  def feeds
+    @title = PageTitle.new I18n.t('page_titles.about.rss_feeds')
+
+    @locales = Locale.unscoped.order(name_in_english: :asc)
+
+    render "#{Current.theme}/pages/feeds"
+  end
+
   def library
     @title = PageTitle.new I18n.t('page_titles.about.library')
 
