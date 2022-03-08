@@ -22,7 +22,14 @@
             <p class="e-content"><%= latest_episode.subtitle %></p>
 
             <%= render_themed "podcasts/player", episode: latest_episode unless lite_mode? %>
+
+            <p>
+              <%= link_to podcast.path do %>
+              Find more episodes of <i><%= podcast.title %></i> here →
+              <% end %>
+            </p>
           </article>
+
         </div> <!-- .latest-episodes -->
       </div> <!-- .h-feed -->
     </div> <!-- .column -->
