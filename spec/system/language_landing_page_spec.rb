@@ -46,7 +46,7 @@ describe 'Language Landing Page' do
       links = all('a')
 
       # 3 versions of every language's link
-      expect(links.count).to eq(Article.count * 3)
+      expect(links.count).to eq(Article.count * 4)
     end
   end
 
