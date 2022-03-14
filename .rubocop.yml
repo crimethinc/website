@@ -28,7 +28,7 @@ Layout/SpaceBeforeBrackets:
   Enabled: false
 
 Metrics/AbcSize:
-  Max: 72
+  Max: 74
 
 Metrics/BlockLength:
   Max: 99
@@ -42,7 +42,7 @@ Metrics/CyclomaticComplexity:
   Max: 13
 
 Metrics/MethodLength:
-  Max: 30
+  Max: 31
   Exclude:
     - 'db/migrate/*'
 

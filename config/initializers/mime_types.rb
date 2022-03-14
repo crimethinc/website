@@ -4,3 +4,4 @@
 # Mime::Type.register "text/richtext", :rtf
 
 Mime::Type.register 'text/markdown', :markdown
+Mime::Type.register 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', :docx
