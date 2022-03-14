@@ -10,10 +10,12 @@
     <%= link_to "Scroll to Site Top", "#header",  class: "button" %>
 
     <% if @editable.present? %>
-      <b><%= link_to "Edit #{@editable.class}", [:edit, :admin, @editable], class: "button button-buy" %></b>
+      <b><%= link_to "Edit #{@editable.class}", [:edit, :admin, @editable], class: "button" %></b>
     <% end %>
 
     <% if @article.present? %>
+      <%= link_to "Download .docx", "#{@article.path}.docx", class: "button" %>
+
       <%= render 'admin/translate_this', resource: @article %>
     <% end %>
   </nav>

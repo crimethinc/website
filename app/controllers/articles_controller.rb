@@ -81,7 +81,30 @@ class ArticlesController < ApplicationController
       respond_to do |format|
         format.html     { render "#{Current.theme}/articles/show" }
         format.markdown { render "#{Current.theme}/articles/show" }
+        format.docx     { download_docx }
       end
     end
+  end
+
+  private
+
+  def download_docx
+    send_data generate_docx, filename: "#{@article.slug}.docx", type: docx_mimetype
+  end
+
+  def generate_docx
+    PandocRuby.new(content_without_embeds, from: :markdown, to: :docx).convert
+  end
+
+  def content_without_embeds
+    @article
+      .content
+      .gsub(/\[\[.+\]\]/, '')
+      .gsub("\r\n\r\n\r\n\r\n", "\r\n\r\n")
+      .gsub("\r\n\r\n\r\n", "\r\n\r\n")
+  end
+
+  def docx_mimetype
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
   end
 end

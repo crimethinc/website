@@ -48,7 +48,7 @@ Rails.application.routes.draw do
 
   # Article permalink
   # no (/:lang) since slug should encompass that
-  get ':year/:month/:day/:slug(/feed)',
+  get ':year/:month/:day/:slug(.:format)',
       to:          'articles#show',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article
