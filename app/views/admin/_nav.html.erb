@@ -9,35 +9,10 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
-          <%= nav_to "📝 New Article", [:new, :admin, :article] %>
-          <%= nav_to "📄 Articles",  [:admin, :articles] %>
-          <%= nav_to "↪️ Redirects", [:admin, :redirects] %>
-
-          <li class="nav-item dropdown">
-            <%= link_to "#", class: "nav-link dropdown-toggle", data: { "bs-toggle" => "dropdown" }, role: "button", aria: { haspopup: "true", expanded: "false" } do %>
-              ⬇️ Content
-            <% end %>
-
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><%= link_to "📄 Articles",   [:admin, :articles] %></li>
-              <li class="dropdown-item"><%= link_to "📦 Categories", [:admin, :categories] %></li>
-              <li class="dropdown-item"><%= link_to "🌍 Locales",    [:admin, :locales] %></li>
-              <li class="dropdown-item"><%= link_to "📜 Pages",      [:admin, :pages] %></li>
-              <li role="separator" class="dropdown-divider"></li>
-              <li class="dropdown-header">Media</li>
-              <li class="dropdown-item"><%= link_to "🎧 Podcasts", [:admin, :podcasts] %></li>
-              <li class="dropdown-item"><%= link_to "🎬 Videos",   [:admin, :videos] %></li>
-              <li role="separator" class="dropdown-divider"></li>
-              <li class="dropdown-header">Tools</li>
-              <li class="dropdown-item"><%= link_to "📚 Books",       [:admin, :books] %></li>
-              <li class="dropdown-item"><%= link_to "🖨 Zines",       [:admin, :zines] %></li>
-              <li class="dropdown-item"><%= link_to "📰 Journals",    [:admin, :journals] %></li>
-              <li class="dropdown-item"><%= link_to "📉 Posters",     [:admin, :posters] %></li>
-              <li class="dropdown-item"><%= link_to "🌠 Stickers",    [:admin, :stickers] %></li>
-              <li class="dropdown-item"><%= link_to "🔫 Logos",       [:admin, :logos] %></li>
-              <li class="dropdown-item"><%= link_to "📕 Definitions", [:admin, :definitions] %></li>
-            </ul>
-          </li>
+          <%= nav_to "📝 New Article",  [:new, :admin, :article] %>
+          <%= nav_to "📄 Articles",     [:admin, :articles] %>
+          <%= nav_to "↪️ Redirects",    [:admin, :redirects] %>
+          <%= nav_to "⤴️ New Redirect", [:new, :admin, :redirect] %>
         </ul>
 
         <div class="d-flex">
