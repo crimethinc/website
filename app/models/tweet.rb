@@ -27,9 +27,9 @@ class Tweet
   end
 
   def image_url
-    return thing.image.url if thing.image.is_a? ActiveStorage::Attached::One
+    return "https://crimethinc.com#{thing.image_file}" if thing.image.is_a? ActiveStorage::Attached::One
 
-    "https://crimethinc.com#{thing.image}"
+    thing.image
   end
 
   def image_file
