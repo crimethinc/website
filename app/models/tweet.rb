@@ -29,7 +29,7 @@ class Tweet
   def image_url
     return thing.image.url if thing.image.is_a? ActiveStorage::Attached::One
 
-    thing.image
+    "https://crimethinc.com#{thing.image}"
   end
 
   def image_file
