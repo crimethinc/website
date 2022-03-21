@@ -140,7 +140,7 @@ FactoryBot.define do # rubocop:disable Metrics/BlockLength
     name_in_english { 'Japanese' }
     name { '日本語' }
     language_direction { 'ltr' }
-    slug { 'ri-ben-yu' }
+    slug { 'nihongo' }
   end
 
   trait(:ko) do
