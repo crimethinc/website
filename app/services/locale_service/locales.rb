@@ -110,9 +110,9 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'portugues-brasileiro', lang_code: :pt, canonical: 'portugues-brasileiro'),
 
     # ro: romana
-    Locale.new(locale: 'română',   lang_code: :ru, canonical: 'romana'),
-    Locale.new(locale: 'romanian', lang_code: :ru, canonical: 'romana'),
-    Locale.new(locale: 'romana',   lang_code: :ru, canonical: 'romana'),
+    Locale.new(locale: 'română',   lang_code: :ro, canonical: 'romana'),
+    Locale.new(locale: 'romanian', lang_code: :ro, canonical: 'romana'),
+    Locale.new(locale: 'romana',   lang_code: :ro, canonical: 'romana'),
 
     # ru: russian
     Locale.new(locale: 'русский', lang_code: :ru, canonical: 'russkii'),
