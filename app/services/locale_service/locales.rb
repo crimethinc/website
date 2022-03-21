@@ -76,9 +76,9 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'italiano', lang_code: :it, canonical: 'italiano'),
 
     # ja: japanese
-    Locale.new(locale: 'japanese',  lang_code: :ja, canonical: 'ri-ben-yu'),
-    Locale.new(locale: 'ri-ben-yu', lang_code: :ja, canonical: 'ri-ben-yu'),
-    Locale.new(locale: '日本語', lang_code: :ja, canonical: 'ri-ben-yu'),
+    Locale.new(locale: 'japanese', lang_code: :ja, canonical: 'nihongo'),
+    Locale.new(locale: 'nihongo',  lang_code: :ja, canonical: 'nihongo'),
+    Locale.new(locale: '日本語', lang_code: :ja, canonical: 'nihongo'),
 
     # ko: korean
     Locale.new(locale: 'korean',   lang_code: :ko, canonical: 'hangugeo'),
