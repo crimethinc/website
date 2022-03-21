@@ -38,8 +38,12 @@ module Crimethinc
     config.i18n.default_locale = :en
 
     # Allowed list locales available for the application
-    subdomain_locales = %i[ar bn cs cz da de dv en es fa fi fr gl gr he id it ja ko nl no pl pt ru sh sv th tl tr uk vi zh]
-    path_ltr_locales  = %i[
+    subdomain_locales = %i[
+      ar bn cs cz da de dv en es fa fi fr gl gr he id it
+      ja ko nl no pl pt ro ru sh sv th tl tr uk vi zh
+    ]
+
+    path_ltr_locales = %i[
       english
       espanol
       espanol-america-latina
@@ -51,6 +55,7 @@ module Crimethinc
       한국어
     ]
     path_rtl_locales = %i[فارسی]
+
     config.i18n.available_locales = [subdomain_locales, path_ltr_locales, path_rtl_locales].flatten
 
     # Allow nested diretories in locales
