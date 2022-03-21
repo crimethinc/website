@@ -9,7 +9,7 @@
 #  9. Markdown examples: [link text](url), **bold**, _italics_, %{dynamic variable}, etc.
 # 10. If a value has <b>HTML</b> syntax characters in it, please keep those in your translation.
 gl:
-  name: Galego
+  name: Gallego
   language_direction: ltr
   site_name: CrimethInc.
   site_author: CrimethInc. Ex-Workers Collective
@@ -32,7 +32,7 @@ gl:
     support: Support Us
     search: Search
     about: About
-    locale_articles: See all articles in Galician →
+    locale_articles: See all articles in Gallego →
     site_banner: "[Help us recover from the fire that destroyed our mailorder space →](https://www.gofundme.com/f/fire-destroyed-the-crimethinc-mailorder-space)"
 
     first_time: First Time? Start Here →
