@@ -21,7 +21,8 @@ class Article < ApplicationRecord
   validates :summary, length: { maximum: 200 }
 
   before_save :update_or_create_redirect
-  after_save  :update_locale_articles_count
+  after_destroy :update_locale_articles_count
+  after_save :update_locale_articles_count
 
   default_scope { order(published_at: :desc) }
 
@@ -126,13 +127,16 @@ class Article < ApplicationRecord
   end
 
   def update_locale_articles_count
-    return if locale.blank?
+    original_locale = saved_change_to_locale.first if saved_change_to_locale?
+    return if locale.blank? && original_locale.blank?
 
-    article_locale = Locale.find_by(abbreviation: locale)
+    article_locales = Locale.where(abbreviation: [locale, original_locale].compact)
 
-    return if article_locale.blank?
+    return if article_locales.blank?
 
-    articles_count = Article.live.published.where(locale: article_locale.abbreviation).count
-    article_locale.update(articles_count: articles_count)
+    article_locales.each do |article_locale|
+      articles_count = Article.live.published.where(locale: article_locale.abbreviation).count
+      article_locale.update(articles_count: articles_count)
+    end
   end
 end

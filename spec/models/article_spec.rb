@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Article do
+describe Article do # rubocop:disable Metrics/BlockLength
   describe 'validations' do
     # TEMP TODO re-enable when tweet character count is smarter
     # it 'validates tweet is less than 250 characters' do
@@ -31,6 +31,59 @@ describe Article do
       expect(new_article.reload).to be_valid
       expect(new_article.summary.length).to eq(200)
       expect(new_article.tweet.length).to eq(250)
+    end
+  end
+
+  describe '#after_save' do
+    let(:article) { build(:article) }
+    let(:locale) { Locale.find_by abbreviation: article.locale }
+
+    context 'when the article has an associated locale' do
+      it 'updates the locale\'s articles_count cache value' do
+        # pre-condition: before the article is saved the locale's
+        # cache value should be 0
+        expect(locale.articles_count).to eq 0
+
+        article.save
+
+        expect(locale.reload.articles_count).to eq 1
+      end
+    end
+
+    context 'when an article has its associated locale changed' do
+      let(:new_locale) { create(:locale, :gl) }
+
+      before { article.save }
+
+      it 'updates both locale\'s articles_count cache value' do
+        # pre-condition: before the article's locale is changed
+        expect(locale.articles_count).to eq 1
+        expect(new_locale.articles_count).to eq 0
+
+        article.update!(locale: new_locale.abbreviation)
+
+        expect(locale.reload.articles_count).to eq 0
+        expect(new_locale.reload.articles_count).to eq 1
+      end
+    end
+  end
+
+  describe '#after_destroy' do
+    let(:article) { build(:article) }
+    let(:locale) { Locale.find_by abbreviation: article.locale }
+
+    context 'when the article has an associated locale' do
+      before { article.save! }
+
+      it 'decrements the locale\'s articles_count cache value' do
+        # pre-condition: before the article is destroyed the locale's
+        # cache value should be 1
+        expect(locale.articles_count).to eq 1
+
+        article.destroy
+
+        expect(locale.reload.articles_count).to eq 0
+      end
     end
   end
 
