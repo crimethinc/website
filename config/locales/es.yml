@@ -50,7 +50,7 @@ es:
         content_label: Contenido
         tag_label: Tags
         category_label: Categorias
-        comma_separated_note: Separados con comas. Por ejemplo: perros, gatos, etc.
+        comma_separated_note: "Separados con comas. Por ejemplo: perros, gatos, etc."
         button: Buscar
 
   footer:
