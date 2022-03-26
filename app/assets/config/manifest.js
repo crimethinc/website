@@ -13,3 +13,5 @@
 //= link 2020.css
 
 // ??? lite_mode.css
+//= link_tree ../../javascript .js
+//= link_tree ../../../vendor/javascript .js

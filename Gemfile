@@ -20,6 +20,9 @@ gem 'sassc-rails'
 gem 'sitemap_generator' # for generating a compliant xml sitemap
 gem 'uglifier'
 
+# Javascript / Hotwire
+gem 'importmap-rails'
+
 # JSON views
 gem 'jbuilder'
 
