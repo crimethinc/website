@@ -40,7 +40,7 @@ es:
 
   search:
     form_placeholder: Busca en los archivos…
-    search_results: 'Resultados de la búsqueda de: %{query}'
+    search_results: 'Resultados de la búsqueda: %{query}'
     advanced:
       heading: Búsqueda avanzada
       form:
