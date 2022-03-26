@@ -40,17 +40,17 @@ es:
 
   search:
     form_placeholder: Busca en los archivos…
-    search_results: 'Search results for: %{query}'
+    search_results: 'Resultados de la búsqueda: %{query}'
     advanced:
       heading: Búsqueda avanzada
       form:
         term_label: Buscar
-        title_label: Title
-        subtitle_label: Subtitle
-        content_label: Content
+        title_label: Titulo
+        subtitle_label: Subtitulo
+        content_label: Contenido
         tag_label: Tags
-        category_label: Categories
-        comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
+        category_label: Categorias
+        comma_separated_note: Separados con comas. Por ejemplo: perros, gatos, etc.
         button: Buscar
 
   footer:
