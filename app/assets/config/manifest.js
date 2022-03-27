@@ -5,7 +5,6 @@
 //= link live_blog.js
 //= link support.js
 //= link to_change_everything.css
-//= link admin.js
 //= link admin.css
 //= link steal-something-from-work-day.css
 //= link steal-something-from-work-day.js

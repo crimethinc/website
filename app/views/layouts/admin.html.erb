@@ -31,7 +31,8 @@
     <link rel="manifest" href="/manifest.json">
 
     <%= stylesheet_link_tag    "admin", media: "all" %>
-    <%= javascript_include_tag "admin" %>
+    <%= javascript_importmap_tags %>
+    <%= yield(:head) %>
   </head>
 
   <body id="<%= body_id %>">
