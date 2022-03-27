@@ -94,3 +94,7 @@
     handler.close();
   });
 </script>
+
+<% content_for :head do %>
+  <%= javascript_import_module_tag "support" %>
+<% end %>

@@ -2,7 +2,6 @@
 //= link_directory ../javascripts .js
 //= link_directory ../stylesheets .css
 
-//= link support.js
 //= link to_change_everything.css
 //= link admin.css
 //= link steal-something-from-work-day.css
