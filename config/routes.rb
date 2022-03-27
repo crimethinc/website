@@ -74,7 +74,7 @@ Rails.application.routes.draw do
   get 'feed(/:lang)',      to: 'articles#index', defaults: { format: 'atom' }, as: :feed
 
   # Articles - Collection Items
-  get 'articles/:id/collection_posts', to: 'collection_posts#index'
+  get 'articles/:id_or_slug/collection_posts', to: 'collection_posts#index'
 
   # Categories
   get 'categories',                    to: 'categories#index', as: :categories
