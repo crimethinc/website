@@ -29,3 +29,7 @@
     <br><br><br><br><br>
   </main>
 </div><!-- .main-wrapper -->
+<% content_for :head do %>
+  <%= javascript_import_module_tag "popper" %>
+  <%= javascript_import_module_tag "bootstrap" %>
+<% end %>
