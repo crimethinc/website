@@ -8,7 +8,9 @@
     <%= stylesheet_link_tag Current.theme, media: "all" %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Markazi+Text:400,500,600,700&display=swap", media: "all" %>
     <%= render_themed "shared/translation_missing_css" %>
-  </head>
+    <%= javascript_importmap_tags %>
+    <%= yield :head %>
+ </head>
 
   <body>
     <%= render_themed "shared/admin_header" %>
@@ -23,6 +25,5 @@
     </main>
 
     <%= render_themed "shared/footer" %>
-    <%= render_themed "shared/javascripts" %>
   </body>
 <% end %>

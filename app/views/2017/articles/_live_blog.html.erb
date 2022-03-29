@@ -1,0 +1,11 @@
+<div id="floating-alert"
+     class="alert alert-floating alert-notice"
+     hidden="true"
+     data-controller="live-blog"
+     data-live-blog-page-loaded-at="<%= Time.current.utc.to_i %>"
+     data-live-blog-url-value="<%= "/articles/#{article_slug}/collection_posts" %>"
+     data-live-blog-target="container">
+  <a class="close"
+     data-action="live-blog#close"> ✖</a>
+  <p data-live-blog-target="text"></p>
+</div>

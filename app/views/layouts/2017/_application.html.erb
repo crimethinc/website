@@ -6,6 +6,8 @@
              prefix: html_prefix do %>
   <head>
     <%= render_themed "shared/head" %>
+    <%= javascript_importmap_tags %>
+    <%= yield :head %>
   </head>
 
   <body id="<%= body_id %>">
@@ -27,6 +29,5 @@
     </main>
 
     <%= render_themed "shared/footer" %>
-    <%= render_themed "shared/javascripts" %>
   </body>
 <% end %>

@@ -15,10 +15,13 @@ gem 'puma'
 # assets
 gem 'autoprefixer-rails'
 gem 'bootstrap'
-gem 'jquery-rails'      # for bootstrap pages (admin, steal-something-from-work-day)
 gem 'sassc-rails'
 gem 'sitemap_generator' # for generating a compliant xml sitemap
 gem 'uglifier'
+
+# Javascript / Hotwire
+gem 'importmap-rails'
+gem 'stimulus-rails'
 
 # JSON views
 gem 'jbuilder'
