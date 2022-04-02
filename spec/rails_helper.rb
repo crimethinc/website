@@ -8,7 +8,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'support/factory_bot'
-require_relative './support/capybara.rb'
+require_relative './support/capybara'
 
 ActiveRecord::Migration.maintain_test_schema!
 
@@ -24,7 +24,7 @@ RSpec.configure do |config|
 
   config.before(:each, type: :system, js: true) do
     driven_by :headless_selenium_firefox_in_container
-    Capybara.server_host = "0.0.0.0"
+    Capybara.server_host = '0.0.0.0'
     Capybara.server_port = 4000
     Capybara.app_host = 'http://web:4000'
   end
