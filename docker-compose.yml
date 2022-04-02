@@ -5,6 +5,7 @@ services:
     build: .
     ports:
       - "3000:3000"
+      - "4000:4000"
     volumes:
       - .:/usr/src/app
     env_file:
@@ -18,4 +19,16 @@ services:
     image: postgres
     env_file:
       - .env/development/database
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  selenium_firefox:
+    image: selenium/standalone-firefox-debug
+    logging:
+      driver: none
+    ports:
+      - "5900:5900"
+
+volumes:
+  db_data:
 
