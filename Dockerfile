@@ -8,6 +8,10 @@ RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
 COPY .ruby-version /usr/src/app/
 COPY Gemfile* /usr/src/app/
 WORKDIR /usr/src/app
+
+# create a local gem cache
+ENV BUNDLE_PATH /gem
+
 RUN bundle install
 
 COPY . /usr/src/app/
