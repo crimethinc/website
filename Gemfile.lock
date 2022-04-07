@@ -370,7 +370,7 @@ GEM
     ruby-progressbar (1.11.0)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
-    ruby_parser (3.19.0)
+    ruby_parser (3.19.1)
       sexp_processor (~> 4.16)
     rubypants (0.7.1)
     rubyzip (2.3.2)
