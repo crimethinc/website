@@ -39,8 +39,8 @@ module Crimethinc
 
     # Allowed list locales available for the application
     subdomain_locales = %i[
-      ar bn cs cz da de dv en es fa fi fr gl gr he id it
-      ja ko nl no pl pt ro ru sh sv th tl tr uk vi zh
+      ar bn cs cz da de dv en es eu fa fi fr gl gr he id
+      it ja ko nl no pl pt ro ru sh sv th tl tr uk vi zh
     ]
 
     path_ltr_locales = %i[

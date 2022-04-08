@@ -25,6 +25,7 @@ FactoryBot.define do
   trait(:maldivian)      { locale { 'dv' } }
   trait(:english)        { locale { 'en' } }
   trait(:spanish)        { locale { 'es' } }
+  trait(:basque)         { locale { 'eu' } }
   trait(:farsi)          { locale { 'fa' } }
   trait(:finnish)        { locale { 'fi' } }
   trait(:french)         { locale { 'fr' } }

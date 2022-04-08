@@ -38,6 +38,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'spanish', lang_code: :es, canonical: 'espanol'),
     Locale.new(locale: 'español', lang_code: :es, canonical: 'espanol'),
 
+    # eu: basque
+    Locale.new(locale: 'euskara', lang_code: :eu, canonical: 'euskara'),
+    Locale.new(locale: 'basque',  lang_code: :eu, canonical: 'euskara'),
+
     # fa: farsi
     Locale.new(locale: 'farsi', lang_code: :fa, canonical: 'frsy'),
     Locale.new(locale: 'frsy',  lang_code: :fa, canonical: 'frsy'),

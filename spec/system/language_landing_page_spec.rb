@@ -6,6 +6,7 @@ describe 'Language Landing Page' do
 
     create(:article)
     create(:article, :arabic)
+    create(:article, :basque)
     create(:article, :bengali)
     create(:article, :chinese)
     create(:article, :czech)
