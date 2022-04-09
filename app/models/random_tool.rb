@@ -5,8 +5,6 @@ class RandomTool
     delegate :sample, to: :new
   end
 
-  def initialize; end
-
   def sample
     random_tool_class.constantize.readonly.find random_tool_id
   end
