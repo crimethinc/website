@@ -6,7 +6,7 @@
 
 ## What Is CrimethInc.?
 
-**CrimethInc. is a rebel alliance** — a secret society pledged to the propagation of crimethink. It is a think tank producing inflammatory ideas and action, a sphinx posing questions fatal to the superstitions of our age.
+**CrimethInc. is a rebel alliance** — a secret society pledged to the propagation of crimethink. It is a think tank producing ideas and action, a sphinx posing questions fatal to the superstitions of our age.
 
 **CrimethInc. is a banner for anonymous collective action.** It is not a membership organization, but a mouthpiece for longings that extend throughout the population at large. Anyone can be CrimethInc. — it could be your next-door neighbor or the person sitting beside you on the bus. You and your friends already constitute an [affinity group](http://destructables.org/node/54), the organizational model best suited to guerrilla tactics, ready to go into action against all the forces that threaten your freedom.
 
