@@ -391,7 +391,7 @@ GEM
       rubyzip (>= 1.2.2)
     sexp_processor (4.16.1)
     shellany (0.0.1)
-    sidekiq (6.4.1)
+    sidekiq (6.4.2)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
