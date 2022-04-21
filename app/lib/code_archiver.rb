@@ -34,7 +34,7 @@ class CodeArchiver
       end
 
       puts '**********************************************************************'
-      if ENV['STATIC_EXPORT_IMAGES'].present?
+      if ENV.fetch('STATIC_EXPORT_IMAGES') { nil }.present?
         puts 'downloading local copies of article images. this will take a while...'
         download_article_images
       else

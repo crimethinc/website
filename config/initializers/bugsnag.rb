@@ -5,7 +5,7 @@ Bugsnag.configure do |config|
   # we consider both staging and production as 'production' for heroku
   # reasons, so set based on ENV variables
   if Rails.env.production?
-    staging = ENV['ON_STAGING'] == 'TRUE'
+    staging = ENV.fetch('ON_STAGING') { 'FALSE' } == 'TRUE'
     config.release_stage = staging ? 'staging' : 'production'
   else
     # otherwise it is 'test' or 'development'
