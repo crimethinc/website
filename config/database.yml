@@ -17,4 +17,4 @@ production:
   <<: *default
   database: crimethinc_production
   username: crimethinc
-  password: <%= ENV['CRIMETHINC_DATABASE_PASSWORD'] %>
+  password: <%= ENV.fetch('CRIMETHINC_DATABASE_PASSWORD', '') %>

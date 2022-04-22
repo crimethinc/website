@@ -22,13 +22,13 @@ Rails.application.configure do
 
   # Configure memcache as the cache_store if available
   # Pulled from https://devcenter.heroku.com/articles/memcachedcloud
-  config.cache_store = if ENV['MEMCACHEDCLOUD_SERVERS']
+  config.cache_store = if ENV.fetch('MEMCACHEDCLOUD_SERVERS') { nil }
                          [
                            :mem_cache_store,
-                           ENV['MEMCACHEDCLOUD_SERVERS'].split(','),
+                           ENV.fetch('MEMCACHEDCLOUD_SERVERS').split(','),
                            {
-                             username: ENV['MEMCACHEDCLOUD_USERNAME'],
-                             password: ENV['MEMCACHEDCLOUD_PASSWORD']
+                             username: ENV.fetch('MEMCACHEDCLOUD_USERNAME'),
+                             password: ENV.fetch('MEMCACHEDCLOUD_PASSWORD')
                            }
                          ]
                        else
@@ -42,7 +42,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.public_file_server.enabled = ENV.fetch('RAILS_SERVE_STATIC_FILES') { nil }.present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -88,7 +88,7 @@ Rails.application.configure do
   # TODO: Extract to ENV var in .env and staging/production environments
   # For using #url_for et al in non-views/helpers
   Rails.application.routes.default_url_options[:host] =
-    if ENV['ON_STAGING'] == 'TRUE'
+    if ENV.fetch('ON_STAGING') { 'FALSE' } == 'TRUE'
       'crimethincstaging.com'
     else
       'crimethinc.com'
@@ -112,7 +112,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV['RAILS_LOG_TO_STDOUT'].present?
+  if ENV.fetch('RAILS_LOG_TO_STDOUT') { nil }.present?
     logger           = ActiveSupport::Logger.new($stdout)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)

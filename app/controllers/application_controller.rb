@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   helper :meta
 
   def staging?
-    ENV['ON_STAGING'] == 'TRUE'
+    ENV.fetch('ON_STAGING') { 'FALSE' } == 'TRUE'
   end
   helper_method :staging?
 
