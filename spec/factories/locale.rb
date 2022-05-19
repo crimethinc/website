@@ -1,4 +1,4 @@
-FactoryBot.define do # rubocop:disable Metrics/BlockLength
+FactoryBot.define do
   factory :locale do
     abbreviation { 'en' }
     name_in_english { 'English' }

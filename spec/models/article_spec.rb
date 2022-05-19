@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Article do # rubocop:disable Metrics/BlockLength
+describe Article do
   describe 'validations' do
     # TEMP TODO re-enable when tweet character count is smarter
     # it 'validates tweet is less than 250 characters' do
