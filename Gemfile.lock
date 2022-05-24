@@ -418,7 +418,7 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     stringex (2.8.5)
-    stripe (6.1.0)
+    stripe (6.2.0)
     strscan (3.0.3)
     thor (1.2.1)
     thread_safe (0.3.6)
