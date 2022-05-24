@@ -70,7 +70,7 @@ class ApplicationController < ActionController::Base
 
     return if redirect.blank?
 
-    redirect_to(redirect.target_path.downcase, status: redirect.temporary? ? 302 : 301, allow_other_host: true)
+    redirect_to(redirect.target_path, status: redirect.temporary? ? 302 : 301, allow_other_host: true)
   end
 
   # TODO: move to rack middleware
