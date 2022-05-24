@@ -30,7 +30,7 @@ class Redirect < ApplicationRecord
 
   def strip_double_slashes
     paths.each do |path|
-      path.downcase.gsub!('//', '/')
+      path.gsub!('//', '/')
     end
   end
 
