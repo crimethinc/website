@@ -1,5 +1,5 @@
 <div class="mb-3">
   <%= form.label :tags, "Tags", class: "form-label" %>
-  <%= text_field_tag :tags, @article.tags.map(&:name).join(", "), class: "form-control form-control-lg" %>
+  <%= text_field_tag :tags, @article.tags.map(&:name).join(", "), class: "form-control form-control-lg", autocomplete: :off %>
   <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
 </div>

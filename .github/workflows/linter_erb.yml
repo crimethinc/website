@@ -12,12 +12,9 @@ jobs:
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@master
+        with:
+          bundler-cache: true
 
-      # TODO: Uncomment when erb_lint is compatible with rubocop <= 1.0
-      # - name: Install Ruby gems
-      #   run: |
-      #     gem install erb_lint --no-document
-      #
-      # - name: Run ERB linter
-      #   run: |
-      #     erblint app
+      - name: Run ERB linter
+        run: |
+          bundle exec erblint app
