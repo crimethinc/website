@@ -464,4 +464,32 @@
       }
     }
   }
+
+  @media print {
+      .related-articles { display: none; }
+      footer#site-footer { display: none; }
+      .social { display: none; }
+      .site-header { display: none; }
+      #development-mode-banner { display: none; }
+      .categories { display: none !important; }
+      .localizations { display: none !important; }
+
+      // only safari supports currently
+      div:has(> ul.pagination) { display: none; }
+      ul.pagination { display: none; }
+
+      // hide videos as they render as a large blank space in print
+      .video-container { display: none; }
+
+      // make title and subtitle a lil bit bigger in print
+      .p-name .p-x-title { font-size: 5rem; }
+      .p-name .p-x-subtitle { font-size: 3rem; }
+
+      // Prevent images and blockquotes from spanning a page break
+      blockquote, figure, img {
+          break-inside: avoid;
+          max-height: 90vh;
+      }
+  }
+
 } /* #article */
