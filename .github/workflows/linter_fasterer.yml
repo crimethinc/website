@@ -12,11 +12,9 @@ jobs:
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@master
-
-      - name: Install Ruby gems
-        run: |
-          gem install fasterer --no-document
+        with:
+          bundler-cache: true
 
       - name: Run Fasterer linter
         run: |
-          fasterer
+          bundle exec fasterer app
