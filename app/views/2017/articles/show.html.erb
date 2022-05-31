@@ -14,10 +14,9 @@
       <%= render_themed "articles/image_media", article: @article, linked: false %>
 
       <div class="meta">
-        <%= render_themed "articles/titles", header: @article, linked: false %>
-
-        <%= render_themed "articles/categories", article: @article %>
-
+        <%= render_themed "articles/titles",        header:  @article, linked: false %>
+        <%= render_themed "articles/published_on",  article: @article, linked: true %>
+        <%= render_themed "articles/categories",    article: @article %>
         <%= render_themed "articles/localizations", article: @article %>
       </div>
 
@@ -32,7 +31,6 @@
 
     <footer>
       <%= render_themed "articles/share_on_social_networks", article: @article %>
-      <%= render_themed "articles/published_on",             article: @article, linked: true %>
       <%= render_themed "articles/categories",               article: @article %>
       <%= render_themed "articles/tags",                     article: @article %>
 
