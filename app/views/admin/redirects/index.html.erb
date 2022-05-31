@@ -21,7 +21,7 @@
   <div class="col">
     <%= form_with url: [:admin, :redirects], method: "get" do %>
       <div class="mb-3">
-        <%= text_field_tag :source_path, params[:source_path], class: "form-control form-control-lg", placeholder: "FROM" %>
+        <%= text_field_tag :source_path, params[:source_path], class: "form-control form-control-lg", placeholder: "FROM", autocomplete: :off %>
       </div>
 
       <div class="text-right">
@@ -33,7 +33,7 @@
   <div class="col">
     <%= form_tag [:admin, :redirects], method: "get" do %>
       <div class="mb-3">
-        <%= text_field_tag :target_path, params[:target_path], class: "form-control form-control-lg", placeholder: "TO" %>
+        <%= text_field_tag :target_path, params[:target_path], class: "form-control form-control-lg", placeholder: "TO", autocomplete: :off %>
       </div>
 
       <div class="text-right">
