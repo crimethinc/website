@@ -73,7 +73,7 @@ class PagesController < ApplicationController
   end
 
   def page_redirects
-    return render file: Rails.root.join('public', '404.html'), status: :not_found if @page.nil?
+    return render file: Rails.public_path.join('404.html'), status: :not_found if @page.nil?
 
     return redirect_to @page.path if @page.published? && params[:draft_code].present?
   end
