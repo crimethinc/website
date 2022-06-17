@@ -19,7 +19,9 @@ module Rack
         README.txt
         wp
         wp-login
+        wp-admin
         cdnbuster
+        jars
       ]
     ).freeze
 
