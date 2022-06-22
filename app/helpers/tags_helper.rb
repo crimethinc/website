@@ -18,9 +18,17 @@ module TagsHelper
     "#{site_mode}-mode"
   end
 
+  def tool_language_direction
+    tool_locale&.language_direction.presence || t('language_direction')
+  end
+
   private
 
   def article_locale
     @article_locale ||= Locale.find_by(abbreviation: @article&.locale)
+  end
+
+  def tool_locale
+    @tool_locale ||= Locale.find_by(abbreviation: @tool&.locale)
   end
 end

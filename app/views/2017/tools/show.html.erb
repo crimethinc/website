@@ -78,12 +78,15 @@
       <header>
         <%= render_themed "tools/nav" %>
 
-        <%= render_themed "articles/titles", header: @tool, linked: true %>
+
+        <%= tag.div dir: tool_language_direction do %>
+          <%= render_themed "articles/titles", header: @tool, linked: true %>
+        <% end %>
 
         <%= render_themed "articles/localizations", article: @tool %>
       </header>
 
-      <div class="e-content">
+      <%= tag.div class: "e-content", dir: tool_language_direction do %>
         <div class="book-description">
           <%= render_markdown @tool.description %>
         </div>
@@ -93,7 +96,7 @@
             <%= render_markdown @tool.content %>
           <% end %>
         </div>
-      </div>
+      <% end %>
     </div>
 
   </div>
