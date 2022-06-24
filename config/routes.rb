@@ -1,6 +1,9 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  # TEMP: time sensitive bug workaround
+  get 'bodilyautonomyflier', to: redirect('https:/cdn.crimethinc.com/assets/downloads/bodily-autonomy-in-the-streets-flier/bodily-autonomy-in-the-streets.pdf')
+
   # TODO: After switching the site auth to Devise, enable this auth protected route
   # # Sidekiq admin interface to monitor background jobs
   # authenticate :user, ->(user) { user.admin? } do
