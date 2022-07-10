@@ -61,7 +61,7 @@ class ProductionAssetsImporter
 
       # delete tmp file
       puts "==>    Deleting file: tmp/#{file_name}"
-      File.delete("tmp/#{file_name}") if File.exist? "tmp/#{file_name}"
+      FileUtils.rm_rf("tmp/#{file_name}")
       puts
     end
 
