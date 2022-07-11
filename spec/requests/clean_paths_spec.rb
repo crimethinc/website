@@ -20,7 +20,7 @@ RSpec.describe 'Rack::CleanPath', type: :request do
 
     get 'http://example.com/sitemap.xml.gz'
 
-    expect(response.status).to eq(200)
+    expect(response).to have_http_status(:ok)
     expect(response.header['Location']).to be_nil
     expect(response.body).not_to be_empty
 
