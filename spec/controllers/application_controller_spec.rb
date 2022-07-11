@@ -62,13 +62,13 @@ RSpec.describe ApplicationController, type: :controller do
 
       get :destroy, params: { id: 1 }
 
-      expect(response.status).to eq(200)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'is false with no user' do
       get :destroy, params: { id: 1 }
 
-      expect(response.status).to eq(302)
+      expect(response).to have_http_status(:found)
     end
   end
 
@@ -78,7 +78,7 @@ RSpec.describe ApplicationController, type: :controller do
 
       get :index
 
-      expect(response.status).to eq(302)
+      expect(response).to have_http_status(:found)
     end
 
     it 'redirects permanently when present' do
@@ -86,7 +86,7 @@ RSpec.describe ApplicationController, type: :controller do
 
       get :index
 
-      expect(response.status).to eq(301)
+      expect(response).to have_http_status(:moved_permanently)
     end
   end
 
@@ -94,7 +94,7 @@ RSpec.describe ApplicationController, type: :controller do
     it 'strips .html' do
       get :index, format: 'html'
 
-      expect(response.status).to eq(302)
+      expect(response).to have_http_status(:found)
     end
   end
 
