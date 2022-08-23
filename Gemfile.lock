@@ -430,7 +430,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     squasher (0.6.2)
-    stackprof (0.2.20)
+    stackprof (0.2.21)
     sterile (1.0.23)
       nokogiri (>= 1.11.7)
     stimulus-rails (1.1.0)
