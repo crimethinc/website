@@ -408,7 +408,7 @@ GEM
       websocket (~> 1.0)
     sexp_processor (4.16.1)
     shellany (0.0.1)
-    sidekiq (6.5.4)
+    sidekiq (6.5.5)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.5.0)
