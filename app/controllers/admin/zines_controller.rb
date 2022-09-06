@@ -56,7 +56,7 @@ module Admin
 
     def book_params
       params.require(:zine).permit(:title, :subtitle, :content, :tweet, :summary, :locale,
-                                   :description, :buy_url, :buy_info, :slug, :series, :published_at,
+                                   :description, :buy_url, :buy_info, :slug, :series, :published_at, :gallery_images_count,
                                    :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,
                                    :photographs, :printing, :ink, :definitions, :recipes, :has_index, :cover_style,
                                    :binding_style, :table_of_contents, :back_image_present, :canonical_id,
