@@ -1,7 +1,7 @@
 desc 'Request the Wayback Machine to snapshot a specific URL or all new ' \
      'article URLs for the past 24 hours if no argument is given'
 task :wayback, [:url] => :environment do |_t, args|
-  app = JSON.parse(File.read(Rails.root.join('app.json')))
+  app = JSON.parse(Rails.root.join('app.json').read)
   api = 'https://pragma.archivelab.org/'
   urls = []
 
