@@ -110,3 +110,7 @@ Naming/BlockForwarding:
 # We don't translate admin flash message for now
 Rails/I18nLocaleTexts:
   Enabled: false
+
+# Remove once we won,t have commented tests
+RSpec/NoExpectationExample:
+  Enabled: false
