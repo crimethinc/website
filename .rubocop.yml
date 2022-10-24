@@ -114,3 +114,7 @@ Rails/I18nLocaleTexts:
 # Remove once we won,t have commented tests
 RSpec/NoExpectationExample:
   Enabled: false
+
+# If we don,t care about explicit type, then remove this and fix errors
+RSpec/Rails/InferredSpecType:
+  Enabled: false
