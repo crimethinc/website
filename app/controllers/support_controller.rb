@@ -9,18 +9,27 @@ class SupportController < ApplicationController
     render "#{Current.theme}/support/new"
   end
 
-  def create
-    if params[:monthly] == 'true' && customer_with_subscription(stripe_options[:email])
-      flash[:error] = t('views.support.create.repeat_subscriber_error')
-      return redirect_to [:support]
+  def edit
+    @html_id = 'page'
+    @body_id = 'support-edit'
+    @title   = PageTitle.new t('views.support.edit.heading')
+
+    @support_session = SupportSession.find_by token: params[:token]
+
+    if @support_session.nil? || @support_session.expired?
+      flash[:error] = t('views.support.edit.expired_link_error')
+      redirect_to [:support]
+      return
+    else
+      @customer = Stripe::Customer.retrieve(
+        id:     @support_session.stripe_customer_id,
+        expand: %w[default_source subscriptions] # for future credit card updates
+      )
+      @subscription = @customer.subscriptions.data.first
+      @next_invoice = Stripe::Invoice.upcoming(customer: @customer.id)
     end
 
-    params[:monthly] == 'true' ? create_stripe_subscription : create_stripe_charge
-  rescue Stripe::CardError => e
-    flash.now[:error] = e.message
-    render :new
-  else
-    redirect_to [:thanks]
+    render "#{Current.theme}/support/edit"
   end
 
   def thanks
@@ -48,35 +57,26 @@ class SupportController < ApplicationController
       mailer_options = { email: email, support_session: support_session, host: request.host_with_port }
       SupportMailer.with(mailer_options).edit_subscription.deliver_now
 
-      flash[:notice] = t('views.support.create_session.success_notice', email: email)
+      flash.now[:notice] = t('views.support.create_session.success_notice', email: email)
     else
-      flash[:error] = t('views.support.create_session.repeat_customer_error')
+      flash.now[:error] = t('views.support.create_session.repeat_customer_error')
     end
 
     redirect_to [:support]
   end
 
-  def edit
-    @html_id = 'page'
-    @body_id = 'support-edit'
-    @title   = PageTitle.new t('views.support.edit.heading')
-
-    @support_session = SupportSession.find_by token: params[:token]
-
-    if @support_session.nil? || @support_session.expired?
-      flash[:error] = t('views.support.edit.expired_link_error')
-      redirect_to [:support]
-      return
-    else
-      @customer = Stripe::Customer.retrieve(
-        id:     @support_session.stripe_customer_id,
-        expand: %w[default_source subscriptions] # for future credit card updates
-      )
-      @subscription = @customer.subscriptions.data.first
-      @next_invoice = Stripe::Invoice.upcoming(customer: @customer.id)
+  def create
+    if params[:monthly] == 'true' && customer_with_subscription(stripe_options[:email])
+      flash[:error] = t('views.support.create.repeat_subscriber_error')
+      return redirect_to [:support]
     end
 
-    render "#{Current.theme}/support/edit"
+    params[:monthly] == 'true' ? create_stripe_subscription : create_stripe_charge
+  rescue Stripe::CardError => e
+    flash.now[:error] = e.message
+    render :new
+  else
+    redirect_to [:thanks]
   end
 
   def update_subscription
@@ -84,9 +84,9 @@ class SupportController < ApplicationController
     subscription.quantity = params[:amount].to_i
 
     if subscription&.save
-      flash[:notice] = t('views.support.update_subscription.notice')
+      flash.now[:notice] = t('views.support.update_subscription.notice')
     else
-      flash[:error] = t('views.support.update_subscription.error')
+      flash.now[:error] = t('views.support.update_subscription.error')
     end
 
     redirect_to [:support_edit, { token: params[:token] }]
@@ -97,9 +97,9 @@ class SupportController < ApplicationController
 
     if subscription&.delete
       SupportSession.find_by(token: params[:token]).destroy
-      flash[:notice] = t('views.support.cancel_subscription.notice')
+      flash.now[:notice] = t('views.support.cancel_subscription.notice')
     else
-      flash[:error] = t('views.support.cancel_subscription.error')
+      flash.now[:error] = t('views.support.cancel_subscription.error')
     end
 
     redirect_to [:support]
