@@ -4,13 +4,6 @@ class CategoriesController < ApplicationController
   before_action :set_title,    only: %i[show feed]
   before_action :set_articles, only: %i[show feed]
 
-  def show
-    @html_id = 'page'
-    @body_id = 'category'
-
-    render "#{Current.theme}/categories/show"
-  end
-
   def index
     @html_id    = 'page'
     @body_id    = 'categories'
@@ -18,6 +11,13 @@ class CategoriesController < ApplicationController
     @title      = PageTitle.new title_for(:categories)
 
     render "#{Current.theme}/categories/index"
+  end
+
+  def show
+    @html_id = 'page'
+    @body_id = 'category'
+
+    render "#{Current.theme}/categories/show"
   end
 
   def feed

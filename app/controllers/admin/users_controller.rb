@@ -17,6 +17,10 @@ module Admin
       @title = admin_title
     end
 
+    def edit
+      @title = admin_title(@user, %i[id username])
+    end
+
     def create
       @user = User.new(user_params)
 
@@ -25,10 +29,6 @@ module Admin
       else
         render :new
       end
-    end
-
-    def edit
-      @title = admin_title(@user, %i[id username])
     end
 
     def update
