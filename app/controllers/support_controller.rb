@@ -17,7 +17,7 @@ class SupportController < ApplicationController
     @support_session = SupportSession.find_by token: params[:token]
 
     if @support_session.nil? || @support_session.expired?
-      flash[:error] = t('views.support.edit.expired_link_error')
+      flash.now[:error] = t('views.support.edit.expired_link_error')
       redirect_to [:support]
       return
     else
