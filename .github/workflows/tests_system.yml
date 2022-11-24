@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Install system libraries
         run: |
-          sudo apt-get -y install libpq-dev
+          sudo apt-get -y install libpq-dev firefox
 
       - name: Checkout repository
         uses: actions/checkout@master
