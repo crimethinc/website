@@ -6,11 +6,8 @@ threads min_threads_count, max_threads_count
 port        ENV.fetch('PORT') { 3000 }
 environment ENV.fetch('RAILS_ENV') { 'development' }
 
-# Puma 5 experiment
-# https://github.com/puma/puma/issues/2258
 wait_for_less_busy_worker
 fork_worker
-nakayoshi_fork
 
 before_fork do
   ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
