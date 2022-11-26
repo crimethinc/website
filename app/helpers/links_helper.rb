@@ -1,9 +1,9 @@
 module LinksHelper
   SOCIAL_LINKS = {
+    'CrimethInc. on Mastodon'          => 'https://todon.eu/@CrimethInc',
     'Crimethinc. on Facebook'          => 'https://www.facebook.com/To-Change-Everything-103734818122357',
     'CrimethInc. on Github'            => 'https://github.com/crimethinc',
     'CrimethInc. on Tumblr'            => 'https://crimethinc.tumblr.com',
-    'CrimethInc. on Mastodon'          => 'https://todon.eu/@CrimethInc',
     'CrimethInc. on Telegram'          => 'https://t.me/ExWorkers',
     'CrimethInc.com Articles RSS feed' => 'https://crimethinc.com/feed'
   }.freeze
@@ -11,10 +11,10 @@ module LinksHelper
   # For 2020 theme
   def social_links_by_domain
     {
+      'Mastodon' => 'https://mastodon.online/@crimethinc',
       'Facebook' => 'https://www.facebook.com/To-Change-Everything-103734818122357',
       'Github'   => 'https://github.com/crimethinc',
       'Tumblr'   => 'https://crimethinc.tumblr.com',
-      'Mastodon' => 'https://mastodon.online/@crimethinc',
       'RSS feed' => 'https://crimethinc.com/feed'
     }
   end
