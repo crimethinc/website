@@ -18,4 +18,4 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 end
 
-Capybara.javascript_driver = :selenium_headless
+Capybara.javascript_driver = :selenium_chrome_headless
