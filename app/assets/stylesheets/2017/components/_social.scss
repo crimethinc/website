@@ -39,5 +39,8 @@
     .link-domain-twitter {
       @include social-icon("twitter");
     }
+    .link-domain-tiktok {
+      @include social-icon("tiktok");
+    }
   }
 }
