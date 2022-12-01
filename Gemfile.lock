@@ -325,6 +325,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.8.0)
+    redis-client (0.11.2)
+      connection_pool
     redis-store (1.9.1)
       redis (>= 4, < 5)
     referral (0.0.5)
@@ -401,10 +403,11 @@ GEM
       websocket (~> 1.0)
     sexp_processor (4.16.1)
     shellany (0.0.1)
-    sidekiq (6.5.8)
-      connection_pool (>= 2.2.5, < 3)
-      rack (~> 2.0)
-      redis (>= 4.5.0, < 5)
+    sidekiq (7.0.2)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.11.0)
     simple_oauth (0.3.1)
     simplecov (0.21.2)
       docile (~> 1.1)
@@ -529,7 +532,7 @@ DEPENDENCIES
   sassc-rails
   scenic
   selenium-webdriver
-  sidekiq (< 7)
+  sidekiq (< 8)
   simplecov
   sitemap_generator
   squasher
