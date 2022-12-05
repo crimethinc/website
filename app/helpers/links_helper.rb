@@ -6,6 +6,7 @@ module LinksHelper
     'CrimethInc. on Tumblr'            => 'https://crimethinc.tumblr.com',
     'CrimethInc. on Telegram'          => 'https://t.me/ExWorkers',
     'Crimethinc. on TikTok'            => 'https://tiktok.com/@crimethinc',
+    'Crimethinc. on YouTube'           => 'https://youtube.com/@crimethincexworkerscollective',
     'CrimethInc.com Articles RSS feed' => 'https://crimethinc.com/feed'
   }.freeze
 
@@ -15,8 +16,10 @@ module LinksHelper
       'Mastodon' => 'https://todon.eu/@crimethinc',
       'Facebook' => 'https://www.facebook.com/To-Change-Everything-103734818122357',
       'Github'   => 'https://github.com/crimethinc',
+      'Telegram' => 'https://t.me/ExWorkers',
       'Tumblr'   => 'https://crimethinc.tumblr.com',
       'TikTok'   => 'https://tiktok.com/@crimethinc',
+      'YouTube'  => 'https://youtube.com/@crimethincexworkerscollective',
       'RSS feed' => 'https://crimethinc.com/feed'
     }
   end
