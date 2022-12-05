@@ -164,10 +164,15 @@
       }
 
       .social {
-        h1 {
+        margin-bottom: 5rem;
+        h2 {
           font-weight: 700;
           font-size: 3rem;
         }
+      }
+
+      .tags {
+        margin-top: 1.25rem;
       }
     } /* footer */
   } /* .h-entry */
