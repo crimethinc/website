@@ -27,5 +27,7 @@
     .link-domain-tumblr    { @include social-icon("tumblr");    }
     .link-domain-twitter   { @include social-icon("twitter");   }
     .link-domain-youtube   { @include social-icon("youtube");   }
+    .link-domain-kolektiva, // the peertube instance domain is kolektiva.media
+    .link-domain-peertube  { @include social-icon("peertube");  }
   }
 }
