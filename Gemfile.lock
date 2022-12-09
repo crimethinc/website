@@ -122,6 +122,7 @@ GEM
     connection_pool (2.3.0)
     crass (1.0.6)
     dalli (3.2.3)
+    date (3.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
     domain_name (0.5.20190701)
@@ -249,11 +250,12 @@ GEM
     multipart-post (2.2.3)
     naught (1.1.0)
     nenv (0.3.0)
-    net-imap (0.3.1)
+    net-imap (0.3.2)
+      date
       net-protocol
     net-pop (0.1.2)
       net-protocol
-    net-protocol (0.2.0)
+    net-protocol (0.2.1)
       timeout
     net-smtp (0.3.3)
       net-protocol
