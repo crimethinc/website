@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Peertube icon</title>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Group" transform="translate(0.500000, 0.500000)">
+      <circle id="Oval" fill="#D3DDE1" cx="19" cy="19" r="19"></circle>
+      <polyline id="Path_4" fill="#211F20" fill-rule="nonzero" points="13.5335678 8.8400333 13.5335678 19.5070333 21.5335678 14.1740333"></polyline>
+      <polyline id="Path_5" fill="#737373" fill-rule="nonzero" points="13.5335678 19.5070333 13.5335678 30.1740333 21.5335678 24.8410333"></polyline>
+      <polyline id="Path_6" fill="#F1680D" fill-rule="nonzero" points="21.5335678 14.1730333 21.5335678 24.8400333 29.5335678 19.5070333"></polyline>
+      <polygon id="Path_7" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" transform="translate(17.533568, 19.506533) rotate(180.000000) translate(-17.533568, -19.506533) " points="13.5335678 14.1730333 13.5335678 24.8400333 21.5335678 19.5060333"></polygon>
+    </g>
+  </g>
+</svg>
