@@ -1,42 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="2799 -911 16 22" version="1.1" id="svg13" sodipodi:docname="logo.svg" width="16" height="22" inkscape:version="0.92.2 5c3e80d, 2017-08-06">
-  <metadata id="metadata17">
-    <rdf:RDF>
-      <cc:Work rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-        <dc:title/>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1916" inkscape:window-height="1040" id="namedview15" showgrid="false" inkscape:zoom="29.790476" inkscape:cx="-1.1827326" inkscape:cy="12.088" inkscape:window-x="0" inkscape:window-y="18" inkscape:window-maximized="0" inkscape:current-layer="svg13"/>
-  <defs id="defs4">
-    <style id="style2">
-      .cls-3 {
-        fill: #211f20;
-      }
-
-      .cls-4 {
-        fill: #737373;
-      }
-
-      .cls-5 {
-        fill: #f1680d;
-      }
-
-      .cls-6 {
-        fill: rgba(255, 255, 255, 0);
-      }
-    </style>
-  </defs>
-  <g id="Artboard_1" data-name="Artboard – 1" class="cls-1" transform="translate(0.03356777,-1.9929667)">
-    <g id="Symbol_3_1" data-name="Symbol 3 – 1" transform="translate(2759,-975)">
-      <g id="Group_44" data-name="Group 44" transform="translate(0,2.333)">
-        <path id="Path_4" data-name="Path 4" class="cls-3" d="m -949,-500 v 10.667 l 8,-5.333" transform="translate(989,564)" inkscape:connector-curvature="0" style="fill:#211f20"/>
-        <path id="Path_5" data-name="Path 5" class="cls-4" d="m -949,-500 v 10.667 l 8,-5.333" transform="translate(989,574.667)" inkscape:connector-curvature="0" style="fill:#737373"/>
-        <path id="Path_6" data-name="Path 6" class="cls-5" d="m -949,-500 v 10.667 l 8,-5.333" transform="translate(997,569.333)" inkscape:connector-curvature="0" style="fill:#f1680d"/>
-        <path id="Path_7" data-name="Path 7" class="cls-6" d="M 0,0 V 10.667 L 8,5.333 Z" transform="rotate(180,24,40)" inkscape:connector-curvature="0" style="fill:rgba(255,255,255,0)"/>
-      </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Peertube icon</title>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Group" transform="translate(0.500000, 0.500000)">
+      <circle id="Oval" fill="#D3DDE1" cx="19" cy="19" r="19"></circle>
+      <polyline id="Path_4" fill="#211F20" fill-rule="nonzero" points="13.5335678 8.8400333 13.5335678 19.5070333 21.5335678 14.1740333"></polyline>
+      <polyline id="Path_5" fill="#737373" fill-rule="nonzero" points="13.5335678 19.5070333 13.5335678 30.1740333 21.5335678 24.8410333"></polyline>
+      <polyline id="Path_6" fill="#F1680D" fill-rule="nonzero" points="21.5335678 14.1730333 21.5335678 24.8400333 29.5335678 19.5070333"></polyline>
+      <polygon id="Path_7" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" transform="translate(17.533568, 19.506533) rotate(180.000000) translate(-17.533568, -19.506533) " points="13.5335678 14.1730333 13.5335678 24.8400333 21.5335678 19.5060333"></polygon>
     </g>
   </g>
 </svg>
