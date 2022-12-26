@@ -11,10 +11,10 @@ Ruby on Rails app that powers https://crimethinc.com
 
 ## Short Version
 
-**First things first**, [Strap](https://macos-strap.herokuapp.com) your computer’s development environment.
+**First things first**, [Strap](https://strap.mikemcquaid.com/) your computer’s development environment.
 
 ```sh
-open https://macos-strap.herokuapp.com/strap.sh
+open https://strap.mikemcquaid.com/strap.sh
 ```
 
 Then…
