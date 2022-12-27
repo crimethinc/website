@@ -131,7 +131,7 @@ GEM
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
-    down (5.3.1)
+    down (5.4.0)
       addressable (~> 2.8)
     equalizer (0.0.11)
     erb_lint (0.3.1)
