@@ -2,6 +2,7 @@ module LinksHelper
   SOCIAL_LINKS = {
     'CrimethInc. on Mastodon'          => 'https://todon.eu/@CrimethInc',
     'Crimethinc. on Facebook'          => 'https://www.facebook.com/To-Change-Everything-103734818122357',
+    'Crimethinc. on Instagram'         => 'https://instagram.com/crimethincredux',
     'CrimethInc. on Github'            => 'https://github.com/crimethinc',
     'CrimethInc. on Tumblr'            => 'https://crimethinc.tumblr.com',
     'CrimethInc. on Bandcamp'          => 'https://crimethinc.bandcamp.com',
@@ -15,16 +16,17 @@ module LinksHelper
   # For 2020 theme
   def social_links_by_domain
     {
-      'Mastodon' => 'https://todon.eu/@crimethinc',
-      'Facebook' => 'https://www.facebook.com/To-Change-Everything-103734818122357',
-      'Github'   => 'https://github.com/crimethinc',
-      'Telegram' => 'https://t.me/ExWorkers',
-      'Tumblr'   => 'https://crimethinc.tumblr.com',
-      'Bandcamp' => 'https://crimethinc.bandcamp.com',
-      'TikTok'   => 'https://tiktok.com/@crimethinc',
-      'Peertube' => 'https://kolektiva.media/a/crimethinc',
-      'YouTube'  => 'https://youtube.com/@crimethincexworkerscollective',
-      'RSS feed' => 'https://crimethinc.com/feed'
+      'Mastodon'  => 'https://todon.eu/@crimethinc',
+      'Facebook'  => 'https://www.facebook.com/To-Change-Everything-103734818122357',
+      'Instagram' => 'https://instagram.com/crimethincredux',
+      'Github'    => 'https://github.com/crimethinc',
+      'Telegram'  => 'https://t.me/ExWorkers',
+      'Tumblr'    => 'https://crimethinc.tumblr.com',
+      'Bandcamp'  => 'https://crimethinc.bandcamp.com',
+      'TikTok'    => 'https://tiktok.com/@crimethinc',
+      'Peertube'  => 'https://kolektiva.media/a/crimethinc',
+      'YouTube'   => 'https://youtube.com/@crimethincexworkerscollective',
+      'RSS feed'  => 'https://crimethinc.com/feed'
     }
   end
 
