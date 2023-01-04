@@ -13,7 +13,7 @@ class ArticleArchivesController < ApplicationController
     path =
       if @article_archive.articles.length == 1 && @article_archive.day.present?
         @article_archive.articles.first.path
-      elsif @article_archive.articles.length.zero?
+      elsif @article_archive.articles.empty?
         if @article_archive.day.present?
           article_archives_path(@article_archive.year, @article_archive.month)
         elsif @article_archive.month.present?
