@@ -3,6 +3,12 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+docker:
+  <<: *default
+  host: host.docker.internal
+  username: postgres
+  database: crimethinc
+
 development:
   <<: *default
   host: localhost

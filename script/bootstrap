@@ -47,5 +47,9 @@ echo '==> Installing bundler…'
 gem install bundler
 echo
 
+echo '==> Installing os...'
+gem install os
+echo
+
 echo '==> All done! Your system is now bootstrapped.'
 echo '==> Next up: ./script/setup'

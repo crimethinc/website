@@ -163,6 +163,21 @@ Drop the database, rebuild it, and fill it with seed data.
 
 ***
 
+## Docker
+
+### Build it
+```sh
+docker build -t crimethinc .
+```
+
+### Run it
+
+This runs the website rails server and postgres server in two separate containers. This is the recommended way to do things instead of running two seperate services in a single container.
+
+```sh
+docker compose up
+```
+
 ## How to guides…
 
 - [Add a new language to `/languages`](/blob/main/docs/languages.md)

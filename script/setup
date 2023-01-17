@@ -5,6 +5,7 @@
 
 require 'pathname'
 require 'fileutils'
+require 'os'
 include FileUtils
 
 # path to your application root.
@@ -19,8 +20,10 @@ chdir APP_ROOT do
   system! 'gem install bundler --conservative'
   system('bundle check') || system!('bundle install')
 
-  puts '==> Starting postgresql'
-  system! 'brew services start postgresql'
+  if OS.mac? then
+    puts '==> Starting postgresql'
+    system! 'brew services start postgresql'
+  end
 
   puts '==> Preparing database'
   system! 'bundle exec rails db:create'

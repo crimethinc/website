@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
+  web:
+    image: crimethinc:latest
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    environment:
+      - RAILS_ENV=docker
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
