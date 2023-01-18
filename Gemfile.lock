@@ -158,7 +158,7 @@ GEM
       rake
     flamegraph (0.9.5)
     formatador (1.1.0)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     guard (2.18.0)
       formatador (>= 0.2.4)
