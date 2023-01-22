@@ -15,6 +15,6 @@ services:
     links:
       - db
     environment:
-      - RAILS_ENV=docker
+      - RAILS_ENV=${RAILS_ENV}
     extra_hosts:
       - "host.docker.internal:host-gateway"
