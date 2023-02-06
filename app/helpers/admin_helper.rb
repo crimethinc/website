@@ -45,7 +45,7 @@ module AdminHelper
     end
 
     target = nil
-    target = '_blank' if /View Site/.match?(text)
+    target = '_blank' if text.include?('View Site')
 
     classes << 'active' if current_page?(path)
 
