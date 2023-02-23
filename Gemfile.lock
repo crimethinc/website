@@ -432,7 +432,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    squasher (0.7.0)
+    squasher (0.7.1)
     stackprof (0.2.23)
     sterile (1.0.23)
       nokogiri (>= 1.11.7)
