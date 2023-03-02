@@ -40,7 +40,7 @@ describe 'JSONRequests', type: :request do
       get "/articles/#{collection.id}/collection_posts", params: { published_at: published_at.to_i }, headers: json_headers
       follow_redirect!
 
-      article_title = JSON.parse(response.body)['posts'].first['title']
+      article_title = response.parsed_body['posts'].first['title']
       expect(article_title).to eq article.title
     end
   end
