@@ -330,7 +330,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.8.0)
-    redis-client (0.12.2)
+    redis-client (0.13.0)
       connection_pool
     redis-store (1.9.2)
       redis (>= 4, < 6)
