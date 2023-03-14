@@ -149,7 +149,7 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     fast_stack (0.2.0)
-    fasterer (0.10.0)
+    fasterer (0.10.1)
       colorize (~> 0.7)
       ruby_parser (>= 3.19.1)
     ffi (1.15.5)
