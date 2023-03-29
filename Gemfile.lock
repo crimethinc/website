@@ -404,7 +404,7 @@ GEM
     scenic (1.7.0)
       activerecord (>= 4.0.0)
       railties (>= 4.0.0)
-    selenium-webdriver (4.8.3)
+    selenium-webdriver (4.8.5)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
