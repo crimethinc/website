@@ -12,7 +12,6 @@ hdrive_s3:
   secret_access_key: <%= ENV.fetch('HDRIVE_S3_SECRET_KEY') { 'TODO' } %>
   bucket:            <%= ENV.fetch('HDRIVE_S3_BUCKET')     { 'TODO' } %>
   region:            <%= ENV.fetch('HDRIVE_S3_REGION')     { 'TODO' } %>
-  public:            true
 
 amazon:
   service:           S3
