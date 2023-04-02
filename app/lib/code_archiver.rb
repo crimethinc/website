@@ -1,4 +1,7 @@
 class CodeArchiver
+  # TODO: rename methods to match other service-y classes
+  #       e.g., ActiveStorageMirrorSyncer, ProductionAssetsImporter
+  #       Class.new.run
   class << self
     def put_it_on_ice # rubocop:disable Metrics/MethodLength
       # make all the directories
