@@ -532,6 +532,7 @@ DEPENDENCIES
   reverse_markdown
   rspec-rails (> 6)
   rubocop
+  rubocop-capybara
   rubocop-performance
   rubocop-rails
   rubocop-rspec
