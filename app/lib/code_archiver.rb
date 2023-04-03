@@ -111,15 +111,15 @@ class CodeArchiver
 
   def git_steps
     <<~HEREDOC
-      cd website-content/ && \\\n
-      git init && \\\n
-      git remote add origin git@github.com:crimethinc/website-content.git && \\\n
-      git fetch origin && \\\n
-      git checkout -b $(date +"%m-%d-%y") && \\\n
-      git add . && \\\n
-      git commit -am "update: $(date +"%m-%d-%y")" && \\\n
-      git pull --rebase origin master && \\\n
-      git push --set-upstream origin $(date +"%m-%d-%y") \\\n
+      cd website-content/ && \\
+      git init && \\
+      git remote add origin git@github.com:crimethinc/website-content.git && \\
+      git fetch origin && \\
+      git checkout -b $(date +"%m-%d-%y") && \\
+      git add . && \\
+      git commit -am "update: $(date +"%m-%d-%y")" && \\
+      git pull --rebase origin master && \\
+      git push --set-upstream origin $(date +"%m-%d-%y") \\
     HEREDOC
   end
 
