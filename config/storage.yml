@@ -6,13 +6,6 @@ test:
   service: Disk
   root:    <%= Rails.root.join 'tmp', 'storage' %>
 
-hdrive_s3:
-  service:           S3
-  access_key_id:     <%= ENV.fetch('HDRIVE_S3_ACCESS_KEY') { 'TODO' } %>
-  secret_access_key: <%= ENV.fetch('HDRIVE_S3_SECRET_KEY') { 'TODO' } %>
-  bucket:            <%= ENV.fetch('HDRIVE_S3_BUCKET')     { 'TODO' } %>
-  region:            <%= ENV.fetch('HDRIVE_S3_REGION')     { 'TODO' } %>
-
 amazon:
   service:           S3
   access_key_id:     <%= ENV.fetch('S3_ACCESS_KEY') { 'TODO' } %>
@@ -21,8 +14,15 @@ amazon:
   region:            <%= ENV.fetch('S3_REGION')     { 'TODO' } %>
   public:            true
 
+hdrive_s3:
+  service:           S3
+  access_key_id:     <%= ENV.fetch('HDRIVE_S3_ACCESS_KEY') { 'TODO' } %>
+  secret_access_key: <%= ENV.fetch('HDRIVE_S3_SECRET_KEY') { 'TODO' } %>
+  bucket:            <%= ENV.fetch('HDRIVE_S3_BUCKET')     { 'TODO' } %>
+  region:            <%= ENV.fetch('HDRIVE_S3_REGION')     { 'TODO' } %>
+
 production:
   service: Mirror
-  primary: hdrive_s3
+  primary: amazon
   mirrors:
-    - amazon
+    - hdrive_s3
