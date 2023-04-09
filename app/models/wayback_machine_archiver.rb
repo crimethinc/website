@@ -65,7 +65,7 @@ class WaybackMachineArchiver
         Rails.logger.debug response.body
       end
 
-      puts
+      Rails.logger.debug
     end
   end
 end
