@@ -25,10 +25,10 @@ class ProductionAssetsImporter
     remote_tool_json = HTTP.get(remote_tool_url).to_s
     remote_tool_data = JSON.parse(remote_tool_json).with_indifferent_access
 
-    puts
+    Rails.logger.debug
     Rails.logger.debug '*' * 80
     Rails.logger.debug { "==> #{remote_tool_url}" }
-    puts
+    Rails.logger.debug
 
     remote_tool_data[:attachments].each do |key, url|
       attr_name = "image_#{key}"
@@ -62,7 +62,7 @@ class ProductionAssetsImporter
       # delete tmp file
       Rails.logger.debug { "==>    Deleting file: tmp/#{file_name}" }
       FileUtils.rm_rf("tmp/#{file_name}")
-      puts
+      Rails.logger.debug
     end
 
     sleep 2
