@@ -10,6 +10,7 @@ module LinksHelper
     'Crimethinc. on TikTok'            => 'https://tiktok.com/@crimethinc',
     'CrimethInc. on Peertube'          => 'https://kolektiva.media/a/crimethinc',
     'CrimethInc. on YouTube'           => 'https://youtube.com/@crimethincexworkerscollective',
+    'CrimethInc. on Reddit'            => 'https://www.reddit.com/r/CrimethInc/',
     'CrimethInc.com Articles RSS feed' => 'https://crimethinc.com/feed'
   }.freeze
 
@@ -26,6 +27,7 @@ module LinksHelper
       'TikTok'    => 'https://tiktok.com/@crimethinc',
       'Peertube'  => 'https://kolektiva.media/a/crimethinc',
       'YouTube'   => 'https://youtube.com/@crimethincexworkerscollective',
+      'Reddit'    => 'https://www.reddit.com/r/CrimethInc/',
       'RSS feed'  => 'https://crimethinc.com/feed'
     }
   end
