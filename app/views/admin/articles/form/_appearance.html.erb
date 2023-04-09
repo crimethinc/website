@@ -18,9 +18,7 @@
     <% unless @collection.present? %>
       <hr>
 
-      <% if @article.css.present? %>
-        <%= render "admin/label_and_area_form_group", form: form, attr: :css, label_text: "CSS", rows: 6 %>
-      <% end %>
+      <%= render "admin/label_and_area_form_group", form: form, attr: :css, label_text: "CSS", rows: 6 %>
 
       <p class="form-text text-muted">
         Prefix your CSS selectors with <b><code>main article</code></b> to scope your styles to just this <i>Article</i>.
