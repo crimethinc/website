@@ -1,4 +1,3 @@
-require 'set'
 # Q: What do we say to the gods of pen testing?
 # A: Not today, kid!
 #
