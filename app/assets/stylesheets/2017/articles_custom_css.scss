@@ -1,0 +1,10 @@
+// for text centering in 2017 theme, which does not include Bootstrap
+.text-center {
+  text-align: center !important;
+}
+
+// for article:
+// https://crimethinc.com/2017/02/12/high-voltage-lessons-from-four-summers-of-protests-in-armenia
+#article--high-voltage-lessons-from-four-summers-of-protests-in-armenia td {
+  width: 33.3333%;
+}

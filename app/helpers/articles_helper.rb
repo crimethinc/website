@@ -53,12 +53,13 @@ module ArticlesHelper
   def article_tag article, &block
     klasses = ['h-entry']
     klasses << 'article-with-no-header-image' if article.image.blank?
+    id = "article--#{article.slug}"
 
     # Data attributes are used to determine how the article should be polled for updates
     data = { id: article.id, published_at: Time.now.utc.to_i }
     data[:listen] = true if article.collection_posts.recent.any?
 
-    tag.article id: article.slug, class: klasses.join(' '), data: data, &block
+    tag.article id: id, class: klasses.join(' '), data: data, &block
   end
 
   def display_date datetime = nil
