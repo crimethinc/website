@@ -26,7 +26,7 @@ module Admin
     end
 
     def create
-      @book = Zine.new(book_params)
+      @book = Zine.new(zine_params)
 
       if @book.save
         redirect_to [:admin, @book], notice: 'Zine was successfully created.'
@@ -36,7 +36,7 @@ module Admin
     end
 
     def update
-      if @book.update(book_params)
+      if @book.update(zine_params)
         redirect_to [:admin, @book], notice: 'Zine was successfully updated.'
       else
         render :edit
@@ -54,7 +54,7 @@ module Admin
       @book = Zine.find(params[:id])
     end
 
-    def book_params
+    def zine_params
       params.require(:zine).permit(:title, :subtitle, :content, :tweet, :summary, :locale,
                                    :description, :buy_url, :buy_info, :slug, :series, :published_at, :gallery_images_count,
                                    :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,

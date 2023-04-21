@@ -11,11 +11,11 @@
 
       <% EbookFormat.all.each do |ebook_format| %>
         <div class="form-check mb-3">
-          <%= form.label class: "form-check-label" do %>
-            <%= form.check_box "#{ebook_format.slug}_download_present",
-                               id: "book_#{ebook_format.slug}_download_present",
-                               class: "form-check-input" %>
+          <%= form.check_box "#{ebook_format.slug}_download_present",
+                             id: "#{resource.class.name.downcase}_#{ebook_format.slug}_download_present",
+                             class: "form-check-input" %>
 
+          <%= form.label "#{ebook_format.slug}_download_present", class: "form-check-label" do %>
             <%= ebook_format.name %>
 
             <span class="form-text text-muted fw-normal">
@@ -26,6 +26,7 @@
               </code>
             </span>
           <% end %>
+
         </div>
       <% end %>
 

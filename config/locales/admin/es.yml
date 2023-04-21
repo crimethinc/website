@@ -113,7 +113,7 @@ es:
       description: Is there an A4 sized B/W `PDF` for printing uploaded?
     - slug: lite
       name: Lo Res PDF
-      description: Is there a `.epub` file uploaded?
+      description: Is there a "lo res" (smaller file size) `PDF` file uploaded?
     - slug: epub
       name: ePub
       description: Is there a `.mobi` file uploaded?
