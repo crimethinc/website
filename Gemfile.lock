@@ -335,7 +335,7 @@ GEM
     redis-store (1.9.2)
       redis (>= 4, < 6)
     referral (0.0.5)
-    regexp_parser (2.7.0)
+    regexp_parser (2.8.0)
     request_store (1.5.1)
       rack (>= 1.4)
     reverse_markdown (2.1.1)
