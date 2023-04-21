@@ -434,7 +434,7 @@ GEM
       sprockets (>= 3.0.0)
     squasher (0.7.2)
     stackprof (0.2.25)
-    sterile (1.0.23)
+    sterile (1.0.24)
       nokogiri (>= 1.11.7)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
