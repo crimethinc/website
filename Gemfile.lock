@@ -272,7 +272,7 @@ GEM
       rexml (~> 3.2)
     pandoc-ruby (2.1.7)
     parallel (1.23.0)
-    parser (3.2.2.0)
+    parser (3.2.2.1)
       ast (~> 2.4.1)
     pg (1.4.6)
     popper_js (2.11.7)
