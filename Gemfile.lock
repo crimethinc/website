@@ -408,7 +408,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sexp_processor (4.16.1)
+    sexp_processor (4.17.0)
     shellany (0.0.1)
     sidekiq (7.1.0)
       concurrent-ruby (< 2)
