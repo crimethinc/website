@@ -443,7 +443,7 @@ GEM
       railties (>= 6.0.0)
     stringex (2.8.6)
     stripe (8.5.0)
-    thor (1.2.1)
+    thor (1.2.2)
     thread_safe (0.3.6)
     tilt (2.1.0)
     timeout (0.3.2)
