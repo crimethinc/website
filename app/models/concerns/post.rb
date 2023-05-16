@@ -2,7 +2,6 @@ module Post
   extend ActiveSupport::Concern
 
   include Name
-  include Searchable
   include Slug
   include Publishable
   include MetaDescription

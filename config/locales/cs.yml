@@ -41,17 +41,6 @@ cs:
   search:
     form_placeholder: Prohledej Archiv…
     search_results: 'Výsledky vyhledávání pro: %{query}'
-    advanced:
-      heading: Advanced Search
-      form:
-        term_label: Search
-        title_label: Title
-        subtitle_label: Subtitle
-        content_label: Content
-        tag_label: Tags
-        category_label: Categories
-        comma_separated_note: Comma separated. For example, _dogs, cats, etc_.
-        button: Search
 
   footer:
     nav:

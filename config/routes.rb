@@ -133,8 +133,7 @@ Rails.application.routes.draw do
 
   # Site search
   get  'search',          to: 'search#index'
-  get  'search/advanced', to: 'search#advanced', as: :advanced_search
-  post 'search/advanced', to: 'search#advanced_search', as: :advanced_searches
+  get  'search/advanced', to: redirect('/search')
 
   # Support
   get  'support', to: 'support#new',    as: :support
