@@ -59,4 +59,3 @@ fa:
 
     search:
       form_placeholder: Search Archives…
-      search_results: 'Search results for: %{query}'
