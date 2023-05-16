@@ -1,6 +1,5 @@
 class Podcast < ApplicationRecord
   include Name
-  include Searchable
 
   has_many :episodes, dependent: :destroy
 
