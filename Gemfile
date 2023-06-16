@@ -111,6 +111,8 @@ group :development do
   gem 'fast_stack'
   gem 'flamegraph'
   gem 'stackprof'
+
+  gem 'ruby-lsp'
 end
 
 # monitoring
