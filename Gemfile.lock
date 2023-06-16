@@ -101,7 +101,6 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
-    buftok (0.3.0)
     bugsnag (6.25.2)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
@@ -133,7 +132,6 @@ GEM
       railties (>= 3.2)
     down (5.4.1)
       addressable (~> 2.8)
-    equalizer (0.0.11)
     erb_lint (0.4.0)
       activesupport
       better_html (>= 2.0.1)
@@ -240,16 +238,12 @@ GEM
     markdown_media (1.7.0)
       kramdown
     matrix (0.4.2)
-    memoizable (0.4.2)
-      thread_safe (~> 0.3, >= 0.3.1)
     memory_profiler (1.0.1)
     method_source (1.0.0)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.2)
     minitest (5.18.0)
-    multipart-post (2.3.0)
-    naught (1.1.0)
     nenv (0.3.0)
     net-imap (0.3.4)
       date
@@ -425,7 +419,6 @@ GEM
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
       redis-client (>= 0.14.0)
-    simple_oauth (0.3.1)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -454,20 +447,8 @@ GEM
     syntax_tree (6.1.1)
       prettier_print (>= 1.2.0)
     thor (1.2.2)
-    thread_safe (0.3.6)
     tilt (2.1.0)
     timeout (0.3.2)
-    twitter (8.0.0)
-      addressable (~> 2.3)
-      buftok (~> 0.3.0)
-      equalizer (~> 0.0.11)
-      http (~> 5.1)
-      http-form_data (~> 2.3)
-      llhttp-ffi (~> 0.4.0)
-      memoizable (~> 0.4.0)
-      multipart-post (~> 2.0)
-      naught (~> 1.0)
-      simple_oauth (~> 0.3.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
@@ -563,7 +544,6 @@ DEPENDENCIES
   stimulus-rails
   stringex
   stripe
-  twitter (~> 8)
   tzinfo-data
   uglifier
   web-console
