@@ -9,7 +9,7 @@ generator: mermaid
 # disconnected: true
 # filename: erd
 # filetype: pdf
-# indirect: true
+indirect: false
 # inheritance: false
 # markup: true
 # notation: simple
@@ -17,7 +17,10 @@ generator: mermaid
 # polymorphism: false
 # sort: true
 # warn: true
-# exclude: null
+exclude:
+  - ActiveStorage::Blob
+  - ActiveStorage::Variant
+  - ActiveStorage::VariantRecord
 # only: null
 # only_recursion_depth: null
 # prepend_primary: false
