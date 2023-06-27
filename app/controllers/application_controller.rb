@@ -75,7 +75,7 @@ class ApplicationController < ActionController::Base
 
   # TODO: move to rack middleware
   def strip_file_extension
-    return redirect_to request.path.sub(/\.html/, '') if request.path.include?('.html')
+    return redirect_to request.path.sub('.html', '') if request.path.include?('.html')
   end
 
   # TODO: move to meta helper
