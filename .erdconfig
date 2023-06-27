@@ -1,12 +1,15 @@
 title: CrimethInc. website domain model
 
+attributes:
+  - foreign_keys
+  - inheritance
 exclude:
   - ActiveStorage::Blob
   - ActiveStorage::Variant
   - ActiveStorage::VariantRecord
   - ActiveStorage::Attachment
-
 indirect: false
+orientation: vertical
 
 # Defaults:
 # attributes:
