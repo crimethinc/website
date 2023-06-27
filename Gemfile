@@ -78,6 +78,7 @@ group :development, :test do
   gem 'overcommit'
   gem 'pry-byebug', platform: :mri
   gem 'rails-controller-testing'
+  gem 'rails-erd'
   gem 'rspec-rails', '> 6'
   gem 'selenium-webdriver'
   gem 'webdrivers'
