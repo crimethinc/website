@@ -26,7 +26,6 @@ orientation: vertical
 # orientation: horizontal
 # polymorphism: false
 # sort: true
-sort: false
 # warn: true
 # exclude: null
 # only: null
