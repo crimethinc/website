@@ -1,5 +1,12 @@
 title: CrimethInc. website domain model
-generator: mermaid
+
+exclude:
+  - ActiveStorage::Blob
+  - ActiveStorage::Variant
+  - ActiveStorage::VariantRecord
+  - ActiveStorage::Attachment
+
+indirect: false
 
 # Defaults:
 # attributes:
@@ -7,9 +14,9 @@ generator: mermaid
 #   - foreign_keys
 #   - inheritance
 # disconnected: true
-filename: polymorphism
+# filename: erd
 # filetype: pdf
-indirect: false
+# indirect: true
 # inheritance: false
 # markup: true
 # notation: simple
@@ -17,10 +24,7 @@ indirect: false
 # polymorphism: false
 # sort: true
 # warn: true
-exclude:
-  - ActiveStorage::Blob
-  - ActiveStorage::Variant
-  - ActiveStorage::VariantRecord
+# exclude: null
 # only: null
 # only_recursion_depth: null
 # prepend_primary: false
