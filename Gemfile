@@ -61,7 +61,6 @@ gem 'sidekiq', '< 8'
 
 # syndication
 gem 'down' # downloading images from ActiveStorage/S3
-gem 'twitter', '~> 8'
 
 # dev and testing
 group :development, :test do
@@ -111,6 +110,8 @@ group :development do
   gem 'fast_stack'
   gem 'flamegraph'
   gem 'stackprof'
+
+  gem 'ruby-lsp'
 end
 
 # monitoring
