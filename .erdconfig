@@ -7,7 +7,7 @@ generator: mermaid
 #   - foreign_keys
 #   - inheritance
 # disconnected: true
-filename: polymorphism
+filename: erd2
 # filetype: pdf
 indirect: false
 # inheritance: false
