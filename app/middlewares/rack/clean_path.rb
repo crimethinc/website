@@ -6,6 +6,7 @@ module Rack
       'index.html'           => '',
       '.html'                => '',
       '.xml'                 => '',
+      '.txt'                 => '',
       'index.php'            => '',
       '.php'                 => '',
       '.md'                  => '.markdown',
@@ -36,6 +37,7 @@ module Rack
     SMOOSHED_TWEET_TEXT_UNICODE_SEPARATORS = %w[
       %E2%80%8E
       %EF%BF%BD
+      %C2%A0
     ].freeze
 
     def initialize app
