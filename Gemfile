@@ -7,7 +7,6 @@ gem 'rails'
 
 # database
 gem 'pg'
-gem 'scenic'
 
 # webserver
 gem 'puma'
