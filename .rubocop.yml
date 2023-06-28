@@ -11,7 +11,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - 'db/schema.rb'
-    - 'db/migrate/20200715082914_init_schema.rb'
+    - 'db/migrate/20230628052836_init_schema.rb'
     - 'vendor/**/*'
 
 Layout/HashAlignment:
