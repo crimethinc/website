@@ -20,7 +20,7 @@ chdir APP_ROOT do
   system('bundle check') || system!('bundle install')
 
   puts '==> Starting postgresql'
-  system! 'brew services start postgresql'
+  system! 'brew services start postgresql@15'
 
   puts '==> Preparing database'
   system! 'bundle exec rails db:create'
