@@ -11,7 +11,9 @@ class ArticleArchivesController < ApplicationController
 
     # Redirect to somewhere else if showing this result set isn’t useful
     path =
-      if @article_archive.articles.length == 1 && @article_archive.day.present?
+      if @article_archive.articles.length
+        :root
+      elsif @article_archive.articles.length == 1 && @article_archive.day.present?
         @article_archive.articles.first.path
       elsif @article_archive.articles.empty?
         if @article_archive.day.present?
