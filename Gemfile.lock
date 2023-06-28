@@ -115,6 +115,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     childprocess (4.1.0)
+    choice (0.2.0)
     coderay (1.1.3)
     colorize (0.8.1)
     concurrent-ruby (1.2.2)
@@ -244,8 +245,6 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.8.2)
     minitest (5.18.1)
-    multipart-post (2.3.0)
-    naught (1.1.0)
     nenv (0.3.0)
     net-imap (0.3.6)
       date
@@ -314,6 +313,11 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-erd (1.7.2)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      choice (~> 0.2.0)
+      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
@@ -390,6 +394,8 @@ GEM
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
+    ruby-graphviz (1.2.5)
+      rexml
     ruby-lsp (0.5.1)
       language_server-protocol (~> 3.17.0)
       sorbet-runtime
@@ -451,7 +457,6 @@ GEM
     syntax_tree (6.1.1)
       prettier_print (>= 1.2.0)
     thor (1.2.2)
-    thread_safe (0.3.6)
     tilt (2.2.0)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -525,6 +530,7 @@ DEPENDENCIES
   rack-timeout
   rails
   rails-controller-testing
+  rails-erd
   redis
   redis-store
   referral

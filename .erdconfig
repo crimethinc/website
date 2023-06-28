@@ -1,0 +1,45 @@
+title: CrimethInc. website domain model
+
+attributes:
+  - foreign_keys
+  - inheritance
+exclude:
+  - ActiveStorage::Blob
+  - ActiveStorage::Variant
+  - ActiveStorage::VariantRecord
+  - ActiveStorage::Attachment
+  - Record
+  - ApplicationRecord
+  - ActiveStorage::Record
+  - ActionText::Record
+  - ActionMailbox::Record
+indirect: false
+orientation: vertical
+polymorphism: true
+
+# Defaults:
+# attributes:
+#   - content
+#   - foreign_keys
+#   - inheritance
+# disconnected: true
+# filename: erd
+# filetype: pdf
+# indirect: true
+# inheritance: false
+# markup: true
+# notation: simple
+# orientation: horizontal
+# polymorphism: false
+# sort: true
+# warn: true
+# exclude: null
+# only: null
+# only_recursion_depth: null
+# prepend_primary: false
+# cluster: false
+# splines: spline
+# fonts:
+#   normal: "Arial"
+#   bold: "Arial Bold"
+#   italic: "Arial Italic"
