@@ -6,13 +6,6 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowSafeAssignment.
-Lint/AssignmentInCondition:
-  Exclude:
-    - 'db/migrate/20201222045039_add_service_name_to_active_storage_blobs.active_storage.rb'
-
 # Offense count: 6
 # Configuration parameters: EnforcedStyleForLeadingUnderscores.
 # SupportedStylesForLeadingUnderscores: disallowed, required, optional
@@ -32,13 +25,6 @@ RSpec/IndexedLet:
 Rails/Blank:
   Exclude:
     - 'app/controllers/admin/articles_controller.rb'
-
-# Offense count: 1
-# Configuration parameters: Include.
-# Include: db/migrate/*.rb
-Rails/CreateTableWithTimestamps:
-  Exclude:
-    - 'db/migrate/20201222045040_create_active_storage_variant_records.active_storage.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -118,7 +104,6 @@ Rails/RedundantForeignKey:
 Rails/SkipsModelValidations:
   Exclude:
     - 'app/controllers/articles_controller.rb'
-    - 'db/migrate/20201222045039_add_service_name_to_active_storage_blobs.active_storage.rb'
     - 'lib/tasks/db/export.rake'
 
 # Offense count: 2
@@ -163,10 +148,3 @@ Rails/WhereExists:
 Security/Open:
   Exclude:
     - 'lib/tasks/db/import.rake'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: MinBodyLength, AllowConsecutiveConditionals.
-Style/GuardClause:
-  Exclude:
-    - 'db/migrate/20201222045039_add_service_name_to_active_storage_blobs.active_storage.rb'
