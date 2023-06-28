@@ -8,8 +8,14 @@ exclude:
   - ActiveStorage::Variant
   - ActiveStorage::VariantRecord
   - ActiveStorage::Attachment
+  - Record
+  - ApplicationRecord
+  - ActiveStorage::Record
+  - ActionText::Record
+  - ActionMailbox::Record
 indirect: false
 orientation: vertical
+polymorphism: true
 
 # Defaults:
 # attributes:
