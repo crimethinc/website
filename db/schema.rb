@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_03_05_063227) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -159,8 +158,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_05_063227) do
     t.string "draft_code"
     t.string "slug"
     t.integer "publication_status"
-    t.datetime "published_at", precision: nil
-    t.datetime "featured_at", precision: nil
+    t.datetime "published_at"
+    t.datetime "featured_at"
     t.boolean "featured_status", default: false
     t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
   end

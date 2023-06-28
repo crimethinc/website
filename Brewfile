@@ -18,7 +18,7 @@ brew 'poppler'
 brew 'pandoc'
 
 # Database
-brew 'postgresql'
+brew 'postgresql@15'
 
 # Overcommit hooks
 brew 'yamllint'
