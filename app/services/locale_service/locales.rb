@@ -7,6 +7,16 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'alarabiyawu', lang_code: :ar, canonical: 'alarabiyawu'),
     Locale.new(locale: 'اَلْعَرَبِيَّةُ', lang_code: :ar, canonical: 'alarabiyawu'),
 
+    # be: belarusian
+    Locale.new(locale: 'belarusian', lang_code: :be, canonical: 'bielaruskaia-mova'),
+    Locale.new(locale: 'беларуская мова', lang_code: :be, canonical: 'bielaruskaia-mova'),
+    Locale.new(locale: 'bielaruskaia-mova', lang_code: :be, canonical: 'bielaruskaia-mova'),
+
+    # bg: bulgarian
+    Locale.new(locale: 'bulgarian', lang_code: :bg, canonical: 'blgharski'),
+    Locale.new(locale: 'български', lang_code: :bg, canonical: 'blgharski'),
+    Locale.new(locale: 'blgharski', lang_code: :bg, canonical: 'blgharski'),
+
     # bn: bengali
     Locale.new(locale: 'bengali', lang_code: :bn, canonical: 'baanlaa'),
     Locale.new(locale: 'baanlaa', lang_code: :bn, canonical: 'baanlaa'),
@@ -71,6 +81,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'ibriyt',   lang_code: :he, canonical: 'ibriyt'),
     Locale.new(locale: 'עִבְרִית', lang_code: :he, canonical: 'ibriyt'),
 
+    # hu: hungarian
+    Locale.new(locale: 'hungarian', lang_code: :hu, canonical: 'magyar'),
+    Locale.new(locale: 'magyar', lang_code: :hu, canonical: 'magyar'),
+
     # id: indonesian
     Locale.new(locale: 'indonesian',       lang_code: :id, canonical: 'bahasa-indonesia'),
     Locale.new(locale: 'bahasa-indonesia', lang_code: :id, canonical: 'bahasa-indonesia'),
@@ -88,6 +102,11 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'korean',   lang_code: :ko, canonical: 'hangugeo'),
     Locale.new(locale: 'hangugeo', lang_code: :ko, canonical: 'hangugeo'),
     Locale.new(locale: '한국어', lang_code: :ko, canonical: 'hangugeo'),
+
+    # ku: kurdish
+    Locale.new(locale: 'kurdish', lang_code: :ku, canonical: 'kurmanci'),
+    Locale.new(locale: 'kurmancî', lang_code: :ku, canonical: 'kurmanci'),
+    Locale.new(locale: 'kurmanci', lang_code: :ku, canonical: 'kurmanci'),
 
     # nl: dutch
     Locale.new(locale: 'dutch',      lang_code: :nl, canonical: 'nederlands'),
@@ -135,6 +154,10 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     # sh: serbo-croatian
     Locale.new(locale: 'serbo-croatian',  lang_code: :sh, canonical: 'srpskohrvatski'),
     Locale.new(locale: 'srpskohrvatski',  lang_code: :sh, canonical: 'srpskohrvatski'),
+
+    # sk: slovakian
+    Locale.new(locale: 'slovakian', lang_code: :sk, canonical: 'slovak'),
+    Locale.new(locale: 'slovak', lang_code: :sk, canonical: 'slovak'),
 
     # sl: slovenian
     Locale.new(locale: 'slovenian',   lang_code: :sl, canonical: 'slovenscina'),
