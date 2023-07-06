@@ -26,22 +26,27 @@ FactoryBot.define do
   trait(:english)        { locale { 'en' } }
   trait(:spanish)        { locale { 'es' } }
   trait(:basque)         { locale { 'eu' } }
+  trait(:belarusian)     { locale { 'be' } }
+  trait(:bulgarian)      { locale { 'bg' } }
   trait(:farsi)          { locale { 'fa' } }
   trait(:finnish)        { locale { 'fi' } }
   trait(:french)         { locale { 'fr' } }
   trait(:galician)       { locale { 'gl' } }
   trait(:greek)          { locale { 'gr' } }
   trait(:hebrew)         { locale { 'he' } }
+  trait(:hungarian)      { locale { 'hu' } }
   trait(:indonesian)     { locale { 'id' } }
   trait(:italian)        { locale { 'it' } }
   trait(:japanese)       { locale { 'ja' } }
   trait(:korean)         { locale { 'ko' } }
+  trait(:kurdish)        { locale { 'ku' } }
   trait(:dutch)          { locale { 'nl' } }
   trait(:norwegian)      { locale { 'no' } }
   trait(:polish)         { locale { 'pl' } }
   trait(:portuguese)     { locale { 'pt' } }
   trait(:romanian)       { locale { 'ro' } }
   trait(:russian)        { locale { 'ru' } }
+  trait(:slovakian)      { locale { 'sk' } }
   trait(:slovenian)      { locale { 'sl' } }
   trait(:serbo_croatian) { locale { 'sh' } }
   trait(:swedish)        { locale { 'sv' } }

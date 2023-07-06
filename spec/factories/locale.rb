@@ -23,6 +23,22 @@ FactoryBot.define do
     slug { 'alarabiyawu' }
   end
 
+  trait(:be) do
+    abbreviation { 'be' }
+    name_in_english { 'Belarusian' }
+    name { 'беларуская мова' }
+    language_direction { 'ltr' }
+    slug { 'bielaruskaia-mova' }
+  end
+
+  trait(:bg) do
+    abbreviation { 'bg' }
+    name_in_english { 'Bulgarian' }
+    name { 'български' }
+    language_direction { 'ltr' }
+    slug { 'blgharski' }
+  end
+
   trait(:bn) do
     abbreviation { 'bn' }
     name_in_english { 'Bengali' }
@@ -127,6 +143,14 @@ FactoryBot.define do
     slug { 'ibriyt' }
   end
 
+  trait(:hu) do
+    abbreviation { 'hu' }
+    name_in_english { 'Hungarian' }
+    name { 'Magyar' }
+    language_direction { 'ltr' }
+    slug { 'magyar' }
+  end
+
   trait(:id) do
     abbreviation { 'id' }
     name_in_english { 'Indonesian' }
@@ -157,6 +181,14 @@ FactoryBot.define do
     name { '한국어' }
     language_direction { 'ltr' }
     slug { 'hangugeo' }
+  end
+
+  trait(:ku) do
+    abbreviation { 'ku' }
+    name_in_english { 'Kurdish' }
+    name { 'Kurmancî' }
+    language_direction { 'ltr' }
+    slug { 'slovak' }
   end
 
   trait(:nl) do
@@ -221,6 +253,14 @@ FactoryBot.define do
     name { 'Srpskohrvatski' }
     language_direction { 'ltr' }
     slug { 'srpskohrvatski' }
+  end
+
+  trait(:sk) do
+    abbreviation { 'sk' }
+    name_in_english { 'Slovakian' }
+    name { 'Slovak' }
+    language_direction { 'ltr' }
+    slug { 'slovak' }
   end
 
   trait(:sl) do
