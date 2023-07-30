@@ -80,7 +80,6 @@ group :development, :test do
   gem 'rails-erd'
   gem 'rspec-rails', '> 6'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
 
   # codestyle guide and linting
   gem 'rubocop', require: false
