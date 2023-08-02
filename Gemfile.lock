@@ -398,7 +398,7 @@ GEM
       rubocop-factory_bot (~> 2.22)
     ruby-graphviz (1.2.5)
       rexml
-    ruby-lsp (0.7.4)
+    ruby-lsp (0.7.5)
       language_server-protocol (~> 3.17.0)
       sorbet-runtime
       syntax_tree (>= 6.1.1, < 7)
@@ -437,7 +437,7 @@ GEM
     sitemap_generator (6.3.0)
       builder (~> 3.0)
     smart_properties (1.17.0)
-    sorbet-runtime (0.5.10940)
+    sorbet-runtime (0.5.10941)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
