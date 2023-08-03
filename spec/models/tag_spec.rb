@@ -9,7 +9,7 @@ describe Tag do
         described_class.create!(name: 'anarchism')
         second_tag = described_class.new(name: 'Anarchism')
 
-        expect(second_tag).to be_invalid
+        expect(second_tag).not_to be_valid
       end
     end
   end
