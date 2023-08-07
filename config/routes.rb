@@ -41,7 +41,7 @@ Rails.application.routes.draw do
   get '(/:year)(/:month)(/:day)/page(/1)', to: redirect { |_, req|
     req.path.split('page').first
   }
-  get '/(:year)/(:month)/(:day)/(page/:page)',
+  get '/(:year/(:month/(:day)))/(page/:page)',
       to:          'article_archives#index',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ },
       as:          :article_archives
@@ -58,6 +58,12 @@ Rails.application.routes.draw do
       controller:  'admin/articles',
       action:      'edit',
       constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }
+
+  # Fallback route for mangled date URL fragments, example: .com/202 (one digit cut off a year)
+  get '/(:year/(:month/(:day)))/(page/:page)',
+      to:          'article_archives#index',
+      constraints: { year: /\d*/, month: /\d*/, day: /\d*/ },
+      as:          :article_archives_fallback
 
   # Draft Articles and Pages
   get 'drafts/articles/:draft_code',            to: 'articles#show',       as: :article_draft
