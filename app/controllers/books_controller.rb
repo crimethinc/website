@@ -51,6 +51,6 @@ class BooksController < ApplicationController
 
   def set_book
     @book = Book.find_by(slug: params[:slug])
-    return redirect_to [:books] if @book.blank?
+    redirect_to [:books] if @book.blank?
   end
 end
