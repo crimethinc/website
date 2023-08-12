@@ -8,7 +8,7 @@ class SessionsController < Admin::AdminController
     @title   = PageTitle.new 'Sign In'
     @body_id = 'signin'
     # TODO: why doesn't this prevent a signed in user going to /signin
-    return redirect_to(root_url) if signed_in?
+    redirect_to(root_url) if signed_in?
   end
 
   # /signin

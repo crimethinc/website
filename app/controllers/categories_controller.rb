@@ -29,7 +29,7 @@ class CategoriesController < ApplicationController
   def set_slug
     @slug = params[:slug].dasherize
 
-    return redirect_to category_path(@slug) if @slug != params[:slug]
+    redirect_to category_path(@slug) if @slug != params[:slug]
   end
 
   def set_category
@@ -46,7 +46,7 @@ class CategoriesController < ApplicationController
   def set_articles
     @articles = @category.articles.for_index(**filters).page(params[:page]).per(25)
 
-    return redirect_to root_path if @articles.blank?
+    redirect_to root_path if @articles.blank?
   end
 
   def filters

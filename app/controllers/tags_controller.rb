@@ -31,7 +31,7 @@ class TagsController < ApplicationController
   def set_articles
     @articles = @tag.articles.for_index(**filters).page(params[:page]).per(25)
 
-    return redirect_to root_path if @articles.blank?
+    redirect_to root_path if @articles.blank?
   end
 
   def filters

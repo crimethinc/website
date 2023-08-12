@@ -43,6 +43,6 @@ class DefinitionsController < ApplicationController
 
   def set_definition
     @definition = Definition.find_by(slug: params[:slug])
-    return redirect_to [:definitions] if @definition.blank?
+    redirect_to [:definitions] if @definition.blank?
   end
 end

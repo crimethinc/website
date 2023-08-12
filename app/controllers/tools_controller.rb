@@ -92,6 +92,6 @@ class ToolsController < ApplicationController
   end
 
   def redirect_to_tool_namespace_if_no_tool
-    return redirect_to [@type.to_sym] if @tool.blank?
+    redirect_to [@type.to_sym] if @tool.blank?
   end
 end
