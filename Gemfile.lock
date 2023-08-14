@@ -98,9 +98,9 @@ GEM
       parser (>= 2.4)
       smart_properties
     bindex (0.8.1)
-    bootstrap (5.2.3)
+    bootstrap (5.3.1)
       autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 2.11.6, < 3)
+      popper_js (>= 2.11.8, < 3)
       sassc-rails (>= 2.0.0)
     bugsnag (6.26.0)
       concurrent-ruby (~> 1.0)
@@ -273,7 +273,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.3)
-    popper_js (2.11.7)
+    popper_js (2.11.8)
     prettier_print (1.2.1)
     pry (0.14.2)
       coderay (~> 1.1)
