@@ -273,7 +273,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.3)
-    popper_js (2.11.7)
+    popper_js (2.11.8)
     prettier_print (1.2.1)
     pry (0.14.2)
       coderay (~> 1.1)
