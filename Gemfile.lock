@@ -454,7 +454,7 @@ GEM
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
     stringex (2.8.6)
-    stripe (8.7.0)
+    stripe (9.0.0)
     syntax_tree (6.1.1)
       prettier_print (>= 1.2.0)
     thor (1.2.2)
