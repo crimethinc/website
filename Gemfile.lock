@@ -337,7 +337,7 @@ GEM
       ffi (~> 1.0)
     redis (5.0.7)
       redis-client (>= 0.9.0)
-    redis-client (0.16.0)
+    redis-client (0.17.0)
       connection_pool
     redis-store (1.9.2)
       redis (>= 4, < 6)
