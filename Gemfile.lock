@@ -441,7 +441,7 @@ GEM
       builder (~> 3.0)
     smart_properties (1.17.0)
     sorbet-runtime (0.5.11002)
-    sprockets (4.2.0)
+    sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
     sprockets-rails (3.4.2)
