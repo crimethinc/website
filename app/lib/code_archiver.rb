@@ -20,14 +20,14 @@ class CodeArchiver
 
     puts '*' * 80
     puts 'Making html page files'
-    Page.where(slug: %i[about faq]).each do |page|
+    Page.where(slug: %i[about faq]).find_each do |page|
       make_page_dir page
       make_html_page page
     end
 
     puts '*' * 80
     puts 'Making markdown page files'
-    Page.where(slug: %i[about faq]).each do |page|
+    Page.where(slug: %i[about faq]).find_each do |page|
       make_page_dir page
       make_md_page page
     end

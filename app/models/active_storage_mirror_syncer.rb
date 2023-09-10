@@ -7,7 +7,7 @@ class ActiveStorageMirrorSyncer
     ]
 
     # Iterate through each blob
-    ActiveStorage::Blob.all.find_each do |blob|
+    ActiveStorage::Blob.find_each do |blob|
       # Select services where file exists
       services = all_services.select { |file| file.exist? blob.key }
 

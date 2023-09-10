@@ -26,7 +26,7 @@ namespace :db do
       puts '==> Scrubbing Users…'
 
       # Delete all users except User ID #1, to reuse that ID
-      User.all.each do |user|
+      User.find_each do |user|
         user.id == 1 ? next : user.destroy
       end
 
