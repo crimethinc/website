@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Setting and changing an articles published_at date', js: true do
+describe 'Setting and changing an articles published_at date', :js do
   include ActiveSupport::Testing::TimeHelpers
 
   before do
