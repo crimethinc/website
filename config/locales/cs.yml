@@ -233,7 +233,7 @@ cs:
       buy_now_button_text:             Kup zde
       zine_download_read_button_text:  Stáhni PDF pro Čtení
       zine_download_print_button_text: Stáhni PDF pro Tisk
-      zine_download_lite_button_text:  Stáhni Lo Res PDF
+      zine_download_lite_button_text:  Stáhni Ink Lite PDF
       zine_download_epub_button_text:  Stáhni ePub eKnihu
       zine_download_mobi_button_text:  Stáhni Mobi eKnihu
 
@@ -251,7 +251,7 @@ cs:
 
       admin_zine_read_download_text:  Zobrazit PDF
       admin_zine_print_download_text: Vytisknout PDF
-      admin_zine_lite_download_text:  Lo Res PDF
+      admin_zine_lite_download_text:  Ink Lite PDF
       admin_zine_epub_download_text:  Mobi
       admin_zine_mobi_download_text:  ePub
 

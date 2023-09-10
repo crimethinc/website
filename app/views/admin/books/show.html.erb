@@ -55,7 +55,7 @@
     print_black_and_white_a4: "Print B/W A4",
     epub:                     "ePub",
     mobi:                     "Mobi",
-    lite:                     "Lo Res"
+    lite:                     "Ink Lite"
   }.each do |type, label| %>
 
     <% if @book.send("#{type}_download_present?") %>

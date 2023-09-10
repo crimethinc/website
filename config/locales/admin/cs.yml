@@ -112,16 +112,14 @@ cs:
       name:  B/W A4 PDF
       description: Is there an A4 sized B/W `PDF` for printing uploaded?
     - slug: lite
-      name: Lo Res PDF
-      description: Is there a "lo res" (smaller file size) `PDF` file uploaded?
+      name: Ink Lite PDF
+      description: Is there a printer toner frienly `PDF` file uploaded?
     - slug: epub
       name: ePub
       description: Is there a `.mobi` file uploaded?
     - slug: mobi
       name: Mobi
       description: Is there a low resolution or single page view PDF uploaded?
-
-
   activerecord:
     errors:
       models:
