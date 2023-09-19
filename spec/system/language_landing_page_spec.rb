@@ -71,7 +71,7 @@ describe 'Language Landing Page' do
     link_triplets.each do |triple|
       english = triple.last
       triple.each do |link_text|
-        click_on link_text, match: :first
+        click_link link_text, match: :first
         expect(page).to have_content english
         visit '/languages'
       end

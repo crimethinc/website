@@ -18,15 +18,15 @@ describe 'Creating sub articles for a live blog' do
     login_user(admin)
     visit '/admin/articles'
 
-    click_on article.title
-    click_on 'NEW Nested Article'
+    click_link article.title
+    click_link 'NEW Nested Article'
 
     fill_in 'article_title', with: blog_update_title
-    within('#datetime') { click_on 'Publish NOW!' }
+    within('#datetime') { click_button 'Publish NOW!' }
 
     expect(page).to have_content "Part of the #{article.name} Collection"
 
-    click_on article.title, match: :first
+    click_link article.title, match: :first
     within('#collection') do
       expect(page).to have_content blog_update_title
     end
