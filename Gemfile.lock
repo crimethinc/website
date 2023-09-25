@@ -152,7 +152,7 @@ GEM
     fasterer (0.10.1)
       colorize (~> 0.7)
       ruby_parser (>= 3.19.1)
-    ffi (1.15.5)
+    ffi (1.16.1)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
