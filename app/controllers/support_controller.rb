@@ -95,7 +95,7 @@ class SupportController < ApplicationController
   def cancel_subscription
     subscription = Stripe::Subscription.retrieve(params[:subscription_id])
 
-    if subscription&.delete
+    if subscription&.cancel
       SupportSession.find_by(token: params[:token]).destroy
       flash.now[:notice] = t('views.support.cancel_subscription.notice')
     else
