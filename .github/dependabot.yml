@@ -9,9 +9,18 @@ updates:
       # Allow both direct and indirect updates for all packages
       - dependency-type: "all"
     groups:
-      bundler-deps:
-        patterns:
-          - "*"
+      bundler-prod:
+        dependency-type: "production"
+        update-types: minor
         exclude-patterns:
           - rails
-          - stripe
+      bundler-dev:
+        dependency-type: "development"
+        exclude-patterns:
+          - erb_lint
+          - "rubocop*"
+      bundler-lint:
+        patterns:
+          - erb_lint
+          - "rubocop*"        
+        
