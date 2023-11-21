@@ -20,7 +20,7 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
     app_config = 'config/application.rb'
 
     if lang_direction.casecmp('ltr').zero?
-      after_this_text  = "path_ltr_locales  = %i[\n"
+      after_this_text  = "path_ltr_locales = %i[\n"
       inject_this_text = "      #{lang_name}\n"
     else
       after_this_text  = 'path_rtl_locales = %i['
