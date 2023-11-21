@@ -10,7 +10,7 @@
         meta:
           title: To Change Everything, an anarchist appeal
           description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart
-          url: http://tochangeeverything.com/
+          url: https://tochangeeverything.com/
       menu:
         toc: Table of Contents
         language: <%= lang_name %>

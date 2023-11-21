@@ -33,25 +33,29 @@ class ToChangeEverythingGenerator < Rails::Generators::Base
   end
 
   def add_language_to_nav_menu_desktop
-    layout = 'app/views/layouts/to_change_everything.html.erb'
-    inject_into_file layout, after: '<ul id="language">' do
-      <<-ERB
+    # TODO: change this to inject into app/helpers/to_change_everything_helper.rb
 
-                <%# TODO: make sure this div doesn’t have duplicate URLs %>
-                <li><a href='/tce/#{lang_name}'>#{lang_name}</a></li>
-      ERB
-    end
+    # layout = 'app/views/layouts/to_change_everything.html.erb'
+    # inject_into_file layout, after: '<ul id="language">' do
+    #   <<-ERB
+    #
+    #             <%# TODO: make sure this div doesn’t have duplicate URLs %>
+    #             <li><a href='/tce/#{lang_name}'>#{lang_name}</a></li>
+    #   ERB
+    # end
   end
 
   def add_language_to_nav_menu_mobile
-    layout = 'app/views/layouts/to_change_everything.html.erb'
-    inject_into_file layout, after: '<div id="lang1">' do
-      <<-ERB
+    # TODO: change this to inject into app/helpers/to_change_everything_helper.rb
 
-          <%# TODO: make sure this div doesn’t have duplicate URLs %>
-          <li><a href='/tce/#{lang_name}'>#{lang_name} <span class='check check-#{lang_name}'></span></a></li>
-      ERB
-    end
+    # layout = 'app/views/layouts/to_change_everything.html.erb'
+    # inject_into_file layout, after: '<div id="lang1">' do
+    #   <<-ERB
+    #
+    #       <%# TODO: make sure this div doesn’t have duplicate URLs %>
+    #       <li><a href='/tce/#{lang_name}'>#{lang_name} <span class='check check-#{lang_name}'></span></a></li>
+    #   ERB
+    # end
   end
 
   def create_tce_css_file

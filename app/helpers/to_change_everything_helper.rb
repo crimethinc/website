@@ -43,6 +43,7 @@ module ToChangeEverythingHelper
       'Srpskohrvatski' => '/2016/09/21/to-change-everything-in-11-more-languages#serbocroatian',
       'Slovenčina'     => '/2016/09/21/to-change-everything-in-11-more-languages#slovakvideo',
       'Slovenščina'    => '/tce/slovenscina',
+      'Türkçe'         => '/tce/turkce',
       'Svenska'        => '/2016/01/25/to-change-everything-in-ten-more-languages#swedish',
       'Tagalog'        => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano',
       'ภาษาไทย'        => '/tce/ภาษาไทย'

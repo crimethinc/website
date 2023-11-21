@@ -8,6 +8,7 @@ class ToChangeEverythingController < ApplicationController
     lietuvos
     portugues
     quebecois
+    turkce
     日本語
     ภาษาไทย
     한국어
