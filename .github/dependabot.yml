@@ -3,8 +3,24 @@ updates:
   - package-ecosystem: bundler
     directory: "/"
     schedule:
-      interval: daily
+      interval: weekly
     open-pull-requests-limit: 10
     allow:
       # Allow both direct and indirect updates for all packages
       - dependency-type: "all"
+    groups:
+      bundler-prod:
+        dependency-type: "production"
+        update-types: minor
+        exclude-patterns:
+          - rails
+      bundler-dev:
+        dependency-type: "development"
+        exclude-patterns:
+          - erb_lint
+          - "rubocop*"
+      bundler-lint:
+        patterns:
+          - erb_lint
+          - "rubocop*"        
+        
