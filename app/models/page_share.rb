@@ -12,7 +12,7 @@ class PageShare
   end
 
   def share_url_for site
-    send "share_url_for_#{site}"
+    send :"share_url_for_#{site}"
   end
 
   private
