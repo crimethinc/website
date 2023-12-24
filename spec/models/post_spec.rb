@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   %w[draft published].each do |status_name|
     describe "#{status_name}?" do
-      subject { post.send("#{status_name}?") }
+      subject { post.send(:"#{status_name}?") }
 
       context "with status of #{status_name}" do
         let(:post) { Page.new(publication_status: status_name) }

@@ -25,8 +25,8 @@ module SinglePageTool
 
   def image side: :front, color: :color
     if prefer_image_for_preview?
-      image_permutation = send("image_#{side}_#{color}_image")
-      send("image_#{side}_black_and_white_image") unless image_permutation.attached?
+      image_permutation = send(:"image_#{side}_#{color}_image")
+      send(:"image_#{side}_black_and_white_image") unless image_permutation.attached?
 
       image_permutation
     else
@@ -63,7 +63,7 @@ module SinglePageTool
   private
 
   def url_of side:, color:, kind:
-    Rails.application.routes.url_helpers.rails_blob_url send("image_#{side}_#{color}_#{kind}")
+    Rails.application.routes.url_helpers.rails_blob_url send(:"image_#{side}_#{color}_#{kind}")
   end
 
   def preferred_front_image_color
