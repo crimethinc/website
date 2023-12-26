@@ -23,4 +23,4 @@ updates:
       bundler-lint:
         patterns:
           - erb_lint
-          - "rubocop"
+          - "rubocop*"
