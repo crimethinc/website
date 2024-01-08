@@ -15,7 +15,7 @@ describe 'Setting and changing an articles published_at date', :js do
     login_user(admin)
     visit '/admin/articles'
 
-    click_link 'NEW'
+    click_link_or_button 'NEW'
 
     within '#publication_datetime' do
       execute_script("document.getElementById('publication_date').value = '2018-12-24';")
@@ -40,7 +40,7 @@ describe 'Setting and changing an articles published_at date', :js do
     login_user(admin)
     visit '/admin/articles'
 
-    click_link 'EDIT'
+    click_link_or_button 'EDIT'
     within '#publication_datetime' do
       # make sure pre-fills are right
       expect(find_field('published_at_date').value).to eq '2018-12-24'
@@ -65,7 +65,7 @@ describe 'Setting and changing an articles published_at date', :js do
     login_user(admin)
     visit '/admin/articles'
 
-    click_link 'NEW'
+    click_link_or_button 'NEW'
 
     within('#publication-status') { find('label[for=publication_status_draft]').click }
 
@@ -81,9 +81,9 @@ describe 'Setting and changing an articles published_at date', :js do
       login_user(admin)
       visit '/admin/articles'
 
-      click_link 'NEW'
+      click_link_or_button 'NEW'
 
-      within('#datetime') { click_button 'Publish NOW!' }
+      within('#datetime') { click_link_or_button 'Publish NOW!' }
 
       expect(page).to have_content 'Article was successfully created'
       article = Article.last
@@ -99,7 +99,7 @@ describe 'Setting and changing an articles published_at date', :js do
       login_user(admin)
       visit '/admin/articles'
 
-      click_link 'NEW'
+      click_link_or_button 'NEW'
 
       within('#publication-status') { find('label[for=publication_status_published]').click }
       find_button('Save', match: :first).click

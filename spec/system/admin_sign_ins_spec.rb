@@ -14,7 +14,7 @@ describe 'Signing in as an admin' do
       fill_in 'username', with: 'user1'
       fill_in 'password', with: 'c' * 31
     end
-    click_button 'Sign In'
+    click_link_or_button 'Sign In'
 
     expect(page).to have_content 'Logged in!'
     expect(page).to have_current_path(admin_dashboard_path)
@@ -26,7 +26,7 @@ describe 'Signing in as an admin' do
       fill_in 'username', with: 'user2'
       fill_in 'password', with: 'Ba' * 30
     end
-    click_button 'Sign In'
+    click_link_or_button 'Sign In'
 
     # TODO: is it weird that we don’t go back to /signin and there is no error message?
     expect(page).to have_current_path(sessions_path)
