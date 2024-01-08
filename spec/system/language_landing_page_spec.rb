@@ -71,7 +71,7 @@ describe 'Language Landing Page' do
     link_triplets.each do |triple|
       english = triple.last
       triple.each do |link_text|
-        click_link link_text, match: :first
+        click_link_or_button link_text, match: :first
         expect(page).to have_content english
         visit '/languages'
       end
@@ -88,7 +88,7 @@ describe 'Language Landing Page' do
 
     visit '/languages'
 
-    within('#locales') { expect(page).not_to have_content 'Italian' }
+    within('#locales') { expect(page).to have_no_content 'Italian' }
   end
 
   it 'redirects to the language index page if a language is not found' do

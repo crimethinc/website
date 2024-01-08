@@ -27,6 +27,6 @@ def login_user _user
     fill_in 'password', with: 'c' * 31
   end
 
-  click_button 'Sign In'
+  click_link_or_button 'Sign In'
   expect(page).to have_content 'Logged in!'
 end
