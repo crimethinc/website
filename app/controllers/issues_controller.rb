@@ -9,7 +9,7 @@ class IssuesController < ApplicationController
     @tool     = @issue
     @editable = @issue
 
-    @title = PageTitle.new title_for :journals, journal.name, @issue.issue
+    @title = PageTitle.new [title_for(:journals), journal.name, @issue.issue].compact
     render "#{Current.theme}/books/show"
   end
 
