@@ -17,7 +17,7 @@ class LogosController < ApplicationController
     @body_id       = 'tools'
     @type          = 'logos'
     @editable      = @tool
-    @title         = PageTitle.new title_for :logos, @tool.name
+    @title         = PageTitle.new [title_for(:logos), @tool.name].compact
     @preview_width = 640
 
     render "#{Current.theme}/logos/show"
