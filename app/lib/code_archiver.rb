@@ -133,7 +133,8 @@ class CodeArchiver
 
   def download_article_images
     files = `grep -hrioE '"http[s]?:\/\/cloudfront\.crimethinc\.com.*"' website-content/articles/ | sort | uniq`
-    count = `grep -hrioE '"http[s]?:\/\/cloudfront\.crimethinc\.com.*"' website-content/articles/ | sort | uniq| wc -l`.to_i
+    count = `grep -hrioE '"http[s]?:\/\/cloudfront\.crimethinc\.com.*"' website-content/articles/ | sort | uniq| wc -l`
+            .to_i
 
     files = files.tr('\"', '').split("\n")
 
