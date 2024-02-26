@@ -69,8 +69,8 @@ describe 'Tools Pages' do
     visit '/zines'
 
     expect(page).to have_content 'published'
-    expect(page).not_to have_content 'draft'
-    expect(page).not_to have_content 'not live'
+    expect(page).to have_no_content 'draft'
+    expect(page).to have_no_content 'not live'
   end
 
   it 'Renders published posters calling /posters' do
@@ -114,7 +114,7 @@ describe 'Tools Pages' do
     visit '/videos'
 
     expect(page).to have_content 'published'
-    expect(page).not_to have_content 'not live'
-    expect(page).not_to have_content 'draft'
+    expect(page).to have_no_content 'not live'
+    expect(page).to have_no_content 'draft'
   end
 end

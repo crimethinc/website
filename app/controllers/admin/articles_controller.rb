@@ -12,7 +12,9 @@ module Admin
 
     def draft
       @articles = Article.draft.root.page(params[:page])
-      @title    = admin_title
+
+      # TEMP: workaround, for now
+      @title    = PageTitle.new %i[Admin Articles Draft]
     end
 
     def show

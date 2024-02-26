@@ -14,7 +14,7 @@ class PodcastsController < ApplicationController
     @body_id  = 'podcast'
     @podcast  = Podcast.find_by! slug: params[:slug]
     @episodes = @podcast.episodes.live.published
-    @title    = PageTitle.new title_for @podcast.name
+    @title    = PageTitle.new [title_for(:podcasts), @podcast.name]
 
     render "#{Current.theme}/podcasts/show"
   end
