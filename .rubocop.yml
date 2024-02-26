@@ -19,7 +19,6 @@ Layout/HashAlignment:
   EnforcedColonStyle: table
 
 Layout/LineLength:
-  Max: 186
   Exclude:
     - 'db/**/*'
 
@@ -67,7 +66,7 @@ RSpec/DescribeClass:
     - 'spec/system/*'
 
 RSpec/ExampleLength:
-  Max: 9
+  Max: 14
   Exclude:
     - 'spec/system/*'
 

@@ -103,9 +103,22 @@ RSpec.describe Redirect, type: :model do
 
     context 'without creating a redirect if short path exists' do
       it 'raises error' do
-        create(:article, title: 'test', short_path: 'tester', publication_status: 'published', published_at: published_at)
+        create(
+          :article,
+          title:              'test',
+          short_path:         'tester',
+          publication_status: 'published',
+          published_at:       published_at
+        )
+
         redirect = described_class.new(source_path: '/tester', target_path: '/test/test')
-        expect { redirect.save! }.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Source path has already been taken, Source path is already taken by article short path')
+
+        error_message = <<~ERROR_MESSAGE.squish
+          Validation failed: Source path has already been taken,
+          Source path is already taken by article short path
+        ERROR_MESSAGE
+
+        expect { redirect.save! }.to raise_error(ActiveRecord::RecordInvalid, error_message)
       end
     end
   end

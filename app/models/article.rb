@@ -10,8 +10,18 @@ class Article < ApplicationRecord
   has_many :categories, through: :categorizations
 
   # Collections / Nested Articles, used for live blogs
-  has_many   :collection_posts, foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection, dependent: :destroy
-  belongs_to :collection,       foreign_key: :collection_id, class_name: 'Article', inverse_of: :collection_posts, touch: true, optional: true
+  has_many :collection_posts,
+           foreign_key: :collection_id,
+           class_name:  'Article',
+           inverse_of:  :collection,
+           dependent:   :destroy
+
+  belongs_to :collection,
+             foreign_key: :collection_id,
+             class_name:  'Article',
+             inverse_of:  :collection_posts,
+             touch:       true,
+             optional:    true
 
   before_validation :generate_published_dates, on: %i[create update]
   before_validation :normalize_newlines,       on: %i[create update]
@@ -117,7 +127,9 @@ class Article < ApplicationRecord
   def update_or_create_redirect
     return if short_path.blank?
 
-    if redirect.present? && (short_path_changed? || slug_changed? || published_at_changed? || publication_status_changed?)
+    # TODO: name this conditional's concept, extract to a private method
+    if redirect.present? &&
+       (short_path_changed? || slug_changed? || published_at_changed? || publication_status_changed?)
       redirect.update(source_path: absolute_short_path, target_path: path)
     elsif Redirect.where(source_path: absolute_short_path).exists?
       errors.add(:short_path, ' is a path that already points to a redirect')

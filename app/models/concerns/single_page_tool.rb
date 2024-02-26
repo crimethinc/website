@@ -67,8 +67,11 @@ module SinglePageTool
   end
 
   def preferred_front_image_color
-    return :color           if image_front_color_image.attached?           || image_front_color_download.attached?
-    return :black_and_white if image_front_black_and_white_image.attached? || image_front_black_and_white_download.attached?
+    return :color if image_front_color_image.attached? || image_front_color_download.attached?
+
+    if image_front_black_and_white_image.attached? || image_front_black_and_white_download.attached?
+      return :black_and_white
+    end
 
     :color
   end

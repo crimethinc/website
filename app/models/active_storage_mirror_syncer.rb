@@ -19,7 +19,10 @@ class ActiveStorageMirrorSyncer
 
       # Open the local file (if one exists)
       if services.any?(ActiveStorage::Service::DiskService)
-        local_file_path = services.find { |service| service.is_a? ActiveStorage::Service::DiskService }.path_for blob.key
+        local_file_path = services.find do |service|
+          service.is_a? ActiveStorage::Service::DiskService
+        end.path_for blob.key
+
         local_file = File.open(local_file_path)
       end
 
