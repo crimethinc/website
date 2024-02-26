@@ -35,14 +35,6 @@ Rails/OutputSafety:
     - 'app/models/article.rb'
 
 # Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowedReceivers.
-# AllowedReceivers: ActionMailer::Preview, ActiveSupport::TimeZone
-Rails/RedundantActiveRecordAllMethod:
-  Exclude:
-    - 'app/models/support_session.rb'
-
-# Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Rails/RedundantForeignKey:
   Exclude:
