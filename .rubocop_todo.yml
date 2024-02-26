@@ -14,14 +14,6 @@ Naming/MemoizedInstanceVariableName:
   Exclude:
     - 'app/models/article_archive_paginator.rb'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: Include.
-# Include: app/models/**/*.rb
-Rails/EnumHash:
-  Exclude:
-    - 'app/models/locale.rb'
-
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle.
