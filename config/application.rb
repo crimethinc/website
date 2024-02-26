@@ -68,6 +68,9 @@ module Crimethinc
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+
+    # TODO: do this at its own PR after releasing Rails 7.1 upgrade
+    #       confirm that all Heroku tasks still run after adding this line
+    # config.autoload_lib ignore: %w[assets generators tasks]
   end
 end
