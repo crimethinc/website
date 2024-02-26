@@ -16,9 +16,9 @@ Naming/MemoizedInstanceVariableName:
 
 # Offense count: 3
 # Configuration parameters: Max, AllowedIdentifiers, AllowedPatterns.
-RSpec/IndexedLet:
-  Exclude:
-    - 'spec/services/tag_assigner_spec.rb'
+# RSpec/IndexedLet:
+#   Exclude:
+#     - 'spec/services/tag_assigner_spec.rb'
 
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
