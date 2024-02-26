@@ -107,7 +107,15 @@ describe Article do
   describe '#slug_exists?' do
     subject { article.slug_exists? }
 
-    let(:article) { described_class.new(slug: 'slug', published_at: date, short_path: SecureRandom.hex, publication_status: 'published') }
+    let(:article) do
+      described_class.new(
+        slug:               'slug',
+        published_at:       date,
+        short_path:         SecureRandom.hex,
+        publication_status: 'published'
+      )
+    end
+
     let(:date)    { Date.parse('2017-01-01') }
 
     context 'with the same slug on the same date' do
@@ -152,8 +160,20 @@ describe Article do
     let(:published_at) { Date.current }
 
     it 'finds related collection_posts by collection_id' do
-      collection = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
-      article = create(:article, title: 'test', collection_id: collection.id, publication_status: 'published', published_at: published_at)
+      collection = create(
+        :article,
+        title:              'test',
+        publication_status: 'published',
+        published_at:       published_at
+      )
+
+      article = create(
+        :article,
+        title:              'test',
+        collection_id:      collection.id,
+        publication_status: 'published',
+        published_at:       published_at
+      )
 
       expect(collection.collection_posts).to include article
     end
@@ -164,8 +184,20 @@ describe Article do
 
     context 'when #collection_posts exists' do
       it 'returns true' do
-        collection = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
-        create(:article, title: 'test', collection_id: collection.id, publication_status: 'published', published_at: published_at)
+        collection = create(
+          :article,
+          title:              'test',
+          publication_status: 'published',
+          published_at:       published_at
+        )
+
+        create(
+          :article,
+          title:              'test',
+          collection_id:      collection.id,
+          publication_status: 'published',
+          published_at:       published_at
+        )
 
         expect(collection.collection_root?).to be true
       end
@@ -185,8 +217,20 @@ describe Article do
 
     context 'when it has a collection_id' do
       it 'returns true' do
-        collection = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
-        article = create(:article, title: 'test', collection_id: collection.id, publication_status: 'published', published_at: published_at)
+        collection = create(
+          :article,
+          title:              'test',
+          publication_status: 'published',
+          published_at:       published_at
+        )
+
+        article = create(
+          :article,
+          title:              'test',
+          collection_id:      collection.id,
+          publication_status: 'published',
+          published_at:       published_at
+        )
 
         expect(article.in_collection?).to be true
       end
@@ -207,7 +251,14 @@ describe Article do
     context 'when it successfully creates a short_path redirect' do
       it 'returns true' do
         # TODO: FIXME: redo this test
-        # article = create(:article, title: 'test', publication_status: 'published', published_at: published_at)
+        #
+        # article = create(
+        #   :article,
+        #   title:              'test',
+        #   publication_status: 'published',
+        #   published_at:       published_at
+        # )
+        #
         # expect(Redirect.last.source_path[/\w+/]).to eq article.short_path
       end
     end
@@ -215,9 +266,18 @@ describe Article do
     context 'when it doesn’t create a short_path redirect if redirect exists' do
       it 'raises error' do
         # TODO: FIXME: redo this test
-        # redirect = Redirect.create!(source_path: '/tester', target_path: '/test/test')
-        # article = Article.new(title: 'test', collection_id: nil, short_path: 'tester', publication_status: 'published', published_at: published_at)
-        # expect{article.save!}.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Short path  is already defined by a redirect')
+        # Redirect.create!(source_path: '/tester', target_path: '/test/test')
+        #
+        # article = described_class.new(
+        #   title:              'test',
+        #   collection_id:      nil,
+        #   short_path:         'tester',
+        #   publication_status: 'published',
+        #   published_at:       published_at
+        # )
+        #
+        # error_message = 'Validation failed: Short path is already defined by a redirect'
+        # expect { article.save! }.to raise_error(ActiveRecord::RecordInvalid, error_message)
       end
     end
   end
