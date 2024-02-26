@@ -67,6 +67,10 @@ Rails/Output:
     - 'app/lib/code_archiver.rb'
     - 'db/seeds.rb'
 
+Rails/TimeZone:
+  Exclude:
+    - 'script/*'
+
 RSpec/DescribeClass:
   Exclude:
     - 'spec/system/*'

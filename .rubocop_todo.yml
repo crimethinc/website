@@ -34,15 +34,6 @@ Rails/OutputSafety:
     - 'app/helpers/markdown_helper.rb'
     - 'app/models/article.rb'
 
-# Offense count: 3
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: strict, flexible
-Rails/TimeZone:
-  Exclude:
-    - 'script/cibuild'
-    - 'script/test'
-
 # Offense count: 8
 # Configuration parameters: Include.
 # Include: app/models/**/*.rb
