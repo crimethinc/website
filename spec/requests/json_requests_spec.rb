@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe 'JSONRequests', type: :request do
-  let(:json_headers) { { ACCEPT: 'application/json', HTTP_ACCEPT: 'application/json', CONTENT_TYPE: 'application/json' } }
+  let(:json_headers) do
+    { ACCEPT: 'application/json', HTTP_ACCEPT: 'application/json', CONTENT_TYPE: 'application/json' }
+  end
   let(:expected_error) { 'Y’all requested JSON, but we don’t do that' }
 
   it 'returns a 406 response to clients requesting json' do
@@ -32,12 +34,22 @@ describe 'JSONRequests', type: :request do
   context 'when hitting the article polling endpoint' do
     let(:published_at) { 5.minutes.ago }
     let(:collection) { create(:article, title: 'test', publication_status: 'published', published_at: published_at) }
+
     let!(:article) do
-      create(:article, title: 'collection', collection_id: collection.id, publication_status: 'published', published_at: published_at)
+      create(
+        :article,
+        title:              'collection',
+        collection_id:      collection.id,
+        publication_status: 'published',
+        published_at:       published_at
+      )
     end
 
     it 'still returns collections' do
-      get "/articles/#{collection.id}/collection_posts", params: { published_at: published_at.to_i }, headers: json_headers
+      get "/articles/#{collection.id}/collection_posts",
+          params:  { published_at: published_at.to_i },
+          headers: json_headers
+
       follow_redirect!
 
       article_title = response.parsed_body['posts'].first['title']
