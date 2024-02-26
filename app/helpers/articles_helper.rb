@@ -40,7 +40,7 @@ module ArticlesHelper
           url_encode(article.title),
           '&amp;content=',
           article.image
-        ]
+        ].join
       end
 
     tag.li class: 'social-link' do
