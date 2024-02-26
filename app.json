@@ -24,7 +24,6 @@
       "generator":   "secret"
     },
 
-    "DISABLE_SPRING": "true",
     "MIN_THREADS": "1",
     "MAX_THREADS": "1"
   },
