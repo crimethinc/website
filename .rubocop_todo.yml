@@ -25,14 +25,6 @@ Rails/HelperInstanceVariable:
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: numeric, symbolic
-Rails/HttpStatus:
-  Exclude:
-    - 'app/controllers/collection_posts_controller.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
 Rails/IndexWith:
   Exclude:
     - 'app/controllers/admin/admin_controller.rb'
