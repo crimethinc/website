@@ -75,7 +75,7 @@ module Admin
     def populate_content_from_docx_upload!
       # TEMP: Spike to explore .docx uploads for article content
       #       This will get moved out to its own object
-      return unless params[:article][:word_doc].present?
+      return if params[:article][:word_doc].blank?
 
       # Convert the temp file to HTML first to make for better conversion to Markdown
       word_doc_content   = params[:article][:word_doc].read.force_encoding('UTF-8')
@@ -105,7 +105,7 @@ module Admin
 
     def prepare_article_for_translation
       # Prefill and clean article for translation
-      return unless params[:canonical_id].present?
+      return if params[:canonical_id].blank?
 
       canonical_article = Article.find(params[:canonical_id])
       @article          = canonical_article.dup
