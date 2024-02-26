@@ -6,7 +6,7 @@ class EpisodesController < ApplicationController
     @html_id  = 'page'
     @body_id  = 'podcast'
     @editable = @episode
-    @title    = PageTitle.new title_for :podcasts, @episode.name
+    @title    = PageTitle.new [title_for(:podcasts), @podcast.name, @episode.name]
 
     render "#{Current.theme}/episodes/show"
   end
@@ -15,7 +15,7 @@ class EpisodesController < ApplicationController
     @html_id  = 'page'
     @body_id  = 'podcast'
     @editable = @episode
-    @title    = PageTitle.new title_for :podcasts, @episode.name, :transcript
+    @title    = PageTitle.new [title_for(:podcasts, :transcript), @podcast.name, @episode.name]
 
     render "#{Current.theme}/episodes/show"
   end

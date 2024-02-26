@@ -40,7 +40,7 @@ class CategoriesController < ApplicationController
   end
 
   def set_title
-    @title = PageTitle.new title_for(:categories, @category.name)
+    @title = PageTitle.new [title_for(:categories), @category.name]
   end
 
   def set_articles
