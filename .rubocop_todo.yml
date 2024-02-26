@@ -23,12 +23,6 @@ Rails/HelperInstanceVariable:
     - 'app/helpers/meta_helper.rb'
     - 'app/helpers/tags_helper.rb'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Rails/IndexWith:
-  Exclude:
-    - 'app/controllers/admin/admin_controller.rb'
-
 # Offense count: 23
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: Include.
