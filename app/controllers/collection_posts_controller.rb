@@ -7,7 +7,7 @@ class CollectionPostsController < ApplicationController
             end
 
     if posts.nil?
-      render json: {}, status: 404
+      render json: {}, status: :not_found
     else
       render json: { published_at: Time.now.utc.to_i, posts: posts }
     end

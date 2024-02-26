@@ -7,7 +7,7 @@ module Slug
   end
 
   def slug_exists?
-    self.class.where(slug: slug).exists?
+    self.class.exists?(slug: slug)
   end
 
   def blank_slug

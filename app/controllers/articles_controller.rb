@@ -72,8 +72,11 @@ class ArticlesController < ApplicationController
     @next_article     = Article.next(@article).first
     @editable         = @article
 
+    # TODO: extract to an async background job
     # save view stats
+    # rubocop:disable Rails/SkipsModelValidations
     Article.increment_counter(:page_views, @article.id) unless signed_in?
+    # rubocop:enable Rails/SkipsModelValidations
 
     if @article.content_in_html?
       render html: @article.content.html_safe, layout: false

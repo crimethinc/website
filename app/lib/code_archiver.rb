@@ -58,7 +58,7 @@ class CodeArchiver
   def make_html_article article
     File.open("#{articles_prefix}/#{article_dir(article)}/#{article.slug}.html", 'w') do |file|
       file.puts "<h1>#{article.title}</h1>"
-      file.puts "<h2>#{article.subtitle}</h2>" unless article.subtitle.blank?
+      file.puts "<h2>#{article.subtitle}</h2>" if article.subtitle.present?
       file.puts to_html article
     end
   end
@@ -66,7 +66,7 @@ class CodeArchiver
   def make_md_article article
     File.open("#{articles_prefix}/#{article_dir(article)}/#{article.slug}.md", 'w') do |file|
       file.puts "# #{article.title}"
-      file.puts "## #{article.subtitle}" unless article.subtitle.blank?
+      file.puts "## #{article.subtitle}" if article.subtitle.present?
       file.puts to_markdown article
     end
   end
@@ -74,7 +74,7 @@ class CodeArchiver
   def make_html_page page
     File.open("#{pages_prefix}/#{page.slug}.html", 'w') do |file|
       file.puts "<h1>#{page.title}</h1>"
-      file.puts "<h2>#{page.subtitle}</h2>" unless page.subtitle.blank?
+      file.puts "<h2>#{page.subtitle}</h2>" if page.subtitle.present?
       file.puts to_html page
     end
   end
@@ -82,7 +82,7 @@ class CodeArchiver
   def make_md_page page
     File.open("#{pages_prefix}/#{page.slug}.md", 'w') do |file|
       file.puts "# #{page.title}"
-      file.puts "## #{page.subtitle}" unless page.subtitle.blank?
+      file.puts "## #{page.subtitle}" if page.subtitle.present?
       file.puts to_markdown page
     end
   end

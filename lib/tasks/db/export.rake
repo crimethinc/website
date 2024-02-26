@@ -46,8 +46,10 @@ namespace :db do
         klass.draft.destroy_all
       end
 
+      # rubocop:disable Rails/SkipsModelValidations
       puts '==> Scrubbing article page view counts…'
       Article.update_all(page_views: 0)
+      # rubocop:enable Rails/SkipsModelValidations
     end
 
     desc 'Dump local development DB'
