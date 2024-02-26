@@ -14,12 +14,6 @@ Naming/MemoizedInstanceVariableName:
   Exclude:
     - 'app/models/article_archive_paginator.rb'
 
-# Offense count: 3
-# Configuration parameters: Max, AllowedIdentifiers, AllowedPatterns.
-# RSpec/IndexedLet:
-#   Exclude:
-#     - 'spec/services/tag_assigner_spec.rb'
-
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: NilOrEmpty, NotPresent, UnlessPresent.
