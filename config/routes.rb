@@ -94,10 +94,17 @@ Rails.application.routes.draw do
   get 'tags/:slug/feed(/:lang)', to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
 
   # Podcast
-  get 'podcast/feed(/:lang)',                               to: 'podcasts#feed',        as: :podcast_feed, defaults: { format: 'rss' }
+  get 'podcast/feed(/:lang)',
+      to:       'podcasts#feed',
+      as:       :podcast_feed,
+      defaults: { format: 'rss' }
+
   get 'podcasts',                                           to: 'podcasts#index',       as: :podcasts
   get 'podcasts/:slug',                                     to: 'podcasts#show',        as: :podcast
-  get 'podcasts/:slug/episodes',                            to: redirect { |path_params, _| "/podcasts/#{path_params[:slug]}" }
+
+  get 'podcasts/:slug/episodes',
+      to: redirect { |path_params, _| "/podcasts/#{path_params[:slug]}" }
+
   get 'podcasts/:slug/episodes/:episode_number',            to: 'episodes#show',       as: :episode
   get 'podcasts/:slug/episodes/:episode_number/transcript', to: 'episodes#transcript', as: :episode_transcript
 
@@ -152,7 +159,8 @@ Rails.application.routes.draw do
   post 'support/cancel/:token/:subscription_id', to: 'support#cancel_subscription', as: :support_cancel_subscription
   post 'support/update/:token/:subscription_id', to: 'support#update_subscription', as: :support_update_subscription
 
-  post 'support/stripe_subscription_payment_succeeded_webhook', to: 'support#stripe_subscription_payment_succeeded_webhook'
+  post 'support/stripe_subscription_payment_succeeded_webhook',
+       to: 'support#stripe_subscription_payment_succeeded_webhook'
 
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
