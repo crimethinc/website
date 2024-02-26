@@ -8,7 +8,7 @@ Rails.application.configure do
   config.lograge.formatter = Lograge::Formatters::Logstash.new
 
   # Code is not reloaded between requests.
-  config.enable_reloading = true
+  config.enable_reloading = false
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
