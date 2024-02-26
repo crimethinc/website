@@ -7,7 +7,7 @@ namespace :db do
     task download: :environment do
       # ensure that the db dump directory and file exist
       FileUtils.mkdir_p Rails.root.join 'database-dumps'
-      FileUtils.touch Rails.root.join 'database-dumps', 'crimethinc_production_db_dump.sql'
+      FileUtils.touch Rails.root.join 'database-dumps/crimethinc_production_db_dump.sql'
 
       # URL to download from
       url = 'https://crimethinc-production.s3.us-west-2.amazonaws.com/database-dumps/crimethinc_production_db_dump.sql'

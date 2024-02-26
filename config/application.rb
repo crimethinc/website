@@ -67,7 +67,7 @@ module Crimethinc
     config.i18n.available_locales = [subdomain_locales, path_ltr_locales, path_rtl_locales].flatten
 
     # Allow nested diretories in locales
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}')]
 
     # Configuration for the application, engines, and railties goes here.
     #

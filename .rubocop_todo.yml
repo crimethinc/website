@@ -14,15 +14,6 @@ Naming/MemoizedInstanceVariableName:
   Exclude:
     - 'app/models/article_archive_paginator.rb'
 
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: slashes, arguments
-Rails/FilePath:
-  Exclude:
-    - 'config/application.rb'
-    - 'lib/tasks/db/import.rake'
-
 # Offense count: 14
 # Configuration parameters: Include.
 # Include: app/helpers/**/*.rb
