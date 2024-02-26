@@ -19,7 +19,6 @@ Layout/HashAlignment:
   EnforcedColonStyle: table
 
 Layout/LineLength:
-  Max: 186
   Exclude:
     - 'db/**/*'
 
