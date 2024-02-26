@@ -14,7 +14,8 @@ namespace :db do
 
       puts '==> Downloading remote production DB dump from S3…'
       File.open('database-dumps/crimethinc_production_db_dump.sql', 'wb') do |file|
-        file << URI.open(url).read
+        # TODO: use Down or HTTP.rb gem instead
+        file << URI.open(url).read # rubocop:disable Security/Open
       end
     end
 
