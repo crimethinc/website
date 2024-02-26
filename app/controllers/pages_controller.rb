@@ -40,15 +40,6 @@ class PagesController < ApplicationController
     render "#{Current.theme}/pages/library"
   end
 
-  # TODO: Delete and all of its views and translation locale YAMLs
-  def post_order_success
-    @order_id = params[:ordernum]
-    @title    = PageTitle.new title_for(I18n.t('page_titles.about.store')),
-                              I18n.t('page_titles.about.post_order_success')
-
-    render "#{Current.theme}/pages/post_order_success"
-  end
-
   # TODO: make this view localizable
   def submission_guidelines
     @title = PageTitle.new I18n.t('page_titles.about.submission_guidelines')
