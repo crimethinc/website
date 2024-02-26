@@ -48,7 +48,24 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
     '/tools/',
     '/watch/'
   ]
-  tce_languages = %w[czech deutsch espanol espanol-america-latina polski portugues quebecois slovenscina slovensko فارسی 日本語 한국어 lietuvos portugues ภาษาไทย]
+
+  tce_languages = %w[
+    czech
+    deutsch
+    espanol
+    espanol-america-latina
+    polski
+    portugues
+    quebecois
+    slovenscina
+    slovensko
+    فارسی
+    日本語
+    한국어
+    lietuvos
+    portugues
+    ภาษาไทย
+  ]
 
   tce_languages.each do |lang|
     static_paths.push("/tce/#{lang}/", "/tce/#{lang}/get/")
