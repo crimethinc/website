@@ -17,11 +17,10 @@ class Article < ApplicationRecord
            dependent:   :destroy
 
   belongs_to :collection,
-             foreign_key: :collection_id,
-             class_name:  'Article',
-             inverse_of:  :collection_posts,
-             touch:       true,
-             optional:    true
+             class_name: 'Article',
+             inverse_of: :collection_posts,
+             touch:      true,
+             optional:   true
 
   before_validation :generate_published_dates, on: %i[create update]
   before_validation :normalize_newlines,       on: %i[create update]
