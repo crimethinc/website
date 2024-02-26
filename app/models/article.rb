@@ -47,7 +47,7 @@ class Article < ApplicationRecord
 
   # Overwrites slug_exists? from Slug. We allow duplicate slugs on different published_at dates.
   def slug_exists?
-    Article.on(published_at).where(slug: slug).exists?
+    Article.on(published_at).exists?(slug: slug)
   end
 
   def collection_root?
@@ -130,7 +130,7 @@ class Article < ApplicationRecord
     if redirect.present? &&
        (short_path_changed? || slug_changed? || published_at_changed? || publication_status_changed?)
       redirect.update(source_path: absolute_short_path, target_path: path)
-    elsif Redirect.where(source_path: absolute_short_path).exists?
+    elsif Redirect.exists?(source_path: absolute_short_path)
       errors.add(:short_path, ' is a path that already points to a redirect')
     elsif publication_status == 'published'
       Redirect.create(source_path: absolute_short_path, target_path: path, article_id: id)

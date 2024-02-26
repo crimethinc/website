@@ -46,15 +46,6 @@ Rails/UniqueValidationWithoutIndex:
     - 'app/models/support_session.rb'
     - 'app/models/user.rb'
 
-# Offense count: 3
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: exists, where
-Rails/WhereExists:
-  Exclude:
-    - 'app/models/article.rb'
-    - 'app/models/concerns/slug.rb'
-
 # Offense count: 1
 Security/Open:
   Exclude:
