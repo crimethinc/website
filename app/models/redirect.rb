@@ -84,4 +84,12 @@ class Redirect < ApplicationRecord
 
     errors.add(:target_path, I18n.t('activerecord.errors.models.article.target_path.uniqueness'))
   end
+
+  def article_short_path_unique
+    aa = Article.where(short_path: source_path[/\w+/])
+
+    return if aa.blank?
+
+    errors.add(:source_path, I18n.t('activerecord.errors.models.article.source_path.uniqueness')) unless aa.first.id == article_id
+  end
 end
