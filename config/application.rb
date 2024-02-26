@@ -30,6 +30,13 @@ module Crimethinc
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    # TODO: do this at its own PR after releasing Rails 7.1 upgrade
+    # TODO: confirm that all Heroku tasks still run after adding this line
+    # config.autoload_lib ignore: %w[assets generators tasks]
+
     # By default `form_with` generates remote forms. We don't really
     # use this right now, so it is easier to have it default to `false`.
     config.action_view.form_with_generates_remote_forms = false
@@ -68,9 +75,5 @@ module Crimethinc
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-
-    # TODO: do this at its own PR after releasing Rails 7.1 upgrade
-    #       confirm that all Heroku tasks still run after adding this line
-    # config.autoload_lib ignore: %w[assets generators tasks]
   end
 end
