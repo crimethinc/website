@@ -23,15 +23,6 @@ Rails/HelperInstanceVariable:
     - 'app/helpers/meta_helper.rb'
     - 'app/helpers/tags_helper.rb'
 
-# Offense count: 23
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: Include.
-# Include: app/**/*.rb, config/**/*.rb, db/**/*.rb, lib/**/*.rb
-Rails/Output:
-  Exclude:
-    - 'app/lib/code_archiver.rb'
-    - 'db/seeds.rb'
-
 # Offense count: 8
 Rails/OutputSafety:
   Exclude:

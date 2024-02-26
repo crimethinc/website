@@ -61,6 +61,12 @@ Naming/VariableNumber:
 Rails/EnvironmentVariableAccess:
   Enabled: false
 
+# Using `puts` is allowed in these files
+Rails/Output:
+  Exclude:
+    - 'app/lib/code_archiver.rb'
+    - 'db/seeds.rb'
+
 RSpec/DescribeClass:
   Exclude:
     - 'spec/system/*'
