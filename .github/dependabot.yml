@@ -1,26 +1,26 @@
 version: 2
 updates:
   - package-ecosystem: bundler
-    directory: "/"
+    directory: /
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
     allow:
       # Allow both direct and indirect updates for all packages
-      - dependency-type: "all"
+      - dependency-type: all
     groups:
-      bundler-prod:
-        dependency-type: "production"
-        update-types:
-          - minor
-        exclude-patterns:
-          - rails
-      bundler-dev:
-        dependency-type: "development"
-        exclude-patterns:
-          - erb_lint
-          - "rubocop*"
+      # Dependabot creates groups in the order they appear in this config.
+      # If a dependency update could belong to more than one group,
+      # it is only assigned to the first group it matches with.
       bundler-lint:
         patterns:
           - erb_lint
-          - "rubocop*"
+          - rubocop*
+      bundler-dev:
+        dependency-type: development
+      bundler-all:
+        update-types:
+          - minor
+          - patch
+        exclude-patterns:
+          - rails
