@@ -14,7 +14,7 @@ describe TagAssigner do
       expect(described_class.parse_glob(glob).tags.map(&:name)).to eq %w[foo bar baz]
     end
 
-    it 'will drop blank tags' do
+    it 'drops blank tags' do
       glob = 'foo,, bar'
       expect(described_class.parse_glob(glob).tags.map(&:name)).to eq %w[foo bar]
     end

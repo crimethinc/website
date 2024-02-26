@@ -15,7 +15,7 @@ class VideosController < ApplicationController
     @editable = @video
     @html_id  = 'page'
     @body_id  = 'video'
-    @title    = PageTitle.new title_for :videos, @video.title
+    @title    = PageTitle.new [title_for(:videos), @video.title].compact
 
     render "#{Current.theme}/videos/show"
   end
