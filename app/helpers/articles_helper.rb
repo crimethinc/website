@@ -33,11 +33,22 @@ module ArticlesHelper
       when :facebook
         "https://www.facebook.com/sharer?u=#{url_encode article_url}"
       when :tumblr
-        "http://tumblr.com/widgets/share/tool?canonicalUrl=#{article_url}&amp;caption=#{url_encode article.title}&amp;content=#{article.image}"
+        [
+          'http://tumblr.com/widgets/share/tool?canonicalUrl=',
+          article_url,
+          '&amp;caption=',
+          url_encode(article.title),
+          '&amp;content=',
+          article.image
+        ]
       end
 
     tag.li class: 'social-link' do
-      link_to "Share on #{site.capitalize}", url, class: "link-domain-#{site}", target: '_blank', rel: 'noopener'
+      link_to "Share on #{site.capitalize}",
+              url,
+              class:  "link-domain-#{site}",
+              target: '_blank',
+              rel:    'noopener'
     end
   end
 
@@ -79,9 +90,32 @@ module ArticlesHelper
     month = month.to_s.rjust(2, '0') unless month.nil?
     day   = day.to_s.rjust(2, '0')   unless day.nil?
 
-    links << link_to_unless_current(year,  article_archives_path(year),               rel: 'archives', class: 'year') if year && show_year
-    links << link_to_unless_current(month, article_archives_path(year, month),        rel: 'archives', class: 'month') if month && show_month
-    links << link_to_unless_current(day,   article_archives_path(year, month, day),   rel: 'archives', class: 'day') if day && show_day
+    if year && show_year
+      links << link_to_unless_current(
+        year,
+        article_archives_path(year),
+        rel:   'archives',
+        class: 'year'
+      )
+    end
+
+    if month && show_month
+      links << link_to_unless_current(
+        month,
+        article_archives_path(year, month),
+        rel:   'archives',
+        class: 'month'
+      )
+    end
+
+    if day && show_day
+      links << link_to_unless_current(
+        day,
+        article_archives_path(year, month, day),
+        rel:   'archives',
+        class: 'day'
+      )
+    end
 
     links.join('-').html_safe
   end
