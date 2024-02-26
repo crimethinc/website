@@ -36,7 +36,16 @@ describe Tag do
 
   describe 'assign_to!' do
     let(:published_at) { Date.current }
-    let(:article) { Article.new(title: 'foobar', short_path: SecureRandom.hex, publication_status: 'published', published_at: published_at) }
+
+    let(:article) do
+      Article.new(
+        title:              'foobar',
+        short_path:         SecureRandom.hex,
+        publication_status: 'published',
+        published_at:       published_at
+      )
+    end
+
     let(:page) { Page.new(title: 'about') }
 
     it 'assigns the tag to articles' do
