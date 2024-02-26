@@ -150,10 +150,3 @@ Rails/WhereExists:
 Security/Open:
   Exclude:
     - 'lib/tasks/db/import.rake'
-
-# Offense count: 55
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.
-# URISchemes: http, https
-Layout/LineLength:
-  Max: 186

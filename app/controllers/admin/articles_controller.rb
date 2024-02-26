@@ -121,7 +121,11 @@ module Admin
 
     def set_article
       if params[:year] && params[:slug]
-        @article = Article.where(year: params[:year]).where(month: params[:month]).where(day: params[:day]).where(slug: params[:slug]).first
+        @article = Article.where(year:  params[:year])
+                          .where(month: params[:month])
+                          .where(day:   params[:day])
+                          .where(slug:  params[:slug])
+                          .first
 
         redirect_to([:edit, :admin, @article])
       elsif params[:draft_code].present?
