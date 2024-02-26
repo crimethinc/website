@@ -8,6 +8,7 @@ module ToChangeEverythingHelper
     outro: %w[anarchy outro takeflight next].freeze
   }.freeze
 
+  # rubocop:disable Layout/LineLength
   LANGUAGE_LINKS = {
     first: {
       'العربية'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#arabic',
@@ -26,6 +27,7 @@ module ToChangeEverythingHelper
       'Français'                                        => '/2016/01/25/to-change-everything-in-ten-more-languages#french',
       'Français (Québec)'                               => '/tce/quebecois'
     }.freeze,
+    # rubocop:enable Layout/LineLength
 
     last:  {
       'ελληνικά'       => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
