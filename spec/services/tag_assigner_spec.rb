@@ -21,7 +21,7 @@ describe TagAssigner do
   end
 
   describe 'assign_tags_to!' do
-    subject(:tag_assigner) { described_class.new(tag_1, tag_2, tag_3) }
+    subject(:tag_assigner) { described_class.new(first_tag, second_tag, third_tag) }
 
     let(:first_tag) { double }
     let(:second_tag) { double }
