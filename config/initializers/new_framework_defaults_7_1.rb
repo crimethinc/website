@@ -23,13 +23,14 @@
 # Remove the default X-Download-Options headers since it is used only by Internet Explorer.
 # If you need to support Internet Explorer, add back `"X-Download-Options" => "noopen"`.
 #++
-Rails.application.config.action_dispatch.default_headers = {
-  'X-Frame-Options'                   => 'SAMEORIGIN',
-  'X-XSS-Protection'                  => '0',
-  'X-Content-Type-Options'            => 'nosniff',
-  'X-Permitted-Cross-Domain-Policies' => 'none',
-  'Referrer-Policy'                   => 'strict-origin-when-cross-origin'
-}
+# TODO: enable this one by itself, after the rest
+# Rails.application.config.action_dispatch.default_headers = {
+#   'X-Frame-Options'                   => 'SAMEORIGIN',
+#   'X-XSS-Protection'                  => '0',
+#   'X-Content-Type-Options'            => 'nosniff',
+#   'X-Permitted-Cross-Domain-Policies' => 'none',
+#   'Referrer-Policy'                   => 'strict-origin-when-cross-origin'
+# }
 
 ###
 # Do not treat an `ActionController::Parameters` instance
@@ -138,7 +139,7 @@ Rails.application.config.active_record.query_log_tags_format = :sqlcommenter
 # servers, first deploy without changing the serializer, then set the serializer
 # in a subsequent deploy.
 #++
-Rails.application.config.active_support.message_serializer = :json_allow_marshal
+Rails.application.config.active_support.message_serializer = ActiveSupport::JSON
 
 ###
 # Enable a performance optimization that serializes message data and metadata
@@ -173,7 +174,8 @@ Rails.application.config.active_record.raise_on_assign_to_attr_readonly = true
 # The previous behavior was to validate the presence of the parent record, which performed an extra query
 # to get the parent every time the child record was updated, even when parent has not changed.
 #++
-Rails.application.config.active_record.belongs_to_required_validates_foreign_key = false
+# TODO: enable this one by itself, after the rest
+# Rails.application.config.active_record.belongs_to_required_validates_foreign_key = false
 
 ###
 # Enable precompilation of `config.filter_parameters`. Precompilation can
