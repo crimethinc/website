@@ -173,8 +173,7 @@ Rails.application.config.active_record.raise_on_assign_to_attr_readonly = true
 # The previous behavior was to validate the presence of the parent record, which performed an extra query
 # to get the parent every time the child record was updated, even when parent has not changed.
 #++
-# TODO: enable this one by itself, after the rest
-# Rails.application.config.active_record.belongs_to_required_validates_foreign_key = false
+Rails.application.config.active_record.belongs_to_required_validates_foreign_key = false
 
 ###
 # Enable precompilation of `config.filter_parameters`. Precompilation can
