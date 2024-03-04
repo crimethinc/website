@@ -46,7 +46,7 @@ class ArticleArchive
     @paginator ||= ArticleArchivePaginator.new(self)
   end
 
-  def each &block
-    calendar.sort.reverse_each(&block)
+  def each(&)
+    calendar.sort.reverse_each(&)
   end
 end
