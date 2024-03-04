@@ -24,7 +24,7 @@ module Slug
 
       while slug_exists?
         n += 1
-        self.slug = "#{name} #{n}"&.to_slug
+        self.slug = "#{name} #{n}".to_slug
       end
     end
 

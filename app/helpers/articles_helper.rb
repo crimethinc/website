@@ -61,7 +61,7 @@ module ArticlesHelper
     tag.figure img + figcaption.to_s
   end
 
-  def article_tag article, &block
+  def article_tag(article, &)
     klasses = ['h-entry']
     klasses << 'article-with-no-header-image' if article.image.blank?
     id = "article--#{article.slug}"
@@ -70,7 +70,7 @@ module ArticlesHelper
     data = { id: article.id, published_at: Time.now.utc.to_i }
     data[:listen] = true if article.collection_posts.recent.any?
 
-    tag.article id: id, class: klasses.join(' '), data: data, &block
+    tag.article(id: id, class: klasses.join(' '), data: data, &)
   end
 
   def display_date datetime = nil
