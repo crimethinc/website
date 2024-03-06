@@ -31,9 +31,6 @@ module Crimethinc
     config.load_defaults 7.0
     config.active_support.cache_format_version = 7.1
 
-    # TEMP: delete after load_defaults is 7.1
-    config.add_autoload_paths_to_load_path = false
-
     # TEMP: re-enable mini magick until variant syntax is changed to vips in ActiveStorageHelper#image_variant_by_width
     config.active_storage.variant_processor = :mini_magick
 
@@ -71,6 +68,10 @@ module Crimethinc
 
     config.i18n.available_locales = [subdomain_locales, path_ltr_locales, path_rtl_locales].flatten
 
+    # TEMP: delete after load_defaults is 7.1
+    # TODO: set to false after i18n.load_path is solved below
+    config.add_autoload_paths_to_load_path = true
+    # TODO: rethink how to allow nested locales directories without load_path
     # Allow nested diretories in locales
     config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}')]
 
