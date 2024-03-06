@@ -31,6 +31,9 @@ module Crimethinc
     config.load_defaults 7.0
     config.active_support.cache_format_version = 7.1
 
+    # TEMP: delete after load_defaults is 7.1
+    config.add_autoload_paths_to_load_path = false
+
     # TEMP: re-enable mini magick until variant syntax is changed to vips in ActiveStorageHelper#image_variant_by_width
     config.active_storage.variant_processor = :mini_magick
 
