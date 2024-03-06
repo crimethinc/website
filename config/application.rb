@@ -68,6 +68,10 @@ module Crimethinc
 
     config.i18n.available_locales = [subdomain_locales, path_ltr_locales, path_rtl_locales].flatten
 
+    # TEMP: delete after load_defaults is 7.1
+    # TODO: set to false after i18n.load_path is solved below
+    config.add_autoload_paths_to_load_path = true
+    # TODO: rethink how to allow nested locales directories without load_path
     # Allow nested diretories in locales
     config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}')]
 
