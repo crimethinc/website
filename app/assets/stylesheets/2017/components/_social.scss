@@ -31,5 +31,7 @@
     .link-domain-peertube  { @include social-icon("peertube");  }
     .link-domain-bandcamp  { @include social-icon("bandcamp");  }
     .link-domain-reddit    { @include social-icon("reddit");  }
+    .link-domain-bsky, // the bluesky domain is bsky for now, but it may change or have more in the future
+    .link-domain-bluesky    { @include social-icon("bluesky");  }
   }
 }
