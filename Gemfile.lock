@@ -255,7 +255,7 @@ GEM
       kramdown
     matrix (0.4.2)
     memory_profiler (1.0.1)
-    method_source (1.0.0)
+    method_source (1.1.0)
     mini_magick (4.12.0)
     mini_mime (1.1.5)
     mini_portile2 (2.8.6)
@@ -471,7 +471,7 @@ GEM
     sitemap_generator (6.3.0)
       builder (~> 3.0)
     smart_properties (1.17.0)
-    sorbet-runtime (0.5.11346)
+    sorbet-runtime (0.5.11352)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
