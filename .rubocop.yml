@@ -6,6 +6,7 @@ require:
   - rubocop-rails
   - rubocop-rspec
   - rubocop-factory_bot
+  - rubocop-rspec_rails
 
 AllCops:
   NewCops: enable
@@ -127,5 +128,5 @@ RSpec/NoExpectationExample:
   Enabled: false
 
 # If we don,t care about explicit type, then remove this and fix errors
-RSpec/Rails/InferredSpecType:
+RSpecRails/InferredSpecType:
   Enabled: false
