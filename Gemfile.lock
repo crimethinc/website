@@ -251,7 +251,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
-    markdown_media (1.7.0)
+    markdown_media (2.0.0)
       kramdown
     matrix (0.4.2)
     memory_profiler (1.0.1)
