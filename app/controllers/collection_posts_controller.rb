@@ -33,6 +33,6 @@ class CollectionPostsController < ApplicationController
            .collection_posts
            .live
            .published
-           .where('published_at >= :published_since', published_since: published_since)
+           .where(published_at: published_since..)
   end
 end

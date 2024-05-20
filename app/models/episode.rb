@@ -10,7 +10,7 @@ class Episode < ApplicationRecord
   after_create :generate_slug
   after_create :generate_episode_number
 
-  scope :live, -> { where('published_at < ?', Time.now.utc) }
+  scope :live, -> { where(published_at: ...Time.now.utc) }
 
   def path
     if published?

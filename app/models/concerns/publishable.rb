@@ -9,7 +9,7 @@ module Publishable
 
     scope :chronological, -> { order(published_at: :desc) }
     scope :root,          -> { where(collection_id: nil) }
-    scope :live,          -> { where('published_at < ?', Time.now.utc) }
+    scope :live,          -> { where(published_at: ...Time.now.utc) }
     scope :recent,        -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.days, Time.now.utc) }
 
     scope :on,
@@ -29,7 +29,7 @@ module Publishable
 
     scope :previous,
           lambda { |article|
-            root.where('published_at < ?', article.published_at)
+            root.where(published_at: article.published_at)
                 .live
                 .published
                 .chronological
