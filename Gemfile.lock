@@ -283,7 +283,7 @@ GEM
       iniparse (~> 1.4)
       rexml (~> 3.2)
     pandoc-ruby (2.1.10)
-    parallel (1.24.0)
+    parallel (1.25.1)
     parser (3.3.2.0)
       ast (~> 2.4.1)
       racc
@@ -431,7 +431,7 @@ GEM
       rubocop (~> 1.40)
     ruby-graphviz (1.2.5)
       rexml
-    ruby-lsp (0.17.1)
+    ruby-lsp (0.17.2)
       language_server-protocol (~> 3.17.0)
       prism (>= 0.29.0, < 0.30)
       sorbet-runtime (>= 0.5.10782)
@@ -472,7 +472,7 @@ GEM
     sitemap_generator (6.3.0)
       builder (~> 3.0)
     smart_properties (1.17.0)
-    sorbet-runtime (0.5.11406)
+    sorbet-runtime (0.5.11422)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
