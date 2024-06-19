@@ -28,7 +28,7 @@ gem 'jbuilder'
 # text utilities
 gem 'addressable'      # for current URL with a subdomain
 gem 'kramdown'         # for Markdown processing
-gem 'markdown_media', '1.8' # for [[ media embeds ]]
+gem 'markdown_media'   # for [[ media embeds ]]
 gem 'pandoc-ruby'      # for Word to HTML conversion
 gem 'reverse_markdown' # for HTML to Markdown conversion
 gem 'rubypants'        # for smart quotes
