@@ -252,7 +252,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
-    markdown_media (2.0.0)
+    markdown_media (1.8.0)
       kramdown
     matrix (0.4.2)
     memory_profiler (1.0.2)
@@ -547,7 +547,7 @@ DEPENDENCIES
   listen
   lograge
   logstash-event
-  markdown_media
+  markdown_media (= 1.8)
   memory_profiler
   nokogiri
   overcommit
