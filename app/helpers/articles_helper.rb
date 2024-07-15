@@ -10,7 +10,7 @@ module ArticlesHelper
   def displayable_localizations article
     return article.localizations if signed_in?
 
-    article.localizations.filter_map { |localization| localization if localization.published? }
+    article.localizations.select(&:published?)
   end
 
   def story_card_background_image article:
