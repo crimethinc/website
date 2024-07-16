@@ -47,12 +47,20 @@ FactoryBot.define do
     slug { 'baanlaa' }
   end
 
-  trait(:cs) do
-    abbreviation { 'cs' }
+  trait(:ca) do
+    abbreviation { 'ca' }
     name_in_english { 'Czech' }
     name { 'čeština' }
     language_direction { 'ltr' }
     slug { 'cestina' }
+  end
+
+  trait(:cs) do
+    abbreviation { 'cs' }
+    name_in_english { 'Catalan' }
+    name { 'Català' }
+    language_direction { 'ltr' }
+    slug { 'catala' }
   end
 
   trait(:da) do
