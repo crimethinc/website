@@ -49,18 +49,18 @@ FactoryBot.define do
 
   trait(:ca) do
     abbreviation { 'ca' }
-    name_in_english { 'Czech' }
-    name { 'čeština' }
-    language_direction { 'ltr' }
-    slug { 'cestina' }
-  end
-
-  trait(:cs) do
-    abbreviation { 'cs' }
     name_in_english { 'Catalan' }
     name { 'Català' }
     language_direction { 'ltr' }
     slug { 'catala' }
+  end
+
+  trait(:cs) do
+    abbreviation { 'cs' }
+    name_in_english { 'Czech' }
+    name { 'čeština' }
+    language_direction { 'ltr' }
+    slug { 'cestina' }
   end
 
   trait(:da) do
