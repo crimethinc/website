@@ -23,9 +23,9 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'বাংলা', lang_code: :bn, canonical: 'baanlaa'),
 
     # ca: catalan
-    Locale.new(locale: 'catalan', lang_code: :cs, canonical: 'catala'),
-    Locale.new(locale: 'català',  lang_code: :cs, canonical: 'catala'),
-    Locale.new(locale: 'catala',  lang_code: :cs, canonical: 'catala'),
+    Locale.new(locale: 'catalan', lang_code: :ca, canonical: 'catala'),
+    Locale.new(locale: 'català',  lang_code: :ca, canonical: 'catala'),
+    Locale.new(locale: 'catala',  lang_code: :ca, canonical: 'catala'),
 
     # cs: czech
     Locale.new(locale: 'czech',   lang_code: :cs, canonical: 'cestina'),
