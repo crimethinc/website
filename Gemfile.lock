@@ -142,12 +142,12 @@ GEM
     down (5.4.2)
       addressable (~> 2.8)
     drb (2.2.1)
-    erb_lint (0.5.0)
+    erb_lint (0.6.0)
       activesupport
       better_html (>= 2.0.1)
       parser (>= 2.7.1.4)
       rainbow
-      rubocop
+      rubocop (>= 1)
       smart_properties
     erubi (1.13.0)
     execjs (2.9.1)
@@ -303,7 +303,7 @@ GEM
     public_suffix (6.0.1)
     puma (6.4.2)
       nio4r (~> 2.0)
-    racc (1.8.0)
+    racc (1.8.1)
     rack (3.1.7)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
@@ -378,7 +378,7 @@ GEM
       rack (>= 1.4)
     reverse_markdown (2.1.1)
       nokogiri
-    rexml (3.3.3)
+    rexml (3.3.4)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -401,7 +401,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.1)
-    rubocop (1.65.0)
+    rubocop (1.65.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
