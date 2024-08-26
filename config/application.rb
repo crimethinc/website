@@ -72,7 +72,7 @@ module Crimethinc
     config.add_autoload_paths_to_load_path = true
     # TODO: rethink how to allow nested locales directories without load_path
     # Allow nested diretories in locales
-    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}')]
+    config.i18n.load_path += Rails.root.glob('config/locales/**/*.{rb,yml}')
 
     # Configuration for the application, engines, and railties goes here.
     #
