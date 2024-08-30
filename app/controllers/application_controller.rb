@@ -3,6 +3,7 @@ require 'json'
 
 class ApplicationController < ActionController::Base
   # TODO: investigate/test/consider this. Added in Rails 7.2
+  # https://guides.rubyonrails.org/7_2_release_notes.html#add-browser-version-guard-by-default
   # Allow only browsers natively supporting webp images, web push, badges, import maps, CSS nesting + :has
   # allow_browser versions: :modern
 
