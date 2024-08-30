@@ -18,9 +18,3 @@ updates:
           - rubocop*
       bundler-dev:
         dependency-type: development
-      bundler-all:
-        update-types:
-          - minor
-          - patch
-        exclude-patterns:
-          - rails
