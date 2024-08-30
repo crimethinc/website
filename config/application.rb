@@ -28,7 +28,7 @@ module Crimethinc
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.1
+    config.load_defaults 7.2
 
     # TEMP: re-enable mini magick until variant syntax is changed to vips in ActiveStorageHelper#image_variant_by_width
     config.active_storage.variant_processor = :mini_magick
@@ -37,10 +37,6 @@ module Crimethinc
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib ignore: %w[assets generators tasks]
-
-    # By default `form_with` generates remote forms. We don't really
-    # use this right now, so it is easier to have it default to `false`.
-    config.action_view.form_with_generates_remote_forms = false
 
     # Set default locale to English
     config.i18n.default_locale = :en
@@ -80,5 +76,6 @@ module Crimethinc
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
+    # config.eager_load_paths << Rails.root.join("extras")
   end
 end
