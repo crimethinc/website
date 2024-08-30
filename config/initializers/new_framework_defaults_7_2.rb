@@ -21,3 +21,5 @@ Rails.application.config.active_record.validate_migration_timestamps = true
 # This query used to return a `String`.
 #++
 # Rails.application.config.active_record.postgresql_adapter_decode_dates = true
+
+Rails.application.config.yjit = true
