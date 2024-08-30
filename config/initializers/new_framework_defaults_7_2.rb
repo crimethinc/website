@@ -1,6 +1,8 @@
 Rails.application.config.active_job.enqueue_after_transaction_commit = :default
 
 ###
+# TODO: investigate Heroku support for libvips + WebP
+# TODO: investigate which browsers can/not use WebP images
 # Adds image/webp to the list of content types Active Storage considers as an image
 # Prevents automatic conversion to a fallback PNG, and assumes clients support WebP, as they support gif, jpeg, and png.
 # This is possible due to broad browser support for WebP, but older browsers and email clients may still not support
