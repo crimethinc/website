@@ -12,9 +12,7 @@ updates:
       # Dependabot creates groups in the order they appear in this config.
       # If a dependency update could belong to more than one group,
       # it is only assigned to the first group it matches with.
-      bundler-lint:
+      linters:
         patterns:
           - erb_lint
           - rubocop*
-      bundler-dev:
-        dependency-type: development
