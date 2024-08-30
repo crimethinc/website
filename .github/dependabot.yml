@@ -16,3 +16,11 @@ updates:
         patterns:
           - erb_lint
           - rubocop*
+      aws:
+        patterns:
+          - aws-eventstream
+          - aws-partitions
+          - aws-sdk-core
+          - aws-sdk-kms
+          - aws-sdk-s3
+          - aws-sigv4
