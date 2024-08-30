@@ -38,10 +38,6 @@ module Crimethinc
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib ignore: %w[assets generators tasks]
 
-    # By default `form_with` generates remote forms. We don't really
-    # use this right now, so it is easier to have it default to `false`.
-    config.action_view.form_with_generates_remote_forms = false
-
     # Set default locale to English
     config.i18n.default_locale = :en
 
@@ -80,5 +76,6 @@ module Crimethinc
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
+    # config.eager_load_paths << Rails.root.join("extras")
   end
 end
