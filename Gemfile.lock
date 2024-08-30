@@ -287,7 +287,7 @@ GEM
       racc
     pg (1.5.7)
     popper_js (2.11.8)
-    prism (0.30.0)
+    prism (1.0.0)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -429,9 +429,9 @@ GEM
       rubocop-rspec (~> 3, >= 3.0.1)
     ruby-graphviz (1.2.5)
       rexml
-    ruby-lsp (0.17.15)
+    ruby-lsp (0.17.17)
       language_server-protocol (~> 3.17.0)
-      prism (>= 0.29.0, < 0.31)
+      prism (~> 1.0)
       rbs (>= 3, < 4)
       sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
