@@ -5,7 +5,7 @@ module Publishable
   included do
     enum :publication_status, PUBLICATION_STATUSES
     enum :temp_publication_status,
-         { draft: :draft, published: :published },
+         { draft: 'draft', published: 'published' },
          default: :draft,
          prefix:  true
     # validate: true,
