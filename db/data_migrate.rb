@@ -3,7 +3,7 @@ class DataMigrate
   class << self
     def run
       Locale.find_each do |locale|
-        locale.update! language_direction: locale.temp_language_direction
+        locale.update! temp_language_direction: locale.language_direction
       end
 
       User.find_each do |locale|
