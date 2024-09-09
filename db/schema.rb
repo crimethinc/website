@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_09_055738) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
   create_schema "heroku_ext"
 
   # These are extensions that must be enabled in order to support this database
@@ -478,7 +478,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_055738) do
     t.integer "role", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "temp_roles"
+    t.string "temp_role"
   end
 
   create_table "videos", id: :serial, force: :cascade do |t|
