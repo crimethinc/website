@@ -10,8 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_09_055738) do
+  create_schema "heroku_ext"
+
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -74,6 +77,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
   end
@@ -129,6 +133,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.boolean "hide_from_index", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_books_on_canonical_id"
   end
 
@@ -161,6 +166,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.boolean "featured_status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
   end
 
@@ -190,6 +196,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.integer "publication_status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_episodes_on_canonical_id"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
@@ -247,6 +254,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.boolean "hide_from_index", default: false
     t.datetime "created_at", precision: nil
     t.datetime "updated_at", precision: nil
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_issues_on_canonical_id"
   end
 
@@ -268,6 +276,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.boolean "hide_from_index", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_journals_on_canonical_id"
   end
 
@@ -280,6 +289,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.integer "articles_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_language_direction"
   end
 
   create_table "logos", force: :cascade do |t|
@@ -297,6 +307,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.boolean "hide_from_index", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_logos_on_canonical_id"
   end
 
@@ -321,6 +332,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.integer "canonical_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_pages_on_canonical_id"
   end
 
@@ -384,6 +396,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.boolean "hide_from_index", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_posters_on_canonical_id"
   end
 
@@ -430,6 +443,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.boolean "hide_from_index", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
   end
 
@@ -464,6 +478,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.integer "role", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_roles"
   end
 
   create_table "videos", id: :serial, force: :cascade do |t|
@@ -488,6 +503,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.integer "canonical_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_videos_on_canonical_id"
   end
 
@@ -542,6 +558,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_30_054014) do
     t.boolean "hide_from_index", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "temp_publication_status"
     t.index ["canonical_id"], name: "index_zines_on_canonical_id"
   end
 

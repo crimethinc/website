@@ -9,6 +9,11 @@ class Locale < ApplicationRecord
   validates :name, uniqueness: true
 
   enum :language_direction, { ltr: 0, rtl: 1 }
+  enum :temp_language_direction,
+       { ltr: :ltr, rtl: :rtl },
+       default: :ltr,
+       prefix:  true
+  # validate: true,
 
   default_scope { order abbreviation: :asc }
 
