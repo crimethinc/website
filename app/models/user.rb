@@ -7,9 +7,9 @@ class User < ApplicationRecord
   enum :role, ROLES
   enum :temp_role,
        { author: 'author', editor: 'editor', publisher: 'publisher' },
-       default: :author,
-       prefix:  true
-  # validate: true,
+       # default: :author,
+       prefix: true
+  # validate: true
 
   validates :username, presence: true, uniqueness: true, on: %i[create update]
 

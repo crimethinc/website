@@ -6,9 +6,9 @@ module Publishable
     enum :publication_status, PUBLICATION_STATUSES
     enum :temp_publication_status,
          { draft: 'draft', published: 'published' },
-         default: :draft,
+         # default: :draft,
          prefix:  true
-    # validate: true,
+    # validate: true
 
     default_scope { order(published_at: :desc) }
 
