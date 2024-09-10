@@ -3,7 +3,6 @@ module Publishable
   extend ActiveSupport::Concern
 
   included do
-    # enum :publication_status, PUBLICATION_STATUSES
     enum :publication_status,
          { draft: 'draft', published: 'published' },
          default:  :draft,
