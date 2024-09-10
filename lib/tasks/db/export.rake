@@ -33,12 +33,11 @@ namespace :db do
       # Update the first user instead of creating a new one,
       #   so to not reveal how many production users there are
       password = '1234567890' * 3
-      publisher_role = User::ROLES.index :publisher
 
       User.find(1).update username:              :publisher,
                           password:              password,
                           password_confirmation: password,
-                          role:                  publisher_role
+                          role:                  User.roles[:publisher]
 
       puts '==> Scrubbing drafts…'
       # TODO: add #publication_status to these models: Definition Episode Podcast
