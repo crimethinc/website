@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_10_031633) do
   create_schema "heroku_ext"
 
   # These are extensions that must be enabled in order to support this database
@@ -68,7 +68,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.text "image_mobile"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "page_views", default: 0
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.text "word_doc"
@@ -77,7 +77,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.integer "position"
     t.boolean "hide_from_index", default: false
     t.text "notes"
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
     t.index ["collection_id"], name: "index_articles_on_collection_id"
   end
@@ -126,14 +126,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
     t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_books_on_canonical_id"
   end
 
@@ -162,11 +162,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.string "filed_under"
     t.string "draft_code"
     t.string "slug"
-    t.integer "publication_status"
+    t.integer "old_publication_status"
     t.datetime "published_at", precision: nil
     t.datetime "featured_at", precision: nil
     t.boolean "featured_status", default: false
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
   end
 
@@ -195,8 +195,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.string "draft_code"
-    t.integer "publication_status", default: 0, null: false
-    t.string "temp_publication_status"
+    t.integer "old_publication_status", default: 0, null: false
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_episodes_on_canonical_id"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
@@ -245,7 +245,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.boolean "screen_two_page_view_download_present"
     t.integer "journal_id"
     t.integer "issue"
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
@@ -254,7 +254,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.boolean "hide_from_index", default: false
     t.datetime "created_at", precision: nil
     t.datetime "updated_at", precision: nil
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_issues_on_canonical_id"
   end
 
@@ -266,7 +266,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.datetime "updated_at", precision: nil, null: false
     t.string "slug"
     t.datetime "published_at", precision: nil
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.text "buy_url"
     t.text "content"
     t.text "summary"
@@ -276,7 +276,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.integer "canonical_id"
     t.integer "position"
     t.boolean "hide_from_index", default: false
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_journals_on_canonical_id"
   end
 
@@ -286,10 +286,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.string "name"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.integer "language_direction", default: 0
+    t.integer "old_language_direction", default: 0
     t.string "slug"
     t.integer "articles_count", default: 0
-    t.string "temp_language_direction"
+    t.string "language_direction"
   end
 
   create_table "logos", force: :cascade do |t|
@@ -302,12 +302,12 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.text "summary"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.integer "position"
     t.boolean "hide_from_index", default: false
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_logos_on_canonical_id"
   end
 
@@ -329,10 +329,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_pages_on_canonical_id"
   end
 
@@ -389,14 +389,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
     t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_posters_on_canonical_id"
   end
 
@@ -434,7 +434,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "locale", default: "en"
@@ -443,7 +443,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
   end
 
@@ -477,8 +477,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.string "password_digest"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.integer "role", default: 0, null: false
-    t.string "temp_role"
+    t.integer "old_role", default: 0, null: false
+    t.string "role"
   end
 
   create_table "videos", id: :serial, force: :cascade do |t|
@@ -500,10 +500,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_videos_on_canonical_id"
   end
 
@@ -549,7 +549,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "publication_status", default: 0, null: false
+    t.integer "old_publication_status", default: 0, null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "locale", default: "en"
@@ -558,7 +558,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_09_064134) do
     t.datetime "featured_at", precision: nil
     t.integer "position"
     t.boolean "hide_from_index", default: false
-    t.string "temp_publication_status"
+    t.string "publication_status"
     t.index ["canonical_id"], name: "index_zines_on_canonical_id"
   end
 
