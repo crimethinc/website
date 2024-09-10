@@ -10,10 +10,10 @@ class Locale < ApplicationRecord
 
   enum :language_direction, { ltr: 0, rtl: 1 }
   enum :temp_language_direction,
-       { ltr: :ltr, rtl: :rtl },
-       default: :ltr,
+       { ltr: 'ltr', rtl: 'rtl' },
+       # default: :ltr,
        prefix:  true
-  # validate: true,
+  # validate: true
 
   default_scope { order abbreviation: :asc }
 

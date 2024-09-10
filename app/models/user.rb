@@ -5,11 +5,11 @@ class User < ApplicationRecord
   ROLES = %i[author editor publisher].freeze
 
   enum :role, ROLES
-  enum :temp_roles,
-       { author: :author, editor: :editor, publisher: :publisher },
-       default: :author,
-       prefix:  true
-  # validate: true,
+  enum :temp_role,
+       { author: 'author', editor: 'editor', publisher: 'publisher' },
+       # default: :author,
+       prefix: true
+  # validate: true
 
   validates :username, presence: true, uniqueness: true, on: %i[create update]
 

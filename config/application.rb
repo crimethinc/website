@@ -10,6 +10,9 @@ require_relative '../app/middlewares/rack/redirect'
 require_relative '../app/middlewares/rack/teapot'
 require 'rack/contrib'
 
+# TEMP: enum backfill data migration class
+require_relative '../db/data_migrate'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
