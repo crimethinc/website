@@ -10,7 +10,7 @@
       <div class="mb-3">
         <%= form.label :language_direction, "Direction", class: "form-label" %>
         <%= form.select :language_direction,
-                        Locale.language_directions.keys,
+                        Locale.language_directions,
                         {},
                         class: "form-select form-select-lg text-uppercase" %>
       </div>

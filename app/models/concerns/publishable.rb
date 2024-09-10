@@ -3,12 +3,10 @@ module Publishable
   extend ActiveSupport::Concern
 
   included do
-    enum :publication_status, PUBLICATION_STATUSES
-    enum :temp_publication_status,
+    enum :publication_status,
          { draft: 'draft', published: 'published' },
-         # default: :draft,
-         prefix:  true
-    # validate: true
+         default:  :draft,
+         validate: true
 
     default_scope { order(published_at: :desc) }
 

@@ -4,12 +4,10 @@ class User < ApplicationRecord
   PASSWORD_MINIMUM_LENGTH = 30
   ROLES = %i[author editor publisher].freeze
 
-  enum :role, ROLES
-  enum :temp_role,
+  enum :role,
        { author: 'author', editor: 'editor', publisher: 'publisher' },
-       # default: :author,
-       prefix: true
-  # validate: true
+       default:  :author,
+       validate: true
 
   validates :username, presence: true, uniqueness: true, on: %i[create update]
 
