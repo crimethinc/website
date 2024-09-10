@@ -8,12 +8,10 @@ class Locale < ApplicationRecord
   validates :name_in_english, uniqueness: true
   validates :name, uniqueness: true
 
-  enum :language_direction, { ltr: 0, rtl: 1 }
-  enum :temp_language_direction,
+  enum :language_direction,
        { ltr: 'ltr', rtl: 'rtl' },
-       # default: :ltr,
-       prefix:  true
-  # validate: true
+       default:  :ltr,
+       validate: true
 
   default_scope { order abbreviation: :asc }
 

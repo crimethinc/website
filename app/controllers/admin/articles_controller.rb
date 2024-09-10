@@ -113,7 +113,7 @@ module Admin
       @article.canonical_id       = canonical_article.id
       @article.locale             = params[:locale]
       @article.short_path         = nil
-      @article.publication_status = :draft
+      @article.publication_status = 'draft'
 
       @article.tags       = canonical_article.tags
       @article.categories = canonical_article.categories
