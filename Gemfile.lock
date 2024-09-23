@@ -253,7 +253,7 @@ GEM
     markdown_media (2.0.1)
       kramdown
     matrix (0.4.2)
-    memory_profiler (1.0.2)
+    memory_profiler (1.1.0)
     method_source (1.1.0)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
