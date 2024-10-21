@@ -473,7 +473,7 @@ GEM
     sitemap_generator (6.3.0)
       builder (~> 3.0)
     smart_properties (1.17.0)
-    sorbet-runtime (0.5.11602)
+    sorbet-runtime (0.5.11609)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
