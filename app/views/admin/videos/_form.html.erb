@@ -9,8 +9,14 @@
       <%= render "admin/label_and_field_form_group", form: form, attr: :vimeo_id, label_text: "Vimeo ID" %>
       <p class="form-text text-muted">
         https://vimeo.com/<code class="fw-bold">676634993</code>
-        The number part of the Vimeo URL imediately after the
+        The number part of the Vimeo URL immediately after the
         <code>.com/</code>.
+      </p>
+
+      <%= render "admin/label_and_field_form_group", form: form, attr: :peer_tube_url, label_text: "PeerTube URL" %>
+      <p class="form-text text-muted">
+        Kolektiva is powered by PeerTube. Example URL:
+        <code class="fw-bold">https://kolektiva.media/w/33ZwhxfHhkRMNJxrEnZTAi</code>
       </p>
 
       <%= form.label :image_poster_frame, "Poster Frame Image", class: "form-label" %>

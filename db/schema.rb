@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_10_031633) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
   create_schema "heroku_ext"
 
   # These are extensions that must be enabled in order to support this database
@@ -504,6 +504,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_10_031633) do
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.string "publication_status"
+    t.text "peer_tube_url"
     t.index ["canonical_id"], name: "index_videos_on_canonical_id"
   end
 

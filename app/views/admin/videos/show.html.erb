@@ -28,9 +28,7 @@
     <div class="col-12 col-md-7">
       <b>Video</b>
 
-      <%= render_markdown("[[ https://vimeo.com/#{@video.vimeo_id} ]]")
-            .sub('video-container', 'ratio ratio-16x9')
-            .html_safe %>
+      <%= video_embed_tag @video %>
 
       <b>Image</b>
 
@@ -46,6 +44,13 @@
 
     <div class="col-12 col-md-5">
       <dl>
+        <dt>PeerTube URL</dt>
+        <dd>
+          <% if @video.peer_tube_url.present? %>
+            <%= link_to @video.peer_tube_url, @video.peer_tube_url, target: :_blank %>
+          <% end %>
+        </dd>
+
         <dt>Vimeo ID</dt>
         <dd><%= @video.vimeo_id %></dd>
 
