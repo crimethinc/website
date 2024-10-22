@@ -4,4 +4,10 @@ module VideosHelper
 
     image_tag url, class: 'mb-3 rounded d-block'
   end
+
+  def video_embed_tag video
+    render_markdown("[[ #{video.video_url} ]]")
+      .sub('video-container', 'ratio ratio-16x9')
+      .html_safe
+  end
 end
