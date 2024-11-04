@@ -1,17 +1,10 @@
 {
   "name": "Website, by CrimethInc.",
   "description": "Rails app that powers crimethinc.com",
-  "keywords": [
-    "indieweb",
-    "publishing",
-    "rubyonrails",
-    "rails"
-  ],
-
+  "keywords": ["indieweb", "publishing", "rubyonrails", "rails"],
   "website": "https://crimethinc.com",
   "repository": "https://github.com/crimethinc/website",
   "logo": "https://avatars0.githubusercontent.com/u/21285375",
-
   "success_url": "/",
 
   "scripts": {
@@ -19,29 +12,45 @@
   },
 
   "env": {
-    "SECRET_KEY_BASE": {
+    "RAILS_MASTER_KEY": {
       "description": "This gets generated",
-      "generator":   "secret"
+      "generator": "secret"
     },
 
-    "MIN_THREADS": "1",
-    "MAX_THREADS": "1"
+    "RAILS_MIN_THREADS": "1",
+    "RAILS_MAX_THREADS": "5",
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "3"
+    }
+  },
+
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic-1x"
+    }
   },
 
   "addons": [
-    "heroku-postgresql:hobby-dev"
+    {
+      "plan": "heroku-postgresql:essential-0",
+      "options": {
+        "version": "15.8"
+      }
+    }
   ],
 
   "environments": {
-    "test": {
+    "review": {
       "buildpacks": [
         { "url": "heroku://github.com/gaffneyc/heroku-buildpack-jemalloc" },
-        { "url": "heroku/ruby" },
+        { "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview" },
         { "url": "https://github.com/heroku/heroku-buildpack-apt" },
-        { "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview" }
+        { "url": "heroku/ruby" }
       ]
     }
   },
 
-  "stack": "heroku-22"
+  "stack": "heroku-24"
 }
