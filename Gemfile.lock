@@ -278,6 +278,7 @@ GEM
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    ostruct (0.6.0)
     overcommit (0.64.0)
       childprocess (>= 0.6.3, < 6)
       iniparse (~> 1.4)
@@ -549,6 +550,7 @@ DEPENDENCIES
   markdown_media
   memory_profiler
   nokogiri
+  ostruct
   overcommit
   pandoc-ruby
   pg
