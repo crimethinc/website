@@ -17,3 +17,7 @@ node_modules
 yarn.lock
 storage/
 .irb_history
+
+/config/master.key
+
+/config/credentials/production.key
