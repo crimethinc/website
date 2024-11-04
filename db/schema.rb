@@ -68,7 +68,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.text "image_mobile"
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
     t.integer "page_views", default: 0
-    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.text "word_doc"
@@ -126,7 +125,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
@@ -162,7 +160,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.string "filed_under"
     t.string "draft_code"
     t.string "slug"
-    t.integer "old_publication_status"
     t.datetime "published_at", precision: nil
     t.datetime "featured_at", precision: nil
     t.boolean "featured_status", default: false
@@ -195,7 +192,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.string "draft_code"
-    t.integer "old_publication_status", default: 0, null: false
     t.string "publication_status"
     t.index ["canonical_id"], name: "index_episodes_on_canonical_id"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
@@ -245,7 +241,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.boolean "screen_two_page_view_download_present"
     t.integer "journal_id"
     t.integer "issue"
-    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
@@ -266,7 +261,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.datetime "updated_at", precision: nil, null: false
     t.string "slug"
     t.datetime "published_at", precision: nil
-    t.integer "old_publication_status", default: 0, null: false
     t.text "buy_url"
     t.text "content"
     t.text "summary"
@@ -286,7 +280,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.string "name"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.integer "old_language_direction", default: 0
     t.string "slug"
     t.integer "articles_count", default: 0
     t.string "language_direction"
@@ -302,7 +295,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.text "summary"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.integer "position"
@@ -329,7 +321,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.string "publication_status"
@@ -389,7 +380,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
-    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.boolean "featured_status", default: false
@@ -434,7 +424,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.boolean "front_black_and_white_download_present"
     t.boolean "back_color_download_present"
     t.boolean "back_black_and_white_download_present"
-    t.integer "old_publication_status", default: 0, null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "locale", default: "en"
@@ -477,7 +466,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.string "password_digest"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.integer "old_role", default: 0, null: false
     t.string "role"
   end
 
@@ -500,7 +488,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "published_at_tz", default: "Pacific Time (US & Canada)", null: false
-    t.integer "old_publication_status", default: 0, null: false
     t.string "locale", default: "en"
     t.integer "canonical_id"
     t.string "publication_status"
@@ -550,7 +537,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.boolean "print_black_and_white_download_present"
     t.boolean "screen_single_page_view_download_present"
     t.boolean "screen_two_page_view_download_present"
-    t.integer "old_publication_status", default: 0, null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "locale", default: "en"
