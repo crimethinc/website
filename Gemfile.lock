@@ -374,7 +374,7 @@ GEM
       io-console (~> 0.5)
     request_store (1.7.0)
       rack (>= 1.4)
-    reverse_markdown (2.1.1)
+    reverse_markdown (3.0.0)
       nokogiri
     rexml (3.3.9)
     rspec (3.13.0)
