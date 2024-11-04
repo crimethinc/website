@@ -16,5 +16,4 @@ jobs:
           bundler-cache: true
 
       - name: Run ERB linter
-        run: |
-          bundle exec erblint app
+        run:  bundle exec erb_lint app
