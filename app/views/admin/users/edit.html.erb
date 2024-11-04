@@ -14,12 +14,11 @@
       <li><b>Publishers</b> can write drafts, make edits to published articles, and publish articles.</li>
     </ul>
 
-    <% User::ROLES.each do |role| %>
+    <% User.roles.each do |role, _| %>
       <div class="form-check form-check-inline">
         <span class="d-inline-block me-3">
-          <%= form.radio_button :role, role, id: "user_role_#{role}", class: "form-check-input" %>
-
-          <%= form.label :role, role.capitalize, class: "form-check-label", for: "user_role_#{role}" %>
+          <%= form.radio_button :role, role,            class: "form-check-input" %>
+          <%= form.label        :role, role.capitalize, class: "form-check-label", value: role %>
         </span>
       </div>
     <% end %>

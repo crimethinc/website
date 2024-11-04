@@ -32,6 +32,7 @@ Rails/OutputSafety:
     - 'app/helpers/articles_helper.rb'
     - 'app/helpers/embeds_helper.rb'
     - 'app/helpers/markdown_helper.rb'
+    - 'app/helpers/videos_helper.rb'
     - 'app/models/article.rb'
 
 # Offense count: 8
