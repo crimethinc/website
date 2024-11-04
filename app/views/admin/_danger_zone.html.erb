@@ -13,13 +13,13 @@
     </p>
 
     <div class="text-right">
-      <%=  link_to "Delete",
-                   path,
-                   class: "btn btn-danger btn-sm",
-                   data:  {
-                     turbo_method:  :delete,
-                     turbo_confirm: "Are you sure you’re sure? There is NO UNDO."
-                   } %>
+      <%= link_to "Delete",
+                  path,
+                  class: "btn btn-danger btn-sm",
+                  data:  {
+                    turbo_method:  :delete,
+                    turbo_confirm: "Are you sure you’re sure? There is NO UNDO."
+                  } %>
     </div>
   </div>
 </div>
