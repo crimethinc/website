@@ -13,12 +13,13 @@
     </p>
 
     <div class="text-right">
-      <%# TODO: fix confirm. currently isn't popping up one click. requires data-turbo-confirm? %>
-      <%= button_to "Delete",
-                    path,
-                    method: :delete,
-                    data: { confirm: "Are you sure you’re sure? There is NO UNDO." },
-                    class: "btn btn-danger btn-sm" %>
+      <%= link_to "Delete",
+                  path,
+                  class: "btn btn-danger btn-sm",
+                  data:  {
+                    turbo_method:  :delete,
+                    turbo_confirm: "Are you sure you’re sure? There is NO UNDO."
+                  } %>
     </div>
   </div>
 </div>
