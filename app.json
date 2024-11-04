@@ -44,7 +44,7 @@
   "environments": {
     "review": {
       "buildpacks": [
-        { "url": "heroku://github.com/gaffneyc/heroku-buildpack-jemalloc" },
+        { "url": "https://github.com/gaffneyc/heroku-buildpack-jemalloc" },
         { "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview" },
         { "url": "https://github.com/heroku/heroku-buildpack-apt" },
         { "url": "heroku/ruby" }
