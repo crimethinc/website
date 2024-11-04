@@ -47,7 +47,7 @@ namespace :db do
 
       # rubocop:disable Rails/SkipsModelValidations
       puts '==> Scrubbing article page view counts…'
-      Article.update_all(page_views: 0)
+      Article.update_all page_views: 0
       # rubocop:enable Rails/SkipsModelValidations
     end
 
@@ -63,17 +63,20 @@ namespace :db do
 
     desc 'Upload DB dump to S3'
     task upload: :environment do
-      puts '==> Uploading local development DB dump to S3…'
+      # Set Bucket URL and file name for use later
+      bucket_url = 'https://cdn.crimethinc.com'
+      file_name  = 'database-dumps/crimethinc_production_db_dump.sql'
 
-      # Check for required env vars
+      puts '==> Uploading local development DB dump to S3…'
+      # Check for required ENV vars
       env_vars = [
         aws_access_key_id     = ENV.fetch('AWS_ACCESS_KEY_ID_FOR_DB_EXPORT')     { 'TODO' },
         aws_secret_access_key = ENV.fetch('AWS_SECRET_ACCESS_KEY_FOR_DB_EXPORT') { 'TODO' },
-        aws_bucket            = ENV.fetch('AWS_BUCKET_FOR_DB_EXPORT')            { 'TODO' },
+        aws_bucket_name       = ENV.fetch('AWS_BUCKET_FOR_DB_EXPORT')            { 'TODO' },
         aws_region            = ENV.fetch('AWS_REGION_FOR_DB_EXPORT')            { 'TODO' }
       ]
 
-      # Exit if any env vars aren't set
+      # Exit if any env vars aren’t set
       if env_vars.include? 'TODO'
         puts 'You need to set these as environment variables or in a .env file:'
         puts '  AWS_ACCESS_KEY_ID_FOR_DB_EXPORT'
@@ -83,40 +86,31 @@ namespace :db do
         exit
       end
 
-      # Configure AWS
-      Aws.config.update(
-        region:      aws_region,
-        credentials: Aws::Credentials.new(aws_access_key_id, aws_secret_access_key)
-      )
+      # Auth the AWS client
+      aws_credentials = Aws::Credentials.new(aws_access_key_id, aws_secret_access_key)
+      Aws.config.update region: aws_region, credentials: aws_credentials
 
-      # For making file public
+      # Make S3 client to make a public file
       client = Aws::S3::Client.new
-      # for file upload
+      # Make S3 resource to upload a file
       aws_s_3 = Aws::S3::Resource.new
 
       # Reference an existing bucket by name
-      bucket_name = aws_bucket
-      bucket      = aws_s_3.bucket(bucket_name)
-      bucket_url  = bucket.url
-
-      # Get just the file name
-      file_name = 'database-dumps/crimethinc_production_db_dump.sql'
+      aws_bucket = aws_s_3.bucket aws_bucket_name
 
       # Create the object to upload
-      obj = aws_s_3.bucket(bucket_name).object(file_name)
+      aws_object = aws_bucket.object file_name
 
       # Upload it
-      obj.upload_file file_name
+      aws_object.upload_file file_name
 
-      # Setting the object to public-read
-      client.put_object_acl(
-        acl:    'public-read',
-        bucket: bucket_name,
-        key:    file_name
-      )
+      # Set the object to public-read
+      client.put_object_acl acl: 'public-read', bucket: aws_bucket_name, key: file_name
 
-      download_url = [bucket_url, file_name].join('/')
-      puts "SUCCESS! File written to S3: #{download_url}"
+      # Finish
+      download_url = [bucket_url, file_name].join '/'
+      puts '==> SUCCESS! File written to S3:'
+      puts "==> #{download_url}"
     end
   end
 end
