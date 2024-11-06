@@ -494,9 +494,6 @@ GEM
     thor (1.3.2)
     tilt (2.4.0)
     timeout (0.4.1)
-    turbo-rails (2.0.11)
-      actionpack (>= 6.0.0)
-      railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.1)
@@ -590,7 +587,6 @@ DEPENDENCIES
   stimulus-rails
   stringex
   stripe
-  turbo-rails
   tzinfo-data
   uglifier
   web-console
