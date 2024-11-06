@@ -52,7 +52,7 @@ WC1N 3XX,\\
 England
 
 _**E-mail:**_\\
-[jon@activedistribution.org](mailto:http://jon@activedistribution.org)
+[jon@activedistribution.org](mailto:jon@activedistribution.org)
 
 ***
 
