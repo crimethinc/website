@@ -21,7 +21,6 @@ gem 'uglifier'
 # Javascript / Hotwire
 gem 'importmap-rails'
 gem 'stimulus-rails'
-gem 'turbo-rails'
 
 # JSON views
 gem 'jbuilder'
