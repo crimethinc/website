@@ -1,9 +1,9 @@
-<article class="p-2 mb-3 rounded">
+<article class="p-2 mb-3 rounded border-bottom">
 
   <%# mobile header… %>
   <div class="articles-header row d-md-none mb-3">
     <div class="col-8">
-      <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm me-2" %>
+      <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-outline-secondary btn-sm me-2" %>
       <% unless article.english? %><span class="badge bg-secondary"><%= article.locale.upcase %></span><% end %>
       <%= render "/admin/articles/publication_status_badge", resource: article if article.draft? %>
       <%= render "/admin/articles/children_articles_badge", article: article %>
@@ -21,7 +21,7 @@
 
   <div class="row">
     <div class="col d-none d-md-block col-md-2">
-      <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-light border-secondary btn-sm me-2" %><br>
+      <%= link_to "EDIT", [:edit, :admin, article], class: "btn btn-outline-primary btn-sm me-2" %><br>
       <% unless article.english? %><span class="badge bg-secondary"><%= article.locale.upcase %></span><% end %>
       <%= render "/admin/articles/publication_status_badge", resource: article if article.draft? %><br>
       <%= render "/admin/articles/children_articles_badge", article: article %><br>
