@@ -1,0 +1,14 @@
+<!-- auto-switch Bootstrap between light and dark mode -->
+<script>
+  // set theme to the viewer's preferred color scheme
+  function updateTheme() {
+    const colorMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.querySelector('html').setAttribute('data-bs-theme', colorMode);
+  }
+
+  // set theme on load
+  updateTheme()
+
+  // update theme when the preferred scheme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme)
+</script>

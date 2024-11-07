@@ -1,7 +1,9 @@
-<%# TODO there's got to be a better way! %>
+<%# TODO: there's got to be a better way! %>
+<%# TODO: there is! in rails 7.2, locals() magic comment %>
+
 <% button_text ||= "Save" %>
 
-<div class="actions">
+<div class="my-5 pb-3 border-bottom text-end">
   <%= link_to "Cancel", cancel_url, class: "cancel action-cancel" %>
   <%= button_tag button_text, class: "btn btn-primary btn-lg" %>
 </div>

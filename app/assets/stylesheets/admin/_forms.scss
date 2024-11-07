@@ -1,12 +1,6 @@
-input[type=checkbox] {
-  margin-right: .5rem;
-}
-
-.actions {
-  text-align: right;
-  margin: 2em 0 3em 0;
-  padding-bottom: 1em;
-  border-bottom: $border-size-xsmall solid #eee;
+/* TODO: audit all checkboxes and ensure usage of bootstrap .form-check */
+input[type="checkbox"] {
+  margin-right: 0.5rem;
 }
 
 .table img {
