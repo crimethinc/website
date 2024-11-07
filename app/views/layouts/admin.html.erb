@@ -30,29 +30,17 @@
     <!-- Icons and stuff for more browsers via manifest.json -->
     <link rel="manifest" href="/manifest.json">
 
-    <%= stylesheet_link_tag    "admin", media: "all" %>
+    <%= stylesheet_link_tag "admin", media: "all" %>
     <%= javascript_importmap_tags %>
     <%= javascript_import_module_tag "popper" %>
     <%= javascript_import_module_tag "bootstrap" %>
     <%= yield(:head) %>
+
+    <%= render 'layouts/auto_dark_mode' %>
   </head>
 
   <body id="<%= body_id %>">
-    <% if Rails.env.development? %>
-      <style>
-        #development-mode-banner {
-          background: yellow;
-          text-align: center;
-          font-weight: bold;
-          padding: 2rem;
-        }
-      </style>
-
-      <div id="development-mode-banner">
-        DEVELOPMENT MODE
-      </div>
-    <% end %>
-
+    <%= render "shared/development_mode_banner" %>
     <%= render "admin/nav" %>
 
     <div class="container">
