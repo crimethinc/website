@@ -460,7 +460,7 @@ GEM
       websocket (~> 1.0)
     sexp_processor (4.17.2)
     shellany (0.0.1)
-    sidekiq (7.3.4)
+    sidekiq (7.3.5)
       connection_pool (>= 2.3.0)
       logger
       rack (>= 2.2.4)
