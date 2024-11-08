@@ -12,10 +12,6 @@ updates:
       # Dependabot creates groups in the order they appear in this config.
       # If a dependency update could belong to more than one group,
       # it is only assigned to the first group it matches with.
-      linters:
-        patterns:
-          - erb_lint
-          - rubocop*
       aws:
         patterns:
           - aws-eventstream
@@ -24,3 +20,22 @@ updates:
           - aws-sdk-kms
           - aws-sdk-s3
           - aws-sigv4
+      linters:
+        patterns:
+          - erb_lint
+          - rubocop*
+      rails:
+        patterns:
+          - rails
+          - railties
+          - actioncable
+          - actionmailbox
+          - actionmailer
+          - actionpack
+          - actiontext
+          - actionview
+          - activejob
+          - activemodel
+          - activerecord
+          - activestorage
+          - activesupport
