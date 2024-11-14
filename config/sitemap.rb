@@ -24,6 +24,9 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
     add_to_index "/categories/#{category.slug}/feed/"
   end
 
+  # TODO: audit this
+  # TODO: add /languages pages
+  # TODO: add locale /subdomains?
   static_paths = [
     '/about/',
     '/arts/submission-guidelines',
@@ -49,6 +52,7 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
     '/watch/'
   ]
 
+  # TODO: read this from app data
   tce_languages = %w[
     czech
     deutsch
@@ -87,6 +91,7 @@ SitemapGenerator::Sitemap.create(default_host: 'https://crimethinc.com', compres
     add "/#{year}/"
   end
 
+  # TODO: only published ones
   [Book, Episode, Page, Podcast, Video, Zine, Journal, Issue, Episode, Poster, Sticker, Logo].each do |model|
     model.find_each do |page|
       add page.path, lastmod: page.updated_at
