@@ -259,7 +259,7 @@ GEM
     method_source (1.1.0)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
-    minitest (5.25.1)
+    minitest (5.25.2)
     nenv (0.3.0)
     net-imap (0.5.1)
       date
@@ -560,7 +560,7 @@ DEPENDENCIES
   rack-attack
   rack-contrib
   rack-timeout
-  rails
+  rails (~> 7.2.2)
   rails-controller-testing
   rails-erd
   redis
