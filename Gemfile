@@ -45,7 +45,7 @@ gem 'kaminari'
 gem 'dalli'
 
 # Stripe for /support
-gem 'stripe'
+gem 'stripe', '~> 8.7.0'
 
 # observability
 gem 'lograge'
