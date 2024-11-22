@@ -23,7 +23,7 @@ _Mastodon:_ \\
 [@crimethinc@todon.eu](https://todon.eu/@CrimethInc)
 
 _Bluesky:_ \\
-[@crimethinc.bsky.social](https://bsky.app/profile/crimethinc.bsky.social)
+[@crimethinc.com](https://bsky.app/profile/crimethinc.bsky.social)
 
 ## Mailorder
 
