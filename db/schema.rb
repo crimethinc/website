@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_25_231604) do
   create_schema "heroku_ext"
 
   # These are extensions that must be enabled in order to support this database
@@ -193,6 +193,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.integer "canonical_id"
     t.string "draft_code"
     t.string "publication_status"
+    t.boolean "boolean", default: false, null: false
+    t.datetime "datetime", precision: nil
     t.index ["canonical_id"], name: "index_episodes_on_canonical_id"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
@@ -250,6 +252,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.datetime "created_at", precision: nil
     t.datetime "updated_at", precision: nil
     t.string "publication_status"
+    t.boolean "boolean", default: false, null: false
+    t.datetime "datetime", precision: nil
     t.index ["canonical_id"], name: "index_issues_on_canonical_id"
   end
 
@@ -300,6 +304,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.integer "position"
     t.boolean "hide_from_index", default: false
     t.string "publication_status"
+    t.boolean "featured_status", default: false, null: false
+    t.datetime "featured_at", precision: nil
     t.index ["canonical_id"], name: "index_logos_on_canonical_id"
   end
 
@@ -350,6 +356,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.string "episode_prefix"
     t.string "locale", default: "en"
     t.integer "canonical_id"
+    t.boolean "boolean", default: false, null: false
+    t.datetime "datetime", precision: nil
     t.index ["canonical_id"], name: "index_podcasts_on_canonical_id"
   end
 
@@ -492,6 +500,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_223548) do
     t.integer "canonical_id"
     t.string "publication_status"
     t.text "peer_tube_url"
+    t.boolean "boolean", default: false, null: false
+    t.datetime "datetime", precision: nil
     t.index ["canonical_id"], name: "index_videos_on_canonical_id"
   end
 
