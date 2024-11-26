@@ -1,6 +1,5 @@
 class Issue < ApplicationRecord
   include MultiPageTool
-  include Featureable
 
   belongs_to :journal
 
