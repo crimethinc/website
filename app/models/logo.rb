@@ -1,5 +1,7 @@
 class Logo < ApplicationRecord
   include Tool
+  include Featureable
+
   has_one_attached :image_jpg, dependent: :destroy
   has_one_attached :image_png, dependent: :destroy
   has_one_attached :image_pdf, dependent: :destroy

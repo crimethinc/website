@@ -1,7 +1,6 @@
 module Featureable
   extend ActiveSupport::Concern
 
-  # TEMP: re-enable and expand coverage to include Journal, Issue, et al
   included do
     scope :featured, -> { where.not(featured_at: nil) }
     before_save :update_featured_at
