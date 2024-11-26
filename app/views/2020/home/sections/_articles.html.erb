@@ -1,0 +1,49 @@
+<!-- Recent and previous articles -->
+<section class='pt-5'>
+  <article class='row'>
+    <div class='col col-8'>
+      <p class='mb-2'>Recent articles</p>
+
+      <ol class='list-unstyled'>
+        <% @recent_articles.each do |article| %>
+          <li>
+            <div class='row mb-3'>
+              <div class='col col-4'>
+                <%= image_tag article.image %>
+              </div><!-- /.col.col-4 -->
+
+              <div class='col col-8'>
+                <p>
+                  <% article.categories.each do |category| %>
+                    <%= link_to category.name, category.path, class: 'text-uppercase' %>
+                  <% end %>
+                </p>
+
+                <%= link_to article.path do %>
+                  <div class='fw-bold'><%= article.title %></span>
+                  <%= article.subtitle %>
+                <% end %>
+              </div><!-- /.col.col-8 -->
+            </div><!-- /.row -->
+          </li>
+        <% end %>
+      </ol>
+    </div>
+
+    <div class='col col-4'>
+      <p class='mb-2'>Previous articles</p>
+
+      <ol class='list-unstyled'>
+        <% @previous_articles.each do |article| %>
+          <li class='mb-3'>
+            <%= link_to article.path do %>
+              <b class='fw-bold d-block'><%= article.title %></b>
+              <span class='fw-light'><%= article.subtitle %></span>
+            <% end %>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </article>
+</section>
+<!-- /Recent and previous articles -->

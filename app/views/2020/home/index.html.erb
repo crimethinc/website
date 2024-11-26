@@ -2,69 +2,11 @@
 
   <%= render_themed 'home/sections/article',  article: @latest_article %>
   <%= render_themed 'home/sections/podcasts' %>
-
-  <!-- Recent and previous articles -->
-  <section class='row'>
-    <!-- Recent articles -->
-    <div class='col col-6'>
-      <h1><%= link_to_next_page @articles, 'Recent Articles' %></h1>
-
-      <ol>
-        <% @recent_articles.each do |article| %>
-          <li>
-            <div class='row'>
-              <div class='col col-33'>
-                <%= image_tag article.image, style: 'max-width: 200px' %>
-              </div><!-- /.col.col-33 -->
-
-              <div class='col col-66'>
-                <p>
-                  <% article.categories.each do |category| %>
-                    <%= link_to category.name, category.path %>
-                  <% end %>
-                </p>
-
-                <%= link_to article.path do %>
-                  <b><%= article.title %></b><br>
-                  <%= article.subtitle %>
-                <% end %>
-              </div><!-- /.col.col-66 -->
-            </div><!-- /.row -->
-          </li>
-        <% end %>
-      </ol>
-
-      <p><%= link_to_next_page @articles, 'More articles →' %></p>
-    </div><!-- /.col.col-6 -->
-    <!-- /Recent articles -->
-
-    <!-- Previous articles -->
-    <div class='col col-6'>
-      <h1><%= link_to_next_page @articles, 'Previous Articles' %></h1>
-
-      <ol>
-        <% @previous_articles.each do |article| %>
-          <li>
-            <%= link_to article.path do %>
-              <b><%= article.title %></b><br>
-              <%= article.subtitle %>
-            <% end %>
-          </li>
-        <% end %>
-      </ol>
-
-      <p><%= link_to_next_page @articles, 'More articles →' %></p>
-    </div><!-- /.col.col-6 -->
-    <!-- /Previous articles -->
-  </section>
-  <!-- /Recent and previous articles -->
-
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <%= render_themed 'home/sections/articles' %>
 
   <!-- Featured books -->
   <section>
-    <h1><%= link_to 'Featured Books', [:books] %></h1>
+    <h1><%= link_to 'Featured Books', :books %></h1>
 
     <div class='row'>
       <% @featured_books.each do |book| %>
