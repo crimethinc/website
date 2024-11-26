@@ -1,8 +1,11 @@
 <div class='container'>
-
   <%= render_themed 'home/sections/article',  article: @latest_article %>
-  <%= render_themed 'home/sections/podcasts' %>
-  <%= render_themed 'home/sections/articles' %>
+  <%= render_themed 'home/sections/podcasts', latest_episode: @latest_episode, recent_episodes: @recent_episodes %>
+  <%= render_themed 'home/sections/articles', articles: @articles, recent_articles: @recent_articles, previous_articles: @previous_articles %>
+
+
+
+
 
   <!-- Featured books -->
   <section>
@@ -83,5 +86,4 @@
     </section>
   <% end %>
   <!-- /Selected tools -->
-
 </div><!-- /.container -->

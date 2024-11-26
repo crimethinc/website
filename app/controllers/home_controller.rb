@@ -19,9 +19,9 @@ class HomeController < ApplicationController
       @previous_articles = @articles[4..15]
 
       # Latest and recent podcast episodes
-      podcast_episodes         = Episode.live.limit(5)
-      @latest_podcast_episode  = podcast_episodes.first
-      @recent_podcast_episodes = podcast_episodes[1..4]
+      podcast_episodes = Episode.live.limit(5)
+      @latest_episode  = podcast_episodes.first
+      @recent_episodes = podcast_episodes[1..4]
 
       # Featured books
       @featured_books = Book.published.featured.limit(2).order(featured_at: :desc)
