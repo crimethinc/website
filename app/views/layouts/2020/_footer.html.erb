@@ -45,13 +45,6 @@
           <dd>
             <%= link_to t('footer.nav.store.description'), '/store' %>
           </dd>
-
-          <dt class='nav-label nav-label-languages' id='languages'><%= link_to t('header.languages'), [:languages] %></dt>
-          <dd>
-            <% Locale.live.each do |locale| %>
-              <%= link_to locale.name, [:language, locale: locale.name.downcase.gsub(' ', '-')] %>
-            <% end %>
-          </dd>
         </dl>
 
         <% if media_mode? && I18n.locale == :en %>

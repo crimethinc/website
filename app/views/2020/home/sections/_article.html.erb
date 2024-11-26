@@ -1,17 +1,24 @@
-<article class="row">
-  <div class='column column-50'>
-    <%= render_markdown "[[#{article.image} #{article.image_description}]]" %>
-  </div><!-- /.column.column-50 -->
+<section id='latest' class='pt-5'>
+  <!-- Latest article -->
+  <p class='mb-2'>Latest article</p>
 
-  <div class="column column-50">
-    <%= link_to article.path do %>
-      <h2><%= article.title %></h2>
-      <h3><%= article.subtitle %></h3>
-    <% end %>
-    <div>
-      <%= render_markdown article.lede %>
-    </div><!-- /.column.column-50 -->
+  <article class='row'>
+    <div class='col col-6'>
+      <%= render_markdown "[[#{article.image} #{article.image_description}]]" %>
+    </div><!-- /.col.col-6 -->
 
-    <p><%= link_to 'KEEP READING →', article.path %></p>
-  </div><!-- /.row -->
-</article>
+    <div class='col col-6'>
+      <%= link_to article.path do %>
+        <h1 class='fw-bold'><%= article.title %></h1>
+        <h2><%= article.subtitle %></h2>
+      <% end %>
+
+      <div>
+        <%= render_markdown article.lede %>
+      </div><!-- /.col.col-6 -->
+
+      <p><%= link_to 'KEEP READING →', article.path %></p>
+    </div><!-- /.row -->
+  </article>
+</section>
+<!-- /Latest article -->

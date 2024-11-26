@@ -2,7 +2,7 @@
   <div class="alert alert-danger rounded-0 border-0 mb-0">
     <div>
       <%= link_to "🖤 ADMIN Dashboard",    admin_path, class: "btn btn-light mr-3" %>
-      <%= link_to "↓ Scroll to Site Top",  "#header",  class: "btn btn-light mr-3" %>
+      <%= link_to "↓ Scroll to Site Top",  "#top",     class: "btn btn-light mr-3" %>
 
       <% if @editable.present? %>
         <%= link_to "📝 Edit #{@editable.class}", [:edit, :admin, @editable], class: "btn btn-light mr-3" %>

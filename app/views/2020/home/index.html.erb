@@ -1,72 +1,27 @@
-<div class="container">
+<div class='container'>
 
-  <!-- Latest article -->
-  <h1><%= link_to "Latest Article", @latest_article.path %></h1>
+  <%= render_themed 'home/sections/article',  article: @latest_article %>
+  <%= render_themed 'home/sections/podcasts' %>
 
-  <section>
-    <%= render_themed 'home/sections/article', article: @latest_article %>
-  </section>
-  <!-- /Latest article -->
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-  <!-- Latest and recent podcast episodes -->
-  <section class="row">
-    <div class="column column-50">
-      <h1><%= link_to "Latest Podcast Episode", @latest_podcast_episode.path %></h1>
-
-      <div class="row">
-        <div class="column column-25">
-          <%= link_to image_tag(@latest_podcast_episode.image), @latest_podcast_episode.path %>
-        </div><!-- /.column.column-25 -->
-
-        <div class="column column-75">
-          <p>
-            <%= @latest_podcast_episode.podcast.title %>
-            #<%= @latest_podcast_episode.episode_number %>
-            —
-            <%= display_date @latest_podcast_episode.published_at %>
-          </p>
-
-          <%= link_to @latest_podcast_episode.path do %>
-            <h2><%= @latest_podcast_episode.title %></h2>
-            <h3><%= @latest_podcast_episode.subtitle %></h3>
-          <% end %>
-
-          <%= link_to "Listen to episode →", @latest_podcast_episode.path %>
-        </div><!-- /.column.column-75 -->
-      </div><!-- /.row -->
-    </div><!-- /.column.column-50 -->
-
-    <div class="column column-50">
-      <h1><%= link_to "Recent Podcast Episodes", [:podcasts] %></h1>
-
-      <div class="row">
-        <% @recent_podcast_episodes.each do |podcast_episode| %>
-          <div class="column column-25">
-            <%= link_to image_tag(podcast_episode.image), podcast_episode.path %>
-          </div><!-- /.column.column-25 -->
-        <% end %>
-      </div><!-- /.row -->
-
-      <%= link_to "More podcast episodes →", [:podcasts] %>
-    </div><!-- /.column.column-50 -->
-  </section>
-  <!-- /Latest and recent podcast episodes -->
 
   <!-- Recent and previous articles -->
-  <section class="row">
+  <section class='row'>
     <!-- Recent articles -->
-    <div class="column column-50">
+    <div class='col col-6'>
       <h1><%= link_to_next_page @articles, 'Recent Articles' %></h1>
 
       <ol>
         <% @recent_articles.each do |article| %>
           <li>
-            <div class="row">
-              <div class="column column-33">
+            <div class='row'>
+              <div class='col col-33'>
                 <%= image_tag article.image, style: 'max-width: 200px' %>
-              </div><!-- /.column.column-33 -->
+              </div><!-- /.col.col-33 -->
 
-              <div class="column column-66">
+              <div class='col col-66'>
                 <p>
                   <% article.categories.each do |category| %>
                     <%= link_to category.name, category.path %>
@@ -77,18 +32,18 @@
                   <b><%= article.title %></b><br>
                   <%= article.subtitle %>
                 <% end %>
-              </div><!-- /.column.column-66 -->
+              </div><!-- /.col.col-66 -->
             </div><!-- /.row -->
           </li>
         <% end %>
       </ol>
 
       <p><%= link_to_next_page @articles, 'More articles →' %></p>
-    </div><!-- /.column.column-50 -->
+    </div><!-- /.col.col-6 -->
     <!-- /Recent articles -->
 
     <!-- Previous articles -->
-    <div class="column column-50">
+    <div class='col col-6'>
       <h1><%= link_to_next_page @articles, 'Previous Articles' %></h1>
 
       <ol>
@@ -103,7 +58,7 @@
       </ol>
 
       <p><%= link_to_next_page @articles, 'More articles →' %></p>
-    </div><!-- /.column.column-50 -->
+    </div><!-- /.col.col-6 -->
     <!-- /Previous articles -->
   </section>
   <!-- /Recent and previous articles -->
@@ -112,16 +67,16 @@
   <section>
     <h1><%= link_to 'Featured Books', [:books] %></h1>
 
-    <div class="row">
+    <div class='row'>
       <% @featured_books.each do |book| %>
-        <div class='column column-50'>
+        <div class='col col-6'>
 
           <div class='row'>
-            <div class='column column-25'>
+            <div class='col col-3'>
               <%= link_to image_tag(book.image), book.path %>
-            </div><!-- /.column.column-25 -->
+            </div><!-- /.col.col-3 -->
 
-            <div class='column column-75'>
+            <div class='col col-9'>
               <%= link_to book.path do %>
                 <h2><%= book.title %></h2>
                 <h3><%= book.subtitle %></h3>
@@ -129,11 +84,11 @@
 
               <%= render_markdown book.summary %>
 
-              <%= link_to "Learn more →", book.path %>
-            </div><!-- /.column.column-75 -->
+              <%= link_to 'Learn more →', book.path %>
+            </div><!-- /.col.col-9 -->
           </div><!-- /.row -->
 
-        </div><!-- /.column.column-50 -->
+        </div><!-- /.col.col-6 -->
       <% end %>
 
     </div><!-- /.row -->
@@ -155,19 +110,19 @@
   <!-- Selected tools -->
   <% if @selected_tools.present? %>
     <section>
-      <div class="row">
-        <div class='column column-50'>
+      <div class='row'>
+        <div class='col col-6'>
           <h1><%= link_to 'Selected Tools', [:tools] %></h1>
         </div>
 
-        <div class='column column-50'>
+        <div class='col col-6'>
           <%= link_to 'More Tools →', [:tools] %>
         </div>
       </div>
 
-      <div class="row">
+      <div class='row'>
         <% @selected_tools.each do |tool| %>
-          <div class='column column-25'>
+          <div class='col col-3'>
             <%= link_to image_tag(tool.image), tool.path %>
 
             <p>
@@ -181,7 +136,7 @@
                 <h3><%= tool.subtitle %></h3>
               <% end %>
             <% end %>
-          </div><!-- /.column.column-25 -->
+          </div><!-- /.col.col-3 -->
         <% end %>
       </div><!-- /.row -->
     </section>

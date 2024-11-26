@@ -1,82 +1,89 @@
-<header id='header' class='container'>
+<header id='top' class='my-5 container'>
   <nav>
-    <ul>
-      <li><%= link_to tt('site_name'),       [:root] %></li>
-      <li><%= link_to tt('header.books'),    [:books] %></li>
-      <li><%= link_to tt('header.library'),  [:library] %></li>
-      <li><%= link_to tt('header.tools'),    [:tools] %></li>
-      <li><%= link_to tt('header.podcasts'), [:podcasts] %></li>
-      <li><%= link_to tt('header.store'),    [:store] %></li>
-      <li><%= link_to tt('header.about'),    anchor: 'about' %></li>
-    </ul>
+    <div class='row'>
+      <div class='col-lg-10'>
+        <ul class='list-inline'>
+          <li class='list-inline-item'><%= link_to tt('site_name'),       :root     %></li>
+          <li class='list-inline-item'><%= link_to tt('header.books'),    :books    %></li>
+          <li class='list-inline-item'><%= link_to tt('header.library'),  :library  %></li>
+          <li class='list-inline-item'><%= link_to tt('header.tools'),    :tools    %></li>
+          <li class='list-inline-item'><%= link_to tt('header.podcasts'), :podcasts %></li>
+          <li class='list-inline-item'><%= link_to tt('header.store'),    :store    %></li>
+          <li class='list-inline-item'><%= link_to tt('header.about'),    { anchor: :about } %></li>
+        </ul>
+      </div>
 
-    <%= link_to tt('header.support'), [:support] %>
+      <div class='col-lg-2'>
+        <%= link_to tt('header.support'), :support, class: 'btn btn-success' %>
 
-    <ul>
-      <li><%= link_to tt('header.languages'), anchor: 'languages' %></li>
-      <li><%= link_to tt('header.search'),    anchor: 'search' %></li>
-      <li><%= link_to tt('header.share'),     anchor: 'share' %></li>
-    </ul>
+        <ul class='list-inline'>
+          <li class='list-inline-item'><%= link_to tt('header.languages'), { anchor: :languages } %></li>
+          <li class='list-inline-item'><%= link_to tt('header.search'),    { anchor: :search }    %></li>
+          <li class='list-inline-item'><%= link_to tt('header.share'),     { anchor: :share }     %></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-
-  <div id='languages' style='display: none;'>
-    <ol>
-      <% Locale.live.each do |locale| %>
-        <%= tag.li class: locale_nav_item_classes_for(locale) do %>
-          <%= link_to locale.name,
-                      url_for_current_path_with_subdomain(subdomain: locale.abbreviation) %>
-        <% end %>
-      <% end %>
-    </ol>
-  </div>
 </header>
 
-<div id='about' style='display: none;'>
-  <p><%= tt('site_name') %></p>
-
-  <%= tt 'header.cards.about.first_time_description' %>
-  <%= link_to tt('header.cards.about.first_time_link'), '/start' %>
-
-  <%= render_markdown tt 'header.cards.about.search_description' %>
-
-  <%= render 'layouts/2020/site_search' %>
-
-  <%= render_markdown tt 'header.cards.about.description' %>
-  <p><%= tt 'header.cards.about.more_link' %></p>
-</div>
-
-<div id='search' style='display: none;'>
-  <%= tt 'header.cards.search.description' %>
-
-  <%= render 'layouts/2020/site_search' %>
-
-  <h2><%= tt 'header.cards.search.category_heading' %></h2>
-
-  <p>
-    <% Category.all.each do |category| %>
-      <%= link_to category.name, [:category, slug: category.slug] %>
+<div class='container'>
+  <div id='languages' class='d-block mb-5 border'>
+    #LANGUAGES
+    <% Locale.live.each do |locale| %>
+      <%= link_to locale.name, [:language, locale: locale.name.downcase.gsub(' ', '-')] %>
     <% end %>
-  </p>
+  </div>
 
-  <h2><%= tt 'header.cards.search.chronological_heading' %></h2>
+  <div id='about' class='d-block mb-5 border'>
+    #ABOUT
+    <p><%= tt('site_name') %></p>
 
-  <p>
-    <% (1996..Time.current.year).to_a.reverse_each do |year| %>
-      <%= link_to year, [:article_archives, year: year] %>
-    <% end %>
-  </p>
-</div>
+    <%= tt 'header.cards.about.first_time_description' %>
+    <%= link_to tt('header.cards.about.first_time_link'), '/start' %>
 
-<div id='share' style='display: none;'>
-  <%= render_markdown tt 'header.cards.share.description' %>
+    <%= render_markdown tt 'header.cards.about.search_description' %>
 
-  <h2><%= @page_share.title %></h2>
-  <h3><%= @page_share.subtitle %></h3>
+    <%= render 'layouts/2020/site_search' %>
 
-  <ul>
-    <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
-    <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>
-    <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr),   target: '_blank' %></li>
-    <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email),    target: '_blank' %></li>
-  </ul>
+    <%= render_markdown tt 'header.cards.about.description' %>
+    <p><%= tt 'header.cards.about.more_link' %></p>
+  </div>
+
+  <div id='search' class='d-block mb-5 border'>
+    #SEARCH
+    <%= tt 'header.cards.search.description' %>
+
+    <%= render 'layouts/2020/site_search' %>
+
+    <h2><%= tt 'header.cards.search.category_heading' %></h2>
+
+    <p>
+      <% Category.all.each do |category| %>
+        <%= link_to category.name, [:category, slug: category.slug] %>
+      <% end %>
+    </p>
+
+    <h2><%= tt 'header.cards.search.chronological_heading' %></h2>
+
+    <p>
+      <% (1996..Time.current.year).to_a.reverse_each do |year| %>
+        <%= link_to year, [:article_archives, year: year] %>
+      <% end %>
+    </p>
+  </div>
+
+  <div id='share' class='d-block mb-5 border'>
+    #SHARE
+    <%= render_markdown tt 'header.cards.share.description' %>
+
+    <h2><%= @page_share.title %></h2>
+    <h3><%= @page_share.subtitle %></h3>
+
+    <ul>
+      <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
+      <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>
+      <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr),   target: '_blank' %></li>
+      <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email),    target: '_blank' %></li>
+    </ul>
+  </div>
 </div>
