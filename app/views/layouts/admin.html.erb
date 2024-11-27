@@ -36,7 +36,9 @@
     <%= javascript_import_module_tag "bootstrap" %>
     <%= yield(:head) %>
 
-    <%= render 'layouts/auto_dark_mode' %>
+    <% if Current.theme == '2020' %>
+      <%= render 'layouts/auto_dark_mode' %>
+    <% end %>
   </head>
 
   <body id="<%= body_id %>">

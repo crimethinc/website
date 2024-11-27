@@ -1,55 +1,18 @@
 <div class='container'>
   <%= render_themed 'home/sections/article',  article: @latest_article %>
   <%= render_themed 'home/sections/podcasts', latest_episode: @latest_episode, recent_episodes: @recent_episodes %>
-  <%= render_themed 'home/sections/articles', articles: @articles, just_published_articles: @just_published_articles, recent_articles: @recent_articles %>
+
+  <%= render_themed 'home/sections/articles',
+                    articles:                @articles,
+                    just_published_articles: @just_published_articles,
+                    recent_articles:         @recent_articles %>
+
+  <%= render_themed 'home/sections/books', featured_books: @featured_books %>
+  <%= render_themed 'home/sections/ex_workers_collection', ex_workers_collection: @ex_workers_collection %>
 
 
 
-
-
-  <!-- Featured books -->
-  <section>
-    <h1><%= link_to 'Featured Books', :books %></h1>
-
-    <div class='row'>
-      <% @featured_books.each do |book| %>
-        <div class='col col-6'>
-
-          <div class='row'>
-            <div class='col col-3'>
-              <%= link_to image_tag(book.image), book.path %>
-            </div><!-- /.col.col-3 -->
-
-            <div class='col col-9'>
-              <%= link_to book.path do %>
-                <h2><%= book.title %></h2>
-                <h3><%= book.subtitle %></h3>
-              <% end %>
-
-              <%= render_markdown book.summary %>
-
-              <%= link_to 'Learn more →', book.path %>
-            </div><!-- /.col.col-9 -->
-          </div><!-- /.row -->
-
-        </div><!-- /.col.col-6 -->
-      <% end %>
-
-    </div><!-- /.row -->
-  </section>
-  <!-- /Featured books -->
-
-  <!-- Ex-Workers’ Collection -->
-  <% if @ex_workers_collection.present? %>
-    <section>
-      <h1>Ex-Workers’ Collection</h1>
-
-      <% @ex_workers_collection.each do |article| %>
-        <%= render_themed 'home/sections/article', article: article %>
-      <% end %>
-    </section>
-  <% end %>
-  <!-- /Ex-Workers’ Collection -->
+  <% if false %>
 
   <!-- Selected tools -->
   <% if @selected_tools.present? %>
@@ -86,4 +49,6 @@
     </section>
   <% end %>
   <!-- /Selected tools -->
+
+  <% end %>
 </div><!-- /.container -->
