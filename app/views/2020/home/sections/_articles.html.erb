@@ -1,10 +1,10 @@
 <!-- Recent and previous articles -->
 <section class='row'>
   <div class='col col-8'>
-    <p class='mb-2 pt-5' id='recent'>Recent articles</p>
+    <p class='mb-2 pt-5' id='recent'>Just published</p>
 
     <ol class='list-unstyled'>
-      <% recent_articles.each do |article| %>
+      <% just_published_articles.each do |article| %>
         <li>
           <div class='row mb-3'>
             <div class='col col-4'>
@@ -32,10 +32,10 @@
   </div>
 
   <div class='col col-4'>
-    <p class='mb-2 pt-5' id='previous'>Previous articles</p>
+    <p class='mb-2 pt-5' id='recent'>Recent articles</p>
 
     <ol class='list-unstyled'>
-      <% previous_articles.each do |article| %>
+      <% recent_articles.each do |article| %>
         <li class='mb-3'>
           <%= link_to article.path do %>
             <b class='fw-bold d-block'><%= article.title %></b>

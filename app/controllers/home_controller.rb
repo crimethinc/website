@@ -13,10 +13,10 @@ class HomeController < ApplicationController
       @articles = articles_for_current_page.page(params[:page]).per(14).padding(1)
 
       # Recent article
-      @recent_articles = @articles[0..3]
+      @just_published_articles = @articles[0..3]
 
       # Previous article
-      @previous_articles = @articles[4..15]
+      @recent_articles = @articles[4..15]
 
       # Latest and recent podcast episodes
       podcast_episodes = Episode.live.limit(5)
