@@ -1,10 +1,12 @@
-<div id='share' class='d-block mb-5 border'>
-  #SHARE
+<div id='share' class='alert alert-info mb-5'>
   <%= render_markdown tt 'header.cards.share.description' %>
 
-  <h2><%= @page_share.title %></h2>
-  <h3><%= @page_share.subtitle %></h3>
+  <div class='fw-bold'><%= @page_share.title %></div>
+  <% if @page_share.subtitle.present? %>
+    <%= @page_share.subtitle %>
+  <% end %>
 
+  <%# TODO: remove twitter, add mastodon, threads, bluesky %>
   <ul>
     <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
     <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>

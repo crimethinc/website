@@ -1,10 +1,9 @@
-<div id='search' class='d-block mb-5 border'>
-  #SEARCH
+<div id='search' class='alert alert-danger mb-5'>
   <%= tt 'header.cards.search.description' %>
 
   <%= render 'layouts/2020/site_search' %>
 
-  <h2><%= tt 'header.cards.search.category_heading' %></h2>
+  <b><%= tt 'header.cards.search.category_heading' %></b>
 
   <p>
     <% Category.all.each do |category| %>
@@ -12,7 +11,7 @@
     <% end %>
   </p>
 
-  <h2><%= tt 'header.cards.search.chronological_heading' %></h2>
+  <b><%= tt 'header.cards.search.chronological_heading' %></b>
 
   <p>
     <% (1996..Time.current.year).to_a.reverse_each do |year| %>
