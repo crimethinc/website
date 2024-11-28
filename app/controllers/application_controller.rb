@@ -35,6 +35,10 @@ class ApplicationController < ActionController::Base
   end
   helper_method :media_mode?
 
+  def home_page?
+    controller_name == 'home' && action_name == 'index'
+  end
+
   def render_content article
     cache [:article_content, article, lite_mode?] do
       article.content_rendered include_media: media_mode?
@@ -66,8 +70,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def default_theme = '2017'
+
   def set_current_theme
-    Current.theme = ENV.fetch('THEME') { '2017' }
+    theme = default_theme
+    theme = ENV.fetch('THEME') { default_theme } if home_page?
+
+    Current.theme = theme
   end
 
   def check_for_redirection
