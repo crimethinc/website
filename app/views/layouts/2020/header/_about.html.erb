@@ -1,13 +1,21 @@
 <div id='about' class='alert alert-warning mb-5'>
-  <p><%= tt('site_name') %></p>
+  <div class='row'>
+    <div class='col-12 col-md-4 mb-3 mb-md-0'>
+      <p><%= tt 'site_name' %></p>
 
-  <%= tt 'header.cards.about.first_time_description' %>
-  <%= link_to tt('header.cards.about.first_time_link'), '/start' %>
+      <p>
+        <%= tt 'header.cards.about.first_time_description' %>
+        <%= link_to tt('header.cards.about.first_time_link'), '/start', class: 'fw-bold text-uppercase' %>
+      </p>
 
-  <%= render_markdown tt 'header.cards.about.search_description' %>
+      <%= render_markdown tt('header.cards.about.search_description'), remove_wrapper_p_tag: true %>
 
-  <%= render 'layouts/2020/site_search' %>
+      <%= render 'layouts/2020/site_search' %>
+    </div>
 
-  <%= render_markdown tt 'header.cards.about.description' %>
-  <p><%= tt 'header.cards.about.more_link' %></p>
-</div>
+    <div class='col-12 col-md-8'>
+      <%= render_markdown tt 'header.cards.about.description' %>
+      <p><%= link_to tt('header.cards.about.more_link'), :about, class: 'text-uppercase fw-bold' %></p>
+    </div>
+  </div><!-- /.row -->
+</div><!-- /#about -->
