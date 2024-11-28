@@ -42,7 +42,7 @@ module Crimethinc
     config.i18n.default_locale = :en
 
     # Allowed list locales available for the application
-    subdomain_locales = %i[
+    config.subdomain_locales = %i[
       ar be bg bn ca cs cz da de dv en es eu fa fi fr gl gr he hu
       id it ja ko ku nl no pl pt ro ru sh sk sv th tl tr uk vi zh
     ]
@@ -61,7 +61,7 @@ module Crimethinc
     ]
     path_rtl_locales = %i[فارسی]
 
-    config.i18n.available_locales = [subdomain_locales, path_ltr_locales, path_rtl_locales].flatten
+    config.i18n.available_locales = [config.subdomain_locales, path_ltr_locales, path_rtl_locales].flatten.sort
 
     # TEMP: delete after load_defaults is 7.1
     # TODO: set to false after i18n.load_path is solved below
