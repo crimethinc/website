@@ -15,7 +15,13 @@
       <% @selected_tools.each do |tool| %>
         <div class='col col-3'>
           <%= link_to image_tag(tool.image), tool.path %>
+        </div><!-- /.col.col-3 -->
+      <% end %>
+    </div><!-- /.row -->
 
+    <div class='row'>
+      <% @selected_tools.each do |tool| %>
+        <div class='col col-3'>
           <p>
             <%= link_to tool.class, tool.class.to_s.downcase.pluralize.to_sym %>
           </p>
