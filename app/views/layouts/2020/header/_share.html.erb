@@ -1,0 +1,14 @@
+<div id='share' class='d-block mb-5 border'>
+  #SHARE
+  <%= render_markdown tt 'header.cards.share.description' %>
+
+  <h2><%= @page_share.title %></h2>
+  <h3><%= @page_share.subtitle %></h3>
+
+  <ul>
+    <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr),   target: '_blank' %></li>
+    <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email),    target: '_blank' %></li>
+  </ul>
+</div>

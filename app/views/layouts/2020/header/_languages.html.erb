@@ -1,0 +1,7 @@
+<div class='card mb-5' id='languages'>
+  <div class='card-body'>
+    <% Locale.live.each do |locale| %>
+      <%= link_to locale.name, [:language, locale: locale.name.downcase.gsub(' ', '-')] %>
+    <% end %>
+  </div>
+</div>
