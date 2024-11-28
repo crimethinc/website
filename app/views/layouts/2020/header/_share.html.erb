@@ -1,16 +1,22 @@
 <div id='share' class='alert alert-info mb-5'>
-  <%= render_markdown tt 'header.cards.share.description' %>
+  <div class='row'>
+    <div class='col-12 col-md-4 mb-3 mb-md-0'>
+      <%= render_markdown tt 'header.cards.share.description' %>
+    </div>
 
-  <div class='fw-bold'><%= @page_share.title %></div>
-  <% if @page_share.subtitle.present? %>
-    <%= @page_share.subtitle %>
-  <% end %>
+    <div class='col-12 col-md-8'>
+      <div class='fw-bold'><%= @page_share.title %></div>
+      <% if @page_share.subtitle.present? %>
+        <%= @page_share.subtitle %>
+      <% end %>
 
-  <%# TODO: remove twitter, add mastodon, threads, bluesky %>
-  <ul>
-    <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
-    <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>
-    <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr),   target: '_blank' %></li>
-    <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email),    target: '_blank' %></li>
-  </ul>
-</div>
+      <%# TODO: remove twitter, add mastodon, threads, bluesky %>
+      <ul>
+        <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
+        <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>
+        <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr),   target: '_blank' %></li>
+        <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email),    target: '_blank' %></li>
+      </ul>
+    </div>
+  </div><!-- /.row -->
+</div><!-- /#share -->
