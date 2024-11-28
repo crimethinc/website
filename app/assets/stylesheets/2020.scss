@@ -25,14 +25,8 @@
 // TODO: TEMP move to images.scss
 img { max-width: 100%; }
 
-// TODO: TEMP move to footer.scss
+// Footer links
 #site-footer {
-  a, a:hover, a:active {
-    color: black;
-    @extend .text-decoration-none;
-  }
-
-  a:hover, a:active {
-    @extend .text-decoration-underline;
-  }
+  a:hover, a:active, a { @extend .text-decoration-none; }
+  a:hover, a:active    { @extend .text-decoration-underline; }
 }
