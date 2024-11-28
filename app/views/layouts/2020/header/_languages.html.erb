@@ -1,5 +1,11 @@
 <div class='alert alert-light mb-5' id='languages'>
   <% Locale.live.each do |locale| %>
-    <%= link_to locale.name, [:language, locale: locale.name.downcase.gsub(' ', '-')] %>
+    <%# TODO: extract to helper %>
+    <% locale_path = [:language, locale: locale.name.downcase.gsub(' ', '-')] %>
+
+    <%# TODO: extract to helper %>
+    <% current_locale_classes = 'fw-bold' if locale.abbreviation == String(Current.locale) %>
+
+    <%= link_to locale.name, locale_path, class: "text-uppercase #{current_locale_classes}" %>
   <% end %>
 </div>
