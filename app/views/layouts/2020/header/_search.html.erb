@@ -1,21 +1,32 @@
 <div id='search' class='alert alert-danger mb-5'>
-  <%= tt 'header.cards.search.description' %>
+  <div class='row'>
+    <div class='col-12 col-md-4'>
+      <div class='mt-md-4 mb-3'>
+        <%= render_markdown tt('header.cards.search.description'), remove_wrapper_p_tag: true %>
+        <%= render 'layouts/2020/site_search' %>
+      </div>
+    </div>
 
-  <%= render 'layouts/2020/site_search' %>
+    <div class='col-12 col-md-8'>
+      <b><%= tt 'header.cards.search.category_heading' %></b>
 
-  <b><%= tt 'header.cards.search.category_heading' %></b>
+      <p>
+        <% categories = Category.all %>
+        <% categories.each do |category| %>
+          <% classes = 'pe-2 me-1 border-end border-danger' unless category == categories.last %>
+          <%= link_to category.name, [:category, slug: category.slug], class: classes %>
+        <% end %>
+      </p>
 
-  <p>
-    <% Category.all.each do |category| %>
-      <%= link_to category.name, [:category, slug: category.slug] %>
-    <% end %>
-  </p>
+      <b><%= tt 'header.cards.search.chronological_heading' %></b>
 
-  <b><%= tt 'header.cards.search.chronological_heading' %></b>
-
-  <p>
-    <% (1996..Time.current.year).to_a.reverse_each do |year| %>
-      <%= link_to year, [:article_archives, year: year] %>
-    <% end %>
-  </p>
+      <p class='mb-0'>
+        <% years = (1996..Time.current.year).to_a.reverse %>
+        <% years.each do |year| %>
+          <% classes = 'pe-2 me-1 border-end border-danger' unless year == years.last %>
+          <%= link_to year, [:article_archives, year: year], class: classes %>
+        <% end %>
+      </p>
+    </div>
+  </div>
 </div>

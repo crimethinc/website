@@ -53,7 +53,7 @@ en:
           more_link: Read more →
 
         search:
-          description: You can search over two decades of archives.
+          description: You can **search** over two decades of archives.
           category_heading: Browse by Category
           chronological_heading: Browse Chronologically
 

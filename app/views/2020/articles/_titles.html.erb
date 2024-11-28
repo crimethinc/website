@@ -6,7 +6,7 @@
     </h1>
 
     <% if header.subtitle.present? %>
-      <span class="screen-reader-only visually-hidden sr-only"> : </span>
+      <span class="visually-hidden"> : </span>
 
       <h2 class="p-x-subtitle">
         <%= RubyPants.new(header.subtitle).to_html.html_safe %>

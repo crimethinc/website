@@ -8,7 +8,7 @@
 #  8. If a value has Markdown syntax characters in it, please keep those in your translation.
 #  9. Markdown examples: [link text](url), **bold**, _italics_, %{dynamic variable}, etc.
 # 10. If a value has <b>HTML</b> syntax characters in it, please keep those in your translation.
-en:
+ar:
   '2020':
     theme: '2020'
     name: English
@@ -53,7 +53,7 @@ en:
           more_link: Read more →
 
         search:
-          description: You can search over two decades of archives.
+          description: You can **search** over two decades of archives TKTK.
           category_heading: Browse by Category
           chronological_heading: Browse Chronologically
 
