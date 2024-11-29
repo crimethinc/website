@@ -1,11 +1,13 @@
-<!-- Ex-Workers’ Collection -->
 <% if ex_workers_collection.present? %>
-  <section class='row'>
-    <p class='mb-2 pt-5' id='ex-workers-collection'>Ex-Workers’ Collection</p>
+  <!-- Ex-Workers’ Collection -->
+  <% if ex_workers_collection.present? %>
+    <section class='row'>
+      <p class='mb-2 pt-5' id='ex-workers-collection'>Ex-Workers’ Collection</p>
 
-    <% @ex_workers_collection.each do |article| %>
-      <%= render_themed 'home/sections/article', article: article %>
-    <% end %>
-  </section>
+      <% @ex_workers_collection.each do |article| %>
+        <%= render_themed 'home/sections/article', article: article %>
+      <% end %>
+    </section>
+  <% end %>
+  <!-- /Ex-Workers’ Collection -->
 <% end %>
-<!-- /Ex-Workers’ Collection -->
