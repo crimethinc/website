@@ -51,7 +51,7 @@ en:
     videos:         Videos
     zines:          Zines
 
-    search:_placeholder: Search archives…
+    search_placeholder: Search archives…
 
     # Books
     contradictionary:           Contradictionary
@@ -66,44 +66,34 @@ en:
     to_change_everything:          To Change Everything
     steal_something_from_work_day: Steal Something from Work Day
     # Podcasts
-    the_ex_worker:          The Ex-Worker
-    the_hotwire:            The Hotwire
+    the_ex_worker: The Ex-Worker
+    the_hotwire:   The Hotwire
 
-    header:
-      books:    Books
-      library:  Library
-      tools:    Tools
-      podcasts: Podcasts
-      store:    Store
-      about:    About
+    cards:
+      share:
+        description: Everything conspires to suppress the voices of those who fight for a better world. Help us bring them to a wide audience.
+        domains:
+          twitter: Twitter
+          facebook: Facebook
+          tumblr: Tumblr
+          email: Email
 
-      support: Support us
+      about:
+        first_time_description: Is this your first time hearing about CrimethInc.?
+        first_time_link: Start here. →
+        search_description: Or you can **search** over two decades of archives.
+        description: |
+          CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age.
+          We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+          We believe that you should be free to dispose of your limitless potential on your own terms:
+          that no government, market, or ideology should be able to dictate what your life can be.
+          If you agree, _let’s do something about it._
+        more_link: Read more →
 
-      languages: Languages
-      search: Search
-      share: Share
-
-      cards:
-        share:
-          description: Everything conspires to suppress the voices of those who fight for a better world. Help us bring them to a wide audience.
-          domains:
-            twitter: Twitter
-            facebook: Facebook
-            tumblr: Tumblr
-            email: Email
-
-        about:
-          first_time_description: Is this your first time hearing about CrimethInc.?
-          first_time_link: Start here. →
-          search_description: Or you can **search** over two decades of archives.
-          description: |
-            CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid. We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._
-          more_link: Read more →
-
-        search:
-          description: You can **search** over two decades of archives.
-          category_heading: Browse by category
-          chronological_heading: Browse chronologically
+      search:
+        description: You can **search** over two decades of archives.
+        category_heading: Browse by category
+        chronological_heading: Browse chronologically
 
     footer:
       store_description: Books, Posters, Stickers, and more…
