@@ -22,35 +22,36 @@ en:
       meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
       meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
-    about:               About
-    adventure:           Adventure
-    analysis:            Analysis
-    arts:                Arts
-    books:               Books
-    current_events:      Current Events
-    email:               Email
-    geography:           Geography
-    history:             History
-    how_to:              How To
-    journals:            Journals
-    languages:           Languages
-    library:             Library
-    logos:               Logos
-    music:               Music
-    news:                News
-    podcasts:            Podcasts
-    posters:             Posters
-    search:              Search
+    about:          About
+    adventure:      Adventure
+    analysis:       Analysis
+    arts:           Arts
+    books:          Books
+    current_events: Current Events
+    email:          Email
+    geography:      Geography
+    history:        History
+    how_to:         How To
+    journals:       Journals
+    languages:      Languages
+    library:        Library
+    logos:          Logos
+    music:          Music
+    news:           News
+    podcasts:       Podcasts
+    posters:        Posters
+    search:         Search
+    share:          Share
+    sitemap:        Site map
+    stickers:       Stickers
+    store:          Store
+    support:        Support us
+    technology:     Technology
+    tools:          Tools
+    videos:         Videos
+    zines:          Zines
+
     search:_placeholder: Search archives…
-    share:               Share
-    sitemap:             Site map
-    stickers:            Stickers
-    store:               Store
-    support:             Support us
-    technology:          Technology
-    tools:               Tools
-    videos:              Videos
-    zines:               Zines
 
     # Books
     contradictionary:           Contradictionary
@@ -69,12 +70,12 @@ en:
     the_hotwire:            The Hotwire
 
     header:
-      books: Books
-      library: Library
-      tools: Tools
+      books:    Books
+      library:  Library
+      tools:    Tools
       podcasts: Podcasts
-      store: Store
-      about: About
+      store:    Store
+      about:    About
 
       support: Support us
 
