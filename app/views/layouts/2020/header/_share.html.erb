@@ -16,7 +16,7 @@
 
       <%# TODO: remove twitter, add mastodon, threads, bluesky %>
       <%# TODO: add email icon %>
-      <ul class='list-unstyled list-inline'>
+      <ul class='list-inline mb-0'>
         <% %i[twitter facebook tumblr email].each do |domain| %>
           <li class='list-inline-item'>
             <%= link_to @page_share.share_url_for(domain), class: 'my-2', target: '_blank', rel: 'noopener' do %>
