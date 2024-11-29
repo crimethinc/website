@@ -56,23 +56,8 @@
       </nav>
     </div><!-- .col-12 col-md-6 -->
 
-    <div class='col-12 col-md-3 mb-5'>
-      <h2><%= t('footer.contact.social.heading') %></h2>
-      <%= render_markdown t('footer.contact.social.description') %>
+    <div class='col-12 col-md-6 pr-5 mb-5'>
 
-      <ul class='list-unstyled'>
-        <% social_links_by_domain.each do |domain, url| %>
-          <li class='mb-2'>
-            <%= link_to url, class: 'my-2', target: '_blank', rel: 'noopener' do %>
-              <%= image_tag "social-icons/#{domain.parameterize}.svg", size: '40x40', class: 'me-2' %>
-              <%= domain %>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
-    </div><!-- .col-12 col-md-3 -->
-
-    <div class='col-12 col-md-3 mb-5'>
       <div id='mc_embed_signup'><!-- Begin MailChimp Signup Form -->
         <h2 class='newsletter-signup-label'><%= t('footer.contact.newsletter.heading') %></h2>
         <div class='newsletter-signup-description'><%= render_markdown t('footer.contact.newsletter.description') %></div>
@@ -106,7 +91,31 @@
           <div id='a-thing-with-an-id' style='<%= left_or_right %>' aria-hidden='true'><input type='text' name='b_cb48383602b7373f496e9ba33_344714b249' tabindex='-1' value='' autocomplete="off"></div>
         <% end %>
       </div><!--End mc_embed_signup-->
-    </div><!-- .col-12 col-md-3 -->
+
+      <div id='social'>
+        <h2><%= t('footer.contact.social.heading') %></h2>
+        <%= render_markdown t('footer.contact.social.description') %>
+
+        <% social_links_by_domain.in_groups_of(2).each do |row| %>
+          <div class='mb-2 row'>
+            <% row.each do |social| %>
+              <% next if social.nil? %>
+
+              <% social.each do |domain, url| %>
+                <div class='col-6'>
+                  <%= link_to url, class: 'my-2', target: '_blank', rel: 'noopener' do %>
+                    <%= image_tag "social-icons/#{domain.to_s.parameterize}.svg", size: '40x40', class: 'me-2' %>
+                    <%= domain %>
+                  <% end %>
+                </div>
+              <% end %>
+
+            <% end %>
+          </div>
+        <% end %>
+      </div><!-- #social -->
+
+    </div><!-- .col-12 col-md-6 -->
   </div><!-- .row -->
 
   <div rel='license' class='text-secondary text-center my-5 py-5'>
