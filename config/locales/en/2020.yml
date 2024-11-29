@@ -19,8 +19,9 @@ en:
     head:
       # meta_title is wrapped in quotes because it has a colon in its text value
       meta_title: "CrimethInc. ex-Workers’ Collective: Your ticket to a world free of charge"
-      meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
       meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+      # TODO: move this out of YAML, into a view
+      meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
 
     # words
     about:          About
@@ -53,20 +54,20 @@ en:
     zines:          Zines
 
     # phrases
-    search_placeholder:      Search archives…
+    ex_workers_collection:   Ex-Workers’ Collection
+    featured_books:          Featured books
+    just_published:          Just published
     latest_article:          Latest article
     latest_podcast_episode:  Latest podcast episode
-    listen_to_episode:       Listen to episode
-    recent_podcast_episodes: Recent podcast episodes
-    more_podcast_episodes:   More podcast episodes
-    just_published:          Just published
-    more_articles:           More articles
-    recent_articles:         Recent articles
-    featured_books:          Featured books
     learn_more:              Learn more
-    ex_workers_collection:   Ex-Workers’ Collection
-    selected_tools:          Selected tools
+    listen_to_episode:       Listen to episode
+    more_articles:           More articles
+    more_podcast_episodes:   More podcast episodes
     more_tools:              More tools
+    recent_articles:         Recent articles
+    recent_podcast_episodes: Recent podcast episodes
+    search_placeholder:      Search archives…
+    selected_tools:          Selected tools
 
     # Books
     contradictionary:           Contradictionary
@@ -78,8 +79,8 @@ en:
     recipes_for_disaster:       Recipes for Disaster
     work:                       Work
     # Projects
-    to_change_everything:          To Change Everything
     steal_something_from_work_day: Steal Something from Work Day
+    to_change_everything:          To Change Everything
     # Podcasts
     the_ex_worker: The Ex-Worker
     the_hotwire:   The Hotwire
@@ -113,7 +114,7 @@ en:
         chronological_heading: Browse chronologically
 
     footer:
-      store_description: Books, Posters, Stickers, and more…
+      store_description: Books, posters, stickers, and more…
       site_mode: Switch to the lite version of the site →
 
       contact:
