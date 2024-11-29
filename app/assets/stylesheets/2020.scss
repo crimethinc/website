@@ -31,3 +31,8 @@ a:hover, a:active    { @extend .text-decoration-underline; }
 header {
   a:hover, a:active { @extend .text-decoration-none; }
 }
+
+#about:target     #about-card     { display: block !important; }
+#languages:target #languages-card { display: block !important; }
+#search:target    #search-card    { display: block !important; }
+#share:target     #share-card     { display: block !important; }

@@ -24,15 +24,26 @@
   </head>
 
   <body>
-    <%= render 'layouts/2020/admin_header' %>
-    <%= render 'layouts/2020/development_mode_banner' %>
+    <%#= render 'layouts/2020/admin_header' %>
+    <%#= render 'layouts/2020/development_mode_banner' %>
 
-    <%= render 'layouts/2020/header' %>
+    <div id='about'>
+      <div id='languages'>
+        <div id='search'>
+          <div id='share'>
 
-    <main>
-      <%= yield %>
-    </main>
+            <%= render 'layouts/2020/header' %>
 
-    <%= render 'layouts/2020/footer' %>
+            <main>
+              <%= yield %>
+            </main>
+
+            <%= render 'layouts/2020/footer' %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 <% end %>

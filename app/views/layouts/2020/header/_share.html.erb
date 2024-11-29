@@ -1,9 +1,10 @@
-<div id='share' class='alert alert-info mb-5'>
+<div id='share-card' class='alert alert-info mb-5' style='display: none'>
   <h2 class='visually-hidden'><%= tt 'share' %></h2>
 
   <div class='row'>
     <div class='col-12 col-md-4 mb-md-0'>
       <%= render_markdown tt 'cards.share.description' %>
+      <%= link_to 'X', '#' %>
     </div>
 
     <div class='col-12 col-md-8'>
