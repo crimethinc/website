@@ -1,7 +1,7 @@
 <% if featured_books.present? %>
   <!-- Featured books -->
   <section class='row'>
-    <p class='mb-2 pt-5' id='books'>Featured Books</p>
+    <p class='mb-2 pt-5' id='books'><%= tt :featured_books %></p>
 
     <% featured_books.each do |book| %>
       <div class='col col-6'>
@@ -19,7 +19,7 @@
 
             <%= render_markdown book.summary %>
 
-            <p class='fw-bold text-end'><%= link_to 'Learn more →', book.path %></p>
+            <p class='fw-bold text-end'><%= link_to "#{tt :learn_more} →", book.path %></p>
           </div><!-- /.col.col-9 -->
         </div><!-- /.row -->
 

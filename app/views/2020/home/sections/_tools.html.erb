@@ -3,11 +3,11 @@
     <section>
       <div class='row'>
         <div class='col col-6'>
-          <p class='mb-2 pt-5' id='tools'>Selected tools</p>
+          <p class='mb-2 pt-5' id='tools'><%= tt :selected_tools %></p>
         </div>
 
         <div class='col col-6'>
-          <p class='mb-2 pt-5 text-end' id='tools'><%= link_to 'More tools →', :tools %></p>
+          <p class='mb-2 pt-5 text-end' id='tools'><%= link_to "#{tt :more_tools} →", :tools %></p>
         </div>
       </div>
 

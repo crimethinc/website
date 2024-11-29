@@ -2,7 +2,7 @@
   <!-- Ex-Workers’ Collection -->
   <% if ex_workers_collection.present? %>
     <section class='row'>
-      <p class='mb-2 pt-5' id='ex-workers-collection'>Ex-Workers’ Collection</p>
+      <p class='mb-2 pt-5' id='ex-workers-collection'><%= tt :ex_workers_collection %></p>
 
       <% @ex_workers_collection.each do |article| %>
         <%= render_themed 'home/sections/article', article: article %>

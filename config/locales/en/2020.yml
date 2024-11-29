@@ -22,6 +22,7 @@ en:
       meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
       meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
 
+    # words
     about:          About
     adventure:      Adventure
     analysis:       Analysis
@@ -51,7 +52,21 @@ en:
     videos:         Videos
     zines:          Zines
 
-    search_placeholder: Search archives…
+    # phrases
+    search_placeholder:      Search archives…
+    latest_article:          Latest article
+    latest_podcast_episode:  Latest podcast episode
+    listen_to_episode:       Listen to episode
+    recent_podcast_episodes: Recent podcast episodes
+    more_podcast_episodes:   More podcast episodes
+    just_published:          Just published
+    more_articles:           More articles
+    recent_articles:         Recent articles
+    featured_books:          Featured books
+    learn_more:              Learn more
+    ex_workers_collection:   Ex-Workers’ Collection
+    selected_tools:          Selected tools
+    more_tools:              More tools
 
     # Books
     contradictionary:           Contradictionary
