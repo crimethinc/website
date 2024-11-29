@@ -1,17 +1,17 @@
 <!-- Recent and previous articles -->
 <section class='row'>
-  <div class='col col-8'>
+  <div class='col-8'>
     <p class='mb-2 pt-5' id='articles'><%= tt :just_published %></p>
 
     <ol class='list-unstyled'>
       <% just_published_articles.each do |article| %>
         <li>
           <div class='row mb-3'>
-            <div class='col col-4'>
+            <div class='col-4'>
               <%= link_to image_tag(article.image), article.path %>
-            </div><!-- /.col.col-4 -->
+            </div><!-- /.col-4 -->
 
-            <div class='col col-8'>
+            <div class='col-8'>
               <p>
                 <% article.categories.each do |category| %>
                   <%= link_to category.name, category.path, class: 'text-uppercase' %>
@@ -22,7 +22,7 @@
                 <div class='fw-bold'><%= article.title %></div>
                 <%= article.subtitle %>
               <% end %>
-            </div><!-- /.col.col-8 -->
+            </div><!-- /.col-8 -->
           </div><!-- /.row -->
         </li>
       <% end %>
@@ -31,7 +31,7 @@
     <p class='fw-bold'><%= link_to_next_page articles, "#{tt :more_articles} →" %></p>
   </div>
 
-  <div class='col col-4'>
+  <div class='col-4'>
     <p class='mb-2 pt-5' id='recent'><%= tt :recent_articles %></p>
 
     <ol class='list-unstyled'>

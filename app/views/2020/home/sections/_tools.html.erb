@@ -2,26 +2,26 @@
   <!-- Selected tools -->
     <section>
       <div class='row'>
-        <div class='col col-6'>
+        <div class='col-6'>
           <p class='mb-2 pt-5' id='tools'><%= tt :selected_tools %></p>
         </div>
 
-        <div class='col col-6'>
+        <div class='col-6'>
           <p class='mb-2 pt-5 text-end' id='tools'><%= link_to "#{tt :more_tools} →", :tools %></p>
         </div>
       </div>
 
       <div class='row'>
         <% selected_tools.each do |tool| %>
-          <div class='col col-3'>
+          <div class='col-3'>
             <%= link_to image_tag(tool.image), tool.path %>
-          </div><!-- /.col.col-3 -->
+          </div><!-- /.col-3 -->
         <% end %>
       </div><!-- /.row -->
 
       <div class='row'>
         <% selected_tools.each do |tool| %>
-          <div class='col col-3'>
+          <div class='col-3'>
             <p>
               <%= link_to tool.class, tool.class.to_s.downcase.pluralize.to_sym %>
             </p>
@@ -33,7 +33,7 @@
                 <%= tool.subtitle %>
               <% end %>
             <% end %>
-          </div><!-- /.col.col-3 -->
+          </div><!-- /.col-3 -->
         <% end %>
       </div><!-- /.row -->
     </section>
