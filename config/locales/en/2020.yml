@@ -86,12 +86,14 @@ en:
 
     cards:
       share:
-        description: Everything conspires to suppress the voices of those who fight for a better world. Help us bring them to a wide audience.
+        description: |
+          Everything conspires to suppress the voices of those who fight for a better world.
+          Help us bring them to a wide audience.
         domains:
-          twitter: Twitter
+          twitter:  Twitter
           facebook: Facebook
-          tumblr: Tumblr
-          email: Email
+          tumblr:   Tumblr
+          email:    Email
 
       about:
         first_time_description: Is this your first time hearing about CrimethInc.?
@@ -127,7 +129,7 @@ en:
           heading: Find us elsewhere
           description: Keep up with our activities on the following additional platforms.
 
-    mantra:
+    mantras:
       - If your heart is free, the ground you stand on is liberated territory. Defend it.
       - Only those prepared to go too far will learn how far they can go.
       - Desperate measures are long overdue.
