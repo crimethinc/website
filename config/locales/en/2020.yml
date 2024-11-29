@@ -30,7 +30,7 @@ en:
       store: Store
       about: About
 
-      support: Support Us
+      support: Support us
 
       languages: Languages
       search: Search
@@ -39,10 +39,11 @@ en:
       cards:
         share:
           description: Everything conspires to suppress the voices of those who fight for a better world. Help us bring them to a wide audience.
-          twitter: Twitter
-          facebook: Facebook
-          tumblr: Tumblr
-          email: Email
+          domains:
+            twitter: Twitter
+            facebook: Facebook
+            tumblr: Tumblr
+            email: Email
 
         about:
           first_time_description: Is this your first time hearing about CrimethInc.?
@@ -54,8 +55,8 @@ en:
 
         search:
           description: You can **search** over two decades of archives.
-          category_heading: Browse by Category
-          chronological_heading: Browse Chronologically
+          category_heading: Browse by category
+          chronological_heading: Browse chronologically
 
     search:
-      form_placeholder: Search Archives…
+      form_placeholder: Search archives…

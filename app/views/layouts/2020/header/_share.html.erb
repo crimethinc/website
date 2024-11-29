@@ -1,21 +1,30 @@
 <div id='share' class='alert alert-info mb-5'>
+  <h2 class='visually-hidden'><%= tt 'header.share' %></h2>
+
   <div class='row'>
-    <div class='col-12 col-md-4 mb-3 mb-md-0'>
+    <div class='col-12 col-md-4 mb-md-0'>
       <%= render_markdown tt 'header.cards.share.description' %>
     </div>
 
     <div class='col-12 col-md-8'>
-      <div class='fw-bold'><%= @page_share.title %></div>
-      <% if @page_share.subtitle.present? %>
-        <%= @page_share.subtitle %>
-      <% end %>
+      <div class='mb-3'>
+        <div class='fw-bold'><%= @page_share.title %></div>
+        <% if @page_share.subtitle.present? %>
+          <%= @page_share.subtitle %>
+        <% end %>
+      </div>
 
       <%# TODO: remove twitter, add mastodon, threads, bluesky %>
-      <ul>
-        <li><%= link_to tt('header.cards.share.twitter'),  @page_share.share_url_for(:twitter),  target: '_blank' %></li>
-        <li><%= link_to tt('header.cards.share.facebook'), @page_share.share_url_for(:facebook), target: '_blank' %></li>
-        <li><%= link_to tt('header.cards.share.tumblr'),   @page_share.share_url_for(:tumblr),   target: '_blank' %></li>
-        <li><%= link_to tt('header.cards.share.email'),    @page_share.share_url_for(:email),    target: '_blank' %></li>
+      <%# TODO: add email icon %>
+      <ul class='list-unstyled list-inline'>
+        <% %i[twitter facebook tumblr email].each do |domain| %>
+          <li class='list-inline-item'>
+            <%= link_to @page_share.share_url_for(domain), class: 'my-2', target: '_blank', rel: 'noopener' do %>
+              <%= image_tag "social-icons/#{domain.to_s.parameterize}.svg", size: '40x40', class: 'me-2' %>
+              <%= tt "header.cards.share.domains.#{domain}" %>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div><!-- /.row -->

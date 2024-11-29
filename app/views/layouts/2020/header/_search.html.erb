@@ -1,13 +1,17 @@
 <div id='search' class='alert alert-danger mb-5'>
+  <h2 class='visually-hidden'><%= tt 'header.search' %></h2>
+
   <div class='row'>
-    <div class='col-12 col-md-4'>
-      <div class='mt-md-4 mb-3 mb-md-0'>
-        <%= render_markdown tt('header.cards.search.description'), remove_wrapper_p_tag: true %>
+    <div class='col-12 col-lg-4 mb-3'>
+      <div class='mt-lg-4 mb-3 mb-md-0'>
+        <p class='mb-1'>
+          <%= render_markdown tt('header.cards.search.description'), remove_wrapper_p_tag: true %>
+        </p>
         <%= render 'layouts/2020/site_search' %>
       </div>
     </div>
 
-    <div class='col-12 col-md-8'>
+    <div class='col-12 col-lg-8'>
       <b><%= tt 'header.cards.search.category_heading' %></b>
 
       <p>
