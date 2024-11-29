@@ -1,8 +1,8 @@
-<footer id='site-footer' class='container mt-5' role='contentinfo'>
+<footer class='container mt-5 pt-5 border-top' role='contentinfo' id='site-footer'>
   <div class='row'>
     <div class='col-12 col-md-6 pr-5 mb-5'>
       <nav>
-        <h2 id='sitemap'><%= t 'footer.nav.heading' %></h2>
+        <h2 class='pt-3' id='sitemap'><%= t 'footer.nav.heading' %></h2>
 
         <dl>
           <dt>
@@ -61,8 +61,9 @@
     <div class='col-12 col-md-6 pr-5 mb-5' id='email'>
 
       <div id='mc_embed_signup'><!-- Begin MailChimp Signup Form -->
-        <h2 class='newsletter-signup-label'><%= t('footer.contact.newsletter.heading') %></h2>
-        <div class='newsletter-signup-description'><%= render_markdown t('footer.contact.newsletter.description') %></div>
+        <h2 class='pt-3'><%= t('footer.contact.newsletter.heading') %></h2>
+
+        <%= render_markdown t('footer.contact.newsletter.description') %>
 
         <%= form_with url: '//crimethinc.us2.list-manage.com/subscribe/post?u=cb48383602b7373f496e9ba33&amp;id=344714b249', id: 'mc-embedded-subscribe-form', class: 'newsletter-signup-form validate', name: 'mc-embedded-subscribe-form', target: '_blank', rel: 'noopener', novalidate: true do |form| %>
           <div class='mc-field-group'>
@@ -94,7 +95,7 @@
         <% end %>
       </div><!--End mc_embed_signup-->
 
-      <div id='social'>
+      <div class='pt-3' id='social'>
         <h2><%= t('footer.contact.social.heading') %></h2>
         <%= render_markdown t('footer.contact.social.description') %>
 
