@@ -12,7 +12,7 @@
           </div><!-- /.col-3 -->
 
           <div class='col-9'>
-            <%= link_to book.path do %>
+            <%= link_to book.path, class: 'd-block mb-2' do %>
               <div class='fw-bold'><%= book.title %></div>
               <%= book.subtitle %>
             <% end %>

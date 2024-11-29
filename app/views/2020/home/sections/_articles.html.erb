@@ -6,22 +6,22 @@
     <ol class='list-unstyled'>
       <% just_published_articles.each do |article| %>
         <li>
-          <div class='row mb-3'>
-            <div class='col-12 col-md-4 col-lg-4'>
+          <div class='row mb-4'>
+            <div class='col-12 col-md-4 col-lg-4 mb-1'>
               <%= link_to image_tag(article.image), article.path %>
             </div><!-- /.col-4 -->
 
             <div class='col-12 col-md-8 col-lg-8'>
               <p>
                 <% article.categories.each do |category| %>
-                  <%= link_to category.name, category.path, class: 'text-uppercase' %>
+                  <%= link_to category.name, category.path, class: 'text-uppercase' %><%= tag.span ',' unless category == article.categories.last %>
                 <% end %>
               </p>
 
               <%= link_to article.path do %>
-                <div class='fw-bold'><%= article.title %></div>
+                <h2 class='h3'><%= article.title %></h2>
                 <% if article.subtitle.present? %>
-                  <span class='fw-light'><%= article.subtitle %></span>
+                  <h3 class='h5 fw-light'><%= article.subtitle %></h3>
                 <% end %>
               <% end %>
             </div><!-- /.col-8 -->

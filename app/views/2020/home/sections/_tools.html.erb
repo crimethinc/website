@@ -7,33 +7,31 @@
         </div>
 
         <div class='col-6'>
-          <p class='mb-2 pt-5 text-end' id='tools'><%= link_to "#{tt :more_tools} →", :tools %></p>
+          <p class='mb-2 pt-5 text-end'><%= link_to "#{tt :more_tools} →", :tools %></p>
         </div>
       </div>
 
-      <div class='row'>
+      <div class='row mb-2'>
         <% selected_tools.each do |tool| %>
-          <div class='col-3'>
-            <%= link_to image_tag(tool.image), tool.path %>
-          </div><!-- /.col-3 -->
+          <div class='col-6 col-md-3'>
+            <div class='mb-2'>
+              <%= link_to image_tag(tool.image), tool.path %>
+            </div>
+
+            <div class='d-block d-md-none mb-4'>
+              <%= render_themed 'home/sections/tool_meta', tool: tool %>
+            </div>
+          </div>
         <% end %>
       </div><!-- /.row -->
 
       <div class='row'>
         <% selected_tools.each do |tool| %>
-          <div class='col-3'>
-            <p>
-              <%= link_to tool.class, tool.class.to_s.downcase.pluralize.to_sym %>
-            </p>
-
-            <%= link_to tool.path do %>
-              <div class='fw-bold'><%= tool.title %></div>
-
-              <% if tool.subtitle.present? %>
-                <%= tool.subtitle %>
-              <% end %>
-            <% end %>
-          </div><!-- /.col-3 -->
+          <div class='col-6 col-md-3'>
+            <div class='d-none d-md-block'>
+              <%= render_themed 'home/sections/tool_meta', tool: tool %>
+            </div>
+          </div>
         <% end %>
       </div><!-- /.row -->
     </section>
