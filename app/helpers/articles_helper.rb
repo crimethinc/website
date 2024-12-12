@@ -123,4 +123,22 @@ module ArticlesHelper
   def publication_status_badge_class article
     article.draft? ? 'danger' : 'success'
   end
+
+  def header_image_tag article, width: 2000, height: 1000
+    height = width if height.blank?
+
+    placeholder_image_url
+    url = article.image
+    url = article.header.variant resize_to_limit: [width, height] if article.header.attached?
+
+    image_tag url, class: 'w-100'
+  end
+
+  def placeholder_image_url width: 2000, height: 1000
+    height = width if height.blank?
+
+    hex_range = (0..9).to_a + ('a'..'f').to_a
+    color = [hex_range.sample, hex_range.sample, hex_range.sample].join
+    "https://via.placeholder.com/#{width}x#{height}/#{color}?text=+"
+  end
 end

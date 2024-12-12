@@ -26,6 +26,19 @@
     </div>
   </div>
 
+  <% if article.image.present? %>
+    <div class='mb-3'>
+      <%= header_image_tag article %>
+    </div>
+  <% end %>
+
+  <%= render "admin/form/file_field", form: form, attr: :header, resource: article, label_text: "Header image" %>
+  <p class="form-text text-muted">
+    This is the large image that will be front and center on the <i>Article</i> page,
+    on the homepage and when syndicated to other sites. Preferred size:
+    <code>2000px wide</code> by about <code>1000px tall</code> (or taller).
+  </p>
+
   <div class="row mb-5">
     <div class="col-12 col-md-7">
       <%= tag.div dir: html_dir do %>
@@ -71,7 +84,7 @@
 
   <div class="row mb-5">
     <div class="col-12 col-md-7">
-      <%= render "admin/articles/form/appearance", form: form %>
+      <%= render "admin/articles/form/appearance", form: form, resource: @article %>
     </div>
 
     <div class="col-12 col-md-5">

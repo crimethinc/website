@@ -171,7 +171,7 @@
             <%= link_to image_tag(tool.image), tool.path %>
 
             <p>
-              <%= link_to tool.class, [tool.class.to_s.downcase.pluralize] %>
+              <%= link_to tool.class, [tool.class.to_s.downcase.pluralize.to_sym] %>
             </p>
 
             <%= link_to tool.path do %>

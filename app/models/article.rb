@@ -3,6 +3,8 @@ class Article < ApplicationRecord
   include Featureable
   include Translatable
 
+  has_one_attached :header, dependent: :destroy
+
   has_one  :redirect, dependent: :destroy
   has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings
