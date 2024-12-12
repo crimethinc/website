@@ -1,5 +1,6 @@
 class Podcast < ApplicationRecord
   include Name
+  include Featureable
 
   has_many :episodes, dependent: :destroy
 

@@ -1,5 +1,6 @@
 class Episode < ApplicationRecord
   include Name
+  include Featureable
   include Publishable
 
   belongs_to :podcast

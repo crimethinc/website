@@ -19,8 +19,11 @@
 _Email:_ \\
 [contact@crimethinc.com](mailto:contact@crimethinc.com)
 
-_Twitter:_ \\
-[@crimethinc](https://twitter.com/crimethinc)
+_Mastodon:_ \\
+[@crimethinc@todon.eu](https://todon.eu/@CrimethInc)
+
+_Bluesky:_ \\
+[@crimethinc.com](https://bsky.app/profile/crimethinc.com)
 
 ## Mailorder
 

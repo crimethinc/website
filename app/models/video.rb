@@ -1,5 +1,6 @@
 class Video < ApplicationRecord
   include Tool
+  include Featureable
 
   has_one_attached :image_poster_frame
 
