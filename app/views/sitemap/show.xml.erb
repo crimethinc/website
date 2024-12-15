@@ -47,6 +47,14 @@
     <% end %>
   <% end %>
 
+  <%# article years %>
+  <% @article_years.each do |year| %>
+    <% lastmod = DateTime.new(year).end_of_day %>
+    <% lastmod = @last_modified if year == Time.current.year %>
+
+    <%= render 'sitemap/url', loc: article_archives_url(year: year), lastmod: lastmod %>
+  <% end %>
+
   <%# @urls.each do |url| %>
     <%#= render 'sitemap/url', loc: url.loc, lastmod: url.lastmod %>
   <%# end %>

@@ -13,7 +13,9 @@ class SitemapController < ApplicationController
     # articles
     @articles = Article.live.published
 
-    add_article_years
+    # articles by year
+    @article_years = (1996..Time.zone.today.year).to_a
+
     add_pages
     add_tools
     add_to_change_everything
@@ -28,14 +30,6 @@ class SitemapController < ApplicationController
     Article.live.published.find_each do |article|
       url = [root_url, article.path].join
       @urls << sitemap_url.new(url, article.updated_at)
-    end
-  end
-
-  def add_article_years
-    # articles year list page
-    (1996..Time.zone.today.year).to_a.each do |year|
-      url = [root_url, year].join '/'
-      @urls << sitemap_url.new(url, @last_modified)
     end
   end
 
