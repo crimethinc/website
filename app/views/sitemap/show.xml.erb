@@ -40,11 +40,9 @@
     <%= render 'sitemap/url', loc: category_url(category.slug), lastmod: @last_modified %>
   <% end %>
 
-  <%# articles %>
-  <% @articles.find_each do |article| %>
-    <% cache article do %>
-      <%= render 'sitemap/url', loc: [root_url, article.path].join, lastmod: article.updated_at %>
-    <% end %>
+  <%# static-ish pages %>
+  <% @static_paths.each do |path| %>
+    <%= render 'sitemap/url', loc: [root_url, path].join('/'), lastmod: @last_modified %>
   <% end %>
 
   <%# article years %>
@@ -55,11 +53,6 @@
     <%= render 'sitemap/url', loc: article_archives_url(year: year), lastmod: lastmod %>
   <% end %>
 
-  <%# static-ish pages %>
-  <% @static_paths.each do |path| %>
-    <%= render 'sitemap/url', loc: [root_url, path].join('/'), lastmod: @last_modified %>
-  <% end %>
-
   <%# To Change Everything (TCE) %>
   <%= render 'sitemap/url', loc: to_change_everything_url, lastmod: @last_modified %>
 
@@ -68,7 +61,19 @@
     <%= render 'sitemap/url', loc: [to_change_everything_url(lang: tce_language), '/get'].join, lastmod: @last_modified %>
   <% end %>
 
+  <%# articles %>
+  <% @articles.each do |article| %>
+    <% cache article do %>
+      <%= render 'sitemap/url', loc: [root_url, article.path].join, lastmod: article.updated_at %>
+    <% end %>
+  <% end %>
+
+
+  <% if false %>
+
   <%# @urls.each do |url| %>
     <%#= render 'sitemap/url', loc: url.loc, lastmod: url.lastmod %>
   <%# end %>
+
+  <% end %>
 </urlset>

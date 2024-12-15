@@ -35,9 +35,7 @@ class SitemapController < ApplicationController
     @categories = Category.all
 
     # articles
-    @articles = Article.live
-                       .published
-                       .select(:id, :updated_at, :draft_code, :published_at, :publication_status, :slug)
+    @articles = live_published_articles
 
     # articles by year
     @article_years = (1996..Time.zone.today.year).to_a
@@ -49,8 +47,8 @@ class SitemapController < ApplicationController
     @to_change_everything_languages = TO_CHANGE_EVERYTHING_LANGUAGES
 
     # TODO: extract to show view + _url partial
-    add_languages
-    add_tools
+    # add_languages
+    # add_tools
   end
 
   private
@@ -105,6 +103,14 @@ class SitemapController < ApplicationController
       urls.each do |url|
         @urls << sitemap_url.new(url, @last_modified)
       end
+    end
+  end
+
+  def live_published_articles
+    Rails.cache.fetch([:sitemap, @latest_article, :live_published_articles], expires_in: 12.hours) do
+      Article.live
+             .published
+             .select(:id, :updated_at, :draft_code, :published_at, :publication_status, :slug)
     end
   end
 end
