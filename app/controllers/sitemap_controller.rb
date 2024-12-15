@@ -95,16 +95,14 @@ class SitemapController < ApplicationController
     tool_classes = [
       Book,
       Episode,
-      Page,
-      Podcast,
-      Video,
-      Zine,
-      Journal,
       Issue,
-      Episode,
+      Journal,
+      Logo,
+      Podcast,
       Poster,
       Sticker,
-      Logo
+      Video,
+      Zine
     ]
 
     tool_classes.each do |tool_class|
@@ -127,6 +125,9 @@ class SitemapController < ApplicationController
 
   def add_to_change_everything
     # To Change Everything
+    url = [root_url, :tce].join '/'
+    @urls << sitemap_url.new(url, @last_modified)
+
     to_change_everything_languages = [
       # in YAML files
       ToChangeEverythingController::TO_CHANGE_ANYTHING_YAMLS.dup,
