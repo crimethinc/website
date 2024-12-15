@@ -45,27 +45,27 @@ SitemapGenerator::Sitemap.create do
   # ]
 
   # TODO: read this from app data
-  tce_languages = %w[
-    czech
-    deutsch
-    espanol
-    espanol-america-latina
-    polski
-    portugues
-    quebecois
-    slovenscina
-    slovensko
-    فارسی
-    日本語
-    한국어
-    lietuvos
-    portugues
-    ภาษาไทย
-  ]
+  # tce_languages = %w[
+  #   czech
+  #   deutsch
+  #   espanol
+  #   espanol-america-latina
+  #   polski
+  #   portugues
+  #   quebecois
+  #   slovenscina
+  #   slovensko
+  #   فارسی
+  #   日本語
+  #   한국어
+  #   lietuvos
+  #   portugues
+  #   ภาษาไทย
+  # ]
 
-  tce_languages.each do |lang|
-    static_paths.push("/tce/#{lang}/", "/tce/#{lang}/get/")
-  end
+  # tce_languages.each do |lang|
+  #   static_paths.push("/tce/#{lang}/", "/tce/#{lang}/get/")
+  # end
 
   # static_paths.each do |path|
   #   add path, changefreq: 'monthly', lastmod: '2017-01-01'
