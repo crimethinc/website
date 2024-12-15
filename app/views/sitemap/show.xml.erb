@@ -8,6 +8,31 @@
         xmlns:pagemap='http://www.google.com/schemas/sitemap-pagemap/1.0'
         xmlns:xhtml='http://www.w3.org/1999/xhtml'
         xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'>
+  <%# @urls.each do |url| %>
+    <%#= render 'sitemap/url', loc: url.loc, lastmod: url.lastmod %>
+  <%# end %>
+
+  <%# language pages %>
+  <%= render 'sitemap/url', loc: languages_url, lastmod: @last_modified %>
+
+  <% Locale.live.each do |locale| %>
+    <%
+    unicode_url = language_url locale: locale.name.downcase.tr(' ', '-')
+    slug_url    = language_url locale: locale.slug.to_sym
+    english_url = language_url locale: locale.name_in_english.downcase.tr(' ', '-')
+
+    urls = [unicode_url, slug_url, english_url].uniq
+    %>
+
+    <% urls.each do |url| %>
+      <%= render 'sitemap/url', loc: url, lastmod: @last_modified %>
+    <% end %>
+  <% end %>
+
+
+
+  <% if false %>
+
 
   <%= cache @last_modified do %>
     <%# homepage %>
@@ -68,12 +93,6 @@
     <% end %>
   <% end %>
 
-
-  <% if false %>
-
-  <%# @urls.each do |url| %>
-    <%#= render 'sitemap/url', loc: url.loc, lastmod: url.lastmod %>
-  <%# end %>
 
   <% end %>
 </urlset>

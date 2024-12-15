@@ -46,8 +46,10 @@ class SitemapController < ApplicationController
     # To Change Everything (TCE)
     @to_change_everything_languages = TO_CHANGE_EVERYTHING_LANGUAGES
 
+    # languages
+    @locales = languages
+
     # TODO: extract to show view + _url partial
-    # add_languages
     # add_tools
   end
 
@@ -89,20 +91,13 @@ class SitemapController < ApplicationController
   end
 
   # languages
-  def add_languages
-    language_url = [root_url, :languages].join '/'
-    @urls << sitemap_url.new(language_url, @last_modified)
-
+  def languages
     Locale.live.each do |locale|
       unicode_url = language_url locale: locale.name.downcase.tr(' ', '-')
       slug_url    = language_url locale: locale.slug.to_sym
       english_url = language_url locale: locale.name_in_english.downcase.tr(' ', '-')
 
-      urls = [unicode_url, slug_url, english_url].uniq
-
-      urls.each do |url|
-        @urls << sitemap_url.new(url, @last_modified)
-      end
+      [unicode_url, slug_url, english_url].uniq
     end
   end
 
