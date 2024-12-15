@@ -1,6 +1,8 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  get 'sitemap.xml', to: 'sitemap#show', as: :sitemap
+
   # TODO: After switching the site auth to Devise, enable this auth protected route
   # # Sidekiq admin interface to monitor background jobs
   # authenticate :user, ->(user) { user.admin? } do

@@ -6,6 +6,9 @@ class Podcast < ApplicationRecord
 
   validates :slug, presence: true, uniqueness: true
 
+  # hardcoding .published to find all, since Podcast doesn't include Publishable
+  scope :published, -> { where.not(id: nil) }
+
   def path
     "/podcasts/#{slug}"
   end
