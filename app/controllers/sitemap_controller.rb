@@ -16,7 +16,24 @@ class SitemapController < ApplicationController
     # articles by year
     @article_years = (1996..Time.zone.today.year).to_a
 
-    add_pages
+    # static-ish pages
+    @static_paths = %w[
+      about
+      arts/submission-guidelines
+      books/into-libraries
+      books/lit-kit
+      contact
+      faq
+      games/j20
+      kickstarter/2017
+      library
+      start
+      steal-something-from-work-day
+      store
+      tce
+      tools
+    ]
+
     add_tools
     add_to_change_everything
   end
@@ -24,14 +41,6 @@ class SitemapController < ApplicationController
   private
 
   def sitemap_url = Data.define(:loc, :lastmod)
-
-  def add_articles
-    # articles
-    Article.live.published.find_each do |article|
-      url = [root_url, article.path].join
-      @urls << sitemap_url.new(url, article.updated_at)
-    end
-  end
 
   def add_pages
     # pages

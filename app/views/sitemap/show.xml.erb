@@ -55,6 +55,10 @@
     <%= render 'sitemap/url', loc: article_archives_url(year: year), lastmod: lastmod %>
   <% end %>
 
+  <% @static_paths.each do |path| %>
+    <%= render 'sitemap/url', loc: [root_url, path].join('/'), lastmod: @last_modified %>
+  <% end %>
+
   <%# @urls.each do |url| %>
     <%#= render 'sitemap/url', loc: url.loc, lastmod: url.lastmod %>
   <%# end %>
