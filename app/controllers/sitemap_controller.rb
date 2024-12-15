@@ -4,10 +4,15 @@ class SitemapController < ApplicationController
     @last_modified  = @latest_article.updated_at
     @urls           = []
 
-    add_feeds
-    add_localized_feeds
-    add_categories
-    add_articles
+    # articles feed, for all languages with articles
+    @localized_feeds = Locale.unscoped.order(name_in_english: :asc)
+
+    # categories
+    @categories = Category.all
+
+    # articles
+    @articles = Article.live.published
+
     add_article_years
     add_pages
     add_tools
@@ -17,37 +22,6 @@ class SitemapController < ApplicationController
   private
 
   def sitemap_url = Data.define(:loc, :lastmod)
-
-  def add_feeds
-    # Atom feeds discovery page, for all languages with articles
-    @urls << sitemap_url.new(feeds_url, @last_modified)
-  end
-
-  def add_localized_feeds
-    # articles feed, for all languages with articles
-    Locale.unscoped.order(name_in_english: :asc).each do |locale|
-      latest_article = Article.published.where(locale: locale.abbreviation).order(updated_at: :desc).select(:updated_at)
-      lastmod        = latest_article.blank? ? @last_modified : latest_article.first.updated_at
-
-      # Atom feed
-      @urls << sitemap_url.new(json_feed_url(locale.abbreviation), lastmod)
-
-      # JSON feed (https://jsonfeed.org)
-      @urls << sitemap_url.new(feed_url(locale.abbreviation), lastmod)
-    end
-  end
-
-  def add_categories
-    # categories
-    @urls << sitemap_url.new(categories_url, @last_modified)
-    Category.find_each do |category|
-      # category feeds
-      @urls << sitemap_url.new(category_feed_url(category.slug), @last_modified)
-
-      # category pages
-      @urls << sitemap_url.new(category_url(category.slug), @last_modified)
-    end
-  end
 
   def add_articles
     # articles

@@ -8,13 +8,46 @@
         xmlns:pagemap='http://www.google.com/schemas/sitemap-pagemap/1.0'
         xmlns:xhtml='http://www.w3.org/1999/xhtml'
         xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'>
-  <%# homepage %>
-  <%= render 'sitemap/url', loc: root_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
 
-  <%# default articles feed, for english articles %>
-  <%= render 'sitemap/url', loc: feed_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
+  <%= cache @last_modified do %>
+    <%# homepage %>
+    <%= render 'sitemap/url', loc: root_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
 
-  <% @urls.each do |url| %>
-    <%= render 'sitemap/url', loc: url.loc, lastmod: url.lastmod %>
+    <%# default articles feed, for english articles %>
+    <%= render 'sitemap/url', loc: feed_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
   <% end %>
+
+  <%# Atom feeds discovery page, for all languages with articles %>
+  <%= render 'sitemap/url', loc: feeds_url, lastmod: @last_modified %>
+
+  <%# articles feed, for all languages with articles %>
+  <% @localized_feeds.each do |locale| %>
+    <%# Atom feed %>
+    <%= render 'sitemap/url', loc: feed_url(locale.abbreviation), lastmod: @last_modified %>
+
+    <%# JSON feed (https://jsonfeed.org) %>
+    <%= render 'sitemap/url', loc: json_feed_url(locale.abbreviation), lastmod: @last_modified %>
+  <% end %>
+
+  <%# categories %>
+  <%= render 'sitemap/url', loc: categories_url, lastmod: @last_modified %>
+  <% @categories.each do |category| %>
+    <%# category Atom feeds %>
+    <%= render 'sitemap/url', loc: category_feed_url(category.slug), lastmod: @last_modified %>
+    <%# category JSON feeds %>
+    <%= render 'sitemap/url', loc: category_json_feed_url(category.slug), lastmod: @last_modified %>
+    <%# category pages %>
+    <%= render 'sitemap/url', loc: category_url(category.slug), lastmod: @last_modified %>
+  <% end %>
+
+  <%# articles %>
+  <% @articles.find_each do |article| %>
+    <% cache article do %>
+      <%= render 'sitemap/url', loc: [root_url, article.path].join, lastmod: article.updated_at %>
+    <% end %>
+  <% end %>
+
+  <%# @urls.each do |url| %>
+    <%#= render 'sitemap/url', loc: url.loc, lastmod: url.lastmod %>
+  <%# end %>
 </urlset>
