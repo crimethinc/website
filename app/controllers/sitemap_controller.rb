@@ -1,4 +1,28 @@
 class SitemapController < ApplicationController
+  STATIC_PATHS = %w[
+    about
+    arts/submission-guidelines
+    books/into-libraries
+    books/lit-kit
+    contact
+    faq
+    games/j20
+    kickstarter/2017
+    library
+    start
+    steal-something-from-work-day
+    store
+    tce
+    tools
+  ].freeze
+
+  TO_CHANGE_EVERYTHING_LANGUAGES = [
+    # in YAML files
+    ToChangeEverythingController::TO_CHANGE_ANYTHING_YAMLS.dup,
+    # in /public folder
+    %w[czech deutsch polski slovenscina slovensko]
+  ].flatten.freeze
+
   def show
     @latest_article = Article.published.english.first
     @last_modified  = @latest_article.updated_at
@@ -11,61 +35,27 @@ class SitemapController < ApplicationController
     @categories = Category.all
 
     # articles
-    @articles = Article.live.published
+    @articles = Article.live
+                       .published
+                       .select(:id, :updated_at, :draft_code, :published_at, :publication_status, :slug)
 
     # articles by year
     @article_years = (1996..Time.zone.today.year).to_a
 
     # static-ish pages
-    @static_paths = %w[
-      about
-      arts/submission-guidelines
-      books/into-libraries
-      books/lit-kit
-      contact
-      faq
-      games/j20
-      kickstarter/2017
-      library
-      start
-      steal-something-from-work-day
-      store
-      tce
-      tools
-    ]
+    @static_paths = STATIC_PATHS
 
+    # To Change Everything (TCE)
+    @to_change_everything_languages = TO_CHANGE_EVERYTHING_LANGUAGES
+
+    # TODO: extract to show view + _url partial
+    add_languages
     add_tools
-    add_to_change_everything
   end
 
   private
 
   def sitemap_url = Data.define(:loc, :lastmod)
-
-  def add_pages
-    # pages
-    static_paths = %w[
-      about
-      arts/submission-guidelines
-      books/into-libraries
-      books/lit-kit
-      contact
-      faq
-      games/j20
-      kickstarter/2017
-      library
-      start
-      steal-something-from-work-day
-      store
-      tce
-      tools
-    ]
-
-    static_paths.each do |path|
-      url = [root_url, path].join '/'
-      @urls << sitemap_url.new(url, @last_modified)
-    end
-  end
 
   def add_tools
     # tools (everything except articles)
@@ -97,27 +87,6 @@ class SitemapController < ApplicationController
         url = [root_url, tool.path].join
         @urls << sitemap_url.new(url, tool.updated_at)
       end
-    end
-  end
-
-  def add_to_change_everything
-    # To Change Everything
-    url = [root_url, :tce].join '/'
-    @urls << sitemap_url.new(url, @last_modified)
-
-    to_change_everything_languages = [
-      # in YAML files
-      ToChangeEverythingController::TO_CHANGE_ANYTHING_YAMLS.dup,
-      # in /public folder
-      %w[czech deutsch polski slovenscina slovensko]
-    ].flatten
-
-    to_change_everything_languages.each do |tce_language|
-      url = [root_url, :tce, tce_language].join '/'
-      @urls << sitemap_url.new(url, @last_modified)
-
-      get_url = [root_url, :tce, tce_language, :get].join '/'
-      @urls << sitemap_url.new(get_url, @last_modified)
     end
   end
 

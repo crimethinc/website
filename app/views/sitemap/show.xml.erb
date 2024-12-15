@@ -1,4 +1,4 @@
-<?xml version='1.0'?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
         xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'
         xmlns:image='http://www.google.com/schemas/sitemap-image/1.1'
@@ -55,8 +55,17 @@
     <%= render 'sitemap/url', loc: article_archives_url(year: year), lastmod: lastmod %>
   <% end %>
 
+  <%# static-ish pages %>
   <% @static_paths.each do |path| %>
     <%= render 'sitemap/url', loc: [root_url, path].join('/'), lastmod: @last_modified %>
+  <% end %>
+
+  <%# To Change Everything (TCE) %>
+  <%= render 'sitemap/url', loc: to_change_everything_url, lastmod: @last_modified %>
+
+  <% @to_change_everything_languages.each do |tce_language| %>
+    <%= render 'sitemap/url', loc: to_change_everything_url(lang: tce_language), lastmod: @last_modified %>
+    <%= render 'sitemap/url', loc: [to_change_everything_url(lang: tce_language), '/get'].join, lastmod: @last_modified %>
   <% end %>
 
   <%# @urls.each do |url| %>
