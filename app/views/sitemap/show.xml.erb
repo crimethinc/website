@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <%= tag.urlset **sitemap_urlset_tag_attributes do %>
   <%# homepage %>
-  <%= sitemap_url_tag root_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
+  <%= render 'sitemap/url', loc: root_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
 
   <%# default articles feed, for english articles %>
-  <%= sitemap_url_tag feed_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
+  <%= render 'sitemap/url', loc: feed_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
 
   <% @urls.each do |url| %>
-    <%= sitemap_url_tag url.loc, lastmod: url.lastmod %>
+    <%= render 'sitemap/url', loc: url.loc, lastmod: url.lastmod %>
   <% end %>
 <% end %>

@@ -1,0 +1,8 @@
+<%# locals: (loc:, lastmod: Time.current, changefreq: :weekly, priority: 0.5) %>
+
+<%= tag.url do %>
+  <%= tag.loc        loc %>
+  <%= tag.lastmod    lastmod.iso8601 %>
+  <%= tag.changefreq changefreq %>
+  <%= tag.priority   priority %>
+<% end %>

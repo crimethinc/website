@@ -12,15 +12,4 @@ module SitemapHelper
       'xsi:schemaLocation' => 'http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'
     }
   end
-
-  def sitemap_url_tag loc, lastmod: Time.current, changefreq: :weekly, priority: 0.5
-    content = [
-      tag.loc(loc),
-      tag.lastmod(lastmod.iso8601),
-      tag.changefreq(changefreq),
-      tag.priority(priority)
-    ].join.html_safe # rubocop:disable Rails/OutputSafety
-
-    tag.url content
-  end
 end
