@@ -25,7 +25,7 @@ class SitemapController < ApplicationController
 
   def show
     @latest_article = Article.published.english.first
-    @last_modified  = @latest_article.updated_at
+    @last_modified  = @latest_article&.updated_at || Time.current
     @urls           = []
 
     # articles feed, for all languages with articles
