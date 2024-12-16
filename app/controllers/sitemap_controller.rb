@@ -104,29 +104,4 @@ class SitemapController < ApplicationController
              .select(:id, :updated_at, :draft_code, :published_at, :publication_status, :slug)
     end
   end
-
-  def add_tools
-    # tools (everything except articles)
-    tool_classes = [
-      Episode,
-      Podcast
-    ]
-
-    tool_classes.each do |tool_class|
-      # tool list page
-      url = [
-        root_url,
-        tool_class.name.downcase.pluralize
-      ].join '/'
-
-      latest = tool_class.order(updated_at: :desc).first
-      @urls << sitemap_url.new(url, latest.updated_at)
-
-      # tool pages
-      tool_class.published.find_each do |tool|
-        url = [root_url, tool.path].join
-        @urls << sitemap_url.new(url, tool.updated_at)
-      end
-    end
-  end
 end
