@@ -147,8 +147,8 @@ Rails.application.routes.draw do
   get 'random', to: 'tools#random', as: :random_tool
 
   # Site search
-  get  'search',          to: 'search#index'
-  get  'search/advanced', to: redirect('/search')
+  get  'search',          to: 'search#index',      as: :search
+  get  'search/advanced', to: redirect('/search'), as: :advanced_search
 
   # Support
   get  'support', to: 'support#new',    as: :support
