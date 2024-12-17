@@ -54,8 +54,6 @@
   <% end %>
 
   <%# To Change Everything (TCE) %>
-  <%= render 'sitemap/url', loc: to_change_everything_url, lastmod: @last_modified %>
-
   <% @to_change_everything_languages.each do |tce_language| %>
     <%= render 'sitemap/url', loc: to_change_everything_url(lang: tce_language), lastmod: @last_modified %>
     <%= render 'sitemap/url', loc: [to_change_everything_url(lang: tce_language), '/get'].join, lastmod: @last_modified %>

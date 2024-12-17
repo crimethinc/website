@@ -42,8 +42,6 @@
 <% end %>
 <%# %>
 <%# To Change Everything (TCE) %>
-<%= to_change_everything_url %>
-<%# %>
 <% @to_change_everything_languages.each do |tce_language| %>
 <%= to_change_everything_url(lang: tce_language) %>
 <%= [to_change_everything_url(lang: tce_language), '/get'].join %>
