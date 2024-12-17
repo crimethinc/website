@@ -1,7 +1,11 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  # sitemaps
+  # xml: for robots/search engines
+  # txt: for humans/archivers
   get 'sitemap.xml', to: 'sitemap#show', as: :sitemap
+  get 'sitemap.txt', to: 'sitemap#show', as: :sitemap_txt
 
   # TODO: After switching the site auth to Devise, enable this auth protected route
   # # Sidekiq admin interface to monitor background jobs

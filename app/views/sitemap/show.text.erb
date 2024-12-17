@@ -1,0 +1,162 @@
+<%# no indentation, so that the rendered text file is also flat %>
+<%# homepage %>
+<%= root_url %>
+<%# %>
+<%# default articles feed, for english articles %>
+<%= feed_url %>
+<%# %>
+<%# Atom feeds discovery page, for all languages with articles %>
+<%= feeds_url %>
+<%# %>
+<%# articles feed, for all languages with articles %>
+<% @localized_feeds.each do |locale| %>
+<%# Atom feed %>
+<%= feed_url(locale.abbreviation) %>
+<%# %>
+<%# JSON feed (https://jsonfeed.org) %>
+<%= json_feed_url(locale.abbreviation) %>
+<% end %>
+<%# %>
+<%# categories %>
+<%= categories_url %>
+<% @categories.each do |category| %>
+<%# category Atom feeds %>
+<%= category_feed_url(category.slug) %>
+<%# category JSON feeds %>
+<%= category_json_feed_url(category.slug) %>
+<%# category pages %>
+<%= category_url(category.slug) %>
+<% end %>
+<%# %>
+<%# static-ish pages %>
+<% @static_paths.each do |path| %>
+<%= [root_url, path].join('/') %>
+<% end %>
+<%# %>
+<%# article years %>
+<% @article_years.each do |year| %>
+<% lastmod = DateTime.new(year).end_of_day %>
+<% lastmod = @last_modified if year == Time.current.year %>
+<%# %>
+<%= article_archives_url(year: year) %>
+<% end %>
+<%# %>
+<%# To Change Everything (TCE) %>
+<%= to_change_everything_url %>
+<%# %>
+<% @to_change_everything_languages.each do |tce_language| %>
+<%= to_change_everything_url(lang: tce_language) %>
+<%= [to_change_everything_url(lang: tce_language), '/get'].join %>
+<% end %>
+<%# %>
+<%# articles %>
+<% @articles.find_each do |article| %>
+<% cache article do %>
+<%= [root_url, article.path].join %>
+<% end %>
+<% end %>
+<%# %>
+<%# language pages %>
+<%= languages_url %>
+<%# %>
+<% Locale.live.each do |locale| %>
+<%
+# TODO: move these URLs to routes/model/helper
+unicode_url = language_url locale.name.downcase.tr(' ', '-')
+slug_url    = language_url locale.slug.to_sym
+english_url = language_url locale.name_in_english.downcase.tr(' ', '-')
+#
+urls = [unicode_url, slug_url, english_url].uniq
+%>
+<%# %>
+<% urls.each do |url| %>
+<%= url %>
+<% end %>
+<% end %>
+<%# %>
+<%# support %>
+<%= support_url %>
+<%# %>
+<%# search %>
+<%= search_url %>
+<%= advanced_search_url %>
+<%# %>
+<%# tools %>
+<%# books %>
+<%= books_url %>
+<%= books_extras_url(:work) %>
+<% @books.find_each do |book| %>
+<% cache book do %>
+<%= book_url(book.slug) %>
+<% end %>
+<% end %>
+<%# %>
+<%# logos %>
+<%= logos_url %>
+<% @logos.find_each do |logo| %>
+<% cache logo do %>
+<%= logo_url(logo.slug) %>
+<% end %>
+<% end %>
+<%# %>
+<%# posters %>
+<%= posters_url %>
+<% @posters.find_each do |poster| %>
+<% cache poster do %>
+<%= poster_url(poster.slug) %>
+<% end %>
+<% end %>
+<%# %>
+<%# stickers %>
+<%= stickers_url %>
+<% @stickers.find_each do |sticker| %>
+<% cache sticker do %>
+<%= sticker_url(sticker.slug) %>
+<% end %>
+<% end %>
+<%# %>
+<%# videos / music %>
+<%= music_url %>
+<%= videos_url %>
+<% @videos.find_each do |video| %>
+<% cache video do %>
+<%= video_url(video.slug) %>
+<% end %>
+<% end %>
+<%# %>
+<%# zines %>
+<%= zines_url %>
+<% @zines.find_each do |zine| %>
+<% cache zine do %>
+<%= zine_url(zine.slug) %>
+<% end %>
+<% end %>
+<%# %>
+<%# journals / issues %>
+<%= journals_url %>
+<% @journals.find_each do |journal| %>
+<% cache journal do %>
+<%= journal_url(journal.slug) %>
+<%# %>
+<% journal.issues.each do |issue| %>
+<% cache issue do %>
+<%= issue_url(slug: journal.slug, issue_number: issue.issue) %>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+<%# %>
+<%# podcasts / episodes %>
+<%= podcasts_url %>
+<% @podcasts.find_each do |podcast| %>
+<% cache podcast do %>
+<%= podcast_url(podcast.slug) %>
+<%# %>
+<% podcast.episodes.each do |episode| %>
+<% cache episode do %>
+<%= episode_url(slug: podcast.slug, episode_number: episode.episode_number) %>
+<%= episode_transcript_url(slug: podcast.slug, episode_number: episode.episode_number) %>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
