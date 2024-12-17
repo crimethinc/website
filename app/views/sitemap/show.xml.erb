@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns:xsi          = 'http://www.w3.org/2001/XMLSchema-instance'
+        xmlns              = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+        xmlns:image        = 'http://www.google.com/schemas/sitemap-image/1.1'
+        xmlns:video        = 'http://www.google.com/schemas/sitemap-video/1.1'
+        xmlns:news         = 'http://www.google.com/schemas/sitemap-news/0.9'
+        xmlns:mobile       = 'http://www.google.com/schemas/sitemap-mobile/1.0'
+        xmlns:pagemap      = 'http://www.google.com/schemas/sitemap-pagemap/1.0'
+        xmlns:xhtml        = 'http://www.w3.org/1999/xhtml'
+        xsi:schemaLocation = 'http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'>
+
+  <%= cache @last_modified do %>
+    <%# homepage %>
+    <%= render 'sitemap/url', loc: root_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
+
+    <%# default articles feed, for english articles %>
+    <%= render 'sitemap/url', loc: feed_url, lastmod: @last_modified, changefreq: :daily, priority: 1.0 %>
+  <% end %>
+
+  <%# Atom feeds discovery page, for all languages with articles %>
+  <%= render 'sitemap/url', loc: feeds_url, lastmod: @last_modified %>
+
+  <%# articles feed, for all languages with articles %>
+  <% @localized_feeds.each do |locale| %>
+    <%# Atom feed %>
+    <%= render 'sitemap/url', loc: feed_url(locale.abbreviation), lastmod: @last_modified %>
+
+    <%# JSON feed (https://jsonfeed.org) %>
+    <%= render 'sitemap/url', loc: json_feed_url(locale.abbreviation), lastmod: @last_modified %>
+  <% end %>
+
+  <%# categories %>
+  <%= render 'sitemap/url', loc: categories_url, lastmod: @last_modified %>
+  <% @categories.each do |category| %>
+    <%# category Atom feeds %>
+    <%= render 'sitemap/url', loc: category_feed_url(category.slug), lastmod: @last_modified %>
+    <%# category JSON feeds %>
+    <%= render 'sitemap/url', loc: category_json_feed_url(category.slug), lastmod: @last_modified %>
+    <%# category pages %>
+    <%= render 'sitemap/url', loc: category_url(category.slug), lastmod: @last_modified %>
+  <% end %>
+
+  <%# static-ish pages %>
+  <% @static_paths.each do |path| %>
+    <%= render 'sitemap/url', loc: [root_url, path].join('/'), lastmod: @last_modified %>
+  <% end %>
+
+  <%# article years %>
+  <% @article_years.each do |year| %>
+    <% lastmod = DateTime.new(year).end_of_day %>
+    <% lastmod = @last_modified if year == Time.current.year %>
+
+    <%= render 'sitemap/url', loc: article_archives_url(year: year), lastmod: lastmod %>
+  <% end %>
+
+  <%# To Change Everything (TCE) %>
+  <%= render 'sitemap/url', loc: to_change_everything_url, lastmod: @last_modified %>
+
+  <% @to_change_everything_languages.each do |tce_language| %>
+    <%= render 'sitemap/url', loc: to_change_everything_url(lang: tce_language), lastmod: @last_modified %>
+    <%= render 'sitemap/url', loc: [to_change_everything_url(lang: tce_language), '/get'].join, lastmod: @last_modified %>
+  <% end %>
+
+  <%# articles %>
+  <% @articles.find_each do |article| %>
+    <% cache article do %>
+      <%= render 'sitemap/url', loc: [root_url, article.path].join, lastmod: article.updated_at %>
+    <% end %>
+  <% end %>
+
+  <%# language pages %>
+  <%= render 'sitemap/url', loc: languages_url, lastmod: @last_modified %>
+
+  <% Locale.live.each do |locale| %>
+    <%
+    # TODO: move these URLs to routes/model/helper
+    unicode_url = language_url locale.name.downcase.tr(' ', '-')
+    slug_url    = language_url locale.slug.to_sym
+    english_url = language_url locale.name_in_english.downcase.tr(' ', '-')
+
+    urls = [unicode_url, slug_url, english_url].uniq
+    %>
+
+    <% urls.each do |url| %>
+      <%= render 'sitemap/url', loc: url, lastmod: @last_modified %>
+    <% end %>
+  <% end %>
+
+  <%# support %>
+  <%= render 'sitemap/url', loc: support_url, lastmod: @last_modified %>
+
+  <%# search %>
+  <%= render 'sitemap/url', loc: search_url,          lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: advanced_search_url, lastmod: @last_modified %>
+
+  <%# tools %>
+  <%# books %>
+  <%= render 'sitemap/url', loc: books_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: books_extras_url(:work), lastmod: @last_modified %>
+  <% @books.find_each do |book| %>
+    <% cache book do %>
+      <%= render 'sitemap/url', loc: book_url(book.slug), lastmod: book.updated_at %>
+    <% end %>
+  <% end %>
+
+  <%# logos %>
+  <%= render 'sitemap/url', loc: logos_url, lastmod: @last_modified %>
+  <% @logos.find_each do |logo| %>
+    <% cache logo do %>
+      <%= render 'sitemap/url', loc: logo_url(logo.slug), lastmod: logo.updated_at %>
+    <% end %>
+  <% end %>
+
+  <%# posters %>
+  <%= render 'sitemap/url', loc: posters_url, lastmod: @last_modified %>
+  <% @posters.find_each do |poster| %>
+    <% cache poster do %>
+      <%= render 'sitemap/url', loc: poster_url(poster.slug), lastmod: poster.updated_at %>
+    <% end %>
+  <% end %>
+
+  <%# stickers %>
+  <%= render 'sitemap/url', loc: stickers_url, lastmod: @last_modified %>
+  <% @stickers.find_each do |sticker| %>
+    <% cache sticker do %>
+      <%= render 'sitemap/url', loc: sticker_url(sticker.slug), lastmod: sticker.updated_at %>
+    <% end %>
+  <% end %>
+
+  <%# videos / music %>
+  <%= render 'sitemap/url', loc: music_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: videos_url, lastmod: @last_modified %>
+  <% @videos.find_each do |video| %>
+    <% cache video do %>
+      <%= render 'sitemap/url', loc: video_url(video.slug), lastmod: video.updated_at %>
+    <% end %>
+  <% end %>
+
+  <%# zines %>
+  <%= render 'sitemap/url', loc: zines_url, lastmod: @last_modified %>
+  <% @zines.find_each do |zine| %>
+    <% cache zine do %>
+      <%= render 'sitemap/url', loc: zine_url(zine.slug), lastmod: zine.updated_at %>
+    <% end %>
+  <% end %>
+
+  <%# journals / issues %>
+  <%= render 'sitemap/url', loc: journals_url, lastmod: @last_modified %>
+  <% @journals.find_each do |journal| %>
+    <% cache journal do %>
+      <%= render 'sitemap/url', loc: journal_url(journal.slug), lastmod: journal.updated_at %>
+
+      <% journal.issues.each do |issue| %>
+        <% cache issue do %>
+          <%= render 'sitemap/url',
+                     loc: issue_url(slug: journal.slug, issue_number: issue.issue),
+                     lastmod: issue.updated_at %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%# podcasts / episodes %>
+  <%= render 'sitemap/url', loc: podcasts_url, lastmod: @last_modified %>
+  <% @podcasts.find_each do |podcast| %>
+    <% cache podcast do %>
+      <%= render 'sitemap/url', loc: podcast_url(podcast.slug), lastmod: podcast.updated_at %>
+
+      <% podcast.episodes.each do |episode| %>
+        <% cache episode do %>
+          <%= render 'sitemap/url',
+                     loc:     episode_url(slug: podcast.slug, episode_number: episode.episode_number),
+                     lastmod: episode.updated_at %>
+          <%= render 'sitemap/url',
+                     loc:     episode_transcript_url(slug: podcast.slug, episode_number: episode.episode_number),
+                     lastmod: episode.updated_at %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+</urlset>

@@ -6,6 +6,12 @@ class Podcast < ApplicationRecord
 
   validates :slug, presence: true, uniqueness: true
 
+  # hardcoding .published & .live to find all, since Podcast doesn't include Publishable
+  # rubocop:disable Rails/DuplicateScope
+  scope :published, -> { where.not(id: nil) }
+  scope :live,      -> { where.not(id: nil) }
+  # rubocop:enable Rails/DuplicateScope
+
   def path
     "/podcasts/#{slug}"
   end
