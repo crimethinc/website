@@ -1,6 +1,12 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  # sitemaps
+  # xml: for robots/search engines
+  # txt: for humans/archivers
+  get 'sitemap.xml', to: 'sitemap#show', defaults: { format: 'xml' }, as: :sitemap
+  get 'sitemap.txt', to: 'sitemap#show', defaults: { format: 'txt' }, as: :sitemap_txt
+
   # TODO: After switching the site auth to Devise, enable this auth protected route
   # # Sidekiq admin interface to monitor background jobs
   # authenticate :user, ->(user) { user.admin? } do
@@ -82,10 +88,11 @@ Rails.application.routes.draw do
   get 'articles/:id_or_slug/collection_posts', to: 'collection_posts#index'
 
   # Categories
-  get 'categories',                    to: 'categories#index', as: :categories
-  get 'categories/:slug/page(/1)',     to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
-  get 'categories/:slug(/page/:page)', to: 'categories#show', as: :category
-  get 'categories/:slug/feed(/:lang)', to: 'categories#feed', defaults: { format: 'atom' }, as: :category_feed
+  get 'categories',                         to: 'categories#index', as: :categories
+  get 'categories/:slug/page(/1)',          to: redirect { |path_params, _| "/categories/#{path_params[:slug]}" }
+  get 'categories/:slug(/page/:page)',      to: 'categories#show', as: :category
+  get 'categories/:slug/feed(/:lang).json', to: 'categories#feed', defaults: { format: 'json' }, as: :category_json_feed
+  get 'categories/:slug/feed(/:lang)',      to: 'categories#feed', defaults: { format: 'atom' }, as: :category_feed
 
   # Tags
   get 'tags/:slug/page(/1)',     to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
@@ -144,8 +151,8 @@ Rails.application.routes.draw do
   get 'random', to: 'tools#random', as: :random_tool
 
   # Site search
-  get  'search',          to: 'search#index'
-  get  'search/advanced', to: redirect('/search')
+  get  'search',          to: 'search#index',      as: :search
+  get  'search/advanced', to: redirect('/search'), as: :advanced_search
 
   # Support
   get  'support', to: 'support#new',    as: :support
