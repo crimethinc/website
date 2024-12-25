@@ -12,7 +12,7 @@
 //= link 2017.css
 
 // 2025 theme
-//= link_directory ../stylesheets/2025 .css
+//= link_tree ../stylesheets/2025 .css
 
 // TODO: delete this?
 // ??? lite_mode.css
