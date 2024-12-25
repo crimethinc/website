@@ -1,5 +1,5 @@
 /*
-Top of page cards
+Top of site cards
 toggle header cards from nav icons using CSS (:target), no JS
 */
 #about:target     #about-card     { display: block !important; }

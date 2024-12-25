@@ -1,5 +1,5 @@
 <% if Rails.env.development? %>
-  <%# Highlight text that doesn't have a translation in locales YAML %>
+  <%# Highlight any text which doesn’t have a translation in locales YAML %>
   <style>.translation_missing { outline: 5px solid #ff0080; }</style>
 <% end %>
 
@@ -15,11 +15,13 @@
 stylesheet_partials = %w[
   vendor/bootstrap
   bootstrap-overrides
+  buttons
   fonts
   headings
   images
   links
   navbar
+  utilities
 ]
 %>
 

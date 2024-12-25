@@ -166,7 +166,7 @@ Override Bootstrap framework variables
   --bs-heading-color:             inherit;
   --bs-link-color:                var(--bs-gray-100);
   --bs-link-hover-color:          var(--bs-white);
-  --bs-link-color-rgb:            233, 236, 239;
+  --bs-link-color-rgb:            248, 249, 250; /* --bs-gray-100 in RGB */
   --bs-link-hover-color-rgb:      var(--bs-white-rgb);
   --bs-code-color:                #e685b5;
   --bs-highlight-color:           #dee2e6;
