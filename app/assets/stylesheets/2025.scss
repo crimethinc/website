@@ -3,13 +3,12 @@
 // Core: load on all pages
 
 // Framework
-@import "bootstrap";
+@import 'bootstrap';
 
 // Abstracts
 @import '2025/fonts';
-@import '2025/variables';
-@import '2025/mixins';
-@import '2025/colors';
+@import '2025/images';
+@import '2025/navbar';
 
 // // // // // // // // // // // // // // // // // // // // //
 
@@ -17,24 +16,7 @@
 // TODO: Extract to being loaded on 2025 layout conditionally
 
 // Pages
-@import '2025/pages/about';
+//@import '2025/pages/about';
 
-// Themes
-@import '2025/themes/literary';
-
-// TODO: TEMP move to images.scss
-img { max-width: 100%; }
-
-// header navbar links
-a:hover, a:active, a { @extend .text-decoration-none; }
-a:hover, a:active    { @extend .text-decoration-underline; }
-
-header {
-  a:hover, a:active { @extend .text-decoration-none; }
-}
-
-// toggle header cards from nav icons using CSS (:target), no JS
-#about:target     #about-card     { display: block !important; }
-#languages:target #languages-card { display: block !important; }
-#search:target    #search-card    { display: block !important; }
-#share:target     #share-card     { display: block !important; }
+// Sub-themes
+//@import '2025/themes/literary';
