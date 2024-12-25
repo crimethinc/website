@@ -3,16 +3,23 @@ Header navbar
 */
 
 #brand {
+  /* image replacement to use black logo wordmark */
   h1 {
-    max-width: 150px;
+    font: inherit;
+    max-width: 300px;
     content: url('assets/crimethinc-logo-type-black.svg');
+  }
+
+  @media (max-width: 767.9px) {
+    img { transform: rotate(-5deg); }
   }
 }
 
 [data-bs-theme=dark] {
   #brand {
-    h1 { filter: invert(1); }
     img { /* TODO: replace bulb and bones image with something better than invert? */ }
+    /* use white logo wordmark in dark mode */
+    h1 { filter: invert(1); }
   }
 }
 
