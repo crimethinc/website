@@ -1,4 +1,4 @@
 // Hyperlinks
 // TODO: why isn't this working by changing --bs-link-decoration to "none"
-a:hover, a:active, a { @extend .text-decoration-none; }
-a:hover, a:active    { @extend .text-decoration-underline; }
+a:hover, a:active, a { text-decoration: none; }
+a:hover, a:active    { text-decoration: underline; }
