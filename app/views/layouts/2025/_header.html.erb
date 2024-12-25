@@ -1,12 +1,12 @@
 <header id='top' class='pt-5 mb-5 container'>
   <nav>
     <div class='row'>
-      <div class='col-lg-10 mb-3 borderXborder-danger'>
+      <div class='col-lg-10 mb-3'>
 
         <div class='row align-items-end'>
-          <div class='col-12 col-md-2 mb-3 borderXborder-info'>
+          <div class='col-12 col-md-2 mb-3'>
             <%= link_to :root, id: :brand, class: 'row align-items-center' do %>
-              <div class='col-2 col-md-12 borderXborder-warning'>
+              <div class='col-2 col-md-12'>
                 <%= image_tag 'icons/icon-1200x1200.png',
                               # size:  '200x200',
                               class: 'borderx',
@@ -16,13 +16,13 @@
                                       <%# TODO: move this alt text to localization YAML files %>
               </div>
 
-              <div class='col-4 col-md-12 borderXborder-warning g-0'>
+              <div class='col-4 col-md-12 g-0'>
                 <h1 class='mb-0'><%= tt :site_name %></h1>
               </div>
             <% end %>
           </div>
 
-          <div class='col-12 col-md-10 mb-3 borderXborder-info'>
+          <div class='col-12 col-md-10 mb-3'>
             <ul class='list-inline text-uppercase mb-0 lh-1'>
               <li class='list-inline-item'><%= link_to tt(:books),    :books             %></li>
               <li class='list-inline-item'><%= link_to tt(:library),  :library           %></li>
@@ -36,7 +36,7 @@
 
       </div><!-- .col -->
 
-      <div class='col-lg-2 mb-3 text-start text-lg-end borderXborder-danger'>
+      <div class='col-lg-2 mb-3 text-start text-lg-end'>
         <ul class='list-unstyled list-inline text-uppercase'>
           <li class='mb-3'><%= link_to tt(:support), :support, class: 'btn btn-outline-success btn-lg' %></li>
 
