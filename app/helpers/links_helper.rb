@@ -15,7 +15,7 @@ module LinksHelper
     'CrimethInc.com Articles RSS feed' => 'https://crimethinc.com/feed'
   }.freeze
 
-  # For 2020 theme
+  # For 2025 theme
   def social_links_by_domain
     [
       { Mastodon:   'https://todon.eu/@crimethinc' },

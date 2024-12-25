@@ -1,0 +1,27 @@
+<div id='about-card' class='alert alert-warning mb-5' style='display: none'>
+  <h2 class='visually-hidden'><%= tt 'about' %></h2>
+
+  <div class='row'>
+    <div class='col-12 col-md-4 mb-3 mb-md-0'>
+      <p><%= tt 'site_name' %></p>
+
+      <p>
+        <%= tt 'cards.about.first_time_description' %>
+        <%= link_to tt('cards.about.first_time_link'), '/start', class: 'fw-bold text-uppercase' %>
+      </p>
+
+      <p class='mb-1'>
+        <%= render_markdown tt('cards.about.search_description'), remove_wrapper_p_tag: true %>
+      </p>
+
+      <%= render 'layouts/2025/site_search' %>
+    </div>
+
+    <div class='col-12 col-md-8'>
+      <%= render_markdown tt 'cards.about.description' %>
+      <p><%= link_to tt('cards.about.more_link'), :about, class: 'text-uppercase fw-bold' %></p>
+
+      <%= link_to 'X', '#' %>
+    </div>
+  </div><!-- /.row -->
+</div><!-- /#about -->

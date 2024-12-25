@@ -5,7 +5,7 @@
 //= link admin.css
 //= link steal-something-from-work-day.css
 //= link 2017.css
-//= link 2020.css
+//= link 2025.css
 
 // ??? lite_mode.css
 //= link_tree ../../javascript .js

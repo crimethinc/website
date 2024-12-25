@@ -1,0 +1,35 @@
+<header id='top' class='pt-5 mb-5 container'>
+  <nav>
+    <div class='row'>
+      <div class='col-lg-10'>
+        <h1><%= link_to tt(:site_name), :root %></h1>
+
+        <ul class='list-inline'>
+          <li class='list-inline-item'><%= link_to tt(:books),    :books    %></li>
+          <li class='list-inline-item'><%= link_to tt(:library),  :library  %></li>
+          <li class='list-inline-item'><%= link_to tt(:tools),    :tools    %></li>
+          <li class='list-inline-item'><%= link_to tt(:podcasts), :podcasts %></li>
+          <li class='list-inline-item'><%= link_to tt(:store),    :store    %></li>
+          <li class='list-inline-item'><%= link_to tt(:about),    { anchor: :about } %></li>
+        </ul>
+      </div>
+
+      <div class='col-lg-2'>
+        <%= link_to tt(:support), :support, class: 'btn btn-outline-success' %>
+
+        <ul class='list-inline'>
+          <li class='list-inline-item'><%= link_to tt(:languages), { anchor: :languages } %></li>
+          <li class='list-inline-item'><%= link_to tt(:search),    { anchor: :search }    %></li>
+          <li class='list-inline-item'><%= link_to tt(:share),     { anchor: :share }     %></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class='container'>
+  <%= render 'layouts/2025/header/languages' %>
+  <%= render 'layouts/2025/header/search' %>
+  <%= render 'layouts/2025/header/about' %>
+  <%= render 'layouts/2025/header/share' %>
+</div>

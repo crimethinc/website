@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     # Homepage featured article
     @latest_article = articles_for_current_page.first if first_page?
 
-    if Current.theme == '2020'
+    if Current.theme == '2025'
       # Feed artciles, needed for pagination
       @articles = articles_for_current_page.page(params[:page]).per(14).padding(1)
 
