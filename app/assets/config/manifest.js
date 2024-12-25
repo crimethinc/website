@@ -3,6 +3,8 @@
 
 // /admin site
 //= link admin.css
+//= link popper.js
+//= link bootstrap.min.js
 
 // Mini sites
 //= link to_change_everything.css
