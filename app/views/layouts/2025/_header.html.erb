@@ -2,18 +2,18 @@
   <nav>
     <div class='row'>
       <div class='col-lg-10'>
-        <%= link_to :root do %>
+        <%= link_to :root, id: :brand do %>
           <%= image_tag 'icons/icon-1200x1200.png',
                         size: '100x100',
                         alt: 'An animal bone and 10mm combo wrench in an X shape,
                               behind an incandescent light bulb,
                               in the arrangement of a skull and cross bones' %>
                               <%# TODO: move this alt text to localization YAML files %>
+
+          <h1 class='d-inline d-lg-block'><%= tt(:site_name) %></h1>
         <% end %>
 
-        <h1><%= link_to tt(:site_name), :root %></h1>
-
-        <ul class='list-inline'>
+        <ul class='list-inline text-uppercase'>
           <li class='list-inline-item'><%= link_to tt(:books),    :books    %></li>
           <li class='list-inline-item'><%= link_to tt(:library),  :library  %></li>
           <li class='list-inline-item'><%= link_to tt(:tools),    :tools    %></li>

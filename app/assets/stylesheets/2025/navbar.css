@@ -1,4 +1,22 @@
 /*
+Header navbar
+*/
+
+#brand {
+  h1 {
+    max-width: 150px;
+    content: url('assets/crimethinc-logo-type-black.svg');
+  }
+}
+
+[data-bs-theme=dark] {
+  #brand {
+    h1 { filter: invert(1); }
+    img { /* TODO: replace bulb and bones image with something better than invert? */ }
+  }
+}
+
+/*
 Top of site cards
 toggle header cards from nav icons using CSS (:target), no JS
 */
