@@ -1,5 +1,7 @@
-// Top of page cards
-// toggle header cards from nav icons using CSS (:target), no JS
+/*
+Top of page cards
+toggle header cards from nav icons using CSS (:target), no JS
+*/
 #about:target     #about-card     { display: block !important; }
 #languages:target #languages-card { display: block !important; }
 #search:target    #search-card    { display: block !important; }

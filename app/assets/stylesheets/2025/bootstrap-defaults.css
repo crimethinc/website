@@ -1,5 +1,7 @@
-// EDIT THIS FILE, DIFF against bootstrap-defaults.scss
-// Override Bootstrap framework variables
+/*
+DO NOT EDIT, for DIFFing reference only
+Override Bootstrap framework variables
+*/
 :root,
 [data-bs-theme=light] {
   --bs-blue:                      #0d6efd;
@@ -67,14 +69,14 @@
   --bs-dark-border-subtle:        #adb5bd;
   --bs-white-rgb:                 255, 255, 255;
   --bs-black-rgb:                 0, 0, 0;
-  --bs-font-sans-serif:           "Alright Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif:           system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace:            SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient:                  linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family:          var(--bs-font-sans-serif);
   --bs-body-font-size:            1rem;
   --bs-body-font-weight:          400;
   --bs-body-line-height:          1.5;
-  --bs-body-color:                var(--bs-gray-800);
+  --bs-body-color:                #212529;
   --bs-body-color-rgb:            33, 37, 41;
   --bs-body-bg:                   #fff;
   --bs-body-bg-rgb:               255, 255, 255;
@@ -89,11 +91,11 @@
   --bs-tertiary-bg:               #f8f9fa;
   --bs-tertiary-bg-rgb:           248, 249, 250;
   --bs-heading-color:             inherit;
-  --bs-link-color:                var(--bs-gray-900);
-  --bs-link-color-rgb:            33, 37, 41; // --bs-gray-900 in RGB
+  --bs-link-color:                #0d6efd;
+  --bs-link-color-rgb:            13, 110, 253;
   --bs-link-decoration:           underline;
-  --bs-link-hover-color:          var(--bs-black);
-  --bs-link-hover-color-rgb:      var(--bs-black-rgb);
+  --bs-link-hover-color:          #0a58ca;
+  --bs-link-hover-color-rgb:      10, 88, 202;
   --bs-code-color:                #d63384;
   --bs-highlight-color:           #212529;
   --bs-highlight-bg:              #fff3cd;
