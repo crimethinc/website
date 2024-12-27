@@ -2,40 +2,48 @@ module Rack
   class DomainRedirect
     # subdomain (optional), path prefix (optional), URL regex to match (required)
     REDIRECT_CONFIGS = [
-      [
-        '',
-        '/steal-something-from-work-day',
-        /stealfromwork.crimethinc.com|stealfromworkday.com|stealsomethingfromworkday.com$/
-      ],
+      # SSfWD
+      ['', '/steal-something-from-work-day', /stealfromwork.crimethinc.com$/],
+      ['', '/steal-something-from-work-day', /stealfromworkday.com$/],
+      ['', '/steal-something-from-work-day', /stealsomethingfromworkday.com$/],
 
+      # TCE
       ['', '/tce', /tochangeeverything.com/],
 
-      ['',    '', /crimethinc.herokuapp.com$/],
-      ['',    '', /crimethinc.gay$/],
+      # Heroku subdomain
+      ['', '', /crimethinc.herokuapp.com$/],
+
+      # Other TLDs
+      ['', '', /crimethinc.gay$/],
+
+      # ccTLDs => localized subdomain
       ['es.', '', /crimethinc.es/],
       ['de.', '', /crimethinc.de/],
       ['cs.', '', /cz.crimethinc.com/], # Fix our orignal mistaken assumption
 
-      ['ar.', '', /ar.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['cs.', '', /cs.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['cz.', '', /cz.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['da.', '', /da.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['de.', '', /de.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['en.', '', /en.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['es.', '', /es.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['fi.', '', /fi.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['fr.', '', /fr.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['gr.', '', /gr.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['he.', '', /he.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['id.', '', /id.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['in.', '', /in.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['it.', '', /it.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['pl.', '', /pl.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['pt.', '', /pt.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['ru.', '', /ru.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['sv.', '', /sv.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['tr.', '', /tr.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['',    '', /cwc.im/]
+      # short domain (for historical twitter/etc posts)
+      ['', '', /cwc.im/],
+
+      # TEMP: work out better general purpose locale subdomain + short domain redirect
+      ['ar.', '', /ar.cwc.im$/],
+      ['cs.', '', /cs.cwc.im$/],
+      ['cz.', '', /cz.cwc.im$/],
+      ['da.', '', /da.cwc.im$/],
+      ['de.', '', /de.cwc.im$/],
+      ['en.', '', /en.cwc.im$/],
+      ['es.', '', /es.cwc.im$/],
+      ['fi.', '', /fi.cwc.im$/],
+      ['fr.', '', /fr.cwc.im$/],
+      ['gr.', '', /gr.cwc.im$/],
+      ['he.', '', /he.cwc.im$/],
+      ['id.', '', /id.cwc.im$/],
+      ['in.', '', /in.cwc.im$/],
+      ['it.', '', /it.cwc.im$/],
+      ['pl.', '', /pl.cwc.im$/],
+      ['pt.', '', /pt.cwc.im$/],
+      ['ru.', '', /ru.cwc.im$/],
+      ['sv.', '', /sv.cwc.im$/],
+      ['tr.', '', /tr.cwc.im$/]
     ].freeze
 
     PROTOCOL = 'https://'.freeze
