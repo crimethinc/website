@@ -11,6 +11,7 @@ module Rack
       ['', '/tce', /tochangeeverything.com/],
 
       ['',    '', /crimethinc.herokuapp.com$/],
+      ['',    '', /crimethinc.gay$/],
       ['es.', '', /crimethinc.es/],
       ['de.', '', /crimethinc.de/],
       ['cs.', '', /cz.crimethinc.com/], # Fix our orignal mistaken assumption
