@@ -3,26 +3,26 @@ module Rack
     # subdomain (optional), path prefix (optional), URL regex to match (required)
     MAIN_REDIRECT_CONFIGS = [
       # SSfWD
-      ['', '/steal-something-from-work-day', /stealfromwork.crimethinc.com$/],
-      ['', '/steal-something-from-work-day', /stealfromworkday.com$/],
-      ['', '/steal-something-from-work-day', /stealsomethingfromworkday.com$/],
+      ['', '/steal-something-from-work-day', /stealfromwork\.crimethinc\.com$/],
+      ['', '/steal-something-from-work-day', /stealfromworkday\.com$/],
+      ['', '/steal-something-from-work-day', /stealsomethingfromworkday\.com$/],
 
       # TCE
-      ['', '/tce', /tochangeeverything.com/],
+      ['', '/tce', /tochangeeverything\.com/],
 
       # Heroku subdomain
-      ['', '', /crimethinc.herokuapp.com$/],
+      ['', '', /crimethinc\.herokuapp\.com$/],
 
       # Other TLDs
-      ['', '', /crimethinc.gay$/],
+      ['', '', /crimethinc\.gay$/],
 
       # ccTLDs => localized subdomain
-      ['es.', '', /crimethinc.es/],
-      ['de.', '', /crimethinc.de/],
-      ['cs.', '', /cz.crimethinc.com/], # Fix our orignal mistaken assumption
+      ['es.', '', /crimethinc\.es/],
+      ['de.', '', /crimethinc\.de/],
+      ['cs.', '', /cz\.crimethinc\.com/], # Fix our orignal mistaken assumption
 
       # short domain (for historical twitter/etc posts)
-      ['', '', /cwc.im/]
+      ['', '', /cwc\.im/]
     ].freeze
 
     CC_TLD_SUBDOMAINS = %w[
@@ -49,7 +49,7 @@ module Rack
 
     # TEMP: work out better general purpose locale subdomain + short domain redirect
     CC_TLD_SHORT_DOMAIN_REDIRECT_CONFIGS = CC_TLD_SUBDOMAINS.map do |subdomain|
-      ["#{subdomain}.", '', /#{subdomain}.cwc.im$/]
+      ["#{subdomain}.", '', /#{subdomain}\.cwc\.im$/]
     end.freeze
 
     # combined redirect configs
