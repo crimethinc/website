@@ -1,7 +1,7 @@
 module Rack
   class DomainRedirect
     # subdomain (optional), path prefix (optional), URL regex to match (required)
-    REDIRECT_CONFIGS = [
+    MAIN_REDIRECT_CONFIGS = [
       # SSfWD
       ['', '/steal-something-from-work-day', /stealfromwork.crimethinc.com$/],
       ['', '/steal-something-from-work-day', /stealfromworkday.com$/],
@@ -22,29 +22,38 @@ module Rack
       ['cs.', '', /cz.crimethinc.com/], # Fix our orignal mistaken assumption
 
       # short domain (for historical twitter/etc posts)
-      ['', '', /cwc.im/],
-
-      # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['ar.', '', /ar.cwc.im$/],
-      ['cs.', '', /cs.cwc.im$/],
-      ['cz.', '', /cz.cwc.im$/],
-      ['da.', '', /da.cwc.im$/],
-      ['de.', '', /de.cwc.im$/],
-      ['en.', '', /en.cwc.im$/],
-      ['es.', '', /es.cwc.im$/],
-      ['fi.', '', /fi.cwc.im$/],
-      ['fr.', '', /fr.cwc.im$/],
-      ['gr.', '', /gr.cwc.im$/],
-      ['he.', '', /he.cwc.im$/],
-      ['id.', '', /id.cwc.im$/],
-      ['in.', '', /in.cwc.im$/],
-      ['it.', '', /it.cwc.im$/],
-      ['pl.', '', /pl.cwc.im$/],
-      ['pt.', '', /pt.cwc.im$/],
-      ['ru.', '', /ru.cwc.im$/],
-      ['sv.', '', /sv.cwc.im$/],
-      ['tr.', '', /tr.cwc.im$/]
+      ['', '', /cwc.im/]
     ].freeze
+
+    CC_TLD_SUBDOMAINS = %w[
+      ar
+      be bg bn
+      cs cz
+      da de dv
+      en es eu
+      fa fi fr
+      gl gr
+      he hu
+      id in it
+      ja
+      ko ku
+      nl no
+      pl pt
+      ro ru
+      sk sl sv
+      th tl tr
+      uk
+      vi
+      zh
+    ].freeze
+
+    # TEMP: work out better general purpose locale subdomain + short domain redirect
+    CC_TLD_SHORT_DOMAIN_REDIRECT_CONFIGS = CC_TLD_SUBDOMAINS.map do |subdomain|
+      ["#{subdomain}.", '', /#{subdomain}.cwc.im$/]
+    end.freeze
+
+    # combined redirect configs
+    REDIRECT_CONFIGS = (MAIN_REDIRECT_CONFIGS + CC_TLD_SHORT_DOMAIN_REDIRECT_CONFIGS).freeze
 
     PROTOCOL = 'https://'.freeze
     DOMAIN   = 'crimethinc.com'.freeze
