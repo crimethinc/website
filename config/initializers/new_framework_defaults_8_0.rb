@@ -5,17 +5,6 @@
 # Uncomment each configuration one by one to switch to the new default.
 # Once your application is ready to run with all new defaults, you can remove
 # this file and set the `config.load_defaults` to `8.0`.
-#
-# Read the Guide for Upgrading Ruby on Rails for more info on each option.
-# https://guides.rubyonrails.org/upgrading_ruby_on_rails.html
-
-###
-# Specifies whether `to_time` methods preserve the UTC offset of their receivers or preserves the timezone.
-# If set to `:zone`, `to_time` methods will use the timezone of their receivers.
-# If set to `:offset`, `to_time` methods will use the UTC offset.
-# If `false`, `to_time` methods will convert to the local system UTC offset instead.
-#++
-# Rails.application.config.active_support.to_time_preserves_timezone = :zone
 
 ###
 # When both `If-Modified-Since` and `If-None-Match` are provided by the client
