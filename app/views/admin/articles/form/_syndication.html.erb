@@ -7,7 +7,7 @@
          data-admin--text-box-counter-error-class="is-invalid"
          data-controller='admin--text-box-counter'>
       <%= form.label :tweet, class: "form-label" %>
-      <%= form.text_area :tweet, class: "form-control form-control-lg",
+      <%= form.textarea :tweet, class: "form-control form-control-lg",
           'data-admin--text-box-counter-target': 'source',
           'data-action': 'admin--text-box-counter#count',
           rows: 3 %>
@@ -23,7 +23,7 @@
          data-admin--text-box-counter-error-class="is-invalid"
          data-controller='admin--text-box-counter'>
       <%= form.label :summary, class: "form-label" %>
-      <%= form.text_area :summary, class: "form-control form-control-lg",
+      <%= form.textarea :summary, class: "form-control form-control-lg",
           'data-admin--text-box-counter-target': 'source',
           'data-action': 'admin--text-box-counter#count',
           rows: 5 %>

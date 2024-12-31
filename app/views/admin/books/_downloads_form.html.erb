@@ -11,7 +11,7 @@
 
       <% EbookFormat.all.each do |ebook_format| %>
         <div class="form-check mb-3">
-          <%= form.check_box "#{ebook_format.slug}_download_present",
+          <%= form.checkbox "#{ebook_format.slug}_download_present",
                              id: "#{resource.class.name.downcase}_#{ebook_format.slug}_download_present",
                              class: "form-check-input" %>
 
