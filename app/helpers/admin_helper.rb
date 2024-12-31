@@ -78,15 +78,15 @@ module AdminHelper
     class_for_article_counter_genesis article
   end
 
-  def category_check_box form:, category:
-    form.check_box :category_ids,
-                   {
-                     id:    "article_category_ids_#{category.id}",
-                     name:  'article[category_ids][]',
-                     class: 'form-check-input'
-                   },
-                   category.id,
-                   nil
+  def category_checkbox form:, category:
+    form.checkbox :category_ids,
+                  {
+                    id:    "article_category_ids_#{category.id}",
+                    name:  'article[category_ids][]',
+                    class: 'form-check-input'
+                  },
+                  category.id,
+                  nil
   end
 
   def s3_folder_path resource:

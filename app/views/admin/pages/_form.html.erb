@@ -23,7 +23,7 @@
         <legend>Meta</legend>
         <div class="mb-3">
           <%= form.label :tags, class: "form-label", class: "form-label" %>
-          <%= text_area_tag :tags, @page.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
+          <%= textarea_tag :tags, @page.tags.map{ |t| t.name }.join(", "), class: "form-control form-control-lg" %>
           <p class="form-text text-muted">Comma separated. For example, <em>dogs, cats, etc</em>.</p>
         </div>
       </fieldset>
