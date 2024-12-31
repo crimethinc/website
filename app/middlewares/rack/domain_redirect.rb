@@ -1,7 +1,7 @@
 module Rack
   class DomainRedirect
     # subdomain (optional), path prefix (optional), URL regex to match (required)
-    MAIN_REDIRECT_CONFIGS = [
+    main_redirect_configs = [
       # SSfWD
       ['', '/steal-something-from-work-day', /stealfromwork\.crimethinc\.com$/],
       ['', '/steal-something-from-work-day', /stealfromworkday\.com$/],
@@ -19,13 +19,10 @@ module Rack
       # ccTLDs => localized subdomain
       ['es.', '', /crimethinc\.es/],
       ['de.', '', /crimethinc\.de/],
-      ['cs.', '', /cz\.crimethinc\.com/], # Fix our orignal mistaken assumption
+      ['cs.', '', /cz\.crimethinc\.com/] # Fix our orignal mistaken assumption
+    ]
 
-      # short domain (for historical twitter/etc posts)
-      ['', '', /cwc\.im/]
-    ].freeze
-
-    CC_TLD_SUBDOMAINS = %w[
+    cc_tld_subdomains = %w[
       ar
       be bg bn
       cs cz
@@ -45,15 +42,26 @@ module Rack
       uk
       vi
       zh
-    ].freeze
+    ]
 
-    # TEMP: work out better general purpose locale subdomain + short domain redirect
-    CC_TLD_SHORT_DOMAIN_REDIRECT_CONFIGS = CC_TLD_SUBDOMAINS.map do |subdomain|
+    # de.cwc.im, es.cwc.im, etc
+    # TEMP: work out better general purpose for (locale subdomain + short domain) redirect
+    cc_tld_short_domain_redirect_configs = cc_tld_subdomains.map do |subdomain|
       ["#{subdomain}.", '', /#{subdomain}\.cwc\.im$/]
-    end.freeze
+    end
+
+    # the root short domain (cwc.im) MUST be AFTER ccTLD short domains (de.cwc.im, etc)
+    # short domain (for historical twitter/etc posts)
+    root_short_domain_redirect_config = [
+      ['', '', /cwc\.im/]
+    ]
 
     # combined redirect configs
-    REDIRECT_CONFIGS = (MAIN_REDIRECT_CONFIGS + CC_TLD_SHORT_DOMAIN_REDIRECT_CONFIGS).freeze
+    REDIRECT_CONFIGS = (
+      main_redirect_configs +
+      cc_tld_short_domain_redirect_configs +
+      root_short_domain_redirect_config
+    ).freeze
 
     PROTOCOL = 'https://'.freeze
     DOMAIN   = 'crimethinc.com'.freeze
