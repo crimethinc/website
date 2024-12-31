@@ -28,7 +28,7 @@ module Crimethinc
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.2
+    config.load_defaults 8.0
 
     # TEMP: re-enable mini magick until variant syntax is changed to vips in ActiveStorageHelper#image_variant_by_width
     config.active_storage.variant_processor = :mini_magick
