@@ -11,7 +11,7 @@ module Rack
       ['', '/tce', /tochangeeverything\.com/],
 
       # Heroku subdomain
-      ['', '', /crimethinc\.herokuapp\.com$/],
+      ['', '', /\.herokuapp\.com$/],
 
       # Other TLDs
       ['', '', /crimethinc\.gay$/],
