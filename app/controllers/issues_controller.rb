@@ -5,7 +5,11 @@ class IssuesController < ApplicationController
   def show
     @type     = 'issues'
     journal   = Journal.find_by(slug: show_params[:slug])
-    @issue    = Issue.find_by(issue: show_params[:issue_number], journal_id: journal.id)
+    return redirect_to :journals if journal.blank?
+
+    @issue = Issue.find_by(issue: show_params[:issue_number], journal_id: journal.id)
+    return redirect_to journal.path if @issue.blank?
+
     @tool     = @issue
     @editable = @issue
 
