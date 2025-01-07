@@ -90,6 +90,20 @@ class Article < ApplicationRecord
     content.strip.split("\n").first
   end
 
+  def header_storage_key
+    file_name_base = [
+      :header,
+      created_at.to_fs(:dashed_date)
+    ].join '-'
+
+    file_name = [
+      file_name_base,
+      '.jpg' # TODO: make this dynamically inferred from the uploaded file
+    ].join
+
+    ['assets', 'articles', id, file_name].join '/'
+  end
+
   private
 
   def find_related_articles
