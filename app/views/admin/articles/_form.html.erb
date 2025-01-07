@@ -26,11 +26,9 @@
     </div>
   </div>
 
-  <% if article.image.present? %>
-    <div class='mb-3'>
-      <%= header_image_tag article %>
-    </div>
-  <% end %>
+  <div class='mb-3'>
+    <%= header_image_tag article %>
+  </div>
 
   <%= render "admin/form/file_field", form: form, attr: :header, resource: article, label_text: "Header image" %>
   <p class="form-text text-muted">
