@@ -127,9 +127,13 @@ module ArticlesHelper
   def header_image_tag article, width: 2000, height: 1000
     height = width if height.blank?
 
-    placeholder_image_url
-    url = article.image
-    url = article.header.variant resize_to_limit: [width, height] if article.header.attached?
+    url = if article.header.attached?
+            article.header.variant resize_to_limit: [width, height]
+          elsif article.image.present?
+            article.image
+          else
+            placeholder_image_url
+          end
 
     image_tag url, class: 'w-100'
   end
@@ -139,6 +143,7 @@ module ArticlesHelper
 
     hex_range = (0..9).to_a + ('a'..'f').to_a
     color = [hex_range.sample, hex_range.sample, hex_range.sample].join
-    "https://via.placeholder.com/#{width}x#{height}/#{color}?text=+"
+
+    "https://placehold.co/#{width}x#{height}/#{color}/white.jpeg?text=PLACEHOLDER+HEADER"
   end
 end
