@@ -6,6 +6,7 @@
 //= link steal-something-from-work-day.css
 //= link 2017.css
 //= link 2020.css
+//= link application.js
 
 // ??? lite_mode.css
 //= link_tree ../../javascript .js
