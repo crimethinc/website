@@ -73,13 +73,20 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def default_theme = 2017
+  def default_theme = '2017'
+  def next_theme    = '2025'
+
+  def pages_for_2025_theme
+    %w[
+      home#index
+    ]
+  end
 
   def set_current_theme
-    theme = default_theme
-    theme = ENV.fetch('THEME') { default_theme } if home_page?
+    current_page = "#{controller_name}##{action_name}"
+    theme = next_theme if signed_in? && current_page.in?(pages_for_2025_theme)
 
-    Current.theme = theme
+    Current.theme = theme.presence || default_theme
   end
 
   def check_for_redirection
