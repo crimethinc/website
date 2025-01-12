@@ -91,20 +91,27 @@ class Article < ApplicationRecord
   end
 
   def header_storage_key
-    file_name_base = [
-      :header,
-      created_at.to_fs(:dashed_date)
-    ].join '-'
+    # return unless persisted?
 
-    file_name = [
-      file_name_base,
-      '.jpg' # TODO: make this dynamically inferred from the uploaded file
-    ].join
+    # TODO: make extension dynamically inferred from the uploaded file
+    extension = '.jpg'
+    file_name = [:header, '-', header_storage_key_date, extension].join
 
     ['assets', 'articles', id, file_name].join '/'
   end
 
   private
+
+  def header_storage_key_date
+    published_at.presence || created_at
+    date = Time.zone.today
+
+    [
+      date.year,
+      date.month.to_s.rjust(2, '0'),
+      date.day.to_s.rjust(2, '0')
+    ].join '-'
+  end
 
   def find_related_articles
     return {} if categories.blank?

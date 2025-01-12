@@ -38,9 +38,22 @@ module Admin
       @title      = admin_title(@article, %i[id title subtitle])
     end
 
+    def upload_header!
+      return if article_params[:header].blank?
+
+      # @article.header.purge if @article.header.attached?
+
+      @article.header.attach(
+        io:       article_params[:header],
+        key:      @article.header_storage_key,
+        filename: @article.header_storage_key
+      )
+    end
+
     def create
-      @article = Article.new(article_params)
+      @article = Article.new article_params_without_header
       populate_content_from_docx_upload!
+      # upload_header!
 
       if @article.save
         redirect_to [:admin, @article], notice: 'Article was successfully created.'
@@ -52,8 +65,9 @@ module Admin
     def update
       populate_content_from_docx_upload!
       @article.tags.destroy_all
+      upload_header!
 
-      if @article.update(article_params)
+      if @article.update article_params_without_header
         # Bust the article cache to update list of translations on articles
         @article.localizations.each(&:touch)
 
@@ -167,6 +181,10 @@ module Admin
       # Override publication_status from the submitted for,
       # to prevent authors and editors from publishing a draft article
       permitted_params.merge(publication_status: 'draft') if @article.blank? || @article.draft?
+    end
+
+    def article_params_without_header
+      article_params.except(:header)
     end
 
     def handle_publish_now_situation permitted_params, time: Time.zone.now, zone: Time.zone.name
