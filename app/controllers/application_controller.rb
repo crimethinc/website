@@ -73,7 +73,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def default_theme = '2017'
+  def default_theme = 2017
 
   def set_current_theme
     theme = default_theme
