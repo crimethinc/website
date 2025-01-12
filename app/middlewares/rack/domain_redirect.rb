@@ -1,41 +1,67 @@
 module Rack
   class DomainRedirect
     # subdomain (optional), path prefix (optional), URL regex to match (required)
-    REDIRECT_CONFIGS = [
-      [
-        '',
-        '/steal-something-from-work-day',
-        /stealfromwork.crimethinc.com|stealfromworkday.com|stealsomethingfromworkday.com$/
-      ],
+    main_redirect_configs = [
+      # SSfWD
+      ['', '/steal-something-from-work-day', /stealfromwork\.crimethinc\.com$/],
+      ['', '/steal-something-from-work-day', /stealfromworkday\.com$/],
+      ['', '/steal-something-from-work-day', /stealsomethingfromworkday\.com$/],
 
-      ['', '/tce', /tochangeeverything.com/],
+      # TCE
+      ['', '/tce', /tochangeeverything\.com/],
 
-      ['',    '', /crimethinc.herokuapp.com$/],
-      ['es.', '', /crimethinc.es/],
-      ['de.', '', /crimethinc.de/],
-      ['cs.', '', /cz.crimethinc.com/], # Fix our orignal mistaken assumption
+      # Heroku subdomain
+      ['', '', /\.herokuapp\.com$/],
 
-      ['ar.', '', /ar.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['cs.', '', /cs.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['cz.', '', /cz.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['da.', '', /da.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['de.', '', /de.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['en.', '', /en.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['es.', '', /es.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['fi.', '', /fi.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['fr.', '', /fr.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['gr.', '', /gr.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['he.', '', /he.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['id.', '', /id.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['in.', '', /in.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['it.', '', /it.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['pl.', '', /pl.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['pt.', '', /pt.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['ru.', '', /ru.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['sv.', '', /sv.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['tr.', '', /tr.cwc.im$/], # TEMP: work out better general purpose locale subdomain + short domain redirect
-      ['',    '', /cwc.im/]
-    ].freeze
+      # Other TLDs
+      ['', '', /crimethinc\.gay$/],
+
+      # ccTLDs => localized subdomain
+      ['es.', '', /crimethinc\.es/],
+      ['de.', '', /crimethinc\.de/],
+      ['cs.', '', /cz\.crimethinc\.com/] # Fix our orignal mistaken assumption
+    ]
+
+    cc_tld_subdomains = %w[
+      ar
+      be bg bn
+      cs cz
+      da de dv
+      en es eu
+      fa fi fr
+      gl gr
+      he hu
+      id in it
+      ja
+      ko ku
+      nl no
+      pl pt
+      ro ru
+      sk sl sv
+      th tl tr
+      uk
+      vi
+      zh
+    ]
+
+    # de.cwc.im, es.cwc.im, etc
+    # TEMP: work out better general purpose for (locale subdomain + short domain) redirect
+    cc_tld_short_domain_redirect_configs = cc_tld_subdomains.map do |subdomain|
+      ["#{subdomain}.", '', /#{subdomain}\.cwc\.im$/]
+    end
+
+    # the root short domain (cwc.im) MUST be AFTER ccTLD short domains (de.cwc.im, etc)
+    # short domain (for historical twitter/etc posts)
+    root_short_domain_redirect_config = [
+      ['', '', /cwc\.im/]
+    ]
+
+    # combined redirect configs
+    REDIRECT_CONFIGS = (
+      main_redirect_configs +
+      cc_tld_short_domain_redirect_configs +
+      root_short_domain_redirect_config
+    ).freeze
 
     PROTOCOL = 'https://'.freeze
     DOMAIN   = 'crimethinc.com'.freeze

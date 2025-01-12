@@ -63,12 +63,13 @@ a {
   }
 }
 
-p > a {
+#article .e-content li a,
+p a {
   &:link,
   &:visited,
   &:hover,
   &:active {
-    color: $color-gray-medium;
+    color: #555;
     text-decoration: underline;
     font-weight: 700;
   }

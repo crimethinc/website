@@ -13,14 +13,17 @@ module Rack
         ads.txt
         afacacaeusaaa
         asp.net
+        cdnbuster
+        connector.asp
         error.asp
+        FCKeditor
+        filemanager
+        jars
         kindeditor
         README.txt
         wp
-        wp-login
         wp-admin
-        cdnbuster
-        jars
+        wp-login
       ]
     ).freeze
 

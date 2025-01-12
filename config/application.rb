@@ -28,7 +28,7 @@ module Crimethinc
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.2
+    config.load_defaults 8.0
 
     # TEMP: re-enable mini magick until variant syntax is changed to vips in ActiveStorageHelper#image_variant_by_width
     config.active_storage.variant_processor = :mini_magick
@@ -63,8 +63,8 @@ module Crimethinc
 
     config.i18n.available_locales = [config.subdomain_locales, path_ltr_locales, path_rtl_locales].flatten.sort
 
-    # TEMP: delete after load_defaults is 7.1
-    # TODO: set to false after i18n.load_path is solved below
+    # TODO: rails8
+    # TODO: set to false (or delete?) after i18n.load_path is solved below
     config.add_autoload_paths_to_load_path = true
     # TODO: rethink how to allow nested locales directories without load_path
     # Allow nested diretories in locales
@@ -77,5 +77,11 @@ module Crimethinc
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # TODO: rails81
+    # DEPRECATION WARNING:
+    # `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1.
+    # To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`.
+    config.active_support.to_time_preserves_timezone = :zone
   end
 end
