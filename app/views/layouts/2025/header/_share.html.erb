@@ -1,0 +1,32 @@
+<div id='share-card' class='alert alert-info mb-5 d-none'>
+  <h2 class='visually-hidden'><%= tt 'share' %></h2>
+
+  <div class='row'>
+    <div class='col-12 col-md-4 mb-md-0'>
+      <%= render_markdown tt 'cards.share.description' %>
+      <%= link_to 'X', '#' %>
+    </div>
+
+    <div class='col-12 col-md-8'>
+      <div class='mb-3'>
+        <div class='fw-bold'><%= @page_share.title %></div>
+        <% if @page_share.subtitle.present? %>
+          <%= @page_share.subtitle %>
+        <% end %>
+      </div>
+
+      <%# TODO: remove twitter, add mastodon, threads, bluesky %>
+      <%# TODO: add email icon %>
+      <ul class='list-inline mb-0'>
+        <% %i[twitter facebook tumblr email].each do |domain| %>
+          <li class='list-inline-item'>
+            <%= link_to @page_share.share_url_for(domain), class: 'my-2', target: '_blank', rel: 'noopener' do %>
+              <%= image_tag "social-icons/#{domain.to_s.parameterize}.svg", size: '40x40', class: 'me-2' %>
+              <%= tt "cards.share.domains.#{domain}" %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div><!-- /.row -->
+</div><!-- /#share -->

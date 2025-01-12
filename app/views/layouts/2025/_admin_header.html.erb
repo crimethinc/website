@@ -1,0 +1,30 @@
+<% if signed_in? %>
+  <div class="alert alert-danger rounded-0 border-0 mb-0">
+    <div>
+      <%= link_to "🖤 ADMIN Dashboard",    admin_path, class: "btn btn-light mr-3" %>
+      <%= link_to "↓ Scroll to Site Top",  "#top",     class: "btn btn-light mr-3" %>
+
+      <%# theme switcher, admin only %>
+      <%= render "admin/cookies/form" %>
+
+      <% if @editable.present? %>
+        <%= link_to "📝 Edit #{@editable.class}", [:edit, :admin, @editable], class: "btn btn-light mr-3" %>
+      <% end %>
+    </div>
+
+    <div>
+      <% if @editable.present? %>
+        <p class="mb-0 d-lg-inline font-weight-bold mr-1">Translate <%= @editable.class %> to</p>
+
+        <% Locale.all.each do |locale| %>
+          <% next if locale.english? %>
+          <% next if @editable.localizations.map(&:locale).include? locale.abbreviation %>
+
+          <%= link_to locale.abbreviation.upcase,
+                      [:new, :admin, @editable.class.to_s.downcase.to_sym, canonical_id: @editable.id, locale: locale.abbreviation],
+                      class: "btn btn-secondary btn-sm mb-2" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

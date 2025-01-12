@@ -1,0 +1,29 @@
+<% if featured_books.present? %>
+  <!-- Featured books -->
+  <section class='row'>
+    <p class='mb-2 pt-5' id='books'><%= tt :featured_books %></p>
+
+    <% featured_books.each do |book| %>
+      <div class='col-12 col-lg-6'>
+
+        <div class='row'>
+          <div class='col-3'>
+            <%= link_to image_tag(book.image), book.path %>
+          </div><!-- /.col-3 -->
+
+          <div class='col-9'>
+            <%= link_to book.path, class: 'd-block mb-2' do %>
+              <div class='fw-bold'><%= book.title %></div>
+              <%= book.subtitle %>
+            <% end %>
+
+            <%= render_markdown book.summary %>
+
+            <p class='fw-bold text-end'><%= link_to "#{tt :learn_more} →", book.path %></p>
+          </div><!-- /.col-9 -->
+        </div><!-- /.row -->
+
+      </div><!-- /.col-6 -->
+    <% end %>
+  </section><!-- /.row -->
+<% end %>

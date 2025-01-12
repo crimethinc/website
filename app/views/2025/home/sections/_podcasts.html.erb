@@ -1,0 +1,48 @@
+<!-- Latest and recent podcast episodes -->
+<section class='pb-5'>
+  <div class='row'>
+    <div class='col-12 col-md-12 col-lg-6 pt-5' id='podcast'>
+      <p class='mb-2'><%= tt :latest_podcast_episode %></p>
+
+      <div class='row'>
+        <div class='col-4 col-lg-3'>
+          <%= link_to image_tag(latest_episode.image), latest_episode.path %>
+        </div><!-- /.col-3 -->
+
+        <div class='col-8 col-lg-9'>
+          <p>
+            <%= link_to latest_episode.path, class: 'fw-bold' do %>
+              <%= latest_episode.podcast.title %>
+              #<%= latest_episode.episode_number %>
+            <% end %>
+            —
+            <%= display_date latest_episode.published_at %>
+          </p>
+
+          <%= link_to latest_episode.path do %>
+            <h2 class='h5 fw-bold'><%= latest_episode.title %></h2>
+            <h3 class='h5 fw-light'><%= latest_episode.subtitle %></h3>
+          <% end %>
+
+          <p class='text-end fw-bold mt-3'><%= link_to "#{tt :listen_to_episode} →", latest_episode.path %></p>
+        </div><!-- /.col-9 -->
+      </div><!-- /.row -->
+    </div><!-- /.col-6 -->
+
+    <div class='col-12 col-md-12 col-lg-6 pt-5' id='episodes'>
+      <p class='mb-2'><%= tt :recent_podcast_episodes %></p>
+
+      <div class='row'>
+        <% recent_episodes.each do |episode| %>
+          <div class='col-3 text-end'>
+            <%= link_to image_tag(episode.image), episode.path %>
+            <%= link_to "##{episode.episode_number}", episode.path %>
+          </div><!-- /.col-3 -->
+        <% end %>
+      </div><!-- /.row -->
+
+      <p class='text-end fw-bold mt-3'><%= link_to "#{tt :more_podcast_episodes} →", :podcasts %></p>
+    </div><!-- /.col-6 -->
+  </div><!-- /.row -->
+</section>
+<!-- /Latest and recent podcast episodes -->

@@ -1,0 +1,26 @@
+<div id='languages-card' class='alert alert-light mb-5 col-6 col-md-4 col-lg-3 d-none'>
+  <h2 class='visually-hidden'><%= tt 'header.languages' %></h2>
+
+  <%= link_to 'X', '#' %>
+
+  <ol class='list-unstyled mb-0'>
+    <% @locales.each do |locale| %>
+      <%# TODO: extract to helper %>
+      <% locale_direction_classes = 'text-end' if locale.language_direction == 'rtl' %>
+      <%# locale_direction_classes = '' # TEMP %>
+
+      <%= tag.li class: locale_direction_classes do %>
+        <%# TODO: extract to helper %>
+        <%# TODO: for links to /languages/espanol etc %>
+        <%# locale_path = [:language, locale: locale.name.downcase.gsub(' ', '-')] %>
+
+        <%# TODO: extract to helper %>
+        <% current_locale_classes = 'fw-bold' if locale.abbreviation == String(Current.locale) %>
+
+        <%= link_to locale.name,
+                    url_for_current_path_with_subdomain(subdomain: locale.abbreviation),
+                    class: current_locale_classes %>
+      <% end %>
+    <% end %>
+  </ol>
+</div>

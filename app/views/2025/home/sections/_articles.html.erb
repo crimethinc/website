@@ -1,0 +1,55 @@
+<!-- Recent and previous articles -->
+<section class='row'>
+  <div class='col-12 col-lg-8'>
+    <p class='mb-2 pt-5' id='articles'><%= tt :just_published %></p>
+
+    <ol class='list-unstyled'>
+      <% just_published_articles.each do |article| %>
+        <li>
+          <div class='row mb-4'>
+            <div class='col-12 col-md-4 col-lg-4 mb-1'>
+              <%= link_to image_tag(article.image), article.path %>
+            </div><!-- /.col-4 -->
+
+            <div class='col-12 col-md-8 col-lg-8'>
+              <p>
+                <% article.categories.each do |category| %>
+                  <%= link_to category.name, category.path, class: 'text-uppercase' %><%= tag.span ',' unless category == article.categories.last %>
+                <% end %>
+              </p>
+
+              <%= link_to article.path do %>
+                <h2 class='h3'><%= article.title %></h2>
+                <% if article.subtitle.present? %>
+                  <h3 class='h5 fw-light'><%= article.subtitle %></h3>
+                <% end %>
+              <% end %>
+            </div><!-- /.col-8 -->
+          </div><!-- /.row -->
+        </li>
+      <% end %>
+    </ol>
+
+    <p class='fw-bold'><%= link_to_next_page articles, "#{tt :more_articles} →" %></p>
+  </div>
+
+  <div class='col-12 col-lg-4'>
+    <p class='mb-2 pt-5' id='recent'><%= tt :recent_articles %></p>
+
+    <ol class='list-unstyled'>
+      <% recent_articles.each do |article| %>
+        <li class='mb-3'>
+          <%= link_to article.path do %>
+            <div class='fw-bold'><%= article.title %></div>
+            <% if article.subtitle.present? %>
+              <span class='fw-light'><%= article.subtitle %></span>
+            <% end %>
+          <% end %>
+        </li>
+      <% end %>
+    </ol>
+
+    <p class='fw-bold text-end'><%= link_to_next_page articles, "#{tt :more_articles} →" %></p>
+  </div>
+</section>
+<!-- /Recent and previous articles -->

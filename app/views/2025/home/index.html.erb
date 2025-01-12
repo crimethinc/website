@@ -1,0 +1,16 @@
+<div class='container'>
+  <%= render_themed 'home/sections/latest_article', article: @latest_article %>
+
+  <%= render_themed 'home/sections/podcasts',
+                    latest_episode:  @latest_episode,
+                    recent_episodes: @recent_episodes %>
+
+  <%= render_themed 'home/sections/articles',
+                    articles:                @articles,
+                    just_published_articles: @just_published_articles,
+                    recent_articles:         @recent_articles %>
+
+  <%= render_themed 'home/sections/books',                 featured_books:        @featured_books %>
+  <%= render_themed 'home/sections/ex_workers_collection', ex_workers_collection: @ex_workers_collection %>
+  <%= render_themed 'home/sections/tools',                 selected_tools:        @selected_tools %>
+</div><!-- /.container -->

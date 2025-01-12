@@ -1,3 +1,3 @@
 class Current < ActiveSupport::CurrentAttributes
-  attribute :user, :theme
+  attribute :user, :theme, :locale
 end

@@ -1,0 +1,130 @@
+<footer class='container mt-5 pt-5 border-top' role='contentinfo' id='site-footer'>
+  <div class='row'>
+    <div class='col-12 col-md-6 pr-5 mb-5'>
+      <nav>
+        <h2 class='pt-3' id='sitemap'><%= tt :sitemap %></h2>
+
+        <dl>
+          <dt>
+            <%= link_to tt(:library), :library %>
+            <small class='fw-normal'>
+              <%= link_to :RSS, :feed, class: 'text-secondary' %>
+            </small>
+          </dt>
+          <dd>
+            <% categories = %w[arts adventure analysis current_events history how_to news technology] %>
+            <% categories.each do |category| %>
+              <%= link_to tt(category), [:category, slug: category.dasherize] %><%= tag.span ',' unless category == categories.last %>
+            <% end %>
+          </dd>
+
+          <dt>
+            <%= link_to tt(:tools), :tools %>
+          </dt>
+          <dd>
+            <% tools = %i[zines journals posters stickers videos music logos to_change_everything steal_something_from_work_day] %>
+            <% tools.each do |tool| %>
+              <%= link_to tt(tool), tool %><%= tag.span ',' unless tool == tools.last %>
+            <% end %>
+          </dd>
+
+          <dt><%= link_to tt(:books), :books %></dt>
+          <dd>
+            <% books = %i[from_democracy_to_freedom contradictionary work expect_resistance recipes_for_disaster days_of_war_nights_of_love no_wall_they_can_build off_the_map] %>
+            <% books.each do |book| %>
+              <%= link_to tt(book), [:book, slug: book.to_s.dasherize] %><%= tag.span ',' unless book == books.last %>
+            <% end %>
+          </dd>
+
+          <dt>
+            <%= link_to tt(:podcasts), :podcasts %>
+            <small class='fw-normal'>
+              <%= link_to :RSS, :podcast_feed, class: 'text-secondary' %>
+            </small>
+          </dt>
+          <dd>
+            <% podcasts = %i[the_ex_worker no_wall_they_can_build the_hotwire] %>
+            <% podcasts.each do |podcast| %>
+              <%= link_to tt(podcast), "/podcasts/#{podcast.to_s.dasherize}" %><%= tag.span ',' unless podcast == podcasts.last %>
+            <% end %>
+          </dd>
+
+          <dt><%= link_to tt(:store),              '/store' %></dt>
+          <dd><%= link_to tt('footer.store_description'), '/store' %></dd>
+        </dl>
+
+        <% if media_mode? && I18n.locale == :en %>
+          <p>
+            <%= link_to tt('footer.site_mode'), url_for_current_path_with_subdomain(subdomain: :lite) %>
+          </p>
+        <% end %>
+
+      </nav>
+    </div><!-- .col-12 col-md-6 -->
+
+    <div class='col-12 col-md-6 pr-5 mb-5' id='email'>
+      <div class='mb-5' id='mc_embed_signup'><!-- Begin MailChimp Signup Form -->
+        <h2 class='pt-3'><%= tt 'footer.contact.newsletter.heading' %></h2>
+
+        <%= render_markdown tt('footer.contact.newsletter.description') %>
+
+        <%= form_with url: '//crimethinc.us2.list-manage.com/subscribe/post?u=cb48383602b7373f496e9ba33&amp;id=344714b249', id: 'mc-embedded-subscribe-form', class: 'newsletter-signup-form validate', name: 'mc-embedded-subscribe-form', target: '_blank', rel: 'noopener', novalidate: true do |form| %>
+          <div class='mc-field-group'>
+            <%= form.label       'mce-EMAIL',                                         tt('footer.contact.newsletter.signup_form_placeholder'), class: 'visually-hidden' %>
+            <%= form.email_field :email, name: 'EMAIL', id: 'mce-EMAIL', placeholder: tt('footer.contact.newsletter.signup_form_placeholder'), class: 'form-control mb-3' %>
+          </div>
+
+          <div class='mc-field-group'>
+            <%= form.label 'mce-MMERGE3', tt('contact.newsletter.signup_form_select_placeholder'), class: 'visually-hidden' %>
+
+            <select name='MMERGE3' class='required form-select' id='mce-MMERGE3'>
+              <option value='<%= tt('contact.newsletter.signup_form_select_option_lot') %>'>   <%= t('footer.contact.newsletter.signup_form_select_option_lot') %>   </option>
+              <option value='<%= tt('contact.newsletter.signup_form_select_option_little') %>'><%= t('footer.contact.newsletter.signup_form_select_option_little') %></option>
+            </select>
+          </div>
+
+          <div id='mce-responses' class='visually-hidden'>
+            <div class='response' id='mce-error-response'>  </div>
+            <div class='response' id='mce-success-response'></div>
+          </div>
+
+          <div class='text-lg-end mt-3'>
+            <%= button_tag tt('footer.contact.newsletter.signup_button_text'), name: 'subscribe', id: 'mc-embedded-subscribe', class: 'btn btn-outline-success btn-lg' %>
+          </div>
+
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <% left_or_right = html_dir == 'ltr' ? 'position: absolute; left: -5000px;' : 'position: absolute; right: -5000px;' %>
+          <div id='a-thing-with-an-id' style='<%= left_or_right %>' aria-hidden='true'><input type='text' name='b_cb48383602b7373f496e9ba33_344714b249' tabindex='-1' value='' autocomplete="off"></div>
+        <% end %>
+      </div><!--End mc_embed_signup-->
+
+      <div class='pt-3' id='social'>
+        <h2><%= tt 'footer.contact.social.heading' %></h2>
+        <%= render_markdown tt 'footer.contact.social.description' %>
+
+        <% social_links_by_domain.in_groups_of(2).each do |row| %>
+          <div class='mb-2 row'>
+            <% row.each do |social| %>
+              <% next if social.nil? %>
+
+              <% social.each do |domain, url| %>
+                <div class='col-6'>
+                  <%= link_to url, class: 'my-2', target: '_blank', rel: 'noopener' do %>
+                    <%= image_tag "social-icons/#{domain.to_s.parameterize}.svg", size: '40x40', class: 'me-2' %>
+                    <%= domain %>
+                  <% end %>
+                </div>
+              <% end %>
+
+            <% end %>
+          </div>
+        <% end %>
+      </div><!-- #social -->
+
+    </div><!-- .col-12 col-md-6 -->
+  </div><!-- .row -->
+
+  <div rel='license' class='text-secondary text-center my-5 py-5'>
+    <p><%= tt(:mantras).sample %></p>
+  </div>
+</footer>

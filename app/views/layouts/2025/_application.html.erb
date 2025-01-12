@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<%= tag.html dir: html_dir, lang: html_lang, class: html_class, prefix: html_prefix do %>
+  <head>
+    <%# TODO: expand title to include page specific title segments %>
+    <%# TODO: About | CrimethInc. %>
+    <%# TODO: {Article Title} | CrimethInc. %>
+    <title>CrimethInc.</title>
+
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%# TODO: add favicon link tags here %>
+
+    <%= javascript_importmap_tags %>
+    <%= render 'layouts/2025/auto_dark_mode' %>
+    <%= render 'layouts/2025/stylesheets' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/2025/admin_header' %>
+    <%= render 'layouts/2025/development_mode_banner' %>
+
+    <%#
+    INFO: these four wrapper divs are here to make header #anchor links work,
+          using :target in CSS to toggle header cards without scrolling
+    %>
+    <div id='about'>
+      <div id='languages'>
+        <div id='search'>
+          <div id='share'>
+
+            <%= render 'layouts/2025/header' %>
+
+            <main>
+              <%= yield %>
+            </main>
+
+            <%= render 'layouts/2025/footer' %>
+
+          </div><!-- .about -->
+        </div><!-- .languages -->
+      </div><!-- .search -->
+    </div><!-- .share -->
+  </body>
+<% end %>

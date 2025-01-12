@@ -1,0 +1,55 @@
+<header id='top' class='pt-5 mb-5 container'>
+  <nav>
+    <div class='row'>
+      <div class='col-lg-10 mb-3'>
+
+        <div class='row align-items-end'>
+          <div class='col-12 col-md-2 mb-3'>
+            <%= link_to :root, id: :brand, class: 'row align-items-center' do %>
+              <div class='col-2 col-md-12'>
+                <%# TODO: move this image's alt text to localization YAML files %>
+                <%= image_tag 'icons/icon-1200x1200.png',
+                              alt: 'An animal bone and 10mm combo wrench in an X shape,
+                                    behind an incandescent light bulb,
+                                    in the arrangement of a skull and cross bones' %>
+              </div>
+
+              <div class='col-4 col-md-12 g-0'>
+                <h1 class='mb-0'><%= tt :site_name %></h1>
+              </div>
+            <% end %>
+          </div>
+
+          <div class='col-12 col-md-10 mb-3'>
+            <ul class='list-inline text-uppercase mb-0 lh-1'>
+              <li class='list-inline-item'><%= link_to tt(:books),    :books %></li>
+              <li class='list-inline-item'><%= link_to tt(:library),  :library %></li>
+              <li class='list-inline-item'><%= link_to tt(:tools),    :tools %></li>
+              <li class='list-inline-item'><%= link_to tt(:podcasts), :podcasts %></li>
+              <li class='list-inline-item'><%= link_to tt(:store),    :store %></li>
+              <li class='list-inline-item'><%= link_to tt(:about),    { anchor: :about } %></li>
+            </ul>
+          </div><!-- .col -->
+        </div><!-- .row -->
+
+      </div><!-- .col -->
+
+      <div class='col-lg-2 mb-3 text-start text-lg-end'>
+        <ul class='list-unstyled list-inline text-uppercase'>
+          <li class='mb-3'><%= link_to tt(:support), :support, class: 'btn btn-outline-success btn-lg' %></li>
+
+          <li class='list-inline-item'><%= link_to tt(:languages), { anchor: :languages } %></li>
+          <li class='list-inline-item'><%= link_to tt(:search),    { anchor: :search } %></li>
+          <li class='list-inline-item'><%= link_to tt(:share),     { anchor: :share } %></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class='container'>
+  <%= render 'layouts/2025/header/languages' %>
+  <%= render 'layouts/2025/header/search' %>
+  <%= render 'layouts/2025/header/about' %>
+  <%= render 'layouts/2025/header/share' %>
+</div>

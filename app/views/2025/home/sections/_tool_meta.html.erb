@@ -1,0 +1,11 @@
+<p>
+  <%= link_to tool.class, tool.class.to_s.downcase.pluralize.to_sym %>
+</p>
+
+<%= link_to tool.path do %>
+  <div class='fw-bold'><%= tool.title %></div>
+
+  <% if tool.subtitle.present? %>
+    <%= tool.subtitle %>
+  <% end %>
+<% end %>
