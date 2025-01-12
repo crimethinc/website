@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
 
   before_action :set_current_locale
   before_action :set_current_theme
-  before_action :set_current_theme_cookie
 
   before_action :set_site_locale
   before_action :check_for_redirection
@@ -93,13 +92,9 @@ class ApplicationController < ActionController::Base
     # read from cookie if it's set
     return Current.theme = default_theme if cookies[:theme].blank?
     # only check theme for redesigned pages
-    return Current.theme = default_theme unless current_page.in?(pages_for_2025_theme)
+    return Current.theme = default_theme unless current_page.in? pages_for_2025_theme
 
-    Current.theme = next_theme
-  end
-
-  def set_current_theme_cookie
-    cookies[:theme] = Current.theme
+    Current.theme = cookies[:theme]
   end
 
   def check_for_redirection

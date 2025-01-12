@@ -1,13 +1,16 @@
 <% if signed_in? %>
   <style>
     #admin-header { padding:2rem; background:#ff007f; }
+    #admin-header form { display: inline; }
     .translate-this p { margin: 1rem 0; color: white; }
     .translate-this a { margin-bottom: .5rem; }
+
   </style>
 
   <nav id="admin-header">
     <%= link_to "ADMIN Dashboard",    admin_path, class: "button" %>
     <%= link_to "Scroll to Site Top", "#header",  class: "button" %>
+    <%= render "admin/cookies/form" %>
 
     <% if @article.present? %>
       <%= link_to "Download .docx", "#{@article.path}.docx", class: "button" %>

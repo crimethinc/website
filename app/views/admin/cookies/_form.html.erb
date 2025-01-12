@@ -1,0 +1,17 @@
+<% unless Current.theme == '2017' %>
+<%= button_to 'Change theme to 2017',
+              admin_cookies_path,
+                class: 'btn btn-light button',
+                params:       { cookie: { theme: 2017 } },
+                form_class:   'd-inline'
+              %>
+<% end %>
+
+<% unless Current.theme == '2025' %>
+<%= button_to 'Change theme to 2025',
+              admin_cookies_path,
+                class: 'btn btn-light button',
+                params:       { cookie: { theme: 2025 } },
+                form_class:   'd-inline'
+              %>
+<% end %>
