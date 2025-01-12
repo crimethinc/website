@@ -35,6 +35,10 @@ class ApplicationController < ActionController::Base
   end
   helper_method :media_mode?
 
+  def home_page?
+    controller_name == 'home' && action_name == 'index'
+  end
+
   def render_content article
     cache [:article_content, article, lite_mode?] do
       article.content_rendered include_media: media_mode?
@@ -52,8 +56,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_current_locale
-    locale = request.subdomain
+    locale      = request.subdomain
     I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
+
+    # Set to either the subdomain, fallback to :en
+    Current.locale = locale.presence || I18n.default_locale
 
     # Force the subdomain to match the locale.
     # Don’t do this in development, because typically local development
@@ -66,8 +73,28 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def default_theme = '2017'
+  def next_theme    = '2025'
+
+  def pages_for_2025_theme
+    %w[
+      home#index
+    ]
+  end
+
+  def current_page
+    "#{controller_name}##{action_name}"
+  end
+
   def set_current_theme
-    Current.theme = ENV.fetch('THEME') { '2017' }
+    # next theme is admin only
+    return Current.theme = default_theme unless signed_in?
+    # read from cookie if it's set
+    return Current.theme = default_theme if cookies[:theme].blank?
+    # only check theme for redesigned pages
+    return Current.theme = default_theme unless current_page.in? pages_for_2025_theme
+
+    Current.theme = cookies[:theme]
   end
 
   def check_for_redirection

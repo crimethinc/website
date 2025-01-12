@@ -1,0 +1,33 @@
+/*
+Header navbar
+*/
+
+#brand {
+  /* image replacement to use black logo wordmark */
+  h1 {
+    font: inherit;
+    max-width: 300px;
+    content: url(<%= image_path 'crimethinc-logo-type-black.svg' %>);
+  }
+
+  @media (max-width: 767.9px) {
+    img { transform: rotate(-5deg); }
+  }
+}
+
+[data-bs-theme=dark] {
+  #brand {
+    img { /* TODO: replace bulb and bones image with something better than invert? */ }
+    /* use white logo wordmark in dark mode */
+    h1 { filter: invert(1); }
+  }
+}
+
+/*
+Top of site cards
+toggle header cards from nav icons using CSS (:target), no JS
+*/
+#about:target     #about-card     { display: block !important; }
+#languages:target #languages-card { display: block !important; }
+#search:target    #search-card    { display: block !important; }
+#share:target     #share-card     { display: block !important; }

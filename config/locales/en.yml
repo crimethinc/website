@@ -111,15 +111,15 @@ en:
 
     contact:
       newsletter:
-        heading: Email Updates
+        heading: Email updates
         description: Sign up here to receive regular email updates. _(Processed by Mailchimp.)_
         signup_form_placeholder: What’s your email address?
         signup_form_select_placeholder: You want a lot of emails? Or a little?
         signup_form_select_option_lot:    Every little thing. (Many emails)
         signup_form_select_option_little: Just the big stuff! (Fewer emails)
-        signup_button_text: Sign Up
+        signup_button_text: Sign up
       social:
-        heading: Find Us Elsewhere
+        heading: Find us elsewhere
         description: Keep up with our activities on the following additional platforms.
 
     mantra:

@@ -1,4 +1,0 @@
-<%= form_with url: :search, role: 'search', method: 'get', local: true do %>
-  <%= label_tag        :q, tt('search.form_placeholder'), class: 'screen-reader-only' %>
-  <%= search_field_tag :q, @search&.query, placeholder: tt('search.form_placeholder'), id: :q, autocomplete: :off %>
-<% end %>

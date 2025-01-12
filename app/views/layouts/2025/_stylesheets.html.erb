@@ -1,0 +1,30 @@
+<% if Rails.env.development? %>
+  <%# Highlight any text which doesn’t have a translation in locales YAML %>
+  <style>.translation_missing { outline: 5px solid #ff0080; }</style>
+<% end %>
+
+<%# INFO: Update this instead of the bootstrap gem when new versions come out %>
+<%# NOTE: Pull this in as static local file at 2025/vendor/bootstrap.css %>
+<%# TODO: create a rake task to automate that %>
+<%# bootstrap_major_version = 5 %>
+<%# bootstrap_minor_version = 3 %>
+<%# bootstrap_patch_version = 3 %>
+<%# "https://cdn.jsdelivr.net/npm/bootstrap@#{bootstrap_major_version}.#{bootstrap_minor_version}.#{bootstrap_patch_version}/dist/css/bootstrap.css" %>
+
+<%
+stylesheet_partials = %w[
+  vendor/bootstrap
+  bootstrap-overrides
+  buttons
+  fonts
+  headings
+  images
+  links
+  navbar
+  utilities
+]
+%>
+
+<% stylesheet_partials.each do |stylesheet_partial| %>
+  <%= stylesheet_link_tag "2025/#{stylesheet_partial}", media: :all %>
+<% end %>

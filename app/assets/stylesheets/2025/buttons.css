@@ -1,0 +1,39 @@
+/*
+Buttons
+*/
+
+/* square corners for all buttons */
+.btn { --bs-btn-border-radius: 0; }
+
+/* ALL CAPS button text with no line breaks between words */
+/* for non-ALL CAPS text, override with .text-transform-none on the HTML element */
+.btn {
+  text-transform: uppercase;
+  text-wrap:      nowrap;
+}
+
+/* special treatment for large buttons */
+.btn-lg {
+  --bs-border-width:    3px;
+  --bs-btn-font-size:   1.1rem;
+  --bs-btn-font-weight: 800;
+  --bs-btn-line-height: 1;
+  --bs-btn-padding-x:   1.2rem;
+  --bs-btn-padding-y:   1.1rem;
+
+  /* even out top spacing with bottom (because there are no descenders in ALL CAPS) */
+  padding-top:    1.25rem;
+}
+
+/* bright green for .success buttons */
+.btn-outline-success {
+  --bs-green:                     #66CC00;
+  --bs-btn-color:                 var(--bs-green);
+  --bs-btn-border-color:          var(--bs-green);
+  --bs-btn-hover-bg:              var(--bs-green);
+  --bs-btn-hover-border-color:    var(--bs-green);
+  --bs-btn-active-bg:             var(--bs-green);
+  --bs-btn-active-border-color:   var(--bs-green);
+  --bs-btn-disabled-color:        var(--bs-green);
+  --bs-btn-disabled-border-color: var(--bs-green);
+  }

@@ -8,20 +8,20 @@ class HomeController < ApplicationController
     # Homepage featured article
     @latest_article = articles_for_current_page.first if first_page?
 
-    if Current.theme == '2020'
+    if Current.theme == '2025'
       # Feed artciles, needed for pagination
       @articles = articles_for_current_page.page(params[:page]).per(14).padding(1)
 
       # Recent article
-      @recent_articles = @articles[0..3]
+      @just_published_articles = @articles[0..3]
 
       # Previous article
-      @previous_articles = @articles[4..15]
+      @recent_articles = @articles[4..15]
 
       # Latest and recent podcast episodes
-      podcast_episodes         = Episode.live.limit(5)
-      @latest_podcast_episode  = podcast_episodes.first
-      @recent_podcast_episodes = podcast_episodes[1..4]
+      podcast_episodes = Episode.live.limit(5)
+      @latest_episode  = podcast_episodes.first
+      @recent_episodes = podcast_episodes[1..4]
 
       # Featured books
       @featured_books = Book.published.featured.limit(2).order(featured_at: :desc)
@@ -39,6 +39,9 @@ class HomeController < ApplicationController
 
       # Ex-Workers’ Collection
       @ex_workers_collection = Article.featured
+
+      # Site language/subdomain switcher
+      @locales = Locale.where abbreviation: Rails.application.config.subdomain_locales
     else
       # Feed artciles
       @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)

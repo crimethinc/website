@@ -1,0 +1,8 @@
+/*
+Utilies
+Extensions to: https://getbootstrap.com/docs/5.3/utilities/text
+*/
+
+.text-transform-none {
+  text-transform: none !important;
+}

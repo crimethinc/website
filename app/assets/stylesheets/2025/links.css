@@ -1,0 +1,12 @@
+/*
+Hyperlinks
+TODO: why isn't this working by changing --bs-link-decoration to "none"
+*/
+
+/* no underline for all links or buttons */
+a,
+.btn:hover,
+.btn:active       { text-decoration: none; }
+
+/* underline for all links */
+a:hover, a:active { text-decoration: underline; }

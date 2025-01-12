@@ -171,6 +171,9 @@ Rails.application.routes.draw do
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
   namespace :admin do
+    # theme switcher
+    resources :cookies
+
     get 'dashboard', to: 'dashboard#index'
     get 'markdown',  to: 'dashboard#markdown', as: :markdown
 
