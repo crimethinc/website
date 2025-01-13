@@ -124,6 +124,24 @@ module ArticlesHelper
     article.draft? ? 'danger' : 'success'
   end
 
+  def article_attached_header_image_tag article, width: 2000, height: 1000
+    height = width if height.blank?
+
+    url = if article.header.attached?
+            article.header.variant resize_to_limit: [width, height]
+          else
+            placeholder_image_url
+          end
+
+    image_tag url, class: 'w-100'
+  end
+
+  def article_header_image_tag article
+    url = article.image.presence || placeholder_image_url
+
+    image_tag url, class: 'w-100'
+  end
+
   def header_image_tag article, width: 2000, height: 1000
     height = width if height.blank?
 

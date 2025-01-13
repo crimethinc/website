@@ -49,7 +49,7 @@ Metrics/MethodLength:
     - "db/migrate/*"
 
 Metrics/ModuleLength:
-  Max: 117
+  Max: 130
 
 Metrics/ParameterLists:
   Max: 6

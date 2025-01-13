@@ -6,23 +6,23 @@
 
     <%= render "admin/label_and_field_form_group", form: form, attr: :image, label_text: "Header Image" %>
 
-    <% if resource.image.present? %>
-      <div class='mb-3'>
-        <%= header_image_tag resource %>
-      </div>
-    <% end %>
-
     <p class="form-text text-muted">
       This is the large image that will be front and center on the <i>Article</i> page,
       on the homepage and when syndicated to other sites. Preferred size:
       <code>2000px wide</code> by about <code>1000px tall</code> (or taller).
     </p>
 
-    <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
-    <p class="form-text text-muted">
-      This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
-      And will be displayed underneath the header image in the redesign of the site.
-    </p>
+    <% if resource.image.present? %>
+      <div class='mb-3'>
+        <%= article_header_image_tag resource %>
+      </div>
+
+      <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
+      <p class="form-text text-muted">
+        This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
+        And will be displayed underneath the header image in the redesign of the site.
+      </p>
+    <% end %>
 
     <% unless @collection.present? %>
       <hr>
