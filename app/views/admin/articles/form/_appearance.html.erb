@@ -14,7 +14,7 @@
 
     <% if resource.image.present? %>
       <div class='mb-3'>
-        <%= article_header_image_tag resource %>
+        <%= image_tag resource.image, class: 'w-100' %>
       </div>
 
       <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>

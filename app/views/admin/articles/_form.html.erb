@@ -38,9 +38,7 @@
 
         <div class='mb-3'>
           <% if article.header.attached? %>
-            <%= article_attached_header_image_tag article, variant: :large %>
-          <% else %>
-            <%= image_tag article.image, class: "rounded mb-3" %>
+            <%= image_tag article.header.variant(:large), class: 'w-100' %>
           <% end %>
 
           <% if article.image_description.present? %>

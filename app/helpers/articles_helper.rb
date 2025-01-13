@@ -123,43 +123,4 @@ module ArticlesHelper
   def publication_status_badge_class article
     article.draft? ? 'danger' : 'success'
   end
-
-  def article_attached_header_image_tag article, variant: :large
-    url = if article.header.attached?
-            article.header.variant variant
-          else
-            placeholder_image_url
-          end
-
-    image_tag url, class: 'w-100'
-  end
-
-  def article_header_image_tag article
-    url = article.image.presence || placeholder_image_url
-
-    image_tag url, class: 'w-100'
-  end
-
-  def header_image_tag article, width: 2000, height: 1000
-    height = width if height.blank?
-
-    url = if article.header.attached?
-            article.header.variant resize_to_limit: [width, height]
-          elsif article.image.present?
-            article.image
-          else
-            placeholder_image_url
-          end
-
-    image_tag url, class: 'w-100'
-  end
-
-  def placeholder_image_url width: 2000, height: 1000
-    height = width if height.blank?
-
-    hex_range = (0..9).to_a + ('a'..'f').to_a
-    color = [hex_range.sample, hex_range.sample, hex_range.sample].join
-
-    "https://placehold.co/#{width}x#{height}/#{color}/white.jpeg?text=PLACEHOLDER+HEADER"
-  end
 end
