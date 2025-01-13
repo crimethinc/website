@@ -5,7 +5,7 @@ module Admin
     def index
       @posters = Sticker.order(slug: :asc).page(params[:page])
       @title = admin_title
-      @preview_width = 240
+      @preview_width = 640
       render 'admin/posters/index'
     end
 
@@ -18,13 +18,13 @@ module Admin
     def new
       @poster = Sticker.new
       @title  = admin_title
-      @preview_width = 240
+      @preview_width = 640
       render 'admin/posters/new'
     end
 
     def edit
       @title = admin_title(@poster, %i[id title subtitle])
-      @preview_width = 240
+      @preview_width = 640
       render 'admin/posters/edit'
     end
 
