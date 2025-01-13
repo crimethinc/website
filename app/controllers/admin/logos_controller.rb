@@ -5,7 +5,7 @@ module Admin
     def index
       @logos         = Logo.order(slug: :asc).page(params[:page])
       @title         = admin_title
-      @preview_width = 240
+      @preview_width = 640
     end
 
     def show
@@ -16,12 +16,12 @@ module Admin
     def new
       @logo          = Logo.new
       @title         = admin_title
-      @preview_width = 240
+      @preview_width = 640
     end
 
     def edit
       @title         = admin_title(@logo, %i[id title subtitle])
-      @preview_width = 240
+      @preview_width = 640
     end
 
     def create
