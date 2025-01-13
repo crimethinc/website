@@ -41,7 +41,7 @@ module Admin
     def upload_header!
       return if article_params[:header].blank?
 
-      # @article.header.purge if @article.header.attached?
+      @article.header.purge if @article.header.attached?
 
       @article.header.attach(
         io:       article_params[:header],
