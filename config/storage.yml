@@ -4,10 +4,10 @@ local:
 
 development_amazon:
   service:           S3
-  access_key_id:     <%= ENV.fetch('AWS_ACCESS_KEY_ID') { 'TODO' } %>
+  access_key_id:     <%= ENV.fetch('AWS_ACCESS_KEY_ID')     { 'TODO' } %>
   secret_access_key: <%= ENV.fetch('AWS_SECRET_ACCESS_KEY') { 'TODO' } %>
-  bucket:            <%= ENV.fetch('AWS_BUCKET') { 'TODO' } %>
-  region:            <%= ENV.fetch('AWS_REGION') { 'TODO' } %>
+  bucket:            <%= ENV.fetch('AWS_BUCKET')            { 'TODO' } %>
+  region:            <%= ENV.fetch('AWS_REGION')            { 'TODO' } %>
   public:            true
 
 test:
@@ -18,6 +18,6 @@ production:
   service:           S3
   access_key_id:     <%= ENV.fetch('S3_ACCESS_KEY') { 'TODO' } %>
   secret_access_key: <%= ENV.fetch('S3_SECRET_KEY') { 'TODO' } %>
-  bucket:            <%= ENV.fetch('S3_BUCKET') { 'TODO' } %>
-  region:            <%= ENV.fetch('S3_REGION') { 'TODO' } %>
+  bucket:            <%= ENV.fetch('S3_BUCKET')     { 'TODO' } %>
+  region:            <%= ENV.fetch('S3_REGION')     { 'TODO' } %>
   public:            true
