@@ -49,13 +49,17 @@
 
 <article class="row">
   <div class="col-12 col-md-8">
-    <% if @article.image.present? %>
-      <%= image_tag @article.image, class: "rounded mb-3" %>
-    <% end %>
+    <div class="mb-5 pb-5 border-bottom">
+      <% if @article.header.attached? %>
+        <%= article_attached_header_image_tag @article %>
+      <% else %>
+        <%= image_tag @article.image, class: "rounded mb-3" %>
+      <% end %>
 
-    <% if @article.image_description.present? %>
-      <%= render_markdown @article.image_description %>
-    <% end %>
+      <% if @article.image_description.present? %>
+        <%= render_markdown @article.image_description %>
+      <% end %>
+    </div>
 
     <div class="e-content">
       <% if @article.content_in_html? %>
