@@ -3,7 +3,11 @@ class Article < ApplicationRecord
   include Featureable
   include Translatable
 
-  has_one_attached :header, dependent: :destroy
+  has_one_attached :header, dependent: :destroy do |attachable|
+    attachable.variant :small,  resize_to_limit: [400, 200],   preprocessed: true
+    attachable.variant :medium, resize_to_limit: [1000, 500],  preprocessed: true
+    attachable.variant :large,  resize_to_limit: [2000, 1000], preprocessed: true
+  end
 
   has_one  :redirect, dependent: :destroy
   has_many :taggings, dependent: :destroy, as: :taggable
@@ -90,28 +94,7 @@ class Article < ApplicationRecord
     content.strip.split("\n").first
   end
 
-  def header_storage_key
-    # return unless persisted?
-
-    # TODO: make extension dynamically inferred from the uploaded file
-    extension = '.jpg'
-    file_name = [:header, '-', header_storage_key_date, extension].join
-
-    ['assets', 'articles', id, file_name].join '/'
-  end
-
   private
-
-  def header_storage_key_date
-    published_at.presence || created_at
-    date = Time.zone.today
-
-    [
-      date.year,
-      date.month.to_s.rjust(2, '0'),
-      date.day.to_s.rjust(2, '0')
-    ].join '-'
-  end
 
   def find_related_articles
     return {} if categories.blank?

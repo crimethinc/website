@@ -36,15 +36,23 @@
           <code>2000px wide</code> by about <code>1000px tall</code> (or taller).
         </p>
 
+        <div class='mb-3'>
+          <% if article.header.attached? %>
+            <%= article_attached_header_image_tag article, variant: :large %>
+          <% else %>
+            <%= image_tag article.image, class: "rounded mb-3" %>
+          <% end %>
+
+          <% if article.image_description.present? %>
+            <%= render_markdown article.image_description %>
+          <% end %>
+        </div>
+
         <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
         <p class="form-text text-muted">
           This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
           And will be displayed underneath the header image in the redesign of the site.
         </p>
-
-        <div class='mb-3'>
-          <%= article_attached_header_image_tag article %>
-        </div>
       </div>
 
     </div>

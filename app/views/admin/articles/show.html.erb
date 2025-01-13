@@ -51,7 +51,7 @@
   <div class="col-12 col-md-8">
     <div class="mb-5 pb-5 border-bottom">
       <% if @article.header.attached? %>
-        <%= article_attached_header_image_tag @article %>
+        <%= article_attached_header_image_tag @article, variant: :large %>
       <% else %>
         <%= image_tag @article.image, class: "rounded mb-3" %>
       <% end %>
