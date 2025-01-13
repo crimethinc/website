@@ -1,6 +1,6 @@
 local:
   service: Disk
-  root: <%= Rails.root.join 'storage' %>
+  root:    <%= Rails.root.join 'storage' %>
 
 development_amazon:
   service:           S3
@@ -12,7 +12,7 @@ development_amazon:
 
 test:
   service: Disk
-  root: <%= Rails.root.join 'tmp/storage' %>
+  root:    <%= Rails.root.join 'tmp/storage' %>
 
 production:
   service:           S3
