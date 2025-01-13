@@ -2,7 +2,7 @@ local:
   service: Disk
   root:    <%= Rails.root.join 'storage' %>
 
-development_amazon:
+development_remote:
   service:           S3
   access_key_id:     <%= ENV.fetch('AWS_ACCESS_KEY_ID')     { 'TODO' } %>
   secret_access_key: <%= ENV.fetch('AWS_SECRET_ACCESS_KEY') { 'TODO' } %>
