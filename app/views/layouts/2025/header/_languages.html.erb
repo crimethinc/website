@@ -4,7 +4,7 @@
   <%= link_to 'X', '#' %>
 
   <ol class='list-unstyled mb-0'>
-    <% @locales.each do |locale| %>
+    <% @subdomain_locales.each do |locale| %>
       <%# TODO: extract to helper %>
       <% locale_direction_classes = 'text-end' if locale.language_direction == 'rtl' %>
       <%# locale_direction_classes = '' # TEMP %>
