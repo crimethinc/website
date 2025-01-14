@@ -79,6 +79,8 @@ class ApplicationController < ActionController::Base
   def pages_for_2025_theme
     %w[
       home#index
+      languages#index
+      languages#show
     ]
   end
 

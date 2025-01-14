@@ -1,0 +1,55 @@
+<div class='container content'>
+
+  <div class='col-lg-8 mb-5'>
+    <header class='d-flex align-items-end mb-3'>
+      <div class='col'>
+        <h1 class='m-0 p-0'><%= t 'views.languages.heading' %></h1>
+      </div>
+
+      <div class='col text-end'>
+        <%= link_to 'RSS Feeds →', :feeds %>
+      </div>
+    </header>
+
+    <div class='mb-5 lead'>
+      <%= render_markdown t('views.languages.description') %>
+    </div>
+
+    <div class='row'>
+      <div class='col-6'>
+        <ul class='list-unstyled'>
+          <% @locales.each do |locale| %>
+            <%
+              unicode_link = link_to locale.name,            [:language, locale: locale.name.downcase.gsub(' ', '-')]
+              slug_link    = link_to locale.slug,            [:language, locale: locale.slug.to_sym]
+              english_link = link_to locale.name_in_english, [:language, locale: locale.name_in_english.downcase.gsub(' ', '-')]
+            %>
+
+            <li class='mb-3'>
+              <h2 class='mb-0 d-inline'><%= english_link %></h2>
+              <small><%= number_with_delimiter locale.articles_count %></small>
+
+              <p>
+                <%= unicode_link %>
+                (<%= slug_link %>)
+                <small class='fs-6'><%= link_to 'RSS', [:feed, lang: locale.abbreviation] %></small>
+              </p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class='col-6'>
+        <h2 class='mb-0'><%= t 'footer.nav.tools.to_change_everything' %></h2>
+
+        <ul class='list-unstyled fs-5'>
+          <% tce_language_links.each do |name, path| %>
+            <li class='mb-1'><%= link_to name.html_safe.strip_tags.html_safe, path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>

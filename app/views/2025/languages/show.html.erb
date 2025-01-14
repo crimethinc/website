@@ -1,0 +1,36 @@
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags(@articles) %>
+<% end %>
+
+<header>
+  <h1><%= @locale.name %></h1>
+
+  <% unless @locale.english? %>
+    <h2>(<%= @locale.name_in_english %>)</h2>
+  <% end %>
+
+  <nav class="crumbtrail">
+    <%= link_to t("views.languages.heading"), [:languages] %>
+  </nav>
+
+  <div class="subdomain-switcher">
+    <% unless @locale.abbreviation == I18n.locale.to_s %>
+      <%= render_markdown t("views.languages.view_site_in_locale", locale: @locale.abbreviation) %>
+    <% end %>
+
+    <%= render_markdown t("views.languages.view_tools_in_locale", locale: @locale.abbreviation) %>
+    <%= render_markdown t("views.languages.view_books_in_locale", locale: @locale.abbreviation) %>
+
+    <p>
+      <%= link_to [:feed, lang: @locale.abbreviation] do %>
+        <%= @locale.name %> RSS
+      <% end %>
+    </p>
+  </div>
+</header>
+
+<div class="h-feed">
+  <%= render_themed "articles/list", articles: @articles, skip_preferred_localization: true %>
+</div>
+
+<%= paginate @articles %>
