@@ -19,4 +19,16 @@ module LocalesHelper
     classes << 'current' if I18n.locale.to_s == locale.abbreviation
     classes
   end
+
+  def link_to_locale_name locale
+    link_to locale.name, [:language, { locale: locale.name.downcase.tr(' ', '-') }]
+  end
+
+  def link_to_locale_slug locale
+    link_to locale.slug, [:language, { locale: locale.slug.to_sym }]
+  end
+
+  def link_to_locale_english_name locale
+    link_to locale.name_in_english, [:language, { locale: locale.name_in_english.downcase.tr(' ', '-') }]
+  end
 end

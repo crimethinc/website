@@ -1,55 +1,41 @@
 <div class='container content'>
 
-  <div class='col-lg-8 mb-5'>
-    <header class='d-flex align-items-end mb-3'>
-      <div class='col'>
-        <h1 class='m-0 p-0'><%= tt :languages %></h1>
-      </div>
+  <header class='d-flex align-items-baseline mb-3'>
+    <h1 class='mb-0 me-2 d-inline'><%= tt :languages %></h1>
 
-      <div class='col text-end'>
-        <%= link_to 'RSS Feeds →', :feeds %>
-      </div>
-    </header>
+    <%= link_to 'RSS Feeds →', :feeds %>
+  </header>
 
-    <div class='mb-5 lead'>
+  <div class='row'>
+    <div class='col-lg-6 mb-5 lead' id='description'>
       <%= render_markdown t('views.languages.description') %>
     </div>
 
-    <div class='row'>
-      <div class='col-6'>
-        <ul class='list-unstyled'>
-          <% @locales.each do |locale| %>
-            <%
-              unicode_link = link_to locale.name,            [:language, locale: locale.name.downcase.tr(' ', '-')]
-              slug_link    = link_to locale.slug,            [:language, locale: locale.slug.to_sym]
-              english_link = link_to locale.name_in_english, [:language, locale: locale.name_in_english.downcase.tr(' ', '-')]
-            %>
+    <div class='col-6 col-lg-3'>
+      <ul class='list-unstyled'>
+        <% @locales.each do |locale| %>
+          <li class='mb-3'>
+            <b class='h2'><%= link_to_locale_english_name locale %></b>
+            <small><%= number_with_delimiter locale.articles_count %></small>
 
-            <li class='mb-3'>
-              <h2 class='mb-0 d-inline'><%= english_link %></h2>
-              <small><%= number_with_delimiter locale.articles_count %></small>
-
-              <p>
-                <%= unicode_link %>
-                (<%= slug_link %>)
-                <small class='fs-6'><%= link_to 'RSS', [:feed, lang: locale.abbreviation] %></small>
-              </p>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-
-      <div class='col-6'>
-        <h2 class='mb-0'><%= tt :to_change_everything %></h2>
-
-        <ul class='list-unstyled fs-5'>
-          <% tce_language_links.each do |name, path| %>
-            <li class='mb-1'><%= link_to name.html_safe.strip_tags.html_safe, path %></li>
-          <% end %>
-        </ul>
-      </div>
+            <p>
+              <%= link_to_locale_name locale %>
+              (<%= link_to_locale_slug locale %>)
+              <small class='fs-6'><%= link_to :RSS, [:feed, lang: locale.abbreviation] %></small>
+            </p>
+          </li>
+        <% end %>
+      </ul>
     </div>
-  </div>
 
-  </div>
-</div>
+    <div class='col-6 col-lg-3'>
+      <h2 class='mb-0'><%= tt :to_change_everything %></h2>
+
+      <ul class='list-unstyled fs-5'>
+        <% tce_language_links.each do |name, path| %>
+          <li class='mb-1'><%= link_to name.html_safe.strip_tags.html_safe, path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div><!-- .row -->
+</div><!-- .container -->
