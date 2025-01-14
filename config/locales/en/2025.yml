@@ -42,6 +42,7 @@ en:
     news:           News
     podcasts:       Podcasts
     posters:        Posters
+    rss:            RSS
     search:         Search
     share:          Share
     sitemap:        Site map
@@ -64,6 +65,7 @@ en:
     more_articles:           More articles
     more_podcast_episodes:   More podcast episodes
     more_tools:              More tools
+    rss_feeds:               RSS Feeds
     recent_articles:         Recent articles
     recent_podcast_episodes: Recent podcast episodes
     search_placeholder:      Search archives…

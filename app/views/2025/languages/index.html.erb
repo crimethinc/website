@@ -3,12 +3,14 @@
   <header class='d-flex align-items-baseline mb-3'>
     <h1 class='mb-0 me-2 d-inline'><%= tt :languages %></h1>
 
-    <%= link_to 'RSS Feeds →', :feeds %>
+    <%= link_to :feeds do %>
+      <%= tt :rss_feeds %> →
+    <% end %>
   </header>
 
   <div class='row'>
     <div class='col-lg-6 mb-5 lead' id='description'>
-      <%= render_markdown t('views.languages.description') %>
+      <%= render_markdown t 'views.languages.description' %>
     </div>
 
     <div class='col-6 col-lg-3'>
@@ -21,7 +23,7 @@
             <p>
               <%= link_to_locale_name locale %>
               (<%= link_to_locale_slug locale %>)
-              <small class='fs-6'><%= link_to :RSS, [:feed, lang: locale.abbreviation] %></small>
+              <small class='fs-6'><%= link_to tt(:rss), [:feed, lang: locale.abbreviation] %></small>
             </p>
           </li>
         <% end %>
