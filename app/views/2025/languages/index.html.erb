@@ -3,9 +3,7 @@
   <header class='d-flex align-items-baseline mb-3'>
     <h1 class='mb-0 me-2 d-inline'><%= tt :languages %></h1>
 
-    <%= link_to :feeds do %>
-      <%= tt :rss_feeds %> →
-    <% end %>
+    <%= link_to tt(:rss_feeds), :feeds %>
   </header>
 
   <div class='row'>
