@@ -193,8 +193,8 @@ class ApplicationController < ActionController::Base
     @site_locale = LocaleService.find(locale: nil, lang_code: I18n.locale)
   end
 
-  # Site language/subdomain switcher
   def set_subdomain_locales
+    # Site language/subdomain switcher
     @subdomain_locales = Locale.where abbreviation: Rails.application.config.subdomain_locales
   end
   # ...Page Share
