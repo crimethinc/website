@@ -3,7 +3,7 @@
   <div class='col-lg-8 mb-5'>
     <header class='d-flex align-items-end mb-3'>
       <div class='col'>
-        <h1 class='m-0 p-0'><%= t 'views.languages.heading' %></h1>
+        <h1 class='m-0 p-0'><%= tt :languages %></h1>
       </div>
 
       <div class='col text-end'>
@@ -20,9 +20,9 @@
         <ul class='list-unstyled'>
           <% @locales.each do |locale| %>
             <%
-              unicode_link = link_to locale.name,            [:language, locale: locale.name.downcase.gsub(' ', '-')]
+              unicode_link = link_to locale.name,            [:language, locale: locale.name.downcase.tr(' ', '-')]
               slug_link    = link_to locale.slug,            [:language, locale: locale.slug.to_sym]
-              english_link = link_to locale.name_in_english, [:language, locale: locale.name_in_english.downcase.gsub(' ', '-')]
+              english_link = link_to locale.name_in_english, [:language, locale: locale.name_in_english.downcase.tr(' ', '-')]
             %>
 
             <li class='mb-3'>
@@ -40,7 +40,7 @@
       </div>
 
       <div class='col-6'>
-        <h2 class='mb-0'><%= t 'footer.nav.tools.to_change_everything' %></h2>
+        <h2 class='mb-0'><%= tt :to_change_everything %></h2>
 
         <ul class='list-unstyled fs-5'>
           <% tce_language_links.each do |name, path| %>
