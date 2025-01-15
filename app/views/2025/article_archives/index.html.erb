@@ -4,7 +4,7 @@
 
 <div class='container'>
   <div class='row'>
-    <div class='col-md-6 col-lg-8'><!-- TEMP LEFT COLUMN -->
+    <div class='col-md-6 col-lg-8'>
       <header class='titles pb-3 mb-4 border-bottom'>
         <h1><%= tt :archives %></h1>
 
@@ -15,31 +15,45 @@
         </h2>
       </header>
 
+      <div class='h-feed'>
+        <% date_heading_class = 'd-none' %>
 
-
-
-      <div class="h-feed">
         <% @article_archive.each do |year, months| %>
           <% months.sort.reverse_each do |month, articles| %>
 
             <% if @article_archive.day.blank? || @article_archive.month.blank? %>
-              <h2><%= link_to_dates(year: year, month: month) %></h2>
+              <h2 class='<%= date_heading_class %>'>
+                <% date_heading_class = 'd-block' %>
+                <%= link_to_dates(year: year, month: month) %>
+              </h2>
             <% end %>
 
             <% articles.each do |article| %>
-              <%= render_themed "articles/article", article: article %>
+              <%= render_themed 'articles/article', article: article %>
             <% end %>
 
           <% end %>
         <% end %>
       </div>
 
+      <%= paginate @article_archive, theme: 'twitter-bootstrap-4' %>
 
+      <div class='row' id='pagination'>
+        <div class='col text-end'>
+          <% if @article_archive.paginator.next? %>
+            <%= link_to @article_archive.paginator.next_label, @article_archive.paginator.next_path %>
+          <% end %>
+        </div>
 
+        <div class='col <%= 'text-end' unless @article_archive.paginator.next? %>'>
+          <% if @article_archive.paginator.previous? %>
+            <%= link_to @article_archive.paginator.previous_label, @article_archive.paginator.previous_path %>
+          <% end %>
+        </div>
+      </div>
+    </div>
 
-    </div><!-- /TEMP LEFT COLUMN -->
-
-    <div class='col-md-6 col-lg-4'><!-- /TEMP RIGHT COLUMN -->
+    <div class='col-md-6 col-lg-4'>
       <header class='titles pb-3 mb-2 border-bottom fw-normal'>
         <h1 class='fw-normal'>See also…</h1>
         <h2 class='fw-normal'>Explore The Archives</h2>
@@ -54,28 +68,6 @@
         <h2 class='h4 fw-bold'><%= link_to tt(:chronological_heading), '#years' %></h2>
         <%= render_themed 'years/list', years: @years %>
       </div>
-    </div><!-- /TEMP RIGHT COLUMN -->
+    </div>
   </div><!-- .row -->
-</div>
-
-<% if false %>
-
-<%= paginate @article_archive %>
-
-<div class="pagination-container">
-  <ul class="pagination">
-    <% if @article_archive.paginator.next? %>
-      <li class="page">
-        <%= link_to @article_archive.paginator.next_label, @article_archive.paginator.next_path %>
-      </li>
-    <% end %>
-
-    <% if @article_archive.paginator.previous? %>
-      <li class="page">
-        <%= link_to @article_archive.paginator.previous_label, @article_archive.paginator.previous_path %>
-      </li>
-    <% end %>
-  </ul>
-</div>
-
-<% end %>
+</div><!-- .container -->

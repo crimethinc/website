@@ -5,7 +5,7 @@
     <b class='d-block'>Share this article</b>
 
     <% social_share_sites(article).each do |domain, url| %>
-      <%= link_to url, target: '_blank', rel: 'noopener' do %>
+      <%= link_to url, class: 'text-decoration-none', target: '_blank', rel: 'noopener' do %>
         <%= image_tag "social-icons/#{domain.to_s.parameterize}.svg", size: '40x40' %>
         <span class='visually-hidden'><%= domain %></span>
       <% end %>
