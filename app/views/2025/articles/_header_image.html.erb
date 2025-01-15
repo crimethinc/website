@@ -1,9 +1,11 @@
-<%# locals: (article:, image_class: :first, text_class: :last) %>
+<%# locals: (article:) %>
 
-<figure class='text-secondary'>
-  <%= link_to image_tag(article.image, class: 'u-photo mb-2', alt: article.image_description, loading: :lazy), article.path %>
+<% if article.image.present? %>
+  <figure class='text-secondary'>
+    <%= link_to image_tag(article.image, class: 'u-photo mb-2', alt: article.image_description, loading: :lazy), article.path %>
 
-  <% if article.image_description.present? %>
-    <figcaption><%= render_markdown article.image_description %></figcaption>
-  <% end %>
-</figure>
+    <% if article.image_description.present? %>
+      <figcaption><%= render_markdown article.image_description %></figcaption>
+    <% end %>
+  </figure>
+<% end %>

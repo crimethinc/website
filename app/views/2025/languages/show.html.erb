@@ -36,15 +36,7 @@
       <article class='h-entry mb-5 pb-3'>
         <div class='row'>
           <div class='col-md-6 col-lg-5 col-xl-4'>
-            <% if article.image.present? %>
-              <figure class='text-secondary'>
-                <%= link_to image_tag(article.image, class: 'u-photo mb-2', alt: article.image_description, loading: :lazy), article.path %>
-
-                <% if article.image_description.present? %>
-                  <figcaption><%= render_markdown article.image_description %></figcaption>
-                <% end %>
-              </figure>
-            <% end %>
+            <%= render_themed 'articles/header_image', article: article %>
           </div>
 
           <div class='col-md-6 col-lg-7 col-xl-8'>
