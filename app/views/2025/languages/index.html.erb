@@ -1,6 +1,6 @@
 <div class='container underlined-links'>
 
-  <header class='d-flex align-items-baseline mb-3'>
+  <header class='titles d-flex align-items-baseline mb-3'>
     <h1 class='mb-0 me-2 d-inline'><%= tt :languages %></h1>
 
     <%= link_to tt(:rss_feeds), :feeds %>
@@ -14,7 +14,7 @@
     <div class='col-6 col-lg-3'>
       <ul class='list-unstyled'>
         <% @locales.each do |locale| %>
-          <li class='mb-3'>
+          <li class='titles mb-3'>
             <b class='h2'><%= link_to_locale_english_name locale %></b>
             <small><%= number_with_delimiter locale.articles_count %></small>
 
@@ -28,7 +28,7 @@
       </ul>
     </div>
 
-    <div class='col-6 col-lg-3'>
+    <div class='titles col-6 col-lg-3'>
       <h2 class='mb-0'><%= tt :to_change_everything %></h2>
 
       <ul class='list-unstyled fs-5'>
