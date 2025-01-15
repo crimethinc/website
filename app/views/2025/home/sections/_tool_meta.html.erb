@@ -3,9 +3,9 @@
 </p>
 
 <%= link_to tool.path do %>
-  <div class='fw-bold'><%= tool.title %></div>
+  <h2><%= tool.title %></h2>
 
   <% if tool.subtitle.present? %>
-    <%= tool.subtitle %>
+    <h4 class='fw-light'><%= tool.subtitle %></h3>
   <% end %>
 <% end %>

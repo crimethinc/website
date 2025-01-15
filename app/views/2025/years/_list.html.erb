@@ -1,0 +1,11 @@
+<%# locals: (years:) %>
+
+<ul class='list-inline underlined-links lh-lg'>
+  <% @years.each do |year| %>
+    <% classes = 'pe-2 me-1 border-end border-secondary' unless year == @years.last %>
+
+    <li class='list-inline-item me-0'>
+      <%= link_to year, [:article_archives, year: year], class: classes %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,73 @@
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags @article_archive.articles %>
+<% end %>
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-6 col-lg-8'>
+      <header class='titles pb-3 mb-4 border-bottom'>
+        <h1><%= tt :archives %></h1>
+
+        <h2 class='fw-normal'>
+          <time datetime='<%= [@article_archive.year, @article_archive.month, @article_archive.day].compact.join '-' %>'>
+            <%= link_to_dates(year: @article_archive.year, month: @article_archive.month, day: @article_archive.day) %>
+          </time>
+        </h2>
+      </header>
+
+      <div class='h-feed'>
+        <% date_heading_class = 'd-none' %>
+
+        <% @article_archive.each do |year, months| %>
+          <% months.sort.reverse_each do |month, articles| %>
+
+            <% if @article_archive.day.blank? || @article_archive.month.blank? %>
+              <h2 class='<%= date_heading_class %>'>
+                <% date_heading_class = 'd-block' %>
+                <%= link_to_dates(year: year, month: month) %>
+              </h2>
+            <% end %>
+
+            <% articles.each do |article| %>
+              <%= render_themed 'articles/article', article: article %>
+            <% end %>
+
+          <% end %>
+        <% end %>
+      </div>
+
+      <%= paginate @article_archive, theme: 'twitter-bootstrap-4' %>
+
+      <div class='row underlined-links'>
+        <div class='col text-end'>
+          <% if @article_archive.paginator.next? %>
+            <%= link_to @article_archive.paginator.next_label, @article_archive.paginator.next_path %>
+          <% end %>
+        </div>
+
+        <div class='col <%= 'text-end' unless @article_archive.paginator.next? %>'>
+          <% if @article_archive.paginator.previous? %>
+            <%= link_to @article_archive.paginator.previous_label, @article_archive.paginator.previous_path %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class='col-md-6 col-lg-4'>
+      <header class='titles pb-3 mb-2 border-bottom fw-normal'>
+        <h1 class='fw-normal'>See also…</h1>
+        <h2 class='fw-normal'>Explore The Archives</h2>
+      </header>
+
+      <div id='categories' class='mb-5 pt-3'>
+        <h2 class='h4 fw-bold'><%= link_to tt(:categories_heading), '#categories' %></h2>
+        <%= render_themed 'categories/list', categories: @categories %>
+      </div>
+
+      <div id='years' class='mb-5 pt-3'>
+        <h2 class='h4 fw-bold'><%= link_to tt(:chronological_heading), '#years' %></h2>
+        <%= render_themed 'years/list', years: @years %>
+      </div>
+    </div>
+  </div><!-- .row -->
+</div><!-- .container -->

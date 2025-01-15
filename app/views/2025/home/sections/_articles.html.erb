@@ -6,7 +6,7 @@
     <ol class='list-unstyled'>
       <% just_published_articles.each do |article| %>
         <li>
-          <div class='row mb-4'>
+          <article class='row mb-4'>
             <div class='col-12 col-md-4 col-lg-4 mb-1'>
               <%= link_to image_tag(article.image), article.path %>
             </div><!-- /.col-4 -->
@@ -19,13 +19,14 @@
               </p>
 
               <%= link_to article.path do %>
-                <h2 class='h3'><%= article.title %></h2>
+                <h2><%= article.title %></h2>
+
                 <% if article.subtitle.present? %>
-                  <h3 class='h5 fw-light'><%= article.subtitle %></h3>
+                  <h3 class='fw-light'><%= article.subtitle %></h3>
                 <% end %>
               <% end %>
             </div><!-- /.col-8 -->
-          </div><!-- /.row -->
+          </article><!-- /.row -->
         </li>
       <% end %>
     </ol>

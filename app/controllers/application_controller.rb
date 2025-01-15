@@ -9,14 +9,17 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  before_action :authorize, if: :staging?
+  before_action :check_for_redirection
+  before_action :strip_file_extension
+
   before_action :set_current_locale
   before_action :set_current_theme
   before_action :set_site_locale
   before_action :set_subdomain_locales
+  before_action :set_categories
+  before_action :set_years
 
-  before_action :check_for_redirection
-  before_action :strip_file_extension
-  before_action :authorize, if: :staging?
   before_action :set_page_share
 
   helper :meta
@@ -79,6 +82,7 @@ class ApplicationController < ActionController::Base
 
   def pages_for_2025_theme
     %w[
+      article_archives#index
       home#index
       languages#index
       languages#show
@@ -188,6 +192,7 @@ class ApplicationController < ActionController::Base
     # TODO: implement this algorithm
     'https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png'
   end
+  # ...Page Share
 
   def set_site_locale
     @site_locale = LocaleService.find(locale: nil, lang_code: I18n.locale)
@@ -197,5 +202,12 @@ class ApplicationController < ActionController::Base
     # Site language/subdomain switcher
     @subdomain_locales = Locale.where abbreviation: Rails.application.config.subdomain_locales
   end
-  # ...Page Share
+
+  def set_categories
+    @categories = Category.all
+  end
+
+  def set_years
+    @years = (1996..Time.current.year).to_a.reverse
+  end
 end

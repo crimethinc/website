@@ -1,5 +1,5 @@
-<% linked ||= false %>
+<%= time_tag article.published_at, class: 'd-block text-secondary underlined-links' do %>
+  <b><%= tt :published %></b>
 
-<p class="screen-reader-only">
-  <%= render_themed "articles/published_on_time_tag", article: article, linked: linked %>
-</p>
+  <%= link_to display_date(article.published_at), article.path, class: 'text-secondary' %>
+<% end %>

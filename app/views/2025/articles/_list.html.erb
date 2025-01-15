@@ -1,7 +1,0 @@
-<% skip_preferred_localization ||= skip_preferred_localization %>
-
-<div class="articles-list">
-  <% articles.each do |article| %>
-    <%= render_themed "articles/list_item", article: skip_preferred_localization ? article : article.preferred_localization %>
-  <% end %>
-</div>

@@ -15,11 +15,11 @@ module MarkdownHelper
       transliterated_header_ids: true
     ).to_html.html_safe
 
-    html = remove_wrapper_p_tag_from html: html if remove_wrapper_p_tag.present?
+    html = remove_wrapper_p_tag_from html if remove_wrapper_p_tag.present?
     html
   end
 
-  def remove_wrapper_p_tag_from html:
+  def remove_wrapper_p_tag_from html
     fragment = Nokogiri::HTML5.fragment html
     fragment.inner_html.gsub('<p>', '').gsub('</p>', '').strip.html_safe
   end
