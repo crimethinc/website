@@ -4,6 +4,9 @@ class ArticleArchivesController < ApplicationController
     @body_id = 'article-archives'
     @title   = PageTitle.new title_for :archives
 
+    # NOTE: @categories and @years are used on every page in the header search card
+    #       each is set in a before_action in application_controller
+
     @article_archive = ArticleArchive.new(year:  params[:year],
                                           month: params[:month],
                                           day:   params[:day],

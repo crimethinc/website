@@ -16,10 +16,8 @@
       <b><%= tt 'cards.search.category_heading' %></b>
 
       <p>
-        <%# TODO: extract to before_action in application controller %>
-        <% categories = Category.all %>
-        <% categories.each do |category| %>
-          <% classes = 'pe-2 me-1 border-end border-danger' unless category == categories.last %>
+        <% @categories.each do |category| %>
+          <% classes = 'pe-2 me-1 border-end border-danger' unless category == @categories.last %>
           <%= link_to category.name, [:category, slug: category.slug], class: classes %>
         <% end %>
       </p>
@@ -27,10 +25,8 @@
       <b><%= tt 'cards.search.chronological_heading' %></b>
 
       <p class='mb-0'>
-        <%# TODO: extract to before_action in application controller %>
-        <% years = (1996..Time.current.year).to_a.reverse %>
-        <% years.each do |year| %>
-          <% classes = 'pe-2 me-1 border-end border-danger' unless year == years.last %>
+        <% @years.each do |year| %>
+          <% classes = 'pe-2 me-1 border-end border-danger' unless year == @years.last %>
           <%= link_to year, [:article_archives, year: year], class: classes %>
         <% end %>
       </p>

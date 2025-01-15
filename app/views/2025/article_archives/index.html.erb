@@ -4,33 +4,63 @@
 
 <div class='container'>
   <div class='row'>
-    <div class='col-md-6 col-lg-8'>
-      <header class=' pb-3 mb-4 border-bottom'>
-        <h1 class='fw-normal'>
-          <b><%= tt :archives %></b> :
+    <div class='col-md-6 col-lg-8'><!-- TEMP LEFT COLUMN -->
+      <header class='titles pb-3 mb-4 border-bottom'>
+        <h1>
+          <%= tt :archives %>
 
-          <time datetime='<%= [@article_archive.year, @article_archive.month, @article_archive.day].compact.join '-' %>'>
-            <%= link_to_dates(year: @article_archive.year, month: @article_archive.month, day: @article_archive.day) %>
-          </time>
+          <span class='fw-normal'>
+            :
+            <time datetime='<%= [@article_archive.year, @article_archive.month, @article_archive.day].compact.join '-' %>'>
+              <%= link_to_dates(year: @article_archive.year, month: @article_archive.month, day: @article_archive.day) %>
+            </time>
+          </span>
         </h1>
       </header>
 
-      ARTICLES Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
+      ARTICLES GO HERE Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div><!-- /TEMP LEFT COLUMN -->
 
-    <div class='col-md-6 col-lg-4'>
-      <header class='pb-3 mb-4 border-bottom'>
-
-      <h1>Explore The Archives</h1>
+    <div class='col-md-6 col-lg-4'><!-- /TEMP RIGHT COLUMN -->
+      <header class='titles pb-3 mb-2 border-bottom fw-normal'>
+        <h1 class='fw-normal'>See also…</h1>
+        <h2 class='fw-normal'>Explore The Archives</h2>
       </header>
 
-      LISTS Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
+      <div id='categories' class='mb-5 pt-3'>
+        <h2 class='h4 fw-bold'>
+          <%= link_to 'Navigate by theme', '#categories' %>
+        </h2>
 
+        <ul class='list-inline underlined-links lh-lg'>
+          <% @categories.each do |category| %>
+            <% classes = 'pe-2 me-1 border-end' unless category == @categories.last %>
+            <li class='list-inline-item me-0'>
+              <%= link_to category.name, category.path, class: classes %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
 
+      <div id='years' class='mb-5 pt-3'>
+        <h2 class='h4 fw-bold'>
+        <%= link_to 'Navigate chronologically', '#years' %>
+        </h2>
+
+        <ul class='list-inline underlined-links lh-lg'>
+          <% @years.each do |year| %>
+            <% classes = 'pe-2 me-1 border-end' unless year == @years.last %>
+            <li class='list-inline-item me-0'>
+              <%= link_to year, [:article_archives, year: year], class: classes %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div><!-- /TEMP RIGHT COLUMN -->
   </div><!-- .row -->
-
 </div>
+
+<% if false %>
 
 <div class="h-feed">
   <% @article_archive.each do |year, months| %>
@@ -63,3 +93,5 @@
     <% end %>
   </ul>
 </div>
+
+<% end %>

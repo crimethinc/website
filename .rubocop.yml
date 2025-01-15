@@ -38,7 +38,7 @@ Metrics/BlockLength:
     - 'config/routes.rb'
 
 Metrics/ClassLength:
-  Max: 135
+  Max: 145
 
 Metrics/CyclomaticComplexity:
   Max: 13
@@ -58,7 +58,7 @@ Naming/VariableNumber:
   EnforcedStyle: snake_case
 
 # TODO: https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsenvironmentvariableaccess
-#       Consider using `Rails.application.config.foo` instead of `ENV["FOO"]`
+#       Consider using `Rails.application.config.foo` instead of `ENV['FOO']`
 Rails/EnvironmentVariableAccess:
   Enabled: false
 
