@@ -7,3 +7,8 @@ https://getbootstrap.com/docs/5.3/content/typography/#lead
 .lead {
   font-weight: normal;
 }
+
+/* make .lead links a little bolder for better visibility */
+.lead a {
+  font-weight: 500;
+}
