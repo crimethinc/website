@@ -117,7 +117,7 @@ module ArticlesHelper
       )
     end
 
-    links.join('-').html_safe
+    links.join('–').html_safe
   end
 
   def publication_status_badge_class article
