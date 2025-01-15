@@ -22,7 +22,11 @@
 
             <%= render_markdown book.summary %>
 
-            <p class='fw-bold text-end'><%= link_to "#{tt :learn_more} →", book.path %></p>
+            <p class='fw-bold text-end'>
+              <%= link_to book.path do %>
+                <%= tt :learn_more %> →
+              <% end %>
+            </p>
           </div><!-- /.col-9 -->
         </div><!-- /.row -->
       </article><!-- /.col-6 -->
