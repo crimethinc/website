@@ -59,6 +59,8 @@ en:
     zines:          Zines
 
     # phrases
+    categories_heading:      Browse by category
+    chronological_heading:   Browse chronologically
     ex_workers_collection:   Ex-Workers’ Collection
     featured_books:          Featured books
     just_published:          Just published
@@ -117,8 +119,6 @@ en:
 
       search:
         description: You can **search** over two decades of archives.
-        category_heading: Browse by category
-        chronological_heading: Browse chronologically
 
     footer:
       store_description: Books, posters, stickers, and more…

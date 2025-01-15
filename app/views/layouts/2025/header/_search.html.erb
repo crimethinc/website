@@ -13,10 +13,10 @@
     </div>
 
     <div class='col-12 col-lg-8'>
-      <b><%= tt 'cards.search.category_heading' %></b>
+      <b><%= tt :categories_heading %></b>
       <%= render_themed 'categories/list', categories: @categories %>
 
-      <b><%= tt 'cards.search.chronological_heading' %></b>
+      <b><%= tt :chronological_heading %></b>
       <%= render_themed 'years/list', years: @years %>
     </div>
   </div><!-- /.row -->
