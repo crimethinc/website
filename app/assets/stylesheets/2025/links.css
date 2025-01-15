@@ -17,7 +17,7 @@ a:active {
 }
 
 /* underline and bolder for all links in the main content */
-.content a {
+.underlined-links a {
   text-decoration: underline;
 }
 

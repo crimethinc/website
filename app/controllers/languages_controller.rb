@@ -16,6 +16,16 @@ class LanguagesController < ApplicationController
     @locale  = Locale.find_by(slug: canonical_locale.canonical)
     @title = PageTitle.new "#{@locale.name} / #{@locale.name_in_english} (#{@locale.slug})"
 
+    @description = []
+
+    unless @locale.abbreviation == Current.locale.to_s
+      @description << t('views.languages.view_site_in_locale', locale: @locale.abbreviation)
+    end
+
+    @description << t('views.languages.view_tools_in_locale', locale: @locale.abbreviation)
+    @description << t('views.languages.view_books_in_locale', locale: @locale.abbreviation)
+    @description = @description.join ' '
+
     render "#{Current.theme}/languages/show"
   end
 
