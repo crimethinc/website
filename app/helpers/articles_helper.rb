@@ -17,6 +17,23 @@ module ArticlesHelper
     "background-image: url(#{article.image})" unless lite_mode?
   end
 
+  def social_share_sites article
+    # TODO: change list of social sites
+    # TODO: add: mastodon, bluesky, threads
+    # TODO: remove: twitter
+    url = article_url year:  article.year,
+                      month: article.month,
+                      day:   article.day,
+                      slug:  article.slug
+
+    {
+      Twitter:  "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{url}&amp;via=crimethinc",
+      Facebook: "https://www.facebook.com/sharer?u=#{url_encode url}",
+      Tumblr:   ['http://tumblr.com/widgets/share/tool?canonicalUrl=', url, '&amp;caption=',
+                 url_encode(article.title), '&amp;content=', article.image].join
+    }
+  end
+
   def social_links_for article
     tag.ul class: 'social-links' do
       social_link_for(article, :twitter) +
@@ -26,16 +43,24 @@ module ArticlesHelper
   end
 
   def social_link_for article, site
-    url =
+    # TODO: change list of social sites
+    # TODO: add: mastodon, bluesky, threads
+    # TODO: remove: twitter
+    url = article_url year:  article.year,
+                      month: article.month,
+                      day:   article.day,
+                      slug:  article.slug
+
+    share_url =
       case site
       when :twitter
-        "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{article_url}&amp;via=crimethinc"
+        "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{url}&amp;via=crimethinc"
       when :facebook
-        "https://www.facebook.com/sharer?u=#{url_encode article_url}"
+        "https://www.facebook.com/sharer?u=#{url_encode url}"
       when :tumblr
         [
           'http://tumblr.com/widgets/share/tool?canonicalUrl=',
-          article_url,
+          url,
           '&amp;caption=',
           url_encode(article.title),
           '&amp;content=',
@@ -45,7 +70,7 @@ module ArticlesHelper
 
     tag.li class: 'social-link' do
       link_to "Share on #{site.capitalize}",
-              url,
+              share_url,
               class:  "link-domain-#{site}",
               target: '_blank',
               rel:    'noopener'

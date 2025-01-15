@@ -1,7 +1,14 @@
-<% if article.published? %>
-  <div class="social">
-    <h2 class="share-btns-heading">Share this article</h2>
+<%# locals: (article:) %>
 
-    <%= social_links_for article %>
+<% if article.published? %>
+  <div class='text-start text-lg-end'>
+    <b class='d-block'>Share this article</b>
+
+    <% social_share_sites(article).each do |domain, url| %>
+      <%= link_to url, target: '_blank', rel: 'noopener' do %>
+        <%= image_tag "social-icons/#{domain.to_s.parameterize}.svg", size: '40x40' %>
+        <span class='visually-hidden'><%= domain %></span>
+      <% end %>
+    <% end %>
   </div>
 <% end %>

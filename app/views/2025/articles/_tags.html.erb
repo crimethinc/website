@@ -1,10 +1,12 @@
 <% if article.tags.present? %>
-  <div class="tags">
-    <b class="badge">Tags:</b>
+  <div class='text-secondary'>
+    <b><%= tt :tags %></b>
 
-    <ul>
+    <ul class='list-inline d-inline'>
       <% article.tags.each do |tag| %>
-        <li><%= link_to tag.name, tag_path(tag.slug), rel: "tag", class: "p-category" %></li>
+        <li class='list-inline-item m-0 underlined-links'>
+          <%= link_to tag.name, tag_path(tag.slug), rel: 'tag', class: 'p-category text-secondary' %>
+        </li>
       <% end %>
     </ul>
   </div>

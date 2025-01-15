@@ -48,6 +48,9 @@ Metrics/MethodLength:
   Exclude:
     - 'db/migrate/*'
 
+Metrics/ModuleLength:
+  Max: 116
+
 Metrics/ParameterLists:
   Max: 6
 

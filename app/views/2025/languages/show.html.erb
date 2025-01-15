@@ -3,14 +3,14 @@
 <% end %>
 
 <div class='container underlined-links'>
-  <header class='mb-3'>
+  <header class='mb-3 titles'>
     <nav aria-label='breadcrumb'>
       <ol class='breadcrumb mb-0'>
         <li class='breadcrumb-item'><%= link_to tt(:languages), :languages %></li>
       </ol>
     </nav>
 
-    <h1 class='titles'>
+    <h1>
       <%= @locale.name %>
 
       <% unless @locale.english? %>
@@ -40,46 +40,15 @@
           <div class='col-md-6 col-lg-7 col-xl-8'>
             <header>
               <div class='p-name mb-3'>
-                <h2 class='x-p-title h1 fw-bold lh-1 mb-1'><%= link_to article.title, article.path %></h2>
+                <h2 class='p-x-title h1 fw-bold lh-1 mb-1'><%= link_to article.title, article.path %></h2>
 
                 <% if article.subtitle.present? %>
-                  <h3 class='x-p-subtitle h2 fw-light'><%= link_to article.subtitle, article.path %></h3>
+                  <h3 class='p-x-subtitle h2 fw-light'><%= link_to article.subtitle, article.path %></h3>
                 <% end %>
               </div>
-
-              <%= time_tag article.published_at, class: 'd-block text-secondary underlined-links' do %>
-                <b><%= tt :published %></b>
-                <%= link_to display_date(article.published_at), article.path, class: 'text-secondary' %>
-              <% end %>
-
-              <% if article.categories.present? %>
-                <div class='text-secondary'>
-                  <b><%= tt :categories %></b>
-
-                  <ul class='list-inline d-inline'>
-                    <% article.categories.each do |category| %>
-                      <li class='list-inline-item m-0 underlined-links'>
-                        <%= link_to category.name, category_path(category.slug), rel: 'tag', class: 'p-category text-secondary' %>
-                      </li>
-                    <% end %>
-                  </ul>
-                </div>
-              <% end %>
-
-              <% if article.tags.present? %>
-                <div class='text-secondary'>
-                  <b><%= tt :tags %></b>
-
-                  <ul class='list-inline d-inline'>
-                    <% article.tags.each do |tag| %>
-                      <li class='list-inline-item m-0 underlined-links'>
-                        <%= link_to tag.name, tag_path(tag.slug), rel: 'tag', class: 'p-category text-secondary' %>
-                      </li>
-                    <% end %>
-                  </ul>
-                </div>
-              <% end %>
             </header>
+
+            <%= render_themed 'articles/footer', article: article %>
           </div>
         </div>
       </article>
