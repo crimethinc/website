@@ -7,8 +7,8 @@
     paginator:     the paginator that renders the pagination tags inside -%>
 
 <%= paginator.render do -%>
-  <nav class="mt-5">
-    <ul class="pagination pagination-sm justify-content-center">
+  <nav class='mt-5'>
+    <ul class='pagination pagination-sm justify-content-center'>
       <%= prev_page_tag unless current_page.first? %>
 
       <% each_page do |page| -%>

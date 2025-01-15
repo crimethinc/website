@@ -45,7 +45,11 @@
         <% end %>
       </div><!-- /.row -->
 
-      <p class='text-end fw-bold mt-3'><%= link_to "#{tt :more_podcast_episodes} →", :podcasts %></p>
+      <p class='text-end fw-bold mt-3'>
+        <%= link_to :podcasts %>
+          <%= tt :more_podcast_episodes %> →
+        <% end %>
+      </p>
     </div><!-- /.col-6 -->
   </div><!-- /.row -->
 </section>
