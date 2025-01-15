@@ -3,14 +3,14 @@
 <% end %>
 
 <div class='container underlined-links'>
-  <header class='mb-3 titles'>
+  <header class='mb-3'>
     <nav aria-label='breadcrumb'>
       <ol class='breadcrumb mb-0'>
         <li class='breadcrumb-item'><%= link_to tt(:languages), :languages %></li>
       </ol>
     </nav>
 
-    <h1>
+    <h1 class='titles'>
       <%= @locale.name %>
 
       <% unless @locale.english? %>

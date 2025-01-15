@@ -7,7 +7,7 @@
         </div>
 
         <div class='col-6'>
-          <p class='mb-2 pt-5 text-end'><%= link_to "#{tt :more_tools} →", :tools %></p>
+          <p class='mb-2 pt-5 text-end fw-bold'><%= link_to "#{tt :more_tools} →", :tools %></p>
         </div>
       </div>
 
@@ -15,7 +15,14 @@
         <% selected_tools.each do |tool| %>
           <div class='col-6 col-md-3'>
             <div class='mb-2'>
-              <%= link_to image_tag(tool.image), tool.path %>
+              <% if tool.image.is_a? String %>
+                <%# TODO: audit all tools for any missing cover/preview images %>
+                <%= link_to image_tag(tool.image), tool.path %>
+              <% else %>
+                <%# TODO: FIXME: for ActiveStorage attached images %>
+                <%# TODO: FIXME: for tools without #image as a the method %>
+                <%= tool.image.attached? %>
+              <% end %>
             </div>
 
             <div class='d-block d-md-none mb-4'>
@@ -27,11 +34,11 @@
 
       <div class='row'>
         <% selected_tools.each do |tool| %>
-          <div class='col-6 col-md-3'>
+          <article class='col-6 col-md-3'>
             <div class='d-none d-md-block'>
               <%= render_themed 'home/sections/tool_meta', tool: tool %>
             </div>
-          </div>
+          </article>
         <% end %>
       </div><!-- /.row -->
     </section>
