@@ -2,7 +2,13 @@
 
 <article class='row mb-3'>
   <div class='col-12 col-md-4 col-lg-6 order-md-<%= image_class %>'>
-    <%= render_markdown "[[#{article.image} #{article.path} #{article.image_description}]]" %>
+    <figure class='text-secondary'>
+      <%= link_to image_tag(article.image, class: 'u-photo mb-2', alt: article.image_description, loading: :lazy), article.path %>
+
+      <% if article.image_description.present? %>
+        <figcaption><%= render_markdown article.image_description %></figcaption>
+      <% end %>
+    </figure>
   </div><!-- /.col-6 -->
 
   <div class='col-12 col-md-8 col-lg-6 order-md-<%= text_class %>'>
@@ -15,6 +21,10 @@
       <%= render_markdown article.lede %>
     </div><!-- /.col-6 -->
 
-    <p class='text-uppercase text-end'><%= link_to 'Keep reading →', article.path %></p>
+    <p class='text-uppercase text-end'>
+      <%= link_to article.path do %>
+        <%= tt :keep_reading %> →
+      <% end %>
+    </p>
   </div><!-- /.row -->
 </article>
