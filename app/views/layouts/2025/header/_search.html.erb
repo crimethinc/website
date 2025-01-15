@@ -14,22 +14,10 @@
 
     <div class='col-12 col-lg-8'>
       <b><%= tt 'cards.search.category_heading' %></b>
-
-      <p>
-        <% @categories.each do |category| %>
-          <% classes = 'pe-2 me-1 border-end border-danger' unless category == @categories.last %>
-          <%= link_to category.name, [:category, slug: category.slug], class: classes %>
-        <% end %>
-      </p>
+      <%= render_themed 'categories/list', categories: @categories %>
 
       <b><%= tt 'cards.search.chronological_heading' %></b>
-
-      <p class='mb-0'>
-        <% @years.each do |year| %>
-          <% classes = 'pe-2 me-1 border-end border-danger' unless year == @years.last %>
-          <%= link_to year, [:article_archives, year: year], class: classes %>
-        <% end %>
-      </p>
+      <%= render_themed 'years/list', years: @years %>
     </div>
   </div><!-- /.row -->
 </div><!-- /#search -->

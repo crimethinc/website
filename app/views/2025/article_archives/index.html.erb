@@ -32,29 +32,15 @@
           <%= link_to 'Navigate by theme', '#categories' %>
         </h2>
 
-        <ul class='list-inline underlined-links lh-lg'>
-          <% @categories.each do |category| %>
-            <% classes = 'pe-2 me-1 border-end' unless category == @categories.last %>
-            <li class='list-inline-item me-0'>
-              <%= link_to category.name, category.path, class: classes %>
-            </li>
-          <% end %>
-        </ul>
+        <%= render_themed 'categories/list', categories: @categories %>
       </div>
 
       <div id='years' class='mb-5 pt-3'>
         <h2 class='h4 fw-bold'>
-        <%= link_to 'Navigate chronologically', '#years' %>
+          <%= link_to 'Navigate chronologically', '#years' %>
         </h2>
 
-        <ul class='list-inline underlined-links lh-lg'>
-          <% @years.each do |year| %>
-            <% classes = 'pe-2 me-1 border-end' unless year == @years.last %>
-            <li class='list-inline-item me-0'>
-              <%= link_to year, [:article_archives, year: year], class: classes %>
-            </li>
-          <% end %>
-        </ul>
+        <%= render_themed 'years/list', years: @years %>
       </div>
     </div><!-- /TEMP RIGHT COLUMN -->
   </div><!-- .row -->
