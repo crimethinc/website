@@ -38,7 +38,7 @@
 
       <%= paginate @article_archive, theme: 'twitter-bootstrap-4' %>
 
-      <div class='row' id='pagination'>
+      <div class='row underlined-links'>
         <div class='col text-end'>
           <% if @article_archive.paginator.next? %>
             <%= link_to @article_archive.paginator.next_label, @article_archive.paginator.next_path %>
