@@ -24,7 +24,11 @@
             <h3 class='fw-light'><%= latest_episode.subtitle %></h3>
           <% end %>
 
-          <p class='text-end fw-bold mt-3'><%= link_to "#{tt :listen_to_episode} →", latest_episode.path %></p>
+          <p class='text-end fw-bold mt-3'>
+            <%= link_to latest_episode.path do %>
+              <%= tt :listen_to_episode %> →
+            <% end %>
+          </p>
         </div><!-- /.col-9 -->
       </div><!-- /.row -->
     </div><!-- /.col-6 -->
