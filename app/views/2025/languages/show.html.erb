@@ -2,35 +2,104 @@
   <%= rel_next_prev_link_tags(@articles) %>
 <% end %>
 
-<header>
-  <h1><%= @locale.name %></h1>
+<div class='container'>
+  <header class='mb-3'>
+    <h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <%= link_to tt(:languages), :languages %>
+          </li>
 
-  <% unless @locale.english? %>
-    <h2>(<%= @locale.name_in_english %>)</h2>
-  <% end %>
+          <li class="breadcrumb-item active" aria-current="page">
+            <%= @locale.name %>
 
-  <nav class="crumbtrail">
-    <%= link_to t("views.languages.heading"), [:languages] %>
-  </nav>
+            <% unless @locale.english? %>
+              (<%= @locale.name_in_english %>)
+            <% end %>
 
-  <div class="subdomain-switcher">
-    <% unless @locale.abbreviation == I18n.locale.to_s %>
+            <small>
+              <%= link_to tt(:rss), [:feed, lang: @locale.abbreviation] %>
+            </small>
+          </li>
+        </ol>
+      </nav>
+    </h1>
+  </header>
+
+  <div class='col-lg-8 mb-5 lead'>
+    <% unless @locale.abbreviation == Current.locale.to_s %>
       <%= render_markdown t("views.languages.view_site_in_locale", locale: @locale.abbreviation) %>
     <% end %>
 
     <%= render_markdown t("views.languages.view_tools_in_locale", locale: @locale.abbreviation) %>
     <%= render_markdown t("views.languages.view_books_in_locale", locale: @locale.abbreviation) %>
-
-    <p>
-      <%= link_to [:feed, lang: @locale.abbreviation] do %>
-        <%= @locale.name %> RSS
-      <% end %>
-    </p>
   </div>
-</header>
 
-<div class="h-feed">
-  <%= render_themed "articles/list", articles: @articles, skip_preferred_localization: true %>
+  <div class="h-feed">
+    <% @articles.each do |article| %>
+      <% next if article.blank? %>
+
+      <article class="h-entry mb-5 pb-3">
+        <div class="row">
+          <div class="col-md-3">
+            <% if article.image.present? %>
+              <%= link_to image_tag(article.image, class: "u-photo mb-2", alt: article.image_description, loading: :lazy), article.path %>
+            <% end %>
+          </div>
+
+          <div class="col-md-9">
+            <header>
+              <div class='p-name mb-3'>
+                <h2 class='x-p-title h1 fw-bold lh-1 mb-1'><%= link_to article.title, article.path %></h2>
+
+                <% if article.subtitle.present? %>
+                  <h3 class='x-p-subtitle h2 fw-light'><%= link_to article.subtitle, article.path %></h3>
+                <% end %>
+              </div>
+
+              <%= time_tag article.published_at, class: 'd-block text-secondary' do %>
+                <b><%= tt :published %></b>
+                <%= link_to display_date(article.published_at), article.path %>
+              <% end %>
+
+
+              <% if article.categories.present? %>
+                <div class='text-secondary'>
+                  <b><%= tt :categories %></b>
+
+                  <ul class='list-inline d-inline'>
+                    <% article.categories.each do |category| %>
+                      <li class='list-inline-item m-0'>
+                        <%= link_to category.name, category_path(category.slug), rel: "tag", class: "p-category text-secondary" %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <% if article.tags.present? %>
+                <div class='text-secondary'>
+                  <b><%= tt :tags %></b>
+
+                  <ul class='list-inline d-inline'>
+                    <% article.tags.each do |tag| %>
+                      <li class='list-inline-item m-0'>
+                        <%= link_to tag.name, tag_path(tag.slug), rel: "tag", class: "p-category text-secondary" %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            </header>
+          </div>
+        </div>
+      </article>
+
+    <% end %>
+  </div>
+
+  <%= paginate @articles, theme: "twitter-bootstrap-4" %>
 </div>
 
-<%= paginate @articles %>
+

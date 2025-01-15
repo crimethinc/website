@@ -23,12 +23,13 @@ en:
       # TODO: move this out of YAML, into a view
       meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
 
-    # words
+    # terms
     about:          About
     adventure:      Adventure
     analysis:       Analysis
     arts:           Arts
     books:          Books
+    categories:     Categories
     current_events: Current Events
     email:          Email
     geography:      Geography
@@ -42,13 +43,15 @@ en:
     news:           News
     podcasts:       Podcasts
     posters:        Posters
+    published:      Published
     rss:            RSS
+    rss_feeds:      RSS feeds
     search:         Search
     share:          Share
     sitemap:        Site map
     stickers:       Stickers
     store:          Store
-    support:        Support us
+    tags:           Tags
     technology:     Technology
     tools:          Tools
     videos:         Videos
@@ -65,11 +68,11 @@ en:
     more_articles:           More articles
     more_podcast_episodes:   More podcast episodes
     more_tools:              More tools
-    rss_feeds:               RSS Feeds
     recent_articles:         Recent articles
     recent_podcast_episodes: Recent podcast episodes
     search_placeholder:      Search archives…
     selected_tools:          Selected tools
+    support:                 Support us
 
     # Books
     contradictionary:           Contradictionary
