@@ -11,8 +11,9 @@ class ApplicationController < ActionController::Base
 
   before_action :set_current_locale
   before_action :set_current_theme
-
   before_action :set_site_locale
+  before_action :set_subdomain_locales
+
   before_action :check_for_redirection
   before_action :strip_file_extension
   before_action :authorize, if: :staging?
@@ -79,6 +80,8 @@ class ApplicationController < ActionController::Base
   def pages_for_2025_theme
     %w[
       home#index
+      languages#index
+      languages#show
     ]
   end
 
@@ -190,5 +193,9 @@ class ApplicationController < ActionController::Base
     @site_locale = LocaleService.find(locale: nil, lang_code: I18n.locale)
   end
 
+  def set_subdomain_locales
+    # Site language/subdomain switcher
+    @subdomain_locales = Locale.where abbreviation: Rails.application.config.subdomain_locales
+  end
   # ...Page Share
 end

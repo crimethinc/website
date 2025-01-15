@@ -7,7 +7,6 @@ Header navbar
   h1 {
     font: inherit;
     max-width: 300px;
-    content: url(<%= image_path 'crimethinc-logo-type-black.svg' %>);
   }
 
   @media (max-width: 767.9px) {

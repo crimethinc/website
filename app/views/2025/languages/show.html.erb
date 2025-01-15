@@ -1,0 +1,101 @@
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags(@articles) %>
+<% end %>
+
+<div class='container underlined-links'>
+  <header class='mb-3'>
+    <nav aria-label='breadcrumb'>
+      <ol class='breadcrumb mb-0'>
+        <li class='breadcrumb-item'>
+          <%= link_to tt(:languages), :languages %>
+        </li>
+      </ol>
+    </nav>
+
+    <h1>
+      <%= @locale.name %>
+
+      <% unless @locale.english? %>
+        (<%= @locale.name_in_english %>)
+      <% end %>
+
+      <small>
+        <%= link_to tt(:rss), [:feed, lang: @locale.abbreviation] %>
+      </small>
+    </h1>
+  </header>
+
+  <div class='col-lg-8 mb-5 lead'>
+    <%= render_markdown @description %>
+  </div>
+
+  <div class='h-feed'>
+    <% @articles.each do |article| %>
+      <% next if article.blank? %>
+
+      <article class='h-entry mb-5 pb-3'>
+        <div class='row'>
+          <div class='col-md-6 col-lg-5 col-xl-4'>
+            <% if article.image.present? %>
+              <figure class='text-secondary'>
+                <%= link_to image_tag(article.image, class: 'u-photo mb-2', alt: article.image_description, loading: :lazy), article.path %>
+
+                <% if article.image_description.present? %>
+                  <figcaption><%= render_markdown article.image_description %></figcaption>
+                <% end %>
+              </figure>
+            <% end %>
+          </div>
+
+          <div class='col-md-6 col-lg-7 col-xl-8'>
+            <header>
+              <div class='p-name mb-3'>
+                <h2 class='x-p-title h1 fw-bold lh-1 mb-1'><%= link_to article.title, article.path %></h2>
+
+                <% if article.subtitle.present? %>
+                  <h3 class='x-p-subtitle h2 fw-light'><%= link_to article.subtitle, article.path %></h3>
+                <% end %>
+              </div>
+
+              <%= time_tag article.published_at, class: 'd-block text-secondary underlined-links' do %>
+                <b><%= tt :published %></b>
+                <%= link_to display_date(article.published_at), article.path, class: 'text-secondary' %>
+              <% end %>
+
+              <% if article.categories.present? %>
+                <div class='text-secondary'>
+                  <b><%= tt :categories %></b>
+
+                  <ul class='list-inline d-inline'>
+                    <% article.categories.each do |category| %>
+                      <li class='list-inline-item m-0 underlined-links'>
+                        <%= link_to category.name, category_path(category.slug), rel: 'tag', class: 'p-category text-secondary' %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <% if article.tags.present? %>
+                <div class='text-secondary'>
+                  <b><%= tt :tags %></b>
+
+                  <ul class='list-inline d-inline'>
+                    <% article.tags.each do |tag| %>
+                      <li class='list-inline-item m-0 underlined-links'>
+                        <%= link_to tag.name, tag_path(tag.slug), rel: 'tag', class: 'p-category text-secondary' %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            </header>
+          </div>
+        </div>
+      </article>
+
+    <% end %>
+  </div>
+
+  <%= paginate @articles, theme: 'twitter-bootstrap-4' %>
+</div>
