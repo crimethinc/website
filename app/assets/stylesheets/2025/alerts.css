@@ -1,0 +1,15 @@
+/*
+Alerts
+https://getbootstrap.com/docs/5.3/components/alerts/
+*/
+
+.alert p:last-child { margin-bottom: 0; }
+
+.alert-primary   a { color: var(--bs-primary-text-emphasis); }
+.alert-secondary a { color: var(--bs-secondary-text-emphasis); }
+.alert-success   a { color: var(--bs-success-text-emphasis); }
+.alert-info      a { color: var(--bs-info-text-emphasis); }
+.alert-warning   a { color: var(--bs-warning-text-emphasis); }
+.alert-danger    a { color: var(--bs-danger-text-emphasis); }
+.alert-light     a { color: var(--bs-light-text-emphasis); }
+.alert-dark      a { color: var(--bs-dark-text-emphasis); }

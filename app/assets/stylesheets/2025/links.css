@@ -20,8 +20,3 @@ a:active {
 .underlined-links a {
   text-decoration: underline;
 }
-
-/* make .lead links a little bolder for better visibility */
-.lead a {
-  font-weight: 500;
-}

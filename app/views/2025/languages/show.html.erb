@@ -16,11 +16,11 @@
       <%= @locale.name %>
 
       <% unless @locale.english? %>
-        (<%= @locale.name_in_english %>)
+        <span class='fw-normal text-secondary'>(<%= @locale.name_in_english %>)</span>
       <% end %>
 
       <small>
-        <%= link_to tt(:rss), [:feed, lang: @locale.abbreviation] %>
+        <%= link_to tt(:rss), [:feed, lang: @locale.abbreviation], class: 'text-secondary' %>
       </small>
     </h1>
   </header>
