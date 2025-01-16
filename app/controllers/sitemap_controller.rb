@@ -33,6 +33,9 @@ class SitemapController < ApplicationController
     # categories
     set_categories
 
+    # tags
+    set_tags
+
     # articles
     set_articles
 
@@ -81,7 +84,6 @@ class SitemapController < ApplicationController
     set_episodes
     set_episodes_last_modified
 
-    # TODO: add tags index and show pages to sitemap
     # TODO: add steal-something-from-work-day localized pages
   end
 
@@ -100,9 +102,12 @@ class SitemapController < ApplicationController
     @localized_feeds = Locale.unscoped.order(name_in_english: :asc)
   end
 
-  # categories
   def set_categories
     @categories = Category.all
+  end
+
+  def set_tags
+    @tags = Tag.all
   end
 
   def set_articles
@@ -124,7 +129,6 @@ class SitemapController < ApplicationController
     @to_change_everything_languages = TO_CHANGE_EVERYTHING_LANGUAGES
   end
 
-  # languages
   def set_locales
     @locales = Locale.live.each do |locale|
       unicode_url = language_url locale: locale.name.downcase.tr(' ', '-')

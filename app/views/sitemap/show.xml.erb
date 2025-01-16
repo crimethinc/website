@@ -40,6 +40,16 @@
     <%= render 'sitemap/url', loc: category_url(category.slug), lastmod: @last_modified %>
   <% end %>
 
+  <%# tags %>
+  <% @tags.each do |tag| %>
+    <%# tag Atom feeds %>
+    <%= render 'sitemap/url', loc: tag_feed_url(tag.slug), lastmod: @last_modified %>
+    <%# tag JSON feeds %>
+    <%= render 'sitemap/url', loc: tag_json_feed_url(tag.slug), lastmod: @last_modified %>
+    <%# tag pages %>
+    <%= render 'sitemap/url', loc: tag_url(tag.slug), lastmod: @last_modified %>
+  <% end %>
+
   <%# static-ish pages %>
   <% @static_paths.each do |path| %>
     <%= render 'sitemap/url', loc: [root_url, path].join('/'), lastmod: @last_modified %>

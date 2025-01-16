@@ -95,9 +95,10 @@ Rails.application.routes.draw do
   get 'categories/:slug/feed(/:lang)',      to: 'categories#feed', defaults: { format: 'atom' }, as: :category_feed
 
   # Tags
-  get 'tags/:slug/page(/1)',     to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
-  get 'tags/:slug(/page/:page)', to: 'tags#show', as: :tag
-  get 'tags/:slug/feed(/:lang)', to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
+  get 'tags/:slug/page(/1)',          to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
+  get 'tags/:slug(/page/:page)',      to: 'tags#show', as: :tag
+  get 'tags/:slug/feed(/:lang).json', to: 'tags#feed', defaults: { format: 'json' }, as: :tag_json_feed
+  get 'tags/:slug/feed(/:lang)',      to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
 
   # Podcast
   get 'podcast/feed(/:lang)',
