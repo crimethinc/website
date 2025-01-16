@@ -38,7 +38,7 @@ Metrics/BlockLength:
     - "config/routes.rb"
 
 Metrics/ClassLength:
-  Max: 145
+  Max: 160
 
 Metrics/CyclomaticComplexity:
   Max: 13

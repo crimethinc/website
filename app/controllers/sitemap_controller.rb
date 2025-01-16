@@ -24,60 +24,59 @@ class SitemapController < ApplicationController
   ].flatten.freeze
 
   def show
-    @latest_article = Article.published.english.first
-    @last_modified  = @latest_article&.updated_at || Time.current
-    @urls           = []
+    set_latest_article
+    set_last_modified
 
     # articles feed, for all languages with articles
-    @localized_feeds = Locale.unscoped.order(name_in_english: :asc)
+    set_localized_feeds
 
     # categories
-    @categories = Category.all
+    set_categories
 
     # articles
-    @articles = live_published_articles
+    set_articles
 
     # articles by year
-    @article_years = (1996..Time.zone.today.year).to_a
+    set_article_years
 
     # static-ish pages
-    @static_paths = STATIC_PATHS
+    set_static_paths
 
     # To Change Everything (TCE)
-    @to_change_everything_languages = TO_CHANGE_EVERYTHING_LANGUAGES
+    set_to_change_everything_languages
 
     # languages
-    @locales = languages
+    set_locales
 
     # tools
     # books
-    @books                  = Book.published.live
-    @books_last_modified    = @books.unscoped.order(id: :asc).first.updated_at
+    set_books
+    set_books_last_modified
     # logos
-    @logos                  = Logo.published.live
-    @logos_last_modified    = @logos.unscoped.order(id: :asc).first.updated_at
+    set_logos
+    set_logos_last_modified
     # posters
-    @posters                = Poster.published.live
-    @posters_last_modified  = @posters.unscoped.order(id: :asc).first.updated_at
+    set_posters
+    set_posters_last_modified
     # stickers
-    @stickers               = Sticker.published.live
-    @stickers_last_modified = @stickers.unscoped.order(id: :asc).first.updated_at
+    set_stickers
+    set_stickers_last_modified
     # videos
-    @videos                 = Video.published.live
-    @videos_last_modified   = @videos.unscoped.order(id: :asc).first.updated_at
+    set_videos
+    set_videos_last_modified
     # zines
-    @zines                  = Zine.published.live
-    @zines_last_modified    = @zines.unscoped.order(id: :asc).first.updated_at
+    set_zines
+    set_zines_last_modified
     # journals / issues
-    @journals               = Journal.published.live
-    @journals_last_modified = @journals.unscoped.order(id: :asc).first.updated_at
-    @issues                 = Issue.published.live
-    @issues_last_modified   = @issues.unscoped.order(id: :asc).first.updated_at
+    set_journals
+    set_journals_last_modified
+    set_issues
+    set_issues_last_modified
     # podcasts / episodes
-    @podcasts               = Podcast.published.live
-    @podcasts_last_modified = @podcasts.unscoped.order(id: :asc).first.updated_at
-    @episodes               = Episode.published.live
-    @episodes_last_modified = @episodes.unscoped.order(id: :asc).first.updated_at
+    set_podcasts
+    set_podcasts_last_modified
+    set_episodes
+    set_episodes_last_modified
 
     # TODO: add contradictionary definitions pages to sitemap
     # TODO: add tags index and show pages to sitemap
@@ -86,11 +85,46 @@ class SitemapController < ApplicationController
 
   private
 
-  def sitemap_url = Data.define(:loc, :lastmod)
+  def set_latest_article
+    @latest_article = Article.published.english.first
+  end
+
+  def set_last_modified
+    @last_modified  = @latest_article&.updated_at || Time.current
+  end
+
+  # articles feed, for all languages with articles
+  def set_localized_feeds
+    @localized_feeds = Locale.unscoped.order(name_in_english: :asc)
+  end
+
+  # categories
+  def set_categories
+    @categories = Category.all
+  end
+
+  def set_articles
+    @articles =
+      Rails.cache.fetch([:sitemap, @latest_article, :live_published_articles], expires_in: 12.hours) do
+        Article.live.published.select(:id, :updated_at, :draft_code, :published_at, :publication_status, :slug)
+      end
+  end
+
+  def set_article_years
+    @article_years = (1996..Time.zone.today.year).to_a
+  end
+
+  def set_static_paths
+    @static_paths = STATIC_PATHS
+  end
+
+  def set_to_change_everything_languages
+    @to_change_everything_languages = TO_CHANGE_EVERYTHING_LANGUAGES
+  end
 
   # languages
-  def languages
-    Locale.live.each do |locale|
+  def set_locales
+    @locales = Locale.live.each do |locale|
       unicode_url = language_url locale: locale.name.downcase.tr(' ', '-')
       slug_url    = language_url locale: locale.slug.to_sym
       english_url = language_url locale: locale.name_in_english.downcase.tr(' ', '-')
@@ -99,11 +133,83 @@ class SitemapController < ApplicationController
     end
   end
 
-  def live_published_articles
-    Rails.cache.fetch([:sitemap, @latest_article, :live_published_articles], expires_in: 12.hours) do
-      Article.live
-             .published
-             .select(:id, :updated_at, :draft_code, :published_at, :publication_status, :slug)
-    end
+  def set_books
+    @books = Book.published.live
+  end
+
+  def set_books_last_modified
+    @books_last_modified = @books.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_logos
+    @logos = Logo.published.live
+  end
+
+  def set_logos_last_modified
+    @logos_last_modified = @logos.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_posters
+    @posters = Poster.published.live
+  end
+
+  def set_posters_last_modified
+    @posters_last_modified = @posters.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_stickers
+    @stickers = Sticker.published.live
+  end
+
+  def set_stickers_last_modified
+    @stickers_last_modified = @stickers.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_videos
+    @videos = Video.published.live
+  end
+
+  def set_videos_last_modified
+    @videos_last_modified = @videos.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_zines
+    @zines = Zine.published.live
+  end
+
+  def set_zines_last_modified
+    @zines_last_modified = @zines.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_journals
+    @journals = Journal.published.live
+  end
+
+  def set_journals_last_modified
+    @journals_last_modified = @journals.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_issues
+    @issues = Issue.published.live
+  end
+
+  def set_issues_last_modified
+    @issues_last_modified = @issues.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_podcasts
+    @podcasts = Podcast.published.live
+  end
+
+  def set_podcasts_last_modified
+    @podcasts_last_modified = @podcasts.unscoped.order(id: :asc).first&.updated_at || Time.current
+  end
+
+  def set_episodes
+    @episodes = Episode.published.live
+  end
+
+  def set_episodes_last_modified
+    @episodes_last_modified = @episodes.unscoped.order(id: :asc).first&.updated_at || Time.current
   end
 end
