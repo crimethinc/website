@@ -1,5 +1,5 @@
 class CodeArchiver
-  def run # rubocop:disable Metrics/MethodLength
+  def run
     # make all the directories
     system 'mkdir', '-p', articles_prefix
     system 'mkdir', '-p', pages_prefix
