@@ -31,7 +31,11 @@
       <% end %>
     </ol>
 
-    <p class='fw-bold'><%= link_to_next_page articles, "#{tt :more_articles} →" %></p>
+    <p class='fw-bold'>
+      <%= link_to [:articles, page: 2] do %>
+        <%= tt :more_articles %> →
+      <% end %>
+    </p>
   </div>
 
   <div class='col-12 col-lg-4'>
@@ -50,7 +54,12 @@
       <% end %>
     </ol>
 
-    <p class='fw-bold text-end'><%= link_to_next_page articles, "#{tt :more_articles} →" %></p>
+    <p class='fw-bold text-end'>
+      <%= link_to [:articles, page: 2] do %>
+        <%= tt :more_articles %> →
+      <% end %>
+    </p>
+
   </div>
 </section>
 <!-- /Recent and previous articles -->

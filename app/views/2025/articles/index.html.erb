@@ -1,31 +1,39 @@
-<%# TODO delete this view %>
-<header>
-  <h1>
-    <%= link_to "Archives", [:library] %> :
-    <time>
-      <%= link_to_dates(year: @articles_year, month: @articles_month, day: @articles_day) %>
-    </time>
-  </h1>
-</header>
-
-<% if @articles.nil? %>
-  <h2>No archives for this time period.</h2>
-<% else %>
-  <ol class="h-feed">
-    <% @articles.each do |article| %>
-      <li>
-        <article class="h-entry">
-          <header>
-            <%= render_themed "articles/titles", header: article, linked: true %>
-          </header>
-
-          <footer>
-            <%= render_themed "articles/published_on", article: article %>
-            <%= render_themed "articles/categories",   article: article %>
-            <%= render_themed "articles/tags",         article: article %>
-          </footer>
-        </article>
-      </li>
-    <% end %>
-  </ol>
+<% content_for(:head) do %>
+  <%= rel_next_prev_link_tags @articles %>
 <% end %>
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-6 col-lg-8'>
+      <header class='titles pb-3 mb-4 border-bottom'>
+        <h1><%= tt :articles %></h1>
+        <h2 class='fw-light'><%= tt :page %> <%= @page_number %></h2>
+      </header>
+
+      <div class='h-feed'>
+        <% @articles.each do |article| %>
+          <%= render_themed 'articles/article', article: article %>
+        <% end %>
+      </div>
+
+      <%= paginate @articles, theme: 'twitter-bootstrap-4' %>
+    </div>
+
+    <div class='col-md-6 col-lg-4'>
+      <header class='titles pb-3 mb-2 border-bottom fw-normal'>
+        <h1 class='fw-normal'>See also…</h1>
+        <h2 class='fw-normal'>Explore The Archives</h2>
+      </header>
+
+      <div id='categories' class='mb-5 pt-3'>
+        <h2 class='h4 fw-bold'><%= link_to tt(:categories_heading), '#categories' %></h2>
+        <%= render_themed 'categories/list', categories: @categories %>
+      </div>
+
+      <div id='years' class='mb-5 pt-3'>
+        <h2 class='h4 fw-bold'><%= link_to tt(:chronological_heading), '#years' %></h2>
+        <%= render_themed 'years/list', years: @years %>
+      </div>
+    </div>
+  </div><!-- .row -->
+</div><!-- .container -->

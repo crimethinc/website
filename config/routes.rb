@@ -26,8 +26,8 @@ Rails.application.routes.draw do
   # Homepage
   root to: 'home#index'
 
-  get 'page(/1)', to: redirect { |_, _| '/' }
-  get 'page/:page', to: 'home#index'
+  get 'page', to: redirect('/page/1'), as: :page_one
+  get 'page/:page', to: 'articles#index', as: :articles
 
   # To Change Everything (TCE)
   get 'tce(/:lang)',

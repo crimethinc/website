@@ -2,16 +2,39 @@ class ArticlesController < ApplicationController
   skip_before_action :check_for_redirection, only: :index
 
   def index
-    @articles = Article.includes(:tags, :categories)
-                       .for_index(**filters)
-                       .root
-                       .page(params[:page])
-                       .per(10)
+    @page_number = params[:page].gsub(/\D/, '')
+    return redirect_to [:articles, { page: @page_number }] unless @page_number == params[:page]
 
-    locale = Locale.find_by(abbreviation: params[:lang])
-    @lang = locale.abbreviation if locale.present?
+    if Current.theme == '2025'
+      @articles = Article.includes(:tags, :categories)
+                         .for_index(**filters)
+                         .root
+                         .page(@page_number)
+                         .per(15)
 
-    render "#{Current.theme}/articles/index"
+      locale = Locale.find_by(abbreviation: params[:lang])
+      @lang = locale.abbreviation if locale.present?
+
+      render "#{Current.theme}/articles/index"
+    end
+
+    # TEMP: copied from home#index because the route /page/:page changed
+    #       from home#index in 2017 theme
+    #       to articles#index in 2025 theme
+    if Current.theme == '2017'
+      @body_id = 'home'
+      @homepage = true
+
+      articles_for_current_page = Article.includes(:categories).english.live.published.root
+
+      # Homepage featured article
+      @latest_article = articles_for_current_page.first if params[:page].blank?
+
+      # Feed artciles
+      @articles = articles_for_current_page.page(params[:page]).per(6)
+
+      render "#{Current.theme}/home/index"
+    end
   end
 
   def filters

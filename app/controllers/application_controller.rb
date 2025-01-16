@@ -82,6 +82,7 @@ class ApplicationController < ActionController::Base
 
   def pages_for_2025_theme
     %w[
+      articles#index
       article_archives#index
       home#index
       languages#index
