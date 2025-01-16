@@ -1,27 +1,16 @@
 class ArticlesController < ApplicationController
   skip_before_action :check_for_redirection, only: :index
 
+  before_action :set_page_number,               only: :index
+  before_action :redirect_malformed_pagination, only: :index
+  before_action :force_2025_theme_for_feeds,    only: :index
+
   def index
-    @page_number = params[:page].gsub(/\D/, '')
-    return redirect_to [:articles, { page: @page_number }] unless @page_number == params[:page]
-
-    if Current.theme == '2025'
-      @articles = Article.includes(:tags, :categories)
-                         .for_index(**filters)
-                         .root
-                         .page(@page_number)
-                         .per(15)
-
-      locale = Locale.find_by(abbreviation: params[:lang])
-      @lang = locale.abbreviation if locale.present?
-
-      render "#{Current.theme}/articles/index"
-    end
-
     # TEMP: copied from home#index because the route /page/:page changed
     #       from home#index in 2017 theme
     #       to articles#index in 2025 theme
     if Current.theme == '2017'
+
       @body_id = 'home'
       @homepage = true
 
@@ -35,6 +24,19 @@ class ArticlesController < ApplicationController
 
       render "#{Current.theme}/home/index"
     end
+
+    return unless Current.theme == '2025'
+
+    @articles = Article.includes(:tags, :categories)
+                       .for_index(**filters)
+                       .root
+                       .page(@page_number)
+                       .per(15)
+
+    locale = Locale.find_by(abbreviation: params[:lang])
+    @lang = locale.abbreviation if locale.present?
+
+    render "#{Current.theme}/articles/index"
   end
 
   def filters
@@ -132,5 +134,22 @@ class ArticlesController < ApplicationController
 
   def docx_mimetype
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+  end
+
+  def set_page_number
+    return if params[:page].blank?
+
+    @page_number = params[:page].gsub(/\D/, '')
+  end
+
+  def redirect_malformed_pagination
+    return if params[:format].in? %w[json atom]
+    return if @page_number == params[:page]
+
+    redirect_to [:articles, { page: @page_number }]
+  end
+
+  def force_2025_theme_for_feeds
+    Current.theme = '2025' if params[:format].in? %w[json atom]
   end
 end
