@@ -51,32 +51,34 @@ class SitemapController < ApplicationController
 
     # tools
     # books
-    @books = Book.published.live
-
+    @books                  = Book.published.live
+    @books_last_modified    = @books.unscoped.order(id: :asc).first.updated_at
     # logos
-    @logos = Logo.published.live
-
+    @logos                  = Logo.published.live
+    @logos_last_modified    = @logos.unscoped.order(id: :asc).first.updated_at
     # posters
-    @posters = Poster.published.live
-
+    @posters                = Poster.published.live
+    @posters_last_modified  = @posters.unscoped.order(id: :asc).first.updated_at
     # stickers
-    @stickers = Sticker.published.live
-
+    @stickers               = Sticker.published.live
+    @stickers_last_modified = @stickers.unscoped.order(id: :asc).first.updated_at
     # videos
-    @videos = Video.published.live
-
+    @videos                 = Video.published.live
+    @videos_last_modified   = @videos.unscoped.order(id: :asc).first.updated_at
     # zines
-    @zines = Zine.published.live
-
+    @zines                  = Zine.published.live
+    @zines_last_modified    = @zines.unscoped.order(id: :asc).first.updated_at
     # journals / issues
-    @journals = Journal.published.live
-    @issues   = Issue.published.live
-
+    @journals               = Journal.published.live
+    @journals_last_modified = @journals.unscoped.order(id: :asc).first.updated_at
+    @issues                 = Issue.published.live
+    @issues_last_modified   = @issues.unscoped.order(id: :asc).first.updated_at
     # podcasts / episodes
-    @podcasts = Podcast.published.live
-    @episodes = Episode.published.live
+    @podcasts               = Podcast.published.live
+    @podcasts_last_modified = @podcasts.unscoped.order(id: :asc).first.updated_at
+    @episodes               = Episode.published.live
+    @episodes_last_modified = @episodes.unscoped.order(id: :asc).first.updated_at
 
-    # TODO: add @TOOL_latest_modified to each tool, used in view for lastmod: in url tag partial
     # TODO: add contradictionary definitions pages to sitemap
     # TODO: add tags index and show pages to sitemap
     # TODO: add steal-something-from-work-day localized pages

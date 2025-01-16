@@ -98,7 +98,7 @@
   <%# tools %>
   <%# books %>
   <%= render 'sitemap/url', loc: books_url, lastmod: @last_modified %>
-  <%= render 'sitemap/url', loc: books_extras_url(:work), lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: books_extras_url(:work), lastmod: @books_last_modified %>
   <% @books.find_each do |book| %>
     <% cache book do %>
       <%= render 'sitemap/url', loc: book_url(book.slug), lastmod: book.updated_at %>
@@ -106,7 +106,7 @@
   <% end %>
 
   <%# logos %>
-  <%= render 'sitemap/url', loc: logos_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: logos_url, lastmod: @logos_last_modified %>
   <% @logos.find_each do |logo| %>
     <% cache logo do %>
       <%= render 'sitemap/url', loc: logo_url(logo.slug), lastmod: logo.updated_at %>
@@ -114,7 +114,7 @@
   <% end %>
 
   <%# posters %>
-  <%= render 'sitemap/url', loc: posters_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: posters_url, lastmod: @posters_last_modified %>
   <% @posters.find_each do |poster| %>
     <% cache poster do %>
       <%= render 'sitemap/url', loc: poster_url(poster.slug), lastmod: poster.updated_at %>
@@ -122,7 +122,7 @@
   <% end %>
 
   <%# stickers %>
-  <%= render 'sitemap/url', loc: stickers_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: stickers_url, lastmod: @stickers_last_modified %>
   <% @stickers.find_each do |sticker| %>
     <% cache sticker do %>
       <%= render 'sitemap/url', loc: sticker_url(sticker.slug), lastmod: sticker.updated_at %>
@@ -131,7 +131,7 @@
 
   <%# videos / music %>
   <%= render 'sitemap/url', loc: music_url, lastmod: @last_modified %>
-  <%= render 'sitemap/url', loc: videos_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: videos_url, lastmod: @videos_last_modified %>
   <% @videos.find_each do |video| %>
     <% cache video do %>
       <%= render 'sitemap/url', loc: video_url(video.slug), lastmod: video.updated_at %>
@@ -139,7 +139,7 @@
   <% end %>
 
   <%# zines %>
-  <%= render 'sitemap/url', loc: zines_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: zines_url, lastmod: @zines_last_modified %>
   <% @zines.find_each do |zine| %>
     <% cache zine do %>
       <%= render 'sitemap/url', loc: zine_url(zine.slug), lastmod: zine.updated_at %>
@@ -147,7 +147,7 @@
   <% end %>
 
   <%# journals / issues %>
-  <%= render 'sitemap/url', loc: journals_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: journals_url, lastmod: @journals_last_modified %>
   <% @journals.find_each do |journal| %>
     <% cache journal do %>
       <%= render 'sitemap/url', loc: journal_url(journal.slug), lastmod: journal.updated_at %>
@@ -163,7 +163,7 @@
   <% end %>
 
   <%# podcasts / episodes %>
-  <%= render 'sitemap/url', loc: podcasts_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: podcasts_url, lastmod: @podcasts_last_modified %>
   <% @podcasts.find_each do |podcast| %>
     <% cache podcast do %>
       <%= render 'sitemap/url', loc: podcast_url(podcast.slug), lastmod: podcast.updated_at %>
