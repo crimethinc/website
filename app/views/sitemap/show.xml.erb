@@ -62,7 +62,8 @@
   <%# articles %>
   <% @articles.find_each do |article| %>
     <% cache article do %>
-      <%= render 'sitemap/url', loc: [root_url, article.path].join, lastmod: article.updated_at %>
+      <%= render 'sitemap/url', loc: [root_url, article.path].join,              lastmod: article.updated_at %>
+      <%= render 'sitemap/url', loc: [root_url, article.path, '.markdown'].join, lastmod: article.updated_at %>
     <% end %>
   <% end %>
 

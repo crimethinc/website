@@ -51,6 +51,7 @@
 <% @articles.find_each do |article| %>
 <% cache article do %>
 <%= [root_url, article.path].join %>
+<%= [root_url, article.path, '.markdown'].join %>
 <% end %>
 <% end %>
 <%# %>
