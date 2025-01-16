@@ -52,6 +52,9 @@ class SitemapController < ApplicationController
     # books
     set_books
     set_books_last_modified
+    # contradictionary definitions
+    set_definitions
+    set_definitions_last_modified
     # logos
     set_logos
     set_logos_last_modified
@@ -78,7 +81,6 @@ class SitemapController < ApplicationController
     set_episodes
     set_episodes_last_modified
 
-    # TODO: add contradictionary definitions pages to sitemap
     # TODO: add tags index and show pages to sitemap
     # TODO: add steal-something-from-work-day localized pages
   end
@@ -138,7 +140,7 @@ class SitemapController < ApplicationController
   end
 
   def set_books_last_modified
-    @books_last_modified = @books.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @books_last_modified = @books.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_logos
@@ -146,7 +148,7 @@ class SitemapController < ApplicationController
   end
 
   def set_logos_last_modified
-    @logos_last_modified = @logos.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @logos_last_modified = @logos.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_posters
@@ -154,7 +156,7 @@ class SitemapController < ApplicationController
   end
 
   def set_posters_last_modified
-    @posters_last_modified = @posters.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @posters_last_modified = @posters.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_stickers
@@ -162,7 +164,7 @@ class SitemapController < ApplicationController
   end
 
   def set_stickers_last_modified
-    @stickers_last_modified = @stickers.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @stickers_last_modified = @stickers.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_videos
@@ -170,7 +172,7 @@ class SitemapController < ApplicationController
   end
 
   def set_videos_last_modified
-    @videos_last_modified = @videos.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @videos_last_modified = @videos.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_zines
@@ -178,7 +180,7 @@ class SitemapController < ApplicationController
   end
 
   def set_zines_last_modified
-    @zines_last_modified = @zines.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @zines_last_modified = @zines.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_journals
@@ -186,7 +188,7 @@ class SitemapController < ApplicationController
   end
 
   def set_journals_last_modified
-    @journals_last_modified = @journals.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @journals_last_modified = @journals.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_issues
@@ -194,7 +196,7 @@ class SitemapController < ApplicationController
   end
 
   def set_issues_last_modified
-    @issues_last_modified = @issues.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @issues_last_modified = @issues.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_podcasts
@@ -202,7 +204,7 @@ class SitemapController < ApplicationController
   end
 
   def set_podcasts_last_modified
-    @podcasts_last_modified = @podcasts.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @podcasts_last_modified = @podcasts.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 
   def set_episodes
@@ -210,6 +212,14 @@ class SitemapController < ApplicationController
   end
 
   def set_episodes_last_modified
-    @episodes_last_modified = @episodes.unscoped.order(id: :asc).first&.updated_at || Time.current
+    @episodes_last_modified = @episodes.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
+  end
+
+  def set_definitions
+    @definitions = Definition.live.published.group_by(&:filed_under)
+  end
+
+  def set_definitions_last_modified
+    @definitions_last_modified = Definition.unscoped.order(updated_at: :asc).first&.updated_at || Time.current
   end
 end

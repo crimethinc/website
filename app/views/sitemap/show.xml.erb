@@ -105,6 +105,15 @@
     <% end %>
   <% end %>
 
+  <%# contradictionary definitions %>
+  <%= render 'sitemap/url', loc: definitions_url, lastmod: @definitions_last_modified %>
+  <% @definitions.each do |letter, definitions| %>
+    <%= render 'sitemap/url', loc: letter_url(letter), lastmod: @definitions_last_modified %>
+    <% definitions.each do |definition| %>
+       <%= render 'sitemap/url', loc: definition_url(letter: letter, slug: definition.slug), lastmod: definition.updated_at %>
+    <% end %>
+  <% end %>
+
   <%# logos %>
   <%= render 'sitemap/url', loc: logos_url, lastmod: @logos_last_modified %>
   <% @logos.find_each do |logo| %>
