@@ -37,6 +37,10 @@
 <% @article_years.each do |year| %>
 <% lastmod = DateTime.new(year).end_of_day %>
 <% lastmod = @last_modified if year == Time.current.year %>
+<%# article months in a year %>
+<% ('01'..'12').each do |month| %>
+<%= article_archives_url(year: year, month: month) %>
+<% end %>
 <%# %>
 <%= article_archives_url(year: year) %>
 <% end %>

@@ -51,6 +51,9 @@
     <% lastmod = @last_modified if year == Time.current.year %>
 
     <%= render 'sitemap/url', loc: article_archives_url(year: year), lastmod: lastmod %>
+    <% (01..12).each do |month| %>
+      <%= render 'sitemap/url', loc: article_archives_url(year: year, month: month), lastmod: lastmod %>
+    <% end %>
   <% end %>
 
   <%# To Change Everything (TCE) %>
