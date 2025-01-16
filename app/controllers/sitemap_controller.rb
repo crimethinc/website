@@ -10,7 +10,6 @@ class SitemapController < ApplicationController
     kickstarter/2017
     library
     start
-    steal-something-from-work-day
     store
     tce
     tools
@@ -48,6 +47,9 @@ class SitemapController < ApplicationController
     # To Change Everything (TCE)
     set_to_change_everything_languages
 
+    # Steal Something from Work Day (SSfWD)
+    set_steal_something_from_work_day_urls
+
     # languages
     set_locales
 
@@ -83,8 +85,6 @@ class SitemapController < ApplicationController
     set_podcasts_last_modified
     set_episodes
     set_episodes_last_modified
-
-    # TODO: add steal-something-from-work-day localized pages
   end
 
   private
@@ -127,6 +127,18 @@ class SitemapController < ApplicationController
 
   def set_to_change_everything_languages
     @to_change_everything_languages = TO_CHANGE_EVERYTHING_LANGUAGES
+  end
+
+  def set_steal_something_from_work_day_urls
+    @steal_something_from_work_day_urls = [steal_something_from_work_day_url]
+
+    ssfwd_locales = StealSomethingFromWorkDayController::STEAL_SOMETHING_FROM_WORK_DAY_LOCALES.keys - [:en]
+
+    ssfwd_locales.each do |ssfwd_locale|
+      @steal_something_from_work_day_urls << steal_something_from_work_day_url
+                                             .sub('http://',  "http://#{ssfwd_locale}.")
+                                             .sub('https://', "https://#{ssfwd_locale}.")
+    end
   end
 
   def set_locales

@@ -1,3 +1,4 @@
+<%# IMPORTANT: any changes to this file also need to be applied to show.text.erb for /sitemap.txt %>
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns:xsi          = 'http://www.w3.org/2001/XMLSchema-instance'
         xmlns              = 'http://www.sitemaps.org/schemas/sitemap/0.9'
@@ -70,6 +71,11 @@
   <% @to_change_everything_languages.each do |tce_language| %>
     <%= render 'sitemap/url', loc: to_change_everything_url(lang: tce_language), lastmod: @last_modified %>
     <%= render 'sitemap/url', loc: [to_change_everything_url(lang: tce_language), '/get'].join, lastmod: @last_modified %>
+  <% end %>
+
+  <%# Steal Something from Work Day (SSfWD) %>
+  <% @steal_something_from_work_day_urls.each do |ssfwd_url| %>
+    <%= render 'sitemap/url', loc: ssfwd_url, lastmod: @last_modified %>
   <% end %>
 
   <%# articles %>
