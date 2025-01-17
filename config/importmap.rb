@@ -4,7 +4,6 @@ pin 'application', preload: true
 
 # Our JS files
 pin 'support'
-pin 'popper',    to: 'popper.js'
 pin 'bootstrap', to: 'bootstrap.min.js'
 
 # Hotwired JS https://hotwired.dev
