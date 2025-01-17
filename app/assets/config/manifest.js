@@ -3,7 +3,6 @@
 
 // /admin site
 //= link admin.css
-//= link bootstrap.min.js
 
 // Mini sites
 //= link to_change_everything.css

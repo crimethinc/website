@@ -14,9 +14,13 @@
 
     <%# TODO: add favicon link tags here %>
 
-    <%= javascript_importmap_tags %>
     <%= render 'layouts/2025/auto_dark_mode' %>
     <%= render 'layouts/2025/stylesheets' %>
+
+    <% if content_for(:javascript).present? %>
+      <%= javascript_importmap_tags %>
+      <%= yield :javascript %>
+    <% end %>
   </head>
 
   <body>

@@ -1,12 +1,11 @@
 # Pin npm packages by running ./bin/importmap
 
-pin 'application', preload: false
+pin :application
 
 # Our JS files
-pin 'support',   preload: false
-pin 'bootstrap', preload: false, to: 'bootstrap.min.js'
+pin :support
 
-# Hotwired JS https://hotwired.dev
+# Stimulus JS (part of Hotwire JS) https://stimulus.hotwired.dev
 pin '@hotwired/stimulus',         to: 'stimulus.min.js',     preload: false
 pin '@hotwired/stimulus-loading', to: 'stimulus-loading.js', preload: false
 

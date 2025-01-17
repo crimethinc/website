@@ -7,8 +7,8 @@
 <% end %>
 
 <% if live_blog_article? && @article.updated_at.after?(1.week.ago) %>
-  <% content_for :head do %>
-    <%= javascript_import_module_tag "live_blog" %>
+  <% content_for :javascript do %>
+    <%= javascript_import_module_tag :live_blog %>
   <% end %>
 
   <%= render_themed "articles/live_blog", article_slug: @article.slug %>
