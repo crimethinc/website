@@ -12,6 +12,8 @@ class ArticleArchivesController < ApplicationController
                                           day:   params[:day],
                                           page:  params[:page])
 
+    @datetime = [@article_archive.year, @article_archive.month, @article_archive.day].compact.join '-'
+
     # Redirect to somewhere else if showing this result set isn’t useful
     path =
       if @article_archive.articles.length == 1 && @article_archive.day.present?

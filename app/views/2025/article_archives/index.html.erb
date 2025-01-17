@@ -1,12 +1,6 @@
 <%
-datetime = [
-  @article_archive.year,
-  @article_archive.month,
-  @article_archive.day
-].compact.join '-'
-
 subtitle =
-  tag.time datetime: datetime do
+  tag.time datetime: @datetime do
     link_to_dates year:  @article_archive.year,
                   month: @article_archive.month,
                   day:   @article_archive.day
