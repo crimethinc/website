@@ -85,6 +85,7 @@ class ApplicationController < ActionController::Base
       articles#index
       article_archives#index
       categories#index
+      categories#show
       home#index
       languages#index
       languages#show

@@ -1,18 +1,44 @@
 <% content_for :head do %>
-  <%= rel_next_prev_link_tags(@articles) %>
+  <%= rel_next_prev_link_tags @articles %>
 <% end %>
 
 <% content_for :auto_discovery do %>
-  <%= auto_discovery_link_tag(:atom, category_feed_path(@category.slug), title: page_title) %>
+  <%= auto_discovery_link_tag :atom, category_feed_path(@category.slug), title: page_title %>
+  <%= auto_discovery_link_tag nil,   category_feed_path(@category.slug, format: :json), { type: "application/json", title: page_title } %>
 <% end %>
 
-<header>
-  <h1>Category</h1>
-  <h2><%= @category.name %></h2>
-</header>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-6 col-lg-8'>
+      <header class='titles pb-3 mb-4 border-bottom'>
+        <h1><%= link_to tt(:categories), :categories %></h1>
+        <h2 class='fw-light'><%= @category.name %></h2>
+      </header>
 
-<div class="h-feed">
-  <%= render_themed "articles/list", articles: @articles %>
-</div>
+      <div class='h-feed'>
+        <% @articles.each do |article| %>
+          <%= render_themed 'articles/article', article: article %>
+        <% end %>
+      </div>
 
-<%= paginate @articles %>
+      <%= paginate @articles, theme: 'twitter-bootstrap-4' %>
+    </div>
+
+    <div class='col-md-6 col-lg-4'>
+      <header class='titles pb-3 mb-2 border-bottom fw-normal'>
+        <h1 class='fw-normal'>See also…</h1>
+        <h2 class='fw-normal'>Explore The Archives</h2>
+      </header>
+
+      <div id='categories' class='mb-5 pt-3'>
+        <h2 class='h4 fw-bold'><%= link_to tt(:categories_heading), '#categories' %></h2>
+        <%= render_themed 'categories/list', categories: @categories %>
+      </div>
+
+      <div id='years' class='mb-5 pt-3'>
+        <h2 class='h4 fw-bold'><%= link_to tt(:chronological_heading), '#years' %></h2>
+        <%= render_themed 'years/list', years: @years %>
+      </div>
+    </div>
+  </div><!-- .row -->
+</div><!-- .container -->

@@ -21,6 +21,14 @@
       <%= javascript_importmap_tags %>
       <%= yield :javascript %>
     <% end %>
+
+    <!-- Feeds: RSS/Atom and JSON Feed -->
+    <% if content_for?(:auto_discovery) %>
+      <%= yield :auto_discovery %>
+    <% else %>
+      <%= auto_discovery_link_tag :atom, feed_url, title: page_title %>
+      <%= auto_discovery_link_tag nil,   json_feed_url(format: :json), { type: "application/json", title: page_title } %>
+    <% end %>
   </head>
 
   <body>
