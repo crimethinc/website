@@ -1,11 +1,17 @@
-<%# locals: (categories:) %>
+<%# locals: (categories:, show_articles_count: false) %>
 
 <ul class='list-inline underlined-links lh-lg'>
   <% categories.each do |category| %>
     <% classes = 'pe-2 me-1 border-end border-secondary' unless category == categories.last %>
 
     <li class='list-inline-item me-0'>
-      <%= link_to category.name, category.path, class: classes %>
+      <span class='<%= classes %>'>
+        <%= link_to category.name, category.path %>
+
+        <% if show_articles_count %>
+          <small>(<%= category.articles.count %>)</small>
+        <% end %>
+      </span>
     </li>
   <% end %>
 </ul>
