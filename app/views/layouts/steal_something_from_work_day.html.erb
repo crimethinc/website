@@ -14,8 +14,13 @@
     <%= render 'steal_something_from_work_day/head/fav_and_touch_icons' %>
 
     <%= stylesheet_link_tag 'steal-something-from-work-day', media: 'all' %>
-    <%= javascript_importmap_tags %>
-    <%= yield(:head) %>
+
+    <%= yield :head %>
+
+    <% if content_for(:javascript).present? %>
+      <%= javascript_importmap_tags %>
+      <%= yield :javascript %>
+    <% end %>
   </head>
 
   <body id='<%= body_id %>' data-bs-spy='scroll' data-bs-target='#section-list' data-bs-offset='0'>

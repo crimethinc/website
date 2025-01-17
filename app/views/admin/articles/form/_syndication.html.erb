@@ -2,32 +2,10 @@
   <fieldset>
     <legend>Syndication</legend>
 
-    <div class="mb-3"
-         data-admin--text-box-counter-max-length-value="250"
-         data-admin--text-box-counter-error-class="is-invalid"
-         data-controller='admin--text-box-counter'>
-      <%= form.label :tweet, class: "form-label" %>
-      <%= form.textarea :tweet, class: "form-control form-control-lg",
-          'data-admin--text-box-counter-target': 'source',
-          'data-action': 'admin--text-box-counter#count',
-          rows: 3 %>
-      <div id="tweet-length" data-admin--text-box-counter-target='output'>0</div>
-      <p class="form-text text-muted">
-        Maximum 250 characters to leave room for the <code>t.co</code> short URL that Twitter creates.
-        Used for syndicated tweet for this Article.
-      </p>
-    </div>
-
-    <div class="mb-3"
-         data-admin--text-box-counter-max-length-value="150"
-         data-admin--text-box-counter-error-class="is-invalid"
-         data-controller='admin--text-box-counter'>
+    <div class="mb-3">
       <%= form.label :summary, class: "form-label" %>
-      <%= form.textarea :summary, class: "form-control form-control-lg",
-          'data-admin--text-box-counter-target': 'source',
-          'data-action': 'admin--text-box-counter#count',
-          rows: 5 %>
-      <div id="summary-length" data-admin--text-box-counter-target='output'>0</div>
+      <%= form.textarea :summary, class: "form-control form-control-lg", rows: 5 %>
+
       <p class="form-text text-muted">
         Maximum 150 characters.
         Used for page description and previews in story cards on other sites.
