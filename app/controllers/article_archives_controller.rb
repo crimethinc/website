@@ -14,24 +14,25 @@ class ArticleArchivesController < ApplicationController
 
     @datetime = [@article_archive.year, @article_archive.month, @article_archive.day].compact.join '-'
 
-    # Redirect to somewhere else if showing this result set isn’t useful
-    path =
-      if @article_archive.articles.length == 1 && @article_archive.day.present?
-        @article_archive.articles.first.path
-      elsif @article_archive.articles.empty?
-        if @article_archive.day.present?
-          article_archives_path(@article_archive.year, @article_archive.month)
-        elsif @article_archive.month.present?
-          article_archives_path(@article_archive.year)
-        elsif @article_archive.year.present?
-          [:library]
-        end
-      end
+    return redirect_to redirect_to_path if redirect_to_path.present?
 
-    if path.present?
-      redirect_to path, allow_other_host: true
-    else
-      render "#{Current.theme}/article_archives/index"
+    render "#{Current.theme}/article_archives/index"
+  end
+
+  private
+
+  def redirect_to_path
+    # Redirect to somewhere else if showing this result set isn’t useful
+    if @article_archive.articles.length == 1 && @article_archive.day.present?
+      @article_archive.articles.first.path
+    elsif @article_archive.articles.empty?
+      if @article_archive.day.present?
+        article_archives_path(@article_archive.year, @article_archive.month)
+      elsif @article_archive.month.present?
+        article_archives_path(@article_archive.year)
+      elsif @article_archive.year.present?
+        :library
+      end
     end
   end
 end
