@@ -1,4 +1,4 @@
-<%# locals: (articles:, title:, subtitle:, feed_url:, json_feed_url:) %>
+<%# locals: (articles:, title:, subtitle:, feed_url:, json_feed_url:, path_to_feed_partial: nil, path_to_pagination_partial: nil) %>
 
 <% content_for :head do %>
   <%= rel_next_prev_link_tags articles %>
@@ -18,12 +18,20 @@
       </header>
 
       <div class='h-feed'>
-        <% articles.each do |article| %>
-          <%= render_themed 'articles/article', article: article %>
+        <% if path_to_feed_partial.present? %>
+          <%= render_themed path_to_feed_partial %>
+        <% else %>
+          <% articles.each do |article| %>
+            <%= render_themed 'articles/article', article: article %>
+          <% end %>
         <% end %>
       </div>
 
       <%= paginate articles, theme: 'twitter-bootstrap-4' %>
+
+      <% if path_to_pagination_partial.present? %>
+        <%= render_themed path_to_pagination_partial %>
+      <% end %>
     </div>
 
     <div class='col-md-6 col-lg-4'>
