@@ -1,0 +1,7 @@
+<article class='container'>
+  <h1><%= t 'page_titles.categories.index' %></h1>
+
+  <div class='fs-4 lead'>
+    <%= render_themed 'categories/list', categories: @categories, show_articles_count: true %>
+  </div>
+</article>
