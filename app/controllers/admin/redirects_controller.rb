@@ -78,7 +78,7 @@ module Admin
     end
 
     def redirect_params
-      params.require(:redirect).permit(:source_path, :target_path, :temporary)
+      params.expect redirect: %i[source_path target_path temporary]
     end
   end
 end

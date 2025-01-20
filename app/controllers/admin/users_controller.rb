@@ -51,7 +51,7 @@ module Admin
     end
 
     def user_params
-      params.require(:user).permit(:username, :password, :password_confirmation, :role)
+      params.expect user: %i[username password password_confirmation role]
     end
 
     def authorize_admin_role
