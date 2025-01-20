@@ -18,6 +18,6 @@ class UsersController < Admin::AdminController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation)
+    params.expect user: %i[username password password_confirmation]
   end
 end

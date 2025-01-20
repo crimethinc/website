@@ -54,10 +54,10 @@ module Admin
     end
 
     def logo_params
-      params.require(:logo).permit %i[
+      params.expect logo: [%i[
         title subtitle description slug summary published_at locale publication_status
         position hide_from_index image_jpg image_png image_pdf image_svg image_tif
-      ]
+      ]]
     end
   end
 end

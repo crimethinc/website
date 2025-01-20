@@ -50,7 +50,7 @@ module Admin
     end
 
     def category_params
-      params.require(:category).permit(:name, :slug)
+      params.expect category: %i[name slug]
     end
   end
 end

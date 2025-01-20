@@ -58,24 +58,24 @@ module Admin
     end
 
     def poster_params
-      params.require(:sticker).permit(
-        :title, :subtitle, :content, :buy_info, :buy_url, :locale,
-        :price_in_cents, :summary, :description, :slug, :height, :width, :depth,
-        :front_image_format, :back_image_format, :published_at, :front_color_image_present,
-        :front_black_and_white_image_present, :back_color_image_present,
-        :back_black_and_white_image_present, :front_color_download_present,
-        :front_black_and_white_download_present, :back_color_download_present,
-        :back_black_and_white_download_present, :publication_status,
-        :featured_status, :featured_at, :canonical_id, :position, :hide_from_index,
-        :image_front_color_image,
-        :image_front_black_and_white_image,
-        :image_back_color_image,
-        :image_back_black_and_white_image,
-        :image_front_color_download,
-        :image_front_black_and_white_download,
-        :image_back_color_download,
-        :image_back_black_and_white_download
-      )
+      params.expect sticker: %i[
+        title subtitle content buy_info buy_url locale
+        price_in_cents summary description slug height width depth
+        front_image_format back_image_format published_at front_color_image_present
+        front_black_and_white_image_present back_color_image_present
+        back_black_and_white_image_present front_color_download_present
+        front_black_and_white_download_present back_color_download_present
+        back_black_and_white_download_present publication_status
+        featured_status featured_at canonical_id position hide_from_index
+        image_front_color_image
+        image_front_black_and_white_image
+        image_back_color_image
+        image_back_black_and_white_image
+        image_front_color_download
+        image_front_black_and_white_download
+        image_back_color_download
+        image_back_black_and_white_download
+      ]
     end
   end
 end

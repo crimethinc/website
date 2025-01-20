@@ -70,8 +70,10 @@ module Admin
     end
 
     def page_params
-      params.require(:page).permit(:year, :month, :day, :css, :slug, :tags, :draft_code, :locale,
-                                   :published_at, :categories, :published_at_tz, :publication_status)
+      params.expect page: %i[
+        year month day css slug tags draft_code locale
+        published_at categories published_at_tz publication_status
+      ]
     end
   end
 end

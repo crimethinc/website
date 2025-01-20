@@ -146,13 +146,13 @@ module Admin
     end
 
     def article_params
-      permitted_params = params.require(:article).permit(
+      permitted_params = params.expect article: [
         :title, :subtitle, :content, :notes, :year, :month, :day, :tweet, :slug,
         :draft_code, :summary, :published_at, :tags, :collection_id,
         :short_path, :image, :css, :image_description, :image_mobile,
         :published_at_tz, :locale, :canonical_id, :publication_status,
-        :word_doc, :featured_status, :featured_at, category_ids: []
-      )
+        :word_doc, :featured_status, :featured_at, { category_ids: [] }
+      ]
 
       # if the `publish_now` submit button was used, we should see
       # that name show up in the raw params, we will set the
