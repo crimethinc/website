@@ -56,7 +56,7 @@
 
               <ul>
                 <% links.each do |link| %>
-                  <li><%= link_to link[:name], link[:path], anchor: link[:anchor] %></li>
+                  <li><%= link_to link[:name], [link[:path], link[:anchor]].compact.join('#') %></li>
                 <% end %>
               </ul>
             </div> <!-- .e-content -->
