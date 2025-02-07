@@ -46,6 +46,8 @@
       <div class="row">
 
         <% group.each do |section, links| %>
+          <% next if section.blank? %>
+
           <div class="column column-half section h-entry">
             <h1 id="<%= section.to_s.downcase.sub(' ', '-') %>"><%= section %></h1>
 
@@ -54,7 +56,7 @@
 
               <ul>
                 <% links.each do |link| %>
-                  <li><%= link_to link[:name], link[:path] %></li>
+                  <li><%= link_to link[:name], link[:path], anchor: link[:anchor] %></li>
                 <% end %>
               </ul>
             </div> <!-- .e-content -->
