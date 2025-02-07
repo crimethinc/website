@@ -140,6 +140,9 @@ zh:
 
       How To:
 
+        - name: 'Tools and Tactics in the Portland Protests: From Leaf Blowers and Umbrellas to Lasers, Balloons, and Power Tools'
+          path: /2020/08/03/tools-and-tactics-in-the-portland-protests-from-leaf-blowers-and-umbrellas-to-lasers-bubbles-and-balloons
+
         - name:   'A Collection of Action Resources'
           path:   /2020/10/27/everybody-out-resources-for-a-season-of-post-election-unrest
           anchor: resources
@@ -147,8 +150,8 @@ zh:
         - name: 'A Step-by-Step Guide to Direct Action: What It Is, What It’s Good for, How It Works'
           path: /2017/03/14/direct-action-guide
 
-        - name: 'What Is Security Culture'
-          path: /2004/11/01/what-is-security-culture)?
+        - name: 'What Is Security Culture?'
+          path: /2004/11/01/what-is-security-culture
 
         - name: 'Producing Transdermal Estrogen: A Do-It-Yourself Guide'
           path: /2022/12/15/producing-transdermal-estrogen-a-do-it-yourself-guide
@@ -158,9 +161,6 @@ zh:
 
         - name: 'A Demonstrator’s Guide to Responding to Gunshot Wounds: What Everyone Should Know'
           path: /2020/09/24/a-demonstrators-guide-to-responding-to-gunshot-wounds-what-everyone-should-know
-
-        - name: 'Tools and Tactics in the Portland Protests: From Leaf Blowers and Umbrellas to Lasers, Balloons, and Power Tools'
-          path: /2020/08/03/tools-and-tactics-in-the-portland-protests-from-leaf-blowers-and-umbrellas-to-lasers-bubbles-and-balloons
 
         - name: 'How to Survive a Felony Trial'
           path: /2017/02/08/how-to-survive-a-felony-trial-a-guide-to-keeping-your-head-up-through-the-worst
