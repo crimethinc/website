@@ -439,7 +439,7 @@ GEM
       rubocop-rspec (~> 3, >= 3.0.1)
     ruby-graphviz (1.2.5)
       rexml
-    ruby-lsp (0.23.9)
+    ruby-lsp (0.23.10)
       language_server-protocol (~> 3.17.0)
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 4)
@@ -483,7 +483,7 @@ GEM
     simplecov-html (0.13.1)
     simplecov_json_formatter (0.1.4)
     smart_properties (1.17.0)
-    sorbet-runtime (0.5.11813)
+    sorbet-runtime (0.5.11820)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
