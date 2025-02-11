@@ -21,3 +21,6 @@ storage/
 # rails credentials
 /config/master.key
 /config/credentials/production.key
+
+# static archive export repo
+website-content
