@@ -15,32 +15,33 @@ def system! *args
 end
 
 chdir APP_ROOT do
-  puts '==> Check out the latest from main'
+  puts '==> Checking out the latest from main'
   system! 'git pull origin main'
 
-  puts '==> Create a new branch: named update_static_sitemap'
+  puts '==> Creating a new branch: named update_static_sitemap'
   system! 'git checkout -b update_static_sitemap'
 
-  puts '==> Delete existing static sitemap files in public/'
+  puts '==> Deleting existing static sitemap files in public/'
   system! 'rm public/sitemap.*'
 
-  puts '==> Fetch sitemap.txt from production'
+  puts '==> Downloading sitemap.txt from production'
   system! 'curl -o public/sitemap.txt https://crimethinc.com/sitemap_txt'
 
-  puts '==> Fetch sitemap.xml from production'
+  puts '==> Downloading sitemap.xml from production'
   system! 'curl -o public/sitemap.xml https://crimethinc.com/sitemap_xml'
 
-  puts '==> Compress sitemap.xml with gzip'
+  puts '==> Compressing sitemap.xml with gzip'
   system! 'gzip --force --best public/sitemap.xml'
 
-  puts '==> Add changes to git'
+  puts '==> Adding changes to git'
   system! 'git add .'
 
-  puts '==> Commit changes'
+  puts '==> Commiting changes'
   system! 'git commit -am "Update static sitemaps $(date)"'
 
-  puts '==> Push changes to GitHub'
+  puts '==> Pushing changes to GitHub'
   system! 'git push'
 
-  puts
+  puts '==> Opening GitHub to create a pull request'
+  system! 'open https://github.com/crimethinc/website/pull/new/update_static_sitemap'
 end
