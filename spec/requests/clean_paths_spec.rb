@@ -15,8 +15,8 @@ RSpec.describe 'Rack::CleanPath', type: :request do
     expect(response.header['Location']).to eq('/about/faq?test=true')
   end
 
-  it 'does not strip .xml extension from sitemap.xml' do
-    get 'http://example.com/sitemap.xml'
+  it 'does not strip .xml extension from sitemap.xml.gz' do
+    get 'http://example.com/sitemap.xml.gz'
 
     expect(response).to have_http_status(:ok)
     expect(response.header['Location']).to be_nil
