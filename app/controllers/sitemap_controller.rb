@@ -1,4 +1,6 @@
 class SitemapController < ApplicationController
+  layout false
+
   STATIC_PATHS = %w[
     about
     arts/submission-guidelines
@@ -22,7 +24,14 @@ class SitemapController < ApplicationController
     %w[czech deutsch polski slovenscina slovensko]
   ].flatten.freeze
 
-  def show
+  before_action :set_all_data
+
+  def sitemap_xml;  end
+  def sitemap_text; end
+
+  private
+
+  def set_all_data
     set_latest_article
     set_last_modified
 
@@ -86,8 +95,6 @@ class SitemapController < ApplicationController
     set_episodes
     set_episodes_last_modified
   end
-
-  private
 
   def set_latest_article
     @latest_article = Article.published.english.first
