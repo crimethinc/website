@@ -10319,7 +10319,7 @@ https://crimethinc.com/posters/behind-our-masks-we-are-you
 https://crimethinc.com/posters/capitalism-is-doomed
 https://crimethinc.com/posters/democracy-means-war
 https://crimethinc.com/posters/dont-let-them-throw-your-life-away
-https://tl.crimethinc.com/posters/dont-talk-to-the-police-or-the-fbi
+https://crimethinc.com/posters/dont-talk-to-the-police-or-the-fbi
 https://crimethinc.com/posters/everyone-has-add-but-the-computers
 https://crimethinc.com/posters/fight-capitalism-and-win-millions-of-dollars-in-prizes
 https://crimethinc.com/posters/fight-where-you-stand
@@ -10554,7 +10554,7 @@ https://crimethinc.com/stickers/vote-here
 https://crimethinc.com/stickers/we-love-power-and-hate-authority
 https://crimethinc.com/stickers/you-are-under-surveillance
 https://crimethinc.com/stickers/its-already-here
-https://tl.crimethinc.com/stickers/inmigrantes-bienvenidxs
+https://crimethinc.com/stickers/inmigrantes-bienvenidxs
 https://crimethinc.com/stickers/you-cant-kill-an-idea
 https://crimethinc.com/stickers/you-cant-kill-an-idea-de
 https://crimethinc.com/stickers/gender-self-determination
@@ -10854,14 +10854,14 @@ https://crimethinc.com/zines/tras-la-cresta-de-la-ola-parte-1
 https://crimethinc.com/zines/tras-la-cresta-de-la-ola-parte-3
 https://crimethinc.com/zines/tras-la-cresta-de-la-ola-partes-1-4
 https://crimethinc.com/zines/anarchist-techno-attacks-a-brief-history-of-reclaim-the-streets
-https://tl.crimethinc.com/zines/the-case-for-resistance
+https://crimethinc.com/zines/the-case-for-resistance
 https://crimethinc.com/zines/strategizing-to-stop-mass-deportations
 https://crimethinc.com/zines/anarkhia-kai-alkool
 https://crimethinc.com/zines/estrategias-para-detener-las-deportaciones
-https://tl.crimethinc.com/zines/el-argumento-por-resistencia-a-que-nos-enfrentamos-y-como-podria-ser-la-lucha
-https://tl.crimethinc.com/zines/ya-ghazze-habibti-gaza-cintaku-memahami-genosida-di-palestina
-https://tl.crimethinc.com/zines/7-mitos-tentang-polisi
-https://pl.crimethinc.com/zines/its-safer-in-the-front
+https://crimethinc.com/zines/el-argumento-por-resistencia-a-que-nos-enfrentamos-y-como-podria-ser-la-lucha
+https://crimethinc.com/zines/ya-ghazze-habibti-gaza-cintaku-memahami-genosida-di-palestina
+https://crimethinc.com/zines/7-mitos-tentang-polisi
+https://crimethinc.com/zines/its-safer-in-the-front
 https://crimethinc.com/zines/8-things-you-can-do-to-stop-ice
 https://crimethinc.com/journals
 https://crimethinc.com/journals/rolling-thunder

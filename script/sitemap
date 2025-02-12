@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+
+# script/test: Run test suite for application. Optionally pass in a path to an
+#              individual test file to run a single test.
+
+require 'pathname'
+require 'fileutils'
+include FileUtils
+
+# path to your application root.
+APP_ROOT = Pathname.new File.expand_path('..', __dir__)
+
+def system! *args
+  system(*args) || abort("\n==> Command #{args} failed")
+end
+
+chdir APP_ROOT do
+  puts '==> Check out the latest from main'
+  system! 'git pull origin main'
+
+  puts '==> Create a new branch: named update_static_sitemap'
+  system! 'git checkout -b update_static_sitemap'
+
+  puts '==> Delete existing static sitemap files in public/'
+  system! 'rm public/sitemap.*'
+
+  puts '==> Fetch sitemap.txt from production'
+  system! 'curl -o public/sitemap.txt https://crimethinc.com/sitemap_txt'
+
+  puts '==> Fetch sitemap.xml from production'
+  system! 'curl -o public/sitemap.xml https://crimethinc.com/sitemap_xml'
+
+  puts '==> Compress sitemap.xml with gzip'
+  system! 'gzip --force --best public/sitemap.xml'
+
+  puts '==> Add changes to git'
+  system! 'git add .'
+
+  puts '==> Commit changes'
+  system! 'git commit -am "Update static sitemaps $(date)"'
+
+  puts '==> Push changes to GitHub'
+  system! 'git push'
+
+  puts
+end
