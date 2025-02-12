@@ -1,6 +1,4 @@
 class SitemapController < ApplicationController
-  layout false
-
   STATIC_PATHS = %w[
     about
     arts/submission-guidelines
