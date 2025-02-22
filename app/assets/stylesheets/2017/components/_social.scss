@@ -19,10 +19,12 @@
     // The Mastodon account is on a domain called todon.eu
     .link-domain-todon,
     .link-domain-mastodon  { @include social-icon("mastodon");  }
+    .link-domain-email     { @include social-icon("email");     }
     .link-domain-facebook  { @include social-icon("facebook");  }
     .link-domain-github    { @include social-icon("github");    }
     .link-domain-instagram { @include social-icon("instagram"); }
     .link-domain-telegram  { @include social-icon("telegram");  }
+    .link-domain-threads   { @include social-icon("threads");   }
     .link-domain-tiktok    { @include social-icon("tiktok");    }
     .link-domain-tumblr    { @include social-icon("tumblr");    }
     .link-domain-twitter   { @include social-icon("twitter");   }
