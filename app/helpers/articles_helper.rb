@@ -27,7 +27,7 @@ module ArticlesHelper
                       slug:  article.slug
 
     {
-      Twitter:  "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{url}&amp;via=crimethinc",
+      Email:    "mailto:?subject=#{article.title}",
       Facebook: "https://www.facebook.com/sharer?u=#{url_encode url}",
       Tumblr:   ['http://tumblr.com/widgets/share/tool?canonicalUrl=', url, '&amp;caption=',
                  url_encode(article.title), '&amp;content=', article.image].join
@@ -35,17 +35,15 @@ module ArticlesHelper
   end
 
   def social_links_for article
+    domains = %i[email bluesky mastodon threads facebook tumblr]
+
     tag.ul class: 'social-links' do
-      social_link_for(article, :twitter) +
-        social_link_for(article, :facebook) +
-        social_link_for(article, :tumblr)
+      domains.map { social_link_for article, it }.join.html_safe
     end
   end
 
   def social_link_for article, site
-    # TODO: change list of social sites
     # TODO: add: mastodon, bluesky, threads
-    # TODO: remove: twitter
     url = article_url year:  article.year,
                       month: article.month,
                       day:   article.day,
@@ -53,10 +51,16 @@ module ArticlesHelper
 
     share_url =
       case site
-      when :twitter
-        "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{url}&amp;via=crimethinc"
+      when :email
+        "mailto:?subject=CrimethInc.— #{article.name}&body=#{article.name} #{url_encode url}"
+      when :bluesky
+        "https://bsky.app/intent/compose?text=#{article.name} #{url_encode url} — @crimethinc.com "
       when :facebook
         "https://www.facebook.com/sharer?u=#{url_encode url}"
+      when :mastodon
+        "http://mastodon.social/share?text=#{article.name} #{url_encode url}"
+      when :threads
+        "https://threads.net/intent/post?text=#{article.name} #{url_encode url} — @crimethincredux"
       when :tumblr
         [
           'http://tumblr.com/widgets/share/tool?canonicalUrl=',
