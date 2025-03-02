@@ -1,10 +1,11 @@
 <%= render "admin/page_header", thing: @users %>
 
 <% @users.each do |user| %>
-  <%= link_to [:edit, :admin, user], class: "btn btn-lg btn-light border-secondary me-3 mb-3" do %>
-    <span class="me-2 badge bg-<%= badge_color_class role: user.role %>"><%= user.role.upcase %></span>
+  <%= link_to [:edit, :admin, user], class: "btn btn-lg border me-3 mb-3" do %>
+    <span class="me-2 badge bg-<%= badge_color_class role: user.role %>">
+      <%= user.role.upcase %>
+    </span>
+
     <%= user.username.upcase %>
   <% end %>
 <% end %>
-
-<%= paginate @users, views_prefix: "admin", theme: "twitter-bootstrap-4" %>

@@ -18,6 +18,7 @@ class User < ApplicationRecord
             exclusion: {
               in:      [
                 'mickey fickie fire cracker soap on a rope',
+                'mickey fickey fire cracker soap on a rope',
                 'a long passphrase to meet the minimum length'
               ],
               message: 'The passphrase ‘%<value>{value}’ is prohibited.'
