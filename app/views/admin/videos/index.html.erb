@@ -5,7 +5,7 @@
     <tr>
       <th></th>
       <th>Title / Subtitle</th>
-      <th>Status</th>
+      <th class='text-end'>Status</th>
     </tr>
   </thead>
 
@@ -13,7 +13,7 @@
     <% @videos.each do |video| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, video], class: "btn btn-light border-secondary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, video], class: "btn btn-outline-primary btn-sm" %>
         </td>
         <td>
           <%= link_to [:admin, video] do %>
@@ -21,7 +21,7 @@
             <%= video.subtitle %>
           <% end %>
         </td>
-        <td>
+        <td class='text-end'>
           <%= render "/admin/articles/publication_status_badge", resource: video %>
         </td>
       </tr>

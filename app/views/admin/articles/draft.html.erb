@@ -45,7 +45,7 @@
         <%= render "/admin/articles/publication_status_badge", resource: article %>
 
         <% if article.locale.present? %>
-          <%= link_to article.locale.upcase, [:admin, :locales], class: "badge bg-dark text-white" %>
+          <%= link_to article.locale.upcase, [:admin, :locales], class: "badge bg-secondary" %>
         <% end %>
       </div>
 
@@ -56,7 +56,7 @@
         <% else %>
           <% if article.canonical_id.present? %>
             <% if article.canonical_record.locale.present? %>
-              <%= link_to article.canonical_record.locale.upcase, [:admin, :locales], class: "badge bg-secondary text-white" %>
+              <%= link_to article.canonical_record.locale.upcase, [:admin, :locales], class: "badge bg-secondary" %>
             <% end %>
             <span class="text-muted">English Article</span>
             <br>
@@ -72,10 +72,8 @@
       </div>
     </div>
   <% end %>
+</div><!-- .articles -->
 
-  <div class="articles-footer row">
-    <p class="col text-right text-muted p2-3">View counts started on <code>2017-08-23</code></p>
-  </div>
-</div>
+<%= render 'view_counter_note' %>
 
 <%= paginate @articles, views_prefix: 'admin', theme: 'twitter-bootstrap-4' %>

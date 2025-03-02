@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_action :set_page,       only: %i[show about contact]
-  before_action :page_redirects, only: %i[show about contact]
+  before_action :set_page,       only: :show
+  before_action :page_redirects, only: :show
   before_action :set_html_id
 
   # TODO: Delete? Is this used by anything anymore?
@@ -13,22 +13,19 @@ class PagesController < ApplicationController
   end
 
   def about
-    @editable = @page
     @title = PageTitle.new I18n.t('page_titles.about.about')
 
     render "#{Current.theme}/pages/about"
   end
 
   def contact
-    @editable = @page
     @title = PageTitle.new I18n.t('page_titles.about.contact')
 
     render "#{Current.theme}/pages/contact"
   end
 
   def feeds
-    @title = PageTitle.new I18n.t('page_titles.about.rss_feeds')
-
+    @title   = PageTitle.new I18n.t('page_titles.about.rss_feeds')
     @locales = Locale.unscoped.order(name_in_english: :asc)
 
     render "#{Current.theme}/pages/feeds"
@@ -48,6 +45,7 @@ class PagesController < ApplicationController
   end
 
   def pgp_public_key
+    # TODO: use Rails.root.join 'path/to'
     content = File.read [Rails.root, 'app', 'assets', 'pgp_public_key.asc'].join('/')
 
     render plain: content

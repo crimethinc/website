@@ -8,7 +8,7 @@
       <th>Name in English</th>
       <th>Name</th>
       <th>Slug</th>
-      <th>Language Direction</th>
+      <th class='text-end'>Language Direction</th>
     </tr>
   </thead>
 
@@ -16,13 +16,15 @@
     <% @locales.each do |locale| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, locale], class: "btn btn-light border-secondary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, locale], class: "btn btn-outline-primary btn-sm" %>
         </td>
-        <td class="text-uppercase"><%= link_to locale.abbreviation, locale_subdomain_url(locale), target: :_blank %></td>
+        <td class="text-uppercase">
+          <%= link_to locale.abbreviation, locale_subdomain_url(locale), target: :_blank %>
+        </td>
         <td><%= locale.name_in_english %></td>
         <td><%= locale.name %></td>
         <td><%= locale.slug %></td>
-        <td><%= locale.language_direction %></td>
+        <td class='text-end'><%= locale.language_direction.upcase %></td>
       </tr>
     <% end %>
   </tbody>

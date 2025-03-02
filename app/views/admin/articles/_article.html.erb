@@ -1,4 +1,4 @@
-<article class="p-2 mb-3 rounded border-bottom">
+<article class="p-2 mb-3 border-bottom">
 
   <%# mobile header… %>
   <div class="articles-header row d-md-none mb-3">
@@ -9,7 +9,7 @@
       <%= render "/admin/articles/children_articles_badge", article: article %>
     </div>
 
-    <div class="col-4 text-right">
+    <div class="col-4 text-end">
       <%= number_with_delimiter article.page_views %> Views
 
       <% if article.english? %>
@@ -44,7 +44,7 @@
           <% end %>
         </div>
 
-        <div class="col-md-2 d-none d-md-block text-right">
+        <div class="col-md-2 d-none d-md-block text-end">
           <p class="m-0"><%= number_with_delimiter article.page_views %> Views</p>
 
           <% if article.english? %>

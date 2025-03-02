@@ -27,12 +27,6 @@
   <% end %>
 </div><!-- .articles -->
 
-<div class="articles-footer row">
-  <p class="col text-right text-muted p2-3">View counts started on <code>2017-08-23</code></p>
-</div>
-
-<div class="articles-footer text-right mt-5">
-  <p class="text-muted border-top pt-1">View counts started on <code>2017-08-23</code></p>
-</div>
+<%= render 'view_counter_note' %>
 
 <%= paginate @articles, views_prefix: 'admin', theme: 'twitter-bootstrap-4' %>

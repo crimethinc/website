@@ -1,2 +1,14 @@
 <%= render "admin/page_header",      thing:   @journal %>
-<%= render "admin/journals/journal", journal: @journal %>
+
+<article class='col-12 col-md-9 col-lg-6'>
+  <header>
+    <div class="p-name">
+      <h1><%= @journal.title %></h1>
+      <h2><%= @journal.subtitle %></h2>
+    </div>
+  </header>
+
+  <div class="e-content">
+    <%= render_markdown @journal.description %>
+  </div>
+</article>

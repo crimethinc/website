@@ -1,3 +1,4 @@
+# TODO: nest this controller's routes under a podcast's route
 module Admin
   class EpisodesController < Admin::AdminController
     before_action :set_episode,      only: %i[show edit update destroy]

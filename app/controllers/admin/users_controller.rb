@@ -4,7 +4,7 @@ module Admin
     before_action :set_user, only: %i[show edit update destroy]
 
     def index
-      @users = User.page(params[:page])
+      @users = User.all
       @title = admin_title
     end
 
@@ -55,7 +55,7 @@ module Admin
     end
 
     def authorize_admin_role
-      redirect_to [:admin] unless Current.user.can_admin_users?
+      redirect_to :admin unless Current.user.can_admin_users?
     end
   end
 end

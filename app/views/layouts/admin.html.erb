@@ -69,9 +69,9 @@
             <%= link_to "Users", [:admin, :users], class: "text-muted mx-2" %>
           <% end %>
 
-          <%= link_to "Markdown", [:admin, :markdown], class: "text-muted mx-2" %>
-          <%= link_to "Settings", [:settings],         class: "text-muted mx-2" %>
-          <%= link_to "Sign out", [:signout],          class: "text-muted mx-2" %>
+          <%= link_to "Markdown", [:admin, :markdown],           class: "text-muted mx-2" %>
+          <%= link_to "Settings", [:edit, :admin, Current.user], class: "text-muted mx-2" %>
+          <%= link_to "Sign out", :signout,                      class: "text-muted mx-2" %>
         </footer>
       <% end %>
     </div>

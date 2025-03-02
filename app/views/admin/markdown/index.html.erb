@@ -1,6 +1,6 @@
 <h1>Markdown Cheatsheet</h1>
 
-<p>
+<p class='lead col-12 col-md-9 col-lg-6'>
   Markdown is a minimal syntax for adding some formatting and structure to plain text.
   Authors write it Markdown. The CMS transforms Markdown into HTML.
   HTML is what is rendered in a web browser (Firefox, Chrome, Safari, etc) for readers.
@@ -22,11 +22,11 @@
       <% column.each do |card| %>
         <div id="<%= card %>" class="card mb-5">
           <div class="card-body">
-            <%= render "markdown_#{card}" %>
+            <%= render card %>
           </div><!-- .card-body -->
 
-          <div class="card-footer text-right">
-            <%= link_to "Back to Top ↑", "#top", class: "btn btn-outline-primary" %>
+          <div class="card-footer text-end">
+            <%= link_to "Back to Top ↑", "#", class: "btn btn-outline-primary" %>
           </div><!-- .card-footer -->
         </div><!-- .card -->
       <% end %>

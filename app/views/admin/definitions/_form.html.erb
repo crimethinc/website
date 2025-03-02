@@ -1,12 +1,3 @@
-<nav class="mb-5">
-  <p class="h6 text-muted">Jump to</p>
-
-  <%= link_to [:admin, :markdown], class: "btn btn-outline-primary mb-2 me-2", target: "_blank", rel: "noopener" do %>
-    <span class="badge bg-secondary text-white">MD</span>
-    Markdown Cheatsheet ↗
-  <% end %>
-</nav>
-
 <%= form_with model: [:admin, @definition], id: "article-form", class: "row" do |form| %>
   <div class="col-12">
     <%= render "admin/form_errors", thing: @definition %>
@@ -17,13 +8,21 @@
 
     <%= tag.div dir: html_dir do %>
       <%= render "admin/label_and_area_form_group", form: form, attr: :content, rows: 10 %>
+      <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+
+      <%= link_to [:admin, :markdown], class: "btn btn-outline-primary mb-2 me-2", target: "_blank", rel: "noopener" do %>
+        <span class="badge bg-secondary text-white">MD</span>
+        Markdown Cheatsheet ↗
+      <% end %>
     <% end %>
 
     <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
   </section>
 
   <aside class="col-12 col-md-3">
-    <%#= render "admin/articles/form/publication_status", form: form %>
+    <label class='form-label'>&nbsp;</label>
+    <%= render "admin/articles/form/publication_status", form: form %>
+    <%# TODO: refactor published_at for more general purpose usage %>
     <%#= render "admin/articles/form/published_at", form: form %>
   </aside>
 <% end %>

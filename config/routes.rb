@@ -176,7 +176,7 @@ Rails.application.routes.draw do
     resources :cookies
 
     get 'dashboard', to: 'dashboard#index'
-    get 'markdown',  to: 'dashboard#markdown', as: :markdown
+    get 'markdown',  to: 'markdown#index', as: :markdown
 
     concern :paginatable do
       get 'page(/1)', on: :collection, to: redirect { |_, req| req.path.split('page').first }
@@ -195,8 +195,8 @@ Rails.application.routes.draw do
     resources :books,       concerns: :paginatable
     resources :categories,  concerns: :paginatable
     resources :definitions, concerns: :paginatable
-    resources :episodes,    concerns: :paginatable
-    resources :issues,      concerns: :paginatable
+    resources :episodes,    concerns: :paginatable # TODO: nest this controller's routes under a podcast's route
+    resources :issues,      concerns: :paginatable # TODO: nest this controller's routes under a journal's route
     resources :journals,    concerns: :paginatable
     resources :links,       concerns: :paginatable
     resources :locales,     concerns: :paginatable
@@ -215,7 +215,6 @@ Rails.application.routes.draw do
   resources :users,    only: %i[create update destroy]
   resources :sessions, only: [:create]
 
-  get 'settings', to: 'users#edit',       as: :settings
   get 'signin',   to: 'sessions#new',     as: :signin
   get 'signout',  to: 'sessions#destroy', as: :signout
 

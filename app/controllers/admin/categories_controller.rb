@@ -3,7 +3,7 @@ module Admin
     before_action :set_category, only: %i[show edit update destroy]
 
     def index
-      @categories = Category.page(params[:page])
+      @categories = Category.all
       @title = admin_title
     end
 
