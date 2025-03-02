@@ -1,12 +1,14 @@
-<%= form_with(model: [:admin, @category]) do |form| %>
-  <%= render "admin/form_errors", thing: @category %>
+<div class='col-12 col-md-9 col-lg-6'>
+  <%= form_with(model: [:admin, @category]) do |form| %>
+    <%= render "admin/form_errors", thing: @category %>
 
-  <%= render "admin/label_and_field_form_group", form: form, attr: :name %>
+    <%= render "admin/label_and_field_form_group", form: form, attr: :name %>
 
-  <%= render "admin/label_and_field_form_group", form: form, attr: :slug %>
-  <p class="form-text text-muted">
-    Leave blank to auto-generate <code>slug</code> based on <code>name</code>.
-  </p>
+    <%= render "admin/label_and_field_form_group", form: form, attr: :slug %>
+    <p class="form-text text-muted">
+      Leave blank to auto-generate <code>slug</code> based on <code>name</code>.
+    </p>
 
-  <%= render "admin/form_actions", cancel_url: [:admin, :categories] %>
-<% end %>
+    <%= render "admin/form_actions", cancel_url: [:admin, :categories] %>
+  <% end %>
+</div>
