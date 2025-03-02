@@ -6,8 +6,9 @@
   <p>
     <% if action_name == 'index' %>
       <%= link_to "NEW", [:new, :admin, current_resource_name.downcase.to_sym], class: "btn btn-outline-primary btn-sm action-new" %>
+      LOREM
     <% elsif action_name == 'show' %>
-      <%= link_to "EDIT", [:edit, :admin, thing], class: "btn btn-light border-secondary btn-sm action-edit" %>
+      <%= link_to "EDIT", [:edit, :admin, thing], class: "btn btn-outline-primary btn-sm action-edit" %>
     <% end %>
   </p>
 
