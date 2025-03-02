@@ -2,46 +2,23 @@
 
 <% if params[:source_path].present? || params[:target_path].present? %>
   <h2>
-    <small class="text-muted">Search results for</small>
+    <small class="text-muted d-block">Search results for</small>
 
     <% if params[:source_path].present? %>
-      FROM: <%= params[:source_path] %>
+      <b>FROM</b>: <code><%= params[:source_path] %></code>
     <% end %>
     <% if params[:target_path].present? %>
-      TO: <%= params[:target_path] %>
+      <b>TO</b>: <code><%= params[:target_path] %></code>
     <% end %>
   </h2>
 
   <div class="my-3">
-    <%= link_to "Clear search form and view all Redirects", [:admin, :redirects], class: "btn btn-light border-secondary btn-sm" %>
+    <%= link_to "Clear search form", [:admin, :redirects], class: "btn btn-primary btn-sm" %>
+    and view all Redirects
   </div>
 <% end %>
 
-<div class="row my-5">
-  <div class="col">
-    <%= form_with url: [:admin, :redirects], method: "get" do %>
-      <div class="mb-3">
-        <%= text_field_tag :source_path, params[:source_path], class: "form-control form-control-lg", placeholder: "FROM", autocomplete: :off %>
-      </div>
-
-      <div class="text-end">
-        <button type="submit" class="btn btn-primary">Search</button>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="col">
-    <%= form_tag [:admin, :redirects], method: "get" do %>
-      <div class="mb-3">
-        <%= text_field_tag :target_path, params[:target_path], class: "form-control form-control-lg", placeholder: "TO", autocomplete: :off %>
-      </div>
-
-      <div class="text-end">
-        <button type="submit" class="btn btn-primary">Search</button>
-      </div>
-    <% end %>
-  </div>
-</div>
+<%= render 'search_form' %>
 
 <table class="table table-striped table-sm mb-5">
   <thead class="table-dark">
