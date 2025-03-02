@@ -1,3 +1,4 @@
+# TODO: Delete! NOT used by anything anymore!
 module Admin
   class PagesController < Admin::AdminController
     before_action :set_page,         only: %i[show edit update destroy]

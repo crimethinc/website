@@ -14,7 +14,7 @@
     <% @pages.each do |page| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, page], class: "btn btn-light border-secondary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, page], class: "btn btn-outline-primary btn-sm" %>
         </td>
 
         <td><%= render "/admin/articles/publication_status_badge", resource: page %></td>
