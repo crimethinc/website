@@ -55,7 +55,7 @@ module Admin
     end
 
     def authorize_admin_role
-      redirect_to [:admin] unless Current.user.can_admin_users?
+      redirect_to :admin unless Current.user.can_admin_users?
     end
   end
 end

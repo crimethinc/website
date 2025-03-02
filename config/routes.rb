@@ -215,7 +215,6 @@ Rails.application.routes.draw do
   resources :users,    only: %i[create update destroy]
   resources :sessions, only: [:create]
 
-  get 'settings', to: 'users#edit',       as: :settings
   get 'signin',   to: 'sessions#new',     as: :signin
   get 'signout',  to: 'sessions#destroy', as: :signout
 
