@@ -24,8 +24,8 @@
         <%= text_field_tag :source_path, params[:source_path], class: "form-control form-control-lg", placeholder: "FROM", autocomplete: :off %>
       </div>
 
-      <div class="text-right">
-        <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      <div class="text-end">
+        <button type="submit" class="btn btn-primary">Search</button>
       </div>
     <% end %>
   </div>
@@ -36,8 +36,8 @@
         <%= text_field_tag :target_path, params[:target_path], class: "form-control form-control-lg", placeholder: "TO", autocomplete: :off %>
       </div>
 
-      <div class="text-right">
-        <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      <div class="text-end">
+        <button type="submit" class="btn btn-primary">Search</button>
       </div>
     <% end %>
   </div>
@@ -49,7 +49,7 @@
       <th></th>
       <th>From</th>
       <th>To</th>
-      <th>HTTP</th>
+      <th class='text-end'>HTTP</th>
     </tr>
   </thead>
 
@@ -57,13 +57,11 @@
     <% @redirects.each do |redirect| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, redirect], class: "btn btn-light btn-sm border-secondary" %>
+          <%= link_to "EDIT", [:edit, :admin, redirect], class: "btn btn-outline-primary btn-sm border-secondary" %>
         </td>
         <td><%= link_to redirect.source_path, [:admin, redirect] %></td>
         <td><%= link_to redirect.target_path, [:admin, redirect] %></td>
-        <td>
-          <%= redirect_http_status_code redirect %>
-        </td>
+        <td class='text-end'><%= redirect_http_status_code redirect %></td>
       </tr>
     <% end %>
   </tbody>
