@@ -1,7 +1,7 @@
-<div class="card text-white bg-danger mb-5" style="margin-top: 10rem">
-  <div class="card-header h3">The Danger Zone™</div>
+<div class="card text-white mb-5" style="margin-top: 10rem">
+  <div class="card-header h3 bg-danger">The Danger Zone™</div>
 
-  <div class="card-body bg-light text-dark">
+  <div class="card-body text-secondary">
     <h2 class="card-title text-danger h5">
       Want to delete this <%= label.humanize.titleize %>?
     </h2>
@@ -12,10 +12,10 @@
       There is <b>NO UNDO</b>.
     </p>
 
-    <div class="text-right">
+    <div class="text-end">
       <%= link_to "Delete",
                   path,
-                  class: "btn btn-danger btn-sm",
+                  class: "btn btn-danger",
                   data:  {
                     turbo_method:  :delete,
                     turbo_confirm: "Are you sure you’re sure? There is NO UNDO."
