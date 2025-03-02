@@ -195,8 +195,8 @@ Rails.application.routes.draw do
     resources :books,       concerns: :paginatable
     resources :categories,  concerns: :paginatable
     resources :definitions, concerns: :paginatable
-    resources :episodes,    concerns: :paginatable
-    resources :issues,      concerns: :paginatable
+    resources :episodes,    concerns: :paginatable # TODO: nest this controller's routes under a podcast's route
+    resources :issues,      concerns: :paginatable # TODO: nest this controller's routes under a journal's route
     resources :journals,    concerns: :paginatable
     resources :links,       concerns: :paginatable
     resources :locales,     concerns: :paginatable

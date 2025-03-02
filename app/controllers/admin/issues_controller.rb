@@ -1,3 +1,4 @@
+# TODO: nest this controller's routes under a journal's route
 module Admin
   class IssuesController < Admin::ToolsController
     before_action :set_journal, only: %i[show edit update destroy]
