@@ -8,7 +8,7 @@ module Admin
 
     # /admin/pages
     def index
-      @pages = Page.page(params[:page])
+      @pages = Page.all
       @title = admin_title
     end
 
