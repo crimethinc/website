@@ -16,15 +16,15 @@
         <tr>
           <th></th>
           <th>Name</th>
-          <th>Published At</th>
           <th>Path</th>
+          <th class='text-end'>Published</th>
         </tr>
       </thead>
 
       <tbody>
         <% journal.issues.each do |issue| %>
           <tr>
-            <td><%= link_to "EDIT", [:edit, :admin, issue], class: "btn btn-light border-secondary btn-sm" %></td>
+            <td><%= link_to "EDIT", [:edit, :admin, issue], class: "btn btn-outline-primary btn-sm" %></td>
 
             <td>
               <%= link_to [:admin, issue] do %>
@@ -33,9 +33,8 @@
               <% end %>
             </td>
 
-            <td><%= issue.published_at %></td>
-
             <td><%= link_to issue.path, issue.path %></td>
+            <td class='text-end'><%= issue.published_at %></td>
           </tr>
         <% end %>
       </tbody>
