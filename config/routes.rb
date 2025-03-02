@@ -176,7 +176,7 @@ Rails.application.routes.draw do
     resources :cookies
 
     get 'dashboard', to: 'dashboard#index'
-    get 'markdown',  to: 'dashboard#markdown', as: :markdown
+    get 'markdown',  to: 'markdown#index', as: :markdown
 
     concern :paginatable do
       get 'page(/1)', on: :collection, to: redirect { |_, req| req.path.split('page').first }
