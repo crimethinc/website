@@ -55,7 +55,7 @@ gem 'aws-sdk-s3'
 gem 'image_processing'
 
 # job queue using Active Job
-gem 'sidekiq', '< 8'
+gem 'sidekiq', '< 9'
 
 # syndication
 gem 'down' # downloading images from ActiveStorage/S3
