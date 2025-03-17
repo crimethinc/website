@@ -29,6 +29,7 @@ class EpisodesController < ApplicationController
   def set_episode
     if request.path.starts_with? '/draft'
       @episode = Episode.unscoped.find_by(draft_code: params[:draft_code])
+      @podcast = @episode.podcast
 
       redirect_to(@episode.path) if @episode&.published?
     else

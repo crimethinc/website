@@ -14,7 +14,7 @@ module Admin
     end
 
     def new
-      @episode = Episode.new
+      @episode = Episode.for_admin.new
       @title = admin_title
     end
 
@@ -23,7 +23,7 @@ module Admin
     end
 
     def create
-      @episode = Episode.new(episode_params)
+      @episode = Episode.for_admin.new episode_params
 
       if @episode.save
         redirect_to [:admin, @episode], notice: 'Episode was successfully created.'
