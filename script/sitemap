@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
-# script/test: Run test suite for application. Optionally pass in a path to an
-#              individual test file to run a single test.
+# script/sitemap: Generate and upload new sitemaps (xml and txt)
 
 require 'pathname'
 require 'fileutils'
