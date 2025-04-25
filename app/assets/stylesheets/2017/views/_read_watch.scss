@@ -1,18 +1,21 @@
 #page {
   main {
-
     p {
       font-size: 2rem;
       line-height: 1.25em;
       margin-bottom: 1em;
     }
 
+    #years a {
+      font-variant-numeric: tabular-nums;
+    }
+
     #years a,
     #categroies a {
       border-right: 1px solid #ccc;
-      padding-right: .75em;
-      margin-right:  .5em;
-      font-weight: normal
+      padding-right: 0.75em;
+      margin-right: 0.5em;
+      font-weight: normal;
     }
 
     #years a:last-child,
@@ -67,7 +70,6 @@
         font-style: italic;
         color: $color-gray;
       }
-
     } // .h-entry
 
     #samples {
@@ -86,7 +88,6 @@
         margin-left: 0;
       }
     }
-
   } // main
 } // #page
 
