@@ -371,7 +371,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rbs (3.9.3)
+    rbs (3.9.4)
       logger
     rdoc (6.13.1)
       psych (>= 4.0.0)
@@ -450,7 +450,7 @@ GEM
       rubocop-rspec (~> 3.5)
     ruby-graphviz (1.2.5)
       rexml
-    ruby-lsp (0.23.19)
+    ruby-lsp (0.23.20)
       language_server-protocol (~> 3.17.0)
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 4)
@@ -494,7 +494,7 @@ GEM
     simplecov-html (0.13.1)
     simplecov_json_formatter (0.1.4)
     smart_properties (1.17.0)
-    sorbet-runtime (0.5.12099)
+    sorbet-runtime (0.5.12104)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
