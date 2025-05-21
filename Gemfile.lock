@@ -141,7 +141,7 @@ GEM
       railties (>= 6.1)
     down (5.4.2)
       addressable (~> 2.8)
-    drb (2.2.1)
+    drb (2.2.3)
     erb (5.0.1)
     erb_lint (0.9.0)
       activesupport
