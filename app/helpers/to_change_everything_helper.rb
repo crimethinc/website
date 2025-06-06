@@ -82,7 +82,7 @@ module ToChangeEverythingHelper
   end
 
   def url_for_tce_image *pieces
-    [IMAGE_BASE_URL, pieces].flatten.join
+    [IMAGE_BASE_URL, pieces].join
   end
 
   def tce_image_tag filename
