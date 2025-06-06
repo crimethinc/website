@@ -458,7 +458,7 @@ GEM
       rbs (>= 3, < 5)
       sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
-    ruby-vips (2.2.3)
+    ruby-vips (2.2.4)
       ffi (~> 1.12)
       logger
     ruby_parser (3.21.1)
