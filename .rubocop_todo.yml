@@ -46,3 +46,8 @@ Rails/UniqueValidationWithoutIndex:
     - 'app/models/redirect.rb'
     - 'app/models/support_session.rb'
     - 'app/models/user.rb'
+
+Naming/PredicateMethod:
+  Exclude:
+    - 'app/models/journal.rb'
+    - 'app/models/issue.rb'

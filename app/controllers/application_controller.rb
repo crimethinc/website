@@ -145,7 +145,7 @@ class ApplicationController < ActionController::Base
       pieces << piece
     end
 
-    pieces.flatten.join ' : '
+    pieces.join ' : '
   end
 
   # TODO: move to a helper
