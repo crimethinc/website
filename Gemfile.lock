@@ -106,7 +106,7 @@ GEM
       erubi (~> 1.4)
       parser (>= 2.4)
       smart_properties
-    bigdecimal (3.2.1)
+    bigdecimal (3.2.2)
     bindex (0.8.1)
     bootstrap (5.3.5)
       popper_js (>= 2.11.8, < 3)
