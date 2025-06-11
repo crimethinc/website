@@ -3,12 +3,6 @@
 
 // /admin site
 //= link admin.css
-//= link steal-something-from-work-day.css
-//= link application.js
-
-// Bootstrap
-//= link popper.js
-//= link bootstrap.min.js
 
 // Mini sites
 //= link to_change_everything.css

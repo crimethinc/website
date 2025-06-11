@@ -1,7 +1,7 @@
 default: &default
-  adapter: postgresql
+  adapter:  postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
@@ -18,3 +18,4 @@ production:
   database: crimethinc_production
   username: crimethinc
   password: <%= ENV.fetch('CRIMETHINC_DATABASE_PASSWORD', '') %>
+  pool:     <%= ENV.fetch('POSTGRESQL_CONNECTION_LIMIT') { 120 } %>

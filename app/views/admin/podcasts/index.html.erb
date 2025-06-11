@@ -16,23 +16,23 @@
         <tr>
           <th></th>
           <th>Name</th>
-          <th>Published At</th>
           <th>Path</th>
+          <th class='text-end'>Published</th>
         </tr>
       </thead>
 
       <tbody>
-        <% podcast.episodes.each do |episode| %>
+        <% podcast.episodes.for_admin.each do |episode| %>
           <tr>
-            <td><%= link_to "EDIT", [:edit, :admin, episode], class: "btn btn-light border-secondary btn-sm" %></td>
+            <td><%= link_to "EDIT", [:edit, :admin, episode], class: "btn btn-outline-primary btn-sm" %></td>
             <td>
               <%= link_to [:admin, episode] do %>
                 <b><%= episode.title %></b><br>
                 <%= episode.subtitle %>
               <% end %>
             </td>
-            <td><%= episode.published_at %></td>
-            <td><%= link_to episode.path, episode.path %></td>
+            <td><code><%= link_to episode.path, episode.path %></code></td>
+            <td class='text-end'><%= episode.published_at %></td>
           </tr>
         <% end %>
       </tbody>

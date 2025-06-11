@@ -1,3 +1,4 @@
+# TODO: nest this controller's routes under a journal's route
 module Admin
   class IssuesController < Admin::ToolsController
     before_action :set_journal, only: %i[show edit update destroy]
@@ -55,17 +56,19 @@ module Admin
     end
 
     def journal_params
-      params.require(:issue).permit(:title, :subtitle, :content, :tweet, :summary, :locale,
-                                    :description, :buy_url, :buy_info, :slug, :series, :published_at,
-                                    :price_in_cents, :height, :width, :depth, :weight, :pages, :words, :illustrations,
-                                    :photographs, :printing, :ink, :definitions, :recipes, :has_index, :cover_style,
-                                    :binding_style, :table_of_contents, :back_image_present, :canonical_id,
-                                    :lite_download_present, :epub_download_present, :mobi_download_present,
-                                    :print_black_and_white_a4_download_present, :print_color_a4_download_present,
-                                    :print_color_download_present, :print_black_and_white_download_present,
-                                    :screen_single_page_view_download_present, :screen_two_page_view_download_present,
-                                    :publication_status, :journal_id, :issue, :featured_status, :featured_at,
-                                    :position, :hide_from_index)
+      params.expect issue: %i[
+        title subtitle content tweet summary locale
+        description buy_url buy_info slug series published_at
+        price_in_cents height width depth weight pages words illustrations
+        photographs printing ink definitions recipes has_index cover_style
+        binding_style table_of_contents back_image_present canonical_id
+        lite_download_present epub_download_present mobi_download_present
+        print_black_and_white_a4_download_present print_color_a4_download_present
+        print_color_download_present print_black_and_white_download_present
+        screen_single_page_view_download_present screen_two_page_view_download_present
+        publication_status journal_id issue featured_status featured_at
+        position hide_from_index
+      ]
     end
   end
 end

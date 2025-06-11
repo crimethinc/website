@@ -17,25 +17,54 @@ module ArticlesHelper
     "background-image: url(#{article.image})" unless lite_mode?
   end
 
+  def social_share_sites article
+    # TODO: change list of social sites
+    # TODO: add: mastodon, bluesky, threads
+    # TODO: remove: twitter
+    url = article_url year:  article.year,
+                      month: article.month,
+                      day:   article.day,
+                      slug:  article.slug
+
+    {
+      Email:    "mailto:?subject=#{article.title}",
+      Facebook: "https://www.facebook.com/sharer?u=#{url_encode url}",
+      Tumblr:   ['http://tumblr.com/widgets/share/tool?canonicalUrl=', url, '&amp;caption=',
+                 url_encode(article.title), '&amp;content=', article.image].join
+    }
+  end
+
   def social_links_for article
+    domains = %i[email bluesky mastodon threads facebook tumblr]
+
     tag.ul class: 'social-links' do
-      social_link_for(article, :twitter) +
-        social_link_for(article, :facebook) +
-        social_link_for(article, :tumblr)
+      domains.map { social_link_for article, it() }.join.html_safe
     end
   end
 
   def social_link_for article, site
-    url =
+    # TODO: add: mastodon, bluesky, threads
+    url = article_url year:  article.year,
+                      month: article.month,
+                      day:   article.day,
+                      slug:  article.slug
+
+    share_url =
       case site
-      when :twitter
-        "https://twitter.com/intent/tweet?text=#{url_encode article.title}&amp;url=#{article_url}&amp;via=crimethinc"
+      when :email
+        "mailto:?subject=CrimethInc.— #{article.name}&body=#{article.name} #{url_encode url}"
+      when :bluesky
+        "https://bsky.app/intent/compose?text=#{article.name} #{url_encode url} — @crimethinc.com "
       when :facebook
-        "https://www.facebook.com/sharer?u=#{url_encode article_url}"
+        "https://www.facebook.com/sharer?u=#{url_encode url}"
+      when :mastodon
+        "http://mastodon.social/share?text=#{article.name} #{url_encode url}"
+      when :threads
+        "https://threads.net/intent/post?text=#{article.name} #{url_encode url} — @crimethincredux"
       when :tumblr
         [
           'http://tumblr.com/widgets/share/tool?canonicalUrl=',
-          article_url,
+          url,
           '&amp;caption=',
           url_encode(article.title),
           '&amp;content=',
@@ -45,7 +74,7 @@ module ArticlesHelper
 
     tag.li class: 'social-link' do
       link_to "Share on #{site.capitalize}",
-              url,
+              share_url,
               class:  "link-domain-#{site}",
               target: '_blank',
               rel:    'noopener'
@@ -117,7 +146,7 @@ module ArticlesHelper
       )
     end
 
-    links.join('-').html_safe
+    links.join('–').html_safe
   end
 
   def publication_status_badge_class article

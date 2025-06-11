@@ -25,7 +25,7 @@ class ToolsController < ApplicationController
 
   # Inherited by each kind of tool
   def show
-    @preview_width = 400
+    @preview_width = 640
     render "#{Current.theme}/tools/show"
   end
 

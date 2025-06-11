@@ -68,6 +68,6 @@
   <%= t('views.support.edit.expires_at', minutes: minutes_until_expiration(@support_session)) %>
 </p>
 
-<% content_for :head do %>
-  <%= javascript_import_module_tag "support" %>
+<% content_for :javascript do %>
+  <%= javascript_import_module_tag :support %>
 <% end %>

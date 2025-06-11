@@ -1,0 +1,13 @@
+<div class='row underlined-links'>
+  <div class='col text-end'>
+    <% if @article_archive.paginator.next? %>
+      <%= link_to @article_archive.paginator.next_label, @article_archive.paginator.next_path %>
+    <% end %>
+  </div>
+
+  <div class='col <%= 'text-end' unless @article_archive.paginator.next? %>'>
+    <% if @article_archive.paginator.previous? %>
+      <%= link_to @article_archive.paginator.previous_label, @article_archive.paginator.previous_path %>
+    <% end %>
+  </div>
+</div>

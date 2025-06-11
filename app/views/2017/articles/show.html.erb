@@ -6,7 +6,13 @@
   </div>
 <% end %>
 
-<%= render_themed "articles/live_blog", article_slug: @article.slug if live_blog_article? %>
+<% if live_blog_article? && @article.updated_at.after?(1.week.ago) %>
+  <% content_for :javascript do %>
+    <%= javascript_import_module_tag :live_blog %>
+  <% end %>
+
+  <%= render_themed "articles/live_blog", article_slug: @article.slug %>
+<% end %>
 
 <% cache [@article, lite_mode?], expires_in: (Rails.env.development? ? 1.second : 1.day) do %>
   <%= article_tag @article do %>

@@ -5,7 +5,7 @@ class Episode < ApplicationRecord
 
   belongs_to :podcast
 
-  default_scope { order(id: :desc) }
+  default_scope { order(id: :desc).published }
 
   before_validation :generate_draft_code, on: %i[create update]
   after_create :generate_slug

@@ -23,12 +23,15 @@ en:
       # TODO: move this out of YAML, into a view
       meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
 
-    # words
+    # terms
     about:          About
     adventure:      Adventure
     analysis:       Analysis
+    archives:       The Archives
+    articles:       Articles
     arts:           Arts
     books:          Books
+    categories:     Categories
     current_events: Current Events
     email:          Email
     geography:      Geography
@@ -40,23 +43,30 @@ en:
     logos:          Logos
     music:          Music
     news:           News
+    page:           Page
     podcasts:       Podcasts
     posters:        Posters
+    published:      Published
+    rss:            RSS
+    rss_feeds:      RSS feeds
     search:         Search
     share:          Share
     sitemap:        Site map
     stickers:       Stickers
     store:          Store
-    support:        Support us
+    tags:           Tags
     technology:     Technology
     tools:          Tools
     videos:         Videos
     zines:          Zines
 
     # phrases
+    categories_heading:      Browse by category
+    chronological_heading:   Browse chronologically
     ex_workers_collection:   Ex-Workers’ Collection
     featured_books:          Featured books
     just_published:          Just published
+    keep_reading:            Keep reading
     latest_article:          Latest article
     latest_podcast_episode:  Latest podcast episode
     learn_more:              Learn more
@@ -68,6 +78,7 @@ en:
     recent_podcast_episodes: Recent podcast episodes
     search_placeholder:      Search archives…
     selected_tools:          Selected tools
+    support:                 Support us
 
     # Books
     contradictionary:           Contradictionary
@@ -91,7 +102,6 @@ en:
           Everything conspires to suppress the voices of those who fight for a better world.
           Help us bring them to a wide audience.
         domains:
-          twitter:  Twitter
           facebook: Facebook
           tumblr:   Tumblr
           email:    Email
@@ -110,8 +120,6 @@ en:
 
       search:
         description: You can **search** over two decades of archives.
-        category_heading: Browse by category
-        chronological_heading: Browse chronologically
 
     footer:
       store_description: Books, posters, stickers, and more…

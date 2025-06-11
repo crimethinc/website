@@ -1,3 +1,4 @@
+# TODO: nest this controller's routes under a podcast's route
 module Admin
   class EpisodesController < Admin::AdminController
     before_action :set_episode,      only: %i[show edit update destroy]
@@ -13,7 +14,7 @@ module Admin
     end
 
     def new
-      @episode = Episode.new
+      @episode = Episode.for_admin.new
       @title = admin_title
     end
 
@@ -22,7 +23,7 @@ module Admin
     end
 
     def create
-      @episode = Episode.new(episode_params)
+      @episode = Episode.for_admin.new episode_params
 
       if @episode.save
         redirect_to [:admin, @episode], notice: 'Episode was successfully created.'
@@ -51,16 +52,18 @@ module Admin
     end
 
     def set_episode
-      @episode = Episode.find(params[:id])
+      @episode = Episode.for_admin.find params[:id]
       redirect_to %i[admin podcasts] if @episode.blank?
     end
 
     def episode_params
-      params.require(:episode).permit(:podcast_id, :title, :subtitle, :image, :content, :locale,
-                                      :audio_mp3_url, :audio_mp3_file_size, :audio_ogg_url,
-                                      :audio_ogg_file_size, :show_notes, :transcript, :audio_length,
-                                      :duration, :audio_type, :tags, :published_at, :published_at_tz,
-                                      :publication_status, :draft_code)
+      params.expect episode: %i[
+        podcast_id title subtitle image content locale
+        audio_mp3_url audio_mp3_file_size audio_ogg_url
+        audio_ogg_file_size show_notes transcript audio_length
+        duration audio_type tags published_at published_at_tz
+        publication_status draft_code
+      ]
     end
   end
 end

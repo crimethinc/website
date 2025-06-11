@@ -63,7 +63,7 @@
 
     <div class="e-content">
       <% if @article.content_in_html? %>
-        <pre class='bg-light p-3'><code><%= @article.content.gsub("\t", "  ") %></code></pre>
+        <pre class='border p-3'><%= @article.content.gsub("\t", "  ") %></pre>
       <% else %>
         <%= render_content @article %>
       <% end %>

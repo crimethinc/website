@@ -1,0 +1,13 @@
+<%# locals: (article:) %>
+
+<footer class='py-4 my-4 border-top border-bottom row'>
+  <div class='col-lg-8 mb-1'>
+    <%= render_themed 'articles/published_on', article: article %>
+    <%= render_themed 'articles/categories',   article: article %>
+    <%= render_themed 'articles/tags',         article: article %>
+  </div>
+
+  <div class='col-lg-4'>
+    <%= render_themed 'articles/share_on_social_networks', article: article %>
+  </div>
+</footer>

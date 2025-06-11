@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   # sitemaps
   # xml: for robots/search engines
   # txt: for humans/archivers
-  get 'sitemap.xml', to: 'sitemap#show', defaults: { format: 'xml' }, as: :sitemap
-  get 'sitemap.txt', to: 'sitemap#show', defaults: { format: 'txt' }, as: :sitemap_txt
+  get 'sitemap_xml', to: 'sitemap#sitemap_xml', defaults: { format: 'xml' }, as: :sitemap_xml
+  get 'sitemap_txt', to: 'sitemap#sitemap_txt', defaults: { format: 'txt' }, as: :sitemap_txt
 
   # TODO: After switching the site auth to Devise, enable this auth protected route
   # # Sidekiq admin interface to monitor background jobs
@@ -26,8 +26,8 @@ Rails.application.routes.draw do
   # Homepage
   root to: 'home#index'
 
-  get 'page(/1)', to: redirect { |_, _| '/' }
-  get 'page/:page', to: 'home#index'
+  get 'page', to: redirect('/page/1'), as: :page_one
+  get 'page/:page', to: 'articles#index', as: :articles
 
   # To Change Everything (TCE)
   get 'tce(/:lang)',
@@ -95,9 +95,10 @@ Rails.application.routes.draw do
   get 'categories/:slug/feed(/:lang)',      to: 'categories#feed', defaults: { format: 'atom' }, as: :category_feed
 
   # Tags
-  get 'tags/:slug/page(/1)',     to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
-  get 'tags/:slug(/page/:page)', to: 'tags#show', as: :tag
-  get 'tags/:slug/feed(/:lang)', to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
+  get 'tags/:slug/page(/1)',          to: redirect { |path_params, _| "/tags/#{path_params[:slug]}" }
+  get 'tags/:slug(/page/:page)',      to: 'tags#show', as: :tag
+  get 'tags/:slug/feed(/:lang).json', to: 'tags#feed', defaults: { format: 'json' }, as: :tag_json_feed
+  get 'tags/:slug/feed(/:lang)',      to: 'tags#feed', defaults: { format: 'atom' }, as: :tag_feed
 
   # Podcast
   get 'podcast/feed(/:lang)',
@@ -175,7 +176,7 @@ Rails.application.routes.draw do
     resources :cookies
 
     get 'dashboard', to: 'dashboard#index'
-    get 'markdown',  to: 'dashboard#markdown', as: :markdown
+    get 'markdown',  to: 'markdown#index', as: :markdown
 
     concern :paginatable do
       get 'page(/1)', on: :collection, to: redirect { |_, req| req.path.split('page').first }
@@ -194,8 +195,8 @@ Rails.application.routes.draw do
     resources :books,       concerns: :paginatable
     resources :categories,  concerns: :paginatable
     resources :definitions, concerns: :paginatable
-    resources :episodes,    concerns: :paginatable
-    resources :issues,      concerns: :paginatable
+    resources :episodes,    concerns: :paginatable # TODO: nest this controller's routes under a podcast's route
+    resources :issues,      concerns: :paginatable # TODO: nest this controller's routes under a journal's route
     resources :journals,    concerns: :paginatable
     resources :links,       concerns: :paginatable
     resources :locales,     concerns: :paginatable
@@ -214,7 +215,6 @@ Rails.application.routes.draw do
   resources :users,    only: %i[create update destroy]
   resources :sessions, only: [:create]
 
-  get 'settings', to: 'users#edit',       as: :settings
   get 'signin',   to: 'sessions#new',     as: :signin
   get 'signout',  to: 'sessions#destroy', as: :signout
 

@@ -10,6 +10,8 @@ module Publishable
 
     default_scope { order(published_at: :desc) }
 
+    scope :for_admin, -> { unscoped.order(published_at: :desc) }
+
     scope :chronological, -> { order(published_at: :desc) }
     scope :root,          -> { where(collection_id: nil) }
     scope :live,          -> { where(published_at: ...Time.now.utc) }

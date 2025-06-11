@@ -1,3 +1,4 @@
+<%# IMPORTANT: any changes to this file also need to be applied to show.text.erb for /sitemap.txt %>
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns:xsi          = 'http://www.w3.org/2001/XMLSchema-instance'
         xmlns              = 'http://www.sitemaps.org/schemas/sitemap/0.9'
@@ -40,6 +41,16 @@
     <%= render 'sitemap/url', loc: category_url(category.slug), lastmod: @last_modified %>
   <% end %>
 
+  <%# tags %>
+  <% @tags.each do |tag| %>
+    <%# tag Atom feeds %>
+    <%= render 'sitemap/url', loc: tag_feed_url(tag.slug), lastmod: @last_modified %>
+    <%# tag JSON feeds %>
+    <%= render 'sitemap/url', loc: tag_json_feed_url(tag.slug), lastmod: @last_modified %>
+    <%# tag pages %>
+    <%= render 'sitemap/url', loc: tag_url(tag.slug), lastmod: @last_modified %>
+  <% end %>
+
   <%# static-ish pages %>
   <% @static_paths.each do |path| %>
     <%= render 'sitemap/url', loc: [root_url, path].join('/'), lastmod: @last_modified %>
@@ -51,6 +62,9 @@
     <% lastmod = @last_modified if year == Time.current.year %>
 
     <%= render 'sitemap/url', loc: article_archives_url(year: year), lastmod: lastmod %>
+    <% (01..12).each do |month| %>
+      <%= render 'sitemap/url', loc: article_archives_url(year: year, month: month), lastmod: lastmod %>
+    <% end %>
   <% end %>
 
   <%# To Change Everything (TCE) %>
@@ -59,10 +73,16 @@
     <%= render 'sitemap/url', loc: [to_change_everything_url(lang: tce_language), '/get'].join, lastmod: @last_modified %>
   <% end %>
 
+  <%# Steal Something from Work Day (SSfWD) %>
+  <% @steal_something_from_work_day_urls.each do |ssfwd_url| %>
+    <%= render 'sitemap/url', loc: ssfwd_url, lastmod: @last_modified %>
+  <% end %>
+
   <%# articles %>
   <% @articles.find_each do |article| %>
     <% cache article do %>
-      <%= render 'sitemap/url', loc: [root_url, article.path].join, lastmod: article.updated_at %>
+      <%= render 'sitemap/url', loc: [root_url, article.path].join,              lastmod: article.updated_at %>
+      <%= render 'sitemap/url', loc: [root_url, article.path, '.markdown'].join, lastmod: article.updated_at %>
     <% end %>
   <% end %>
 
@@ -94,15 +114,24 @@
   <%# tools %>
   <%# books %>
   <%= render 'sitemap/url', loc: books_url, lastmod: @last_modified %>
-  <%= render 'sitemap/url', loc: books_extras_url(:work), lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: books_extras_url(:work), lastmod: @books_last_modified %>
   <% @books.find_each do |book| %>
     <% cache book do %>
       <%= render 'sitemap/url', loc: book_url(book.slug), lastmod: book.updated_at %>
     <% end %>
   <% end %>
 
+  <%# contradictionary definitions %>
+  <%= render 'sitemap/url', loc: definitions_url, lastmod: @definitions_last_modified %>
+  <% @definitions.each do |letter, definitions| %>
+    <%= render 'sitemap/url', loc: letter_url(letter), lastmod: @definitions_last_modified %>
+    <% definitions.each do |definition| %>
+       <%= render 'sitemap/url', loc: definition_url(letter: letter, slug: definition.slug), lastmod: definition.updated_at %>
+    <% end %>
+  <% end %>
+
   <%# logos %>
-  <%= render 'sitemap/url', loc: logos_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: logos_url, lastmod: @logos_last_modified %>
   <% @logos.find_each do |logo| %>
     <% cache logo do %>
       <%= render 'sitemap/url', loc: logo_url(logo.slug), lastmod: logo.updated_at %>
@@ -110,7 +139,7 @@
   <% end %>
 
   <%# posters %>
-  <%= render 'sitemap/url', loc: posters_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: posters_url, lastmod: @posters_last_modified %>
   <% @posters.find_each do |poster| %>
     <% cache poster do %>
       <%= render 'sitemap/url', loc: poster_url(poster.slug), lastmod: poster.updated_at %>
@@ -118,7 +147,7 @@
   <% end %>
 
   <%# stickers %>
-  <%= render 'sitemap/url', loc: stickers_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: stickers_url, lastmod: @stickers_last_modified %>
   <% @stickers.find_each do |sticker| %>
     <% cache sticker do %>
       <%= render 'sitemap/url', loc: sticker_url(sticker.slug), lastmod: sticker.updated_at %>
@@ -127,7 +156,7 @@
 
   <%# videos / music %>
   <%= render 'sitemap/url', loc: music_url, lastmod: @last_modified %>
-  <%= render 'sitemap/url', loc: videos_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: videos_url, lastmod: @videos_last_modified %>
   <% @videos.find_each do |video| %>
     <% cache video do %>
       <%= render 'sitemap/url', loc: video_url(video.slug), lastmod: video.updated_at %>
@@ -135,7 +164,7 @@
   <% end %>
 
   <%# zines %>
-  <%= render 'sitemap/url', loc: zines_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: zines_url, lastmod: @zines_last_modified %>
   <% @zines.find_each do |zine| %>
     <% cache zine do %>
       <%= render 'sitemap/url', loc: zine_url(zine.slug), lastmod: zine.updated_at %>
@@ -143,7 +172,7 @@
   <% end %>
 
   <%# journals / issues %>
-  <%= render 'sitemap/url', loc: journals_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: journals_url, lastmod: @journals_last_modified %>
   <% @journals.find_each do |journal| %>
     <% cache journal do %>
       <%= render 'sitemap/url', loc: journal_url(journal.slug), lastmod: journal.updated_at %>
@@ -159,7 +188,7 @@
   <% end %>
 
   <%# podcasts / episodes %>
-  <%= render 'sitemap/url', loc: podcasts_url, lastmod: @last_modified %>
+  <%= render 'sitemap/url', loc: podcasts_url, lastmod: @podcasts_last_modified %>
   <% @podcasts.find_each do |podcast| %>
     <% cache podcast do %>
       <%= render 'sitemap/url', loc: podcast_url(podcast.slug), lastmod: podcast.updated_at %>

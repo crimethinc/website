@@ -50,7 +50,7 @@ module Admin
     end
 
     def journal_params
-      params.require(:journal).permit(:title, :subtitle, :description, :locale, :position, :hide_from_index)
+      params.expect journal: %i[title subtitle description locale position hide_from_index]
     end
   end
 end

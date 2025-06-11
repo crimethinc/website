@@ -25,11 +25,7 @@
       <%= render_markdown "[[https://www.youtube.com/watch?v=33QwamMHVlA]]" %>
     </div>
 
-    <%# HACK these BRs are to account for the CSS weirdness around the YouTube embed %>
+    <%# HACK: these BRs are to account for the CSS weirdness around the YouTube embed %>
     <br><br><br><br><br>
   </main>
 </div><!-- .main-wrapper -->
-<% content_for :head do %>
-  <%= javascript_import_module_tag "popper" %>
-  <%= javascript_import_module_tag "bootstrap" %>
-<% end %>

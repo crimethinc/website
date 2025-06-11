@@ -1,0 +1,6 @@
+<%= render_themed 'articles/list',
+                  articles:      @articles,
+                  title:         link_to(tt(:categories), :categories),
+                  subtitle:      @category.name,
+                  feed_url:      category_feed_path(@category.slug),
+                  json_feed_url: category_feed_path(@category.slug, format: :json) %>

@@ -19,7 +19,7 @@
           <div class="card mb-3">
             <div class="card-header">
               <% if @definition.canonical_record.locale.present? %>
-                <%= link_to @definition.canonical_record.locale.upcase, [:admin, :locales], class: "badge bg-secondary text-white" %>
+                <%= link_to @definition.canonical_record.locale.upcase, [:admin, :locales], class: "badge bg-secondary" %>
               <% end %>
 
               English Definition
@@ -65,7 +65,7 @@
       <%= render "/admin/articles/publication_status_badge", resource: @definition %>
 
       <% if @definition.locale.present? %>
-        <%= link_to @definition.locale.upcase, [:admin, :locales], class: "badge bg-dark text-white" %>
+        <%= link_to @definition.locale.upcase, [:admin, :locales], class: "badge bg-secondary" %>
       <% end %>
     </p>
   </aside>

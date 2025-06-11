@@ -1,0 +1,60 @@
+<% content_for :head do %>
+  <%= rel_next_prev_link_tags(@articles) %>
+<% end %>
+
+<div class='container underlined-links'>
+  <header class='mb-3 titles'>
+    <nav aria-label='breadcrumb'>
+      <ol class='breadcrumb mb-0'>
+        <li class='breadcrumb-item'><%= link_to tt(:languages), :languages %></li>
+      </ol>
+    </nav>
+
+    <h1>
+      <%= @locale.name %>
+
+      <% unless @locale.english? %>
+        <span class='fw-normal text-secondary'>(<%= @locale.name_in_english %>)</span>
+      <% end %>
+
+      <small>
+        <%= link_to tt(:rss), [:feed, lang: @locale.abbreviation], class: 'text-secondary' %>
+      </small>
+    </h1>
+  </header>
+
+  <div class='col-lg-8 mb-5 lead'>
+    <%= render_markdown @description %>
+  </div>
+
+  <div class='h-feed'>
+    <% @articles.each do |article| %>
+      <% next if article.blank? %>
+
+      <article class='h-entry mb-5 pb-3'>
+        <div class='row'>
+          <div class='col-md-6 col-lg-5 col-xl-4'>
+            <%= render_themed 'articles/header_image', article: article %>
+          </div>
+
+          <div class='col-md-6 col-lg-7 col-xl-8'>
+            <header>
+              <div class='p-name mb-3'>
+                <h2 class='p-x-title h1 fw-bold lh-1 mb-1'><%= link_to article.title, article.path %></h2>
+
+                <% if article.subtitle.present? %>
+                  <h3 class='p-x-subtitle h2 fw-light'><%= link_to article.subtitle, article.path %></h3>
+                <% end %>
+              </div>
+            </header>
+
+            <%= render_themed 'articles/footer', article: article %>
+          </div>
+        </div>
+      </article>
+
+    <% end %>
+  </div>
+
+  <%= paginate @articles, theme: 'twitter-bootstrap-4' %>
+</div>

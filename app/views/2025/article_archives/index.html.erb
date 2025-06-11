@@ -1,0 +1,17 @@
+<%
+subtitle =
+  tag.time datetime: @datetime do
+    link_to_dates year:  @article_archive.year,
+                  month: @article_archive.month,
+                  day:   @article_archive.day
+  end
+%>
+
+<%= render_themed 'articles/list',
+                  articles:                   @article_archive.articles,
+                  title:                      tt(:archives),
+                  subtitle:                   subtitle,
+                  feed_url:                   feed_path,
+                  json_feed_url:              feed_path(format: :json),
+                  path_to_feed_partial:       'article_archives/feed',
+                  path_to_pagination_partial: 'article_archives/pagination' %>

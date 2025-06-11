@@ -12,6 +12,7 @@ module Rack
 
       # special case: non-ASCII paths
       redirects = {
+        '/sitemap.xml'    => '/sitemap.xml.gz',
         '/search?utf8=✓&' => '/search',
         '/tce/%uFEFF'     => '/tce'
       }

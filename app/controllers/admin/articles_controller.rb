@@ -146,7 +146,7 @@ module Admin
     end
 
     def article_params
-      permitted_params = params.require(:article).permit(
+      permitted_params = params.expect article: [
         :title, :subtitle, :content, :notes, :year, :month, :day, :tweet, :slug,
         :draft_code, :summary, :published_at, :tags, :collection_id,
         :short_path, :image, :css, :image_description, :image_mobile,

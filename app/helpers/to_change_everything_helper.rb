@@ -22,6 +22,7 @@ module ToChangeEverythingHelper
       'Deutsch'                                         => '/tce/deutsch',
       'English'                                         => '/tce',
       'Español'                                         => '/tce/espanol',
+      # TODO: move the br and nbsp into view logic
       'Español<br />&nbsp;&nbsp;&nbsp;(América Latina)' => '/tce/espanol-america-latina',
       'فارسی'                                           => '/tce/فارسی',
       'Français'                                        => '/2016/01/25/to-change-everything-in-ten-more-languages#french',
@@ -81,7 +82,7 @@ module ToChangeEverythingHelper
   end
 
   def url_for_tce_image *pieces
-    [IMAGE_BASE_URL, pieces].flatten.join
+    [IMAGE_BASE_URL, pieces].join
   end
 
   def tce_image_tag filename

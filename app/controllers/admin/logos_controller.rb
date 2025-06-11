@@ -5,7 +5,7 @@ module Admin
     def index
       @logos         = Logo.order(slug: :asc).page(params[:page])
       @title         = admin_title
-      @preview_width = 240
+      @preview_width = 640
     end
 
     def show
@@ -16,12 +16,12 @@ module Admin
     def new
       @logo          = Logo.new
       @title         = admin_title
-      @preview_width = 240
+      @preview_width = 640
     end
 
     def edit
       @title         = admin_title(@logo, %i[id title subtitle])
-      @preview_width = 240
+      @preview_width = 640
     end
 
     def create
@@ -54,7 +54,7 @@ module Admin
     end
 
     def logo_params
-      params.require(:logo).permit %i[
+      params.expect logo: %i[
         title subtitle description slug summary published_at locale publication_status
         position hide_from_index image_jpg image_png image_pdf image_svg image_tif
       ]

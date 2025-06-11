@@ -12,7 +12,7 @@
     <% definitions.each do |definition| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, definition], class: "btn btn-light border-secondary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, definition], class: "btn btn-outline-primary btn-sm" %>
         </td>
         <td>
           <b><%= link_to definition.name, [:admin, definition] %></b>

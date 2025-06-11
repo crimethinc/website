@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+
+# script/sitemap: Generate and upload new sitemaps (xml and txt)
+
+require 'pathname'
+require 'fileutils'
+include FileUtils
+
+# path to your application root.
+APP_ROOT = Pathname.new File.expand_path('..', __dir__)
+
+def system! *args
+  system(*args) || abort("\n==> Command #{args} failed")
+end
+
+chdir APP_ROOT do
+  puts '==> Checking out the latest from main'
+  system! 'git pull origin main'
+
+  puts '==> Creating a new branch: named update_static_sitemap'
+  system! 'git checkout -b update_static_sitemap'
+
+  puts '==> Deleting existing static sitemap files in public/'
+  system! 'rm public/sitemap.*'
+
+  puts '==> Downloading sitemap.txt from production'
+  system! 'curl -o public/sitemap.txt https://crimethinc.com/sitemap_txt'
+
+  puts '==> Downloading sitemap.xml from production'
+  system! 'curl -o public/sitemap.xml https://crimethinc.com/sitemap_xml'
+
+  puts '==> Compressing sitemap.xml with gzip'
+  system! 'gzip --force --best public/sitemap.xml'
+
+  puts '==> Adding changes to git'
+  system! 'git add .'
+
+  puts '==> Commiting changes'
+  system! 'git commit -am "Update static sitemaps $(date)"'
+
+  puts '==> Pushing changes to GitHub'
+  system! 'git push'
+
+  puts '==> Opening GitHub to create a pull request'
+  system! 'open https://github.com/crimethinc/website/pull/new/update_static_sitemap'
+end

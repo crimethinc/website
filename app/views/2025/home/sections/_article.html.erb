@@ -2,19 +2,23 @@
 
 <article class='row mb-3'>
   <div class='col-12 col-md-4 col-lg-6 order-md-<%= image_class %>'>
-    <%= render_markdown "[[#{article.image} #{article.path} #{article.image_description}]]" %>
+    <%= render_themed 'articles/header_image', article: article %>
   </div><!-- /.col-6 -->
 
   <div class='col-12 col-md-8 col-lg-6 order-md-<%= text_class %>'>
     <%= link_to article.path do %>
-      <h1 class='fw-bold'><%= article.title %></h1>
-      <h2><%= article.subtitle %></h2>
+      <h2 class='h1'><%= article.title %></h2>
+      <h3 class='h2 fw-light'><%= article.subtitle %></h3>
     <% end %>
 
     <div>
       <%= render_markdown article.lede %>
     </div><!-- /.col-6 -->
 
-    <p class='text-uppercase text-end'><%= link_to 'Keep reading →', article.path %></p>
+    <p class='text-uppercase text-end'>
+      <%= link_to article.path do %>
+        <%= tt :keep_reading %> →
+      <% end %>
+    </p>
   </div><!-- /.row -->
 </article>

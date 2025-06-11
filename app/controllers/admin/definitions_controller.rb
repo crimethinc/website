@@ -50,8 +50,10 @@ module Admin
     end
 
     def definition_params
-      params.require(:definition).permit(:title, :content, :publication_status, :locale, :published_at,
-                                         :featured_status, :featured_at, :canonical_id)
+      params.expect definition: %i[
+        title content publication_status locale
+        published_at featured_status featured_at canonical_id
+      ]
     end
   end
 end

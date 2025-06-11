@@ -6,7 +6,7 @@
       <th></th>
       <th>Name</th>
       <th>Path</th>
-      <th>Articles</th>
+      <th class='text-end'>Articles</th>
     </tr>
   </thead>
 
@@ -14,14 +14,12 @@
     <% @categories.each do |category| %>
       <tr>
         <td>
-          <%= link_to "EDIT", [:edit, :admin, category], class: "btn btn-light border-secondary btn-sm" %>
+          <%= link_to "EDIT", [:edit, :admin, category], class: "btn btn-outline-primary btn-sm" %>
         </td>
         <td><b><%= category.name %></b></td>
         <td><%= link_to category.path, category.path %></td>
-        <td><%= category.articles.count %></td>
+        <td class='text-end'><%= category.articles.count %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= paginate @categories, views_prefix: "admin", theme: "twitter-bootstrap-4" %>

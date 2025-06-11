@@ -6,11 +6,7 @@
 
 <%= render "form", article: @article %>
 
-<div class="row">
-  <div class="col-12 col-lg-9">
-    <%= render "admin/danger_zone",
-               thing: @article,
-               label: "article",
-               path: [:admin, @article] if Current.user.can_delete? %>
-  </div>
-</div>
+<%= render "admin/danger_zone",
+           thing: @article,
+           label: "article",
+           path: [:admin, @article] if Current.user.can_delete? %>

@@ -1,0 +1,19 @@
+<div class='row my-5'>
+  <% { source_path: 'FROM', target_path: 'TO' }.each do |attribute, placeholder| %>
+  <div class='col'>
+    <%= form_with url: [:admin, :redirects], method: :get do |form| %>
+      <div class='mb-3'>
+        <%= form.text_field attribute,
+                            value:        params[attribute],
+                            class:        'form-control form-control-lg',
+                            placeholder:  placeholder,
+                            autocomplete: :off %>
+      </div>
+
+      <div class='text-end'>
+        <%= form.submit 'Search', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>

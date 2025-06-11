@@ -2,7 +2,18 @@
 H1-H6 headings
 */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Markazi Text';
-  line-height: 1;
+article,
+.titles {
+   h1,  h2,  h3,  h4,  h5,  h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Markazi Text';
+    font-weight: bold;
+    line-height: 1;
+
+    small {
+      font-family: var(--bs-font-sans-serif);
+      font-weight: normal;
+      font-size: .5em;
+    }
+  }
 }

@@ -1,3 +1,4 @@
+<%# IMPORTANT: any changes to this file also need to be applied to show.xml.erb for /sitemap.xml %>
 <%# no indentation, so that the rendered text file is also flat %>
 <%# homepage %>
 <%= root_url %>
@@ -28,6 +29,16 @@
 <%= category_url(category.slug) %>
 <% end %>
 <%# %>
+<%# tags %>
+<% @tags.each do |tag| %>
+<%# tag Atom feeds %>
+<%= tag_feed_url(tag.slug) %>
+<%# tag JSON feeds %>
+<%= tag_json_feed_url(tag.slug) %>
+<%# tag pages %>
+<%= tag_url(tag.slug) %>
+<% end %>
+<%# %>
 <%# static-ish pages %>
 <% @static_paths.each do |path| %>
 <%= [root_url, path].join('/') %>
@@ -37,6 +48,10 @@
 <% @article_years.each do |year| %>
 <% lastmod = DateTime.new(year).end_of_day %>
 <% lastmod = @last_modified if year == Time.current.year %>
+<%# article months in a year %>
+<% ('01'..'12').each do |month| %>
+<%= article_archives_url(year: year, month: month) %>
+<% end %>
 <%# %>
 <%= article_archives_url(year: year) %>
 <% end %>
@@ -47,10 +62,16 @@
 <%= [to_change_everything_url(lang: tce_language), '/get'].join %>
 <% end %>
 <%# %>
+<%# Steal Something from Work Day (SSfWD) %>
+<% @steal_something_from_work_day_urls.each do |ssfwd_url| %>
+<%= ssfwd_url %>
+<% end %>
+<%# %>
 <%# articles %>
 <% @articles.find_each do |article| %>
 <% cache article do %>
 <%= [root_url, article.path].join %>
+<%= [root_url, article.path, '.markdown'].join %>
 <% end %>
 <% end %>
 <%# %>
@@ -86,6 +107,15 @@ urls = [unicode_url, slug_url, english_url].uniq
 <% @books.find_each do |book| %>
 <% cache book do %>
 <%= book_url(book.slug) %>
+<% end %>
+<% end %>
+<%# %>
+<%# contradictionary definitions %>
+<%= definitions_url %>
+<% @definitions.each do |letter, definitions| %>
+<%= letter_url(letter) %>
+<% definitions.each do |definition| %>
+<%= definition_url(letter: letter, slug: definition.slug) %>
 <% end %>
 <% end %>
 <%# %>

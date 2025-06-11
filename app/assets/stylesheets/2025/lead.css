@@ -1,0 +1,14 @@
+/*
+Lead paragraph/s, from Bootstrap's .lead
+https://getbootstrap.com/docs/5.3/content/typography/#lead
+*/
+
+/* normal weight for .lead text */
+.lead {
+  font-weight: normal;
+}
+
+/* make .lead links a little bolder for better visibility */
+.lead a {
+  font-weight: 500;
+}

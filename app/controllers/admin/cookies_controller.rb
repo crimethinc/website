@@ -8,6 +8,6 @@ module Admin
 
     private
 
-    def cookie_params = params.require(:cookie).permit(:theme)
+    def cookie_params = params.expect cookie: [:theme]
   end
 end

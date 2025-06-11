@@ -31,10 +31,6 @@
     <link rel="manifest" href="/manifest.json">
 
     <%= stylesheet_link_tag "admin", media: "all" %>
-    <%= javascript_importmap_tags %>
-    <%= javascript_import_module_tag "popper" %>
-    <%= javascript_import_module_tag "bootstrap" %>
-    <%= yield(:head) %>
 
     <%= render 'layouts/2025/auto_dark_mode' %>
   </head>
@@ -62,9 +58,9 @@
             <%= link_to "Users", [:admin, :users], class: "text-muted mx-2" %>
           <% end %>
 
-          <%= link_to "Markdown", [:admin, :markdown], class: "text-muted mx-2" %>
-          <%= link_to "Settings", [:settings],         class: "text-muted mx-2" %>
-          <%= link_to "Sign out", [:signout],          class: "text-muted mx-2" %>
+          <%= link_to "Markdown", [:admin, :markdown],           class: "text-muted mx-2" %>
+          <%= link_to "Settings", [:edit, :admin, Current.user], class: "text-muted mx-2" %>
+          <%= link_to "Sign out", :signout,                      class: "text-muted mx-2" %>
         </footer>
       <% end %>
     </div>

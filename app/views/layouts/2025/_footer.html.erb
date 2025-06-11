@@ -1,6 +1,6 @@
 <footer class='container mt-5 pt-5 border-top' role='contentinfo' id='site-footer'>
   <div class='row'>
-    <div class='col-12 col-md-6 pr-5 mb-5'>
+    <div class='titles col-12 col-md-6 pr-5 mb-5'>
       <nav>
         <h2 class='pt-3' id='sitemap'><%= tt :sitemap %></h2>
 
@@ -63,7 +63,7 @@
     </div><!-- .col-12 col-md-6 -->
 
     <div class='col-12 col-md-6 pr-5 mb-5' id='email'>
-      <div class='mb-5' id='mc_embed_signup'><!-- Begin MailChimp Signup Form -->
+      <div class='titles mb-5' id='mc_embed_signup'><!-- Begin MailChimp Signup Form -->
         <h2 class='pt-3'><%= tt 'footer.contact.newsletter.heading' %></h2>
 
         <%= render_markdown tt('footer.contact.newsletter.description') %>
@@ -98,7 +98,7 @@
         <% end %>
       </div><!--End mc_embed_signup-->
 
-      <div class='pt-3' id='social'>
+      <div class='titles pt-3' id='social'>
         <h2><%= tt 'footer.contact.social.heading' %></h2>
         <%= render_markdown tt 'footer.contact.social.description' %>
 

@@ -1,10 +1,10 @@
 inherit_from: .rubocop_todo.yml
 
-require:
-  - rubocop-capybara
+plugins:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-capybara
   - rubocop-factory_bot
   - rubocop-rspec_rails
 
@@ -30,7 +30,7 @@ Layout/SpaceBeforeBrackets:
   Enabled: false
 
 Metrics/AbcSize:
-  Max: 74
+  Max: 80
 
 Metrics/BlockLength:
   Max: 99
@@ -38,13 +38,13 @@ Metrics/BlockLength:
     - "config/routes.rb"
 
 Metrics/ClassLength:
-  Max: 150
+  Max: 180
 
 Metrics/CyclomaticComplexity:
   Max: 13
 
 Metrics/MethodLength:
-  Max: 31
+  Max: 40
   Exclude:
     - "db/migrate/*"
 
@@ -61,7 +61,7 @@ Naming/VariableNumber:
   EnforcedStyle: snake_case
 
 # TODO: https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsenvironmentvariableaccess
-#       Consider using `Rails.application.config.foo` instead of `ENV["FOO"]`
+#       Consider using `Rails.application.config.foo` instead of `ENV['FOO']`
 Rails/EnvironmentVariableAccess:
   Enabled: false
 

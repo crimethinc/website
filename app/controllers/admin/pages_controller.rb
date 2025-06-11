@@ -1,3 +1,4 @@
+# TODO: Delete! NOT used by anything anymore!
 module Admin
   class PagesController < Admin::AdminController
     before_action :set_page,         only: %i[show edit update destroy]
@@ -7,7 +8,7 @@ module Admin
 
     # /admin/pages
     def index
-      @pages = Page.page(params[:page])
+      @pages = Page.all
       @title = admin_title
     end
 
@@ -70,8 +71,10 @@ module Admin
     end
 
     def page_params
-      params.require(:page).permit(:year, :month, :day, :css, :slug, :tags, :draft_code, :locale,
-                                   :published_at, :categories, :published_at_tz, :publication_status)
+      params.expect page: %i[
+        year month day css slug tags draft_code locale
+        published_at categories published_at_tz publication_status
+      ]
     end
   end
 end

@@ -1,46 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="1024"
-   height="1024"
-   viewBox="0 0 1024 1024"
-   fill="none"
-   version="1.1"
-   id="svg1"
-   sodipodi:docname="bluesky.svg"
-   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs1" />
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#505050"
-     bordercolor="#ffffff"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="1"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="1.3710938"
-     inkscape:cx="512"
-     inkscape:cy="512"
-     inkscape:window-width="3072"
-     inkscape:window-height="1652"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg1" />
-  <circle
-     style="fill:#161e27;stroke-width:1.22294;fill-opacity:1"
-     id="path2"
-     cx="512"
-     cy="512"
-     r="462.31625" />
-  <path
-     d="M351.121 315.106C416.241 363.994 486.281 463.123 512 516.315C537.719 463.123 607.759 363.994 672.879 315.106C719.866 279.83 796 252.536 796 339.388C796 356.734 786.055 485.101 780.222 505.943C759.947 578.396 686.067 596.876 620.347 585.691C735.222 605.242 764.444 670.002 701.333 734.762C581.473 857.754 529.061 703.903 515.631 664.481C513.169 657.254 512.017 653.873 512 656.748C511.983 653.873 510.831 657.254 508.369 664.481C494.939 703.903 442.527 857.754 322.667 734.762C259.556 670.002 288.778 605.242 403.653 585.691C337.933 596.876 264.053 578.396 243.778 505.943C237.945 485.101 228 356.734 228 339.388C228 252.536 304.134 279.83 351.121 315.106Z"
-     fill="#1185FE"
-     id="path1" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g fill-rule="nonzero">
+    <circle id="path2" fill="#1185FE" cx="15" cy="15" r="15"></circle>
+    <path d="M9.7802289,8.6117106 C11.8930683,10.1978975 14.1655387,13.41417 15,15.1400016 C15.8344613,13.41417 18.1069317,10.1978975 20.2197711,8.6117106 C21.7442795,7.46716939 24.2144717,6.58160675 24.2144717,9.39954793 C24.2144717,9.9623445 23.891803,14.1272533 23.7025494,14.8034787 C23.0447205,17.1542397 20.64766,17.7538292 18.5153534,17.3909283 C22.2425099,18.0252668 23.1906271,20.1264259 21.1429703,22.227585 C17.2540739,26.2181002 15.5535497,21.2263548 15.117809,19.9472953 C15.0379286,19.7128129 15.0005516,19.6031153 15,19.6963956 C14.9994484,19.6031153 14.9620714,19.7128129 14.882191,19.9472953 C14.4464503,21.2263548 12.7459261,26.2181002 8.85702968,22.227585 C6.80937291,20.1264259 7.75749014,18.0252668 11.4846466,17.3909283 C9.35233998,17.7538292 6.95527953,17.1542397 6.29745061,14.8034787 C6.10819704,14.1272533 5.7855283,9.9623445 5.7855283,9.39954793 C5.7855283,6.58160675 8.25572052,7.46716939 9.7802289,8.6117106 Z" id="path1" fill="#FFFFFF"></path>
+  </g>
 </svg>

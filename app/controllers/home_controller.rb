@@ -1,16 +1,24 @@
 class HomeController < ApplicationController
-  def index
-    @body_id = 'home'
-    @homepage = true
+  before_action :redirect_pagination
 
+  def index
     articles_for_current_page = Article.includes(:categories).english.live.published.root
 
-    # Homepage featured article
-    @latest_article = articles_for_current_page.first if first_page?
+    if Current.theme == '2017'
+      @body_id = 'home'
+      @homepage = true
 
-    if Current.theme == '2025'
+      # Homepage featured article
+      @latest_article = articles_for_current_page.first if first_page?
+
+      # Feed artciles
+      @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)
+    else
       # Feed artciles, needed for pagination
       @articles = articles_for_current_page.page(params[:page]).per(14).padding(1)
+
+      # Homepage featured article
+      @latest_article = articles_for_current_page.first
 
       # Recent article
       @just_published_articles = @articles[0..3]
@@ -39,12 +47,6 @@ class HomeController < ApplicationController
 
       # Ex-Workers’ Collection
       @ex_workers_collection = Article.featured
-
-      # Site language/subdomain switcher
-      @locales = Locale.where abbreviation: Rails.application.config.subdomain_locales
-    else
-      # Feed artciles
-      @articles = articles_for_current_page.page(params[:page]).per(6).padding(1)
     end
 
     render "#{Current.theme}/home/index"
@@ -54,5 +56,11 @@ class HomeController < ApplicationController
 
   def first_page?
     params[:page].blank?
+  end
+
+  def redirect_pagination
+    return if params[:page].blank?
+
+    redirect_to [:articles, { page: params[:page] }]
   end
 end

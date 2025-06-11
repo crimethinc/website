@@ -1,0 +1,18 @@
+<% date_heading_class = 'd-none' %>
+
+<% @article_archive.each do |year, months| %>
+  <% months.sort.reverse_each do |month, articles| %>
+
+    <% if @article_archive.day.blank? || @article_archive.month.blank? %>
+      <h2 class='<%= date_heading_class %>'>
+        <% date_heading_class = 'd-block' %>
+        <%= link_to_dates(year: year, month: month) %>
+      </h2>
+    <% end %>
+
+    <% articles.each do |article| %>
+      <%= render_themed 'articles/article', article: article %>
+    <% end %>
+
+  <% end %>
+<% end %>
