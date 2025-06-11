@@ -152,7 +152,7 @@ module Admin
         :short_path, :image, :css, :image_description, :image_mobile,
         :published_at_tz, :locale, :canonical_id, :publication_status,
         :word_doc, :featured_status, :featured_at, :header, category_ids: []
-      )
+      ]
 
       # if the `publish_now` submit button was used, we should see
       # that name show up in the raw params, we will set the
