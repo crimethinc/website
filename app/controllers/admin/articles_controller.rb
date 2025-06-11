@@ -39,7 +39,7 @@ module Admin
     end
 
     def create
-      @article = Article.new(article_params)
+      @article = Article.new article_params
       populate_content_from_docx_upload!
 
       if @article.save
@@ -53,7 +53,7 @@ module Admin
       populate_content_from_docx_upload!
       @article.tags.destroy_all
 
-      if @article.update(article_params)
+      if @article.update article_params
         # Bust the article cache to update list of translations on articles
         @article.localizations.each(&:touch)
 
