@@ -3,6 +3,11 @@ class Article < ApplicationRecord
   include Featureable
   include Translatable
 
+  has_one_attached :header, dependent: :destroy do |attachable|
+    attachable.variant :small,  resize_to_limit: [400, 200],   preprocessed: true
+    attachable.variant :large,  resize_to_limit: [2000, 1000], preprocessed: true
+  end
+
   has_one  :redirect, dependent: :destroy
   has_many :taggings, dependent: :destroy, as: :taggable
   has_many :tags, through: :taggings

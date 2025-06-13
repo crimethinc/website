@@ -22,7 +22,40 @@
     </div>
 
     <div class="col-12 col-md-5">
-      <%= render "admin/articles/upload_word_doc", form: form %>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-12 col-md-7">
+      <div class='mb-5'>
+        <%= render "admin/form/file_field", form: form, attr: :header, resource: article, label_text: "Header image" %>
+
+        <p class="form-text text-muted">
+          This is the large image that will be front and center on the <i>Article</i> page,
+          on the homepage and when syndicated to other sites. Preferred size:
+          <code>2000px wide</code> by about <code>1000px tall</code> (or taller).
+        </p>
+
+        <div class='mb-3'>
+          <% if article.header.attached? %>
+            <%= image_tag article.header.variant(:large), class: 'w-100' %>
+          <% end %>
+
+          <% if article.image_description.present? %>
+            <%= render_markdown article.image_description %>
+          <% end %>
+        </div>
+
+        <%= render "admin/label_and_area_form_group", form: form, attr: :image_description %>
+        <p class="form-text text-muted">
+          This is used for the <code>&lt;img&gt;</code>’s <code>alt</code> text.
+          And will be displayed underneath the header image in the redesign of the site.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-5">
     </div>
   </div>
 
@@ -71,11 +104,22 @@
 
   <div class="row mb-5">
     <div class="col-12 col-md-7">
-      <%= render "admin/articles/form/appearance", form: form %>
+      <%= render "admin/articles/form/appearance", form: form, resource: @article %>
     </div>
 
     <div class="col-12 col-md-5">
       <%= render "admin/articles/form/syndication", form: form %>
+    </div>
+  </div>
+
+  <%= render "admin/form_actions", cancel_url: [:admin, :articles] %>
+
+  <div class="row mb-5">
+    <div class="col-12 col-md-7">
+      <%= render "admin/articles/upload_word_doc", form: form %>
+    </div>
+
+    <div class="col-12 col-md-5">
     </div>
   </div>
 
