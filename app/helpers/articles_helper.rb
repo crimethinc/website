@@ -38,7 +38,7 @@ module ArticlesHelper
     domains = %i[email bluesky mastodon threads facebook tumblr]
 
     tag.ul class: 'social-links' do
-      domains.map { social_link_for article, it() }.join.html_safe
+      domains.map { social_link_for article, it }.join.html_safe
     end
   end
 
