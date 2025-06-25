@@ -56,7 +56,7 @@ module Crimethinc
       nl no
       pl pt
       ro ru
-      sh sk sv
+      sh sk sl sv
       th tl tr
       uk
       vi
