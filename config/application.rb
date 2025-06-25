@@ -50,7 +50,7 @@ module Crimethinc
       fa fi fr
       gl gr
       he hu
-      id it
+      id in it
       ja
       ko ku
       nl no
