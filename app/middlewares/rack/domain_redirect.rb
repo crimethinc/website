@@ -37,7 +37,7 @@ module Rack
       nl no
       pl pt
       ro ru
-      sk sl sv
+      sh sk sl sv
       th tl tr
       uk
       vi
