@@ -25,7 +25,7 @@ module Rack
     cc_tld_subdomains = %w[
       ar
       be bg bn
-      cs cz
+      ca cs cz
       da de dv
       en es eu
       fa fi fr
@@ -37,7 +37,7 @@ module Rack
       nl no
       pl pt
       ro ru
-      sk sl sv
+      sh sk sl sv
       th tl tr
       uk
       vi
