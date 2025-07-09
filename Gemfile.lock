@@ -110,7 +110,7 @@ GEM
     bindex (0.8.1)
     bootstrap (5.3.5)
       popper_js (>= 2.11.8, < 3)
-    bugsnag (6.27.1)
+    bugsnag (6.28.0)
       concurrent-ruby (~> 1.0)
     builder (3.3.0)
     byebug (12.0.0)
