@@ -24,6 +24,13 @@ class Poster < ApplicationRecord
     Rails.application.routes.url_helpers.rails_blob_url preferred_front_image
   end
 
+  # TEMP: duplicate of #meta_image, for now (2025-07-17)
+  def front_image
+    return if preferred_front_image.blank?
+
+    Rails.application.routes.url_helpers.rails_blob_url preferred_front_image
+  end
+
   private
 
   def preferred_front_image
