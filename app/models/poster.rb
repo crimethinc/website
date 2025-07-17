@@ -15,7 +15,8 @@ class Poster < ApplicationRecord
 
     Rails.application.routes.url_helpers.rails_blob_url preferred_front_image
   end
-  alias image meta_image
+
+  alias front_image image
 
   private
 
