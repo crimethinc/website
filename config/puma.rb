@@ -40,3 +40,9 @@ plugin :solid_queue if ENV['SOLID_QUEUE_IN_PUMA']
 # Specify the PID file. Defaults to tmp/pids/server.pid in development.
 # In other environments, only set the PID file if requested.
 pidfile ENV['PIDFILE'] if ENV['PIDFILE']
+
+# TEMP: for Heroku Router 2.0 until Puma fixes http2+keepalive upstream —Sb 2025-07-17
+#       https://www.heroku.com/blog/tips-tricks-router-2dot0-migration
+#       https://www.heroku.com/blog/pumas-routers-keepalives-ohmy
+#       https://github.com/puma/puma/issues/3487
+enable_keep_alives false
