@@ -17,7 +17,7 @@ class Logo < ApplicationRecord
   end
 
   def front_image
-    Rails.application.routes.url_helpers.rails_blob_path image_jpg, only_path: true
+    Rails.application.routes.url_helpers.rails_blob_path image_jpg
   end
 
   def meta_description
@@ -25,7 +25,7 @@ class Logo < ApplicationRecord
   end
 
   def meta_image
-    Rails.application.routes.url_helpers.rails_blob_url image_jpg, only_path: true
+    Rails.application.routes.url_helpers.rails_blob_url image_jpg
   end
   alias image meta_image
 
