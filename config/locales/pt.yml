@@ -299,13 +299,13 @@ pt:
       zines_heading_text:    Zines
 
       buttons:
-        browse_journals_text: Buscar todos os Jornais
-        browse_logos_text: Buscar todos os Logos
-        browse_music_text: Buscar todos as Músicas
-        browse_posters_text: Buscar todos os Posters
-        browse_stickers_text: Buscar todos os Adesivos
-        browse_videos_text: Buscar todos os Vídeos
-        browse_zines_text: Buscar todos os Zines
+        browse_journals_text: Ver todos os Jornais
+        browse_logos_text: Ver todos os Logos
+        browse_music_text: Ver todos as Músicas
+        browse_posters_text: Ver todos os Posters
+        browse_stickers_text: Ver todos os Adesivos
+        browse_videos_text: Ver todos os Vídeos
+        browse_zines_text: Ver todos os Zines
 
     books:
       crimethinc_into_libraries_heading: CrimethInc. nas Bibliotecas.
