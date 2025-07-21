@@ -44,15 +44,17 @@ module Crimethinc
     config.subdomain_locales = %i[
       ar
       be bg bn
-      ca cs cz
+      ca cs cz ceb
       da de dv
       en es eu
-      fa fi fr
+      fa fi fo fr
       gl gr
       he hu
       id in it
       ja
       ko ku
+      li lt
+      ms mt
       nl no
       pl pt
       ro ru
@@ -62,6 +64,10 @@ module Crimethinc
       vi
       zh
     ]
+
+    # Regional locales that have a hyphen in their IANA identifier
+    config.subdomain_locales << :'es-419' # Spanish (Latin America) # rubocop:disable Naming/VariableNumber
+    config.subdomain_locales << :'fr-qu'  # French  (Canadian/Quebecois)
 
     path_ltr_locales = %i[
       turkce
