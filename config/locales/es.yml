@@ -341,7 +341,7 @@ es:
         repeat_subscriber_error: Ya tenemos un suscriptor mensual con ese email. Si todavía queires dar más, intenta la donación de una vez. ¡Gracias!
 
       create_session:
-        no_existing_customer_error: No pudimos encontrar a ningún subscriptor mensual con ese email. Si piensas que esto es un error, por favor [envíanos un email](envíalo a:contact@crimethinc.com) para que podamos ayudarte.
+        no_existing_customer_error: No pudimos encontrar a ningún subscriptor mensual con ese email. Si piensas que esto es un error, por favor [envíanos un email](mailto:contact@crimethinc.com) para que podamos ayudarte.
         success_notice: Enviamos un email a _%{email}_ con un link donde puedes modificar tu suscripción.
         repeat_customer_error: ¡Ya enviaste tu solicitud! Espera un email de _contact@crimethinc.com_. Si nunca recibiste el email o perdiste tu link súper secreto, espera una hora e inténtalo de nuevo.
 
@@ -364,16 +364,16 @@ es:
 
       update_subscription:
         notice: Se ha actualizado la cantidad de tu subscripción.
-        error: Hubo un problema al actualizar tu soscripción. Por favor inténtalo de nuevo. Si el problema continúa, por favor [envíanos un email](envíalo a:contact@crimethinc.com) para poder ayudarte.
+        error: Hubo un problema al actualizar tu soscripción. Por favor inténtalo de nuevo. Si el problema continúa, por favor [envíanos un email](mailto:contact@crimethinc.com) para poder ayudarte.
 
       cancel_subscription:
         notice: Tu suscripción se ha cancelado.
-        error: Hubo un problema al cancelar tu soscripción. Por favor inténtalo de nuevo. Si el problema continúa, por favor [envíanos un email](envíalo a:contact@crimethinc.com) para poder ayudarte
+        error: Hubo un problema al cancelar tu soscripción. Por favor inténtalo de nuevo. Si el problema continúa, por favor [envíanos un email](mailto:contact@crimethinc.com) para poder ayudarte
 
       thanks:
         heading: ¡Gracias por tu apoyo!
         description: |
-          Tu [retroalimentación] es bienvenida (envíala a:contact@crimethinc.com) sobre nuestros esfuerzos y tu [participación](envíalo a:contact@crimethinc.com) en ellos.
+          Tu [retroalimentación] es bienvenida (envíala a:contact@crimethinc.com) sobre nuestros esfuerzos y tu [participación](mailto:contact@crimethinc.com) en ellos.
 
           Pronto recibirás un correo de confirmación.
 
