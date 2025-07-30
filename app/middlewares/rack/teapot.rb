@@ -1,31 +1,29 @@
 # Q: What do we say to the gods of pen testing?
 # A: Not today, kid!
 #
-# For requests that look like their "pen testing" the site,
+# For requests that look like they’re "pen testing" the site,
 # send back a 418 HTTP status code, instead of a 404/500 in our error logs
 #   https://httpstatuses.com/418
 #   https://http.cat/418.jpg
 
 module Rack
   class Teapot
-    BANNED_SEGMENTS = Set.new(
-      %w[
-        ads.txt
-        afacacaeusaaa
-        asp.net
-        cdnbuster
-        connector.asp
-        error.asp
-        FCKeditor
-        filemanager
-        jars
-        kindeditor
-        README.txt
-        wp
-        wp-admin
-        wp-login
-      ]
-    ).freeze
+    BANNED_SEGMENTS = %w[
+      ads.txt
+      afacacaeusaaa
+      asp.net
+      cdnbuster
+      connector.asp
+      error.asp
+      FCKeditor
+      filemanager
+      jars
+      kindeditor
+      README.txt
+      wp
+      wp-admin
+      wp-login
+    ].freeze
 
     def initialize app
       @app = app
