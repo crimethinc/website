@@ -44,7 +44,7 @@ module Rack
       segments = [path_segments, query_params].flatten
 
       # send a 418 code, if it looks like it’s a pen test kind of request
-      return i_am_a_teapot if segments.any? { |segment| BANNED_SEGMENTS.member? segment }
+      return i_am_a_teapot if segments.intersect?(BANNED_SEGMENTS)
 
       @app.call(env)
     end
