@@ -246,6 +246,49 @@
       margin-top: -.5em;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      display: flex;
+      align-items: baseline;
+    }
+
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+      order: 0;
+      margin-left: -0.6em;
+      margin-right: 0.1em;
+      text-decoration: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    h1:hover a,
+    h2:hover a,
+    h3:hover a,
+    h4:hover a,
+    h5:hover a,
+    h6:hover a {
+      opacity: 0.25;
+    }
+
+    h1 a::after,
+    h2 a::after,
+    h3 a::after,
+    h4 a::after,
+    h5 a::after,
+    h6 a::after {
+      content: "#";
+      font-size: 0.7em;
+    }
+
     p {
       line-height: 1.6em;
       margin-bottom: 1em;

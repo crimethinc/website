@@ -12,7 +12,8 @@ module MarkdownHelper
       MarkdownMedia.parse(text, include_media: media_mode?),
       input:                     :kramdown,
       remove_block_html_tags:    false,
-      transliterated_header_ids: true
+      transliterated_header_ids: true,
+      header_links:              true
     ).to_html.html_safe
 
     html = remove_wrapper_p_tag_from html if remove_wrapper_p_tag.present?
