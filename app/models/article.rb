@@ -71,6 +71,7 @@ class Article < ApplicationRecord
       input:                     content_format.to_sym,
       remove_block_html_tags:    false,
       transliterated_header_ids: true,
+      header_links:              true,
       html_to_native:            true
     ).to_html.html_safe
   end
