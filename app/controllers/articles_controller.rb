@@ -126,7 +126,7 @@ class ArticlesController < ApplicationController
 
   def content_without_embeds
     @article
-      .content
+      .content_and_notes
       .gsub(/\[\[.+\]\]/, '')
       .gsub("\r\n\r\n\r\n\r\n", "\r\n\r\n")
       .gsub("\r\n\r\n\r\n", "\r\n\r\n")
