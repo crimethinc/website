@@ -3,6 +3,7 @@ class ToChangeEverythingController < ApplicationController
 
   LTR_TO_CHANGE_ANYTHING_YAMLS = %w[
     srpskohrvatski
+    cebuano
     malay
     english
     espanol
