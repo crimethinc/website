@@ -14,7 +14,5 @@
 // 2025 theme
 //= link_tree ../stylesheets/2025 .css
 
-// TODO: delete this?
-// ??? lite_mode.css
+// javascript used for support page and live blogs
 //= link_tree ../../javascript .js
-//= link_tree ../../../vendor/javascript .js
