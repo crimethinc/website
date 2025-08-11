@@ -79,7 +79,7 @@ GEM
       execjs (~> 2)
     awesome_print (1.9.2)
     aws-eventstream (1.4.0)
-    aws-partitions (1.1143.0)
+    aws-partitions (1.1144.0)
     aws-sdk-core (3.229.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
@@ -167,7 +167,8 @@ GEM
       ffi (>= 1.15.5)
       rake
     flamegraph (0.9.5)
-    formatador (1.1.1)
+    formatador (1.2.0)
+      reline
     globalid (1.2.1)
       activesupport (>= 6.1)
     guard (2.19.1)
