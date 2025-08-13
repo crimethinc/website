@@ -465,7 +465,7 @@ GEM
       racc (~> 1.5)
       sexp_processor (~> 4.16)
     rubypants (0.7.1)
-    rubyzip (2.4.1)
+    rubyzip (3.0.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -475,11 +475,11 @@ GEM
       sprockets-rails
       tilt
     securerandom (0.4.1)
-    selenium-webdriver (4.34.0)
+    selenium-webdriver (4.35.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
-      rubyzip (>= 1.2.2, < 3.0)
+      rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
     sexp_processor (4.17.3)
     shellany (0.0.1)
