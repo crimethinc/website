@@ -380,7 +380,7 @@ GEM
       psych (>= 4.0.0)
     redis (5.4.1)
       redis-client (>= 0.22.0)
-    redis-client (0.25.1)
+    redis-client (0.25.2)
       connection_pool
     redis-store (1.11.0)
       redis (>= 4, < 6)
@@ -483,7 +483,7 @@ GEM
       websocket (~> 1.0)
     sexp_processor (4.17.3)
     shellany (0.0.1)
-    sidekiq (8.0.6)
+    sidekiq (8.0.7)
       connection_pool (>= 2.5.0)
       json (>= 2.9.0)
       logger (>= 1.6.2)
