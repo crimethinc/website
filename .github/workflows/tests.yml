@@ -9,10 +9,10 @@ jobs:
     services:
       postgres:
         image: postgres:11.6-alpine
-        ports: ['5432:5432']
+        ports: ["5432:5432"]
         env:
           PGUSER: postgres
-          PGPASSWORD: ''
+          PGPASSWORD: ""
         # Ensure Postgres container passes a health check
         options: >-
           --health-cmd pg_isready
@@ -22,8 +22,7 @@ jobs:
 
     steps:
       - name: Install system libraries
-        run: |
-          sudo apt-get -y install libpq-dev
+        run: sudo apt-get -y install libpq-dev
 
       - name: Checkout repository
         uses: actions/checkout@main
@@ -36,11 +35,9 @@ jobs:
       - name: Configure database
         env:
           PGUSER: postgres
-        run: |
-          bundle exec rails db:create
+        run: bundle exec rails db:create
 
       - name: Run tests
         env:
           PGUSER: postgres
-        run: |
-          bundle exec rspec --exclude-pattern="spec/system/*"
+        run: bundle exec rspec --exclude-pattern="spec/system/*"
