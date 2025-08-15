@@ -13,9 +13,9 @@ gem 'puma'
 
 # assets
 gem 'autoprefixer-rails'
-gem 'bootstrap'
 gem 'sassc-rails'
 gem 'uglifier'
+gem 'bootstrap'
 
 # Javascript / Hotwire
 gem 'importmap-rails'
