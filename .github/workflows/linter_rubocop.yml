@@ -16,4 +16,4 @@ jobs:
           bundler-cache: true
 
       - name: Run Rubocop linter
-        run:  bundle exec rubocop # --format github
+        run:  bundle exec rubocop --format github
