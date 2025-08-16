@@ -21,49 +21,49 @@ es:
       new_title: New Articles
       show_title: "Articles : %{title}"
       edit_title: "Editing article %{id} %{title} : %{subtitle}"
-      created: "El artículo se creó correctamente."
-      updated: "El artículo se actualizó correctamente."
-      destroyed: "El artículo se eliminó correctamente."
+      created: El artículo se creó correctamente.
+      updated: El artículo se actualizó correctamente.
+      destroyed: El artículo se eliminó correctamente.
     books:
       index_title: Books
       new_title: New Books
       show_title: "Books : %{title}"
       edit_title: "Editing book %{id} %{title} : %{subtitle}"
-      created: "El libro se creó correctamente."
-      updated: "El libro se actualizó correctamente."
-      destroyed: "El libro se eliminó correctamente."
+      created: El libro se creó correctamente.
+      updated: El libro se actualizó correctamente.
+      destroyed: El libro se eliminó correctamente.
     zines:
       index_title: Zines
       new_title: New Zines
       show_title: "Zines : %{title}"
       edit_title: "Editing zine %{id} %{title} : %{subtitle}"
-      created: "El fanzine se creó correctamente."
-      updated: "El fanzine se actualizó correctamente."
-      destroyed: "El fanzine se eliminó correctamente."
+      created: El fanzine se creó correctamente.
+      updated: El fanzine se actualizó correctamente.
+      destroyed: El fanzine se eliminó correctamente.
     journals:
       index_title: Journals
       new_title: New Journals
       show_title: "Journals : %{title}"
       edit_title: "Editing journal %{id} %{title} : %{subtitle}"
-      created: "La revista se creó correctamente."
-      updated: "La revista se actualizó correctamente."
-      destroyed: "La revista se eliminó correctamente."
+      created: La revista se creó correctamente.
+      updated: La revista se actualizó correctamente.
+      destroyed: La revista se eliminó correctamente.
     posters:
       index_title: Posters
       new_title: New Posters
       show_title: "Posters : %{title}"
       edit_title: "Editing poster %{id} %{title} : %{subtitle}"
-      created: "El póster se creó correctamente."
-      updated: "El póster se actualizó correctamente."
-      destroyed: "El póster se eliminó correctamente."
+      created: El póster se creó correctamente.
+      updated: El póster se actualizó correctamente.
+      destroyed: El póster se eliminó correctamente.
     stickers:
       index_title: Stickers
       new_title: New Stickers
       show_title: "Stickers : %{title}"
       edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
-      created: "La pegatina se creó correctamente."
-      updated: "La pegatina se actualizó correctamente."
-      destroyed: "La pegatina se eliminó correctamente."
+      created: La pegatina se creó correctamente.
+      updated: La pegatina se actualizó correctamente.
+      destroyed: La pegatina se eliminó correctamente.
     podcasts:
       index_title: Podcasts
       new_title: New Podcasts
@@ -79,33 +79,33 @@ es:
       new_title: New Categories
       show_title: "Categories : %{name}"
       edit_title: "Editing category %{id} : %{name}"
-      created: "La categoría se creó correctamente."
-      updated: "La categoría se actualizó correctamente."
-      destroyed: "La categoría se eliminó correctamente."
+      created: La categoría se creó correctamente.
+      updated: La categoría se actualizó correctamente.
+      destroyed: La categoría se eliminó correctamente.
     episodes:
       index_title: Episodes
       new_title: New Episodes
       show_title: "Episodes : %{title}"
       edit_title: "Editing episode %{id} %{title}"
-      created: "El episodio se creó correctamente."
-      updated: "El episodio se actualizó correctamente."
-      destroyed: "El episodio se eliminó correctamente."
+      created: El episodio se creó correctamente.
+      updated: El episodio se actualizó correctamente.
+      destroyed: El episodio se eliminó correctamente.
     users:
       index_title: Users
       new_title: New Users
       show_title: "Users : %{name}"
       edit_title: "Editing user %{id} : %{username}"
-      created: "El usuario se creó correctamente."
-      updated: "El usuario se actualizó correctamente."
-      destroyed: "El usuario se eliminó correctamente."
+      created: El usuario se creó correctamente.
+      updated: El usuario se actualizó correctamente.
+      destroyed: El usuario se eliminó correctamente.
     pages:
       index_title: Pages
       new_title: New Pages
       show_title: "Pages : %{title}"
       edit_title: "Editing page %{id} %{title} : %{subtitle}"
-      created: "La página se creó correctamente."
-      updated: "La página se actualizó correctamente."
-      destroyed: "La página se eliminó correctamente."
+      created: La página se creó correctamente.
+      updated: La página se actualizó correctamente.
+      destroyed: La página se eliminó correctamente.
     links:
       index_title: Links
       new_title: New Links
@@ -131,113 +131,112 @@ es:
     # Model-specific messages
 
     definitions:
-      created: "La definición se creó correctamente."
-      updated: "La definición se actualizó correctamente."
-      destroyed: "La definición se eliminó correctamente."
+      created: La definición se creó correctamente.
+      updated: La definición se actualizó correctamente.
+      destroyed: La definición se eliminó correctamente.
 
     issues:
-      created: "El número se creó correctamente."
-      updated: "El número se actualizó correctamente."
-      destroyed: "El número se eliminó correctamente."
+      created: El número se creó correctamente.
+      updated: El número se actualizó correctamente.
+      destroyed: El número se eliminó correctamente.
 
     logos:
-      created: "El logo se creó correctamente."
-      updated: "El logo se actualizó correctamente."
-      destroyed: "El logo se eliminó correctamente."
+      created: El logo se creó correctamente.
+      updated: El logo se actualizó correctamente.
+      destroyed: El logo se eliminó correctamente.
 
     tags:
-      created: "La etiqueta se creó correctamente."
-      updated: "La etiqueta se actualizó correctamente."
-      destroyed: "La etiqueta se eliminó correctamente."
+      created: La etiqueta se creó correctamente.
+      updated: La etiqueta se actualizó correctamente.
+      destroyed: La etiqueta se eliminó correctamente.
 
     # Common UI elements
     ui:
-      cancel: "Cancelar"
-      delete: "Eliminar"
-      edit: "Editar"
-      new: "NUEVO"
-      save: "Guardar"
-      preview: "Vista previa"
-      publish: "Publicar"
-      draft: "Borrador"
-      published: "Publicado"
+      cancel: Cancelar
+      delete: Eliminar
+      edit: Editar
+      new: NUEVO
+      save: Guardar
+      preview: Vista previa
+      publish: Publicar
+      draft: Borrador
+      published: Publicado
 
     # Confirmation messages
     confirmations:
-      delete: "¿Estás seguro? NO HAY DESHACER."
+      delete: ¿Estás seguro? NO HAY DESHACER.
 
     # Form labels and help text
     forms:
-      publication_status: "Estado de publicación"
+      publication_status: Estado de publicación
       featured_status: "¿Destacar este %{model} en la página principal?"
-      featured_status_help: "En la Colección de Ex-Trabajadores"
-      not_featured: "No destacado"
-      featured: "Destacado"
-      upload_word_doc: "Subir un archivo de Word"
-      word_doc_help: "Un archivo .docx subido se convertirá a Markdown y se usará en el área de contenido, sobrescribiendo cualquier contenido que ya esté allí. ¡SOLO funcionan archivos .docx!"
-      header_image: "Imagen de cabecera"
+      featured_status_help: En la Colección de Ex-Trabajadores
+      not_featured: No destacado
+      featured: Destacado
+      upload_word_doc: Subir un archivo de Word
+      word_doc_help: Un archivo .docx subido se convertirá a Markdown y se usará en el área de contenido, sobrescribiendo cualquier contenido que ya esté allí. ¡SOLO funcionan archivos .docx!
+      header_image: Imagen de cabecera
       header_image_help: "Esta es la imagen grande que estará al frente y al centro en la página del Artículo, en la página principal y cuando se sindique a otros sitios. Tamaño preferido: 2000px de ancho por aproximadamente 1000px de alto (o más alto)."
-      short_url_path: "Ruta de URL corta"
-      categories: "Categorías"
-      syndication: "Sindicación"
-      appearance: "Apariencia"
-      localization: "Localización"
+      short_url_path: Ruta de URL corta
+      categories: Categorías
+      syndication: Sindicación
+      appearance: Apariencia
+      localization: Localización
 
     # Navigation
     nav:
-      admin_dashboard: "🖤 ADMIN"
-      new_article: "📝 Nuevo Artículo"
-      articles: "📄 Artículos"
-      redirects: "↪️ Redirects"
-      new_redirect: "↪️ Nuevo Redirect"
-      draft_articles: "Borradores ➡️"
-      published_articles: "Publicados ➡️"
-      scroll_to_top: "Desplazarse al inicio del sitio"
-      markdown_cheatsheet: "Guía de Markdown ↗"
+      admin_dashboard: 🖤 ADMIN
+      new_article: 📝 Nuevo Artículo
+      articles: 📄 Artículos
+      redirects: ↪️ Redirects
+      new_redirect: ↪️ Nuevo Redirect
+      draft_articles: Borradores ➡️
+      published_articles: Publicados ➡️
+      scroll_to_top: Desplazarse al inicio del sitio
+      markdown_cheatsheet: Guía de Markdown ↗
 
     # Page headings and sections
     headings:
-      nested_articles: "Artículos anidados"
-      new_nested_article: "NUEVO Artículo anidado"
-      downloads: "Descargas"
-      danger_zone: "Zona de peligro"
+      nested_articles: Artículos anidados
+      new_nested_article: NUEVO Artículo anidado
+      downloads: Descargas
+      danger_zone: Zona de peligro
 
     # Help text and descriptions
     help:
-      downloads_path: "Las descargas deben subirse a"
-      live_blog_help: "Para artículos de blog en vivo:"
-      preview_draft: "Vista previa del borrador"
-      edit_article: "Editar artículo"
-      jump_to: "Saltar a"
+      downloads_path: Las descargas deben subirse a
+      preview_draft: Vista previa del borrador
+      edit_article: Editar artículo
+      jump_to: Saltar a
 
   ebooks:
     - slug: screen_single_page_view
       name: Vista de Página Única para Pantalla PDF
-      description: ¿Hay un `PDF` de una página de ancho para lectura en pantalla subido?
+      description: ¿Hay un ‘PDF’ de una página de ancho para lectura en pantalla subido?
     - slug: screen_two_page_view
       name: Vista de Dos Páginas para Pantalla PDF
-      description: ¿Hay un `PDF` de dos páginas de ancho para lectura en pantalla subido?
+      description: ¿Hay un ‘PDF’ de dos páginas de ancho para lectura en pantalla subido?
     - slug: print_color
       name: PDF Color para Imprimir
-      description: ¿Hay un `PDF` a color para imprimir subido?
+      description: ¿Hay un ‘PDF’ a color para imprimir subido?
     - slug: print_black_and_white
       name: PDF B/N para Imprimir
-      description: ¿Hay un `PDF` en blanco y negro para imprimir subido?
+      description: ¿Hay un ‘PDF’ en blanco y negro para imprimir subido?
     - slug: print_color_a4
       name: PDF Color A4 para Imprimir
-      description: ¿Hay un `PDF` a color tamaño A4 para imprimir subido?
+      description: ¿Hay un ‘PDF’ a color tamaño A4 para imprimir subido?
     - slug: print_black_and_white_a4
       name: PDF B/N A4
-      description: ¿Hay un `PDF` en blanco y negro tamaño A4 para imprimir subido?
+      description: ¿Hay un ‘PDF’ en blanco y negro tamaño A4 para imprimir subido?
     - slug: lite
       name: PDF Tinta Lite
-      description: ¿Hay un archivo `PDF` amigable con el tóner de la impresora subido?
+      description: ¿Hay un archivo ‘PDF’ amigable con el tóner de la impresora subido?
     - slug: epub
       name: ePub
-      description: ¿Hay un archivo `.mobi` subido?
+      description: ¿Hay un archivo ‘.epub’ subido?
     - slug: mobi
       name: Mobi
-      description: ¿Hay un PDF de baja resolución o vista de página única subido?
+      description: ¿Hay un archivo ‘.mobi’ subido?
 
   activerecord:
     errors:
