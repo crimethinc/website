@@ -1,7 +1,7 @@
 <% if @article.draft? %>
   <div class="draft-preview-message">
     <%= t('ui.previewing_draft') %>
-    <%= link_to t('ui.continue_editing', model: 'article'), [:edit, :admin, @article] %> or
+    <%= link_to t('ui.continue_editing_article'), [:edit, :admin, @article] %> or
     <%= link_to t('ui.view_in_admin', model: 'article'), [:admin, @article] %>.
   </div>
 <% end %>

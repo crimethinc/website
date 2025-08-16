@@ -413,8 +413,8 @@ en:
   # Common UI elements and messages
   ui:
     previewing_draft: PREVIEWING DRAFT.
-    continue_editing: Continue editing %{model}
-    view_in_admin: view %{model} in Admin
+    continue_editing_article: Continue editing article
+    view_article_in_admin: view article in Admin
     download_docx: Download .docx
     subscribe_to_rss: Subscribe to RSS
     subscribe_in_itunes: Subscribe in iTunes

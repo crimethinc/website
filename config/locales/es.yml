@@ -413,8 +413,8 @@ es:
   # Common UI elements and messages
   ui:
     previewing_draft: PREVISUALIZANDO BORRADOR.
-    continue_editing: Continuar editando %{model}
-    view_in_admin: ver %{model} en Admin
+    continue_editing_article: Continuar editando artículo
+    view_article_in_admin: ver artículo en Admin
     download_docx: Descargar .docx
     subscribe_to_rss: Suscribirse a RSS
     subscribe_in_itunes: Suscribirse en iTunes
