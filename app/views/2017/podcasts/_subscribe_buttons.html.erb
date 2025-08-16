@@ -1,8 +1,9 @@
 <p class="podcast-contact-info">
-  Rate us on iTunes and let us know what you think, or send us an email to <%= mail_to "podcast@crimethinc.com" %>.
+  Rate us on iTunes and let us know what you think, or send us an email to
+  <%= mail_to "podcast@crimethinc.com" %>.
 </p>
 
 <div class="subscribe">
   <%# All links are on one line to avoid the browsers default little spacing that comes with a source linebreak %>
-  <%= link_to "Subscribe to RSS", podcast_feed_url, class: "u-url podcast-subscribe-rss" %><%= link_to "Subscribe in iTunes", podcast.itunes_url, class: "u-url podcast-subscribe-itunes" %><br><%= link_to "Subscribe in Overcast", podcast.overcast_url, class: "u-url podcast-subscribe-overcast" %><%= link_to "Subscribe in Pocket Casts", podcast.pocketcasts_url, class: "u-url podcast-subscribe-pocketcasts" %>
+  <%= link_to t('ui.subscribe_to_rss'), podcast_feed_url, class: "u-url podcast-subscribe-rss" %><%= link_to t('ui.subscribe_in_itunes'), podcast.itunes_url, class: "u-url podcast-subscribe-itunes" %><br><%= link_to t('ui.subscribe_in_overcast'), podcast.overcast_url, class: "u-url podcast-subscribe-overcast" %><%= link_to t('ui.subscribe_in_pocket_casts'), podcast.pocketcasts_url, class: "u-url podcast-subscribe-pocketcasts" %>
 </div>
