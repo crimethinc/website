@@ -43,7 +43,7 @@ module Admin
       populate_content_from_docx_upload!
 
       if @article.save
-        redirect_to [:admin, @article], notice: t('admin.articles.create.notice')
+        redirect_to [:admin, @article], notice: t('.notice')
       else
         render :new
       end
@@ -57,7 +57,7 @@ module Admin
         # Bust the article cache to update list of translations on articles
         @article.localizations.each(&:touch)
 
-        redirect_to [:admin, @article], notice: t('admin.articles.update.notice')
+        redirect_to [:admin, @article], notice: t('.notice')
       else
         render :edit
       end
@@ -67,7 +67,7 @@ module Admin
       return redirect_to [:admin, @article] unless Current.user.can_delete?
 
       @article.destroy
-      redirect_to %i[admin articles], notice: t('admin.articles.destroy.notice')
+      redirect_to %i[admin articles], notice: t('.notice')
     end
 
     private

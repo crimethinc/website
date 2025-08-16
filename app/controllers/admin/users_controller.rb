@@ -25,7 +25,7 @@ module Admin
       @user = User.new(user_params)
 
       if @user.save
-        redirect_to %i[admin users], notice: t('admin.users.create.notice')
+        redirect_to %i[admin users], notice: t('.notice')
       else
         render :new
       end
@@ -33,7 +33,7 @@ module Admin
 
     def update
       if @user.update(user_params)
-        redirect_to %i[admin users], notice: t('admin.users.update.notice')
+        redirect_to %i[admin users], notice: t('.notice')
       else
         render :edit
       end
@@ -41,7 +41,7 @@ module Admin
 
     def destroy
       @user.destroy
-      redirect_to %i[admin users], notice: t('admin.users.destroy.notice')
+      redirect_to %i[admin users], notice: t('.notice')
     end
 
     private
