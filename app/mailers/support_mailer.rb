@@ -6,6 +6,6 @@ class SupportMailer < ApplicationMailer
     @support_session = params[:support_session]
     @host = params[:host]
 
-    mail to: @email, subject: t('views.support.mailers.edit_subscription.subject')
+    mail to: @email, subject: t('.edit_subscription.subject')
   end
 end

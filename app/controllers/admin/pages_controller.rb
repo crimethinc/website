@@ -33,7 +33,7 @@ module Admin
       @page = Page.new(page_params)
 
       if @page.save
-        redirect_to [:admin, @page], notice: 'Page was successfully created.'
+        redirect_to [:admin, @page], notice: t('admin.pages.create.notice')
       else
         render :new
       end
@@ -42,7 +42,7 @@ module Admin
     # /admin/pages/1
     def update
       if @page.update(page_params)
-        redirect_to [:admin, @page], notice: 'Page was successfully updated.'
+        redirect_to [:admin, @page], notice: t('admin.pages.update.notice')
       else
         render :edit
       end
@@ -51,7 +51,7 @@ module Admin
     # /admin/pages/1
     def destroy
       @page.destroy
-      redirect_to %i[admin pages], notice: 'Page was successfully destroyed.'
+      redirect_to %i[admin pages], notice: t('admin.pages.destroy.notice')
     end
 
     private

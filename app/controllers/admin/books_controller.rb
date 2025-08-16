@@ -24,7 +24,7 @@ module Admin
       @book = Book.new(book_params)
 
       if @book.save
-        redirect_to [:admin, @book], notice: t('admin.books.created')
+        redirect_to [:admin, @book], notice: t('admin.books.create.notice')
       else
         render :new
       end
@@ -32,7 +32,7 @@ module Admin
 
     def update
       if @book.update(book_params)
-        redirect_to [:admin, @book], notice: t('admin.books.updated')
+        redirect_to [:admin, @book], notice: t('admin.books.update.notice')
       else
         render :edit
       end
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @book.destroy
-      redirect_to %i[admin books], notice: t('admin.books.destroyed')
+      redirect_to %i[admin books], notice: t('admin.books.destroy.notice')
     end
 
     private

@@ -24,7 +24,7 @@ module Admin
       @category = Category.new(category_params)
 
       if @category.save
-        redirect_to [:admin, @category], notice: t('admin.categories.created')
+        redirect_to [:admin, @category], notice: t('admin.categories.create.notice')
       else
         render :new
       end
@@ -32,7 +32,7 @@ module Admin
 
     def update
       if @category.update(category_params)
-        redirect_to [:admin, @category], notice: t('admin.categories.updated')
+        redirect_to [:admin, @category], notice: t('admin.categories.update.notice')
       else
         render :edit
       end
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @category.destroy
-      redirect_to %i[admin categories], notice: t('admin.categories.destroyed')
+      redirect_to %i[admin categories], notice: t('admin.categories.destroy.notice')
     end
 
     private
