@@ -21,31 +21,49 @@ es:
       new_title: New Articles
       show_title: "Articles : %{title}"
       edit_title: "Editing article %{id} %{title} : %{subtitle}"
+      created: "El artículo se creó correctamente."
+      updated: "El artículo se actualizó correctamente."
+      destroyed: "El artículo se eliminó correctamente."
     books:
       index_title: Books
       new_title: New Books
       show_title: "Books : %{title}"
       edit_title: "Editing book %{id} %{title} : %{subtitle}"
+      created: "El libro se creó correctamente."
+      updated: "El libro se actualizó correctamente."
+      destroyed: "El libro se eliminó correctamente."
     zines:
       index_title: Zines
       new_title: New Zines
       show_title: "Zines : %{title}"
       edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+      created: "El fanzine se creó correctamente."
+      updated: "El fanzine se actualizó correctamente."
+      destroyed: "El fanzine se eliminó correctamente."
     journals:
       index_title: Journals
       new_title: New Journals
       show_title: "Journals : %{title}"
       edit_title: "Editing journal %{id} %{title} : %{subtitle}"
+      created: "La revista se creó correctamente."
+      updated: "La revista se actualizó correctamente."
+      destroyed: "La revista se eliminó correctamente."
     posters:
       index_title: Posters
       new_title: New Posters
       show_title: "Posters : %{title}"
       edit_title: "Editing poster %{id} %{title} : %{subtitle}"
+      created: "El póster se creó correctamente."
+      updated: "El póster se actualizó correctamente."
+      destroyed: "El póster se eliminó correctamente."
     stickers:
       index_title: Stickers
       new_title: New Stickers
       show_title: "Stickers : %{title}"
       edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
+      created: "La pegatina se creó correctamente."
+      updated: "La pegatina se actualizó correctamente."
+      destroyed: "La pegatina se eliminó correctamente."
     podcasts:
       index_title: Podcasts
       new_title: New Podcasts
@@ -61,21 +79,33 @@ es:
       new_title: New Categories
       show_title: "Categories : %{name}"
       edit_title: "Editing category %{id} : %{name}"
+      created: "La categoría se creó correctamente."
+      updated: "La categoría se actualizó correctamente."
+      destroyed: "La categoría se eliminó correctamente."
     episodes:
       index_title: Episodes
       new_title: New Episodes
       show_title: "Episodes : %{title}"
       edit_title: "Editing episode %{id} %{title}"
+      created: "El episodio se creó correctamente."
+      updated: "El episodio se actualizó correctamente."
+      destroyed: "El episodio se eliminó correctamente."
     users:
       index_title: Users
       new_title: New Users
       show_title: "Users : %{name}"
       edit_title: "Editing user %{id} : %{username}"
+      created: "El usuario se creó correctamente."
+      updated: "El usuario se actualizó correctamente."
+      destroyed: "El usuario se eliminó correctamente."
     pages:
       index_title: Pages
       new_title: New Pages
       show_title: "Pages : %{title}"
       edit_title: "Editing page %{id} %{title} : %{subtitle}"
+      created: "La página se creó correctamente."
+      updated: "La página se actualizó correctamente."
+      destroyed: "La página se eliminó correctamente."
     links:
       index_title: Links
       new_title: New Links
@@ -99,75 +129,26 @@ es:
       destroyed: "%{model} se eliminó correctamente."
 
     # Model-specific messages
-    articles:
-      created: "El artículo se creó correctamente."
-      updated: "El artículo se actualizó correctamente."
-      destroyed: "El artículo se eliminó correctamente."
-
-    books:
-      created: "El libro se creó correctamente."
-      updated: "El libro se actualizó correctamente."
-      destroyed: "El libro se eliminó correctamente."
-
-    categories:
-      created: "La categoría se creó correctamente."
-      updated: "La categoría se actualizó correctamente."
-      destroyed: "La categoría se eliminó correctamente."
 
     definitions:
       created: "La definición se creó correctamente."
       updated: "La definición se actualizó correctamente."
       destroyed: "La definición se eliminó correctamente."
 
-    episodes:
-      created: "El episodio se creó correctamente."
-      updated: "El episodio se actualizó correctamente."
-      destroyed: "El episodio se eliminó correctamente."
-
     issues:
       created: "El número se creó correctamente."
       updated: "El número se actualizó correctamente."
       destroyed: "El número se eliminó correctamente."
-
-    journals:
-      created: "La revista se creó correctamente."
-      updated: "La revista se actualizó correctamente."
-      destroyed: "La revista se eliminó correctamente."
 
     logos:
       created: "El logo se creó correctamente."
       updated: "El logo se actualizó correctamente."
       destroyed: "El logo se eliminó correctamente."
 
-    pages:
-      created: "La página se creó correctamente."
-      updated: "La página se actualizó correctamente."
-      destroyed: "La página se eliminó correctamente."
-
-    posters:
-      created: "El póster se creó correctamente."
-      updated: "El póster se actualizó correctamente."
-      destroyed: "El póster se eliminó correctamente."
-
-    stickers:
-      created: "La pegatina se creó correctamente."
-      updated: "La pegatina se actualizó correctamente."
-      destroyed: "La pegatina se eliminó correctamente."
-
     tags:
       created: "La etiqueta se creó correctamente."
       updated: "La etiqueta se actualizó correctamente."
       destroyed: "La etiqueta se eliminó correctamente."
-
-    users:
-      created: "El usuario se creó correctamente."
-      updated: "El usuario se actualizó correctamente."
-      destroyed: "El usuario se eliminó correctamente."
-
-    zines:
-      created: "El fanzine se creó correctamente."
-      updated: "El fanzine se actualizó correctamente."
-      destroyed: "El fanzine se eliminó correctamente."
 
     # Common UI elements
     ui:

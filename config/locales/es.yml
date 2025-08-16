@@ -143,6 +143,7 @@ es:
       - Una chispa en cada barril de pólvora.
       - La esperanza no espera.
       - Mobilis in mobili
+      - Luchando la próxima guerra.
 
     site_mode: Cambiar a a versión pequeña del sitio →
 
@@ -152,6 +153,7 @@ es:
       about: About
       library: Biblioteca en línea
       store: Tienda
+      rss_feeds: Feeds RSS
       submission_guidelines: Para colaboraciones
       steal_something_from_work_day: Steal Something from Work Day
     search:
@@ -190,6 +192,10 @@ es:
       off_the_map: Fuera del mapa
       recipes_for_disaster: Recetas para el desastre
       work: Trabajo
+    definitions:
+      index: Definiciones
+    archives:
+      index: Archivos
 
   podcast:
     latest_episode: Episodios recientes

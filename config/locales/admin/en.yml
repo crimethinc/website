@@ -21,31 +21,49 @@ en:
       new_title: New Articles
       show_title: "Articles : %{title}"
       edit_title: "Editing article %{id} %{title} : %{subtitle}"
+      created: "Article was successfully created."
+      updated: "Article was successfully updated."
+      destroyed: "Article was successfully destroyed."
     books:
       index_title: Books
       new_title: New Books
       show_title: "Books : %{title}"
       edit_title: "Editing book %{id} %{title} : %{subtitle}"
+      created: "Book was successfully created."
+      updated: "Book was successfully updated."
+      destroyed: "Book was successfully destroyed."
     zines:
       index_title: Zines
       new_title: New Zines
       show_title: "Zines : %{title}"
       edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+      created: "Zine was successfully created."
+      updated: "Zine was successfully updated."
+      destroyed: "Zine was successfully destroyed."
     journals:
       index_title: Journals
       new_title: New Journals
       show_title: "Journals : %{title}"
       edit_title: "Editing journal %{id} %{title} : %{subtitle}"
+      created: "Journal was successfully created."
+      updated: "Journal was successfully updated."
+      destroyed: "Journal was successfully destroyed."
     posters:
       index_title: Posters
       new_title: New Posters
       show_title: "Posters : %{title}"
       edit_title: "Editing poster %{id} %{title} : %{subtitle}"
+      created: "Poster was successfully created."
+      updated: "Poster was successfully updated."
+      destroyed: "Poster was successfully destroyed."
     stickers:
       index_title: Stickers
       new_title: New Stickers
       show_title: "Stickers : %{title}"
       edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
+      created: "Sticker was successfully created."
+      updated: "Sticker was successfully updated."
+      destroyed: "Sticker was successfully destroyed."
     podcasts:
       index_title: Podcasts
       new_title: New Podcasts
@@ -61,21 +79,33 @@ en:
       new_title: New Categories
       show_title: "Categories : %{name}"
       edit_title: "Editing category %{id} : %{name}"
+      created: "Category was successfully created."
+      updated: "Category was successfully updated."
+      destroyed: "Category was successfully destroyed."
     episodes:
       index_title: Episodes
       new_title: New Episodes
       show_title: "Episodes : %{title}"
       edit_title: "Editing episode %{id} %{title}"
+      created: "Episode was successfully created."
+      updated: "Episode was successfully updated."
+      destroyed: "Episode was successfully destroyed."
     users:
       index_title: Users
       new_title: New Users
       show_title: "Users : %{name}"
       edit_title: "Editing user %{id} : %{username}"
+      created: "User was successfully created."
+      updated: "User was successfully updated."
+      destroyed: "User was successfully destroyed."
     pages:
       index_title: Pages
       new_title: New Pages
       show_title: "Pages : %{title}"
       edit_title: "Editing page %{id} %{title} : %{subtitle}"
+      created: "Page was successfully created."
+      updated: "Page was successfully updated."
+      destroyed: "Page was successfully destroyed."
     links:
       index_title: Links
       new_title: New Links
@@ -99,75 +129,25 @@ en:
       destroyed: "%{model} was successfully destroyed."
 
     # Model-specific messages
-    articles:
-      created: "Article was successfully created."
-      updated: "Article was successfully updated."
-      destroyed: "Article was successfully destroyed."
-
-    books:
-      created: "Book was successfully created."
-      updated: "Book was successfully updated."
-      destroyed: "Book was successfully destroyed."
-
-    categories:
-      created: "Category was successfully created."
-      updated: "Category was successfully updated."
-      destroyed: "Category was successfully destroyed."
-
     definitions:
       created: "Definition was successfully created."
       updated: "Definition was successfully updated."
       destroyed: "Definition was successfully destroyed."
-
-    episodes:
-      created: "Episode was successfully created."
-      updated: "Episode was successfully updated."
-      destroyed: "Episode was successfully destroyed."
 
     issues:
       created: "Issue was successfully created."
       updated: "Issue was successfully updated."
       destroyed: "Issue was successfully destroyed."
 
-    journals:
-      created: "Journal was successfully created."
-      updated: "Journal was successfully updated."
-      destroyed: "Journal was successfully destroyed."
-
     logos:
       created: "Logo was successfully created."
       updated: "Logo was successfully updated."
       destroyed: "Logo was successfully destroyed."
 
-    pages:
-      created: "Page was successfully created."
-      updated: "Page was successfully updated."
-      destroyed: "Page was successfully destroyed."
-
-    posters:
-      created: "Poster was successfully created."
-      updated: "Poster was successfully updated."
-      destroyed: "Poster was successfully destroyed."
-
-    stickers:
-      created: "Sticker was successfully created."
-      updated: "Sticker was successfully updated."
-      destroyed: "Sticker was successfully destroyed."
-
     tags:
       created: "Tag was successfully created."
       updated: "Tag was successfully updated."
       destroyed: "Tag was successfully destroyed."
-
-    users:
-      created: "User was successfully created."
-      updated: "User was successfully updated."
-      destroyed: "User was successfully destroyed."
-
-    zines:
-      created: "Zine was successfully created."
-      updated: "Zine was successfully updated."
-      destroyed: "Zine was successfully destroyed."
 
     # Common UI elements
     ui:
