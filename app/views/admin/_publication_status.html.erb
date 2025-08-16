@@ -1,7 +1,7 @@
 <div class="card mb-3">
   <div class="card-body">
     <div id="publication-status">
-      <%= form.label :publication_status, "Publication Status", class: "form-label" %><br>
+      <%= form.label :publication_status, t('admin.forms.publication_status'), class: "form-label" %><br>
 
       <% Publishable.publication_statuses_for(user: Current.user).each do |state| %>
         <%= form.radio_button :publication_status, state, id: "publication_status_#{state}", class: "btn-check" %>
