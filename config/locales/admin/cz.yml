@@ -1,18 +1,18 @@
 cz:
   auth:
-    signin_failed:             Invalid email or password.
-    signout:                   Signed out!
+    signin_failed: Invalid email or password.
+    signout: Signed out!
 
-    signup_heading:            Sign Up
-    signin_heading:            Sign In
-    forgot_password_heading:   Forget Your Password?
-    reset_password_heading:    Reset Your Password
+    signup_heading: Sign Up
+    signin_heading: Sign In
+    forgot_password_heading: Forget Your Password?
+    reset_password_heading: Reset Your Password
 
-    username_label:            🦁 Username
-    username_note:             Not an email address.
-    password_label:            🔑 Password
-    password_note:             Passwords must be **at least %{password_minimum_length} characters** long.
-    signin_button_text:        Sign In
+    username_label: 🦁 Username
+    username_note: Not an email address.
+    password_label: 🔑 Password
+    password_note: Passwords must be **at least %{password_minimum_length} characters** long.
+    signin_button_text: Sign In
 
   admin:
     title_prepend: Admin
@@ -95,28 +95,28 @@ cz:
   ebooks:
     - slug: screen_single_page_view
       name: Screen Single Page View PDF
-      description: Is there a one page wide `PDF` for on-screen reading uploaded?
+      description: Is there a one page wide ‘PDF’ for on-screen reading uploaded?
     - slug: screen_two_page_view
       name: Screen Two Page View PDF
-      description: Is there a two page wide `PDF` for on-screen reading uploaded?
+      description: Is there a two page wide ‘PDF’ for on-screen reading uploaded?
     - slug: print_color
       name: Print Color PDF
-      description: Is there a color `PDF` for printing uploaded?
+      description: Is there a color ‘PDF’ for printing uploaded?
     - slug: print_black_and_white
       name: Print B/W PDF
-      description: Is there a B/W `PDF` for printing uploaded?
+      description: Is there a B/W ‘PDF’ for printing uploaded?
     - slug: print_color_a4
       name: Print Color A4 PDF
-      description: Is there an A4 sized color `PDF` for printing uploaded?
+      description: Is there an A4 sized color ‘PDF’ for printing uploaded?
     - slug: print_black_and_white_a4
-      name:  B/W A4 PDF
-      description: Is there an A4 sized B/W `PDF` for printing uploaded?
+      name: B/W A4 PDF
+      description: Is there an A4 sized B/W ‘PDF’ for printing uploaded?
     - slug: lite
       name: Ink Lite PDF
-      description: Is there a printer toner frienly `PDF` file uploaded?
+      description: Is there a printer toner friendly ‘PDF’ file uploaded?
     - slug: epub
       name: ePub
-      description: Is there a `.mobi` file uploaded?
+      description: Is there a ‘.epub’ file uploaded?
     - slug: mobi
       name: Mobi
       description: Is there a low resolution or single page view PDF uploaded?

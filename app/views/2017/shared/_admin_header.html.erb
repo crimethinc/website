@@ -6,15 +6,15 @@
   </style>
 
   <nav id="admin-header">
-    <%= link_to "ADMIN Dashboard",    admin_path, class: "button" %>
-    <%= link_to "Scroll to Site Top", "#header",  class: "button" %>
+    <%= link_to t('nav.links.admin_dashboard'),    admin_path, class: "button" %>
+    <%= link_to t('nav.links.scroll_to_site_top'), "#header",  class: "button" %>
 
     <% if @article.present? %>
-      <%= link_to "Download .docx", "#{@article.path}.docx", class: "button" %>
+      <%= link_to t('ui.download_docx'), "#{@article.path}.docx", class: "button" %>
     <% end %>
 
     <% if @editable.present? %>
-      <b><%= link_to "Edit #{@editable.class}", [:edit, :admin, @editable], class: "button" %></b>
+      <b><%= link_to t('forms.buttons.edit', model: @editable.class), [:edit, :admin, @editable], class: "button" %></b>
     <% end %>
 
     <% if @article.present? %>
