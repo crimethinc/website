@@ -1,233 +1,185 @@
 es:
-  auth:
-    signin_failed: Invalid email or password.
-    signout: Signed out!
-    signup_heading: Sign Up
-    signin_heading: Sign In
-    forgot_password_heading: Forget Your Password?
-    reset_password_heading: Reset Your Password
-    username_label: "🦁 Username"
-    username_note: Not an email address.
-    password_label: "🔑 Password"
-    password_note: Passwords must be **at least %{password_minimum_length} characters** long.
-    signin_button_text: Sign In
   admin:
     title_prepend: Admin
     articles:
-      index_title: Articles
-      new_title: New Articles
-      show_title: "Articles : %{title}"
-      edit_title: "Editing article %{id} %{title} : %{subtitle}"
-      created: El artículo se creó correctamente.
-      updated: El artículo se actualizó correctamente.
-      destroyed: El artículo se eliminó correctamente.
+      index_title: Artículos
+      new_title: Nuevos Artículos
+      show_title: "Artículos : %{title}"
+      edit_title: "Editando artículo %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO- Translate] Article was successfully created."
+        notice: El artículo se creó correctamente.
       update:
-        notice: "[TODO- Translate] Article was successfully updated."
+        notice: El artículo se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Article was successfully destroyed."
+        notice: El artículo se eliminó correctamente.
     books:
-      index_title: Books
-      new_title: New Books
-      show_title: "Books : %{title}"
-      edit_title: "Editing book %{id} %{title} : %{subtitle}"
-      created: El libro se creó correctamente.
-      updated: El libro se actualizó correctamente.
-      destroyed: El libro se eliminó correctamente.
+      index_title: Libros
+      new_title: Nuevos Libros
+      show_title: "Libros : %{title}"
+      edit_title: "Editando libro %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO- Translate] Book was successfully created."
+        notice: El libro se creó correctamente.
       update:
-        notice: "[TODO- Translate] Book was successfully updated."
+        notice: El libro se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Book was successfully destroyed."
+        notice: El libro se eliminó correctamente.
     zines:
-      index_title: Zines
-      new_title: New Zines
-      show_title: "Zines : %{title}"
-      edit_title: "Editing zine %{id} %{title} : %{subtitle}"
-      created: El fanzine se creó correctamente.
-      updated: El fanzine se actualizó correctamente.
-      destroyed: El fanzine se eliminó correctamente.
+      index_title: Fanzines
+      new_title: Nuevos Fanzines
+      show_title: "Fanzines : %{title}"
+      edit_title: "Editando fanzine %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO- Translate] Zine was successfully created."
+        notice: El fanzine se creó correctamente.
       update:
-        notice: "[TODO- Translate] Zine was successfully updated."
+        notice: El fanzine se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Zine was successfully destroyed."
+        notice: El fanzine se eliminó correctamente.
     journals:
-      index_title: Journals
-      new_title: New Journals
-      show_title: "Journals : %{title}"
-      edit_title: "Editing journal %{id} %{title} : %{subtitle}"
-      created: La revista se creó correctamente.
-      updated: La revista se actualizó correctamente.
-      destroyed: La revista se eliminó correctamente.
+      index_title: Revistas
+      new_title: Nuevas Revistas
+      show_title: "Revistas : %{title}"
+      edit_title: "Editando revista %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO- Translate] Journal was successfully created."
+        notice: La revista se creó correctamente.
       update:
-        notice: "[TODO- Translate] Journal was successfully updated."
+        notice: La revista se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Journal was successfully destroyed."
+        notice: La revista se eliminó correctamente.
     posters:
-      index_title: Posters
-      new_title: New Posters
-      show_title: "Posters : %{title}"
-      edit_title: "Editing poster %{id} %{title} : %{subtitle}"
-      created: El póster se creó correctamente.
-      updated: El póster se actualizó correctamente.
-      destroyed: El póster se eliminó correctamente.
+      index_title: Pósters
+      new_title: Nuevos Pósters
+      show_title: "Pósters : %{title}"
+      edit_title: "Editando póster %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO- Translate] Poster was successfully created."
+        notice: El póster se creó correctamente.
       update:
-        notice: "[TODO- Translate] Poster was successfully updated."
+        notice: El póster se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Poster was successfully destroyed."
+        notice: El póster se eliminó correctamente.
     stickers:
-      index_title: Stickers
-      new_title: New Stickers
-      show_title: "Stickers : %{title}"
-      edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
-      created: La pegatina se creó correctamente.
-      updated: La pegatina se actualizó correctamente.
-      destroyed: La pegatina se eliminó correctamente.
+      index_title: Pegatinas
+      new_title: Nuevas Pegatinas
+      show_title: "Pegatinas : %{title}"
+      edit_title: "Editando pegatina %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO- Translate] Sticker was successfully created."
+        notice: La pegatina se creó correctamente.
       update:
-        notice: "[TODO- Translate] Sticker was successfully updated."
+        notice: La pegatina se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Sticker was successfully destroyed."
+        notice: La pegatina se eliminó correctamente.
     podcasts:
       index_title: Podcasts
-      new_title: New Podcasts
+      new_title: Nuevos Podcasts
       show_title: "Podcasts : %{title}"
-      edit_title: "Editing podcast %{id} %{title} : %{subtitle}"
+      edit_title: "Editando podcast %{id} %{title} : %{subtitle}"
     videos:
       index_title: Videos
-      new_title: New Videos
+      new_title: Nuevos Videos
       show_title: "Videos : %{title}"
-      edit_title: "Editing video %{id} %{title} : %{subtitle}"
+      edit_title: "Editando video %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO- Translate] Video was successfully created."
+        notice: El video se creó correctamente.
       update:
-        notice: "[TODO- Translate] Video was successfully updated."
+        notice: El video se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Video was successfully destroyed."
+        notice: El video se eliminó correctamente.
     categories:
-      index_title: Categories
-      new_title: New Categories
-      show_title: "Categories : %{name}"
-      edit_title: "Editing category %{id} : %{name}"
-      created: La categoría se creó correctamente.
-      updated: La categoría se actualizó correctamente.
-      destroyed: La categoría se eliminó correctamente.
+      index_title: Categorías
+      new_title: Nuevas Categorías
+      show_title: "Categorías : %{name}"
+      edit_title: "Editando categoría %{id} : %{name}"
       create:
-        notice: "[TODO- Translate] Categorie was successfully created."
+        notice: La categoría se creó correctamente.
       update:
-        notice: "[TODO- Translate] Categorie was successfully updated."
+        notice: La categoría se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Categorie was successfully destroyed."
+        notice: La categoría se eliminó correctamente.
     episodes:
-      index_title: Episodes
-      new_title: New Episodes
-      show_title: "Episodes : %{title}"
-      edit_title: Editing episode %{id} %{title}
-      created: El episodio se creó correctamente.
-      updated: El episodio se actualizó correctamente.
-      destroyed: El episodio se eliminó correctamente.
+      index_title: Episodios
+      new_title: Nuevos Episodios
+      show_title: "Episodios : %{title}"
+      edit_title: "Editando episodio %{id} %{title}"
       create:
-        notice: "[TODO- Translate] Episode was successfully created."
+        notice: El episodio se creó correctamente.
       update:
-        notice: "[TODO- Translate] Episode was successfully updated."
+        notice: El episodio se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Episode was successfully destroyed."
+        notice: El episodio se eliminó correctamente.
     users:
-      index_title: Users
-      new_title: New Users
-      show_title: "Users : %{name}"
-      edit_title: "Editing user %{id} : %{username}"
-      created: El usuario se creó correctamente.
-      updated: El usuario se actualizó correctamente.
-      destroyed: El usuario se eliminó correctamente.
+      index_title: Usuarios
+      new_title: Nuevos Usuarios
+      show_title: "Usuarios : %{name}"
+      edit_title: "Editando usuario %{id} : %{username}"
       create:
-        notice: "[TODO- Translate] User was successfully created."
+        notice: El usuario se creó correctamente.
       update:
-        notice: "[TODO- Translate] User was successfully updated."
+        notice: El usuario se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] User was successfully destroyed."
+        notice: El usuario se eliminó correctamente.
     pages:
-      index_title: Pages
-      new_title: New Pages
-      show_title: "Pages : %{title}"
-      edit_title: "Editing page %{id} %{title} : %{subtitle}"
-      created: La página se creó correctamente.
-      updated: La página se actualizó correctamente.
-      destroyed: La página se eliminó correctamente.
+      index_title: Páginas
+      new_title: Nuevas Páginas
+      show_title: "Páginas : %{title}"
+      edit_title: "Editando página %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO- Translate] Page was successfully created."
+        notice: La página se creó correctamente.
       update:
-        notice: "[TODO- Translate] Page was successfully updated."
+        notice: La página se actualizó correctamente.
       destroy:
-        notice: "[TODO- Translate] Page was successfully destroyed."
+        notice: La página se eliminó correctamente.
     links:
-      index_title: Links
-      new_title: New Links
-      show_title: "Links : %{name}"
-      edit_title: "Editing link %{id} : %{name}"
+      index_title: Enlaces
+      new_title: Nuevos Enlaces
+      show_title: "Enlaces : %{name}"
+      edit_title: "Editando enlace %{id} : %{name}"
     locales:
-      index_title: Locales
-      new_title: New Locales
-      show_title: "Locales : %{name}"
-      edit_title: "Editing locale %{id} : %{abbreviation} : %{name_in_english} : %{name}"
+      index_title: Idiomas
+      new_title: Nuevos Idiomas
+      show_title: "Idiomas : %{name}"
+      edit_title: "Editando idioma %{id} : %{abbreviation} : %{name_in_english} : %{name}"
     redirects:
-      index_title: Redirects
-      new_title: New Redirects
-      show_title: "Redirects : %{source_path}"
-      edit_title: Editing redirect %{id} %{source_path}
+      index_title: Redirecciones
+      new_title: Nuevas Redirecciones
+      show_title: "Redirecciones : %{source_path}"
+      edit_title: "Editando redirección %{id} %{source_path}"
+
+    # Additional admin sections for controllers without page titles
+    definitions:
+      create:
+        notice: La definición se creó correctamente.
+      update:
+        notice: La definición se actualizó correctamente.
+      destroy:
+        notice: La definición se eliminó correctamente.
+    issues:
+      create:
+        notice: El número se creó correctamente.
+      update:
+        notice: El número se actualizó correctamente.
+      destroy:
+        notice: El número se eliminó correctamente.
+    logos:
+      create:
+        notice: El logo se creó correctamente.
+      update:
+        notice: El logo se actualizó correctamente.
+      destroy:
+        notice: El logo se eliminó correctamente.
+    tags:
+      create:
+        notice: La etiqueta se creó correctamente.
+      update:
+        notice: La etiqueta se actualizó correctamente.
+      destroy:
+        notice: La etiqueta se eliminó correctamente.
+
+    # Generic CRUD operation messages for fallback
     notices:
       created: "%{model} se creó correctamente."
       updated: "%{model} se actualizó correctamente."
       destroyed: "%{model} se eliminó correctamente."
-    definitions:
-      created: La definición se creó correctamente.
-      updated: La definición se actualizó correctamente.
-      destroyed: La definición se eliminó correctamente.
-      create:
-        notice: "[TODO- Translate] Definition was successfully created."
-      update:
-        notice: "[TODO- Translate] Definition was successfully updated."
-      destroy:
-        notice: "[TODO- Translate] Definition was successfully destroyed."
-    issues:
-      created: El número se creó correctamente.
-      updated: El número se actualizó correctamente.
-      destroyed: El número se eliminó correctamente.
-      create:
-        notice: "[TODO- Translate] Issue was successfully created."
-      update:
-        notice: "[TODO- Translate] Issue was successfully updated."
-      destroy:
-        notice: "[TODO- Translate] Issue was successfully destroyed."
-    logos:
-      created: El logo se creó correctamente.
-      updated: El logo se actualizó correctamente.
-      destroyed: El logo se eliminó correctamente.
-      create:
-        notice: "[TODO- Translate] Logo was successfully created."
-      update:
-        notice: "[TODO- Translate] Logo was successfully updated."
-      destroy:
-        notice: "[TODO- Translate] Logo was successfully destroyed."
-    tags:
-      created: La etiqueta se creó correctamente.
-      updated: La etiqueta se actualizó correctamente.
-      destroyed: La etiqueta se eliminó correctamente.
-      create:
-        notice: "[TODO- Translate] Tag was successfully created."
-      update:
-        notice: "[TODO- Translate] Tag was successfully updated."
-      destroy:
-        notice: "[TODO- Translate] Tag was successfully destroyed."
+
+    # Common UI elements
     ui:
       cancel: Cancelar
       delete: Eliminar
@@ -238,8 +190,12 @@ es:
       publish: Publicar
       draft: Borrador
       published: Publicado
+
+    # Confirmation messages
     confirmations:
       delete: "¿Estás seguro? NO HAY DESHACER."
+
+    # Form labels and help text
     forms:
       publication_status: Estado de publicación
       featured_status: "¿Destacar este %{model} en la página principal?"
@@ -247,7 +203,7 @@ es:
       not_featured: No destacado
       featured: Destacado
       upload_word_doc: Subir un archivo de Word
-      word_doc_help: Un archivo .docx subido se convertirá a Markdown y se usará en el área de contenido, sobrescribiendo cualquier contenido que ya esté allí. ¡SOLO funcionan archivos .docx!
+      word_doc_help: "Un archivo .docx subido se convertirá a Markdown y se usará en el área de contenido, sobrescribiendo cualquier contenido que ya esté allí. ¡SOLO funcionan archivos .docx!"
       header_image: Imagen de cabecera
       header_image_help: "Esta es la imagen grande que estará al frente y al centro en la página del Artículo, en la página principal y cuando se sindique a otros sitios. Tamaño preferido: 2000px de ancho por aproximadamente 1000px de alto (o más alto)."
       short_url_path: Ruta de URL corta
@@ -255,59 +211,59 @@ es:
       syndication: Sindicación
       appearance: Apariencia
       localization: Localización
+
+    # Navigation
     nav:
-      admin_dashboard: "🖤 ADMIN"
-      new_article: "📝 Nuevo Artículo"
-      articles: "📄 Artículos"
-      redirects: "↪️ Redirects"
-      new_redirect: "↪️ Nuevo Redirect"
+      admin_dashboard: 🖤 ADMIN
+      new_article: 📝 Nuevo Artículo
+      articles: 📄 Artículos
+      redirects: ↪️ Redirecciones
+      new_redirect: ↪️ Nueva Redirección
       draft_articles: Borradores ➡️
       published_articles: Publicados ➡️
-      scroll_to_top: Desplazarse al inicio del sitio
+      scroll_to_top: Ir al inicio de la página
       markdown_cheatsheet: Guía de Markdown ↗
+
+    # Page headings and sections
     headings:
       nested_articles: Artículos anidados
       new_nested_article: NUEVO Artículo anidado
       downloads: Descargas
       danger_zone: Zona de peligro
+
+    # Help text and descriptions
     help:
       downloads_path: Las descargas deben subirse a
+      live_blog_help: "Para artículos de blog en vivo:"
       preview_draft: Vista previa del borrador
       edit_article: Editar artículo
       jump_to: Saltar a
+
   ebooks:
     - slug: screen_single_page_view
       name: Vista de Página Única para Pantalla PDF
-      description: "¿Hay un ‘PDF’ de una página de ancho para lectura en pantalla subido?"
+      description: "¿Hay un 'PDF' de una página de ancho para lectura en pantalla subido?"
     - slug: screen_two_page_view
       name: Vista de Dos Páginas para Pantalla PDF
-      description: "¿Hay un ‘PDF’ de dos páginas de ancho para lectura en pantalla subido?"
+      description: "¿Hay un 'PDF' de dos páginas de ancho para lectura en pantalla subido?"
     - slug: print_color
       name: PDF Color para Imprimir
-      description: "¿Hay un ‘PDF’ a color para imprimir subido?"
+      description: "¿Hay un 'PDF' a color para imprimir subido?"
     - slug: print_black_and_white
       name: PDF B/N para Imprimir
-      description: "¿Hay un ‘PDF’ en blanco y negro para imprimir subido?"
+      description: "¿Hay un 'PDF' en blanco y negro para imprimir subido?"
     - slug: print_color_a4
       name: PDF Color A4 para Imprimir
-      description: "¿Hay un ‘PDF’ a color tamaño A4 para imprimir subido?"
+      description: "¿Hay un 'PDF' a color tamaño A4 para imprimir subido?"
     - slug: print_black_and_white_a4
       name: PDF B/N A4
-      description: "¿Hay un ‘PDF’ en blanco y negro tamaño A4 para imprimir subido?"
+      description: "¿Hay un 'PDF' en blanco y negro tamaño A4 para imprimir subido?"
     - slug: lite
       name: PDF Tinta Lite
-      description: "¿Hay un archivo ‘PDF’ amigable con el tóner de la impresora subido?"
+      description: "¿Hay un archivo 'PDF' amigable con el tóner de la impresora subido?"
     - slug: epub
       name: ePub
-      description: "¿Hay un archivo ‘.epub’ subido?"
+      description: "¿Hay un archivo '.epub' subido?"
     - slug: mobi
       name: Mobi
-      description: "¿Hay un archivo ‘.mobi’ subido?"
-  activerecord:
-    errors:
-      models:
-        article:
-          source_path:
-            uniqueness: is already taken by article short path
-          target_path:
-            uniqueness: redirects to itself
+      description: "¿Hay un archivo '.mobi' subido?"
