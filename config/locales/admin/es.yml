@@ -242,28 +242,28 @@ es:
   ebooks:
     - slug: screen_single_page_view
       name: Vista de Página Única para Pantalla PDF
-      description: "¿Hay un 'PDF' de una página de ancho para lectura en pantalla subido?"
+      description: "¿Hay un ʻPDFʼ de una página de ancho para lectura en pantalla subido?"
     - slug: screen_two_page_view
       name: Vista de Dos Páginas para Pantalla PDF
-      description: "¿Hay un 'PDF' de dos páginas de ancho para lectura en pantalla subido?"
+      description: "¿Hay un ʻPDFʼ de dos páginas de ancho para lectura en pantalla subido?"
     - slug: print_color
       name: PDF Color para Imprimir
-      description: "¿Hay un 'PDF' a color para imprimir subido?"
+      description: "¿Hay un ʻPDFʼ a color para imprimir subido?"
     - slug: print_black_and_white
       name: PDF B/N para Imprimir
-      description: "¿Hay un 'PDF' en blanco y negro para imprimir subido?"
+      description: "¿Hay un ʻPDFʼ en blanco y negro para imprimir subido?"
     - slug: print_color_a4
       name: PDF Color A4 para Imprimir
-      description: "¿Hay un 'PDF' a color tamaño A4 para imprimir subido?"
+      description: "¿Hay un ʻPDFʼ a color tamaño A4 para imprimir subido?"
     - slug: print_black_and_white_a4
       name: PDF B/N A4
-      description: "¿Hay un 'PDF' en blanco y negro tamaño A4 para imprimir subido?"
+      description: "¿Hay un ʻPDFʼ en blanco y negro tamaño A4 para imprimir subido?"
     - slug: lite
       name: PDF Tinta Lite
-      description: "¿Hay un archivo 'PDF' amigable con el tóner de la impresora subido?"
+      description: "¿Hay un archivo ʻPDFʼ amigable con el tóner de la impresora subido?"
     - slug: epub
       name: ePub
-      description: "¿Hay un archivo '.epub' subido?"
+      description: "¿Hay un archivo ʻ.epubʼ subido?"
     - slug: mobi
       name: Mobi
-      description: "¿Hay un archivo '.mobi' subido?"
+      description: "¿Hay un archivo ʻ.mobiʼ subido?"
