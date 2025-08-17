@@ -1,28 +1,28 @@
-en:
+es:
   views:
     pagination:
       first: «
       last: »
       previous: ‹
-      previous_screen_reader: Previous
+      previous_screen_reader: Anterior
       next: ›
-      next_screen_reader: Next
+      next_screen_reader: Siguiente
       truncate: …
-      next_page: Next ›
-      previous_page: ‹ Previous
-      next_article: Next article ›
-      previous_article: ‹ Previous article
-      next_month: Next month ›
-      previous_month: ‹ Previous month
-      next_year: Next year ›
-      previous_year: ‹ Previous year
+      next_page: Siguiente ›
+      previous_page: ‹ Anterior
+      next_article: Artículo siguiente ›
+      previous_article: ‹ Artículo anterior
+      next_month: Mes siguiente ›
+      previous_month: ‹ Mes anterior
+      next_year: Año siguiente ›
+      previous_year: ‹ Año anterior
 
   helpers:
     page_entries_info:
       entry:
-        zero: entries
-        one: entry
-        other: entries
+        zero: entradas
+        one: entrada
+        other: entradas
       one_page:
         display_entries:
           zero: No %{entry_name} found

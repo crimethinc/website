@@ -1,0 +1,17 @@
+es:
+  views:
+    languages:
+      heading: Idiomas
+      view_site_in_locale: Ver el sitio en español [aquí](https://es.crimethinc.com).
+      view_tools_in_locale: Se puede acceder nuestros afiches, fanzines, y otros materiales en español [aquí](https://es.crimethinc.com/tools).
+      view_books_in_locale: Se puede acceder nuestros libros en español [aquí](https://es.crimethinc.com/books).
+
+      description: |
+        El material de CrimethInc. ha aparecido en más de tres docenas de idiomas;
+        nuestro manual introductorio, [Para Cambiar Todo](/tce), está disponible en 30.
+        Hemos aspirado por mucho tiempo a recopilar todas las diferentes traducciones en este sitio.
+        Si te gustaría traducir nuestro material—o si puedes ayudarnos a recopilar traducciones para
+        este archivo o ayudarnos a mantener comunicación entre proyectos relacionados alrededor
+        del mundo—por favor [contáctanos](mailto:contact@crimethinc.com).
+
+        Aquí, puedes encontrar todos los artículos en este sitio categorizados según el idioma.

@@ -1,0 +1,163 @@
+es:
+  activerecord:
+    models:
+      article:
+        one: Artículo
+        other: Artículos
+      book:
+        one: Libro
+        other: Libros
+      category:
+        one: Categoría
+        other: Categorías
+      episode:
+        one: Episodio
+        other: Episodios
+      journal:
+        one: Periódico
+        other: Periódicos
+      poster:
+        one: Poster
+        other: Posters
+      sticker:
+        one: Sticker
+        other: Stickers
+      video:
+        one: Video
+        other: Videos
+      zine:
+        one: Zine
+        other: Zines
+      user:
+        one: Usuario
+        other: Usuarios
+      page:
+        one: Página
+        other: Páginas
+      podcast:
+        one: Podcast
+        other: Podcasts
+      definition:
+        one: Definición
+        other: Definiciones
+      tag:
+        one: Tag
+        other: Tags
+      logo:
+        one: Logo
+        other: Logos
+      issue:
+        one: Problema
+        other: Problemas
+      redirect:
+        one: Redirección
+        other: Redirecciones
+      locale:
+        one: Idioma
+        other: Idiomas
+
+    attributes:
+      article:
+        title: Título
+        subtitle: Subtítulo
+        content: Contenido
+        summary: Resumen
+        published_at: Publicado en
+        slug: Slug
+        short_path: Ruta Corta
+        image_description: Descripción de Imagen
+        locale: Idioma
+        publication_status: Estado de Publicación
+        featured_status: Estado Destacado
+        tags: Tags
+        categories: Categorías
+        tweet: Tweet
+        notes: Notas
+        css: CSS
+        year: Año
+        month: Mes
+        day: Día
+        draft_code: Código de Borrador
+        canonical_id: Artículo Canónico
+        collection_id: Colección
+        featured_at: Destacado En
+        published_at_tz: Zona Horaria de Publicación
+      book:
+        title: Título
+        subtitle: Subtítulo
+        content: Contenido
+        summary: Resumen
+        published_at: Publicado en
+        slug: Slug
+        short_path: Ruta Corta
+        image_description: Descripción de Imagen
+        locale: Idioma
+        publication_status: Estado de Publicación
+        featured_status: Estado Destacado
+        price_in_cents: Precio (centavos)
+        buy_url: URL de Compra
+        buy_info: Información de Compra
+        content_format: Formato de Contenido
+      category:
+        name: Nombre
+        slug: Slug
+      episode:
+        title: Título
+        subtitle: Subtítulo
+        content: Contenido
+        summary: Resumen
+        audio_url: URL de Audio
+        audio_length: Duración de Audio
+        audio_type: Tipo de Audio
+        duration: Duración
+        podcast_id: Podcast
+        episode_number: Número de Episodio
+      user:
+        username: Nombre de Usuario
+        password: Contraseña
+        email: Email
+        role: Rol
+      tag:
+        name: Nombre
+        slug: Slug
+
+    errors:
+      messages:
+        blank: no puede estar en blanco
+        taken: ya ha sido tomado
+        too_short: es demasiado corto (mínimo es %{count} caracteres)
+        too_long: es demasiado largo (máximo es %{count} caracteres)
+        invalid: es inválido
+        confirmation: no coincide con la confirmación
+      models:
+        article:
+          attributes:
+            title:
+              blank: El título no puede estar en blanco
+            slug:
+              taken: El slug ya ha sido tomado para esta fecha
+            short_path:
+              taken: La ruta corta ya ha sido tomada
+              uniqueness: ya está tomada por la ruta corta del artículo
+            published_at:
+              blank: La fecha de publicación no puede estar en blanco para artículos publicados
+        book:
+          attributes:
+            title:
+              blank: El título no puede estar en blanco
+        category:
+          attributes:
+            name:
+              blank: El nombre no puede estar en blanco
+              taken: El nombre ya ha sido tomado
+        user:
+          attributes:
+            username:
+              blank: El nombre de usuario no puede estar en blanco
+              taken: El nombre de usuario ya ha sido tomado
+            password:
+              blank: La contraseña no puede estar en blanco
+              too_short: La contraseña es demasiado corta (mínimo es %{count} caracteres)
+            email:
+              blank: El email no puede estar en blanco
+              invalid: El formato del email es inválido

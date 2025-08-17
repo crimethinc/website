@@ -1,0 +1,13 @@
+es:
+  auth:
+    forgot_password_heading: ¿Olvidaste tu Contraseña?
+    password_label: 🔑 Contraseña
+    password_note: Las contraseñas deben tener **al menos %{password_minimum_length} caracteres** de largo.
+    reset_password_heading: Restablecer tu Contraseña
+    signin_button_text: Iniciar Sesión
+    signin_failed: Email o contraseña inválidos.
+    signin_heading: Iniciar Sesión
+    signout: ¡Sesión cerrada!
+    signup_heading: Registrarse
+    username_label: 🦁 Nombre de usuario
+    username_note: No es una dirección de email.

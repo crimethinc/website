@@ -55,6 +55,7 @@ en:
       locale:
         one: Locale
         other: Locales
+
     attributes:
       article:
         title: Title
@@ -119,6 +120,7 @@ en:
       tag:
         name: Name
         slug: Slug
+
     errors:
       messages:
         blank: can't be blank

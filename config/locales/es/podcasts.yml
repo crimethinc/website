@@ -1,0 +1,17 @@
+es:
+  views:
+    podcasts:
+      show:
+        download: Descarga
+        full_episode_transcript: Transcripciones del episodio completo
+        latest_episode: Episodios recientes
+        listen: Escucha el episodio
+        notes_and_links: Notas y links
+        other_episodes: Todos episodios
+        show_notes: Notas del show
+        subscribe_in_itunes: Suscribirse en iTunes
+        subscribe_in_overcast: Suscribirse en Overcast
+        subscribe_in_pocket_casts: Suscribirse en Pocket Casts
+        subscribe_to_rss: Suscribirse a RSS
+        summary: Resumen
+        transcript: Transcripcción

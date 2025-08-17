@@ -1,0 +1,167 @@
+es:
+  admin:
+    articles:
+      create:
+        notice: Artículo fue creado exitosamente.
+      update:
+        notice: Artículo fue actualizado exitosamente.
+      destroy:
+        notice: Artículo fue eliminado exitosamente.
+    books:
+      create:
+        notice: Libro fue creado exitosamente.
+      update:
+        notice: Libro fue actualizado exitosamente.
+      destroy:
+        notice: Libro fue eliminado exitosamente.
+    categories:
+      create:
+        notice: Categoría fue creada exitosamente.
+      update:
+        notice: Categoría fue actualizada exitosamente.
+      destroy:
+        notice: Categoría fue eliminada exitosamente.
+    episodes:
+      create:
+        notice: Episodio fue creado exitosamente.
+      update:
+        notice: Episodio fue actualizado exitosamente.
+      destroy:
+        notice: Episodio fue eliminado exitosamente.
+    journals:
+      create:
+        notice: Periódico fue creado exitosamente.
+      update:
+        notice: Periódico fue actualizado exitosamente.
+      destroy:
+        notice: Periódico fue eliminado exitosamente.
+    posters:
+      create:
+        notice: Poster fue creado exitosamente.
+      update:
+        notice: Poster fue actualizado exitosamente.
+      destroy:
+        notice: Poster fue eliminado exitosamente.
+    stickers:
+      create:
+        notice: Sticker fue creado exitosamente.
+      update:
+        notice: Sticker fue actualizado exitosamente.
+      destroy:
+        notice: Sticker fue eliminado exitosamente.
+    videos:
+      create:
+        notice: Video fue creado exitosamente.
+      update:
+        notice: Video fue actualizado exitosamente.
+      destroy:
+        notice: Video fue eliminado exitosamente.
+    zines:
+      create:
+        notice: Zine fue creado exitosamente.
+      update:
+        notice: Zine fue actualizado exitosamente.
+      destroy:
+        notice: Zine fue eliminado exitosamente.
+    users:
+      create:
+        notice: Usuario fue creado exitosamente.
+      update:
+        notice: Usuario fue actualizado exitosamente.
+      destroy:
+        notice: Usuario fue eliminado exitosamente.
+    pages:
+      create:
+        notice: Página fue creada exitosamente.
+      update:
+        notice: Página fue actualizada exitosamente.
+      destroy:
+        notice: Página fue eliminada exitosamente.
+    tools:
+      poster:
+        image_description: Photo of '%{title}' front side
+        back_image_description: Photo of '%{title}' back side
+
+  # Public site controllers
+  videos:
+    index:
+      title: Videos
+  tools:
+    index:
+      title: Herramientas
+  posters:
+    index:
+      title: Posters
+  journals:
+    index:
+      title: Periódicos
+  zines:
+    index:
+      title: Zines
+  stickers:
+    index:
+      title: Stickers
+  logos:
+    index:
+      title: Logos
+  podcasts:
+    index:
+      title: Podcasts
+    transcript:
+      title: Transcripciones
+  categories:
+    index:
+      title: Categorías
+  books:
+    index:
+      title: Libros
+    extras:
+      title: Extras
+    lit_kit:
+      title: Kit de distribución de libros
+    into_libraries:
+      title: CrimethInc. Libros introductorios
+    contradictionary:
+      title: Contradiccionario
+    days_of_war_nights_of_love:
+      title: Días de guerra, noches de amor
+    expect_resistance:
+      title: Esperen resistencia
+    from_democracy_to_freedom:
+      title: De la democracia a la libertad
+    no_wall_they_can_build:
+      title: Ningún muro que ellos puedan construir
+    off_the_map:
+      title: Fuera del mapa
+    recipes_for_disaster:
+      title: Recetas para el desastre
+    work:
+      title: Trabajo
+  definitions:
+    index:
+      title: Definiciones
+  archives:
+    index:
+      title: Archivos
+  search:
+    index:
+      title: Buscar
+    results:
+      title: Resultados
+    advanced:
+      title: Búsqueda avanzada
+  about:
+    contact:
+      title: Contact
+    about:
+      title: About
+    library:
+      title: Biblioteca en línea
+    store:
+      title: Tienda
+    rss_feeds:
+      title: Feeds RSS
+    submission_guidelines:
+      title: Para colaboraciones
+    steal_something_from_work_day:
+      title: Steal Something from Work Day
