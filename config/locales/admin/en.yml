@@ -190,6 +190,11 @@ en:
       publish: Publish
       draft: Draft
       published: Published
+      previewing_draft: PREVIEWING DRAFT.
+      continue_editing_article: Continue editing article
+      view_article_in_admin: view article in Admin
+      download_docx: Download .docx
+      toggle_navigation: Toggle navigation
 
     # Confirmation messages
     confirmations:
@@ -211,18 +216,23 @@ en:
       syndication: Syndication
       appearance: Appearance
       localization: Localization
-
-    # Navigation
-    nav:
-      admin_dashboard: 🖤 ADMIN
-      new_article: 📝 New Article
-      articles: 📄 Articles
-      redirects: ↪️ Redirects
-      new_redirect: ↪️ New Redirect
-      draft_articles: Draft ➡️
-      published_articles: Published ➡️
-      scroll_to_top: Scroll to Site Top
-      markdown_cheatsheet: Markdown Cheatsheet ↗
+      labels:
+        publication_status: Publication Status
+        image_description: Image Description
+        summary: Summary
+        locale: Locale
+      buttons:
+        cancel: Cancel
+        save: Save
+        delete: Delete
+        edit: Edit %{model}
+        new: New %{model}
+        preview_draft: Preview Draft
+        download: Download .%{format}
+      help_text:
+        word_doc_upload: An uploaded .docx file will get converted to Markdown and used in the content textarea, over-writing any content that is already there. ONLY .docx files will work!
+        header_image: "This is the large image that will be front and center on the Article page, on the homepage and when syndicated to other sites. Preferred size: 2000px wide by about 1000px tall (or taller)."
+        featured_status: In the Ex-Workers' Collection
 
     # Page headings and sections
     headings:
@@ -238,6 +248,41 @@ en:
       preview_draft: Preview Draft
       edit_article: Edit Article
       jump_to: Jump to
+
+    # Navigation breadcrumbs and links
+    nav:
+      admin_dashboard: 🖤 ADMIN
+      new_article: 📝 New Article
+      articles: 📄 Articles
+      redirects: ↪️ Redirects
+      new_redirect: ↪️ New Redirect
+      draft_articles: Draft ➡️
+      published_articles: Published ➡️
+      scroll_to_top: Scroll to Site Top
+      markdown_cheatsheet: Markdown Cheatsheet ↗
+      breadcrumbs:
+        contradictionary: Contradictionary
+        definitions: Definitions
+      links:
+        admin_dashboard: ADMIN Dashboard
+        scroll_to_site_top: Scroll to Site Top
+        markdown_cheatsheet: Markdown Cheatsheet ↗
+        new_nested_article: NEW Nested Article
+
+    # Page sections
+    sections:
+      appearance: Appearance
+      syndication: Syndication
+      localization: Localization
+      categorization: Categories
+      featured_status: Featured Status
+      publication_status: Publication Status
+      danger_zone: Danger Zone
+      nested_articles: Nested Articles
+      downloads: Downloads
+      jump_to: Jump to
+
+      delete_no_undo: Are you sure you're sure? There is NO UNDO.
 
   ebooks:
     - slug: screen_single_page_view

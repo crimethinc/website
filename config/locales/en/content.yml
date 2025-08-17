@@ -1,0 +1,149 @@
+en:
+  page_titles:
+    about:
+      contact: Contact
+      about: About
+      library: Online Reading Library
+      store: Store
+      rss_feeds: RSS Feeds
+      submission_guidelines: Submission Guidelines
+      steal_something_from_work_day: Steal Something from Work Day
+    search:
+      index: Search
+      results: Results for
+      advanced: Advanced Search
+    videos:
+      index: Videos
+    tools:
+      index: Tools
+    posters:
+      index: Posters
+    journals:
+      index: Journals
+    zines:
+      index: Zines
+    stickers:
+      index: Stickers
+    logos:
+      index: Logos
+    podcasts:
+      index: Podcasts
+      transcript: Transcript
+    categories:
+      index: Categories
+    books:
+      index: Books
+      extras: Extras
+      lit_kit: Literature Distribution Kit
+      into_libraries: CrimethInc. Into Libraries
+      contradictionary: Contradictionary
+      days_of_war_nights_of_love: Days of War Nights of Love
+      expect_resistance: Expect Resistance
+      from_democracy_to_freedom: From Democracy to Freedom
+      no_wall_they_can_build: No Wall They Can Build
+      off_the_map: Off the Map
+      recipes_for_disaster: Recipes for Disaster
+      work: Work
+    definitions:
+      index: Definitions
+    archives:
+      index: Archives
+  footer:
+    nav:
+      heading: Site Map
+      articles:
+        label: Articles
+        feed: RSS
+        adventure: Adventure
+        analysis: Analysis
+        arts: Arts
+        current_events: Current Events
+        geography: Geography
+        how_to: How To
+        history: History
+        news: News
+        technology: Technology
+      books:
+        label: Books
+        contradictionary: Contradictionary
+        days_of_war_nights_of_love: Days of War Nights of Love
+        expect_resistance: Expect Resistance
+        from_democracy_to_freedom: From Democracy to Freedom
+        no_wall_they_can_build: No Wall They Can Build
+        off_the_map: Off the Map
+        recipes_for_disaster: Recipes for Disaster
+        work: Work
+      podcast:
+        label: Podcast
+        feed: RSS
+        the_ex_worker: The Ex-Worker
+        the_hotwire: The Hotwire
+        no_wall_they_can_build: No Wall They can Build
+      videos:
+        label: Videos
+      tools:
+        label: Tools
+        zines: Zines
+        journals: Journals
+        posters: Posters
+        stickers: Stickers
+        videos: Videos
+        music: Music
+        logos: Logos
+        to_change_everything: To Change Everything
+        steal_something_from_work_day: Steal Something from Work Day
+      store:
+        label: Store
+        description: Books, Posters, Stickers, and more…
+      projects:
+        label: Projects
+        kickstarter: Kickstarter
+    about:
+      first_time_text: Is this your first time hearing about CrimethInc.?
+      first_time_link: Start here. →
+      heading: About CrimethInc.
+      description: |
+        CrimethInc. is a rebel alliance—a decentralized network pledged to anonymous collective action—a breakout from the prisons of our age. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+
+        We believe that you should be free to dispose of your limitless potential on your own terms: that no government, market, or ideology should be able to dictate what your life can be. If you agree, _let’s do something about it._
+      more_link: More about CrimethInc. →
+      donate_button_text: Support this site
+    contact:
+      newsletter:
+        heading: Email updates
+        description: Sign up here to receive regular email updates. _(Processed by Mailchimp.)_
+        signup_form_placeholder: What’s your email address?
+        signup_form_select_placeholder: You want a lot of emails? Or a little?
+        signup_form_select_option_lot: Every little thing. (Many emails)
+        signup_form_select_option_little: Just the big stuff! (Fewer emails)
+        signup_button_text: Sign up
+      social:
+        heading: Find us elsewhere
+        description: Keep up with our activities on the following additional platforms.
+    mantra:
+      - If your heart is free, the ground you stand on is liberated territory. Defend it.
+      - Only those prepared to go too far will learn how far they can go.
+      - Desperate measures are long overdue.
+      - Cradle the seed, even in the volcano’s mouth.
+      - The future is in chains within you — set it free.
+      - A spark for every powder keg.
+      - Esperanza no espera.
+      - Mobilis in mobili
+      - Fighting the next war.
+    site_mode: Switch to the lite version of the site →
+  header:
+    languages: Languages
+    books: Books
+    library: Library
+    tools: Tools
+    audio: Podcasts
+    video: Video
+    store: Store
+    subscribe: Subscribe
+    support: Support Us
+    search: Search
+    about: About
+    locale_articles: See all articles in English →
+    site_banner: "[Help us recover from the fire that destroyed our mailorder space →](https://www.gofundme.com/f/fire-destroyed-the-crimethinc-mailorder-space)"
+    first_time: First Time? Start Here →
+    site_mode: Switch to the full version of the site →

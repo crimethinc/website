@@ -1,0 +1,161 @@
+en:
+  activerecord:
+    models:
+      article:
+        one: Article
+        other: Articles
+      book:
+        one: Book
+        other: Books
+      category:
+        one: Category
+        other: Categories
+      episode:
+        one: Episode
+        other: Episodes
+      journal:
+        one: Journal
+        other: Journals
+      poster:
+        one: Poster
+        other: Posters
+      sticker:
+        one: Sticker
+        other: Stickers
+      video:
+        one: Video
+        other: Videos
+      zine:
+        one: Zine
+        other: Zines
+      user:
+        one: User
+        other: Users
+      page:
+        one: Page
+        other: Pages
+      podcast:
+        one: Podcast
+        other: Podcasts
+      definition:
+        one: Definition
+        other: Definitions
+      tag:
+        one: Tag
+        other: Tags
+      logo:
+        one: Logo
+        other: Logos
+      issue:
+        one: Issue
+        other: Issues
+      redirect:
+        one: Redirect
+        other: Redirects
+      locale:
+        one: Locale
+        other: Locales
+    attributes:
+      article:
+        title: Title
+        subtitle: Subtitle
+        content: Content
+        summary: Summary
+        published_at: Published at
+        slug: Slug
+        short_path: Short Path
+        image_description: Image Description
+        locale: Language
+        publication_status: Publication Status
+        featured_status: Featured Status
+        tags: Tags
+        categories: Categories
+        tweet: Tweet
+        notes: Notes
+        css: CSS
+        year: Year
+        month: Month
+        day: Day
+        draft_code: Draft Code
+        canonical_id: Canonical Article
+        collection_id: Collection
+        featured_at: Featured At
+        published_at_tz: Published Timezone
+      book:
+        title: Title
+        subtitle: Subtitle
+        content: Content
+        summary: Summary
+        published_at: Published at
+        slug: Slug
+        short_path: Short Path
+        image_description: Image Description
+        locale: Language
+        publication_status: Publication Status
+        featured_status: Featured Status
+        price_in_cents: Price (cents)
+        buy_url: Buy URL
+        buy_info: Buy Info
+        content_format: Content Format
+      category:
+        name: Name
+        slug: Slug
+      episode:
+        title: Title
+        subtitle: Subtitle
+        content: Content
+        summary: Summary
+        audio_url: Audio URL
+        audio_length: Audio Length
+        audio_type: Audio Type
+        duration: Duration
+        podcast_id: Podcast
+        episode_number: Episode Number
+      user:
+        username: Username
+        password: Password
+        email: Email
+        role: Role
+      tag:
+        name: Name
+        slug: Slug
+    errors:
+      messages:
+        blank: can't be blank
+        taken: has already been taken
+        too_short: is too short (minimum is %{count} characters)
+        too_long: is too long (maximum is %{count} characters)
+        invalid: is invalid
+        confirmation: doesn't match confirmation
+      models:
+        article:
+          attributes:
+            title:
+              blank: Title can't be blank
+            slug:
+              taken: Slug has already been taken for this date
+            short_path:
+              taken: Short path has already been taken
+              uniqueness: is already taken by article short path
+            published_at:
+              blank: Published date can't be blank for published articles
+        book:
+          attributes:
+            title:
+              blank: Title can't be blank
+        category:
+          attributes:
+            name:
+              blank: Name can't be blank
+              taken: Name has already been taken
+        user:
+          attributes:
+            username:
+              blank: Username can't be blank
+              taken: Username has already been taken
+            password:
+              blank: Password can't be blank
+              too_short: Password is too short (minimum is %{count} characters)
+            email:
+              blank: Email can't be blank
+              invalid: Email format is invalid

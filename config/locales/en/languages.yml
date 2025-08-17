@@ -1,0 +1,15 @@
+en:
+  views:
+    languages:
+      view_site_in_locale: View this site in English [here](https://en.crimethinc.com).
+      view_tools_in_locale: You can access an array of posters, zines, and other materials in English [here](https://en.crimethinc.com/tools).
+      view_books_in_locale: You can access our books in English [here](https://en.crimethinc.com/books).
+      heading: Languages
+      description: |
+        CrimethInc. texts have been translated into dozens of languages by anarchists around the world. Some of these translations are published on this website, while others appear on autonomous websites maintained by our comrades.
+
+        You can access materials in a growing number of languages by clicking the "Languages" link in the header above. In some cases, this will redirect you to other sites. When possible, we prefer to link to autonomous websites rather than listing all the translations on the same server, as this better reflects the distributed nature of our activities.
+
+        To read about our approach to translation and how to join the translation effort, [click here](/2016/08/01/how-to-translate-crimethinc).
+
+        You can also download [_To Change Everything_](/tce), our primer on anarchist ideas and history, in dozens of languages.

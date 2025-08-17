@@ -1,0 +1,57 @@
+en:
+  views:
+    support:
+      new:
+        heading: Invest Your Money in CrimethInc.—!
+        description: |
+          We depend on readers like you to fund our activities. If you value the resources we offer here, please consider supporting us financially. Your contribution makes it possible for us to provide a website without advertisements or paywalls, to pay our authors and editors, to offset expenses for our other projects, and to continually expand and improve what we have to offer.
+
+          Our work is a gift to the movements for liberation and the revolution-to-come, but it also costs a lot! For a small collective, we keep a lot of servers running, manage a lot of logistics, and maintain momentum on a lot of projects. [Your support is invaluable to us.](http://www.crimethinc.com/blog/2017/01/30/how-much-force-are-you-using-an-open-letter-to-the-law-enforcement-agents-assigned-to-investigate-political-dissidents)
+
+          We offer a monthly subscription option and one-time donations. Please choose what works best for you!
+        radio_label_monthly: Monthly
+        radio_label_one_time: One-time
+        amount_label: Support Amount
+        description_monthly: Monthly Subscription
+        description_one_time: One-Time Support
+        button_text: Next →
+        support_request:
+          header: Existing Monthly Subscribers
+          description: Need to update or cancel your subscription? Enter the email address you used to sign up, and we will send you an email with a super secret link where you can make changes.
+          email_label: Email Address
+          email_placeholder: you@example.com
+          button_text: Send Super Secret Link
+      create:
+        repeat_subscriber_error: We already have a monthly subscriber with that email address. If you'd still like to give more, try a one-time donation. Thanks!
+      create_session:
+        no_existing_customer_error: We can't find any monthly subscribers with that email address. If you think this is in error, please [send us an email](mailto:contact@crimethinc.com) so we can help you.
+        success_notice: We sent an email to _%{email}_ with a link where you can make changes to your subscription.
+        repeat_customer_error: You already submitted a request! Look for an email from _contact@crimethinc.com_. If you never got the email or you've lost your super secret link, wait an hour and try again.
+      edit:
+        heading: Your Subscription
+        description: Thank you so much for your ongoing support. We count on contributions like yours to do what we do.
+        expired_link_error: That link has expired. Please try again.
+        expires_at: This page will expire in about %{minutes} minutes.
+        update:
+          amount_label: Monthly Support
+          amount_slider_label: Drag the slider to change your subscription amount.
+          button_text: Update Subscription
+          button_confirm: Are you sure you want to update your subscription amount?
+          start_date: Subscribed since
+          next_date: Next charge
+        cancel:
+          header: If you want to cancel your subscription, click the big red button!
+          button_text: Cancel Subscription
+          button_confirm: Are you sure you want to completely cancel your subscription?
+      update_subscription:
+        notice: Your subscription amount has been updated!
+        error: There was a problem updating your subscription. Try again! If the problem continues, please [send us an email](mailto:contact@crimethinc.com) so we can help you.
+      cancel_subscription:
+        notice: Your subscription has been canceled.
+        error: There was a problem canceling your subscription. Try again! If the problem continues, please [send us an email](mailto:contact@crimethinc.com) so we can help you.
+      thanks:
+        heading: Thanks for your help!
+        description: |
+          Thank you so much for supporting CrimethInc.! Because we are a decentralized collective, it is not possible for us to offer the same sorts of perks that organizations with more formal structures use as fundraising incentives. What we can do is promise that every contribution helps us to keep this material free, to distribute it as widely as possible, to continue creating new resources, and to work together towards the realization of a freer world.
+
+          _Keep checking back! Our site is updated daily, there's always something new._

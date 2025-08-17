@@ -1,0 +1,78 @@
+en:
+  downloads:
+    heading: Downloads
+    formats:
+      screen_single_page_view: Screen Single Page View PDF
+      screen_two_page_view: Screen Two Page View PDF
+      print_color: Print Color PDF
+      print_black_and_white: Print B/W PDF
+      print_color_a4: Print Color A4 PDF
+      print_black_and_white_a4: Print B/W A4 PDF
+      lite: Ink Lite PDF
+      epub: ePub
+      mobi: Mobi
+
+  views:
+    tools:
+      buy_now_button_text: Buy Now
+      zine_download_read_button_text: Download PDF for Reading
+      zine_download_print_button_text: Download PDF for Printing
+      zine_download_lite_button_text: Download Ink Lite PDF
+      zine_download_epub_button_text: Download ePub eBook
+      zine_download_mobi_button_text: Download Mobi eBook
+      book_download_read_button_text: Download Two Page View PDF
+      book_download_print_button_text: Download Print PDF
+      book_download_lite_button_text: Download Single Page View PDF
+      book_download_epub_button_text: Download ePub eBook
+      book_download_mobi_button_text: Download Mobi eBook
+      admin_book_read_download_text: Two Up PDF
+      admin_book_print_download_text: Print PDF
+      admin_book_lite_download_text: One Up PDF
+      admin_book_epub_download_text: Mobi
+      admin_book_mobi_download_text: ePub
+      admin_zine_read_download_text: Read PDF
+      admin_zine_print_download_text: Print PDF
+      admin_zine_lite_download_text: Ink Lite PDF
+      admin_zine_epub_download_text: Mobi
+      admin_zine_mobi_download_text: ePub
+      download_front_button_text: ""
+      download_back_button_text: ""
+      download_front_color_button_text: ""
+      download_back_color_button_text: ""
+      download_front_black_and_white_button_text: ""
+      download_back_black_and_white_button_text: ""
+      pdf_donate_button_text: Donate
+      pdf_donate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
+      journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading "the propaganda of desire," and other ambitious serial publications from the past two decades.
+      logos_intro_text: CrimethInc. for yourself! Logos for your own CrimethInc. projects.
+      music_intro_text: Download a wide range of the albums we've [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
+      posters_intro_text: Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
+      stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
+      tools_intro_text: Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
+      videos_intro_text: Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
+      zines_intro_text: A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers' markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [_To Change Everything_ site](/tce).
+      books_intro_text: |
+        Our books are explorations of diverse facets of resistance, offering critiques of various forms of oppression and introducing popular movements, tactics, and ways of living that point beyond capitalism and the state.
+
+        We love making books.
+      books_heading_text: We love making books.
+      journals_heading_text: Journals
+      logos_heading_text: Logos
+      posters_heading_text: Posters
+      stickers_heading_text: Stickers
+      tools_heading_text: Tools
+      zines_heading_text: Zines
+      buttons:
+        browse_journals_text: Browse All Journals
+        browse_logos_text: Browse All Logos
+        browse_music_text: Browse All Music
+        browse_posters_text: Browse All Posters
+        browse_stickers_text: Browse All Stickers
+        browse_videos_text: Browse All Videos
+        browse_zines_text: Browse All Zines
+
+    books:
+      crimethinc_into_libraries_heading: CrimethInc. Into Libraries
+      crimethinc_into_libraries_intro: For those who don't have the extra resources with which to buy books or who just aren't excited about acquiring more possessions, we have good news for you—the [CrimethInc. Into Libraries program](/books/into-libraries). Our books are [in more libraries than you might guess](/2007/10/09/crimethinc-into-libraries-progress-report), and if not, you can probably get them onto the shelves, for free. [Find out how!](/books/into-libraries)
+      literature_distro_kit_heading: Literature Distro Kit
+      literature_distro_kit_intro: Our books are the cornerstone of our [Literature Distribution Kit](/books/lit-kit), an all-in-one literature distro for you to deploy how you see fit. It contains a mix of both books to sell and stuff to give away, everything you need to set up a table at a show, take on tour, or spread the word out of your backpack or break-room.
