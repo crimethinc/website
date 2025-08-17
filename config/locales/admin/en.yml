@@ -6,31 +6,67 @@ en:
       new_title: New Articles
       show_title: "Articles : %{title}"
       edit_title: "Editing article %{id} %{title} : %{subtitle}"
+      create:
+        notice: "Article was successfully created."
+      update:
+        notice: "Article was successfully updated."
+      destroy:
+        notice: "Article was successfully destroyed."
     books:
       index_title: Books
       new_title: New Books
       show_title: "Books : %{title}"
       edit_title: "Editing book %{id} %{title} : %{subtitle}"
+      create:
+        notice: "Book was successfully created."
+      update:
+        notice: "Book was successfully updated."
+      destroy:
+        notice: "Book was successfully destroyed."
     zines:
       index_title: Zines
       new_title: New Zines
       show_title: "Zines : %{title}"
       edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+      create:
+        notice: "Zine was successfully created."
+      update:
+        notice: "Zine was successfully updated."
+      destroy:
+        notice: "Zine was successfully destroyed."
     journals:
       index_title: Journals
       new_title: New Journals
       show_title: "Journals : %{title}"
       edit_title: "Editing journal %{id} %{title} : %{subtitle}"
+      create:
+        notice: "Journal was successfully created."
+      update:
+        notice: "Journal was successfully updated."
+      destroy:
+        notice: "Journal was successfully destroyed."
     posters:
       index_title: Posters
       new_title: New Posters
       show_title: "Posters : %{title}"
       edit_title: "Editing poster %{id} %{title} : %{subtitle}"
+      create:
+        notice: "Poster was successfully created."
+      update:
+        notice: "Poster was successfully updated."
+      destroy:
+        notice: "Poster was successfully destroyed."
     stickers:
       index_title: Stickers
       new_title: New Stickers
       show_title: "Stickers : %{title}"
       edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
+      create:
+        notice: "Sticker was successfully created."
+      update:
+        notice: "Sticker was successfully updated."
+      destroy:
+        notice: "Sticker was successfully destroyed."
     podcasts:
       index_title: Podcasts
       new_title: New Podcasts
@@ -41,26 +77,56 @@ en:
       new_title: New Videos
       show_title: "Videos : %{title}"
       edit_title: "Editing video %{id} %{title} : %{subtitle}"
+      create:
+        notice: "Video was successfully created."
+      update:
+        notice: "Video was successfully updated."
+      destroy:
+        notice: "Video was successfully destroyed."
     categories:
       index_title: Categories
       new_title: New Categories
       show_title: "Categories : %{name}"
       edit_title: "Editing category %{id} : %{name}"
+      create:
+        notice: "Category was successfully created."
+      update:
+        notice: "Category was successfully updated."
+      destroy:
+        notice: "Category was successfully destroyed."
     episodes:
       index_title: Episodes
       new_title: New Episodes
       show_title: "Episodes : %{title}"
       edit_title: "Editing episode %{id} %{title}"
+      create:
+        notice: "Episode was successfully created."
+      update:
+        notice: "Episode was successfully updated."
+      destroy:
+        notice: "Episode was successfully destroyed."
     users:
       index_title: Users
       new_title: New Users
       show_title: "Users : %{name}"
       edit_title: "Editing user %{id} : %{username}"
+      create:
+        notice: "User was successfully created."
+      update:
+        notice: "User was successfully updated."
+      destroy:
+        notice: "User was successfully destroyed."
     pages:
       index_title: Pages
       new_title: New Pages
       show_title: "Pages : %{title}"
       edit_title: "Editing page %{id} %{title} : %{subtitle}"
+      create:
+        notice: "Page was successfully created."
+      update:
+        notice: "Page was successfully updated."
+      destroy:
+        notice: "Page was successfully destroyed."
     links:
       index_title: Links
       new_title: New Links
@@ -77,84 +143,7 @@ en:
       show_title: "Redirects : %{source_path}"
       edit_title: "Editing redirect %{id} %{source_path}"
 
-    # Rails Convention Controller Messages
-    articles:
-      create:
-        notice: "Article was successfully created."
-      update:
-        notice: "Article was successfully updated."
-      destroy:
-        notice: "Article was successfully destroyed."
-    books:
-      create:
-        notice: "Book was successfully created."
-      update:
-        notice: "Book was successfully updated."
-      destroy:
-        notice: "Book was successfully destroyed."
-    categories:
-      create:
-        notice: "Category was successfully created."
-      update:
-        notice: "Category was successfully updated."
-      destroy:
-        notice: "Category was successfully destroyed."
-    episodes:
-      create:
-        notice: "Episode was successfully created."
-      update:
-        notice: "Episode was successfully updated."
-      destroy:
-        notice: "Episode was successfully destroyed."
-    journals:
-      create:
-        notice: "Journal was successfully created."
-      update:
-        notice: "Journal was successfully updated."
-      destroy:
-        notice: "Journal was successfully destroyed."
-    posters:
-      create:
-        notice: "Poster was successfully created."
-      update:
-        notice: "Poster was successfully updated."
-      destroy:
-        notice: "Poster was successfully destroyed."
-    stickers:
-      create:
-        notice: "Sticker was successfully created."
-      update:
-        notice: "Sticker was successfully updated."
-      destroy:
-        notice: "Sticker was successfully destroyed."
-    videos:
-      create:
-        notice: "Video was successfully created."
-      update:
-        notice: "Video was successfully updated."
-      destroy:
-        notice: "Video was successfully destroyed."
-    zines:
-      create:
-        notice: "Zine was successfully created."
-      update:
-        notice: "Zine was successfully updated."
-      destroy:
-        notice: "Zine was successfully destroyed."
-    users:
-      create:
-        notice: "User was successfully created."
-      update:
-        notice: "User was successfully updated."
-      destroy:
-        notice: "User was successfully destroyed."
-    pages:
-      create:
-        notice: "Page was successfully created."
-      update:
-        notice: "Page was successfully updated."
-      destroy:
-        notice: "Page was successfully destroyed."
+    # Additional admin sections for controllers without page titles
     definitions:
       create:
         notice: "Definition was successfully created."
