@@ -9,5 +9,4 @@ rules:
     min-spaces-from-content: 1
 
   quoted-strings:
-    quote-type: any
     required: only-when-needed
