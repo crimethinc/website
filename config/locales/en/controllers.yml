@@ -85,3 +85,53 @@ en:
       poster:
         image_description: Photo of '%{title}' front side
         back_image_description: Photo of '%{title}' back side
+
+  # Public site controllers
+  videos:
+    index_title: Videos
+  tools:
+    index_title: Tools
+  posters:
+    index_title: Posters
+  journals:
+    index_title: Journals
+  zines:
+    index_title: Zines
+  stickers:
+    index_title: Stickers
+  logos:
+    index_title: Logos
+  podcasts:
+    index_title: Podcasts
+    transcript_title: Transcript
+  categories:
+    index_title: Categories
+  books:
+    index_title: Books
+    extras_title: Extras
+    lit_kit_title: Literature Distribution Kit
+    into_libraries_title: CrimethInc. Into Libraries
+    contradictionary_title: Contradictionary
+    days_of_war_nights_of_love_title: Days of War Nights of Love
+    expect_resistance_title: Expect Resistance
+    from_democracy_to_freedom_title: From Democracy to Freedom
+    no_wall_they_can_build_title: No Wall They Can Build
+    off_the_map_title: Off the Map
+    recipes_for_disaster_title: Recipes for Disaster
+    work_title: Work
+  definitions:
+    index_title: Definitions
+  archives:
+    index_title: Archives
+  search:
+    index_title: Search
+    results_title: Results for
+    advanced_title: Advanced Search
+  about:
+    contact_title: Contact
+    about_title: About
+    library_title: Online Reading Library
+    store_title: Store
+    rss_feeds_title: RSS Feeds
+    submission_guidelines_title: Submission Guidelines
+    steal_something_from_work_day_title: Steal Something from Work Day
