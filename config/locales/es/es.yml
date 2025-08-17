@@ -1,7 +1,3 @@
-# Rails I18n Locale: ES
-# This file has been migrated to use Rails I18n conventions.
-# Please translate all entries marked with '[TODO- Translate]'
-
 es:
   name: Español
   language_direction: ltr
