@@ -267,3 +267,12 @@ es:
     - slug: mobi
       name: Mobi
       description: ¿Hay un archivo ʻ.mobiʼ subido?
+
+  activerecord:
+    errors:
+      models:
+        article:
+          source_path:
+            uniqueness: ya está tomado por la ruta corta del artículo
+          target_path:
+            uniqueness: redirige a sí mismo

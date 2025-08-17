@@ -267,3 +267,12 @@ en:
     - slug: mobi
       name: Mobi
       description: Is there a ‘.mobi’ file uploaded?
+
+  activerecord:
+    errors:
+      models:
+        article:
+          source_path:
+            uniqueness: is already taken by article short path
+          target_path:
+            uniqueness: redirects to itself
