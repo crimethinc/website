@@ -14,6 +14,272 @@ en:
   site_name: CrimethInc.
   site_author: CrimethInc. Ex-Workers Collective
 
+  # Rails I18n Conventions
+  activerecord:
+    models:
+      article:
+        one: Article
+        other: Articles
+      book:
+        one: Book
+        other: Books
+      category:
+        one: Category
+        other: Categories
+      episode:
+        one: Episode
+        other: Episodes
+      journal:
+        one: Journal
+        other: Journals
+      poster:
+        one: Poster
+        other: Posters
+      sticker:
+        one: Sticker
+        other: Stickers
+      video:
+        one: Video
+        other: Videos
+      zine:
+        one: Zine
+        other: Zines
+      user:
+        one: User
+        other: Users
+      page:
+        one: Page
+        other: Pages
+      podcast:
+        one: Podcast
+        other: Podcasts
+      definition:
+        one: Definition
+        other: Definitions
+      tag:
+        one: Tag
+        other: Tags
+      logo:
+        one: Logo
+        other: Logos
+      issue:
+        one: Issue
+        other: Issues
+      redirect:
+        one: Redirect
+        other: Redirects
+      locale:
+        one: Locale
+        other: Locales
+
+    attributes:
+      article:
+        title: Title
+        subtitle: Subtitle
+        content: Content
+        summary: Summary
+        published_at: Published at
+        slug: Slug
+        short_path: Short Path
+        image_description: Image Description
+        locale: Language
+        publication_status: Publication Status
+        featured_status: Featured Status
+        tags: Tags
+        categories: Categories
+        tweet: Tweet
+        notes: Notes
+        css: CSS
+        year: Year
+        month: Month
+        day: Day
+        draft_code: Draft Code
+        canonical_id: Canonical Article
+        collection_id: Collection
+        featured_at: Featured At
+        published_at_tz: Published Timezone
+      book:
+        title: Title
+        subtitle: Subtitle
+        content: Content
+        summary: Summary
+        published_at: Published at
+        slug: Slug
+        short_path: Short Path
+        image_description: Image Description
+        locale: Language
+        publication_status: Publication Status
+        featured_status: Featured Status
+        price_in_cents: Price (cents)
+        buy_url: Buy URL
+        buy_info: Buy Info
+        content_format: Content Format
+      category:
+        name: Name
+        slug: Slug
+      episode:
+        title: Title
+        subtitle: Subtitle
+        content: Content
+        summary: Summary
+        audio_url: Audio URL
+        audio_length: Audio Length
+        audio_type: Audio Type
+        duration: Duration
+        podcast_id: Podcast
+        episode_number: Episode Number
+      user:
+        username: Username
+        password: Password
+        email: Email
+        role: Role
+      tag:
+        name: Name
+        slug: Slug
+
+    errors:
+      messages:
+        blank: can’t be blank
+        taken: has already been taken
+        too_short: is too short (minimum is %{count} characters)
+        too_long: is too long (maximum is %{count} characters)
+        invalid: is invalid
+        confirmation: doesn’t match confirmation
+      models:
+        article:
+          attributes:
+            title:
+              blank: Title can’t be blank
+            slug:
+              taken: Slug has already been taken for this date
+            short_path:
+              taken: Short path has already been taken
+              uniqueness: is already taken by article short path
+            published_at:
+              blank: Published date can’t be blank for published articles
+        book:
+          attributes:
+            title:
+              blank: Title can’t be blank
+        category:
+          attributes:
+            name:
+              blank: Name can’t be blank
+              taken: Name has already been taken
+        user:
+          attributes:
+            username:
+              blank: Username can’t be blank
+              taken: Username has already been taken
+            password:
+              blank: Password can’t be blank
+              too_short: Password is too short (minimum is %{count} characters)
+            email:
+              blank: Email can’t be blank
+              invalid: Email format is invalid
+
+  # Controller Messages (Rails Convention)
+  articles:
+    create:
+      notice: Article was successfully created.
+    update:
+      notice: Article was successfully updated.
+    destroy:
+      notice: Article was successfully destroyed.
+  books:
+    create:
+      notice: Book was successfully created.
+    update:
+      notice: Book was successfully updated.
+    destroy:
+      notice: Book was successfully destroyed.
+  categories:
+    create:
+      notice: Category was successfully created.
+    update:
+      notice: Category was successfully updated.
+    destroy:
+      notice: Category was successfully destroyed.
+  episodes:
+    create:
+      notice: Episode was successfully created.
+    update:
+      notice: Episode was successfully updated.
+    destroy:
+      notice: Episode was successfully destroyed.
+  journals:
+    create:
+      notice: Journal was successfully created.
+    update:
+      notice: Journal was successfully updated.
+    destroy:
+      notice: Journal was successfully destroyed.
+  posters:
+    create:
+      notice: Poster was successfully created.
+    update:
+      notice: Poster was successfully updated.
+    destroy:
+      notice: Poster was successfully destroyed.
+  stickers:
+    create:
+      notice: Sticker was successfully created.
+    update:
+      notice: Sticker was successfully updated.
+    destroy:
+      notice: Sticker was successfully destroyed.
+  videos:
+    create:
+      notice: Video was successfully created.
+    update:
+      notice: Video was successfully updated.
+    destroy:
+      notice: Video was successfully destroyed.
+  zines:
+    create:
+      notice: Zine was successfully created.
+    update:
+      notice: Zine was successfully updated.
+    destroy:
+      notice: Zine was successfully destroyed.
+  users:
+    create:
+      notice: User was successfully created.
+    update:
+      notice: User was successfully updated.
+    destroy:
+      notice: User was successfully destroyed.
+  pages:
+    create:
+      notice: Page was successfully created.
+    update:
+      notice: Page was successfully updated.
+    destroy:
+      notice: Page was successfully destroyed.
+
+  # Mailer Subjects (Rails Convention)
+  support_mailer:
+    edit_subscription:
+      subject: Request for Super Secret Support Link
+      header: Your Super Secret Support Link has arrived!
+      link_description: Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe.
+      repeat_request: If you don’t get around to making the changes you want in time, no worries. We can always send you another super secret link.
+      more_help: You can also reply to this email if need more assistance.
+
+  # Authentication Messages
+  auth:
+    signin_failed: Invalid email or password.
+    signout: Signed out!
+    signin_heading: Sign In
+    signup_heading: Sign Up
+    forgot_password_heading: Forget Your Password?
+    reset_password_heading: Reset Your Password
+    username_label: 🦁 Username
+    username_note: Not an email address.
+    password_label: 🔑 Password
+    password_note: Passwords must be **at least %{password_minimum_length} characters** long.
+    signin_button_text: Sign In
+
   head:
     # meta_title is wrapped in quotes because it has a colon in its text value
     meta_title: "CrimethInc. ex-Workers’ Collective: Your ticket to a world free of charge"
@@ -385,14 +651,6 @@ en:
 
           If you signed up for a monthly subscription, you can update or cancel your subscription at any time by submitting your email address in the form at the bottom of the [support](/support) page.
 
-      mailers:
-        edit_subscription:
-          subject: Request for Super Secret Support Link
-          header: Your Super Secret Support Link has arrived!
-          link_description: Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe.
-          repeat_request: If you don’t get around to making the changes you want in time, no worries. We can always send you another super secret link.
-          more_help: You can also reply to this email if need more assistance.
-
     languages:
       view_site_in_locale: View this site in English [here](https://en.crimethinc.com).
       view_tools_in_locale: You can access an array of posters, zines, and other materials in English [here](https://en.crimethinc.com/tools).
@@ -440,9 +698,9 @@ en:
       preview_draft: Preview Draft
       download: Download .%{format}
     help_text:
-      word_doc_upload: "An uploaded .docx file will get converted to Markdown and used in the content textarea, over-writing any content that is already there. ONLY .docx files will work!"
+      word_doc_upload: An uploaded .docx file will get converted to Markdown and used in the content textarea, over-writing any content that is already there. ONLY .docx files will work!
       header_image: "This is the large image that will be front and center on the Article page, on the homepage and when syndicated to other sites. Preferred size: 2000px wide by about 1000px tall (or taller)."
-      featured_status: "In the Ex-Workers’ Collection"
+      featured_status: In the Ex-Workers’ Collection
 
   # Navigation elements
   nav:

@@ -40,6 +40,10 @@ module Crimethinc
     # Set default locale to English
     config.i18n.default_locale = :en
 
+    # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+    # the I18n.default_locale when a translation cannot be found).
+    config.i18n.fallbacks = [I18n.default_locale]
+
     # Allowed list locales available for the application
     config.subdomain_locales = %i[
       ar
