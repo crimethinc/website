@@ -98,7 +98,7 @@ es:
       index_title: Episodios
       new_title: Nuevos Episodios
       show_title: "Episodios : %{title}"
-      edit_title: "Editando episodio %{id} %{title}"
+      edit_title: Editando episodio %{id} %{title}
       create:
         notice: El episodio se creó correctamente.
       update:
@@ -141,7 +141,7 @@ es:
       index_title: Redirecciones
       new_title: Nuevas Redirecciones
       show_title: "Redirecciones : %{source_path}"
-      edit_title: "Editando redirección %{id} %{source_path}"
+      edit_title: Editando redirección %{id} %{source_path}
 
     # Additional admin sections for controllers without page titles
     definitions:
@@ -193,17 +193,17 @@ es:
 
     # Confirmation messages
     confirmations:
-      delete: "¿Estás seguro? NO HAY DESHACER."
+      delete: ¿Estás seguro? NO HAY DESHACER.
 
     # Form labels and help text
     forms:
       publication_status: Estado de publicación
-      featured_status: "¿Destacar este %{model} en la página principal?"
+      featured_status: ¿Destacar este %{model} en la página principal?
       featured_status_help: En la Colección de Ex-Trabajadores
       not_featured: No destacado
       featured: Destacado
       upload_word_doc: Subir un archivo de Word
-      word_doc_help: "Un archivo .docx subido se convertirá a Markdown y se usará en el área de contenido, sobrescribiendo cualquier contenido que ya esté allí. ¡SOLO funcionan archivos .docx!"
+      word_doc_help: Un archivo .docx subido se convertirá a Markdown y se usará en el área de contenido, sobrescribiendo cualquier contenido que ya esté allí. ¡SOLO funcionan archivos .docx!
       header_image: Imagen de cabecera
       header_image_help: "Esta es la imagen grande que estará al frente y al centro en la página del Artículo, en la página principal y cuando se sindique a otros sitios. Tamaño preferido: 2000px de ancho por aproximadamente 1000px de alto (o más alto)."
       short_url_path: Ruta de URL corta
