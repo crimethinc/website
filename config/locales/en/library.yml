@@ -24,6 +24,7 @@ en:
       sample:
         title: Sample Reading Lists
 
+    # TODO: change this to use "label:" instead of the key content
     links:
       Strategy and Analysis:
         - name: "The Case for Resistance: What We’re Up Against—and What It Could Look Like to Fight"

@@ -6,6 +6,12 @@ en:
   head:
     meta_title: "CrimethInc. ex-Workers’ Collective: Your ticket to a world free of charge"
     meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
-    meta_description: CrimethInc. is a decentralized network pledged to anonymous collective action. We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
+    meta_description: |
+      CrimethInc. is a decentralized network pledged to anonymous collective action.
+      We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.
   meta:
+    title: Your ticket to a world free of charge
     generator: CrimethInc. Internet Rube Goldberg Machine 3000
+    description: |
+      CrimethInc. is a decentralized network pledged to anonymous collective action.
+      We strive to reinvent our lives and our world according to the principles of self-determination and mutual aid.

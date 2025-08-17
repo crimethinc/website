@@ -1,15 +1,19 @@
 en:
-  search:
-    form_placeholder: Search Archives…
-    search_results: Search Results
-    advanced:
-      heading: Advanced Search
-      form:
-        term_label: Search
-        title_label: Title
-        subtitle_label: Subtitle
-        content_label: Content
-        tag_label: Tags
-        category_label: Categories
-        comma_separated_note: (comma separated)
-        button: Search
+  views:
+    search:
+      index:
+        title: Search Archives
+      advanced:
+        title: Advanced Search
+        heading: Advanced Search
+        form:
+          button: Search
+          category_label: Categories
+          comma_separated_note: (comma separated)
+          content_label: Content
+          subtitle_label: Subtitle
+          tag_label: Tags
+          term_label: Search
+          title_label: Title
+      form_placeholder: Search Archives…
+      search_results: Search Results

@@ -501,14 +501,14 @@ en:
       next: "&rsaquo;"
       next_screen_reader: Next
       truncate: "&hellip;"
-      next_page: "Next &rsaquo;"
+      next_page: Next &rsaquo;
       previous_page: "&lsaquo; Previous"
       next_article: "%{title}: Next &rsaquo;"
       previous_article: "&lsaquo; Previous: %{title}"
       next_month: "&lsaquo; Next Month (%{month})"
-      previous_month: "(%{month}) Previous Month &rsaquo;"
+      previous_month: (%{month}) Previous Month &rsaquo;
       next_year: "&lsaquo; Next Year (%{year})"
-      previous_year: "(%{year}) Previous Year &rsaquo;"
+      previous_year: (%{year}) Previous Year &rsaquo;
 
     tools:
       buy_now_button_text: Buy Now
@@ -743,7 +743,7 @@ en:
       one_page:
         display_entries:
           zero: No %{entry_name} found
-          one: "Displaying <b>1</b> %{entry_name}"
-          other: "Displaying <b>all %{count}</b> %{entry_name}"
+          one: Displaying <b>1</b> %{entry_name}
+          other: Displaying <b>all %{count}</b> %{entry_name}
       more_pages:
-        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+        display_entries: Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total

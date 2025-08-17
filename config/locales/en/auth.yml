@@ -1,13 +1,13 @@
 en:
   auth:
-    signin_failed: Invalid email or password.
-    signout: Signed out!
-    signin_heading: Sign In
-    signup_heading: Sign Up
     forgot_password_heading: Forget Your Password?
-    reset_password_heading: Reset Your Password
-    username_label: 🦁 Username
-    username_note: Not an email address.
     password_label: 🔑 Password
     password_note: Passwords must be **at least %{password_minimum_length} characters** long.
+    reset_password_heading: Reset Your Password
     signin_button_text: Sign In
+    signin_failed: Invalid email or password.
+    signin_heading: Sign In
+    signout: Signed out!
+    signup_heading: Sign Up
+    username_label: 🦁 Username
+    username_note: Not an email address.

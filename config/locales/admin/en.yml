@@ -1,317 +1,349 @@
 en:
-  admin:
-    title_prepend: Admin
-    articles:
-      index_title: Articles
-      new_title: New Articles
-      show_title: "Articles : %{title}"
-      edit_title: "Editing article %{id} %{title} : %{subtitle}"
-      create:
-        notice: Article was successfully created.
-      update:
-        notice: Article was successfully updated.
-      destroy:
-        notice: Article was successfully destroyed.
-    books:
-      index_title: Books
-      new_title: New Books
-      show_title: "Books : %{title}"
-      edit_title: "Editing book %{id} %{title} : %{subtitle}"
-      create:
-        notice: Book was successfully created.
-      update:
-        notice: Book was successfully updated.
-      destroy:
-        notice: Book was successfully destroyed.
-    zines:
-      index_title: Zines
-      new_title: New Zines
-      show_title: "Zines : %{title}"
-      edit_title: "Editing zine %{id} %{title} : %{subtitle}"
-      create:
-        notice: Zine was successfully created.
-      update:
-        notice: Zine was successfully updated.
-      destroy:
-        notice: Zine was successfully destroyed.
-    journals:
-      index_title: Journals
-      new_title: New Journals
-      show_title: "Journals : %{title}"
-      edit_title: "Editing journal %{id} %{title} : %{subtitle}"
-      create:
-        notice: Journal was successfully created.
-      update:
-        notice: Journal was successfully updated.
-      destroy:
-        notice: Journal was successfully destroyed.
-    posters:
-      index_title: Posters
-      new_title: New Posters
-      show_title: "Posters : %{title}"
-      edit_title: "Editing poster %{id} %{title} : %{subtitle}"
-      create:
-        notice: Poster was successfully created.
-      update:
-        notice: Poster was successfully updated.
-      destroy:
-        notice: Poster was successfully destroyed.
-    stickers:
-      index_title: Stickers
-      new_title: New Stickers
-      show_title: "Stickers : %{title}"
-      edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
-      create:
-        notice: Sticker was successfully created.
-      update:
-        notice: Sticker was successfully updated.
-      destroy:
-        notice: Sticker was successfully destroyed.
-    podcasts:
-      index_title: Podcasts
-      new_title: New Podcasts
-      show_title: "Podcasts : %{title}"
-      edit_title: "Editing podcast %{id} %{title} : %{subtitle}"
-    videos:
-      index_title: Videos
-      new_title: New Videos
-      show_title: "Videos : %{title}"
-      edit_title: "Editing video %{id} %{title} : %{subtitle}"
-      create:
-        notice: Video was successfully created.
-      update:
-        notice: Video was successfully updated.
-      destroy:
-        notice: Video was successfully destroyed.
-    categories:
-      index_title: Categories
-      new_title: New Categories
-      show_title: "Categories : %{name}"
-      edit_title: "Editing category %{id} : %{name}"
-      create:
-        notice: Category was successfully created.
-      update:
-        notice: Category was successfully updated.
-      destroy:
-        notice: Category was successfully destroyed.
-    episodes:
-      index_title: Episodes
-      new_title: New Episodes
-      show_title: "Episodes : %{title}"
-      edit_title: "Editing episode %{id} %{title}"
-      create:
-        notice: Episode was successfully created.
-      update:
-        notice: Episode was successfully updated.
-      destroy:
-        notice: Episode was successfully destroyed.
-    users:
-      index_title: Users
-      new_title: New Users
-      show_title: "Users : %{name}"
-      edit_title: "Editing user %{id} : %{username}"
-      create:
-        notice: User was successfully created.
-      update:
-        notice: User was successfully updated.
-      destroy:
-        notice: User was successfully destroyed.
-    pages:
-      index_title: Pages
-      new_title: New Pages
-      show_title: "Pages : %{title}"
-      edit_title: "Editing page %{id} %{title} : %{subtitle}"
-      create:
-        notice: Page was successfully created.
-      update:
-        notice: Page was successfully updated.
-      destroy:
-        notice: Page was successfully destroyed.
-    links:
-      index_title: Links
-      new_title: New Links
-      show_title: "Links : %{name}"
-      edit_title: "Editing link %{id} : %{name}"
-    locales:
-      index_title: Locales
-      new_title: New Locales
-      show_title: "Locales : %{name}"
-      edit_title: "Editing locale %{id} : %{abbreviation} : %{name_in_english} : %{name}"
-    redirects:
-      index_title: Redirects
-      new_title: New Redirects
-      show_title: "Redirects : %{source_path}"
-      edit_title: "Editing redirect %{id} %{source_path}"
+  views:
+    admin:
+      title_prepend: Admin
 
-    # Additional admin sections for controllers without page titles
-    definitions:
-      create:
-        notice: Definition was successfully created.
-      update:
-        notice: Definition was successfully updated.
-      destroy:
-        notice: Definition was successfully destroyed.
-    issues:
-      create:
-        notice: Issue was successfully created.
-      update:
-        notice: Issue was successfully updated.
-      destroy:
-        notice: Issue was successfully destroyed.
-    logos:
-      create:
-        notice: Logo was successfully created.
-      update:
-        notice: Logo was successfully updated.
-      destroy:
-        notice: Logo was successfully destroyed.
-    tags:
-      create:
-        notice: Tag was successfully created.
-      update:
-        notice: Tag was successfully updated.
-      destroy:
-        notice: Tag was successfully destroyed.
+      articles:
+        previewing_draft: PREVIEWING DRAFT.
+        continue_editing_article: Continue editing article
+        view_article_in_admin: view article in Admin
+        upload_word_doc: Upload a Word Doc file
+        word_doc_help: |
+          An uploaded .docx file will get converted to Markdown and used in the content textarea,
+          over-writing any content that is already there. ONLY .docx files will work!
+        header_image: Header Image
+        header_image_help: |
+          This is the large image that will be front and center on the Article page,
+          on the homepage and when syndicated to other sites.
+          Preferred size is 2000px wide by about 1000px tall (or taller).
+        short_url_path: Short URL Path
+        categories: Categories
+        syndication: Syndication
+        appearance: Appearance
+        localization: Localization
+        index_title: Articles
+        new_title: New Articles
+        show_title: "Articles : %{title}"
+        edit_title: "Editing article %{id} %{title} : %{subtitle}"
+        create:
+          notice: Article was successfully created.
+        update:
+          notice: Article was successfully updated.
+        destroy:
+          notice: Article was successfully destroyed.
 
-    # Generic CRUD operation messages for fallback
-    notices:
-      created: "%{model} was successfully created."
-      updated: "%{model} was successfully updated."
-      destroyed: "%{model} was successfully destroyed."
+      books:
+        index_title: Books
+        new_title: New Books
+        show_title: "Books : %{title}"
+        edit_title: "Editing book %{id} %{title} : %{subtitle}"
+        create:
+          notice: Book was successfully created.
+        update:
+          notice: Book was successfully updated.
+        destroy:
+          notice: Book was successfully destroyed.
+        admin_book_read_download_text: Two Up PDF
+        admin_book_print_download_text: Print PDF
+        admin_book_lite_download_text: One Up PDF
+        admin_book_epub_download_text: Mobi
+        admin_book_mobi_download_text: ePub
+        ebooks:
+          - slug: screen_single_page_view
+            name: Screen Single Page View PDF
+            description: Is there a one page wide ‘PDF’ for on-screen reading uploaded?
+          - slug: screen_two_page_view
+            name: Screen Two Page View PDF
+            description: Is there a two page wide ‘PDF’ for on-screen reading uploaded?
+          - slug: print_color
+            name: Print Color PDF
+            description: Is there a color ‘PDF’ for printing uploaded?
+          - slug: print_black_and_white
+            name: Print B/W PDF
+            description: Is there a B/W ‘PDF’ for printing uploaded?
+          - slug: print_color_a4
+            name: Print Color A4 PDF
+            description: Is there an A4 sized color ‘PDF’ for printing uploaded?
+          - slug: print_black_and_white_a4
+            name: B/W A4 PDF
+            description: Is there an A4 sized B/W ‘PDF’ for printing uploaded?
+          - slug: lite
+            name: Ink Lite PDF
+            description: Is there a printer toner friendly ‘PDF’ for printing uploaded?
+          - slug: epub
+            name: ePub
+            description: Is there a ‘.epub’ file uploaded?
+          - slug: mobi
+            name: Mobi
+            description: Is there a ‘.mobi’ file uploaded?
 
-    # Common UI elements
-    ui:
-      cancel: Cancel
-      delete: Delete
-      edit: Edit
-      new: NEW
-      save: Save
-      preview: Preview
-      publish: Publish
-      draft: Draft
-      published: Published
-      previewing_draft: PREVIEWING DRAFT.
-      continue_editing_article: Continue editing article
-      view_article_in_admin: view article in Admin
-      download_docx: Download .docx
-      toggle_navigation: Toggle navigation
+      zines:
+        index_title: Zines
+        new_title: New Zines
+        show_title: "Zines : %{title}"
+        edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+        create:
+          notice: Zine was successfully created.
+        update:
+          notice: Zine was successfully updated.
+        destroy:
+          notice: Zine was successfully destroyed.
+        admin_zine_read_download_text: Read PDF
+        admin_zine_print_download_text: Print PDF
+        admin_zine_lite_download_text: Ink Lite PDF
+        admin_zine_epub_download_text: Mobi
+        admin_zine_mobi_download_text: ePub
 
-    # Confirmation messages
-    confirmations:
-      delete: Are you sure you’re sure? There is NO UNDO.
+      journals:
+        index_title: Journals
+        new_title: New Journals
+        show_title: "Journals : %{title}"
+        edit_title: "Editing journal %{id} %{title} : %{subtitle}"
+        create:
+          notice: Journal was successfully created.
+        update:
+          notice: Journal was successfully updated.
+        destroy:
+          notice: Journal was successfully destroyed.
 
-    # Form labels and help text
-    forms:
-      publication_status: Publication Status
-      featured_status: Feature this %{model} on the homepage?
-      featured_status_help: In the Ex-Workers’ Collection
-      not_featured: Not featured
-      featured: Featured
-      upload_word_doc: Upload a Word Doc file
-      word_doc_help: "An uploaded .docx file will get converted to Markdown and used in the content textarea, over-writing any content that is already there. ONLY .docx files will work!"
-      header_image: Header Image
-      header_image_help: "This is the large image that will be front and center on the Article page, on the homepage and when syndicated to other sites. Preferred size: 2000px wide by about 1000px tall (or taller)."
-      short_url_path: Short URL Path
-      categories: Categories
-      syndication: Syndication
-      appearance: Appearance
-      localization: Localization
-      labels:
-        publication_status: Publication Status
-        image_description: Image Description
-        summary: Summary
-        locale: Locale
-      buttons:
-        cancel: Cancel
-        save: Save
-        delete: Delete
-        edit: Edit %{model}
-        new: New %{model}
-        preview_draft: Preview Draft
-        download: Download .%{format}
-      help_text:
-        word_doc_upload: An uploaded .docx file will get converted to Markdown and used in the content textarea, over-writing any content that is already there. ONLY .docx files will work!
-        header_image: "This is the large image that will be front and center on the Article page, on the homepage and when syndicated to other sites. Preferred size: 2000px wide by about 1000px tall (or taller)."
-        featured_status: In the Ex-Workers' Collection
+      posters:
+        index_title: Posters
+        new_title: New Posters
+        show_title: "Posters : %{title}"
+        edit_title: "Editing poster %{id} %{title} : %{subtitle}"
+        create:
+          notice: Poster was successfully created.
+        update:
+          notice: Poster was successfully updated.
+        destroy:
+          notice: Poster was successfully destroyed.
 
-    # Page headings and sections
-    headings:
-      nested_articles: Nested Articles
-      new_nested_article: NEW Nested Article
-      downloads: Downloads
-      danger_zone: Danger Zone
+      stickers:
+        index_title: Stickers
+        new_title: New Stickers
+        show_title: "Stickers : %{title}"
+        edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
+        create:
+          notice: Sticker was successfully created.
+        update:
+          notice: Sticker was successfully updated.
+        destroy:
+          notice: Sticker was successfully destroyed.
 
-    # Help text and descriptions
-    help:
-      downloads_path: Downloads must be uploaded to
-      live_blog_help: "For live blog articles:"
-      preview_draft: Preview Draft
-      edit_article: Edit Article
-      jump_to: Jump to
+      podcasts:
+        index_title: Podcasts
+        new_title: New Podcasts
+        show_title: "Podcasts : %{title}"
+        edit_title: "Editing podcast %{id} %{title} : %{subtitle}"
 
-    # Navigation breadcrumbs and links
-    nav:
-      admin_dashboard: 🖤 ADMIN
-      new_article: 📝 New Article
-      articles: 📄 Articles
-      redirects: ↪️ Redirects
-      new_redirect: ↪️ New Redirect
-      draft_articles: Draft ➡️
-      published_articles: Published ➡️
-      scroll_to_top: Scroll to Site Top
-      markdown_cheatsheet: Markdown Cheatsheet ↗
-      breadcrumbs:
-        contradictionary: Contradictionary
-        definitions: Definitions
+      videos:
+        index_title: Videos
+        new_title: New Videos
+        show_title: "Videos : %{title}"
+        edit_title: "Editing video %{id} %{title} : %{subtitle}"
+        create:
+          notice: Video was successfully created.
+        update:
+          notice: Video was successfully updated.
+        destroy:
+          notice: Video was successfully destroyed.
+
+      categories:
+        index_title: Categories
+        new_title: New Categories
+        show_title: "Categories : %{name}"
+        edit_title: "Editing category %{id} : %{name}"
+        create:
+          notice: Category was successfully created.
+        update:
+          notice: Category was successfully updated.
+        destroy:
+          notice: Category was successfully destroyed.
+
+      episodes:
+        index_title: Episodes
+        new_title: New Episodes
+        show_title: "Episodes : %{title}"
+        edit_title: Editing episode %{id} %{title}
+        create:
+          notice: Episode was successfully created.
+        update:
+          notice: Episode was successfully updated.
+        destroy:
+          notice: Episode was successfully destroyed.
+
+      users:
+        index_title: Users
+        new_title: New Users
+        show_title: "Users : %{name}"
+        edit_title: "Editing user %{id} : %{username}"
+        create:
+          notice: User was successfully created.
+        update:
+          notice: User was successfully updated.
+        destroy:
+          notice: User was successfully destroyed.
+
+      pages:
+        index_title: Pages
+        new_title: New Pages
+        show_title: "Pages : %{title}"
+        edit_title: "Editing page %{id} %{title} : %{subtitle}"
+        create:
+          notice: Page was successfully created.
+        update:
+          notice: Page was successfully updated.
+        destroy:
+          notice: Page was successfully destroyed.
+
       links:
-        admin_dashboard: ADMIN Dashboard
-        scroll_to_site_top: Scroll to Site Top
-        markdown_cheatsheet: Markdown Cheatsheet ↗
+        index_title: Links
+        new_title: New Links
+        show_title: "Links : %{name}"
+        edit_title: "Editing link %{id} : %{name}"
+
+      locales:
+        index_title: Locales
+        new_title: New Locales
+        show_title: "Locales : %{name}"
+        edit_title: "Editing locale %{id} : %{abbreviation} : %{name_in_english} : %{name}"
+
+      redirects:
+        index_title: Redirects
+        new_title: New Redirects
+        show_title: "Redirects : %{source_path}"
+        edit_title: Editing redirect %{id} %{source_path}
+
+      definitions:
+        create:
+          notice: Definition was successfully created.
+        update:
+          notice: Definition was successfully updated.
+        destroy:
+          notice: Definition was successfully destroyed.
+
+      issues:
+        create:
+          notice: Issue was successfully created.
+        update:
+          notice: Issue was successfully updated.
+        destroy:
+          notice: Issue was successfully destroyed.
+
+      logos:
+        create:
+          notice: Logo was successfully created.
+        update:
+          notice: Logo was successfully updated.
+        destroy:
+          notice: Logo was successfully destroyed.
+
+      tags:
+        create:
+          notice: Tag was successfully created.
+        update:
+          notice: Tag was successfully updated.
+        destroy:
+          notice: Tag was successfully destroyed.
+
+      # Generic CRUD operation messages for fallback
+      notices:
+        created: "%{model} was successfully created."
+        updated: "%{model} was successfully updated."
+        destroyed: "%{model} was successfully destroyed."
+
+      # Common UI elements
+      ui:
+        cancel: Cancel
+        delete: Delete
+        edit: Edit
+        new: NEW
+        save: Save
+        preview: Preview
+        publish: Publish
+        draft: Draft
+        published: Published
+        download_docx: Download .docx
+        toggle_navigation: Toggle navigation
+
+      # Confirmation messages
+      confirmations:
+        delete: Are you sure you’re sure? There is NO UNDO.
+
+      # Form labels and help text
+      forms:
+        publication_status: Publication Status
+        featured_status: Feature this %{model} on the homepage?
+        featured_status_help: In the Ex-Workers’ Collection
+        not_featured: Not featured
+        featured: Featured
+        labels:
+          publication_status: Publication Status
+          image_description: Image Description
+          summary: Summary
+          locale: Locale
+        buttons:
+          cancel: Cancel
+          save: Save
+          delete: Delete
+          edit: Edit %{model}
+          new: New %{model}
+          preview_draft: Preview Draft
+          download: Download .%{format}
+        help_text:
+          word_doc_upload: An uploaded .docx file will get converted to Markdown and used in the content textarea, over-writing any content that is already there. ONLY .docx files will work!
+          header_image: "This is the large image that will be front and center on the Article page, on the homepage and when syndicated to other sites. Preferred size: 2000px wide by about 1000px tall (or taller)."
+          featured_status: In the Ex-Workers' Collection
+
+      # Page headings and sections
+      headings:
+        nested_articles: Nested Articles
         new_nested_article: NEW Nested Article
+        downloads: Downloads
+        danger_zone: Danger Zone
 
-    # Page sections
-    sections:
-      appearance: Appearance
-      syndication: Syndication
-      localization: Localization
-      categorization: Categories
-      featured_status: Featured Status
-      publication_status: Publication Status
-      danger_zone: Danger Zone
-      nested_articles: Nested Articles
-      downloads: Downloads
-      jump_to: Jump to
+      # Help text and descriptions
+      help:
+        downloads_path: Downloads must be uploaded to
+        live_blog_help: "For live blog articles:"
+        preview_draft: Preview Draft
+        edit_article: Edit Article
+        jump_to: Jump to
 
-      delete_no_undo: Are you sure you're sure? There is NO UNDO.
+      # Navigation breadcrumbs and links
+      nav:
+        admin_dashboard: 🖤 ADMIN
+        new_article: 📝 New Article
+        articles: 📄 Articles
+        redirects: ↪️ Redirects
+        new_redirect: ↪️ New Redirect
+        draft_articles: Draft ➡️
+        published_articles: Published ➡️
+        scroll_to_top: Scroll to Site Top
+        markdown_cheatsheet: Markdown Cheatsheet ↗
+        breadcrumbs:
+          contradictionary: Contradictionary
+          definitions: Definitions
+        links:
+          admin_dashboard: ADMIN Dashboard
+          scroll_to_site_top: Scroll to Site Top
+          markdown_cheatsheet: Markdown Cheatsheet ↗
+          new_nested_article: NEW Nested Article
 
-  ebooks:
-    - slug: screen_single_page_view
-      name: Screen Single Page View PDF
-      description: Is there a one page wide ‘PDF’ for on-screen reading uploaded?
-    - slug: screen_two_page_view
-      name: Screen Two Page View PDF
-      description: Is there a two page wide ‘PDF’ for on-screen reading uploaded?
-    - slug: print_color
-      name: Print Color PDF
-      description: Is there a color ‘PDF’ for printing uploaded?
-    - slug: print_black_and_white
-      name: Print B/W PDF
-      description: Is there a B/W ‘PDF’ for printing uploaded?
-    - slug: print_color_a4
-      name: Print Color A4 PDF
-      description: Is there an A4 sized color ‘PDF’ for printing uploaded?
-    - slug: print_black_and_white_a4
-      name: B/W A4 PDF
-      description: Is there an A4 sized B/W ‘PDF’ for printing uploaded?
-    - slug: lite
-      name: Ink Lite PDF
-      description: Is there a printer toner friendly ‘PDF’ for printing uploaded?
-    - slug: epub
-      name: ePub
-      description: Is there a ‘.epub’ file uploaded?
-    - slug: mobi
-      name: Mobi
-      description: Is there a ‘.mobi’ file uploaded?
+      # Page sections
+      sections:
+        appearance: Appearance
+        syndication: Syndication
+        localization: Localization
+        categorization: Categories
+        featured_status: Featured Status
+        publication_status: Publication Status
+        danger_zone: Danger Zone
+        nested_articles: Nested Articles
+        downloads: Downloads
+        jump_to: Jump to
+
+        delete_no_undo: Are you sure you're sure? There is NO UNDO.
 
   activerecord:
     errors:
