@@ -1,7 +1,3 @@
-# Rails I18n Admin Locale: ES
-# This file has been migrated to use Rails I18n conventions.
-# Please translate all entries marked with '[TODO: Translate]'
-
 es:
   auth:
     signin_failed: Invalid email or password.
@@ -26,11 +22,11 @@ es:
       updated: El artículo se actualizó correctamente.
       destroyed: El artículo se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Article was successfully created."
+        notice: "[TODO- Translate] Article was successfully created."
       update:
-        notice: "[TODO: Translate] Article was successfully updated."
+        notice: "[TODO- Translate] Article was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Article was successfully destroyed."
+        notice: "[TODO- Translate] Article was successfully destroyed."
     books:
       index_title: Books
       new_title: New Books
@@ -40,11 +36,11 @@ es:
       updated: El libro se actualizó correctamente.
       destroyed: El libro se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Book was successfully created."
+        notice: "[TODO- Translate] Book was successfully created."
       update:
-        notice: "[TODO: Translate] Book was successfully updated."
+        notice: "[TODO- Translate] Book was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Book was successfully destroyed."
+        notice: "[TODO- Translate] Book was successfully destroyed."
     zines:
       index_title: Zines
       new_title: New Zines
@@ -54,11 +50,11 @@ es:
       updated: El fanzine se actualizó correctamente.
       destroyed: El fanzine se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Zine was successfully created."
+        notice: "[TODO- Translate] Zine was successfully created."
       update:
-        notice: "[TODO: Translate] Zine was successfully updated."
+        notice: "[TODO- Translate] Zine was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Zine was successfully destroyed."
+        notice: "[TODO- Translate] Zine was successfully destroyed."
     journals:
       index_title: Journals
       new_title: New Journals
@@ -68,11 +64,11 @@ es:
       updated: La revista se actualizó correctamente.
       destroyed: La revista se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Journal was successfully created."
+        notice: "[TODO- Translate] Journal was successfully created."
       update:
-        notice: "[TODO: Translate] Journal was successfully updated."
+        notice: "[TODO- Translate] Journal was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Journal was successfully destroyed."
+        notice: "[TODO- Translate] Journal was successfully destroyed."
     posters:
       index_title: Posters
       new_title: New Posters
@@ -82,11 +78,11 @@ es:
       updated: El póster se actualizó correctamente.
       destroyed: El póster se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Poster was successfully created."
+        notice: "[TODO- Translate] Poster was successfully created."
       update:
-        notice: "[TODO: Translate] Poster was successfully updated."
+        notice: "[TODO- Translate] Poster was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Poster was successfully destroyed."
+        notice: "[TODO- Translate] Poster was successfully destroyed."
     stickers:
       index_title: Stickers
       new_title: New Stickers
@@ -96,11 +92,11 @@ es:
       updated: La pegatina se actualizó correctamente.
       destroyed: La pegatina se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Sticker was successfully created."
+        notice: "[TODO- Translate] Sticker was successfully created."
       update:
-        notice: "[TODO: Translate] Sticker was successfully updated."
+        notice: "[TODO- Translate] Sticker was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Sticker was successfully destroyed."
+        notice: "[TODO- Translate] Sticker was successfully destroyed."
     podcasts:
       index_title: Podcasts
       new_title: New Podcasts
@@ -112,11 +108,11 @@ es:
       show_title: "Videos : %{title}"
       edit_title: "Editing video %{id} %{title} : %{subtitle}"
       create:
-        notice: "[TODO: Translate] Video was successfully created."
+        notice: "[TODO- Translate] Video was successfully created."
       update:
-        notice: "[TODO: Translate] Video was successfully updated."
+        notice: "[TODO- Translate] Video was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Video was successfully destroyed."
+        notice: "[TODO- Translate] Video was successfully destroyed."
     categories:
       index_title: Categories
       new_title: New Categories
@@ -126,11 +122,11 @@ es:
       updated: La categoría se actualizó correctamente.
       destroyed: La categoría se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Categorie was successfully created."
+        notice: "[TODO- Translate] Categorie was successfully created."
       update:
-        notice: "[TODO: Translate] Categorie was successfully updated."
+        notice: "[TODO- Translate] Categorie was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Categorie was successfully destroyed."
+        notice: "[TODO- Translate] Categorie was successfully destroyed."
     episodes:
       index_title: Episodes
       new_title: New Episodes
@@ -140,11 +136,11 @@ es:
       updated: El episodio se actualizó correctamente.
       destroyed: El episodio se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Episode was successfully created."
+        notice: "[TODO- Translate] Episode was successfully created."
       update:
-        notice: "[TODO: Translate] Episode was successfully updated."
+        notice: "[TODO- Translate] Episode was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Episode was successfully destroyed."
+        notice: "[TODO- Translate] Episode was successfully destroyed."
     users:
       index_title: Users
       new_title: New Users
@@ -154,11 +150,11 @@ es:
       updated: El usuario se actualizó correctamente.
       destroyed: El usuario se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] User was successfully created."
+        notice: "[TODO- Translate] User was successfully created."
       update:
-        notice: "[TODO: Translate] User was successfully updated."
+        notice: "[TODO- Translate] User was successfully updated."
       destroy:
-        notice: "[TODO: Translate] User was successfully destroyed."
+        notice: "[TODO- Translate] User was successfully destroyed."
     pages:
       index_title: Pages
       new_title: New Pages
@@ -168,11 +164,11 @@ es:
       updated: La página se actualizó correctamente.
       destroyed: La página se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Page was successfully created."
+        notice: "[TODO- Translate] Page was successfully created."
       update:
-        notice: "[TODO: Translate] Page was successfully updated."
+        notice: "[TODO- Translate] Page was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Page was successfully destroyed."
+        notice: "[TODO- Translate] Page was successfully destroyed."
     links:
       index_title: Links
       new_title: New Links
@@ -197,41 +193,41 @@ es:
       updated: La definición se actualizó correctamente.
       destroyed: La definición se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Definition was successfully created."
+        notice: "[TODO- Translate] Definition was successfully created."
       update:
-        notice: "[TODO: Translate] Definition was successfully updated."
+        notice: "[TODO- Translate] Definition was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Definition was successfully destroyed."
+        notice: "[TODO- Translate] Definition was successfully destroyed."
     issues:
       created: El número se creó correctamente.
       updated: El número se actualizó correctamente.
       destroyed: El número se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Issue was successfully created."
+        notice: "[TODO- Translate] Issue was successfully created."
       update:
-        notice: "[TODO: Translate] Issue was successfully updated."
+        notice: "[TODO- Translate] Issue was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Issue was successfully destroyed."
+        notice: "[TODO- Translate] Issue was successfully destroyed."
     logos:
       created: El logo se creó correctamente.
       updated: El logo se actualizó correctamente.
       destroyed: El logo se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Logo was successfully created."
+        notice: "[TODO- Translate] Logo was successfully created."
       update:
-        notice: "[TODO: Translate] Logo was successfully updated."
+        notice: "[TODO- Translate] Logo was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Logo was successfully destroyed."
+        notice: "[TODO- Translate] Logo was successfully destroyed."
     tags:
       created: La etiqueta se creó correctamente.
       updated: La etiqueta se actualizó correctamente.
       destroyed: La etiqueta se eliminó correctamente.
       create:
-        notice: "[TODO: Translate] Tag was successfully created."
+        notice: "[TODO- Translate] Tag was successfully created."
       update:
-        notice: "[TODO: Translate] Tag was successfully updated."
+        notice: "[TODO- Translate] Tag was successfully updated."
       destroy:
-        notice: "[TODO: Translate] Tag was successfully destroyed."
+        notice: "[TODO- Translate] Tag was successfully destroyed."
     ui:
       cancel: Cancelar
       delete: Eliminar

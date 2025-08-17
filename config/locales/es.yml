@@ -1,6 +1,6 @@
 # Rails I18n Locale: ES
 # This file has been migrated to use Rails I18n conventions.
-# Please translate all entries marked with '[TODO: Translate]'
+# Please translate all entries marked with '[TODO- Translate]'
 
 es:
   name: Español
@@ -429,256 +429,256 @@ es:
   activerecord:
     models:
       article:
-        one: "[TODO: Translate] Article"
-        other: "[TODO: Translate] Articles"
+        one: "[TODO- Translate] Article"
+        other: "[TODO- Translate] Articles"
       book:
-        one: "[TODO: Translate] Book"
-        other: "[TODO: Translate] Books"
+        one: "[TODO- Translate] Book"
+        other: "[TODO- Translate] Books"
       category:
-        one: "[TODO: Translate] Category"
-        other: "[TODO: Translate] Categories"
+        one: "[TODO- Translate] Category"
+        other: "[TODO- Translate] Categories"
       episode:
-        one: "[TODO: Translate] Episode"
-        other: "[TODO: Translate] Episodes"
+        one: "[TODO- Translate] Episode"
+        other: "[TODO- Translate] Episodes"
       journal:
-        one: "[TODO: Translate] Journal"
-        other: "[TODO: Translate] Journals"
+        one: "[TODO- Translate] Journal"
+        other: "[TODO- Translate] Journals"
       poster:
-        one: "[TODO: Translate] Poster"
-        other: "[TODO: Translate] Posters"
+        one: "[TODO- Translate] Poster"
+        other: "[TODO- Translate] Posters"
       sticker:
-        one: "[TODO: Translate] Sticker"
-        other: "[TODO: Translate] Stickers"
+        one: "[TODO- Translate] Sticker"
+        other: "[TODO- Translate] Stickers"
       video:
-        one: "[TODO: Translate] Video"
-        other: "[TODO: Translate] Videos"
+        one: "[TODO- Translate] Video"
+        other: "[TODO- Translate] Videos"
       zine:
-        one: "[TODO: Translate] Zine"
-        other: "[TODO: Translate] Zines"
+        one: "[TODO- Translate] Zine"
+        other: "[TODO- Translate] Zines"
       user:
-        one: "[TODO: Translate] User"
-        other: "[TODO: Translate] Users"
+        one: "[TODO- Translate] User"
+        other: "[TODO- Translate] Users"
       page:
-        one: "[TODO: Translate] Page"
-        other: "[TODO: Translate] Pages"
+        one: "[TODO- Translate] Page"
+        other: "[TODO- Translate] Pages"
       podcast:
-        one: "[TODO: Translate] Podcast"
-        other: "[TODO: Translate] Podcasts"
+        one: "[TODO- Translate] Podcast"
+        other: "[TODO- Translate] Podcasts"
       definition:
-        one: "[TODO: Translate] Definition"
-        other: "[TODO: Translate] Definitions"
+        one: "[TODO- Translate] Definition"
+        other: "[TODO- Translate] Definitions"
       tag:
-        one: "[TODO: Translate] Tag"
-        other: "[TODO: Translate] Tags"
+        one: "[TODO- Translate] Tag"
+        other: "[TODO- Translate] Tags"
       logo:
-        one: "[TODO: Translate] Logo"
-        other: "[TODO: Translate] Logos"
+        one: "[TODO- Translate] Logo"
+        other: "[TODO- Translate] Logos"
       issue:
-        one: "[TODO: Translate] Issue"
-        other: "[TODO: Translate] Issues"
+        one: "[TODO- Translate] Issue"
+        other: "[TODO- Translate] Issues"
       redirect:
-        one: "[TODO: Translate] Redirect"
-        other: "[TODO: Translate] Redirects"
+        one: "[TODO- Translate] Redirect"
+        other: "[TODO- Translate] Redirects"
       locale:
-        one: "[TODO: Translate] Locale"
-        other: "[TODO: Translate] Locales"
+        one: "[TODO- Translate] Locale"
+        other: "[TODO- Translate] Locales"
     attributes:
       article:
-        title: "[TODO: Translate] Title"
-        subtitle: "[TODO: Translate] Subtitle"
-        content: "[TODO: Translate] Content"
-        summary: "[TODO: Translate] Summary"
-        published_at: "[TODO: Translate] Published at"
-        slug: "[TODO: Translate] Slug"
-        short_path: "[TODO: Translate] Short Path"
-        image_description: "[TODO: Translate] Image Description"
-        locale: "[TODO: Translate] Language"
-        publication_status: "[TODO: Translate] Publication Status"
-        featured_status: "[TODO: Translate] Featured Status"
-        tags: "[TODO: Translate] Tags"
-        categories: "[TODO: Translate] Categories"
-        tweet: "[TODO: Translate] Tweet"
-        notes: "[TODO: Translate] Notes"
-        css: "[TODO: Translate] CSS"
-        year: "[TODO: Translate] Year"
-        month: "[TODO: Translate] Month"
-        day: "[TODO: Translate] Day"
-        draft_code: "[TODO: Translate] Draft Code"
-        canonical_id: "[TODO: Translate] Canonical Article"
-        collection_id: "[TODO: Translate] Collection"
-        featured_at: "[TODO: Translate] Featured At"
-        published_at_tz: "[TODO: Translate] Published Timezone"
+        title: "[TODO- Translate] Title"
+        subtitle: "[TODO- Translate] Subtitle"
+        content: "[TODO- Translate] Content"
+        summary: "[TODO- Translate] Summary"
+        published_at: "[TODO- Translate] Published at"
+        slug: "[TODO- Translate] Slug"
+        short_path: "[TODO- Translate] Short Path"
+        image_description: "[TODO- Translate] Image Description"
+        locale: "[TODO- Translate] Language"
+        publication_status: "[TODO- Translate] Publication Status"
+        featured_status: "[TODO- Translate] Featured Status"
+        tags: "[TODO- Translate] Tags"
+        categories: "[TODO- Translate] Categories"
+        tweet: "[TODO- Translate] Tweet"
+        notes: "[TODO- Translate] Notes"
+        css: "[TODO- Translate] CSS"
+        year: "[TODO- Translate] Year"
+        month: "[TODO- Translate] Month"
+        day: "[TODO- Translate] Day"
+        draft_code: "[TODO- Translate] Draft Code"
+        canonical_id: "[TODO- Translate] Canonical Article"
+        collection_id: "[TODO- Translate] Collection"
+        featured_at: "[TODO- Translate] Featured At"
+        published_at_tz: "[TODO- Translate] Published Timezone"
       book:
-        title: "[TODO: Translate] Title"
-        subtitle: "[TODO: Translate] Subtitle"
-        content: "[TODO: Translate] Content"
-        summary: "[TODO: Translate] Summary"
-        published_at: "[TODO: Translate] Published at"
-        slug: "[TODO: Translate] Slug"
-        short_path: "[TODO: Translate] Short Path"
-        image_description: "[TODO: Translate] Image Description"
-        locale: "[TODO: Translate] Language"
-        publication_status: "[TODO: Translate] Publication Status"
-        featured_status: "[TODO: Translate] Featured Status"
-        price_in_cents: "[TODO: Translate] Price (cents)"
-        buy_url: "[TODO: Translate] Buy URL"
-        buy_info: "[TODO: Translate] Buy Info"
-        content_format: "[TODO: Translate] Content Format"
+        title: "[TODO- Translate] Title"
+        subtitle: "[TODO- Translate] Subtitle"
+        content: "[TODO- Translate] Content"
+        summary: "[TODO- Translate] Summary"
+        published_at: "[TODO- Translate] Published at"
+        slug: "[TODO- Translate] Slug"
+        short_path: "[TODO- Translate] Short Path"
+        image_description: "[TODO- Translate] Image Description"
+        locale: "[TODO- Translate] Language"
+        publication_status: "[TODO- Translate] Publication Status"
+        featured_status: "[TODO- Translate] Featured Status"
+        price_in_cents: "[TODO- Translate] Price (cents)"
+        buy_url: "[TODO- Translate] Buy URL"
+        buy_info: "[TODO- Translate] Buy Info"
+        content_format: "[TODO- Translate] Content Format"
       category:
-        name: "[TODO: Translate] Name"
-        slug: "[TODO: Translate] Slug"
+        name: "[TODO- Translate] Name"
+        slug: "[TODO- Translate] Slug"
       episode:
-        title: "[TODO: Translate] Title"
-        subtitle: "[TODO: Translate] Subtitle"
-        content: "[TODO: Translate] Content"
-        summary: "[TODO: Translate] Summary"
-        audio_url: "[TODO: Translate] Audio URL"
-        audio_length: "[TODO: Translate] Audio Length"
-        audio_type: "[TODO: Translate] Audio Type"
-        duration: "[TODO: Translate] Duration"
-        podcast_id: "[TODO: Translate] Podcast"
-        episode_number: "[TODO: Translate] Episode Number"
+        title: "[TODO- Translate] Title"
+        subtitle: "[TODO- Translate] Subtitle"
+        content: "[TODO- Translate] Content"
+        summary: "[TODO- Translate] Summary"
+        audio_url: "[TODO- Translate] Audio URL"
+        audio_length: "[TODO- Translate] Audio Length"
+        audio_type: "[TODO- Translate] Audio Type"
+        duration: "[TODO- Translate] Duration"
+        podcast_id: "[TODO- Translate] Podcast"
+        episode_number: "[TODO- Translate] Episode Number"
       user:
-        username: "[TODO: Translate] Username"
-        password: "[TODO: Translate] Password"
-        email: "[TODO: Translate] Email"
-        role: "[TODO: Translate] Role"
+        username: "[TODO- Translate] Username"
+        password: "[TODO- Translate] Password"
+        email: "[TODO- Translate] Email"
+        role: "[TODO- Translate] Role"
       tag:
-        name: "[TODO: Translate] Name"
-        slug: "[TODO: Translate] Slug"
+        name: "[TODO- Translate] Name"
+        slug: "[TODO- Translate] Slug"
     errors:
       messages:
-        blank: "[TODO: Translate] can't be blank"
-        taken: "[TODO: Translate] has already been taken"
-        too_short: "[TODO: Translate] is too short (minimum is %<count>s characters)"
-        too_long: "[TODO: Translate] is too long (maximum is %<count>s characters)"
-        invalid: "[TODO: Translate] is invalid"
-        confirmation: "[TODO: Translate] doesn't match confirmation"
+        blank: "[TODO- Translate] can't be blank"
+        taken: "[TODO- Translate] has already been taken"
+        too_short: "[TODO- Translate] is too short (minimum is %<count>s characters)"
+        too_long: "[TODO- Translate] is too long (maximum is %<count>s characters)"
+        invalid: "[TODO- Translate] is invalid"
+        confirmation: "[TODO- Translate] doesn't match confirmation"
       models:
         article:
           attributes:
             title:
-              blank: "[TODO: Translate] Title can't be blank"
+              blank: "[TODO- Translate] Title can't be blank"
             slug:
-              taken: "[TODO: Translate] Slug has already been taken for this date"
+              taken: "[TODO- Translate] Slug has already been taken for this date"
             short_path:
-              taken: "[TODO: Translate] Short path has already been taken"
-              uniqueness: "[TODO: Translate] is already taken by article short path"
+              taken: "[TODO- Translate] Short path has already been taken"
+              uniqueness: "[TODO- Translate] is already taken by article short path"
             published_at:
-              blank: "[TODO: Translate] Published date can't be blank for published articles"
+              blank: "[TODO- Translate] Published date can't be blank for published articles"
         book:
           attributes:
             title:
-              blank: "[TODO: Translate] Title can't be blank"
+              blank: "[TODO- Translate] Title can't be blank"
         category:
           attributes:
             name:
-              blank: "[TODO: Translate] Name can't be blank"
-              taken: "[TODO: Translate] Name has already been taken"
+              blank: "[TODO- Translate] Name can't be blank"
+              taken: "[TODO- Translate] Name has already been taken"
         user:
           attributes:
             username:
-              blank: "[TODO: Translate] Username can't be blank"
-              taken: "[TODO: Translate] Username has already been taken"
+              blank: "[TODO- Translate] Username can't be blank"
+              taken: "[TODO- Translate] Username has already been taken"
             password:
-              blank: "[TODO: Translate] Password can't be blank"
-              too_short: "[TODO: Translate] Password is too short (minimum is %{count} characters)"
+              blank: "[TODO- Translate] Password can't be blank"
+              too_short: "[TODO- Translate] Password is too short (minimum is %{count} characters)"
             email:
-              blank: "[TODO: Translate] Email can't be blank"
-              invalid: "[TODO: Translate] Email format is invalid"
+              blank: "[TODO- Translate] Email can't be blank"
+              invalid: "[TODO- Translate] Email format is invalid"
   articles:
     create:
-      notice: "[TODO: Translate] Article was successfully created."
+      notice: "[TODO- Translate] Article was successfully created."
     update:
-      notice: "[TODO: Translate] Article was successfully updated."
+      notice: "[TODO- Translate] Article was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Article was successfully destroyed."
+      notice: "[TODO- Translate] Article was successfully destroyed."
   books:
     create:
-      notice: "[TODO: Translate] Book was successfully created."
+      notice: "[TODO- Translate] Book was successfully created."
     update:
-      notice: "[TODO: Translate] Book was successfully updated."
+      notice: "[TODO- Translate] Book was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Book was successfully destroyed."
+      notice: "[TODO- Translate] Book was successfully destroyed."
   categories:
     create:
-      notice: "[TODO: Translate] Categorie was successfully created."
+      notice: "[TODO- Translate] Categorie was successfully created."
     update:
-      notice: "[TODO: Translate] Categorie was successfully updated."
+      notice: "[TODO- Translate] Categorie was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Categorie was successfully destroyed."
+      notice: "[TODO- Translate] Categorie was successfully destroyed."
   episodes:
     create:
-      notice: "[TODO: Translate] Episode was successfully created."
+      notice: "[TODO- Translate] Episode was successfully created."
     update:
-      notice: "[TODO: Translate] Episode was successfully updated."
+      notice: "[TODO- Translate] Episode was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Episode was successfully destroyed."
+      notice: "[TODO- Translate] Episode was successfully destroyed."
   journals:
     create:
-      notice: "[TODO: Translate] Journal was successfully created."
+      notice: "[TODO- Translate] Journal was successfully created."
     update:
-      notice: "[TODO: Translate] Journal was successfully updated."
+      notice: "[TODO- Translate] Journal was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Journal was successfully destroyed."
+      notice: "[TODO- Translate] Journal was successfully destroyed."
   posters:
     create:
-      notice: "[TODO: Translate] Poster was successfully created."
+      notice: "[TODO- Translate] Poster was successfully created."
     update:
-      notice: "[TODO: Translate] Poster was successfully updated."
+      notice: "[TODO- Translate] Poster was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Poster was successfully destroyed."
+      notice: "[TODO- Translate] Poster was successfully destroyed."
   stickers:
     create:
-      notice: "[TODO: Translate] Sticker was successfully created."
+      notice: "[TODO- Translate] Sticker was successfully created."
     update:
-      notice: "[TODO: Translate] Sticker was successfully updated."
+      notice: "[TODO- Translate] Sticker was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Sticker was successfully destroyed."
+      notice: "[TODO- Translate] Sticker was successfully destroyed."
   videos:
     create:
-      notice: "[TODO: Translate] Video was successfully created."
+      notice: "[TODO- Translate] Video was successfully created."
     update:
-      notice: "[TODO: Translate] Video was successfully updated."
+      notice: "[TODO- Translate] Video was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Video was successfully destroyed."
+      notice: "[TODO- Translate] Video was successfully destroyed."
   zines:
     create:
-      notice: "[TODO: Translate] Zine was successfully created."
+      notice: "[TODO- Translate] Zine was successfully created."
     update:
-      notice: "[TODO: Translate] Zine was successfully updated."
+      notice: "[TODO- Translate] Zine was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Zine was successfully destroyed."
+      notice: "[TODO- Translate] Zine was successfully destroyed."
   users:
     create:
-      notice: "[TODO: Translate] User was successfully created."
+      notice: "[TODO- Translate] User was successfully created."
     update:
-      notice: "[TODO: Translate] User was successfully updated."
+      notice: "[TODO- Translate] User was successfully updated."
     destroy:
-      notice: "[TODO: Translate] User was successfully destroyed."
+      notice: "[TODO- Translate] User was successfully destroyed."
   pages:
     create:
-      notice: "[TODO: Translate] Page was successfully created."
+      notice: "[TODO- Translate] Page was successfully created."
     update:
-      notice: "[TODO: Translate] Page was successfully updated."
+      notice: "[TODO- Translate] Page was successfully updated."
     destroy:
-      notice: "[TODO: Translate] Page was successfully destroyed."
+      notice: "[TODO- Translate] Page was successfully destroyed."
   support_mailer:
     edit_subscription:
-      subject: "[TODO: Translate] Request for Super Secret Support Link"
-      header: "[TODO: Translate] Your Super Secret Support Link has arrived!"
-      link_description: "[TODO: Translate] Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe."
-      repeat_request: "[TODO: Translate] If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link."
-      more_help: "[TODO: Translate] You can also reply to this email if need more assistance."
+      subject: "[TODO- Translate] Request for Super Secret Support Link"
+      header: "[TODO- Translate] Your Super Secret Support Link has arrived!"
+      link_description: "[TODO- Translate] Anyone with the above link can use it to make changes to your subscription. It will expire in one hour. Keep it secret, keep it safe."
+      repeat_request: "[TODO- Translate] If you don't get around to making the changes you want in time, no worries. We can always send you another super secret link."
+      more_help: "[TODO- Translate] You can also reply to this email if need more assistance."
   auth:
-    signin_failed: "[TODO: Translate] Invalid email or password."
-    signout: "[TODO: Translate] Signed out!"
-    signin_heading: "[TODO: Translate] Sign In"
-    signup_heading: "[TODO: Translate] Sign Up"
-    forgot_password_heading: "[TODO: Translate] Forget Your Password?"
-    reset_password_heading: "[TODO: Translate] Reset Your Password"
-    username_label: "[TODO: Translate] 🦁 Username"
-    username_note: "[TODO: Translate] Not an email address."
-    password_label: "[TODO: Translate] 🔑 Password"
-    password_note: "[TODO: Translate] Passwords must be **at least %<password_minimum_length>s characters** long."
-    signin_button_text: "[TODO: Translate] Sign In"
+    signin_failed: "[TODO- Translate] Invalid email or password."
+    signout: "[TODO- Translate] Signed out!"
+    signin_heading: "[TODO- Translate] Sign In"
+    signup_heading: "[TODO- Translate] Sign Up"
+    forgot_password_heading: "[TODO- Translate] Forget Your Password?"
+    reset_password_heading: "[TODO- Translate] Reset Your Password"
+    username_label: "[TODO- Translate] 🦁 Username"
+    username_note: "[TODO- Translate] Not an email address."
+    password_label: "[TODO- Translate] 🔑 Password"
+    password_note: "[TODO- Translate] Passwords must be **at least %<password_minimum_length>s characters** long."
+    signin_button_text: "[TODO- Translate] Sign In"
