@@ -79,15 +79,15 @@ ar:
         label: Videos
 
       tools:
-        label: Tools
-        zines: Zines
+        label:    Tools
+        zines:    Zines
         journals: Journals
-        posters: Posters
+        posters:  Posters
         stickers: Stickers
-        videos: Videos
-        music: Music
-        logos: Logos
-        to_change_everything: To Change Everything
+        videos:   Videos
+        music:    Music
+        logos:    Logos
+        to_change_everything:          To Change Everything
         steal_something_from_work_day: Steal Something from Work Day
 
       store:
@@ -115,7 +115,7 @@ ar:
         description: Sign up here to receive regular email updates. _(Processed by Mailchimp.)_
         signup_form_placeholder: What’s your email address?
         signup_form_select_placeholder: You want a lot of emails? Or a little?
-        signup_form_select_option_lot: Every little thing. (Many emails)
+        signup_form_select_option_lot:    Every little thing. (Many emails)
         signup_form_select_option_little: Just the big stuff! (Fewer emails)
         signup_button_text: Sign Up
       social:
@@ -193,21 +193,21 @@ ar:
 
   tools:
     poster:
-      image_description: Photo of ‘%{title}’ front side
+      image_description:      Photo of ‘%{title}’ front side
       back_image_description: Photo of ‘%{title}’ back side
 
   downloads:
     heading: Downloads
     formats:
-      screen_single_page_view: Screen Single Page View PDF
-      screen_two_page_view: Screen Two Page View PDF
-      print_color: Print Color PDF
-      print_black_and_white: Print B/W PDF
-      print_color_a4: Print Color A4 PDF
+      screen_single_page_view:  Screen Single Page View PDF
+      screen_two_page_view:     Screen Two Page View PDF
+      print_color:              Print Color PDF
+      print_black_and_white:    Print B/W PDF
+      print_color_a4:           Print Color A4 PDF
       print_black_and_white_a4: Print B/W A4 PDF
-      lite: Ink Lite PDF
-      epub: ePub
-      mobi: Mobi
+      lite:                     Ink Lite PDF
+      epub:                     ePub
+      mobi:                     Mobi
 
   views:
     pagination:
@@ -218,72 +218,72 @@ ar:
       next: "&rsaquo;"
       next_screen_reader: Next
       truncate: "&hellip;"
-      next_page: Next &rsaquo;
+      next_page: "Next &rsaquo;"
       previous_page: "&lsaquo; Previous"
       next_article: "%{title}: Next &rsaquo;"
       previous_article: "&lsaquo; Previous: %{title}"
       next_month: "&lsaquo; Next Month (%{month})"
-      previous_month: (%{month}) Previous Month &rsaquo;
+      previous_month: "(%{month}) Previous Month &rsaquo;"
       next_year: "&lsaquo; Next Year (%{year})"
-      previous_year: (%{year}) Previous Year &rsaquo;
+      previous_year: "(%{year}) Previous Year &rsaquo;"
 
     tools:
-      buy_now_button_text: Buy Now
-      zine_download_read_button_text: Download PDF for Reading
+      buy_now_button_text:             Buy Now
+      zine_download_read_button_text:  Download PDF for Reading
       zine_download_print_button_text: Download PDF for Printing
-      zine_download_lite_button_text: Download Ink Lite PDF
-      zine_download_epub_button_text: Download ePub eBook
-      zine_download_mobi_button_text: Download Mobi eBook
+      zine_download_lite_button_text:  Download Ink Lite PDF
+      zine_download_epub_button_text:  Download ePub eBook
+      zine_download_mobi_button_text:  Download Mobi eBook
 
-      book_download_read_button_text: Download Two Page View PDF
+      book_download_read_button_text:  Download Two Page View PDF
       book_download_print_button_text: Download Print PDF
-      book_download_lite_button_text: Download Single Page View PDF
-      book_download_epub_button_text: Download ePub eBook
-      book_download_mobi_button_text: Download Mobi eBook
+      book_download_lite_button_text:  Download Single Page View PDF
+      book_download_epub_button_text:  Download ePub eBook
+      book_download_mobi_button_text:  Download Mobi eBook
 
-      admin_book_read_download_text: Two Up PDF
+      admin_book_read_download_text:  Two Up PDF
       admin_book_print_download_text: Print PDF
-      admin_book_lite_download_text: One Up PDF
-      admin_book_epub_download_text: Mobi
-      admin_book_mobi_download_text: ePub
+      admin_book_lite_download_text:  One Up PDF
+      admin_book_epub_download_text:  Mobi
+      admin_book_mobi_download_text:  ePub
 
-      admin_zine_read_download_text: Read PDF
+      admin_zine_read_download_text:  Read PDF
       admin_zine_print_download_text: Print PDF
-      admin_zine_lite_download_text: Ink Lite PDF
-      admin_zine_epub_download_text: Mobi
-      admin_zine_mobi_download_text: ePub
+      admin_zine_lite_download_text:  Ink Lite PDF
+      admin_zine_epub_download_text:  Mobi
+      admin_zine_mobi_download_text:  ePub
 
       # these text values are wrapped in quotes because each has a colon in its text value
       download_front_button_text: "Download PDF : Front"
-      download_back_button_text: "Download PDF : Back"
-      download_front_color_button_text: "Download PDF : Front Color"
-      download_back_color_button_text: "Download PDF : Back Color"
+      download_back_button_text:  "Download PDF : Back"
+      download_front_color_button_text:  "Download PDF : Front Color"
+      download_back_color_button_text:   "Download PDF : Back Color"
       download_front_black_and_white_button_text: "Download PDF : Front B/W"
-      download_back_black_and_white_button_text: "Download PDF : Back B/W"
+      download_back_black_and_white_button_text:  "Download PDF : Back B/W"
 
       pdf_donate_button_text: Donate
       pdf_donate_button_label: Donate here to help us keep this PDF freely available and continue creating new ones.
 
       journals_intro_text: Here, you can download PDFs of _Rolling Thunder,_ our acclaimed journal of analysis and direct action, _Harbinger_, our classic tabloid spreading “the propaganda of desire,” and other ambitious serial publications from the past two decades.
-      logos_intro_text: CrimethInc. for yourself! Logos for your own CrimethInc. projects.
-      music_intro_text: Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
-      posters_intro_text: Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
+      logos_intro_text:    CrimethInc. for yourself! Logos for your own CrimethInc. projects.
+      music_intro_text:    Download a wide range of the albums we’ve [released](/2018/10/22/crimethinc-music-releases-now-on-bandcamp) since 1996, [punk](/2018/10/22/music-as-a-weapon-the-contentious-symbiosis-of-punk-rock-and-anarchism) and otherwise.
+      posters_intro_text:  Bring the walls of your home, school, town, or community center to life! We recommend using wallpaper paste or [wheatpaste](/posters) to post these in public places.
       stickers_intro_text: Help the mute objects around you communicate more eloquently! Order these in bulk or print them out on adhesive paper.
-      tools_intro_text: Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
-      videos_intro_text: Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
-      zines_intro_text: A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [_To Change Everything_ site](/tce).
+      tools_intro_text:    Drawing on more than two decades of activity, we offer a wide range of material for you to download or order in mass quantities. Use these to educate, agitate, and transform the spaces around you.
+      videos_intro_text:   Emergency Broadcast System — A selection of videos from CrimethInc. Perpetual Motion Pictures
+      zines_intro_text:    A great many of our texts are available here in pamphlet form. Print them out or photocopy them to distribute at schools, protests, concerts, social events, farmers’ markets, and anywhere else people might be hungry for ideas. You can also  obtain PDFs of _To Change Everything,_ our introduction to anarchism, in dozens of languages at the [_To Change Everything_ site](/tce).
       books_intro_text: |
         From passionate writing and meticulous editing, to intricate and unique design, to expert and careful production, these books are the result of much love and care. We’ve been at this for over a decade, and you’ll find the proof in all the tiny details and orchestrated moments that can only be achieved with ink-soaked paper.
 
         All our books are printed with soy ink on 100% post-consumer recycled paper by skilled artisans in Louisville, Quebec, Canada using the finest offset printing presses.
 
-      books_heading_text: We love making books.
+      books_heading_text:    We love making books.
       journals_heading_text: Journals
-      logos_heading_text: Logos
-      posters_heading_text: Posters
+      logos_heading_text:    Logos
+      posters_heading_text:  Posters
       stickers_heading_text: Stickers
-      tools_heading_text: Tools
-      zines_heading_text: Zines
+      tools_heading_text:    Tools
+      zines_heading_text:    Zines
 
       buttons:
         browse_journals_text: Browse All Journals
@@ -377,7 +377,7 @@ ar:
           more_help: You can also reply to this email if need more assistance.
 
     languages:
-      view_site_in_locale: View this site in Arabic [here](https://ar.crimethinc.com).
+      view_site_in_locale:  View this site in Arabic [here](https://ar.crimethinc.com).
       view_tools_in_locale: You can access an array of posters, zines, and other materials in Arabic [here](https://ar.crimethinc.com/tools).
       view_books_in_locale: You can access our books in Arabic [here](https://ar.crimethinc.com/books).
 
@@ -401,8 +401,8 @@ ar:
         other: entries
       one_page:
         display_entries:
-          zero: No %{entry_name} found
-          one: Displaying <b>1</b> %{entry_name}
-          other: Displaying <b>all %{count}</b> %{entry_name}
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
-        display_entries: Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
