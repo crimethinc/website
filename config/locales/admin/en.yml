@@ -198,7 +198,7 @@ en:
     # Form labels and help text
     forms:
       publication_status: Publication Status
-      featured_status: "Feature this %{model} on the homepage?"
+      featured_status: Feature this %{model} on the homepage?
       featured_status_help: In the Ex-Workers’ Collection
       not_featured: Not featured
       featured: Featured
