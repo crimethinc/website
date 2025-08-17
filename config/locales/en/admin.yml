@@ -21,10 +21,14 @@ en:
         syndication: Syndication
         appearance: Appearance
         localization: Localization
-        index_title: Articles
-        new_title: New Articles
-        show_title: "Articles : %{title}"
-        edit_title: "Editing article %{id} %{title} : %{subtitle}"
+        index:
+          title: Articles
+        new:
+          title: New Articles
+        show:
+          title: "Articles : %{title}"
+        edit:
+          title: "Editing article %{id} %{title} : %{subtitle}"
         create:
           notice: Article was successfully created.
         update:
@@ -33,10 +37,14 @@ en:
           notice: Article was successfully destroyed.
 
       books:
-        index_title: Books
-        new_title: New Books
-        show_title: "Books : %{title}"
-        edit_title: "Editing book %{id} %{title} : %{subtitle}"
+        index:
+          title: Books
+        new:
+          title: New Books
+        show:
+          title: "Books : %{title}"
+        edit:
+          title: "Editing book %{id} %{title} : %{subtitle}"
         create:
           notice: Book was successfully created.
         update:
@@ -78,10 +86,14 @@ en:
             description: Is there a ‘.mobi’ file uploaded?
 
       zines:
-        index_title: Zines
-        new_title: New Zines
-        show_title: "Zines : %{title}"
-        edit_title: "Editing zine %{id} %{title} : %{subtitle}"
+        index:
+          title: Zines
+        new:
+          title: New Zines
+        show:
+          title: "Zines : %{title}"
+        edit:
+          title: "Editing zine %{id} %{title} : %{subtitle}"
         create:
           notice: Zine was successfully created.
         update:
@@ -95,10 +107,14 @@ en:
         admin_zine_mobi_download_text: ePub
 
       journals:
-        index_title: Journals
-        new_title: New Journals
-        show_title: "Journals : %{title}"
-        edit_title: "Editing journal %{id} %{title} : %{subtitle}"
+        index:
+          title: Journals
+        new:
+          title: New Journals
+        show:
+          title: "Journals : %{title}"
+        edit:
+          title: "Editing journal %{id} %{title} : %{subtitle}"
         create:
           notice: Journal was successfully created.
         update:
@@ -107,10 +123,14 @@ en:
           notice: Journal was successfully destroyed.
 
       posters:
-        index_title: Posters
-        new_title: New Posters
-        show_title: "Posters : %{title}"
-        edit_title: "Editing poster %{id} %{title} : %{subtitle}"
+        index:
+          title: Posters
+        new:
+          title: New Posters
+        show:
+          title: "Posters : %{title}"
+        edit:
+          title: "Editing poster %{id} %{title} : %{subtitle}"
         create:
           notice: Poster was successfully created.
         update:
@@ -119,10 +139,14 @@ en:
           notice: Poster was successfully destroyed.
 
       stickers:
-        index_title: Stickers
-        new_title: New Stickers
-        show_title: "Stickers : %{title}"
-        edit_title: "Editing sticker %{id} %{title} : %{subtitle}"
+        index:
+          title: Stickers
+        new:
+          title: New Stickers
+        show:
+          title: "Stickers : %{title}"
+        edit:
+          title: "Editing sticker %{id} %{title} : %{subtitle}"
         create:
           notice: Sticker was successfully created.
         update:
@@ -131,16 +155,24 @@ en:
           notice: Sticker was successfully destroyed.
 
       podcasts:
-        index_title: Podcasts
-        new_title: New Podcasts
-        show_title: "Podcasts : %{title}"
-        edit_title: "Editing podcast %{id} %{title} : %{subtitle}"
+        index:
+          title: Podcasts
+        new:
+          title: New Podcasts
+        show:
+          title: "Podcasts : %{title}"
+        edit:
+          title: "Editing podcast %{id} %{title} : %{subtitle}"
 
       videos:
-        index_title: Videos
-        new_title: New Videos
-        show_title: "Videos : %{title}"
-        edit_title: "Editing video %{id} %{title} : %{subtitle}"
+        index:
+          title: Videos
+        new:
+          title: New Videos
+        show:
+          title: "Videos : %{title}"
+        edit:
+          title: "Editing video %{id} %{title} : %{subtitle}"
         create:
           notice: Video was successfully created.
         update:
@@ -149,10 +181,14 @@ en:
           notice: Video was successfully destroyed.
 
       categories:
-        index_title: Categories
-        new_title: New Categories
-        show_title: "Categories : %{name}"
-        edit_title: "Editing category %{id} : %{name}"
+        index:
+          title: Categories
+        new:
+          title: New Categories
+        show:
+          title: "Categories : %{name}"
+        edit:
+          title: "Editing category %{id} : %{name}"
         create:
           notice: Category was successfully created.
         update:
@@ -161,10 +197,14 @@ en:
           notice: Category was successfully destroyed.
 
       episodes:
-        index_title: Episodes
-        new_title: New Episodes
-        show_title: "Episodes : %{title}"
-        edit_title: Editing episode %{id} %{title}
+        index:
+          title: Episodes
+        new:
+          title: New Episodes
+        show:
+          title: "Episodes : %{title}"
+        edit:
+          title: Editing episode %{id} %{title}
         create:
           notice: Episode was successfully created.
         update:
@@ -173,10 +213,14 @@ en:
           notice: Episode was successfully destroyed.
 
       users:
-        index_title: Users
-        new_title: New Users
-        show_title: "Users : %{name}"
-        edit_title: "Editing user %{id} : %{username}"
+        index:
+          title: Users
+        new:
+          title: New Users
+        show:
+          title: "Users : %{name}"
+        edit:
+          title: "Editing user %{id} : %{username}"
         create:
           notice: User was successfully created.
         update:
@@ -185,10 +229,14 @@ en:
           notice: User was successfully destroyed.
 
       pages:
-        index_title: Pages
-        new_title: New Pages
-        show_title: "Pages : %{title}"
-        edit_title: "Editing page %{id} %{title} : %{subtitle}"
+        index:
+          title: Pages
+        new:
+          title: New Pages
+        show:
+          title: "Pages : %{title}"
+        edit:
+          title: "Editing page %{id} %{title} : %{subtitle}"
         create:
           notice: Page was successfully created.
         update:
@@ -197,22 +245,34 @@ en:
           notice: Page was successfully destroyed.
 
       links:
-        index_title: Links
-        new_title: New Links
-        show_title: "Links : %{name}"
-        edit_title: "Editing link %{id} : %{name}"
+        index:
+          title: Links
+        new:
+          title: New Links
+        show:
+          title: "Links : %{name}"
+        edit:
+          title: "Editing link %{id} : %{name}"
 
       locales:
-        index_title: Locales
-        new_title: New Locales
-        show_title: "Locales : %{name}"
-        edit_title: "Editing locale %{id} : %{abbreviation} : %{name_in_english} : %{name}"
+        index:
+          title: Locales
+        new:
+          title: New Locales
+        show:
+          title: "Locales : %{name}"
+        edit:
+          title: "Editing locale %{id} : %{abbreviation} : %{name_in_english} : %{name}"
 
       redirects:
-        index_title: Redirects
-        new_title: New Redirects
-        show_title: "Redirects : %{source_path}"
-        edit_title: Editing redirect %{id} %{source_path}
+        index:
+          title: Redirects
+        new:
+          title: New Redirects
+        show:
+          title: "Redirects : %{source_path}"
+        edit:
+          title: Editing redirect %{id} %{source_path}
 
       definitions:
         create:
