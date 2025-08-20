@@ -3,6 +3,10 @@ en:
     admin:
       title_prepend: Admin
 
+      dashboard:
+        index:
+          title: Dashboard
+
       articles:
         previewing_draft: PREVIEWING DRAFT.
         continue_editing_article: Continue editing article

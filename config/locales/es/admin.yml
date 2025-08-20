@@ -1,6 +1,11 @@
 es:
   admin:
     title_prepend: Admin
+
+    dashboard:
+      index:
+        title: Dashboard
+
     articles:
       index_title: Artículos
       new_title: Nuevos Artículos
