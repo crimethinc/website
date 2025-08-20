@@ -1,0 +1,84 @@
+es:
+  footer:
+    nav:
+      heading: Mapa del sitio
+      articles:
+        label: Artículos
+        feed: RSS
+        adventure: Aventura
+        analysis: Análisis
+        arts: Artes
+        current_events: Eventos
+        geography: Geografía
+        how_to: Cómo hacerle
+        history: Historia
+        news: Noticias
+        technology: Tecnología
+      books:
+        label: Libros
+        contradictionary: Contradiccionario
+        days_of_war_nights_of_love: Días de guerra, noches de amor
+        expect_resistance: Esperen resistencia
+        from_democracy_to_freedom: De la democracia a la libertad
+        no_wall_they_can_build: Ningún muro que ellos puedan construir
+        off_the_map: Fuera del mapa
+        recipes_for_disaster: Recetas para el desastre
+        work: Trabajo
+      podcast:
+        label: Podcast
+        feed: RSS
+        the_ex_worker: El Ex-Trabajador
+        the_hotwire: The Hotwire
+        no_wall_they_can_build: No Wall They can Build
+      videos:
+        label: Videos
+      tools:
+        label: Herramientas
+        zines: Zines
+        journals: Periódicos
+        posters: Posters
+        stickers: Stickers
+        videos: Videos
+        music: Música
+        logos: Logos
+        to_change_everything: Para Cambiar Todo
+        steal_something_from_work_day: Steal Something from Work Day
+      store:
+        label: Tienda
+        description: Libros, posters, stickers y más…
+      projects:
+        label: Proyectos
+        kickstarter: Kickstarter
+    about:
+      first_time_text: "¿Es la primera vez que escuchas de CrimethInc.?"
+      first_time_link: Empieza aquí. →
+      heading: Sobre CrimethInc.
+      description: |
+        CrimethInc. es una alianza rebelde-una red descentralizada dedicada a la acción colectiva anónima-una fuga de la prisión de nuestro tiempo. Luchamos por reinventar nuestras vidas y nuestro mundo de acuerdo a los principios de la autodeterminación y el apoyo mutuo.
+
+        Creemos que deberías poder disponer de tu ilimitado potencial en tus propios términos: que ningún gobierno, mercado o ideología debe dictar lo que tu vida ha de ser. Si estás de acuerdo, _hagamos algo al respeto_.
+      more_link: Más sobre CrimethInc. →
+      donate_button_text: Apoya este sitio
+    contact:
+      newsletter:
+        heading: Alertas de correo
+        description: Suscríbete para recibir actualizaciones regulares. _(Processed by Mailchimp.)_
+        signup_form_placeholder: "¿Cuál es tu correo electrónico?"
+        signup_form_select_placeholder: "¿Quieres muchos correos o pocos?"
+        signup_form_select_option_lot: Cada pequeño detalle. (Muchos correos)
+        signup_form_select_option_little: "¡Sólo lo importante! (menos correos)"
+        signup_button_text: Suscríbete
+      social:
+        heading: Encuéntranos en otros lados
+        description: Mantente al tanto de nuestras actividades en las siguientes plataformas adicionales
+    mantra:
+      - Si tu corazón es libre, el suelo donde estás es territorio liberado. Defiéndelo.
+      - Sólo aquellos preparados para ir lejos descubren qué tan lejos pueden llegar.
+      - Ya va siendo tiempo de medidas desesperadas.
+      - Cultiva la semilla, incluso en la boca del volcán.
+      - El futuro está encadenado dentro de ti — Libéralo.
+      - Una chispa en cada barril de pólvora.
+      - La esperanza no espera.
+      - Mobilis in mobili
+      - Luchando la próxima guerra.
+    site_mode: Cambiar a a versión pequeña del sitio →
