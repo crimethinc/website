@@ -18,7 +18,7 @@ es:
 
     head:
       # meta_title is wrapped in quotes because it has a colon in its text value
-      meta_title: "CrimethInc. Colectivo de Ex-trabajadores: Tu boleto a un mundo libre de cargos"
+      meta_title: "CrimethInc. colectivo de ex-trabajadores: Tu boleto gratuito a un mundo nuevo"
       meta_description: CrimethInc. es una red descentralizada dedicada a la acción colectiva anónima. Luchamos por reinventar nuestras vidas y nuestro mundo de acuerdo con los principios de la autodeterminación y el apoyo mutuo.
       # TODO: move this out of YAML, into a view
       meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
