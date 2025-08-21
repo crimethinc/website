@@ -465,7 +465,7 @@ GEM
       racc (~> 1.5)
       sexp_processor (~> 4.16)
     rubypants (0.7.1)
-    rubyzip (3.0.1)
+    rubyzip (3.0.2)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
