@@ -1,12 +1,12 @@
-.bahasa-melayu-piawai {
+.malay {
   @import "common/font_styling";
   /*--- Highlight language in mobile language menu ---*/
-  #lang1  li  > a[href="/tce/bahasa-melayu-piawai"],
-  #lang2  li  > a[href="/tce/bahasa-melayu-piawai"] {
+  #lang1  li  > a[href="/tce/malay"],
+  #lang2  li  > a[href="/tce/malay"] {
     color: #d62d34 !important;
   }
 
-  .check-bahasa-melayu-piawai:before {
+  .check-malay:before {
     content: '';
   }
 
@@ -18,12 +18,12 @@
 
   @media (min-device-width: 200px) and (max-width: 600px) {
       .rightintro h3 { padding: 8% 5% 5% 0%; }
-      .bahasa-melayu-piawai #intro .rightintro h3 { padding: 4% 5% 5% 0%; }
-      .bahasa-melayu-piawai #next h1 {
+      .malay #intro .rightintro h3 { padding: 4% 5% 5% 0%; }
+      .malay #next h1 {
           font-size: 10.7vw;
           line-height: 13vw;
       }
-      .bahasa-melayu-piawai #takeflight h1 { font-size: 14vw; }
+      .malay #takeflight h1 { font-size: 14vw; }
   }
 
   @media (min-width: 601px) and (max-width: 1023px) {
@@ -32,12 +32,12 @@
       #menus { width: 74%; }
 
        .rightintro h3 { padding: 8% 5% 5% 0%; }
-      .bahasa-melayu-piawai #intro .rightintro h3 { padding: 4% 5% 5% 0%; }
-      .bahasa-melayu-piawai #next h1 {
+      .malay #intro .rightintro h3 { padding: 4% 5% 5% 0%; }
+      .malay #next h1 {
           font-size: 10.7vw;
           line-height: 13vw;
       }
-      .bahasa-melayu-piawai #takeflight h1 { font-size: 14vw; }
+      .malay #takeflight h1 { font-size: 14vw; }
   }
 
   @media (min-width: 1024px) and (max-width: 1200px) {
@@ -45,23 +45,23 @@
           line-height: 2.6vw;
           width: 75%;
       }
-      .bahasa-melayu-piawai #tocdiv { font-size: 2.5vw; }
+      .malay #tocdiv { font-size: 2.5vw; }
       .label { font-size: 2.1vw; }
       nav ul li { padding-left: 3%; }
       #menus { width: 74%; };
       .rightintro h3 { padding: 8% 5% 5% 0%; }
-      .bahasa-melayu-piawai #intro .rightintro h3 { padding: 4% 5% 5% 0%; }
-      .bahasa-melayu-piawai #next h1 {
+      .malay #intro .rightintro h3 { padding: 4% 5% 5% 0%; }
+      .malay #next h1 {
           font-size: 10.7vw;
           line-height: 13vw;
       }
-      .bahasa-melayu-piawai #takeflight h1 { font-size: 14vw; }
+      .malay #takeflight h1 { font-size: 14vw; }
   }
 
   @media (min-width: 1201px) and (max-width: 1670px) {
       #navwrapper { width: 860px; }
       .leftintro .lefttext { padding: 4% 20% 0% 15%; }
-      .bahasa-melayu-piawai .right p { line-height: 1.4vw; }
+      .malay .right p { line-height: 1.4vw; }
       #property .righttext { padding: 5% 12% 0% 10%; }
       #relationships h2,
       #reconciling h2,
@@ -75,13 +75,13 @@
       #government h2,
       #profit h2,
       #property h2 { padding: 12% 0 0 10%; }
-      .bahasa-melayu-piawai #outro .leftintro p { font-size: 1.5vw; }
-      .bahasa-melayu-piawai #takeflight h1 { font-size: 13vw; }
+      .malay #outro .leftintro p { font-size: 1.5vw; }
+      .malay #takeflight h1 { font-size: 13vw; }
   }
   @media (min-width: 1671px) {
       #navwrapper { width: 860px; }
       .leftintro .lefttext { padding: 4% 20% 0% 15%; }
-      .bahasa-melayu-piawai .right p { line-height: 1.4vw; }
+      .malay .right p { line-height: 1.4vw; }
       #property .righttext { padding: 5% 12% 0% 10%; }
       #relationships h2,
       #reconciling h2,
@@ -95,7 +95,7 @@
       #government h2,
       #profit h2,
       #property h2 { padding: 12% 0 0 10%; }
-      .bahasa-melayu-piawai #outro .leftintro p { font-size: 1.5vw; }
-      .bahasa-melayu-piawai #takeflight h1 { font-size: 13vw; }
+      .malay #outro .leftintro p { font-size: 1.5vw; }
+      .malay #takeflight h1 { font-size: 13vw; }
   }
 }

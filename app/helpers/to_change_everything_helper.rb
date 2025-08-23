@@ -35,7 +35,7 @@ module ToChangeEverythingHelper
       'Italiano'       => '/2016/01/25/to-change-everything-in-ten-more-languages#italian',
       '한국어'            => '/tce/한국어',
       'Lietuvos'       => '/tce/lietuvos',
-      'Bahasa <br />&nbsp;&nbsp;&nbsp;Melayu Piawai'          => '/tce/bahasa-melayu-piawai',
+      'Malay'          => '/tce/malay',
       'Malti'          => '/2016/09/21/to-change-everything-in-11-more-languages#maltese',
       'Nederlands'     => '/2016/09/21/to-change-everything-in-11-more-languages#dutch',
       '日本語'            => '/tce/日本語',

@@ -1,4 +1,4 @@
-bahasa-melayu-piawai:
+malay:
   layouts:
     to_change_everything:
       language_direction: ltr
@@ -8,10 +8,10 @@ bahasa-melayu-piawai:
         meta:
           title: Untuk Mengubah Semuanya, cara anarkis
           description: The case for complete self-determination—a guide for the furious, the curious, and the pure of heart
-          url: https://tochangeeverything.com/
+          url: https://tochangeeverything.com/malay
       menu:
         toc: Jadual Kandungan
-        language: Bahasa Melayu Piawai
+        language: Malay
         share: Berkongsi
       toc:
         introduction: mukadimah
