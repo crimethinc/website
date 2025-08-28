@@ -132,11 +132,6 @@ es:
         notice: La página se actualizó correctamente.
       destroy:
         notice: La página se eliminó correctamente.
-    links:
-      index_title: Enlaces
-      new_title: Nuevos Enlaces
-      show_title: "Enlaces : %{name}"
-      edit_title: "Editando enlace %{id} : %{name}"
     locales:
       index_title: Idiomas
       new_title: Nuevos Idiomas
@@ -183,6 +178,11 @@ es:
       created: "%{model} se creó correctamente."
       updated: "%{model} se actualizó correctamente."
       destroyed: "%{model} se eliminó correctamente."
+
+    tools:
+      poster:
+        image_description: Photo of '%{title}' front side
+        back_image_description: Photo of '%{title}' back side
 
     # Common UI elements
     ui:

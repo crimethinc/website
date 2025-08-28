@@ -3,10 +3,6 @@ en:
     admin:
       title_prepend: Admin
 
-      dashboard:
-        index:
-          title: Dashboard
-
       articles:
         previewing_draft: PREVIEWING DRAFT.
         continue_editing_article: Continue editing article
@@ -25,6 +21,7 @@ en:
         syndication: Syndication
         appearance: Appearance
         localization: Localization
+
         index:
           title: Articles
         new:
@@ -39,6 +36,15 @@ en:
           notice: Article was successfully updated.
         destroy:
           notice: Article was successfully destroyed.
+
+      tools:
+        poster:
+          image_description: Photo of '%{title}' front side
+          back_image_description: Photo of '%{title}' back side
+
+      dashboard:
+        index:
+          title: Dashboard
 
       books:
         index:
@@ -248,16 +254,6 @@ en:
         destroy:
           notice: Page was successfully destroyed.
 
-      links:
-        index:
-          title: Links
-        new:
-          title: New Links
-        show:
-          title: "Links : %{name}"
-        edit:
-          title: "Editing link %{id} : %{name}"
-
       locales:
         index:
           title: Locales
@@ -359,13 +355,6 @@ en:
           header_image: "This is the large image that will be front and center on the Article page, on the homepage and when syndicated to other sites. Preferred size: 2000px wide by about 1000px tall (or taller)."
           featured_status: In the Ex-Workers' Collection
 
-      # Page headings and sections
-      headings:
-        nested_articles: Nested Articles
-        new_nested_article: NEW Nested Article
-        downloads: Downloads
-        danger_zone: Danger Zone
-
       # Help text and descriptions
       help:
         downloads_path: Downloads must be uploaded to
@@ -402,7 +391,7 @@ en:
         categorization: Categories
         featured_status: Featured Status
         publication_status: Publication Status
-        danger_zone: Danger Zone
+        danger_zone: The Danger Zone™
         nested_articles: Nested Articles
         downloads: Downloads
         jump_to: Jump to
