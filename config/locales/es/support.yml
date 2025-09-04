@@ -1,0 +1,95 @@
+es:
+  views:
+    support:
+      new:
+        heading: "¡Invierte en CrimethInc.!"
+        description: |
+          _Ajusta tu donación._
+          _¡Ninguna cantidad es lo suficientemente grande como para ser indispensable_
+          _ni demasiado pequeña para no ser de ayuda!_
+          _Si puedes, anótate para donar de forma mensual, para que podamos contar contigo para sostener a largo plazo._
+
+          CrimethInc. es un proyecto donde todos somos voluntarios sin ninguna fuente externa de fondos.
+          Ofrecemos todo lo que hacemos de forma gratuita o a precios de
+          recuperación manteniendo los más altos estándares en nuestro campo.
+          Publicamos constantemente, circulando materiales en [más de 30 idiomas](/tce)
+          en [los siete continentes](/2008/01/06/now-serving-seven-continents).
+          Nos hemos mantenido ya por un cuarto de siglo.
+
+          Nos esforzamos por hacer todo con el menor presupuesto posible pero, a pesar de nuestros esfuerzos, algunos gastos son inevitables.
+          Necesitamos tu ayuda para cubrir esos gastos.
+          Con más recursos, podríamos expandirnos más formatos y liberar más tiempo para publicar con más frecuencia.
+
+          Como siempre, la manera más efectiva de apoyar lo que hacemos es _hacerlo tú mismo._
+        radio_label_monthly: Mensual
+        radio_label_one_time: Una vez
+        amount_label: Cantidad para apoyar
+        description_monthly: Suscripción mensual
+        description_one_time: Apoyar una vez
+        button_text: Siguiente →
+        support_request:
+          header: Si ya eres suscriptor mensual
+          description: |
+            ¿Necesitas actualizar o cancelar tu subscripción?
+            Ingresa el email que usaste para suscribirte,
+            y te enviaremos un link súper secreto donde puedes hacer los cambios.
+          email_label: Email
+          email_placeholder: you@example.com
+          button_text: Enviar link súper secreto
+      create:
+        repeat_subscriber_error: |
+          Ya tenemos un suscriptor mensual con ese email.
+          Si todavía queires dar más, intenta la donación de una vez.
+          ¡Gracias!
+      create_session:
+        no_existing_customer_error: |
+          No pudimos encontrar a ningún subscriptor mensual con ese email.
+          Si piensas que esto es un error,
+          por favor [envíanos un email](mailto:contact@crimethinc.com) para que podamos ayudarte.
+        success_notice: Enviamos un email a _%{email}_ con un link donde puedes modificar tu suscripción.
+        repeat_customer_error: |
+          ¡Ya enviaste tu solicitud!
+          Espera un email de _contact@crimethinc.com_.
+          Si nunca recibiste el email o perdiste tu link súper secreto, espera una hora e inténtalo de nuevo.
+      edit:
+        heading: Tu suscripción
+        description: Muchas gracias por tu apoyo. Nos apoyamos en contribuciones como la tuya para hacer lo que hacemos.
+        expired_link_error: Este link ha expirado. Por favor intenta de nuevo.
+        expires_at: Esta página expirará en unos %{minutes} minutos.
+        update:
+          amount_label: Apoyo mensual
+          amount_slider_label: Desliza para ajustar tu apoyo mensual.
+          button_text: Actualizar suscripción
+          button_confirm: "¿Estás seguro que quieres actualizar la cantidad de tu suscripción?"
+          start_date: Subscrito desde
+          next_date: Siguiente cargo
+        cancel:
+          header: Si quieres cancelar tu suscripción ¡oprime el gran botón rojo!
+          button_text: Cancelar Subscripción
+          button_confirm: "¿Estás seguro que quieres cancelar tu suscripción completamente?"
+      update_subscription:
+        notice: Se ha actualizado la cantidad de tu subscripción.
+        error: |
+          Hubo un problema al actualizar tu soscripción.
+          Por favor inténtalo de nuevo.
+          Si el problema continúa,
+          por favor [envíanos un email](mailto:contact@crimethinc.com) para poder ayudarte.
+      cancel_subscription:
+        notice: Tu suscripción se ha cancelado.
+        error: |
+          Hubo un problema al cancelar tu soscripción.
+          Por favor inténtalo de nuevo.
+          Si el problema continúa,
+          por favor [envíanos un email](mailto:contact@crimethinc.com) para poder ayudarte
+      thanks:
+        heading: ¡Gracias por tu apoyo!
+        description: |
+          Thank you so much for supporting CrimethInc.!
+          Because we are a decentralized collective,
+          it is not possible for us to offer the same sorts of perks that organizations
+          with more formal structures use as fundraising incentives.
+          What we can do is promise that every contribution helps us to keep this material free,
+          to distribute it as widely as possible, to continue creating new resources,
+          and to work together towards the realization of a freer world.
+
+          _Keep checking back! Our site is updated daily, there's always something new._

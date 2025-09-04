@@ -1,0 +1,19 @@
+es:
+  views:
+    search:
+      index:
+        title: Busca en los archivos…
+      advanced:
+        title: Búsqueda avanzada
+        heading: Búsqueda avanzada
+        form:
+          button: Buscar
+          category_label: Categorias
+          comma_separated_note: "Separados con comas. Por ejemplo: perros, gatos, etc."
+          content_label: Contenido
+          subtitle_label: Subtitulo
+          tag_label: Tags
+          term_label: Buscar
+          title_label: Titulo
+      form_placeholder: Busca en los archivos…
+      search_results: "Resultados de la búsqueda: %{query}"
