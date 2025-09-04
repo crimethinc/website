@@ -481,7 +481,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
-    sexp_processor (4.17.3)
+    sexp_processor (4.17.4)
     shellany (0.0.1)
     sidekiq (8.0.7)
       connection_pool (>= 2.5.0)
