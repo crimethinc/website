@@ -2,7 +2,7 @@ module Admin
   class DashboardController < Admin::AdminController
     # /admin/dashboard
     def index
-      @title = admin_title
+      @title = admin_title :dashboard
     end
 
     # /admin/markdown

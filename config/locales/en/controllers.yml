@@ -1,0 +1,84 @@
+en:
+  # Public site controllers
+  videos:
+    index:
+      title: Videos
+  tools:
+    index:
+      title: Tools
+  posters:
+    index:
+      title: Posters
+  journals:
+    index:
+      title: Journals
+  zines:
+    index:
+      title: Zines
+  stickers:
+    index:
+      title: Stickers
+  logos:
+    index:
+      title: Logos
+  podcasts:
+    index:
+      title: Podcasts
+    transcript:
+      title: Transcript
+  categories:
+    index:
+      title: Categories
+  books:
+    index:
+      title: Books
+    extras:
+      title: Extras
+    lit_kit:
+      title: Literature Distribution Kit
+    into_libraries:
+      title: CrimethInc. Into Libraries
+    contradictionary:
+      title: Contradictionary
+    days_of_war_nights_of_love:
+      title: Days of War Nights of Love
+    expect_resistance:
+      title: Expect Resistance
+    from_democracy_to_freedom:
+      title: From Democracy to Freedom
+    no_wall_they_can_build:
+      title: No Wall They Can Build
+    off_the_map:
+      title: Off the Map
+    recipes_for_disaster:
+      title: Recipes for Disaster
+    work:
+      title: Work
+  definitions:
+    index:
+      title: Definitions
+  archives:
+    index:
+      title: Archives
+  search:
+    index:
+      title: Search
+    results:
+      title: Results for
+    advanced:
+      title: Advanced Search
+  about:
+    contact:
+      title: Contact
+    about:
+      title: About
+    library:
+      title: Online Reading Library
+    store:
+      title: Store
+    rss_feeds:
+      title: RSS Feeds
+    submission_guidelines:
+      title: Submission Guidelines
+    steal_something_from_work_day:
+      title: Steal Something from Work Day
