@@ -259,7 +259,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marcel (1.0.4)
+    marcel (1.1.0)
     markdown_media (2.0.1)
       kramdown
     matrix (0.4.3)
