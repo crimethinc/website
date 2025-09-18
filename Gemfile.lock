@@ -167,7 +167,7 @@ GEM
       ffi (>= 1.15.5)
       rake
     flamegraph (0.9.5)
-    formatador (1.2.0)
+    formatador (1.2.1)
       reline
     globalid (1.2.1)
       activesupport (>= 6.1)
