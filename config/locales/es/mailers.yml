@@ -1,0 +1,8 @@
+es:
+  support_mailer:
+    edit_subscription:
+      header: "¡Tu link súper secreto ha llegado!"
+      link_description: Cualquier persona con acceso a este link puede realizar cambios a tu suscripción. Expirará en una hora. Mantenlo secreto, mantente seguro.
+      more_help: También puedes responder a este correo si necesitas más ayuda.
+      repeat_request: Si no alcanzas a hacer los cambios necesarios a tiempo, descuida. Podemos enviarte otro link súper secreto.
+      subject: Solicita el link súper secreto.

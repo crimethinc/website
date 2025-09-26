@@ -6,12 +6,29 @@ module Admin
     layout 'admin'
 
     def admin_title model = nil, keys = []
-      return PageTitle.new(['Admin', t(".#{action_name}_title")]).content if model.blank?
+      # controller_name is 'admin', controller_path is 'admin/articles'
+      #    we need 'Article' for the title from models locale YAML
+      controller_name_space  = :admin
+      nested_controller_name = controller_path.split('/').last
+
+      if model.blank?
+        subtitle = t :other, scope: [:activerecord, :models, nested_controller_name.singularize]
+        return PageTitle.new(['Admin', subtitle]).content
+      end
+
       return '' unless keys.all? { |key| model.respond_to? key }
 
       translation_vars = keys.index_with { |key| model.send(key) }
 
-      PageTitle.new(['Admin', t(".#{action_name}_title", **translation_vars)]).content
+      lookup_path = [
+        :views,
+        controller_name_space,
+        nested_controller_name,
+        action_name,
+        :title
+      ].join('.')
+
+      PageTitle.new(['Admin', t(lookup_path, **translation_vars)]).content
     end
 
     def set_published_at
