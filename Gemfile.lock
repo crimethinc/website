@@ -381,7 +381,7 @@ GEM
       psych (>= 4.0.0)
     redis (5.4.1)
       redis-client (>= 0.22.0)
-    redis-client (0.26.0)
+    redis-client (0.26.1)
       connection_pool
     redis-store (1.11.0)
       redis (>= 4, < 6)
