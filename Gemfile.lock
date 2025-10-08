@@ -487,7 +487,7 @@ GEM
       websocket (~> 1.0)
     sexp_processor (4.17.4)
     shellany (0.0.1)
-    sidekiq (8.0.7)
+    sidekiq (8.0.8)
       connection_pool (>= 2.5.0)
       json (>= 2.9.0)
       logger (>= 1.6.2)
