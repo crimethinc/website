@@ -618,7 +618,7 @@ DEPENDENCIES
   sterile
   stimulus-rails
   stringex
-  stripe
+  stripe (~> 8.7.0)
   tzinfo-data
   uglifier
   web-console
