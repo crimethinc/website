@@ -1,6 +1,9 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
 
+// Bootstrap, vendored
+//= link vendor/bootstrap.css
+
 // /admin site
 //= link admin.css
 
