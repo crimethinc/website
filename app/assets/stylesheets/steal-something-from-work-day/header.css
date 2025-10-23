@@ -1,0 +1,100 @@
+#hero {
+  padding: 0 10px 40px 10px;
+  margin-bottom: 80px;
+  color: white;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-color: black;
+}
+
+#hero .logos {
+  margin-bottom: 80px;
+}
+
+#hero .logos .logo-mark,
+#hero .logos .logo-type {
+  display: block;
+  margin: 0 auto;
+}
+
+#hero .logos .logo-mark {
+  max-width: 60px;
+  padding-bottom: 10px;
+}
+
+#hero .logos .logo-type {
+  width: 120px;
+}
+
+#hero h1 {
+  font-family: alright_sansblack, system, sans-serif;
+  font-weight: 900;
+  display: inline-block;
+  line-height: 1em;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.02em;
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#hero h1 span {
+  font-family: alright_sanslight, system, sans-serif;
+  font-weight: 100;
+}
+
+#hero p span,
+#hero p {
+  font-family: alright_sanslight, system, sans-serif;
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+
+/* Bootstrap sm breakpoint: 576px and up */
+@media (min-width: 576px) {
+  #hero h1 {
+    font-size: 4rem;
+  }
+
+  #hero p,
+  #hero p span {
+    font-size: 1.6rem;
+  }
+}
+
+/* Bootstrap md breakpoint: 768px and up */
+@media (min-width: 768px) {
+  #hero h1 {
+    font-size: 4.5rem;
+  }
+
+  #hero p,
+  #hero p span {
+    font-size: 1.8rem;
+  }
+}
+
+/* Bootstrap lg breakpoint: 992px and up */
+@media (min-width: 992px) {
+  #hero h1 {
+    font-size: 5rem;
+  }
+
+  #hero p,
+  #hero p span {
+    font-size: 2rem;
+  }
+}
+
+/* Bootstrap xl breakpoint: 1200px and up */
+@media (min-width: 1200px) {
+  #hero h1 {
+    font-size: 5.5rem;
+  }
+
+  #hero p,
+  #hero p span {
+    font-size: 2.2rem;
+  }
+}
