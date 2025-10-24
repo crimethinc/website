@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ArticlesHelper, type: :helper do
+RSpec.describe ArticlesHelper do
   describe '#article_tag' do
     subject { helper.article_tag(article) { 'Test Text' }.to_s }
 

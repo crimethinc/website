@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Video, type: :model do
+RSpec.describe Video do
   describe '#path' do
     subject { video.path }
 

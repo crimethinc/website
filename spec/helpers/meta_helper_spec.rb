@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe MetaHelper, type: :helper do
+RSpec.describe MetaHelper do
   describe '#meta_image' do
     subject { helper.meta_image(thing) }
 

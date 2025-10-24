@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe MarkdownHelper, type: :helper do
+RSpec.describe MarkdownHelper do
   # describe '#render_markdown' do
   #   # TODO: mock out #media_mode?
   #   subject { helper.render_markdown('text').strip }

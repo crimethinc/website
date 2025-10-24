@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PagesController, type: :controller do
+RSpec.describe PagesController do
   describe 'GET #library' do
     it 'assigns all instance variables' do
       get :library

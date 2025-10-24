@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ArticleArchive, type: :model do
+RSpec.describe ArticleArchive do
   describe 'it sorts the articles correctly' do
     subject { described_class.new(year: '2017', month: '01').first }
 

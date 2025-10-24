@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Locale, type: :model do
+RSpec.describe Locale do
   describe '#english?' do
     let(:english_locale) { build(:locale, :en) }
     let(:spanish_locale) { build(:locale, :es) }

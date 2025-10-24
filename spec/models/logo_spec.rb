@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Logo, type: :model do
+RSpec.describe Logo do
   describe '#published?' do
     subject { logo.published? }
 

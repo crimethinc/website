@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Poster, type: :model do
+RSpec.describe Poster do
   describe '#published?' do
     subject { poster.published? }
 

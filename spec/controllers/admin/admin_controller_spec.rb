@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Admin::AdminController, type: :controller do
+RSpec.describe Admin::AdminController do
   describe '#admin_title' do
     let(:article) { create(:article, title: 'title', subtitle: 'sub', id: 1) }
 

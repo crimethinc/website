@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Admin::CategoriesController, type: :controller do
+RSpec.describe Admin::CategoriesController do
   context 'when unauthorized' do
     it 'redirects on index' do
       get :index

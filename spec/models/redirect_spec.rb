@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Redirect, type: :model do
+RSpec.describe Redirect do
   describe '#name' do
     subject { redirect.name }
 
