@@ -1,0 +1,84 @@
+es:
+  # Public site controllers
+  videos:
+    index:
+      title: Videos
+  tools:
+    index:
+      title: Herramientas
+  posters:
+    index:
+      title: Posters
+  journals:
+    index:
+      title: Periódicos
+  zines:
+    index:
+      title: Zines
+  stickers:
+    index:
+      title: Stickers
+  logos:
+    index:
+      title: Logos
+  podcasts:
+    index:
+      title: Podcasts
+    transcript:
+      title: Transcripciones
+  categories:
+    index:
+      title: Categorías
+  books:
+    index:
+      title: Libros
+    extras:
+      title: Extras
+    lit_kit:
+      title: Kit de distribución de libros
+    into_libraries:
+      title: CrimethInc. Libros introductorios
+    contradictionary:
+      title: Contradiccionario
+    days_of_war_nights_of_love:
+      title: Días de guerra, noches de amor
+    expect_resistance:
+      title: Esperen resistencia
+    from_democracy_to_freedom:
+      title: De la democracia a la libertad
+    no_wall_they_can_build:
+      title: Ningún muro que ellos puedan construir
+    off_the_map:
+      title: Fuera del mapa
+    recipes_for_disaster:
+      title: Recetas para el desastre
+    work:
+      title: Trabajo
+  definitions:
+    index:
+      title: Definiciones
+  archives:
+    index:
+      title: Archivos
+  search:
+    index:
+      title: Buscar
+    results:
+      title: Resultados
+    advanced:
+      title: Búsqueda avanzada
+  about:
+    contact:
+      title: Contact
+    about:
+      title: About
+    library:
+      title: Biblioteca en línea
+    store:
+      title: Tienda
+    rss_feeds:
+      title: Feeds RSS
+    submission_guidelines:
+      title: Para colaboraciones
+    steal_something_from_work_day:
+      title: Steal Something from Work Day

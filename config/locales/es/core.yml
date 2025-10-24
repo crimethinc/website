@@ -1,0 +1,17 @@
+es:
+  name: Español
+  language_direction: ltr
+  site_name: CrimethInc.
+  site_author: CrimethInc. Colectivo de Ex-trabajadores
+  head:
+    meta_title: "CrimethInc. colectivo de ex-trabajadores: Tu boleto gratuito a un mundo nuevo"
+    meta_image_url: https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png
+    meta_description: |
+      CrimethInc. es una red descentralizada dedicada a la acción colectiva anónima.
+      Luchamos por reinventar nuestras vidas y nuestro mundo de acuerdo con los principios de la autodeterminación y el apoyo mutuo.
+  meta:
+    title: Tu boleto gratuito a un mundo nuevo
+    generator: Máquina de Rube Goldberg de Internet CrimethInc. 3000
+    description: |
+      CrimethInc. es una red descentralizada dedicada a la acción colectiva anónima.
+      Luchamos por reinventar nuestras vidas y nuestro mundo de acuerdo con los principios de la autodeterminación y el apoyo mutuo.
