@@ -107,7 +107,3 @@ Style/OpenStructUse:
 # We don't translate admin flash message for now
 Rails/I18nLocaleTexts:
   Enabled: false
-
-# Remove once we don’t have commented tests
-RSpec/NoExpectationExample:
-  Enabled: false
