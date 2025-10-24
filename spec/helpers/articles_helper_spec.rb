@@ -33,7 +33,8 @@ RSpec.describe ArticlesHelper do
     context 'with collection posts' do
       let(:article) do
         article = Article.new(id: 1, slug: 'slug')
-        allow(article).to receive(:collection_posts).and_return OpenStruct.new(recent: [Article.new])
+        collection_posts_double = object_double(Article.all, recent: [Article.new])
+        allow(article).to receive(:collection_posts).and_return collection_posts_double
         article
       end
 

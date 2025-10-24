@@ -5,13 +5,13 @@ RSpec.describe MetaHelper do
     subject { helper.meta_image(thing) }
 
     context 'with a thing' do
-      let(:thing) { OpenStruct.new(image: 'http://example.com/image.png', meta_image: 'http://example.com/image.png') }
+      let(:thing) { instance_double(Article, image: 'http://example.com/image.png', meta_image: 'http://example.com/image.png') }
 
       it { is_expected.to eq('http://example.com/image.png') }
     end
 
     context 'with a thing with no image' do
-      let(:thing) { OpenStruct.new(image: nil) }
+      let(:thing) { instance_double(Article, image: nil) }
 
       it { is_expected.to eq('https://cdn.crimethinc.com/assets/share/crimethinc-site-share.png') }
     end
