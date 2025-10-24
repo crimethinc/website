@@ -11,9 +11,9 @@ plugins:
 AllCops:
   NewCops: enable
   Exclude:
-    - "db/schema.rb"
-    - "db/migrate/20230628052836_init_schema.rb"
-    - "vendor/**/*"
+    - db/schema.rb
+    - db/migrate/20230628052836_init_schema.rb
+    - vendor/**/*
 
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
@@ -21,7 +21,7 @@ Layout/HashAlignment:
 
 Layout/LineLength:
   Exclude:
-    - "db/**/*"
+    - db/**/*
 
 Metrics/AbcSize:
   Max: 74
@@ -29,7 +29,7 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Max: 99
   Exclude:
-    - "config/routes.rb"
+    - config/routes.rb
 
 Metrics/ClassLength:
   Max: 180
@@ -40,7 +40,7 @@ Metrics/CyclomaticComplexity:
 Metrics/MethodLength:
   Max: 40
   Exclude:
-    - "db/migrate/*"
+    - db/migrate/*
 
 Metrics/ModuleLength:
   Max: 130
@@ -62,21 +62,21 @@ Rails/EnvironmentVariableAccess:
 # Using `puts` is allowed in these files
 Rails/Output:
   Exclude:
-    - "app/lib/code_archiver.rb"
-    - "db/seeds.rb"
+    - app/lib/code_archiver.rb
+    - db/seeds.rb
 
 Rails/TimeZone:
   Exclude:
-    - "script/*"
+    - script/*
 
 RSpec/DescribeClass:
   Exclude:
-    - "spec/system/*"
+    - spec/system/*
 
 RSpec/ExampleLength:
   Max: 14
   Exclude:
-    - "spec/system/*"
+    - spec/system/*
 
 RSpec/MessageSpies:
   Enabled: false
@@ -84,7 +84,7 @@ RSpec/MessageSpies:
 RSpec/MultipleExpectations:
   Max: 5
   Exclude:
-    - "spec/system/*"
+    - spec/system/*
 
 Style/AsciiComments:
   Enabled: false
@@ -100,7 +100,7 @@ Style/MethodDefParentheses:
 
 Style/MixinUsage:
   Exclude:
-    - "script/*"
+    - script/*
 
 Style/RedundantFetchBlock:
   Enabled: false
