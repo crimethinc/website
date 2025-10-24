@@ -7,23 +7,32 @@
   <head>
     <%= render 'steal_something_from_work_day/head/license' %>
     <title><%= t 'steal_something_from_work_day.title' %> | <%= t 'steal_something_from_work_day.crimethinc' %></title>
+
     <%= render 'steal_something_from_work_day/head/meta_tags' %>
     <%= render 'steal_something_from_work_day/head/public_meta_tags' %>
     <%= render 'steal_something_from_work_day/head/social_media_meta_tags' %>
     <%= render 'steal_something_from_work_day/head/link_tags' %>
     <%= render 'steal_something_from_work_day/head/fav_and_touch_icons' %>
 
-    <%= stylesheet_link_tag 'vendor/bootstrap', media: :all %>
-
-    <% %w[bootstrap-overrides fonts headings].each do |stylesheet_partial| %>
-      <%= stylesheet_link_tag "2025/#{stylesheet_partial}", media: :all %>
+    <% if lite_mode? %>
+      <%= render_themed "shared/head/lite_mode_css" %>
     <% end %>
 
-    <%= stylesheet_link_tag 'steal-something-from-work-day', media: 'all' %>
+    <% if media_mode? %>
+      <%= stylesheet_link_tag 'vendor/bootstrap', media: :all %>
+
+      <% %w[
+        bootstrap-overrides
+        fonts
+        headings
+        ].each do |stylesheet_partial| %>
+        <%= stylesheet_link_tag "2025/#{stylesheet_partial}", media: :all %>
+      <% end %>
+
+      <%= stylesheet_link_tag 'steal-something-from-work-day', media: 'all' %>
+    <% end %>
 
     <%= yield :head %>
-
-
 
     <% if content_for(:javascript).present? %>
       <%= javascript_importmap_tags %>
@@ -34,7 +43,7 @@
   <body id='<%= body_id %>' data-bs-spy='scroll' data-bs-target='#section-list' data-bs-offset='0'>
     <%= render "shared/development_mode_banner" %>
 
-    <header role='banner' id='hero' class='d-flex p-5 mb-5 text-white bg-dark' style='<%= hero_background_image_css %>'>
+    <header role='banner' id='hero' class='d-flex p-5 mb-5 text-white bg-dark background-<%= rand 1..9 %>'>
       <div class='container'>
         <div class='align-self-center col'>
           <div class='logos mb-5'>
