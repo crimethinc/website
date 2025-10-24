@@ -70,7 +70,7 @@ module Crimethinc
     ]
 
     # Regional locales that have a hyphen in their IANA identifier
-    config.subdomain_locales << :'es-419' # Spanish (Latin America) # rubocop:disable Naming/VariableNumber
+    config.subdomain_locales << :'es-419' # Spanish (Latin America)
     config.subdomain_locales << :'fr-qu'  # French  (Canadian/Quebecois)
 
     path_ltr_locales = %i[

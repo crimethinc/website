@@ -37,9 +37,6 @@ RSpec/ExampleLength:
   Exclude:
     - spec/system/*
 
-RSpec/MessageSpies:
-  Enabled: false
-
 RSpec/MultipleExpectations:
   Max: 5
   Exclude:
@@ -61,7 +58,7 @@ Style/MixinUsage:
   Exclude:
     - script/*
 
-# Metrics rules to ignore
+# Ignore metrics rules
 Metrics/AbcSize:
   Enabled: false
 
