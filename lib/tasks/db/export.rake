@@ -87,22 +87,17 @@ namespace :db do
       end
 
       # Auth the AWS client
-      aws_credentials = Aws::Credentials.new(aws_access_key_id, aws_secret_access_key)
-      Aws.config.update region: aws_region, credentials: aws_credentials
+      aws_credentials = Aws::Credentials.new aws_access_key_id, aws_secret_access_key
+      Aws.config.update region: aws_region, credentials: aws_credentials, ssl_verify_peer: false
 
       # Make S3 client to make a public file
       client = Aws::S3::Client.new
-      # Make S3 resource to upload a file
-      aws_s_3 = Aws::S3::Resource.new
 
-      # Reference an existing bucket by name
-      aws_bucket = aws_s_3.bucket aws_bucket_name
+      # Use TransferManager instead of deprecated upload_file method
+      transfer_manager = Aws::S3::TransferManager.new client: client
 
-      # Create the object to upload
-      aws_object = aws_bucket.object file_name
-
-      # Upload it
-      aws_object.upload_file file_name
+      # Upload the file
+      transfer_manager.upload_file file_name, bucket: aws_bucket_name, key: file_name
 
       # Set the object to public-read
       client.put_object_acl acl: 'public-read', bucket: aws_bucket_name, key: file_name
