@@ -1,8 +1,1 @@
 # See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
-
-Sitemap: https://crimethinc.com/sitemap.xml
-
-User-agent: *
-Disallow: /admin*
-Disallow: */page/*
-Disallow: /support/*
