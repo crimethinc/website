@@ -23,14 +23,8 @@ Layout/LineLength:
   Exclude:
     - "db/**/*"
 
-# This is too aggressive with our use of Seattle.rb style lack of parens on method calls
-# E.g., return redirect_to [:articles]
-# Rubocop thinks that `redirect_to` is a collection and `:articles` is a hash key
-Layout/SpaceBeforeBrackets:
-  Enabled: false
-
 Metrics/AbcSize:
-  Max: 80
+  Max: 74
 
 Metrics/BlockLength:
   Max: 99
