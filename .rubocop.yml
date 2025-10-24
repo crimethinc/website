@@ -85,6 +85,3 @@ Metrics/ParameterLists:
 
 Metrics/PerceivedComplexity:
   Enabled: false
-
-Naming/VariableNumber:
-  EnforcedStyle: snake_case
