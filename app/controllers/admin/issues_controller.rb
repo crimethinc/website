@@ -30,7 +30,7 @@ module Admin
       @book = Issue.new(journal_params)
 
       if @book.save
-        redirect_to [:admin, @book], notice: 'Issue was successfully created.'
+        redirect_to [:admin, @book], notice: t('.notice')
       else
         render :new
       end
@@ -38,7 +38,7 @@ module Admin
 
     def update
       if @book.update(journal_params)
-        redirect_to [:admin, @book], notice: 'Issue was successfully updated.'
+        redirect_to [:admin, @book], notice: t('.notice')
       else
         render :edit
       end
@@ -46,7 +46,7 @@ module Admin
 
     def destroy
       @book.destroy
-      redirect_to %i[admin journals], notice: 'Issue was successfully destroyed.'
+      redirect_to %i[admin journals], notice: t('.notice')
     end
 
     private

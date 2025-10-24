@@ -1,19 +1,19 @@
 inherit_from: .rubocop_todo.yml
 
 plugins:
+  - rubocop-capybara
+  - rubocop-factory_bot
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
-  - rubocop-capybara
-  - rubocop-factory_bot
   - rubocop-rspec_rails
 
 AllCops:
   NewCops: enable
   Exclude:
-    - "db/schema.rb"
-    - "db/migrate/20230628052836_init_schema.rb"
-    - "vendor/**/*"
+    - db/schema.rb
+    - db/migrate/20230628052836_init_schema.rb
+    - vendor/**/*
 
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
@@ -21,76 +21,26 @@ Layout/HashAlignment:
 
 Layout/LineLength:
   Exclude:
-    - "db/**/*"
-
-# This is too aggressive with our use of Seattle.rb style lack of parens on method calls
-# E.g., return redirect_to [:articles]
-# Rubocop thinks that `redirect_to` is a collection and `:articles` is a hash key
-Layout/SpaceBeforeBrackets:
-  Enabled: false
-
-Metrics/AbcSize:
-  Max: 80
-
-Metrics/BlockLength:
-  Max: 99
-  Exclude:
-    - "config/routes.rb"
-
-Metrics/ClassLength:
-  Max: 180
-
-Metrics/CyclomaticComplexity:
-  Max: 13
-
-Metrics/MethodLength:
-  Max: 40
-  Exclude:
-    - "db/migrate/*"
-
-Metrics/ModuleLength:
-  Max: 130
-
-Metrics/ParameterLists:
-  Max: 6
-
-Metrics/PerceivedComplexity:
-  Max: 15
-
-Naming/VariableNumber:
-  EnforcedStyle: snake_case
+    - db/**/*
 
 # TODO: https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsenvironmentvariableaccess
 #       Consider using `Rails.application.config.foo` instead of `ENV['FOO']`
 Rails/EnvironmentVariableAccess:
   Enabled: false
 
-# Using `puts` is allowed in these files
-Rails/Output:
-  Exclude:
-    - "app/lib/code_archiver.rb"
-    - "db/seeds.rb"
-
-Rails/TimeZone:
-  Exclude:
-    - "script/*"
-
 RSpec/DescribeClass:
   Exclude:
-    - "spec/system/*"
+    - spec/system/*
 
 RSpec/ExampleLength:
   Max: 14
   Exclude:
-    - "spec/system/*"
-
-RSpec/MessageSpies:
-  Enabled: false
+    - spec/system/*
 
 RSpec/MultipleExpectations:
   Max: 5
   Exclude:
-    - "spec/system/*"
+    - spec/system/*
 
 Style/AsciiComments:
   Enabled: false
@@ -106,30 +56,29 @@ Style/MethodDefParentheses:
 
 Style/MixinUsage:
   Exclude:
-    - "script/*"
+    - script/*
 
-Style/RedundantFetchBlock:
+# Ignore metrics rules
+Metrics/AbcSize:
   Enabled: false
 
-Style/OpenStructUse:
+Metrics/BlockLength:
   Enabled: false
 
-# For now we disable this, since explicit hash value sounds better to use
-Style/HashSyntax:
+Metrics/ClassLength:
   Enabled: false
 
-# For now we disable this, since I prefer explicit block name
-Naming/BlockForwarding:
+Metrics/CyclomaticComplexity:
   Enabled: false
 
-# We don't translate admin flash message for now
-Rails/I18nLocaleTexts:
+Metrics/MethodLength:
   Enabled: false
 
-# Remove once we won,t have commented tests
-RSpec/NoExpectationExample:
+Metrics/ModuleLength:
   Enabled: false
 
-# If we don,t care about explicit type, then remove this and fix errors
-RSpecRails/InferredSpecType:
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
   Enabled: false

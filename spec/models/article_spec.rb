@@ -249,35 +249,35 @@ describe Article do
     let(:published_at) { Date.current }
 
     context 'when it successfully creates a short_path redirect' do
-      it 'returns true' do
+      it 'returns true', skip: 'Fix this test' do
         # TODO: FIXME: redo this test
-        #
-        # article = create(
-        #   :article,
-        #   title:              'test',
-        #   publication_status: 'published',
-        #   published_at:       published_at
-        # )
-        #
-        # expect(Redirect.last.source_path[/\w+/]).to eq article.short_path
+
+        article = create(
+          :article,
+          title:              'test',
+          publication_status: 'published',
+          published_at:       published_at
+        )
+
+        expect(Redirect.last.source_path[/\w+/]).to eq article.short_path
       end
     end
 
     context 'when it doesn’t create a short_path redirect if redirect exists' do
-      it 'raises error' do
+      it 'raises error', skip: 'Fix this test' do
         # TODO: FIXME: redo this test
-        # Redirect.create!(source_path: '/tester', target_path: '/test/test')
-        #
-        # article = described_class.new(
-        #   title:              'test',
-        #   collection_id:      nil,
-        #   short_path:         'tester',
-        #   publication_status: 'published',
-        #   published_at:       published_at
-        # )
-        #
-        # error_message = 'Validation failed: Short path is already defined by a redirect'
-        # expect { article.save! }.to raise_error(ActiveRecord::RecordInvalid, error_message)
+        Redirect.create!(source_path: '/tester', target_path: '/test/test')
+
+        article = described_class.new(
+          title:              'test',
+          collection_id:      nil,
+          short_path:         'tester',
+          publication_status: 'published',
+          published_at:       published_at
+        )
+
+        error_message = 'Validation failed: Short path is already defined by a redirect'
+        expect { article.save! }.to raise_error(ActiveRecord::RecordInvalid, error_message)
       end
     end
   end

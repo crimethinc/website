@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Page, type: :model do
+RSpec.describe Page do
   describe '#path' do
     subject { page.path }
 

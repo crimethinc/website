@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ArticlesHelper, type: :helper do
+RSpec.describe ArticlesHelper do
   describe '#article_tag' do
     subject { helper.article_tag(article) { 'Test Text' }.to_s }
 
@@ -33,7 +33,8 @@ RSpec.describe ArticlesHelper, type: :helper do
     context 'with collection posts' do
       let(:article) do
         article = Article.new(id: 1, slug: 'slug')
-        allow(article).to receive(:collection_posts).and_return OpenStruct.new(recent: [Article.new])
+        collection_posts_double = object_double(Article.all, recent: [Article.new])
+        allow(article).to receive(:collection_posts).and_return collection_posts_double
         article
       end
 

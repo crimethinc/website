@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe CategoriesController, type: :controller do
+RSpec.describe CategoriesController do
   describe 'GET #show' do
     let(:category) { create(:category, name: 'Test Category') }
 

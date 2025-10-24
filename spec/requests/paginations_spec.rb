@@ -1,6 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Pagination Redirects', type: :request do
+# rubocop:disable RSpec/DescribeClass
+RSpec.describe 'Pagination Redirects' do
+  # rubocop:enable RSpec/DescribeClass
   describe 'article archives' do
     it 'redirects on page 1' do
       get 'http://example.com/2017/01/01/page/1'

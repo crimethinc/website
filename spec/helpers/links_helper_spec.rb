@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe LinksHelper, type: :helper do
+RSpec.describe LinksHelper do
   describe '#social_link_classes' do
     subject { helper.social_link_classes(url: 'http://example.com', name: 'example') }
 

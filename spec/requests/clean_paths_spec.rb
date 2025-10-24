@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'rake'
 Rails.application.load_tasks
 
-RSpec.describe 'Rack::CleanPath', type: :request do
+RSpec.describe 'Rack::CleanPath' do
   it 'redirects according to path clean up rules' do
     get 'http://example.com/about/faq.html'
 

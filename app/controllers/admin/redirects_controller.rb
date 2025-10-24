@@ -31,7 +31,7 @@ module Admin
       @redirect = Redirect.new(redirect_params)
 
       if @redirect.save
-        redirect_to [:admin, @redirect], notice: 'Redirect was successfully created.'
+        redirect_to [:admin, @redirect], notice: t('.notice')
       else
         render :new
       end
@@ -39,7 +39,7 @@ module Admin
 
     def update
       if @redirect.update(redirect_params)
-        redirect_to [:admin, @redirect], notice: 'Redirect was successfully updated.'
+        redirect_to [:admin, @redirect], notice: t('.notice')
       else
         render :edit
       end
@@ -47,7 +47,7 @@ module Admin
 
     def destroy
       @redirect.destroy
-      redirect_to %i[admin redirects], notice: 'Redirect was successfully destroyed.'
+      redirect_to %i[admin redirects], notice: t('.notice')
     end
 
     private

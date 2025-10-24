@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe VideosController, type: :controller do
+RSpec.describe VideosController do
   describe 'GET index' do
     it 'renders the videos' do
       get :index

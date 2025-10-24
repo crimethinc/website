@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe MiscController, type: :controller do
+RSpec.describe MiscController do
   # get 'manifest.json',  to: 'misc#mainfest_json'
   # get 'opensearch.xml', to: 'misc#opensearch_xml'
   describe 'GET #manifest_json' do

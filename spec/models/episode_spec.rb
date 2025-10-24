@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Episode, type: :model do
+RSpec.describe Episode do
   describe '#name' do
     subject { episode.name }
 

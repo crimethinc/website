@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Book, type: :model do
+RSpec.describe Book do
   describe '#name' do
     subject { book.name }
 

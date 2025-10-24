@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe BooksHelper, type: :helper do
+RSpec.describe BooksHelper do
   describe '#thumbnail_link_to_large_image' do
     context 'with large_url' do
       subject { helper.thumbnail_link_to_large_image('http://example.com/test/small.png', '/test/larger.png') }

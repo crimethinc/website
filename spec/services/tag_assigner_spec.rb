@@ -33,11 +33,15 @@ describe TagAssigner do
       allow(second_tag).to receive(:assigned_to?).with(taggable).and_return true
       allow(third_tag).to receive(:assigned_to?).with(taggable).and_return false
 
-      expect(first_tag).to receive(:assign_to!).with(taggable)
-      expect(second_tag).not_to receive(:assign_to!).with(taggable)
-      expect(third_tag).to receive(:assign_to!).with(taggable)
+      allow(first_tag).to receive(:assign_to!)
+      allow(second_tag).to receive(:assign_to!)
+      allow(third_tag).to receive(:assign_to!)
 
       tag_assigner.assign_tags_to!(taggable)
+
+      expect(first_tag).to have_received(:assign_to!).with(taggable)
+      expect(second_tag).not_to have_received(:assign_to!).with(taggable)
+      expect(third_tag).to have_received(:assign_to!).with(taggable)
     end
   end
 end

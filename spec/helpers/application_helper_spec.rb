@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ApplicationHelper, type: :helper do
+RSpec.describe ApplicationHelper do
   describe '#largest_touch_icon_url' do
     subject { helper.largest_touch_icon_url }
 

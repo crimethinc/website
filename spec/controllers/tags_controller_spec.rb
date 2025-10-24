@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe TagsController, type: :controller do
+RSpec.describe TagsController do
   describe 'GET #show' do
     it 'renders on a tag with articles' do
       article = create(:article, title: 'Test', published_at: 1.day.ago, publication_status: 'published')

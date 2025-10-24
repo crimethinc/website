@@ -24,7 +24,7 @@ module Admin
       @definition = Definition.new(definition_params)
 
       if @definition.save
-        redirect_to [:admin, @definition], notice: 'Definition was successfully created.'
+        redirect_to [:admin, @definition], notice: t('.notice')
       else
         render :new
       end
@@ -32,7 +32,7 @@ module Admin
 
     def update
       if @definition.update(definition_params)
-        redirect_to [:admin, @definition], notice: 'Definition was successfully updated.'
+        redirect_to [:admin, @definition], notice: t('.notice')
       else
         render :edit
       end
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @definition.destroy
-      redirect_to %i[admin definitions], notice: 'Definition was successfully destroyed.'
+      redirect_to %i[admin definitions], notice: t('.notice')
     end
 
     private

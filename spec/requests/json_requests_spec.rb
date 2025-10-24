@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'JSONRequests', type: :request do
+describe 'JSONRequests' do
   let(:json_headers) do
     { ACCEPT: 'application/json', HTTP_ACCEPT: 'application/json', CONTENT_TYPE: 'application/json' }
   end

@@ -70,7 +70,7 @@ module Crimethinc
     ]
 
     # Regional locales that have a hyphen in their IANA identifier
-    config.subdomain_locales << :'es-419' # Spanish (Latin America) # rubocop:disable Naming/VariableNumber
+    config.subdomain_locales << :'es-419' # Spanish (Latin America)
     config.subdomain_locales << :'fr-qu'  # French  (Canadian/Quebecois)
 
     path_ltr_locales = %i[
@@ -108,6 +108,7 @@ module Crimethinc
     # TODO: rails81
     # DEPRECATION WARNING:
     # `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1.
+    # is deprecated and will be removed in Rails 8.2
     # To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`.
     config.active_support.to_time_preserves_timezone = :zone
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe RedirectsHelper, type: :helper do
+RSpec.describe RedirectsHelper do
   describe '#redirect_http_status_code' do
     subject { helper.redirect_http_status_code(redirect) }
 

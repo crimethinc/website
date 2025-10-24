@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Podcast, type: :model do
+RSpec.describe Podcast do
   describe '#name' do
     subject { podcast.name }
 
