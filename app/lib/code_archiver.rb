@@ -1,3 +1,4 @@
+# rubocop:disable Rails/Output
 class CodeArchiver
   def run
     # make all the directories
@@ -152,3 +153,4 @@ class CodeArchiver
     :done
   end
 end
+# rubocop:enable Rails/Output
