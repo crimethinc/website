@@ -249,35 +249,40 @@ describe Article do
     let(:published_at) { Date.current }
 
     context 'when it successfully creates a short_path redirect' do
-      it 'returns true', skip: 'Fix this test' do
-        # TODO: FIXME: redo this test
-
-        article = create(
+      it 'creates a redirect when article has short_path and is published' do
+        article = build(
           :article,
           title:              'test',
+          short_path:         'shortpath',
           publication_status: 'published',
           published_at:       published_at
         )
 
-        expect(Redirect.last.source_path[/\w+/]).to eq article.short_path
+        article.save!
+
+        redirect = Redirect.find_by(source_path: '/shortpath')
+        expect(redirect).to be_present
+        expect(redirect.source_path).to eq '/shortpath'
+        expect(redirect.target_path).to eq article.path
       end
     end
 
-    context 'when it doesn’t create a short_path redirect if redirect exists' do
-      it 'raises error', skip: 'Fix this test' do
-        # TODO: FIXME: redo this test
-        Redirect.create!(source_path: '/tester', target_path: '/test/test')
+    context 'when it does not create a short_path redirect if redirect exists' do
+      it 'adds validation error when short_path conflicts with existing redirect' do
+        # Create an existing redirect
+        Redirect.create!(source_path: '/tester', target_path: '/some/other/path')
 
-        article = described_class.new(
+        article = build(
+          :article,
           title:              'test',
-          collection_id:      nil,
           short_path:         'tester',
           publication_status: 'published',
           published_at:       published_at
         )
 
-        error_message = 'Validation failed: Short path is already defined by a redirect'
-        expect { article.save! }.to raise_error(ActiveRecord::RecordInvalid, error_message)
+        article.save
+
+        expect(article.errors[:short_path]).to include(' is a path that already points to a redirect')
       end
     end
   end
