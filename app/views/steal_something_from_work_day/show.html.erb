@@ -14,7 +14,6 @@
 
 <div class='col-12 col-md-8 main-wrapper'>
   <main>
-
     <% @sections.each do |section| %>
       <article id="<%= section.to_slug %>" class="py-5 mb-5">
         <%= render section.to_slug.underscore %>

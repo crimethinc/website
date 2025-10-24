@@ -1,11 +1,4 @@
 module StealSomethingFromWorkDayHelper
-  def hero_background_image_css
-    filename = "#{(1..9).to_a.sample}.jpg"
-    url      = "https://cdn.crimethinc.com/assets/steal-something-from-work-day/backgrounds/#{filename}"
-
-    "background-image: url(#{url});"
-  end
-
   def card_tag options
     card_options = {
       download_button: t('steal_something_from_work_day.outreach_materials.download_button')

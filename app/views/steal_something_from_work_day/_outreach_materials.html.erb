@@ -76,10 +76,12 @@
 
 <div class="row">
   <% t('steal_something_from_work_day.outreach_materials.journals.cards').each do |journal| %>
-    <div class="col-lg-6 mb-5">
+    <div class="col-lg-6 mb-3">
       <%= card_tag journal %>
     </div>
   <% end %>
+
+  <%= link_to '↩︎', '#top' %>
 </div>
 
 <div class='lead text-danger my-5 py-5'>

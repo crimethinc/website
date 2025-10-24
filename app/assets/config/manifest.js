@@ -1,12 +1,14 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
 
+// Bootstrap, vendored
+//= link vendor/bootstrap.css
+
 // /admin site
 //= link admin.css
 
 // Mini sites
 //= link to_change_everything.css
-//= link steal-something-from-work-day.css
 
 // Legacy theme (2017)
 //= link 2017.css

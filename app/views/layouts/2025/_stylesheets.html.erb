@@ -4,16 +4,17 @@
 <% end %>
 
 <%# INFO: Update this instead of the bootstrap gem when new versions come out %>
-<%# NOTE: Pull this in as static local file at 2025/vendor/bootstrap.css %>
+<%# NOTE: Pull this in as static local file at app/assets/stylesheets/vendor/bootstrap.css %>
 <%# TODO: create a rake task to automate that %>
 <%# bootstrap_major_version = 5 %>
 <%# bootstrap_minor_version = 3 %>
-<%# bootstrap_patch_version = 3 %>
+<%# bootstrap_patch_version = 8 %>
 <%# "https://cdn.jsdelivr.net/npm/bootstrap@#{bootstrap_major_version}.#{bootstrap_minor_version}.#{bootstrap_patch_version}/dist/css/bootstrap.css" %>
+
+<%= stylesheet_link_tag 'vendor/bootstrap', media: :all %>
 
 <%
 stylesheet_partials = %w[
-  vendor/bootstrap
   bootstrap-overrides
 
   alerts
