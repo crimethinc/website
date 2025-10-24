@@ -29,7 +29,7 @@ module Admin
       @book = Zine.new(zine_params)
 
       if @book.save
-        redirect_to [:admin, @book], notice: 'Zine was successfully created.'
+        redirect_to [:admin, @book], notice: t('.notice')
       else
         render :new
       end
@@ -37,7 +37,7 @@ module Admin
 
     def update
       if @book.update(zine_params)
-        redirect_to [:admin, @book], notice: 'Zine was successfully updated.'
+        redirect_to [:admin, @book], notice: t('.notice')
       else
         render :edit
       end
@@ -45,7 +45,7 @@ module Admin
 
     def destroy
       @book.destroy
-      redirect_to %i[admin zines], notice: 'Zine was successfully destroyed.'
+      redirect_to %i[admin zines], notice: t('.notice')
     end
 
     private

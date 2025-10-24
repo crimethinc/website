@@ -32,7 +32,7 @@ module Admin
       @poster = Sticker.new(poster_params)
 
       if @poster.save
-        redirect_to [:admin, @poster], notice: 'Sticker was successfully created.'
+        redirect_to [:admin, @poster], notice: t('.notice')
       else
         render :new
       end
@@ -40,7 +40,7 @@ module Admin
 
     def update
       if @poster.update(poster_params)
-        redirect_to [:admin, @poster], notice: 'Sticker was successfully updated.'
+        redirect_to [:admin, @poster], notice: t('.notice')
       else
         render :edit
       end
@@ -48,7 +48,7 @@ module Admin
 
     def destroy
       @poster.destroy
-      redirect_to %i[admin posters], notice: 'Sticker was successfully destroyed.'
+      redirect_to %i[admin posters], notice: t('.notice')
     end
 
     private

@@ -24,7 +24,7 @@ module Admin
       @locale = Locale.new(locale_params)
 
       if @locale.save
-        redirect_to %i[admin locales], notice: 'Locale was successfully created.'
+        redirect_to %i[admin locales], notice: t('.notice')
       else
         render :new
       end
@@ -32,7 +32,7 @@ module Admin
 
     def update
       if @locale.update(locale_params)
-        redirect_to %i[admin locale], notice: 'Locale was successfully updated.'
+        redirect_to %i[admin locale], notice: t('.notice')
       else
         render :edit
       end
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @locale.destroy
-      redirect_to %i[admin locales], notice: 'Locale was successfully destroyed.'
+      redirect_to %i[admin locales], notice: t('.notice')
     end
 
     private

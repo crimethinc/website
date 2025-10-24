@@ -26,7 +26,7 @@ module Admin
       @episode = Episode.for_admin.new episode_params
 
       if @episode.save
-        redirect_to [:admin, @episode], notice: 'Episode was successfully created.'
+        redirect_to [:admin, @episode], notice: t('.notice')
       else
         render :new
       end
@@ -34,7 +34,7 @@ module Admin
 
     def update
       if @episode.update(episode_params)
-        redirect_to [:admin, @episode], notice: 'Episode was successfully updated.'
+        redirect_to [:admin, @episode], notice: t('.notice')
       else
         render :edit
       end
@@ -42,7 +42,7 @@ module Admin
 
     def destroy
       @episode.destroy
-      redirect_to %i[admin podcasts], notice: 'Episode was successfully destroyed.'
+      redirect_to %i[admin podcasts], notice: t('.notice')
     end
 
     private

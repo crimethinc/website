@@ -28,7 +28,7 @@ module Admin
       @logo = Logo.new(logo_params)
 
       if @logo.save
-        redirect_to [:admin, @logo], notice: 'Logo was successfully created.'
+        redirect_to [:admin, @logo], notice: t('.notice')
       else
         render :new
       end
@@ -36,7 +36,7 @@ module Admin
 
     def update
       if @logo.update(logo_params)
-        redirect_to [:admin, @logo], notice: 'Logo was successfully updated.'
+        redirect_to [:admin, @logo], notice: t('.notice')
       else
         render :edit
       end
@@ -44,7 +44,7 @@ module Admin
 
     def destroy
       @logo.destroy
-      redirect_to %i[admin logos], notice: 'Logo was successfully destroyed.'
+      redirect_to %i[admin logos], notice: t('.notice')
     end
 
     private

@@ -56,7 +56,7 @@ class ApplicationController < ActionController::Base
   helper_method :signed_in?
 
   def authorize
-    redirect_to [:signin], alert: 'You need to sign in to view that page.' unless signed_in?
+    redirect_to [:signin], alert: t('application.require_sign_in.alert') unless signed_in?
   end
 
   def set_current_locale

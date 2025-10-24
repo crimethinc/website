@@ -174,6 +174,7 @@ en:
             password:
               blank: Password can’t be blank
               too_short: Password is too short (minimum is %{count} characters)
+              exclusion: The passphrase '%{value}' is prohibited.
             email:
               blank: Email can’t be blank
               invalid: Email format is invalid
@@ -256,6 +257,105 @@ en:
       notice: Page was successfully updated.
     destroy:
       notice: Page was successfully destroyed.
+
+  # Admin Controller Messages
+  admin:
+    definitions:
+      create:
+        notice: Definition was successfully created.
+      update:
+        notice: Definition was successfully updated.
+      destroy:
+        notice: Definition was successfully destroyed.
+    episodes:
+      create:
+        notice: Episode was successfully created.
+      update:
+        notice: Episode was successfully updated.
+      destroy:
+        notice: Episode was successfully destroyed.
+    issues:
+      create:
+        notice: Issue was successfully created.
+      update:
+        notice: Issue was successfully updated.
+      destroy:
+        notice: Issue was successfully destroyed.
+    journals:
+      create:
+        notice: Journal was successfully created.
+      update:
+        notice: Journal was successfully updated.
+      destroy:
+        notice: Journal was successfully destroyed.
+    locales:
+      create:
+        notice: Locale was successfully created.
+      update:
+        notice: Locale was successfully updated.
+      destroy:
+        notice: Locale was successfully destroyed.
+    logos:
+      create:
+        notice: Logo was successfully created.
+      update:
+        notice: Logo was successfully updated.
+      destroy:
+        notice: Logo was successfully destroyed.
+    podcasts:
+      create:
+        notice: Podcast was successfully created.
+      update:
+        notice: Podcast was successfully updated.
+      destroy:
+        notice: Podcast was successfully destroyed.
+    posters:
+      create:
+        notice: Poster was successfully created.
+      update:
+        notice: Poster was successfully updated.
+      destroy:
+        notice: Poster was successfully destroyed.
+    redirects:
+      create:
+        notice: Redirect was successfully created.
+      update:
+        notice: Redirect was successfully updated.
+      destroy:
+        notice: Redirect was successfully destroyed.
+    stickers:
+      create:
+        notice: Sticker was successfully created.
+      update:
+        notice: Sticker was successfully updated.
+      destroy:
+        notice: Sticker was successfully destroyed.
+    videos:
+      create:
+        notice: Video was successfully created.
+      update:
+        notice: Video was successfully updated.
+      destroy:
+        notice: Video was successfully destroyed.
+    zines:
+      create:
+        notice: Zine was successfully created.
+      update:
+        notice: Zine was successfully updated.
+      destroy:
+        notice: Zine was successfully destroyed.
+
+  # Authentication Messages
+  sessions:
+    create:
+      notice: Logged in!
+    destroy:
+      notice: Signed out!
+
+  # Authorization Messages
+  application:
+    require_sign_in:
+      alert: You need to sign in to view that page.
 
   # Mailer Subjects (Rails Convention)
   support_mailer:

@@ -103,7 +103,3 @@ Style/RedundantFetchBlock:
 
 Style/OpenStructUse:
   Enabled: false
-
-# We don't translate admin flash message for now
-Rails/I18nLocaleTexts:
-  Enabled: false
