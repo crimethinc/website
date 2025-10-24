@@ -93,7 +93,7 @@ namespace :db do
       # Make S3 client to make a public file
       client = Aws::S3::Client.new
 
-      # Use TransferManager instead of deprecated upload_file method
+      # Make TransferManager to upload a file
       transfer_manager = Aws::S3::TransferManager.new client: client
 
       # Upload the file
