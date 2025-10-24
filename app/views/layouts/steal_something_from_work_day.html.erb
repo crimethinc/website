@@ -19,28 +19,25 @@
     <% end %>
 
     <% if media_mode? %>
-      <%= stylesheet_link_tag 'vendor/bootstrap', media: :all %>
-
       <% %w[
-        bootstrap-overrides
-        fonts
-        headings
-        ].each do |stylesheet_partial| %>
-        <%= stylesheet_link_tag "2025/#{stylesheet_partial}", media: :all %>
+        vendor/bootstrap
+        2025/bootstrap-overrides
+        2025/fonts
+        2025/headings
+        steal-something-from-work-day
+      ].each do |stylesheet| %>
+        <%= stylesheet_link_tag stylesheet, media: :all %>
       <% end %>
-
-      <%= stylesheet_link_tag 'steal-something-from-work-day', media: 'all' %>
     <% end %>
 
-    <%= yield :head %>
-
-    <% if content_for(:javascript).present? %>
-      <%= javascript_importmap_tags %>
-      <%= yield :javascript %>
-    <% end %>
+    <%# Bootstrap JS from their CDN %>
+    <%# TODO: refactor this away, only used for hamburger icon in responsive nav %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js',
+                               integrity:   'sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y',
+                               crossorigin: :anonymous %>
   </head>
 
-  <body id='<%= body_id %>' data-bs-spy='scroll' data-bs-target='#section-list' data-bs-offset='0'>
+  <body data-bs-spy='scroll' data-bs-target='#section-list' data-bs-offset='0'>
     <%= render "shared/development_mode_banner" %>
 
     <header role='banner' id='hero' class='d-flex p-5 mb-5 text-white bg-dark background-<%= rand 1..9 %>'>

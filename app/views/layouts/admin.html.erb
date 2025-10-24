@@ -22,9 +22,9 @@
     <meta name="msapplication-TileImage" content="<%= asset_path "icons/icon-144x144.png" %>">
     <meta name="msapplication-TileColor" content="#000000">
 
-    <meta name="msapplication-square70x70logo" content="<%= asset_path "icons/icon-150x150.png" %>">
-    <meta name="msapplication-square150x150logo" content="<%= asset_path "icons/icon-70x70.png" %>">
-    <meta name="msapplication-wide310x150logo" content="<%= asset_path "icons/icon-310x150.png" %>">
+    <meta name="msapplication-square70x70logo"   content="<%= asset_path "icons/icon-150x150.png" %>">
+    <meta name="msapplication-square150x150logo" content="<%= asset_path "icons/icon-70x70.png"   %>">
+    <meta name="msapplication-wide310x150logo"   content="<%= asset_path "icons/icon-310x150.png" %>">
     <meta name="msapplication-square310x310logo" content="<%= asset_path "icons/icon-310x310.png" %>">
 
     <!-- Icons and stuff for more browsers via manifest.json -->
@@ -35,7 +35,9 @@
 
     <%# Bootstrap JS from their CDN %>
     <%# TODO: refactor this away, only used for hamburger icon in responsive nav %>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js',
+                               integrity:   'sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y',
+                               crossorigin: :anonymous %>
     <%= yield :head %>
 
     <% if content_for(:javascript).present? %>
