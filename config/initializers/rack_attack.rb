@@ -4,7 +4,7 @@ if Rails.env.production?
       throttle('limit requests per IP', limit: 60, period: 1.minute) do |req|
         # Allow trusted requests through unthrottled
         trusted_request =
-          ENV.fetch('RACK_ATTACK_ALLOWED_USER_AGENT') { nil }.present? &&
+          ENV.fetch('RACK_ATTACK_ALLOWED_USER_AGENT', nil).present? &&
           req.user_agent&.starts_with?(ENV.fetch('RACK_ATTACK_ALLOWED_USER_AGENT'))
 
         # Allow Asset Pipeline and ActiveStorage requests through unthrottled

@@ -19,7 +19,7 @@ Rails.application.configure do
   config.public_file_server.headers = { 'cache-control' => "public, max-age=#{1.year.to_i}" }
 
   # Enable serving static files from `public/`, Heroku sets RAILS_SERVE_STATIC_FILES to 'enabled'
-  config.public_file_server.enabled = ENV.fetch('RAILS_SERVE_STATIC_FILES') { nil }.present?
+  config.public_file_server.enabled = ENV.fetch('RAILS_SERVE_STATIC_FILES', nil).present?
 
   # TODO: rails8 delete this after confirming .scss files still work
   # Compress CSS using a preprocessor.
@@ -128,7 +128,7 @@ Rails.application.configure do
   # Configure memcache as the cache_store if available
   # Copied from https://devcenter.heroku.com/articles/memcachedcloud
   # Replace the default in-process memory cache store with a durable alternative.
-  config.cache_store = if ENV.fetch('MEMCACHEDCLOUD_SERVERS') { nil }
+  config.cache_store = if ENV.fetch('MEMCACHEDCLOUD_SERVERS', nil).present?
                          [
                            :mem_cache_store,
                            ENV.fetch('MEMCACHEDCLOUD_SERVERS').split(','),

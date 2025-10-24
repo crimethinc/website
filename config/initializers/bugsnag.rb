@@ -1,5 +1,5 @@
 Bugsnag.configure do |config|
-  config.api_key = ENV.fetch('BUGSNAG_API_KEY') { nil }
+  config.api_key = ENV.fetch('BUGSNAG_API_KEY', nil)
   config.notify_release_stages = %w[staging production]
 
   # we consider both staging and production as 'production' for heroku
