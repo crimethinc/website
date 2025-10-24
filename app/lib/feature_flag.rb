@@ -16,7 +16,7 @@
 class FeatureFlag
   class << self
     def enabled? feature
-      env_var = ENV.fetch(feature.to_s.upcase) { false }
+      env_var = ENV.fetch(feature.to_s.upcase, false)
       env_var == true.to_s
     end
   end

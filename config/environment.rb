@@ -6,7 +6,7 @@ Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
   user_name:            'apikey',
-  password:             ENV.fetch('SENDGRID_API_KEY') { nil },
+  password:             ENV.fetch('SENDGRID_API_KEY', nil),
   domain:               'crimethinc.com',
   address:              'smtp.sendgrid.net',
   port:                 587,
