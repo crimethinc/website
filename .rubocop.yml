@@ -104,18 +104,14 @@ Style/RedundantFetchBlock:
 Style/OpenStructUse:
   Enabled: false
 
-# For now we disable this, since explicit hash value sounds better to use
-Style/HashSyntax:
-  Enabled: false
-
 # We don't translate admin flash message for now
 Rails/I18nLocaleTexts:
   Enabled: false
 
-# Remove once we won,t have commented tests
+# Remove once we don’t have commented tests
 RSpec/NoExpectationExample:
   Enabled: false
 
-# If we don,t care about explicit type, then remove this and fix errors
+# If we don’t care about explicit type, then remove this and fix errors
 RSpecRails/InferredSpecType:
   Enabled: false
