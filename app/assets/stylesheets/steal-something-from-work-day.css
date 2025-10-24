@@ -1,116 +1,27 @@
-/* Global typography */
-* {
-  font-family: alright_sansregular, system, sans-serif;
-}
-
-b,
-strong {
-  font-family: alright_sansmedium, system, sans-serif;
-  font-weight: 600;
-}
-
 /* Hero section */
 #hero {
-  padding: 0 10px 40px 10px;
-  margin-bottom: 80px;
-  color: white;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
   background-size: cover;
-  background-color: black;
 }
 
-#hero .logos {
-  margin-bottom: 80px;
+#hero img {
+  max-width: 100%;
 }
 
 #hero .logos .logo-mark,
 #hero .logos .logo-type {
   display: block;
-  margin: 0 auto;
-}
-
-#hero .logos .logo-mark {
-  max-width: 60px;
-  padding-bottom: 10px;
-}
-
-#hero .logos .logo-type {
-  width: 120px;
+  width: 160px;
 }
 
 #hero h1 {
-  font-family: alright_sansblack, system, sans-serif;
   font-weight: 900;
   display: inline-block;
   line-height: 1em;
-  margin: 0 0 20px 0;
-  letter-spacing: -0.02em;
-  font-size: 3rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#hero h1 span {
-  font-family: alright_sanslight, system, sans-serif;
-  font-weight: 100;
-}
-
-#hero p span,
-#hero p {
-  font-family: alright_sanslight, system, sans-serif;
-  font-weight: 100;
-  font-size: 1.4rem;
-}
-
-/* Media queries for hero responsiveness */
-@media (min-width: 576px) {
-  #hero h1 {
-    font-size: 4rem;
-  }
-
-  #hero p,
-  #hero p span {
-    font-size: 1.6rem;
-  }
-}
-
-@media (min-width: 768px) {
-  #hero h1 {
-    font-size: 4.5rem;
-  }
-
-  #hero p,
-  #hero p span {
-    font-size: 1.8rem;
-  }
-}
-
-@media (min-width: 992px) {
-  #hero h1 {
-    font-size: 5rem;
-  }
-
-  #hero p,
-  #hero p span {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  #hero h1 {
-    font-size: 5.5rem;
-  }
-
-  #hero p,
-  #hero p span {
-    font-size: 2.2rem;
-  }
-}
-
-/* General styles */
-img {
-  max-width: 100%;
+/* Images via [[markdown_media]] */
+main img {
+  width: 100%;
 }
 
 figure {
@@ -124,25 +35,11 @@ figure img {
 
 figure figcaption {
   margin-top: 0.5rem;
-  color: #6c757d;
-  font-size: 0.875em;
+  color: var(--bs-secondary);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  em {
-    font-family: inherit;
-  }
-}
-
+/* FAQ */
 dt {
-  font-family: alright_sansmedium, system, sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
   line-height: 1.2;
 }
 
@@ -154,78 +51,15 @@ dt + dd {
   margin-top: 0.25rem;
 }
 
-blockquote {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  color: #6c757d;
+blockquote p {
+  padding: 0 1rem;
+  color: var(--bs-secondary);
   font-style: italic;
-}
-
-main img {
-  width: 100%;
-}
-
-main header {
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #dee2e6;
-}
-
-/* Section headings with font-black styling */
-header h1,
-#faq h1,
-#outreach-materials h1,
-#interviews h1,
-#narratives h1,
-#testimonials h1,
-#further-reading h1,
-#selected-coverage h1,
-#internationally h1 {
-  font-family: alright_sansblack, system, sans-serif;
-  font-weight: 900;
-}
-
-header h2,
-#faq h2,
-#outreach-materials h2,
-#interviews h2,
-#narratives h2,
-#testimonials h2,
-#further-reading h2,
-#selected-coverage h2,
-#internationally h2 {
-  font-family: alright_sanslight, system, sans-serif;
-  font-weight: 100;
 }
 
 /* Introduction section */
 #introduction h1 {
-  font-family: alright_sanslight, system, sans-serif;
-  font-weight: 100;
-  color: #6c757d;
-  font-size: 1.75rem;
-}
-
-#introduction h2 {
-  font-family: alright_sansblack, system, sans-serif;
-  font-weight: 900;
-  font-size: 2.5rem;
-}
-
-/* Analysis and narratives sections */
-#analysis h1,
-#analysis h2,
-#narratives h1,
-#narratives h2 {
-  font-family: alright_sansblack, system, sans-serif;
-  font-weight: 900;
-  font-size: 2.5rem;
-}
-
-#analysis h3,
-#narratives h3 {
-  font-family: alright_sanslight, system, sans-serif;
-  font-weight: 100;
+  color: var(--bs-secondary);
 }
 
 #analysis hr,
