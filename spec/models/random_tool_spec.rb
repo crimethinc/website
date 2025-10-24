@@ -14,7 +14,7 @@ RSpec.describe RandomTool do
       tool_classes = %w[Book Logo Poster Sticker Video Zine]
 
       tool = described_class.sample
-      expect(tool_classes).to include(tool.class.name)
+      expect(tool_classes).to include tool.class.name
       expect(tool).to be_persisted
     end
   end
