@@ -16,4 +16,4 @@ jobs:
           bundler-cache: true
 
       - name: Run Fasterer linter
-        run: bundle exec fasterer app
+        run:  bundle exec fasterer app
