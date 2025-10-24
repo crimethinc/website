@@ -20,7 +20,7 @@ open https://strap.mikemcquaid.com/strap.sh
 Then…
 
 ```sh
-bash ~/Downloads/strap.sh
+sh ~/Downloads/strap.sh
 rm -f ~/Downloads/strap.sh
 git clone https://github.com/crimethinc/website.git
 cd website
