@@ -16,7 +16,7 @@ end
 
 chdir APP_ROOT do
   # print output at the start of test run
-  puts "==> Tests started at: #{Time.now.strftime('%H:%M:%S')}"
+  puts "==> Tests started at: #{Time.now.getlocal.strftime('%H:%M:%S')}"
 
   # run tests
   if ARGV[0].nil?
@@ -32,5 +32,5 @@ chdir APP_ROOT do
     system! "bundle exec rubocop #{ARGV[0]}"
   end
 
-  puts "==> Tests finished at: #{Time.now.strftime('%H:%M:%S')}"
+  puts "==> Tests finished at: #{Time.now.getlocal.strftime('%H:%M:%S')}"
 end

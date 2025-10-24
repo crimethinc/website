@@ -18,7 +18,7 @@ chdir APP_ROOT do
   puts '==> Setting up DB...'
   system! 'bundle exec rails db:create'
 
-  puts "==> Tests started at: #{Time.now.strftime('%H:%M:%S')}"
+  puts "==> Tests started at: #{Time.now.getlocal.strftime('%H:%M:%S')}"
 
   system! 'bundle exec rspec'
   system! 'bundle exec rubocop'
