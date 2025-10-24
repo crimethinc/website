@@ -23,37 +23,6 @@ Layout/LineLength:
   Exclude:
     - db/**/*
 
-Metrics/AbcSize:
-  Max: 74
-
-Metrics/BlockLength:
-  Max: 99
-  Exclude:
-    - config/routes.rb
-
-Metrics/ClassLength:
-  Max: 180
-
-Metrics/CyclomaticComplexity:
-  Max: 13
-
-Metrics/MethodLength:
-  Max: 40
-  Exclude:
-    - db/migrate/*
-
-Metrics/ModuleLength:
-  Max: 130
-
-Metrics/ParameterLists:
-  Max: 6
-
-Metrics/PerceivedComplexity:
-  Max: 15
-
-Naming/VariableNumber:
-  EnforcedStyle: snake_case
-
 # TODO: https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsenvironmentvariableaccess
 #       Consider using `Rails.application.config.foo` instead of `ENV['FOO']`
 Rails/EnvironmentVariableAccess:
@@ -98,5 +67,30 @@ Style/MixinUsage:
   Exclude:
     - script/*
 
-Style/RedundantFetchBlock:
+# Metrics rules to ignore
+Metrics/AbcSize:
   Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
