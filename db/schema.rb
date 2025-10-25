@@ -13,6 +13,7 @@
 ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.bigint "blob_id", null: false
@@ -47,7 +48,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.integer "collection_id"
     t.text "content"
     t.string "content_format", default: "kramdown"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.text "css"
     t.string "day"
     t.string "draft_code"
@@ -71,7 +72,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "summary"
     t.text "title"
     t.text "tweet"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.text "word_doc"
     t.string "year"
     t.index ["canonical_id"], name: "index_articles_on_canonical_id"
@@ -87,7 +88,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "content"
     t.string "content_format", default: "kramdown"
     t.text "cover_style"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "definitions"
     t.string "depth"
     t.text "description"
@@ -125,7 +126,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "table_of_contents"
     t.text "title"
     t.text "tweet"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "weight"
     t.string "width"
     t.string "words"
@@ -133,35 +134,35 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
   end
 
   create_table "categories", id: :serial, force: :cascade do |t|
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "name"
     t.string "slug"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["name"], name: "index_categories_on_name", unique: true
   end
 
   create_table "categorizations", id: :serial, force: :cascade do |t|
     t.integer "article_id"
     t.integer "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "definitions", force: :cascade do |t|
     t.integer "canonical_id"
     t.text "content"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "draft_code"
-    t.datetime "featured_at"
+    t.datetime "featured_at", precision: nil
     t.boolean "featured_status", default: false
     t.string "filed_under"
     t.string "locale", default: "en"
     t.string "publication_status"
-    t.datetime "published_at"
+    t.datetime "published_at", precision: nil
     t.string "slug"
     t.string "subtitle"
     t.string "title"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["canonical_id"], name: "index_definitions_on_canonical_id"
   end
 
@@ -174,7 +175,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.string "audio_type", default: "audio/mpeg"
     t.integer "canonical_id"
     t.string "content"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "draft_code"
     t.string "duration"
     t.string "episode_number"
@@ -192,7 +193,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.string "tags"
     t.string "title"
     t.text "transcript"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["canonical_id"], name: "index_episodes_on_canonical_id"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
@@ -258,7 +259,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "buy_url"
     t.integer "canonical_id"
     t.text "content"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.text "description"
     t.datetime "featured_at", precision: nil
     t.boolean "featured_status", default: false, null: false
@@ -272,19 +273,19 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.string "subtitle"
     t.text "summary"
     t.string "title"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["canonical_id"], name: "index_journals_on_canonical_id"
   end
 
   create_table "locales", force: :cascade do |t|
     t.string "abbreviation"
     t.integer "articles_count", default: 0
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "language_direction"
     t.string "name"
     t.string "name_in_english"
     t.string "slug"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["abbreviation"], name: "index_locales_on_abbreviation", unique: true
     t.index ["name"], name: "index_locales_on_name", unique: true
     t.index ["name_in_english"], name: "index_locales_on_name_in_english", unique: true
@@ -293,7 +294,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
   create_table "logos", force: :cascade do |t|
     t.integer "canonical_id"
     t.string "content_format"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.text "description"
     t.datetime "featured_at", precision: nil
     t.boolean "featured_status", default: false, null: false
@@ -306,7 +307,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.string "subtitle"
     t.text "summary"
     t.string "title"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["canonical_id"], name: "index_logos_on_canonical_id"
   end
 
@@ -314,7 +315,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.integer "canonical_id"
     t.text "content"
     t.string "content_format", default: "kramdown"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.text "css"
     t.string "draft_code"
     t.string "header_background_color"
@@ -330,7 +331,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "summary"
     t.text "title"
     t.text "tweet"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["canonical_id"], name: "index_pages_on_canonical_id"
   end
 
@@ -338,7 +339,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.integer "canonical_id"
     t.text "content"
     t.string "copyright"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "episode_prefix"
     t.datetime "featured_at", precision: nil
     t.boolean "featured_status", default: false, null: false
@@ -358,7 +359,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.string "subtitle"
     t.string "tags"
     t.string "title"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["canonical_id"], name: "index_podcasts_on_canonical_id"
     t.index ["slug"], name: "index_podcasts_on_slug", unique: true
   end
@@ -374,7 +375,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.integer "canonical_id"
     t.text "content"
     t.string "content_format", default: "kramdown"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "depth"
     t.text "description"
     t.datetime "featured_at", precision: nil
@@ -395,18 +396,18 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "subtitle"
     t.text "summary"
     t.text "title"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "width"
     t.index ["canonical_id"], name: "index_posters_on_canonical_id"
   end
 
   create_table "redirects", id: :serial, force: :cascade do |t|
     t.integer "article_id"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "source_path"
     t.string "target_path"
     t.boolean "temporary"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["source_path"], name: "index_redirects_on_source_path", unique: true
   end
 
@@ -421,7 +422,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.integer "canonical_id"
     t.text "content"
     t.string "content_format", default: "kramdown"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "depth"
     t.text "description"
     t.datetime "featured_at", precision: nil
@@ -442,7 +443,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "subtitle"
     t.text "summary"
     t.text "title"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "width"
     t.index ["canonical_id"], name: "index_stickers_on_canonical_id"
   end
@@ -455,29 +456,29 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.integer "tag_id"
     t.integer "taggable_id"
     t.string "taggable_type"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "tags", id: :serial, force: :cascade do |t|
     t.integer "canonical_id"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "locale", default: "en"
     t.string "name"
     t.string "slug"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["canonical_id"], name: "index_tags_on_canonical_id"
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "users", id: :serial, force: :cascade do |t|
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "password_digest"
     t.string "role"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "username"
     t.index ["username"], name: "index_users_on_username", unique: true
   end
@@ -486,7 +487,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.integer "canonical_id"
     t.text "content"
     t.string "content_format", default: "kramdown"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "day"
     t.string "duration"
     t.datetime "featured_at", precision: nil
@@ -504,7 +505,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "summary"
     t.text "title"
     t.text "tweet"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "vimeo_id"
     t.string "year"
     t.index ["canonical_id"], name: "index_videos_on_canonical_id"
@@ -519,7 +520,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "content"
     t.string "content_format", default: "kramdown"
     t.text "cover_style"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.string "definitions"
     t.string "depth"
     t.text "description"
@@ -557,7 +558,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_07_31_001410) do
     t.text "table_of_contents"
     t.text "title"
     t.text "tweet"
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "weight"
     t.string "width"
     t.string "words"
