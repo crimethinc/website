@@ -35,11 +35,11 @@ environment ENV.fetch('RAILS_ENV', 'development')
 plugin :tmp_restart
 
 # Run the Solid Queue supervisor inside of Puma for single-server deployments
-plugin :solid_queue if ENV.fetch('SOLID_QUEUE_IN_PUMA', nil).present?
+plugin :solid_queue if ENV.fetch('SOLID_QUEUE_IN_PUMA', nil)
 
 # Specify the PID file. Defaults to tmp/pids/server.pid in development.
 # In other environments, only set the PID file if requested.
-pidfile ENV.fetch('PIDFILE') if ENV.fetch('PIDFILE', nil).present?
+pidfile ENV.fetch('PIDFILE') if ENV.fetch('PIDFILE', nil)
 
 # TEMP: for Heroku Router 2.0 until Puma fixes http2+keepalive upstream —Sb 2025-07-17
 #       https://www.heroku.com/blog/tips-tricks-router-2dot0-migration
