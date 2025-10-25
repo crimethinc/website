@@ -12,7 +12,7 @@
 # SupportedStylesForLeadingUnderscores: disallowed, required, optional
 Naming/MemoizedInstanceVariableName:
   Exclude:
-    - 'app/models/article_archive_paginator.rb'
+    - "app/models/article_archive_paginator.rb"
 
 # Offense count: 3
 # Configuration parameters: Mode, AllowedMethods, AllowedPatterns, AllowBangMethods, WaywardPredicates.
@@ -20,38 +20,31 @@ Naming/MemoizedInstanceVariableName:
 # WaywardPredicates: nonzero?
 Naming/PredicateMethod:
   Exclude:
-    - 'app/controllers/application_controller.rb'
-    - 'app/models/issue.rb'
-    - 'app/models/journal.rb'
+    - "app/controllers/application_controller.rb"
+    - "app/models/issue.rb"
+    - "app/models/journal.rb"
 
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Rails/FindByOrAssignmentMemoization:
   Exclude:
-    - 'app/helpers/tags_helper.rb'
+    - "app/helpers/tags_helper.rb"
 
 # Offense count: 14
 Rails/HelperInstanceVariable:
   Exclude:
-    - 'app/helpers/articles_helper.rb'
-    - 'app/helpers/meta_helper.rb'
-    - 'app/helpers/tags_helper.rb'
+    - "app/helpers/articles_helper.rb"
+    - "app/helpers/meta_helper.rb"
+    - "app/helpers/tags_helper.rb"
 
 # Offense count: 11
 Rails/OutputSafety:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/controllers/pages_controller.rb'
-    - 'app/helpers/admin_helper.rb'
-    - 'app/helpers/articles_helper.rb'
-    - 'app/helpers/embeds_helper.rb'
-    - 'app/helpers/markdown_helper.rb'
-    - 'app/helpers/videos_helper.rb'
-    - 'app/models/article.rb'
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: SafeForConstants.
-Style/RedundantFetchBlock:
-  Exclude:
-    - 'config/puma.rb'
+    - "app/controllers/articles_controller.rb"
+    - "app/controllers/pages_controller.rb"
+    - "app/helpers/admin_helper.rb"
+    - "app/helpers/articles_helper.rb"
+    - "app/helpers/embeds_helper.rb"
+    - "app/helpers/markdown_helper.rb"
+    - "app/helpers/videos_helper.rb"
+    - "app/models/article.rb"
