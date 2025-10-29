@@ -520,7 +520,7 @@ GEM
     stripe (8.7.0)
     thor (1.4.0)
     tilt (2.6.1)
-    timeout (0.4.3)
+    timeout (0.4.4)
     tsort (0.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -823,7 +823,7 @@ CHECKSUMS
   stripe (8.7.0) sha256=632e179ea15f06573fe3d9d9a9be62089c786596db716c4bfdd282ecd1878f13
   thor (1.4.0) sha256=8763e822ccb0f1d7bee88cde131b19a65606657b847cc7b7b4b82e772bcd8a3d
   tilt (2.6.1) sha256=35a99bba2adf7c1e362f5b48f9b581cce4edfba98117e34696dde6d308d84770
-  timeout (0.4.3) sha256=9509f079b2b55fe4236d79633bd75e34c1c1e7e3fb4b56cb5fda61f80a0fe30e
+  timeout (0.4.4) sha256=f0f6f970104b82427cd990680f539b6bbb8b1e55efa913a55c6492935e4e0edb
   tsort (0.2.0) sha256=9650a793f6859a43b6641671278f79cfead60ac714148aabe4e3f0060480089f
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
   uglifier (4.2.1) sha256=75d42b81b10bfd21e7a427fabb1d49ff5ea7bda3c4a5039ddb2a78d194c6f5aa
