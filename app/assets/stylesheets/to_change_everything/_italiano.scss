@@ -1,0 +1,35 @@
+.italiano {
+  @import "common/font_styling";
+  /*--- Highlight language in mobile language menu ---*/
+  #lang1  li  > a[href="/tce/italiano"],
+  #lang2  li  > a[href="/tce/italiano"] { color: #d62d34 !important; }
+  .check-italiano:before { content: ''; }
+
+  h1, h2, h3 { line-height: 0.95; }
+  h2 { font-size: 4.2vw; }
+  #takeflight h1 { font-size: 11vw; }
+  
+  .right p {
+    font-size: 0.70em;
+    line-height: 1.35;
+    text-indent: 1em each-line;
+  } 
+
+  #outro .leftintro p,
+  .leftintro p {
+    line-height: 1.1;
+    text-indent: 1em each-line;
+  }
+
+  @media (min-width: 1201px) and (max-width: 1670px) {
+    .lefttext { padding: 8% 10% 0% 10%; }
+    #government .righttext { padding: 2% 10% 0% 10%; }
+
+    #self h2 { padding: 6% 0 0 5%; }
+    #answering h2 { padding: 5% 0 0 20%; }
+    #reconciling .righttext { padding: 0% 12% 0% 10%; }
+    #liberation h2 { padding: 4% 0 0 20%; }
+    #borders h2 { padding: 7% 0 0 10%; }
+    #leaders h2 { padding: 6% 0 0 15%; }
+  }
+}
