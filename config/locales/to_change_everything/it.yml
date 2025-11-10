@@ -8,7 +8,7 @@ italiano:
         meta:
           title: Per Cambiare Tutto, un appello anarchico
           description: "Il caso di un'autodeterminazione completa: una guida per il furioso, il curioso e il puro del cuore"
-          url: https://tochangeeverything.com/it
+          url: https://tochangeeverything.com/italiano
       menu:
         toc: Sommario
         language: italiano
@@ -42,8 +42,8 @@ italiano:
       video_cte: Guarda il video
       video_url: https://player.vimeo.com/video/111159930 TODO
       pdf_cte_html: Scarica<br />&nbsp;PDF
-      pdf_get_url: /tce/get TODO
-      pdf_image: tce-cover-200.png
+      pdf_get_url: https://crimethinc.com/2016/01/25/to-change-everything-in-ten-more-languages#italian
+      pdf_image: ../../articles/2016/01/25/italian-a.jpg
       intro:
         left_text_html: <p>Se potessi cambiare qualcosa, cosa cambieresti? Andresti in vacanza per il resto della tua vita? Cercheresti una benzina che non inquina? Vorresti banche etiche e politici impegnati? L’idea di mantenere tutto così com’è, cercando di ottenere risultati differenti, appare sempre più irrealistica.</p> <p>I nostri conflitti, emotivi e finanziari, rispecchiano gli sconvolgimenti e i disastri globali. Potremmo spendere il resto dei nostri giorni tentando di spegnere questi incendi uno ad uno, ma il focolaio da cui hanno origine continuerà ad alimentarli. Non ci servono riforme graduali; abbiamo bisogno di ripensare tutto quanto secondo una logica differente.</p>
         right_text_html: Cambiare<br />qualsiasi cosa,<br />ovunque ci si trovi.
