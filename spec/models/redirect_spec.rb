@@ -27,7 +27,7 @@ RSpec.describe Redirect do
     end
 
     context 'with relative source path and absolute target path' do
-      https_target_path = 'https://example.com/foo/bar'
+      let(:https_target_path) { 'https://example.com/foo/bar' }
       let(:redirect) { described_class.new(source_path: 'source', target_path: https_target_path) }
 
       specify { expect(redirect.source_path).to eq('/source') }
@@ -52,7 +52,7 @@ RSpec.describe Redirect do
     before { redirect.strip_domain_from_target_path }
 
     context 'with crimethinc domain and subdomain' do
-      http_target_path = 'https://store.crimethinc.com/x/AddToCart?Item=democracy&Dest=books'
+      let(:http_target_path) { 'https://store.crimethinc.com/x/AddToCart?Item=democracy&Dest=books' }
 
       let(:redirect) { described_class.new(source_path: 'source', target_path: http_target_path) }
 
@@ -66,14 +66,14 @@ RSpec.describe Redirect do
     end
 
     context 'with external http domain' do
-      http_target_path = 'http://example.com/foo/bar'
+      let(:http_target_path) { 'http://example.com/foo/bar' }
       let(:redirect) { described_class.new(source_path: 'source', target_path: http_target_path) }
 
       it { is_expected.to eq(http_target_path) }
     end
 
     context 'with external https domain' do
-      https_target_path = 'https://example.com/foo/bar'
+      let(:https_target_path) { 'https://example.com/foo/bar' }
       let(:redirect) { described_class.new(source_path: 'source', target_path: https_target_path) }
 
       it { is_expected.to eq(https_target_path) }
