@@ -120,8 +120,8 @@ class Article < ApplicationRecord
   end
 
   def normalize_newlines
-    tweet.gsub!("\r\n", "\n")   if tweet.present?
-    summary.gsub!("\r\n", "\n") if summary.present?
+    tweet.presence&.gsub!("\r\n", "\n")
+    summary.presence&.gsub!("\r\n", "\n")
   end
 
   def update_or_create_redirect

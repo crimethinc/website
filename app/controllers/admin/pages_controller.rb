@@ -67,7 +67,7 @@ module Admin
 
     def organize_page
       tag_assigner = TagAssigner.parse_glob(params[:tags])
-      tag_assigner.assign_tags_to!(@page) if tag_assigner.present?
+      tag_assigner.presence&.assign_tags_to!(@page)
     end
 
     def page_params
