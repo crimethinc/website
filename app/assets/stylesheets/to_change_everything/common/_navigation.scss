@@ -299,31 +299,32 @@ li.selected a:visited {
   }
 }
 
-#toc1 {
-  width: 50%;
-  margin: 0 10% 0 7%;
-  float: left;
-  position: relative;
+#tocdiv {
+  font-size: 1rem;
+  line-height: 1.2;
+  text-indent: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  h1 {
+    line-height: 1;
+    width: 100%;
+  }
+
+  #toc1, #toc2 {
+    position: relative;
+    width: 47.5%;
+    margin: 0;
+    text-align: start;
+    text-indent: 10px hanging;
+  }
 
   li {
-    padding-top: 6%;
+    padding-top: 5%;
+    a { font-size: 0.7rem; }
   }
 }
 
-#toc2 {
-  width: 28%;
-  margin: 0 0 0 5%;
-  float: left;
-  position: relative;
-
-  li {
-    padding-top: 9.25%;
-  }
-}
-
-/*-------------PHONE CSS------------------*/
-
-/*-------------TABLET CSS------------------*/
 @media (min-width: 601px) and (max-width: 1023px) {
   nav {
     padding-top: 5%;
