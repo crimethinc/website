@@ -2,6 +2,7 @@ class ToChangeEverythingController < ApplicationController
   layout 'to_change_everything', only: [:show]
 
   LTR_TO_CHANGE_ANYTHING_YAMLS = %w[
+    srpskohrvatski
     malay
     english
     espanol
@@ -16,6 +17,7 @@ class ToChangeEverythingController < ApplicationController
   ].freeze
 
   RTL_TO_CHANGE_ANYTHING_YAMLS = %w[
+    srpskohrvatski
     فارسی
   ].freeze
 
