@@ -2,11 +2,40 @@
   @import "common/font_styling";
   /*--- Highlight language in mobile language menu ---*/
   #lang1  li  > a[href="/tce/srpskohrvatski"],
-  #lang2  li  > a[href="/tce/srpskohrvatski"] {
-    color: #d62d34 !important;
+  #lang2  li  > a[href="/tce/srpskohrvatski"] { color: #d62d34 !important; }
+  .check-srpskohrvatski:before { content: ''; }
+
+  #answering h2 { padding: 5% 0 0 10%; }
+  #liberation h2 { padding: 4% 0 0 15%; }
+
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    #takeflight h1 {
+      padding: 15% 0 0 1%;
+      font-size: 11rem;
+      line-height: 1.2;
+    }
   }
 
-  .check-srpskohrvatski:before {
-    content: '';
+  @media (min-width: 601px) and (max-width: 1023px) {
+    #takeflight h1 {
+      padding: 15% 0 0 1%;
+      font-size: 8rem;
+      line-height: 1.2;
+    }
+  }
+
+  @media (min-device-width: 200px) and (max-width: 600px) {
+    .title-container .cte-pdf img { width: 3rem; }
+
+    #reconciling h2 { padding: 7% 0 0 8%; }
+    #takeflight h1 {
+      padding: 10% 0% 0 0%;
+      font-size: 3.9rem;
+      line-height: 1.1;
+    }
+    #next h1 {
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
   }
 }
