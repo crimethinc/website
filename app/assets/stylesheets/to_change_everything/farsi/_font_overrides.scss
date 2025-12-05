@@ -4,6 +4,12 @@ $body-font-stack: "Noto Naskh Arabic", "Whitney SSm A", "Whitney SSm B", serif;
 
 @import "../common/font_styling";
 
+#tocdiv {
+  #toc1, #toc2 {
+    li { a { font-size: 0.8rem; } }
+  }
+}
+
 @mixin intro-header($font-size, $line-height) {
   font: {
     weight: 600;
