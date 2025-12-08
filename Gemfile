@@ -54,8 +54,13 @@ gem 'logstash-event'
 gem 'aws-sdk-s3'
 gem 'image_processing'
 
+# TEMP: pin connection_pool and sidekiq until this is resolved:
+#      https://github.com/crimethinc/website/pull/4994
+gem 'connection_pool', '< 3'
+
+# TEMP: pin until connection_pool can be updated to 3
 # job queue using Active Job
-gem 'sidekiq', '< 9'
+gem 'sidekiq', '< 8'
 
 # syndication
 gem 'down' # downloading images from ActiveStorage/S3
