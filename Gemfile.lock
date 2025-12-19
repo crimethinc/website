@@ -379,7 +379,7 @@ GEM
       ffi (~> 1.0)
     rbs (3.9.5)
       logger
-    rdoc (6.17.0)
+    rdoc (7.0.1)
       erb
       psych (>= 4.0.0)
       tsort
@@ -771,7 +771,7 @@ CHECKSUMS
   rb-fsevent (0.11.2) sha256=43900b972e7301d6570f64b850a5aa67833ee7d87b458ee92805d56b7318aefe
   rb-inotify (0.11.1) sha256=a0a700441239b0ff18eb65e3866236cd78613d6b9f78fea1f9ac47a85e47be6e
   rbs (3.9.5) sha256=eabaaf60aee84e38cbf94839c6e1b9cd145c7295fc3cc0e88c92e4069b1119b0
-  rdoc (6.17.0) sha256=0f50d4e568fc98195f9bb155a9e8dff6c7feabfb515fb22ef6df1d12ad5a02b7
+  rdoc (7.0.1) sha256=7ae1540c54eb8174f6549440dd2299276eac51deaa7d80ea7db9ea5b96559f53
   redis (5.4.1) sha256=b5e675b57ad22b15c9bcc765d5ac26f60b675408af916d31527af9bd5a81faae
   redis-client (0.26.2) sha256=1336fb5a7202d398b719531853c184b7c9cbdcace1f00f8356062b9dfba6779b
   redis-store (1.11.0) sha256=edc4f3e239dcd1fdd9905584e6b1e623a84618e14436e6e8a07c70891008eda4
