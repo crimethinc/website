@@ -273,7 +273,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.27.0)
     nenv (0.3.0)
-    net-imap (0.6.0)
+    net-imap (0.6.2)
       date
       net-protocol
     net-pop (0.1.2)
@@ -728,7 +728,7 @@ CHECKSUMS
   mini_mime (1.1.5) sha256=8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef
   minitest (5.27.0) sha256=2d3b17f8a36fe7801c1adcffdbc38233b938eb0b4966e97a6739055a45fa77d5
   nenv (0.3.0) sha256=d9de6d8fb7072228463bf61843159419c969edb34b3cef51832b516ae7972765
-  net-imap (0.6.0) sha256=5d48bb048c85addcf0d83f6ff55be02aea111437c21d1cf3adf62b2fbe0f6cc8
+  net-imap (0.6.2) sha256=08caacad486853c61676cca0c0c47df93db02abc4a8239a8b67eb0981428acc6
   net-pop (0.1.2) sha256=848b4e982013c15b2f0382792268763b748cce91c9e91e36b0f27ed26420dff3
   net-protocol (0.2.2) sha256=aa73e0cba6a125369de9837b8d8ef82a61849360eba0521900e2c3713aa162a8
   net-smtp (0.5.1) sha256=ed96a0af63c524fceb4b29b0d352195c30d82dd916a42f03c62a3a70e5b70736
