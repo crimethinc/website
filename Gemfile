@@ -60,7 +60,7 @@ gem 'connection_pool', '< 4'
 
 # TEMP: pin until connection_pool can be updated to 3
 # job queue using Active Job
-gem 'sidekiq', '< 8'
+gem 'sidekiq', '< 9'
 
 # syndication
 gem 'down' # downloading images from ActiveStorage/S3
