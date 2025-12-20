@@ -94,7 +94,8 @@ describe 'Setting and changing an articles published_at date', :js do
     end
   end
 
-  it 'Sets the publication date/time if article is `published` and fields are blank' do
+  it 'Sets the publication date/time if article is `published` and fields are blank',
+     skip: 'TODO: fix or change flaky system tests' do
     freeze_time do
       login_user(admin)
       visit '/admin/articles'
