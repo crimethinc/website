@@ -1,3 +1,5 @@
+require 'barnes' # for Heroku Ruby Metrics
+
 # This configuration file will be evaluated by Puma. The top-level methods that
 # are invoked here are part of Puma's configuration DSL. For more information
 # about methods provided by the DSL, see https://puma.io/puma/Puma/DSL.html.
@@ -46,3 +48,9 @@ pidfile ENV.fetch('PIDFILE') if ENV.fetch('PIDFILE', nil)
 #       https://www.heroku.com/blog/pumas-routers-keepalives-ohmy
 #       https://github.com/puma/puma/issues/3487
 enable_keep_alives false
+
+before_fork do
+  # worker specific setup, if needed
+
+  Barnes.start # Must have enabled worker mode for this to block to be called
+end
