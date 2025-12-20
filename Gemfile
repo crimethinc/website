@@ -119,9 +119,6 @@ group :development do
   gem 'flamegraph'
   gem 'stackprof'
 
-  # For Heroku Ruby Metrics
-  gem 'barnes'
-
   gem 'ruby-lsp'
 end
 
