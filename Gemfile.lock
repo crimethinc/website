@@ -163,8 +163,8 @@ GEM
     fast_stack (0.2.0)
     fasterer (0.11.0)
       ruby_parser (>= 3.19.1)
-    ffi (1.17.2-arm64-darwin)
-    ffi (1.17.2-x86_64-linux-gnu)
+    ffi (1.17.3-arm64-darwin)
+    ffi (1.17.3-x86_64-linux-gnu)
     ffi-compiler (1.3.2)
       ffi (>= 1.15.5)
       rake
@@ -682,8 +682,8 @@ CHECKSUMS
   factory_bot_rails (6.5.1) sha256=d3cc4851eae4dea8a665ec4a4516895045e710554d2b5ac9e68b94d351bc6d68
   fast_stack (0.2.0) sha256=a5f4a6f16904ca72e74b6257dc11517bfea82b651643f1c6d2895b41255d2b71
   fasterer (0.11.0) sha256=9c38b77583584f3339a729eb077fd8f2856a317abe747528f6563d7c23e9dda8
-  ffi (1.17.2-arm64-darwin) sha256=54dd9789be1d30157782b8de42d8f887a3c3c345293b57ffb6b45b4d1165f813
-  ffi (1.17.2-x86_64-linux-gnu) sha256=05d2026fc9dbb7cfd21a5934559f16293815b7ce0314846fee2ac8efbdb823ea
+  ffi (1.17.3-arm64-darwin) sha256=0c690555d4cee17a7f07c04d59df39b2fba74ec440b19da1f685c6579bb0717f
+  ffi (1.17.3-x86_64-linux-gnu) sha256=3746b01f677aae7b16dc1acb7cb3cc17b3e35bdae7676a3f568153fb0e2c887f
   ffi-compiler (1.3.2) sha256=a94f3d81d12caf5c5d4ecf13980a70d0aeaa72268f3b9cc13358bcc6509184a0
   flamegraph (0.9.5) sha256=a683020637ffa0e14a72640fa41babf14d926bfeaed87e31907cfd06ab2de8dc
   formatador (1.2.3) sha256=19fa898133c2c26cdbb5d09f6998c1e137ad9427a046663e55adfe18b950d894
