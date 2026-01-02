@@ -25,6 +25,8 @@ module Rack
       'texts/rollingthunder' => 'texts',
       'texts/selected'       => 'texts',
       'texts/ux'             => 'texts',
+      'languages/espa%F1ol'  => 'languages/espanol',
+      'languages/espa%f1ol'  => 'languages/espanol',
       '%E2%80%A6'            => '', # Unicode elipsis of a truncated URL /atoz/fuc…
       '%E2%80%99'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
       '%E2%80%9C'            => '', # URLs from Wordpress sometimes encode ‘,’,“,” like this
