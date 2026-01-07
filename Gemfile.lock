@@ -519,7 +519,7 @@ GEM
     stringex (2.8.6)
     stringio (3.2.0)
     stripe (8.7.0)
-    thor (1.4.0)
+    thor (1.5.0)
     tilt (2.6.1)
     timeout (0.6.0)
     tsort (0.2.0)
@@ -823,7 +823,7 @@ CHECKSUMS
   stringex (2.8.6) sha256=c7b382d2b2a47a1e1646f256df201c48d487d6296fbb289d76802f67f5e929c4
   stringio (3.2.0) sha256=c37cb2e58b4ffbd33fe5cd948c05934af997b36e0b6ca6fdf43afa234cf222e1
   stripe (8.7.0) sha256=632e179ea15f06573fe3d9d9a9be62089c786596db716c4bfdd282ecd1878f13
-  thor (1.4.0) sha256=8763e822ccb0f1d7bee88cde131b19a65606657b847cc7b7b4b82e772bcd8a3d
+  thor (1.5.0) sha256=e3a9e55fe857e44859ce104a84675ab6e8cd59c650a49106a05f55f136425e73
   tilt (2.6.1) sha256=35a99bba2adf7c1e362f5b48f9b581cce4edfba98117e34696dde6d308d84770
   timeout (0.6.0) sha256=6d722ad619f96ee383a0c557ec6eb8c4ecb08af3af62098a0be5057bf00de1af
   tsort (0.2.0) sha256=9650a793f6859a43b6641671278f79cfead60ac714148aabe4e3f0060480089f
