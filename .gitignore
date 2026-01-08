@@ -24,3 +24,9 @@ storage/
 
 # static archive export repo
 website-content
+
+# nix stuff
+.envrc
+shell.nix
+flake.nix
+flake.lock
