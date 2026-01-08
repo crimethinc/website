@@ -53,6 +53,12 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'spanish', lang_code: :es, canonical: 'espanol'),
     Locale.new(locale: 'español', lang_code: :es, canonical: 'espanol'),
 
+    # es-419: spanish in the americas
+    Locale.new(locale: 'espanol-en-las-americas', lang_code: :'es-419', canonical: 'espanol-en-las-americas'),
+    Locale.new(locale: 'espanol-america-latina',  lang_code: :'es-419', canonical: 'espanol-en-las-americas'),
+    Locale.new(locale: 'spanish-in-the-americas', lang_code: :'es-419', canonical: 'espanol-en-las-americas'),
+    Locale.new(locale: 'espanol-en-las-americas', lang_code: :'es-419', canonical: 'espanol-en-las-americas'),
+
     # eu: basque
     Locale.new(locale: 'euskara', lang_code: :eu, canonical: 'euskara'),
     Locale.new(locale: 'basque',  lang_code: :eu, canonical: 'euskara'),

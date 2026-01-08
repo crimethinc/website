@@ -23,6 +23,10 @@ Layout/LineLength:
   Exclude:
     - db/**/*
 
+Naming/VariableNumber:
+  AllowedIdentifiers:
+    - es_419
+
 # TODO: https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsenvironmentvariableaccess
 #       Consider using `Rails.application.config.foo` instead of `ENV['FOO']`
 Rails/EnvironmentVariableAccess:
