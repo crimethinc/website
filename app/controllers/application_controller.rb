@@ -60,8 +60,14 @@ class ApplicationController < ActionController::Base
   end
 
   def set_current_locale
-    locale      = request.subdomain
-    I18n.locale = locale if I18n.available_locales.include?(locale.to_sym)
+    # Special case language dialect subdomains
+    locale = case request.subdomain.to_s
+             when 'fr-qu',  :'fr-qu'  then :'fr-qu'
+             when 'es-419', :'es-419' then :'es-419'
+             else request.subdomain.to_sym
+             end
+
+    I18n.locale = locale if I18n.available_locales.include?(locale)
 
     # Set to either the subdomain, fallback to :en
     Current.locale = locale.presence || I18n.default_locale
