@@ -95,6 +95,14 @@ FactoryBot.define do
     slug { 'espanol' }
   end
 
+  trait(:es_419) do
+    abbreviation { 'es-419' }
+    name_in_english { 'Spanish in the Americas' }
+    name { 'Español en las Américas' }
+    language_direction { 'ltr' }
+    slug { 'espanol-en-las-americas' }
+  end
+
   trait(:eu) do
     abbreviation { 'eu' }
     name_in_english { 'Basque' }
