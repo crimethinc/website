@@ -1,5 +1,11 @@
 @import "../common/font_styling";
 
+#tocdiv {
+  #toc1, #toc2 {
+    li { a { font-size: 1rem; } }
+  }
+}
+
 .right p:first-of-type,
 #anarchy p:first-of-type,
 .leftintro p:first-of-type {
