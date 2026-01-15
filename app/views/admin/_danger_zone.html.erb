@@ -16,13 +16,10 @@
         </p>
 
         <div class="text-end">
-          <%= link_to t('admin.ui.delete'),
+          <%= button_to t('admin.ui.delete'),
                       path,
-                      class: "btn btn-danger",
-                      data:  {
-                        turbo_method:  :delete,
-                        turbo_confirm: t('admin.confirmations.delete')
-                      } %>
+              class: "btn btn-danger",
+              method: 'delete' %>
         </div>
       </div>
     </div>
