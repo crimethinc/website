@@ -82,7 +82,7 @@ GEM
       execjs (~> 2)
     awesome_print (1.9.2)
     aws-eventstream (1.4.0)
-    aws-partitions (1.1204.0)
+    aws-partitions (1.1205.0)
     aws-sdk-core (3.241.3)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
@@ -645,7 +645,7 @@ CHECKSUMS
   autoprefixer-rails (10.4.21.0) sha256=71b48caf850fc25275abd96f0b1fdd51c82e1c9b99cd30085cacb05da9c70235
   awesome_print (1.9.2) sha256=e99b32b704acff16d768b3468680793ced40bfdc4537eb07e06a4be11133786e
   aws-eventstream (1.4.0) sha256=116bf85c436200d1060811e6f5d2d40c88f65448f2125bc77ffce5121e6e183b
-  aws-partitions (1.1204.0) sha256=533ed16969cd37f381995eedc41ece6bbfe6a6eb35fb3ead66221e3bdab0e42a
+  aws-partitions (1.1205.0) sha256=5000d3235bc86c98fad0b1613414f0d0b884cd3e27e34933982885efeefd13df
   aws-sdk-core (3.241.3) sha256=c7c445ecf1c601c860fd537458b2eb8df0c5df01e63c371849e6594e6b1d4f47
   aws-sdk-kms (1.120.0) sha256=a206ac6f62efbe971f802e8399d2702496a5c5bc800abcf94ead87bdddfdfd80
   aws-sdk-s3 (1.211.0) sha256=2ae5feb09ff4862462824f267b76601ed16922a15de56cf51e4fa99bc5b3f519
