@@ -11,7 +11,7 @@ module Admin
     end
 
     def draft
-      @articles = Article.draft.root.page(params[:page])
+      @articles = Article.reorder(updated_at: :desc).draft.root.page(params[:page])
 
       # TEMP: workaround, for now
       @title    = PageTitle.new %i[Admin Articles Draft]
