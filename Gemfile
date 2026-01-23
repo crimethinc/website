@@ -136,6 +136,10 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 # i18n
 gem 'rack-contrib'
 
+# Heroku API SDKs
+gem 'heroku-api-postgres' # Extension for Platform API for Heroku Postgres
+gem 'platform-api'        # Heroku API SDK, rake task: data:copy_production_to_staging
+
 group :production do
   # webserver
   gem 'rack-timeout'
