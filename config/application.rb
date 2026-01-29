@@ -112,8 +112,8 @@ module Crimethinc
     # To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`.
     config.active_support.to_time_preserves_timezone = :zone
 
-    # Load each service specific config file into the application's config,
-    # using Rails' custom config namespace: x
+    # Load each service specific config file into the app’s config,
+    # using Rails’ custom config namespace: x
     # Example: Rails.application.config.x.stripe.secret_key
     #
     # Enumerate through all YAML files in config/services
