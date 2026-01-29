@@ -32,7 +32,7 @@ module ToChangeEverythingHelper
 
     last:  {
       'ελληνικά'       => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
-      'Italiano'       => '/2016/01/25/to-change-everything-in-ten-more-languages#italian',
+      'Italiano'       => '/tce/italiano',
       '한국어'            => '/tce/한국어',
       'Lietuvos'       => '/tce/lietuvos',
       'Malay'          => '/tce/malay',
