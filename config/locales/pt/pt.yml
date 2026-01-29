@@ -59,6 +59,7 @@ pt:
       articles:
         label: Artigos
         feed: RSS
+        a_demonstrators_guide: A Demonstrator’s Guide
         adventure: Aventura
         analysis: Análises
         arts: Artess

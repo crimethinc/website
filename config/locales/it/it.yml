@@ -59,6 +59,7 @@ it:
       articles:
         label: Articoli
         feed: RSS
+        a_demonstrators_guide: A Demonstrator’s Guide
         adventure: Avventura
         analysis: Analisi
         arts: Arte
