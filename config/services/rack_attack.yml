@@ -1,0 +1,9 @@
+---
+development:
+  allowed_user_agent: <%= ENV.fetch("RACK_ATTACK_ALLOWED_USER_AGENT", nil) %>
+
+test:
+  allowed_user_agent: <%= ENV.fetch("RACK_ATTACK_ALLOWED_USER_AGENT", nil) %>
+
+production:
+  allowed_user_agent: <%= ENV.fetch("RACK_ATTACK_ALLOWED_USER_AGENT", nil) %>

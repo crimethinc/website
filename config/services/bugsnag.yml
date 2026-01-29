@@ -1,0 +1,9 @@
+---
+development:
+  api_key: <%= ENV.fetch("BUGSNAG_API_KEY", nil) %>
+
+test:
+  api_key: <%= ENV.fetch("BUGSNAG_API_KEY", nil) %>
+
+production:
+  api_key: <%= ENV.fetch("BUGSNAG_API_KEY", nil) %>

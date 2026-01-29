@@ -111,5 +111,22 @@ module Crimethinc
     # is deprecated and will be removed in Rails 8.2
     # To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`.
     config.active_support.to_time_preserves_timezone = :zone
+
+    # Load each service specific config file into the application's config,
+    # using Rails' custom config namespace: x
+    # Example: Rails.application.config.x.stripe.secret_key
+    #
+    # Enumerate through all YAML files in config/services
+    Rails.root.glob('config/services/*.yml').each do |yaml_filepath|
+      # Read the service name from the YAML file's name
+      service_name = File.basename(yaml_filepath, '.yml')
+
+      # Read the YAML config file for this service
+      service_config = config_for("services/#{service_name}")
+
+      # Load the service's configuration into the custom config namespace
+      # Example: when `yaml_filepath` is "stripe.yml", this will call `config.x.stripe =`
+      config.x.public_send(:"#{service_name}=", service_config)
+    end
   end
 end
