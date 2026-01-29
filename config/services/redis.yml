@@ -1,0 +1,12 @@
+---
+development:
+  provider: <%= ENV.fetch("REDIS_PROVIDER", "REDIS_URL") %>
+  url: <%= ENV.fetch(ENV.fetch("REDIS_PROVIDER", "REDIS_URL"), nil) %>
+
+test:
+  provider: <%= ENV.fetch("REDIS_PROVIDER", "REDIS_URL") %>
+  url: <%= ENV.fetch(ENV.fetch("REDIS_PROVIDER", "REDIS_URL"), nil) %>
+
+production:
+  provider: <%= ENV.fetch("REDIS_PROVIDER", "REDIS_URL") %>
+  url: <%= ENV.fetch(ENV.fetch("REDIS_PROVIDER", "REDIS_URL"), nil) %>

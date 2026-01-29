@@ -111,5 +111,13 @@ module Crimethinc
     # is deprecated and will be removed in Rails 8.2
     # To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`.
     config.active_support.to_time_preserves_timezone = :zone
+
+    # Load service-specific config files into Rails' custom config namespace: x
+    # Example: Rails.application.config.x.stripe.secret_key
+    config.x.app         = config_for 'services/app'
+    config.x.bugsnag     = config_for 'services/bugsnag'
+    config.x.rack_attack = config_for 'services/rack_attack'
+    config.x.redis       = config_for 'services/redis'
+    config.x.stripe      = config_for 'services/stripe'
   end
 end
