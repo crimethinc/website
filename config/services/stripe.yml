@@ -1,0 +1,15 @@
+---
+development:
+  publishable_key: <%= ENV.fetch("STRIPE_PUBLISHABLE_KEY", nil) %>
+  secret_key: <%= ENV.fetch("STRIPE_SECRET_KEY", nil) %>
+  monthly_price_id: <%= ENV.fetch("STRIPE_MONTHLY_PRICE_ID", "monthly") %>
+
+test:
+  publishable_key: <%= ENV.fetch("STRIPE_PUBLISHABLE_KEY", nil) %>
+  secret_key: <%= ENV.fetch("STRIPE_SECRET_KEY", nil) %>
+  monthly_price_id: <%= ENV.fetch("STRIPE_MONTHLY_PRICE_ID", "monthly") %>
+
+production:
+  publishable_key: <%= ENV.fetch("STRIPE_PUBLISHABLE_KEY", nil) %>
+  secret_key: <%= ENV.fetch("STRIPE_SECRET_KEY", nil) %>
+  monthly_price_id: <%= ENV.fetch("STRIPE_MONTHLY_PRICE_ID", "monthly") %>

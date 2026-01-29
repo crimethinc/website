@@ -52,7 +52,7 @@ module SinglePageTool
     # Rails environment is production in our staging environment for
     # heroku reasons. We have environment variables set to distinguish
     # between the two.
-    throw e if Rails.env.production? && ENV.fetch('ON_PRODUCTION') { 'FALSE' } == 'TRUE'
+    throw e if Rails.env.production? && Rails.application.config.x.app.on_production
     ''
   end
 

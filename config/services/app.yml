@@ -1,0 +1,15 @@
+---
+development:
+  on_staging: false
+  on_production: false
+  static_export_images: <%= ENV.fetch("STATIC_EXPORT_IMAGES", nil).present? %>
+
+test:
+  on_staging: false
+  on_production: false
+  static_export_images: <%= ENV.fetch("STATIC_EXPORT_IMAGES", nil).present? %>
+
+production:
+  on_staging: <%= ENV.fetch("ON_STAGING", "FALSE") == "TRUE" %>
+  on_production: <%= ENV.fetch("ON_PRODUCTION", "FALSE") == "TRUE" %>
+  static_export_images: <%= ENV.fetch("STATIC_EXPORT_IMAGES", nil).present? %>

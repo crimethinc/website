@@ -34,7 +34,7 @@ class CodeArchiver
     end
 
     puts '*' * 80
-    if ENV.fetch('STATIC_EXPORT_IMAGES', nil).present?
+    if Rails.application.config.x.app.static_export_images
       puts 'downloading local copies of article images. this will take a while...'
       download_article_images
     else
