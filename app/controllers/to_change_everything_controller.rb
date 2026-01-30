@@ -17,7 +17,6 @@ class ToChangeEverythingController < ApplicationController
   ].freeze
 
   RTL_TO_CHANGE_ANYTHING_YAMLS = %w[
-    srpskohrvatski
     فارسی
   ].freeze
 
