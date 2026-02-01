@@ -8,7 +8,7 @@ module ToChangeEverythingHelper
     outro: %w[anarchy outro takeflight next].freeze
   }.freeze
 
-  # rubocop:disable Layout/LineLength
+  # rubocop:disable Layout/LineLength, Layout/HashAlignment
   LANGUAGE_LINKS = {
     first: {
       'العربية'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#arabic',
@@ -16,7 +16,7 @@ module ToChangeEverythingHelper
       'Български'                                       => '/2016/09/21/to-change-everything-in-11-more-languages#bulgarian',
       'Cebuano'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano',
       'Català'                                          => '/2016/01/25/to-change-everything-in-ten-more-languages#catalan',
-      '中文'                                              => '/2016/01/25/to-change-everything-in-ten-more-languages#chinese',
+      '中文'                                            => '/2016/01/25/to-change-everything-in-ten-more-languages#chinese',
       'Czech'                                           => '/tce/czech',
       'Dansk'                                           => '/2016/01/25/to-change-everything-in-ten-more-languages#danish',
       'Deutsch'                                         => '/tce/deutsch',
@@ -28,12 +28,13 @@ module ToChangeEverythingHelper
       'Français'                                        => '/2016/01/25/to-change-everything-in-ten-more-languages#french',
       'Français (Québec)'                               => '/tce/quebecois'
     }.freeze,
-    # rubocop:enable Layout/LineLength
+    # rubocop:enable Layout/LineLength, Layout/HashAlignment
 
+    # rubocop:disable Layout/HashAlignment
     last:  {
       'ελληνικά'       => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
       'Italiano'       => '/2016/01/25/to-change-everything-in-ten-more-languages#italian',
-      '한국어'          => '/tce/한국어',
+      '한국어'         => '/tce/한국어',
       'Lietuvos'       => '/tce/lietuvos',
       'Malay'          => '/tce/malay',
       'Malti'          => '/2016/09/21/to-change-everything-in-11-more-languages#maltese',
@@ -51,6 +52,7 @@ module ToChangeEverythingHelper
       'Tagalog'        => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano',
       'ภาษาไทย'        => '/tce/ภาษาไทย'
     }.freeze
+    # rubocop:enable Layout/HashAlignment
   }.freeze
 
   def tce_table_of_contents_sections
