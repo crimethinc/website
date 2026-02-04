@@ -84,9 +84,22 @@ module ToChangeEverythingHelper
   end
 
   def url_for_tce_image *pieces
-    [IMAGE_BASE_URL, pieces].join
-  end
+    url = [IMAGE_BASE_URL, pieces].join
 
+    if url.include?("control-it") ||
+       url.include?("liberation-it") ||
+       url.include?("government-it") ||
+       url.include?("property-it") ||
+       url.include?("hierarchy-it")
+      puts "*"*70
+      puts "/tce/images/#{pieces.join.gsub('.jpg', '.png')}"
+
+      "/tce/images/#{pieces.join.gsub('.jpg', '.png')}"
+    else
+      url
+    end
+   end
+    
   def tce_image_tag filename
     image_tag url_for_tce_image filename
   end
