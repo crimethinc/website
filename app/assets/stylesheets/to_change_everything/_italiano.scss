@@ -10,8 +10,8 @@
   #takeflight h1 { font-size: 11vw; }
   
   .right p {
-    font-size: 0.70em;
-    line-height: 1.35;
+    font-size: 0.875rem;
+    line-height: 1.26;
     text-indent: 1em each-line;
   } 
 
@@ -19,6 +19,12 @@
   .leftintro p {
     line-height: 1.1;
     text-indent: 1em each-line;
+  }
+
+  #control h2 { padding: 35% 0 0 15%; }
+  #property h2 {
+    text-shadow: 4px 4px 11px #000;
+    padding: 40% 0 0 20%;
   }
 
   @media (min-width: 1201px) and (max-width: 1670px) {
@@ -31,5 +37,6 @@
     #liberation h2 { padding: 4% 0 0 20%; }
     #borders h2 { padding: 7% 0 0 10%; }
     #leaders h2 { padding: 6% 0 0 15%; }
+    #government .left { padding-top: 74.6%; }
   }
 }
