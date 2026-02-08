@@ -5,5 +5,3 @@ Rails.configuration.stripe = {
 }
 
 Stripe.api_key = Rails.configuration.stripe[:secret_key]
-
-STRIPE_MONTHLY_PRICE_ID = Rails.application.config.x.stripe.monthly_price_id
