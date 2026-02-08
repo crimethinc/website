@@ -107,6 +107,112 @@ RSpec.describe 'Support' do
     end
   end
 
+  describe 'POST /support/create_session' do
+    let(:customer)      { Struct.new(:id).new('cus_test_123') }
+    let(:subscriptions) { Struct.new(:data).new([Struct.new(:id).new('sub_test_1')]) }
+
+    context 'when a subscriber exists with an active subscription' do
+      let(:mailer_double) { instance_double(ActionMailer::MessageDelivery) }
+
+      before do
+        allow(Stripe::Customer).to receive(:list)
+          .and_return(Struct.new(:data).new([customer]))
+        allow(Stripe::Subscription).to receive(:list)
+          .and_return(subscriptions)
+
+        mailer = instance_double(SupportMailer)
+        allow(SupportMailer).to receive(:with).and_return(mailer)
+        allow(mailer).to receive(:edit_subscription).and_return(mailer_double)
+        allow(mailer_double).to receive(:deliver_now)
+      end
+
+      it 'sends an email and redirects with a success notice' do
+        post support_request_path, params: { email: 'donor@example.com' }
+
+        expect(mailer_double).to have_received(:deliver_now)
+        expect(response).to redirect_to(support_path)
+        expect(flash[:notice]).to include('donor@example.com')
+      end
+
+      it 'creates a SupportSession' do
+        expect do
+          post support_request_path, params: { email: 'donor@example.com' }
+        end.to change(SupportSession, :count).by(1)
+      end
+    end
+
+    context 'when no subscriber is found' do
+      before do
+        allow(Stripe::Customer).to receive(:list)
+          .and_return(Struct.new(:data).new([]))
+      end
+
+      it 'redirects with an error' do
+        post support_request_path, params: { email: 'nobody@example.com' }
+
+        expect(response).to redirect_to(support_path)
+        expect(flash[:error]).to be_present
+      end
+    end
+  end
+
+  describe 'GET /support/edit/:token' do
+    let(:portal_session) { Struct.new(:url).new('https://billing.stripe.com/p/session/test_portal') }
+
+    context 'with a valid token' do
+      before do
+        SupportSession.create!(
+          stripe_customer_id: 'cus_test_123',
+          token:              'valid_token',
+          expires_at:         30.minutes.from_now
+        )
+        allow(Stripe::BillingPortal::Session).to receive(:create).and_return(portal_session)
+      end
+
+      it 'creates a portal session and redirects to Stripe' do
+        get support_edit_path(token: 'valid_token')
+
+        expect(Stripe::BillingPortal::Session).to have_received(:create).with(
+          customer:   'cus_test_123',
+          return_url: support_url
+        )
+        expect(response).to redirect_to('https://billing.stripe.com/p/session/test_portal')
+      end
+
+      it 'destroys the support session after use' do
+        expect do
+          get support_edit_path(token: 'valid_token')
+        end.to change(SupportSession, :count).by(-1)
+      end
+    end
+
+    context 'with an expired token' do
+      before do
+        SupportSession.create!(
+          stripe_customer_id: 'cus_test_456',
+          token:              'expired_token',
+          expires_at:         1.hour.ago
+        )
+      end
+
+      it 'redirects to support with an error' do
+        get support_edit_path(token: 'expired_token')
+
+        expect(response).to redirect_to(support_path)
+        expect(flash[:error]).to include('expired')
+      end
+    end
+
+    context 'with an invalid token' do
+      it 'redirects to support with an error' do
+        get support_edit_path(token: 'nonexistent')
+
+        expect(response).to redirect_to(support_path)
+        expect(flash[:error]).to include('expired')
+      end
+    end
+  end
+
   describe 'POST /support/stripe_subscription_payment_succeeded_webhook' do
     let(:webhook_url) { '/support/stripe_subscription_payment_succeeded_webhook' }
     let(:payload)     { { type: 'invoice.payment_succeeded' }.to_json }

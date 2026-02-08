@@ -10,26 +10,23 @@ class SupportController < ApplicationController
   end
 
   def edit
-    @html_id = 'page'
-    @body_id = 'support-edit'
-    @title   = PageTitle.new t('views.support.edit.heading')
+    support_session = SupportSession.find_by token: params[:token]
 
-    @support_session = SupportSession.find_by token: params[:token]
-
-    if @support_session.nil? || @support_session.expired?
-      flash.now[:error] = t('views.support.edit.expired_link_error')
-      redirect_to [:support]
-      return
-    else
-      @customer = Stripe::Customer.retrieve(
-        id:     @support_session.stripe_customer_id,
-        expand: %w[default_source subscriptions] # for future credit card updates
-      )
-      @subscription = @customer.subscriptions.data.first
-      @next_invoice = Stripe::Invoice.upcoming(customer: @customer.id)
+    if support_session.nil? || support_session.expired?
+      flash[:error] = t('views.support.edit.expired_link_error')
+      return redirect_to support_path
     end
 
-    render "#{Current.theme}/support/edit"
+    portal_session = Stripe::BillingPortal::Session.create(
+      customer:   support_session.stripe_customer_id,
+      return_url: support_url
+    )
+
+    support_session.destroy
+    redirect_to portal_session.url, allow_other_host: true, status: :see_other
+  rescue Stripe::StripeError => e
+    flash[:error] = e.message
+    redirect_to support_path
   end
 
   def thanks
@@ -41,12 +38,12 @@ class SupportController < ApplicationController
   end
 
   def create_session
-    email = params[:email]
+    email    = params[:email]
     customer = customer_with_subscription(email)
 
     if customer.blank?
       flash[:error] = t('views.support.create_session.no_existing_customer_error')
-      return redirect_to [:support]
+      return redirect_to support_path
     end
 
     support_session = SupportSession.new(stripe_customer_id: customer.id,
@@ -57,12 +54,12 @@ class SupportController < ApplicationController
       mailer_options = { email: email, support_session: support_session, host: request.host_with_port }
       SupportMailer.with(mailer_options).edit_subscription.deliver_now
 
-      flash.now[:notice] = t('views.support.create_session.success_notice', email: email)
+      flash[:notice] = t('views.support.create_session.success_notice', email: email)
     else
-      flash.now[:error] = t('views.support.create_session.repeat_customer_error')
+      flash[:error] = t('views.support.create_session.repeat_customer_error')
     end
 
-    redirect_to [:support]
+    redirect_to support_path
   end
 
   def create
@@ -78,36 +75,10 @@ class SupportController < ApplicationController
     redirect_to support_path
   end
 
-  def update_subscription
-    subscription = Stripe::Subscription.retrieve(params[:subscription_id])
-    subscription.quantity = params[:amount].to_i
-
-    if subscription&.save
-      flash.now[:notice] = t('views.support.update_subscription.notice')
-    else
-      flash.now[:error] = t('views.support.update_subscription.error')
-    end
-
-    redirect_to [:support_edit, { token: params[:token] }]
-  end
-
-  def cancel_subscription
-    subscription = Stripe::Subscription.retrieve(params[:subscription_id])
-
-    if subscription&.cancel
-      SupportSession.find_by(token: params[:token]).destroy
-      flash.now[:notice] = t('views.support.cancel_subscription.notice')
-    else
-      flash.now[:error] = t('views.support.cancel_subscription.error')
-    end
-
-    redirect_to [:support]
-  end
-
   def stripe_subscription_payment_succeeded_webhook
-    payload   = request.body.read
-    sig       = request.env['HTTP_STRIPE_SIGNATURE']
-    secret    = Rails.configuration.stripe[:webhook_secret]
+    payload = request.body.read
+    sig     = request.env['HTTP_STRIPE_SIGNATURE']
+    secret  = Rails.configuration.stripe[:webhook_secret]
 
     Stripe::Webhook.construct_event(payload, sig, secret)
 
@@ -119,13 +90,17 @@ class SupportController < ApplicationController
   private
 
   def customer_with_subscription email
-    customers = Stripe::Customer.list(email: email, expand: %w[data.subscriptions]).data
+    customers    = Stripe::Customer.list(email: email).data
+    customer_ids = customers.map(&:id)
 
-    customers.each do |customer|
-      customers.delete(customer) if customer.subscriptions.data.empty?
+    return nil if customer_ids.empty?
+
+    customer_ids.each do |customer_id|
+      subscriptions = Stripe::Subscription.list(customer: customer_id, status: 'active', limit: 1)
+      return customers.find { |c| c.id == customer_id } if subscriptions.data.any?
     end
 
-    customers.first # returns nil if empty
+    nil
   end
 
   def create_subscription_checkout_session
