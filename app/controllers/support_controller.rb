@@ -66,17 +66,16 @@ class SupportController < ApplicationController
   end
 
   def create
-    if params[:monthly] == 'true' && customer_with_subscription(stripe_options[:email])
-      flash[:error] = t('views.support.create.repeat_subscriber_error')
-      return redirect_to [:support]
-    end
+    session = if params[:monthly] == 'true'
+                create_subscription_checkout_session
+              else
+                create_payment_checkout_session
+              end
 
-    params[:monthly] == 'true' ? create_stripe_subscription : create_stripe_charge
-  rescue Stripe::CardError => e
-    flash.now[:error] = e.message
-    render :new
-  else
-    redirect_to [:thanks]
+    redirect_to session.url, allow_other_host: true, status: :see_other
+  rescue Stripe::StripeError => e
+    flash[:error] = e.message
+    redirect_to support_path
   end
 
   def update_subscription
@@ -125,14 +124,6 @@ class SupportController < ApplicationController
 
   private
 
-  def stripe_options
-    {
-      amount: params[:amount],
-      email:  params[:js_stripe_email],
-      source: params[:js_stripe_token]
-    }
-  end
-
   def customer_with_subscription email
     customers = Stripe::Customer.list(email: email, expand: %w[data.subscriptions]).data
 
@@ -143,31 +134,36 @@ class SupportController < ApplicationController
     customers.first # returns nil if empty
   end
 
-  def create_stripe_subscription
-    Stripe::Subscription.create(
-      customer: stripe_customer.id,
-      items:    [
-        {
-          price:    STRIPE_MONTHLY_PRICE_ID,
-          quantity: stripe_options[:amount]
-        }
-      ]
+  def create_subscription_checkout_session
+    amount = params[:amount].to_i
+    prices = Stripe::Price.list(lookup_keys: ["crimethinc_monthly_#{amount}"], limit: 1)
+    price  = prices.data.first
+
+    raise Stripe::InvalidRequestError.new("No price found for $#{amount}/mo", nil) if price.nil?
+
+    Stripe::Checkout::Session.create(
+      mode:        'subscription',
+      line_items:  [{ price: price.id, quantity: 1 }],
+      success_url: thanks_url,
+      cancel_url:  support_url
     )
   end
 
-  def create_stripe_charge
-    Stripe::Charge.create(
-      currency:      'usd',
-      customer:      stripe_customer.id,
-      amount:        stripe_options[:amount].to_i * 100, # charges need to be in cents
-      description:   t('views.support.new.description_one_time'),
-      receipt_email: stripe_customer.email
+  def create_payment_checkout_session
+    amount = params[:amount].to_i
+
+    Stripe::Checkout::Session.create(
+      mode:        'payment',
+      line_items:  [{
+        price_data: {
+          currency:     'usd',
+          product_data: { name: t('views.support.new.description_one_time') },
+          unit_amount:  amount * 100
+        },
+        quantity:   1
+      }],
+      success_url: thanks_url,
+      cancel_url:  support_url
     )
-  end
-
-  def stripe_customer
-    stripe_options_without_amount = stripe_options.except(:amount)
-
-    @stripe_customer ||= Stripe::Customer.create stripe_options_without_amount
   end
 end
