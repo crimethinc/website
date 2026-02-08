@@ -30,6 +30,7 @@ Naming/VariableNumber:
 RSpec/DescribeClass:
   Exclude:
     - spec/system/*
+    - spec/lib/tasks/*
 
 RSpec/ExampleLength:
   Max: 14
