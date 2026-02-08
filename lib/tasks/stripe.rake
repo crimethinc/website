@@ -38,4 +38,78 @@ namespace :stripe do
 
     puts "==> Done! Set STRIPE_MONTHLY_PRODUCT_ID=#{product.id} in your environment."
   end
+
+  desc 'Migrate existing $1 x quantity subscriptions to individual price objects'
+  task :migrate_subscriptions, [:mode] => :environment do |_t, args|
+    execute = args[:mode] == 'execute'
+
+    puts execute ? '==> EXECUTE MODE: Will modify subscriptions!' : '==> DRY RUN: No changes will be made.'
+    puts ''
+
+    subscriptions = fetch_all_subscriptions
+    puts "==> Found #{subscriptions.size} active subscription(s)."
+    puts ''
+
+    migrated = 0
+    skipped  = 0
+    errored  = 0
+
+    subscriptions.each do |subscription|
+      item     = subscription.items.data.first
+      price    = Stripe::Price.retrieve(item.price.id)
+      quantity = item.quantity
+
+      if quantity == 1 && price.unit_amount > 100
+        puts "  SKIP #{subscription.id}: already using individual price ($#{price.unit_amount / 100}/mo)"
+        skipped += 1
+        next
+      end
+
+      amount     = price.unit_amount / 100 * quantity
+      lookup_key = "crimethinc_monthly_#{amount}"
+
+      new_prices = Stripe::Price.list(lookup_keys: [lookup_key], limit: 1)
+      new_price  = new_prices.data.first
+
+      if new_price.nil?
+        puts "  ERROR #{subscription.id}: no price found for #{lookup_key} ($#{amount}/mo)"
+        errored += 1
+        next
+      end
+
+      puts "  #{execute ? 'MIGRATE' : 'WOULD MIGRATE'} #{subscription.id}: " \
+           "$#{price.unit_amount / 100} x #{quantity} => $#{amount}/mo (#{new_price.id})"
+
+      if execute
+        Stripe::Subscription.update(
+          subscription.id,
+          items:              [
+            { id: item.id, price: new_price.id, quantity: 1 }
+          ],
+          proration_behavior: 'none'
+        )
+      end
+
+      migrated += 1
+    end
+
+    puts ''
+    puts "==> Summary: #{migrated} migrated, #{skipped} skipped, #{errored} errored"
+    puts '==> (Dry run — no changes made. Run with [execute] to apply.)' unless execute
+  end
+end
+
+def fetch_all_subscriptions
+  all    = []
+  params = { status: 'active', limit: 100 }
+
+  loop do
+    batch = Stripe::Subscription.list(params)
+    all.concat(batch.data)
+    break unless batch.has_more
+
+    params[:starting_after] = batch.data.last.id
+  end
+
+  all
 end
