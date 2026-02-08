@@ -4,4 +4,5 @@ Rails.configuration.stripe = {
   webhook_secret:  Rails.application.config.x.stripe.webhook_secret
 }
 
-Stripe.api_key = Rails.configuration.stripe[:secret_key]
+Stripe.api_key     = Rails.configuration.stripe[:secret_key]
+Stripe.api_version = '2026-01-28.clover'
