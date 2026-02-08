@@ -101,6 +101,7 @@ end
 # testing / ci
 group :test do
   gem 'simplecov', require: false
+  gem 'webmock'
 end
 
 # dev

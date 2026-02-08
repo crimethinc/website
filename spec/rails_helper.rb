@@ -8,6 +8,9 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'support/factory_bot'
+require 'webmock/rspec'
+
+WebMock.disable_net_connect!(allow_localhost: true)
 
 ActiveRecord::Migration.maintain_test_schema!
 
