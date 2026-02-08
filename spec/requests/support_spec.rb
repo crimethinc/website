@@ -107,6 +107,44 @@ RSpec.describe 'Support' do
     end
   end
 
+  describe 'POST /support/stripe_subscription_payment_succeeded_webhook' do
+    let(:webhook_url) { '/support/stripe_subscription_payment_succeeded_webhook' }
+    let(:payload)     { { type: 'invoice.payment_succeeded' }.to_json }
+    let(:secret)      { Rails.configuration.stripe[:webhook_secret] }
+
+    let(:timestamp) { Time.now.to_i }
+
+    let(:sig_header) do
+      signed_payload = "#{timestamp}.#{payload}"
+      signature = OpenSSL::HMAC.hexdigest('SHA256', secret, signed_payload)
+      "t=#{timestamp},v1=#{signature}"
+    end
+
+    it 'returns 200 with a valid signature' do
+      post webhook_url,
+           env:     { 'RAW_POST_DATA' => payload },
+           headers: { 'HTTP_STRIPE_SIGNATURE' => sig_header, 'CONTENT_TYPE' => 'application/json' }
+
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'returns 400 with an invalid signature' do
+      post webhook_url,
+           env:     { 'RAW_POST_DATA' => payload },
+           headers: { 'HTTP_STRIPE_SIGNATURE' => 't=123,v1=badsig', 'CONTENT_TYPE' => 'application/json' }
+
+      expect(response).to have_http_status(:bad_request)
+    end
+
+    it 'returns 400 with no signature header' do
+      post webhook_url,
+           env:     { 'RAW_POST_DATA' => payload },
+           headers: { 'CONTENT_TYPE' => 'application/json' }
+
+      expect(response).to have_http_status(:bad_request)
+    end
+  end
+
   describe 'GET /thanks' do
     it 'renders the thanks page' do
       get thanks_path

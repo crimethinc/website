@@ -105,21 +105,15 @@ class SupportController < ApplicationController
   end
 
   def stripe_subscription_payment_succeeded_webhook
-    event = JSON.parse(request.body.read)
+    payload   = request.body.read
+    sig       = request.env['HTTP_STRIPE_SIGNATURE']
+    secret    = Rails.configuration.stripe[:webhook_secret]
 
-    if event['type'] == 'invoice.payment_succeeded'
-      customer_id = event['data']['object']['customer']
-      customer    = Stripe::Customer.retrieve(customer_id)
-
-      charge_id = event['data']['object']['charge']
-      charge    = Stripe::Charge.retrieve(charge_id)
-
-      charge.receipt_email = customer.email
-      charge.description   = t('views.support.new.description_monthly')
-      charge.save
-    end
+    Stripe::Webhook.construct_event(payload, sig, secret)
 
     head :ok
+  rescue JSON::ParserError, Stripe::SignatureVerificationError
+    head :bad_request
   end
 
   private
