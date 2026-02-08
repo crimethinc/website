@@ -24,22 +24,46 @@ RSpec.describe 'Stripe rake tasks' do
       ]
     end
 
+    let(:empty_search) { Struct.new(:data).new([]) }
+    let(:empty_list)   { Struct.new(:data).new([]) }
+
     before do
-      allow(Stripe::Product).to receive(:create).and_return(product)
-      allow(Stripe::Price).to receive(:create).and_return(price)
+      allow(Stripe::Product).to receive_messages(search: empty_search, create: product)
+      allow(Stripe::Price).to receive_messages(list: empty_list, create: price)
 
       Rake::Task['stripe:create_prices'].reenable
       Rake::Task['stripe:create_prices'].invoke
     end
 
-    it 'creates a product' do
+    it 'creates a product when none exists' do
       expect(Stripe::Product).to have_received(:create).once.with(
         name:     'Monthly CrimethInc. Support',
         metadata: { managed_by: 'crimethinc_rake' }
       )
     end
 
+    it 'reuses an existing product' do
+      allow(Stripe::Product).to receive(:search)
+        .and_return(Struct.new(:data).new([product]))
+
+      Rake::Task['stripe:create_prices'].reenable
+      Rake::Task['stripe:create_prices'].invoke
+
+      expect(Stripe::Product).to have_received(:create).once # only from the first invoke
+    end
+
     it 'creates 85 recurring prices' do
+      expect(Stripe::Price).to have_received(:create).exactly(85).times
+    end
+
+    it 'skips prices that already exist' do
+      allow(Stripe::Price).to receive(:list)
+        .and_return(Struct.new(:data).new([price]))
+
+      Rake::Task['stripe:create_prices'].reenable
+      Rake::Task['stripe:create_prices'].invoke
+
+      # 85 from first invoke, 0 from second (all skipped)
       expect(Stripe::Price).to have_received(:create).exactly(85).times
     end
 

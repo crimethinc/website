@@ -13,16 +13,33 @@ namespace :stripe do
       8000, 8500, 9000, 9500, 10_000
     ]
 
-    puts '==> Creating Stripe Product for monthly support...'
-    product = Stripe::Product.create(
-      name:     'Monthly CrimethInc. Support',
-      metadata: { managed_by: 'crimethinc_rake' }
-    )
-    puts "    Product created: #{product.id}"
+    puts '==> Finding or creating Stripe Product for monthly support...'
+    products = Stripe::Product.search(query: "metadata['managed_by']:'crimethinc_rake'", limit: 1)
+    product  = products.data.first
 
-    puts "==> Creating #{amounts.size} recurring Prices..."
+    if product
+      puts "    Product already exists: #{product.id}"
+    else
+      product = Stripe::Product.create(
+        name:     'Monthly CrimethInc. Support',
+        metadata: { managed_by: 'crimethinc_rake' }
+      )
+      puts "    Product created: #{product.id}"
+    end
+
+    puts "==> Creating #{amounts.size} recurring Prices (skipping existing)..."
+    created = 0
+    skipped = 0
+
     amounts.each do |amount|
       lookup_key = "crimethinc_monthly_#{amount}"
+      existing   = Stripe::Price.list(lookup_keys: [lookup_key], limit: 1)
+
+      if existing.data.any?
+        puts "    SKIP $#{amount}/mo => #{lookup_key} (already exists: #{existing.data.first.id})"
+        skipped += 1
+        next
+      end
 
       Stripe::Price.create(
         product:     product.id,
@@ -34,9 +51,11 @@ namespace :stripe do
       )
 
       puts "    $#{amount}/mo => #{lookup_key}"
+      created += 1
     end
 
-    puts "==> Done! Set STRIPE_MONTHLY_PRODUCT_ID=#{product.id} in your environment."
+    puts "==> Done! #{created} created, #{skipped} skipped."
+    puts "    STRIPE_MONTHLY_PRODUCT_ID=#{product.id}"
   end
 
   desc 'Migrate existing $1 x quantity subscriptions to individual price objects'
