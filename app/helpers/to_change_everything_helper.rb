@@ -33,13 +33,13 @@ module ToChangeEverythingHelper
     # rubocop:disable Layout/HashAlignment
     last:  {
       'ελληνικά'       => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
-      'Italiano'       => '/2016/01/25/to-change-everything-in-ten-more-languages#italian',
+      'Italiano'       => '/tce/italiano',
       '한국어'         => '/tce/한국어',
       'Lietuvos'       => '/tce/lietuvos',
       'Malay'          => '/tce/malay',
       'Malti'          => '/2016/09/21/to-change-everything-in-11-more-languages#maltese',
       'Nederlands'     => '/2016/09/21/to-change-everything-in-11-more-languages#dutch',
-      '日本語'         => '/tce/日本語',
+      '日本語'          => '/tce/日本語',
       'Polski'         => '/tce/polski',
       'Português'      => '/tce/portugues',
       'Română'         => '/2016/01/25/to-change-everything-in-ten-more-languages#romanian',
