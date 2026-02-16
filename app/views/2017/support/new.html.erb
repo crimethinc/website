@@ -7,12 +7,6 @@
 <div class='row'>
   <div class='column column-one-third'>
     <%= form_with url: :support_create, id: :js_stripe_form do |form| %>
-      <script src='https://checkout.stripe.com/checkout.js'></script>
-
-      <!-- These get populated by the token callback below -->
-      <%= form.hidden_field :js_stripe_email %>
-      <%= form.hidden_field :js_stripe_token %>
-
       <div class='row buttons'>
         <div class='column column-half'>
           <%= form.radio_button :monthly, true, checked: true %>
@@ -31,13 +25,11 @@
       <%= form.label :amount, t('views.support.new.amount_label') %>
 
       <div id="dollar-sign-amount-wrapper">
-        <%= form.number_field :amount, value: 50, min: 1, max: 1000, step: 1, tabindex: '-1' %>
+        <%= form.number_field :amount, value: 45, min: 1, max: 10000, step: 1, tabindex: '-1' %>
       </div>
 
       <div class='actions'>
-        <button id='js-stripe-button' class='button'>
-          <%= t 'views.support.new.button_text' %>
-        </button>
+        <%= form.submit t('views.support.new.button_text'), class: 'button' %>
       </div>
     <% end %>
   </div>
@@ -58,42 +50,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  var handler = StripeCheckout.configure({
-    key:    '<%= Rails.configuration.stripe[:publishable_key] %>',
-    image:  '<%= asset_url 'icons/icon-1200x1200.png' %>',
-    locale: 'auto',
-    token:  function(token) {
-      document.getElementById('js_stripe_token').value = token.id;
-      document.getElementById('js_stripe_email').value = token.email;
-      document.getElementById('js_stripe_form').submit();
-    }
-  });
-
-  document.getElementById('js-stripe-button').addEventListener('click', function(e) {
-    var amount = document.getElementById('amount').value
-
-    if (document.getElementById('monthly_true').checked === true){
-      var description = '$' + amount + ' <%= t 'views.support.new.description_monthly' %>';
-    } else {
-      var description = '$' + amount + ' <%= t 'views.support.new.description_one_time' %>';
-    }
-
-    // Open Checkout with further options:
-    handler.open({
-      description: description,
-      amount: parseInt(amount) * 100
-    });
-
-    e.preventDefault();
-  });
-
-  // Close Checkout on page navigation:
-  window.addEventListener('popstate', function() {
-    handler.close();
-  });
-</script>
 
 <% content_for :javascript do %>
   <%= javascript_import_module_tag :support %>
