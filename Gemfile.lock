@@ -315,7 +315,7 @@ GEM
       rexml (>= 3.3.9)
     pandoc-ruby (2.1.10)
     parallel (1.27.0)
-    parser (3.3.10.1)
+    parser (3.3.10.2)
       ast (~> 2.4.1)
       racc
     pg (1.6.3-arm64-darwin)
@@ -774,7 +774,7 @@ CHECKSUMS
   overcommit (0.68.0) sha256=bfbcd26388e024e10a3d720f03077bc9389fe7c3beac360263b6c77926bcc8d0
   pandoc-ruby (2.1.10) sha256=37653d6b5e71657fb25b3cb230e6eebbfb8c925c7f1fcf69dfb6b929d12b74b2
   parallel (1.27.0) sha256=4ac151e1806b755fb4e2dc2332cbf0e54f2e24ba821ff2d3dcf86bf6dc4ae130
-  parser (3.3.10.1) sha256=06f6a725d2cd91e5e7f2b7c32ba143631e1f7c8ae2fb918fc4cebec187e6a688
+  parser (3.3.10.2) sha256=6f60c84aa4bdcedb6d1a2434b738fe8a8136807b6adc8f7f53b97da9bc4e9357
   pg (1.6.3-arm64-darwin) sha256=7240330b572e6355d7c75a7de535edb5dfcbd6295d9c7777df4d9dddfb8c0e5f
   pg (1.6.3-x86_64-linux) sha256=5d9e188c8f7a0295d162b7b88a768d8452a899977d44f3274d1946d67920ae8d
   platform-api (3.8.0) sha256=d5b6b303e93bf0fb83b0e87637999a93a71a008ccb207540596c849ef07ce417
