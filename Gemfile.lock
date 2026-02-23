@@ -134,7 +134,7 @@ GEM
     concurrent-ruby (1.3.6)
     connection_pool (2.5.5)
     crass (1.0.6)
-    dalli (5.0.0)
+    dalli (5.0.1)
       logger
     date (3.5.1)
     diff-lcs (1.6.2)
@@ -692,7 +692,7 @@ CHECKSUMS
   concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
   connection_pool (2.5.5) sha256=e54ff92855753df1fd7c59fa04a398833355f27dd14c074f8c83a05f72a716ad
   crass (1.0.6) sha256=dc516022a56e7b3b156099abc81b6d2b08ea1ed12676ac7a5657617f012bd45d
-  dalli (5.0.0) sha256=7d5ae821da3ef98cad68e77f09ae0e563244dc0f3995f5c8999c5a379fa3d468
+  dalli (5.0.1) sha256=ced5dcd5643cc67971432eee25f713720fc5e1d2cf6505e36695c33654e9f28d
   date (3.5.1) sha256=750d06384d7b9c15d562c76291407d89e368dda4d4fff957eb94962d325a0dc0
   diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
   docile (1.4.1) sha256=96159be799bfa73cdb721b840e9802126e4e03dfc26863db73647204c727f21e
