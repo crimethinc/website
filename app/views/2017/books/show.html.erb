@@ -50,7 +50,7 @@
       <% end %>
 
       <div class="tool-specs">
-        <ol>
+        <ul>
           <% if @tool.width.present? %>
             <li>
               <b>Size</b>
@@ -81,7 +81,7 @@
               <span>Yes</span>
             </li>
           <% end %>
-        </ol>
+        </ul>
       </div> <!-- .tool-specs -->
 
       <%= render_themed "books/table_of_contents", book: @tool %>
