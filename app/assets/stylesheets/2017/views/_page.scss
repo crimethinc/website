@@ -127,7 +127,7 @@
     }
 
     ol {
-      list-style-type: square;
+      list-style-type: numerals;
     }
 
     ul {
@@ -141,7 +141,17 @@
     }
 
     li {
-      margin: 0 0 0.5em 1em;
+      margin: 0 0 0.5em 0;
+    }
+
+    .e-content {
+      li {
+        margin: 0 0 0.5em 1em;
+      }
+
+      ol li {
+        margin-left: 1.5em;
+      }
     }
 
     li li {
