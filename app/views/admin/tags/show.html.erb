@@ -1,0 +1,48 @@
+<%= render "admin/page_header", thing: @tag %>
+
+<article>
+  <header>
+    <h1>
+      <%= link_to [:admin, @tag], class: "p-name" do %>
+        <span class="h1 name"><%= @tag.name %></span>
+      <% end %>
+    </h1>
+  </header>
+
+  <hr>
+  <p>
+    <strong>Name:</strong>
+    <%= @tag.name %>
+  </p>
+
+  <p>
+    <strong>Slug:</strong>
+    <%= @tag.slug %>
+  </p>
+
+  <p>
+    <strong>URL:</strong>
+    <%= link_to @tag.path, @tag.path %>
+  </p>
+
+  <p>
+    <strong>Description (raw):</strong>
+  </p>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <pre class="mb-0"><code><%= @tag.description %></code></pre>
+    </div>
+  </div>
+
+  <p>
+    <strong>Description (rendered):</strong>
+  </p>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <%= render_markdown @tag.description %>
+    </div>
+  </div>
+
+</article>
