@@ -206,6 +206,7 @@ Rails.application.routes.draw do
     resources :posters,     concerns: :paginatable
     resources :redirects,   concerns: :paginatable
     resources :stickers,    concerns: :paginatable
+    resources :tags,        concerns: :paginatable
     resources :users,       concerns: :paginatable
     resources :videos,      concerns: :paginatable
     resources :zines,       concerns: :paginatable

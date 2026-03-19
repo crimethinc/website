@@ -19,4 +19,30 @@
     <strong>Slug:</strong>
     <%= @category.slug %>
   </p>
+
+  <p>
+    <strong>URL:</strong>
+    <%= link_to @category.path, @category.path %>
+  </p>
+
+  <p>
+    <strong>Description (raw):</strong>
+  </p>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <pre class="mb-0"><code><%= @category.description %></code></pre>
+    </div>
+  </div>
+
+  <p>
+    <strong>Description (rendered):</strong>
+  </p>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <%= render_markdown @category.description %>
+    </div>
+  </div>
+
 </article>

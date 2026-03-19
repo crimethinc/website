@@ -6,6 +6,7 @@
       <th></th>
       <th>Name</th>
       <th>Path</th>
+      <th>Description</th>
       <th class='text-end'>Articles</th>
     </tr>
   </thead>
@@ -16,8 +17,9 @@
         <td>
           <%= link_to "EDIT", [:edit, :admin, category], class: "btn btn-outline-primary btn-sm" %>
         </td>
-        <td><b><%= category.name %></b></td>
+        <td><b><%= link_to category.name, [:admin, category] %></b></td>
         <td><%= link_to category.path, category.path %></td>
+        <td><%= truncate(category.description, length: 80) %></td>
         <td class='text-end'><%= category.articles.count %></td>
       </tr>
     <% end %>
