@@ -14,6 +14,18 @@ describe Tag do
     end
   end
 
+  describe 'description' do
+    it 'is optional' do
+      tag = described_class.new(name: 'no-description')
+      expect(tag).to be_valid
+    end
+
+    it 'can be set' do
+      tag = described_class.create!(name: 'with-description', description: 'A tag about things')
+      expect(tag.reload.description).to eq('A tag about things')
+    end
+  end
+
   describe 'assigned_to?' do
     let(:page) { Page.create(title: 'about') }
 

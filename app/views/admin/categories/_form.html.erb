@@ -9,6 +9,9 @@
       Leave blank to auto-generate <code>slug</code> based on <code>name</code>.
     </p>
 
+    <%= render "admin/label_and_area_form_group", form: form, attr: :description, rows: 4 %>
+    <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+
     <%= render "admin/form_actions", cancel_url: [:admin, :categories] %>
   <% end %>
 </div>

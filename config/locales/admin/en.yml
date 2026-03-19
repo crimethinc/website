@@ -166,6 +166,10 @@ en:
       destroy:
         notice: Logo was successfully destroyed.
     tags:
+      index_title: Tags
+      new_title: New Tags
+      show_title: "Tags : %{name}"
+      edit_title: "Editing tag %{id} : %{name}"
       create:
         notice: Tag was successfully created.
       update:

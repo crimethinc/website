@@ -4,8 +4,9 @@ class TagsController < ApplicationController
   before_action :set_articles
 
   def show
-    @html_id = 'page'
-    @body_id = 'tag'
+    @html_id  = 'page'
+    @body_id  = 'tag'
+    @editable = @tag
 
     render "#{Current.theme}/tags/show"
   end
