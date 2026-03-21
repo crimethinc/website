@@ -8,7 +8,7 @@ module Admin
     end
 
     def show
-      redirect_to %i[admin categories]
+      @title = admin_title(@category, %i[id name])
     end
 
     def new
@@ -50,7 +50,7 @@ module Admin
     end
 
     def category_params
-      params.expect category: %i[name slug]
+      params.expect category: %i[name slug description]
     end
   end
 end

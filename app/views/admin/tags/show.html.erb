@@ -1,10 +1,10 @@
-<%= render "admin/page_header", thing: @category %>
+<%= render "admin/page_header", thing: @tag %>
 
 <article>
   <header>
     <h1>
-      <%= link_to [:admin, @category], class: "p-name" do %>
-        <span class="h1 name"><%= @category.name %></span>
+      <%= link_to [:admin, @tag], class: "p-name" do %>
+        <span class="h1 name"><%= @tag.name %></span>
       <% end %>
     </h1>
   </header>
@@ -12,17 +12,17 @@
   <hr>
   <p>
     <strong>Name:</strong>
-    <%= @category.name %>
+    <%= @tag.name %>
   </p>
 
   <p>
     <strong>Slug:</strong>
-    <%= @category.slug %>
+    <%= @tag.slug %>
   </p>
 
   <p>
     <strong>URL:</strong>
-    <%= link_to @category.path, @category.path %>
+    <%= link_to @tag.path, @tag.path %>
   </p>
 
   <p>
@@ -31,7 +31,7 @@
 
   <div class="card mb-3">
     <div class="card-body">
-      <pre class="mb-0"><code><%= @category.description %></code></pre>
+      <pre class="mb-0"><code><%= @tag.description %></code></pre>
     </div>
   </div>
 
@@ -41,7 +41,7 @@
 
   <div class="card mb-3">
     <div class="card-body">
-      <%= render_markdown @category.description %>
+      <%= render_markdown @tag.description %>
     </div>
   </div>
 

@@ -7,24 +7,26 @@
   }
 
   #intro-image {
-    margin-top: 2rem
+    margin-top: 2rem;
   }
 }
 
 .definitions article {
-  padding-top: 1em
+  padding-top: 1em;
 }
 
 #page {
   #tools {
-    main{
-      .badge { display: none; }
+    main {
+      .badge {
+        display: none;
+      }
 
       .icon-image {
         height: 1.3rem !important;
         width: auto !important;
-        opacity: .5;
-        margin-right: .25rem;
+        opacity: 0.5;
+        margin-right: 0.25rem;
       }
 
       .localizations,
@@ -41,12 +43,14 @@
 
         li {
           border-right: 1px solid #ccc;
-          padding-right: .5em;
-          margin-right: .25em;
+          padding-right: 0.5em;
+          margin-right: 0.25em;
           display: inline-block;
         }
 
-        li:last-child { border-right: none; }
+        li:last-child {
+          border-right: none;
+        }
       }
 
       hr {
@@ -83,21 +87,35 @@
 
       // Contradictionary rounded corners
       // books#index
-      #contradictionary .tool-front img { border-radius: 0 10px 10px 0; }
+      #contradictionary .tool-front img {
+        border-radius: 0 10px 10px 0;
+      }
       // books#show
-      .tool-front.contradictionary-cover img { border-radius: 0 20px 20px 0; }
+      .tool-front.contradictionary-cover img {
+        border-radius: 0 20px 20px 0;
+      }
 
       // Cover image sizes on /books
       .book {
         // Custom size
-        &#recipes-for-disaster         .tool-front img { width: 100%; }
-        &#contradictionary             .tool-front img { width:  60%; }
+        &#recipes-for-disaster .tool-front img {
+          width: 100%;
+        }
+        &#contradictionary .tool-front img {
+          width: 60%;
+        }
 
         &#expect-resistance,
-        &#days-of-war-nights-of-love { .tool-front img { width:  79%; } }
+        &#days-of-war-nights-of-love {
+          .tool-front img {
+            width: 79%;
+          }
+        }
 
         // Default size
-        & .tool-front img { width:  68%; }
+        & .tool-front img {
+          width: 68%;
+        }
       }
 
       .tool-section {
@@ -127,13 +145,12 @@
         }
       }
 
-
       .tool {
         margin-bottom: 4rem;
 
         .p-name {
           margin-bottom: 2rem;
-          font-size:   2rem;
+          font-size: 2rem;
           line-height: 1.25em;
 
           a {
@@ -154,11 +171,11 @@
           }
 
           time {
-            margin-top: .5em;
+            margin-top: 0.5em;
             display: block;
             text-align: right;
             color: $color-gray;
-            padding-right: .25em;
+            padding-right: 0.25em;
           }
         }
       }
@@ -179,7 +196,7 @@
 
       .isbns {
         h1 {
-          margin: .5rem 0 1.5rem 0;
+          margin: 0.5rem 0 1.5rem 0;
         }
 
         p {
@@ -214,37 +231,38 @@
       }
 
       #download a {
-        margin-top:     .5rem;
-        margin-bottom:  .5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
       }
 
       .tool-specs {
-        margin-top:     2rem;
-        margin-bottom:  2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         padding-bottom: 2rem;
-        border-bottom:  $border-size-xsmall solid $color-gray-light;
+        border-bottom: $border-size-xsmall solid $color-gray-light;
 
         @media screen and (min-width: $large-phone) {
           padding-bottom: 0;
-          border-bottom:  none;
+          border-bottom: none;
         }
-        ol, ul {
+        ol,
+        ul {
           margin-left: 2rem;
         }
 
         li {
-          margin-bottom: .5em;
+          margin-bottom: 0.5em;
         }
 
         b {
-          padding-right: .25em;
+          padding-right: 0.25em;
         }
       }
 
       .h-entry .e-content .table-of-contents,
       .table-of-contents {
-        padding-top:  2rem;
-        border-top:  $border-size-xsmall solid $color-gray-light;
+        padding-top: 2rem;
+        border-top: $border-size-xsmall solid $color-gray-light;
 
         * {
           font-size: 1rem;
@@ -253,7 +271,7 @@
         h1 {
           font-weight: bold;
           font-weight: 700;
-          font-size:   1.5rem;
+          font-size: 1.5rem;
           margin-bottom: 1rem;
         }
 
@@ -278,10 +296,9 @@
         }
       }
 
-
       .tool-content {
         padding-top: 2rem;
-        border-top:  $border-size-xsmall solid $color-gray-light;
+        border-top: $border-size-xsmall solid $color-gray-light;
 
         h1 {
           font-size: 3rem;
@@ -306,6 +323,15 @@
 
       .list {
         margin: 2rem 0;
+
+        li {
+          margin-left: 1.5em;
+        }
+
+        li ul {
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+        }
       }
 
       // extras
@@ -315,7 +341,7 @@
 
       .main {
         p {
-        font-size: 1rem;
+          font-size: 1rem;
         }
 
         a {
@@ -373,7 +399,6 @@
           padding-right: 0px;
         }
       }
-
     }
   }
 }
