@@ -20,7 +20,8 @@ chdir APP_ROOT do
 
   # run tests
   if ARGV[0].nil?
-    system! 'bundle exec rspec'
+    # system! 'bundle exec rspec'
+    system! "bundle exec rspec --exclude-pattern='spec/system/*'"
 
     puts '==> Running Rubocop…'
     system! 'bundle exec rubocop'

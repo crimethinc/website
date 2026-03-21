@@ -332,45 +332,8 @@ it:
         description_monthly: Donazione mensile
         description_one_time: Donare una volta
         button_text: Successivo ?
-        support_request:
-          header: Contributi mensili esistenti
-          description: Devi aggiornare o cancellare la tua iscrizione? Inserisci l’indirizzo email che hai utilizzato per iscriverti, e t invieremo un link supersegreto dove potrai apportare le modifiche.
-          email_label: indirizzo email
-          email_placeholder: tu@example.com
-          button_text: Inviare il link supersegreto
-
       create:
         repeat_subscriber_error: Esiste già un contribuente mensile con questo indirizzo email. Se vuoi dare di più, prova con la donazione una tantum. Grazie!
-
-      create_session:
-        no_existing_customer_error: Non riusciamo a trovare alcun contribuente mensile con questo indirizzo email. Se pensi ci sia un errore, [inviaci una email](mailto:contact@crimethinc.com) cosicché potremo aiutarti.
-        success_notice: Abbiamo inviato una mail a _%{email}_ con un link dove potrai modificare il tuo contributo.
-        repeat_customer_error: Hai già inviato una richiesta! Cerca un email da _contact@crimethinc.com_. Se non l hai mai ricevuta o se hai perso il tuo link supersegreto, aspetta un ora e riprova.
-
-      edit:
-        heading: Il tuo contributo
-        description: Grazie per il tuo sostegno. Noi contiamo su contributi come il tuo per continuare a fare ciò facciamo.
-        expired_link_error: Il link è scaduto. Riprova.
-        expires_at: Questa pagina scadrà in circa %{minuti} minuti.
-        update:
-          amount_label: Contributo mensile
-          amount_slider_label: Fai scorrere il cursore per modificare la somma del tuo contributo.
-          button_text: Aggiorna il contributo
-          button_confirm: Sei sicuro di voler aggiornare il tuo la somma del tuo contributo?
-          start_date: Iscritto dal
-          next_date: Prossimo versamento
-        cancel:
-          header: Se vuoi cancellare la tua iscrizione, clicca sul grande pulsante rosso!
-          button_text: Cancella l iscrizione
-          button_confirm: Sei sicuro di voler cancellare completamente la tua iscrizione?
-
-      update_subscription:
-        notice: La somma del tuo contributo è stata aggiornata!
-        error: Abbiamo riscontrato un problema durante l aggiornamento della tua iscrizione. Prova ancora! Se il problema persiste, [inviaci un email](mailto:contact@crimethinc.com) così potremo aiutarti.
-
-      cancel_subscription:
-        notice: La tua iscrizione è stata cancellata.
-        error: Abbiamo riscontrato un problema durante la cancellazione della tua iscrizione. Prova ancora! Se il problema persiste, [inviaci un email](mailto:contact@crimethinc.com) così potremo aiutarti.
 
       thanks:
         heading: Grazie per il tuo aiuto!
@@ -381,13 +344,6 @@ it:
 
           Se ti sei registrato per un versamento mensile, potrai aggiornarlo o cancellarlo in qualsiasi momento inserendo il tuo indirizzo email nel form sulla pagina [support](/support).
 
-      mailers:
-        edit_subscription:
-          subject: Richiedi il link supersegreto
-          header: Il tuo link supersegreto è arrivato!
-          link_description: Chiunque abbia accesso a questo link potrà utilizzarlo per effettuare delle modifiche alla tua iscrizione. Scadrà tra un ora. Tienilo segreto, tienilo al sicuro.
-          repeat_request: Se non riesci ad apportare le modifiche che desideri in un ora, non ti preoccupare. Ti invieremo un altro link supersegreto.
-          more_help: Puoi anche rispondere a questa email se hai bisogno di altro aiuto.
 
     languages:
       view_site_in_locale:  Visita il sito in italiano [qui](https://it.crimethinc.com).
