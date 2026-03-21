@@ -38,15 +38,11 @@
     <%= render_markdown t 'views.support.new.description' %>
 
     <div class="support-request">
-      <p><strong><%= t 'views.support.new.support_request.header' %></strong></p>
-      <p><%= t 'views.support.new.support_request.description' %></p>
-
-      <%= form_with url: [:support, :request] do |form| %>
-        <%= form.label :email, t('views.support.new.support_request.email_label'), class: "visually-hidden sr-only" %>
-        <%= form.email_field :email, placeholder: t('views.support.new.support_request.email_placeholder') %>
-
-        <%= form.submit t 'views.support.new.support_request.button_text' %>
-      <% end %>
+      <p><strong><%= t 'views.support.new.manage_subscription.header' %></strong></p>
+      <p><%= t 'views.support.new.manage_subscription.description' %></p>
+      <p><%= link_to t('views.support.new.manage_subscription.button_text'),
+                     Rails.configuration.stripe[:customer_portal_url],
+                     class: 'button' %></p>
     </div>
   </div>
 </div>

@@ -160,12 +160,6 @@ Rails.application.routes.draw do
   post 'support', to: 'support#create', as: :support_create
   get  'thanks',  to: 'support#thanks', as: :thanks
 
-  post 'support/create_session', to: 'support#create_session', as: :support_request
-  get  'support/edit/:token',    to: 'support#edit',           as: :support_edit
-
-  post 'support/stripe_subscription_payment_succeeded_webhook',
-       to: 'support#stripe_subscription_payment_succeeded_webhook'
-
   # Admin Dashboard
   get :admin, to: redirect('/admin/dashboard'), as: 'admin'
   namespace :admin do
