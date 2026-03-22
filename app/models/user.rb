@@ -34,6 +34,7 @@ class User < ApplicationRecord
     self.username = username.strip
   end
 
+  # TODO: bug — @user should be self; method appears unused
   def default_role!
     @user.author!
   end
