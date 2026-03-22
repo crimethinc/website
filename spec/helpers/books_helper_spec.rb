@@ -14,4 +14,18 @@ RSpec.describe BooksHelper do
       it { is_expected.to eq(%(<a href="http://example.com/test/large.png"><img src="http://example.com/test/small.png" /></a>)) }
     end
   end
+
+  describe '#extension_for_ebook' do
+    it 'returns epub for epub type' do
+      expect(helper.extension_for_ebook(:epub)).to eq 'epub'
+    end
+
+    it 'returns mobi for mobi type' do
+      expect(helper.extension_for_ebook(:mobi)).to eq 'mobi'
+    end
+
+    it 'returns pdf for other types' do
+      expect(helper.extension_for_ebook(:screen)).to eq 'pdf'
+    end
+  end
 end

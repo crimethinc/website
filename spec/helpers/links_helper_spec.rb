@@ -6,4 +6,13 @@ RSpec.describe LinksHelper do
 
     it { is_expected.to eq('link-name-example link-domain-example') }
   end
+
+  describe '#social_links_by_domain' do
+    it 'returns an array of social link hashes' do
+      links = helper.social_links_by_domain
+
+      expect(links).to be_an Array
+      expect(links.first.keys.first).to eq :Mastodon
+    end
+  end
 end
