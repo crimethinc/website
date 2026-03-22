@@ -153,6 +153,23 @@ describe Article do
     end
   end
 
+  describe '.next' do
+    it 'returns the article published after the given one' do
+      older = create(:article, published_at: 2.days.ago, publication_status: 'published')
+      newer = create(:article, published_at: 1.day.ago, publication_status: 'published')
+
+      expect(described_class.next(older).first).to eq newer
+    end
+  end
+
+  describe '.previous' do
+    it 'returns the article published on the same date before the given one' do
+      article = create(:article, published_at: 1.day.ago, publication_status: 'published')
+
+      expect(described_class.previous(article)).to exist
+    end
+  end
+
   describe '#generate_published_dates' do
     it 'sets year, month, and day from published_at' do
       article = create(:article, published_at: Time.zone.parse('2023-03-07'))
