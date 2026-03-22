@@ -12,20 +12,7 @@ Rails.configuration.active_support.escape_js_separators_in_json = false
 #++
 # Rails.configuration.active_record.raise_on_missing_required_finder_order_columns = true
 
-###
-# Controls how Rails handles path relative URL redirects.
-# When set to `:raise`, Rails will raise an `ActionController::Redirecting::UnsafeRedirectError`
-# for relative URLs without a leading slash, which can help prevent open redirect vulnerabilities.
-#
-# Example:
-#   redirect_to "example.com"     # Raises UnsafeRedirectError
-#   redirect_to "@attacker.com"   # Raises UnsafeRedirectError
-#   redirect_to "/safe/path"      # Works correctly
-#
-# Applications that want to allow these redirects can set the config to `:log` (previous default)
-# to only log warnings, or `:notify` to send ActiveSupport notifications.
-#++
-# Rails.configuration.action_controller.action_on_path_relative_redirect = :raise
+Rails.configuration.action_controller.action_on_path_relative_redirect = :raise
 
 ###
 # Use a Ruby parser to track dependencies between Action View templates
