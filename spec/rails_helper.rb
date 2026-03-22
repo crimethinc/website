@@ -6,7 +6,7 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rspec'
-require 'selenium-webdriver'
+require 'capybara/cuprite'
 require 'support/factory_bot'
 require 'webmock/rspec'
 
@@ -21,4 +21,4 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 end
 
-Capybara.javascript_driver = :selenium_chrome_headless
+Capybara.javascript_driver = :cuprite
