@@ -137,6 +137,49 @@ describe Article do
     end
   end
 
+  describe '#content_and_notes' do
+    it 'joins content and notes' do
+      article = build(:article, content: 'Body text', notes: 'Footnotes')
+
+      expect(article.content_and_notes).to eq "Body text\n\nFootnotes"
+    end
+  end
+
+  describe '#lede' do
+    it 'returns the first line of content' do
+      article = build(:article, content: "First line\nSecond line")
+
+      expect(article.lede).to eq 'First line'
+    end
+  end
+
+  describe '.next' do
+    it 'returns the article published after the given one' do
+      older = create(:article, published_at: 2.days.ago, publication_status: 'published')
+      newer = create(:article, published_at: 1.day.ago, publication_status: 'published')
+
+      expect(described_class.next(older).first).to eq newer
+    end
+  end
+
+  describe '.previous' do
+    it 'returns the article published on the same date before the given one' do
+      article = create(:article, published_at: 1.day.ago, publication_status: 'published')
+
+      expect(described_class.previous(article)).to exist
+    end
+  end
+
+  describe '#generate_published_dates' do
+    it 'sets year, month, and day from published_at' do
+      article = create(:article, published_at: Time.zone.parse('2023-03-07'))
+
+      expect(article.year).to eq '2023'
+      expect(article.month).to eq '03'
+      expect(article.day).to eq '07'
+    end
+  end
+
   # TODO: add new spec for saving tags
   # describe '#save_tags!' do
   #   it 'creates Tags and adds taggings' do

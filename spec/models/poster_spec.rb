@@ -9,6 +9,33 @@ RSpec.describe Poster do
     it { is_expected.to be(true) }
   end
 
+  describe '#meta_image' do
+    it 'returns nil when no images are attached' do
+      poster = create(:poster)
+
+      expect(poster.meta_image).to be_nil
+    end
+
+    it 'returns a URL when front color image is attached' do
+      poster = create(:poster)
+      poster.image_front_color_image.attach(
+        io:           Rails.root.join('spec/fixtures/files/test_image.jpg').open,
+        filename:     'test.jpg',
+        content_type: 'image/jpeg'
+      )
+
+      expect(poster.meta_image).to be_present
+    end
+  end
+
+  describe '#front_image' do
+    it 'returns nil when no images are attached' do
+      poster = create(:poster)
+
+      expect(poster.front_image).to be_nil
+    end
+  end
+
   describe '#tags' do
     let(:poster) { described_class.create(title: 'title', subtitle: 'subtitle') }
     let(:first_tag) { Tag.create(name: 'test 1', slug: 'test-1') }

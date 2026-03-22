@@ -45,6 +45,28 @@ RSpec.describe Post do
     end
   end
 
+  describe 'Publishable.publication_statuses_for' do
+    it 'returns all statuses for publishers' do
+      publisher = build(:user, role: 'publisher')
+
+      expect(Publishable.publication_statuses_for(user: publisher)).to eq %i[draft published]
+    end
+
+    it 'excludes published for non-publishers' do
+      author = build(:user, role: 'author')
+
+      expect(Publishable.publication_statuses_for(user: author)).to eq %i[draft]
+    end
+  end
+
+  describe '#meta_image' do
+    it 'falls back to default when image is blank' do
+      post = Page.new(title: 'test')
+
+      expect(post.meta_image).to eq I18n.t('head.meta_image_url')
+    end
+  end
+
   describe '#generated_draft_code' do
     subject { post.draft_code }
 
