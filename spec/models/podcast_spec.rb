@@ -55,6 +55,22 @@ RSpec.describe Podcast do
     end
   end
 
+  describe '#latest_episode' do
+    it 'returns the most recent live published episode' do
+      podcast = create(:podcast, slug: 'the-ex-worker')
+      create(:episode, podcast: podcast, title: 'Older', published_at: 2.days.ago)
+      latest = create(:episode, podcast: podcast, title: 'Newer', published_at: 1.day.ago)
+
+      expect(podcast.latest_episode).to eq latest
+    end
+
+    it 'returns nil when there are no episodes' do
+      podcast = create(:podcast, slug: 'empty-podcast')
+
+      expect(podcast.latest_episode).to be_nil
+    end
+  end
+
   describe 'validations' do
     it 'validates the presence of a slug' do
       valid_podcast = build(:podcast, slug: 'anarchy')
