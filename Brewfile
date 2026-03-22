@@ -23,8 +23,5 @@ brew 'postgresql@15'
 # Overcommit hooks
 brew 'yamllint'
 
-# System tests
-cask 'chromedriver'
-
 # Entity relationship diagram (ERD)
 brew 'graphviz'
