@@ -14,7 +14,6 @@ AllCops:
     - db/schema.rb
     - db/migrate/20230628052836_init_schema.rb
     - vendor/**/*
-    - script/migrate_tce_html_to_yaml
 
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
