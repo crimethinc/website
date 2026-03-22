@@ -58,7 +58,7 @@ describe 'Setting and changing an articles published_at date', :js do
     expect(article.reload.published_at_tz).to eq('UTC')
   end
 
-  it 'saves an article without entering publication date info', skip: 'TODO: fix or change flaky system tests' do
+  it 'saves an article without entering publication date info' do
     login_user
     visit '/admin/articles'
 
@@ -91,8 +91,7 @@ describe 'Setting and changing an articles published_at date', :js do
     end
   end
 
-  it 'Sets the publication date/time if article is `published` and fields are blank',
-     skip: 'TODO: fix or change flaky system tests' do
+  it 'sets the publication date/time if article is `published` and fields are blank' do
     freeze_time do
       login_user
       visit '/admin/articles'
