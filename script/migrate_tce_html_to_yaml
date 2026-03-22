@@ -1,0 +1,454 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Migrates a static HTML TCE language page to the modern YAML system.
+#
+# Usage:
+#   script/migrate_tce_html_to_yaml <folder_name> <lang_code> <lang_name_for_route>
+#
+# Examples:
+#   script/migrate_tce_html_to_yaml czech cs czech
+#   script/migrate_tce_html_to_yaml deutsch de deutsch
+#   script/migrate_tce_html_to_yaml polski pl polski
+#   script/migrate_tce_html_to_yaml slovenscina sl slovenscina
+#   script/migrate_tce_html_to_yaml slovensko sk slovensko
+#
+# What it does:
+#   1. Parses public/tce/<folder>/index.html
+#   2. Generates config/locales/to_change_everything/<lang_code>.yml
+#   3. Converts public/tce/<folder>/modify.css to app/assets/stylesheets/to_change_everything/_<route_name>.scss
+#   4. Runs the Rails generator to wire up controller, config, and stylesheet imports
+#   5. Prints a TODO list of manual follow-up steps
+#
+# After running:
+#   - Review the generated YAML for accuracy
+#   - Upload the PDF to the CDN if needed
+#   - Run the Rails generator output to verify wiring
+#   - Delete public/tce/<folder>/ once satisfied
+
+require 'fileutils'
+require 'nokogiri'
+require 'yaml'
+
+REPO_ROOT = File.expand_path('..', __dir__)
+
+# Default English video URL, used when the HTML has no video
+DEFAULT_VIDEO_URL = 'https://player.vimeo.com/video/111159930'
+
+# CDN path pattern for PDFs
+PDF_URL_PATTERN = 'https://cdn.crimethinc.com/assets/tce/images/to-change-everything-%<lang_name>s.pdf'
+
+# Section IDs in order, matching the YAML structure
+CONTENT_SECTIONS = %w[
+  self
+  answering
+  power
+  relationships
+  reconciling
+  liberation
+  revolt
+  control
+  hierarchy
+  borders
+  representation
+  leaders
+  government
+  profit
+  property
+].freeze
+
+folder_name = ARGV[0]
+lang_code   = ARGV[1]
+route_name  = ARGV[2] || folder_name
+
+unless folder_name && lang_code
+  warn "Usage: #{$PROGRAM_NAME} <folder_name> <lang_code> [route_name]"
+  exit 1
+end
+
+html_path = File.join(REPO_ROOT, 'public', 'tce', folder_name, 'index.html')
+css_path  = File.join(REPO_ROOT, 'public', 'tce', folder_name, 'modify.css')
+
+unless File.exist?(html_path)
+  warn "HTML file not found: #{html_path}"
+  exit 1
+end
+
+doc = Nokogiri::HTML(File.read(html_path, encoding: 'utf-8'))
+
+# --- Helper methods ---
+
+def inner_html(node)
+  return '' unless node
+
+  html = node.inner_html.strip
+  # Nokogiri normalizes <br /> to <br>, convert back for consistency with existing YAMLs
+  html.gsub('<br>', '<br />')
+end
+
+def text_content(node)
+  return '' unless node
+
+  node.text.strip
+end
+
+# Extract paragraphs from a .righttext or .lefttext div, preserving inner HTML
+def extract_text_html(spread, css_selector)
+  container = spread.at_css(css_selector)
+  return '' unless container
+
+  # Get the inner HTML, clean up whitespace between tags but preserve content
+  html = container.inner_html.strip
+  # Collapse runs of whitespace around tags into single spaces
+  html = html.gsub(/\n\s*/, ' ').gsub(/\s+/, ' ').strip
+  # Normalize <br> to <br />
+  html.gsub('<br>', '<br />')
+end
+
+# Extract h2 content from the left side of a spread
+def extract_left_h2_html(spread)
+  h2 = spread.at_css('.left h2')
+  return '' unless h2
+
+  inner_html(h2)
+end
+
+# Extract image info from a spread
+def extract_image_info(spread)
+  img = spread.at_css('.left img.responsive-image') || spread.at_css('.left img')
+  return { name: '', alt: '' } unless img
+
+  alt = img['alt'] || ''
+
+  # Derive image name from the data-responsimg attributes or src
+  src = img['data-responsimg-large'] || img['data-responsimg-small'] || img['src'] || ''
+  # Extract image name like "self" from ".../self-large.jpg"
+  name = src.match(%r{/(\w+)-(?:large|small|tablet|phone)})&.captures&.first || ''
+
+  { name: name, alt: alt }
+end
+
+# --- Parse the HTML ---
+
+puts "Parsing #{html_path}..."
+
+# Head metadata
+title = text_content(doc.at_css('title'))
+meta_title = doc.at_css('meta[name="twitter:title"]')&.[]('content') ||
+             doc.at_css('meta[property="og:title"]')&.[]('content') || ''
+meta_description = doc.at_css('meta[name="twitter:description"]')&.[]('content') ||
+                   doc.at_css('meta[property="og:description"]')&.[]('content') || ''
+meta_url = doc.at_css('meta[property="og:url"]')&.[]('content') || "https://tochangeeverything.com/#{route_name}"
+
+# Navigation menu labels
+menu_toc = text_content(doc.at_css('#menus ul > li:nth-child(1) .label'))
+menu_language = text_content(doc.at_css('#menus ul > li:nth-child(2) .label'))
+menu_share = text_content(doc.at_css('#menus ul > li:nth-child(3) .label'))
+
+# Table of contents
+toc = {}
+toc_sections = %w[introduction self answering power relationships reconciling liberation revolt
+                  control hierarchy borders representation leaders government profit property
+                  lastcrime anarchy outro takeflight]
+
+# Parse from the nav TOC list
+toc_links = doc.css('#menus #toc li a')
+toc_sections.each_with_index do |section, i|
+  link = toc_links[i]
+  toc[section] = link ? inner_html(link) : section
+end
+# "next" TOC entry — the old HTML files don't have this, use section name
+toc['next'] = toc_sections.last == 'next' ? toc['next'] : ''
+
+# Cover / title section
+cover = doc.at_css('.cover .title')
+title_h1 = cover ? inner_html(cover.at_css('h1')) : ''
+subtitle_h4 = cover ? inner_html(cover.at_css('h4')) : ''
+
+# Video
+video_container = doc.at_css('#video-container iframe') || doc.at_css('.spread#video-container iframe')
+video_url = if video_container
+             video_container['src']
+           else
+             # Check for commented-out video
+             DEFAULT_VIDEO_URL
+           end
+
+video_cte_node = doc.at_css('#videopdf #video p')
+video_cte = video_cte_node ? inner_html(video_cte_node) : 'Watch Video'
+
+# PDF
+pdf_link = doc.at_css('#videopdf a[href*="get"], #videopdf a[href*="pdf"], #videopdf a:nth-child(2)')
+pdf_cte_node = doc.at_css('#videopdf #pdfright p')
+pdf_cte_html = pdf_cte_node ? inner_html(pdf_cte_node) : 'Download<br />&nbsp;PDF'
+
+# PDF cover image
+pdf_img = doc.at_css('#videopdf #pdfleft img')
+pdf_image = if pdf_img
+             File.basename(pdf_img['src'])
+           else
+             "tce-cover-200-#{route_name}.png"
+           end
+
+# Use CDN URL pattern for PDF
+pdf_get_url = format(PDF_URL_PATTERN, lang_name: route_name)
+
+# Intro section
+intro = doc.at_css('#intro') || doc.at_css('.spread:first-of-type')
+intro_left_html = ''
+intro_right_html = ''
+if intro
+  intro_left = intro.at_css('.leftintro .lefttext') || intro.at_css('.leftintro')
+  html = intro_left ? intro_left.inner_html.strip.gsub(/\n\s*/, ' ').gsub(/\s+/, ' ').strip : ''
+  intro_left_html = html.gsub('<br>', '<br />')
+
+  intro_right = intro.at_css('.rightintro h3')
+  # inner_html already normalizes <br>, but we also need to collapse newlines
+  intro_right_html = if intro_right
+                       intro_right.inner_html.strip.gsub(/\n\s*/, ' ').gsub(/\s+/, ' ').strip.gsub('<br>', '<br />')
+                     else
+                       ''
+                     end
+end
+
+# Content sections
+sections = {}
+CONTENT_SECTIONS.each do |section_id|
+  spread = doc.at_css("##{section_id}")
+  next unless spread
+
+  left_h2 = extract_left_h2_html(spread)
+  right_text = extract_text_html(spread, '.right .righttext')
+  image = extract_image_info(spread)
+
+  sections[section_id] = {
+    'left_text_html'  => left_h2,
+    'right_text_html' => right_text,
+    'image_name'      => image[:name],
+    'image_alt'       => image[:alt]
+  }
+end
+
+# Last crime section
+lastcrime = doc.at_css('#lastcrime')
+if lastcrime
+  sections['lastcrime'] = {
+    'left_text_html'  => extract_left_h2_html(lastcrime),
+    'right_text_html' => extract_text_html(lastcrime, '.right .righttext'),
+    'image_name'      => extract_image_info(lastcrime)[:name],
+    'image_alt'       => extract_image_info(lastcrime)[:alt]
+  }
+end
+
+# Anarchy section (special: three columns, no image)
+anarchy = doc.at_css('#anarchy')
+anarchy_first = ''
+anarchy_second = ''
+anarchy_third = ''
+if anarchy
+  first_div = anarchy.at_css('.first')
+  second_div = anarchy.at_css('.second')
+  third_div = anarchy.at_css('.third')
+
+  anarchy_first  = first_div  ? first_div.inner_html.strip.gsub(/\n\s*/, ' ').gsub(/\s+/, ' ').strip : ''
+  anarchy_second = second_div ? second_div.inner_html.strip.gsub(/\n\s*/, ' ').gsub(/\s+/, ' ').strip : ''
+  anarchy_third  = third_div  ? third_div.inner_html.strip.gsub(/\n\s*/, ' ').gsub(/\s+/, ' ').strip : ''
+
+  # Remove the circle-a logo image from whichever div contains it
+  # Nokogiri may output <img ...> or <img .../> so match both
+  [anarchy_first, anarchy_second, anarchy_third].each do |html|
+    html.gsub!(/<img\s+src="[^"]*circle-a[^"]*"[^>]*>/, '')
+    html.gsub!('<br>', '<br />')
+    html.strip!
+  end
+end
+
+# Outro section
+outro = doc.at_css('#outro')
+outro_left_html = ''
+outro_right_html = ''
+if outro
+  outro_left = outro.at_css('.leftintro .lefttext') || outro.at_css('.leftintro')
+  html = outro_left ? outro_left.inner_html.strip.gsub(/\n\s*/, ' ').gsub(/\s+/, ' ').strip : ''
+  outro_left_html = html.gsub('<br>', '<br />')
+
+  outro_right = outro.at_css('.rightintro h3') || outro.at_css('h3')
+  outro_right_html = if outro_right
+                       outro_right.inner_html.strip.gsub(/\n\s*/, ' ').gsub(/\s+/, ' ').strip.gsub('<br>', '<br />')
+                     else
+                       ''
+                     end
+end
+
+# Take flight
+takeflight = doc.at_css('#takeflight')
+take_flight_html = takeflight ? inner_html(takeflight.at_css('h1')) : ''
+
+# --- Build YAML structure ---
+
+# Single-quote a YAML value, escaping internal single quotes by doubling them
+def yq(val)
+  return "''" if val.nil? || val.empty?
+
+  "'#{val.gsub("'", "''")}'"
+end
+
+# We build the YAML manually to match the existing file format exactly
+# (ruby's YAML.dump doesn't produce the style we want)
+
+yaml_lines = []
+yaml_lines << "#{route_name}:"
+yaml_lines << '  layouts:'
+yaml_lines << '    to_change_everything:'
+yaml_lines << '      language_direction: ltr'
+yaml_lines << "      lang_code: #{lang_code}"
+yaml_lines << '      head:'
+yaml_lines << "        title: \"#{title.gsub('"', '\\"')}\""
+yaml_lines << '        meta:'
+yaml_lines << "          title: #{meta_title}"
+yaml_lines << "          description: #{meta_description}"
+yaml_lines << "          url: #{meta_url}"
+yaml_lines << '      menu:'
+yaml_lines << "        toc: #{menu_toc}"
+yaml_lines << "        language: #{menu_language}"
+yaml_lines << "        share: #{menu_share}"
+yaml_lines << '      toc:'
+
+toc_sections.each do |section|
+  val = toc[section] || section
+  yaml_lines << "        #{section}: #{val}"
+end
+yaml_lines << "        next: #{toc['next'] || ''}"
+
+yaml_lines << '  to_change_everything:'
+yaml_lines << '    show:'
+yaml_lines << "      title_html: #{yq(title_h1)}"
+yaml_lines << "      subtitle_html: #{subtitle_h4}"
+yaml_lines << "      video_cte: #{video_cte}"
+yaml_lines << "      video_url: #{video_url}"
+yaml_lines << "      pdf_cte_html: #{pdf_cte_html}"
+yaml_lines << "      pdf_get_url: #{pdf_get_url}"
+yaml_lines << "      pdf_image: #{pdf_image}"
+
+# Intro
+yaml_lines << '      intro:'
+yaml_lines << "        left_text_html: #{yq(intro_left_html)}"
+yaml_lines << "        right_text_html: #{yq(intro_right_html)}"
+
+# Content sections
+CONTENT_SECTIONS.each do |section_id|
+  data = sections[section_id]
+  next unless data
+
+  yaml_lines << "      #{section_id}:"
+  yaml_lines << "        left_text_html: #{yq(data['left_text_html'])}"
+  yaml_lines << "        right_text_html: #{yq(data['right_text_html'])}"
+  yaml_lines << "        image_name: #{data['image_name']}"
+  yaml_lines << "        image_alt: #{data['image_alt']}"
+end
+
+# Last crime
+if sections['lastcrime']
+  data = sections['lastcrime']
+  yaml_lines << '      lastcrime:'
+  yaml_lines << "        left_text_html: #{yq(data['left_text_html'])}"
+  yaml_lines << "        right_text_html: #{yq(data['right_text_html'])}"
+  yaml_lines << "        image_name: #{data['image_name']}"
+  yaml_lines << "        image_alt: #{data['image_alt']}"
+end
+
+# Anarchy
+yaml_lines << '      anarchy:'
+yaml_lines << "        first_html: #{yq(anarchy_first)}"
+yaml_lines << "        second_html: #{yq(anarchy_second)}"
+yaml_lines << "        third_html: #{yq(anarchy_third)}"
+
+# Outro
+yaml_lines << '      outro:'
+yaml_lines << "        left_text_html: #{yq(outro_left_html)}"
+yaml_lines << "        right_text_html: #{yq(outro_right_html)}"
+
+# Take flight and next
+yaml_lines << "      take_flight_html: #{take_flight_html}"
+yaml_lines << "      next_path: ''"
+yaml_lines << "      next_text: ''"
+
+yaml_content = yaml_lines.join("\n") + "\n"
+
+# --- Write YAML ---
+
+yaml_output = File.join(REPO_ROOT, 'config', 'locales', 'to_change_everything', "#{lang_code}.yml")
+File.write(yaml_output, yaml_content)
+puts "  Wrote #{yaml_output}"
+
+# --- Convert CSS to SCSS ---
+
+if File.exist?(css_path)
+  css_content = File.read(css_path)
+
+  # Wrap in the language class selector, following the existing SCSS pattern
+  scss_lines = []
+  scss_lines << ".#{route_name} {"
+  scss_lines << '  @import "common/font_styling";'
+  scss_lines << ''
+  scss_lines << '  /*--- Highlight language in mobile language menu ---*/'
+  scss_lines << "  #lang1 li > a[href=\"/tce/#{route_name}\"],"
+  scss_lines << "  #lang2 li > a[href=\"/tce/#{route_name}\"] {"
+  scss_lines << '    color: #d62d34 !important;'
+  scss_lines << '  }'
+  scss_lines << ''
+  scss_lines << "  .check-#{route_name}:before {"
+  scss_lines << "    content: '';"
+  scss_lines << '  }'
+  scss_lines << ''
+
+  # Process the original CSS: indent and include everything that's not boilerplate
+  # Skip commented-out rules and the #video { display: none } if present
+  # (since we'll use the default EN video)
+  css_content.each_line do |line|
+    scss_lines << "  #{line.rstrip}"
+  end
+
+  scss_lines << '}'
+  scss_lines << ''
+
+  scss_output = File.join(REPO_ROOT, 'app', 'assets', 'stylesheets', 'to_change_everything', "_#{route_name}.scss")
+  File.write(scss_output, scss_lines.join("\n") + "\n")
+  puts "  Wrote #{scss_output}"
+else
+  puts "  No CSS file found at #{css_path}, skipping SCSS conversion"
+end
+
+# --- Print next steps ---
+
+puts ''
+puts '=' * 60
+puts 'Migration complete! Next steps:'
+puts '=' * 60
+puts ''
+puts "1. Run the Rails generator for wiring:"
+puts "   rails generate to_change_everything #{lang_code} #{route_name}"
+puts "   (This adds the route to controller + config. Skip if already done.)"
+puts ''
+puts '2. Review the generated YAML for accuracy:'
+puts "   #{yaml_output}"
+puts '   - Check that HTML entities and special characters are correct'
+puts '   - Verify section content matches the original HTML'
+puts "   - Ensure title_html formatting looks right (may need &nbsp; adjustments)"
+puts ''
+puts '3. Review the generated SCSS:'
+puts "   app/assets/stylesheets/to_change_everything/_#{route_name}.scss"
+puts '   - Remove any #video { display: none } if video should show'
+puts '   - Clean up commented-out rules if desired'
+puts ''
+
+# Check if PDF needs to be uploaded
+pdf_cdn_url = format(PDF_URL_PATTERN, lang_name: route_name)
+puts '4. PDF upload TODO:'
+puts "   Upload the #{route_name} PDF to: #{pdf_cdn_url}"
+puts ''
+puts '5. Update the language helper if needed:'
+puts '   app/helpers/to_change_everything_helper.rb'
+puts ''
+puts "6. Once satisfied, delete: public/tce/#{folder_name}/"
+puts ''
