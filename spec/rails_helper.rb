@@ -5,9 +5,9 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 
 require 'spec_helper'
 require 'rspec/rails'
-require 'capybara/rspec'
-require 'capybara/cuprite'
+require 'support/capybara'
 require 'support/factory_bot'
+require 'support/login_helper'
 require 'webmock/rspec'
 
 WebMock.disable_net_connect!(allow_localhost: true)
@@ -20,5 +20,3 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
 end
-
-Capybara.javascript_driver = :cuprite
