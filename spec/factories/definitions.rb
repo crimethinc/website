@@ -1,7 +1,6 @@
 FactoryBot.define do
   factory :definition do
-    name { 'MyString' }
+    title { 'MyString' }
     content { 'MyText' }
-    image_present { false }
   end
 end

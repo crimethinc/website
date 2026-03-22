@@ -22,6 +22,7 @@ class Definition < ApplicationRecord
     self.filed_under = title[0]&.downcase if title.present?
   end
 
+  # TODO: this callback is dead code — Publishable enum already defaults to :draft
   def set_publication_status
     draft! if publication_status.blank?
   end
