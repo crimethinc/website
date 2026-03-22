@@ -2,14 +2,14 @@
 development:
   publishable_key: <%= ENV.fetch("STRIPE_PUBLISHABLE_KEY", nil) %>
   secret_key: <%= ENV.fetch("STRIPE_SECRET_KEY", nil) %>
-  customer_portal_url: https://billing.stripe.com/p/login/test_cNi00kcnQghy4RS8AwgQE00
+  customer_portal_url: https://support.crimethinc.com/p/login/test_cNi00kcnQghy4RS8AwgQE00
 
 test:
   publishable_key: <%= ENV.fetch("STRIPE_PUBLISHABLE_KEY", nil) %>
   secret_key: <%= ENV.fetch("STRIPE_SECRET_KEY", nil) %>
-  customer_portal_url: https://billing.stripe.com/p/login/test_cNi00kcnQghy4RS8AwgQE00
+  customer_portal_url: https://support.crimethinc.com/p/login/test_cNi00kcnQghy4RS8AwgQE00
 
 production:
   publishable_key: <%= ENV.fetch("STRIPE_PUBLISHABLE_KEY", nil) %>
   secret_key: <%= ENV.fetch("STRIPE_SECRET_KEY", nil) %>
-  customer_portal_url: https://billing.stripe.com/p/login/cNi00kcnQghy4RS8AwgQE00
+  customer_portal_url: https://support.crimethinc.com/p/login/cNi00kcnQghy4RS8AwgQE00
