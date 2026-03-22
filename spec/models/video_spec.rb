@@ -9,6 +9,12 @@ RSpec.describe Video do
     it { is_expected.to eq('/videos/slug') }
   end
 
+  describe '#ask_for_donation?' do
+    it 'returns false' do
+      expect(described_class.new.ask_for_donation?).to be false
+    end
+  end
+
   describe '#meta_image' do
     it 'returns an empty string' do
       expect(described_class.new.meta_image).to eq ''

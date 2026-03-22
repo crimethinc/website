@@ -1,6 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Locale do
+  describe '.current' do
+    it 'returns the current I18n locale' do
+      expect(described_class.current).to eq I18n.locale
+    end
+  end
+
+  describe '#title' do
+    it 'returns the name' do
+      locale = build(:locale, :en)
+
+      expect(locale.title).to eq locale.name
+    end
+  end
+
   describe '#english?' do
     let(:english_locale) { build(:locale, :en) }
     let(:spanish_locale) { build(:locale, :es) }

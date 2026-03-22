@@ -42,4 +42,14 @@ RSpec.describe Journal do
       expect(journal.last_published_in).to eq 2010
     end
   end
+
+  describe '#false_for_missing_methods' do
+    it 'returns false for aliased stub methods' do
+      journal = described_class.new
+
+      expect(journal.back_image_present?).to be false
+      expect(journal.width).to be false
+      expect(journal.height).to be false
+    end
+  end
 end

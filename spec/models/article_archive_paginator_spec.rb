@@ -20,6 +20,11 @@ RSpec.describe ArticleArchivePaginator do
       expect(paginator.next?).to be true
       expect(paginator.next_path).to eq '/2024'
     end
+
+    it 'returns year labels' do
+      expect(paginator.previous_label).to be_present
+      expect(paginator.next_label).to be_present
+    end
   end
 
   describe 'month-based pagination' do
@@ -37,6 +42,11 @@ RSpec.describe ArticleArchivePaginator do
 
     it 'has a next month' do
       expect(paginator.next?).to be true
+    end
+
+    it 'returns month labels' do
+      expect(paginator.previous_label).to be_present
+      expect(paginator.next_label).to be_present
     end
   end
 end
