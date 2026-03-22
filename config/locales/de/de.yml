@@ -320,45 +320,8 @@ de:
         description_monthly: Monatliche Unterstützung
         description_one_time: Einmalige Unterstützung
         button_text: Nächste →
-        support_request:
-          header: Verwalte deine monatliche Unterstützung
-          description: Möchtest du deine Unterstützung aktualisieren oder kündigen? Gib die E-Mail-Adresse ein, mit der du dich angemeldet hast, und wir senden dir eine E-Mail mit einem supergeheimen Link, über den du Änderungen vornehmen kannst.
-          email_label: Email Addresse
-          email_placeholder: you@example.com
-          button_text: Schickt mir den supergeheimen Link
-
       create:
         repeat_subscriber_error: Wir haben bereits eine*n monatlichen Unterstützer*in mit dieser E-Mail-Adresse. Wenn du noch mehr geben möchtest, versuche eine einmalige Spende. Danke!
-
-      create_session:
-        no_existing_customer_error: Wir können keine*n monatlichen Unterstützer*in mit dieser E-Mail-Adresse finden. Wenn du denkst, dass dies ein Fehler ist, schicke uns bitte eine E-Mail an](mailto:contact@crimethinc.com), damit wir dir helfen können.
-        success_notice: Wir haben eine E-Mail an _%{email}_ mit einem Link geschickt, über den du Änderungen an deiner Unterstützung vornehmen kannst.
-        repeat_customer_error: Du hast bereits eine Anfrage gestellt! Suche nach einer E-Mail von _contact@crimethinc.com_. Wenn du die E-Mail nie bekommen hast oder deinen supergeheimen Link verloren hast, warte eine Stunde und versuche es erneut.
-
-      edit:
-        heading: Deine Unterstützung
-        description: Vielen Dank für deine kontinuierliche Unterstützung. Wir zählen auf Beiträge wie deine, um das zu tun, was wir tun.
-        expired_link_error: Dieser Link ist abgelaufen. Bitte versuche es erneut.
-        expires_at: Diese Seite läuft in ca. %{Minuten} Minuten ab.
-        update:
-          amount_label: Monatliche Unterstützung
-          amount_slider_label: Verschiebe den Slider, um den Betrag zu ändern.
-          button_text: Update
-          button_confirm: Bist du sicher, dass du den Unterstützungsbetrag aktualisieren möchtest?
-          start_date: Eingetragen seit
-          next_date: Nächste Ladung
-        cancel:
-          header: Wenn du deine Unterstützung beenden möchtest, klick auf den großen roten Button!
-          button_text: Unterstützun beenden
-          button_confirm: Bist du sicher, dass du deine Unterstützung komlett abbrechen willst?
-
-      update_subscription:
-        notice: Dein Unterstützungsbetrag wurde aktualisiert!
-        error: Es gab ein Problem bei der Aktualisierung deines Abonnements. Versuche es bitte noch einmal! Wenn das Problem weiterhin besteht, schick uns bitte eine E-Mail an](mailto:contact@crimethinc.com), damit wir weiter helfen können.
-
-      cancel_subscription:
-        notice: Dein Abonnement wurde gekündigt.
-        error: Es gab ein Problem bei der Kündigung deines Abonnements. Versuchen es bitte noch einmal! Wenn das Problem weiterhin besteht, schick uns bitte eine E-Mail an](mailto:contact@crimethinc.com), damit wir weiter helfen können.
 
       thanks:
         heading: Danke für deine Hilfe!
@@ -369,13 +332,6 @@ de:
 
           Wenn du dich für montaliche Unterstützung entschieden hast, kannst du dein Abonnement jederzeit aktualisieren oder kündigen, indem du deine E-Mail-Adresse in das Formular unten auf der Seite[support](/support) eingibst.
 
-      mailers:
-        edit_subscription:
-          subject: Anfrage eines supergeheimen Support Links
-          header: Dein supergeheimer Support Link ist da!
-          link_description: Jede*r mit dem oben genannten Link kann damit Änderungen an deinem Abonnement vornehmen. Es verfällt in einer Stunde. Behalte ihn geheim, behalte ihn sicher.
-          repeat_request: Wenn du die gewünschten Änderungen nicht rechtzeitig vornehmen kannst, ist das kein Problem. Wir können dir jederzeit einen weiteren supergeheimen Link schicken.
-          more_help: Du kannst auch auf diese E-Mail antworten, wenn du weitere Unterstützung benötigst.
 
     languages:
       view_site_in_locale:  "[Hier](https://de.crimethinc.com) kannst du dir die gesamte Seite auf deutsch anzeigen lassen."

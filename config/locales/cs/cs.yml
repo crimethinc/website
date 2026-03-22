@@ -322,45 +322,8 @@ cs:
         description_monthly: Měsíční podpora
         description_one_time: Jednorázová podpora
         button_text: Další →
-        support_request:
-          header: Existující měsíční předplatné.
-          description: Potřebuješ upravit nebo zrušit předplatné? Vlož email kterým se přihlašuješ, A my ti na něj pošleme supertajný odkaz kde ho můžeš upravit .
-          email_label: Emailová adresa
-          email_placeholder: ty@example.com
-          button_text: Pošli supertajný odkaz
-
       create:
         repeat_subscriber_error: Už máme měsíčního podporovatele s touto emailovou adresou. Jestli chceš přispět víc, zkus jednorázový příspěvek. Díky!
-
-      create_session:
-        no_existing_customer_error: Nemůžeme najít podporovatele s touto emailovou adresou. Jestli si myslíš že jde o chybu napiš nám prosím[email na ](mailto:contact@crimethinc.com) ať ti můžeme pomoct.
-        success_notice: Poslali jsme na email  _%{email}_ odkaz ze kterého můžeš změnit své předplatné.
-        repeat_customer_error: O svůj odkaz už jsi požádal! Hledej email od  _contact@crimethinc.com_. Jestli jsi email nikdy nedostal nebo si ztratil svůj supertajný odkaz, počkej hodinu a zkus to znovu.
-
-      edit:
-        heading: Tvé předplatné
-        description: Děkujeme ti moc za tvou pravidelnou podporu. Spoléháme na přispěvatele jako jsi ty pro to abychom mohli dělat to co děláme.
-        expired_link_error: Odkaz vypršel. Zkus to prosím znovu.
-        expires_at: Tato stránka vyprší za  %{minutes} minut.
-        update:
-          amount_label: Měsíční Podpora
-          amount_slider_label: Potáhni slider aby si změnil výši podpory.
-          button_text: Uprav předplatné
-          button_confirm: Jsi si jistý že chceš upravit výši tvé podpory?
-          start_date: Podporuješ nás od
-          next_date: Další platba
-        cancel:
-          header: Jestli chceš zrušit své předplatné, Klikni na velké červené tlačítko!
-          button_text: Zrušit předplatné
-          button_confirm: Jsi si jistý že chceš zrušit své předplatné?
-
-      update_subscription:
-        notice: Částka tvého předplatného byla změněna!
-        error: Při úpravě částky se něco nepovedlo. Zkus to znovu! Jestli problém přetrvává, prosím [pošli nám email na](mailto:contact@crimethinc.com) abychom ti mohli pomoct.
-
-      cancel_subscription:
-        notice: Tvé předplatné bylo zrušeno.
-        error: Při rušení tvého předplatného se něco nepovedlo. Zkus to znovu! Jestli problém přetrvává, prosím [pošli nám email na](mailto:contact@crimethinc.com) abychom ti mohli pomoct.
 
       thanks:
         heading: Díky za pomoc!
@@ -370,13 +333,6 @@ cs:
 
           Jestli si se přihlásil k měsíčnímu předplatnému, můžeš ho upravit nebo zrušit kdykoliv chceš vyplněním tvé emailové adresy ve formuláři na spodu stránky [Podpora](/support) page.
 
-      mailers:
-        edit_subscription:
-          subject: Požádej o svů supertajný link na podporu
-          header:  Tvůj supertajný kód dorazil!
-          link_description: Kdokoliv kdo má přístup k odkazu nahoře, ho může použít k tomu aby změnil částku tvého předplatného. Za hodinu vyprší, udržuj ho v tajnosti a bezpečí
-          repeat_request: Jestli nestihneš co si potřeboval, není se čeho bát, vždy ti můžeme poslad další odkaz
-          more_help: Můžeš taky odpovědět na tento email jestli potřebuješ s něčím pomoct.
 
     languages:
       view_site_in_locale:  Podívej se na tuto stránku v angličtině [zde](https://cs.crimethinc.com).
