@@ -1,39 +1,47 @@
 .social {
-  margin-top: 4rem;
-  clear: both;
+    margin-top: 4rem;
+    clear: both;
 }
 
 .social-links {
-  margin-top: 2rem;
+    margin-top: 2rem;
 
-  .social-link {
-    display: inline-block;
+    .social-link {
+        --social-link-icon-url: url("/social-icons/rss.svg");
 
-    a {
-      display: inline-block;
-      @include square(40px);
-      @include social-icon("rss");
-      margin: 0 var(--border-size-small) var(--border-size-small) 0;
+        display: inline-block;
+        margin: 0 var(--border-size-small) var(--border-size-small) 0;
+
+        a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-image: var(--social-link-icon-url);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            overflow: hidden;
+            text-indent: -10000%;
+            white-space: nowrap;
+        }
     }
 
     /* The Mastodon account is on a domain called todon.eu */
     .link-domain-todon,
-    .link-domain-mastodon  { @include social-icon("mastodon");  }
-    .link-domain-email     { @include social-icon("email");     }
-    .link-domain-facebook  { @include social-icon("facebook");  }
-    .link-domain-github    { @include social-icon("github");    }
-    .link-domain-instagram { @include social-icon("instagram"); }
-    .link-domain-telegram  { @include social-icon("telegram");  }
-    .link-domain-threads   { @include social-icon("threads");   }
-    .link-domain-tiktok    { @include social-icon("tiktok");    }
-    .link-domain-tumblr    { @include social-icon("tumblr");    }
-    .link-domain-twitter   { @include social-icon("twitter");   }
-    .link-domain-youtube   { @include social-icon("youtube");   }
+    .link-domain-mastodon  { --social-link-icon-url: url("/social-icons/mastodon.svg"); }
+    .link-domain-email     { --social-link-icon-url: url("/social-icons/email.svg"); }
+    .link-domain-facebook  { --social-link-icon-url: url("/social-icons/facebook.svg"); }
+    .link-domain-github    { --social-link-icon-url: url("/social-icons/github.svg"); }
+    .link-domain-instagram { --social-link-icon-url: url("/social-icons/instagram.svg"); }
+    .link-domain-telegram  { --social-link-icon-url: url("/social-icons/telegram.svg"); }
+    .link-domain-threads   { --social-link-icon-url: url("/social-icons/threads.svg"); }
+    .link-domain-tiktok    { --social-link-icon-url: url("/social-icons/tiktok.svg"); }
+    .link-domain-tumblr    { --social-link-icon-url: url("/social-icons/tumblr.svg"); }
+    .link-domain-twitter   { --social-link-icon-url: url("/social-icons/twitter.svg"); }
     .link-domain-kolektiva, /* the peertube instance domain is kolektiva.media */
-    .link-domain-peertube  { @include social-icon("peertube");  }
-    .link-domain-bandcamp  { @include social-icon("bandcamp");  }
-    .link-domain-reddit    { @include social-icon("reddit");  }
+    .link-domain-peertube  { --social-link-icon-url: url("/social-icons/peertube.svg"); }
+    .link-domain-bandcamp  { --social-link-icon-url: url("/social-icons/bandcamp.svg"); }
+    .link-domain-reddit    { --social-link-icon-url: url("/social-icons/reddit.svg"); }
     .link-domain-bsky, /* the bluesky domain is bsky for now, but it may change or have more in the future */
-    .link-domain-bluesky    { @include social-icon("bluesky");  }
-  }
+    .link-domain-bluesky    { --social-link-icon-url: url("/social-icons/bluesky.svg"); }
 }
