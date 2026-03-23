@@ -22,7 +22,6 @@
   .categories {
     display: none;
 
-    /* var(--small-tablet) */
     @media screen and (min-width: 800px) {
       display: block;
       margin-bottom: 0.5em;
