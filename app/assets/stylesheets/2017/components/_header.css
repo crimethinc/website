@@ -5,8 +5,8 @@ html[dir="ltr"] .site-header .button {
 html[dir="rtl"] .site-header .button {
   left: var(--border-size-large);
 }
-
-@media screen and (max-width: $small-tablet) {
+/* var(--small-tablet) */
+@media screen and (max-width: 800px) {
   html[dir="ltr"] .site-header .button {
     right: var(--border-size-medium);
   }
@@ -19,8 +19,8 @@ html[dir="rtl"] .site-header .button {
   position: relative;
   background-color: var(--color-true-black);
   padding: var(--border-size-large);
-
-  @media screen and (max-width: $small-tablet) {
+  /* var(--small-tablet) */
+  @media screen and (max-width: 800px) {
     padding: var(--border-size-medium);
   }
 
@@ -28,8 +28,8 @@ html[dir="rtl"] .site-header .button {
     background: var(--color-blue);
     position: absolute;
     top: var(--border-size-large);
-
-    @media screen and (max-width: $small-tablet) {
+    /* var(--small-tablet) */
+    @media screen and (max-width: 800px) {
       font-size: 12px;
       padding: 0.5em;
       top: var(--border-size-medium);
@@ -46,8 +46,8 @@ html[dir="rtl"] .site-header .button {
   );
   @include size(15rem, 3rem);
   display: inline-block;
-
-  @media screen and (max-width: $small-tablet) {
+  /* var(--small-tablet) */
+  @media screen and (max-width: 800px) {
     @include image-replacement-graphic(
       "crimethinc-logo-type-white.svg",
       "crimethinc-logo-type-white.svg",
@@ -90,16 +90,17 @@ html[dir="rtl"] .site-header .button {
     }
   }
 }
-
-@media screen and (max-width: $small-tablet) {
+/* var(--small-tablet) */
+@media screen and (max-width: 800px) {
   .site-header nav {
     display: block;
     margin-top: 0.4em;
   }
 }
 
-/* larger than $large-phone viewport */
-@media screen and (min-width: $small-tablet) {
+/* larger than var(--large-phone) viewport */
+/* var(--small-tablet) */
+@media screen and (min-width: 800px) {
   .site-header .nav-link {
     font-size: 1.7rem;
 

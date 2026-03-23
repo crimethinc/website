@@ -7,8 +7,8 @@ footer#site-footer {
     flex-wrap: wrap;
     align-items: top;
   }
-
-  @media screen and (min-width: $small-tablet) {
+  /* var(--small-tablet) */
+  @media screen and (min-width: 800px) {
     .footer-section {
       width: 33.33333333%;
     }
@@ -16,8 +16,8 @@ footer#site-footer {
 
   .footer-section-container {
     padding: var(--border-size-large);
-
-    @media screen and (min-width: $small-tablet) {
+    /* var(--small-tablet) */
+    @media screen and (min-width: 800px) {
       padding: var(--border-size-xlarge);
     }
   }

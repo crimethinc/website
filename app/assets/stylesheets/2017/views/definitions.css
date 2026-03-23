@@ -12,7 +12,7 @@ html#definitions {
     }
 
     .e-content > * {
-      max-width: $large-tablet;
+      max-width: var(--large-tablet);
     }
 
     #introduction {
