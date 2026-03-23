@@ -9,7 +9,7 @@
     padding: 0;
     list-style: none;
 
-    // most recent entry only
+    /* most recent entry only */
     > .h-entry {
       height: 300pt;
       /* var(--small-tablet) */
@@ -41,7 +41,7 @@
     margin: 0 0 var(--border-size-xlarge) 0;
   }
 
-  // all entries in the feed (including most recent)
+  /* all entries in the feed (including most recent) */
   .h-entry {
     background-color:    var(--color-true-black);
     background-position: center;
@@ -140,7 +140,7 @@
     }
   } /* .h-entry */
 
-  // all entries in the feed except most recent
+  /* all entries in the feed except most recent */
   .row {
       /* var(--small-tablet) */
       @media screen and (min-width: 800px) {
@@ -169,9 +169,9 @@
       }
     }
   }
-} // #home
+}
 
-// hide 'Tags:' and 'Categories:' on home page story card and article#show header
+/* hide 'Tags:' and 'Categories:' on home page story card and article#show header */
 #article,
 #home {
   .badge {

@@ -100,10 +100,8 @@
       }
 
       h1 {
-        font: {
-          size: 3rem;
-          weight: 900;
-        }
+        font-size: 3rem;
+        font-weight: 900;
         letter-spacing: -.01em;
         line-height: 1.05em;
         margin-bottom: .1em;
@@ -182,11 +180,9 @@
     padding: 0 var(--border-size-medium);
     margin-top: 4rem;
 
-    font: {
-      size: 1.75rem;
-      weight: lighter;
-      weight: 300;
-    }
+    font-size: 1.75rem;
+    font-weight: lighter;
+    font-weight: 300;
     letter-spacing: .02em;
     /* var(--small-tablet) */
     @media screen and (min-width: 800px) {
@@ -299,10 +295,8 @@
     }
 
     dt, b, strong {
-      font: {
-        weight: bold;
-        weight: 700;
-      }
+      font-weight: bold;
+      font-weight: 700;
     }
 
     dl {
@@ -352,25 +346,23 @@
     }
 
     caption {
-      // TODO
+      /* TODO */
       font-weight: bold;
       font-weight: 700;
       padding: .5em;
     }
 
     th {
-      // TODO
-      font: {
-        weight: bold;
-        weight: 700;
-      }
+      /* TODO */
+      font-weight: bold;
+      font-weight: 700;
       text-align: left;
       background: #eee;
       border-bottom: var(--border-size-xsmall) solid white;
     }
 
     th, td {
-      // TODO
+      /* TODO */
       padding: .5em;
     }
 
@@ -443,7 +435,7 @@
     }
 
     /* for groups of images */
-    // TODO
+    /* TODO */
     .images,
     .images-group {
       text-align: center;
@@ -459,13 +451,13 @@
       @media screen and (min-width: 800px) {
         figure + figure,
         img + img {
-          // TODO
+          /* TODO */
           margin-left: 1em;
         }
       }
 
       figure {
-        // TODO
+        /* TODO */
         display: inline-block;
         margin: 0;
         max-width: 50%;
@@ -479,13 +471,13 @@
     }
 
     table {
-      // TODO
+      /* TODO */
       text-align: center;
       margin: 1em auto;
     }
 
     th {
-      // TODO
+      /* TODO */
       text-align: left;
       padding-right: .25em;
       font-weight: normal;
@@ -493,7 +485,7 @@
     }
 
     td {
-      // TODO
+      /* TODO */
       text-align: left;
       font-weight: lighter;
       font-weight: 300;
@@ -513,10 +505,8 @@
       &:link, &:visited, &:hover, &:active {
         display: inline-block;
         text-decoration: none;
-        font: {
-          size: 0.625em;
-          weight: 500;
-        }
+        font-size: 0.625em;
+        font-weight: 500;
         position: relative;
         top: -0.625em;
         left: -0.125em;
@@ -533,22 +523,21 @@
       .categories { display: none !important; }
       .localizations { display: none !important; }
 
-      // only safari supports currently
+      /* only safari supports currently */
       div:has(> ul.pagination) { display: none; }
       ul.pagination { display: none; }
 
-      // hide videos as they render as a large blank space in print
+      /* hide videos as they render as a large blank space in print */
       .video-container { display: none; }
 
-      // make title and subtitle a lil bit bigger in print
+      /* make title and subtitle a lil bit bigger in print */
       .p-name .p-x-title { font-size: 5rem; }
       .p-name .p-x-subtitle { font-size: 3rem; }
 
-      // Prevent images and blockquotes from spanning a page break
+      /* Prevent images and blockquotes from spanning a page break */
       blockquote, figure, img {
           break-inside: avoid;
           max-height: 90vh;
       }
   }
-
 } /* #article */

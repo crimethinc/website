@@ -1,4 +1,4 @@
-// Contradictionary definitions
+/* Contradictionary definitions */
 .h-entry.definition {
   #intro a {
     font-weight: normal;
@@ -85,19 +85,19 @@
         }
       }
 
-      // Contradictionary rounded corners
-      // books#index
+      /* Contradictionary rounded corners */
+      /* books#index */
       #contradictionary .tool-front img {
         border-radius: 0 10px 10px 0;
       }
-      // books#show
+      /* books#show */
       .tool-front.contradictionary-cover img {
         border-radius: 0 20px 20px 0;
       }
 
-      // Cover image sizes on /books
+      /* Cover image sizes on /books */
       .book {
-        // Custom size
+        /* Custom size */
         &#recipes-for-disaster .tool-front img {
           width: 100%;
         }
@@ -112,7 +112,7 @@
           }
         }
 
-        // Default size
+        /* Default size */
         & .tool-front img {
           width: 68%;
         }
@@ -334,7 +334,7 @@
         }
       }
 
-      // extras
+      /* extras */
       h1 + .row {
         margin-top: 2rem;
       }
