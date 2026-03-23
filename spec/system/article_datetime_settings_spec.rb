@@ -5,14 +5,11 @@ describe 'Setting and changing an articles published_at date', :js do
 
   before do
     Current.theme = '2017'
-  end
-
-  let(:admin) do
     create(:user, username: 'user1', password: 'c' * 31, role: 'publisher')
   end
 
   it 'creates a new article' do
-    login_user(admin)
+    login_user
     visit '/admin/articles'
 
     click_link_or_button 'NEW'
@@ -37,7 +34,7 @@ describe 'Setting and changing an articles published_at date', :js do
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
     expect(article.published_at_tz).to eq('Pacific Time (US & Canada)')
 
-    login_user(admin)
+    login_user
     visit '/admin/articles'
 
     click_link_or_button 'EDIT'
@@ -61,8 +58,8 @@ describe 'Setting and changing an articles published_at date', :js do
     expect(article.reload.published_at_tz).to eq('UTC')
   end
 
-  it 'saves an article without entering publication date info', skip: 'TODO: fix or change flaky system tests' do
-    login_user(admin)
+  it 'saves an article without entering publication date info' do
+    login_user
     visit '/admin/articles'
 
     click_link_or_button 'NEW'
@@ -78,7 +75,7 @@ describe 'Setting and changing an articles published_at date', :js do
 
   it 'uses ‘PUBLISH NOW’ feature' do
     freeze_time do
-      login_user(admin)
+      login_user
       visit '/admin/articles'
 
       click_link_or_button 'NEW'
@@ -94,10 +91,9 @@ describe 'Setting and changing an articles published_at date', :js do
     end
   end
 
-  it 'Sets the publication date/time if article is `published` and fields are blank',
-     skip: 'TODO: fix or change flaky system tests' do
+  it 'sets the publication date/time if article is `published` and fields are blank' do
     freeze_time do
-      login_user(admin)
+      login_user
       visit '/admin/articles'
 
       click_link_or_button 'NEW'

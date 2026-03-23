@@ -24,7 +24,7 @@ brew 'postgresql@15'
 brew 'yamllint'
 
 # System tests
-cask 'chromedriver'
+cask 'google-chrome' unless system 'test -d "/Applications/Google Chrome.app"'
 
 # Entity relationship diagram (ERD)
 brew 'graphviz'

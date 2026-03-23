@@ -9,6 +9,10 @@
 <header>
   <h1>Category</h1>
   <h2><%= @category.name %></h2>
+
+  <% if @category.description.present? %>
+    <%= render_markdown @category.description %>
+  <% end %>
 </header>
 
 <div class="h-feed">

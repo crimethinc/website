@@ -9,6 +9,10 @@
 <header>
   <h1>Tag</h1>
   <h2><%= @tag.name %></h2>
+
+  <% if @tag.description.present? %>
+    <%= render_markdown @tag.description %>
+  <% end %>
 </header>
 
 <div class="h-feed">

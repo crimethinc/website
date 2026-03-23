@@ -14,8 +14,9 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @html_id = 'page'
-    @body_id = 'category'
+    @html_id  = 'page'
+    @body_id  = 'category'
+    @editable = @category
 
     render "#{Current.theme}/categories/show"
   end

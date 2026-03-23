@@ -73,6 +73,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platform: :mri
   gem 'capybara'
+  gem 'cuprite'
   gem 'dotenv-rails'
   gem 'erb_lint', require: false
   gem 'factory_bot_rails'
@@ -86,7 +87,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rails-erd'
   gem 'rspec-rails', '> 6'
-  gem 'selenium-webdriver'
 
   # codestyle guide and linting
   gem 'rubocop', require: false
@@ -101,6 +101,7 @@ end
 # testing / ci
 group :test do
   gem 'simplecov', require: false
+  gem 'webmock'
 end
 
 # dev

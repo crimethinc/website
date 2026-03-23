@@ -41,6 +41,20 @@ RSpec.describe Book do
     it { is_expected.to eq('Photo of ‘Contradictionary’ front cover') }
   end
 
+  describe '#ask_for_donation?' do
+    it 'returns true when downloads are available' do
+      book = described_class.new(title: 'Test', screen_single_page_view_download_present: true)
+
+      expect(book.ask_for_donation?).to be true
+    end
+
+    it 'returns false when no downloads are available' do
+      book = described_class.new(title: 'Test')
+
+      expect(book.ask_for_donation?).to be false
+    end
+  end
+
   describe '#published?' do
     subject { book.published? }
 

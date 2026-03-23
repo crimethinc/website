@@ -9,4 +9,12 @@ RSpec.describe ArticleArchive do
 
     it { is_expected.to eq([2017, { 1 => [last, first] }]) }
   end
+
+  describe '#paginator' do
+    it 'returns an ArticleArchivePaginator' do
+      archive = described_class.new(year: '2017', month: '01')
+
+      expect(archive.paginator).to be_a ArticleArchivePaginator
+    end
+  end
 end

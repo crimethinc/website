@@ -14,6 +14,34 @@ describe Tag do
     end
   end
 
+  describe '#path' do
+    it 'returns the tag path' do
+      tag = described_class.new(name: 'Anarchism', slug: 'anarchism')
+
+      expect(tag.path).to eq '/tags/anarchism'
+    end
+  end
+
+  describe '#strip_whitespace' do
+    it 'strips whitespace from name' do
+      tag = described_class.create!(name: '  Padded  ')
+
+      expect(tag.name).to eq 'Padded'
+    end
+  end
+
+  describe 'description' do
+    it 'is optional' do
+      tag = described_class.new(name: 'no-description')
+      expect(tag).to be_valid
+    end
+
+    it 'can be set' do
+      tag = described_class.create!(name: 'with-description', description: 'A tag about things')
+      expect(tag.reload.description).to eq('A tag about things')
+    end
+  end
+
   describe 'assigned_to?' do
     let(:page) { Page.create(title: 'about') }
 

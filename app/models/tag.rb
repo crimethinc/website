@@ -18,6 +18,10 @@ class Tag < ApplicationRecord
     self.name = name.strip
   end
 
+  def path
+    "/tags/#{slug}"
+  end
+
   def assigned_to? taggable
     in? taggable.tags
   end

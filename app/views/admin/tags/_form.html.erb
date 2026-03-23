@@ -1,0 +1,17 @@
+<div class='col-12 col-md-9 col-lg-6'>
+  <%= form_with(model: [:admin, @tag]) do |form| %>
+    <%= render "admin/form_errors", thing: @tag %>
+
+    <%= render "admin/label_and_field_form_group", form: form, attr: :name %>
+
+    <%= render "admin/label_and_field_form_group", form: form, attr: :slug %>
+    <p class="form-text text-muted">
+      Leave blank to auto-generate <code>slug</code> based on <code>name</code>.
+    </p>
+
+    <%= render "admin/label_and_area_form_group", form: form, attr: :description, rows: 4 %>
+    <p class="form-text text-muted">Formatted as <b>Markdown</b>.</p>
+
+    <%= render "admin/form_actions", cancel_url: [:admin, :tags] %>
+  <% end %>
+</div>

@@ -28,7 +28,7 @@ module Crimethinc
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 8.0
+    config.load_defaults 8.1
 
     config.active_storage.variant_processor = :vips
 
@@ -76,6 +76,7 @@ module Crimethinc
     path_ltr_locales = %i[
       italiano
       srpskohrvatski
+      cebuano
       malay
       turkce
       english
@@ -108,12 +109,6 @@ module Crimethinc
     # config.eager_load_paths << Rails.root.join("extras")
 
     # TODO: rails81
-    # DEPRECATION WARNING:
-    # `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1.
-    # is deprecated and will be removed in Rails 8.2
-    # To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`.
-    config.active_support.to_time_preserves_timezone = :zone
-
     # Load service-specific config files into Rails' custom config namespace: x
     # Example: Rails.application.config.x.stripe.secret_key
     config.x.app         = config_for 'services/app'
