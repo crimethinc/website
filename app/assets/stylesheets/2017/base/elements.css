@@ -14,8 +14,8 @@ body {
   background: var(--color-white);
   color: var(--color-black);
   font: {
-    size: $base-font-size;
-    family: $font-body;
+    size: var(--base-font-size);
+    family: var(--font-body);
   }
 }
 
