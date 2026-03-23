@@ -33,10 +33,10 @@
 
     header {
       color: red;
-      color: $color-white;
+      color: var(--color-white);
 
       .u-photo {
-        background: $color-true-black;
+        background: var(--color-true-black);
         width: 100%;
       }
 
@@ -58,7 +58,7 @@
 
       .meta,
       a {
-        color: $color-black;
+        color: var(--color-black);
         text-decoration: none;
       }
 
@@ -82,7 +82,7 @@
           text-decoration: underline;
           font-style: italic;
           font-weight: normal;
-          color: $color-gray;
+          color: var(--color-gray);
         }
       }
 
@@ -178,7 +178,7 @@
   } /* .h-entry */
 
   .e-content {
-    color: $color-black;
+    color: var(--color-black);
     padding: 0 var(--border-size-medium);
     margin-top: 4rem;
 
@@ -419,7 +419,7 @@
     }
 
     blockquote {
-      border-left: solid $color-gray-light 0.6rem;
+      border-left: solid var(--color-gray-light) 0.6rem;
       margin: 1.5em auto;
       padding: 0.2em 0 0.3em 0.75em;
 
@@ -496,7 +496,7 @@
   } /* .e-content */
 
   .footnotes {
-    border-top: solid 1px $color-gray-light;
+    border-top: solid 1px var(--color-gray-light);
     margin-top: 3rem;
     padding: 3rem 1rem 0;
 
