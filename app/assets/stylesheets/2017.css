@@ -7,7 +7,7 @@
 @import url("/2017/base/variables/viewports.css");
 /* @import url("/2017/base/mixins.css"); */
 
-/* @import url("/2017/base/elements.css"); */
+@import url("/2017/base/elements.css");
 
 /* @import url("/2017/components/alerts.css"); */
 /* @import url("/2017/components/articles_list.css"); */
