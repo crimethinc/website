@@ -1,7 +1,7 @@
 #page {
   main {
     margin: var(--border-size-xlarge) auto;
-    max-width: $large-tablet;
+    max-width: var(--large-tablet);
 
     .crumbtrail {
       text-transform: uppercase;
@@ -158,8 +158,8 @@
       margin: 0 0 0 1.5em;
       line-height: 1.5em;
     }
-
-    @media screen and (min-width: $small-tablet) {
+    /* var(--small-tablet) */
+    @media screen and (min-width: 800px) {
       .intro p {
         font-size: 2.25rem;
         line-height: 1.5em;

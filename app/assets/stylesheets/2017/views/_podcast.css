@@ -134,8 +134,8 @@
     ul {
       list-style-type: square;
     }
-
-    @media screen and (min-width: $small-tablet) {
+    /* var(--small-tablet) */
+    @media screen and (min-width: 800px) {
       .subscribe {
         margin: var(--border-size-small) auto;
         text-align: right;

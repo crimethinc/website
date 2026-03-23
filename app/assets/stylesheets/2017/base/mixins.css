@@ -30,10 +30,10 @@
   @include size($width, $height);
   @include image-replacement();
 
-  @media screen and #{$standard-def} {
+  @media screen and (-webkit-max-device-pixel-ratio: 1.49), (max-resolution: 143.9dpi), (max-resolution: 1.5dppx) {
     background-image: asset-data-url($url);
   }
-  @media screen and #{$retina} {
+  @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.49dppx) {
     background-image: asset-data-url($retina-url);
   }
 }
