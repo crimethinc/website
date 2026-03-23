@@ -100,10 +100,8 @@
       }
 
       h1 {
-        font: {
-          size: 3rem;
-          weight: 900;
-        }
+        font-size: 3rem;
+        font-weight: 900;
         letter-spacing: -.01em;
         line-height: 1.05em;
         margin-bottom: .1em;
@@ -182,11 +180,9 @@
     padding: 0 var(--border-size-medium);
     margin-top: 4rem;
 
-    font: {
-      size: 1.75rem;
-      weight: lighter;
-      weight: 300;
-    }
+    font-size: 1.75rem;
+    font-weight: lighter;
+    font-weight: 300;
     letter-spacing: .02em;
     /* var(--small-tablet) */
     @media screen and (min-width: 800px) {
@@ -299,10 +295,8 @@
     }
 
     dt, b, strong {
-      font: {
-        weight: bold;
-        weight: 700;
-      }
+      font-weight: bold;
+      font-weight: 700;
     }
 
     dl {
@@ -360,10 +354,8 @@
 
     th {
       /* TODO */
-      font: {
-        weight: bold;
-        weight: 700;
-      }
+      font-weight: bold;
+      font-weight: 700;
       text-align: left;
       background: #eee;
       border-bottom: var(--border-size-xsmall) solid white;
@@ -513,10 +505,8 @@
       &:link, &:visited, &:hover, &:active {
         display: inline-block;
         text-decoration: none;
-        font: {
-          size: 0.625em;
-          weight: 500;
-        }
+        font-size: 0.625em;
+        font-weight: 500;
         position: relative;
         top: -0.625em;
         left: -0.125em;
@@ -550,5 +540,4 @@
           max-height: 90vh;
       }
   }
-
 } /* #article */

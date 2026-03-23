@@ -25,19 +25,19 @@
 /* @import url("/2017/components/localization.css"); */
 /* @import url("/2017/components/media_mode.css"); */
 
-/* @import url("/2017/views/article_archives.css"); */
-/* @import url("/2017/views/article.css"); */
-/* @import url("/2017/views/definitions.css"); */
-/* @import url("/2017/views/category.css"); */
-/* @import url("/2017/views/video.css"); */
-/* @import url("/2017/views/tools.css"); */
-/* @import url("/2017/views/home.css"); */
-/* @import url("/2017/views/languages.css"); */
-/* @import url("/2017/views/locales.css"); */
-/* @import url("/2017/views/page.css"); */
-/* @import url("/2017/views/podcast.css"); */
-/* @import url("/2017/views/read_watch.css"); */
-/* @import url("/2017/views/related_articles.css"); */
-/* @import url("/2017/views/support.css"); */
+@import url("/2017/views/article_archives.css");
+@import url("/2017/views/article.css");
+@import url("/2017/views/definitions.css");
+@import url("/2017/views/category.css");
+@import url("/2017/views/video.css");
+@import url("/2017/views/tools.css");
+@import url("/2017/views/home.css");
+@import url("/2017/views/languages.css");
+@import url("/2017/views/locales.css");
+@import url("/2017/views/page.css");
+@import url("/2017/views/podcast.css");
+@import url("/2017/views/read_watch.css");
+@import url("/2017/views/related_articles.css");
+@import url("/2017/views/support.css");
 
 /* @import url("/2017/articles_custom_css.css"); */
