@@ -1,6 +1,6 @@
 #article .related-articles {
   margin: var(--border-size-xlarge) auto;
-  max-width: $large-tablet;
+  max-width: var(--large-tablet);
   padding: 5rem 0 5rem;
 
   .related-articles-heading {
@@ -44,21 +44,21 @@
       }
     }
   }
-
-  @media screen and (max-width: $large-phone) {
+  /* var(--large-phone) */
+  @media screen and (max-width: 640px) {
     .third-related-article {
       display: none;
     }
   }
 }
-
-@media screen and (min-width: $small-tablet) {
+/* var(--small-tablet) */
+@media screen and (min-width: 800px) {
   #article .related-articles {
     padding: var(--border-size-xlarge);
   }
 }
-
-@media screen and (max-width: $large-phone){
+/* var(--large-phone) */
+@media screen and (max-width: 640px){
   #article .related-articles {
     padding-right: 1rem;
     padding-left: 1rem;

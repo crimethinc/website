@@ -240,8 +240,8 @@
         margin-bottom: 2rem;
         padding-bottom: 2rem;
         border-bottom: var(--border-size-xsmall) solid var(--color-gray)-light;
-
-        @media screen and (min-width: $large-phone) {
+        /* var(--large-phone) */
+        @media screen and (min-width: 640px) {
           padding-bottom: 0;
           border-bottom: none;
         }
@@ -379,8 +379,8 @@
           width: 50%;
         }
       }
-
-      @media screen and (min-width: $small-tablet) {
+      /* var(--small-tablet) */
+      @media screen and (min-width: 800px) {
         .tool-series-books {
           margin-bottom: 4rem;
         }
