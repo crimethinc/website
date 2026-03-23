@@ -33,11 +33,9 @@
       margin: 0 0 2em 0;
       padding: 0 0.65em;
       h1 {
-        font: {
-          weight: lighter;
-          weight: 300;
-          size: 3rem;
-        }
+        font-weight: lighter;
+        font-weight: 300;
+        font-size: 3rem;
         border-bottom: 1px solid var(--color-gray-light);
         padding-bottom: var(--border-size-small);
       }
@@ -55,12 +53,9 @@
       }
 
       &.section li:first-child {
-        font: {
-          weight: bold;
-          weight: 700;
-          size: 1.5em;
-        }
-
+        font-weight: bold;
+        font-weight: 700;
+        font-size: 1.5em;
         line-height: 1.2em;
         list-style-type: none;
         margin-left: 0;
@@ -70,7 +65,7 @@
         font-style: italic;
         color: var(--color-gray);
       }
-    } /* .h-entry */
+    }
 
     #samples {
       .column:first-child {
@@ -88,8 +83,8 @@
         margin-left: 0;
       }
     }
-  } /* main */
-} /* #page */
+  }
+}
 
 #library header img {
   margin-top: 2rem;

@@ -3,10 +3,8 @@
   main {
     .e-content {
       h1 {
-        font: {
-          weight: normal;
-          size: 2rem;
-        }
+        font-weight: normal;
+        font-size: 2rem;
       }
     }
   }
@@ -19,11 +17,8 @@
       margin: calc(var(--border-size-xlarge) * 2) auto;
 
       h1 {
-        font: {
-          weight: normal;
-          size: 3rem;
-        }
-
+        font-weight: normal;
+        font-size: 3rem;
         margin-bottom: var(--border-size-medium);
       }
     }
@@ -41,11 +36,9 @@
       }
 
       h1 {
-        font: {
-          weight: bold;
-          weight: 800;
-          size: 2rem;
-        }
+        font-weight: bold;
+        font-weight: 800;
+        font-size: 2rem;
         line-height: 1.25em;
       }
 
