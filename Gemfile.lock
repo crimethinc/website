@@ -290,7 +290,7 @@ GEM
     markdown_media (2.0.1)
       kramdown
     matrix (0.4.3)
-    mcp (0.9.0)
+    mcp (0.9.1)
       json-schema (>= 4.1)
     memory_profiler (1.1.0)
     method_source (1.1.0)
@@ -767,7 +767,7 @@ CHECKSUMS
   marcel (1.1.0) sha256=fdcfcfa33cc52e93c4308d40e4090a5d4ea279e160a7f6af988260fa970e0bee
   markdown_media (2.0.1) sha256=ea3fad7c58b2eceda1e453b15733641d23f34754091c505704fecfc88cc84cb7
   matrix (0.4.3) sha256=a0d5ab7ddcc1973ff690ab361b67f359acbb16958d1dc072b8b956a286564c5b
-  mcp (0.9.0) sha256=a0a3737b0ac9df0772f4ef7e2b013c260ddbcf217a5d50a66bff0baeddf03e47
+  mcp (0.9.1) sha256=58185e2f80777be85134ead5dea38519520fa61856a36139a13932def6b2b199
   memory_profiler (1.1.0) sha256=79a17df7980a140c83c469785905409d3027ca614c42c086089d128b805aa8f8
   method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
   mini_magick (5.3.1) sha256=29395dfd76badcabb6403ee5aff6f681e867074f8f28ce08d78661e9e4a351c4
