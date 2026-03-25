@@ -109,7 +109,7 @@
 
     .listen {
       small {
-        color: var(--color-gray)-medium;
+        color: var(--color-gray-medium);
         font-size: .75em;
       }
     }

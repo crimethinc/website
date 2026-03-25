@@ -36,7 +36,7 @@
         font-weight: lighter;
         font-weight: 300;
         font-size: 3rem;
-        border-bottom: 1px solid var(--color-gray)-light;
+        border-bottom: 1px solid var(--color-gray-light);
         padding-bottom: var(--border-size-small);
       }
 
