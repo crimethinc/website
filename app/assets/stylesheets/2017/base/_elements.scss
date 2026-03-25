@@ -50,8 +50,8 @@ input[type="search"] {
 main {
   clear: both;
   width: 100%;
-  padding: 0 $border-size-medium;
-  margin: 0 auto $border-size-xlarge auto;
+  padding: 0 var(--border-size-medium);
+  margin: 0 auto var(--border-size-xlarge) auto;
 }
 
 a {
@@ -111,8 +111,8 @@ sup {
 audio {
   display: block;
   margin: {
-    top: $border-size-large;
-    bottom: $border-size-xlarge;
+    top: var(--border-size-large);
+    bottom: var(--border-size-xlarge);
   }
-  min-height: $border-size-xlarge;
+  min-height: var(--border-size-xlarge);
 }

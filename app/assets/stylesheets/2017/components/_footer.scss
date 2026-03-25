@@ -15,10 +15,10 @@ footer#site-footer {
   }
 
   .footer-section-container {
-    padding: $border-size-large;
+    padding: var(--border-size-large);
 
     @media screen and (min-width: $small-tablet) {
-      padding: $border-size-xlarge;
+      padding: var(--border-size-xlarge);
     }
   }
 
@@ -40,7 +40,7 @@ footer#site-footer {
   .license {
     text-align: center;
     font-style: italic;
-    padding: $border-size-xlarge $border-size-large;
+    padding: var(--border-size-xlarge) var(--border-size-large);
   }
 
   h1 {
@@ -59,7 +59,7 @@ footer#site-footer {
 
       &:hover,
       &:active {
-        border-bottom: $border-size-xsmall solid $color-true-black;
+        border-bottom: var(--border-size-xsmall) solid $color-true-black;
       }
     }
 

@@ -5,7 +5,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $color-white !important;
-  border: $border-size-xsmall solid $color-true-black;
+  border: var(--border-size-xsmall) solid $color-true-black;
   border-radius: 2px;
 }
 
