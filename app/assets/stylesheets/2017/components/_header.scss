@@ -1,4 +1,4 @@
-// Move SUPPORT US button to left or right based on language direction
+/* Move SUPPORT US button to left or right based on language direction */
 html[dir="ltr"] .site-header .button {
   right: var(--border-size-large);
 }
@@ -63,7 +63,7 @@ html[dir="rtl"] .site-header .button {
   color: white !important;
 }
 
-// nav
+/* nav */
 .primary-navigation {
   margin: 1rem 0 0 0;
   display: inline-block;
@@ -98,7 +98,7 @@ html[dir="rtl"] .site-header .button {
   }
 }
 
-// larger than $large-phone viewport
+/* larger than $large-phone viewport */
 @media screen and (min-width: $small-tablet) {
   .site-header .nav-link {
     font-size: 1.7rem;
