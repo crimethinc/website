@@ -39,7 +39,7 @@
           size: 3rem;
         }
         border-bottom: 1px solid $color-gray-light;
-        padding-bottom: $border-size-small;
+        padding-bottom: var(--border-size-small);
       }
 
       img {

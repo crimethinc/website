@@ -1,5 +1,5 @@
 #article .related-articles {
-  margin: $border-size-xlarge auto;
+  margin: var(--border-size-xlarge) auto;
   max-width: $large-tablet;
   padding: 5rem 0 5rem;
 
@@ -54,7 +54,7 @@
 
 @media screen and (min-width: $small-tablet) {
   #article .related-articles {
-    padding: $border-size-xlarge;
+    padding: var(--border-size-xlarge);
   }
 }
 

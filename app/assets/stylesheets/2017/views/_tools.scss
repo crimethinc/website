@@ -54,7 +54,7 @@
       }
 
       hr {
-        border: $border-size-xsmall solid $color-gray-light;
+        border: var(--border-size-xsmall) solid $color-gray-light;
         margin: 3rem auto;
         width: 80%;
       }
@@ -239,7 +239,7 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
         padding-bottom: 2rem;
-        border-bottom: $border-size-xsmall solid $color-gray-light;
+        border-bottom: var(--border-size-xsmall) solid $color-gray-light;
 
         @media screen and (min-width: $large-phone) {
           padding-bottom: 0;
@@ -262,7 +262,7 @@
       .h-entry .e-content .table-of-contents,
       .table-of-contents {
         padding-top: 2rem;
-        border-top: $border-size-xsmall solid $color-gray-light;
+        border-top: var(--border-size-xsmall) solid $color-gray-light;
 
         * {
           font-size: 1rem;
@@ -298,7 +298,7 @@
 
       .tool-content {
         padding-top: 2rem;
-        border-top: $border-size-xsmall solid $color-gray-light;
+        border-top: var(--border-size-xsmall) solid $color-gray-light;
 
         h1 {
           font-size: 3rem;

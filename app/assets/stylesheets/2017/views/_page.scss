@@ -1,6 +1,6 @@
 #page {
   main {
-    margin: $border-size-xlarge auto;
+    margin: var(--border-size-xlarge) auto;
     max-width: $large-tablet;
 
     .crumbtrail {
@@ -14,7 +14,7 @@
 
     .h-entry header,
     header {
-      margin-bottom: $border-size-large;
+      margin-bottom: var(--border-size-large);
 
       h1 {
         font: {
@@ -52,7 +52,7 @@
         }
 
         line-height: 1.25em;
-        margin-bottom: $border-size-small;
+        margin-bottom: var(--border-size-small);
       }
 
       h2 {
@@ -63,7 +63,7 @@
         }
 
         line-height: 1.25em;
-        margin-bottom: $border-size-small;
+        margin-bottom: var(--border-size-small);
       }
 
       h3 {
@@ -74,8 +74,8 @@
         }
 
         line-height: 1.25em;
-        margin-bottom: $border-size-medium;
-        border-bottom: $border-size-xsmall solid $color-gray-light;
+        margin-bottom: var(--border-size-medium);
+        border-bottom: var(--border-size-xsmall) solid $color-gray-light;
 
         &:first-child {
           border: none;
@@ -88,14 +88,14 @@
 
       video {
         width: 100%;
-        margin-bottom: $border-size-large;
+        margin-bottom: var(--border-size-large);
       }
 
       .buttons {
-        margin-bottom: $border-size-xlarge;
+        margin-bottom: var(--border-size-xlarge);
 
         .button {
-          margin: 0 $border-size-small $border-size-medium 0;
+          margin: 0 var(--border-size-small) var(--border-size-medium) 0;
         }
       }
 
@@ -107,13 +107,13 @@
       }
 
       p {
-        margin-bottom: $border-size-large;
+        margin-bottom: var(--border-size-large);
       }
     }
 
     li {
       text-rendering: optimizeLegibility;
-      margin-bottom: $border-size-large;
+      margin-bottom: var(--border-size-large);
     }
 
     ul,

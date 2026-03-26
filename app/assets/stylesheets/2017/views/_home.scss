@@ -5,7 +5,7 @@
   }
 
   .h-feed {
-    margin:  0 0 $border-size-xsmall 0;
+    margin:  0 0 var(--border-size-xsmall) 0;
     padding: 0;
     list-style: none;
 
@@ -36,7 +36,7 @@
   }
 
   .pagination {
-    margin: 0 0 $border-size-xlarge 0;
+    margin: 0 0 var(--border-size-xlarge) 0;
   }
 
   // all entries in the feed (including most recent)
@@ -44,7 +44,7 @@
     background-color:    $color-true-black;
     background-position: center;
     background-size:     cover;
-    border-bottom: $border-size-medium solid $color-white;
+    border-bottom: var(--border-size-medium) solid $color-white;
     color: $color-white;
     margin:  0;
     padding: 0;
@@ -79,10 +79,10 @@
       height: 100%;
       width:  100%;
 
-      padding: 0 $border-size-medium;
+      padding: 0 var(--border-size-medium);
 
       @media screen and (min-width: $small-phone) {
-        padding: 0 $border-size-large;
+        padding: 0 var(--border-size-large);
       }
 
       @media screen and (min-width: $large-tablet) {
@@ -150,7 +150,7 @@
 
       &:first-of-type {
         @media screen and (min-width: $small-tablet) {
-          border-right: $border-size-medium solid $color-white;
+          border-right: var(--border-size-medium) solid $color-white;
         }
       }
 

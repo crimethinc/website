@@ -49,7 +49,7 @@
 
         max-width: $large-tablet;
 
-        padding: 0 $border-size-medium;
+        padding: 0 var(--border-size-medium);
 
         @media screen and (min-width: 957px) {
           padding: 0;
@@ -155,9 +155,9 @@
 
       p {
         display: inline-block;
-        margin: $border-size-medium 0;
-        padding: $border-size-medium;
-        border-top: $border-size-xsmall solid #ccc;
+        margin: var(--border-size-medium) 0;
+        padding: var(--border-size-medium);
+        border-top: var(--border-size-xsmall) solid #ccc;
         font-weight: lighter;
         font-weight: 300;
         font-style: italic;
@@ -179,7 +179,7 @@
 
   .e-content {
     color: $color-black;
-    padding: 0 $border-size-medium;
+    padding: 0 var(--border-size-medium);
     margin-top: 4rem;
 
     font: {
@@ -311,7 +311,7 @@
 
     dd {
       margin: {
-        left: $border-size-large;
+        left: var(--border-size-large);
       }
     }
 
@@ -345,7 +345,7 @@
 
     hr {
       border: none;
-      border-bottom: $border-size-xsmall solid #ccc;
+      border-bottom: var(--border-size-xsmall) solid #ccc;
       margin: 3em auto;
       width: 50%;
       display: block;
@@ -366,7 +366,7 @@
       }
       text-align: left;
       background: #eee;
-      border-bottom: $border-size-xsmall solid white;
+      border-bottom: var(--border-size-xsmall) solid white;
     }
 
     th, td {
