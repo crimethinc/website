@@ -7,33 +7,36 @@
   margin-top: 2rem;
 
   .social-link {
+    --_icon-url: url("social-icons/rss.svg");
+    --_icon-size: 40px;
     display: inline-block;
 
     a {
       display: inline-block;
-      @include square(40px);
-      @include social-icon("rss");
+      width: var(--_icon-size);
+      height: var(--_icon-size);
       margin: 0 var(--border-size-small) var(--border-size-small) 0;
+      background: var(--_icon-url) center center / contain no-repeat scroll border-box padding-box transparent;
     }
 
     /* The Mastodon account is on a domain called todon.eu */
     .link-domain-todon,
-    .link-domain-mastodon  { @include social-icon("mastodon");  }
-    .link-domain-email     { @include social-icon("email");     }
-    .link-domain-facebook  { @include social-icon("facebook");  }
-    .link-domain-github    { @include social-icon("github");    }
-    .link-domain-instagram { @include social-icon("instagram"); }
-    .link-domain-telegram  { @include social-icon("telegram");  }
-    .link-domain-threads   { @include social-icon("threads");   }
-    .link-domain-tiktok    { @include social-icon("tiktok");    }
-    .link-domain-tumblr    { @include social-icon("tumblr");    }
-    .link-domain-twitter   { @include social-icon("twitter");   }
-    .link-domain-youtube   { @include social-icon("youtube");   }
+    .link-domain-mastodon  {   --_icon-url: url("social-icons/mastodon.svg"); }
+    .link-domain-email     {   --_icon-url: url("social-icons/email.svg"); }
+    .link-domain-facebook  {   --_icon-url: url("social-icons/facebook.svg"); }
+    .link-domain-github    {   --_icon-url: url("social-icons/github.svg"); }
+    .link-domain-instagram {   --_icon-url: url("social-icons/instagram.svg"); }
+    .link-domain-telegram  {   --_icon-url: url("social-icons/telegram.svg"); }
+    .link-domain-threads   {   --_icon-url: url("social-icons/threads.svg"); }
+    .link-domain-tiktok    {   --_icon-url: url("social-icons/tiktok.svg"); }
+    .link-domain-tumblr    {   --_icon-url: url("social-icons/tumblr.svg"); }
+    .link-domain-twitter   {   --_icon-url: url("social-icons/twitter.svg"); }
+    .link-domain-youtube   {   --_icon-url: url("social-icons/youtube.svg"); }
     .link-domain-kolektiva, /* the peertube instance domain is kolektiva.media */
-    .link-domain-peertube  { @include social-icon("peertube");  }
-    .link-domain-bandcamp  { @include social-icon("bandcamp");  }
-    .link-domain-reddit    { @include social-icon("reddit");  }
+    .link-domain-peertube  {   --_icon-url: url("social-icons/peertube.svg"); }
+    .link-domain-bandcamp  {   --_icon-url: url("social-icons/bandcamp.svg"); }
+    .link-domain-reddit    {   --_icon-url: url("social-icons/reddit.svg"); }
     .link-domain-bsky, /* the bluesky domain is bsky for now, but it may change or have more in the future */
-    .link-domain-bluesky    { @include social-icon("bluesky");  }
+    .link-domain-bluesky    {   --_icon-url: url("social-icons/bluesky.svg"); }
   }
 }
