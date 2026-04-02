@@ -17,7 +17,7 @@ html[dir="rtl"] .site-header .button {
 
 .site-header {
   position: relative;
-  background-color: $color-true-black;
+  background-color: var(--color-true-black);
   padding: var(--border-size-large);
 
   @media screen and (max-width: $small-tablet) {
@@ -25,7 +25,7 @@ html[dir="rtl"] .site-header .button {
   }
 
   .button {
-    background: $color-blue;
+    background: var(--color-blue);
     position: absolute;
     top: var(--border-size-large);
 
@@ -81,12 +81,12 @@ html[dir="rtl"] .site-header .button {
 
     &:link,
     &:visited {
-      color: $color-white;
+      color: var(--color-white);
     }
 
     &:hover,
     &:active {
-      border-bottom: 1px solid $color-white;
+      border-bottom: 1px solid var(--color-white);
     }
   }
 }

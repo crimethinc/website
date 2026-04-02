@@ -1,5 +1,5 @@
 footer#site-footer {
-  background-color: $color-gray-light;
+  background-color: var(--color-gray-light);
   line-height: 1.25em;
 
   .footer-sections {
@@ -23,13 +23,13 @@ footer#site-footer {
   }
 
   .footer-section-about .footer-section-container {
-    background: $color-true-black;
-    color: $color-white;
+    background: var(--color-true-black);
+    color: var(--color-white);
   }
 
   .simple-field {
     width: 100%;
-    border-color: $color-gray-dark;
+    border-color: var(--color-gray-dark);
     margin: 1rem 0;
   }
 
@@ -53,13 +53,13 @@ footer#site-footer {
 
   .footer-section.footer-section-nav {
     a {
-      color: $color-true-black;
+      color: var(--color-true-black);
       text-decoration: none;
       line-height: 1.5em;
 
       &:hover,
       &:active {
-        border-bottom: var(--border-size-xsmall) solid $color-true-black;
+        border-bottom: var(--border-size-xsmall) solid var(--color-true-black);
       }
     }
 
@@ -110,8 +110,8 @@ footer#site-footer {
     .first-time-link a,
     .about-us-link a {
       @extend .button;
-      background: $color-white;
-      color: $color-true-black !important;
+      background: var(--color-white);
+      color: var(--color-true-black) !important;
       text-decoration: none;
       text-align: right;
       display: block;
@@ -149,7 +149,7 @@ footer#site-footer {
         @extend .button;
         font-size: 1.5rem;
         float: right;
-        background: $color-blue;
+        background: var(--color-blue);
       }
     }
   }

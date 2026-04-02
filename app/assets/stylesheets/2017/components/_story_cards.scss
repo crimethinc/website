@@ -12,7 +12,7 @@
   li {
     display: inline-block;
     padding: var(--border-size-medium);
-    background: $color-true-black;
+    background: var(--color-true-black);
   }
 
   a {
@@ -28,7 +28,7 @@
   right: var(--border-size-medium);
   z-index: 20;
   padding: var(--border-size-medium);
-  background: $color-true-black;
+  background: var(--color-true-black);
   text-align: right;
   line-height: 1.25em;
 
