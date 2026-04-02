@@ -11,11 +11,11 @@
 
         line-height: 1em;
         margin-bottom: 1em;
-        border-bottom: 1px solid $color-gray-light;
+        border-bottom: 1px solid var(--color-gray)-light;
         padding-bottom: .25em;
-        color: $color-true-black;
+        color: var(--color-true-black);
       }
 
-    } // .h-feed
-  } // main
-} // #article-archives
+    }
+  }
+}

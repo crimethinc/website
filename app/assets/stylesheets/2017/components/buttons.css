@@ -1,0 +1,20 @@
+.button {
+  display: inline-block;
+  background: var(--color-gray);
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-white) !important;
+  border: var(--border-size-xsmall) solid var(--color-true-black);
+  border-radius: 2px;
+}
+
+.download.button,
+.buy-now.button,
+.support-site.button {
+  background: var(--color-green);
+  border-color: darken(var(--color-green), 10%);
+  font-weight: bold;
+  font-weight: 500;
+  color: var(--color-white);
+}

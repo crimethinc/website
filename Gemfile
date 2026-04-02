@@ -12,10 +12,7 @@ gem 'pg'
 gem 'puma'
 
 # assets
-gem 'autoprefixer-rails'
-gem 'bootstrap'
-gem 'sassc-rails'
-gem 'uglifier'
+gem 'propshaft'
 
 # Javascript / Hotwire
 gem 'importmap-rails'
@@ -78,7 +75,6 @@ group :development, :test do
   gem 'erb_lint', require: false
   gem 'factory_bot_rails'
   gem 'fasterer', require: false
-  gem 'http'
   gem 'i18n-debug'
   gem 'launchy'
   gem 'nokogiri'
