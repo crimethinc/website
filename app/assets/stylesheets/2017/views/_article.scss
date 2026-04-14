@@ -352,14 +352,14 @@
     }
 
     caption {
-      // TODO
+      /* TODO */
       font-weight: bold;
       font-weight: 700;
       padding: .5em;
     }
 
     th {
-      // TODO
+      /* TODO */
       font: {
         weight: bold;
         weight: 700;
@@ -370,7 +370,7 @@
     }
 
     th, td {
-      // TODO
+      /* TODO */
       padding: .5em;
     }
 
@@ -439,7 +439,7 @@
     }
 
     /* for groups of images */
-    // TODO
+    /* TODO */
     .images,
     .images-group {
       text-align: center;
@@ -454,13 +454,13 @@
       @media screen and (min-width: $small-tablet) {
         figure + figure,
         img + img {
-          // TODO
+          /* TODO */
           margin-left: 1em;
         }
       }
 
       figure {
-        // TODO
+        /* TODO */
         display: inline-block;
         margin: 0;
         max-width: 50%;
@@ -474,13 +474,13 @@
     }
 
     table {
-      // TODO
+      /* TODO */
       text-align: center;
       margin: 1em auto;
     }
 
     th {
-      // TODO
+      /* TODO */
       text-align: left;
       padding-right: .25em;
       font-weight: normal;
@@ -488,7 +488,7 @@
     }
 
     td {
-      // TODO
+      /* TODO */
       text-align: left;
       font-weight: lighter;
       font-weight: 300;
@@ -528,18 +528,18 @@
       .categories { display: none !important; }
       .localizations { display: none !important; }
 
-      // only safari supports currently
+      /* only safari supports currently */
       div:has(> ul.pagination) { display: none; }
       ul.pagination { display: none; }
 
-      // hide videos as they render as a large blank space in print
+      /* hide videos as they render as a large blank space in print */
       .video-container { display: none; }
 
-      // make title and subtitle a lil bit bigger in print
+      /* make title and subtitle a lil bit bigger in print */
       .p-name .p-x-title { font-size: 5rem; }
       .p-name .p-x-subtitle { font-size: 3rem; }
 
-      // Prevent images and blockquotes from spanning a page break
+      /* Prevent images and blockquotes from spanning a page break */
       blockquote, figure, img {
           break-inside: avoid;
           max-height: 90vh;

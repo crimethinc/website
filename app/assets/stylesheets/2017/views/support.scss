@@ -232,7 +232,7 @@
   width: 75%;
 }
 
-// removes little up and down arrows in number field
+/* removes little up and down arrows in number field */
 #amount::-webkit-inner-spin-button,
 #amount::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -258,7 +258,7 @@ label[for=amount_slider]  {
   border: 0;
 }
 
-// Generated using: http://danielstern.ca/range.css
+/* Generated using: http://danielstern.ca/range.css */
 #amount_slider {
   -webkit-appearance: none;
   width: 100%;

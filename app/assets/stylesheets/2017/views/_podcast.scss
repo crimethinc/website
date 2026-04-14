@@ -1,4 +1,4 @@
-// HACK: overly specific override of _page.scss, will go away in 2.0 redesign's CSS
+/* HACK: overly specific override of _page.scss, will go away in 2.0 redesign's CSS */
 #podcast {
   main {
     .e-content {
@@ -83,7 +83,7 @@
         display: inline-block;
         margin: 0 0 var(--border-size-small) var(--border-size-small);
 
-        // TODO WHY is this necessary? :(
+        /* TODO WHY is this necessary? :( */
         text-indent: 9999em !important;
 
         &:first-child {
@@ -142,7 +142,7 @@
 
         a {
           margin: 0 0 var(--border-size-small) var(--border-size-small);
-          // WHY is this necessary? :(
+          /* WHY is this necessary? :( */
           text-indent: 9999em !important;
         }
       }
