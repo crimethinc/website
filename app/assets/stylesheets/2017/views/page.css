@@ -1,7 +1,7 @@
 #page {
   main {
     margin: var(--border-size-xlarge) auto;
-    max-width: $large-tablet;
+    max-width: var(--large-tablet);
 
     .crumbtrail {
       text-transform: uppercase;
@@ -17,20 +17,16 @@
       margin-bottom: var(--border-size-large);
 
       h1 {
-        font: {
-          weight: bold;
-          weight: 800;
-          size: 3rem;
-        }
+        font-weight: bold;
+        font-weight: 800;
+        font-size: 3rem;
         line-height: 1.25em;
       }
 
       h2 {
-        font: {
-          weight: normal;
-          weight: 300;
-          size: 2rem;
-        }
+        font-weight: normal;
+        font-weight: 300;
+        font-size: 2rem;
         line-height: 1.25em;
       }
     }
@@ -45,34 +41,25 @@
 
     .e-content {
       h1 {
-        font: {
-          weight: bold;
-          weight: 700;
-          size: 4rem;
-        }
-
+        font-weight: bold;
+        font-weight: 700;
+        font-size: 4rem;
         line-height: 1.25em;
         margin-bottom: var(--border-size-small);
       }
 
       h2 {
-        font: {
-          weight: normal;
-          weight: 500;
-          size: 3rem;
-        }
-
+        font-weight: normal;
+        font-weight: 500;
+        font-size: 3rem;
         line-height: 1.25em;
         margin-bottom: var(--border-size-small);
       }
 
       h3 {
-        font: {
-          weight: lighter;
-          weight: 300;
-          size: 2.5rem;
-        }
-
+        font-weight: lighter;
+        font-weight: 300;
+        font-size: 2.5rem;
         line-height: 1.25em;
         margin-bottom: var(--border-size-medium);
         border-bottom: var(--border-size-xsmall) solid var(--color-gray-light);
@@ -158,8 +145,8 @@
       margin: 0 0 0 1.5em;
       line-height: 1.5em;
     }
-
-    @media screen and (min-width: $small-tablet) {
+    /* var(--small-tablet) */
+    @media screen and (min-width: 800px) {
       .intro p {
         font-size: 2.25rem;
         line-height: 1.5em;

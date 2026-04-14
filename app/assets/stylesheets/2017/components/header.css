@@ -1,0 +1,87 @@
+:root {
+    --site-header-padding: var(--border-size-large);
+    --site-header-button-padding: 0.5em;
+    --site-header-nav-link-font: 1.6rem;
+    --site-header-support-us-position: var(--border-size-large);
+    --site-header-logo-width: 10rem;
+    --site-header-logo-height: 2rem;
+    --site-header-logo-url: url("/crimethinc-logo-type-white.svg");
+
+    @media screen and (max-width: 800px) { /* var(--small-tablet) */
+        --site-header-support-us-position: var(--border-size-medium);
+        --site-header-padding: var(--border-size-medium);
+        --site-header-button-padding: 0.5em;
+    }
+    @media screen and (-webkit-max-device-pixel-ratio: 1.49), (max-resolution: 143.9dpi), (max-resolution: 1.5dppx) {
+        --site-header-logo-width: 15rem;
+        --site-header-logo-height: 3rem;
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.49dppx) {
+        --site-header-logo-width: 15rem;
+        --site-header-logo-height: 3rem;
+    }
+    @media screen and (min-width: 800px) {
+        --site-header-nav-link-font: 1.7rem;
+    }
+}
+
+html[dir="ltr"] .site-header .button { right: var(--site-header-support-us-position); }
+html[dir="rtl"] .site-header .button { left: var(--site-header-support-us-position); }
+
+.language-switcher a, .language-switcher { color: white !important; }
+
+.site-header {    
+    position: relative;
+    background-color: var(--color-true-black);
+    padding: var(--site-header-padding);
+
+    .nav-link {
+        display: inline-block;
+        font-size: var(--site-header-nav-link-font);
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+
+        a {
+            text-decoration: none;
+            &:link, &:visited { color: var(--color-white); }
+            &:hover, &:active { border-bottom: 1px solid var(--color-white); }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        nav {
+            display: block;
+            margin-top: 0.4em;
+        }
+    }
+
+    @media screen and (min-width: 800px) { .nav-link { a { padding: 1rem 0; } } }
+
+    .button {
+        background: var(--color-blue);
+        position: absolute;
+        top: var(--border-size-large);
+        font-size: 12px;
+        padding: var(--site-header-button-padding);
+        top: var(--border-size-medium);
+    }
+}
+
+.primary-navigation {
+    margin: 1rem 0 0 0;
+    display: inline-block;
+}
+
+.header-logo a {
+    background-image: var(--site-header-logo-url);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: var(--site-header-logo-width);
+    height: var(--site-header-logo-height);
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -10000%;
+    white-space: nowrap;
+}
