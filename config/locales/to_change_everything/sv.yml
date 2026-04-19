@@ -1,0 +1,344 @@
+---
+swedish:
+  layouts:
+    to_change_everything:
+      language_direction: ltr
+      lang_code: sv
+      head:
+        title: To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers'
+          Collective
+        meta:
+          title: To Change Everything, an anarchist appeal
+          description: The case for complete self-determination—a guide for the furious,
+            the curious, and the pure of heart
+          url: https://tochangeeverything.com/
+      menu:
+        toc: Table of Contents
+        language: English
+        share: Share
+      toc:
+        introduction: introduction
+        self: start with self-determination
+        answering: start by answering to ourselves
+        power: start by seeking power, not authority
+        relationships: start with relationships built on trust
+        reconciling: start by reconciling the individual and the whole
+        liberation: start with the liberation of desire
+        revolt: start with revolt
+        control: the problem is control
+        hierarchy: the problem is hierarchy
+        borders: the problem is borders
+        representation: the problem is representation
+        leaders: the problem is leaders
+        government: the problem is government
+        profit: the problem is profit
+        property: the problem is property
+        lastcrime: the last crime
+        anarchy: anarchy is
+        outro: outro
+        takeflight: take flight
+        next: next
+  to_change_everything:
+    show:
+      title_html: Att förändra allt
+      subtitle_html: en anarkistisk uppmaning
+      video_cte: Watch Video
+      video_url: https://player.vimeo.com/video/111159930
+      pdf_cte_html: Download<br />&nbsp;PDF
+      pdf_get_url: "/tce/get"
+      pdf_image: tce-cover-200.png
+      intro:
+        left_text_html: Om du kunde förändra vad som helst, vad skulle det vara? Skulle
+          du semestra livet ut? Göra så att fossilt bränsle inte skadade miljön? Be
+          om etiska banker och politiker? Inget är mer orealistiskt än att förvänta
+          sig nya resultat om världen förblir som den är idag. Vår privata ekonomiska
+          och känslomässiga kamp speglar en global omstörtning och katastrof. Vi skulle
+          kunna ägna resten av våra liv åt att försöka släcka bränder en efter en
+          utan att komma åt källan. Ingen gradvis lösning kommer att räcka. Vi måste
+          tänka om gällande allt och följa en annan logik.
+        right_text_html: För att förändra vad som helst, börja överallt.
+      self:
+        left_text_html: börja med självbestämmande
+        right_text_html: |-
+          Välfärdsstatens skugga ligger fortfarande tung över vårt samhälle men idag talar de flesta politiker om valfrihet medan välfärdsstaten nedmonteras. Till förmån för en nyliberal världsordning. Men vi vill inte ha något
+
+          av det.
+
+          Om du hade total självbestämmanderätt, vad skulle du göra just nu? Tänk på ditt livs enorma potential. Tänk på relationerna du kunde ha, sakerna du skulle kunna uppleva, hur du kunde ge mening åt din existens. När du föddes verkade det inte finnas några gränser för vad du du kunde bli. Du var bara möjlighet. Vanligtvis stannar vi inte upp och föreställer oss detta. Bara i de vackraste ögonblick, när vi är förälskade eller når ett genombrott eller besöker ett land långt borta, får vi en glimt av vad våra liv skulle kunna vara. Vad begränsar dig från att bli allt du kan? Hur stor möjlighet har du att påverka miljön du befinner dig i eller hur du spenderar din tid? Är det byråkratin som värderar dig utifrån hur bra du är på att följa instruktioner eller är det ekonomin som ger dig möjlighet utifrån hur mycket profit du genererar? Som möjliggör att du på dina egna villkor kan göra det mesta av ditt liv? Den nakna sanningen är att vi alla har totalt självbestämmande. Inte för att vi fått det utan för att inte ens den mest totalitära diktaturen kan ta det ifrån oss. Samtidigt så hamnar vi, så fort vi börjar agera självständigt, i konflikt med de institutioner som är menade att
+
+          ge oss frihet.
+        image_name: self
+        image_alt: shadow of a person climbing over a barbed-wire fence
+      answering:
+        left_text_html: börja genom att ta ansvar för oss själva
+        right_text_html: |-
+          Chefer och politiker älskar att prata om personligt ansvar. Men om vi helt tog ansvar för våra handlingar skulle vi då överhuvudtaget följa deras anvisningar? Historiskt sett har mer skada orsakats genom lydnad än genom ondska. Hela världens militära arsenal är den fysiska manifestationen av vår villighet att foga oss efter någon annan. Om du vill vara säker på att du aldrig bidrar till krig, folkmord eller förtryck är det första steget att
+
+          sluta följa order.
+
+          Det gäller dina värderingar också. Oräkneliga makthavare och regelverk kräver att du utan att ifrågasätta underkastar dig. Men även om du skulle vilja överlåta ansvaret för dina beslut till någon gud eller lära, hur bestämmer du vilken det skulle bli? Oavsett om du gillar det eller inte, är det du som måste välja. Vanligtvis gör människor valet utifrån vad som är mest lättillgängligt
+
+          och bekvämt.
+
+          Vi kommer inte undan ansvaret för det vi tror på eller för våra beslut. Genom att hålla oss själva ansvariga istället för att låta ledare eller religiösa regler ställa oss till svars undviker vi inte att hamna i konflikter med andra. Skillnaden skulle vara att vi skulle hamna där på våra egna villkor. Vi skulle inte i onödan skada andra för att
+
+          uppfylla någon annans agenda.
+        image_name: answering
+        image_alt: 1968 Olympics Black Power salute raised by the African-American
+          athletes Tommie Smith and John Carlos during their medal ceremony at the
+          1968 Summer Olympics in the Olympic Stadium in Mexico City. As they turned
+          to face their flags and hear the American national anthem, they each raised
+          a black-gloved fist and kept them raised until the anthem had finished
+      power:
+        left_text_html: börja med att söka makt, inte auktoritet
+        right_text_html: |-
+          Arbetarna som gör jobbet har makt, cheferna som beslutar om vad de ska göra har auktoritet. Hyresgästerna som underhåller huset har makt, hyresvärden som
+
+          äger det har auktoritet.
+
+          Makt i sig är inte förtryckande. Många typer av makt kan istället vara frigörande. Makten att ta hand om de du älskar, att försvara dig själv eller att lösa konflikter. Makten att laga sånt som går sönder, odla dina grönsaker eller att sjunga tillsammans. Det finns sätt att utveckla dina förmågor som också ökar andras frihet. Varje person som försöker nå sin fulla potential skapar något som är
+
+          värdefullt för alla.
+
+          Den som däremot söker auktoritet över andra försöker lägga beslag på deras makt. Och det du tar från dem kommer någon annan att ta från dig. Auktoritet utgår
+
+          alltid ovanifrån.
+
+          En soldat lyder generalen som svarar till regeringen som får sin
+
+          auktoritet från grundlagen.
+
+          Den anställde svarar inför VD:n som svarar inför styrelsen som får sin auktoritet från aktieägarna och deras vinster. En polis utför en husrannsakan med en underskrift från en åklagare som hämtar sin auktoritet från lagen.
+
+          Manlighet, vithet och ägande. Högst upp i dessa pyramider hittar vi inga tyranner, bara sociala konstruktioner. Spöken som hypnotiserar oss alla. I vårt samhälle är makt och auktoritet så sammanlänkade att vi knappt kan skilja dem åt. Vi kan bara få makt genom att ta den från någon annan. Men utan frihet är makten värdelös.
+        image_name: power
+        image_alt: a worker in a gold mine confronts soldier keeping guard and grabs
+          his rifle by the barrel as a crowd of workers watch
+      relationships:
+        left_text_html: börja med relationer byggda på förtroende
+        right_text_html: |-
+          Till skillnad från auktoritet så lägger ett förtroende makten i händerna på de som ger det, inte de som får det. En person som förtjänat ett förtroende behöver ingen auktoritet och har den inte gjort sig förtjänt av det borde verkligen inte tilldelas auktoritet! Men trots detta, finns det några vi har mindre förtroende för än politiker och
+
+          företagsledare?
+
+          Utan en påtvingad maktobalans har vi drivkraften att lösa konflikter på ett sätt som gynnar alla. Och därigenom förtjäna varandras förtroende. Hierarkier tar bort den här drivkraften och möjliggör för de med auktoritet att tysta ner konflikter utan att lösa dem. Vänskap, när den är som bäst, är ett band mellan jämlikar som stöttar och utmanar varandra, samtidigt som de respekterar varandras autonomi. Detta är en ganska bra måttstock för att utvärdera alla våra relationer. Utan de bojor som vi lever under idag – medborgare och illegal, ägare och skuldsatt samt beslutsordningar inom företag eller förvaltningar – skulle vi kunna omskapa våra relationer utifrån fria sammanslutningar och ömsesidig hjälp.
+        image_name: relationships
+        image_alt: at night, lit by streetlights, young protestors in Turkey form
+          a fire-brigade-line to transport cobblestones to the front lines of a confrontation
+          with police
+      reconciling:
+        left_text_html: börja med att förena individ och helhet
+        right_text_html: |-
+          ”Dina rättigheter slutar där någon annans rättigheter börjar”. Med den logiken blir slutsatsen att ju fler personer det finns desto mindre frihet. Men frihet är inte en liten bubbla av individuella rättigheter; vi kan inte skiljas åt så lätt. Gäspningar och skratt är smittsamma, precis som entusiasm och hopplöshet. Jag utgörs av klyschorna som kommer ur min mun, låtarna jag får på hjärnan och humören som mina kompisar smittar mig med. När jag kör bil så släpper jag ut avgaser i luften som du andas, medicinerna vi uppmuntras att ta går i vattendrag som påverkar hela ekosystem. Systemet som alla andra accepterar är det som du måste leva under. Men när de utmanar det får också du en chans att omförhandla din verklighet. Din frihet börjar där min gör det, och slutar där min frihet slutar. Vi är inte åtskilda individer. Våra kroppar består av tusentals olika arter som lever i symbios; de är inga avskärmade enheter. Istället går de att förstå som pågående processer genom vilka näringsämnen och mikroorganismer ständigt passerar. Vi lever dessutom i symbios med ytterligare tusentals arter. Vetefält andas in vad vi andas ut. En myllrande vargflock eller en kväll fylld av grodors sorl är lika individuell eller enhetlig som vilken som helst av våra kroppar. Vi lever och verkar inte i ett vakuum, drivna av förnuftet; vi är en del av hela universum och universum är en del av oss. Språk fungerar att kommunicera med bara för att vi har dem gemensamma. Detsamma gäller för idéer och begär. Vi kan kommunicera dem för att de är större än oss själva. Alla är vi sammansatta av ett kaos av motstridiga krafter som sträcker sig ut omkring oss genom tid och rum. Genom att välja vilka av dessa vi ägnar oss åt bestämmer vi vad vi utvecklar i alla vi möter.
+
+          Frihet är ingen ägodel, det är en relation. Det handlar inte om att vara skyddad mot omvärlden utan om att genomkorsa den på ett sätt som maximerar möjligheter. Det betyder inte att vi måste söka konsensus precis alla lägen, både konflikt och konsensus kan vara utvecklande och föra oss framåt. Iallafall så länge som ingen centraliserad makt kan framtvinga överenskommelser eller göra en konflikt till en tävling med bara en vinnare. Så istället för att dela upp världen i små revir, låt oss göra det bästa av att vi är sammanvävda.
+        image_name: reconciling
+        image_alt: kid hugging tree in forest, looking up into the canopy
+      liberation:
+        left_text_html: börja med begärens frigörelse
+        right_text_html: Vi som växer upp i det här samhället måste inse att inte
+          ens våra begär är våra egna. De skapas och upprätthålls av reklam och andra
+          former av propaganda för att distrahera oss där vi springer i marknadens
+          ekorrhjul. Tack vare denna indoktrinering kan folk vara helt nöjda med att
+          göra sådant som i det långa loppet kommer göra dem olyckliga. Vi är instängda
+          i vårt lidande och våra njutningar är låset som håller gallret på plats.
+          För att kunna vara fria på riktigt behöver vi inflytande över processerna
+          som producerar våra begär. Frigörelse betyder inte bara att tillfredsställa
+          de begär vi har idag. Det innebär kanske framförallt att utöka vår förståelse
+          av vad som är möjligt. Så att våra begär kan förändras i takt med de verkligheter
+          de får oss att vilja skapa. Det betyder att vi måste undvika nöjet vi kan
+          känna av att påtvinga, dominera och äga. Istället borde vi söka lustar som
+          tar oss ur lydnadens och tävlandets maskineri. Om du är en av alla de som
+          tagit sig ur ett beroende så har du en förståelse för vad det innebär att
+          förändra dina begär.
+        image_name: liberation
+        image_alt: two protestors, adorned with gas masks and balaclavas, dance the
+          tango together in the street
+      revolt:
+        left_text_html: börja med revolt
+        right_text_html: |-
+          Vi uppmuntras till trångsynt tänkande som gör det lätt att skuldbelägga specifika grupper för systemproblem. Judar får skulden för vinstdrivande kapitalism eller invandrare för lågkonjunktur – på samma sätt som folk skuldbelägger individuella politiker för korruptionen inom politiken. Men problemet är själva systemen. Oavsett vem som regerar, producerar de samma maktobalans och samma kränkningar. Problemet är inte att systemen är trasiga, problemet är att de överhuvudtaget existerar. Våra fiender är inte människor, utan institutionerna och rutinerna som alienerar oss från varandra och oss själva. Det finns mer konflikter i oss själva än mellan oss. Samma felaktigheter som finns i vårt samhälle finns i våra vänskaper och i våra hjärtan; det är inte en krock mellan människor utan mellan olika former av relationer, olika sätt att leva. När vi vägrar infoga oss i våra roller i den nuvarande ordningen synliggör vi felaktigheterna och bjuder in även andra att välja sida. Det bästa vore att göra oss av med dominans helt och hållet – inte att göra saker mer rättvist. Inte att kasta om i våra positioner gällande vem som utsätter och vem som står ut, inte stabilisera systemet genom reform. Poängen med revolt är inte att kräva mer rättvisa regler eller legitima ledare utan att demonstrera att vi kan agera genom vår egen styrka, uppmuntra andra att göra likadant och avskräcka myndigheterna från att lägga sig i. Detta är inte en fråga om krig – en konflikt mellan motsatta militära fiender – snarare en fråga om smittsam olydnad. Det är inte nog att enbart utbilda och diskutera, att vänta på att andras hjärtan och hjärnor ska förändras.
+
+          Tills idéer uttrycks i handlingar och människor konfronteras med konkreta valmöjligheter förblir samtalet abstrakt. De flesta människor tenderar att distansera sig från teoretiska diskussioner men när någonting händer, när insatserna är höga, och de kan se betydande skillnader mellan motsatta sidor kommer de att ta ställning. Vi behöver inte enighet, en djup förståelse av världen eller en karta till ett exakt slutmål. Allt vi behöver är modet att
+
+          välja en annan väg.
+        image_name: revolt
+        image_alt: A anonymous man stands in front of a column of tanks on June 5,
+          1989, the morning after the Chinese military had suppressed the Tiananmen
+          Square protests of 1989 by force, who later became known as the Tank Man.
+          The tanks maneuvered to pass by the man, and he moved to continue to obstruct
+          them, in something like a dance.
+      control:
+        left_text_html: problemet är kontroll
+        right_text_html: |-
+          Vad är tecknen på att du befinner dig i en förtryckande relation? Förövaren försöker kanske kontrollera ditt handlingsutrymme eller säga åt dig hur du ska tänka, hindra och reglera din tillgång till resurser, hota dig eller använda våld mot dig eller hålla dig beroende och under
+
+          konstant övervakning.
+
+          Detta beskriver hur individuella förövare agerar men det passar även in på statens säkerhetstjänster som FRA och SÄPO samt andra statliga institutioner som Migrationsverket. De reglerar vårt samhälle. I stort sett alla är baserade på idén att människor behöver blir tyglade,
+
+          ombesörjda och förvaltade.
+
+          Ju större ojämlikheter som vi påtvingas ju större kontroll krävs det för att bevara dem. På ena sidan av förtrycksskalan används brutal kontroll på individuell nivå; attacker med drönare och insatsstyrkor samt användandet av isoleringsceller och rasprofilering. På andra sidan är den allomfattande och osynlig, inbyggd i samhällets strukturer: bedömningen som avgör vilken kredit banken ger dig och hur mycket lån du kan få, sättet statistik samlas in på och används i stadsplaneringen. Men även utformningen av sociala medier och datingsidor på nätet. FRA övervakar vad vi gör på nätet men det utövar inte lika mycket kontroll över vår verklighet som algoritmerna som avgör hur vårt nyhetsflöde ska se ut. När livets oändliga möjligheter har reducerats till en samling valmöjligheter kodade i ettor och nollor finns det inte längre någon friktion mellan systemet vi lever i och livet vi kan föreställa oss. Inte för att vi nått total frihet utan för att vi har fulländat dess motsats. Frihet är inte att kunna välja mellan olika alternativ utan att kunna formulera frågorna.
+        image_name: control
+        image_alt: a cop dressed in fancy riot gear leans out of his open patrol car
+          door and uses a camcorder to record protestors who are not pictured
+      hierarchy:
+        left_text_html: problemet är hierarkier
+        right_text_html: |-
+          Det finns många olika system för att påtvinga ojämlikheter. Vissa skulle inte fungera utan ett centraliserat maskineri. Andra fungerar mer informellt som till exempel kontaktnätverk och könsroller. Några av dessa system har idag inte längre någon trovärdighet. Få tror idag på kungars gudomliga rätt även om det under århundraden inte gick att föreställa sig något annat sätt att organisera samhället. Andra är fortfarande så djupt rotade att vi inte kan föreställa oss ett liv utan dem. Vem kan föreställa sig en värld utan rätt att äga? Ändå är alla dessa system sociala konstruktioner; de är verkliga men inte oundvikliga. Att chefer och hyresvärdar existerar är inte mer naturligt, nödvändigt eller fördelaktigt än existensen av kungar. Alla dessa system utvecklades tillsammans och stärker varandra. Rasismens historia är till exempel sammanlänkad med kapitalismens historia. Ingen av dem skulle ha kommit till stånd utan kolonialiseringen, slaveriet eller de rasifierade klasslinjer som delar upp arbetare och som fortfarande bestämmer vem som fyller världens fängelser och kåkstäder. Lika så skulle individuella fördomar kunna upprätthålla strukturell rasism utan statens institutioner och andra hierarkier i samhället. Att vi får rasifierade personer på tunga ministerposter bidrar till att stabilisera och legitimera systemet, de blir undantagen
+
+          som bekräftar regeln.
+
+          Ett annat sätt att säga det är: så länge det finns poliser, vilka tror du att de kommer att trakassera? Så länge det finns fängelser, vilka tror du kommer att fylla dem? Så länge det finns fattigdom, vem tror du kommer att vara fattig? Det är naivt att tro att vi skulle kunna nå jämlikhet i ett samhälle baserat på hierarkier. Vi kan blanda korten men det är fortfarande samma korthög.
+        image_name: hierarchy
+        image_alt: a mustachioed cop in riot gear wearing aviator sunglasses stands
+          guard in front of several Ku Klux Klan members in full robes, one of whom
+          carries a American flag
+      borders:
+        left_text_html: problemet är gränser
+        right_text_html: |-
+          Om en utländsk armé invaderade det här landet, högg ner träden, förgiftade floderna och tvingade barn att växa upp svärandes trohet till dem, vem skulle inte ta till vapen mot dem? Men när den inhemska regeringen gör detsamma, bidrar vi gladeligen med vår lydnad, våra skattepengar och barn. Gränser skyddar inte, de söndrar. De skapar onödig friktion mot de utanför samtidigt som de döljer verkliga skillnader bland de inkluderade. Till och med de mest demokratiska regeringar är grundade på denna särskiljning mellan deltagare och de utomstående, legala och illegala. I antikens Aten, demokratins berömda födelseplats, var bara en liten del av männen inkluderade i den politiska processen. Grundarna av dagens demokrati ägde slavar. Medborgarskap avgör fortfarande vilka som är inkluderade och vilka som är exkluderade i Sverige, i den Europeiska Unionen och tar ifrån miljontals papperslösa makten över sina liv. Det liberala idealet är att utvidga gränserna för vilka som inkluderas tills hela världen är integrerad i ett enda stort demokratiskt projekt. Men ojämlikheten är inbyggd i själva strukturen. Varje nivå av detta samhälle har tusen små gränser som delar in oss i de som har makt och de som är maktlösa; säkerhetskontroller, kreditnivåer och prisklasser. Vi behöver andra former av tillhörighet. Som inte baseras på uteslutning, inte centraliserar makt och behörighet eller gör empati till något som bara finns
+
+          för grannarna i villaområdet.
+        image_name: borders
+        image_alt: a grouple of people sits upon a tall boundary fence they have climbed
+      representation:
+        left_text_html: problemet är representation
+        right_text_html: |-
+          Du kan bara inneha makt genom att utöva den. Du kan bara lära dig vad som är viktigt för dig genom att agera efter vad du tror på. När varje försök att använda makt i världen måste kanaliseras genom uppgörelser mellan representanter eller anpassas efter institutioners rutiner och byråkrati blir vi alienerade från varandra och vår egen möjlighet. Varje liten del av vår handlingskraft som vi ger upp återkommer som någonting för oss oigenkännligt och fientligt. Politikerna som hela tiden gör oss besvikna bevisar bara hur mycket av makten över våra liv som vi gett ifrån oss. Polisens våld är den mörka konsekvensen av vår önskan att undfly personligt och kollektivt ansvar för vad som händer i vårt närområde. Nu i den digitala tidsåldern behöver varje person ständigt vara sin egen sekreterare och hantera sin publika image. Våra anseenden har hamnat utanför oss själva, som vampyrer livnär de sig på oss. Om vi inte vore isolerade ifrån varandra, tävlandes om att sälja oss själva på arbetsoch sociala marknader, skulle vi då investera så mycket tid och energi i dessa profiler? Vi kan inte förenklas. Varken delegater eller abstraktion kan ersätta oss. Genom att reducera människor till demografi och verkliga erfarenheter till data förlorar vi insikt om allt som är värdefullt och unikt i världen. Vi behöver närvaro, omedelbarhet, direkt kontakt med varandra och direkt kontroll över våra liv – saker som ingen representant eller representation
+
+          kan ge oss.
+        image_name: representation
+        image_alt: a woman of asian ethnicity works as a mannequin factory stocking
+          a shelves that are full of caucasian mannequin heads
+      leaders:
+        left_text_html: problemet är ledare
+        right_text_html: 'Ledarskap är en social vanordning i vilken majoriteten av
+          deltagare i en grupp misslyckas med att ta initiativ eller att tänka kritiskt
+          kring sina handlingar. Så länge vi förstår handlingskraft som en egenskap
+          hos vissa individer istället för en relation mellan personer så kommer vi
+          alltid vara beroende av ledare – och vara i deras våld. Riktig goda ledare
+          är lika farliga som de verkligt korrupta. Särskilt som deras goda egenskaper
+          bara tjänar till att öka deras status och andras försvar av dem. För att
+          inte tala om att det legitimerar ledarskap i sig självt. När polisen kommer
+          till en manifestation är deras första fråga: Vem är arrangör, vem har ansvaret?
+          Inte för att ledarskap behövs för kollektiv handling utan för att det innebär
+          en svaghet. Kolonialisterna som landade på en främmande strand frågade detsamma.
+          Överallt där det fanns ett svar besparades de århundraden av arbete med
+          att underkuva befolkningen själva. Överallt där det finns en ledare så kan
+          den göras till marionett, bytas ut eller tas som gisslan. I bästa fall är
+          det en akilleshäl att vara beroende av ledare. I värsta fall reproducerar
+          det bara myndigheternas intressen och maktstruktur inom den grupp som motsätter
+          sig dem. Det är bättre om var och en har sin egen föreställning om vad som
+          ska uppnås och en känsla för sin egen handlingskraft.'
+        image_name: leaders
+        image_alt: a portly politician talks into a bouquet of press microphones that
+          surround him
+      government:
+        left_text_html: problemet är regeringar
+        right_text_html: |-
+          Regeringar lovar rättigheter men tar sig friheter. Rättighetstanken förutsätter en central makt som kan tilldela och skydda dem. Men allt som staten har makt att garantera har den också makt att ta ifrån dig. Att ge en regering auktoritet att lösa ett problem öppnar bara dörren för den att klampa in och skapa ännu fler problem. Regeringar skapar inte auktoritet ur ingenting – det är vår makt som de utövar. Och den skulle vi kunna använda bättre själva, direkt, utan den onödigt komplicerade statliga demokratiapparaten. Den allra mest liberala demokrati delar principer med den allra mest despotiska diktatur; centraliseringen av makt och legitimitet i en struktur vars uppgift är att monopolisera våldsanvändning. Det spelar ingen roll om byråkraterna arbetar för en kung, en president eller folkvalda politiker. Lagar, byråkrati och polisen fungerar på samma sätt i en demokrati som i en diktatur. Den enda skillnaden är att eftersom vi röstar på de som förvaltar dem så förväntas vi se dem som våra – även när de
+
+          används mot oss.
+
+          Diktaturer har en inneboende instabilitet; du kan mörda, fängsla och hjärntvätta en hel generation och ändå kommer deras barn att uppfinna frihetskampen på nytt. Men lova varje medborgare en chans att tvinga på sina grannar majoritetens vilja och du kan samla dem alla bakom ett system som ställer dem mot varann. Ju mer inflytande över statens tvingande institutioner folk känner att de har desto populärare kan de bli. Kanske kan detta
+
+          förklara varför demokratins globala expansion sammanfaller med otroligt stor ojämlikhet i fördelningen av resurser och makt. Inget annat styrelsesätt skulle kunna stabilisera en så prekär situation. Med centraliserad makt måste folk söka dominans över andra för att kunna få inflytande över sina egna liv. Strävan efter autonomi blir till en kamp om politisk makt. De styrande kan bara hålla sig kvar genom ständigt krig mot sin egen befolkning och mot andra folk: I USA kallades t. ex. Nationalgardet hem från Irak för att sättas in
+
+          mot protester i Oakland.
+
+          De som gynnas av en hierarki är också de som gynnas i spelet om den centraliserade makten. Att bygga in fler kontroller för att balansera systemet betyder bara att vi måste förlita oss på just det vi behöver beskyddas från. Det enda sättet att utöva inflytande över myndigheterna utan att trassla in oss i deras spel är att utveckla horisontella nätverk som kan agera autonomt. När vi väl är så starka att myndigheterna måste ta oss på allvar så är vi också starka nog att lösa våra problem utan dem. Det finns ingen väg mot frihet som inte går genom frihet. Istället för en enda flaskhals för all handlingskraft så behöver vi en uppsjö av arenor där vi kan utöva vår makt. Istället för en enda objektiv sanning behöver vi plats för många olika berättelser. Istället för det inneboende tvånget i staten så behöver vi strukturer för beslutsfattande som främjar autonomi och praktiker för självförsvar som kan hålla aspirerande ledare i schack.
+        image_name: government
+        image_alt: large conference table at which world leaders are seated, surrounded
+          by press and their minions, a summit meeting with greek columns of marble
+          and a traditional fresco in the dome above
+      profit:
+        left_text_html: problemet är profit
+        right_text_html: Pengar är den perfekta mekanismen för att förverkliga ojämlikhet.
+          De är abstrakta nog för att kunna representera vad som helst. De är universella;
+          personer som inte har något annat gemensamt accepterar dem som ett faktum.
+          De är opersonliga; olikt nedärvda privilegier så kan de ögonblickligen föras
+          över från en person till en annan. På så sätt är det lätt att tro att marknaden
+          är ett mer föränderligt och jämlikt system. Det är förvisso lättare hänt
+          att ens position skiftar men hierarkin i sig själv är desto mer stabil.
+          Många som skulle göra uppror mot en diktator accepterar gladeligen marknadens
+          auktoritet. När allt av värde bara kan mätas med ett mått så berövas till
+          och med våra livs unika stunder all sin mening. De blir symboler i en maktberäkning.
+          Allt som inte är mätbart i ekonomiska mått faller i glömska. Livet blir
+          en enda tävling där vi måste tränga oss fram mot ekonomisk vinning. Alla
+          mot alla, sälja eller säljas. Att gå med vinst betyder att få mer kontroll
+          över större del av samhällets resurser i förhållande till alla andra. Vi
+          kan inte alla göra profit samtidigt. För att en person ska göra det krävs
+          att andra förlorar inflytande, relativt sett. När aktieägare profiterar
+          på anställdas arbete så betyder det att det ekonomiska gapet mellan dem
+          ökar ju mer de anställda arbetar. Ett system som drivs av profit skapar
+          fattigdom i samma takt som det skapar rikedom. Konkurrensen skapar innovationer
+          snabbare än något tidigare system men vid sidan av dem så produceras en
+          stegrande ojämlikhet. Och eftersom vi alla måste jobba för profit, istället
+          för att åstadkomma saker för vår egen skull, så finns risken att resultatet
+          av allt vårt arbete blir katastrofalt. Klimatförändringarna är bara den
+          senaste i raden av katastrofer som inte ens de allra mäktigaste kapitalister
+          kan rå på. Inte för att de har någon anledning att ens försöka. Kapitalismen
+          belönar entreprenörer för att casha in på kriser snarare än för att avvärja
+          dem.
+        image_name: profit
+        image_alt: a chauffeur holds open the door to a large Audi as a wealthy businessman
+          exits a helicopter and proceeds across the helipad towards the car
+      property:
+        left_text_html: problemet är egendom
+        right_text_html: |-
+          Grunden för kapitalismen är äganderätten, ännu en social konstruktion som vi ärvt från kungar och adel. Egendom byter ägare i högre takt idag men konceptet är det samma. Idén om ägande legitimerar våldsanvändande för att upprätthålla konstgjorda ojämlikheter när det gäller tillgången till mark och andra resurser. Vissa tänker sig att egendom skulle kunna existera utan staten. Men äganderätten är meningslös utan en centraliserad auktoritet som kan tilldela och upprätthålla den. Och så länge som det finns en centraliserad auktoritet så är inget egentligen ditt heller. Staten präglar pengarna du tjänar och underkastar dem skatt och inflation. Inte ens om du köpt ett hus äger du det. Det tillhör banken du tog lånet hos. Och om du lyckats köpa det utan lån så kan det alltid exproprieras av staten. Vad skulle krävas för att skydda det som är viktigt för oss? Regeringar finns bara på grund av att de tagit något från oss; de kommer alltid ta mer än de ger. Marknader belönar oss bara när vi skinnar våra medmänniskor och belönar dem när de lurar av oss något. Den enda verkliga försäkringen är våra sociala band. Om vi vill garantera vår säkerhet behöver vi skapa sociala nätverk, byggda på ömsesidig hjälp, som kan försvara sig själva. Utan pengar eller äganderätt skulle våra relationer till saker utgå från våra relationer till varandra. Idag är det helt tvärt om. Våra relationer till varandra styrs av våra relationer till saker. Att släppa taget om egendomstanken betyder inte att du skulle förlora alla dina tillhörigheter. Det skulle däremot betyda att varken polisen eller en finanskris skulle kunna ta ifrån dig det du är beroende
+
+          av. Istället för att styras utifrån byråkrati skulle vi utgå från våra behov som människor. Istället för att utnyttja varandra skulle vi kunna dra fördel av att vi är beroende
+
+          av varandra.
+
+          Exploatörernas största rädsla är ett samhälle utan egendom för utan den skulle de endast få den respekt de förtjänar. Utan pengar skulle folk uppskattas på grund av hur de bidrar till andras liv, inte för vad de kan muta sig till. Utan profit måste varje ansträngning ses som sin egen belöning, det finns då inte några drivkrafter för meningslösa eller skadliga aktiviteter. Det som verkligen är viktigt i livet som t. ex. passion, kamratskap och generositet finns redan i överflöd. Det krävs horder av poliser och lantmätare för att tvinga på oss denna resursbrist som fångar oss i en konkurrenssituation.
+        image_name: property
+        image_alt: an abandoned building, now occupied, with protest banners in the
+          window, being used as community organizing location
+      lastcrime:
+        left_text_html: det sista brottet
+        right_text_html: |-
+          Varje ny ordning är grundad på ett brott mot den gamla ordningen – brottet som upplöste den. Efteråt kommer den nya ordningen upplevas som legitim när människor börjar ta den för given. Det brott som grundande USA var upproret mot den engelska kungens auktoritet. Det brott som kommer att forma det samhälle som kommer att komma – om vi lyckas överleva detta samhälle – kommer att förgöra dagens lagar och institutioner. Kategorin brott innehåller allt som går bortom gränserna för ett samhälle – bortom det sämsta och det bästa. Varje system hemsöks av det som inte kan införlivas eller kontrolleras. Varje ordning innehåller en början till
+
+          dess egen ödeläggelse.
+
+          Inget varar för evigt. Detta gäller även för stormakter och civilisationer. Men vad skulle kunna ersätta detta samhälle? Kan vi föreställa oss en ny ordning som inte baseras på att liv delas in i legitimt och illegitimt, lagligt och kriminellt, styrande och styrda? Vad skulle kunna
+
+          vara det sista brottet?
+        image_name: lastcrime
+        image_alt: a protestor with his face concealed in the act of throwing a lit
+          molotov cocktail during a protest, in front of a huge concrete wall
+      anarchy:
+        first_html: |-
+          ANARKI är det som händer där ordning inte är påtvingat. Det är frihet – processen där vi oupphörligen uppfinner oss själva och våra relationer på nytt. Varje process eller fenomen som fritt uppstår – en regnskog, en grupp av vänner, ens egen kropp – är en anarkistisk harmoni som lever kvar genom ständig förändring. Kontroll som går uppifrån och ner kan däremot bara upprätthållas genom restriktioner och tvång – den problematiska disciplineringen genom kvarsittning i skolan, jordbruksindustrins besprutade monokultur, en
+
+          stormakts ömtåliga hegemoni.
+
+          ANARKISM är idén om att alla är berättigade totalt självbestämmande. Ingen lag, regering eller beslutandeprocess är viktigare än behoven och begären hos verkliga människor. Människor borde vara fria att skapa sina relationer till ömsesidig belåtenhet och att stå upp för sig själva så som de anser passande. Anarkism är inte en uppsjö regler eller en uppritad plan. Det är inte ett system som förmodligen skulle funka bara om en gjorde det på rätt sätt, som demokrati. Inte heller ett mål som ska bli förverkligat i en framtid långt borta, som kommunism. Det är ett sätt att agera på och relatera till saker som vi kan börja praktisera nu. Med hänvisning till varje sätt att tänka och agera kan vi börja med att ställa oss frågan: Hur fördelar det makt? ANARKISTER motsätter sig alla former av hierarkier, allt som lägger makten i händerna på några få och varje mekanism som skapar hinder för att nå vår potential. Då vi motsätter oss stängda system uppskattar vi det okända som ligger framför oss, kaoset inom oss som kan ge oss kraften och möjligheten att bli fria.
+        second_html: |-
+          Den här pamfletten är skriven av CrimethInc som är ett internationellt nätverk av aspirerande revolutionärer. På crimethinc.com kan du hitta andra saker som CrimethInc gjort som till exempel böcker, filmer och podcasts samt förstahandsvittnesmål från uppror runtom i världen. Texten producerades tillsammans med kamrater spridda över fem kontinenter. Hundratals personer har donerat pengar för att täcka tryckkostnaden så att du kan hålla den här pamfletten
+
+          i din hand.
+
+          En digital version finns också tillgänglig på fler än ett dussin språk på tochangeeverything.com, tillsammans med annat relaterat material. För ytterligare papperskopior (av den engelska versionen) behöver du bara betala porto. Texten översattes till svenska av kollektivet Brevbomb.
+
+          brevbomb@riseup.net
+
+          Eftersom idéerna i denna text är så vanliga kan de bara vara till nytta för extraordinära personer. Som tur är så är du en av dem. Om du läser det här, då är du motståndet.
+        third_html: <p><span class="blue black">Anarchists</span> oppose all forms
+          of hierarchy—every currency that concentrates power into the hands of a
+          few, every mechanism that puts us at a distance from our potential. Against
+          closed systems, we relish the unknown before us, the chaos within us by
+          virtue of which we are able to be free.</p>
+      outro:
+        left_text_html: ''
+        right_text_html: |-
+          När vi ser vad alla olika institutioner och mekanismer för dominans har gemensamt blir det tydligt att vår individuella kamp också är en del av något som är större än oss själva. Något som kan sammanlänka oss. När vi går ihop och skapar samhörighet förändras allt. Inte bara vår kamp utan också vår känsla av handlingskraft, vår förmåga till glädje och känslan av att livet har en mening. Allt som krävs för att hitta varandra är att vi börjar handla enligt en annan logik.
+
+          För att förändra allt börja var som helst.
+      take_flight_html: Klamra dig inte fast vid den gamla världen
+      next_path: "/begin"
+      next_text: crimethinc.com
