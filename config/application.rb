@@ -78,6 +78,7 @@ module Crimethinc
       deutsch
       italiano
       polski
+      slovenscina
       srpskohrvatski
       cebuano
       malay
