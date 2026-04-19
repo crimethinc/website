@@ -1,3 +1,8 @@
+# TODO: the text content in this file is Slovenian (sl), not Slovak (sk).
+# The /tce/slovensko folder has been a misfiled duplicate of /tce/slovenscina
+# since the initial 2016 TCE migration (commit ceb8a57a). No Slovak translation
+# has ever existed on the site. The strings below need retranslation into Slovak
+# before this page can honestly claim to be /tce/slovensko.
 slovensko:
   layouts:
     to_change_everything:
