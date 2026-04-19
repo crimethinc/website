@@ -1,3 +1,7 @@
+# NOTE: When this raw text is hand-converted to YAML, the root node should be:
+#   română
+# (endonym / native name for the language; Latin transliteration: "romana")
+
 Pentru
 a schimba
 totul
