@@ -21,6 +21,8 @@ PreCommit:
 
   HardTabs:
     enabled: true
+    exclude:
+      - script/tce/**/*
 
   LineEndings:
     enabled: true
@@ -46,6 +48,7 @@ PreCommit:
     enabled: true
     exclude:
       - '**/db/structure.sql' # Ignore trailing whitespace in generated files
+      - script/tce/**/*
 
   YamlSyntax:
     enabled: true

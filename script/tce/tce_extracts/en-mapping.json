@@ -1,0 +1,520 @@
+[
+  {
+    "paragraph_index": 0,
+    "match_path": "subtitle_html",
+    "overlap_chars": 19,
+    "length": 19,
+    "text_preview": "an anarchist appeal"
+  },
+  {
+    "paragraph_index": 2,
+    "match_path": "title_html",
+    "overlap_chars": 20,
+    "length": 20,
+    "text_preview": "To Change Everything"
+  },
+  {
+    "paragraph_index": 4,
+    "match_path": "intro.left_text_html",
+    "overlap_chars": 299,
+    "length": 299,
+    "text_preview": "If you could change anything, what would you change? Would you go on vacation for the rest of your l"
+  },
+  {
+    "paragraph_index": 5,
+    "match_path": "intro.left_text_html",
+    "overlap_chars": 290,
+    "length": 290,
+    "text_preview": "Our private financial and emotional struggles mirror global upheaval and disaster. We could spend th"
+  },
+  {
+    "paragraph_index": 7,
+    "match_path": "intro.right_text_html",
+    "overlap_chars": 37,
+    "length": 37,
+    "text_preview": "To change anything, start everywhere."
+  },
+  {
+    "paragraph_index": 9,
+    "match_path": "self.right_text_html",
+    "overlap_chars": 177,
+    "length": 177,
+    "text_preview": "The phantom of liberty still haunts a world cast in its image. We have been promised complete self-d"
+  },
+  {
+    "paragraph_index": 10,
+    "match_path": "self.right_text_html",
+    "overlap_chars": 347,
+    "length": 1056,
+    "text_preview": "If you had complete self-determination, what would you be doing right now? Think of the vast potenti"
+  },
+  {
+    "paragraph_index": 11,
+    "match_path": "self.right_text_html",
+    "overlap_chars": 282,
+    "length": 282,
+    "text_preview": "do all have complete self-determination: not because it's given to us, but because not even the most"
+  },
+  {
+    "paragraph_index": 12,
+    "match_path": "answering.right_text_html",
+    "overlap_chars": 192,
+    "length": 192,
+    "text_preview": "Managers and tax collectors love to talk about personal responsibility. But if we took complete resp"
+  },
+  {
+    "paragraph_index": 13,
+    "match_path": "answering.right_text_html",
+    "overlap_chars": 305,
+    "length": 973,
+    "text_preview": "More harm has been done throughout history by obedience than by malice. The arsenals of all the worl"
+  },
+  {
+    "paragraph_index": 14,
+    "match_path": "power.right_text_html",
+    "overlap_chars": 262,
+    "length": 262,
+    "text_preview": "The workers who perform the labor have power; the bosses who tell them what to do have authority. Th"
+  },
+  {
+    "paragraph_index": 15,
+    "match_path": "power.right_text_html",
+    "overlap_chars": 389,
+    "length": 546,
+    "text_preview": "There's nothing oppressive about power per se. Many kinds of power can be liberating: the power to c"
+  },
+  {
+    "paragraph_index": 16,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 330,
+    "text_preview": "The soldier obeys the general, who answers to the president, who derives his authority from the Cons"
+  },
+  {
+    "paragraph_index": 17,
+    "match_path": "power.right_text_html",
+    "overlap_chars": 64,
+    "length": 101,
+    "text_preview": "The police officer executes the warrant signed by the magistrate, who derives authority from the law"
+  },
+  {
+    "paragraph_index": 18,
+    "match_path": "power.right_text_html",
+    "overlap_chars": 187,
+    "length": 331,
+    "text_preview": "Manhood, whiteness, property-at the tops of all these pyramids, we don't even find despots, just soc"
+  },
+  {
+    "paragraph_index": 19,
+    "match_path": "relationships.right_text_html",
+    "overlap_chars": 304,
+    "length": 304,
+    "text_preview": "In contrast to authority, trust centers power in the hands of those who confer it, not those who rec"
+  },
+  {
+    "paragraph_index": 20,
+    "match_path": "relationships.right_text_html",
+    "overlap_chars": 426,
+    "length": 654,
+    "text_preview": "Without imposed power imbalances, people have an incentive to work out conflicts to their mutual sat"
+  },
+  {
+    "paragraph_index": 21,
+    "match_path": "reconciling.right_text_html",
+    "overlap_chars": 117,
+    "length": 117,
+    "text_preview": "\"Your rights end where another's rights begin.\" According to that logic, the more people there are, "
+  },
+  {
+    "paragraph_index": 22,
+    "match_path": "reconciling.right_text_html",
+    "overlap_chars": 1197,
+    "length": 2084,
+    "text_preview": "But freedom is not a tiny bubble of personal rights. We cannot be distinguished from each other so e"
+  },
+  {
+    "paragraph_index": 23,
+    "match_path": "liberation.right_text_html",
+    "overlap_chars": 391,
+    "length": 391,
+    "text_preview": "Growing up in this society, not even our passions are our own; they are cultivated by advertising an"
+  },
+  {
+    "paragraph_index": 24,
+    "match_path": "liberation.right_text_html",
+    "overlap_chars": 538,
+    "length": 538,
+    "text_preview": "To be truly free, we need leverage over the processes that produce our desires. Liberation doesn't j"
+  },
+  {
+    "paragraph_index": 25,
+    "match_path": "revolt.right_text_html",
+    "overlap_chars": 439,
+    "length": 439,
+    "text_preview": "Bigots typically blame a specific group for a systemic problem-Jews for profit-driven capitalism, im"
+  },
+  {
+    "paragraph_index": 26,
+    "match_path": "revolt.right_text_html",
+    "overlap_chars": 496,
+    "length": 1615,
+    "text_preview": "Our enemies are not human beings, but the institutions and routines that estrange us from each other"
+  },
+  {
+    "paragraph_index": 27,
+    "match_path": "control.right_text_html",
+    "overlap_chars": 280,
+    "length": 280,
+    "text_preview": "What are the signs that you are in an abusive relationship? The abuser may try to control your behav"
+  },
+  {
+    "paragraph_index": 28,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 1326,
+    "text_preview": "This describes the behavior of individual abusers, but it also goes for the IRS, the NSA, and most o"
+  },
+  {
+    "paragraph_index": 29,
+    "match_path": "hierarchy.right_text_html",
+    "overlap_chars": 205,
+    "length": 205,
+    "text_preview": "There are many different mechanisms for imposing inequality. Some depend on a centralized apparatus,"
+  },
+  {
+    "paragraph_index": 30,
+    "match_path": "hierarchy.right_text_html",
+    "overlap_chars": 597,
+    "length": 1094,
+    "text_preview": "Some of these mechanisms have been almost completely discredited. Few still believe in the divine ri"
+  },
+  {
+    "paragraph_index": 31,
+    "match_path": "hierarchy.right_text_html",
+    "overlap_chars": 348,
+    "length": 348,
+    "text_preview": "To put it another way: as long as there are police, who do you think they will harass? As long as th"
+  },
+  {
+    "paragraph_index": 32,
+    "match_path": "borders.right_text_html",
+    "overlap_chars": 290,
+    "length": 290,
+    "text_preview": "If a foreign army invaded this land, cut down the trees, poisoned the rivers, and forced children to"
+  },
+  {
+    "paragraph_index": 33,
+    "match_path": "borders.right_text_html",
+    "overlap_chars": 605,
+    "length": 1109,
+    "text_preview": "Borders don't protect us, they divide us-creating needless friction with the excluded while obscurin"
+  },
+  {
+    "paragraph_index": 34,
+    "match_path": "representation.right_text_html",
+    "overlap_chars": 655,
+    "length": 655,
+    "text_preview": "You can only have power by wielding it; you can only learn what your interests are by acting on them"
+  },
+  {
+    "paragraph_index": 35,
+    "match_path": "representation.right_text_html",
+    "overlap_chars": 389,
+    "length": 750,
+    "text_preview": "In the digital age, when every person must continually serve as his own secretary to manage his publ"
+  },
+  {
+    "paragraph_index": 36,
+    "match_path": "leaders.right_text_html",
+    "overlap_chars": 528,
+    "length": 528,
+    "text_preview": "Leadership is a social disorder in which the majority of participants in a group fail to take initia"
+  },
+  {
+    "paragraph_index": 37,
+    "match_path": "leaders.right_text_html",
+    "overlap_chars": 680,
+    "length": 680,
+    "text_preview": "When the police arrive at a protest, their first question is always \"Who's in charge?\"-not because l"
+  },
+  {
+    "paragraph_index": 38,
+    "match_path": "government.right_text_html",
+    "overlap_chars": 498,
+    "length": 498,
+    "text_preview": "Governments promise rights, but they can only take liberties. The idea of rights implies a central p"
+  },
+  {
+    "paragraph_index": 39,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 2642,
+    "text_preview": "The most liberal democracy shares the same principle as the most despotic autocracy: the centralizat"
+  },
+  {
+    "paragraph_index": 40,
+    "match_path": "profit.right_text_html",
+    "overlap_chars": 502,
+    "length": 502,
+    "text_preview": "Money is the ideal mechanism for implementing inequality. It is abstract: it seems to be able to rep"
+  },
+  {
+    "paragraph_index": 41,
+    "match_path": "profit.right_text_html",
+    "overlap_chars": 706,
+    "length": 1355,
+    "text_preview": "When all value is concentrated into a single instrument, even the irrecoverable moments of our lives"
+  },
+  {
+    "paragraph_index": 42,
+    "match_path": "property.right_text_html",
+    "overlap_chars": 304,
+    "length": 304,
+    "text_preview": "The foundation of capitalism is property rights-another social construct we inherited from kings and"
+  },
+  {
+    "paragraph_index": 43,
+    "match_path": "property.right_text_html",
+    "overlap_chars": 487,
+    "length": 1304,
+    "text_preview": "Some people imagine that property could exist without the state. But property rights are meaningless"
+  },
+  {
+    "paragraph_index": 44,
+    "match_path": "property.right_text_html",
+    "overlap_chars": 693,
+    "length": 693,
+    "text_preview": "bureaucracy, we would begin from human needs; instead of taking advantage of each other, we would pu"
+  },
+  {
+    "paragraph_index": 45,
+    "match_path": "anarchy.first_html",
+    "overlap_chars": 143,
+    "length": 150,
+    "text_preview": "ANARCHY is what happens wherever order is not imposed by force. It is freedom: the process of contin"
+  },
+  {
+    "paragraph_index": 46,
+    "match_path": "anarchy.first_html",
+    "overlap_chars": 441,
+    "length": 441,
+    "text_preview": "Any freely occurring process or phenomenon-a rainforest, a circle of friends, your own body-is an an"
+  },
+  {
+    "paragraph_index": 47,
+    "match_path": "anarchy.second_html",
+    "overlap_chars": 311,
+    "length": 320,
+    "text_preview": "ANARCHISM is the idea that everyone is entitled to complete self-determination. No law, government, "
+  },
+  {
+    "paragraph_index": 48,
+    "match_path": "anarchy.second_html",
+    "overlap_chars": 383,
+    "length": 383,
+    "text_preview": "Anarchism is not a dogma or a blueprint. It is not a system that would supposedly work if only it we"
+  },
+  {
+    "paragraph_index": 49,
+    "match_path": "anarchy.third_html",
+    "overlap_chars": 277,
+    "length": 287,
+    "text_preview": "ANARCHISTS oppose all forms of hierarchy-every currency that concentrates power into the hands of a "
+  },
+  {
+    "paragraph_index": 51,
+    "match_path": "self.left_text_html",
+    "overlap_chars": 29,
+    "length": 29,
+    "text_preview": "start with self-determination"
+  },
+  {
+    "paragraph_index": 53,
+    "match_path": "answering.left_text_html",
+    "overlap_chars": 31,
+    "length": 31,
+    "text_preview": "start by answering to ourselves"
+  },
+  {
+    "paragraph_index": 55,
+    "match_path": "power.left_text_html",
+    "overlap_chars": 37,
+    "length": 37,
+    "text_preview": "start by seeking power, not authority"
+  },
+  {
+    "paragraph_index": 57,
+    "match_path": "relationships.left_text_html",
+    "overlap_chars": 39,
+    "length": 39,
+    "text_preview": "start with relationships built on trust"
+  },
+  {
+    "paragraph_index": 59,
+    "match_path": "reconciling.left_text_html",
+    "overlap_chars": 49,
+    "length": 49,
+    "text_preview": "start by reconciling the individual and the whole"
+  },
+  {
+    "paragraph_index": 61,
+    "match_path": "liberation.left_text_html",
+    "overlap_chars": 35,
+    "length": 35,
+    "text_preview": "start with the liberation of desire"
+  },
+  {
+    "paragraph_index": 63,
+    "match_path": "revolt.left_text_html",
+    "overlap_chars": 17,
+    "length": 17,
+    "text_preview": "start with revolt"
+  },
+  {
+    "paragraph_index": 65,
+    "match_path": "control.left_text_html",
+    "overlap_chars": 22,
+    "length": 22,
+    "text_preview": "the problem is control"
+  },
+  {
+    "paragraph_index": 67,
+    "match_path": "hierarchy.left_text_html",
+    "overlap_chars": 24,
+    "length": 24,
+    "text_preview": "the problem is hierarchy"
+  },
+  {
+    "paragraph_index": 69,
+    "match_path": "borders.left_text_html",
+    "overlap_chars": 22,
+    "length": 22,
+    "text_preview": "the problem is borders"
+  },
+  {
+    "paragraph_index": 71,
+    "match_path": "representation.left_text_html",
+    "overlap_chars": 29,
+    "length": 29,
+    "text_preview": "the problem is representation"
+  },
+  {
+    "paragraph_index": 73,
+    "match_path": "leaders.left_text_html",
+    "overlap_chars": 22,
+    "length": 22,
+    "text_preview": "the problem is leaders"
+  },
+  {
+    "paragraph_index": 75,
+    "match_path": "government.left_text_html",
+    "overlap_chars": 25,
+    "length": 25,
+    "text_preview": "the problem is government"
+  },
+  {
+    "paragraph_index": 77,
+    "match_path": "profit.left_text_html",
+    "overlap_chars": 21,
+    "length": 21,
+    "text_preview": "the problem is profit"
+  },
+  {
+    "paragraph_index": 79,
+    "match_path": "property.left_text_html",
+    "overlap_chars": 23,
+    "length": 23,
+    "text_preview": "the problem is property"
+  },
+  {
+    "paragraph_index": 81,
+    "match_path": "lastcrime.right_text_html",
+    "overlap_chars": 439,
+    "length": 439,
+    "text_preview": "Every order is founded on a crime against the preceding order-the crime that dissolved it. Afterward"
+  },
+  {
+    "paragraph_index": 82,
+    "match_path": "lastcrime.right_text_html",
+    "overlap_chars": 271,
+    "length": 495,
+    "text_preview": "The category of crime holds everything that exceeds the limits of a society-its worst and its best. "
+  },
+  {
+    "paragraph_index": 84,
+    "match_path": "lastcrime.left_text_html",
+    "overlap_chars": 14,
+    "length": 14,
+    "text_preview": "the last crime"
+  },
+  {
+    "paragraph_index": 86,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 100,
+    "text_preview": "This project is brought to you by CrimethInc., an international network of aspiring revolutionaries."
+  },
+  {
+    "paragraph_index": 87,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 146,
+    "text_preview": "You can find other examples of our work at crimethinc.com-including books, films, podcasts, and firs"
+  },
+  {
+    "paragraph_index": 88,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 176,
+    "text_preview": "We produced this text in cooperation with comrades from across five continents; hundreds of voluntee"
+  },
+  {
+    "paragraph_index": 89,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 210,
+    "text_preview": "A digital version is available in over a dozen languages at tochangeeverything.com, where you may ob"
+  },
+  {
+    "paragraph_index": 91,
+    "match_path": "outro.left_text_html",
+    "overlap_chars": 489,
+    "length": 489,
+    "text_preview": "When we see what all the different institutions and mechanisms of domination have in common, it beco"
+  },
+  {
+    "paragraph_index": 93,
+    "match_path": "outro.right_text_html",
+    "overlap_chars": 37,
+    "length": 37,
+    "text_preview": "To change everything, start anywhere."
+  },
+  {
+    "paragraph_index": 95,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 14,
+    "text_preview": "crimethinc.com"
+  },
+  {
+    "paragraph_index": 97,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 14,
+    "text_preview": "crimethinc.com"
+  },
+  {
+    "paragraph_index": 99,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 14,
+    "text_preview": "crimethinc.com"
+  },
+  {
+    "paragraph_index": 101,
+    "match_path": null,
+    "overlap_chars": 0,
+    "length": 28,
+    "text_preview": "DON'T CLING TO THE OLD WORLD"
+  }
+]

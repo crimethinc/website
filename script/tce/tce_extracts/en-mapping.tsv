@@ -1,0 +1,75 @@
+paragraph_index	match_path	overlap_chars	length	text_preview
+0	subtitle_html	19	19	an anarchist appeal
+2	title_html	20	20	To Change Everything
+4	intro.left_text_html	299	299	If you could change anything, what would you change? Would you go on vacation for the rest of your l
+5	intro.left_text_html	290	290	Our private financial and emotional struggles mirror global upheaval and disaster. We could spend th
+7	intro.right_text_html	37	37	To change anything, start everywhere.
+9	self.right_text_html	177	177	The phantom of liberty still haunts a world cast in its image. We have been promised complete self-d
+10	self.right_text_html	347	1056	If you had complete self-determination, what would you be doing right now? Think of the vast potenti
+11	self.right_text_html	282	282	do all have complete self-determination: not because it's given to us, but because not even the most
+12	answering.right_text_html	192	192	Managers and tax collectors love to talk about personal responsibility. But if we took complete resp
+13	answering.right_text_html	305	973	More harm has been done throughout history by obedience than by malice. The arsenals of all the worl
+14	power.right_text_html	262	262	The workers who perform the labor have power; the bosses who tell them what to do have authority. Th
+15	power.right_text_html	389	546	There's nothing oppressive about power per se. Many kinds of power can be liberating: the power to c
+16	UNMAPPED	0	330	The soldier obeys the general, who answers to the president, who derives his authority from the Cons
+17	power.right_text_html	64	101	The police officer executes the warrant signed by the magistrate, who derives authority from the law
+18	power.right_text_html	187	331	Manhood, whiteness, property-at the tops of all these pyramids, we don't even find despots, just soc
+19	relationships.right_text_html	304	304	In contrast to authority, trust centers power in the hands of those who confer it, not those who rec
+20	relationships.right_text_html	426	654	Without imposed power imbalances, people have an incentive to work out conflicts to their mutual sat
+21	reconciling.right_text_html	117	117	"Your rights end where another's rights begin." According to that logic, the more people there are, 
+22	reconciling.right_text_html	1197	2084	But freedom is not a tiny bubble of personal rights. We cannot be distinguished from each other so e
+23	liberation.right_text_html	391	391	Growing up in this society, not even our passions are our own; they are cultivated by advertising an
+24	liberation.right_text_html	538	538	To be truly free, we need leverage over the processes that produce our desires. Liberation doesn't j
+25	revolt.right_text_html	439	439	Bigots typically blame a specific group for a systemic problem-Jews for profit-driven capitalism, im
+26	revolt.right_text_html	496	1615	Our enemies are not human beings, but the institutions and routines that estrange us from each other
+27	control.right_text_html	280	280	What are the signs that you are in an abusive relationship? The abuser may try to control your behav
+28	UNMAPPED	0	1326	This describes the behavior of individual abusers, but it also goes for the IRS, the NSA, and most o
+29	hierarchy.right_text_html	205	205	There are many different mechanisms for imposing inequality. Some depend on a centralized apparatus,
+30	hierarchy.right_text_html	597	1094	Some of these mechanisms have been almost completely discredited. Few still believe in the divine ri
+31	hierarchy.right_text_html	348	348	To put it another way: as long as there are police, who do you think they will harass? As long as th
+32	borders.right_text_html	290	290	If a foreign army invaded this land, cut down the trees, poisoned the rivers, and forced children to
+33	borders.right_text_html	605	1109	Borders don't protect us, they divide us-creating needless friction with the excluded while obscurin
+34	representation.right_text_html	655	655	You can only have power by wielding it; you can only learn what your interests are by acting on them
+35	representation.right_text_html	389	750	In the digital age, when every person must continually serve as his own secretary to manage his publ
+36	leaders.right_text_html	528	528	Leadership is a social disorder in which the majority of participants in a group fail to take initia
+37	leaders.right_text_html	680	680	When the police arrive at a protest, their first question is always "Who's in charge?"-not because l
+38	government.right_text_html	498	498	Governments promise rights, but they can only take liberties. The idea of rights implies a central p
+39	UNMAPPED	0	2642	The most liberal democracy shares the same principle as the most despotic autocracy: the centralizat
+40	profit.right_text_html	502	502	Money is the ideal mechanism for implementing inequality. It is abstract: it seems to be able to rep
+41	profit.right_text_html	706	1355	When all value is concentrated into a single instrument, even the irrecoverable moments of our lives
+42	property.right_text_html	304	304	The foundation of capitalism is property rights-another social construct we inherited from kings and
+43	property.right_text_html	487	1304	Some people imagine that property could exist without the state. But property rights are meaningless
+44	property.right_text_html	693	693	bureaucracy, we would begin from human needs; instead of taking advantage of each other, we would pu
+45	anarchy.first_html	143	150	ANARCHY is what happens wherever order is not imposed by force. It is freedom: the process of contin
+46	anarchy.first_html	441	441	Any freely occurring process or phenomenon-a rainforest, a circle of friends, your own body-is an an
+47	anarchy.second_html	311	320	ANARCHISM is the idea that everyone is entitled to complete self-determination. No law, government, 
+48	anarchy.second_html	383	383	Anarchism is not a dogma or a blueprint. It is not a system that would supposedly work if only it we
+49	anarchy.third_html	277	287	ANARCHISTS oppose all forms of hierarchy-every currency that concentrates power into the hands of a 
+51	self.left_text_html	29	29	start with self-determination
+53	answering.left_text_html	31	31	start by answering to ourselves
+55	power.left_text_html	37	37	start by seeking power, not authority
+57	relationships.left_text_html	39	39	start with relationships built on trust
+59	reconciling.left_text_html	49	49	start by reconciling the individual and the whole
+61	liberation.left_text_html	35	35	start with the liberation of desire
+63	revolt.left_text_html	17	17	start with revolt
+65	control.left_text_html	22	22	the problem is control
+67	hierarchy.left_text_html	24	24	the problem is hierarchy
+69	borders.left_text_html	22	22	the problem is borders
+71	representation.left_text_html	29	29	the problem is representation
+73	leaders.left_text_html	22	22	the problem is leaders
+75	government.left_text_html	25	25	the problem is government
+77	profit.left_text_html	21	21	the problem is profit
+79	property.left_text_html	23	23	the problem is property
+81	lastcrime.right_text_html	439	439	Every order is founded on a crime against the preceding order-the crime that dissolved it. Afterward
+82	lastcrime.right_text_html	271	495	The category of crime holds everything that exceeds the limits of a society-its worst and its best. 
+84	lastcrime.left_text_html	14	14	the last crime
+86	UNMAPPED	0	100	This project is brought to you by CrimethInc., an international network of aspiring revolutionaries.
+87	UNMAPPED	0	146	You can find other examples of our work at crimethinc.com-including books, films, podcasts, and firs
+88	UNMAPPED	0	176	We produced this text in cooperation with comrades from across five continents; hundreds of voluntee
+89	UNMAPPED	0	210	A digital version is available in over a dozen languages at tochangeeverything.com, where you may ob
+91	outro.left_text_html	489	489	When we see what all the different institutions and mechanisms of domination have in common, it beco
+93	outro.right_text_html	37	37	To change everything, start anywhere.
+95	UNMAPPED	0	14	crimethinc.com
+97	UNMAPPED	0	14	crimethinc.com
+99	UNMAPPED	0	14	crimethinc.com
+101	UNMAPPED	0	28	DON'T CLING TO THE OLD WORLD

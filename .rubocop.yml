@@ -13,6 +13,7 @@ AllCops:
   Exclude:
     - db/schema.rb
     - db/migrate/20230628052836_init_schema.rb
+    - script/tce/**/*
     - vendor/**/*
 
 Layout/HashAlignment:
