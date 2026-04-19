@@ -280,6 +280,8 @@ Mapping table:
 | Danish (dansk)        | `-reading-lite`               | `to-change-everything-dansk-reading-lite.pdf` | `https://cdn.crimethinc.com/assets/tce/images/tce_dk_a6_small_final.pdf`                   |
 | Danish (dansk)        | `-print-a5`                   | `to-change-everything-dansk-print-a5.pdf`     | `https://cdn.crimethinc.com/assets/tce/images/tce_dk_a6_booklet_final.pdf`                 |
 | Dutch (nederlands)    | `-reading`                    | `to-change-everything-nederlands-reading.pdf` | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-dutch-single.pdf`       |
+| French (français)     | `-reading`                    | `to-change-everything-français-reading.pdf`   | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-french-reading-version.pdf`  |
+| French (français)     | `-print-a4`                   | `to-change-everything-français-print-a4.pdf`  | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-french-printing-version.pdf` |
 | Greek (ελληνικά)      | default (glyph)               | `to-change-everything-ελληνικά.pdf`           | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-greek-2up.pdf`          |
 | Greek (ελληνικά)      | default (latin duplicate)     | `to-change-everything-ellinika.pdf`           | same as above                                                                              |
 | Greek (ελληνικά)      | `-reading` (glyph)            | `to-change-everything-ελληνικά-reading.pdf`   | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-greek-1up.pdf`          |
@@ -294,7 +296,7 @@ Mapping table:
 | Swedish (svenska)     | default ("uppslag" = spread)  | `to-change-everything-svenska.pdf`            | `https://cdn.crimethinc.com/assets/tce/images/att-forandra-allt_web_uppslag.pdf`           |
 | Swedish (svenska)     | `-reading`                    | `to-change-everything-svenska-reading.pdf`    | `https://cdn.crimethinc.com/assets/tce/images/att-forandra-allt_web.pdf`                   |
 
-French (France, distinct from Quebecois `fr`) is out of scope for this migration and is not copied. Its old PDFs stay at their current `/assets/tce/images/` paths.
+French-France (`français`) and Quebec French (`quebecois`, the existing `fr.yml`) are treated as distinct translations — they have different titles ("Pour Tout Changer" vs "Pour tout transformer") from different translation teams. Both get canonical filenames.
 
 Items still to verify by opening the file: _none — all resolved._
 
