@@ -1,0 +1,388 @@
+---
+malti:
+  layouts:
+    to_change_everything:
+      language_direction: ltr
+      lang_code: mt
+      head:
+        title: To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers'
+          Collective
+        meta:
+          title: To Change Everything, an anarchist appeal
+          description: The case for complete self-determination—a guide for the furious,
+            the curious, and the pure of heart
+          url: https://tochangeeverything.com/
+      menu:
+        toc: Table of Contents
+        language: English
+        share: Share
+      toc:
+        introduction: introduction
+        self: start with self-determination
+        answering: start by answering to ourselves
+        power: start by seeking power, not authority
+        relationships: start with relationships built on trust
+        reconciling: start by reconciling the individual and the whole
+        liberation: start with the liberation of desire
+        revolt: start with revolt
+        control: the problem is control
+        hierarchy: the problem is hierarchy
+        borders: the problem is borders
+        representation: the problem is representation
+        leaders: the problem is leaders
+        government: the problem is government
+        profit: the problem is profit
+        property: the problem is property
+        lastcrime: the last crime
+        anarchy: anarchy is
+        outro: outro
+        takeflight: take flight
+        next: next
+  to_change_everything:
+    show:
+      title_html: Li Tbiddel Kollox
+      subtitle_html: appell anarkist
+      video_cte: Watch Video
+      video_url: https://player.vimeo.com/video/111159930
+      pdf_cte_html: Download<br />&nbsp;PDF
+      pdf_get_url: "/tce/get"
+      pdf_image: tce-cover-200.png
+      intro:
+        left_text_html: |-
+          Li kieku kellek tbiddel xi ħaġa f’ħajtek u fid-dinja, tkun xi tkun, x’kont tbiddel? Tmur vaganza twila, għal bqija ta’ ħajtek? Twaqqaf il-bidla fil-klima? Issaqsi għal banek etiċi u politikanti tajbin? Li hu żgur hu li, xejn ma jista’ jkun inqas realistiku milli tħalli kollox kif inhu, u fl-istess ħin tistenna riżultati differenti.
+
+          Il-ġlidiet finanzjarji u emozzjonali ta’ kull wieħed u waħda minnha, huma mera taddiżastri li naraw fuq livell globali. Nistgħu inqattgħu ħajjitna kollha nippruvaw nitfu dawn il-fjammi waħda waħda – imma filverita’ kollha ġejjin mill-istess sors. L-ebda soluzzjoni frammentata ma hi se sservi. Irridu nerġgħu naħsbu kollox skont loġika totalment differenti.
+        right_text_html: Biex tbiddel kollox, ibda minn kullimkien.
+      self:
+        left_text_html: ibda’ middeterminazzjoni tiegħek innifsek
+        right_text_html: |-
+          Il-ħares tal-liberta’ għadu jdur mad-dinja msejsa fuq l-immaġni tiegħu. Ġejna mwiegħda determinazzjoni kompluta tagħna nfusa: l-istituzzjonijiet kollha tas-soċjeta’ tagħna huma mistennija li jipprovduhielna. Li kieku kellek determinazzjoni kompluta fuq ħajtek, x’kont tkun qed tagħmel bħal issa? Aħseb fil-potenzjal vast ta’ ħajtek: ir-relazzjonijiet li jista’ jkollok, l-affarijiet li tista’ tesperjenza, il-modi kollha li bihom tista’ tagħti sens lil ħajtek. Meta twilidt, bħal donnu li ma kienx hemm limitu għal dak li stajt issir jew dak li stajt tagħmel. Kont tirrapreżenta l-possibilita’ pura. Normalment, ma niqfux nimmaġinaw dawn l-affarijiet kollha. Ikun biss fil-mumenti l-aktar sbieħ tal-ħajja, bħal meta nibdew inħobbu lil xi ħadd, jew nilħqu xi għan li nkunu ridna nilħqu, jew inżuru xi pajjiż imbiegħed, li jirnexxielna naqbdu dawk il-mumenti tant sbieħ, ta’ kif ħajjitna jistgħu ikunu. X’jillimita dak li jista’ jgħinek tilħaq il-potenzjal tiegħek? X’saħħa għandek fuq l-ambjent ta’ madwarek jew fuq kif tqatta’ ħinek? Il-burokraziji li trid tħabbat wiċċek magħhom ta kuljum, sakemm timxi mal-istruzzjonijiet li jtuk, l-ekonomija li ttik issaħħa skont kemm jirnexxielek tiġġenera profitt, dawk li jmexxu u jikkontrollaw, il-pulizija li jinsistu li l-aqwa u l-aħjar mod ta’ “kif tkun dak kollu li tista’ tkun” hu li tobdi l-awtorita’ tagħhom – dawn qed jgħinuk biex tgħix il-massimu ta’ ħajtek, bit-termini
+
+          tiegħek?
+
+          Is-sigriet huwa li aħna ġa għandna d-determinazzjoni kompluta tagħna nfusna: U dan, mhux għax din ġiet mogħtija lilna, imma sempliċiment għax lanqas l-iktar dittatura totalitarja ma tista’ toħodilna. Pero’, eventwalment se nindunaw li x’ħin nibdew naġixxu għalina nfusna, se nsibu rwieħna f’kunflitt mal-istess istituzzjonijiet li suppost qed jiggarantulna l-liberta’.
+        image_name: self
+        image_alt: shadow of a person climbing over a barbed-wire fence
+      answering:
+        left_text_html: ibda’ billi tirrispondi lejk innifsek
+        right_text_html: Il-kbarat, l-politikanti, il-bosses, u dawk li jiġbru t-taxxi
+          jgħoxew jitkellmu fuq ir-responsabilita’ personali. Imma jekk verament nieħdu
+          r-responsabilita’ kompluta ta’ l-azzjonijiet tagħna, taħseb li, biex nibdew,
+          se nkunu qed nagħtu kas ta’ l-istruzzjonijiet li jtuna? Matul l-istorja,
+          saret iżjed ħsara b’riżultat tal-ubbidjenza milli mill-azzjonijiet ħżiena.
+          L-bombi kollha tal-militar fuq livell globali huma l-manifestazzjoni fiżika
+          tal-volonta’ tagħna li niddiferixxu lil ħaddieħor. Jekk trid tkun żgur li
+          qatt ma tikkontribwixxi għall-gwerer, ġenoċidju jew oppressjoni, l-ewwel
+          pass hu li tieqaf tobdi l-ordnijiet. L-istess ħaġa nistgħu ngħidu għall-valuri
+          morali tiegħek ukoll. Għexieren ta’ kmandanti u kmandijiet jitolbu s-sottomissjoni
+          kompluta tiegħek. U anki jekk verament trid li titfa’ r-responsabilita’
+          għad-deċiżjonijiet li tagħmel f’ħajtek fuq xi alla jew dogma, kif se tagħżel
+          liema wieħed ser ikun? Trid jew ma tridx, huwa inti dak li jagħżel bejn
+          wieħed jew l-ieħor. Normalment, ħafna minn nies sempliċiment jagħmlu l-għażla
+          tagħhom skont dak li hu l-iktar familjari jew konvenjenti għalihom. Irridu
+          jew ma rridux, aħna responsabbli tat-twemmin u d-deċiżjonijiet tagħna. Jekk
+          nirrispondu lejna nfusna minflok lejn il-kbarat jew xi kmandamenti, jista’
+          jkun li xorta se niġu f’kunflitt ma’ xulxin, imma ta l-anqas, inkunu qed
+          nagħmlu hekk fuq it-termini tagħna nfusna, u mhux nagħmlu ħsara lil xulxin
+          għall-gwadann tal-aġenda ta’ ħaddieħor.
+        image_name: answering
+        image_alt: 1968 Olympics Black Power salute raised by the African-American
+          athletes Tommie Smith and John Carlos during their medal ceremony at the
+          1968 Summer Olympics in the Olympic Stadium in Mexico City. As they turned
+          to face their flags and hear the American national anthem, they each raised
+          a black-gloved fist and kept them raised until the anthem had finished
+      power:
+        left_text_html: ibda’ billi tfittex il-poter, mhux l-awtorita’
+        right_text_html: |-
+          Il-ħaddiema li jaħdmu għandhom il-poter; dawk ta’ fuqhom u li jgħidulhom x’għandhom jagħmlu għandhom l-awtorita’. Dawk li jikru l-propjeta’ fejn jgħixu u jżommu l-bini f’kundizzjoni tajba għandhom il-poter; is-sidien tal-propjeta’ għandhom l-awtorita’. Xmara għandha l-poter; il-permess li bih jista’ jinbena ‘river dam’ jagħti l-awtorita’. Fil-verita`, ma hemm xejn oppressiv fil-poter. Ħafna tipi ta’ poter jistgħu jservu għall-proċess tal-liberta’ u l-ħelsien: il-poter li tieħu ħsieb lil dawk li tħobb, li tiddefendi lilek innifsek u li tirrisolvi argumenti li jistgħu jinqalgħu, il-poter li teżerċita l-prattika ta’ l-’acupuncture’ fuq xi ħadd, li ssuq dagħjsa jew li taqbeż fuq trapeze. Ukoll, hemm ħafna modi ta’ kif wieħed jiżviluppa l-kapaċitajiet li jżidu l-liberta’ ta’ ħaddieħor. Kull persuna li taġixxi b’mod li bih tilħaq il-potenzjal tagħha, tkun qed toffri rigal
+
+          lil ħaddieħor.
+
+          Minn naħa l-oħra, l-awtorita’ imposta fuq persuni oħra, tixorbilhom il-poter tagħhom. U kull ħaga li int tieħu mingħand persuni oħra bissaħħa ta’ l-awtorita’, ħaddieħor se joħodha lilek. L-awtorita’ dejjem tiġi
+
+          minn fuq:
+
+          Is-suldat jobdi lil ġeneral, li jobdi lill-president, li jġib l-awtorita’ tiegħu
+
+          mill-kostituzzjoni—
+
+          Il-qassis jirrispondi għall-arċisqof, l-arċisqof lill-papa, il-papa lill-iskrittura, li ġġib l-awtorita’ tagħha minn Alla— L-impjegat jirrispondi lejn min iħaddmu, min iħaddem jirrispondi lil klienti tiegħu, li jġibu l-awtorita’ mis-simbolu tal-flus: l-ewro— L-uffiċjal tal-pulizija jmexxi ‘warrant’ iffirmata mill-maġistrat, li jġib l-awtorita’
+
+          mill-liġi—
+
+          Il-propjeta’, il-flus – fil-quċċata ta’ dawn il-piramidi, lanqas biss insibu nies qarrieqa, sempliċiment kostruzzjonijiet soċjali: iħirsa li jillupjaw
+
+          lill-umanita’.
+
+          F’din is-soċjeta’, il-poter u l-awtorita’ tant huma meqjusin bħala ħaġa waħda, li bilkemm nistgħu niddistingwuhom: Nistgħu biss nakkwistaw il-poter billi nħallsu bl-ubbidjenza. Madanakollu, il-poter ma jiswa’ xejn
+
+          bla liberta’.
+        image_name: power
+        image_alt: a worker in a gold mine confronts soldier keeping guard and grabs
+          his rifle by the barrel as a crowd of workers watch
+      relationships:
+        left_text_html: Ibda’ b’relazzjonijiet mibnija fuq il-fiduċja
+        right_text_html: Għall-kuntrarju ta’ l-awtorita’, il-fiduċja titfa’ l-poter
+          f’idejn dawk li jikkonferixxuha u mhux dawk li jirċievuha. Persuna li akkwistat
+          il-fiduċja ta’ ħaddieħor ma għandiex bżonn l-awtorita’. Jekk xi ħadd ma
+          ħaqqux il-fiduċja ta’ l-oħrajn, żgur li ma għandiex tingħatalu l-awtorita’!
+          Madanakollu, hemm xi ħadd li ma nafdawhx iktar mill-politikanti jew mill-kbarat?
+          Mingħajr żbilanċi ta’ poter imposta minn fuq, in-nies għandhom inċetiva
+          biex isolvu l-kunflitti ta bejniethom skont is-sodisfazzjon reċiproku tagħhom-li
+          jirbħu l-fiduċja ta’ xulxin. Il-ġerarkiji, minn naħa l-oħra, ineħħu dan
+          l-inċentiv, u jħallu lil min għandu l-awtorita’ biex jgħaffeġ fuq kulħadd.
+          Fl-aqwa tagħha, il-ħbiberija hija għaqda bejn individwi ugwali li jissapportjaw
+          u jisfidaw lil xulxin, filwaqt li jirrispettaw l-awtonomija ta’ xulxin.
+          Dan huwa kejl tajjeb ta’ kif għandna nevalwaw ir-relazzjonijiet tagħna kollha.
+          Mingħajr il-limitazzjonijiet li huma imposta fuqna llum il-ġurnata- bħaċ-ċitaddinanza,
+          l-illegalita’, il-propjeta’ u d-dejn, nistgħu nerġgħu nibdew nibnu r-relazzjonijiet
+          tagħna ibbażati fuq l-assoċjazzjoni ħielsa u l-għajnuna reċiproka.
+        image_name: relationships
+        image_alt: at night, lit by streetlights, young protestors in Turkey form
+          a fire-brigade-line to transport cobblestones to the front lines of a confrontation
+          with police
+      reconciling:
+        left_text_html: ibda’ billi tirrikonċilja l-individwu mal-ħaġa sħiħa
+        right_text_html: |-
+          “Id-drittijiet tiegħek jieqfu fejn jibdew id-drittijiet tal-oħrajn”. Skont din il-loġika, iktar ma hemm nies, inqas ser ikollok liberta’. Imma l-liberta’ mhijiex sempliċiment bużżieqa żgħira bid-drittijiet personali tiegħek, magħluqin fid-dinja tiegħek, għalik waħdek. Hija ħafna iktar ikkumplikata minn hekk. Meta tidħak jew tittewweb, faċilment tista’ tħajjar lil ħaddieħor jidħak u jittewweb bħalek. Bħal meta tkun entużjast jew iddisprat. Aħna magħmulin mill-kanzunetti li jeħlu f’rasna, mill-burdati li jqabbduna sħabna stess. Meta nsuq karozza, din tkun qed tniġġes l-atmosfera li minnha nieħdu l-arja għan-nifs; meta nuża l-mediċina u l-farmaċewtika, dawn eventwalment jispiċċaw fl-ilma li jixrob kulħadd. Is-sistema li kulħadd jaċċetta li jgħix taħtha hija l-istess sistema li int stess ikollok tgħix taħtha – iżda meta nies oħra jisfidaw lil din l-istess sistema, int ikollok ċans li terġa tinnegozja ir-realta’ tiegħek. Il-liberta’ tiegħek tibda’ fejn tibda’ il-liberta’ tiegħi, u tispiċċa fejn tispiċċa tiegħi. Aħna m’aħniex individwi diskreti li neżistu għalina waħidna. Ġisimna magħmul minn eluf ta’ speċi differenti li qed jgħixu f’simbjożi: m’aħniex fortizza magħluqa, imma proċess ikkumplikat fejn in-nutrienti u l-mikrobi il-ħin kollu deħlin u ħerġin minn ġo fina. Ngħixu f’simbjożi ma’ eluf ta’ speċi oħra, bis-siġar jassorbu n-nifs li aħna stess narmu minn ġo fina. Ma naġixxux ġo vacuum, immexxija mir-raġuni; il-mewġ tal-kosmos għaddej
+
+          minn ġo fina.
+
+          L-lingwa tgħina nikkomunikaw sempliċiment għax hija ħaġa li kulħadd juża. L-istess nistgħu ngħidu għall-ideat u x-xewqat tagħna: nistgħu nikkomunikawhom għax huma affarijiet akbar minna. Kull wieħed u waħda minna huwa magħmul minn kaos ta’ forzi li jmorru kontra xulxin, li kollha jestendu lil hinn minna nfusna għall-ħin u l-ispazju. Meta nagħżlu liema minn dawn
+
+          sejrin nikkultivaw, inkunu qed niddeterminaw x’se nsibu f’kull min niltaqgħu miegħu jew magħha. Il-liberta’ mhijiex xi propjeta’ jew xi ħaġa li tista’ tippossedi; hija relazzjoni. Mhijiex kwistjoni li tkun protett mid-dinja ta’ barra, imma li nsibu mod li bih nimmassimiżżaw il-possibilitajiet. Dan ma jfissirx li għandna nfittxu konsensus fuq kull ħaġa akkost ta’ kollox; kemm il-kunflitt, kif ukoll il-konsensus jistgħu jimmobiliżżawna kif ukoll jiddiżentissiżawna. Imma minflok li naqsmu d-dinja f’ħafna biċċiet żgħar, ejja nieħdu milli nistgħu mill-interkonnessjonijiet tagħna.
+        image_name: reconciling
+        image_alt: kid hugging tree in forest, looking up into the canopy
+      liberation:
+        left_text_html: ibda’ millliberazzjoni tax-xewqat tieghek
+        right_text_html: Fis-soċjeta’ li ngħixu fiha, lanqas il-passjonijiet tagħna
+          ma huma verament tagħna; huma passjonijiet ikkultivati mir-rikamar u forom
+          oħra ta’ propoganda, immirati biex iħalluna niġru wara l-karrota tas-suq,
+          bħal ħmir. Bis-saħħa ta’ l-indottrinazzjoni, in-nies isibu ruħhom kuntenti
+          bihom infushom talli jagħmlu affarijiet li inevitabilment ser iżommuhom
+          miserabbli fuq il-medda ta’ ħajjithom. Aħna maqbudin fit-tbatija tagħna
+          stess, u l-ferħ li nħossu f’ħajjitna huwa sempliċiment l-qoxra fuq kollox.
+          Biex inkunu verament liberi, għandna bżonn kontroll fuq il-proċessi li li
+          jipproduċu ix-xewqat u l-aspirazzjonijiet tagħna. Il-liberazzjoni ma tfissirx
+          biss li nissodisfaw ix-xewqat li għandna llum, imma li nwessgħu is-sens
+          ta’ x’hinu possibli sabiex dawn l-istess xewqat ikunu jistgħu jinbildu mar-realtajiet
+          li dawn stess jġiegħluna nikkreaw. Il-liberazzjoni tfisser li nagħtu daharna
+          lil gost pervers li nieħdu meta ninfurzaw, niddominaw u nipposedu. Ifisser
+          li nsibu l-pjaċir fl-affarijiet li jeħilsuna mill-makkinarju ta’ l-ubbidjenza
+          u l-kompetizzjoni. Jekk xi darba qatt irnexxielek tinħeles minn vizzju ikraħ,
+          bħat-tipjip, proabilment għandek idea xi tfisser li tittrasforma u tbiddel
+          ix-xewqat tiegħek.
+        image_name: liberation
+        image_alt: two protestors, adorned with gas masks and balaclavas, dance the
+          tango together in the street
+      revolt:
+        left_text_html: ibda’ mirrivolta
+        right_text_html: |-
+          Il-bigoti tipikament iweħħlu fi gruppi soċjali speċifiċi għal problemi sistematiċi – Il-Lhud għall-kapitaliżmu sfrenat, l-immigranti illegali li jieħdulna xogħolna – bl-istess mod li in-nies iweħħlu f’politikanti individwali tal-korruzjoni fil-politika. Imma l-problema huma is-sistemi fihom infushom. Ma tagħmilx differenza min ikollu l-poter, għax fil-verita’ kollha jipproduċu l-istess żbilanċ fil-poter. Il-problema ma hijiex illi dawn is-sistemi mhux qed jaħdmu sew, imma li appuntu li qiegħdin hemm u
+
+          qed jiffunzjonaw.
+
+          L-għeddewa tagħna ma humiex nies umani, imma l-istituzzjonijiet u r-rutini li jifriduna minna nfusna u minn xulxin. Hemm iżjed kunflitti ġo fina nfusna milli kunflitti bejnietna. L-istess ħsarat u djufija li nsibu fiċ-ċiviliżżazzjoni insibuhom fil-ħbiberiji tagħna u f’qalbna u ruħna; dan ma huwiex kunflitt bejn in-nies imma kunflitt bejn tipi differenti ta’ relazzjonijiet, ta’ modi ta’ għixien. Meta ma naċċettawx ir-rwoli tagħna fl-orndni li tirrenja bħal issa, inkunu qed nistiednu nies oħra biex jagħżlu naħa
+
+          huma wkoll.
+
+          L-aħjar ħaġa li nistgħu nagħmlu hu li narmu l-kunċett kollu tad-dominazzjoni l-baħar – mhux li nimmaniġjaw id-dettalji tad-dominazzjoni b’mod iktar ‘fair’, mhux li nbiddlu n-naħa tagħna fuq il-grawnd tal-logħoba, u min kien jiddomina jieħu l-pożizzjoni ta’ min hu sfruttat u viċi-versa, mhux li nistabilizzaw is-sistema billi nirriformawha. L-għan tal-protesta ma huwiex illi nitolbu mexxejja iktar leġittimi, imma li nuru li nistgħu naġixxu fuq is-saħħa tagħna stess, li ninkoraġġixxu nies oħra jagħmlu l-istess u li niskoraġġixxu lill-awtoritajiet milli jinterferu. Din ma hijiex kwistjoni ta’ gwerra- il-kunflitt binarju bejn żewġ għedewwa militariżżati – imma ta’ diżubbidjenza kontaġġuża. Ma huwiex biżżejjed li nedukaw u niddiskutu, u nistennew lill19
+
+          imħuh u l-qlub tan-nies l-oħra jinbidlu. Sakemm l-ideat ma jiġux espressi f’azzjoni billi nikkonfrontaw lin-nies b’għażliet konkreti, il-konversazzjoni se tibqa’ astratta. Ħafna nies iħossuhom aljenati b’ħafna diskorsi teoretiċi, imma meta jkun qed jiġri xi ħaġa, meta jkunu jistgħu jaraw differenzi li jagħmlu sens bejn żewġ naħat opposti, dawn se jagħżlu naħa. Ma għandniex bżonn unanimata, u lanqas li nifhmu lid-dinja b’mod kompreħensiv, u lanqas mappa li turina d-destinazzjoni eżatta – imma sempliċiment il-kuraġġ li nagħmlu l-ewwel pass fi triq differenti.
+        image_name: revolt
+        image_alt: A anonymous man stands in front of a column of tanks on June 5,
+          1989, the morning after the Chinese military had suppressed the Tiananmen
+          Square protests of 1989 by force, who later became known as the Tank Man.
+          The tanks maneuvered to pass by the man, and he moved to continue to obstruct
+          them, in something like a dance.
+      control:
+        left_text_html: Il-problema hija il-kontroll
+        right_text_html: 'X’hinuma is-sinjali li juruk li qiegħed f’relazzjoni abbużiva?
+          Dak/dik li qed t/jabbuża t/jista’ t/jipprova t/jikkontrolla l-imġieba tiegħek
+          jew t/jiddettalek ħsibijietek; ma t/jħallilekx aċċess għar-riżorsi; t/juża
+          t-theddid jew il-vjolenza fil-konfront tiegħek; jew iżommok f’sitwazzjoni
+          ta’ dipendenza, taħt sorveljanza kontinwa. Dan kollu jiddeskrivi tajjeb
+          l-imġieba ta’ nies individwi li jabbużaw individwi oħra, imma l-istess jista’
+          jingħad għall-pulizija, il-qrati, il-ħabs, ic-CCTV cameras, u l-maġġoranza
+          ta’ l-istituzzjonijiet li jiggvernaw lis-soċjeta’ tagħna. Bażikament kollha
+          kemm huma huma bbażati fuq l-idea li il-bnedmin għandhom bżonn ikunu amministrati,
+          immeniġġjati, taħt kontroll. Iktar ma’ jkun hemm żbilanċi imposti fuqna,
+          iktar hemm bżonn ta’ kontrolli biex dawn jiġu priservati. Dan il-kontroll
+          jista’ jiġi eżerċizzat fuq livell individwali bħall-reklużjoni solitarja
+          fil-ħabsijiet, jew inkella fuq livell ieħor fejn il-kontroll huwa mibni
+          fl-infrastruttura infisha tas-soċjeta: il-mod li bihom jinħadmu il-”credit
+          ratings” u l-”premiums” tal-insurance, il-modi ta’ kif l— istatistika tiġi
+          miġbura sabiex jiġu ippjanati spazji urbani, l-modi ta’ kif jiġu ddisinjati
+          “dating sites” u websites tas-social media. Meta l-possibilitajiet infiniti
+          tal-ħajja jiġu rreduċiti għall-ammont ta’ għażliet b’simboli ta “ones u
+          zeros” , ma jkunx hemm iżjed kunflitt bejn is-sistema li ngħixu fiha u l-ħajja
+          li nistgħu nimmaġinaw – u dan mhux għax inkunu akkwistajna l-liberta’ kompluta,
+          imma appuntu għax inkunu pperfezzjonajna l-oppost. L-liberta’ ma tfissirx
+          illi ngħażlu bejn ammont ta’ għażliet differenti, imma li nifformulaw il-mistoqsijiet
+          aħna stess.'
+        image_name: control
+        image_alt: a cop dressed in fancy riot gear leans out of his open patrol car
+          door and uses a camcorder to record protestors who are not pictured
+      hierarchy:
+        left_text_html: il-problea hija il-ġerarkija
+        right_text_html: 'Hemm ħafna mekkaniżmi li jintużaw sabiex tiġi imposta l-inugwaljanza.
+          Ftit minnhom jiddependu minn sistemi ċentralizzati bħas-sistema tal-qorti.
+          Oħrajn jiffunzjonaw b’modi iktar informali bħall-”gender roles”. Ftit minn
+          dawn il-mekkaniżmi kważi ġew kompletament mormija l-baħar. Illum, ftit hawn
+          min għadu jemmen fid-dritt divin tar-rejiet per eżempju, allavolja għall-mijiet
+          ta’ snin, ftit kienu jimmaġinaw soċjeta’ li tista’ taħdem b’mod ieħor. Mekkaniżmi
+          oħra huma tant ingranati f’ħajjitna li lanqas biss nistgħu nimmaġinaw kif
+          tista’ tkun ħajjitna mingħajrom. Min jista’ jimmaġina dinja mingħajr id-dritt
+          tal-propjeta’, per eżempju? Madanakollu, dawn huma kollha kuntratti soċjali
+          u xejn iżjed. Huma reali, imma mhux inevitabbli. L-eżistenza tas-sidien
+          tal-propjeta’ u s-CEOs tal-kumpaniji ma hijiex naturali jew neċessarja jew
+          ta’ benefiċċju iktar mill-eżistenza tal-imperaturi. Dawn il-mekkaniżmi żviluppaw
+          flimkien, u jirrinfurzaw lil xulxin. L-istorja tar-razziżmu per eżempju
+          ma tistax tifridha mill-istorja tal-kapitaliżmu: L-ebda minnhom ma setgħet
+          tkun possibli mingħajr il-koloniżżazjoni u l-iskjavitu’. Biex inpoġġuga
+          mod ieħor: sakemm jeżistu il-pulizija, lil min taħseb li dawn se jagħtu
+          fastidju? Sakemm jeżistu l-ħabsijiet, min taħseb li se jimlihom? Sakemm
+          jeżisti il-faqar, min taħseb li ser ikun fqir? Huwa naive li temmen li nistgħu
+          nilħqu l-ugwaljanza f’soċjeta’ li hija bbażata fuq il-ġerarkija. Tista’
+          ddawwar il-karti kemm trid, imma l-mazz se jibqa’ l-istess...'
+        image_name: hierarchy
+        image_alt: a mustachioed cop in riot gear wearing aviator sunglasses stands
+          guard in front of several Ku Klux Klan members in full robes, one of whom
+          carries a American flag
+      borders:
+        left_text_html: il-problema hija l-fruntieri
+        right_text_html: |-
+          Li kieku kellha tiġi armata minn barra u tinvadi lil Malta, taqta’ s-siġar kollha u teqred l-ambjent naturali, u tisforza lit-tfal tagħna biex joffru ħajjithom għaliha, min ma kienx se jara x’jagħmel biex jiġġildilha? Imma meta l-gvern lokali (ikun hemm min ikun hemm) jagħmel l-istess ħaġa, ara lill-apoloġisti jħallsu t-taxxi, jaqdu dmirhom, jiddefendu l-azzjonijiet tiegħu.. Il-fruntieri ma jipproteġuniex, imma jifirduna – jikkreaw kunflitti bla bżonn ma’ dawk esklużi u joskuraw differenzi reali bejn dawk inklużi. Anki l-iktar gvernijiet demokratiċi huma bbażati fuq din id-diviżjoni bejn il-parteċipanti u dawk “ta’ barra”, il-leġittimi u l-illeġittimi. Anki f’Ateni l-antika, il-famuża belt li fiha twieldet id-demokrazija, fil-verita’ ftit kienu dawk l-irġiel li kienu inklużi fil-proċessi tal-politika; il-missirijiet tad-demokrazija moderna kellhom l-iskjavi. Iċ-ċittadinanza xorta timponi fruntieri fuq dawk inklużi u dawk esklużi bħall-eluf ta’ immigranti llegali li jaslu f’Malta, li tisirqilhom id-dritt fuq ħajjithom
+
+          b’mod reali ħafna.
+
+          L-idea liberali tisħaq li għandna nespandu l-konfini ta’ l-inklużjoni sakemm id-dinja kollha tiġi integrata fi proġett demokratiku kbir. Imma l-inugwaljanza qiegħda propju imnaqqxa fl-istruttura nfisha. F’kull livell li jeżisti f’din is-soċjeta’, eluf ta fruntieri żgħar jifirduna f’dawk li għandhom is-saħħa u dawk li m’għandhomx; checkpoints tas-sigurta’, credit ratings, passwords tad-databases u tax brackets. Għandna bżonn modi u forom ġodda ta’ kif inħossuna parti mill-komunita’ li ma humiex ibażżati fuq esklużjoni u ma jiċċentraliżżawx il-poter u l-leġittimita f’idejn grupp żgħir ta’ nies.
+        image_name: borders
+        image_alt: a grouple of people sits upon a tall boundary fence they have climbed
+      representation:
+        left_text_html: |-
+          Il-problema hi
+
+          r-rappreżentazzjoni
+        right_text_html: |-
+          Jista’ biss ikollok il-poter jekk tużah; tista’ titgħallem x’hinuma l-interessi tiegħek billi taġixxi fuqhom. Meta kull sforz li jista’ jintuża biex ibiddel l-affarijiet fid-dinja ikollu jgħaddi mill-kanali ta’ rappreżentanti jew tal-protokol tal-istituzzjonijiet, niġu aljenati minn xulxin u mill-potenzjal li kull waħda u wieħed minna għandu. Kull aspett tal-poter li għandna fuq ħajjitna u fuq id-dinja bħala individwi ma jibqax jingħaraf, u kważi isir xi ħaga ostili lejna. Il-politikanti li dejjem jiddiżappuntawna juruna biss kemm ċedejna poter minn fuq ħajjitna; l-abbużi u r-razziżmu li jsir mill-pulizija huma sempliċiment il-konsegwenza kerha tax-xewqa tagħna li nevitaw li nieħdu responsabbilita tal- komunitajiet tagħna. Fl-era diġitali, fejn kulħadd irid prattikament iservi tas-segretarja/u tiegħu/għha innifsu/innifisha biex jimmeniġja id-dehra publika tiegħu/għha, ir-reputazzjoni tagħna saret purament xi ħaġa esterna. Li kieku ma konniex daqstant iżolati minn xulxin, nikkompetu ma’ xulxin biex inbiegħhu lilna nfusna fuq is-swieq soċjali u professjonali, kieku konna ninvestu daqstant ħin u enerġija f’dawn il-profili? – għoġġiela tad-deheb magħmulin
+
+          fix-xbieha tagħna nfusna?
+
+          Fil-verita’ ħadd ma jista’ jiġi ridiċut għall-xejn. Ħadd u xejn ma jista’ jirrapreżentana. Għandna bżonn aktar preżenza, l-immedjat, u l-kuntatt dirett ma’ xulxin, kontroll dirett fuq ħajjitna – xi ħaġa li l-ebda rappreżentant jew rappreżentazzjoni ma tista’
+
+          ttina.
+        image_name: representation
+        image_alt: a woman of asian ethnicity works as a mannequin factory stocking
+          a shelves that are full of caucasian mannequin heads
+      leaders:
+        left_text_html: Il-problema hija l-mexxejja
+        right_text_html: Grupp li għandu bżonn il-mexxejja huwa grupp li jsofri minn
+          diżordni soċjali fejn il-maġġoranza tal-parteċipanti ifallu milli jieħdu
+          inizzjattiva jew li jaħsbu b’mod kritiku fuq l-azzjonijiet tagħhom. Sakemm
+          nibqgħu inħarsu lejn il-poter li kull wieħed u waħda minn għandu bħala l-propjeta’
+          ta’ individwi speċifiċi, u mhux bħala relazzjoni bejnietna, dejjem se nibqgħu
+          dipendenti tal-mexxejja – u tal-ħniena tagħhom. Dawk il-mexxejja li nsejħulhom
+          “eżemplari” huma perikolużi daqs dawk li huma korrotti b’mod sfaċċat, fis-sens
+          illi l-kwalitajiet “tajbin” tagħhom sempliċiment jirrinforzaw l-istatus
+          tagħhom kif ukoll il-leġittimita tal-kunċett tat-tmexxija innifsu. Meta
+          l-pulizija jaslu biex iwaqqfu protesta, l-ewwel mistoqsija tagħhom dejjem
+          tkun “Hawnekk min qed imexxi?” - mhux għax it-tmexxija hija essenzjali għall-azzjoni
+          kollettiva, imma għax tippreżenta vulnerabilita’. Il-Konkwistadors staqsew
+          din l-istess mistoqsija meta waqslu fl-hekk imsejħa d-Dinja l-Ġdida; kull
+          meta dik il-mistoqsija ġiet risposta, frankatielhom mijiet ta’ snin milli
+          jippruvaw joppressaw popolazzjonijiet sħaħ. Sakemm jeżisti mexxej, dejjem
+          jeżisti ukoll iċ-ċans illi jkun mibdul jew meħud ostaġġ. Dejjem aħjar li
+          kieku kulħadd għandu l-aġenda tiegħu u s-sens personali li jista’ jbiddel
+          xi ħaġa.
+        image_name: leaders
+        image_alt: a portly politician talks into a bouquet of press microphones that
+          surround him
+      government:
+        left_text_html: Il-problema hija il-gvernijiet
+        right_text_html: |-
+          Il-gvernijiet iwiegħduna d-drittijiet, imma jistgħu joħdulna biss il-liberta’. L-kunċett tad-drittijiet jimplika li jkun hemm poter ċentrali li jista’ jikkonferixxihom u jipproteġihom. Pero’, kull ħaġa li l-istat għandu l-poter li jiggarantixxi, għandu wkoll il-poter li joħodha lura; meta’ ngħatu l-poter lill-gvern biex isolvi probema, nkunu qed niftħu l-biebien biex jikkrea aktar problemi. U l-poter li l-gvernijiet għandhom, ma waqax mis-sema’ – dak huwa l-poter tagħna, li fil-verita’ nistgħu nużawh b’modi ħafna aktar effiċjenti mingħajr il-mekkaniżmi oppressivi tar-rappreżentazzjoni. L-aktar demokrazija liberali tħaddan l-istess prinċipji li tħaddan l-aktar awtokrazija tiranna: iċ-ċentraliżżazjoni tal-poter u l-leġittimita’ fi struttura li l-iskop tagħha huwa li timmonopoliżża l-użu tal-forza. Ma tagħmilx differenza jekk il-burokraiċi li jmexxuha, jirrispondux lir-re, jew lill-president jew lill-elettorat. L-liġijiet, il-burokraziji u l-pulizija huma eqdem mid-demikrazija nfisha; huma jiffunzjonaw bl-istess mod kemm taħt demokrazija kif ukoll taħt dittatura. L-unika differenza hija illi, peress li aħna nistgħu nivvutaw għal min se jamministrahom, aħna mistennija li nikkunsidrawhom bħala tagħna – anka meta
+
+          dawn jintużaw kontrina stess.
+
+          Id-dittaturi huma fihom infishom instabbli: tista’ toqtol, titfa’ l-ħabs jew taħsel l-imħuħ ta’ generazzjonijiet sħaħ, imma ulied l-oppressati dejjem se jivvintaw ġlidiet ġodda sabiex jerġgħu jirbħu l-liberta’. Imma jekk twiegħed lil kull raġel iċ-ċans illi jimponi ir-rieda tal-maġġoranza fuq il-bqija tan-nies, tista’ ġġibhom kollha flimkien wara sistema li tisfurzahom jitqatlu kontra xulxin. Iktar ma n-nies jaħsbu li għandhom influenza fuq l-istituzzjonijiet tal-istat, iktar dawn l-istess istituzzjonijiet ser jintużaw biex joppressaw lil dawn l-istess nies. Forsi huwa propju għalekk
+
+          li l-ħakma tad-demokrazija fuq livell globali, u l-popolarita’ tagħha, tikkoinċidi mal-inugwaljanzi fid-distribuzzjoni tar-riżorsi u l-poter; l-ebda sistema’ ta’ gvern qatt ma stabiliżżat sitwazzjoni
+
+          daqstant prekarja.
+
+          Meta l-poter ikun ċentraliżżat, in-nies ikollhom jieħdu dominju fuq ħaddieħor sabiex ikunu jistgħu jinfluenzaw id-destin tagħhom. Kull ġlieda għall-awtonomija ser tiġi mdawwra f’kunflitt għall-akkwist tal-poter; kull ma trid huwa li tħares lejn il-gwerer ċivili f’pajjiżi li ħadu l-indipendenza wara li kienu koloniżżati, bejn popli u tribujiet li qabel kienu jgħixu flimkien fil-paċi. Dawk li għandhom il-poter, jistgħu iżommuh biss billi kontinwament jagħmlu gwerra fuq il-popolazzjonijiet tagħhom stess, kif ukoll
+
+          fuq popli barranin.
+
+          Kull fejn hemm il-ġerarkiji, dawk li huma fuq nett dejjem se jkollom id-dritta sabiex jiċċentraliżżaw il-poter. L-uniku mod kif nistgħu nitfgħu il-pressjoni fuq l-awtoritajiet mingħajr ma niġu mdaħħla fil-logħba tagħhom huwa li niżviluppaw networks oriżżontali li jaħdmu b’mod awtonomu. Ma hemmx triq li twassal għall-liberta’ imma t-triq hija l-liberta’ nnifisha. Minflok munita waħda ta’ leġittimita’, għandna bżonn spazju għall-ħafna narrattivi. Minflok l-infruzar li jiġi awtomatikament kull fejn għandek gvern, għandna bżonn strutturi li bihom nieħdu deċiżjonijiet li jiffavorixxu l-awtonomija u prattiċi tad-difiża kontra kull min irid jikkmandana u jisfurzana.
+        image_name: government
+        image_alt: large conference table at which world leaders are seated, surrounded
+          by press and their minions, a summit meeting with greek columns of marble
+          and a traditional fresco in the dome above
+      profit:
+        left_text_html: Il-problema hija il-profitt
+        right_text_html: |-
+          Il-flus huma xi ħaġa astratta: donnhom kapaċi jirrapreżentaw kollox. Huma xi ħaġa universali: nies li m’għandhom xejn komuni bejniethom, kollha jaċċettaw il-flus bħala fatt tal-ħajja. Il-flus huma impersonali: għall-kontra tal-privileġġi li kienu jintirtu b’mod ereditarju, il-flus jistgħu jiġu trasferiti minn persuna għall-oħra fi ftit sekondi. Il-flus huma xi ħaġa fluida: iktar ma hu faċli għall-flus li jiġru minn saff għall-ieħor fil-ġerarkija, iktar il-ġerarkija se tistabiliżża ruħha. Huma ħafna dawk li jirribellaw kontra dittatur, imbgħad jispiċċaw jaċċettaw l-awtorita’ tas-suq immexxija
+
+          mill-flus.
+
+          Meta l-valur ta’ kollox huwa konċentrat fi strument wieħed, anki l-aktar mumenti ta’ ħajjitna li ma nistgħux nikkwantifikaw, jitilfu is-sens tagħhom. Kull ħaġa li ma tistax tiġi kwantifikata b’mod finanzjarju, se titlef il-preġju. Il-ħajja issir ġlieda waħda għall-gwadann finanzjarju: kull wieħed u waħda minna kontra kullħadd, jew tbiegħ jew tisfa’ mibjugħ. Li tagħmel profitt: ifisser li takkwista iżjed kontroll fuq ir-riżorsi tas-soċjeta, għad-dannu ta’ l-oħrajn kollha. Ma nistgħux nagħmlu profitt kollha f’daqqa; b’mod proporzjonali, jekk xi ħadd se jagħmel profitt, ħaddieħor se jkun qed jitlef. Meta’ l-investituri jagħmlu profitt minn fuq dahar ix-xogħol tal-ħaddiema, dak ifisser illi aktar ma l-ħaddiema se jaħdmu, iktar ser tikber id-differenza finanzjarja ta’ bejniethom. Sistema li hija mmexxija mill-profitt, tipproduċi l-faqar bl-istess rata li tikkonċentra l-ġid. Huwa vera li mis-sistemi l-oħra kollha, f’dis-sistema, il-pressjoni biex nikkompetu kapaċi tiġġenera iżjed innovazzjonijiet ġodda, iżda flimkien ma’ dawn, jiġu prodotti wkoll aktar disparitajiet: fejn qabel ir-rikkieba taż-żwiemel kienu jsaltnu fuq dawk li jimxu, illum, l-ajruplani tal-gwerra jtiru fuq n-nies li m’għandhomx saqaf fuq rashom. U għax illum kulħadd qed ifittex li jagħmel il-profitt, minflok li jakkwista l-affarijiet sempliċiment għax għandu bżonnhom, ir-riżultat ta’ dan il-xogħol kollu jista’ jkun diżastruż. Il-bidla fil-klima hija sempliċiment l-aħħar waħda minn serje ta’ katastrofi li anki l-aktar kapitalisti b’saħħithom għadhom ma sabux tarf tagħha. Il-kapitaliżmu ma jippremjax lill-kummerċjanti talli jsolvu l-kriżijiet, imma talli jirnexxielhom jagħmlu l-profitt minn fuqhom.
+
+          would begin from human needs; instead of taking
+        image_name: profit
+        image_alt: a chauffeur holds open the door to a large Audi as a wealthy businessman
+          exits a helicopter and proceeds across the helipad towards the car
+      property:
+        left_text_html: Il-problema hija il-propjeta’
+        right_text_html: |-
+          Il-bażi tal-kapitaliżmu huma d-drittijiet għall-propjeta’ – kostruzzjoni soċjali oħra li writtna mir-rejiet u l-aristokratiċi. Illum il-ġurnata il-propjeta’ tbiddel aktar idejn, imma l-kunċett jibqa’ l-istess: l-idea ta’ pussess ta’ xi ħaġa, tilleġittima l-użu tal-vjolenza’ sabiex tinforza żbilanċi artifiċjali fl-aċċess għall-art
+
+          u r-riżorsi.
+
+          Xi nies jaħsbu li l-propjeta’ tista’ teżisti mingħajr l-istat. Imma d-drittijiet għall-propjeta’ isir bla sens u użu mingħajr awtorita’ ċentraliżżata li timponihom – u apparti minn hekk, sakemm teżisti awtorita’ ċentraliżżata, fil-verita’ xejn ma hu tiegħek. Il-flus li tagħmel huma awtoriżżati mill-istat, u huma suġġett għall-inflazzjoni u t-taxxi. Id-dar li toqgħod fiha ma hijiex tiegħek imma tal-bank li silfek il-flus sabiex tixtriha. Mela x’verament hemm bżonn sabiex nipproteġu dak li huma importanti għalina? Il-gvernijiet jeżistu biss bil-virtu’ ta’ dak li jieħdu minn għandna; dejjem ser jieħdu aktar milli jagħtu. Is-swieq se jippremjawna biss meta’ se nqarqu bi sħabna stess, u se jippremjaw lil sħabna meta dawn iqarrqu bina. L-unika assigurazzjoni vera, allura, tinsab biss fil-konnesjonijiet li għandna ma’ xulxin: jekk irridu nkunu żguri mis-sigurta’ tagħna, għandna bżonn networks ta’ għajnuna reċiproka li kapaċi jiddefendu lilhom infushom. Mingħajr flus u drittijiet għall-propjeta’, ir-relazzjonijiet tagħna lejn affarijiet materjali jkunu determinati mir-relazzjonijiet tagħna ma’ xulxin. Illum il-ġurnata, kollox jaħdem l-oppost: Ir-relazzjonijiet ta’ bejnietna huma determinati mir-relazzjonijiet
+
+          tagħna lejn l-affarijiet.
+
+          Li ngħixu mingħajr propejta’ ma jfissirx illi nitilfu dak kollu li għandna; ifisser illi l-ebda awtorita’ jew l-ebda korporazzjoni ma jkollha d-dritt li toħodlok l-affarijiet li tiddependi fuqhom.
+
+          Minflok nirrispondu lejn l-awtorita’ u l-burokrazija, nibdew billi nirrispondu lejn il-bżonnijiet umani; minflok li nieħdu vantaġġ minn xulxin, nibdew infittxu li nieħdu vantaġġ mill-interdipendenza ta’ bejnietna. Il-biża’ ta’ l-akbar brigant hija soċjeta li taħdem mingħajr il-kunċett ta’ propjeta’ – għax mingħajra se jieħu biss ir-rispett li jistħoqqlu. Mingħajr il-flus, in-nies ikunu jistgħu jiġu ivvalutati għall-dak li jikkontribwixxu lill-ħajja ta’ l-oħrajn, mhux għall-dak li huma kapaċi jagħmlu u jakkwistaw billi jixtru s-saħħa ta’ ħaddieħor. Mingħajr il-profitt, kull sforz ikun il-premju tiegħu innifsu, u għalekk ma jkunx hemm inċentiv għal attivita’ distruttiva. L-affarijiet li verament jiswew fil-ħajja- il-passjoni, il-ħbiberiji, il-ġenerożita- huma aċċessibli b’mod abbundanti. Hemm bżonn leġjuni ta’ pulizija u surveyors tal-propjeta’ sabiex jimponu fuqna l-iskarsita’ li ssakkarna għall-dejjem f’dit-tellieqa li ngħixu fiha bħal issa.
+        image_name: property
+        image_alt: an abandoned building, now occupied, with protest banners in the
+          window, being used as community organizing location
+      lastcrime:
+        left_text_html: L-aħħar att ta’ kriminalita’
+        right_text_html: |-
+          Kull ordni hija mibnija fuq l-aħħar att kriminali li sar kontra l-ordni li kien hemm qabel – l-att kriminali li ddissolviha. Warajaha, hekk kif in-nies jibdew jidrawha, l-ordni l-ġdida issir leġittima. Per eżempju, l-aħħar att kriminali li fuqha ġiet iffundata l-iStati Uniti, kienet ir-ribelljoni kontra l-awtorita’ tar-re ta’ l-Ingilterra. L-att kriminali li fuqha se tiġi ffundata s-soċjeta’ l-ġdida, jekk jirnexxielna ngħixuha, se tarmi l-baħar l-liġijiet, n-normi u l-istituzzjonijiet
+
+          tal-llum.
+
+          Kull sistema hija mdawwra bl-iħirsa ta’ dak kollu li l-istess sistema ma tistax tinkorpora u tikkontrolla. Kull ordni fiha ż-żerriegħa tad-distruzzjoni tagħha stess. Xejn ma hu għal dejjem; din tgħodd ukoll għall-imperi u ċ-ċiviliżżazjonijiet. Imma x’jista’ jissupera lil dan l-imperu? Nistgħu nimmaġinaw ordni li ma hijiex premessa fuq id-diviżjoni ta’ ħajja f’dak li hu leġittimu u illeġittimu, dak li hu legali u dak li hu illegali, dawk li jmexxu u dawk li huma mmexxija? X’jista’ jkun l-aħħar att ta’ kriminalita’?
+        image_name: lastcrime
+        image_alt: a protestor with his face concealed in the act of throwing a lit
+          molotov cocktail during a protest, in front of a huge concrete wall
+      anarchy:
+        first_html: |-
+          L-Anarkija hija dak li jiġri kull meta l-ordni ma tiġix imposta bil-forza. Hija l-liberta’: il-proċess li kontinwament nerġgħu nivvintaw lilna nfusna u r-relazzjonijiet tagħna. Kull proċess jew fenomenu li jsir b’mod ħieles – foresta, ċirku ta’ ħbieb, il-ġisem fiżiku tiegħek stess – huwa armonija anarkika li tippersisti f’bidla kontinwa. Minn naħa l-oħra, kull kontroll li ġej minn fuq, jista’ jinżamm biss b’infurzar: id-dixxiplina ġo klassi ta’ l-iskola, ir-razzett modern industrijaliżżat mimli pestiċidi li jiddefendu raddi sterili twal ħxejjex ġenetifikament modifikati, l-eġemonija fraġli tas-superpotenti. L-Anarkiżmu hija l-idea li kulħadd huwa intitolat għad-determinazzjoni kompluta ta’ ħajtu. L-ebda liġi, gvern jew proċess ma hu iżjed importanti mill-bżonnijiet u x-xewqat ta’ l-umani infushom. In-nies għandhom ikunu liberi li jiffurmaw ir-relazzjonijiet għas-sodisfazzjon reċiproku tagħhom, u li jiddefendu lilhom infushom bil-mod li jħossu li hu l-aħjar għalihom. L-anarkiżmu ma huwiex dogma jew mod/i ta’ kif għandhom isiru l-affarijiet. Ma huwiex sistema li suppost għandha taħdem jekk tiġi applikata b’mod tajjeb, bħad-demokrazija. Lanqas ma hu xi għan jew skop li għandu jiġi realizzat f’xi punt fil-futur, bħall-komuniżmu. Huwa mod ta kif wieħed jista’ jaġixxi u jirrelata li jista’ jiġi attwat fil-prattika issa stess. Bħala referenza għal sistema ta’ valuri jew kors ta’ azzjoni, nistgħu nibdew billi nistaqsu: Kif qed jiġi mqassam il-poter?. L-Anarkisti jopponu kull forma ta’ ġerarkija – kull munita li
+
+          tikkonċentra l-poter fl-idejn tal-ftit, kull mekkaniżmu li jpoġġina l-bogħod mill-potenzjal ta’ dak li nistgħu inkunu. Kontra kull forma ta’ sistema magħluqa, aħna nimirħu f’dak li ma nafux quddiemna, il-kaos ta’ ġo fina li bis-saħħa tiegħu nistgħu nkunu liberi.
+        second_html: |-
+          Dal-proġett qed jiġi miġjub lilek minn CrimethInc., li huwa network internazzjonali ta’ nies li jaspiraw li jkunu rivoluzzjonarji. Tista’ ssib iżed xogħol minn tagħna fuq crimethinc.com – kotba, films, podcasts, u xandiriet ta’ rewwixti mid-dinja kollha. Produċejna dil-kitba bil-koperazzjoni ta’ ħbieb mill-ħames kontinenti; mijiet ta voluntiera offrew il-flus biex ikopru l-ispejjeż tal-printing, sabiex tkun tista’ żżom dil-kitba f’idejk. Il-verżjoni diġitali tista’ tinstab tradotta f’aktar minn tużżana lingwi fuq tochangeeverything.com, flimkien ma’ għażla wiesa
+
+          ta’ media u riżorsi.
+
+          Peress li dawn l-ideat huma tant ordinarji, jistgħu jintużaw biss minn nies li huma straordinajri. Fortunatament, int wieħed minnhom. Jekk qed taqra dan kollu, ifisser li int ir-reżistenza.
+        third_html: <p><span class="blue black">Anarchists</span> oppose all forms
+          of hierarchy—every currency that concentrates power into the hands of a
+          few, every mechanism that puts us at a distance from our potential. Against
+          closed systems, we relish the unknown before us, the chaos within us by
+          virtue of which we are able to be free.</p>
+      outro:
+        left_text_html: ''
+        right_text_html: |-
+          Meta naraw dak kollu li l-mekkaniżmi u l-istituzzjonijiet tad-dominazzjoni għandhom komuni, nibdew naraw b’mod iżjed ċar kif il-ġliediet individwali tagħna huma wkoll parti minn xi ħaġa li hija ikbar minna, xi ħaġa li tista’ tgħaqqadna. Meta niġu flimkien fuq il-bażi ta’ din ilkonnessjoni, kollox jibda’ jinbidel: mhux il-ġliediet tagħna biss, imma anki s-sens ta’ poter personali li kull wieħed minna għandu, il-kapaċita’ li nieħdu gost ngħixu, is-sens li ħajjitna għandha verament sens. Kull ma għandna bżonn biex nibdew insibu lil xulxin huwa li nibdew naħsbu u naġixxu skont loġika differenti.
+
+          Biex tbiddel kollox, ibda’ minn kullimkien.
+      take_flight_html: TEĦILX MAD-DINJA L-QADIMA
+      next_path: "/begin"
+      next_text: crimethinc.com
