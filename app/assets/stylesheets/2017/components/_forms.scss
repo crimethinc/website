@@ -6,10 +6,10 @@
     size: 1.5rem;
   }
 
-  padding: $border-size-medium;
+  padding: var(--border-size-medium);
   width: 66%;
   text-transform: uppercase;
-  border: $border-size-xsmall solid #eee;
+  border: var(--border-size-xsmall) solid #eee;
 
   &:focus {
     outline: none;

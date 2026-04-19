@@ -75,7 +75,9 @@ module Crimethinc
 
     path_ltr_locales = %i[
       deutsch
+      italiano
       srpskohrvatski
+      cebuano
       malay
       turkce
       english
