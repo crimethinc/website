@@ -14,7 +14,7 @@ module ToChangeEverythingHelper
       'العربية'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#arabic',
       'հայերեն'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#armenian',
       'Български'                                       => '/2016/09/21/to-change-everything-in-11-more-languages#bulgarian',
-      'Cebuano'                                         => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano',
+      'Cebuano'                                         => '/tce/cebuano',
       'Català'                                          => '/2016/01/25/to-change-everything-in-ten-more-languages#catalan',
       '中文'                                            => '/2016/01/25/to-change-everything-in-ten-more-languages#chinese',
       'Czech'                                           => '/tce/czech',
@@ -33,13 +33,13 @@ module ToChangeEverythingHelper
     # rubocop:disable Layout/HashAlignment
     last:  {
       'ελληνικά'       => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
-      'Italiano'       => '/2016/01/25/to-change-everything-in-ten-more-languages#italian',
+      'Italiano'       => '/tce/italiano',
       '한국어'         => '/tce/한국어',
       'Lietuvos'       => '/tce/lietuvos',
       'Malay'          => '/tce/malay',
       'Malti'          => '/2016/09/21/to-change-everything-in-11-more-languages#maltese',
       'Nederlands'     => '/2016/09/21/to-change-everything-in-11-more-languages#dutch',
-      '日本語'         => '/tce/日本語',
+      '日本語'          => '/tce/日本語',
       'Polski'         => '/tce/polski',
       'Português'      => '/tce/portugues',
       'Română'         => '/2016/01/25/to-change-everything-in-ten-more-languages#romanian',
@@ -49,7 +49,6 @@ module ToChangeEverythingHelper
       'Slovenščina'    => '/tce/slovenscina',
       'Türkçe'         => '/tce/turkce',
       'Svenska'        => '/2016/01/25/to-change-everything-in-ten-more-languages#swedish',
-      'Tagalog'        => '/2016/09/21/to-change-everything-in-11-more-languages#cebuano',
       'ภาษาไทย'        => '/tce/ภาษาไทย'
     }.freeze
     # rubocop:enable Layout/HashAlignment

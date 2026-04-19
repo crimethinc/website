@@ -38,8 +38,8 @@
           weight: 300;
           size: 3rem;
         }
-        border-bottom: 1px solid $color-gray-light;
-        padding-bottom: $border-size-small;
+        border-bottom: 1px solid var(--color-gray-light);
+        padding-bottom: var(--border-size-small);
       }
 
       img {
@@ -68,9 +68,9 @@
 
       .video-info {
         font-style: italic;
-        color: $color-gray;
+        color: var(--color-gray);
       }
-    } // .h-entry
+    } /* .h-entry */
 
     #samples {
       .column:first-child {
@@ -88,8 +88,8 @@
         margin-left: 0;
       }
     }
-  } // main
-} // #page
+  } /* main */
+} /* #page */
 
 #library header img {
   margin-top: 2rem;

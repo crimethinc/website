@@ -2,7 +2,6 @@
 
 # script/server: Launch the application and any extra required processes locally.
 
-require 'pathname'
 require 'fileutils'
 include FileUtils
 
