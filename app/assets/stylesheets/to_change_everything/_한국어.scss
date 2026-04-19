@@ -19,9 +19,9 @@
       padding-top: 5rem;
     }
 
-    // the title
+    /* the title */
     h1 {
-      // make sure subtitle clears any descenders
+      /* make sure subtitle clears any descenders */
       padding-bottom: 1.5rem;
       @media (min-width: 37.5625rem) and (max-width: 63.9375rem) {
         padding-bottom: 5rem;

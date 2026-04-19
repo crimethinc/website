@@ -1,20 +1,22 @@
 .button {
   display: inline-block;
-  background: $color-gray;
+  background: var(--color-gray);
   padding: 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: $color-white !important;
-  border: $border-size-xsmall solid $color-true-black;
+  color: var(--color-white) !important;
+  border: var(--border-size-xsmall) solid var(--color-true-black);
   border-radius: 2px;
 }
 
 .download.button,
 .buy-now.button,
 .support-site.button {
-  background: $color-green;
-  border-color: darken($color-green, 10%);
+  --button-green-border: lch(from var(--color-green) calc(l - 10) c h);
+
+  background: var(--color-green);
+  border-color: var(--button-green-border);
   font-weight: bold;
   font-weight: 500;
-  color: $color-white;
+  color: var(--color-white);
 }

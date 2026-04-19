@@ -1,4 +1,4 @@
-// Overall Layout Spacing
+/* Overall Layout Spacing */
 .title-container {
   display: flex;
   flex-flow: column nowrap;
@@ -6,7 +6,7 @@
   align-content: center;
   align-items: center;
 
-  // make sure overall container is the right shape on all devices
+  /* make sure overall container is the right shape on all devices */
   min-height: 17rem;
   min-height: 40vh;
   @media (min-width: 75.0625rem) {
@@ -16,24 +16,24 @@
     min-height: 50vh;
   }
 
-  // clear the nav bar
+  /* clear the nav bar */
   padding-top: 3rem;
   @media (min-width: 75.0625rem) {
     padding-top: 5rem;
   }
 
-  // the title
+  /* the title */
   h1 {
     text-align: center;
 
-    // make sure subtitle clears any descenders
+    /* make sure subtitle clears any descenders */
     padding-bottom: 1rem;
     @media (min-width: 64rem) {
       padding-bottom: 3rem;
     }
   }
 
-  // the subtitle
+  /* the subtitle */
   h4 {
     text-align: center;
     padding-bottom: 1rem;
@@ -42,8 +42,8 @@
     }
   }
 
-  // the "call to action" is the section containg the buttons to watch
-  // the TCE video or download the TCE PDF
+  /* the "call to action" is the section containg the buttons to watch */
+  /* the TCE video or download the TCE PDF */
   .call-to-action {
     display: flex;
     flex-flow: row nowrap;
@@ -51,14 +51,14 @@
     justify-content: center;
     width: 100%;
 
-    // gap between subtitle and cte container
+    /* gap between subtitle and cte container */
     padding: 1rem 0;
 
     @media (min-width: 104.4375rem) {
       padding: 3rem 0;
     }
 
-    // gap between bottom of cte container and start of text intro
+    /* gap between bottom of cte container and start of text intro */
     @media (max-width: 104.375rem) {
       margin-bottom: 3rem;
     }
@@ -68,7 +68,7 @@
     }
   }
 
-  // the video image/link
+  /* the video image/link */
   .cte-video {
     display: flex;
     flex-flow: column nowrap;
@@ -87,14 +87,14 @@
     }
   }
 
-  // put a gap between pdf/video that will grow to be proportional based
-  // on container width
+  /* put a gap between pdf/video that will grow to be proportional based */
+  /* on container width */
   .cte-spacer {
     min-width: 3rem;
     flex-grow: 0.15;
   }
 
-  // the pdf image and link
+  /* the pdf image and link */
   .cte-pdf {
     display: flex;
     flex-flow: row nowrap;
@@ -112,7 +112,7 @@
   }
 }
 
-// The background image of the title section
+/* The background image of the title section */
 .title-container {
   background-color: grey;
   background-image: url("https://cdn.crimethinc.com/tce/images/cover-phone.jpg");
@@ -135,7 +135,7 @@
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/cover-large.gif");
   }
 
-  // Retina backgrounds
+  /* Retina backgrounds */
   @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 200px),
     (min-resolution: 192dpi) and (min-width: 200px) {
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/cover-phonesmall@2x.jpg");
@@ -162,7 +162,7 @@
   }
 }
 
-// ie11 needs a height with flexbox (rather than a min-height)
+/* ie11 needs a height with flexbox (rather than a min-height) */
 @media all and (-ms-high-contrast: none) {
   .title-container {
     display: -ms-flexbox;

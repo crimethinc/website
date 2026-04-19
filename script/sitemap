@@ -2,7 +2,6 @@
 
 # script/sitemap: Generate and upload new sitemaps (xml and txt)
 
-require 'pathname'
 require 'fileutils'
 include FileUtils
 

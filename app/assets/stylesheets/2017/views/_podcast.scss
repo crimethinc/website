@@ -1,4 +1,4 @@
-// HACK: overly specific override of _page.scss, will go away in 2.0 redesign's CSS
+/* HACK: overly specific override of _page.scss, will go away in 2.0 redesign's CSS */
 #podcast {
   main {
     .e-content {
@@ -16,7 +16,7 @@
   main {
 
     .latest-episode {
-      margin: (2 * $border-size-xlarge) auto;
+      margin: calc(var(--border-size-xlarge) * 2) auto;
 
       h1 {
         font: {
@@ -24,7 +24,7 @@
           size: 3rem;
         }
 
-        margin-bottom: $border-size-medium;
+        margin-bottom: var(--border-size-medium);
       }
     }
 
@@ -36,7 +36,7 @@
       }
 
       .p-name {
-        margin-bottom: $border-size-large;
+        margin-bottom: var(--border-size-large);
         text-align: left;
       }
 
@@ -76,14 +76,14 @@
     }
 
     .subscribe {
-      margin: $border-size-xlarge auto;
+      margin: var(--border-size-xlarge) auto;
       text-align: center;
 
       a {
         display: inline-block;
-        margin: 0 0 $border-size-small $border-size-small;
+        margin: 0 0 var(--border-size-small) var(--border-size-small);
 
-        // TODO WHY is this necessary? :(
+        /* TODO WHY is this necessary? :( */
         text-indent: 9999em !important;
 
         &:first-child {
@@ -93,18 +93,18 @@
 
       .h-feed {
         article {
-          margin-bottom: $border-size-xlarge;
+          margin-bottom: var(--border-size-xlarge);
         }
 
         h1 {
           font-weight: normal;
           font-weight: 700;
           font-size: 2rem;
-          margin-bottom: $border-size-medium;
+          margin-bottom: var(--border-size-medium);
         }
 
         .e-content {
-          margin-bottom: $border-size-large;
+          margin-bottom: var(--border-size-large);
         }
       }
 
@@ -116,7 +116,7 @@
 
     .listen {
       small {
-        color: $color-gray-medium;
+        color: var(--color-gray-medium);
         font-size: .75em;
       }
     }
@@ -137,12 +137,12 @@
 
     @media screen and (min-width: $small-tablet) {
       .subscribe {
-        margin: $border-size-small auto;
+        margin: var(--border-size-small) auto;
         text-align: right;
 
         a {
-          margin: 0 0 $border-size-small $border-size-small;
-          // WHY is this necessary? :(
+          margin: 0 0 var(--border-size-small) var(--border-size-small);
+          /* WHY is this necessary? :( */
           text-indent: 9999em !important;
         }
       }
