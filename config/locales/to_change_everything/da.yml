@@ -1,0 +1,313 @@
+---
+danish:
+  layouts:
+    to_change_everything:
+      language_direction: ltr
+      lang_code: da
+      head:
+        title: To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers'
+          Collective
+        meta:
+          title: To Change Everything, an anarchist appeal
+          description: The case for complete self-determination—a guide for the furious,
+            the curious, and the pure of heart
+          url: https://tochangeeverything.com/
+      menu:
+        toc: Table of Contents
+        language: English
+        share: Share
+      toc:
+        introduction: introduction
+        self: start with self-determination
+        answering: start by answering to ourselves
+        power: start by seeking power, not authority
+        relationships: start with relationships built on trust
+        reconciling: start by reconciling the individual and the whole
+        liberation: start with the liberation of desire
+        revolt: start with revolt
+        control: the problem is control
+        hierarchy: the problem is hierarchy
+        borders: the problem is borders
+        representation: the problem is representation
+        leaders: the problem is leaders
+        government: the problem is government
+        profit: the problem is profit
+        property: the problem is property
+        lastcrime: the last crime
+        anarchy: anarchy is
+        outro: outro
+        takeflight: take flight
+        next: next
+  to_change_everything:
+    show:
+      title_html: AT ÆNDRE ALT
+      subtitle_html: et anarkistisk opråb
+      video_cte: Watch Video
+      video_url: https://player.vimeo.com/video/111159930
+      pdf_cte_html: Download<br />&nbsp;PDF
+      pdf_get_url: "/tce/get"
+      pdf_image: tce-cover-200.png
+      intro:
+        left_text_html: |-
+          Hvis du kunne ændre noget, hvad skulle det så være? Ville du holde ferie resten af dit liv? Gøre at fossile brændstoffer ikke ville skade klimaet? Give banker og politikere samvittighed? Hvordan man end ser på det, kan man ikke forvente anderledes resultater, hvis man bliver ved med at gøre tingene på samme måde.
+
+          Vores private, finansielle og følelsesmæssige udfordringer afspejler globale katastrofer. Vi kunne bruge resten af vores dage på at forsøge at slukke disse brande en efter en, men de stammer alle fra samme rod. Symptombehandling er ikke tilstrækkelig; vi bliver nødt til at revurdere alting ifølge en anderledes tankegang.
+        right_text_html: Vil du ændre noget, begynd overalt.
+      self:
+        left_text_html: Start med Selvopfattelse
+        right_text_html: |-
+          Illusionen om frihed hjemsøger stadig en verden bygget i dens billede. Hvis du havde komplet selvbestemmelse, hvad ville du så lave lige nu? Tænk på dit livs enorme potentiale: de forhold og relationer du kunne have, de ting du kunne opleve, alle de måder hvorpå du kunne skabe mening med din eksistens. Da du blev født, virkede dine muligheder uendelige. Du repræsenterede rent potentiale. Normalt stopper du ikke op og tænker over sådanne ting. Kun i de smukkeste øjeblikke, når man forelsker sig eller opnår et gennembrud eller besøger et fremmed land, får man et fortryllende glimt af, hvad vores liv kunne være. Hvad begrænser dig i at opfylde dit potentiale? Hvor meget kan du styre miljøet omkring dig eller hvordan du bruger din tid? Bureaukratierne, der anerkender dig for din evne til at adlyde ordrer, økonomien, der giver dig magt alt efter hvor meget profit, du genererer, militæret, der insisterer at den bedste måde hvorpå du kan ”være dig selv fuldstændig” er at underkaste dig deres autoritet – gør disse instanser og institutioner dig i stand til at leve dit liv på
+
+          dine egne præmisser?
+
+          Den åbenlyse hemmelighed er, at vi har komplet selvbestemmelse: ikke fordi den bliver givet til os, men fordi selv det mest totalitære diktatur ikke kan fratage os den. Dog, ligeså snart man begynder at handle på egen hånd, kommer man i konflikt med selveste de institutioner og instanser, der burde sikre ens frihed.
+        image_name: self
+        image_alt: shadow of a person climbing over a barbed-wire fence
+      answering:
+        left_text_html: Begynd med at tage ansvar for dig selv
+        right_text_html: |-
+          Chefer og skatteopkrævere elsker at tale om personligt ansvar. Men hvis vi tog komplet ansvar for alle vores handlinger, ville vi så overhovedet følge deres instruktioner? Mere ondt er blevet udgydt i verden pga. underdanighed end ulydighed. Verdens militære våbenarsenaler er de fysiske manifestationer af vores villighed til at adlyde andre. Hvis du vil være sikker på, at du aldrig bidrager til at skabe krig, folkemord eller undertrykkelse, er første step at
+
+          stoppe med at adlyde ordrer.
+
+          Det samme gælder for værdier. Utallige regenter og lærebøger forlanger din uhæmmede underkastelse. Men selv hvis du vil fralægge dig ansvaret for dine handlinger og overdrage det til en eller anden gud eller et dogme, hvordan beslutter du da, hvilken/hvilket det skal være? Om du kan lide det eller ej, er det dig, der skal vælge mellem dem. Sædvanligvis vælger folk ud fra, hvad der er mest
+
+          genkendeligt og lettest.
+
+          Vi kan ikke flygte fra ansvaret for vores handlinger og holdninger. Selv hvis vi adlyder os selv frem for regenter eller regler, kan vi stadig komme i konflikt med hinanden, men i det mindste vil det være på vore egne præmisser og ikke skabe unødvendigt mange tragedier blot for at udføre
+
+          andres dagsordener.
+        image_name: answering
+        image_alt: 1968 Olympics Black Power salute raised by the African-American
+          athletes Tommie Smith and John Carlos during their medal ceremony at the
+          1968 Summer Olympics in the Olympic Stadium in Mexico City. As they turned
+          to face their flags and hear the American national anthem, they each raised
+          a black-gloved fist and kept them raised until the anthem had finished
+      power:
+        left_text_html: Begynd med at søge Magt, ikke autoritet
+        right_text_html: |-
+          Arbejderne, der udfører et job, har magt; cheferne, der fortæller dem, hvad de skal gøre, har autoritet. Lejerne, der vedligeholder en bygning, har magt; udlejeren, som har sit navn på skødet, har autoritet. En flod har magt; en tilladelse til at bygge en dæmning har autoritet. Der er ikke noget undertrykkende ved magt i sig selv. Mange former for magt kan være befriende: magten til at sørge for dem man elsker, til selvforsvar og til at udligne uoverensstemmelser, til at udføre akupunktur, styre en sejlbåd eller svinge på en trapez. Der er også måder, hvorpå du kan udvikle dine evner til at udvide andres frihed. Hver eneste person, der handler for at opnå hendes fulde potentiale, tilbyder en gave til alle. Autoritet over andre – på den anden side – opsluger deres magt. Og det du tager fra dem, vil andre tage fra dig. Autoritet kommer altid oppefra: Soldaten adlyder generalen, der adlyder ministeren, der får sin autoritet fra loven.Præsten adlyder biskoppen, der adlyder biblen, som får sin autoritet fra Gud.Den ansatte hører under ejeren, der servicerer forbrugeren, hvis autoritet kommer fra penge.Politimanden udfører en ransagning, der er underskrevet af en dommer, som får sin autoritet fra loven.-
+
+          Maskulinitet, ”hvidhed”, ejendom – på toppen af alle disse pyramider finder vi ikke engang tyranner, blot sociale konstruktioner: spøgelser, der hypnotiserer menneskeheden. I dette samfund er magt og autoritet så sammensat, at vi dårligt kan skelne mellem dem: vi kan kun opnå magt via underkastelse. Men alligevel; uden frihed er magt værdiløs.
+        image_name: power
+        image_alt: a worker in a gold mine confronts soldier keeping guard and grabs
+          his rifle by the barrel as a crowd of workers watch
+      relationships:
+        left_text_html: Begynd på Relationer baseret på tillid
+        right_text_html: I kontrast til autoritet giver tillid magt til den der overdrager
+          den, ikke de som modtager. En person, der har fortjent tillid, behøver ikke
+          autoritet. Hvis en person ikke er tillidsværdig, burde han naturligvis ikke
+          tildeles autoritet! Men stadig; hvem stoler man mindre på end politikere
+          og direktører? Uden implementerede magtubalancer har folk et grundlag for
+          at løse deres konflikter til gensidig tilfredsstillelse – at opnå hinandens
+          tillid. Hierarkier fjerner dette grundlag, da det gør de autoritære i stand
+          til at undertrykke konflikter. Venskab, når det er bedst, er et bånd mellem
+          ligeværdige, der både støtter og udfordrer hinanden samtidig med, at man
+          respekterer hverandres uafhængighed. Det er en rimelig god standardmodel,
+          med hvilken man kan evaluere alle relationer. Uden de begrænsninger, der
+          bliver trykket ned over os nu om dage – statsborgerskab og illegalitet,
+          ejendom og gæld, forretningsmæssige og militære kommandokæder – kunne vi
+          genopbygge vores relationer, men baseret på fri association og gensidig
+          hjælp.
+        image_name: relationships
+        image_alt: at night, lit by streetlights, young protestors in Turkey form
+          a fire-brigade-line to transport cobblestones to the front lines of a confrontation
+          with police
+      reconciling:
+        left_text_html: Begynd med at genoprette individet og helheden
+        right_text_html: |-
+          ”Dine rettigheder ophører, hvor en andens begynder.” Ifølge den logik, er der mindre frihed jo flere mennesker. Men frihed er ikke en lille boble af personlige rettigheder. Vi kan ikke adskille os så let fra hinanden. At gabe og at grine smitter; det samme gør entusiasme og lidelse. Jeg er sammensat af de klicheer, der kommer ud af min mund, de sange, der sidder fast i mit hoved, det humør, jeg modtager fra mine omgivende personer. Når jeg kører bil, frigør det forurening ud i den atmosfære du indånder. Når du bruger kosmetik, filtreres det ned i vandet som alle drikker. Det system alle andre accepterer, er det som du skal leve under – men når andre udfordrer det, får du også en chance for at genforhandle din virkelighed. Din frihed begynder, hvor min begynder, og ender hvor min gør. Vi er ikke separerede individer. Vores kroppe er sammensat af tusindvis af forskellige arter, der lever i symbiose: i stedet for at være lukkede bastioner gennemgår de processer, hvor næringsstoffer og mikrober passerer problemfrit. Vi lever i symbiose med tusindvis af andre arter – kornmarker, der indånder samme luft som os. Et ulvekobbel eller en aften, der emmer af frøer, er lige så individuel, så unik som enhver af vores kroppe. Vi handler ikke i vakuum, selvophøjet af fornuft; kosmossets tidevand flyder igennem os. Sprog gør kun kommunikation mulig, fordi vi har det til fælles. Det samme gælder for ideer og drifter: vi kan kommunikere dem, fordi de er større end os. Hver af os er sammensat af et kaos af modstridende kræfter, hvoraf de alle går langt udover os gennem tid og rum. Ved at vælge hvilke man vil kultivere, beslutter vi hvad vi vil opfostre i enhver vi møder.
+
+          Frihed er hverken ejendel eller ejendom; det er en relation. Det handler ikke om at være beskyttet mod omverdenen, men om at skære igennem på en måde, der maksimerer ens muligheder. Det betyder ikke at man skal søge enighed for enighedens skyld; både konflikt og konsensus kan udvide og styrke os, så længe ingen centraliseret magt er i stand til at indføre enighed eller gøre en konflikt til en vinderen-tager-det-hele konkurrence. Men i stedet for at bryde verden op i små friheder, så lad os få det bedste ud af
+
+          vores forbindelser.
+        image_name: reconciling
+        image_alt: kid hugging tree in forest, looking up into the canopy
+      liberation:
+        left_text_html: Start med Frigørelsen af dine ønsker
+        right_text_html: Når man vokser op i dette samfund, kommer ikke engang vores
+          passioner fra os selv; de bliver kultiveret af reklamer og andre former
+          for propaganda for at holde os løbende i markedets trædemølle. Takket være
+          indoktrinering er folk temmeligt tilfredse med, at de foretager sig ting,
+          der i sidste ende vil gøre dem ulykkelige. Vi er låst inde i vores lidelse
+          og vore fornøjelser er forseglingen. For at blive virkeligt fri bliver vi
+          nødt til at styre de processer, der producerer vores ønsker. Frigørelse
+          betyder ikke blot at få tilfredsstillet de ønsker vi har i dag, men at udvide
+          vores opfattelse af, hvad der er muligt, så vores ønsker kan udvikle sig
+          i takt med de virkeligheder, de driver os til at skabe. Det betyder at man
+          skal vænne sig af med den nydelse man får af at magtudøve, dominere og eje
+          ting, at søge nydelser der vrider os fri fra underdanighedens og konkurrencens
+          maskine. Hvis du nogensinde har brudt en afhængighed, ved du hvad det betyder,
+          at kunne ændre sine ønsker.
+        image_name: liberation
+        image_alt: two protestors, adorned with gas masks and balaclavas, dance the
+          tango together in the street
+      revolt:
+        left_text_html: Start med Oprør
+        right_text_html: |-
+          Snæversynede mennesker giver typisk en specifik gruppering skylden for et systematisk problem – Jøder for profitdreven kapitalisme, immigranter for økonomisk tilbagegang – på samme måde som folk giver individuelle politikere skylden for den generelle korruption af politik. Men problemet er systemerne i sig selv. Lige meget hvem der regerer, vil de producere de samme magtubalancer og smålige uanstændigheder. Problemet er ikke at systemerne er i stykker, men at de overhovedet eksisterer. Vores fjender er ikke menneskelige væsner, men de institutioner og rutiner, der fremmedgør os fra hinanden og os selv. Der er flere konflikter i os end imellem os. De samme fejltagelser, der går igennem vores civilisation, går igen i vores venskaber og hjerter; dette er ikke et sammenstød mellem mennesker, men mellem forskellige typer relationer. Når vi afviser vores roller i den bestående orden, åbner vi op for rettelse af disse fejltagelser og inviterer også andre
+
+          til at tage stilling.
+
+          Det bedste ville være at afskaffe dominans fuldstændig – ikke at arrangere dens detaljer mere fair, ikke at bytte om på den undertrykkende og undertrykkedes positioner, ikke at stabilisere systemet ved at reformere det. Pointen med protest er ikke at håbe på mere legitime regler eller herskere, men at demonstrere at vi kan handle på egen hånd, opildne andre til at gøre det samme og afskrække autoriteterne fra at blande sig. Dette er ikke et spørgsmål om krig – en binær konflikt mellem militariserede fjender – men snarere om en
+
+          smittende ulydighed.
+
+          Det er ikke nok at undervise og diskutere, mens man venter på at andres hjerter og sind ændrer sig. Indtil man udtrykker ideer i handling og konfronterer folk med konkrete valg, vil diskussionen forblive abstrakt. De fleste er reserverede overfor teoretiske diskussioner, men når noget sker,
+
+          når indsatserne er høje og folk kan se betydningsfulde forskelle mellem de modstridende sider – da vil de tage stilling. Vi behøver ikke komplet enighed, ej heller en forståelig opfattelse af hele verden eller et kort over den eksakte destination – blot modet til at begive os ud på en anderledes sti.
+        image_name: revolt
+        image_alt: A anonymous man stands in front of a column of tanks on June 5,
+          1989, the morning after the Chinese military had suppressed the Tiananmen
+          Square protests of 1989 by force, who later became known as the Tank Man.
+          The tanks maneuvered to pass by the man, and he moved to continue to obstruct
+          them, in something like a dance.
+      control:
+        left_text_html: Problemet er Kontrol
+        right_text_html: |-
+          Hvad er tegnene på at du befinder dig i et undertrykkende forhold? Undertrykkeren vil måske prøve at kontrollere din opførsel eller diktere dine tanker; blokere eller regulere din adgang til resurser; bruge trusler eller vold mod dig; eller fastholde dig i en afhængig position under konstant overvågning. Ovenstående beskriver opførslen hos individuelle undertrykkere, men det gælder også statslige apparater som Politiet, SKAT og de fleste andre institutioner, der styrer vores samfund. Praktisk talt er de alle baseret på ideen om, at mennesker skal styres, kontrolleres, administreres. Jo større ubalancer der implementeres på os, jo mere kontrol skal der til for at opretholde dem. I den ene ende af magtspektrummet bliver kontrol på brutal vis udført på individuel basis: droneangreb, PET-hold, isoleret tilbageholdelse, racistisk profilering. I den anden ende er det allestedsnærværende og usynligt, bygget ind i selve samfundets infrastruktur: ligningerne der beregner kreditrate og forsikringsmuligheder, måden statistikker bliver indsamlet på og omdannet til byplanlægning, opbygningen af datingsider og sociale netværk. PET og internationale agenturer registrer vores opførsel på internettet, men de har slet ikke ligeså meget magt over vores virkelighedsopfattelse som de algoritmer, der afgør hvad vi ser når vi logger
+
+          ind.
+
+          Når livets uendelige muligheder er blevet reduceret til et spektrum af valg indkodet i enere og nuller, vil der ikke længere være nogen friktion mellem det system, vi lever i, og de liv vi kan forestille os – ikke fordi vi har opnået komplet frihed, men fordi vi har perfektioneret det modsatte. Frihed betyder ikke at man kan vælge mellem muligheder, men at formulere
+
+          spørgsmålene.
+        image_name: control
+        image_alt: a cop dressed in fancy riot gear leans out of his open patrol car
+          door and uses a camcorder to record protestors who are not pictured
+      hierarchy:
+        left_text_html: Problemet er Hierarki
+        right_text_html: |-
+          Der er mange mekanismer at indføre ulighed med. Nogle er afhængige af et centraliseret apparat, f.eks. retssystemet. Andre kan fungere mere uformelt, f.eks. kønsroller. Nogle af disse mekanismer er næsten blevet komplet afskaffet. Få tror endnu på kongers guddommelige magt, selvom det var umuligt i flere hundrede år at forestille sig en anden basis for samfundet. Andre er endnu så indgroede at vi ikke kan tænke os til et liv uden. Hvem kan forestille sig en verden uden ejendomsret? Dog; alle disse sociale konstruktioner er ægte, men ikke uundgåelige. Tilstedeværelsen af bolighajer og direktører er ikke mere naturlig, nødvendig eller nyttig end den
+
+          af kejsere.
+
+          Alle disse mekanismer er udviklet sammen og forstærker hinanden. Historien om racisme, for eksempel, er uadskillelig fra historien om kapitalisme: ingen af dem er mulige at forestille sig uden koloniseringen, slaveri eller de farvelinjer, der adskilte arbejdere og stadig afgør, hvem der fylder verdens fængsler og slumbyer. Samtidigt, uden de statslige infrastrukturer og andre hierarkier i vores vestlige verden, ville individuelt snæversyn aldrig kunne opretholde systematisk hvidt herredømme. At en sort præsident kan præsidere over disse strukturer stabiliserer dem blot: det er undtagelsen, der bekræfter reglen. For at sige det på en anden måde: så længe der er politi, hvem tror du så de vil chikanere? Så længe der er fængsler, hvem tror du så vil fylde dem? Så længe der er fattigdom, hvem tror du så vil være fattige? Det er naivt at tro, at vi kan opnå lighed i et samfund baseret på hierarki. Du kan blande kortene, men det er stadig det samme sæt.
+        image_name: hierarchy
+        image_alt: a mustachioed cop in riot gear wearing aviator sunglasses stands
+          guard in front of several Ku Klux Klan members in full robes, one of whom
+          carries a American flag
+      borders:
+        left_text_html: Problemet er Grænser
+        right_text_html: |-
+          Hvis en fremmed hær skulle invadere dette land, fælde træerne, forgifte floderne og tvinge børn til at vokse op med at sværge troskab til dem, hvem ville så ikke gribe til våben mod dem? Men når ens egen regering gør det, er patrioterne klar til at donere både lydighed, skattepenge og deres børn. Grænser beskytter os ikke, de opdeler os – skaber unødvendige spændinger med de ekskluderede, mens de samtidig usynliggør ægte forskelle blandt de inkluderede. Selv den mest demokratiske regering er grundlagt på denne opdeling mellem deltagere og outsidere, legitime og illegitime. I det antikke Athen, det berømte fødested for demokratiet, var kun en brøkdel af mændene inkluderede i den politiske proces. Statsborgerskab implementer stadig en barriere mellem de inkluderede og de ekskluderede i Danmark, og fratager utallige papirløse herboende magten over deres liv. Det liberale ideal er at udvide grænserne for inklusion indtil hele verden er integreret i ét stort demokratisk projekt. Men ulighed er indkodet i selveste strukturen. På ethvert niveau af dette samfund opdeler tusindvis af grænser os mellem magtfulde og magtesløse: sikkerhedscheckpoints, kreditrater, databasekoder, prisskilte. Vi har brug for tilhørsforhold, der ikke er prædikeret på eksklusion, der ikke centraliserer magt og legitimitet, der ikke sætter empati i karantæne i
+
+          afspærrede samfund.
+        image_name: borders
+        image_alt: a grouple of people sits upon a tall boundary fence they have climbed
+      representation:
+        left_text_html: Problemet er Repræsentation
+        right_text_html: |-
+          Du har kun magt, når du bruger den; du kan kun lære, hvad dine interesser er, ved at handle efter dem. Når enhver indsats for at opnå overblik over verden bliver nødt til at gå igennem repræsentative kanaler eller oversat efter en institutions protokol, bliver vi fremmedgjort overfor hinanden og vores eget potentiale. Ethvert aspekt af vores dagsorden kommer til syne for os igen som noget ugenkendeligt og fjendtligt. Politikerne, der altid skuffer os, viser os blot, hvor meget magt vi har lagt fra vores liv; politibrutalitet er den triste konsekvens af vores ønske om at undgå personligt ansvar for, hvad der foregår i vores nabolag. I denne digitale tidsalder, hvor enhver person må være sin egen sekretær for at kunne opretholde sit image udadtil, er selve vores omdømmer blevet noget eksternt, som vampyrer, der suger livet ud af os. Hvis vi ikke var så isolerede fra hinanden, konkurrerende for at sælge os selv på så mange professionelle og sociale markeder, ville vi så investere så meget tid og energi i disse profiler, gyldne udskæringer i
+
+          vores eget image?
+
+          Vi er uerstattelige. Hverken delegater eller abstraktioner kan erstatte os. Ved at reducere mennesker til demografi og rene oplevelser til data, mister vi fornemmelsen for alt, hvad der er dyrebart og unikt i verden. Vi har brug for tilstedeværelse, umiddelbarhed, direkte kontakt med hinanden og direkte kontrol over vores liv – fænomener, som ingen repræsentanter eller repræsentationer kan levere.
+        image_name: representation
+        image_alt: a woman of asian ethnicity works as a mannequin factory stocking
+          a shelves that are full of caucasian mannequin heads
+      leaders:
+        left_text_html: Problemet er Ledere
+        right_text_html: |-
+          Lederskab er en social dys-funktionalitet i hvilken majoriteten af deltagerne i en gruppe er ude af stand til at tage initiativ eller tænke kritisk over deres handlinger. Så længe vi anser et fælleskab som specifikke individers ejendom i stedet for et forhold mellem mennesker, vil vi altid være afhængig af vores ledere – og af deres nåde. I sandhed eksemplariske ledere er lige så farlige som de åbenlyst korrupte, da deres prisværdige kvaliteter blot forstærker deres status og andres underdanighed, for ikke at nævne lederskabets legitimitet i
+
+          sig selv.
+
+          Når politiet ankommer til en uanmeldt demonstration, er det første spørgsmål altid: ”Hvem er ansvarlig for det her?” – ikke fordi lederskab er essentielt for en kollektiv aktion, men fordi det viser en svaghed. Conquistadorerne stillede det samme spørgsmål, da de ankom til den såkaldte Nye Verden; hvor end der var et svar, sparede det dem århundreder af problemer med at undertrykke befolkningen på egen hånd. Så længe der er en leder, kan han/hun blive styret, erstattet eller taget som gidsel. I bedste fald er afhængigheden af ledere en Akilleshæl; I værste fald reproducerer det autoriteternes interesser og magtstrukturer i den flok, som skulle sætte sig mod dem. Det er bedre hvis alle har en fornemmelse af fælleskab og deres egen dagsorden.
+        image_name: leaders
+        image_alt: a portly politician talks into a bouquet of press microphones that
+          surround him
+      government:
+        left_text_html: Problemet er Regeringer
+        right_text_html: |-
+          Regeringer lover rettigheder, men de kan kun tage friheder. Selve essensen af rettigheder implementerer, at en centraliseret magt kan give og beskytte dem. Dog er staten ligeså meget i stand til at garantere noget, som den er i stand til at fratage det igen; at man opmuntrer regeringen til at løse et problem åbner dermed blot døre for at den kan skabe nye. Og regeringer skaber ikke magt ud af den blå luft – det er vores magt de bruger, og vi kan bruge den langt mere effektivt uden den Storm P. maskine som repræsentation er. Det mest liberale demokrati deler samme princip som det mest tyranniske autokrati: centraliseringen af magt og legitimation i en struktur, hvis formål er at monopolisere magt. Om bureaukraterne der varetager denne struktur hører under en konge, en statsminister eller en folkevalgt er ikke pointen. Love, bureaukrati og politi er fænomener, der er ældre end demokratiet; de fungerer på samme måde i et demokrati som de fungerer i et diktatur. Den eneste forskel er, at fordi vi kan stemme om, hvem der administrerer dem, skal vi anse dem som vores – selv når de bliver brugt imod
+
+          os.
+
+          Diktatur er essentielt ustabilt: man kan slagte, fængsle og hjernevaske en hel generation, men deres børn vil opfinde kampen for frihed på ny. Men lov hvert enkelt en chance for at kunne påføre majoritetens ønsker på hendes frænder og man kan slavebinde alle bag et system, der sætter dem overfor hinanden. Jo mere indflydelse folk tror, de har på statens magtudførende institutioner, jo mere populære vil disse institutioner være. Det kan muligvis forklare hvorfor den globale udvidelse af demokrati sammenfalder med utrolige uligheder i distribueringen af resurser og magt: ingen anden styreform ville kunne stabilisere en så ustabil situation. Når magt centraliseres bliver folk nødt til at opnå dominans over andre for at kunne få indflydelse på deres egne
+
+          ønsker. Kampen for uafhængighed bliver kanaliseret ind i konkurrencer om politisk magt: se på borgerkrigene i de post-koloniserede nationer mellem folkeslag, der før koeksisterede i fred. De, der har magten, kan kun beholde den ved at føre krig mod deres egen befolkning såvel som udenlandske. Ligegyldigt hvor der er hierarkier, så favoriserer det dem på toppen. At opbygge flere kontoer og opsparinger i systemet betyder bare, at man regner med beskyttelse fra det, vi egentlig skal beskytte os imod. Den eneste måde, hvorpå man kan fratage autoriteternes deres magt uden at blive suget ind i spillet, er ved at udvikle horisontale netværk, der kan handle uafhængigt. Dog; når vi har nok magt til at tvinge autoriteterne til at tage os seriøst, er vi også magtfulde nok til at løse vore problemer uden dem. Der er ingen anden vej til frihed end igennem frihed. I stedet for en enkelt flaskehals til hele dagsordenen behøver vi en bred vifte af forummer, hvor vi kan udøve magt. I stedet for én slags måde at legitimere på, skal vi have plads til mangfoldige løsningsmodeller. Hvor den nuværende magtudøvelse og tvang er indgroet i form af regering, har vi brug for beslutningstagende strukturer, der promoverer autonomi, samt selvforsvarsøvelser, der kan holde potentielle
+
+          herskere i skak.
+        image_name: government
+        image_alt: large conference table at which world leaders are seated, surrounded
+          by press and their minions, a summit meeting with greek columns of marble
+          and a traditional fresco in the dome above
+      profit:
+        left_text_html: Problemet er Profit
+        right_text_html: |-
+          Penge er den ideelle mekanisme, hvis man vil indføre ulighed. Det er abstrakt og syntes i stand til at repræsentere alt. Det er universelt: mennesker, der intet andet har til fælles, accepterer det som et grundlæggende livsfakta. Det er upersonligt: fremfor arvelige privilegier kan det overføres fra én person til en anden med det samme. Det er flydende: jo nemmere det er at skifte position i et hierarki, jo mere stabilt er hierarkiet i sig selv. De fleste, som ville gøre oprør mod et diktatur, accepterer
+
+          markedet uden spørgsmål.
+
+          Når al værdi er koncentreret ned i et enkelt fænomen, bliver selv de mest uvurderlige øjeblikke i vores liv drænet for mening, fremstår som en souvenirs i et abstrakt magtregnestykke. Alt der ikke kan kvalificeres finansielt bliver efterladt i vejsiden. Livet bliver til en kamp for økonomisk vinding: alle mod alle,
+
+          sælg eller bliv solgt.
+
+          At skabe profit: Det betyder at opnå mere kontrol over resurserne i samfundet i relation til alle andre. Vi kan ikke alle profitere på én gang; for at en person skal profitere, skal andre miste, proportionelt sagt. Når investorer profiterer på ansattes arbejde betyder det, at jo mere de ansatte arbejder, jo større bliver den finansielle kløft mellem dem og investoren. Et system drevet af profit producerer fattigdom i samme hastighed som det koncentrerer rigdom. Konkurrencepresset genererer innovationer hurtigere end noget andet tidligere system, men sammen med dem producerer det større og større ulighed: hvor hesteryttere engang stod over fodgængere, flyver bombefly nu over køretøjer og hjemløse. Og fordi alle bliver nødt til at jagte profit frem for at gøre ting for deres egen skyld, kan resultaterne af alt dette arbejde blive katastrofale. Klimaforandringer er blot de seneste i en serie af problemer, som selv de mest magtfulde kapitalister er magtesløse overfor. Det er ingen hemmelighed, at kapitalismen ikke belønner entreprenører for at rette op på kriser, men for at tjene på dem.
+        image_name: profit
+        image_alt: a chauffeur holds open the door to a large Audi as a wealthy businessman
+          exits a helicopter and proceeds across the helipad towards the car
+      property:
+        left_text_html: Problemet er Ejendom
+        right_text_html: |-
+          Kapitalismens fundament er ejendomsret- endnu en social konstruktion som vi har nedarvet fra konger og aristokrater. Ejendom skifter hænder hurtigere i dag, men konceptet er det samme: ideen om ejerskab legitimerer brugen af vold for at indføre kunstige uligheder i adgangen til land og resurser. Nogle mennesker mener at ejendom kan eksistere uden staten. Men ejendomsret er meningsløs uden en centraliseret magt til at påføre den- og så længe en centraliseret autoritet eksisterer, er intet i sandhed dit eget alligevel. Pengene, du tjener, er trykt af staten, underlagt skat og inflation. Dit hus tilhører ikke dig, men banken der gav dig et boliglån; selv hvis du har fuldt ejerskab kan ekspropriering overtrumfe ethvert skøde. Hvad ville det kræve at kunne beskytte de ting, der er vigtige for os? Regeringer eksisterer i princippet kun af, hvad de fratager os; de vil altid tage mere end de giver. Markedet belønner os kun for at flå vores medmennesker, og dem for at flå os. Den eneste ægte forsikring ligger i vores sociale bånd: hvis vi vil føle os trygge, har vi brug for gensidige hjælpenetværk, der kan
+
+          beskytte os selv.
+
+          Uden penge eller ejendomsret ville vores forhold til ting være bestemt af relationer til andre. I dag er det lige omvendt: vores forhold til andre er bestemt af vore relationer til ting. At fraligge dig din ejendomsret betyder ikke at du fraligger dig dine ejendele; det ville betyde, at ingen betjent eller noget aktiemarkedsnedbrud ville kunne fratage dig de ting, du er afhængig af. I stedet for at adlyde bureaukrati, ville vi begynde ved menneskelige behov; i stedet for at udnytte hinanden ville vi forfølge mulighederne i gensidig afhængighed. En skurks værste frygt er et samfund uden ejendom- for uden det ville han blot få den respekt han fortjener. Uden penge bliver folk vurderet på hvad de kan bidrage med til andres liv, ikke hvad de kan bestikke andre til at gøre. Uden profit ville hver eneste handling være belønning i sig selv, og dermed vil der ikke være noget grundlag for meningsløse eller destruktive aktiviteter. De ting, der virkelig er værdifulde i livet- lidenskab,
+
+          gavmildhed, kammeratskab-, er tilgængelige i massevis. Der skal hære af politifolk og ejendomsfogeder til for at indføre den mangel, der holder os fanget i det her rotteræs.
+        image_name: property
+        image_alt: an abandoned building, now occupied, with protest banners in the
+          window, being used as community organizing location
+      lastcrime:
+        left_text_html: Den sidste forbrydelse
+        right_text_html: |-
+          Hver orden er grundlagt på en forbrydelse mod den tidligere orden- forbrydelsen der opløste den. Derefter bliver den nye orden anset som legitim, da folk tager den for givet. Den konstituerende forbrydelse for USA var oprøret mod den Engelske konges autoritet. Den konstituerende forbrydelse for det kommende samfund, hvis vi overlever dette, vil fjerne nutidens love
+
+          og institutioner.
+
+          Forbrydelsens kategori indeholder alt det, der overskrider samfundets begrænsninger- de værste og de bedste. Hvert eneste system er hjemsøgt af alle de ting, som det ikke kan indordne eller kontrollere. Hver orden indeholder frøet af dens
+
+          ødelæggelse.
+
+          Intet varer evigt, det samme gælder for imperier og civilisationer. Men hvad kunne erstatte dette? Kan vi forestille os en orden, hvis præmis ikke baserer sig på opdelingen af liv mellem legitim og illegitim, lovlig og ulovlig, herskere og undersåtter? Hvad kunne være den sidste forbrydelse?
+        image_name: lastcrime
+        image_alt: a protestor with his face concealed in the act of throwing a lit
+          molotov cocktail during a protest, in front of a huge concrete wall
+      anarchy:
+        first_html: |-
+          Anarki er hvad der sker, når orden ikke bliver indført
+
+          med magt. Det er frihed: en proces hvor vi konstant genopfinder os selv og vores relationer. Enhver frit handlende proces eller fænomen- en regnskov, en vennegruppe, din egen krop- er en anarkistisk harmoni, der består gennem konstant forandring. Topkontrol, på den anden side, kan kun opretholdes gennem undertrykkelse eller magtudøvelse: den ustabile disciplin i gymnasiets eftersidningslokale, industrifarmen hvor pesticider og herbicider beskytter sterile rækker af genetisk modificeret kort, en supermagts skrøbelige hegemoni.
+
+          Anarkisme er ideen om, at alle har ret til komplet selv-
+
+          bestemmelse. Ingen lov, regering eller beslutningsproces er vigtigere end menneskers behov og ønsker. Folk skal være frie til at forme deres relationer alt efter gensidig tilfredsstillelse, og de skal være i stand til at stå op for
+
+          dem selv som de har lyst.
+
+          Anarkisme er ikke et dogme eller en skabelon. Det er ikke et system, der helst skulle virke, hvis blot det blev anvendt ordentligt – som demokrati – og ej heller et mål, der skal nås i en fremtid langt væk – som kommunisme. Det er en måde at opføre og relatere sig på, som vi kan praktisere lige nu. I forhold til alle værdisystemer og måder at handle på, kan vi starte med at spørge: Hvordan
+
+          fordeler det magt?
+        second_html: Anarkister er imod alle former for hierarki- hver eneste valuta,
+          der koncentrer magt i hænderne på få, hver eneste mekanisme, der distancerer
+          os fra vores potentiale. Imod lukkede systemer sætter vi pris på det ukendte
+          foran os og kaosset i os, med hvilket vi er stand til at blive fri.
+        third_html: <p><span class="blue black">Anarchists</span> oppose all forms
+          of hierarchy—every currency that concentrates power into the hands of a
+          few, every mechanism that puts us at a distance from our potential. Against
+          closed systems, we relish the unknown before us, the chaos within us by
+          virtue of which we are able to be free.</p>
+      outro:
+        left_text_html: ''
+        right_text_html: |-
+          Dette projekt er leveret til dig af en individualistisk og anarkistisk organisation i Danmark og CrimethInc., et internationalt netværk af aspirerende revolutionære. Du kan finde andre eksempler på CrimethInc.’s arbejde på hjemmesiden crimethinc.com såsom bøger, film, podcasts og førstehåndsberetninger fra opstande rundt om i verden. Denne tekst er produceret i samarbejde med kammerater fra 5 forskellige kontinente; hundrede af frivillige har doneret til trykomkostningerne, så du kunne sidde med dette i dine hænder. En digital udgave er tilgængelig på over et dusin sprog på tochangeeverything.com, sammen med en bred vifte af relaterede medier og resurser. Du kan få fat i flere kopier udelukkende
+
+          for forsendelsens pris. Når vi ser, hvad alle de undertrykkende institutioner og mekanismer har til fælles, bliver det klart, at vores individuelle kampe også er en del af noget større end os, noget der kan forbinde os. Når vi finder sammen på basis af denne forbindelse, ændres alt: ikke bare vores kampe, men også vores dagsorden, vores glædeskapacitet, fornemmelsen af at vores liv har mening. Alt der kræves for at finde hinanden er, at vi må begynde at handle efter en anden logik.
+
+          Vil du ændre alt, start overalt
+      take_flight_html: Don’t cling to the old world
+      next_path: "/begin"
+      next_text: The secret is to begin.
