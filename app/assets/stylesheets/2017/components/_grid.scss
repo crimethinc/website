@@ -4,7 +4,7 @@
   }
 
   .column {
-    margin-right: $border-size-large;
+    margin-right: var(--border-size-large);
   }
 
   .column:last-child {

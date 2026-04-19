@@ -2,7 +2,6 @@
 
 # script/update: Update application to run for its current checkout.
 
-require 'pathname'
 require 'fileutils'
 include FileUtils
 

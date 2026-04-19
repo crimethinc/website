@@ -74,8 +74,13 @@ module Crimethinc
     config.subdomain_locales << :'fr-qu'  # French  (Canadian/Quebecois)
 
     path_ltr_locales = %i[
+      czech
+      deutsch
+      italiano
+      polski
       slovensko
       srpskohrvatski
+      cebuano
       malay
       turkce
       english
