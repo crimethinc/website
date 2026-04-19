@@ -43,24 +43,30 @@ The variant vocabulary is modeled on `/assets/zines/` naming. Most of the existi
 | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------- |
 | _(none — no suffix)_ | **default** — on-screen reading on laptop/iPad          | two pages side-by-side, sequential order, meant to be viewed together  |
 | `-reading`           | on-screen scrolling on a phone, or source for re-layout | single page, sequential order                                          |
-| `-print`             | double-sided printing, folding, stapling                | imposed for booklet printing (non-sequential page order after folding) |
+| `-print-*`           | double-sided printing, folding, stapling                | imposed for booklet printing (non-sequential page order after folding) — always requires a paper-size modifier |
 
-Modifiers on `-print` only:
+Modifiers on `-print` only. **Paper size is always explicit** — no "no suffix = letter" default.
 
-| modifier           | when to use                        | effect      |
-| ------------------ | ---------------------------------- | ----------- |
-| _(none)_           | default print — color, letter-size |             |
-| `-a4`              | A4 paper instead of letter         | can combine |
-| `-black-and-white` | B&W instead of color               | can combine |
+| modifier           | when to use                | effect      |
+| ------------------ | -------------------------- | ----------- |
+| `-letter`          | US letter paper            | required    |
+| `-a4`              | A4 paper                   | required    |
+| `-a5`              | A5 paper (booklet prints)  | required    |
+| `-black-and-white` | B&W instead of color       | can combine |
+
+Every print file ends with exactly one paper-size modifier (`-letter` / `-a4` / `-a5`), optionally followed by `-black-and-white`.
+
+Optional `-lite` suffix (applies to any variant): a smaller-filesize, image-compressed duplicate of the same variant. Used when a heavily-compressed version exists alongside the full-quality one. Always goes at the very end of the filename.
 
 Examples:
 
 - `to-change-everything-english.pdf` — default (side-by-side, screen reading)
 - `to-change-everything-english-reading.pdf` — single page (phone)
-- `to-change-everything-english-print.pdf` — print, color, letter
+- `to-change-everything-english-print-letter.pdf` — print, color, letter
 - `to-change-everything-english-print-a4.pdf` — print, color, A4
-- `to-change-everything-english-print-black-and-white.pdf` — print, B&W, letter
+- `to-change-everything-english-print-letter-black-and-white.pdf` — print, B&W, letter
 - `to-change-everything-english-print-a4-black-and-white.pdf` — print, B&W, A4
+- `to-change-everything-danish-reading-lite.pdf` — compressed duplicate of the single-page reading PDF
 
 ## Ground rules for this migration
 
@@ -96,7 +102,7 @@ Before copying, fill the gaps. For each language, the ideal set is:
 
 - `<language>.pdf` (default)
 - `<language>-reading.pdf`
-- `<language>-print.pdf`
+- `<language>-print-letter.pdf`
 - `<language>-print-a4.pdf`
 
 (Black-and-white variants are not user-creatable in this migration — skip those.)
@@ -107,42 +113,42 @@ The audit below is based on filename and `Content-Length` only. Some existing fi
 
 | YAML         | why it's done                                                                                                                                               |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| en (english) | zine-folder files cover default (`screen_two_page_view`), `-reading` (`screen_single_page_view`), `-print` (`print_color`), `-print-a4` (`print_color_a4`). |
-| es (espanol) | has `-spread` (default), `-single` (-reading), `_print_color` (-print), `_print_color_a4` (-print-a4).                                                      |
+| en (english) | zine-folder files cover default (`screen_two_page_view`), `-reading` (`screen_single_page_view`), `-print-letter` (`print_color`), `-print-a4` (`print_color_a4`). |
+| es (espanol) | has `-spread` (default), `-single` (-reading), `_print_color` (-print-letter), `_print_color_a4` (-print-a4).                                               |
 
 ### Group B — missing a specific variant you can create
 
 | YAML                            | has today                                                                                                                                                                                                                                                                                                           | TODO create                                                                          |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| ceb (cebuano)                   | default (20.9 MB "spread")                                                                                                                                                                                                                                                                                          | `-reading`, `-print`, `-print-a4`                                                    |
-| cs (czech)                      | default (was "2up", 1.1 MB), `-reading` (was "1up"/"main", 1.2 MB), `-print-a4` (1.7 MB, was "a4-imposed-color")                                                                                                                                                                                                    | `-print` (letter-size imposed color)                                                 |
-| es-419 (espanol-america-latina) | `-print`, `-print-a4` (+ B&W variants) in zine folder                                                                                                                                                                                                                                                               | default (side-by-side screen), `-reading` (single page)                              |
-| fa (فارسی / farsi)              | default ("spread", 22.9 MB), `-reading` ("single", 23.2 MB), `-print` ("imposed", 10.1 MB)                                                                                                                                                                                                                          | `-print-a4`                                                                          |
-| hbs (srpskohrvatski)            | default ("spread", 1.1 MB), `-reading` ("single", 1.2 MB), `-print` ("imposed", 15.8 MB)                                                                                                                                                                                                                            | `-print-a4`                                                                          |
-| ms (malay)                      | default ("spread", 909 KB — confirmed real side-by-side, just heavily image-compressed), `-reading` ("single", 20.2 MB)                                                                                                                                                                                             | `-print`, `-print-a4`                                                                |
-| fr (quebecois)                  | `-reading` (existing `to-change-everything-quebecois.pdf`, 2.2 MB, confirmed single page)                                                                                                                                                                                                                           | default, `-print`, `-print-a4`                                                       |
-| pl (polski)                     | `-reading` (existing `to-change-everything-polski.pdf`, 951 KB, confirmed single page)                                                                                                                                                                                                                              | default, `-print`, `-print-a4`                                                       |
-| de (deutsch)                    | `-reading` (canonical `to-change-everything-deutsch.pdf`, 3.7 MB, confirmed single page — per Step 1a)                                                                                                                                                                                                              | default, `-print`, `-print-a4`                                                       |
-| pt (portugues)                  | default (canonical `to-change-everything-portugues.pdf`, 5.97 MB, confirmed side-by-side spread — per Step 1b). **Note: this file is black-and-white, not color. Deviates from convention.** Also: cover image has a missing background image bug (white text on white bg). See "Step 1.7 — Deferred design fixes". | `-reading`, `-print`, `-print-a4`                                                    |
-| ja (日本語 / nihongo)           | `-print-a4-black-and-white` (existing `to-change-everything-japanese.pdf`, 10.8 MB, confirmed print-imposed A4 B&W)                                                                                                                                                                                                 | default, `-reading`, `-print`, `-print-a4`                                           |
-| ko (한국어 / hangugeo)          | `-reading` (existing `tce-korean.pdf`, 7.6 MB, confirmed single page). Also: cover image has a bug — see "Step 1.7 — Deferred design fixes".                                                                                                                                                                        | default, `-print`, `-print-a4`                                                       |
-| sl (slovenscina)                | default (existing `to-change-everything-slovenscina.pdf`, 1.0 MB, confirmed side-by-side spread)                                                                                                                                                                                                                    | `-reading`, `-print`, `-print-a4`                                                    |
-| sk (slovensko)                  | default (existing `to-change-everything-slovensko.pdf`, 1.0 MB, byte-identical to sl — currently Slovenian content awaiting Slovak translation)                                                                                                                                                                     | `-reading`, `-print`, `-print-a4` (all pending Slovak translation per `sk.yml` TODO) |
+| ceb (cebuano)                   | default (20.9 MB "spread")                                                                                                                                                                                                                                                                                          | `-reading`, `-print-letter`, `-print-a4`                                             |
+| cs (czech)                      | default (was "2up", 1.1 MB), `-reading` (was "1up"/"main", 1.2 MB), `-print-a4` (1.7 MB, was "a4-imposed-color")                                                                                                                                                                                                    | _(none — Czech Republic uses A4 only)_                                               |
+| es-419 (espanol-america-latina) | `-print-letter`, `-print-a4` (+ B&W variants) in zine folder                                                                                                                                                                                                                                                        | default (side-by-side screen), `-reading` (single page)                              |
+| fa (فارسی / farsi)              | default ("spread", 22.9 MB), `-reading` ("single", 23.2 MB), `-print-a4` ("imposed", 10.1 MB, confirmed A4)                                                                                                                                                                                                         | _(none — Iran uses A4 only)_                                                         |
+| hbs (srpskohrvatski)            | default ("spread", 1.1 MB), `-reading` ("single", 1.2 MB), `-print-a4` ("imposed", 15.8 MB, confirmed A4)                                                                                                                                                                                                           | _(none — Balkans use A4 only)_                                                       |
+| ms (malay)                      | default ("spread", 909 KB — confirmed real side-by-side, just heavily image-compressed), `-reading` ("single", 20.2 MB)                                                                                                                                                                                             | `-print-a4` (Malaysia uses A4 only)                                                  |
+| fr (quebecois)                  | `-reading` (existing `to-change-everything-quebecois.pdf`, 2.2 MB, confirmed single page)                                                                                                                                                                                                                           | default, `-print-letter`, `-print-a4`                                                |
+| pl (polski)                     | `-reading` (existing `to-change-everything-polski.pdf`, 951 KB, confirmed single page)                                                                                                                                                                                                                              | default, `-print-a4` (Poland uses A4 only)                                           |
+| de (deutsch)                    | `-reading` (canonical `to-change-everything-deutsch.pdf`, 3.7 MB, confirmed single page — per Step 1a)                                                                                                                                                                                                              | default, `-print-a4` (German-speaking countries use A4 only)                         |
+| pt (portugues)                  | default (canonical `to-change-everything-portugues.pdf`, 5.97 MB, confirmed side-by-side spread — per Step 1b). **Note: this file is black-and-white, not color. Deviates from convention.** Also: cover image has a missing background image bug (white text on white bg). See "Step 1.7 — Deferred design fixes". | `-reading`, `-print-a4` (Portugal uses A4 only — Brazilian pt not yet scoped)        |
+| ja (日本語 / nihongo)           | `-print-a4-black-and-white` (existing `to-change-everything-japanese.pdf`, 10.8 MB, confirmed print-imposed A4 B&W)                                                                                                                                                                                                 | default, `-reading`, `-print-a4` (Japan uses A4 only)                                |
+| ko (한국어 / hangugeo)          | `-reading` (existing `tce-korean.pdf`, 7.6 MB, confirmed single page). Also: cover image has a bug — see "Step 1.7 — Deferred design fixes".                                                                                                                                                                        | default, `-print-a4` (Korea uses A4 only)                                            |
+| sl (slovenscina)                | default (existing `to-change-everything-slovenscina.pdf`, 1.0 MB, confirmed side-by-side spread)                                                                                                                                                                                                                    | `-reading`, `-print-a4` (Slovenia uses A4 only)                                      |
+| sk (slovensko)                  | default (existing `to-change-everything-slovensko.pdf`, 1.0 MB, byte-identical to sl — currently Slovenian content awaiting Slovak translation)                                                                                                                                                                     | `-reading`, `-print-a4` (Slovakia uses A4 only; all pending Slovak translation per `sk.yml` TODO) |
 
 ### Group C — only one existing PDF, unclear what it is — identify first, then fill gaps
 
 _All Group C items resolved and moved into Group B above._
 
-### Group D — no PDF source material at all
+### Group D — no PDF on CDN (YAMLs already fully translated)
 
-**Decision: flag for commission.** YAMLs for these 4 keep pointing at `/tce/get` (current behaviour) until PDFs are produced and uploaded. When each PDF lands at `/assets/tce/downloads/to-change-everything-<root>.pdf`, update the corresponding YAML's `pdf_get_url`.
+**The constraint is PDF production, not translation.** All 4 YAMLs in this group are fully populated with translated content (139–149 lines each); they just lack a rendered PDF on the CDN. YAMLs keep pointing at `/tce/get` until a PDF is produced and uploaded. When each PDF lands at `/assets/tce/downloads/to-change-everything-<root>.pdf`, update the corresponding YAML's `pdf_get_url`.
 
-| YAML                  | status                                                       |
-| --------------------- | ------------------------------------------------------------ |
-| hu (hungarian)        | no PDF on CDN — commission; YAML stays on `/tce/get` for now |
-| li (lietuvos)         | no PDF on CDN — commission; YAML stays on `/tce/get` for now |
-| th (ภาษาไทย / thai)   | no PDF on CDN — commission; YAML stays on `/tce/get` for now |
-| tr (turkce / turkish) | no PDF on CDN — commission; YAML stays on `/tce/get` for now |
+| YAML                  | status                                                                                                                      |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| hu (hungarian)        | no PDF on CDN, no InDesign source — needs design work from YAML text                                                        |
+| li (lietuvos)         | no PDF on CDN, no InDesign source — needs design work from YAML text                                                        |
+| th (ภาษาไทย / thai)   | no PDF on CDN — **InDesign source exists** (`To Change Everything A4 Imposed THAI.indd`), just needs one-time PDF export    |
+| tr (turkce / turkish) | no PDF on CDN, no InDesign source — needs design work from YAML text                                                        |
 
 ## Step 1.7 — Deferred design fixes
 
@@ -152,7 +158,7 @@ These are existing-PDF issues surfaced while cataloguing. Not blocking for this 
 - [ ] **Portuguese (pt) default PDF is black-and-white** — the rest of the language set uses color for the default. Decide whether to produce a color version (then relegate B&W to the `-print-black-and-white` slot), or accept pt as a B&W-only language and document the deviation.
 - [ ] **Korean (ko) reading PDF** — `tce-korean.pdf`. Cover image has a bug (needs fixing, re-export, re-upload).
 - [ ] **Czech (cs) — cover damage on `/assets/tce/images/to-change-everything-czech.pdf`** (1,195,878 bytes). Content is otherwise identical to `/tce/images/Zmen-Vse.pdf` (958,032 bytes, good cover). Step 2 sources the `-reading` variant from `Zmen-Vse.pdf` to avoid the damaged cover. The 2-up variant (`to-change-everything-czech-2up.pdf`, used as cs default) and the imposed variants should also be checked for the same cover damage — verify before migration.
-- [ ] **Danish (orphan) PDFs are A6 paper size**, not letter or A4. All three `tce_dk_a6_*` files are outside the convention's paper-size slots (`-print` = letter, `-print-a4` = A4). Either (a) re-export at letter/A4 so they fit, or (b) extend the convention with an `-a6` modifier.
+- [x] ~~Danish (orphan) PDFs paper-size slot~~ — resolved: convention extended with `-print-a5`. Danish files' current filenames say `a6` but content is A5 (`tce_dk_a6_booklet_final.pdf` is A5-imposed color). The two single-page variants map to `-reading` and `-reading-lite` (the latter is a compressed duplicate of the former).
 
 ## Step 1.6 — Italian (italiano) TCE redesign
 
@@ -171,8 +177,7 @@ Italian is excluded from this migration's copy + redirect work. The existing Ita
 
 - [ ] Produce `to-change-everything-italiano.pdf` (default — side-by-side, screen reading)
 - [ ] Produce `to-change-everything-italiano-reading.pdf` (single page — phone)
-- [ ] Produce `to-change-everything-italiano-print.pdf` (letter, color, imposed)
-- [ ] Produce `to-change-everything-italiano-print-a4.pdf` (A4, color, imposed)
+- [ ] Produce `to-change-everything-italiano-print-a4.pdf` (A4, color, imposed — Italy uses metric paper, so no letter variant)
 
 Once redesigned, Italian joins the main migration flow: copy to `/assets/tce/downloads/`, set up redirects from old paths, update `it.yml`.
 
@@ -194,49 +199,49 @@ Rows that aren't in this table (e.g. `-reading` for deutsch) fall into Step 1.5 
 | de     | `-reading`                              | `to-change-everything-deutsch-reading.pdf`                                 | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-deutsch.pdf` (Option A per Step 1a)                                                                                  |
 | en     | default                                 | `to-change-everything-english.pdf`                                         | `https://cdn.crimethinc.com/assets/zines/to-change-everything/to-change-everything_screen_two_page_view.pdf`                                                                            |
 | en     | `-reading`                              | `to-change-everything-english-reading.pdf`                                 | `https://cdn.crimethinc.com/assets/zines/to-change-everything/to-change-everything_screen_single_page_view.pdf`                                                                         |
-| en     | `-print`                                | `to-change-everything-english-print.pdf`                                   | `https://cdn.crimethinc.com/assets/zines/to-change-everything/to-change-everything_print_color.pdf`                                                                                     |
+| en     | `-print-letter`                         | `to-change-everything-english-print-letter.pdf`                            | `https://cdn.crimethinc.com/assets/zines/to-change-everything/to-change-everything_print_color.pdf`                                                                                     |
 | en     | `-print-a4`                             | `to-change-everything-english-print-a4.pdf`                                | `https://cdn.crimethinc.com/assets/zines/to-change-everything/to-change-everything_print_color_a4.pdf`                                                                                  |
-| en     | `-print-black-and-white`                | `to-change-everything-english-print-black-and-white.pdf`                   | `https://cdn.crimethinc.com/assets/zines/to-change-everything/to-change-everything_print_black_and_white.pdf`                                                                           |
+| en     | `-print-letter-black-and-white`         | `to-change-everything-english-print-letter-black-and-white.pdf`            | `https://cdn.crimethinc.com/assets/zines/to-change-everything/to-change-everything_print_black_and_white.pdf`                                                                           |
 | es     | default                                 | `to-change-everything-espanol.pdf`                                         | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-espanol-spread.pdf`                                                                                                  |
 | es     | `-reading`                              | `to-change-everything-espanol-reading.pdf`                                 | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-espanol-single.pdf`                                                                                                  |
-| es     | `-print`                                | `to-change-everything-espanol-print.pdf`                                   | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo/para-cambiar-todo_print_color.pdf`                                                                                           |
+| es     | `-print-letter`                         | `to-change-everything-espanol-print-letter.pdf`                            | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo/para-cambiar-todo_print_color.pdf`                                                                                           |
 | es     | `-print-a4`                             | `to-change-everything-espanol-print-a4.pdf`                                | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo/para-cambiar-todo_print_color_a4.pdf`                                                                                        |
-| es     | `-print-black-and-white`                | `to-change-everything-espanol-print-black-and-white.pdf`                   | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo/para-cambiar-todo_print_black_and_white.pdf`                                                                                 |
+| es     | `-print-letter-black-and-white`         | `to-change-everything-espanol-print-letter-black-and-white.pdf`            | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo/para-cambiar-todo_print_black_and_white.pdf`                                                                                 |
 | es     | `-print-a4-black-and-white`             | `to-change-everything-espanol-print-a4-black-and-white.pdf`                | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo/para-cambiar-todo_print_black_and_white_a4.pdf`                                                                              |
-| es-419 | `-print`                                | `to-change-everything-espanol-america-latina-print.pdf`                    | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo-america-latina/para-cambiar-todo-america-latina_print_color.pdf`                                                             |
+| es-419 | `-print-letter`                         | `to-change-everything-espanol-america-latina-print-letter.pdf`             | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo-america-latina/para-cambiar-todo-america-latina_print_color.pdf`                                                             |
 | es-419 | `-print-a4`                             | `to-change-everything-espanol-america-latina-print-a4.pdf`                 | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo-america-latina/para-cambiar-todo-america-latina_print_color_a4.pdf`                                                          |
-| es-419 | `-print-black-and-white`                | `to-change-everything-espanol-america-latina-print-black-and-white.pdf`    | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo-america-latina/para-cambiar-todo-america-latina_print_black_and_white.pdf`                                                   |
+| es-419 | `-print-letter-black-and-white`         | `to-change-everything-espanol-america-latina-print-letter-black-and-white.pdf` | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo-america-latina/para-cambiar-todo-america-latina_print_black_and_white.pdf`                                                   |
 | es-419 | `-print-a4-black-and-white`             | `to-change-everything-espanol-america-latina-print-a4-black-and-white.pdf` | `https://cdn.crimethinc.com/assets/zines/para-cambiar-todo-america-latina/para-cambiar-todo-america-latina_print_black_and_white_a4.pdf`                                                |
 | fa     | default (glyph)                         | `to-change-everything-فارسی.pdf`                                           | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-farsi-spread.pdf`                                                                                                    |
 | fa     | default (latin duplicate)               | `to-change-everything-farsi.pdf`                                           | same as above                                                                                                                                                                           |
 | fa     | `-reading` (glyph)                      | `to-change-everything-فارسی-reading.pdf`                                   | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-farsi-single.pdf`                                                                                                    |
 | fa     | `-reading` (latin duplicate)            | `to-change-everything-farsi-reading.pdf`                                   | same as above                                                                                                                                                                           |
-| fa     | `-print` (glyph)                        | `to-change-everything-فارسی-print.pdf`                                     | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-farsi-imposed.pdf` (paper size assumed letter — verify)                                                              |
-| fa     | `-print` (latin duplicate)              | `to-change-everything-farsi-print.pdf`                                     | same as above                                                                                                                                                                           |
+| fa     | `-print-a4` (glyph)                     | `to-change-everything-فارسی-print-a4.pdf`                                  | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-farsi-imposed.pdf` (confirmed A4)                                                                                    |
+| fa     | `-print-a4` (latin duplicate)           | `to-change-everything-farsi-print-a4.pdf`                                  | same as above                                                                                                                                                                           |
 | fr     | `-reading`                              | `to-change-everything-quebecois-reading.pdf`                               | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-quebecois.pdf`                                                                                                       |
 | hbs    | default                                 | `to-change-everything-srpskohrvatski.pdf`                                  | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-serbocroatian-spread.pdf`                                                                                            |
 | hbs    | `-reading`                              | `to-change-everything-srpskohrvatski-reading.pdf`                          | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-serbocroatian-single.pdf`                                                                                            |
-| hbs    | `-print`                                | `to-change-everything-srpskohrvatski-print.pdf`                            | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-serbocroatian-imposed.pdf` (paper size assumed letter — verify)                                                      |
-| hu     | —                                       | (nothing to copy; commissioned — see Group D)                              |                                                                                                                                                                                         |
+| hbs    | `-print-a4`                             | `to-change-everything-srpskohrvatski-print-a4.pdf`                         | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-serbocroatian-imposed.pdf` (confirmed A4)                                                                            |
+| hu     | —                                       | (nothing to copy; no PDF yet — see Group D)                                |                                                                                                                                                                                         |
 | it     | —                                       | (excluded; Italian redesign — see Step 1.6)                                |                                                                                                                                                                                         |
 | ja     | `-print-a4-black-and-white` (glyph)     | `to-change-everything-日本語-print-a4-black-and-white.pdf`                 | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-japanese.pdf`                                                                                                        |
 | ja     | `-print-a4-black-and-white` (latin dup) | `to-change-everything-nihongo-print-a4-black-and-white.pdf`                | same as above                                                                                                                                                                           |
 | ko     | `-reading` (glyph)                      | `to-change-everything-한국어-reading.pdf`                                  | `https://cdn.crimethinc.com/assets/tce/images/tce-korean.pdf`                                                                                                                           |
 | ko     | `-reading` (latin duplicate)            | `to-change-everything-hangugeo-reading.pdf`                                | same as above                                                                                                                                                                           |
-| li     | —                                       | (nothing to copy; commissioned — see Group D)                              |                                                                                                                                                                                         |
+| li     | —                                       | (nothing to copy; no PDF yet — see Group D)                                |                                                                                                                                                                                         |
 | ms     | default                                 | `to-change-everything-malay.pdf`                                           | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-malay-spread.pdf`                                                                                                    |
 | ms     | `-reading`                              | `to-change-everything-malay-reading.pdf`                                   | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-malay-single.pdf`                                                                                                    |
 | pl     | `-reading`                              | `to-change-everything-polski-reading.pdf`                                  | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-polski.pdf`                                                                                                          |
 | pt     | default                                 | `to-change-everything-portugues.pdf`                                       | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-portugues.pdf` (Option A per Step 1b; B&W + cover bug — see Step 1.7)                                                |
 | sk     | default                                 | `to-change-everything-slovensko.pdf`                                       | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-slovensko.pdf` (Slovenian content pending Slovak translation)                                                        |
 | sl     | default                                 | `to-change-everything-slovenscina.pdf`                                     | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-slovenscina.pdf`                                                                                                     |
-| th     | —                                       | (nothing to copy; commissioned — see Group D)                              |                                                                                                                                                                                         |
-| tr     | —                                       | (nothing to copy; commissioned — see Group D)                              |                                                                                                                                                                                         |
+| th     | —                                       | (nothing to copy; InDesign source exists, PDF export pending — see Group D)|                                                                                                                                                                                         |
+| tr     | —                                       | (nothing to copy; no PDF yet — see Group D)                                |                                                                                                                                                                                         |
 
 #### Naming notes
 
 - **ja / ko / fa** (non-Latin YAML root keys: `日本語`, `한국어`, `فارسی`): **canonical filenames use the native glyphs** — matches YAML root keys exactly, and S3/CloudFront serves them fine in both unencoded and percent-encoded forms. In addition, **duplicate copies with endonym Latin-transliterations** (`nihongo`, `hangugeo`, `farsi`) are also created — not linked from the TCE page, but kept on the CDN for human findability / guessability. (Endonym transliterations are used rather than English exonyms to match the style of `espanol`, `quebecois`, `slovenscina`, etc.)
-  - `ja`: canonical `to-change-everything-日本語.pdf` + duplicate `to-change-everything-nihongo.pdf` (same variants for each: default, `-reading`, `-print`, `-print-a4`)
+  - `ja`: canonical `to-change-everything-日本語.pdf` + duplicate `to-change-everything-nihongo.pdf` (same variants for each: default, `-reading`, `-print-letter`, `-print-a4`)
   - `ko`: canonical `to-change-everything-한국어.pdf` + duplicate `to-change-everything-hangugeo.pdf`
   - `fa`: canonical `to-change-everything-فارسی.pdf` + duplicate `to-change-everything-farsi.pdf` (farsi already is the endonym transliteration)
 - **hbs**: YAML root key is `srpskohrvatski` but source filenames say `serbocroatian`. Destination uses the YAML root key (`srpskohrvatski`) to match the convention.
@@ -262,9 +267,9 @@ Mapping table:
 | Catalan         | `-reading`                   | `to-change-everything-catalan-reading.pdf`      | `https://cdn.crimethinc.com/assets/tce/images/per-canviar-ho-tot_1up.pdf`                       |
 | Chinese         | default                      | `to-change-everything-chinese.pdf`              | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-chinese-2up.pdf`             |
 | Chinese         | `-print-a4`                  | `to-change-everything-chinese-print-a4.pdf`     | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-a4-imposed-chinese.pdf`      |
-| Danish          | — A6 paper                   | (excluded — see Step 1.7 deferred design fixes) | `https://cdn.crimethinc.com/assets/tce/images/tce_dk_a6_final.pdf`                              |
-| Danish          | — A6 paper                   | (excluded — see Step 1.7 deferred design fixes) | `https://cdn.crimethinc.com/assets/tce/images/tce_dk_a6_booklet_final.pdf`                      |
-| Danish          | — A6 paper                   | (excluded — see Step 1.7 deferred design fixes) | `https://cdn.crimethinc.com/assets/tce/images/tce_dk_a6_small_final.pdf`                        |
+| Danish          | `-reading`                   | `to-change-everything-danish-reading.pdf`       | `https://cdn.crimethinc.com/assets/tce/images/tce_dk_a6_final.pdf`                              |
+| Danish          | `-reading-lite`              | `to-change-everything-danish-reading-lite.pdf`  | `https://cdn.crimethinc.com/assets/tce/images/tce_dk_a6_small_final.pdf`                        |
+| Danish          | `-print-a5`                  | `to-change-everything-danish-print-a5.pdf`      | `https://cdn.crimethinc.com/assets/tce/images/tce_dk_a6_booklet_final.pdf`                      |
 | Dutch           | `-reading`                   | `to-change-everything-dutch-reading.pdf`        | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-dutch-single.pdf`            |
 | French (France) | `-reading`                   | `to-change-everything-french-reading.pdf`       | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-french-reading-version.pdf`  |
 | French (France) | `-print-a4`                  | `to-change-everything-french-print-a4.pdf`      | `https://cdn.crimethinc.com/assets/tce/images/to-change-everything-french-printing-version.pdf` |
@@ -278,15 +283,7 @@ Mapping table:
 | Swedish         | default ("uppslag" = spread) | `to-change-everything-swedish.pdf`              | `https://cdn.crimethinc.com/assets/tce/images/att-forandra-allt_web_uppslag.pdf`                |
 | Swedish         | `-reading`                   | `to-change-everything-swedish-reading.pdf`      | `https://cdn.crimethinc.com/assets/tce/images/att-forandra-allt_web.pdf`                        |
 
-Items still to verify by opening the file:
-
-- Arabic `-imposed` → paper size (letter or A4?)
-- Bulgarian `-imposed` → paper size
-- French (France) `-reading-version` → single page or spread?
-- French (France) `-printing-version` → paper size
-- Romanian single file → what type?
-- Russian single file → what type?
-- Swedish `att-forandra-allt_web.pdf` → single or spread?
+Items still to verify by opening the file: _none — all resolved._
 
 ## Step 3 — Set up CDN redirects (happens after Step 2)
 
