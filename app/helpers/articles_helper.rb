@@ -73,11 +73,9 @@ module ArticlesHelper
       end
 
     tag.li class: 'social-link' do
-      link_to "Share on #{site.capitalize}",
-              share_url,
-              class:  "link-domain-#{site}",
-              target: '_blank',
-              rel:    'noopener'
+      link_to(share_url, class: "link-domain-#{site}", target: '_blank', rel: 'noopener') do
+        tag.span(class: 'visually-hidden') { "Share on #{site.capitalize}" }
+      end
     end
   end
 

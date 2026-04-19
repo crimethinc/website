@@ -2,8 +2,11 @@ class ToChangeEverythingController < ApplicationController
   layout 'to_change_everything', only: [:show]
 
   LTR_TO_CHANGE_ANYTHING_YAMLS = %w[
+    deutsch
+    italiano
     polski
     srpskohrvatski
+    cebuano
     malay
     english
     espanol

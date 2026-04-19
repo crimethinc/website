@@ -1,6 +1,6 @@
 .alert {
   text-align: center;
-  padding: $border-size-xlarge;
+  padding: var(--border-size-xlarge);
   font-size: 3rem;
   line-height: 1.25em;
   border-bottom: 10px solid black;

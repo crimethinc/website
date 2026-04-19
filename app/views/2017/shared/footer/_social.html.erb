@@ -5,7 +5,9 @@
   <ul class="social-links">
     <% social_links.each do |name, url| %>
       <li class="social-link">
-        <%= link_to name, url, class: social_link_classes(url: url, name: name), target: "_blank", rel: "me noopener" %>
+        <%= link_to(url, class: social_link_classes(url: url, name: name), target: "_blank", rel: "me noopener") do %>
+          <span class="visually-hidden"><%= name %></span>
+        <% end %>
       </li>
     <% end %>
   </ul>

@@ -11,8 +11,8 @@ body {
 
 body {
   margin-bottom: 0;
-  background: $color-white;
-  color: $color-black;
+  background: var(--color-white);
+  color: var(--color-black);
   font: {
     size: $base-font-size;
     family: $font-body;
@@ -50,8 +50,8 @@ input[type="search"] {
 main {
   clear: both;
   width: 100%;
-  padding: 0 $border-size-medium;
-  margin: 0 auto $border-size-xlarge auto;
+  padding: 0 var(--border-size-medium);
+  margin: 0 auto var(--border-size-xlarge) auto;
 }
 
 a {
@@ -59,7 +59,7 @@ a {
   &:visited,
   &:hover,
   &:active {
-    color: $color-true-black;
+    color: var(--color-true-black);
   }
 }
 
@@ -76,7 +76,7 @@ p a {
 
   &:hover,
   &:active {
-    color: $color-true-black;
+    color: var(--color-true-black);
   }
 }
 
@@ -111,8 +111,20 @@ sup {
 audio {
   display: block;
   margin: {
-    top: $border-size-large;
-    bottom: $border-size-xlarge;
+    top: var(--border-size-large);
+    bottom: var(--border-size-xlarge);
   }
-  min-height: $border-size-xlarge;
+  min-height: var(--border-size-xlarge);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
