@@ -204,7 +204,7 @@ GEM
     http (6.0.2)
       http-cookie (~> 1.0)
       llhttp (~> 0.6.1)
-    http-cookie (1.1.4)
+    http-cookie (1.1.6)
       domain_name (~> 0.5)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
@@ -705,7 +705,7 @@ CHECKSUMS
   guard-rspec (4.7.3) sha256=a47ba03cbd1e3c71e6ae8645cea97e203098a248aede507461a43e906e2f75ca
   hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
   http (6.0.2) sha256=be337816fb45cee712eeb0829a16d9300c9d2b87b38b771d177d7a59f77e8b83
-  http-cookie (1.1.4) sha256=8dd8011dedcae5f91af2671b7ba878c4a9e89f0f6384790c1f4cdd176f5e3ada
+  http-cookie (1.1.6) sha256=ba4b82be64de61dc281243dac70e3c382c45142f20268ed9276a3670c93feaa9
   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
   i18n-debug (1.2.0) sha256=9d3efa42c0fb9b5df49bc4b762c682fdaf323ab02e442e62443f42ead7d57bcb
   image_processing (1.14.0) sha256=754cc169c9c262980889bec6bfd325ed1dafad34f85242b5a07b60af004742fb
