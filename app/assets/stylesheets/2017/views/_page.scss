@@ -5,10 +5,10 @@
 
     .crumbtrail {
       text-transform: uppercase;
-      color: $color-gray;
+      color: var(--color-gray);
 
       a {
-        color: $color-gray;
+        color: var(--color-gray);
       }
     }
 
@@ -37,7 +37,7 @@
 
     .meta {
       img {
-        // TODO refactor away
+        /* TODO refactor away */
         width: 100% !important;
         height: auto !important;
       }
@@ -75,7 +75,7 @@
 
         line-height: 1.25em;
         margin-bottom: var(--border-size-medium);
-        border-bottom: var(--border-size-xsmall) solid $color-gray-light;
+        border-bottom: var(--border-size-xsmall) solid var(--color-gray-light);
 
         &:first-child {
           border: none;

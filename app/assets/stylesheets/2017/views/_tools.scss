@@ -1,4 +1,4 @@
-// Contradictionary definitions
+/* Contradictionary definitions */
 .h-entry.definition {
   #intro a {
     font-weight: normal;
@@ -38,7 +38,7 @@
           text-decoration: underline;
           font-style: italic;
           font-weight: normal;
-          color: $color-gray;
+          color: var(--color-gray);
         }
 
         li {
@@ -54,7 +54,7 @@
       }
 
       hr {
-        border: var(--border-size-xsmall) solid $color-gray-light;
+        border: var(--border-size-xsmall) solid var(--color-gray-light);
         margin: 3rem auto;
         width: 80%;
       }
@@ -85,19 +85,19 @@
         }
       }
 
-      // Contradictionary rounded corners
-      // books#index
+      /* Contradictionary rounded corners */
+      /* books#index */
       #contradictionary .tool-front img {
         border-radius: 0 10px 10px 0;
       }
-      // books#show
+      /* books#show */
       .tool-front.contradictionary-cover img {
         border-radius: 0 20px 20px 0;
       }
 
-      // Cover image sizes on /books
+      /* Cover image sizes on /books */
       .book {
-        // Custom size
+        /* Custom size */
         &#recipes-for-disaster .tool-front img {
           width: 100%;
         }
@@ -112,7 +112,7 @@
           }
         }
 
-        // Default size
+        /* Default size */
         & .tool-front img {
           width: 68%;
         }
@@ -174,7 +174,7 @@
             margin-top: 0.5em;
             display: block;
             text-align: right;
-            color: $color-gray;
+            color: var(--color-gray);
             padding-right: 0.25em;
           }
         }
@@ -183,7 +183,7 @@
       #extra {
         margin-top: 2rem;
         padding-top: 4rem;
-        border-top: 1px solid $color-gray-light;
+        border-top: 1px solid var(--color-gray-light);
       }
 
       #into-libraries,
@@ -214,12 +214,12 @@
       }
 
       .buy-info {
-        background: $color-gray-light;
+        background: var(--color-gray-light);
         margin: 2rem 0;
         padding: 1rem;
 
         p {
-          color: $color-true-black;
+          color: var(--color-true-black);
           line-height: 1.5em;
           font-size: 1.2rem;
           margin-bottom: 0;
@@ -239,7 +239,7 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
         padding-bottom: 2rem;
-        border-bottom: var(--border-size-xsmall) solid $color-gray-light;
+        border-bottom: var(--border-size-xsmall) solid var(--color-gray-light);
 
         @media screen and (min-width: $large-phone) {
           padding-bottom: 0;
@@ -262,7 +262,7 @@
       .h-entry .e-content .table-of-contents,
       .table-of-contents {
         padding-top: 2rem;
-        border-top: var(--border-size-xsmall) solid $color-gray-light;
+        border-top: var(--border-size-xsmall) solid var(--color-gray-light);
 
         * {
           font-size: 1rem;
@@ -298,7 +298,7 @@
 
       .tool-content {
         padding-top: 2rem;
-        border-top: var(--border-size-xsmall) solid $color-gray-light;
+        border-top: var(--border-size-xsmall) solid var(--color-gray-light);
 
         h1 {
           font-size: 3rem;
@@ -306,7 +306,7 @@
         }
 
         blockquote {
-          background: $color-gray-light;
+          background: var(--color-gray-light);
           padding: 1em 1em 1em 1em;
           margin-bottom: 1rem;
 
@@ -334,7 +334,7 @@
         }
       }
 
-      // extras
+      /* extras */
       h1 + .row {
         margin-top: 2rem;
       }

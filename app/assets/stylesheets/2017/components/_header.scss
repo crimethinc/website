@@ -1,4 +1,4 @@
-// Move SUPPORT US button to left or right based on language direction
+/* Move SUPPORT US button to left or right based on language direction */
 html[dir="ltr"] .site-header .button {
   right: var(--border-size-large);
 }
@@ -17,7 +17,7 @@ html[dir="rtl"] .site-header .button {
 
 .site-header {
   position: relative;
-  background-color: $color-true-black;
+  background-color: var(--color-true-black);
   padding: var(--border-size-large);
 
   @media screen and (max-width: $small-tablet) {
@@ -25,7 +25,7 @@ html[dir="rtl"] .site-header .button {
   }
 
   .button {
-    background: $color-blue;
+    background: var(--color-blue);
     position: absolute;
     top: var(--border-size-large);
 
@@ -63,7 +63,7 @@ html[dir="rtl"] .site-header .button {
   color: white !important;
 }
 
-// nav
+/* nav */
 .primary-navigation {
   margin: 1rem 0 0 0;
   display: inline-block;
@@ -81,12 +81,12 @@ html[dir="rtl"] .site-header .button {
 
     &:link,
     &:visited {
-      color: $color-white;
+      color: var(--color-white);
     }
 
     &:hover,
     &:active {
-      border-bottom: 1px solid $color-white;
+      border-bottom: 1px solid var(--color-white);
     }
   }
 }
@@ -98,7 +98,7 @@ html[dir="rtl"] .site-header .button {
   }
 }
 
-// larger than $large-phone viewport
+/* larger than $large-phone viewport */
 @media screen and (min-width: $small-tablet) {
   .site-header .nav-link {
     font-size: 1.7rem;
