@@ -1,10 +1,8 @@
 /* TODO: Is this used anywhere? */
 #video {
   h1 {
-    font: {
-      size: 1.25em;
-      weight: 900;
-    }
+    font-size: 1.25em;
+    font-weight: 900;
     letter-spacing: -.01em;
     line-height: 1.2em;
     margin-bottom: .1em;
@@ -12,8 +10,8 @@
 }
 
 .video-flexbox-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
