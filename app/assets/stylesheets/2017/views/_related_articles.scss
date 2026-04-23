@@ -5,9 +5,10 @@
   @media screen and (max-width: 640px) {
     --_related-article-min-width: 100%;
     --_last-article-display:  none;
+
+    padding-right: 1rem; padding-left: 1rem;
   }
   @media screen and (min-width: 800px) { padding: var(--border-size-xlarge); }
-  @media screen and (max-width: 640px){ padding-right: 1rem; padding-left: 1rem; }
 
   margin: var(--border-size-xlarge) auto;
   padding: 5rem 0 5rem;
