@@ -6,5 +6,10 @@
     per_page:      number of items to fetch per page
     remote:        data-remote -%>
 <li class="prev">
-  <%= link_to_unless current_page.first?, t("views.pagination.previous").html_safe, url, rel: "prev" %>
+  <% unless current_page.first? %>
+    <%= link_to url, rel: "prev", class: "page-link" do %>
+      <span aria-hidden="true"><%= t("views.pagination.previous").html_safe %></span>
+      <span class="visually-hidden"><%= t("views.pagination.previous_screen_reader").html_safe %></span>
+    <% end %>
+  <% end %>
 </li>
