@@ -1,0 +1,32 @@
+.pagination-container {
+    --_pagination-link-padding: 8px 13px;
+
+    display: flex;
+    justify-content: center;
+
+    /* TODO: remove after _page.scss is converted to css */
+    li { list-style: none; }
+
+    .pagination {
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+        /* all child elements */
+        a, .gap {
+            display: block;
+            text-decoration: none;
+            padding: var(--_pagination-link-padding);
+        }
+
+        /* all clickable links */
+        a:not([aria-current="page"]):hover { background-color: var(--color-gray-light); }
+
+        /* link to the curreont page */
+        :has([aria-current="page"]) {
+            font-weight: bold;
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+}
