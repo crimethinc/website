@@ -116,8 +116,8 @@
       margin-bottom: var(--border-size-large);
     }
 
-    ul,
-    ol {
+    ul:not(.pagination),
+    ol:not(.pagination) {
       margin-bottom: 1em;
     }
 
