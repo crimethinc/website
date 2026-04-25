@@ -34,7 +34,7 @@
       <%= render_themed "articles/categories",               article: @article %>
       <%= render_themed "articles/tags",                     article: @article %>
 
-      <div class="pagination-container">
+      <nav class="pagination-container" aria-label="<%= t('views.pagination.label', default: '') %>">
         <ul class="pagination">
           <% if @previous_article.present? %>
             <li class="page">
@@ -48,7 +48,7 @@
             </li>
           <% end %>
         </ul>
-      </div>
+      </nav>
     </footer>
 
     <%= render_themed "articles/related", article: @article %>

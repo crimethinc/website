@@ -542,6 +542,7 @@ en:
       mobi: Mobi
   views:
     pagination:
+      label: "pagination"
       first: "&laquo;"
       last: "&raquo;"
       previous: "&lsaquo;"
