@@ -40,7 +40,7 @@
       <%= render_themed "articles/categories",               article: @article %>
       <%= render_themed "articles/tags",                     article: @article %>
 
-      <div>
+      <div class="pagination-container">
         <ul class="pagination">
           <% if @previous_article.present? %>
             <li class="page">

@@ -13,7 +13,7 @@
     </div>
 
     <div>
-      <% if @editable.present? %>
+      <% if @editable.present? && @editable.respond_to?(:localizations) %>
         <p class="mb-0 d-lg-inline font-weight-bold mr-1">Translate <%= @editable.class %> to</p>
 
         <% Locale.all.each do |locale| %>
