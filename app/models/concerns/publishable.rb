@@ -34,7 +34,8 @@ module Publishable
 
     scope :previous,
           lambda { |article|
-            root.where(published_at: article.published_at)
+            root.where(published_at: ..article.published_at)
+                .where.not(id: article.id)
                 .live
                 .published
                 .chronological
