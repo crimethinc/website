@@ -16,4 +16,33 @@ RSpec.describe MarkdownHelper do
 
     it { is_expected.to eq('<p>text</p>') }
   end
+
+  describe '#render_markdown_for' do
+    around do |example|
+      I18n.with_locale(locale) { example.run }
+    end
+
+    before do
+      without_partial_double_verification do
+        allow(helper).to receive(:media_mode?).and_return(false)
+      end
+    end
+
+    context 'when the current locale has the markdown file' do
+      let(:locale) { :en }
+
+      it 'renders the markdown from that locale' do
+        expect(helper.render_markdown_for(page: :litkit_main)).to include('<p>')
+      end
+    end
+
+    context 'when the current locale lacks the markdown file' do
+      let(:locale) { :ca }
+
+      it 'falls back to the default locale instead of raising' do
+        expect { helper.render_markdown_for(page: :litkit_main) }.not_to raise_error
+        expect(helper.render_markdown_for(page: :litkit_main)).to include('<p>')
+      end
+    end
+  end
 end
