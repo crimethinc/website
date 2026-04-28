@@ -24,7 +24,7 @@
   <% end %>
 </div>
 
-<nav class="pagination-container" aria-label="<%=t('views.pagination.label', default: '')%>">
+<nav class="pagination-container" aria-label="<%= t('views.pagination.label', default: '') %>">
   <ul class="pagination">
     <li class="page">
       <%= link_to_previous_page @articles, t("views.pagination.previous_page").html_safe %>

@@ -1,8 +1,9 @@
 module MarkdownHelper
   def render_markdown_for page:
-    content = File.read [Rails.root, "config/locales/pages/#{I18n.locale}", "#{page}.markdown"].join('/')
+    path = Rails.root.join "config/locales/pages/#{I18n.locale}/#{page}.markdown"
+    path = Rails.root.join "config/locales/pages/#{I18n.default_locale}/#{page}.markdown" unless path.exist?
 
-    render_markdown content
+    render_markdown File.read(path)
   end
 
   def render_markdown text, remove_wrapper_p_tag: false
