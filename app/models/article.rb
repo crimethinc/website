@@ -37,6 +37,15 @@ class Article < ApplicationRecord
 
   scope :last_2_weeks, -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.weeks, Time.now.utc) }
 
+  def previous
+    canonical_previous
+  end
+
+  def next
+    # TODO: mirror the canonical_previous logic
+    Article.next(self).where(locale: I18n.locale).first
+  end
+
   def path
     if published?
       published_at.strftime("/%Y/%m/%d/#{slug}")
@@ -90,6 +99,39 @@ class Article < ApplicationRecord
   end
 
   private
+
+  def canonical_previous
+    article_select = <<-SQL
+            a1.id,
+            a1.canonical_id,
+            a1.locale,
+            a1.published_at as ts1 ,
+            a2.id,
+            CASE
+              WHEN a1.canonical_id IS NULL THEN a1.published_at
+              ELSE a2.published_at
+            END as canonical_published_at
+    SQL
+    article_self_join = <<-SQL
+   JOIN articles a2 ON COALESCE(a1.canonical_id, a1.id) = a2.id
+    SQL
+
+    query = Article
+              .select(article_select)
+              .from("articles a1")
+              .joins(article_self_join)
+              .where('a1.id < COALESCE(?,?)', self.canonical_id, self.id)
+              .where('a1.published_at <= ?', self.published_at)
+              .where('a1.locale': [I18n.default_locale, I18n.locale].uniq)
+              .where('a1.publication_status = ?', 'published')
+              .reorder('canonical_published_at' => :desc)
+              .limit(1)
+
+    Article.find(query.first&.id)&.preferred_localization
+
+  rescue ActiveRecord::RecordNotFound
+    nil
+  end
 
   def find_related_articles
     return {} if categories.blank?
