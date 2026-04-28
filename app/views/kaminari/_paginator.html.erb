@@ -5,8 +5,11 @@
     per_page:      number of items to fetch per page
     remote:        data-remote
     paginator:     the paginator that renders the pagination tags inside -%>
+
+<% container_label = t('views.pagination.label', default: '') %>
+
 <%= paginator.render do -%>
-  <div class="pagination-container">
+  <nav class="pagination-container" aria-label="<%= container_label %>">
     <ul class="pagination">
       <%= prev_page_tag unless current_page.first? %>
       <% each_page do |page| -%>
@@ -20,5 +23,5 @@
         <%= next_page_tag unless current_page.last? %>
       <% end %>
     </ul>
-  </div>
+  </nav>
 <% end %>
