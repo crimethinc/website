@@ -550,6 +550,7 @@ en:
       next: "&rsaquo;"
       next_screen_reader: Next
       truncate: "&hellip;"
+      page_html: "<span class=\"visually-hidden\">page </span>%{page_number}"
       next_page: Next &rsaquo;
       previous_page: "&lsaquo; Previous"
       next_article: "%{title}: Next &rsaquo;"

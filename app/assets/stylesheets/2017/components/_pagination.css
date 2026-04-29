@@ -1,0 +1,42 @@
+.pagination-container {
+    --_pagination-link-padding: 8px 13px;
+
+    display: flex;
+    justify-content: center;
+
+    li {
+        list-style: none;
+        /* TODO: the upper value could probably be tweaked to something like
+           var(--large-tablet) */
+        max-width: clamp(40ch, 50%, 100vw);
+    }
+
+    .pagination {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        /* all child elements */
+        a, .gap {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            padding: var(--_pagination-link-padding);
+            text-wrap: balance;
+            text-wrap: pretty;
+        }
+
+        /* all clickable links */
+        a:not([aria-current="page"]):hover { background-color: var(--color-gray-light); }
+
+        /* link to the curreont page */
+        :has([aria-current="page"]) {
+            font-weight: bold;
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+}
