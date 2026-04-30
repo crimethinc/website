@@ -73,7 +73,7 @@ describe 'Language Landing Page' do
       english = triple.last
       triple.each do |link_text|
         click_link_or_button link_text, match: :first
-        expect(page).to have_content english
+        expect(page).to have_text english
         visit '/languages'
       end
     end
@@ -82,14 +82,14 @@ describe 'Language Landing Page' do
   it 'does NOT show a language if there are no published articles' do
     visit '/languages'
 
-    within('#locales') { expect(page).to have_content 'Italian' }
+    within('#locales') { expect(page).to have_text 'Italian' }
 
     # unpublish the italian article
     Article.where(locale: 'it').first.update!(publication_status: 'draft')
 
     visit '/languages'
 
-    within('#locales') { expect(page).to have_no_content 'Italian' }
+    within('#locales') { expect(page).to have_no_text 'Italian' }
   end
 
   it 'redirects to the language index page if a language is not found' do
