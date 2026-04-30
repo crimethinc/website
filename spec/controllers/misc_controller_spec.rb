@@ -9,6 +9,14 @@ RSpec.describe MiscController do
 
       expect(response).to be_successful
     end
+
+    it 'responds successfully when the client only accepts text/html' do
+      request.headers['Accept'] = 'text/html, text/plain'
+      get :manifest_json
+
+      expect(response).to be_successful
+      expect(response.content_type).to start_with 'application/json'
+    end
   end
 
   describe 'GET #opensearch_xml' do
@@ -16,6 +24,14 @@ RSpec.describe MiscController do
       get :opensearch_xml
 
       expect(response).to be_successful
+    end
+
+    it 'responds successfully when the client only accepts text/html' do
+      request.headers['Accept'] = 'text/html, text/plain'
+      get :opensearch_xml
+
+      expect(response).to be_successful
+      expect(response.content_type).to start_with 'application/xml'
     end
   end
 end
