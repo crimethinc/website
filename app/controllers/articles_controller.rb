@@ -5,6 +5,8 @@ class ArticlesController < ApplicationController
   before_action :redirect_malformed_pagination, only: :index
   before_action :force_2025_theme_for_feeds,    only: :index
 
+  PAGE_NUMBER_LIMIT = 1_000_000
+
   def index
     # TEMP: copied from home#index because the route /page/:page changed
     #       from home#index in 2017 theme
@@ -20,7 +22,7 @@ class ArticlesController < ApplicationController
       @latest_article = articles_for_current_page.first if params[:page].blank?
 
       # Feed artciles
-      @articles = articles_for_current_page.page(params[:page]).per(6)
+      @articles = articles_for_current_page.page(@page_number).per(6)
 
       render "#{Current.theme}/home/index"
     end
@@ -140,6 +142,7 @@ class ArticlesController < ApplicationController
     return if params[:page].blank?
 
     @page_number = params[:page].gsub(/\D/, '')
+    @page_number = PAGE_NUMBER_LIMIT.to_s if @page_number.to_i > PAGE_NUMBER_LIMIT
   end
 
   def redirect_malformed_pagination
