@@ -211,8 +211,8 @@ Rails.application.routes.draw do
   get 'signout',  to: 'sessions#destroy', as: :signout
 
   # Misc plumbing infrastructure
-  get 'manifest.json',  to: 'misc#manifest_json'
-  get 'opensearch.xml', to: 'misc#opensearch_xml'
+  get 'manifest.json',  to: 'misc#manifest_json',  defaults: { format: :json }
+  get 'opensearch.xml', to: 'misc#opensearch_xml', defaults: { format: :xml }
 
   # Pages
   get 'about',                 to: 'pages#about',   as: :about,   via: :all
