@@ -22,11 +22,11 @@ describe 'Creating sub articles for a live blog' do
     fill_in 'article_title', with: blog_update_title
     within('#datetime') { click_link_or_button 'Publish NOW!' }
 
-    expect(page).to have_content "Part of the #{article.name} Collection"
+    expect(page).to have_text "Part of the #{article.name} Collection"
 
     click_link_or_button article.title, match: :first
     within('#collection') do
-      expect(page).to have_content blog_update_title
+      expect(page).to have_text blog_update_title
     end
   end
 end

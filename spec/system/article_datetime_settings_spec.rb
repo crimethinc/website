@@ -24,7 +24,7 @@ describe 'Setting and changing an articles published_at date', :js do
 
     find_button('Save', match: :first).click
 
-    expect(page).to have_content 'Article was successfully created'
+    expect(page).to have_text 'Article was successfully created'
     article = Article.first
     expect(article.published_at.utc).to eq('2018-12-24 11:59:00 UTC')
   end
@@ -53,7 +53,7 @@ describe 'Setting and changing an articles published_at date', :js do
 
     find_button('Save', match: :first).click
 
-    expect(page).to have_content 'Article was successfully updated'
+    expect(page).to have_text 'Article was successfully updated'
     expect(article.reload.published_at.utc).to eq('2018-12-26 22:59:00 UTC')
     expect(article.reload.published_at_tz).to eq('UTC')
   end
@@ -68,7 +68,7 @@ describe 'Setting and changing an articles published_at date', :js do
 
     find_button('Save', match: :first).click
 
-    expect(page).to have_content 'Article was successfully created'
+    expect(page).to have_text 'Article was successfully created'
     article = Article.first
     expect(article.published_at).to be_nil
   end
@@ -82,7 +82,7 @@ describe 'Setting and changing an articles published_at date', :js do
 
       within('#datetime') { click_link_or_button 'Publish NOW!' }
 
-      expect(page).to have_content 'Article was successfully created'
+      expect(page).to have_text 'Article was successfully created'
       article = Article.last
 
       expect(article.reload.published_at_tz).to eq('UTC')
@@ -101,7 +101,7 @@ describe 'Setting and changing an articles published_at date', :js do
       within('#publication-status') { find('label[for=publication_status_published]').click }
       find_button('Save', match: :first).click
 
-      expect(page).to have_content 'Article was successfully created'
+      expect(page).to have_text 'Article was successfully created'
       article = Article.last
 
       expect(article.reload.published_at_tz).to eq('UTC')

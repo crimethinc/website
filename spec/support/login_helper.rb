@@ -8,7 +8,7 @@ module LoginHelper
     end
 
     click_link_or_button 'Sign In'
-    expect(page).to have_content 'Logged in!'
+    expect(page).to have_text 'Logged in!'
   end
 end
 

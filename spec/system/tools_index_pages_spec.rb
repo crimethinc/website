@@ -26,9 +26,9 @@ describe 'Tools pages' do
 
     visit :logos
 
-    expect(page).to have_content 'published'
-    expect(page).to have_no_content 'draft'
-    expect(page).to have_no_content 'not live'
+    expect(page).to have_text 'published'
+    expect(page).to have_no_text 'draft'
+    expect(page).to have_no_text 'not live'
   end
 
   it 'renders published stickers calling /stickers' do
@@ -56,9 +56,9 @@ describe 'Tools pages' do
 
     visit :stickers
 
-    expect(page).to have_content 'published'
-    expect(page).to have_no_content 'draft'
-    expect(page).to have_no_content 'not live'
+    expect(page).to have_text 'published'
+    expect(page).to have_no_text 'draft'
+    expect(page).to have_no_text 'not live'
   end
 
   it 'renders published zines calling /zines' do
@@ -78,9 +78,9 @@ describe 'Tools pages' do
 
     visit :zines
 
-    expect(page).to have_content 'published'
-    expect(page).to have_no_content 'draft'
-    expect(page).to have_no_content 'not live'
+    expect(page).to have_text 'published'
+    expect(page).to have_no_text 'draft'
+    expect(page).to have_no_text 'not live'
   end
 
   it 'renders published posters calling /posters' do
@@ -114,9 +114,9 @@ describe 'Tools pages' do
 
     visit :posters
 
-    expect(page).to have_content 'published'
-    expect(page).to have_no_content 'draft'
-    expect(page).to have_no_content 'not live'
+    expect(page).to have_text 'published'
+    expect(page).to have_no_text 'draft'
+    expect(page).to have_no_text 'not live'
   end
 
   it 'renders published videos calling /videos' do
@@ -136,8 +136,8 @@ describe 'Tools pages' do
 
     visit :videos
 
-    expect(page).to have_content 'published'
-    expect(page).to have_no_content 'not live'
-    expect(page).to have_no_content 'draft'
+    expect(page).to have_text 'published'
+    expect(page).to have_no_text 'not live'
+    expect(page).to have_no_text 'draft'
   end
 end

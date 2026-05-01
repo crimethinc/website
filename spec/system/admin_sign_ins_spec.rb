@@ -16,7 +16,7 @@ describe 'Signing in as an admin' do
     end
     click_link_or_button 'Sign In'
 
-    expect(page).to have_content 'Logged in!'
+    expect(page).to have_text 'Logged in!'
     expect(page).to have_current_path(admin_dashboard_path)
   end
 
