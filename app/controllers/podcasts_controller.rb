@@ -10,9 +10,11 @@ class PodcastsController < ApplicationController
   end
 
   def show
+    @podcast = Podcast.find_by slug: params[:slug]
+    return redirect_to(podcasts_path) if @podcast.blank?
+
     @html_id  = 'page'
     @body_id  = 'podcast'
-    @podcast  = Podcast.find_by! slug: params[:slug]
     @episodes = @podcast.episodes.live.published
     @title    = PageTitle.new [title_for(:podcasts), @podcast.name]
 
