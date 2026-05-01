@@ -163,10 +163,25 @@ describe Article do
   end
 
   describe '.previous' do
-    it 'returns the article published on the same date before the given one' do
-      article = create(:article, published_at: 1.day.ago, publication_status: 'published')
+    subject { described_class.previous(current).first&.id }
 
-      expect(described_class.previous(article)).to exist
+    let!(:current)  { create(:article, :published, published_at: current_timestamp) }
+    let!(:previous) { create(:article, :published, published_at: previous_timestamp) }
+    let(:current_timestamp) { Time.current }
+    let(:previous_timestamp) { current_timestamp - 1.day  }
+
+    it { is_expected.to eq previous.id }
+
+    context 'when the previous article has the exact same published_at' do
+      let(:previous_timestamp) { current_timestamp }
+
+      it { is_expected.to eq previous.id }
+    end
+
+    context 'when there is no previous article' do
+      let(:previous_timestamp) { current_timestamp + 1.day }
+
+      it { is_expected.to be nil }
     end
   end
 
