@@ -7,7 +7,7 @@ module Rack
     def call env
       @request = Rack::Request.new env
 
-      return redirect location if @request.host.start_with? 'www.'
+      return redirect location if @request.host&.start_with? 'www.'
 
       @app.call env
     end
