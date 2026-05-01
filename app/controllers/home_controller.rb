@@ -49,7 +49,13 @@ class HomeController < ApplicationController
       @ex_workers_collection = Article.featured
     end
 
-    render "#{Current.theme}/home/index"
+    respond_to do |format|
+      format.html { render "#{Current.theme}/home/index" }
+      format.atom { redirect_to feed_path }
+      format.xml { redirect_to feed_path }
+      format.json { redirect_to json_feed_path }
+      format.any { head :not_found }
+    end
   end
 
   private
