@@ -22,4 +22,12 @@ RSpec.describe 'Rack::CleanPath' do
     expect(response.header['Location']).to be_nil
     expect(response.body).not_to be_empty
   end
+
+  it 'does not strip .xml extension from opensearch.xml.gz' do
+    get 'http://example.com/opensearch.xml.gz'
+
+    expect(response).to have_http_status(:ok)
+    expect(response.header['Location']).to be_nil
+    expect(response.body).not_to be_empty
+  end
 end

@@ -79,7 +79,10 @@ module Rack
     end
 
     def exit_early?
-      @req.path == '/' || @req.path.starts_with?('/assets') || @req.path.include?('sitemap')
+      @req.path == '/' ||
+        @req.path.starts_with?('/assets') ||
+        @req.path.include?('sitemap') ||
+        @req.path.include?('opensearch')
     end
 
     # get path before Unicode character got smooshed into it
