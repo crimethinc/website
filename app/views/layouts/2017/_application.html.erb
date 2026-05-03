@@ -8,7 +8,7 @@
     <%= render_themed "shared/head" %>
 
     <%= yield :head %>
-
+    <%= stylesheet_link_tag "sass-to-css-transition", media: :all %>
     <% if content_for(:javascript).present? %>
       <%= javascript_importmap_tags %>
       <%= yield :javascript %>
