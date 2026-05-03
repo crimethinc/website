@@ -12,26 +12,29 @@
       }
     }
 
+    .intro p {
+      font-size: var(--page-intro-font-size, 2.25rem);
+      line-height: 1.5;
+    }
+
     .h-entry header,
     header {
       margin-bottom: var(--border-size-large);
 
       h1 {
-        font: {
-          weight: bold;
-          weight: 800;
-          size: 3rem;
-        }
-        line-height: 1.25em;
+        font-weight: bold;
+        font-weight: 800;
+        font-size: var(--page-header-h1, 3rem);
+        line-height: 1.25;
+        text-wrap: balance;
       }
 
       h2 {
-        font: {
-          weight: normal;
-          weight: 300;
-          size: 2rem;
-        }
-        line-height: 1.25em;
+        font-weight: normal;
+        font-weight: 300;
+        font-size: var(--page-header-h2, 2rem);
+        line-height: 1.25;
+        text-wrap: balance;
       }
     }
 
@@ -45,34 +48,25 @@
 
     .e-content {
       h1 {
-        font: {
-          weight: bold;
-          weight: 700;
-          size: 4rem;
-        }
-
+        font-weight: bold;
+        font-weight: 700;
+        font-size: 4rem;
         line-height: 1.25em;
         margin-bottom: var(--border-size-small);
       }
 
       h2 {
-        font: {
-          weight: normal;
-          weight: 500;
-          size: 3rem;
-        }
-
+        font-weight: normal;
+        font-weight: 500;
+        font-size: 3rem;
         line-height: 1.25em;
         margin-bottom: var(--border-size-small);
       }
 
       h3 {
-        font: {
-          weight: lighter;
-          weight: 300;
-          size: 2.5rem;
-        }
-
+        font-weight: lighter;
+        font-weight: 300;
+        font-size: 2.5rem;
         line-height: 1.25em;
         margin-bottom: var(--border-size-medium);
         border-bottom: var(--border-size-xsmall) solid var(--color-gray-light);
@@ -157,23 +151,6 @@
     li li {
       margin: 0 0 0 1.5em;
       line-height: 1.5em;
-    }
-
-    @media screen and (min-width: $small-tablet) {
-      .intro p {
-        font-size: 2.25rem;
-        line-height: 1.5em;
-      }
-
-      header {
-        h1 {
-          font-size: 4rem;
-        }
-
-        h2 {
-          font-size: 3rem;
-        }
-      }
     }
   }
 }

@@ -11,6 +11,7 @@
 //= link to_change_everything.css
 
 // Legacy theme (2017)
+//= link sass-to-css-transition.css
 //= link 2017.css
 
 // 2025 theme

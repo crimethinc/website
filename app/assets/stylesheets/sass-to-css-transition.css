@@ -1,0 +1,13 @@
+/* TODO: In-line the CSS in this file to the relevant files once the
+   SASS preprocessor is removed. */
+
+/*
+╭────────────────────────────────────────────────────╮
+│    app/assets/stylesheets/2017/views/_page.scss    │
+╰────────────────────────────────────────────────────╯
+*/
+:root {
+  --page-header-h1: clamp(3rem, 2.1vw + 1rem, 8rem);
+  --page-header-h2: clamp(2rem, 1.4vw + 1rem, 6rem);
+  --page-intro-font-size: clamp(1rem, 1vw + 1.25rem, 5rem);
+}
