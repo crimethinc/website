@@ -21,6 +21,7 @@
 }
 
 @mixin image-replacement-graphic($url, $retina-url, $width, $height) {
+  background-image: asset-data-url($url);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -29,13 +30,6 @@
   height: $height;
 
   @include image-replacement();
-
-  @media screen and #{$standard-def} {
-    background-image: asset-data-url($url);
-  }
-  @media screen and #{$retina} {
-    background-image: asset-data-url($retina-url);
-  }
 }
 
 @mixin social-icon($domain) {
