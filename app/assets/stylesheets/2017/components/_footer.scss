@@ -99,12 +99,15 @@ footer#site-footer {
 
   .footer-section.footer-section-about {
     .about-us-heading {
-      @include image-replacement-graphic(
-        "crimethinc-logo-type-white.svg",
-        "crimethinc-logo-type-white.svg",
-        16rem,
-        3.2rem
-      );
+      background-image: url("crimethinc-logo-type-white.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 16rem;
+      height: 3.2rem;
+      overflow: hidden;
+      text-indent: -10000%;
+      white-space: nowrap;
     }
 
     .first-time-link a,
