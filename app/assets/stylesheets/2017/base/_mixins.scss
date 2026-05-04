@@ -25,7 +25,9 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  @include size($width, $height);
+  width: $width;
+  height: $height;
+
   @include image-replacement();
 
   @media screen and #{$standard-def} {
