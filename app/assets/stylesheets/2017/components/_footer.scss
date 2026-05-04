@@ -99,10 +99,7 @@ footer#site-footer {
 
   .footer-section.footer-section-about {
     .about-us-heading {
-      background:
-        url("crimethinc-logo-type-white.svg")
-        center center / contain no-repeat
-        scroll border-box padding-box transparent;
+      background: var(--crimethinc-icon-svg);
       width: 16rem;
       height: 3.2rem;
       overflow: hidden;

@@ -38,10 +38,7 @@ html[dir="rtl"] .site-header .button {
 }
 
 .header-logo a {
-  background:
-    url("crimethinc-logo-type-white.svg")
-    center center / contain no-repeat
-    scroll border-box padding-box transparent;
+  background: var(--crimethinc-icon-svg);
   width: 15rem;
   height: 3rem;
   overflow: hidden;
