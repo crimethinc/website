@@ -29,7 +29,9 @@
   width: $width;
   height: $height;
 
-  @include image-replacement();
+  overflow: hidden;
+  text-indent: -10000%;
+  white-space: nowrap;
 }
 
 @mixin social-icon($domain) {
