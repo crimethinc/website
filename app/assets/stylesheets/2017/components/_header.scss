@@ -38,23 +38,17 @@ html[dir="rtl"] .site-header .button {
 }
 
 .header-logo a {
-  @include image-replacement-graphic(
-    "crimethinc-logo-type-white.svg",
-    "crimethinc-logo-type-white.svg",
-    15rem,
-    3rem
-  );
-  @include size(15rem, 3rem);
+  background: var(--crimethinc-icon-svg);
+  width: 15rem;
+  height: 3rem;
+  overflow: hidden;
+  text-indent: -10000%;
+  white-space: nowrap;
   display: inline-block;
 
   @media screen and (max-width: $small-tablet) {
-    @include image-replacement-graphic(
-      "crimethinc-logo-type-white.svg",
-      "crimethinc-logo-type-white.svg",
-      10rem,
-      2rem
-    );
-    @include size(10rem, 2rem);
+    width: 10rem;
+    height: 2rem;
   }
 }
 
