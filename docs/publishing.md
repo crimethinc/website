@@ -60,7 +60,6 @@ After someone creates a CMS account for you and gives you your temporary passwor
 - `Short URL Path` is required. It's what you want in the short URL in social media posts. http://cwc.im/acab or whatever. (**Note:** at the moment, this doesn't actually create the short URL. That is still a manual separate step discussed below in "Creating a Redirect"). This needs to be URL safe (no spaces, etc) and unique (cwc.im/acab and cwc.im/acab can't each redirect to different articles).
   - Before using some string of text as a `Short URL Path`, try going to that path and make sure that we're not already using it. For example, `2018` would be a bad `Short URL Path`, because `/2018` is an articles collection page.
 - `Tags` is optional. They are displayed in the footer. Eventually, we'll do a big push to tag all historical articles and be able to use them more meaningfully.
-- `Tweet` is required and limited to **115** characters to leave room for the `t.co` URL that Twitter turns all URLs into.
 - `Summary` is required and is used in link previews in Facebook, Slack, etc when someone pastes a URL into a post.
 - `Header Image` is required. How and where to upload an image is covered in another document.
 - `Article Specific CSS` is almost never needed either and should not be used as a hammer. If an article has some truly unique requirements, you can write some CSS here to fulfill them. But be very careful to scope the CSS to only this article and not affect the whole site.

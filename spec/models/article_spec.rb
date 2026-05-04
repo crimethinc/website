@@ -2,15 +2,6 @@ require 'rails_helper'
 
 describe Article do
   describe 'validations' do
-    # TEMP TODO re-enable when tweet character count is smarter
-    # it 'validates tweet is less than 250 characters' do
-    #   invalid_article = build(:article, tweet: 'a' * 251)
-    #   valid_article   = build(:article, tweet: 'a' * 250)
-    #
-    #   expect(valid_article).to be_valid
-    #   expect(invalid_article).not_to be_valid
-    # end
-
     it 'validates summary is less than 200 characters' do
       invalid_article = build(:article, summary: 'a' * 201)
       valid_article   = build(:article, summary: 'a' * 200)
@@ -19,18 +10,14 @@ describe Article do
       expect(invalid_article).not_to be_valid
     end
 
-    it 'replace \r\n with \n in tweet and summary' do
-      new_article = build(:article,
-                          tweet:   "ab\r\ncd" * 50,
-                          summary: "a\r\nbc" * 50)
+    it 'replace \r\n with \n in summary' do
+      new_article = build(:article, summary: "a\r\nbc" * 50)
 
       expect(new_article).to be_valid
-      expect(new_article.tweet.length).to eq(250)
 
       new_article.save!
       expect(new_article.reload).to be_valid
       expect(new_article.summary.length).to eq(200)
-      expect(new_article.tweet.length).to eq(250)
     end
   end
 

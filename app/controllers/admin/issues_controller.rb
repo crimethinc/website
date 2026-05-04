@@ -57,7 +57,7 @@ module Admin
 
     def journal_params
       params.expect issue: %i[
-        title subtitle content tweet summary locale
+        title subtitle content summary locale
         description buy_url buy_info slug series published_at
         price_in_cents height width depth weight pages words illustrations
         photographs printing ink definitions recipes has_index cover_style
