@@ -56,7 +56,7 @@ module Admin
 
     def zine_params
       params.expect zine: %i[
-        title subtitle content tweet summary locale
+        title subtitle content summary locale
         description buy_url buy_info slug series published_at gallery_images_count
         price_in_cents height width depth weight pages words illustrations
         photographs printing ink definitions recipes has_index cover_style

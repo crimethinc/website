@@ -60,7 +60,7 @@ module Admin
     def video_params
       params.expect video: %i[
         title subtitle content slug image locale
-        image_description image_poster_frame published_at tweet
+        image_description image_poster_frame published_at
         summary quality duration published_at_tz publication_status
         peer_tube_url vimeo_id
       ]

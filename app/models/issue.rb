@@ -1,6 +1,8 @@
 class Issue < ApplicationRecord
   include MultiPageTool
 
+  self.ignored_columns += [:tweet]
+
   belongs_to :journal
 
   default_scope { order(published_at: :desc) }
