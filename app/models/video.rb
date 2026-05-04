@@ -2,6 +2,8 @@ class Video < ApplicationRecord
   include Tool
   include Featureable
 
+  self.ignored_columns += [:tweet]
+
   has_one_attached :image_poster_frame
 
   alias image image_poster_frame

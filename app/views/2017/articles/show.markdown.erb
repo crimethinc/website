@@ -7,7 +7,7 @@ title: <%= raw @article.title %>
 subtitle: <%= raw @article.subtitle %>
 tags: <%= @article.tags.map(&:name).join ", " %>
 
-# for cwc.im short URL in tweets
+# for cwc.im short URL used in syndication (e.g. social media posts)
 short_path: <%= "/#{@article.short_path}" %>
 
 # for link previews in social media / messaging apps
@@ -16,11 +16,6 @@ summary: <%= raw @article.summary %>
 
 # for image caption
 header_image_description: <%= @article.image_description %>
-<%- end -%>
-<%- if @article.tweet.present? -%>
-
-# for publishing to Twitter
-tweet: <%= @article.tweet %>
 <%- end -%>
 ---
 

@@ -194,7 +194,7 @@ class ApplicationController < ActionController::Base
 
   def page_share_content
     # TODO: implement this algorithm
-    'TODO: Page summary / description / tweet'
+    'TODO: Page summary / description'
   end
 
   def page_share_image_url

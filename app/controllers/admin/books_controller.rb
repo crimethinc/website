@@ -51,7 +51,7 @@ module Admin
 
     def book_params
       params.expect book: %i[
-        title subtitle content tweet summary publication_status locale
+        title subtitle content summary publication_status locale
         description buy_url buy_info slug series published_at gallery_images_count
         price_in_cents height width depth weight pages words illustrations
         photographs printing ink definitions recipes has_index cover_style
