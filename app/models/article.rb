@@ -38,6 +38,18 @@ class Article < ApplicationRecord
 
   scope :last_2_weeks, -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.weeks, Time.now.utc) }
 
+  def previous
+    return nil if draft?
+
+    Article.previous(self).first
+  end
+
+  def next
+    return nil if draft?
+
+    Article.next(self).first
+  end
+
   def path
     if published?
       published_at.strftime("/%Y/%m/%d/#{slug}")

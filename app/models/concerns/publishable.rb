@@ -12,7 +12,7 @@ module Publishable
 
     scope :for_admin, -> { unscoped.order(published_at: :desc) }
 
-    scope :chronological, -> { order(published_at: :desc) }
+    scope :chronological, -> { order(published_at: :desc, id: :desc) }
     scope :root,          -> { where(collection_id: nil) }
     scope :live,          -> { where(published_at: ...Time.now.utc) }
     scope :recent,        -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.days, Time.now.utc) }
@@ -26,6 +26,7 @@ module Publishable
           lambda { |article|
             unscoped.root
                     .where('published_at > ?', article.published_at)
+                    .where.not(id: article.id)
                     .live
                     .published
                     .order(published_at: :asc)
@@ -34,7 +35,8 @@ module Publishable
 
     scope :previous,
           lambda { |article|
-            root.where(published_at: article.published_at)
+            root.where(published_at: ..article.published_at)
+                .where.not(id: article.id)
                 .live
                 .published
                 .chronological

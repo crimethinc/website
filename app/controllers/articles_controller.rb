@@ -93,8 +93,8 @@ class ArticlesController < ApplicationController
 
     @live_blog = @article.collection_root?
 
-    @previous_article = Article.previous(@article).first
-    @next_article     = Article.next(@article).first
+    @previous_article = @article.previous
+    @next_article     = @article.next
     @editable         = @article
 
     # TODO: extract to an async background job

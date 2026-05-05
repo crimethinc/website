@@ -140,20 +140,82 @@ describe Article do
     end
   end
 
-  describe '.next' do
-    it 'returns the article published after the given one' do
-      older = create(:article, published_at: 2.days.ago, publication_status: 'published')
-      newer = create(:article, published_at: 1.day.ago, publication_status: 'published')
+  shared_context "timeline of articles" do
+    include ActiveSupport::Testing::TimeHelpers
 
-      expect(described_class.next(older).first).to eq newer
+    let(:unpublished_article) { create(:article, publication_status: "draft") }
+    let(:article) { Article.find_by(title: article_under_test) }
+
+    before(:context) do
+      travel_to(1.day.ago) do
+        # t0     | represents an article published "now" (the chronologically last published_at date)
+        # t1...n | represents articles with a published at of "t0 - n.days"
+        now = Time.now.utc
+        [
+          {title: 't0', published_at: now.end_of_day, locale: :en, canonical_id: nil },
+          {title: 't1', published_at: now.end_of_day, locale: :en, canonical_id: nil },
+          {title: 't2', published_at: now.end_of_day, locale: :en, canonical_id: nil },
+          {title: 't3', published_at: now.beginning_of_day, locale: :en, canonical_id: nil },
+          {title: 't4', published_at: (now - 1.day).end_of_day, locale: :en, canonical_id: nil },
+          {title: 't5', published_at: (now - 1.day).beginning_of_day, locale: :en, canonical_id: nil },
+          {title: 't6', published_at: (now - 2.days).end_of_day, locale: :en, canonical_id: nil },
+          {title: 't7', published_at: (now - 2.days).beginning_of_day, locale: :en, canonical_id: nil }
+        ].reverse.map! { | params| (create :article, **params) }
+      end
+    end
+
+    after(:context) { Article.destroy_all }
+  end
+
+  describe '#next' do
+    subject { article.next&.title }
+
+    include_context "timeline of articles"
+
+    context 'when the article is the most recently published article' do
+      let(:article_under_test) { "t0" }
+      it { is_expected.to be nil }
+    end
+
+    context 'when the article is the oldest published article' do
+      let(:article_under_test) { "t7" }
+      it { is_expected.to eq "t6" }
+    end
+
+    context 'when the article is on a date boundary' do
+      let(:article_under_test) { "t4" }
+      it { is_expected.to eq "t3" }
+    end
+
+    context 'when the article is unpublished' do
+      let(:article) { unpublished_article }
+      it { is_expected.to be nil }
     end
   end
 
-  describe '.previous' do
-    it 'returns the article published on the same date before the given one' do
-      article = create(:article, published_at: 1.day.ago, publication_status: 'published')
+  describe '#previous' do
+    subject { article.previous&.title }
 
-      expect(described_class.previous(article)).to exist
+    include_context "timeline of articles"
+
+    context 'when the article is the most recently published article' do
+      let(:article_under_test) { "t0" }
+      it { is_expected.to eq "t1" }
+    end
+
+    context 'when the article is the oldest published article' do
+      let(:article_under_test) { "t7" }
+      it { is_expected.to be nil }
+    end
+
+    context 'when the article is on a date boundary' do
+      let(:article_under_test) { "t5" }
+      it { is_expected.to eq "t6" }
+    end
+
+    context 'when the article is unpublished' do
+      let(:article) { unpublished_article }
+      it { is_expected.to be nil }
     end
   end
 
