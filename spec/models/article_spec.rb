@@ -168,53 +168,43 @@ describe Article do
   end
 
   describe '#next' do
-    subject { article.next&.title }
+    subject(:actual_order) do
+      publication_timeline.map { |t| Article.find_by(title: t)&.next&.title }
+    end
 
     include_context "timeline of articles"
+    
+    let(:publication_timeline) { %w[t7 t6 t5 t4 t3 t2 t1 t0] }
+    let(:expected_order) { publication_timeline.tap(&:shift).then{ it.push nil } }
 
-    context 'when the article is the most recently published article' do
-      let(:article_under_test) { "t0" }
-      it { is_expected.to be nil }
+    it "traverses the publication timeline" do
+      expect(actual_order).to eq expected_order
     end
-
-    context 'when the article is the oldest published article' do
-      let(:article_under_test) { "t7" }
-      it { is_expected.to eq "t6" }
-    end
-
-    context 'when the article is on a date boundary' do
-      let(:article_under_test) { "t4" }
-      it { is_expected.to eq "t3" }
-    end
-
+    
     context 'when the article is unpublished' do
-      let(:article) { unpublished_article }
+      subject{ unpublished_article.next }
+
       it { is_expected.to be nil }
     end
   end
 
   describe '#previous' do
-    subject { article.previous&.title }
+    subject(:actual_order) do
+      publication_timeline.reverse.map { |t| Article.find_by(title: t).previous&.title }
+    end
 
     include_context "timeline of articles"
 
-    context 'when the article is the most recently published article' do
-      let(:article_under_test) { "t0" }
-      it { is_expected.to eq "t1" }
-    end
+    let(:publication_timeline) { %w[t7 t6 t5 t4 t3 t2 t1 t0] }
+    let(:expected_order) { publication_timeline.reverse.tap(&:shift).then{ it.push nil } }
 
-    context 'when the article is the oldest published article' do
-      let(:article_under_test) { "t7" }
-      it { is_expected.to be nil }
+    it "traverses the publication timeline" do
+      expect(actual_order).to eq expected_order
     end
-
-    context 'when the article is on a date boundary' do
-      let(:article_under_test) { "t5" }
-      it { is_expected.to eq "t6" }
-    end
-
+    
     context 'when the article is unpublished' do
-      let(:article) { unpublished_article }
+      subject{ unpublished_article.next }
+
       it { is_expected.to be nil }
     end
   end
