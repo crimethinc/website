@@ -24,25 +24,29 @@ module Publishable
 
     scope :next, lambda { |article|
       root.where('published_at > ?', article.published_at).or(
-        self.where('published_at = ?', article.published_at).and(
-          self.where('id > ?', article.id)))
-        .where.not(id: article.id)
-        .live
-        .published
-        .reorder(published_at: :asc, id: :asc)
-        .limit(1)
+        where(published_at: article.published_at).and(
+          where('id > ?', article.id)
+        )
+      )
+          .where.not(id: article.id)
+          .live
+          .published
+          .reorder(published_at: :asc, id: :asc)
+          .limit(1)
     }
 
     scope :previous, lambda { |article|
-      root.where('published_at < ?', article.published_at).or(
-        self.where('published_at = ?', article.published_at).and(
-          self.where('id < ?', article.id)))
-        .where.not(id: article.id)
-        .live
-        .published
-        .chronological
-        .limit(1)
-   }
+      root.where(published_at: ...article.published_at).or(
+        where(published_at: article.published_at).and(
+          where(id: ...article.id)
+        )
+      )
+          .where.not(id: article.id)
+          .live
+          .published
+          .chronological
+          .limit(1)
+    }
   end
 
   def dated?
