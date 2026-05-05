@@ -16,6 +16,8 @@ FactoryBot.define do
     end
   end
 
+  trait(:published)      {  publication_status { 'published' } }
+
   trait(:arabic)         { locale { 'ar' } }
   trait(:bengali)        { locale { 'bn' } }
   trait(:czech)          { locale { 'cs' } }

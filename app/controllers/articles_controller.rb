@@ -93,7 +93,7 @@ class ArticlesController < ApplicationController
 
     @live_blog = @article.collection_root?
 
-    @previous_article = Article.previous(@article).first
+    @previous_article = @article.previous
     @next_article     = Article.next(@article).first
     @editable         = @article
 
