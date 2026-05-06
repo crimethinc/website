@@ -12,7 +12,7 @@ module Publishable
 
     scope :for_admin, -> { unscoped.order(published_at: :desc) }
 
-    scope :chronological, -> { order(published_at: :desc) }
+    scope :chronological, -> { order(published_at: :desc, id: :desc) }
     scope :root,          -> { where(collection_id: nil) }
     scope :live,          -> { where(published_at: ...Time.now.utc) }
     scope :recent,        -> { where('published_at BETWEEN ? AND ?', Time.now.utc - 2.days, Time.now.utc) }
@@ -22,24 +22,31 @@ module Publishable
             where('published_at BETWEEN ? AND ?', date.try(:beginning_of_day), date.try(:end_of_day))
           }
 
-    scope :next,
-          lambda { |article|
-            unscoped.root
-                    .where('published_at > ?', article.published_at)
-                    .live
-                    .published
-                    .order(published_at: :asc)
-                    .limit(1)
-          }
+    scope :next, lambda { |article|
+      root.where('published_at > ?', article.published_at).or(
+        where(published_at: article.published_at).and(
+          where('id > ?', article.id)
+        )
+      )
+          .where.not(id: article.id)
+          .live
+          .published
+          .reorder(published_at: :asc, id: :asc)
+          .limit(1)
+    }
 
-    scope :previous,
-          lambda { |article|
-            root.where(published_at: article.published_at)
-                .live
-                .published
-                .chronological
-                .limit(1)
-          }
+    scope :previous, lambda { |article|
+      root.where(published_at: ...article.published_at).or(
+        where(published_at: article.published_at).and(
+          where(id: ...article.id)
+        )
+      )
+          .where.not(id: article.id)
+          .live
+          .published
+          .chronological
+          .limit(1)
+    }
   end
 
   def dated?

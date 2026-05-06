@@ -140,20 +140,60 @@ describe Article do
     end
   end
 
-  describe '.next' do
-    it 'returns the article published after the given one' do
-      older = create(:article, published_at: 2.days.ago, publication_status: 'published')
-      newer = create(:article, published_at: 1.day.ago, publication_status: 'published')
+  shared_examples 'it can traverse the publication timeline' do |direction|
+    include ActiveSupport::Testing::TimeHelpers
 
-      expect(described_class.next(older).first).to eq newer
+    subject(:actual_order) do
+      articles_to_traverse.map do |t|
+        described_class.find_by(title: t)&.send(method_under_test)&.title
+      end
+    end
+
+    let(:method_under_test) { direction.to_sym }
+
+    let(:publication_timeline) { %w[t7 t6 t5 t4 t3 t2 t1 t0] }
+    let(:unpublished_article) { create(:article, publication_status: 'draft') }
+
+    before do
+      travel_to(1.day.ago) do
+        # t0     | represents an article published "now" (the chronologically last published_at date)
+        # t1...n | represents articles with a published at of "t0 - n.days"
+        now = Time.now.utc
+        [
+          { title: 't0', published_at: now.end_of_day, locale: :en, canonical_id: nil },
+          { title: 't1', published_at: now.end_of_day, locale: :en, canonical_id: nil },
+          { title: 't2', published_at: now.end_of_day, locale: :en, canonical_id: nil },
+          { title: 't3', published_at: now.beginning_of_day, locale: :en, canonical_id: nil },
+          { title: 't4', published_at: (now - 1.day).end_of_day, locale: :en, canonical_id: nil },
+          { title: 't5', published_at: (now - 1.day).beginning_of_day, locale: :en, canonical_id: nil },
+          { title: 't6', published_at: (now - 2.days).end_of_day, locale: :en, canonical_id: nil },
+          { title: 't7', published_at: (now - 2.days).beginning_of_day, locale: :en, canonical_id: nil }
+        ].reverse.map! { |params| create(:article, **params) }
+      end
+    end
+
+    it 'traverses the publication timeline' do
+      expect(actual_order).to eq expected_order
+    end
+
+    context 'when the article is unpublished' do
+      subject { unpublished_article.next }
+
+      it { is_expected.to be_nil }
     end
   end
 
-  describe '.previous' do
-    it 'returns the article published on the same date before the given one' do
-      article = create(:article, published_at: 1.day.ago, publication_status: 'published')
+  describe '#next' do
+    it_behaves_like 'it can traverse the publication timeline', :next do
+      let(:articles_to_traverse) { publication_timeline }
+      let(:expected_order) { publication_timeline.tap(&:shift).then { it.push nil } }
+    end
+  end
 
-      expect(described_class.previous(article)).to exist
+  describe '#previous' do
+    it_behaves_like 'it can traverse the publication timeline', :previous do
+      let(:articles_to_traverse) { publication_timeline.reverse }
+      let(:expected_order) { publication_timeline.reverse.tap(&:shift).then { it.push nil } }
     end
   end
 
