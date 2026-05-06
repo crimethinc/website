@@ -145,8 +145,7 @@ footer#site-footer {
         margin-bottom: 1rem;
       }
 
-      button {
-        @extend .button;
+      .newsletter-signup-button {
         font-size: 1.5rem;
         float: right;
         background: var(--color-blue);
