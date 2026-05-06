@@ -8,18 +8,14 @@ footer#site-footer {
     align-items: top;
   }
 
-  @media screen and (min-width: $small-tablet) {
+  @media screen and (min-width: 800px) {
     .footer-section {
       width: 33.33333333%;
     }
   }
 
   .footer-section-container {
-    padding: var(--border-size-large);
-
-    @media screen and (min-width: $small-tablet) {
-      padding: var(--border-size-xlarge);
-    }
+    padding: var(--footer-section-padding);
   }
 
   .footer-section-about .footer-section-container {
@@ -71,11 +67,9 @@ footer#site-footer {
       font-weight: bold;
 
       b {
-        font: {
-          weight: normal;
-          weight: 300;
-          size: 0.6em;
-        }
+        font-weight: normal;
+        font-weight: 300;
+        font-size: 0.6em;
       }
     }
 
@@ -109,7 +103,6 @@ footer#site-footer {
 
     .first-time-link a,
     .about-us-link a {
-      @extend .button;
       background: var(--color-white);
       color: var(--color-true-black) !important;
       text-decoration: none;
