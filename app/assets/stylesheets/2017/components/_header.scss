@@ -1,24 +1,14 @@
-/* Move SUPPORT US button to left or right based on language direction */
-html[dir="ltr"] .site-header .button {
-  right: var(--border-size-large);
-}
-html[dir="rtl"] .site-header .button {
-  left: var(--border-size-large);
-}
-
-@media screen and (max-width: $small-tablet) {
-  html[dir="ltr"] .site-header .button {
-    right: var(--border-size-medium);
-  }
-  html[dir="rtl"] .site-header .button {
-    left: var(--border-size-medium);
-  }
-}
-
 .site-header {
   position: relative;
   background-color: var(--color-true-black);
   padding: var(--border-size-large);
+
+  /* Move SUPPORT US button to left or right based on language direction */
+  .button {
+      inset-inline-end: var(--border-size-large);
+
+      @media screen and (max-width: $small-tablet) { inset-inline-end: var(--border-size-medium); }
+  }
 
   @media screen and (max-width: $small-tablet) {
     padding: var(--border-size-medium);
