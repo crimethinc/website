@@ -13,7 +13,7 @@
 
   /*
 ╭───────────────────────────────────────────────────────────╮
-│    app/assets/stylesheets/2017/components/_footer.scss    │
+│    app/assets/stylesheets/2017/components/_footer.css    │
 ╰───────────────────────────────────────────────────────────╯
  */
   --footer-section-padding: clamp(var(--border-size-large), 3.5vw, var(--border-size-xlarge));
