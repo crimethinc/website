@@ -37,11 +37,6 @@
   }
 }
 
-.language-switcher a,
-.language-switcher {
-  color: white !important;
-}
-
 /* nav */
 .primary-navigation {
   margin: 1rem 0 0 0;
@@ -72,7 +67,6 @@
 
 @media screen and (max-width: $small-tablet) {
   .site-header nav {
-    display: block;
     margin-top: 0.4em;
   }
 }
