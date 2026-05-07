@@ -3,26 +3,21 @@
   background-color: var(--color-true-black);
   padding: var(--border-size-large);
 
-  /* Move SUPPORT US button to left or right based on language direction */
-  .button {
-      inset-inline-end: var(--border-size-large);
-
-      @media screen and (max-width: $small-tablet) { inset-inline-end: var(--border-size-medium); }
-  }
-
   @media screen and (max-width: $small-tablet) {
     padding: var(--border-size-medium);
   }
 
   .button {
-    background: var(--color-blue);
     position: absolute;
-    top: var(--border-size-large);
+    inset-block-start: var(--border-size-large);
+    inset-inline-end: var(--border-size-large);
+    background: var(--color-blue);
 
     @media screen and (max-width: $small-tablet) {
+      inset-block-start: var(--border-size-medium);
+      inset-inline-end: var(--border-size-medium);
       font-size: 12px;
       padding: 0.5em;
-      top: var(--border-size-medium);
     }
   }
 }
