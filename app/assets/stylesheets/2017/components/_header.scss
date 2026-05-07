@@ -20,6 +20,12 @@
       padding: 0.5em;
     }
   }
+
+  /* nav */
+  .primary-navigation {
+    margin: 1rem 0 0 0;
+    display: inline-block;
+  }
 }
 
 .header-logo a {
@@ -37,11 +43,6 @@
   }
 }
 
-/* nav */
-.primary-navigation {
-  margin: 1rem 0 0 0;
-  display: inline-block;
-}
 
 .nav-link {
   display: inline-block;
