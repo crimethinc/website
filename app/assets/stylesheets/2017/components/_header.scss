@@ -1,79 +1,57 @@
 .site-header {
+  @media screen and (max-width: 800px) {
+    --_site-header-padding: var(--border-size-medium);
+    --_site-header-logo-w: 10rem;
+    --_site-header-logo-h: 2rem;
+    --_site-header-nav-margin: 0.4em 0 0 0;
+    --_site-header-nav-font-size: 1.6rem;
+
+    --_site-header-support-button-font-size: 12px;
+    --_site-header-support-button-padding: 0.5em;
+    --_site-header-support-button-inset: var(--border-size-medium);
+  }
+
   position: relative;
   background-color: var(--color-true-black);
-  padding: var(--border-size-large);
+  padding: var(--_site-header-padding, var(--border-size-large));
 
-  @media screen and (max-width: $small-tablet) {
-    padding: var(--border-size-medium);
+  .header-logo a {
+    display: inline-block;
+    width: var(--_site-header-logo-w, 15rem);
+    height: var(--_site-header-logo-h, 3rem);
+    background: var(--crimethinc-icon-svg);
   }
 
+  /* support us button */
   .button {
-    position: absolute;
-    inset-block-start: var(--border-size-large);
-    inset-inline-end: var(--border-size-large);
-    background: var(--color-blue);
+       position: absolute;
+       inset-block-start: var(--_site-header-support-button-inset, var(--border-size-large));
+       inset-inline-end: var(--_site-header-support-button-inset, var(--border-size-large));
+       background: var(--color-blue);
+       font-size: var(--_site-header-support-button-font-size, inherit);
+       padding: var(--_site-header-support-button-padding, 1rem);
+  }
+  
+  nav { margin: var(--_site-header-nav-margin, 0); }
 
-    @media screen and (max-width: $small-tablet) {
-      inset-block-start: var(--border-size-medium);
-      inset-inline-end: var(--border-size-medium);
-      font-size: 12px;
-      padding: 0.5em;
+  /* nav, language link */
+  .primary-navigation, .primary-navigation + ul {
+    display: inline-block;
+    margin: 1rem 0 0 0;
+    color: var(--color-white);
+
+    .nav-link {
+      display: inline-block;
+      margin: 0 1rem 1rem 0;
+      font-size: var(--_site-header-nav-font-size, 1.7rem);
+      letter-spacing: 0.05em;
+
+      a {
+        text-decoration: none;
+
+        &:link, &:visited { color: currentColor; }
+        &:hover, &:active { border-bottom: 1px solid currentColor; }
+      }
     }
-  }
-}
-
-.header-logo a {
-  background: var(--crimethinc-icon-svg);
-  width: 15rem;
-  height: 3rem;
-  overflow: hidden;
-  text-indent: -10000%;
-  white-space: nowrap;
-  display: inline-block;
-
-  @media screen and (max-width: $small-tablet) {
-    width: 10rem;
-    height: 2rem;
-  }
-}
-
-/* nav */
-.primary-navigation {
-  margin: 1rem 0 0 0;
-  display: inline-block;
-}
-
-.nav-link {
-  display: inline-block;
-  font-size: 1.6rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-
-  a {
-    text-decoration: none;
-
-    &:link,
-    &:visited {
-      color: var(--color-white);
-    }
-
-    &:hover,
-    &:active {
-      border-bottom: 1px solid var(--color-white);
-    }
-  }
-}
-
-@media screen and (max-width: $small-tablet) {
-  .site-header nav {
-    margin-top: 0.4em;
-  }
-}
-
-/* larger than $large-phone viewport */
-@media screen and (min-width: $small-tablet) {
-  .site-header .nav-link {
-    font-size: 1.7rem;
   }
 }
