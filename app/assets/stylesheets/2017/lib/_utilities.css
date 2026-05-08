@@ -1,3 +1,5 @@
-.screen-reader-only {
-  display: none;
+@layer utilities {
+  .screen-reader-only {
+    display: none;
+  }
 }
