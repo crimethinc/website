@@ -1,156 +1,158 @@
-#page {
-  main {
-    margin: var(--border-size-xlarge) auto;
-    max-width: $large-tablet;
+@layer pages {
+  #page {
+    main {
+      margin: var(--border-size-xlarge) auto;
+      max-width: $large-tablet;
 
-    .crumbtrail {
-      text-transform: uppercase;
-      color: var(--color-gray);
-
-      a {
+      .crumbtrail {
+        text-transform: uppercase;
         color: var(--color-gray);
-      }
-    }
 
-    .intro p {
-      font-size: var(--page-intro-font-size, 2.25rem);
-      line-height: 1.5;
-    }
-
-    .h-entry header,
-    header {
-      margin-bottom: var(--border-size-large);
-
-      h1 {
-        font-weight: bold;
-        font-weight: 800;
-        font-size: var(--page-header-h1, 3rem);
-        line-height: 1.25;
-        text-wrap: balance;
-      }
-
-      h2 {
-        font-weight: normal;
-        font-weight: 300;
-        font-size: var(--page-header-h2, 2rem);
-        line-height: 1.25;
-        text-wrap: balance;
-      }
-    }
-
-    .meta {
-      img {
-        /* TODO refactor away */
-        width: 100% !important;
-        height: auto !important;
-      }
-    }
-
-    .e-content {
-      h1 {
-        font-weight: bold;
-        font-weight: 700;
-        font-size: 4rem;
-        line-height: 1.25em;
-        margin-bottom: var(--border-size-small);
-      }
-
-      h2 {
-        font-weight: normal;
-        font-weight: 500;
-        font-size: 3rem;
-        line-height: 1.25em;
-        margin-bottom: var(--border-size-small);
-      }
-
-      h3 {
-        font-weight: lighter;
-        font-weight: 300;
-        font-size: 2.5rem;
-        line-height: 1.25em;
-        margin-bottom: var(--border-size-medium);
-        border-bottom: var(--border-size-xsmall) solid var(--color-gray-light);
-
-        &:first-child {
-          border: none;
+        a {
+          color: var(--color-gray);
         }
       }
 
-      audio {
-        width: 100%;
+      .intro p {
+        font-size: var(--page-intro-font-size, 2.25rem);
+        line-height: 1.5;
       }
 
-      video {
-        width: 100%;
+      .h-entry header,
+      header {
         margin-bottom: var(--border-size-large);
-      }
 
-      .buttons {
-        margin-bottom: var(--border-size-xlarge);
+        h1 {
+          font-weight: bold;
+          font-weight: 800;
+          font-size: var(--page-header-h1, 3rem);
+          line-height: 1.25;
+          text-wrap: balance;
+        }
 
-        .button {
-          margin: 0 var(--border-size-small) var(--border-size-medium) 0;
+        h2 {
+          font-weight: normal;
+          font-weight: 300;
+          font-size: var(--page-header-h2, 2rem);
+          line-height: 1.25;
+          text-wrap: balance;
         }
       }
 
-      li,
-      p {
-        font-size: 1.75rem;
-        line-height: 1.5em;
-        text-rendering: optimizeLegibility;
+      .meta {
+        img {
+          /* TODO refactor away */
+          width: 100% !important;
+          height: auto !important;
+        }
       }
 
-      p {
-        margin-bottom: var(--border-size-large);
+      .e-content {
+        h1 {
+          font-weight: bold;
+          font-weight: 700;
+          font-size: 4rem;
+          line-height: 1.25em;
+          margin-bottom: var(--border-size-small);
+        }
+
+        h2 {
+          font-weight: normal;
+          font-weight: 500;
+          font-size: 3rem;
+          line-height: 1.25em;
+          margin-bottom: var(--border-size-small);
+        }
+
+        h3 {
+          font-weight: lighter;
+          font-weight: 300;
+          font-size: 2.5rem;
+          line-height: 1.25em;
+          margin-bottom: var(--border-size-medium);
+          border-bottom: var(--border-size-xsmall) solid var(--color-gray-light);
+
+          &:first-child {
+            border: none;
+          }
+        }
+
+        audio {
+          width: 100%;
+        }
+
+        video {
+          width: 100%;
+          margin-bottom: var(--border-size-large);
+        }
+
+        .buttons {
+          margin-bottom: var(--border-size-xlarge);
+
+          .button {
+            margin: 0 var(--border-size-small) var(--border-size-medium) 0;
+          }
+        }
+
+        li,
+        p {
+          font-size: 1.75rem;
+          line-height: 1.5em;
+          text-rendering: optimizeLegibility;
+        }
+
+        p {
+          margin-bottom: var(--border-size-large);
+        }
       }
-    }
 
-    li {
-      text-rendering: optimizeLegibility;
-      margin-bottom: var(--border-size-large);
-    }
-
-    ul:not(.pagination),
-    ol:not(.pagination) {
-      margin-bottom: 1em;
-    }
-
-    li ul,
-    li ol {
-      margin-top: 0.5em;
-    }
-
-    ol {
-      list-style-type: numerals;
-    }
-
-    ul {
-      list-style-type: square;
-    }
-
-    dd,
-    dt,
-    li {
-      line-height: 1em;
-    }
-
-    li {
-      margin: 0 0 0.5em 0;
-    }
-
-    .e-content {
       li {
-        margin: 0 0 0.5em 1em;
+        text-rendering: optimizeLegibility;
+        margin-bottom: var(--border-size-large);
       }
 
-      ol li {
-        margin-left: 1.5em;
+      ul:not(.pagination),
+      ol:not(.pagination) {
+        margin-bottom: 1em;
       }
-    }
 
-    li li {
-      margin: 0 0 0 1.5em;
-      line-height: 1.5em;
+      li ul,
+      li ol {
+        margin-top: 0.5em;
+      }
+
+      ol {
+        list-style-type: numerals;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      dd,
+      dt,
+      li {
+        line-height: 1em;
+      }
+
+      li {
+        margin: 0 0 0.5em 0;
+      }
+
+      .e-content {
+        li {
+          margin: 0 0 0.5em 1em;
+        }
+
+        ol li {
+          margin-left: 1.5em;
+        }
+      }
+
+      li li {
+        margin: 0 0 0 1.5em;
+        line-height: 1.5em;
+      }
     }
   }
 }
