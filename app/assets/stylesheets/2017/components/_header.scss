@@ -16,16 +16,16 @@
   padding: var(--_site-header-padding, var(--border-size-large));
 
   .header-logo a {
-    background: var(--crimethinc-icon-svg);
+    display: inline-block;
     width: var(--_site-header-logo-w, 15rem);
     height: var(--_site-header-logo-h, 3rem);
+    background: var(--crimethinc-icon-svg);
     overflow: hidden;
     text-indent: -10000%;
     white-space: nowrap;
-    display: inline-block;
   }
 
-  // support us button
+  /* support us button */
   .button {
        position: absolute;
        inset-block-start: var(--_site-header-support-button-inset, var(--border-size-large));
@@ -39,16 +39,15 @@
 
   /* nav, language link */
   .primary-navigation, .primary-navigation + ul {
-    margin: 1rem 0 0 0;
     display: inline-block;
+    margin: 1rem 0 0 0;
     color: var(--color-white);
 
     .nav-link {
       display: inline-block;
+      margin: 0 1rem 1rem 0;
       font-size: var(--_site-header-nav-font-size, 1.7rem);
       letter-spacing: 0.05em;
-      margin-bottom: 1rem;
-      margin-right: 1rem;
 
       a {
         text-decoration: none;
