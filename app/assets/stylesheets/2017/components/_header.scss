@@ -23,20 +23,24 @@
   }
 
   .button {
-    position: absolute;
-    inset-block-start: var(--border-size-large);
-    inset-inline-end: var(--border-size-large);
-    background: var(--color-blue);
+       position: absolute;
+       inset-block-start: var(--border-size-large);
+       inset-inline-end: var(--border-size-large);
+       background: var(--color-blue);
 
-    @media screen and (max-width: $small-tablet) {
-      inset-block-start: var(--border-size-medium);
-      inset-inline-end: var(--border-size-medium);
-      font-size: 12px;
-      padding: 0.5em;
-    }
+       @media screen and (max-width: $small-tablet) {
+         inset-block-start: var(--border-size-medium);
+         inset-inline-end: var(--border-size-medium);
+         font-size: 12px;
+         padding: 0.5em;
+       }
   }
 
   /* nav, language link */
+  @media screen and (max-width: $small-tablet) {
+    nav { margin-top: 0.4em; }
+  }
+
   .primary-navigation, .primary-navigation + ul {
     margin: 1rem 0 0 0;
     display: inline-block;
@@ -61,20 +65,10 @@
           border-bottom: 1px solid var(--color-white);
         }
       }
+      /* larger than $large-phone viewport */
+      @media screen and (min-width: $small-tablet) {
+        font-size: 1.7rem;
+      }
     }
   }
-}
-
-
-
-
-@media screen and (max-width: $small-tablet) {
-  .site-header nav {
-    margin-top: 0.4em;
-  }
-}
-
-/* larger than $large-phone viewport */
-@media screen and (min-width: $small-tablet) {
-  .site-header .nav-link { font-size: 1.7rem; }
 }
