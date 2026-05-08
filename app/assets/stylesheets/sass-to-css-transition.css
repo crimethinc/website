@@ -1,5 +1,6 @@
 /* TODO: In-line the CSS in this file to the relevant files once the
    SASS preprocessor is removed. */
+@layer reset, base, pages, components, utilities;
 
 :root {
   /*
