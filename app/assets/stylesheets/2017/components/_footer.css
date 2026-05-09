@@ -50,13 +50,7 @@ footer#site-footer {
   .footer-section.footer-section-nav {
     a {
       color: var(--color-true-black);
-      text-decoration: none;
       line-height: 1.5em;
-
-      &:hover,
-      &:active {
-        border-bottom: var(--border-size-xsmall) solid var(--color-true-black);
-      }
     }
 
     dl {
@@ -104,8 +98,7 @@ footer#site-footer {
     .first-time-link a,
     .about-us-link a {
       background: var(--color-white);
-      color: var(--color-true-black) !important;
-      text-decoration: none;
+      color: var(--color-true-black);
       text-align: right;
       display: block;
     }
