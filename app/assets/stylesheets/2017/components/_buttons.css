@@ -4,7 +4,7 @@
   padding: 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-white) !important;
+  color: var(--color-white);
   border: var(--border-size-xsmall) solid var(--color-true-black);
   border-radius: 2px;
 }

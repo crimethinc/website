@@ -45,13 +45,6 @@
       margin: 0 1rem 1rem 0;
       font-size: var(--_site-header-nav-font-size, 1.7rem);
       letter-spacing: 0.05em;
-
-      a {
-        text-decoration: none;
-
-        &:link, &:visited { color: currentColor; }
-        &:hover, &:active { border-bottom: 1px solid currentColor; }
-      }
     }
   }
 }

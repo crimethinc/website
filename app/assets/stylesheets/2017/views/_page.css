@@ -8,9 +8,7 @@
         text-transform: uppercase;
         color: var(--color-gray);
 
-        a {
-          color: var(--color-gray);
-        }
+        a { text-decoration: none; }
       }
 
       .intro p {

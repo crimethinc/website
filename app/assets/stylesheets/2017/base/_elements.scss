@@ -1,4 +1,11 @@
 @layer base {
+  :root {
+    --link-underline-thickness: var(--_link-underline-thickness, .15ch);
+    --link-underline-offset: var(--_link-underline-offset, 0.1em);
+    --link-color: var(--_link-color, currentColor);
+    --link-hover-color: oklch(from currentColor calc(l - 50) c h);
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -55,30 +62,32 @@
     margin: 0 auto var(--border-size-xlarge) auto;
   }
 
-  a {
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      color: var(--color-true-black);
+
+  a, a:link, a:visited, a:hover, a:active {
+    color: var(--link-color);
+
+    &:has(h1,h2) { text-decoration: none;  }
+  }
+
+  nav a {
+    color: var(--link-color);
+
+    &:link, &:visited { text-decoration: none; }
+    &:hover, &:active {
+      text-decoration: underline solid currentColor var(--link-underline-thickness);
+      text-underline-offset: var(--link-underline-offset);
     }
   }
 
-  #article .e-content li a,
   p a {
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      color: #555;
-      text-decoration: underline;
+    color: var(--link-color);
+
+    &:link, &:visited, &:hover, &:active {
+      text-decoration: underline solid currentColor var(--link-underline-thickness);
+      text-underline-offset: var(--link-underline-offset);
       font-weight: 700;
     }
-
-    &:hover,
-    &:active {
-      color: var(--color-true-black);
-    }
+    &:hover, &:active { color: var(--link-hover-color); }
   }
 
   video,
