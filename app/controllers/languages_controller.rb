@@ -32,7 +32,7 @@ class LanguagesController < ApplicationController
   private
 
   def canonical_locale
-    @canonical_locale ||= LocaleService.find(locale: params[:locale])
+    @canonical_locale ||= LocaleService.find(locale: params.expect(:locale))
   end
 
   def set_articles

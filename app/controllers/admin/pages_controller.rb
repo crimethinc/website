@@ -61,7 +61,7 @@ module Admin
         if params[:draft_code].present?
           Page.find_by(draft_code: params[:draft_code])
         else
-          Page.find(params[:id])
+          Page.find(params.expect(:id))
         end
     end
 

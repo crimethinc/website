@@ -54,7 +54,7 @@ module Admin
     private
 
     def set_video
-      @video = Video.find(params[:id])
+      @video = Video.find(params.expect(:id))
     end
 
     def video_params

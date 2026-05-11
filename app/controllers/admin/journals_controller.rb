@@ -46,7 +46,7 @@ module Admin
     private
 
     def set_journal
-      @journal = Journal.find(params[:id])
+      @journal = Journal.find(params.expect(:id))
     end
 
     def journal_params

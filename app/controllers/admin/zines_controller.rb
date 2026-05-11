@@ -51,7 +51,7 @@ module Admin
     private
 
     def set_zine
-      @book = Zine.find(params[:id])
+      @book = Zine.find(params.expect(:id))
     end
 
     def zine_params

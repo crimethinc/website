@@ -46,7 +46,7 @@ module Admin
     private
 
     def set_podcast
-      @podcast = Podcast.find(params[:id])
+      @podcast = Podcast.find(params.expect(:id))
     end
 
     def podcast_params

@@ -26,7 +26,7 @@ module Admin
     end
 
     def new
-      @collection = Article.find(params[:id]) if params[:id]
+      @collection = Article.find(params.expect(:id)) if params[:id]
       @article    = Article.new
       prepare_article_for_translation
 
@@ -98,8 +98,8 @@ module Admin
                                              .strip
 
       # Populate Aricle#content with the markdown
-      params[:article][:content] = markdown_from_html
-      @article.content           = markdown_from_html
+      params.expect(:article)[:content] = markdown_from_html
+      @article.content = markdown_from_html
       # /TEMP
     end
 
@@ -107,7 +107,7 @@ module Admin
       # Prefill and clean article for translation
       return if params[:canonical_id].blank?
 
-      canonical_article = Article.find(params[:canonical_id])
+      canonical_article = Article.find(params.expect(:canonical_id))
       @article          = canonical_article.dup
 
       @article.canonical_id       = canonical_article.id
@@ -132,7 +132,7 @@ module Admin
         @article = Article.find_by(draft_code: params[:draft_code])
         redirect_to([:edit, :admin, @article])
       else
-        @article = Article.find(params[:id])
+        @article = Article.find(params.expect(:id))
       end
     end
 

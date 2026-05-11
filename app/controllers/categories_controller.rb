@@ -28,7 +28,7 @@ class CategoriesController < ApplicationController
   private
 
   def set_slug
-    @slug = params[:slug].dasherize
+    @slug = params.expect(:slug).dasherize
 
     redirect_to category_path(@slug) if @slug != params[:slug]
   end

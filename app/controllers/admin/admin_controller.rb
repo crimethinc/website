@@ -29,7 +29,7 @@ module Admin
       tz_offset = Time.parse("#{date} #{time}").in_time_zone(tz).strftime('%z')
       datetime  = Time.zone.parse("#{date} #{time}#{tz_offset}")
 
-      params[controller_name.singularize.to_sym][:published_at] = datetime
+      params.require(controller_name.singularize.to_sym)[:published_at] = datetime
     end
 
     def set_current_theme

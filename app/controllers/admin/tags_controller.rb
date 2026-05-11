@@ -46,7 +46,7 @@ module Admin
     private
 
     def set_tag
-      @tag = Tag.find(params[:id])
+      @tag = Tag.find(params.expect(:id))
     end
 
     def tag_params

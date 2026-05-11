@@ -52,7 +52,7 @@ module Admin
     end
 
     def set_episode
-      @episode = Episode.for_admin.find params[:id]
+      @episode = Episode.for_admin.find params.expect(:id)
       redirect_to %i[admin podcasts] if @episode.blank?
     end
 

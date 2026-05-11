@@ -50,7 +50,7 @@ module Admin
     private
 
     def set_logo
-      @logo = Logo.find(params[:id])
+      @logo = Logo.find(params.expect(:id))
     end
 
     def logo_params
