@@ -19,63 +19,65 @@ describe 'Tools pages' do
   end
 
   describe '/logos' do
-    before do
-      logo = create(:logo, :live, title: 'published')
-      logo.image_jpg.attach test_image
+    let(:uploads) { [[:image_jpg, test_image]] }
 
-      create(:logo, :published, :not_live, title: 'not live')
-      create(:logo, :draft, title: 'draft')
+    before do
+      create(:logo, :live, title: 'published', uploads: uploads)
+      create(:logo, :published, :not_live, title: 'not live', uploads: uploads)
+      create(:logo, :draft, title: 'draft', uploads: uploads)
     end
 
     it_behaves_like "renders published tool type for the path", :logos
   end
 
   describe '/stickers' do
-    before do
-      first_sticker = create(:sticker, :live, title: 'published')
-      second_sticker = create(:sticker, :not_live, title: 'not live')
-      third_sticker = create(:sticker, :draft, title: 'draft')
+    let(:uploads) { [[:image_front_color_image, test_image]] }
 
-      first_sticker.image_front_color_image.attach test_image
-      second_sticker.image_front_color_image.attach test_image
-      third_sticker.image_front_color_image.attach test_image
+    before do
+      create(:sticker, :live, title: 'published', uploads: uploads)
+      create(:sticker, :not_live, title: 'not live', uploads: uploads)
+      create(:sticker, :draft, title: 'draft', uploads: uploads)
     end
 
     it_behaves_like "renders published tool type for the path", :stickers
   end
 
   describe '/zines' do
+    let(:uploads) { [] }
+
     before do
-      create(:zine, :live, title: 'published')
-      create(:zine, :not_live, title: 'not live')
-      create(:zine, :draft, title: 'draft')
+      create(:zine, :live, title: 'published', uploads: uploads)
+      create(:zine, :not_live, title: 'not live', uploads: uploads)
+      create(:zine, :draft, title: 'draft', uploads: uploads)
     end
 
     it_behaves_like "renders published tool type for the path", :zines
   end
 
   describe '/posters' do
-    before do
-      first_poster = create(:poster, :live, title: 'published')
-      second_poster = create(:poster, :not_live, title: 'not live')
-      third_poster = create(:poster, :draft, title: 'draft')
+    let(:uploads) do
+      [
+        [:image_front_color_download, test_pdf],
+        [:image_front_color_image, test_image]
+      ]
+    end
 
-      first_poster.image_front_color_download.attach test_pdf
-      first_poster.image_front_color_image.attach test_image
-      second_poster.image_front_color_download.attach test_pdf
-      second_poster.image_front_color_image.attach test_image
-      third_poster.image_front_color_download.attach test_pdf
-      third_poster.image_front_color_image.attach test_image
+    before do
+      create(:poster, :live, title: 'published', uploads: uploads)
+      create(:poster, :not_live, title: 'not live', uploads: uploads)
+      create(:poster, :draft, title: 'draft', uploads: uploads)
     end
 
     it_behaves_like "renders published tool type for the path", :posters
   end
 
   describe '/videos' do
+    let(:uploads) { [[:image_poster_frame, test_image]] }
+
     before do
-      create(:video, :live, title: 'published')
-      create(:video, :not_live, title: 'not live')
-      create(:video, :draft, title: 'draft')
+      create(:video, :live, title: 'published', uploads: uploads)
+      create(:video, :not_live, title: 'not live', uploads: uploads)
+      create(:video, :draft, title: 'draft', uploads: uploads)
     end
 
     it_behaves_like "renders published tool type for the path", :videos
