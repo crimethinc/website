@@ -9,21 +9,11 @@ describe 'Tools pages' do
   def test_pdf   = fixture_file_upload('spec/fixtures/files/test_pdf.pdf',   'image/pdf')
 
   it 'renders published logos calling /logos' do
-    logo = create(:logo,
-                  title:              'published',
-                  published_at:       1.day.ago,
-                  publication_status: 'published')
-
+    logo = create(:logo, :live, title: 'published')
     logo.image_jpg.attach test_image
 
-    create(:logo,
-           title:              'not live',
-           published_at:       1.day.from_now,
-           publication_status: 'published')
-
-    create(:logo,
-           title:              'draft',
-           publication_status: 'draft')
+    create(:logo, :published, :not_live, title: 'not live')
+    create(:logo, :draft, title: 'draft')
 
     visit :logos
 
@@ -33,19 +23,9 @@ describe 'Tools pages' do
   end
 
   it 'renders published stickers calling /stickers' do
-    first_sticker = create(:sticker,
-                           title:              'published',
-                           published_at:       1.day.ago,
-                           publication_status: 'published')
-
-    second_sticker = create(:sticker,
-                            title:              'not live',
-                            published_at:       1.day.from_now,
-                            publication_status: 'published')
-
-    third_sticker = create(:sticker,
-                           title:              'draft',
-                           publication_status: 'draft')
+    first_sticker = create(:sticker, :live, title: 'published')
+    second_sticker = create(:sticker, :not_live, title: 'not live')
+    third_sticker = create(:sticker, :draft, title: 'draft')
 
     first_sticker.image_front_color_image.attach test_image
     second_sticker.image_front_color_image.attach test_image
@@ -59,19 +39,9 @@ describe 'Tools pages' do
   end
 
   it 'renders published zines calling /zines' do
-    create(:zine,
-           title:              'published',
-           published_at:       1.day.ago,
-           publication_status: 'published')
-
-    create(:zine,
-           title:              'not live',
-           published_at:       1.day.from_now,
-           publication_status: 'published')
-
-    create(:zine,
-           title:              'draft',
-           publication_status: 'draft')
+    create(:zine, :live, title: 'published')
+    create(:zine, :not_live, title: 'not live')
+    create(:zine, :draft, title: 'draft')
 
     visit :zines
 
@@ -81,19 +51,9 @@ describe 'Tools pages' do
   end
 
   it 'renders published posters calling /posters' do
-    first_poster = create(:poster,
-                          title:              'published',
-                          published_at:       1.day.ago,
-                          publication_status: 'published')
-
-    second_poster = create(:poster,
-                           title:              'not live',
-                           published_at:       1.day.from_now,
-                           publication_status: 'published')
-
-    third_poster = create(:poster,
-                          title:              'draft',
-                          publication_status: 'draft')
+    first_poster = create(:poster, :live, title: 'published')
+    second_poster = create(:poster, :not_live, title: 'not live')
+    third_poster = create(:poster, :draft, title: 'draft')
 
     first_poster.image_front_color_download.attach test_pdf
     first_poster.image_front_color_image.attach test_image
@@ -110,20 +70,10 @@ describe 'Tools pages' do
   end
 
   it 'renders published videos calling /videos' do
-    create(:video,
-           title:              'published',
-           published_at:       1.day.ago,
-           publication_status: 'published')
-
-    create(:video,
-           title:              'not live',
-           published_at:       1.day.from_now,
-           publication_status: 'published')
-
-    create(:video,
-           title:              'draft',
-           publication_status: 'draft')
-
+    create(:video, :live, title: 'published')
+    create(:video, :not_live, title: 'not live')
+    create(:video, :draft, title: 'draft')
+    
     visit :videos
 
     expect(page).to have_text 'published'
