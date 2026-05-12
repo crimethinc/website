@@ -1,7 +1,4 @@
 FactoryBot.define do
-  factory :video do
-    title { 'MyTitle' }
-    content { 'Some Really Sweet Content' }
-    slug { 'MySlug' }
+  factory :video, parent: :tool, class: Video do
   end
 end
