@@ -5,9 +5,10 @@ describe 'Tools pages' do
     Current.theme = '2017'
   end
 
-  it 'renders published logos calling /logos' do
-    test_image = fixture_file_upload 'spec/fixtures/files/test_image.jpg', 'image/jpeg'
+  def test_image = fixture_file_upload 'spec/fixtures/files/test_image.jpg', 'image/jpeg'
+  def test_pdf   = fixture_file_upload('spec/fixtures/files/test_pdf.pdf',   'image/pdf')
 
+  it 'renders published logos calling /logos' do
     logo = create(:logo,
                   title:              'published',
                   published_at:       1.day.ago,
@@ -32,10 +33,6 @@ describe 'Tools pages' do
   end
 
   it 'renders published stickers calling /stickers' do
-    first_test_image = fixture_file_upload 'spec/fixtures/files/test_image.jpg', 'image/jpeg'
-    second_test_image = fixture_file_upload 'spec/fixtures/files/test_image.jpg', 'image/jpeg'
-    third_test_image = fixture_file_upload 'spec/fixtures/files/test_image.jpg', 'image/jpeg'
-
     first_sticker = create(:sticker,
                            title:              'published',
                            published_at:       1.day.ago,
@@ -50,9 +47,9 @@ describe 'Tools pages' do
                            title:              'draft',
                            publication_status: 'draft')
 
-    first_sticker.image_front_color_image.attach first_test_image
-    second_sticker.image_front_color_image.attach second_test_image
-    third_sticker.image_front_color_image.attach third_test_image
+    first_sticker.image_front_color_image.attach test_image
+    second_sticker.image_front_color_image.attach test_image
+    third_sticker.image_front_color_image.attach test_image
 
     visit :stickers
 
@@ -84,13 +81,6 @@ describe 'Tools pages' do
   end
 
   it 'renders published posters calling /posters' do
-    first_test_pdf    = fixture_file_upload('spec/fixtures/files/test_pdf.pdf',   'image/pdf')
-    first_test_image  = fixture_file_upload('spec/fixtures/files/test_image.jpg', 'image/jpg')
-    second_test_pdf   = fixture_file_upload('spec/fixtures/files/test_pdf.pdf',   'image/pdf')
-    second_test_image = fixture_file_upload('spec/fixtures/files/test_image.jpg', 'image/jpg')
-    third_test_pdf    = fixture_file_upload('spec/fixtures/files/test_pdf.pdf',   'image/pdf')
-    third_test_image  = fixture_file_upload('spec/fixtures/files/test_image.jpg', 'image/jpg')
-
     first_poster = create(:poster,
                           title:              'published',
                           published_at:       1.day.ago,
@@ -105,12 +95,12 @@ describe 'Tools pages' do
                           title:              'draft',
                           publication_status: 'draft')
 
-    first_poster.image_front_color_download.attach first_test_pdf
-    first_poster.image_front_color_image.attach first_test_image
-    second_poster.image_front_color_download.attach second_test_pdf
-    second_poster.image_front_color_image.attach second_test_image
-    third_poster.image_front_color_download.attach third_test_pdf
-    third_poster.image_front_color_image.attach third_test_image
+    first_poster.image_front_color_download.attach test_pdf
+    first_poster.image_front_color_image.attach test_image
+    second_poster.image_front_color_download.attach test_pdf
+    second_poster.image_front_color_image.attach test_image
+    third_poster.image_front_color_download.attach test_pdf
+    third_poster.image_front_color_image.attach test_image
 
     visit :posters
 
