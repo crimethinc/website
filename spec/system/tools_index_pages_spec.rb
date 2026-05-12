@@ -6,6 +6,18 @@ describe 'Tools pages' do
   def test_image = fixture_file_upload 'spec/fixtures/files/test_image.jpg', 'image/jpeg'
   def test_pdf   = fixture_file_upload('spec/fixtures/files/test_pdf.pdf',   'image/pdf')
 
+  shared_examples "renders published tool type for the path" do |tool|
+    let(:tool) { tool.to_sym }
+
+    it "renders published logos calling /#{tool}" do
+      visit tool
+
+      expect(page).to have_text 'published'
+      expect(page).to have_no_text 'draft'
+      expect(page).to have_no_text 'not live'
+    end
+  end
+
   describe '/logos' do
     before do
       logo = create(:logo, :live, title: 'published')
@@ -15,13 +27,7 @@ describe 'Tools pages' do
       create(:logo, :draft, title: 'draft')
     end
 
-    it 'renders published logos calling /logos' do
-      visit :logos
-
-      expect(page).to have_text 'published'
-      expect(page).to have_no_text 'draft'
-      expect(page).to have_no_text 'not live'
-    end
+    it_behaves_like "renders published tool type for the path", :logos
   end
 
   describe '/stickers' do
@@ -35,13 +41,7 @@ describe 'Tools pages' do
       third_sticker.image_front_color_image.attach test_image
     end
 
-    it 'renders published stickers calling /stickers' do
-      visit :stickers
-
-      expect(page).to have_text 'published'
-      expect(page).to have_no_text 'draft'
-      expect(page).to have_no_text 'not live'
-    end
+    it_behaves_like "renders published tool type for the path", :stickers
   end
 
   describe '/zines' do
@@ -51,13 +51,7 @@ describe 'Tools pages' do
       create(:zine, :draft, title: 'draft')
     end
 
-    it 'renders published zines calling /zines' do
-      visit :zines
-
-      expect(page).to have_text 'published'
-      expect(page).to have_no_text 'draft'
-      expect(page).to have_no_text 'not live'
-    end
+    it_behaves_like "renders published tool type for the path", :zines
   end
 
   describe '/posters' do
@@ -74,13 +68,7 @@ describe 'Tools pages' do
       third_poster.image_front_color_image.attach test_image
     end
 
-    it 'renders published posters calling /posters' do
-      visit :posters
-
-      expect(page).to have_text 'published'
-      expect(page).to have_no_text 'draft'
-      expect(page).to have_no_text 'not live'
-    end
+    it_behaves_like "renders published tool type for the path", :posters
   end
 
   describe '/videos' do
@@ -90,12 +78,6 @@ describe 'Tools pages' do
       create(:video, :draft, title: 'draft')
     end
 
-    it 'renders published videos calling /videos' do
-      visit :videos
-
-      expect(page).to have_text 'published'
-      expect(page).to have_no_text 'not live'
-      expect(page).to have_no_text 'draft'
-    end
+    it_behaves_like "renders published tool type for the path", :videos
   end
 end
