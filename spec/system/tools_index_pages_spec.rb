@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 describe 'Tools pages' do
-  before do
-    Current.theme = '2017'
-  end
+  before {  Current.theme = '2017' }
 
   def test_image = fixture_file_upload 'spec/fixtures/files/test_image.jpg', 'image/jpeg'
   def test_pdf   = fixture_file_upload('spec/fixtures/files/test_pdf.pdf',   'image/pdf')
