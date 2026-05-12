@@ -7,13 +7,15 @@ describe 'Tools pages' do
   def test_pdf   = fixture_file_upload('spec/fixtures/files/test_pdf.pdf',   'image/pdf')
 
   describe '/logos' do
-    it 'renders published logos calling /logos' do
+    before do
       logo = create(:logo, :live, title: 'published')
       logo.image_jpg.attach test_image
 
       create(:logo, :published, :not_live, title: 'not live')
       create(:logo, :draft, title: 'draft')
+    end
 
+    it 'renders published logos calling /logos' do
       visit :logos
 
       expect(page).to have_text 'published'
@@ -23,7 +25,7 @@ describe 'Tools pages' do
   end
 
   describe '/stickers' do
-    it 'renders published stickers calling /stickers' do
+    before do
       first_sticker = create(:sticker, :live, title: 'published')
       second_sticker = create(:sticker, :not_live, title: 'not live')
       third_sticker = create(:sticker, :draft, title: 'draft')
@@ -31,7 +33,9 @@ describe 'Tools pages' do
       first_sticker.image_front_color_image.attach test_image
       second_sticker.image_front_color_image.attach test_image
       third_sticker.image_front_color_image.attach test_image
+    end
 
+    it 'renders published stickers calling /stickers' do
       visit :stickers
 
       expect(page).to have_text 'published'
@@ -41,11 +45,13 @@ describe 'Tools pages' do
   end
 
   describe '/zines' do
-    it 'renders published zines calling /zines' do
+    before do
       create(:zine, :live, title: 'published')
       create(:zine, :not_live, title: 'not live')
       create(:zine, :draft, title: 'draft')
+    end
 
+    it 'renders published zines calling /zines' do
       visit :zines
 
       expect(page).to have_text 'published'
@@ -55,7 +61,7 @@ describe 'Tools pages' do
   end
 
   describe '/posters' do
-    it 'renders published posters calling /posters' do
+    before do
       first_poster = create(:poster, :live, title: 'published')
       second_poster = create(:poster, :not_live, title: 'not live')
       third_poster = create(:poster, :draft, title: 'draft')
@@ -66,7 +72,9 @@ describe 'Tools pages' do
       second_poster.image_front_color_image.attach test_image
       third_poster.image_front_color_download.attach test_pdf
       third_poster.image_front_color_image.attach test_image
+    end
 
+    it 'renders published posters calling /posters' do
       visit :posters
 
       expect(page).to have_text 'published'
@@ -76,11 +84,13 @@ describe 'Tools pages' do
   end
 
   describe '/videos' do
-    it 'renders published videos calling /videos' do
+    before do
       create(:video, :live, title: 'published')
       create(:video, :not_live, title: 'not live')
       create(:video, :draft, title: 'draft')
-    
+    end
+
+    it 'renders published videos calling /videos' do
       visit :videos
 
       expect(page).to have_text 'published'
