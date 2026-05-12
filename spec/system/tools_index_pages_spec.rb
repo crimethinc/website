@@ -22,6 +22,15 @@ describe 'Tools pages' do
       expect(page).to have_no_text 'draft'
       expect(page).to have_no_text 'not live'
     end
+
+    xcontext 'with no uploads' do
+      let(:uploads) { [] }
+
+      it "can still render the page" do
+        visit tool.to_s.pluralize.to_sym
+        expect(page).to have_text 'published'
+      end
+    end
   end
 
   describe '/logos' do
