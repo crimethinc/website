@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :tool do
-    sequence(:title) { "tool title #{_1}" }
-    sequence(:subtitle) { "tool title #{_1}" }
+    sequence(:title) { "tool title #{it}" }
+    sequence(:subtitle) { "tool title #{it}" }
 
     transient do
       uploads { [] }

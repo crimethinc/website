@@ -1,4 +1,3 @@
 FactoryBot.define do
-  factory :sticker, parent: :tool, class: Sticker do
-  end
+  factory :sticker, parent: :tool, class: 'Sticker'
 end
