@@ -1,6 +1,5 @@
 FactoryBot.define do
-  factory :zine do
-    title { 'MyZine' }
+  factory :zine, parent: :tool, class: Zine do
     locale { 'en' }
 
     after(:build) do |tool|
@@ -10,10 +9,5 @@ FactoryBot.define do
         create(:locale, trait_sym)
       end
     end
-  end
-
-  trait(:live) do
-    published_at { 1.day.ago }
-    publication_status { 'published' }
   end
 end
