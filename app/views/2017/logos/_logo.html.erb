@@ -10,9 +10,11 @@
         <div class="column column-one-quarter logo-first-column">
           <div class="tool-front">
             <%= link_to tool.path do %>
-              <%= image_tag image_variant_by_width(tool.image_jpg, @preview_width),
-                            class: "u-image",
-                            alt:   tool.description %>
+              <% if tool.image_jpg.present? %>
+                <%= image_tag image_variant_by_width(tool.image_jpg, @preview_width),
+                              class: "u-image",
+                              alt:   tool.description %>
+              <% end %>
             <% end %>
           </div> <!-- tool-front -->
         </div> <!-- logo-first-column -->

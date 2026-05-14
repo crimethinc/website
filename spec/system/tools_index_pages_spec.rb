@@ -23,7 +23,7 @@ describe 'Tools pages' do
       expect(page).to have_no_text 'not live'
     end
 
-    xcontext 'with no uploads', skip: 'bug will be fixed in followed' do # rubocop:disable RSpec/PendingWithoutReason
+    context 'with no uploads' do
       let(:uploads) { [] }
 
       it 'can still render the page' do
