@@ -54,7 +54,7 @@ module Admin
     private
 
     def set_poster
-      @poster = Sticker.find(params[:id])
+      @poster = Sticker.find(params.expect(:id))
     end
 
     def poster_params

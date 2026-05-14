@@ -46,7 +46,7 @@ module Admin
     private
 
     def set_definition
-      @definition = Definition.find(params[:id])
+      @definition = Definition.find(params.expect(:id))
     end
 
     def definition_params

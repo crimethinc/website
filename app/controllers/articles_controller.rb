@@ -139,17 +139,17 @@ class ArticlesController < ApplicationController
   def set_page_number
     return if params[:page].blank?
 
-    @page_number = params[:page].gsub(/\D/, '')
+    @page_number = params.expect(:page).gsub(/\D/, '')
   end
 
   def redirect_malformed_pagination
-    return if params[:format].in? %w[json atom]
+    return if params.expect(:format).in? %w[json atom]
     return if @page_number == params[:page]
 
     redirect_to [:articles, { page: @page_number }]
   end
 
   def force_2025_theme_for_feeds
-    Current.theme = '2025' if params[:format].in? %w[json atom]
+    Current.theme = '2025' if params.expect(:format).in? %w[json atom]
   end
 end

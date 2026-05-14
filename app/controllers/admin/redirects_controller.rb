@@ -74,7 +74,7 @@ module Admin
     end
 
     def set_redirect
-      @redirect = Redirect.find(params[:id])
+      @redirect = Redirect.find(params.expect(:id))
     end
 
     def redirect_params

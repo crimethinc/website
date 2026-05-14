@@ -31,7 +31,7 @@ class SupportController < ApplicationController
   private
 
   def create_subscription_checkout_session
-    amount = params[:amount].to_i
+    amount = params.expect(:amount).to_i
     prices = Stripe::Price.list(lookup_keys: ["crimethinc_monthly_#{amount}"], limit: 1)
     price  = prices.data.first
 
@@ -46,7 +46,7 @@ class SupportController < ApplicationController
   end
 
   def create_payment_checkout_session
-    amount = params[:amount].to_i
+    amount = params.expect(:amount).to_i
 
     Stripe::Checkout::Session.create(
       mode:        'payment',

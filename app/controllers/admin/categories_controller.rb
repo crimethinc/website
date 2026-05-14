@@ -46,7 +46,7 @@ module Admin
     private
 
     def set_category
-      @category = Category.find(params[:id])
+      @category = Category.find(params.expect(:id))
     end
 
     def category_params

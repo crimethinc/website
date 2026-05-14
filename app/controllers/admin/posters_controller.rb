@@ -50,7 +50,7 @@ module Admin
     private
 
     def set_poster
-      @poster = Poster.find(params[:id])
+      @poster = Poster.find(params.expect(:id))
     end
 
     def poster_params

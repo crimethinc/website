@@ -46,7 +46,7 @@ module Admin
     private
 
     def set_book
-      @book = Book.find(params[:id])
+      @book = Book.find(params.expect(:id))
     end
 
     def book_params

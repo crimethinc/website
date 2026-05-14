@@ -46,7 +46,7 @@ module Admin
     private
 
     def set_locale
-      @locale = Locale.find(params[:id])
+      @locale = Locale.find(params.expect(:id))
     end
 
     def locale_params

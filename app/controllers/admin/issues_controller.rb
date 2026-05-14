@@ -52,7 +52,7 @@ module Admin
     private
 
     def set_journal
-      @book = Issue.find(params[:id])
+      @book = Issue.find(params.expect(:id))
     end
 
     def journal_params
