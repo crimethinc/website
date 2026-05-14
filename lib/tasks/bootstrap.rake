@@ -17,21 +17,15 @@ namespace :bootstrap do
 
     css_url     = "https://cdn.jsdelivr.net/npm/bootstrap@#{latest_version}/dist/css/bootstrap.css"
     css_map_url = "https://cdn.jsdelivr.net/npm/bootstrap@#{latest_version}/dist/css/bootstrap.css.map"
-    js_url      = "https://cdn.jsdelivr.net/npm/bootstrap@#{latest_version}/dist/js/bootstrap.bundle.js"
-    js_map_url  = "https://cdn.jsdelivr.net/npm/bootstrap@#{latest_version}/dist/js/bootstrap.bundle.js.map"
 
-    css_dir = Rails.root.join 'vendor/stylesheets'
-    js_dir  = Rails.root.join 'vendor/javascript'
+    css_dir = Rails.root.join 'app/assets/stylesheets/vendor'
 
     FileUtils.mkdir_p css_dir
-    FileUtils.mkdir_p js_dir
 
     Down.download css_url,     destination: css_dir.join('bootstrap.css').to_s
     Down.download css_map_url, destination: css_dir.join('bootstrap.css.map').to_s
-    Down.download js_url,      destination: js_dir.join('bootstrap.js').to_s
-    Down.download js_map_url,  destination: js_dir.join('bootstrap.js.map').to_s
 
-    version_file.write latest_version
-    puts "Bootstrap #{latest_version} downloaded to vendor/bootstrap.*"
+    version_file.write "#{latest_version}\n"
+    puts "Bootstrap CSS #{latest_version} downloaded to #{css_dir}"
   end
 end
