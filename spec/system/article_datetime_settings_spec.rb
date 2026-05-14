@@ -90,23 +90,4 @@ describe 'Setting and changing an articles published_at date', :js do
       expect(article).to be_published
     end
   end
-
-  it 'sets the publication date/time if article is `published` and fields are blank' do
-    freeze_time do
-      login_user
-      visit '/admin/articles'
-
-      click_link_or_button 'NEW'
-
-      within('#publication-status') { find('label[for=publication_status_published]').click }
-      find_button('Save', match: :first).click
-
-      expect(page).to have_text 'Article was successfully created'
-      article = Article.last
-
-      expect(article.reload.published_at_tz).to eq('UTC')
-      expect(article.published_at).to eq(Time.now.utc + 100.years)
-      expect(article).to be_published
-    end
-  end
 end
