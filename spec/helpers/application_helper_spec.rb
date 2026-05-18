@@ -2,16 +2,30 @@ require 'rails_helper'
 
 RSpec.describe ApplicationHelper do
   describe '#largest_touch_icon_url' do
-    subject { helper.largest_touch_icon_url }
+    let(:stub_asset) { 'rails asset url' }
 
-    it { is_expected.to match('icons/icon-600x600') }
+    before do
+      allow(helper).to receive(:asset_url).and_return(stub_asset)
+    end
+
+    it 'fetches the expected icon size' do
+      expect(helper.largest_touch_icon_url).to eq stub_asset
+      expect(helper).to have_received(:asset_url).with('icons/icon-600x600.png').once
+    end
   end
 
   describe '#tt' do
-    it 'returns a themed translation' do
-      Current.theme = '2017'
+    let(:stub_translation) { 'i18n translation' }
+    let(:theme) { '2044' }
 
-      expect(helper.tt('site_name')).to be_present
+    before do
+      Current.theme = theme
+      allow(helper).to receive(:t).and_return(stub_translation)
+    end
+
+    it 'calls rails\' translation helper with the current theme' do
+      expect(helper.tt('site_name')).to eq stub_translation
+      expect(helper).to have_received(:t).with(start_with("#{theme}."))
     end
   end
 end
