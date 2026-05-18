@@ -13,6 +13,16 @@ FactoryBot.define do
       end
     end
 
+    trait :with_built_locale do
+      after(:build) do |tool|
+        locale = Locale.find_by(abbreviation: tool.locale)
+        if locale.blank?
+          trait_sym = tool.locale.underscore.to_sym
+          create(:locale, trait_sym)
+        end
+      end
+    end
+
     trait :draft do
       published_at { nil }
       publication_status { 'draft' }
