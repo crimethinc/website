@@ -406,6 +406,7 @@ en:
         off_the_map: Off the Map
         recipes_for_disaster: Recipes for Disaster
         work: Work
+        fuck_ice_luchas_contra_la_politica_migratoria_de_trump_en_estados_unidos: Fuck ICE — Luchas contra la política migratoria de Trump en Estados Unidos
       podcast:
         label: Podcast
         feed: RSS
@@ -454,15 +455,15 @@ en:
         heading: Find us elsewhere
         description: Keep up with our activities on the following additional platforms.
     mantra:
-    - If your heart is free, the ground you stand on is liberated territory. Defend it.
-    - Only those prepared to go too far will learn how far they can go.
-    - Desperate measures are long overdue.
-    - Cradle the seed, even in the volcano’s mouth.
-    - The future is in chains within you — set it free.
-    - A spark for every powder keg.
-    - Esperanza no espera.
-    - Mobilis in mobili
-    - Fighting the next war.
+      - If your heart is free, the ground you stand on is liberated territory. Defend it.
+      - Only those prepared to go too far will learn how far they can go.
+      - Desperate measures are long overdue.
+      - Cradle the seed, even in the volcano’s mouth.
+      - The future is in chains within you — set it free.
+      - A spark for every powder keg.
+      - Esperanza no espera.
+      - Mobilis in mobili
+      - Fighting the next war.
     site_mode: Switch to the lite version of the site →
   page_titles:
     about:
@@ -509,6 +510,7 @@ en:
       off_the_map: Off the Map
       recipes_for_disaster: Recipes for Disaster
       work: Work
+      fuck_ice_luchas_contra_la_politica_migratoria_de_trump_en_estados_unidos: Fuck ICE — Luchas contra la política migratoria de Trump en Estados Unidos
     definitions:
       index: Definitions
     archives:
