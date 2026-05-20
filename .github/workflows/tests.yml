@@ -13,6 +13,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_PORT: 5432
         # Ensure Postgres container passes a health check
         options: >-
           --health-cmd pg_isready
@@ -37,6 +38,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_PORT: 5432
         run: bundle exec rails db:create
 
       - name: Run tests
@@ -44,4 +46,5 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_PORT: 5432
         run: bundle exec rspec --exclude-pattern="spec/system/*"
