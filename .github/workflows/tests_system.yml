@@ -23,6 +23,13 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
+    env:
+      POSTGRES_DB_NAME: crimethinc_test
+      POSTGRES_HOST: localhost
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+
     steps:
       - name: Install system libraries
         run: sudo apt-get -y install libpq-dev libvips-dev
