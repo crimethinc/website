@@ -35,9 +35,11 @@ jobs:
       - name: Configure database
         env:
           POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         run: bundle exec rails db:create
 
       - name: Run tests
         env:
           POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         run: bundle exec rspec spec/system
