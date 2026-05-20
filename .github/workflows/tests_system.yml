@@ -12,7 +12,7 @@ jobs:
         ports: ["5432:5432"]
         env:
           PGUSER: postgres
-          PGPASSWORD: ""
+          PGPASSWORD: postgres
         # Ensure Postgres container passes a health check
         options: >-
           --health-cmd pg_isready
