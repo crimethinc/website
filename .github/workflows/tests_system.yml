@@ -11,8 +11,8 @@ jobs:
         image: postgres:15-alpine
         ports: ["5432:5432"]
         env:
-          PGUSER: postgres
-          PGPASSWORD: ""
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ""
         # Ensure Postgres container passes a health check
         options: >-
           --health-cmd pg_isready
