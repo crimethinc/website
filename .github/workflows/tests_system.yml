@@ -7,18 +7,21 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      postgresql:
-        image: postgres:14.7
+      postgres:
+        image: postgres:15
         env:
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+          POSTGRES_DB_NAME: crimethinc_test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        # needed because the postgres container does not provide a healthcheck
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-        ports:
-          - 5432:5432
 
     steps:
       - name: Install system libraries
