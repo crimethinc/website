@@ -1,3 +1,4 @@
+libvips-dev
 # pandoc from .deb package directly
 # TODO: Upgrade to 3.0 and beyond
 # https://github.com/jgm/pandoc/releases/tag/3.0

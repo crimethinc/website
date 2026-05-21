@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Install system libraries
-        run: sudo apt-get -y install libpq-dev
+        run: sudo apt-get -y install libpq-dev libvips-dev
 
       - name: Checkout repository
         uses: actions/checkout@main

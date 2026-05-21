@@ -52,6 +52,9 @@ gem 'logstash-event'
 # uploads using Active Storage
 gem 'aws-sdk-s3'
 gem 'image_processing'
+# NOTE: image processing backend are now soft dependency, so we specify the on
+# ewe need (needed by image_processing)
+gem 'ruby-vips'
 
 # TEMP: pin connection_pool and sidekiq until this is resolved:
 #      https://github.com/crimethinc/website/pull/4994
