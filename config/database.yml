@@ -12,6 +12,8 @@ test:
   <<: *default
   host: localhost
   database: crimethinc_test
+  username: <%= ENV.fetch('POSTGRES_USER', 'postgres') %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD', '') %>
 
 production:
   <<: *default

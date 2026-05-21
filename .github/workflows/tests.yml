@@ -8,11 +8,11 @@ jobs:
 
     services:
       postgres:
-        image: postgres:11.6-alpine
+        image: postgres:15
         ports: ["5432:5432"]
         env:
-          PGUSER: postgres
-          PGPASSWORD: ""
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         # Ensure Postgres container passes a health check
         options: >-
           --health-cmd pg_isready
@@ -34,10 +34,13 @@ jobs:
 
       - name: Configure database
         env:
-          PGUSER: postgres
+          RAILS_ENV: test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         run: bundle exec rails db:create
 
       - name: Run tests
         env:
-          PGUSER: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         run: bundle exec rspec --exclude-pattern="spec/system/*"

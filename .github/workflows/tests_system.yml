@@ -8,17 +8,27 @@ jobs:
 
     services:
       postgres:
-        image: postgres:11.6-alpine
-        ports: ["5432:5432"]
+        image: postgres:15
         env:
-          PGUSER: postgres
-          PGPASSWORD: ""
-        # Ensure Postgres container passes a health check
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+          POSTGRES_DB_NAME: crimethinc_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        # needed because the postgres container does not provide a healthcheck
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+
+    env:
+      POSTGRES_DB_NAME: crimethinc_test
+      POSTGRES_HOST: localhost
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
 
     steps:
       - name: Install system libraries
@@ -34,10 +44,13 @@ jobs:
 
       - name: Configure database
         env:
-          PGUSER: postgres
+          RAILS_ENV: test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         run: bundle exec rails db:create
 
       - name: Run tests
         env:
-          PGUSER: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         run: bundle exec rspec spec/system
