@@ -360,7 +360,7 @@ GEM
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
-    rails-erd (2.0.0)
+    rails-erd (2.0.1)
       activerecord (>= 7.0)
       activesupport (>= 7.0)
       choice (~> 0.2.0)
@@ -766,7 +766,7 @@ CHECKSUMS
   rails (8.1.3) sha256=6d017ba5348c98fc909753a8169b21d44de14d2a0b92d140d1a966834c3c9cd3
   rails-controller-testing (1.0.5) sha256=741448db59366073e86fc965ba403f881c636b79a2c39a48d0486f2607182e94
   rails-dom-testing (2.3.0) sha256=8acc7953a7b911ca44588bf08737bc16719f431a1cc3091a292bca7317925c1d
-  rails-erd (2.0.0) sha256=eadd199a11e1793b0e6d0f3df47c25a2531754c7f1e1cbad5ceae53058aa6412
+  rails-erd (2.0.1) sha256=e9f111a4569400ef1a764780304c404fda83ec535f3383e4d5172253224790f3
   rails-html-sanitizer (1.7.0) sha256=28b145cceaf9cc214a9874feaa183c3acba036c9592b19886e0e45efc62b1e89
   railties (8.1.3) sha256=913eb0e0cb520aac687ffd74916bd726d48fa21f47833c6292576ef6a286de22
   rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
