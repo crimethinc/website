@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: Install system libraries
-        run: sudo apt-get -y install libpq-dev libvips-dev
+        run: sudo apt-get update && sudo apt-get install -y -qq --no-install-recommends libpq-dev libvips-dev
 
       - name: Checkout repository
         uses: actions/checkout@main
