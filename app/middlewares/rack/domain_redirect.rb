@@ -10,6 +10,9 @@ module Rack
       # TCE
       ['', '/tce', /tochangeeverything\.com/],
 
+      # BGDC
+      ['', '/tags/gay', /crimethinc\.gay/],
+
       # Heroku subdomain
       ['', '', /\.herokuapp\.com$/],
 
