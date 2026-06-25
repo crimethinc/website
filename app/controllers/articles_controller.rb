@@ -143,13 +143,15 @@ class ArticlesController < ApplicationController
   end
 
   def redirect_malformed_pagination
-    return if params.expect(:format).in? %w[json atom]
+    return if non_html_format?
     return if @page_number == params[:page]
 
     redirect_to [:articles, { page: @page_number }]
   end
 
   def force_2025_theme_for_feeds
-    Current.theme = '2025' if params.expect(:format).in? %w[json atom]
+    Current.theme = '2025' if non_html_format?
   end
+
+  def non_html_format? = request.format.atom? || request.format.json?
 end
