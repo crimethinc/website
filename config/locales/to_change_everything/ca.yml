@@ -1,0 +1,359 @@
+---
+català:
+  layouts:
+    to_change_everything:
+      language_direction: ltr
+      lang_code: ca
+      head:
+        title: To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers'
+          Collective
+        meta:
+          title: To Change Everything, an anarchist appeal
+          description: The case for complete self-determination—a guide for the furious,
+            the curious, and the pure of heart
+          url: https://tochangeeverything.com/
+      menu:
+        toc: Table of Contents
+        language: English
+        share: Share
+      toc:
+        introduction: introduction
+        self: start with self-determination
+        answering: start by answering to ourselves
+        power: start by seeking power, not authority
+        relationships: start with relationships built on trust
+        reconciling: start by reconciling the individual and the whole
+        liberation: start with the liberation of desire
+        revolt: start with revolt
+        control: the problem is control
+        hierarchy: the problem is hierarchy
+        borders: the problem is borders
+        representation: the problem is representation
+        leaders: the problem is leaders
+        government: the problem is government
+        profit: the problem is profit
+        property: the problem is property
+        lastcrime: the last crime
+        anarchy: anarchy is
+        outro: outro
+        takeflight: take flight
+        next: next
+  to_change_everything:
+    show:
+      title_html: Per canviar-ho tot
+      subtitle_html: una crida anarquista
+      video_cte: Watch Video
+      video_url: https://player.vimeo.com/video/111159930
+      pdf_cte_html: Download<br />&nbsp;PDF
+      pdf_get_url: "/tce/get"
+      pdf_image: tce-cover-200.png
+      intro:
+        left_text_html: Si poguessis canviar alguna cosa, què canviaries? Aniries
+          de vacances durant la resta de la teva vida? Faries que els combustibles
+          fòssils deixessin de generar un canvi climàtic? Demanaries bancs i polítics
+          ètics? Segurament res és més irreal que esperar resultats diferents sense
+          fer cap canvi estructural. Les nostres lluites personals, econòmiques i
+          emocionals reflecteixen els desastres i conflictes a nivell global. Podríem
+          passar la resta dels nostres dies intentant apagar aquests incendis d'un
+          en un, però tots brollen de la mateixa font. Cap pedaç seria útil; hem de
+          repensar-ho tot d'acord amb una lògica diferent.
+        right_text_html: Per canviar qualsevol cosa, comença arreu
+      self:
+        left_text_html: comença per l'autodeterminació
+        right_text_html: |-
+          El fantasma de la llibertat segueix assetjant un món construït en el seu nom. Se'ns ha promès la completa autodeterminació: se suposa que totes les institucions de la nostra societat haurien d'atorgar-la. No obstant això, si tinguessis completa autodeterminació, què estaries fent ara mateix? Pensa en l'immens potencial de la teva vida: els vincles que podries crear, les experiències que podries viure, totes les formes amb les que podries omplir de sentit la teva existència. Quan vas néixer, semblava no haverhi límits pel que podries arribar a ser. Representaves pura
+
+          possibilitat.
+
+          En general, no ens aturem a imaginar res d'això. És només en els moments més bells, quan ens enamorem o aconseguim una gran fita, o quan visitem terres llunyanes, que sentim breument el vertigen del que podrien estar fetes
+
+          les nostres vides.
+
+          Què és el que limita el teu potencial? Quanta agència tens sobre l'entorn que t'envolta o sobre com passes el teu temps? Les burocràcies que t'avaluen en funció de com segueixes les instruccions, l'economia que et concedeix poder d'acord al benefici que generes, els reclutadors de l'exèrcit que insisteixen en què la millor manera de “ser tot el que pots ser” és sotmetre't a la seva autoritat... Creus que tot això et permet aprofitar al màxim la teva vida segons els teus propis criteris? El secret que no ens expliquen és que totes tenim completa autodeterminació: no perquè ens sigui concedida, sinó perquè ni tan sols la dictadura més totalitària podria llevar-nos-la. No obstant això, tan aviat com actuem per nosaltres mateixes entrem en conflicte amb les institucions que suposadament són allà per assegurar-nos la llibertat.
+        image_name: self
+        image_alt: shadow of a person climbing over a barbed-wire fence
+      answering:
+        left_text_html: comença per respondre la teva pròpia autoritat
+        right_text_html: |-
+          Als líders, caps i recaptadors d'impostos els encanta parlar de responsabilitat personal. Si assumíssim una responsabilitat completa per tots els nostres actes, continuaríem també seguint les seves instruccions? Al llarg de la història s'ha fet més mal per obediència que per malícia. Els arsenals dels exèrcits de tot el món són la manifestació física de la nostra voluntat d'obeir. Si vols estar segura de no contribuir mai a la guerra, el genocidi o l'opressió, el primer pas és deixar de complir
+
+          ordres.
+
+          Això també és vàlid pel que fa als teus valors. Incomptables líders i estructures demanden la teva submissió incondicional. Encara que volguessis cedir la responsabilitat de les teves decisions a algun déu o dogma, com sabries per quin decidir-te? T'agradi o no, tu ets qui ha de triar entre tots ells. En general, les persones simplement prenen aquesta decisió sobre la base del que els resulta més conegut o còmode. Som inevitablement responsables de les nostres creences i decisions. En respondre a la nostra pròpia autoritat en comptes de la de mandataris o manaments, entraríem potser en conflicte entre nosaltres, però almenys ho faríem sota els nostres propis criteris i no acumulant innecessàriament tragèdies al servei dels
+
+          objectius d'uns altres.
+        image_name: answering
+        image_alt: 1968 Olympics Black Power salute raised by the African-American
+          athletes Tommie Smith and John Carlos during their medal ceremony at the
+          1968 Summer Olympics in the Olympic Stadium in Mexico City. As they turned
+          to face their flags and hear the American national anthem, they each raised
+          a black-gloved fist and kept them raised until the anthem had finished
+      power:
+        left_text_html: comença per cercar poder, no autoritat
+        right_text_html: |-
+          Les treballadores que realitzen una feina tenen poder; els caps que els diuen què han de fer tenen autoritat. Els inquilins que mantenen un edifici tenen poder; el propietari, el nom del qual figura en el títol de propietat, té autoritat. Un riu té poder; un permís per construir una presa atorga autoritat. No hi ha res d'opressiu en el poder per se. Moltes formes de poder poden ser alliberadores: el poder de cuidar els teus éssers estimats, de defensar-te i resoldre conflictes, de practicar l'acupuntura, navegar en veler i gronxar-te en un trapezi. Hi ha maneres de desenvolupar les teves capacitats que també augmenten la llibertat de les altres. Tota persona que actua per realitzar el seu ple potencial ofereix un do a la resta. L'autoritat sobre una altra, d'altra banda, li usurpa el seu poder. El que prens d'algú, altres ho prendran de tu. L'autoritat
+
+          sempre s'obté des de dalt:
+
+          El soldat obeeix el general, qui respon davant el president, qui obté la seva autoritat de la Constitució. El capellà respon davant el bisbe, el bisbe davant el Papa, el Papa davant les Escriptures, que obtenen la seva autoritat de Déu. L'empleat respon davant l'amo, qui serveix al client, qui obté la
+
+          seva autoritat dels diners.
+
+          El policia realitza un desnonament derivat d'una ordre signada per un jutge, qui obté la seva autoritat de la llei…
+
+          Ser home, ser blanc, ser propietari: al cim d'aquestes piràmides no trobem ni tan sols dèspotes, tan sols construccions socials, fantasmes hipnotitzant la humanitat. En aquesta societat, poder i autoritat estan tan entrellaçats que amb prou feines podem distingir-los: tan sols podem obtenir poder a canvi d'obediència. Així i tot, sense llibertat el
+
+          poder no té valor.
+        image_name: power
+        image_alt: a worker in a gold mine confronts soldier keeping guard and grabs
+          his rifle by the barrel as a crowd of workers watch
+      relationships:
+        left_text_html: comença per construir relacions basades en la confiança
+        right_text_html: |-
+          En contrast amb l'autoritat, la confiança situa el poder en mans de qui la concedeix, no en qui la rep. La persona que ha guanyat la confiança d'unes altres, no necessita autoritat. Si algú no mereix confiança, segurament no hem de concedir-li autoritat! Pot haver-hi algú en qui confiem menys que en polítics i executius? Si els desequilibris de poder imposats no existissin, les persones se sentirien motivades a resoldre els seus conflictes de manera que totes quedessin satisfetes: se sentirien incentivades a guanyar-se la confiança entre si. La jerarquia elimina aquest incentiu i habilita les que gaudeixen d'autoritat a suprimir els conflictes en lloc de
+
+          resoldre'ls.
+
+          Idealment, l'amistat és un vincle entre iguales que es donen suport i es desafien l'una a l'altra, tot respectant l'autonomia d'ambdues. Aquest és un bon criteri per avaluar totes les nostres relacions. Sense els límits que actualment ens són imposats —ciutadania i il·legalitat, propietat i deute, les jerarquies de les corporacions i els exèrcits— podríem reconstruir les nostres relacions en base a la lliure associació i el suport mutu.
+        image_name: relationships
+        image_alt: at night, lit by streetlights, young protestors in Turkey form
+          a fire-brigade-line to transport cobblestones to the front lines of a confrontation
+          with police
+      reconciling:
+        left_text_html: comença per reconciliar l'individu amb el tot
+        right_text_html: |-
+          “Els teus drets acaben on comencen els drets de l'altre”. Segons aquesta lògica, com més persones, menys llibertat. Però la llibertat no és una petita bombolla de drets personals. No podem diferenciar-nos de les altres tan fàcilment. El riure i el badall són contagiosos, com també ho són l'entusiasme i la desesperança. Estic construïda amb els clixés que dic sense pensar, les cançons que repeteixo, les emocions que comparteixo amb la resta. Quan condueixes un cotxe, aquest contamina l'aire que respires; quan uses drogues farmacèutiques, aquestes es filtren a l'aigua de la qual tots bevem. El sistema que les altres accepten és aquell sota el qual tu has de viure, però quan unes altres ho desafien, tu també obtens una oportunitat per renegociar la teva realitat. La teva llibertat comença on comença la meva, i acaba on acaba la
+
+          meva.
+
+          No som individus separats. Els nostres cossos estan conformats de milers de diferents espècies vivint en simbiosis: no són castells impenetrables, són un conjunt de processos continus pels quals nutrients i microbis passen sense parar. Vivim en simbiosi amb milers d'altres espècies: els boscos inhalen el que nosaltres exhalem. Una guarda de llops en moviment o un vespre que murmura el cant de les granotes són individus, tan unitaris com qualsevol dels nostres cossos. No actuem en el buit, propulsades per la raó; en tot moment les marees del cosmos ens travessen. El llenguatge serveix per comunicar-nos només perquè el tenim en comú. El mateix es pot dir de les idees i dels desitjos: podem comunicar-los perquè són més grans que nosaltres. Cadascuna de nosaltres està formada per un caos de forces contràries, i totes elles s'estenen en el temps i en l'espai més enllà de nosaltres. Quan triem quines d'elles cultivar, determinem què és el que potenciarem en cada persona que
+
+          ens creuem.
+
+          La llibertat no és ni una possessió ni una propietat, és una relació. No es tracta de protegir-nos del món exterior, sinó d'entrellaçar-nos d'una forma que maximitzi les possibilitats. Això no significa que haguem de perseguir el consens per si mateix: tant el conflicte com el consens poden expandir-nos i ennoblir-nos, sempre que cap poder centralitzat ens imposi un acord o transformi un conflicte en una competició en la qual la guanyadora s'ho emporta tot. En comptes de fragmentar el món en petits feus, aprofitem al màxim la nostra interconnexió.
+        image_name: reconciling
+        image_alt: kid hugging tree in forest, looking up into the canopy
+      liberation:
+        left_text_html: comença per l'alliberament del desig
+        right_text_html: |-
+          Quan creixem en aquesta societat, ni tan sols les nostres passions ens pertanyen: aquestes són conreades per la publicitat i altres formes de propaganda per mantenirnos corrent com ratolins sobre les rodes del mercat. Gràcies a l'adoctrinament, les persones poden sentir-se orgulloses de si mateixes per fer coses que segurament a llarg termini les faran infelices. Estem tancades en el nostre sofriment i els nostres plaers són les cadenes que
+
+          ens atrapen.
+
+          Per ser veritablement lliures, necessitem tenir agència sobre els processos que produeixen els nostres desitjos. L'alliberament no solament significa satisfer els desitjos que tenim avui. També expandir la nostra noció d'allò possible perquè els nostres desitjos puguin mutar, juntament amb les realitats que aquests ens empenyen a crear. Això implica renunciar al plaer que obtenim en imposar, dominar i posseir, per poder buscar plaers que ens arrenquin de la maquinària de l'obediència i la competència. Si alguna vegada has trencat amb una addicció, has assaborit el que significa transformar els
+
+          teus desitjos.
+        image_name: liberation
+        image_alt: two protestors, adorned with gas masks and balaclavas, dance the
+          tango together in the street
+      revolt:
+        left_text_html: comença per rebel·lar-te
+        right_text_html: |-
+          De la mateixa manera en què la gent culpa individus polítics concrets de la corrupció de la política, els feixistes solen culpar un grup específic de persones d'un problema sistèmic —per exemple, els jueus pel capitalisme mercantilista o els immigrants per la recessió econòmica—. Però el problema són els sistemes per si mateixos. Sense importar qui porti les regnes, aquests sistemes produeixen sempre els mateixos desequilibris de poder. El problema no és que estiguin funcionant malament,
+
+          sinó que estan funcionant.
+
+          Els nostres enemics no són éssers humans; són les institucions i rutines que ens allunyen les unes de les altres i de nosaltres mateixes. Hi ha més conflictes dins nostre que entre nosaltres. Les mateixes esquerdes que travessen la nostra civilització també travessen les nostres amistats i els nostres cors. Això no és un conflicte entre persones sinó entre diferents formes de relacionar-se, diferents formes de viure. Quan renunciem als nostres rols dins l'ordre imperant, obrim esquerdes que conviden a unes altres a fer el mateix. El millor seria eliminar completament el sistema de dominació, no administrar les seves baules de manera més justa ni invertir les posicions de dominadores i dominades. Tampoc serviria estabilitzar el sistema mitjançant reformes. El sentit de protestar no és exigir regles o governants més legítims, sinó demostrar que podem actuar juntes, encoratjant altres a fer el mateix i dissuadint les autoritats d'interferir. No és una qüestió de guerra —és a dir, un conflicte binari entre enemics militaritzats— sinó, més aviat, de desobediència
+
+          contagiosa.
+
+          No n'hi ha prou amb educar, discutir i esperar un canvi en les ments i els cors de les altres. Fins que les idees no s'expressin en l'acció, de manera que les persones es vegin
+
+          confrontades a decidir sobre coses concretes, la conversa romandrà abstracta. La majoria de la gent no sol interessarse per les discussions teòriques. Però quan allò que hi ha en joc és rellevant, quan passa alguna cosa gran en que poden veure's diferències significatives entre postures oposades, moltes triaran posicionar-se. No necessitem de la unanimitat ni d'una comprensió holística del món sencer, tampoc un mapa amb una destinació determinada: tan sols el coratge de llançar-nos a escollir un camí diferent.
+        image_name: revolt
+        image_alt: A anonymous man stands in front of a column of tanks on June 5,
+          1989, the morning after the Chinese military had suppressed the Tiananmen
+          Square protests of 1989 by force, who later became known as the Tank Man.
+          The tanks maneuvered to pass by the man, and he moved to continue to obstruct
+          them, in something like a dance.
+      control:
+        left_text_html: el problema és el control
+        right_text_html: |-
+          Quines són les pistes que indiquen que estàs en una relació abusiva? L'abusador pot intentar controlar el teu comportament o dir-te què has de pensar; impedir o regular el teu accés a recursos; utilitzar amenaces o violència contra tu, o mantenir-te en una posició de dependència, sota una vigilància constant. Això descriu el comportament d'abusadors individuals, però el mateix pot aplicar-se a la Troika (CE, BCE, FMI), la NSA (Agència de Seguretat Nacional dels EUA) i a la majoria de les institucions que governen una societat com aquesta. Pràcticament totes elles es basen en la idea que els éssers humans necessiten ser vigilats, controlats, administrats. Quant més grans són els desequilibris que se'ns imposen, més control es necessita per preservar-los. A un extrem de l'espectre del poder el control és exercit brutalment de forma explícita: atacs d'avions no tripulats, unitats d'antiavalots, cel·les d'aïllament, discriminació policial racista. A l'altre extrem, el control és omnipresent i invisible, inherent a la pròpia infraestructura de la societat: les equacions que determinen el crèdit i el cost de les assegurances, la manera en què es recol·lecten les estadístiques i es transformen en planificació urbanística, l'estructura de les pàgines web per buscar parella i les plataformes de les xarxes socials. Si bé la NSA controla tot allò que fem online, no té tant control sobre la nostra realitat com els algoritmes que determinen el que veiem quan
+
+          ingressem a Facebook.
+
+          Quan les infinites possibilitats de vida hagin estat reduïdes a un ventall d'opcions codificades en uns i zeros, no hi haurà més conflictes entre el sistema que habitem i les vides que podríem imaginar: no perquè haurem aconseguit l'alliberament total sinó perquè haurem perfeccionat totalment aquest sistema. Llibertat no significa triar entre opcions, sinó poder formular les
+
+          preguntes.
+        image_name: control
+        image_alt: a cop dressed in fancy riot gear leans out of his open patrol car
+          door and uses a camcorder to record protestors who are not pictured
+      hierarchy:
+        left_text_html: el problema és la jerarquia
+        right_text_html: 'Existeixen molts mecanismes per imposar la desigualtat.
+          Alguns depenen d''un aparell centralitzat, com el sistema judicial. Altres
+          poden funcionar de manera més informal, com l''amiguisme en els negocis
+          o els rols de gènere. Alguns d''aquests mecanismes s''han deslegitimat quasi
+          completament. Poques persones creuen encara en el mandat diví dels reis,
+          malgrat que durant segles no va poder pensar-se cap altre fonament per a
+          la societat. Altres mecanismes estan tan profundament incorporats que no
+          podem comprendre la vida sense ells: qui podria imaginar un món sense drets
+          de propietat? No obstant això, tots aquests dispositius són construccions
+          socials: són reals, però no inevitables. L''existència de propietaris i
+          caps d''empresa no és més natural, necessari o beneficiós que l''existència
+          d''emperadors. Tots aquests mecanismes es van desenvolupar junts, reforçant-se
+          entre si. La història del racisme, per exemple, és inseparable de la història
+          del capitalisme: cap dels dos pot concebre''s sense la colonització, l''esclavitud
+          o la segregació per color que dividien les treballadores i segueixen determinant
+          qui omple les presons i els barris on impera la misèria a tot el món. De
+          la mateixa manera, sense la infraestructura de l''Estat i la jerarquia,
+          els prejudicis individuals mai podrien imposar la supremacia blanca sistèmica.
+          Que algú negre, dona o indígena pugui presidir aquestes estructures només
+          aconsegueix estabilitzar-les: és l''excepció que justifica la regla. Per
+          dir-ho d''una altra forma: mentre hi hagi policia, qui penses que reprimirà?
+          Mentre hi hagi presons, amb qui penses que s''ompliran? Mentre hi hagi pobresa,
+          qui penses que serà pobre? És ingenu creure que podríem aconseguir la igualtat
+          en una societat basada en la jerarquia. Pots mesclar les cartes, però la
+          baralla segueix sent la mateixa.'
+        image_name: hierarchy
+        image_alt: a mustachioed cop in riot gear wearing aviator sunglasses stands
+          guard in front of several Ku Klux Klan members in full robes, one of whom
+          carries a American flag
+      borders:
+        left_text_html: el problema són les fronteres
+        right_text_html: 'Si un exèrcit estranger envaís aquesta terra, talés els
+          boscos, enverinés els rius i forcés els infants a créixer jurant fidelitat
+          cap a ell, qui no s''aixecaria en armes en la seva contra? Però quan és
+          el govern local que fa això, els patriotes li reten voluntàriament la seva
+          obediència, els seus impostos i les seves filles. Les fronteres no ens protegeixen,
+          ens divideixen: creen friccions innecessàries amb les excloses al mateix
+          temps que oculten les veritables diferències entre les incloses. Fins el
+          govern més democràtic està fundat en aquesta divisió entre participants
+          i aliens, els legítims i els il·legítims. A l''antiga Atenes, el famós bressol
+          de la democràcia, només una fracció dels homes eren inclosos en el procés
+          polític; els Pares fundadors de la democràcia moderna nord-americana posseïen
+          esclaus. Apel·lar a la ciutadania imposa una barrera entre inclosos i exclosos
+          dins la UE: milions de persones sense documentació es veuen forçades a la
+          repatriació, l''explotació o, fins i tot, la mort al creuar les fronteres
+          de la UE. A elles no se les tracta com a «ciutadanes». L''ideal liberal
+          és expandir les línies d''inclusió fins que tothom sigui integrat en un
+          vast i únic projecte democràtic. Però la desigualtat està codificada dins
+          de la pròpia estructura. En cada aspecte d''aquesta societat existeixen
+          milers de fronteres imperceptibles que ens divideixen entre poderosos i
+          impotents: controls de seguretat, qualificacions sobre el crèdit, contrassenyes
+          d''accés a bases de dades, nivells de poder adquisitiu. Necessitem formes
+          de pertinença que no estiguin fonamentades en l''exclusió, que no centralitzin
+          el poder ni la legitimitat, que no empresonin l''empatia.'
+        image_name: borders
+        image_alt: a grouple of people sits upon a tall boundary fence they have climbed
+      representation:
+        left_text_html: el problema és la representació
+        right_text_html: |-
+          Només pots tenir poder quan l'exerceixes; només pots descobrir què t'interessa quan ho experimentes. En veure'ns obligades a canalitzar a través de representants les maneres d'influir en el món, o en haver de traduir-les al protocol de les institucions, ens distanciem una de l'altra i del nostre propi potencial. Cada aspecte de la nostra agència que deleguem reapareix com alguna cosa irreconeixible i hostil davant nosaltres. La decepció constant amb els polítics només demostra quant de poder els hem cedit sobre les nostres vides; la violència de la policia és l'obscura conseqüència del nostre desig d'evitar la responsabilitat personal sobre el que
+
+          passa als nostres barris.
+
+          En l'era digital, en la que cadascú ha de ser la seva pròpia secretària per manejar la seva imatge pública, fins i tot la nostra reputació se'ns ha tornat externa: com un vampir que s'alimenta de nosaltres. Si no estéssim tan aïllades les unes de les altres, competint per vendre'ns dins els diferents mercats professionals i socials, invertiríem tant de temps i energia en crear perfils, falsos déus fets a la
+
+          nostra imatge i semblança?
+
+          Som irreductibles. Cap delegat ni abstracció pot reemplaçar-nos. En reduir els éssers humans a dades demogràfiques i l'experiència pura a simple informació, perdem de vista tot el que hi ha d'únic i valuós al món. Necessitem presència, immediatesa, contacte directe amb les altres, control directe sobre les nostres vides: coses que ni la representació ni els representants ens
+
+          poden atorgar.
+        image_name: representation
+        image_alt: a woman of asian ethnicity works as a mannequin factory stocking
+          a shelves that are full of caucasian mannequin heads
+      leaders:
+        left_text_html: el problema són els líders
+        right_text_html: |-
+          El lideratge és un desordre social en el qual la majoria dels participants en un grup no prenen iniciativa ni pensen críticament sobre les seves accions. Mentre entenguem l'agència com una propietat de certs individus en lloc d'una relació entre persones, sempre serem dependents dels líders i estarem a la seva mercè. Els líders més exemplars són igual de perillosos que aquells òbviament corruptes, en el sentit que totes les seves lloables qualitats només reforcen el seu estatus i l'obediència dels altres, alhora que reforcen la legitimitat
+
+          del lideratge en si.
+
+          Quan la policia arriba a una protesta, el primer que pregunta sempre és “qui és el responsable?”, no perquè el lideratge sigui essencial a l'acció col·lectiva, sinó perquè representa una vulnerabilitat. Els conqueridors van fer la mateixa pregunta quan van arribar a l'anomenat Nou Món; allí on trobaven una resposta, s'estalviaven segles de treball intentant sotmetre la població. Mentre hi hagi un líder, aquest pot ser comprat, reemplaçat o pres com a ostatge. En el millor dels casos, dependre dels líders pot ser un taló d'Aquil·les; i en el pitjor dels casos, reprodueix els interessos i estructures de poder de les autoritats a l'interior de les comunitats que se'ls oposen. És millor si totes ens sentim amb la capacitat d'incidir en les nostres vides i tenim un projecte propi.
+        image_name: leaders
+        image_alt: a portly politician talks into a bouquet of press microphones that
+          surround him
+      government:
+        left_text_html: el problema són els governs
+        right_text_html: |-
+          Els governs ens prometen drets, però només poden llevar-nos llibertats. El concepte de drets implica que existeix un poder central que els atorga i els protegeix. Però tot allò que l'Estat pot garantir, també té el poder per eliminar-ho. Donar poder al govern per solucionar un problema només li obre la porta per crear més problemes. A més, els governs tampoc generen poder del no-res: és el nostre poder el que utilitzen i podríem emprar-lo de manera molt més efectiva sense la maquinària de
+
+          la representació.
+
+          Fins la més liberal de les democràcies comparteix el mateix principi que la més despòtica de les autocràcies: la centralització del poder i de la legitimitat en una estructura, la funció de la qual és la monopolització de l'ús de la força. No importa si els buròcrates que operen en aquesta estructura responen davant un rei, un president, o un electorat. Les lleis, la burocràcia i la policia són més antigues que la democràcia: funcionen de la mateixa manera tant en una democràcia com en una dictadura. L'única diferència és que, atès que podem votar sobre qui les administra, suposadament hauríem de veure-les com alguna cosa pròpia —tot i que aquestes són utilitzades en contra nostra. Les dictadures són inherentment inestables: es pot massacrar, empresonar i rentar el cervell de generacions senceres, que les seves filles inventaran novament la lluita per la llibertat. Però si es promet a cada persona l'oportunitat d'imposar sobre les seves iguals la voluntat de la majoria, totes es llançaran de cap a sostenir un sistema que les divideix. Quanta més influència creu tenir la gent sobre les institucions coercitives de l'Estat, més populars poden tornar-se aquestes institucions. Potser això pugui explicar per què l'expansió global de la democràcia coincideix amb la increïble desigualtat en la distribució dels recursos i del poder: cap altre sistema de govern podria estabilitzar una situació tan precària.
+
+          Quan el poder està centralitzat, les persones han d'obtenir domini sobre altres per guanyar una mica d'influència sobre el seu propi destí. Les lluites per l'autonomia són canalitzades en disputes pel poder polític: fixem-nos en les nacions postcolonials on hi han hagut guerres civils entre pobles que anteriorment havien coexistit en pau. Els qui tenen el poder només poden retenir-lo per mitjà de la guerra perpètua, tant contra pobles estrangers, com contra les seves pròpies poblacions: l'exèrcit espanyol va ser retirat de l'Iraq, però es dedica aquí a reprimir vagues com la de controladores aèries. Allà on existeixin jerarquies, aquestes faciliten que els de dalt centralitzin el poder. Construir més límits legals en el sistema només implica que la nostra protecció depèn justament d'allò del que hauríem de protegir-nos. L'única forma de pressionar les autoritats sense que siguem absorbides en el seu joc és desenvolupar xarxes horitzontals que puguin actuar autònomament. Si aconseguim tenir el poder suficient per forçar les autoritats a prendre'ns seriosament, també tindrem el poder suficient per resoldre els nostres problemes sense elles. No existeix un camí cap a la llibertat que no sigui mitjançant la pròpia llibertat. Més que un únic canal on concentrar tota la nostra agència, necessitem una àmplia gamma d'expressions des d'on utilitzar el nostre poder. Més que una única forma de legitimitat, necessitem espai per a múltiples narratives. En lloc de la coerció inherent a qualsevol govern, necessitem estructures pròpies per a la presa de decisions que promoguin l'autonomia, i pràctiques d'autodefensa que permetin mantenir a ratlla les que tinguin pretensions d'autoritat.
+        image_name: government
+        image_alt: large conference table at which world leaders are seated, surrounded
+          by press and their minions, a summit meeting with greek columns of marble
+          and a traditional fresco in the dome above
+      profit:
+        left_text_html: el problema és el lucre
+        right_text_html: |-
+          El diner és el mecanisme ideal per implementar la desigualtat. És abstracte: sembla com si pogués representar-ho tot. És universal: persones que no tenen res en comú l'accepten com un fet natural. És impersonal: a diferència dels privilegis hereditaris, pot ser transferit instantàniament d'una persona a una altra. És fluït: com més fàcil és canviar de posició en una jerarquia, més estable és la jerarquia en si. Moltes persones que segurament es rebel·larien contra un dictador accepten voluntàriament l'autoritat del mercat. Quan tot el valor es concentra en un únic instrument, fins i tot els moments irrepetibles de la nostra vida es buiden de significat i tornen fixos en un càlcul abstracte de poder. Tot allò que no pot ser quantificat financerament queda fora. La vida es presenta com una baralla caòtica pel guany econòmic: cadascú contra totes les altres, vendre o ser venuda. Lucrar-se significa guanyar més control sobre els recursos de la societat en relació a les altres. No podem lucrar-nos totes alhora; perquè una persona pugui lucrar-se, unes altres han de perdre influència. Quan les empresàries es lucren del treball de les treballadores significa que com més treballin les treballadores, més gran serà la bretxa econòmica entre ambdues
+
+          classes.
+
+          Un sistema impulsat pel lucre produeix pobresa en la mateixa mesura que concentra la riquesa. La pressió per competir genera innovacions més ràpidament que qualsevol sistema anterior, però produeix, paral·lelament, desigualtats cada vegada majors: abans qui anava a cavall regnava sobre qui anava a peu; avui els bombarders volen sobre conductors i persones sense llar. I degut a que totes han de perseguir el lucre enlloc de fer les coses simplement perquè volen fer-les, els resultats de tot aquest procés poden esdevenir desastrosos. El canvi climàtic és només l'última d'una sèrie de catàstrofes que els capitalistes més poderosos encara no han tingut el poder de frenar. De fet, no oblidem que el capitalisme no premia les emprenedores per solucionar les crisis, sinó per lucrar-se amb elles.
+        image_name: profit
+        image_alt: a chauffeur holds open the door to a large Audi as a wealthy businessman
+          exits a helicopter and proceeds across the helipad towards the car
+      property:
+        left_text_html: el problema és la propietat
+        right_text_html: |-
+          La pedra angular del capitalisme és el dret a la propietat, una altra construcció social que heretem de reis i aristòcrates. Avui, la propietat passa de mà en mà més ràpid que llavors però el concepte és el mateix: la idea de possessió legitima l'ús de la violència per imposar desequilibris artificials en l'accés a la terra i els recursos. Algunes persones imaginen que la propietat podria existir sense l'Estat. Però els drets de propietat manquen de significat si no hi ha una autoritat centralitzada per imposarlos. Al mateix temps, mentre existeixi una autoritat centralitzada, res és tampoc veritablement teu. A més, els diners que guanyes són fabricats per l'Estat i estan subjectes a impostos i a la inflació: no els controlem mai les persones. La teva casa no et pertany a tu, sinó al banc que et va donar la hipoteca. I tot i que ja l'hagis pagada sencera, el dret d'expropiació de l'Estat sempre pot llevar-te-la. Què es necessitaria per protegir les coses que ens són importants? Els governs existeixen només en virtut del que ens lleven; sempre ens prendran més del que ens donen. Els mercats ens premien només per aixafar les nostres iguals, i a les altres per aixafar-nos a nosaltres. L'única seguretat real està en els nostres vincles socials: si volem estar tranquil·les pel que fa a la nostra protecció, necessitem xarxes de suport mutu que puguin generar-la elles mateixes. Sense diners ni drets de propietat, les nostres relacions amb les coses estarien determinades per les nostres relacions amb les altres. Actualment, és exactament a l'inrevés: les nostres relacions amb les altres estan determinades per les nostres relacions amb les coses. Abolir la propietat no significaria perdre totes les teves pertinences; significaria que cap policia ni cap
+
+          caiguda de la borsa podria llevar-te les coses de les quals depens. En lloc de respondre a la burocràcia, actuaríem des
+
+          de les necessitats humanes.
+
+          La por més gran d'una persona garrepa és una societat sense propietat, ja que sense ella només rebria el respecte que mereix. Sense diners, les persones són valorades pel que contribueixen a les vides de les altres, no per la seva capacitat de subornar unes altres perquè facin el que elles vulguin. Sense el lucre, tot esforç es transforma en la seva pròpia recompensa, de manera que no hi ha cap incentiu per activitats destructives o sense sentit. Les coses que realment valen la pena a la vida pertanyen a l'economia de l'abundància: la passió, la companyonia i la generositat. Es necessiten legions de policies i especuladors immobiliaris per imposar l'escassetat que ens atrapa en aquesta lluita quotidiana per la supervivència.
+        image_name: property
+        image_alt: an abandoned building, now occupied, with protest banners in the
+          window, being used as community organizing location
+      lastcrime:
+        left_text_html: l'últim crim
+        right_text_html: |-
+          Tot ordre està fundat en un crim contra l'ordre anterior: el crim que el va dissoldre. Després, el nou ordre arriba a ser percebut com a legítim, a mesura que la gent comença a donar-lo per fet. El crim fundacional del capitalisme europeu van ser els tancaments i privatitzacions dels béns comuns (terres, boscos, gestió de l'aigua), juntament amb l'enduriment de la divisió sexual del treball i la colonització d'Amèrica. El crim fundacional de la societat que està per arribar —si aconseguim sobreviure a aquesta—abandonarà les lleis i les institucions d'avui. La categoria de crim conté tot el que excedeix els límits d'una societat, el millor i el pitjor d'ella. Un sistema està amenaçat per tot allò que no pot incorporar o controlar. Tot ordre conté les llavors
+
+          de la seva pròpia destrucció.
+
+          Res dura per sempre; això també s'aplica als imperis i les civilitzacions, com és el cas de l'Imperi Romà, que va caure tot i considerar-se "etern" durant els segles de la seva esplendor. Però, què podria suplantar la nostra civilització, l'Imperi actual? Podem imaginar un ordre que no estigui basat en una divisió de la vida entre allò legítim i l'il·legítim, allò legal i criminal, entre governants
+
+          i governades? Quin podria ser l'últim crim?
+        image_name: lastcrime
+        image_alt: a protestor with his face concealed in the act of throwing a lit
+          molotov cocktail during a protest, in front of a huge concrete wall
+      anarchy:
+        first_html: |-
+          L'ANARQUIA és el que passa allà on l'ordre no s'imposa per la força. És la llibertat: el procés de reinventar-nos contínuament, nosaltres mateixes i les nostres relacions. Qualsevol procés o fenomen que transcorri lliurement —una selva, un cercle d'amigues, el teu propi cos— és una harmonia anàrquica que es manté en canvi constant. D'altra banda, el control de dalt a baix només pot ser mantingut per coacció i coerció: la precària disciplina de la sala d'expulsions del col·legi, l'extens monocultiu on pesticides i herbicides defensen files estèrils de blat de moro transgènic, la fràgil hegemonia d'un
+
+          superpoder.
+
+          L'ANARQUISME és la idea que defensa que totes tenim dret a la completa autodeterminació. Cap llei, govern, o procés de presa de decisions és més important que les necessitats i els desitjos dels éssers humans de carn i ossos. Les persones han de ser lliures per modelar les seves relacions consensuadament i per defensar-se per elles mateixes com ho
+
+          creguin convenient.
+
+          L'anarquisme no és un dogma ni un esquema. No és un sistema que suposadament funcionaria si s'apliqués correctament, com la democràcia; ni tampoc una meta a la que arribar en un futur distant, com el comunisme. És una manera d'actuar i relacionar-se que podem posar en pràctica ara mateix. Sobre qualsevol sistema de valors o via d'acció, podem començar per demanar-nos: com distribueix aquest el poder? ELS ANARQUISTES s'oposen a tota forma de
+
+          jerarquia: a tota moneda o sistema que concentri el poder en mans d'unes poques, a tot mecanisme que ens distanciï del nostre potencial. En contra de tot sistema tancat, gaudim d'allò desconegut que s'estén davant nostre, sabem gaudir del caos que portem a dins a través del qual podem ser lliures.
+        second_html: |-
+          Aquest projecte s'origina des de CrimethInc., una xarxa internacional de persones amb set de
+
+          revolució.
+
+          Pots trobar molts altres exemples dels nostres treballs a crimethinc.com— llibres, pel·lícules, podcasts, i reportatges propis sobre les revoltes a
+
+          tot el món.
+
+          Aquest text ha estat elaborat en cooperació amb companyes dels cinc continents; centenars de voluntàries han col·laborat per fer possible la seva impressió i perquè aquest fulletó t'arribi a les
+
+          mans.
+
+          Hi ha una versió digital disponible en diverses llengües a tochangeeverything.com, amb altres materials relacionats. Pots obtenir més còpies en paper pagant només les despeses d'enviament.
+        third_html: <p><span class="blue black">Anarchists</span> oppose all forms
+          of hierarchy—every currency that concentrates power into the hands of a
+          few, every mechanism that puts us at a distance from our potential. Against
+          closed systems, we relish the unknown before us, the chaos within us by
+          virtue of which we are able to be free.</p>
+      outro:
+        left_text_html: ''
+        right_text_html: |-
+          Quan veiem el que les institucions i mecanismes de dominació tenen en comú, es fa evident que les nostres lluites individuals també són part d'alguna cosa més gran que nosaltres, d'alguna cosa que podria connectar-nos. Quan ens unim a partir d'aquesta connexió, tot canvia: no només les nostres lluites, sinó també la consciència de la nostra potencialitat, la nostra capacitat per l'alegria, la sensació de que les nostres vides tenen un sentit. L'única cosa que cal per trobar-nos és començar a actuar d'acord amb una lògica diferent.
+
+          Per canviar-ho tot, comença per qualsevol lloc .
+      take_flight_html: NO T'AFERRIS AL VELL MÓN
+      next_path: "/begin"
+      next_text: crimethinc.com
