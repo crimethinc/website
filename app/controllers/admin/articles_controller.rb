@@ -98,7 +98,7 @@ module Admin
                                              .strip
 
       # Populate Aricle#content with the markdown
-      params.expect(:article)[:content] = markdown_from_html
+      params.require(:article)[:content] = markdown_from_html
       @article.content = markdown_from_html
       # /TEMP
     end
