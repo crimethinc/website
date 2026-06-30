@@ -34,6 +34,13 @@ RSpec.describe 'Support' do
         expect(response).to redirect_to('https://checkout.stripe.com/c/pay/test_session')
       end
 
+      it 'does not 400 when the amount param is missing' do
+        post support_create_path, params: { monthly: 'false' }
+
+        expect(response).not_to have_http_status(:bad_request)
+        expect(response).to redirect_to('https://checkout.stripe.com/c/pay/test_session')
+      end
+
       it 'sets line_items with inline price_data for the correct amount' do
         post support_create_path, params: { amount: 100, monthly: 'false' }
 
