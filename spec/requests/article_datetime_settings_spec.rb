@@ -25,7 +25,7 @@ RSpec.describe 'admin article controller set_published_at before_action set publ
         end
       end
 
-      it { is_expected.to eq expected_published_at }
+      it { is_expected.to eq expected_create_published_at }
     end
 
     context "when updating an existing article record with role: #{user_role}" do
@@ -36,7 +36,7 @@ RSpec.describe 'admin article controller set_published_at before_action set publ
         end
       end
 
-      it { is_expected.to eq expected_published_at }
+      it { is_expected.to eq expected_update_published_at }
     end
   end
 
@@ -46,7 +46,8 @@ RSpec.describe 'admin article controller set_published_at before_action set publ
     let(:existing_article) { create(:article, :draft, published_at: DateTime.parse('2018-12-25T03:59:00Z')) }
 
     it_behaves_like 'handles the publication date', :author do
-      let(:expected_published_at) { '2018-12-24 11:59:00 UTC' }
+      let(:expected_create_published_at) { '2018-12-24 11:59:00 UTC' }
+      let(:expected_update_published_at) { '2018-12-24 11:59:00 UTC' }
     end
   end
 
@@ -58,11 +59,13 @@ RSpec.describe 'admin article controller set_published_at before_action set publ
       let(:article_attrs) { published_attrs.merge(published_at: nil) }
 
       it_behaves_like 'handles the publication date', :publisher do
-        let(:expected_published_at) { (now.utc + 100.years).to_s }
+        let(:expected_create_published_at) { (now.utc + 100.years).to_s }
+        let(:expected_update_published_at) { existing_article.published_at.to_s }
       end
 
       it_behaves_like 'handles the publication date', :author do
-        let(:expected_published_at) { '' }
+        let(:expected_create_published_at) { '' }
+        let(:expected_update_published_at) { existing_article.published_at.to_s }
       end
     end
 
@@ -71,11 +74,13 @@ RSpec.describe 'admin article controller set_published_at before_action set publ
       let(:article_attrs) { draft_attrs.merge(published_at: nil) }
 
       it_behaves_like 'handles the publication date', :publisher do
-        let(:expected_published_at) { '' }
+        let(:expected_create_published_at) { '' }
+        let(:expected_update_published_at) { '' }
       end
 
       it_behaves_like 'handles the publication date', :author do
-        let(:expected_published_at) { '' }
+        let(:expected_create_published_at) { '' }
+        let(:expected_update_published_at) { '' }
       end
     end
   end
