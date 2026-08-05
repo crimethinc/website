@@ -1,0 +1,372 @@
+---
+français:
+  layouts:
+    to_change_everything:
+      language_direction: ltr
+      lang_code: fr-fr
+      head:
+        title: To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers'
+          Collective
+        meta:
+          title: To Change Everything, an anarchist appeal
+          description: The case for complete self-determination—a guide for the furious,
+            the curious, and the pure of heart
+          url: https://tochangeeverything.com/
+      menu:
+        toc: Table of Contents
+        language: English
+        share: Share
+      toc:
+        introduction: introduction
+        self: start with self-determination
+        answering: start by answering to ourselves
+        power: start by seeking power, not authority
+        relationships: start with relationships built on trust
+        reconciling: start by reconciling the individual and the whole
+        liberation: start with the liberation of desire
+        revolt: start with revolt
+        control: the problem is control
+        hierarchy: the problem is hierarchy
+        borders: the problem is borders
+        representation: the problem is representation
+        leaders: the problem is leaders
+        government: the problem is government
+        profit: the problem is profit
+        property: the problem is property
+        lastcrime: the last crime
+        anarchy: anarchy is
+        outro: outro
+        takeflight: take flight
+        next: next
+  to_change_everything:
+    show:
+      title_html: Pour Tout Changer
+      subtitle_html: un appel anarchiste
+      video_cte: Watch Video
+      video_url: https://player.vimeo.com/video/111159930
+      pdf_cte_html: Download<br />&nbsp;PDF
+      pdf_get_url: "/tce/get"
+      pdf_image: tce-cover-200.png
+      intro:
+        left_text_html: Si tu avais la possibilité de changer quelque chose, n’importe
+          quoi, que changerais-tu ? Partirais-tu en vacances jusqu’à la fin de tes
+          jours ? Ferais-tu en sorte que les énergies fossiles ne soient plus responsables
+          des changements climatiques ? Exigerais-tu des banques et politiciens qu’ils
+          se comportent de manière éthique ? De toute façon, tu conviendras qu’il
+          serait complétement irréaliste de ne rien changer et d’espérer en retour
+          des résultats différents. Toutes nos luttes financières, émotionnelles et
+          personnelles reflètent les bouleversements et les catastrophes qui se déploient
+          à l’échelle planétaire. Nous pourrions passer le reste de nos vies à tenter
+          d’éteindre ces feux un à un, malheureusement ils ont tous pour source le
+          même foyer. Aucune solution isolée n’y fera ; il nous faut tout repenser
+          selon une autre logique.
+        right_text_html: Pour changer quoi que ce soit, il faut commencer partout.
+      self:
+        left_text_html: à commencer par l’autodétermination
+        right_text_html: |-
+          Le spectre de la liberté hante toujours ce monde soi-disant façonné à son image. On nous a promis une autodétermination totale et toutes les institutions de nos sociétés sont censées nous la garantir. Si tu jouissais d’une parfaite autodétermination, que ferais-tu en ce moment ? Imagine l’ensemble des possibilités : les relations et amitiés que tu pourrais nouer, les expériences que tu pourrais vivre, tout ce que tu pourrais entreprendre pour donner un sens à ta vie. A ta naissance, il n’y avait aucune limite à ce que tu pouvais devenir et accomplir. Tout était possible. Habituellement, nous prenons rarement le temps de réfléchir à cela. Seulement, peut-être, dans les meilleurs moments – lorsque nous tombons amoureuses/eux, connaissons un succès ou une réussite personnelle, ou visitons un pays jusqu’alors méconnu – capturons-nous brièvement l’essence même de ce qu’aurait pu être, ou de tout ce qui pourrait être notre vie ? Qu’est-ce qui t’empêche de réaliser pleinement ton potentiel ? Quelle prise as-tu réellement sur ton environnement, ton milieu de vie, et sur la façon dont tu passes ton temps ? Les bureaucraties qui ne t’estiment que si tu obéis à leurs directives, l’économie qui ne te permet d’agir que si tu génères du profit, les recruteurs de l’armée de terre (Ministère de la Défense) qui insistent sur le fait que le meilleur moyen de « devenir soi-même » est de s’engager « pour soi et pour les autres » en se soumettant à leur autorité – ces institutions te permettent-elles de tirer le meilleur parti de ta vie, selon tes propres
+
+          critères et conditions ?
+
+          Le secret de Polichinelle est que la pleine autodétermination est bel et bien en nous : non pas parce qu’elle nous est accordée, mais parce que même la plus totalitaire des dictatures ne saurait nous en priver. Pourtant, aussitôt que nous agissons par et pour nous-mêmes, nous entrons en conflit avec chacune des institutions qui sont censées
+
+          garantir notre liberté.
+        image_name: self
+        image_alt: shadow of a person climbing over a barbed-wire fence
+      answering:
+        left_text_html: à commencer par ne devoir rendre de compte qu’à soi-même
+        right_text_html: Les gestionnaires et les percepteurs d’impôts adorent parler
+          de responsabilité personnelle. Mais si nous assumions entièrement la responsabilité
+          de nos propres actions, quelle attention porterions-nous à leurs directives
+          ? Tout au long de l’histoire, l’obéissance aveugle a causé bien plus de
+          mal que la malveillance. Les arsenaux des forces armées du monde entier
+          sont la manifestation physique de notre volonté de nous soumettre à l’autorité
+          d’autrui. Si tu veux être sûr(e) et certain(e) de ne jamais participer aux
+          guerres, génocides et autres formes d’oppression, la première étape est
+          de refuser d’obéir aux ordres. Cela vaut également pour les systèmes de
+          valeurs personnelles. D’innombrables dirigeants et règlements exigent notre
+          soumission absolue et inconditionnelle. Mais même si tu es disposé(e) à
+          abdiquer la responsabilité de tes décisions à tel dieu ou tel dogme, comment
+          décider lequel choisir ? Que tu le veuilles ou non, tu es la seule/le seul
+          à pouvoir choisir. La plupart du temps, les gens font ces choix en fonction
+          de ce qui leur est le plus familier ou le plus pratique. Nous ne pouvons
+          échapper à la responsabilité de nos convictions et de nos décisions. Même
+          si nous ne devons de comptes qu’à nous-mêmes, que nous refusons de nous
+          soumettre à tel chef ou tel commandement, il se pourrait encore que nous
+          entrions en conflit les uns contre les autres, mais au moins nous le ferions
+          selon nos propres conditions, sans subir inutilement telle ou telle tragédie
+          au service d’intérêts qui nous échappent.
+        image_name: answering
+        image_alt: 1968 Olympics Black Power salute raised by the African-American
+          athletes Tommie Smith and John Carlos during their medal ceremony at the
+          1968 Summer Olympics in the Olympic Stadium in Mexico City. As they turned
+          to face their flags and hear the American national anthem, they each raised
+          a black-gloved fist and kept them raised until the anthem had finished
+      power:
+        left_text_html: à commencer par rechercher le pouvoir, et non l’autorité
+        right_text_html: |-
+          Les ouvriers qui effectuent un travail ont un certain pouvoir ; les patrons qui eux donnent les directives détiennent l’autorité. Les locataires qui entretiennent leurs logements ont un pouvoir ; le propriétaire dont le nom est sur l’acte de propriété détient l’autorité. Une rivière a « du pouvoir » ; un permis de construire un barrage
+
+          confère de l’autorité.
+
+          Le pouvoir n’a en soi rien d’oppressif. Plusieurs formes de pouvoir sont en soi libératrices : le pouvoir de prendre soin de celles et ceux que l’on aime, de se défendre et de résoudre des conflits, de pratiquer l’acupuncture, de piloter un voilier, de faire du trapèze. Il est possible de développer ses aptitudes tout en favorisant la liberté des autres. Quiconque s’efforce de réaliser son plein potentiel rend du
+
+          même coup service aux autres.
+
+          En revanche, l’autorité imposée à autrui est une véritable usurpation de pouvoir. Or, ce que l’on prend à autrui, d’autres finiront bien par nous le reprendre tôt ou tard. L’autorité provient toujours d’en
+
+          haut :
+
+          Par exemple, le soldat obéit au général, ce dernier relève du Président qui lui tient son autorité de l’article 5 de la Constitution de la Ve République française. Le prêtre obéit à l’évêque, l’évêque au Pape, le Pape aux Ecritures Saintes qui tiennent
+
+          leur autorité de Dieu.
+
+          L’employé obéit au responsable, lui-même au service du client/de la cliente qui tient son autorité de son pouvoir d’achat. Le policier obéit à ses supérieurs, le juge tient son autorité des lois, et les entreprises,
+
+          du capital.
+
+          Le Patriarcat, l’idée d’une suprématie raciale blanche, la notion de propriété : aucun tyran ne trône au sommet de ces pyramides. Ce sont des construits sociaux, des spectres qui maintiennent l’humanité sous
+
+          hypnose.
+
+          Tant que nous chercherons le pouvoir dans l’autorité, il échappera à nos aspirations. En hiérarchie, l’obéissance découle de l’autorité : le pouvoir et l’autorité sont tellement imbriqués qu’il est devenu pratiquement impossible de les distinguer. Et pourtant, sans liberté, le pouvoir n’a aucune valeur.
+        image_name: power
+        image_alt: a worker in a gold mine confronts soldier keeping guard and grabs
+          his rifle by the barrel as a crowd of workers watch
+      relationships:
+        left_text_html: à commencer par fonder nos relations sur la confiance
+        right_text_html: Contrairement à l’autorité, la confiance place le pouvoir
+          dans les mains de ceux qui la donnent, et non dans ceux qui la reçoivent.
+          Une personne qui a gagné la confiance de l’autre n’a pas besoin et n’a que
+          faire de l’autorité. Et qui n’est pas digne de confiance ne mérite certainement
+          pas l’autorité ! Et pourtant, à qui fait-on moins confiance qu’aux politiciens
+          et chefs d’entreprises ? Lorsque le pouvoir est distribué de manière égale,
+          les individus sont incités à régler leurs conflits de sorte à trouver une
+          satisfaction mutuelle – c’est-à-dire, à gagner la confiance d’autrui. La
+          hiérarchie invalide ce schéma et permet à ceux qui sont en position d’autorité
+          de réprimer et supprimer les conflits. Dans le meilleur des cas, l’amitié
+          est un rapport entre individus égaux qui se soutiennent et se remettent
+          en question réciproquement, et ce, tout en respectant l’autonomie de chacun(e).
+          C’est un excellent modèle de comparaison pour évaluer toutes nos relations.
+          Sans les contraintes qui nous sont imposées aujourd’hui – comme celles de
+          la citoyenneté et de la « légalité », de la propriété et de l’endettement,
+          ou encore des hiérarchies décisionnelles militaires et entrepreneuriales
+          ou industrielles – rien ne nous empêcherait de refonder nos relations sur
+          la libre association et l’entraide.
+        image_name: relationships
+        image_alt: at night, lit by streetlights, young protestors in Turkey form
+          a fire-brigade-line to transport cobblestones to the front lines of a confrontation
+          with police
+      reconciling:
+        left_text_html: à commencer par réconcilier l’individu et le collectif
+        right_text_html: |-
+          « Tes droits s’arrêtent là où ceux des autres commencent. » Si l’on donne fois à cette logique, plus nous sommes nombreux, plus la
+
+          liberté s’amenuise.
+
+          Mais la liberté n’est pas un minuscule espace renfermant des droits individuels. Il n’est pas aussi simple de nous distinguer les un(e)s des autres. Le bâillement et le rire sont contagieux, tout comme l’enthousiasme et le désespoir. Je suis la somme des différents clichés qui m’habitent, des musiques qui m’obsèdent, des humeurs que me transmettent mes camarades et connaissances. Lorsque je conduis une voiture, cette dernière pollue l’air que tu respires ; les médicaments que tu consommes se retrouvent tôt ou tard dans l’eau que nous buvons toutes et tous. Le système que tous les autres acceptent et tiennent pour acquis est celui dans lequel tu dois vivre – mais lorsque d’autres personnes que toi le contestent, tu as aussi l’opportunité de renégocier ta propre réalité. Ta liberté commence exactement là où la mienne commence, et se termine là où la mienne se termine. Nous ne sommes pas des individus isolés et déconnectés. Nos corps sont composés de milliers d’espèces évoluant en symbiose : loin d’être des forteresses impénétrables, ils sont des processus évolutifs par lesquels nutriments et microbes transitent perpétuellement. Nous vivons en symbiose avec des milliers d’autres espèces, les champs de maïs absorbent l’air que nous exhalons. Une meute de loups en campagne ou un chœur de grenouilles aux abords d’un étang sont aussi individuels, aussi unitaires, que chacun de nos corps. Nous n’évoluons pas en vase clos, entraîné(e) s uniquement par notre propre raison ; les courants du cosmos nous
+
+          traversent sans cesse.
+
+          Le langage ne nous sert à communiquer que dans la mesure où nous en partageons l’usage. Il en va de même pour les idées et les désirs : nous pouvons les communiquer parce qu’ils nous dépassent, parce qu’ils sont plus grands que chacune ou chacun de nous pris individuellement. Chacun(e) de nous est composé(e) du chaos de forces contradictoires qui, toutes sans exception, nous dépassent tant dans l’espace que dans le temps. En choisissant lesquelles de ces forces cultiver, nous déterminons les qualités que nous favoriserons personnellement chez tous les individus que nous rencontrons.
+
+          La liberté n’est pas un bien privé ou une chose que l’on possède, c’est une relation. Il ne s’agit pas de se prémunir contre le monde, mais d’interagir avec lui de manière à multiplier et optimiser les possibilités. Cela ne veut pas dire que la recherche de consensus soit une fin en soi. Le conflit, autant que le consensus, peut contribuer à nous faire grandir et à nous élever moralement, pourvu qu’aucun pouvoir central ne s’arroge le droit de forcer le compromis ou de transformer le conflit en compétition brutale où le plus fort l’emporte toujours. Mais, plutôt que de diviser le monde en d’infinies sphères de pouvoir distinctes les unes des autres, tirons le maximum de notre interconnexion naturelle.
+        image_name: reconciling
+        image_alt: kid hugging tree in forest, looking up into the canopy
+      liberation:
+        left_text_html: à commencer par la libération du désir
+        right_text_html: |-
+          Dans cette société où nous évoluons et grandissons, même nos passions ne nous appartiennent pas. Elles sont cultivées par la publicité et d’autres formes de propagande pour nous faire tourner en rond sur les manèges de la société de consommation. A travers cet endoctrinement, les gens se complaisent et se félicitent de leurs choix qui, sur le long terme, les rendront toujours plus misérables. Nous sommes prisonniers de nos plaisirs autant que de nos souffrances. Pour être réellement libres, il faut que nous ayons prise sur les procédés qui définissent nos désirs. La libération ne se limite pas à la réalisation des désirs qui nous habitent aujourd’hui. Il faut encore que nous puissions élargir le champ des possibles pour que nos désirs évoluent avec les réalités qu’ils nous poussent à produire. Cela implique de se défaire du plaisir que nous procurent l’imposition, la domination et l’appropriation, afin de chercher les plaisirs qui nous extirpent de la mécanique d’obéissance et de compétition. Quiconque s’est déjà défait d’une dépendance sait ce qu’implique la
+
+          transformation des désirs.
+        image_name: liberation
+        image_alt: two protestors, adorned with gas masks and balaclavas, dance the
+          tango together in the street
+      revolt:
+        left_text_html: à commencer par se révolter
+        right_text_html: |-
+          Les esprits intolérants, les fanatiques et autres sectaires, ont l’habitude d’imputer la responsabilité de problèmes systémiques à certains groupes en particulier – les Juifs sont tenus pour responsables de l’avarice qui caractérise le capitalisme, les immigrés de la récession économique, etc. C’est par le même raisonnement que l’on tend à blâmer individuellement certains politiciens pour la corruption généralisée en politique. Pourtant, le problème ce sont les systèmes eux-mêmes. Peu importe qui tient les rênes du pouvoir, les systèmes reproduiront les mêmes abus et outrages ordinaires. Le problème n’est pas tant le fait que ces systèmes seraient défectueux, mais bel et
+
+          bien leur existence même.
+
+          Nos ennemis ne sont pas les êtres humains, mais les institutions et les habitudes qui nous rendent étrangères/étrangers les un(e)s aux autres ainsi qu’à nous-mêmes. Les conflits sont plus nombreux (et plus violents) en nous qu’entre nous. Les mêmes lignes de fracture qui déchirent notre civilisation traversent également nos amitiés et nos amours. Ce n’est pas un conflit entre individus, mais entre différents types de relations et différents modes de vie. Lorsque nous refusons les rôles qui nous sont impartis d’office par l’ordre en place, nous élargissons ces lignes de fracture et forçons les autres à
+
+          prendre position.
+
+          L’idéal serait de nous débarrasser une fois pour toutes de la domination plutôt que d’en gérer les détails plus équitablement, de mettre ceux qui la subissent à la place de ceux qui l’infligent ou de stabiliser le système en le réformant. L’objet de la contestation n’est pas de réclamer des lois et des législateurs plus justes et légitimes, mais de montrer que nous pouvons agir en nos noms, d’encourager les autres à faire de même et de décourager les autorités de s’interposer et d’interférer. Ce n’est pas tant une question de guerre – soit un conflit binaire entre deux camps militarisés – qu’une forme de
+
+          désobéissance contagieuse.
+
+          Il ne suffit pas d’éduquer et de discuter, d’attendre que les autres révisent leur sentiment et leur opinion. Tant et aussi longtemps que les idées ne seront pas traduites en actions, que les gens ne seront pas confrontés à des choix concrets, la conversation demeurera abstraite. La plupart des gens tendent à s’éloigner des
+
+          discussions théoriques, mais lorsque quelque chose se produit, que les enjeux sont importants et qu’ils perçoivent des différences marquées entre camps opposés, ils prendront position. L’unanimité n’est pas nécessaire, pas plus qu’une compréhension approfondie de l’univers ou qu’un plan détaillé vers une destination précise. Tout ce qu’il faut, c’est le courage de s’avancer sur un sentier inconnu.
+        image_name: revolt
+        image_alt: A anonymous man stands in front of a column of tanks on June 5,
+          1989, the morning after the Chinese military had suppressed the Tiananmen
+          Square protests of 1989 by force, who later became known as the Tank Man.
+          The tanks maneuvered to pass by the man, and he moved to continue to obstruct
+          them, in something like a dance.
+      control:
+        left_text_html: le problème c’est le contrôle
+        right_text_html: |-
+          Quels sont les signes qui nous permettent de déceler une relation abusive ? L’abuseur peut essayer de contrôler ton comportement ou de te dicter tes pensées ; d’entraver ou de règlementer ton accès à certaines ressources ; d’utiliser des menaces ou la violence contre toi ; ou de te maintenir dans une situation de dépendance, sous
+
+          surveillance permanente.
+
+          Ceci décrit le comportement d’un individu abusif, mais le Trésor public, les agences d’espionnage telles que l’Agence Nationale de la Sécurité des Systèmes d’Informations (ANSSI) et la plupart des institutions qui gouvernent notre société se conduisent de la même façon. Elles reposent pratiquement toutes sur l’idée que les êtres humains doivent être contrôlés, gérés, administrés. Plus grandes sont les injustices que l’on nous impose, plus grands sont les moyens de contrôle nécessaires à leur maintien. À une extrémité de l’échelle du pouvoir, le contrôle est exercé brutalement sur une base individuelle, avec entre autres : utilisations de drones tactiques, groupes tactiques d’intervention, isolement cellulaire et profilage racial. À l’autre extrémité, le contrôle est omniprésent, presque indétectable, intégré au sein de l’infrastructure de la société, comme par exemple : les équations qui déterminent les cotes de solvabilité et les primes d’assurance, les moyens par lesquels les statistiques sont recueillies et transformées en méthodes d’aménagement urbain ou d’architecture des sites de rencontres en ligne et des plateformes de médias sociaux. Les agences de « sécurité » surveillent nos activités en ligne mais ont moins d’incidence sur la réalité de nos vies que les algorithmes qui déterminent ce que nous voyons lorsque nous
+
+          nous connectons.
+
+          Lorsque les possibilités infinies de la vie auront été réduites à un éventail d’options codées en 1 et en 0, il n’y aura plus aucune friction entre le système que nous habitons et les vies que nous pourrons encore imaginer – non pas parce nous aurons atteint la liberté totale, mais parce que nous aurons atteint son extrême opposé. La liberté ne se résume pas à choisir entre plusieurs options, mais bien à la possibilité de formuler nous-mêmes les questions.
+        image_name: control
+        image_alt: a cop dressed in fancy riot gear leans out of his open patrol car
+          door and uses a camcorder to record protestors who are not pictured
+      hierarchy:
+        left_text_html: le problème c’est la hiérarchie
+        right_text_html: 'Les mécanismes servant à imposer l’inégalité sont multiples.
+          Certains dépendent d’un appareil plus ou moins centralisé. D’autres fonctionnent
+          de manière plus informelle, comme les réseaux de connaissances et d’influences
+          entraînant des « pistons » lors d’embauches ou d’inscriptions, ou encore
+          les rôles de genre préétablis. Certains de ces mécanismes ont été complètement
+          discrédités. Par exemple, peu sont ceux qui croient encore au droit divin
+          des rois. Pourtant, pendant des siècles aucun autre fondement de la société
+          n’était même envisageable. D’autres mécanismes sont si profondément enracinés
+          que nous les croyons indispensables au bon fonctionnement de nos vies. Qui
+          peut s’imaginer un monde sans propriété privée ? Pourtant, ces concepts
+          ne sont que des construits sociaux : ils sont bien réels, mais leur emprise
+          n’est pas inéluctable. L’existence des chefs d’entreprise et des propriétaires
+          n’est pas plus naturelle, nécessaire ou salutaire que celle des empereurs.
+          Tous ces mécanismes se sont développés ensemble, se renforçant mutuellement.
+          L’histoire du racisme, par exemple, est indissociable de celle du capitalisme,
+          et ni l’un ni l’autre n’est concevable sans la colonisation, l’esclavage
+          et les autres lignes de partage racistes qui divisent la classe ouvrière
+          et déterminent encore à ce jour qui remplit et occupe les différentes prisons
+          et bidonvilles du monde. De la même manière, sans l’infrastructure que garantissent
+          l’État et les autres formes de hiérarchie présentes au sein de notre société,
+          l’intolérance et les préjugés personnels ne suffiraient pas à maintenir
+          en place le concept d’une suprématie « blanche. » Aux États-Unis, le fait
+          qu’un président noir américain puisse être en fonction au sein même de ces
+          structures ne sert en fait qu’à les stabiliser : c’est la proverbiale exception
+          qui confirme la règle. En d’autres termes, tant qu’il y aura de la police,
+          qui selon toi harcèlera-t-elle ? Tant qu’il y aura des prisons, qui y enfermera-ton
+          ? Tant qu’il y aura de la pauvreté, qui touchera-t-elle ? Il est naïf de
+          croire que l’on peut atteindre l’égalité dans une société fondée sur la
+          hiérarchie. On peut bien brasser les cartes, c’est toujours le même jeu.'
+        image_name: hierarchy
+        image_alt: a mustachioed cop in riot gear wearing aviator sunglasses stands
+          guard in front of several Ku Klux Klan members in full robes, one of whom
+          carries a American flag
+      borders:
+        left_text_html: le problème c’est les frontières
+        right_text_html: |-
+          Si une armée étrangère venait à envahir un pays, y couper les arbres, empoisonner les rivières et forcer les enfants à lui prêter allégeance, qui ne voudrait pas prendre les armes contre elle ? Cependant quand le gouvernement local se comporte exactement de la même façon, les patriotes sont toujours disposé(e)s à obéir, à payer des taxes et à
+
+          sacrifier leurs enfants.
+
+          Les frontières ne nous protègent pas, elles nous séparent les un(e)s des autres – causant des frictions artificielles entre « inclus(es) » et « exclu(e)s », tout en cachant les différences qui existent bel et bien entre différentes classes « d’inclus(es). » Même le gouvernement le plus démocratique est fondé sur cette séparation artificielle entre nationaux et étrangers, légitimes et illégitimes. A l’époque classique (Grèce Antique) à Athènes, le fameux berceau de la démocratie, seulement une toute petite fraction des hommes adultes était admise dans le processus démocratique. Les fondateurs de nos démocraties modernes, quant à eux, supportaient la traite des esclaves. La citoyenneté édifie encore aujourd’hui une barrière hermétique entre inclus(es) et exclu(e)s, empêchant à des milliers de résident(e)s sans-papiers en France (et partout en Europe) d’avoir un quelconque contrôle et emprise sur leur
+
+          vie.
+
+          L’idéal libéral vise à élargir les limites de l’inclusion pour en arriver éventuellement au point où tout le monde serait intégré au sein d’un seul et même vaste projet démocratique. Mais l’inégalité est inscrite à même la structure. À toutes les échelles de cette société, des milliers de petites frontières nous séparent entre puissants et impuissants : les contrôles de sécurité, les taux de crédit, les mots de passe de bases de données, les fourchettes de prix. Il nous faut des formes d’appartenance qui ne reposent pas sur l’exclusion, qui ne centralisent pas le pouvoir et la légitimité, et qui ne confinent pas l’empathie aux
+
+          communautés protégées.
+        image_name: borders
+        image_alt: a grouple of people sits upon a tall boundary fence they have climbed
+      representation:
+        left_text_html: le problème c’est la représentation
+        right_text_html: |-
+          Il n’est vraiment possible d’avoir du pouvoir qu’en l’exerçant ; on ne peut vraiment connaître nos intérêts qu’en explorant à fond ces derniers. Lorsque chaque tentative d’influencer le monde dans lequel nous vivons doit obligatoirement passer par la médiation de représentants ou se conformer au protocole des institutions établies, nous devenons forcément aliéné(e)s les un(e)s aux autres, mais aussi aliéné(e)s à notre propre potentiel. Chaque aspect de notre pouvoir d’agir que nous faisons valoir revient nous hanter sous une forme méconnaissable et hostile. Les politiciens qui nous déçoivent constamment ne font en fait que nous démontrer l’étendue du pouvoir qu’ils ont sur nos vies, pouvoir que nous leur avons abandonné ; la violence de la police est la sombre conséquence de notre désir d’éviter toute responsabilité personnelle pour ce qui se
+
+          passe dans nos quartiers.
+
+          À l’ère du numérique, alors que chaque individu est constamment contraint d’être sa/son propre secrétaire pour soigner et gérer son image publique, nos réputations elles-mêmes nous échappent, telles des vampires se nourrissant de nous. Si nous n’étions pas isolé(e)s les un(e)s des autres, en compétition pour nous vendre sur de nombreux marchés sociaux et professionnels, investirions-nous autant d’énergie dans la composition des ces « profils », autant d’objets de culte créés à notre image ? Nous sommes pourtant irréductibles. Aucun délégué ni aucune abstraction ne peut prendre notre place. En réduisant les êtres humains à leurs profils sociodémographiques et les expériences vécues à des données abstraites, nous perdons de vue tout ce qui est précieux et unique dans le monde. Nous avons besoin de présence, d’immédiateté, de contact direct avec autrui, d’emprise directe sur nos vies – autant de choses qu’aucun représentant ni aucune représentation ne peut offrir.
+        image_name: representation
+        image_alt: a woman of asian ethnicity works as a mannequin factory stocking
+          a shelves that are full of caucasian mannequin heads
+      leaders:
+        left_text_html: le problème c’est les dirigeants
+        right_text_html: |-
+          Le « leadership » est un trouble de la société en vertu duquel la majorité des participants à un groupe donné est incapable de prendre l’initiative ou de réfléchir à ses actions de façon critique. Tant et aussi longtemps que nous considèrerons le pouvoir d’agir comme étant la propriété d’individus spécifiques plutôt que comme une relation entre une multitude d’individus, nous serons toujours dépendant(e)s de dirigeants – et nous serons par le fait même toujours à leur merci. Les dirigeants vraiment exemplaires sont tout aussi dangereux que les dirigeants clairement corrompus, puisque toutes leurs qualités louables ne font que renforcer leur statut d’exception et confirmer la soumission des autres, sans parler de la légitimité du « leadership » en
+
+          tant que tel.
+
+          Lorsque la police arrive sur les lieux d’une manifestation, sa première question est toujours « Qui est le responsable ? » – non pas parce que le « leadership » est essentiel à l’action collective, mais parce qu’il constitue une vulnérabilité. Les Conquistadors espagnols et portugais ont posé la même question lorsqu’ils sont arrivés au prétendu « Nouveau Monde. » Chaque réponse leur a épargné les siècles de problèmes qu’ils auraient éprouvés s’ils avaient dû assujettir eux-mêmes les populations locales. Tant qu’il y a un « leader », celui-ci peut être acheté, remplacé ou pris en otage. Dans le meilleur des cas, et selon l’individu, le « leader » est un talon d’Achille ; dans le pire des cas, il reproduit les intérêts et les structures de pouvoir des autorités déjà en place à l’intérieur de celles qui s’y opposent. Ce serait beaucoup mieux si chaque individu avait le sentiment de pouvoir agir selon son propre
+
+          programme.
+        image_name: leaders
+        image_alt: a portly politician talks into a bouquet of press microphones that
+          surround him
+      government:
+        left_text_html: le problème c’est le gouvernement
+        right_text_html: |-
+          Les gouvernements nous promettent des droits, mais ne savent que restreindre nos libertés. La notion même de droit implique un pouvoir central qui les accorde et les protège. Tout ce que le gouvernement a le pouvoir de donner, créer et garantir, il peut également le reprendre. Donner au gouvernement le pouvoir de régler un problème, c’est en même temps lui permettre d’en créer de nouveaux. Et les gouvernements ne tirent pas leur pouvoir de nulle part ; c’est notre pouvoir qu’ils exercent et que nous pourrions employer beaucoup plus efficacement sans la grotesque machinerie représentative. La plus libérale des démocraties partage les mêmes principes que la plus tyrannique des autocraties : la centralisation du pouvoir et de la légitimité au sein d’une structure conçue pour monopoliser l’usage de la force. Que les bureaucrates qui dirigent cette structure répondent à un roi, à un président ou à un électorat n’y change absolument rien. Les lois, la bureaucratie et la police sont plus anciennes que la démocratie. En démocratie comme en dictature, ces dernières fonctionnent de la même façon. La seule différence est qu’en démocratie, parce que nous avons la possibilité d’élire ceux qui les administrent, nous sommes censé(e)s les considérer comme de notre côté – et ce, même lorsqu’elles sont utilisées contre nous. Les dictatures sont intrinsèquement instables : vous pouvez massacrer, emprisonner et endoctriner des générations entières, la génération suivante réinventera toujours la lutte pour la libération. Mais promettez à chaque homme la chance d’imposer à ses congénères la volonté de la majorité et vous pouvez les rallier derrière un système qui les dresse les uns contre les autres. Plus les gens s’imaginent avoir de l’influence sur les institutions coercitives de l’État, plus ces institutions gagnent en popularité. Voilà qui explique peut-être pourquoi l’expansion planétaire de la démocratie coïncide avec d’épouvantables degrés d’inégalité dans la distribution des ressources et du pouvoir : aucun autre système de gouvernement ne pourrait stabiliser une situation aussi précaire. Lorsque le pouvoir est centralisé, les gens doivent maintenir les autres sous leur domination pour acquérir de l’influence sur leur propre destinée. Les luttes pour l’autonomie se transforment en concours pour la capture du pouvoir politique.
+
+          Pour preuve, pensons aux guerres civiles dans les nations postcoloniales entre des peuples qui cohabitaient auparavant pacifiquement. Ceux qui détiennent le pouvoir ne peuvent s’y accrocher qu’en menant une guerre perpétuelle contre leur propre population et contre des peuples étrangers : c’est le cas aux États-Unis où la « National Guard » a été déployée dans les rues d’Oakland après avoir servi en Irak, ou encore avec le cas du Canada où les mêmes régiments de l’armée canadienne ont été déployés à Oka en 1990 pour réprimer le soulèvement « Kanien’kehá:ka » et en Afghanistan en 2001 pour combattre des
+
+          insurgés Pachtounes.
+
+          Partout où il y a une hiérarchie, celle-ci favorise ceux qui se trouvent au sommet, en créant et en intégrant au système préexistant toujours plus de mécanismes de contrôle. Cela signifie en fait que nous confions notre protection à ceux de qui nous devrions le plus nous protéger. La seule façon d’avoir une quelconque emprise sur les autorités sans être aspiré(e) dans leur jeu est de développer des réseaux horizontaux autonomes qui correspondent à nos aspirations. Ironiquement, quand nous serons assez puissant(e)s pour forcer les autorités à nous prendre au sérieux, nous serons également assez puissant(e)s pour régler nos propres problèmes sans elles. La seule voie vers la liberté est la liberté elle-même. Plutôt qu’une seule porte vers le pouvoir d’agir de toutes et tous, il nous faut un large choix de milieux où exercer notre pouvoir. Plutôt qu’un seul faisceau étroit de légitimité, il nous faut assez d’espace pour une multitude de récits. Au lieu de la coercition inhérente au gouvernement, il nous faut des structures de prise de décision qui favorisent l’autonomie et des pratiques d’autodéfense qui permettent de garder à distance tous les prétendants à l’autorité.
+        image_name: government
+        image_alt: large conference table at which world leaders are seated, surrounded
+          by press and their minions, a summit meeting with greek columns of marble
+          and a traditional fresco in the dome above
+      profit:
+        left_text_html: le problème c’est le profit
+        right_text_html: |-
+          L’argent est l’instrument idéal pour assurer et maintenir l’inégalité. Il est abstrait : il semble pouvoir se substituer à n’importe quoi. Il est universel : des gens qui n’ont rien en commun l’acceptent comme un fait établi. Il est impersonnel : contrairement aux privilèges héréditaires, il peut être transféré instantanément d’une personne à une autre. Il est fluide : plus il est facile de changer de position au sein d’une hiérarchie donnée, plus la hiérarchie elle-même s’en trouve renforcée et stabilisée. Nombreux sont celles/ceux qui acceptent sans un mot l’autorité du marché, alors qu’elles/qu’ils se révolteraient volontiers contre la tyrannie d’un dictateur. Quand toute la valeur est concentrée dans un seul instrument, même les moments les plus précieux de nos vies sont dépourvus de leur sens et deviennent d’insignifiantes données dans l’équation abstraite du pouvoir. Tout ce qui ne peut être quantifié en termes financiers est laissé de côté. La vie elle-même devient une sorte de ruée vers le profit : c’est chacun(e) contre toutes/ tous – il faut vendre ou être vendu(e). Faire du profit, c’est accroître, par rapport à autrui, son emprise sur les ressources de la société. Il est impossible que nous générions toutes et tous du profit en même temps ; pour qu’une personne puisse faire du profit, d’autres doivent proportionnellement perdre leurs moyens. Lorsque des investisseurs tirent profit du travail des salarié(e)s, cela signifie que plus ces dernières et/ou derniers travaillent, plus l’écart financier entre elles/eux se creuse. Un système motivé par le profit crée de la pauvreté au même rythme qu’il concentre la richesse. La pression de la compétition favorise l’innovation plus que tout autre système, mais elle aggrave en même temps les inégalités. Et puisque tout le monde cherche le profit au lieu de réaliser des choses pour le plaisir, le résultat de tous ces efforts peut s’avérer désastreux. Les changements climatiques actuels ne sont que la plus récente manifestation d’une longue série de catastrophes que même les plus puissants capitalistes n’ont pas été
+
+          capables d’empêcher.
+        image_name: profit
+        image_alt: a chauffeur holds open the door to a large Audi as a wealthy businessman
+          exits a helicopter and proceeds across the helipad towards the car
+      property:
+        left_text_html: le problème c’est la propriété
+        right_text_html: |-
+          Le fondement du capitalisme est le droit de propriété – un autre construit social hérité des rois et aristocrates. La propriété change de mains plus rapidement de nos jours, mais le concept reste le même : l’idée de possession légitime l’usage de la violence pour imposer les déséquilibres artificiels d’accès à la terre et aux ressources. Certaines personnes pensent que la propriété pourrait exister sans l’État. Mais le droit de propriété ne rime à rien sans une autorité centrale pour l’imposer – par ailleurs, tant et aussi longtemps qu’une autorité centrale existera, rien ne pourra vraiment appartenir à qui que ce soit. L’argent que tu gagnes est imprimé par l’État et soumis aux impôts et à l’inflation. Le certificat d’assurance de ta voiture est émis par ta société d’assurance. Ta maison ne t’appartient pas, elle est la propriété de la banque qui t’a accordé une hypothèque ; et même si tu en es propriétaire de droit, le pouvoir d’expropriation supplante n’importe quel acte de propriété. Que faudrait-il pour véritablement protéger ce qui nous est le plus cher ? Les gouvernements n’existent qu’en fonction de ce qu’ils nous prennent. Ils prendront toujours plus que ce qu’ils donnent. Les marchés nous récompensent lorsque nous arnaquons nos semblables, et vice versa. Nos liens sociaux sont notre seule véritable protection : pour être vraiment en sécurité, il nous faut des réseaux d’entraide autonomes et capables de se défendre. Sans argent ou droits de propriété, nos rapports aux biens matériels seraient déterminés par les rapports que nous entretenons les un(e)s avec les autres. Aujourd’hui, c’est l’inverse qui prévaut : nos rapports avec les autres sont déterminés par nos rapports aux biens. En finir avec la propriété, ce n’est pas faire une croix sur nos biens ; c’est faire en sorte qu’aucune loi ni aucun krach boursier ne pourra nous arracher ce dont nous avons vraiment besoin. Au lieu de dépendre de la bureaucratie, nous pourrions partir des besoins humains ; au lieu de s’exploiter les un(e)s les autres, nous pourrions tirer avantage de
+
+          l’interdépendance.
+
+          La plus grande crainte des escrocs est de voir émerger une société sans propriété – parce que sans elle, ils seraient condamnés au mépris qu’ils méritent. En l’absence d’argent, la valeur des personnes se mesure à ce qu’elles apportent de bon dans la vie
+
+          des autres, et non pas à sa capacité de les acheter ou de les soudoyer. Sans le motif de profit, chaque effort est sa propre récompense. On laisse ainsi de côté toute incitation à mener des activités dénuées de sens ou destructrices. Les choses qui comptent vraiment dans la vie – comme la passion, l’amitié et la générosité – sont disponibles en abondance. Il faut littéralement des légions de policiers et d’experts immobiliers pour imposer la rareté des choses, rareté qui nous enferme toutes et tous dans cette grotesque course au profit.
+        image_name: property
+        image_alt: an abandoned building, now occupied, with protest banners in the
+          window, being used as community organizing location
+      lastcrime:
+        left_text_html: le dernier crime
+        right_text_html: |-
+          Chaque ordre est fondé sur un crime perpétré à l’encontre de l’ordre précédent – le crime qui a causé sa perte. Par la suite, tandis qu’on le tient de plus en plus pour acquis, le nouvel ordre commence à être perçu comme légitime. Le crime fondateur de notre démocratie libérale fut la rébellion contre l’autorité absolue des monarques. Le crime fondateur de la société future, pourvu que nous survivions à la société actuelle, sera de nous débarrasser des lois et institutions
+
+          d’aujourd’hui.
+
+          La définition du crime contient tout ce qui excède les limites d’une société donnée – autant le pire que le meilleur. Chaque système est menacé par tout ce qu’il ne peut incorporer ou maintenir sous son contrôle. Chaque ordre contient le germe de sa propre destruction. Rien ne dure éternellement. Cette règle vaut également pour les empires et les civilisations. Mais qu’est-ce qui pourrait remplacer celle-ci ? Peut-on imaginer un ordre fondé sur autre chose que la division de la vie entre légitimité et illégitimité, légalité et criminalité, dirigeants et dirigés ? Quel pourrait être le dernier crime ?
+        image_name: lastcrime
+        image_alt: a protestor with his face concealed in the act of throwing a lit
+          molotov cocktail during a protest, in front of a huge concrete wall
+      anarchy:
+        first_html: |-
+          L’anarchie est ce qui se produit lorsque l’ordre n’est pas imposé par la force. C’est la liberté : le processus consistant à réinventer continuellement nos identités et nos relations. Tout processus ou phénomène se produisant naturellement – comme une forêt tropicale, un cercle d’ami(e)s, ou même ton propre corps – est une forme d’harmonie anarchique qui persiste en dépit du changement constant. Le contrôle hiérarchique, au contraire, ne peut être maintenu en place que par la contrainte ou la coercition : de la discipline précaire des salles de retenue dans les collèges et lycées, aux fermes industrielles où des pesticides et herbicides protègent des rangées stériles de maïs génétiquement modifié, en passant par la fragile hégémonie d’une superpuissance. L’anarchisme est l’idée selon laquelle chaque individu est apte à s’autodéterminer. Aucune loi, aucun gouvernement, ni aucun processus décisionnel n’est plus important que les besoins et désirs des êtres humains eux-mêmes. Les gens devraient être en mesure de façonner leurs relations en fonction de leur satisfaction mutuelle, et de se
+
+          protéger les uns les autres.
+
+          L’anarchisme n’est pas un dogme ou un programme. Ce n’est pas un système qui fonctionnerait si seulement il était mis en œuvre « correctement », comme la démocratie, ni un objectif à réaliser dans un avenir lointain, comme le communisme. C’est une façon d’agir et d’interagir que l’on peut mettre en pratique dès maintenant. On peut commencer par se demander à l’égard de n’importe quel système de valeur ou ligne de conduite : comment le pouvoir y est-il distribué ? Les anarchistes s’opposent à toute forme de hiérarchie – à tout modèle concentrant le pouvoir dans les mains d’une minorité, à tout mécanisme nous éloignant de notre potentiel. Contre les systèmes fermés, nous savourons l’inconnu qui s’étend devant nous et le chaos qui nous habite, en vertu duquel nous pouvons être libres.
+        second_html: |-
+          Motivations des traducteurs
+
+          Chômage en constante augmentation depuis la crise économique internationale de 2008, partis politiques ne défendant que leurs propres intérêts, progression constante de l’extrême droite sur l’échiquier politique, banalisation des discours nationalistes, xénophobes, LGBTIQ-phobes et réactionnaires, réaffirmation de la présence dans les rues de groupuscules néo-fascistes, renforcement de l’aspect sécuritaire, militarisation de la police, accentuation de la répression et des violences policières dans les quartiers populaires ou lors de rassemblements et manifestations, renforcement de la lutte contre l’immigration (renforts de CRS à Calais, opération Mos Maiorum, opération Triton, etc.), situation écologique plus qu’alarmante (Aéroport de Notre Dame des Landes, barrage de Sivens, projets d’exploitation de gaz de schiste, etc.). Cette liste non exhaustive n’est qu’un bref aperçu de la situation actuelle en France. C’est pourquoi, en ces jours sombres sur fond de crises politiques, économiques, sociales et environnementales, il nous semblait indispensable de rejoindre cette initiative internationale en produisant cette adaptation française du nouveau texte de CrimethInc. : To Change Everything, afin de participer à la mise en place de nouvelles réflexions, consciences et cultures révolutionnaires. Nous espérons que cela puisse générer chez toi une réflexion et que tu puisses apporter à ces différents enjeux contemporains de nouvelles initiatives, de véritables alternatives. Pour plus d’informations, sur les auteurs de ce texte, tu peux consulter les
+
+          sites suivants : - www.crimethinc.com - www.tochangeeverything.com
+        third_html: <p><span class="blue black">Anarchists</span> oppose all forms
+          of hierarchy—every currency that concentrates power into the hands of a
+          few, every mechanism that puts us at a distance from our potential. Against
+          closed systems, we relish the unknown before us, the chaos within us by
+          virtue of which we are able to be free.</p>
+      outro:
+        left_text_html: ''
+        right_text_html: |-
+          Quand nous constatons tout ce que les différents mécanismes et institutions de domination ont en commun, il devient évident que nos luttes individuelles font aussi partie intégrante d’un grand tout qui nous dépasse, mais qui pourrait bien nous rassembler. Lorsque nous agissons ensemble sur la base même de cette connexion, tout change : non seulement nos luttes, mais aussi notre pouvoir d’agir, notre capacité à ressentir la joie, le sentiment que nos vies ont un sens. Tout ce qu’il nous faut pour nous retrouver, c’est de commencer à agir selon une autre logique.
+
+          Pour tout changer, il faut commencer n’importe où.
+      take_flight_html: Ne t’accroche pas à ce monde désuet.
+      next_path: "/begin"
+      next_text: crimethinc.com
