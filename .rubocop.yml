@@ -82,3 +82,7 @@ Metrics/ParameterLists:
 
 Metrics/PerceivedComplexity:
   Enabled: false
+
+# NOTE: break json feed output if applied
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
