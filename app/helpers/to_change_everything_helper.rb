@@ -30,7 +30,7 @@ module ToChangeEverythingHelper
     }.freeze,
     # rubocop:enable Layout/LineLength, Layout/HashAlignment
 
-    # rubocop:disable Layout/HashAlignment
+    # rubocop:disable-next Layout/HashAlignment
     last:  {
       'ελληνικά'       => '/2016/01/25/to-change-everything-in-ten-more-languages#greek',
       'Italiano'       => '/tce/italiano',
@@ -51,7 +51,6 @@ module ToChangeEverythingHelper
       'Svenska'        => '/2016/01/25/to-change-everything-in-ten-more-languages#swedish',
       'ภาษาไทย'        => '/tce/ภาษาไทย'
     }.freeze
-    # rubocop:enable Layout/HashAlignment
   }.freeze
 
   def tce_table_of_contents_sections

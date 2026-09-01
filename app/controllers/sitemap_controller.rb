@@ -99,7 +99,7 @@ class SitemapController < ApplicationController
   end
 
   def set_last_modified
-    @last_modified  = @latest_article&.updated_at || Time.current
+    @last_modified = @latest_article&.updated_at || Time.current
   end
 
   # articles feed, for all languages with articles

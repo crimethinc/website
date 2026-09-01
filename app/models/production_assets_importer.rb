@@ -12,7 +12,7 @@ class ProductionAssetsImporter
 
     case klass
     when :posters
-      Poster.find_each  { |poster|  migrate_assets(poster) }
+      Poster.find_each { |poster| migrate_assets(poster) }
     when :stickers
       Sticker.find_each { |sticker| migrate_assets(sticker) }
     when :logos

@@ -163,8 +163,8 @@ class LocaleService::Locales # rubocop:disable Style/ClassAndModuleChildren
     Locale.new(locale: 'tieng viet', lang_code: :vi, canonical: 'tieng-viet'),
 
     # sh: serbo-croatian
-    Locale.new(locale: 'serbo-croatian',  lang_code: :sh, canonical: 'srpskohrvatski'),
-    Locale.new(locale: 'srpskohrvatski',  lang_code: :sh, canonical: 'srpskohrvatski'),
+    Locale.new(locale: 'serbo-croatian', lang_code: :sh, canonical: 'srpskohrvatski'),
+    Locale.new(locale: 'srpskohrvatski', lang_code: :sh, canonical: 'srpskohrvatski'),
 
     # sk: slovakian
     Locale.new(locale: 'slovakian', lang_code: :sk, canonical: 'slovak'),
