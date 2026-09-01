@@ -110,8 +110,7 @@ def assign_locale! args
   @locale = args[:locale_lang_code]
 end
 
-# rubocop:disable Style/TrivialAccessors
+# rubocop:disable-next Style/TrivialAccessors
 def locale
   @locale
 end
-# rubocop:enable Style/TrivialAccessors
