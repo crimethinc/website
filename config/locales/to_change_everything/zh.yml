@@ -1,0 +1,234 @@
+---
+中文:
+  layouts:
+    to_change_everything:
+      language_direction: ltr
+      lang_code: zh
+      head:
+        title: To Change Everything, an anarchist appeal / CrimethInc. Ex-Workers'
+          Collective
+        meta:
+          title: To Change Everything, an anarchist appeal
+          description: The case for complete self-determination—a guide for the furious,
+            the curious, and the pure of heart
+          url: https://tochangeeverything.com/
+      menu:
+        toc: Table of Contents
+        language: English
+        share: Share
+      toc:
+        introduction: introduction
+        self: start with self-determination
+        answering: start by answering to ourselves
+        power: start by seeking power, not authority
+        relationships: start with relationships built on trust
+        reconciling: start by reconciling the individual and the whole
+        liberation: start with the liberation of desire
+        revolt: start with revolt
+        control: the problem is control
+        hierarchy: the problem is hierarchy
+        borders: the problem is borders
+        representation: the problem is representation
+        leaders: the problem is leaders
+        government: the problem is government
+        profit: the problem is profit
+        property: the problem is property
+        lastcrime: the last crime
+        anarchy: anarchy is
+        outro: outro
+        takeflight: take flight
+        next: next
+  to_change_everything:
+    show:
+      title_html: 来改变     一切
+      subtitle_html: 一个无政府主义的呼吁
+      video_cte: Watch Video
+      video_url: https://player.vimeo.com/video/111159930
+      pdf_cte_html: Download<br />&nbsp;PDF
+      pdf_get_url: "/tce/get"
+      pdf_image: tce-cover-200.png
+      intro:
+        left_text_html: 要有任何的改变，从所有地方开始
+        right_text_html: To&#8200;<br />change&#8200;<br />anything,<br />start&#8200;<br
+          />everywhere.
+      self:
+        left_text_html: 问题是边界
+        right_text_html: |-
+          自由的幻象仍然困扰着它投射着自身形象的世界。我们被承诺完全的自决权：我们社会的所有机构都应该兑现它。如果你有完全的自决权，你现在会做什么？想象一下你生命所拥有的巨大潜力：可能建立的人际关系，可能经历的经验，所有可以赋予你存在意义的方式。在你出生时，你可能成为什么似乎没有界限。你代表了纯粹的“可能性”。平常，我们不会停下来设想这些。只有在最完美的瞬间，当我们坠入爱河或者取得突破或者游览遥远的地方，我们才会看到我们生命潜能的真面目。是什么限制了你如何发挥自己的潜能？对于你身边的环境你有多少筹码，或者你如何花费自己的时间？那些根据你如何遵循指示而评估你的官僚机构，那个根据你产生多少利润而分配你多少权力的经济，那个强调“释放你完全的潜能”的方式是完全服从他们命令的征兵军官——做这些会让你的生活过得最充实吗？我们全都有完全的自我决定权是一个公开的秘密：不是因为它是赐给我们的，而是因为甚至连最极权主义的独裁也不能把它夺走。但当我们为自己行动时，马上就会和本来承诺担保我们自由的机构发生冲突。
+
+          七
+        image_name: self
+        image_alt: shadow of a person climbing over a barbed-wire fence
+      answering:
+        left_text_html: 如果异地的军队侵入了这国家，砍伐树木，在河流里下毒，强迫孩童长大后对他们致敬，谁不会举起武器反抗？但是如果当地政府作出同样的行为，爱国者便欣然地服从，给他们交税，让他们的孩子被社会化。边界不会保护我们，它们隔离我们——和那些被排斥的人群产生没有必要的摩查而掩盖我们和同胞的差别。即使最民主的社会也建立在参与者和局外人、合格与违法的居民的对立之上。在古代雅典，民主的诞生地，只有少数的男性有权利参与政治进程；美国民主的创始者都拥有奴隶。国籍和户口这些概念在本地人和外地人之间施加了障碍，让上万人无法掌控他们的生命。自由主义者的理想是不停扩大融入的范围直到整个世界都包括在一个巨大的民主系统内。但是不平等是这系统的根本。在社会的每一层次，无数的界限把我们分割为有权和无权的：检查站，信用评价，数据库密码，价格段。我们不需要依赖排外的归属形式，不需要集中权力与合法性，它导致我们的同情心只归于门控社区。
+        right_text_html: 开始从对我们自己负责
+        image_name: answering
+        image_alt: 1968 Olympics Black Power salute raised by the African-American
+          athletes Tommie Smith and John Carlos during their medal ceremony at the
+          1968 Summer Olympics in the Olympic Stadium in Mexico City. As they turned
+          to face their flags and hear the American national anthem, they each raised
+          a black-gloved fist and kept them raised until the anthem had finished
+      power:
+        left_text_html: 二十九
+        right_text_html: |-
+          管理者和税吏喜欢谈论个人的责任。但是，如果我们为自己所有的行为负全部责任的话，我们首先会服从他们的指示吗？历史上绝大部分的伤害不是由恶意造成，而服从命令的后果。世界上所有军队的武器仓库里装的军火是我们愿意服从的象征。如果你想确保你永远不会有助于战争、种族灭绝或压迫，第一步是停止服从命令。这也适用于你的价值观。无数的统治者和规则手册要求你绝对服从。但是，即使你想把自己的责任交给某一个神或教义，你如何决定向哪一个屈服？不管你喜欢与否，是你在做这个决定。通常，人们根据哪一个最熟悉或方便来简单地作出这个选择。我们对自己的信仰与决定有义不容辞的责任。我们服从自己，而不是指挥官或诫命，我们可能仍然会相互发生冲突，但至少我们是以自己的主张来发生摩擦，不是因为别人的动机而堆积悲剧。
+
+          开始从
+          寻求权力，而不是权威
+        image_name: power
+        image_alt: a worker in a gold mine confronts soldier keeping guard and grabs
+          his rifle by the barrel as a crowd of workers watch
+      relationships:
+        left_text_html: start with<br /><span class="bold">relationships<br />built
+          on trust</span>
+        right_text_html: 那些履行劳动的劳动者有权力；那些监督他们的上司有权威。那些维护楼房的住户有权利；那个名字在契约上的地主有权威。一条河流有力量；一条建造大坝的许可证有权威。其实权力本身不具有压迫性。很多种权力可以带给我们解放：让你照顾你爱的人的权利，自我防卫和解决纠纷的权力，来执行针灸或者驾驶帆船或者在实行高难度的体操动作。有许多方式发展你自己的能力的同时也增加他人的自由。每个为自己实现个人最大的潜能的人是在给所有人提供一份礼物。另一方面，一方对另一方实施的权威是在篡夺权力。你对他人的窃夺，他人也对你夺取。权威是永远从上往下来执行：士兵服从将军，将军服从总统，总统的权威是从宪法里赐有的。神父服从主教，主教服从教皇，教皇服从圣经，圣经的权威是从神明赐有的。员工服从老板，老板服从顾客，顾客的权威是金钱赐有的。警员执行由地方法官签署手令，地方法官的权威是由法律赐有的。男子气概，白皮肤，财产——在这些金字塔的顶层，我们甚至不会找到暴君，只有社会建构在催眠人类。在这个社会里，权力与权威是如此相通，我们几乎无法区分它们：我们只能以服从换取权力。然而没有自由，权力是毫无价值的。
+        image_name: relationships
+        image_alt: at night, lit by streetlights, young protestors in Turkey form
+          a fire-brigade-line to transport cobblestones to the front lines of a confrontation
+          with police
+      reconciling:
+        left_text_html: 三十一
+        right_text_html: |-
+          十一
+
+          开始从
+          信用建立关系
+        image_name: reconciling
+        image_alt: kid hugging tree in forest, looking up into the canopy
+      liberation:
+        left_text_html: 问题是领袖们
+        right_text_html: 以权威做个对比，信用会把权力献给那些赋予它的人，而不是那些只接受的人。一位赢得信任的人不需要权威。如果某一个人不值得信赖，他当然不配拥有权威！然而，谁比政治家和董事长更缺乏我们的信用？当有冲突的时候，如果没有强加的权力失衡，人与人就会有动机解决冲突令双方都满意——来获取对方的信赖。等级制度会删除这个激励，使那些拥有权威的人能够压迫下层的人。最理想的友谊是平等的，彼此支持与挑战，同时尊重对方的自主。这可以说是一个对于我们所有的关系的好标准。如果没有那些在我们身上施加的限制——公民身份和非法生存，财产和债务，企业和军事指挥链——我们可以在自由结社和互助关系的基础上重建我们的关系。
+        image_name: liberation
+        image_alt: two protestors, adorned with gas masks and balaclavas, dance the
+          tango together in the street
+      revolt:
+        left_text_html: start with<br /><span class="bold">revolt</span>
+        right_text_html: 十三
+        image_name: revolt
+        image_alt: A anonymous man stands in front of a column of tanks on June 5,
+          1989, the morning after the Chinese military had suppressed the Tiananmen
+          Square protests of 1989 by force, who later became known as the Tank Man.
+          The tanks maneuvered to pass by the man, and he moved to continue to obstruct
+          them, in something like a dance.
+      control:
+        left_text_html: the problem is<br /><span class="bold">control</span>
+        right_text_html: 开始从调和个体与整体
+        image_name: control
+        image_alt: a cop dressed in fancy riot gear leans out of his open patrol car
+          door and uses a camcorder to record protestors who are not pictured
+      hierarchy:
+        left_text_html: 政府承诺权利，但是他们只能夺走我们的自由。权利的观念暗示了一个中央权力来授予和维护它们。但是任何国家有足够力量可以赐给我们，它也有足够力量从我们这里夺走；让政府来解决一个问题只是在产生更多的问题。政府的权力不是从真空里成形的——他们支配的权力是我们的，而且我们可以有效率的实施我们的权力，并不需要这么多机构来代表我们。世上最自由民主的社会和最专制独裁的国家共享相同的原理：集权的结构来垄断使用武力的机会。不管是答复国王的官僚，还是投票的选民，这个集权的定律是一样的。法律、官僚主义和警察都比民主古老得多；他们在民主社会里的功能和法西斯社会里的角色是没有差别的。唯一的不同是，在一个民主社会里，因为我们可以选出管理他们的人，我们会把他们给看作我们的选择——即使他们是用来对付我们的。独裁的国家本身有内在的不稳定性：他们可以屠杀、监禁和洗脑一整代人，但是他们的后代会重新创造自由的斗争。但是承诺每一个人有机会把自己的意志强加于他人的系统，就可以让他们自愿支持一个让他们互相争斗的系统。越多人觉得他们可以影响国家的强制性机构，这些机构会获得越多的人气。这也许可以解释为什么民主主义的全球扩张和难以置信的资源和权力的不平等相一致：没有另外一种政府可以稳定这么岌岌可危的局面。当权力被集中，人们必须征服其他人获得权力来控制自己的命运。自主权的斗争被转化为政治权力的争夺：后殖民国家中原本和平共存的人口后来的内战是一个例子。那些有权的阶级只能不停的对自己人口和外国宣战来维持他们的地位：美国的国家警卫队从伊拉克转移回来部署在奥克兰。无论哪里有等级制度，上层阶级的优势会被用来更加巩固那些优势。建设更多的制衡代表我们在依靠原本需要管制的机构来管制他自己。唯一可以对抗当局的垄断而且不被他们的系统卷进去的方法是发展自主行动的横向网络。最终，当我们强大到足够迫使当局把我们认真对待，我们就足够强大来脱离他们，解决自己的问题。要获得自由，只有自由的道路会赐给我们。我们需要的是广泛的场所来行使权力，而不单一的机构施舍。我们需要可以容忍多重叙事的空间，而不是支持单一的叙述。我们需要支持自主的决策结构，还有自我防卫的实践来防止统治者的野心，来代替一个压迫性的政府。
+        right_text_html: |-
+          自由不是所有物或者财产；它是一个关系。它不是防御外部世界的存在的物质，而是和外界相关联的最大的可能性。这不是说我们必须为它的利益寻找共识；冲突与共识两者都可以扩展我们并使我们高尚，只要没有一个中央集权可以把冲突转变成赢家通吃的局面。我们不必把世界分割为封地，我们应该充分利用我们的互联与共存。
+
+          十七
+        image_name: hierarchy
+        image_alt: a mustachioed cop in riot gear wearing aviator sunglasses stands
+          guard in front of several Ku Klux Klan members in full robes, one of whom
+          carries a American flag
+      borders:
+        left_text_html: 三十四
+        right_text_html: 开始从欲望的解放
+        image_name: borders
+        image_alt: a grouple of people sits upon a tall boundary fence they have climbed
+      representation:
+        left_text_html: the problem is<br /><span class="bold">representation</span>
+        right_text_html: 在这个社会里，我们的热情和爱好都不是属于我们的；它们被广告和媒体控制，让我们不断地朝向他们的理想直奔。因为灌输，人们做给他们最终带来苦难的事情也可以很满足。我们被暂时的欢乐困在痛苦的迷宫里面。若要得到真正的自由，我们需要干预那些产生我们热情与爱好的过程。解放并不意味着只是满足今天一时的欲望，而是扩张我们感觉什么是可能的概念，所以我们的欲望能够沿着他们驱使我们创造的现实转移。这意味着我们不再从强制执行、主导、和占有的感觉采取快乐。这表示我们寻找的喜悦应该让我们远离那些让我们竞争和对抗的机制。如果你曾经克服过上瘾，你知道什么叫做转换欲望或者转换热情。
+        image_name: representation
+        image_alt: a woman of asian ethnicity works as a mannequin factory stocking
+          a shelves that are full of caucasian mannequin heads
+      leaders:
+        left_text_html: the problem is<br /><span class="bold">leaders</span>
+        right_text_html: |-
+          十九
+
+          开始从叛逆
+        image_name: leaders
+        image_alt: a portly politician talks into a bouquet of press microphones that
+          surround him
+      government:
+        left_text_html: the problem is<br /><span class="bold">government</span>
+        right_text_html: "<p>Governments promise rights, but they can only take liberties.
+          The idea of rights implies a central power to grant and guard them. Yet
+          anything the state is powerful enough to guarantee, it is powerful enough
+          to take away; empowering government to solve one problem only opens the
+          door for it to create more problems. And governments do not generate power
+          out of thin air—that’s our power that they wield, which we can employ far
+          more effectively without the Rube Goldberg machine of representation.</p><p>The
+          most liberal democracy shares the same principle as the most despotic autocracy:
+          the centralization of power and legitimacy in a structure intended to monopolize
+          the use of force. Whether the bureaucrats who operate this structure answer
+          to a king, a president, or an electorate is beside the point. Laws, bureaucracy,
+          and police are older than democracy; they function the same way in a democracy
+          as in a dictatorship. The only difference is that, because we can vote about
+          who administers them, we’re supposed to regard them as ours—even when they’re
+          used against us.</p><p>Dictatorships are inherently unstable: you can slaughter,
+          imprison, and brainwash entire generations and their children will invent
+          the struggle for freedom anew. But promise every man a chance to impose
+          the will of the majority upon his fellows, and you can get them all together
+          behind a system that pits them against each other. The more influence people
+          think they have over the coercive institutions of the state, the more popular
+          those institutions can be. Perhaps this explains why the global expansion
+          of democracy coincides with incredible inequalities in the distribution
+          of resources and power: no other system of government could stabilize such
+          a precarious situation.</p><p>When power is centralized, people have to
+          attain dominion over others to gain any influence over their own destinies.
+          Struggles for autonomy are channeled into contests for political power:
+          witness the civil wars in postcolonial nations between peoples who previously
+          coexisted peacefully. Those who hold power can only retain it by waging
+          perpetual war against their own populations as well as foreign peoples:
+          the National Guard is brought back from Iraq to be deployed in Oakland.</p><p>Wherever
+          there are hierarchies, it favors the ones on top to centralize power. Building
+          more checks and balances into the system just means relying on the thing
+          we need to be protected from for protection. The only way to exert leverage
+          on the authorities without being sucked into their game is to develop horizontal
+          networks that can act autonomously. Yet when we’re powerful enough to force
+          the authorities to take us seriously, we’ll be powerful enough to solve
+          our problems without them.</p><p>There’s no way to freedom but through freedom.
+          Rather than a single bottleneck for all agency, we need a wide range of
+          venues in which to exercise power. Rather than a singular currency of legitimacy,
+          we need space for multiple narratives. In place of the coercion inherent
+          in government, we need decision-making structures that promote autonomy,
+          and practices of self-defense that can hold would-be rulers at bay.</p>"
+        image_name: government
+        image_alt: large conference table at which world leaders are seated, surrounded
+          by press and their minions, a summit meeting with greek columns of marble
+          and a traditional fresco in the dome above
+      profit:
+        left_text_html: 问题是财产
+        right_text_html: 二十三
+        image_name: profit
+        image_alt: a chauffeur holds open the door to a large Audi as a wealthy businessman
+          exits a helicopter and proceeds across the helipad towards the car
+      property:
+        left_text_html: 资本主义的基础是财产权——另一个我们从国王与贵族继承的社会建构。虽然现代财产会比较急速的交换，但是概念还是一样的：所有权会合法化暴力来执行资源和土地的人为失衡。有些人相信财产可以不靠国家而持续存在。但是财产权如果没有中央集权来执行是没有意义的——但是只要有中央集权，没有真正属于你的东西。你赚的钱是政府打印的，可以收税和通货膨胀。你车子的契税是政府车局控制的。你的家不是真正属于你的，而是属于给你贷款的银行或者拥有那块地的政府机构。即使那个房子已被买下来，政府还是可以征用它。保护对我们重要的东西会需要什么样的措施？政府只是凭借夺取我们的权利和实物而存在；他们永远都会拿的多过给的。市场只会奖励我们掏空其他人，或者其他人来掏空我们。唯一真正的安全网是我们的社会关系：如果我们要确保自己的安全性，我们需要可供自我保护的互助网络。没有金钱或财产权，我们与物的关系会由我们彼此的关系所决定。今天，这正好相反：我们对彼此的关系是由我们对实物的关系来决定的。废除财产不表示你失去全部的东西，而是没有警官或市场大跌把你依赖的东西夺走。我们会从人的需要开始，而不是应付官
+        right_text_html: |-
+          问题是掌控
+
+          如果你在一个虐待性的关系里，会有哪些迹象？虐待者可能试图控制你的行为或想法，管制或停止你对资源的进接，威胁你或者对你使用暴力；或者强迫你只能依赖，或不停的被他们监控。这描述了个体侵犯者的行为，但也适合描绘许多政府机构。它们全部都遵守人类必须被管制、统治的理念。越严重的不平等强加在我们身上，越多的精力必须花费来维持那些不平等。在一个极端，管制以残暴的方式行事：无人机袭击、特警队、单独监禁、种族歧视。在另一端，行事的方式是隐形和无所不在的，融入了我们社会的基础：那些确定信用评级和保险费的方程式，那些从被收集的统计数据变成城市规划，那些网络社交媒体的设计。政府有机构探测我们网上的活动，但比起那些塑造我们现实的程序，政府的直接管制是微不足道的。当生活的可能性被简化到零和一的境界，我们存活的现实和我们的理想会无法分辨而导致我们失去斗争。这不是因为我们得到了完全的解放，而是因为完全的相反。自由不是从某些选项中做出选择，而是制定问题。
+        image_name: property
+        image_alt: an abandoned building, now occupied, with protest banners in the
+          window, being used as community organizing location
+      lastcrime:
+        left_text_html: 最后的罪行会是什么？
+        right_text_html: 四十 三
+        image_name: lastcrime
+        image_alt: a protestor with his face concealed in the act of throwing a lit
+          molotov cocktail during a protest, in front of a huge concrete wall
+      anarchy:
+        first_html: 二十五
+        second_html: |-
+          问题是等级制度
+
+          有许多不同的机制来强加不平等。有些需要集权装置的支持，比如法院系统。其他的可以比较非正式地运作，像裙带关系或者男女角色。有许多维持阶级层次的机制已经完全没有了信誉。极少的人会信国王的神圣权利，虽然过去这是许多社会的根本基础。现在还是有许多概念我们无法脱离。谁能想象一个世界没有产权？虽然这些都是社会建构——它们存在——但是它们不是注定的。地主和总经理的存在不比皇帝的存在更自然、更必要或有益。这些机构都是一起发展，一起加强。举个例子：种族歧视的发展和资本主义的发展是解不开的：两个都需要帝国主义，奴隶制度，或者工厂阶级互相搏斗的实行，两个都是在决定谁会被困在贫民窟或者关在监狱里。同样的，若没有国家的基础设施和其他的不平等机构，私人的偏见是不可能全面性的维持白人至上的偏执。一个黑人总统可以主持这些系统只是在稳定他们：是这个例外来辩解这个规章。用另一个方式说：只要有警察的存在，他们会骚扰谁？只要有监狱，谁会被派进去？只要有贫富差距，谁会是贫困的？认为我们能利用不平等机构实现平等是天真的思想。你可以洗牌，但是牌不变。
+        third_html: <p><span class="blue black">Anarchists</span> oppose all forms
+          of hierarchy—every currency that concentrates power into the hands of a
+          few, every mechanism that puts us at a distance from our potential. Against
+          closed systems, we relish the unknown before us, the chaos within us by
+          virtue of which we are able to be free.</p>
+      outro:
+        left_text_html: 无政府主义是每个人都完全享有自决权的理念。没有法律、政府，或者决策过程比真人的需求和欲望更重要。人们应该自由地形成让他们与他人彼此都满意的关系，还有为自己的权利站起来。无政府主义不是教条或者蓝图。它不是一个若以正确的方法应用便会成功的系统，比如民主政治，或者一个在遥远未来实现的目标，比如共产主义。它是一种我们现在可以付诸实践的行动或叙述方式。对于任何价值体系或行动方针，我们最初应该问的是：它怎么分配权利？
+        right_text_html: 当我们可以看穿那些机构和机制的共同点，那些个人奋斗和普遍的斗争会更清楚地融合在一起。当我们以这个融合找到共同点，一切会改变：不只是我们的斗争，还有我们的主人翁感，我们喜悦的能力，感到我们生命的意义。只要我们能够用一个不同的逻辑行动，我们就能够找到彼此。
+      take_flight_html: Don’t cling to the old world
+      next_path: "/begin"
+      next_text: The secret is to begin.
