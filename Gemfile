@@ -33,6 +33,9 @@ gem 'rubypants'        # for smart quotes
 gem 'sterile'          # for slugs
 gem 'stringex'         # for Markdown header IDs processing
 
+# FIXME: keep json < 3.0.x since it breaks everything
+gem 'json', '< 3'
+
 # auth
 gem 'bcrypt'
 
