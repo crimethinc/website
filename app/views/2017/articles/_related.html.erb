@@ -10,11 +10,7 @@
           <% articles.each do |article| %>
             <% article = article.preferred_localization %>
 
-            <% if article == articles.last %>
-              <div class="related-article column column-one-third third-related-article">
-            <% else %>
-              <div class="related-article column column-one-third">
-            <% end %>
+            <div class="related-article">
 
             <% if article.image.present? && !lite_mode? %>
               <%= link_to image_tag(article.image, class: "related-article-image", alt: article.image_description), article.path %>
