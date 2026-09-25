@@ -1,19 +1,17 @@
 #podcast {
   main {
-
+    /* On /podcasts and /podcasts/specific-podcast pages */
     .latest-episode {
       margin: calc(var(--border-size-xlarge) * 2) auto;
 
       h1 {
-        font: {
-          weight: normal;
-          size: 3rem;
-        }
-
+        font-weight: normal;
+        font-size: 3rem;
         margin-bottom: var(--border-size-medium);
       }
     }
 
+    /* On /podcasts/specific-podcast page */
     .other-episodes {
       h1 {
         font-weight: normal;
@@ -21,9 +19,11 @@
       }
     }
 
+    /* On an episode details page */
     .podcast-meta {
       text-align: right;
 
+      /* TODO: remove as this comes in @base */
       img {
         max-width: 100%;
       }
@@ -34,11 +34,9 @@
       }
 
       h1 {
-        font: {
-          weight: bold;
-          weight: 800;
-          size: 2rem;
-        }
+        font-weight: bold;
+        font-weight: 800;
+        font-size: 2rem;
         line-height: 1.25em;
       }
 
@@ -68,6 +66,7 @@
       }
     }
 
+    /* on all 3 podcast page types */
     .subscribe {
       margin: var(--border-size-xlarge) auto;
       text-align: center;
@@ -75,9 +74,6 @@
       a {
         display: inline-block;
         margin: 0 0 var(--border-size-small) var(--border-size-small);
-
-        /* TODO WHY is this necessary? :( */
-        text-indent: 9999em !important;
 
         &:first-child {
           margin-left: 0;
@@ -101,10 +97,24 @@
         }
       }
 
-      .podcast-subscribe-rss         { @include podcast-subscribe-button("rss"); }
-      .podcast-subscribe-itunes      { @include podcast-subscribe-button("itunes"); }
-      .podcast-subscribe-overcast    { @include podcast-subscribe-button("overcast"); }
-      .podcast-subscribe-pocketcasts { @include podcast-subscribe-button("pocketcasts"); }
+      [class*="podcast-subscribe-"] {
+        --podcast-sub-img:  url("podcast-subscribe-buttons/rss.png");
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 110px;
+        height: 40px;
+        overflow: hidden;
+        text-indent: -10000%;
+        white-space: nowrap;
+        background-image: var(--podcast-sub-img);
+      }
+
+      .podcast-subscribe-rss { --podcast-sub-img:  url("podcast-subscribe-buttons/rss.png"); }
+      .podcast-subscribe-itunes { --podcast-sub-img:  url("podcast-subscribe-buttons/itunes.png"); }
+      .podcast-subscribe-overcast { --podcast-sub-img:  url("podcast-subscribe-buttons/overcast.png"); }
+      .podcast-subscribe-pocketcasts { --podcast-sub-img:  url("podcast-subscribe-buttons/pocketcasts.png"); }
     }
 
     .listen {
@@ -128,7 +138,7 @@
       list-style-type: square;
     }
 
-    @media screen and (min-width: $small-tablet) {
+    @media screen and (min-width: 800px) {
       .subscribe {
         margin: var(--border-size-small) auto;
         text-align: right;
@@ -136,6 +146,9 @@
         a {
           margin: 0 0 var(--border-size-small) var(--border-size-small);
           /* WHY is this necessary? :( */
+          /* Answer: this is to visually hide text, but keep for screen
+             readers. erb template can be update to add the .visually-hidden
+             class on this element and then this can be removed */
           text-indent: 9999em !important;
         }
       }
@@ -154,6 +167,5 @@
         }
       }
     }
-
   }
 }
