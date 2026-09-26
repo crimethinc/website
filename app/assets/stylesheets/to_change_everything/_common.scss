@@ -10,6 +10,80 @@
   width: 100%;
 }
 
+#intro, #outro {
+  width: 100%;
+  background-image: var(--bg);
+  background-size: 100%;
+  padding-bottom: 200%;
+  background-position: center top;
+  position: relative;
+
+  @media (min-width: 1201px) { padding-bottom: 39.5%; }
+
+  .leftintro, .rightintro {
+    position: relative;
+    width: 100%;
+    float: left;
+
+    @media (min-width: 1201px) {
+      width: 50%;
+      &.rightintro { float: right; }
+    }
+
+    > h3 {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 95%;
+      padding: 16% 5% 0% 0%;
+
+      @media (min-width: 1201px) {
+        position: absolute;
+        width: 90%;
+        padding: 12% 10% 0% 0%;
+      }
+    }
+  }
+}
+
+#intro {
+  --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-phone.jpg");
+  @media (min-width: 601px) and (max-width: 1200px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-tablet.jpg"); }
+  @media (min-width: 1201px) and (max-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-small.gif"); }
+  @media (min-width: 1671px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-large.gif"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 200px),
+  (min-resolution: 192dpi) and (min-width: 200px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-phonesmall@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 321px),
+  (min-resolution: 192dpi) and (min-width: 321px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-phone@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 601px),
+  (min-resolution: 192dpi) and (min-width: 601px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-tablet@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
+  (min-resolution: 192dpi) and (min-width: 1024px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-tablet@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1201px),
+  (min-resolution: 192dpi) and (min-width: 1201px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-small@2x.gif"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1670px),
+  (min-resolution: 192dpi) and (min-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/intro-large@2x.gif"); }
+}
+
+#outro {
+  --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-phone.jpg");
+  @media (min-width: 601px) and (max-width: 1200px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-tablet.jpg"); }
+  @media (min-width: 1201px) and (max-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-small.gif"); }
+  @media (min-width: 1671px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-large.gif"); }  
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 200px),
+  (min-resolution: 192dpi) and (min-width: 200px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-phonesmall@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 321px),
+  (min-resolution: 192dpi) and (min-width: 321px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-phone@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 601px),
+  (min-resolution: 192dpi) and (min-width: 601px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-tablet@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
+  (min-resolution: 192dpi) and (min-width: 1024px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-tablet@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1201px),
+  (min-resolution: 192dpi) and (min-width: 1201px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-small@2x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1670px),
+  (min-resolution: 192dpi) and (min-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-large@2x.jpg"); }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -124,44 +198,6 @@
     top: 0;
     left: 0;
     width: 50%;
-  }
-
-  .leftintro {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .rightintro {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .rightintro h3 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 95%;
-    padding: 16% 5% 0% 0%;
-  }
-
-  #intro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-phone.jpg");
-    background-size: 100%;
-    padding-bottom: 200%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #outro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-phone.jpg");
-    background-size: 100%;
-    padding-bottom: 200%;
-    background-position: center top;
-    position: relative;
   }
 
   #takeflight {
@@ -345,44 +381,6 @@
     width: 50%;
   }
 
-  .leftintro {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .rightintro {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .rightintro h3 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 95%;
-    padding: 16% 5% 0% 0%;
-  }
-
-  #intro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-tablet.jpg");
-    background-size: 100%;
-    padding-bottom: 200%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #outro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-tablet.jpg");
-    background-size: 100%;
-    padding-bottom: 200%;
-    background-position: center top;
-    position: relative;
-  }
-
   #takeflight {
     width: 100%;
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg");
@@ -562,44 +560,6 @@
     top: 0;
     left: 0;
     width: 50%;
-  }
-
-  .leftintro {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .rightintro {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .rightintro h3 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 95%;
-    padding: 16% 5% 0% 0%;
-  }
-
-  #intro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-tablet.jpg");
-    background-size: 100%;
-    padding-bottom: 200%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #outro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-tablet.jpg");
-    background-size: 100%;
-    padding-bottom: 200%;
-    background-position: center top;
-    position: relative;
   }
 
   #takeflight {
@@ -791,51 +751,6 @@
     width: 50%;
   }
 
-  .leftintro {
-    position: relative;
-    width: 50%;
-    float: left;
-  }
-
-  .rightintro {
-    position: relative;
-    width: 50%;
-    float: right;
-  }
-
-  .rightintro h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    padding: 12% 10% 0% 0%;
-  }
-
-  #intro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-small.gif");
-    background-size: 100%;
-    padding-bottom: 39.5%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #outro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-small.jpg");
-    background-size: 100%;
-    padding-bottom: 39.5%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #outro .lefttext {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 66%;
-    padding: 8% 19% 0% 15%;
-  }
 
   #takeflight {
     width: 100%;
@@ -1117,44 +1032,6 @@
     width: 50%;
   }
 
-  .leftintro {
-    position: relative;
-    width: 50%;
-    float: left;
-  }
-
-  .rightintro {
-    position: relative;
-    width: 50%;
-    float: right;
-  }
-
-  .rightintro h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    padding: 12% 10% 0% 0%;
-  }
-
-  #intro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-large.gif");
-    background-size: 100%;
-    padding-bottom: 39.5%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #outro {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-large.jpg");
-    background-size: 100%;
-    padding-bottom: 39.5%;
-    background-position: center top;
-    position: relative;
-  }
-
   #takeflight {
     width: 100%;
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg");
@@ -1353,14 +1230,6 @@
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 200px),
   (min-resolution: 192dpi) and (min-width: 200px) {
-  #intro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-phonesmall@2x.jpg");
-  }
-
-  #outro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-phonesmall@2x.jpg");
-  }
-
   #takeflight {
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-phonesmall@2x.jpg");
   }
@@ -1368,13 +1237,6 @@
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 321px),
   (min-resolution: 192dpi) and (min-width: 321px) {
-  #intro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-phone@2x.jpg");
-  }
-
-  #outro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-phone@2x.jpg");
-  }
 
   #takeflight {
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-phone@2x.jpg");
@@ -1383,13 +1245,6 @@
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 601px),
   (min-resolution: 192dpi) and (min-width: 601px) {
-  #intro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-tablet@2x.jpg");
-  }
-
-  #outro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-tablet@2x.jpg");
-  }
 
   #takeflight {
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet@2x.jpg");
@@ -1398,14 +1253,6 @@
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
   (min-resolution: 192dpi) and (min-width: 1024px) {
-  #intro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-tablet@2x.jpg");
-  }
-
-  #outro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-tablet@2x.jpg");
-  }
-
   #takeflight {
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet@2x.jpg");
   }
@@ -1413,14 +1260,6 @@
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1201px),
   (min-resolution: 192dpi) and (min-width: 1201px) {
-  #intro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-small@2x.gif");
-  }
-
-  #outro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-small@2x.jpg");
-  }
-
   #takeflight {
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-small@2x.jpg");
   }
@@ -1428,14 +1267,6 @@
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1670px),
   (min-resolution: 192dpi) and (min-width: 1670px) {
-  #intro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/intro-large@2x.gif");
-  }
-
-  #outro {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/outro-large@2x.jpg");
-  }
-
   #takeflight {
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg");
   }
