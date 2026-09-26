@@ -5,6 +5,5 @@
 </p>
 
 <div class="subscribe">
-  <%# All links are on one line to avoid the browsers default little spacing that comes with a source linebreak %>
-  <%= link_to t('ui.subscribe_to_rss'), podcast_feed_url, class: "u-url podcast-subscribe-rss" %><%= link_to t('ui.subscribe_in_itunes'), podcast.itunes_url, class: "u-url podcast-subscribe-itunes" %><br><%= link_to t('ui.subscribe_in_overcast'), podcast.overcast_url, class: "u-url podcast-subscribe-overcast" %><%= link_to t('ui.subscribe_in_pocket_casts'), podcast.pocketcasts_url, class: "u-url podcast-subscribe-pocketcasts" %>
+  <%= subscribe_links_for podcast -%>
 </div>
