@@ -324,10 +324,10 @@ es-419:
     continue_editing_article: Continuar editando artículo
     view_article_in_admin: ver artículo en Admin
     download_docx: Descargar .docx
-    subscribe_to_rss: Suscribirse a RSS
+    subscribe_in_rss: Suscribirse a RSS
     subscribe_in_itunes: Suscribirse en iTunes
     subscribe_in_overcast: Suscribirse en Overcast
-    subscribe_in_pocket_casts: Suscribirse en Pocket Casts
+    subscribe_in_pocketcasts: Suscribirse en Pocket Casts
     windows_ie_edge: Windows, IE y Edge
     generator_content: Máquina de Rube Goldberg de Internet CrimethInc. 3000
     toggle_navigation: Alternar navegación

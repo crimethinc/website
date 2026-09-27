@@ -673,10 +673,10 @@ en:
     continue_editing_article: Continue editing article
     view_article_in_admin: view article in Admin
     download_docx: Download .docx
-    subscribe_to_rss: Subscribe to RSS
+    subscribe_in_rss: Subscribe to RSS
     subscribe_in_itunes: Subscribe in iTunes
     subscribe_in_overcast: Subscribe in Overcast
-    subscribe_in_pocket_casts: Subscribe in Pocket Casts
+    subscribe_in_pocketcasts: Subscribe in Pocket Casts
     windows_ie_edge: Windows, IE and Edge
     generator_content: CrimethInc. Internet Rube Goldberg Machine 3000
     toggle_navigation: Toggle navigation

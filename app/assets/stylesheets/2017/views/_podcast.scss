@@ -23,11 +23,6 @@
     .podcast-meta {
       text-align: right;
 
-      /* TODO: remove as this comes in @base */
-      img {
-        max-width: 100%;
-      }
-
       .p-name {
         margin-bottom: var(--border-size-large);
         text-align: left;
@@ -97,7 +92,7 @@
         }
       }
 
-      [class*="podcast-subscribe-"] {
+      [data-podcatcher] {
         --podcast-sub-img:  url("podcast-subscribe-buttons/rss.png");
 
         background-position: center center;
@@ -105,16 +100,13 @@
         background-size: contain;
         width: 110px;
         height: 40px;
-        overflow: hidden;
-        text-indent: -10000%;
-        white-space: nowrap;
         background-image: var(--podcast-sub-img);
+        
+        &[data-podcatcher="rss"] { --podcast-sub-img: url("podcast-subscribe-buttons/rss.png"); }
+        &[data-podcatcher="itunes"] { --podcast-sub-img:  url("podcast-subscribe-buttons/itunes.png"); }
+        &[data-podcatcher="overcast"] { --podcast-sub-img:  url("podcast-subscribe-buttons/overcast.png"); }
+        &[data-podcatcher="pocketcasts"] { --podcast-sub-img:  url("podcast-subscribe-buttons/pocketcasts.png"); }
       }
-
-      .podcast-subscribe-rss { --podcast-sub-img:  url("podcast-subscribe-buttons/rss.png"); }
-      .podcast-subscribe-itunes { --podcast-sub-img:  url("podcast-subscribe-buttons/itunes.png"); }
-      .podcast-subscribe-overcast { --podcast-sub-img:  url("podcast-subscribe-buttons/overcast.png"); }
-      .podcast-subscribe-pocketcasts { --podcast-sub-img:  url("podcast-subscribe-buttons/pocketcasts.png"); }
     }
 
     .listen {
@@ -145,11 +137,6 @@
 
         a {
           margin: 0 0 var(--border-size-small) var(--border-size-small);
-          /* WHY is this necessary? :( */
-          /* Answer: this is to visually hide text, but keep for screen
-             readers. erb template can be update to add the .visually-hidden
-             class on this element and then this can be removed */
-          text-indent: 9999em !important;
         }
       }
 
