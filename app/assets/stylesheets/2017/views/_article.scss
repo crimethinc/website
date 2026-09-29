@@ -393,22 +393,13 @@
     .center,
     .centered { text-align: center; }
 
-    .portrait {                                       width: 66%; max-width: 66%;
-      @media screen and (min-width: $large-phone)   { width: 50%; max-width: 50%; }
-      @media screen and (min-width: $medium-laptop) { width: 40%; max-width: 40%; }
-      @media screen and (min-width: $large-laptop)  { width: 33%; max-width: 33%; }
-    }
-
-    .shadow img {
-      box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2)
-    }
-
-    .shadow-portrait,
-    .portrait-shadow {
-      @extend .shadow;
-      @extend .portrait;
-    }
-
+    /* TODO: markdown_media support
+       .portrait,.shadow,.portrait-shadow,.shadow-portrait are classes
+       that can be added by authors directly in the markdown of an
+       article. Perhaps it makes sense to extract all CSS that is
+       author facing to a separate CSS file. Having it mixed in with
+       the site CSS makes it easy to mistake it as dead CSS as
+       grepping for the classes returns no matches. */
     figure {
       img {
         display: block;
@@ -416,6 +407,21 @@
         margin: auto;
         text-align: center;
       }
+
+      &.portrait, &.portrait-shadow, &.shadow-portrait {
+        width: 66%; max-width: 66%;
+        @media screen and (min-width: $large-phone)   { width: 50%; max-width: 50%; }
+        @media screen and (min-width: $medium-laptop) { width: 40%; max-width: 40%; }
+        @media screen and (min-width: $large-laptop)  { width: 33%; max-width: 33%; }
+      }
+
+      @container style(--figure-shadow: true) {
+        img { box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2) }
+      }
+    }
+
+    .shadow, .shadow-portrait, .portrait-shadow {
+      --figure-shadow: true;
     }
 
     blockquote {
