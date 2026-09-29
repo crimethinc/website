@@ -2,7 +2,7 @@
   #page {
     main {
       margin: var(--border-size-xlarge) auto;
-      max-width: $large-tablet;
+      max-width: var(--large-tablet);
 
       .crumbtrail {
         text-transform: uppercase;
