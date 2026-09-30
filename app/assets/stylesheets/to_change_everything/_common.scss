@@ -313,6 +313,33 @@
   }
 }
 
+#property {
+  h2 {
+    padding: 4% 0 0 20%;
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      padding: 12% 0 0 20%;
+    }
+  }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 76%;
+      padding: 8% 12% 0% 10%;
+    }
+    @media (min-width: 1671px) {
+      width: 75%;
+      padding: 5% 10% 0% 15%;
+    }
+  }
+
+  .left {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      padding-top: 62%;
+    }
+  }
+}
+
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -451,10 +478,6 @@
     text-indent: 0px !important;
   }
 
-  #property h2 {
-    padding: 4% 0 0 20%;
-  }
-
   #lastcrime h2 {
     padding: 8% 0 0 10%;
   }
@@ -576,10 +599,6 @@
     text-indent: 0px !important;
   }
 
-  #property h2 {
-    padding: 4% 0 0 20%;
-  }
-
   #lastcrime h2 {
     padding: 8% 0 0 10%;
   }
@@ -699,10 +718,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #property h2 {
-    padding: 4% 0 0 20%;
   }
 
   #lastcrime h2 {
@@ -834,19 +849,6 @@
     text-indent: 0px !important;
   }
 
-  #property h2 {
-    padding: 12% 0 0 20%;
-  }
-
-  #property .righttext {
-    width: 76%;
-    padding: 8% 12% 0% 10%;
-  }
-
-  #property .left {
-    padding-top: 62%;
-  }
-
   #lastcrime h2 {
     padding: 8% 0 0 10%;
   }
@@ -974,15 +976,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #property h2 {
-    padding: 4% 0 0 20%;
-  }
-
-  #property .righttext {
-    width: 75%;
-    padding: 5% 10% 0% 15%;
   }
 
   #lastcrime h2 {
