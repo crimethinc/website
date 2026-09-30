@@ -255,6 +255,22 @@
   }
 }
 
+#leaders {
+  h2 { padding: 6% 0 0 27%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -393,10 +409,6 @@
     text-indent: 0px !important;
   }
 
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
   #government h2 {
     padding: 10% 0 0 21%;
   }
@@ -530,10 +542,6 @@
     text-indent: 0px !important;
   }
 
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
   #government h2 {
     padding: 10% 0 0 21%;
   }
@@ -665,10 +673,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #leaders h2 {
-    padding: 6% 0 0 27%;
   }
 
   #government h2 {
@@ -810,15 +814,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
-  #leaders .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
   }
 
   #government h2 {
@@ -987,15 +982,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
-  #leaders .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
   }
 
   #government h2 {
