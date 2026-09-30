@@ -223,6 +223,22 @@
   }
 }
 
+#borders {
+  h2 { padding: 7% 0 0 17%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -359,10 +375,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
   }
 
   #representation h2 {
@@ -506,10 +518,6 @@
     text-indent: 0px !important;
   }
 
-  #borders h2 {
-    padding: 7% 0 0 17%;
-  }
-
   #representation h2 {
     padding: 10% 0 0 13%;
   }
@@ -649,10 +657,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
   }
 
   #representation h2 {
@@ -802,15 +806,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
-  }
-
-  #borders .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
   }
 
   #representation h2 {
@@ -997,15 +992,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
-  }
-
-  #borders .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
   }
 
   #representation h2 {
