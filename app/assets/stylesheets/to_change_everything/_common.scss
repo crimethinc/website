@@ -239,6 +239,22 @@
   }
 }
 
+#representation {
+  h2 { padding: 10% 0 0 13%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -375,10 +391,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
   }
 
   #leaders h2 {
@@ -518,10 +530,6 @@
     text-indent: 0px !important;
   }
 
-  #representation h2 {
-    padding: 10% 0 0 13%;
-  }
-
   #leaders h2 {
     padding: 6% 0 0 27%;
   }
@@ -657,10 +665,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
   }
 
   #leaders h2 {
@@ -806,15 +810,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
-  }
-
-  #representation .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
   }
 
   #leaders h2 {
@@ -992,15 +987,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
-  }
-
-  #representation .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
   }
 
   #leaders h2 {
