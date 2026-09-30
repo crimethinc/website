@@ -102,6 +102,22 @@
   }
 }
 
+#answering {
+  h2 { padding: 5% 0 0 33%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 72%;
+      padding: 15% 18% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -238,10 +254,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #answering h2 {
-    padding: 5% 0 0 33%;
   }
 
   #power h2 {
@@ -417,10 +429,6 @@
     text-indent: 0px !important;
   }
 
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
   #power h2 {
     padding: 6% 0 0 5%;
   }
@@ -594,10 +602,6 @@
     text-indent: 0px !important;
   }
 
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
   #power h2 {
     padding: 6% 0 0 5%;
   }
@@ -757,7 +761,6 @@
     width: 50%;
   }
 
-
   #takeflight {
     width: 100%;
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-small.jpg");
@@ -778,15 +781,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
-  #answering .righttext {
-    width: 72%;
-    padding: 15% 18% 0% 10%;
   }
 
   #power h2 {
@@ -1049,15 +1043,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
-  #answering .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
   }
 
   #power h2 {
