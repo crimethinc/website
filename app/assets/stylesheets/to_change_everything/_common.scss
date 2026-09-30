@@ -165,6 +165,22 @@
   }
 }
 
+#liberation {
+  h2 { padding: 4% 0 0 32%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 70%;
+      padding: 15% 20% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -301,10 +317,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
   }
 
   #revolt h2 {
@@ -464,10 +476,6 @@
     text-indent: 0px !important;
   }
 
-  #liberation h2 {
-    padding: 4% 0 0 32%;
-  }
-
   #revolt h2 {
     padding: 10% 0 0 12%;
   }
@@ -623,10 +631,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
   }
 
   #revolt h2 {
@@ -792,15 +796,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
-  }
-
-  #liberation .righttext {
-    width: 70%;
-    padding: 15% 20% 0% 10%;
   }
 
   #revolt h2 {
@@ -1023,15 +1018,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
-  }
-
-  #liberation .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
   }
 
   #revolt h2 {
