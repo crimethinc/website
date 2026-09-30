@@ -296,6 +296,23 @@
   }
 }
 
+#profit {
+  h2 { padding: 10% 0 0 25%; }
+
+  .left {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      padding-top: 50%;
+    }
+  }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 8% 12% 0% 10%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -434,10 +451,6 @@
     text-indent: 0px !important;
   }
 
-  #profit h2 {
-    padding: 10% 0 0 25%;
-  }
-
   #property h2 {
     padding: 4% 0 0 20%;
   }
@@ -563,10 +576,6 @@
     text-indent: 0px !important;
   }
 
-  #profit h2 {
-    padding: 10% 0 0 25%;
-  }
-
   #property h2 {
     padding: 4% 0 0 20%;
   }
@@ -690,10 +699,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #profit h2 {
-    padding: 10% 0 0 25%;
   }
 
   #property h2 {
@@ -827,19 +832,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #profit .left {
-    padding-top: 50%;
-  }
-
-  #profit h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #profit .righttext {
-    width: 78%;
-    padding: 8% 12% 0% 10%;
   }
 
   #property h2 {
@@ -982,10 +974,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #profit h2 {
-    padding: 10% 0 0 25%;
   }
 
   #property h2 {
