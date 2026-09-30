@@ -197,6 +197,17 @@
   }
 }
 
+#control {
+  h2 { padding: 10% 0 0 25%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -333,10 +344,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
   }
 
   #hierarchy h2 {
@@ -488,10 +495,6 @@
     text-indent: 0px !important;
   }
 
-  #control h2 {
-    padding: 10% 0 0 25%;
-  }
-
   #hierarchy h2 {
     padding: 10% 0 0 23%;
   }
@@ -639,10 +642,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
   }
 
   #hierarchy h2 {
@@ -800,15 +799,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #control .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
   }
 
   #hierarchy h2 {
@@ -1013,10 +1003,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
   }
 
   #hierarchy h2 {
