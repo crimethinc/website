@@ -339,6 +339,21 @@
   }
 }
 
+#lastcrime {
+  h2 { padding: 8% 0 0 10%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 72%;
+      padding: 12% 18% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 58%;
+      padding: 15% 27% 0% 15%;
+    }
+  }
+}
 
 /*------------------MORE TEXTS LINKS--------------------------*/
 
@@ -478,10 +493,6 @@
     text-indent: 0px !important;
   }
 
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
   #anarchy {
     width: 100%;
     clear: both;
@@ -599,10 +610,6 @@
     text-indent: 0px !important;
   }
 
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
   #anarchy {
     width: 100%;
     clear: both;
@@ -718,10 +725,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
   }
 
   #anarchy {
@@ -849,15 +852,6 @@
     text-indent: 0px !important;
   }
 
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
-  #lastcrime .righttext {
-    width: 72%;
-    padding: 12% 18% 0% 10%;
-  }
-
   #anarchy {
     width: 100%;
     clear: both;
@@ -976,15 +970,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
-  #lastcrime .righttext {
-    width: 58%;
-    padding: 15% 27% 0% 15%;
   }
 
   #anarchy {
