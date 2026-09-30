@@ -145,6 +145,26 @@
   }
 }
 
+#reconciling {
+  h2 { padding: 7% 0 0 19%; }
+
+  .left {
+    @media (min-width: 1201px) { padding-top: 57%; }
+  }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 5% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 70%;
+      padding: 5% 15% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -281,10 +301,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
   }
 
   #liberation h2 {
@@ -448,10 +464,6 @@
     text-indent: 0px !important;
   }
 
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
-  }
-
   #liberation h2 {
     padding: 4% 0 0 32%;
   }
@@ -611,10 +623,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
   }
 
   #liberation h2 {
@@ -784,19 +792,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #reconciling .left {
-    padding-top: 57%;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
-  }
-
-  #reconciling .righttext {
-    width: 78%;
-    padding: 5% 12% 0% 10%;
   }
 
   #liberation h2 {
@@ -1028,15 +1023,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
-  }
-
-  #reconciling .righttext {
-    width: 70%;
-    padding: 5% 15% 0% 15%;
   }
 
   #liberation h2 {
