@@ -74,6 +74,23 @@
   @media (min-resolution: 192dpi) and (min-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-large@2x.jpg"); }
 }
 
+
+#self {
+  h2 { padding: 6% 0 0 10%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 75%;
+      padding: 13% 15% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 65%;
+      padding: 15% 20% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -210,10 +227,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
   }
 
   #answering h2 {
@@ -393,10 +406,6 @@
     text-indent: 0px !important;
   }
 
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
   #answering h2 {
     padding: 5% 0 0 33%;
   }
@@ -572,10 +581,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
   }
 
   #answering h2 {
@@ -762,15 +767,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #self .righttext {
-    width: 75%;
-    padding: 13% 15% 0% 10%;
   }
 
   #answering h2 {
@@ -1042,15 +1038,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #self .righttext {
-    width: 65%;
-    padding: 15% 20% 0% 15%;
   }
 
   #answering h2 {
