@@ -118,6 +118,17 @@
   }
 }
 
+#power {
+  h2 { padding: 6% 0 0 5%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 76%;
+      padding: 7% 14% 0% 10%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -254,10 +265,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
   }
 
   #relationships h2 {
@@ -429,10 +436,6 @@
     text-indent: 0px !important;
   }
 
-  #power h2 {
-    padding: 6% 0 0 5%;
-  }
-
   #relationships h2 {
     padding: 7% 0 0 15%;
   }
@@ -600,10 +603,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
   }
 
   #relationships h2 {
@@ -781,15 +780,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
-  }
-
-  #power .righttext {
-    width: 76%;
-    padding: 7% 14% 0% 10%;
   }
 
   #relationships h2 {
@@ -1043,10 +1033,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
   }
 
   #relationships h2 {
