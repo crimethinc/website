@@ -208,6 +208,21 @@
   }
 }
 
+#hierarchy {
+  h2 { padding: 10% 0 0 23%; }
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 65%;
+      padding: 15% 20% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -344,10 +359,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
   }
 
   #borders h2 {
@@ -495,10 +506,6 @@
     text-indent: 0px !important;
   }
 
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
-  }
-
   #borders h2 {
     padding: 7% 0 0 17%;
   }
@@ -642,10 +649,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
   }
 
   #borders h2 {
@@ -799,15 +802,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
-  }
-
-  #hierarchy .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
   }
 
   #borders h2 {
@@ -1003,15 +997,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
-  }
-
-  #hierarchy .righttext {
-    width: 65%;
-    padding: 15% 20% 0% 15%;
   }
 
   #borders h2 {
