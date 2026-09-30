@@ -181,6 +181,22 @@
   }
 }
 
+#revolt {
+  h2 { padding: 10% 0 0 12%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 79%;
+      padding: 5% 11% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 68%;
+      padding: 8% 17% 0% 15%;
+    }
+  }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -317,10 +333,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
   }
 
   #control h2 {
@@ -476,10 +488,6 @@
     text-indent: 0px !important;
   }
 
-  #revolt h2 {
-    padding: 10% 0 0 12%;
-  }
-
   #control h2 {
     padding: 10% 0 0 25%;
   }
@@ -631,10 +639,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
   }
 
   #control h2 {
@@ -796,15 +800,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
-  }
-
-  #revolt .righttext {
-    width: 79%;
-    padding: 5% 11% 0% 10%;
   }
 
   #control h2 {
@@ -1018,15 +1013,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
-  }
-
-  #revolt .righttext {
-    width: 68%;
-    padding: 8% 17% 0% 15%;
   }
 
   #control h2 {
