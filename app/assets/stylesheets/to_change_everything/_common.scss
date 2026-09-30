@@ -10,6 +10,12 @@
   width: 100%;
 }
 
+  /*
+╭────────────────────────────────────────────────────╮
+│                  Intro and Outro                   │
+╰────────────────────────────────────────────────────╯
+ */
+
 #intro, #outro {
   width: 100%;
   background-image: var(--bg);
@@ -74,6 +80,11 @@
   @media (min-resolution: 192dpi) and (min-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-large@2x.jpg"); }
 }
 
+  /*
+╭────────────────────────────────────────────────────╮
+│                     Chapters                       │
+╰────────────────────────────────────────────────────╯
+ */
 
 #self {
   h2 { padding: 6% 0 0 10%; }
