@@ -43,11 +43,11 @@
       .meta {
         margin: 4rem auto 0 auto;
 
-        @media screen and (min-width: $large-tablet) {
+        @media screen and (min-width: 960px) {
           margin-top: 8rem;
         }
 
-        max-width: $large-tablet;
+        max-width: var(--large-tablet);
 
         padding: 0 var(--border-size-medium);
 
@@ -100,10 +100,8 @@
       }
 
       h1 {
-        font: {
-          size: 3rem;
-          weight: 900;
-        }
+        font-size: 3rem;
+        font-weight: 900;
         letter-spacing: -.01em;
         line-height: 1.05em;
         margin-bottom: .1em;
@@ -112,13 +110,13 @@
           font-size: 4rem;
         }
 
-        @media screen and (min-width: $large-phone) {
+        @media screen and (min-width: 640px) {
           font-size: 6rem;
           letter-spacing: -0.01em;
           line-height: 1em;
         }
 
-        @media screen and (min-width: $small-tablet) {
+        @media screen and (min-width: 800px) {
           font-size: 4em;
           letter-spacing: -0.01em;
           line-height: 1em;
@@ -133,12 +131,12 @@
           font-size: 2.5rem;
         }
 
-        @media screen and (min-width: $large-phone) {
+        @media screen and (min-width: 640px) {
           font-size: 3rem;
           letter-spacing: -0.01em;
         }
 
-        @media screen and (min-width: $small-tablet) {
+        @media screen and (min-width: 800px) {
           font-size: 3rem;
           letter-spacing: -0.01em;
         }
@@ -148,7 +146,7 @@
     footer {
       text-align: center;
 
-      @media screen and (min-width: $small-tablet) {
+      @media screen and (min-width: 800px) {
         margin: 50pt 0;
         padding: 50pt;
       }
@@ -181,15 +179,12 @@
     color: var(--color-black);
     padding: 0 var(--border-size-medium);
     margin-top: 4rem;
-
-    font: {
-      size: 1.75rem;
-      weight: lighter;
-      weight: 300;
-    }
+    font-size: 1.75rem;
+    font-weight: lighter;
+    font-weight: 300;
     letter-spacing: .02em;
 
-    @media screen and (min-width: $small-tablet) {
+    @media screen and (min-width: 800px) {
       font-size: 1.5em;
       padding: 0 10pt;
     }
@@ -200,11 +195,11 @@
     }
 
     > :not(.video-container) {
-      max-width: $large-tablet - 100px;
+      max-width: calc(var(--large-tablet) - 100px);
     }
 
     > :first-child {
-      max-width: $large-tablet;
+      max-width: var(--large-tablet);
       line-height: 1.5em;
       margin-bottom: 1em;
       font-size: 1.1em;
@@ -299,10 +294,8 @@
     }
 
     dt, b, strong {
-      font: {
-        weight: bold;
-        weight: 700;
-      }
+      font-weight: bold;
+      font-weight: 700;
     }
 
     dl {
@@ -310,9 +303,7 @@
     }
 
     dd {
-      margin: {
-        left: var(--border-size-large);
-      }
+      margin-left: var(--border-size-large);
     }
 
     ul, ol {
@@ -360,10 +351,8 @@
 
     th {
       /* TODO */
-      font: {
-        weight: bold;
-        weight: 700;
-      }
+      font-weight: bold;
+      font-weight: 700;
       text-align: left;
       background: #eee;
       border-bottom: var(--border-size-xsmall) solid white;
@@ -410,9 +399,9 @@
 
       &.portrait, &.portrait-shadow, &.shadow-portrait {
         width: 66%; max-width: 66%;
-        @media screen and (min-width: $large-phone)   { width: 50%; max-width: 50%; }
-        @media screen and (min-width: $medium-laptop) { width: 40%; max-width: 40%; }
-        @media screen and (min-width: $large-laptop)  { width: 33%; max-width: 33%; }
+        @media screen and (min-width: 640px)  { width: 50%; max-width: 50%; }
+        @media screen and (min-width: 1280px) { width: 40%; max-width: 40%; }
+        @media screen and (min-width: 1440px) { width: 33%; max-width: 33%; }
       }
 
       @container style(--figure-shadow: true) {
@@ -438,7 +427,7 @@
         font-style: normal;
       }
 
-      @media screen and (min-width: $small-tablet) {
+      @media screen and (min-width: 800px) {
         position: relative;
         left: -0.75em;
       }
@@ -457,7 +446,7 @@
       }
 
       /* narrower desktop browser window in between phone and tablet */
-      @media screen and (min-width: $small-tablet) {
+      @media screen and (min-width: 800px) {
         figure + figure,
         img + img {
           /* TODO */
@@ -514,10 +503,8 @@
       &:link, &:visited, &:hover, &:active {
         display: inline-block;
         text-decoration: none;
-        font: {
-          size: 0.625em;
-          weight: 500;
-        }
+        font-size: 0.625em;
+        font-weight: 500;
         position: relative;
         top: -0.625em;
         left: -0.125em;
