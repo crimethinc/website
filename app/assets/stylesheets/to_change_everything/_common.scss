@@ -68,6 +68,30 @@
   }
 }
 
+.righttext {
+  position: relative;
+  width: 88%;
+  padding: 7% 5% 7% 7%;
+
+  @media (min-width: 601px) and (max-width: 1200px) {
+    width: 81%;
+    padding: 7% 9% 7% 10%;
+  }
+
+  @media (min-width: 1201px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 78%;
+    padding: 8% 12% 0% 10%;
+  }
+
+  @media (min-width: 1671px) {
+    width: 65%;
+    padding: 8% 20% 0% 15%;
+  }
+}
+
 .inlinequote {
   padding: 1% 5% 1% 5%;
   text-indent: 0px !important;
@@ -601,58 +625,4 @@
 
 .black {
   font-weight: 800;
-}
-
-/*----------------------------------------------------------*/
-/*-------------RESPONSIVE CODE STARTS HERE------------------*/
-/*----------------------------------------------------------*/
-
-/*-------------PHONE CSS------------------*/
-/*@media (min-device-width:200px) and (max-device-width:600px) OR  (max-width:600px) ORIGINAL COMBINED {*/
-@media (min-device-width: 200px) and (max-width: 600px) {
-  .righttext {
-    position: relative;
-    width: 88%;
-    padding: 7% 5% 7% 7%;
-  }
-}
-
-/*-------------TABLET CSS------------------*/
-@media (min-width: 601px) and (max-width: 1023px) {
-  .righttext {
-    position: relative;
-    width: 81%;
-    padding: 7% 9% 7% 10%;
-  }
-}
-
-/*-------------TABLET LANDSCAPE------------------*/
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .righttext {
-    position: relative;
-    width: 81%;
-    padding: 7% 9% 7% 10%;
-  }
-}
-
-/*-------------DESKTOP SMALL CSS------------------*/
-@media (min-width: 1201px) and (max-width: 1670px) {
-  .righttext {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 78%;
-    padding: 8% 12% 0% 10%;
-  }
-}
-
-/*-------------DESKTOP BIG CSS------------------*/
-@media (min-width: 1671px) {
-  .righttext {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 65%;
-    padding: 8% 20% 0% 15%;
-  }
 }
