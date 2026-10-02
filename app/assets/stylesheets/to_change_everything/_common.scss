@@ -479,6 +479,11 @@
   }
 }
 
+.inlinequote {
+  padding: 1% 5% 1% 5%;
+  text-indent: 0px !important;
+}
+
 /*
 ╭────────────────────────────────────────────────────╮
 │              Take Flight / Next                    │
@@ -605,11 +610,6 @@
     width: 88%;
     padding: 7% 5% 7% 7%;
   }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
-  }
 }
 
 /*-------------TABLET CSS------------------*/
@@ -627,11 +627,6 @@
     width: 81%;
     padding: 7% 9% 7% 10%;
   }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
-  }
 }
 
 /*-------------TABLET LANDSCAPE------------------*/
@@ -648,11 +643,6 @@
     position: relative;
     width: 81%;
     padding: 7% 9% 7% 10%;
-  }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
   }
 }
 
@@ -673,11 +663,6 @@
     width: 78%;
     padding: 8% 12% 0% 10%;
   }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
-  }
 }
 
 /*-------------DESKTOP BIG CSS------------------*/
@@ -696,9 +681,5 @@
     left: 0;
     width: 65%;
     padding: 8% 20% 0% 15%;
-  }
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
   }
 }
