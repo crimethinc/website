@@ -68,6 +68,10 @@
   }
 }
 
+.inlinequote {
+  padding: 1% 5% 1% 5%;
+  text-indent: 0px !important;
+}
 
 /*
 ╭────────────────────────────────────────────────────╮
@@ -491,11 +495,6 @@
       --col-padding: 5% 7% 5% 0%;
     }
   }
-}
-
-.inlinequote {
-  padding: 1% 5% 1% 5%;
-  text-indent: 0px !important;
 }
 
 /*
