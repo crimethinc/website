@@ -355,7 +355,86 @@
   }
 }
 
-  /*
+/*
+╭────────────────────────────────────────────────────╮
+│                  Anarchy Is                        │
+╰────────────────────────────────────────────────────╯
+ */
+#anarchy {
+  width: 100%;
+  clear: both;
+  background-color: black;
+  overflow: auto;
+  padding-top: 3%;
+
+  @media (min-width: 1201px) { padding: 0; }
+
+  img {
+    width: 50%;
+    padding: 9% 0 0 24%;
+
+    @media (min-width: 1201px) { padding: 15% 0 0 20%; }
+  }
+
+  .first, .second, .third {
+    position: relative;
+    float: left;
+    width: var(--col-width);
+    padding: var(--col-padding);
+  }
+
+  .first  {
+    --col-width: 85%;
+    --col-padding:  5% 7% 5% 8%;
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      --col-width: 81%;
+      --col-padding: 7% 9% 7% 10%;
+    }
+
+    @media (min-width: 1201px) {
+      --col-width: 23%;
+      --col-padding: 5% 7% 5% 8%;
+    }
+  }
+
+  .second {
+    --col-width: 85%;
+    --col-padding: 1% 7% 5% 8%;
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      --col-width: 81%;
+      --col-padding: 2% 9% 7% 10%;
+    }
+
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      --col-width: 25.5%;
+      --col-padding: 5% 7.5% 5% 0%;
+    }
+
+    @media (min-width: 1671px) {
+      --col-width: 26%;
+      --col-padding: 5% 7% 5% 0%;
+    }
+  }
+
+  .third  {
+    --col-width: 85%;
+    --col-padding: 1% 7% 7% 8%;
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      --col-width: 81%;
+      --col-padding: 2% 9% 7% 10%;
+    }
+
+    @media (min-width: 1201px) {
+      --col-width: 22%;
+      --col-padding: 5% 7% 5% 0%;
+    }
+  }
+}
+
+/*
 ╭────────────────────────────────────────────────────╮
 │                  Take Flight                       │
 ╰────────────────────────────────────────────────────╯
@@ -517,40 +596,6 @@
     text-indent: 0px !important;
   }
 
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-    padding-top: 3%;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 9% 0 0 24%;
-  }
-
-  .first {
-    position: relative;
-    width: 85%;
-    padding: 5% 7% 5% 8%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 85%;
-    padding: 1% 7% 5% 8%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 85%;
-    padding: 1% 7% 7% 8%;
-    float: left;
-  }
-
   #next h1 {
     text-align: center;
     padding: 90% 10% 90% 10% !important;
@@ -617,40 +662,6 @@
     text-indent: 0px !important;
   }
 
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-    padding-top: 3%;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 9% 0 0 24%;
-  }
-
-  .first {
-    position: relative;
-    width: 81%;
-    padding: 7% 9% 7% 10%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 81%;
-    padding: 2% 9% 7% 10%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 81%;
-    padding: 2% 9% 7% 10%;
-    float: left;
-  }
-
   #next h1 {
     text-align: center;
     padding: 30% 10% 30% 10% !important;
@@ -715,44 +726,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-    padding-top: 3%;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 9% 0 0 24%;
-  }
-
-  #anarchy p:first-of-type {
-    text-indent: 0px;
-  }
-
-  .first {
-    position: relative;
-    width: 81%;
-    padding: 7% 9% 7% 10%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 81%;
-    padding: 2% 9% 7% 10%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 81%;
-    padding: 2% 9% 7% 10%;
-    float: left;
   }
 
   #next h1 {
@@ -825,39 +798,6 @@
     text-indent: 0px !important;
   }
 
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 15% 0 0 20%;
-  }
-
-  .first {
-    position: relative;
-    width: 23%;
-    padding: 5% 7% 5% 8%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 25.5%;
-    padding: 5% 7.5% 5% 0%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 22%;
-    padding: 5% 7% 5% 0%;
-    float: left;
-  }
-
   #next h1 {
     text-align: center;
     padding: 30% 10% 30% 10% !important;
@@ -926,39 +866,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 15% 0 0 20%;
-  }
-
-  .first {
-    position: relative;
-    width: 23%;
-    padding: 5% 7% 5% 8%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 26%;
-    padding: 5% 7% 5% 0%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 22%;
-    padding: 5% 7% 5% 0%;
-    float: left;
   }
 
   #next h1 {
