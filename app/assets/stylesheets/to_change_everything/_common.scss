@@ -436,7 +436,7 @@
 
 /*
 ╭────────────────────────────────────────────────────╮
-│                  Take Flight                       │
+│              Take Flight / Next                    │
 ╰────────────────────────────────────────────────────╯
  */
 #takeflight {
@@ -475,6 +475,15 @@
   /* TODO: same as non-hidpi, delete or replace with 2x version? */
   @media (min-resolution: 192dpi) and (min-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg"); }
 }
+
+#next h1 {
+    text-align: center;
+    padding: 90% 10% 90% 10% !important;
+    /* TODO: why an h1 */
+    /* TODO: why !important */
+    @media (min-width: 601px) { padding: 30% 10% 30% 10% !important; }
+}
+
 /*------------------MORE TEXTS LINKS--------------------------*/
 
 /*------------------FOOTER----------------------------------*/
@@ -595,11 +604,6 @@
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
   }
-
-  #next h1 {
-    text-align: center;
-    padding: 90% 10% 90% 10% !important;
-  }
 }
 
 /*-------------TABLET CSS------------------*/
@@ -661,11 +665,6 @@
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
   }
-
-  #next h1 {
-    text-align: center;
-    padding: 30% 10% 30% 10% !important;
-  }
 }
 
 /*-------------TABLET LANDSCAPE------------------*/
@@ -726,11 +725,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #next h1 {
-    text-align: center;
-    padding: 30% 10% 30% 10% !important;
   }
 }
 
@@ -797,11 +791,6 @@
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
   }
-
-  #next h1 {
-    text-align: center;
-    padding: 30% 10% 30% 10% !important;
-  }
 }
 
 /*-------------DESKTOP BIG CSS------------------*/
@@ -866,10 +855,5 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #next h1 {
-    text-align: center;
-    padding: 30% 10% 30% 10% !important;
   }
 }
