@@ -6,11 +6,10 @@
 /*-------------APPLY TO ALL VERSIONS-------------------------------*/
 /*-----------------------------------------------------------------*/
 
-.grandwrapper {
-  width: 100%;
-}
+.grandwrapper { width: 100%; }
+.spread { width: 100%; clear: both; }
 
-  /*
+/*
 ╭────────────────────────────────────────────────────╮
 │                  Intro and Outro                   │
 ╰────────────────────────────────────────────────────╯
@@ -547,11 +546,6 @@
 /*-------------PHONE CSS------------------*/
 /*@media (min-device-width:200px) and (max-device-width:600px) OR  (max-width:600px) ORIGINAL COMBINED {*/
 @media (min-device-width: 200px) and (max-width: 600px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
   .left {
     position: relative;
     width: 100%;
@@ -608,11 +602,6 @@
 
 /*-------------TABLET CSS------------------*/
 @media (min-width: 601px) and (max-width: 1023px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
   .left {
     position: relative;
     width: 100%;
@@ -669,11 +658,6 @@
 
 /*-------------TABLET LANDSCAPE------------------*/
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
   .left {
     position: relative;
     width: 100%;
@@ -730,11 +714,6 @@
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width: 1201px) and (max-width: 1670px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
   .left {
     position: relative;
     width: 50%;
@@ -795,11 +774,6 @@
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width: 1671px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
   .left {
     position: relative;
     width: 50%;
