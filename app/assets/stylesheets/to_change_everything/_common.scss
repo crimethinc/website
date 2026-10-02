@@ -8,6 +8,33 @@
 
 .grandwrapper { width: 100%; }
 .spread { width: 100%; clear: both; }
+.left {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background-color: grey;
+  float: left;
+
+  @media (min-width: 1201px) {
+    width: 50%;
+    padding-top: 50%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: 1201px) { width: 100%; }
+  }
+}
 
 /*
 ╭────────────────────────────────────────────────────╮
@@ -546,33 +573,11 @@
 /*-------------PHONE CSS------------------*/
 /*@media (min-device-width:200px) and (max-device-width:600px) OR  (max-width:600px) ORIGINAL COMBINED {*/
 @media (min-device-width: 200px) and (max-width: 600px) {
-  .left {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    background-color: grey;
-    float: left;
-  }
-
   .right {
     position: relative;
     width: 100%;
     float: left;
   }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   .lefttext {
     position: relative;
     top: 0;
@@ -602,31 +607,10 @@
 
 /*-------------TABLET CSS------------------*/
 @media (min-width: 601px) and (max-width: 1023px) {
-  .left {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    background-color: grey;
-    float: left;
-  }
-
   .right {
     position: relative;
     width: 100%;
     float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   .lefttext {
@@ -658,31 +642,10 @@
 
 /*-------------TABLET LANDSCAPE------------------*/
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .left {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    background-color: grey;
-    float: left;
-  }
-
   .right {
     position: relative;
     width: 100%;
     float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   .lefttext {
@@ -714,33 +677,11 @@
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width: 1201px) and (max-width: 1670px) {
-  .left {
-    position: relative;
-    width: 50%;
-    padding-top: 50%;
-    background-color: grey;
-    float: left;
-  }
-
   .right {
     position: relative;
     width: 50%;
     padding-top: 50%;
     float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
   }
 
   .lefttext {
@@ -774,33 +715,11 @@
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width: 1671px) {
-  .left {
-    position: relative;
-    width: 50%;
-    padding-top: 50%;
-    background-color: grey;
-    float: left;
-  }
-
   .right {
     position: relative;
     width: 50%;
     padding-top: 50%;
     float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
   }
 
   .lefttext {
