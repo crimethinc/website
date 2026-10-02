@@ -36,6 +36,25 @@
   }
 }
 
+.right {
+  position: relative;
+  width: 100%;
+  float: left;
+
+  @media (min-width: 1201px) {
+    width: 50%;
+    padding-top: 50%;
+  }
+
+  h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+  }
+}
+
+
 /*
 ╭────────────────────────────────────────────────────╮
 │                  Intro and Outro                   │
@@ -573,11 +592,6 @@
 /*-------------PHONE CSS------------------*/
 /*@media (min-device-width:200px) and (max-device-width:600px) OR  (max-width:600px) ORIGINAL COMBINED {*/
 @media (min-device-width: 200px) and (max-width: 600px) {
-  .right {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
   .lefttext {
     position: relative;
     top: 0;
@@ -592,13 +606,6 @@
     padding: 7% 5% 7% 7%;
   }
 
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
@@ -607,12 +614,6 @@
 
 /*-------------TABLET CSS------------------*/
 @media (min-width: 601px) and (max-width: 1023px) {
-  .right {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
   .lefttext {
     position: relative;
     top: 0;
@@ -625,13 +626,6 @@
     position: relative;
     width: 81%;
     padding: 7% 9% 7% 10%;
-  }
-
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
   }
 
   .inlinequote {
@@ -642,12 +636,6 @@
 
 /*-------------TABLET LANDSCAPE------------------*/
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .right {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
   .lefttext {
     position: relative;
     top: 0;
@@ -662,13 +650,6 @@
     padding: 7% 9% 7% 10%;
   }
 
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
@@ -677,13 +658,6 @@
 
 /*-------------DESKTOP SMALL CSS------------------*/
 @media (min-width: 1201px) and (max-width: 1670px) {
-  .right {
-    position: relative;
-    width: 50%;
-    padding-top: 50%;
-    float: left;
-  }
-
   .lefttext {
     position: absolute;
     top: 0;
@@ -700,13 +674,6 @@
     padding: 8% 12% 0% 10%;
   }
 
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
@@ -715,13 +682,6 @@
 
 /*-------------DESKTOP BIG CSS------------------*/
 @media (min-width: 1671px) {
-  .right {
-    position: relative;
-    width: 50%;
-    padding-top: 50%;
-    float: left;
-  }
-
   .lefttext {
     position: absolute;
     top: 0;
@@ -737,14 +697,6 @@
     width: 65%;
     padding: 8% 20% 0% 15%;
   }
-
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
