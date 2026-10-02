@@ -2,10 +2,6 @@
 @import "common/navigation";
 @import "common/title_section";
 
-/*-----------------------------------------------------------------*/
-/*-------------APPLY TO ALL VERSIONS-------------------------------*/
-/*-----------------------------------------------------------------*/
-
 .grandwrapper { width: 100%; }
 .spread { width: 100%; clear: both; }
 .left {
@@ -571,58 +567,31 @@
     @media (min-width: 601px) { padding: 30% 10% 30% 10% !important; }
 }
 
-/*------------------MORE TEXTS LINKS--------------------------*/
-
-/*------------------FOOTER----------------------------------*/
 
 /*------------------RESPONSIVE VIDEO EMBED------------------*/
-
 #video-container {
   background-color: black;
-}
 
-#video-container iframe {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1285px;
-  height: 40vh;
-
-  @media (min-width: 576px) {
-    height: 50vh;
-  }
-
-  @media (min-width: 900px) {
-    height: 70vh;
-  }
-
-  @media (min-width: 1200px) {
+  iframe {
+    display: block;
     margin: 0 auto;
-    height: 95vh;
+    width: 100%;
+    max-width: 1285px;
+    height: 40vh;
+
+    @media (min-width: 576px) { height: 50vh; }
+    @media (min-width: 900px) { height: 70vh; }
+    @media (min-width: 1200px) {
+      margin: 0 auto;
+      height: 95vh;
+    }
   }
 }
 
 /*------------------COLOURS------------------*/
 
-.green,
-.green a {
-  color: #9ac149;
-}
-
-.blue,
-.blue a {
-  color: #3cbce9;
-}
-
-.pink,
-.pink a {
-  color: #d62d34;
-}
-
-.semi {
-  font-weight: 600;
-}
-
-.black {
-  font-weight: 800;
-}
+.green, .green a { color: #9ac149; }
+.blue, .blue a { color: #3cbce9; }
+.pink, .pink a { color: #d62d34; }
+.semi { font-weight: 600; }
+.black { font-weight: 800; }
