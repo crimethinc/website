@@ -3,17 +3,8 @@
 
   /*--- Highlight language in mobile language menu ---*/
   #lang1 li > a[href="/tce/czech"],
-  #lang2 li > a[href="/tce/czech"] {
-    color: #d62d34 !important;
-  }
-
-  .check-czech:before {
-    content: '';
-  }
-
-  /*#power h2 {
-    padding: 3% 0 0 10%;
-  }*/
+  #lang2 li > a[href="/tce/czech"] { color: #d62d34 !important; }
+  .check-czech:before { content: ''; }
 
   #reconciling h2 {
     padding: 7% 0 0 12%;
@@ -22,23 +13,6 @@
   #liberation h2 {
     padding: 7% 0 0 10%;
   }
-
-  /*#hierarchy h2 {
-    padding: 64% 0 0 46%;
-  }*/
-
-  /*#leaders h2 {
-    padding: 15% 0 0 27%;
-  }*/
-
-  /*#property h2 {
-    padding: 10% 0 0 20%;
-    color: white;
-  }*/
-
-  /*#self h2 {
-    padding: 1% 0 0 15%;
-  }*/
 
   #answering h2 {
     padding: 4% 0 0 28%;
@@ -52,19 +26,12 @@
     padding: 3% 0 0 27%;
   }
 
-  /*#revolt h2 {
-    padding: 75% 0 0 16%;
-    color: white;
-  }*/
-
   #video {
     display: none;
   }
 
   /*-------------PHONE CSS------------------*/
   @media (min-device-width:200px) and (max-width:600px) {
-
-
     #sharediv {
       padding: 7% 5% 10% 15%;
       width: 75%;
@@ -122,12 +89,10 @@
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
 
   /*-------------TABLET CSS------------------*/
   @media (min-width:601px) and (max-width:1023px) {
-
     .title {
       padding-left: 17%;
       padding-top: 6%;
@@ -177,23 +142,14 @@
       line-height: 12vw;
     }
 
-
-    #outro .leftintro p {
-
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
-
-
 
   /*-------------TABLET LANDSCAPE------------------*/
   @media (min-width:1024px) and (max-width:1200px) {
-
     #sharediv li {
       padding-right:3.5%;
     }
@@ -231,7 +187,6 @@
       padding: 6% 0 0 .5%;
     }
 
-
     #pdf {
       padding-left: 10%;
       padding-top: 0;
@@ -247,22 +202,14 @@
       padding: 20% 5% 0% 0%;
     }
 
-    #outro .leftintro p {
-
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
-
-
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width:1201px) and (max-width:1670px) {
-
     ul#toc {
       width: 435px;
     }
@@ -285,7 +232,6 @@
       font-size: 2vw;
       padding: 21.2% 0 0 44%;
     }
-
 
     #videopdf {
       padding-top: 23%;
@@ -312,18 +258,15 @@
       font-size: 5.9vw;
     }
 
-
     #power .righttext {
       width: 76%;
       padding: 5% 14% 0% 10%;
     }
 
-
     #reconciling .righttext {
       width: 78%;
       padding: 5% 7% 0% 15%;
     }
-
 
     #revolt .righttext {
       width: 84%;
@@ -384,13 +327,11 @@
       font-size: 19vw;
       line-height: 15.75vw;
     }
-
   }
 
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
-
     #toc a {
       width: 515px;
     }
@@ -507,37 +448,6 @@
       font-size: 15vw;
       line-height: 11.75vw;
     }
-
   }
-
-
-  /*---------------RETINA BACKGROUNDS----------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 

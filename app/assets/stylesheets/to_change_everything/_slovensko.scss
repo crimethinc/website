@@ -3,13 +3,8 @@
 
   /*--- Highlight language in mobile language menu ---*/
   #lang1 li > a[href="/tce/slovensko"],
-  #lang2 li > a[href="/tce/slovensko"] {
-    color: #d62d34 !important;
-  }
-
-  .check-slovensko:before {
-    content: '';
-  }
+  #lang2 li > a[href="/tce/slovensko"] { color: #d62d34 !important; }
+  .check-slovensko:before { content: ''; }
 
   #power h2 {
     padding: 8% 0 0 10%;
@@ -34,7 +29,6 @@
 
   /*-------------PHONE CSS------------------*/
   @media (min-device-width:200px) and (max-width:600px) {
-
     #sharediv {
       padding: 7% 5% 10% 15%;
       width: 75%;
@@ -95,20 +89,14 @@
       color: white;
     }
 
-  /*  #outro .leftintro p {
-
-    }*/
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
 
   /*-------------TABLET CSS------------------*/
   @media (min-width:601px) and (max-width:1023px) {
-
     .title {
       padding-left: 9%;
       padding-top: 8%;
@@ -170,22 +158,14 @@
       color: white;
     }
 
-    #outro .leftintro p {
-
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
-
-
 
   /*-------------TABLET LANDSCAPE------------------*/
   @media (min-width:1024px) and (max-width:1200px) {
-
     #sharediv li {
       padding-right:3.5%;
     }
@@ -223,10 +203,6 @@
       padding: 6% 0 0 .5%;
     }
 
-    .leftintro p {
-
-    }
-
     .rightintro h3 {
       font-size: 12.3vw;
       line-height: 13vw;
@@ -250,22 +226,14 @@
       color: white;
     }
 
-    #outro .leftintro p {
-
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
-
-
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width:1201px) and (max-width:1670px) {
-
     ul#toc {
       width: 435px;
     }
@@ -299,7 +267,6 @@
     #pdfright p {
       padding: 6% 0 0 .5%;
     }
-
 
     .leftintro p {
       font-size: 1.4vw;
@@ -395,13 +362,10 @@
       font-size: 15vw;
       line-height: 11.75vw;
     }
-
   }
-
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
-
     #toc a {
       width: 515px;
     }
@@ -529,37 +493,6 @@
       font-size: 15vw;
       line-height: 11.75vw;
     }
-
   }
-
-
-  /*---------------RETINA BACKGROUNDS----------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
