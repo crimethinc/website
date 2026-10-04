@@ -3,13 +3,8 @@
 
   /*--- Highlight language in mobile language menu ---*/
   #lang1 li > a[href="/tce/slovenscina"],
-  #lang2 li > a[href="/tce/slovenscina"] {
-    color: #d62d34 !important;
-  }
-
-  .check-slovenscina:before {
-    content: '';
-  }
+  #lang2 li > a[href="/tce/slovenscina"] { color: #d62d34 !important; }
+  .check-slovenscina:before { content: ''; }
 
   #power h2 {
     padding: 8% 0 0 10%;
@@ -103,20 +98,14 @@
       color: white;
     }
 
-  /*  #outro .leftintro p {
-
-    }*/
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
 
   /*-------------TABLET CSS------------------*/
   @media (min-width:601px) and (max-width:1023px) {
-
     .title {
       padding-left: 9%;
       padding-top: 8%;
@@ -178,22 +167,14 @@
       color: white;
     }
 
-    #outro .leftintro p {
-
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
-
-
 
   /*-------------TABLET LANDSCAPE------------------*/
   @media (min-width:1024px) and (max-width:1200px) {
-
     #sharediv li {
       padding-right:3.5%;
     }
@@ -231,10 +212,6 @@
       padding: 6% 0 0 .5%;
     }
 
-    .leftintro p {
-
-    }
-
     .rightintro h3 {
       font-size: 12.3vw;
       line-height: 13vw;
@@ -258,22 +235,14 @@
       color: white;
     }
 
-    #outro .leftintro p {
-
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
-
-
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width:1201px) and (max-width:1670px) {
-
     ul#toc {
       width: 435px;
     }
@@ -307,7 +276,6 @@
     #pdfright p {
       padding: 6% 0 0 .5%;
     }
-
 
     .leftintro p {
       font-size: 1.4vw;
@@ -403,13 +371,11 @@
       font-size: 15vw;
       line-height: 11.75vw;
     }
-
   }
 
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
-
     #toc a {
       width: 515px;
     }
@@ -537,37 +503,6 @@
       font-size: 15vw;
       line-height: 11.75vw;
     }
-
   }
-
-
-  /*---------------RETINA BACKGROUNDS----------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 

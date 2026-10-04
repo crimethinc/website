@@ -1,14 +1,9 @@
 .portugues {
   @import "common/font_styling";
   /*--- Highlight language in mobile language menu ---*/
-  /*--- TODO: make sure the div selection (e.g. #lang1) matches what was added in
-  app/views/layouts/to_change_everything.html.erb ---*/
-  #lang1 li > a[href="/tce/portugues"] {
-    color: #d62d34 !important;
-  }
-  .check-portugues:before {
-    content: "";
-  }
+  #lang1 li > a[href="/tce/portugues"] { color: #d62d34 !important; }
+  .check-portugues:before { content: ""; }
+  
   #answering h2 {
     padding: 2% 0 0 26%;
   }
@@ -88,10 +83,6 @@
       padding: 6% 0 0 7%;
     }
 
-    /*  #outro .leftintro p {
-
-      }*/
-
     #takeflight h1 {
       font-size: 23.5vw;
       line-height: 18vw;
@@ -153,9 +144,6 @@
       padding: 6% 0 0 7%;
     }
 
-    #outro .leftintro p {
-    }
-
     #takeflight h1 {
       font-size: 23.5vw;
       line-height: 18vw;
@@ -203,9 +191,6 @@
 
     #self h2 {
       padding: 6% 0 0 7%;
-    }
-
-    #outro .leftintro p {
     }
 
     #takeflight h1 {
@@ -496,5 +481,4 @@
       line-height: 11.75vw;
     }
   }
-  /*---------------RETINA BACKGROUNDS----------------*/
 }

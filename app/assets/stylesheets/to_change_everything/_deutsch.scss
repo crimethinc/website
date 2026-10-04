@@ -3,13 +3,8 @@
 
   /*--- Highlight language in mobile language menu ---*/
   #lang1 li > a[href="/tce/deutsch"],
-  #lang2 li > a[href="/tce/deutsch"] {
-    color: #d62d34 !important;
-  }
-
-  .check-deutsch:before {
-    content: '';
-  }
+  #lang2 li > a[href="/tce/deutsch"] { color: #d62d34 !important; }
+  .check-deutsch:before { content: ''; }
 
   #answering h2 {
     padding: 2% 0 0 31%;
@@ -96,20 +91,14 @@
       padding: 5% 0 0 9%;
     }
 
-  /*  #outro .leftintro p {
-
-    }*/
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
 
   /*-------------TABLET CSS------------------*/
   @media (min-width:601px) and (max-width:1023px) {
-
     #menus {
       width: 74%;
     }
@@ -130,10 +119,6 @@
       padding: 26.5% 0 0 16%;
       width: 80%;
     }
-
-    /*#videopdf {
-      padding-top: 22%;
-    }*/
 
     #videopdf p {
       padding: .5% 0 0 3.5%;
@@ -161,22 +146,14 @@
       padding: 5% 0 0 9%;
     }
 
-    #outro .leftintro p {
-
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
-
-
 
   /*-------------TABLET LANDSCAPE------------------*/
   @media (min-width:1024px) and (max-width:1200px) {
-
     .title {
       padding-left: 17%;
       padding-top: 4%;
@@ -204,10 +181,6 @@
       padding: 6% 0 0 .5%;
     }
 
-    .leftintro p {
-
-    }
-
     .rightintro h3 {
       font-size: 12.3vw;
       line-height: 13vw;
@@ -222,22 +195,14 @@
       padding: 5% 0 0 9%;
     }
 
-    #outro .leftintro p {
-
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
     }
-
   }
-
-
 
   /*-------------DESKTOP SMALL CSS------------------*/
   @media (min-width:1201px) and (max-width:1670px) {
-
     #toc a {
       width: 565px;
     }
@@ -265,7 +230,6 @@
       font-size: 2vw;
       padding: 22% 0 0 25%;
     }
-
 
     #videopdf {
       padding-top: 23%;
@@ -385,13 +349,10 @@
       font-size: 13vw;
       line-height: 10vw;
     }
-
   }
-
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
-
     #toc a {
       width: 645px;
     }
@@ -527,37 +488,6 @@
       font-size: 13vw;
       line-height: 10vw;
     }
-
   }
-
-
-  /*---------------RETINA BACKGROUNDS----------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 

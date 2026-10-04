@@ -3,12 +3,8 @@
   @import "farsi/font_overrides";
 
   /*--- Highlight language in mobile language menu ---*/
-  #lang1 li > a[href="/tce/farsi"] {
-    color: #d62d34 !important;
-  }
-  .check-farsi:before {
-    content: "";
-  }
+  #lang1 li > a[href="/tce/farsi"] { color: #d62d34 !important; }
+  .check-farsi:before { content: ""; }
 
   /*-------------PHONE CSS------------------*/
   @media (min-device-width: 200px) and (max-width: 600px) {
