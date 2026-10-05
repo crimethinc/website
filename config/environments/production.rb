@@ -21,10 +21,6 @@ Rails.application.configure do
   # Enable serving static files from `public/`, Heroku sets RAILS_SERVE_STATIC_FILES to 'enabled'
   config.public_file_server.enabled = ENV.fetch('RAILS_SERVE_STATIC_FILES', nil).present?
 
-  # TODO: rails8 delete this after confirming .scss files still work
-  # Compress CSS using a preprocessor.
-  # config.assets.css_compressor = :sass
-
   # TODO: rails8 delete this after confirming nothing in app/assets is broken
   # Do not fall back to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
