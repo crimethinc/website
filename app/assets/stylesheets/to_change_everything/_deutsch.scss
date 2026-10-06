@@ -6,6 +6,41 @@
   #lang2 li > a[href="/tce/deutsch"] { color: #d62d34 !important; }
   .check-deutsch:before { content: ''; }
 
+  #intro, #outro {
+    .leftintro, .rightintro {
+      .lefttext p {
+        @media (max-width:1023px) { padding-block: .5% 0; }
+        @media (min-width:1201px) { font-size: 1.2vw; }
+      }
+
+      h3 {
+        @media (max-width:1023px) {
+          font-size: 12vw;
+          line-height: 12vw;
+          padding: 22% 5% 0% 0%;
+        }
+
+        @media (min-width:1024px) and (max-width:1200px) {
+          font-size: 12.3vw;
+          line-height: 13vw;
+          padding: 20% 5% 0% 0%;
+        }
+
+        @media (min-width:1201px) { font-size: 5.9vw; }
+      }
+    }
+  }
+
+
+  #outro {
+    .leftintro .lefttext > p {
+      @media (min-width:1201px) {
+        font-size: 1.5vw;
+        line-height: 2.1vw;
+      }
+    }
+  }
+
   #answering h2 {
     padding: 2% 0 0 31%;
   }
@@ -73,16 +108,6 @@
       padding: 12% 0 0 .5%;
     }
 
-    .leftintro p {
-      padding: .5% 0 0 0;
-    }
-
-    .rightintro h3 {
-      padding: 22% 5% 0% 0%;
-      font-size: 12vw;
-      line-height: 12vw;
-    }
-
     #self h2 {
       padding: 6% 0 0 7%;
     }
@@ -128,16 +153,6 @@
       padding: 12% 0 0 .5%;
     }
 
-    .leftintro p {
-      padding: .5% 0 0 0;
-    }
-
-    .rightintro h3 {
-      padding: 22% 5% 0% 0%;
-      font-size: 12vw;
-      line-height: 12vw;
-    }
-
     #self h2 {
       padding: 6% 0 0 7%;
     }
@@ -179,12 +194,6 @@
 
     #pdfright p {
       padding: 6% 0 0 .5%;
-    }
-
-    .rightintro h3 {
-      font-size: 12.3vw;
-      line-height: 13vw;
-      padding: 20% 5% 0% 0%;
     }
 
     #self h2 {
@@ -241,14 +250,6 @@
 
     #pdfright p {
       padding: 4% 0 0 .5%;
-    }
-
-    .leftintro p {
-      font-size: 1.2vw;
-    }
-
-    .rightintro h3 {
-      font-size: 5.9vw;
     }
 
     #self h2 {
@@ -340,11 +341,6 @@
       padding: 5% 7% 5% 0%;
     }
 
-    #outro .leftintro p {
-      font-size: 1.5vw;
-      line-height: 2.1vw;
-    }
-
     #takeflight h1 {
       font-size: 13vw;
       line-height: 10vw;
@@ -389,14 +385,6 @@
 
     #pdfright p {
       padding: 4% 0 0 .5%;
-    }
-
-    .leftintro p {
-      font-size: 1.2vw;
-    }
-
-    .rightintro h3 {
-      font-size: 5.9vw;
     }
 
     #self h2 {
@@ -479,15 +467,9 @@
       padding: 5% 7% 5% 0%;
     }
 
-    #outro .leftintro p {
-      font-size: 1.5vw;
-      line-height: 2.1vw;
-    }
-
     #takeflight h1 {
       font-size: 13vw;
       line-height: 10vw;
     }
   }
 }
-
