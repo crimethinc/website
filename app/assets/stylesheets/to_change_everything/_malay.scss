@@ -9,38 +9,15 @@
     .leftintro, .rightintro {
       h3 {
         @media (max-width: 1200px) { padding-block: 4% 5%; }
-        @media (min-width: 1201px) and (max-width: 1670px) {
-          padding-block: 5% 0;
-        }
+        @media (min-width: 1201px) { padding-block: 5% 0; }
       }
 
-      .lefttext {
-        @media (min-width: 1201px) { padding-block: 4% 0%; }
-        p {
-          @media (min-width: 1201px) {
-            font-size: 1.55vw;
-            line-height: 2vw;
-          }
-        }
-      }
-    }
-  }
-
-  #outro {
-    .leftintro .lefttext {
-      @media (min-width: 1201px) { width: 66%; }
-
-      > p {
+      .lefttext p {
         @media (min-width: 1201px) {
           font-size: 1.5vw;
-          line-height: 2.3vw;
+          line-height: 1.2;
         }
       }
-    }
-
-    .rightintro h3 {
-      @media (max-width: 1200px) { padding-block: 8% 5%; }
-      @media (min-width: 1201px) { padding-block: 12% 0%; }
     }
   }
 
