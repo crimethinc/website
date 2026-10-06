@@ -5,6 +5,40 @@
   #lang1 li > a[href="/tce/espanol"] { color: #d62d34 !important; }
   .check-espanol:before { content: ""; }
 
+  #intro, #outro {
+    .leftintro, .rightintro {
+      .lefttext > p {
+        @media (max-width: 1023px) { padding-block: 0.5% 0; }
+        @media (min-width: 1201px) { font-size: 1.45vw; }
+      }
+
+      h3 {
+        @media (max-width: 1023px) {
+          font-size: 12vw;
+          line-height: 12vw;
+          padding: 22% 5% 0% 0%;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1200px) {
+          font-size: 12.3vw;
+          line-height: 13vw;
+          padding: 20% 5% 0% 0%;
+        }
+
+        @media (min-width: 1201px) { font-size: 5.9vw; }
+      }
+    }
+  }
+
+  #outro {
+    .leftintro .lefttext > p {
+      @media (min-width: 1201px) {
+        font-size: 1.6vw;
+        line-height: 2.1vw;
+      }
+    }
+  }
+
   /*-------------PHONE CSS------------------*/
   @media (min-device-width: 200px) and (max-width: 600px) {
     #sharediv {
@@ -20,16 +54,6 @@
     #toc2 {
       width: 35%;
       margin: 0 0 0 0%;
-    }
-
-    .leftintro p {
-      padding: 0.5% 0 0 0;
-    }
-
-    .rightintro h3 {
-      padding: 22% 5% 0% 0%;
-      font-size: 12vw;
-      line-height: 12vw;
     }
 
     #self h2 {
@@ -96,16 +120,6 @@
       padding: 12% 0 0 0.5%;
     }
 
-    .leftintro p {
-      padding: 0.5% 0 0 0;
-    }
-
-    .rightintro h3 {
-      padding: 22% 5% 0% 0%;
-      font-size: 12vw;
-      line-height: 12vw;
-    }
-
     #self h2 {
       padding: 6% 0 0 7%;
     }
@@ -160,12 +174,6 @@
 
     #pdfright p {
       padding: 6% 0 0 0.5%;
-    }
-
-    .rightintro h3 {
-      font-size: 12.3vw;
-      line-height: 13vw;
-      padding: 20% 5% 0% 0%;
     }
 
     #self h2 {
@@ -230,14 +238,6 @@
 
     #pdfright p {
       padding: 4% 0 0 0.5%;
-    }
-
-    .leftintro p {
-      font-size: 1.45vw;
-    }
-
-    .rightintro h3 {
-      font-size: 5.9vw;
     }
 
     #self h2 {
@@ -321,11 +321,6 @@
       padding: 5% 7% 5% 0%;
     }
 
-    #outro .leftintro p {
-      font-size: 1.6vw;
-      line-height: 2.1vw;
-    }
-
     #takeflight h1 {
       font-size: 13vw;
       line-height: 10.75vw;
@@ -360,14 +355,6 @@
 
     #pdfright p {
       padding: 4% 0 0 0.5%;
-    }
-
-    .leftintro p {
-      font-size: 1.45vw;
-    }
-
-    .rightintro h3 {
-      font-size: 5.9vw;
     }
 
     #self h2 {
@@ -444,11 +431,6 @@
     .third {
       width: 20%;
       padding: 5% 7% 5% 0%;
-    }
-
-    #outro .leftintro p {
-      font-size: 1.6vw;
-      line-height: 2.1vw;
     }
 
     #takeflight h1 {
