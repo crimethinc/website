@@ -1,6 +1,7 @@
 /* Overall Layout Spacing */
 .title-container {
   display: flex;
+  inline-size: 100%;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-content: center;
