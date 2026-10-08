@@ -6,6 +6,44 @@
   #lang2 li > a[href="/tce/czech"] { color: #d62d34 !important; }
   .check-czech:before { content: ''; }
 
+  #intro, #outro {
+    .leftintro, .rightintro {
+      .lefttext p {
+        @media (max-width:1200px) {
+          font-size: 3.5vw;
+          padding-block: .5% 0;
+        }
+
+        @media (min-width:1201px) { font-size: 1.3vw; }
+      }
+
+      h3 {
+        @media (max-width:1023px) {
+          font-size: 12vw;
+          line-height: 12vw;
+          padding: 22% 5% 0% 0%;
+        }
+
+        @media (min-width:1024px) and (max-width:1200px) {
+          font-size: 12.3vw;
+          line-height: 13vw;
+          padding: 20% 5% 0% 0%;
+        }
+
+        @media (min-width:1201px) { font-size: 5.9vw; }
+      }
+    }
+  }
+
+  #outro {
+    .leftintro .lefttext > p {
+      @media (min-width:1201px) {
+        font-size: 1.7vw;
+        line-height: 2.2vw;
+      }
+    }
+  }
+
   #reconciling h2 {
     padding: 7% 0 0 12%;
   }
@@ -74,17 +112,6 @@
       display: none;
     }
 
-    .leftintro p {
-      padding: .5% 0 0 0;
-      font-size: 3.5vw;
-    }
-
-    .rightintro h3 {
-      padding: 22% 5% 0% 0%;
-      font-size: 12vw;
-      line-height: 12vw;
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
@@ -129,17 +156,6 @@
 
     .subbreak br {
       display: none;
-    }
-
-    .leftintro p {
-      padding: .5% 0 0 0;
-      font-size: 3.5vw;
-    }
-
-    .rightintro h3 {
-      padding: 22% 5% 0% 0%;
-      font-size: 12vw;
-      line-height: 12vw;
     }
 
     #takeflight h1 {
@@ -192,16 +208,6 @@
       padding-top: 0;
     }
 
-    .leftintro p {
-      font-size: 3.5vw;
-    }
-
-    .rightintro h3 {
-      font-size: 12.3vw;
-      line-height: 13vw;
-      padding: 20% 5% 0% 0%;
-    }
-
     #takeflight h1 {
       font-size: 20.5vw;
       line-height: 17vw;
@@ -245,17 +251,9 @@
       padding: 6% 0 0 .5%;
     }
 
-    #pdf {
+    #pdf { 
       padding-left: 10%;
       padding-top: 2%;
-    }
-
-    .leftintro p {
-      font-size: 1.3vw;
-    }
-
-    .rightintro h3 {
-      font-size: 5.9vw;
     }
 
     #power .righttext {
@@ -318,17 +316,11 @@
       padding: 5% 7% 5% 0%;
     }
 
-    #outro .leftintro p {
-      font-size: 1.7vw;
-      line-height: 2.2vw;
-    }
-
     #takeflight h1 {
       font-size: 19vw;
       line-height: 15.75vw;
     }
   }
-
 
   /*-------------DESKTOP BIG CSS------------------*/
   @media (min-width:1671px) {
@@ -374,14 +366,6 @@
     #pdf {
       padding-left: 10%;
       padding-top: 2%;
-    }
-
-    .leftintro p {
-      font-size: 1.3vw;
-    }
-
-    .rightintro h3 {
-      font-size: 5.9vw;
     }
 
     #power .righttext {
@@ -439,15 +423,9 @@
       padding: 5% 7% 5% 0%;
     }
 
-    #outro .leftintro p {
-      font-size: 1.7vw;
-      line-height: 2.2vw;
-    }
-
     #takeflight h1 {
       font-size: 15vw;
       line-height: 11.75vw;
     }
   }
 }
-
