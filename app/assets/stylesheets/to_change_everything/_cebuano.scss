@@ -7,7 +7,7 @@
 
   #intro, #outro {
     background-size: cover;
-    @media (max-width: 1200px) { padding-bottom: 220%; }
+    @media (max-width: 1200px) { padding-block-end: 220%; }
 
     .rightintro h3 {
       padding-block: 0 0;
@@ -34,8 +34,18 @@
     }
   }
 
+  #self {
+    .righttext {
+      @media (min-width: 1201px) {
+        padding-block: 5% 0;
+        padding-inline: 10% 15%;
+      }
+    }
+  }
+
   @media (min-device-width: 200px) and (max-width: 600px) {
     .title-container {
+
       padding-top: 2rem;
 
       h1 {
@@ -72,10 +82,8 @@
     .right p { line-height: 1.4; }
     #power h2 { padding: 5% 0 0 5%; }
     .left h2 { font-size: 4.1vw; }
-    #self .righttext { padding: 5% 15% 0% 10%; }
     #government .righttext { padding: 4% 10% 0% 10%; }
     #profit .right p { line-height: 1.3; }
     #property .right p { line-height: 1.3; }
   }
 }
-

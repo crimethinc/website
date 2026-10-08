@@ -11,36 +11,39 @@
 }
 
 #intro, #outro {
-  width: 100%;
+  inline-size: 100%;
   background-image: var(--bg);
   background-size: 100%;
-  padding-bottom: 200%;
+  padding-block-end: 200%;
   background-position: center top;
   position: relative;
 
-  @media (min-width: 1201px) { padding-bottom: 39.5%; }
+  @media (min-width: 1201px) { padding-block-end: 39.5%; }
 
   .leftintro, .rightintro {
     position: relative;
-    width: 100%;
-    float: left;
+    inline-size: 100%;
+    float: inline-start;
 
     @media (min-width: 1201px) {
-      width: 50%;
-      &.rightintro { float: right; }
+      inline-size: 50%;
+      &.rightintro { float: inline-end; }
     }
 
     > h3 {
       position: relative;
-      top: 0;
-      left: 0;
-      width: 95%;
-      padding: 16% 5% 0% 0%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      inline-size: 95%;
+      padding-block: 16% 0;
+      padding-inline: 0 5%;
 
       @media (min-width: 1201px) {
         position: absolute;
-        width: 90%;
+        inline-size: 90%;
         padding: 12% 10% 0% 0%;
+        padding-block: 12% 0;
+        padding-inline: 0 10%;
       }
     }
   }
@@ -72,6 +75,28 @@
   @media (min-resolution: 192dpi) and (min-width: 1024px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-tablet@2x.jpg"); }
   @media (min-resolution: 192dpi) and (min-width: 1201px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-small@2x.jpg"); }
   @media (min-resolution: 192dpi) and (min-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-large@2x.jpg"); }
+}
+
+
+#self {
+  h2 {
+    padding-block: 6% 0;
+    padding-inline: 10% 0;
+  }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      inline-size: 75%;
+      padding-block: 13% 0;
+      padding-inline: 10% 15%;
+    }
+
+    @media (min-width: 1671px) {
+      inline-size: 65%;
+      padding-block: 15% 0;
+      padding-inline: 15% 20%;
+    }
+  }
 }
 
 /*------------------MORE TEXTS LINKS--------------------------*/
@@ -210,10 +235,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
   }
 
   #answering h2 {
@@ -393,10 +414,6 @@
     text-indent: 0px !important;
   }
 
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
   #answering h2 {
     padding: 5% 0 0 33%;
   }
@@ -572,10 +589,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
   }
 
   #answering h2 {
@@ -762,15 +775,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #self .righttext {
-    width: 75%;
-    padding: 13% 15% 0% 10%;
   }
 
   #answering h2 {
@@ -1042,15 +1046,6 @@
   .inlinequote {
     padding: 1% 5% 1% 5%;
     text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #self .righttext {
-    width: 65%;
-    padding: 15% 20% 0% 15%;
   }
 
   #answering h2 {

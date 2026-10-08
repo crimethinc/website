@@ -6,6 +6,47 @@
   #lang2 li > a[href="/tce/slovenscina"] { color: #d62d34 !important; }
   .check-slovenscina:before { content: ''; }
 
+  #intro, #outo {
+    .leftintro, .rightintro {
+      .lefttext p {
+        @media (max-width:1023px) { padding-block: .5% 0; }
+        @media (min-width:1201px) { font-size: 1.4vw; }
+      }
+      
+      h3 {
+        @media (max-width:1023px) {
+          font-size: 12vw;
+          line-height: 12vw;
+          padding-block: 22% 0;
+          padding-inline: 0 5%;
+        }
+
+        @media (min-width:1024px) and (max-width:1200px) {
+          font-size: 12.3vw;
+          line-height: 13vw;
+          padding-block: 20% 0;
+          padding-inline: 0 5%;
+        }
+
+        @media (min-width:1201px) { font-size: 5.9vw; }
+      }
+    }
+  }
+
+  #outro {
+    .leftintro .lefttext > p {
+      @media (min-width:1201px) {
+        font-size: 1.7vw;
+        line-height: 2.2vw;
+      }
+    }
+  }
+
+  #self h2 {
+    padding-block: 1% 0;
+    padding-inline: 15% 0;
+  }
+
   #power h2 {
     padding: 8% 0 0 10%;
   }
@@ -71,20 +112,6 @@
       padding: 12% 0 0 .5%;
     }
 
-    .leftintro p {
-      padding: .5% 0 0 0;
-    }
-
-    .rightintro h3 {
-      padding: 22% 5% 0% 0%;
-      font-size: 12vw;
-      line-height: 12vw;
-    }
-
-    #self h2 {
-      padding: 1% 0 0 15%;
-    }
-
     #answering h2 {
       padding: 2% 0 0 23%;
     }
@@ -138,20 +165,6 @@
     #pdf {
       width: 49%;
       padding-left: 6%;
-    }
-
-    .leftintro p {
-      padding: .5% 0 0 0;
-    }
-
-    .rightintro h3 {
-      padding: 22% 5% 0% 0%;
-      font-size: 12vw;
-      line-height: 12vw;
-    }
-
-    #self h2 {
-      padding: 1% 0 0 15%;
     }
 
     #answering h2 {
@@ -212,16 +225,6 @@
       padding: 6% 0 0 .5%;
     }
 
-    .rightintro h3 {
-      font-size: 12.3vw;
-      line-height: 13vw;
-      padding: 20% 5% 0% 0%;
-    }
-
-    #self h2 {
-      padding: 1% 0 0 15%;
-    }
-
     #answering h2 {
       padding: 2% 0 0 23%;
     }
@@ -275,18 +278,6 @@
 
     #pdfright p {
       padding: 6% 0 0 .5%;
-    }
-
-    .leftintro p {
-      font-size: 1.4vw;
-    }
-
-    .rightintro h3 {
-      font-size: 5.9vw;
-    }
-
-    #self h2 {
-      padding: 1% 0 0 15%;
     }
 
     #answering h2 {
@@ -362,11 +353,6 @@
       padding: 5% 7% 5% 0%;
     }
 
-    #outro .leftintro p {
-      font-size: 1.7vw;
-      line-height: 2.2vw;
-    }
-
     #takeflight h1 {
       font-size: 15vw;
       line-height: 11.75vw;
@@ -412,18 +398,6 @@
 
     #pdfright p {
       padding: 4% 0 0 .5%;
-    }
-
-    .leftintro p {
-      font-size: 1.4vw;
-    }
-
-    .rightintro h3 {
-      font-size: 5.9vw;
-    }
-
-    #self h2 {
-      padding: 1% 0 0 15%;
     }
 
     #answering h2 {
@@ -494,15 +468,9 @@
       padding: 5% 7% 5% 0%;
     }
 
-    #outro .leftintro p {
-      font-size: 1.7vw;
-      line-height: 2.2vw;
-    }
-
     #takeflight h1 {
       font-size: 15vw;
       line-height: 11.75vw;
     }
   }
 }
-

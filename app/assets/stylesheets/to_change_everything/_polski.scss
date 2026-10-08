@@ -20,13 +20,15 @@
         @media (max-width:1023px) {
           font-size: 12vw;
           line-height: 12vw;
-          padding: 22% 5% 0% 0%;
+          padding-block: 22% 0;
+          padding-inline: 0 5%;
         }
 
         @media (min-width:1024px) and (max-width:1200px) {
           font-size: 12.3vw;
           line-height: 13vw;
-          padding: 20% 5% 0% 0%;
+          padding-block: 20% 0;
+          padding-inline: 0 5%;
         }
 
         @media (min-width:1201px) { font-size: 5.9vw; }

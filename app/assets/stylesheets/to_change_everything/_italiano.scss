@@ -5,6 +5,20 @@
   #lang2  li  > a[href="/tce/italiano"] { color: #d62d34 !important; }
   .check-italiano:before { content: ''; }
 
+  #intro, #outro {
+    .leftintro .lefttext > p {
+      line-height: 1.1;
+      text-indent: 1em each-line;
+    }
+  }
+
+  #self h2 {
+    @media (min-width: 1201px) {
+      padding-block: 6% 0;
+      padding-inline: 5% 0;
+    }
+  }
+
   h1, h2, h3 { line-height: 0.95; }
   h2 { font-size: 4.2vw; }
   #takeflight h1 { font-size: 11vw; }
@@ -12,12 +26,6 @@
   .right p {
     font-size: 0.875rem;
     line-height: 1.26;
-    text-indent: 1em each-line;
-  }
-
-  #outro .leftintro p,
-  .leftintro p {
-    line-height: 1.1;
     text-indent: 1em each-line;
   }
 
@@ -31,7 +39,6 @@
     .lefttext { padding: 8% 10% 0% 10%; }
     #government .righttext { padding: 2% 10% 0% 10%; }
 
-    #self h2 { padding: 6% 0 0 5%; }
     #answering h2 { padding: 5% 0 0 20%; }
     #reconciling .righttext { padding: 0% 12% 0% 10%; }
     #liberation h2 { padding: 4% 0 0 20%; }

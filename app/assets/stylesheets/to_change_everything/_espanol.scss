@@ -16,13 +16,15 @@
         @media (max-width: 1023px) {
           font-size: 12vw;
           line-height: 12vw;
-          padding: 22% 5% 0% 0%;
+          padding-block: 22% 0;
+          padding-inline: 0 5%;
         }
 
         @media (min-width: 1024px) and (max-width: 1200px) {
           font-size: 12.3vw;
           line-height: 13vw;
-          padding: 20% 5% 0% 0%;
+          padding-block: 20% 0;
+          padding-inline: 0 5%;
         }
 
         @media (min-width: 1201px) { font-size: 5.9vw; }
@@ -37,6 +39,11 @@
         line-height: 2.1vw;
       }
     }
+  }
+
+  #self h2 {
+    padding-block: 6% 0;
+    padding-inline: 7% 0;
   }
 
   /*-------------PHONE CSS------------------*/
@@ -54,10 +61,6 @@
     #toc2 {
       width: 35%;
       margin: 0 0 0 0%;
-    }
-
-    #self h2 {
-      padding: 6% 0 0 7%;
     }
 
     #answering h2 {
@@ -120,10 +123,6 @@
       padding: 12% 0 0 0.5%;
     }
 
-    #self h2 {
-      padding: 6% 0 0 7%;
-    }
-
     #answering h2 {
       padding: 2% 0 0 23%;
     }
@@ -174,10 +173,6 @@
 
     #pdfright p {
       padding: 6% 0 0 0.5%;
-    }
-
-    #self h2 {
-      padding: 6% 0 0 7%;
     }
 
     #answering h2 {
@@ -238,10 +233,6 @@
 
     #pdfright p {
       padding: 4% 0 0 0.5%;
-    }
-
-    #self h2 {
-      padding: 6% 0 0 7%;
     }
 
     #answering h2 {
@@ -355,10 +346,6 @@
 
     #pdfright p {
       padding: 4% 0 0 0.5%;
-    }
-
-    #self h2 {
-      padding: 6% 0 0 7%;
     }
 
     #answering h2 {

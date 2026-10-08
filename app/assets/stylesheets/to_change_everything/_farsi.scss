@@ -6,10 +6,52 @@
   #lang1 li > a[href="/tce/farsi"] { color: #d62d34 !important; }
   .check-farsi:before { content: ""; }
 
+  /* TODO: A lot of this can be removed if we use logical units in the
+     common styles. */
+  #intro, #outro {
+    h3 {
+      padding: 0;
+
+      @media (min-device-width: 200px) and (max-width: 1200px) {
+        padding-block-start: 10%;
+        padding-inline-start: 10%;
+        inline-size: 89%;
+      }
+    }
+  }
+
+  #intro {
+    h3 {
+      @media (min-device-width: 200px) and (max-width: 1200px) {
+        inset-inline-start: 0;
+      }
+
+      @media (min-width: 1201px) {
+        padding-block-start: 5%;
+        margin-inline-start: 10%;
+      }
+    }
+
+    .rightintro {
+      @media (min-device-width: 200px) and (max-width: 600px) {
+        position: absolute;
+        inset-block-end: 5px;
+      }
+    }
+  }
+
+  #outro {
+    h3 {
+      @media (min-width: 1201px) {
+        inline-size: 100%;
+        padding-inline-start: 10%;
+        inset-inline-start: 10%;
+      }
+    }
+  }
+
   /*-------------PHONE CSS------------------*/
   @media (min-device-width: 200px) and (max-width: 600px) {
-    #intro h3,
-    #self h2,
     #answering h2,
     #power h2,
     #relationships h2,
@@ -32,23 +74,8 @@
       width: 89%;
     }
 
-    #intro {
-      .rightintro {
-        position: absolute;
-        bottom: 5px;
-      }
-    }
     #relationships h2 {
       padding-top: 5%;
-    }
-
-    #outro {
-      h3 {
-        padding: 0;
-        padding-right: 10%;
-        padding-top: 10%;
-        width: 89%;
-      }
     }
 
     #takeflight {
@@ -63,8 +90,6 @@
 
   /*-------------TABLET CSS------------------*/
   @media (min-width: 601px) and (max-width: 1023px) {
-    #intro h3,
-    #self h2,
     #answering h2,
     #power h2,
     #relationships h2,
@@ -90,15 +115,6 @@
       padding-top: 5%;
     }
 
-    #outro {
-      h3 {
-        padding: 0;
-        padding-right: 10%;
-        padding-top: 10%;
-        width: 89%;
-      }
-    }
-
     #takeflight {
       h1 {
         padding: 0;
@@ -111,8 +127,6 @@
 
   /*-------------TABLET LANDSCAPE------------------*/
   @media (min-width: 1024px) and (max-width: 1200px) {
-    #intro h3,
-    #self h2,
     #answering h2,
     #power h2,
     #relationships h2,
@@ -133,15 +147,6 @@
       padding-top: 10%;
       padding-right: 10%;
       width: 89%;
-    }
-
-    #outro {
-      h3 {
-        padding: 0;
-        padding-right: 10%;
-        padding-top: 10%;
-        width: 89%;
-      }
     }
 
     #takeflight {
@@ -159,13 +164,7 @@
     ul#share {
       width: 280px;
     }
-    #intro h3 {
-      padding: 0;
-      padding-top: 5%;
-      margin-right: 10%;
-    }
 
-    #self h2,
     #answering h2,
     #power h2,
     #relationships h2,
@@ -226,13 +225,6 @@
       }
     }
 
-    #outro h3 {
-      width: 100%;
-      padding: 0;
-      padding-right: 10%;
-      right: 10%;
-    }
-
     #takeflight h1 {
       padding: 0;
       width: auto;
@@ -246,13 +238,7 @@
     ul#share {
       width: 280px;
     }
-    #intro h3 {
-      padding: 0;
-      padding-top: 5%;
-      margin-right: 10%;
-    }
 
-    #self h2,
     #answering h2,
     #power h2,
     #relationships h2,
@@ -307,13 +293,6 @@
       h2 {
         padding-top: 5%;
       }
-    }
-
-    #outro h3 {
-      width: 100%;
-      padding: 0;
-      padding-right: 10%;
-      right: 10%;
     }
 
     #takeflight h1 {
