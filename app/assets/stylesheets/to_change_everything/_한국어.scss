@@ -5,6 +5,17 @@
   #lang2 li > a[href="/tce/한국어"] { color: #d62d34 !important; }
   .check-한국어:before { content: ""; }
 
+  #self h2 {
+    inset-block-start: 30%;
+    inset-inline-start: 40%;
+    text-align: end;
+
+    @media (min-width: 1201px) {
+      inset-block-start: 22%;
+      inset-inline-start: -20%;
+    }
+  }
+
   p {
     margin-bottom: 2vw;
   }
@@ -32,12 +43,6 @@
     letter-spacing: 0;
     padding-left: 15%;
     width: 85%;
-  }
-
-  #self h2 {
-    top: 30%;
-    left: 40%;
-    text-align: right;
   }
 
   #control h2 {
@@ -141,11 +146,6 @@
     ul#share {
       width: 308px;
     }
-    #self h2 {
-      top: 22%;
-      left: -20%;
-      text-align: right;
-    }
 
     #control h2 {
       top: unset;
@@ -178,11 +178,6 @@
   @media (min-width: 1671px) {
     ul#share {
       width: 400px;
-    }
-    #self h2 {
-      top: 22%;
-      left: -20%;
-      text-align: right;
     }
 
     #control h2 {

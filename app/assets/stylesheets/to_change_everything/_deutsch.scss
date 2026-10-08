@@ -40,6 +40,19 @@
     }
   }
 
+  #self {
+    h2 {
+      padding-block: 6% 0;
+      padding-inline: 7% 0;
+    }
+    .righttext {
+      @media (min-width:1201px) {
+        padding-block: 10% 0;
+        padding-inline: 10% 15%;
+      }
+    }
+  }
+  
   #answering h2 {
     padding: 2% 0 0 31%;
   }
@@ -107,10 +120,6 @@
       padding: 12% 0 0 .5%;
     }
 
-    #self h2 {
-      padding: 6% 0 0 7%;
-    }
-
     #relationships h2 {
       padding: 5% 0 0 9%;
     }
@@ -152,10 +161,6 @@
       padding: 12% 0 0 .5%;
     }
 
-    #self h2 {
-      padding: 6% 0 0 7%;
-    }
-
     #relationships h2 {
       padding: 5% 0 0 9%;
     }
@@ -193,10 +198,6 @@
 
     #pdfright p {
       padding: 6% 0 0 .5%;
-    }
-
-    #self h2 {
-      padding: 6% 0 0 7%;
     }
 
     #relationships h2 {
@@ -249,14 +250,6 @@
 
     #pdfright p {
       padding: 4% 0 0 .5%;
-    }
-
-    #self h2 {
-      padding: 6% 0 0 7%;
-    }
-
-    #self .righttext {
-      padding: 10% 15% 0% 10%;
     }
 
     #power .righttext {
@@ -384,10 +377,6 @@
 
     #pdfright p {
       padding: 4% 0 0 .5%;
-    }
-
-    #self h2 {
-      padding: 6% 0 0 7%;
     }
 
     #power .righttext {

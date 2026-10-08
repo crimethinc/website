@@ -41,6 +41,11 @@
       }
     }
   }
+
+  #self h2 {
+    padding-block: 1% 0;
+    padding-inline: 15% 0;
+  }
   
   #power h2 {
     padding: 8% 0 0 10%;
@@ -98,10 +103,6 @@
       padding: 12% 0 0 .5%;
     }
 
-    #self h2 {
-      padding: 1% 0 0 15%;
-    }
-
     #answering h2 {
       padding: 2% 0 0 23%;
     }
@@ -155,10 +156,6 @@
     #pdf {
       width: 49%;
       padding-left: 6%;
-    }
-
-    #self h2 {
-      padding: 1% 0 0 15%;
     }
 
     #answering h2 {
@@ -219,10 +216,6 @@
       padding: 6% 0 0 .5%;
     }
 
-    #self h2 {
-      padding: 1% 0 0 15%;
-    }
-
     #answering h2 {
       padding: 2% 0 0 23%;
     }
@@ -276,10 +269,6 @@
 
     #pdfright p {
       padding: 6% 0 0 .5%;
-    }
-
-    #self h2 {
-      padding: 1% 0 0 15%;
     }
 
     #answering h2 {
@@ -399,10 +388,6 @@
 
     #pdfright p {
       padding: 4% 0 0 .5%;
-    }
-
-    #self h2 {
-      padding: 1% 0 0 15%;
     }
 
     #answering h2 {

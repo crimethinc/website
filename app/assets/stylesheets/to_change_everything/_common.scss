@@ -79,17 +79,22 @@
 
 
 #self {
-  h2 { padding: 6% 0 0 10%; }
+  h2 {
+    padding-block: 6% 0;
+    padding-inline: 10% 0;
+  }
 
   .righttext {
     @media (min-width: 1201px) and (max-width: 1670px) {
-      width: 75%;
-      padding: 13% 15% 0% 10%;
+      inline-size: 75%;
+      padding-block: 13% 0;
+      padding-inline: 10% 15%;
     }
 
     @media (min-width: 1671px) {
-      width: 65%;
-      padding: 15% 20% 0% 15%;
+      inline-size: 65%;
+      padding-block: 15% 0;
+      padding-inline: 15% 20%;
     }
   }
 }
