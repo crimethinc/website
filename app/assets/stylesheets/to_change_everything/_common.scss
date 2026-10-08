@@ -2,13 +2,102 @@
 @import "common/navigation";
 @import "common/title_section";
 
-/*-----------------------------------------------------------------*/
-/*-------------APPLY TO ALL VERSIONS-------------------------------*/
-/*-----------------------------------------------------------------*/
-
-.grandwrapper {
+.grandwrapper { width: 100%; }
+.spread { width: 100%; clear: both; }
+.left {
+  position: relative;
   width: 100%;
+  padding-top: 100%;
+  background-color: grey;
+  float: left;
+
+  @media (min-width: 1201px) {
+    width: 50%;
+    padding-top: 50%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: 1201px) { width: 100%; }
+  }
 }
+
+.right {
+  position: relative;
+  width: 100%;
+  float: left;
+
+  @media (min-width: 1201px) {
+    width: 50%;
+    padding-top: 50%;
+  }
+
+  h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+  }
+}
+
+.lefttext {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 85%;
+  padding: 8% 7% 0% 8%;
+
+  @media (min-width: 1201px) {
+    position: absolute;
+    width: 65%;
+    padding: 8% 20% 0% 15%;
+  }
+}
+
+.righttext {
+  position: relative;
+  width: 88%;
+  padding: 7% 5% 7% 7%;
+
+  @media (min-width: 601px) and (max-width: 1200px) {
+    width: 81%;
+    padding: 7% 9% 7% 10%;
+  }
+
+  @media (min-width: 1201px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 78%;
+    padding: 8% 12% 0% 10%;
+  }
+
+  @media (min-width: 1671px) {
+    width: 65%;
+    padding: 8% 20% 0% 15%;
+  }
+}
+
+.inlinequote {
+  padding: 1% 5% 1% 5%;
+  text-indent: 0px !important;
+}
+
+/*
+╭────────────────────────────────────────────────────╮
+│                  Intro and Outro                   │
+╰────────────────────────────────────────────────────╯
+ */
 
 #intro, #outro {
   width: 100%;
@@ -74,1190 +163,435 @@
   @media (min-resolution: 192dpi) and (min-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/outro-large@2x.jpg"); }
 }
 
-/*------------------MORE TEXTS LINKS--------------------------*/
+  /*
+╭────────────────────────────────────────────────────╮
+│                     Chapters                       │
+╰────────────────────────────────────────────────────╯
+ */
 
-/*------------------FOOTER----------------------------------*/
+#self {
+  h2 { padding: 6% 0 0 10%; }
 
-/*------------------RESPONSIVE VIDEO EMBED------------------*/
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 75%;
+      padding: 13% 15% 0% 10%;
+    }
 
-#video-container {
-  background-color: black;
+    @media (min-width: 1671px) {
+      width: 65%;
+      padding: 15% 20% 0% 15%;
+    }
+  }
 }
 
-#video-container iframe {
-  display: block;
-  margin: 0 auto;
+#answering {
+  h2 { padding: 5% 0 0 33%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 72%;
+      padding: 15% 18% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
+#power {
+  h2 { padding: 6% 0 0 5%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 76%;
+      padding: 7% 14% 0% 10%;
+    }
+  }
+}
+
+#relationships {
+  h2 { padding: 7% 0 0 15%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 70%;
+      padding: 15% 20% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
+#reconciling {
+  h2 { padding: 7% 0 0 19%; }
+
+  .left {
+    @media (min-width: 1201px) { padding-top: 57%; }
+  }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 5% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 70%;
+      padding: 5% 15% 0% 15%;
+    }
+  }
+}
+
+#liberation {
+  h2 { padding: 4% 0 0 32%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 70%;
+      padding: 15% 20% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
+#revolt {
+  h2 { padding: 10% 0 0 12%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 79%;
+      padding: 5% 11% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 68%;
+      padding: 8% 17% 0% 15%;
+    }
+  }
+}
+
+#control {
+  h2 { padding: 10% 0 0 25%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+  }
+}
+
+#hierarchy {
+  h2 { padding: 10% 0 0 23%; }
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 65%;
+      padding: 15% 20% 0% 15%;
+    }
+  }
+}
+
+#borders {
+  h2 { padding: 7% 0 0 17%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
+#representation {
+  h2 { padding: 10% 0 0 13%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
+#leaders {
+  h2 { padding: 6% 0 0 27%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 11% 12% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 60%;
+      padding: 15% 25% 0% 15%;
+    }
+  }
+}
+
+#government {
+  h2 {
+    padding: 10% 0 0 21%;
+    @media (min-width: 1201px) and (max-width: 1670px) { padding: 15% 0 0 16%; }
+    @media (min-width: 1671px) { padding: 20% 0 0 21%; }
+  }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 80%;
+      padding: 8% 10% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 70%;
+      padding: 5% 15% 0% 15%;
+    }
+  }
+
+  .left {
+    @media (min-width: 1201px) and (max-width: 1670px) { padding-top: 75%; }
+    @media (min-width: 1671px) { padding-top: 69%; }
+  }
+}
+
+#profit {
+  h2 { padding: 10% 0 0 25%; }
+
+  .left {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      padding-top: 50%;
+    }
+  }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 78%;
+      padding: 8% 12% 0% 10%;
+    }
+  }
+}
+
+#property {
+  h2 {
+    padding: 4% 0 0 20%;
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      padding: 12% 0 0 20%;
+    }
+  }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 76%;
+      padding: 8% 12% 0% 10%;
+    }
+    @media (min-width: 1671px) {
+      width: 75%;
+      padding: 5% 10% 0% 15%;
+    }
+  }
+
+  .left {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      padding-top: 62%;
+    }
+  }
+}
+
+#lastcrime {
+  h2 { padding: 8% 0 0 10%; }
+
+  .righttext {
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      width: 72%;
+      padding: 12% 18% 0% 10%;
+    }
+
+    @media (min-width: 1671px) {
+      width: 58%;
+      padding: 15% 27% 0% 15%;
+    }
+  }
+}
+
+/*
+╭────────────────────────────────────────────────────╮
+│                  Anarchy Is                        │
+╰────────────────────────────────────────────────────╯
+ */
+#anarchy {
   width: 100%;
-  max-width: 1285px;
-  height: 40vh;
+  clear: both;
+  background-color: black;
+  overflow: auto;
+  padding-top: 3%;
 
-  @media (min-width: 576px) {
-    height: 50vh;
+  @media (min-width: 1201px) { padding: 0; }
+
+  img {
+    width: 50%;
+    padding: 9% 0 0 24%;
+
+    @media (min-width: 1201px) { padding: 15% 0 0 20%; }
   }
 
-  @media (min-width: 900px) {
-    height: 70vh;
+  .first, .second, .third {
+    position: relative;
+    float: left;
+    width: var(--col-width);
+    padding: var(--col-padding);
   }
 
-  @media (min-width: 1200px) {
+  .first  {
+    --col-width: 85%;
+    --col-padding:  5% 7% 5% 8%;
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      --col-width: 81%;
+      --col-padding: 7% 9% 7% 10%;
+    }
+
+    @media (min-width: 1201px) {
+      --col-width: 23%;
+      --col-padding: 5% 7% 5% 8%;
+    }
+  }
+
+  .second {
+    --col-width: 85%;
+    --col-padding: 1% 7% 5% 8%;
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      --col-width: 81%;
+      --col-padding: 2% 9% 7% 10%;
+    }
+
+    @media (min-width: 1201px) and (max-width: 1670px) {
+      --col-width: 25.5%;
+      --col-padding: 5% 7.5% 5% 0%;
+    }
+
+    @media (min-width: 1671px) {
+      --col-width: 26%;
+      --col-padding: 5% 7% 5% 0%;
+    }
+  }
+
+  .third  {
+    --col-width: 85%;
+    --col-padding: 1% 7% 7% 8%;
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      --col-width: 81%;
+      --col-padding: 2% 9% 7% 10%;
+    }
+
+    @media (min-width: 1201px) {
+      --col-width: 22%;
+      --col-padding: 5% 7% 5% 0%;
+    }
+  }
+}
+
+/*
+╭────────────────────────────────────────────────────╮
+│              Take Flight / Next                    │
+╰────────────────────────────────────────────────────╯
+ */
+#takeflight {
+  --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-phone.jpg");
+
+  width: 100%;
+  background-image: var(--bg);
+  background-size: 100%;
+  background-position: center top;
+  position: relative;
+  padding-bottom: 177%;
+  @media (min-width: 1201px) { padding-bottom: 55%; }
+
+  /* TODO: maybe this should be an h3 or even just a p? */
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    padding: 55% 0 0 1%;
+
+    @media (min-width: 1201px) { padding: 3% 0 0 1%; }
+  }
+
+  @media (min-width: 601px) and (max-width: 1023px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg"); }
+  /* TODO: this uses the same asset as above so rules can be combined */
+  @media (min-width: 1024px) and (max-width: 1200px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg"); }
+  @media (min-width: 1201px) and (max-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-small.jpg"); }
+  @media (min-width: 1671px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg"); }
+
+  @media (min-resolution: 192dpi) and (min-width: 200px)  { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-phonesmall@2x.jpg"); }
+  @media (min-resolution: 192dpi) and (min-width: 321px)  { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-phone@2x.jpg"); }
+  @media (min-resolution: 192dpi) and (min-width: 601px)  { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet@2x.jpg"); }
+  @media (min-resolution: 192dpi) and (min-width: 1024px) {--bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet@2x.jpg"); }
+  @media (min-resolution: 192dpi) and (min-width: 1201px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-small@2x.jpg"); }
+  /* TODO: same as non-hidpi, delete or replace with 2x version? */
+  @media (min-resolution: 192dpi) and (min-width: 1670px) { --bg: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg"); }
+}
+
+#next h1 {
+    text-align: center;
+    padding: 90% 10% 90% 10% !important;
+    /* TODO: why an h1 */
+    /* TODO: why !important */
+    @media (min-width: 601px) { padding: 30% 10% 30% 10% !important; }
+}
+
+
+/*------------------RESPONSIVE VIDEO EMBED------------------*/
+#video-container {
+  background-color: black;
+
+  iframe {
+    display: block;
     margin: 0 auto;
-    height: 95vh;
+    width: 100%;
+    max-width: 1285px;
+    height: 40vh;
+
+    @media (min-width: 576px) { height: 50vh; }
+    @media (min-width: 900px) { height: 70vh; }
+    @media (min-width: 1200px) {
+      margin: 0 auto;
+      height: 95vh;
+    }
   }
 }
 
 /*------------------COLOURS------------------*/
 
-.green,
-.green a {
-  color: #9ac149;
-}
-
-.blue,
-.blue a {
-  color: #3cbce9;
-}
-
-.pink,
-.pink a {
-  color: #d62d34;
-}
-
-.semi {
-  font-weight: 600;
-}
-
-.black {
-  font-weight: 800;
-}
-
-/*----------------------------------------------------------*/
-/*-------------RESPONSIVE CODE STARTS HERE------------------*/
-/*----------------------------------------------------------*/
-
-/*-------------PHONE CSS------------------*/
-/*@media (min-device-width:200px) and (max-device-width:600px) OR  (max-width:600px) ORIGINAL COMBINED {*/
-@media (min-device-width: 200px) and (max-width: 600px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
-  .left {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    background-color: grey;
-    float: left;
-  }
-
-  .right {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .lefttext {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 85%;
-    padding: 8% 7% 0% 8%;
-  }
-
-  .righttext {
-    position: relative;
-    width: 88%;
-    padding: 7% 5% 7% 7%;
-  }
-
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
-  #takeflight {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-phone.jpg");
-    background-size: 100%;
-    padding-bottom: 177%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #takeflight h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 99%;
-    padding: 55% 0 0 1%;
-  }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
-  }
-
-  #relationships h2 {
-    padding: 7% 0 0 15%;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
-  }
-
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
-  #government h2 {
-    padding: 10% 0 0 21%;
-  }
-
-  #profit h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #property h2 {
-    padding: 4% 0 0 20%;
-  }
-
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-    padding-top: 3%;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 9% 0 0 24%;
-  }
-
-  .first {
-    position: relative;
-    width: 85%;
-    padding: 5% 7% 5% 8%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 85%;
-    padding: 1% 7% 5% 8%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 85%;
-    padding: 1% 7% 7% 8%;
-    float: left;
-  }
-
-  #next h1 {
-    text-align: center;
-    padding: 90% 10% 90% 10% !important;
-  }
-}
-
-/*-------------TABLET CSS------------------*/
-@media (min-width: 601px) and (max-width: 1023px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
-  .left {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    background-color: grey;
-    float: left;
-  }
-
-  .right {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .lefttext {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 85%;
-    padding: 8% 7% 0% 8%;
-  }
-
-  .righttext {
-    position: relative;
-    width: 81%;
-    padding: 7% 9% 7% 10%;
-  }
-
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
-  #takeflight {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg");
-    background-size: 100%;
-    padding-bottom: 177%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #takeflight h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 99%;
-    padding: 55% 0 0 1%;
-  }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
-  }
-
-  #relationships h2 {
-    padding: 7% 0 0 15%;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
-  }
-
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
-  #government h2 {
-    padding: 10% 0 0 21%;
-  }
-
-  #profit h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #property h2 {
-    padding: 4% 0 0 20%;
-  }
-
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-    padding-top: 3%;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 9% 0 0 24%;
-  }
-
-  .first {
-    position: relative;
-    width: 81%;
-    padding: 7% 9% 7% 10%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 81%;
-    padding: 2% 9% 7% 10%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 81%;
-    padding: 2% 9% 7% 10%;
-    float: left;
-  }
-
-  #next h1 {
-    text-align: center;
-    padding: 30% 10% 30% 10% !important;
-  }
-}
-
-/*-------------TABLET LANDSCAPE------------------*/
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
-  .left {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    background-color: grey;
-    float: left;
-  }
-
-  .right {
-    position: relative;
-    width: 100%;
-    float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .lefttext {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 85%;
-    padding: 8% 7% 0% 8%;
-  }
-
-  .righttext {
-    position: relative;
-    width: 81%;
-    padding: 7% 9% 7% 10%;
-  }
-
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
-  #takeflight {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet.jpg");
-    background-size: 100%;
-    padding-bottom: 177%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #takeflight h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 99%;
-    padding: 55% 0 0 1%;
-  }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
-  }
-
-  #relationships h2 {
-    padding: 7% 0 0 15%;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
-  }
-
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
-  #government h2 {
-    padding: 10% 0 0 21%;
-  }
-
-  #profit h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #property h2 {
-    padding: 4% 0 0 20%;
-  }
-
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-    padding-top: 3%;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 9% 0 0 24%;
-  }
-
-  #anarchy p:first-of-type {
-    text-indent: 0px;
-  }
-
-  .first {
-    position: relative;
-    width: 81%;
-    padding: 7% 9% 7% 10%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 81%;
-    padding: 2% 9% 7% 10%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 81%;
-    padding: 2% 9% 7% 10%;
-    float: left;
-  }
-
-  #next h1 {
-    text-align: center;
-    padding: 30% 10% 30% 10% !important;
-  }
-}
-
-/*-------------DESKTOP SMALL CSS------------------*/
-@media (min-width: 1201px) and (max-width: 1670px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
-  .left {
-    position: relative;
-    width: 50%;
-    padding-top: 50%;
-    background-color: grey;
-    float: left;
-  }
-
-  .right {
-    position: relative;
-    width: 50%;
-    padding-top: 50%;
-    float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .lefttext {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 65%;
-    padding: 8% 20% 0% 15%;
-  }
-
-  .righttext {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 78%;
-    padding: 8% 12% 0% 10%;
-  }
-
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
-
-  #takeflight {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-small.jpg");
-    background-size: 100%;
-    padding-bottom: 55%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #takeflight h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 99%;
-    padding: 3% 0 0 1%;
-  }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #self .righttext {
-    width: 75%;
-    padding: 13% 15% 0% 10%;
-  }
-
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
-  #answering .righttext {
-    width: 72%;
-    padding: 15% 18% 0% 10%;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
-  }
-
-  #power .righttext {
-    width: 76%;
-    padding: 7% 14% 0% 10%;
-  }
-
-  #relationships h2 {
-    padding: 7% 0 0 15%;
-  }
-
-  #relationships .righttext {
-    width: 70%;
-    padding: 15% 20% 0% 10%;
-  }
-
-  #reconciling .left {
-    padding-top: 57%;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
-  }
-
-  #reconciling .righttext {
-    width: 78%;
-    padding: 5% 12% 0% 10%;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
-  }
-
-  #liberation .righttext {
-    width: 70%;
-    padding: 15% 20% 0% 10%;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
-  }
-
-  #revolt .righttext {
-    width: 79%;
-    padding: 5% 11% 0% 10%;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #control .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
-  }
-
-  #hierarchy .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
-  }
-
-  #borders .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
-  }
-
-  #representation .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
-  }
-
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
-  #leaders .righttext {
-    width: 78%;
-    padding: 11% 12% 0% 10%;
-  }
-
-  #government h2 {
-    padding: 15% 0 0 16%;
-  }
-
-  #government .righttext {
-    width: 80%;
-    padding: 8% 10% 0% 10%;
-  }
-
-  #government .left {
-    padding-top: 75%;
-  }
-
-  #profit .left {
-    padding-top: 50%;
-  }
-
-  #profit h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #profit .righttext {
-    width: 78%;
-    padding: 8% 12% 0% 10%;
-  }
-
-  #property h2 {
-    padding: 12% 0 0 20%;
-  }
-
-  #property .righttext {
-    width: 76%;
-    padding: 8% 12% 0% 10%;
-  }
-
-  #property .left {
-    padding-top: 62%;
-  }
-
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
-  #lastcrime .righttext {
-    width: 72%;
-    padding: 12% 18% 0% 10%;
-  }
-
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 15% 0 0 20%;
-  }
-
-  .first {
-    position: relative;
-    width: 23%;
-    padding: 5% 7% 5% 8%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 25.5%;
-    padding: 5% 7.5% 5% 0%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 22%;
-    padding: 5% 7% 5% 0%;
-    float: left;
-  }
-
-  #next h1 {
-    text-align: center;
-    padding: 30% 10% 30% 10% !important;
-  }
-}
-
-/*-------------DESKTOP BIG CSS------------------*/
-@media (min-width: 1671px) {
-  .spread {
-    width: 100%;
-    clear: both;
-  }
-
-  .left {
-    position: relative;
-    width: 50%;
-    padding-top: 50%;
-    background-color: grey;
-    float: left;
-  }
-
-  .right {
-    position: relative;
-    width: 50%;
-    padding-top: 50%;
-    float: left;
-  }
-
-  .left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .left h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .lefttext {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 65%;
-    padding: 8% 20% 0% 15%;
-  }
-
-  .righttext {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 65%;
-    padding: 8% 20% 0% 15%;
-  }
-
-  .right h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-
-  #takeflight {
-    width: 100%;
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg");
-    background-size: 100%;
-    padding-bottom: 55%;
-    background-position: center top;
-    position: relative;
-  }
-
-  #takeflight h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 99%;
-    padding: 3% 0 0 1%;
-  }
-
-  .inlinequote {
-    padding: 1% 5% 1% 5%;
-    text-indent: 0px !important;
-  }
-
-  #self h2 {
-    padding: 6% 0 0 10%;
-  }
-
-  #self .righttext {
-    width: 65%;
-    padding: 15% 20% 0% 15%;
-  }
-
-  #answering h2 {
-    padding: 5% 0 0 33%;
-  }
-
-  #answering .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
-  }
-
-  #power h2 {
-    padding: 6% 0 0 5%;
-  }
-
-  #relationships h2 {
-    padding: 7% 0 0 15%;
-  }
-
-  #relationships .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
-  }
-
-  #reconciling h2 {
-    padding: 7% 0 0 19%;
-  }
-
-  #reconciling .righttext {
-    width: 70%;
-    padding: 5% 15% 0% 15%;
-  }
-
-  #liberation h2 {
-    padding: 4% 0 0 32%;
-  }
-
-  #liberation .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
-  }
-
-  #revolt h2 {
-    padding: 10% 0 0 12%;
-  }
-
-  #revolt .righttext {
-    width: 68%;
-    padding: 8% 17% 0% 15%;
-  }
-
-  #control h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #hierarchy h2 {
-    padding: 10% 0 0 23%;
-  }
-
-  #hierarchy .righttext {
-    width: 65%;
-    padding: 15% 20% 0% 15%;
-  }
-
-  #borders h2 {
-    padding: 7% 0 0 17%;
-  }
-
-  #borders .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
-  }
-
-  #representation h2 {
-    padding: 10% 0 0 13%;
-  }
-
-  #representation .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
-  }
-
-  #leaders h2 {
-    padding: 6% 0 0 27%;
-  }
-
-  #leaders .righttext {
-    width: 60%;
-    padding: 15% 25% 0% 15%;
-  }
-
-  #government h2 {
-    padding: 20% 0 0 21%;
-  }
-
-  #government .righttext {
-    width: 70%;
-    padding: 5% 15% 0% 15%;
-  }
-
-  #government .left {
-    padding-top: 69%;
-  }
-
-  #profit h2 {
-    padding: 10% 0 0 25%;
-  }
-
-  #property h2 {
-    padding: 4% 0 0 20%;
-  }
-
-  #property .righttext {
-    width: 75%;
-    padding: 5% 10% 0% 15%;
-  }
-
-  #lastcrime h2 {
-    padding: 8% 0 0 10%;
-  }
-
-  #lastcrime .righttext {
-    width: 58%;
-    padding: 15% 27% 0% 15%;
-  }
-
-  #anarchy {
-    width: 100%;
-    clear: both;
-    background-color: black;
-    overflow: auto;
-  }
-
-  #anarchy img {
-    width: 50%;
-    padding: 15% 0 0 20%;
-  }
-
-  .first {
-    position: relative;
-    width: 23%;
-    padding: 5% 7% 5% 8%;
-    float: left;
-  }
-
-  .second {
-    position: relative;
-    width: 26%;
-    padding: 5% 7% 5% 0%;
-    float: left;
-  }
-
-  .third {
-    position: relative;
-    width: 22%;
-    padding: 5% 7% 5% 0%;
-    float: left;
-  }
-
-  #next h1 {
-    text-align: center;
-    padding: 30% 10% 30% 10% !important;
-  }
-}
-
-/*---------------RETINA BACKGROUNDS----------------*/
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 200px),
-  (min-resolution: 192dpi) and (min-width: 200px) {
-  #takeflight {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-phonesmall@2x.jpg");
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 321px),
-  (min-resolution: 192dpi) and (min-width: 321px) {
-
-  #takeflight {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-phone@2x.jpg");
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 601px),
-  (min-resolution: 192dpi) and (min-width: 601px) {
-
-  #takeflight {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet@2x.jpg");
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
-  (min-resolution: 192dpi) and (min-width: 1024px) {
-  #takeflight {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-tablet@2x.jpg");
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1201px),
-  (min-resolution: 192dpi) and (min-width: 1201px) {
-  #takeflight {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-small@2x.jpg");
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1670px),
-  (min-resolution: 192dpi) and (min-width: 1670px) {
-  #takeflight {
-    background-image: url("https://cdn.crimethinc.com/assets/tce/images/takeflight-large.jpg");
-  }
-}
+.green, .green a { color: #9ac149; }
+.blue, .blue a { color: #3cbce9; }
+.pink, .pink a { color: #d62d34; }
+.semi { font-weight: 600; }
+.black { font-weight: 800; }
