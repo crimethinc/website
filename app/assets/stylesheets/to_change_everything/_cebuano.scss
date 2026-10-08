@@ -7,7 +7,7 @@
 
   #intro, #outro {
     background-size: cover;
-    @media (max-width: 1200px) { padding-bottom: 220%; }
+    @media (max-width: 1200px) { padding-block-end: 220%; }
 
     .rightintro h3 {
       padding-block: 0 0;

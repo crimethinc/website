@@ -11,36 +11,39 @@
 }
 
 #intro, #outro {
-  width: 100%;
+  inline-size: 100%;
   background-image: var(--bg);
   background-size: 100%;
-  padding-bottom: 200%;
+  padding-block-end: 200%;
   background-position: center top;
   position: relative;
 
-  @media (min-width: 1201px) { padding-bottom: 39.5%; }
+  @media (min-width: 1201px) { padding-block-end: 39.5%; }
 
   .leftintro, .rightintro {
     position: relative;
-    width: 100%;
-    float: left;
+    inline-size: 100%;
+    float: inline-start;
 
     @media (min-width: 1201px) {
-      width: 50%;
-      &.rightintro { float: right; }
+      inline-size: 50%;
+      &.rightintro { float: inline-end; }
     }
 
     > h3 {
       position: relative;
-      top: 0;
-      left: 0;
-      width: 95%;
-      padding: 16% 5% 0% 0%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      inline-size: 95%;
+      padding-block: 16% 0;
+      padding-inline: 0 5%;
 
       @media (min-width: 1201px) {
         position: absolute;
-        width: 90%;
+        inline-size: 90%;
         padding: 12% 10% 0% 0%;
+        padding-block: 12% 0;
+        padding-inline: 0 10%;
       }
     }
   }

@@ -13,9 +13,9 @@
       padding: 0;
 
       @media (min-device-width: 200px) and (max-width: 1200px) {
-        padding-top: 10%;
-        padding-right: 10%;
-        width: 89%;
+        padding-block-start: 10%;
+        padding-inline-start: 10%;
+        inline-size: 89%;
       }
     }
   }
@@ -23,19 +23,19 @@
   #intro {
     h3 {
       @media (min-device-width: 200px) and (max-width: 1200px) {
-        right: 0;
+        inset-inline-start: 0;
       }
 
       @media (min-width: 1201px) {
-        padding-top: 5%;
-        margin-right: 10%;
+        padding-block-start: 5%;
+        margin-inline-start: 10%;
       }
     }
 
     .rightintro {
       @media (min-device-width: 200px) and (max-width: 600px) {
         position: absolute;
-        bottom: 5px;
+        inset-block-end: 5px;
       }
     }
   }
@@ -43,9 +43,9 @@
   #outro {
     h3 {
       @media (min-width: 1201px) {
-        width: 100%;
-        padding-right: 10%;
-        right: 10%;
+        inline-size: 100%;
+        padding-inline-start: 10%;
+        inset-inline-start: 10%;
       }
     }
   }
