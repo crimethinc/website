@@ -2,7 +2,7 @@ module ToChangeEverythingHelper
   IMAGE_BASE_URL = 'https://cdn.crimethinc.com/assets/tce/images/'.freeze
 
   SECTIONS = {
-    intro: %w[introduction].freeze,
+    intro: %w[intro].freeze,
     first: %w[self answering power relationships reconciling liberation revolt control].freeze,
     last:  %w[hierarchy borders representation leaders government profit property lastcrime].freeze,
     outro: %w[anarchy outro takeflight next].freeze

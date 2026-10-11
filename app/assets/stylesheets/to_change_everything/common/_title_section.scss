@@ -123,8 +123,8 @@
   @media (min-device-width: 12.5rem) and (max-width: 37.5rem) {
     background-image: url("https://cdn.crimethinc.com/tce/images/cover-phone.jpg");
   }
-  @media (min-width: 37.5625rem) and (max-width: 63.9375rem) {
-    background-image: url("https://cdn.crimethinc.com/tce/images/cover-tablet.jpg");
+  @media (min-width: 37.5625rem) and (max-width: 63.9375rem) { 
+   background-image: url("https://cdn.crimethinc.com/tce/images/cover-tablet.jpg");
   }
   @media (min-width: 64rem) and (max-width: 75rem) {
     background-image: url("https://cdn.crimethinc.com/assets/tce/images/cover-tiny.jpg");
@@ -203,3 +203,4 @@
     }
   }
 }
+
