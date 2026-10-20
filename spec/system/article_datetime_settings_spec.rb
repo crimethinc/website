@@ -40,9 +40,9 @@ describe 'Setting and changing an articles published_at date', :js do
     click_link_or_button 'EDIT'
     within '#publication_datetime' do
       # make sure pre-fills are right
-      expect(find_field('published_at_date').value).to eq '2018-12-24'
-      expect(find_field('published_at_time').value).to eq '03:59:00'
-      expect(find_field('article_published_at_tz').value).to eq 'Pacific Time (US & Canada)'
+      expect(page).to have_field('published_at_date', with: '2018-12-24')
+      expect(page).to have_field('published_at_time', with: '03:59:00')
+      expect(page).to have_field('article_published_at_tz', with: 'Pacific Time (US & Canada)')
 
       execute_script("document.getElementById('publication_date').value = '2018-12-26';")
       execute_script("document.getElementById('publication_time').value = '22:59:00';")
