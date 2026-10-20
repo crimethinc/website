@@ -16,6 +16,15 @@ FactoryBot.define do
     end
   end
 
+  # TODO: create a published trait that set `published_at` and the
+  # `publication_status`, so the draft trait can properly set `published_at` to
+  # nil
+  trait(:draft) do
+    published_at { nil }
+    publication_status { 'draft' }
+    # TODO: should we also put `published_at_tz { "UTC" }` ?
+  end
+
   trait(:arabic)         { locale { 'ar' } }
   trait(:bengali)        { locale { 'bn' } }
   trait(:czech)          { locale { 'cs' } }

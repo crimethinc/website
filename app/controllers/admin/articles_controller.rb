@@ -181,15 +181,23 @@ module Admin
     end
 
     def handle_published_without_datetime permitted_params
-      return if @article&.published?
+      if @article&.published?
+        # in general, we don't un-publish articles, and if we do it
+        # should be via setting the publication status from "published"
+        # to "draft", not by nil-ing the publication dates...so if we
+        # are ever in this scenario, it is probably a bug. Just use the
+        # already saved publication dates.
+        permitted_params.delete(:published_at) if permitted_params[:published_at].blank?
+        permitted_params.delete(:published_at_tz) if permitted_params[:published_at_tz].blank?
+      else
+        publish_in_100_years = permitted_params[:publication_status] == 'published' &&
+                               permitted_params[:published_at].blank?
 
-      publish_in_100_years = permitted_params[:publication_status] == 'published' &&
-                             permitted_params[:published_at].blank?
+        time = 100.years.from_now
+        tz = Time.zone.name
 
-      time = 100.years.from_now
-      tz = Time.zone.name
-
-      handle_publish_now_situation(permitted_params, time: time, zone: tz) if publish_in_100_years
+        handle_publish_now_situation(permitted_params, time: time, zone: tz) if publish_in_100_years
+      end
     end
   end
 end
