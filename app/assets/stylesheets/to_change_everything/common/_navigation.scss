@@ -1,4 +1,30 @@
 :root {
+  /* Font setup */
+  --fluid-vmin: 500px;
+  --fluid-vmax: 1600px;
+
+  /* the normal <p> fontsize */
+  --base-min: 1rem;
+  --base-max: 1.125rem;
+
+  /* the scaling of fontsize for p -> h4 -> h1 */
+  --type-scale-small: 1.2;
+  --type-scale-large: 1.414;
+
+  /* calculating fluid unitless value */
+  --fluid: clamp(0, tan(atan2(100vw - var(--fluid-vmin), var(--fluid-vmax) - var(--fluid-vmin))), 1);
+  --base: calc(
+    var(--base-min) +
+    var(--fluid) * (var(--base-max) - var(--base-min)));
+  --type-scale: calc(
+    var(--type-scale-small) +
+    var(--fluid) * (var(--type-scale-large) - var(--type-scale-small)));
+
+  /* size of CWC icon and the icon-only menu buttons */
+  --icon-size-min: 2.125rem;
+  --icon-size-max: 2.625rem;
+  --cwc-icon-size: calc(var(--icon-size-min) + var(--fluid) * (var(--icon-size-max) - var(--icon-size-min)));
+
   --tce-green: #9ac149;
   --tce-red: #d62d34;
   --tce-blue: #3cbce9;
@@ -52,8 +78,6 @@
 }
 
 .site-icon-logo {
-  --cwc-icon-size: clamp(1rem, calc(2vw + var(--header-step-0)), 4rem);
-
   border: 1px solid red;
   display: grid;
   gap: 0;
@@ -84,7 +108,6 @@
 
   .button {
     font: inherit;
-    font-size: var(--header-step-3);
     border: 0;
     min-inline-size: fit-content;
     max-inline-size: fit-content;
@@ -96,8 +119,8 @@
     cursor: pointer;
 
     > .icon {
-      height: 2cap;
-      width: 2cap;
+      height: var(--cwc-icon-size);
+      width: var(--cwc-icon-size);
     }
 
     /* when the entire header is less than 65 characters wide we display
@@ -123,6 +146,18 @@ body { container-type: inline-size; }
 * { box-sizing: border-box; }
 
 header {
+  font: var(--f-site-header);
+  
+  :is(button, .label, a, [popover]) {
+    font-size: calc(
+      var(--font-size-min) +
+      var(--fluid) * (var(--font-size-max) - var(--font-size-min)));
+  }
+
+  --_inline_padding: .5rem;
+  --font-size-min: .7rem;
+  --font-size-max: 1.125rem;
+
   display: flex;
   flex-flow: row nowrap;
   gap: 1ch;
@@ -130,125 +165,91 @@ header {
   position: absolute;
   inset-inline: 0;
   background-color: var(--tce-black, red);
-  font: var(--f-site-header);
   justify-content: space-between;
-  padding-inline: var(--page-inline-padding, 2rem);
+  padding-inline: var(--_inline_padding, --page-inline-padding);
+  padding-block-start: calc(var(--_inline_padding) / 2);
 
   align-items: start;
 
   @container(inline-size >= 75ch) {
     align-items: center;
-    font-size: var(--header-step-1);
     justify-content: space-around;
  }
 }
 
 
 [popover] {
-  grid-template-rows: repeat(
-    var(--_popover-max-rows, 11),
-    auto
-  );
-  grid-template-columns: repeat(
-    var(--_popover-max-col, 1),
-    1fr
-  );
-  gap: 1lh;
-  overflow: scroll;
-  font-size: 12px;
-  grid-auto-flow: column;
-  max-block-size: var(--_popover-max-block, 75vh);
-  scrollbar-color: var(--_popover-scroll-color);
-  overscroll-behavior-block: contain;
-  margin: auto;
-  margin-block-start: 10vh;
-  background-color: oklab(from var(--tce-black) calc(l - .05) a b/1);
-  padding: 1rem;
-  border-radius: 15px;
-  
-  @container(inline-size < 45ch) {
-    grid-template-columns: 1fr;    
-    grid-auto-flow: row;
-  }
+  &:popover-open { display: block; }
 
-  > * {
-    font-size: 1rem;
-    text-box-trim: trim-both;
-    text-wrap: balance
+  margin-inline: auto;
+  margin-block-start: 10vh;
+  margin-block-start: 10svh;
+  max-block-size: var(--_popover-max-block, 75vh);
+  max-block-size: var(--_popover-max-block, 75svh);
+  overflow: scroll;
+  overscroll-behavior: contain;
+  overscroll-behavior-block: contain;
+  scrollbar-color: var(--_popover-scroll-color);
+  
+  gap: 1lh;
+  padding: 0;
+  background-color: oklab(from var(--tce-black) calc(l - .05) a b/1);
+  border-radius: 15px;
+
+  @container(inline-size > 45ch) {
+    columns: var(--large-screen-cols, 2);
   }
 
   a {
+    display: block;
     font: inherit;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+
+    &:hover {
+      color: var(--hover-color, red);
+      text-decoration: none;
+    }
+
+    @container(inline-size < 10ch) {
+      hypens: auto;
+    }
   }
 
-  &:popover-open {
-    display: grid;
+  @container style(--active: true) {
+    a { color: var(--tce-red); }
   }
+
+
+  > * {
+    font: inherit;
+    text-box-trim: trim-both;
+    text-wrap: balance;
+  }
+
   &::backdrop {
-    background-color: oklab(from var(--tce-black) l a b/.2);
+    background-color: oklab(from var(--tce-black) l a b/.8);
     backdrop-filter: blur(1px);
   }
 }
 
 #toc {
-  --_popover-max-col: 2;
   --_popover-scroll-color: var(--tce-green) red;
-
+  --hover-color: var(--tce-green);
 }
 #share {
-  --_popover-max-rows: 4;
-  --_popover-max-col: 1;
   --_popover-scroll-color: var(--tce-blue) red;
+  --large-screen-cols: 1;
+  --hover-color: var(--tce-blue);
 }
 
 #language {
-  --_popover-max-col: 2;
   --_popover-scroll-color: var(--tce-red) red;
+  --hover-color: var(--tce-red);
 }
-
-#toc a, #language a, #share a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-  padding: 4px 15px 0px 35px;
-}
-
-#toc a:hover {
-  color: #9ac149;
-  text-decoration: none;
-}
-
-#language a:hover {
-  color: #d62d34;
-  text-decoration: none;
-}
-
-#share a:hover {
-  color: #3cbce9;
-  text-decoration: none;
-}
-
-ul#toc,
-ul#language,
-ul#share {
-  border: 0px solid #000000;
-}
-
-nav ul li.current-menu-item {
-  background: #ddd;
-}
-
-nav ul {
-  background-color: rgba(23, 22, 22, 0.98);
-  padding: 0;
-
-  a {
-    line-height: 120%;
-    padding: 10px 15px;
-  }
-}
-
+ 
 li.selected a:link,
 li.selected a:visited {
   color: #d62d34 !important;
@@ -257,3 +258,4 @@ li.selected a:visited {
 .check {
   font-family: "tcesymbols", Helvetica, Arial, sans-serif;
 }
+
