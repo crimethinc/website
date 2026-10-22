@@ -1,17 +1,34 @@
 :root {
-  /* Font setup */
-  --fluid-vmin: 500px;
+  /************************
+   *      Font setup      *
+   ************************
+   There are 3 main font sizes in the nav bar. 1) Then menu button
+   text and icons, 2) the menu content in the popovers, 3) the menu
+   title in the popove. There is also the site name/logo, though that
+   is actually an image which will have its sized tied to the menu
+   button font size.
+
+   I am thinking of making the menu content the baselie. e.g.
+      menu content -> menu title -> menu button
+
+  So I will need 3 steps. I don't think the nav needs very large
+  steps, so I am going with a 1.067 at the lower viewport bound and
+  1.125 at the larger bound. */
+  --type-scale-small: 1.067;
+  --type-scale-large: 1.125;
+
+  /* I am setting the fluid bounds at 360px and 1600 px. This means that
+     below 360 px the font size will be fixed, and above 1600px it will
+     be fixed (base-min and base-max) */
+  --fluid-vmin: 320px;
   --fluid-vmax: 1600px;
-
-  /* the normal <p> fontsize */
-  --base-min: 1rem;
-  --base-max: 1.125rem;
-
-  /* the scaling of fontsize for p -> h4 -> h1 */
-  --type-scale-small: 1.2;
-  --type-scale-large: 1.414;
+  --base-min: 0.9375rem; /* 15px at a 16px base */
+  --base-max: 1.1250rem; /* 18px at a 16px base */
 
   /* calculating fluid unitless value */
+  /*  TODO: replace by progress once support is a bit better (current 85.73%):
+        https://caniuse.com/wf-progress-function
+  --fluid: progress(100vw, var(--fluid-vmin), var(--fluid-vmax)); */
   --fluid: clamp(0, tan(atan2(100vw - var(--fluid-vmin), var(--fluid-vmax) - var(--fluid-vmin))), 1);
   --base: calc(
     var(--base-min) +
@@ -19,11 +36,14 @@
   --type-scale: calc(
     var(--type-scale-small) +
     var(--fluid) * (var(--type-scale-large) - var(--type-scale-small)));
+  --header-fs-1: var(--base);
+  --header-fs-2: calc(var(--base) * var(--type-scale));
+  --header-fs-3: calc(var(--base) * pow(var(--type-scale), 2));
 
   /* size of CWC icon and the icon-only menu buttons */
   --icon-size-min: 2.125rem;
   --icon-size-max: 2.625rem;
-  --cwc-icon-size: calc(var(--icon-size-min) + var(--fluid) * (var(--icon-size-max) - var(--icon-size-min)));
+  --cwc-icon-size: calc(var(--header-fs-3) * pow(var(--type-scale), 3));
 
   --tce-green: #9ac149;
   --tce-red: #d62d34;
@@ -37,15 +57,6 @@
   --tce-black: rgb(52 52 52 / 0.79);
 
 
-  /* @link https://utopia.fyi/type/calculator?c=700,16,1.2,1670,25,1.25,3,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --header-step--3: clamp(0.5787rem, 0.419rem + 0.365cqi, 0.8rem);
-  --header-step--2: clamp(0.6944rem, 0.4739rem + 0.504cqi, 1rem);
-  --header-step--1: clamp(0.8333rem, 0.5326rem + 0.6873cqi, 1.25rem);
-  --header-step-0: clamp(1rem, 0.5941rem + 0.9278cqi, 1.5625rem);
-  --header-step-1: clamp(1.2rem, 0.6565rem + 1.2423cqi, 1.9531rem);
-  --header-step-2: clamp(1.44rem, 0.7173rem + 1.6518cqi, 2.4414rem);
-  --header-step-3: clamp(1.728rem, 0.7727rem + 2.1835cqi, 3.0518rem);
-
   --sans-family: "Vitesse SSm A", "Vitesse SSm B",
                  "BlinkMacSystemFont", "avenir next", "avenir", "segoe ui", "helvetica neue", "Adwaita Sans",
                  "Cantarell", "Ubuntu", "roboto", "noto", "helvetica", "arial", sans-serif;
@@ -58,11 +69,11 @@
   --code-family: "IosevkaTerm Nerd Font Mono", "FreeMono",
                  "Menlo", "Consolas", "Monaco", "Adwaita Mono", "Liberation Mono", "Lucida Console", monospace;
 
-  --font-block-quote: var(--step--2)/var(--step-6) normal serif;
   --ff-headings: var(--sans-family);
   --ff-content: var(--serif-family);
-
-  --f-site-header: normal normal 300 var(--header-step-0)/1 var(--sans-family);
+  --f-menu-content: normal normal 300 var(--header-fs-1)/1 var(--sans-family);
+  --f-menu-title: normal normal 300 var(--header-fs-2)/1 var(--sans-family);
+  --f-menu-buttons: normal normal 300 var(--header-fs-3)/1 var(--sans-family);
 }
 
 @font-face {
@@ -146,17 +157,7 @@ body { container-type: inline-size; }
 * { box-sizing: border-box; }
 
 header {
-  font: var(--f-site-header);
-  
-  :is(button, .label, a, [popover]) {
-    font-size: calc(
-      var(--font-size-min) +
-      var(--fluid) * (var(--font-size-max) - var(--font-size-min)));
-  }
-
   --_inline_padding: .5rem;
-  --font-size-min: .7rem;
-  --font-size-max: 1.125rem;
 
   display: flex;
   flex-flow: row nowrap;
@@ -171,12 +172,13 @@ header {
 
   align-items: start;
 
+  font: var(--f-menu-buttons);
+
   @container(inline-size >= 75ch) {
     align-items: center;
     justify-content: space-around;
  }
 }
-
 
 [popover] {
   &:popover-open { display: block; }
@@ -195,6 +197,8 @@ header {
   padding: 0;
   background-color: oklab(from var(--tce-black) calc(l - .05) a b/1);
   border-radius: 15px;
+
+  font: var(--header-fs-1);
 
   @container(inline-size > 45ch) {
     columns: var(--large-screen-cols, 2);
