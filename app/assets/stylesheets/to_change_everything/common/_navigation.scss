@@ -1,19 +1,18 @@
 :root {
-  /************************
-   *      Font setup      *
-   ************************
-   There are 3 main font sizes in the nav bar. 1) Then menu button
-   text and icons, 2) the menu content in the popovers, 3) the menu
-   title in the popove. There is also the site name/logo, though that
-   is actually an image which will have its sized tied to the menu
-   button font size.
+  /*                          Font Settings                         */
+  /*╭──────────────────────────────────────────────────────────────╮*/
+  /* There are 3 main font sizes in the nav bar. 1) Then menu button
+     text and icons, 2) the menu content in the popovers, 3) the menu
+     title in the popove. There is also the site name/logo, though
+     that is actually an image which will have its sized tied to the
+     menu button font size.
 
-   I am thinking of making the menu content the baselie. e.g.
-      menu content -> menu title -> menu button
+     I am thinking of making the menu content the baselie. e.g.
+         menu content -> menu title -> menu button
 
-  So I will need 3 steps. I don't think the nav needs very large
-  steps, so I am going with a 1.067 at the lower viewport bound and
-  1.125 at the larger bound. */
+     So I will need 3 steps. I don't think the nav needs very large
+     steps, so I am going with a 1.067 at the lower viewport bound
+     and 1.125 at the larger bound. */
   --type-scale-small: 1.067;
   --type-scale-large: 1.125;
 
@@ -24,38 +23,36 @@
   --fluid-vmax: 1600px;
   --base-min: 0.9375rem; /* 15px at a 16px base */
   --base-max: 1.1250rem; /* 18px at a 16px base */
+  /*╰──────────────────────────────────────────────────────────────╯*/
 
-  /* calculating fluid unitless value */
-  /*  TODO: replace by progress once support is a bit better (current 85.73%):
-        https://caniuse.com/wf-progress-function
+  /*                          Calculations                          */
+  /*╭──────────────────────────────────────────────────────────────╮*/
+  /* Should not need to be touched. Adjust the setting above that
+     are used as inputs to these calcs to tweak the font sizing.     */
+
+  /* TODO: replace by progress once support is a bit better (current 85.73%):
+   *        https://caniuse.com/wf-progress-function
+
   --fluid: progress(100vw, var(--fluid-vmin), var(--fluid-vmax)); */
   --fluid: clamp(0, tan(atan2(100vw - var(--fluid-vmin), var(--fluid-vmax) - var(--fluid-vmin))), 1);
-  --base: calc(
-    var(--base-min) +
-    var(--fluid) * (var(--base-max) - var(--base-min)));
-  --type-scale: calc(
-    var(--type-scale-small) +
-    var(--fluid) * (var(--type-scale-large) - var(--type-scale-small)));
+  --base: calc(var(--base-min) + var(--fluid) * (var(--base-max) - var(--base-min)));
+  --type-scale: calc(var(--type-scale-small) + var(--fluid) * (var(--type-scale-large) - var(--type-scale-small)));
   --header-fs-1: var(--base);
   --header-fs-2: calc(var(--base) * var(--type-scale));
   --header-fs-3: calc(var(--base) * pow(var(--type-scale), 2));
+  --header-fs-4: calc(var(--base) * pow(var(--type-scale), 3));
 
-  /* size of CWC icon and the icon-only menu buttons */
-  --icon-size-min: 2.125rem;
-  --icon-size-max: 2.625rem;
-  --cwc-icon-size: calc(var(--header-fs-3) * pow(var(--type-scale), 3));
+  /*╰──────────────────────────────────────────────────────────────╯*/
 
   --tce-green: #9ac149;
   --tce-red: #d62d34;
   --tce-blue: #3cbce9;
+  --tce-black: rgba(0, 0, 0, 0.79);
+  --tce-black: rgb(52 52 52 / 0.79);
 
   --toc-color: var(--tce-green);
   --lang-color: var(--tce-red);
   --share-color: var(--tce-blue);
-
-  --tce-black: rgba(0, 0, 0, 0.79);
-  --tce-black: rgb(52 52 52 / 0.79);
-
 
   --sans-family: "Vitesse SSm A", "Vitesse SSm B",
                  "BlinkMacSystemFont", "avenir next", "avenir", "segoe ui", "helvetica neue", "Adwaita Sans",
@@ -74,6 +71,7 @@
   --f-menu-content: normal normal 300 var(--header-fs-1)/1 var(--sans-family);
   --f-menu-title: normal normal 300 var(--header-fs-2)/1 var(--sans-family);
   --f-menu-buttons: normal normal 300 var(--header-fs-3)/1 var(--sans-family);
+  --cwc-icon-size: var(--header-fs-4);
 }
 
 @font-face {
@@ -98,13 +96,14 @@
   > .header-logo {
     aspect-ratio: 300 / 44;
     align-self: center;
-    height: calc(var(--cwc-icon-size) / 2);
+    height: var(--cwc-icon-size);
     background: var(--crimethinc-icon-svg);
   }
 
   > .icon-logo {
     aspect-ratio: 1;
-    height: var(--cwc-icon-size);
+    height: 100%;
+    padding-block: 1lh;
     background:
       url("https://cdn.crimethinc.com/tce/images/cwclogo130.png")  
       center center / contain no-repeat scroll border-box padding-box transparent;
