@@ -3,11 +3,11 @@
   /*╭──────────────────────────────────────────────────────────────╮*/
   /* There are 3 main font sizes in the nav bar. 1) Then menu button
      text and icons, 2) the menu content in the popovers, 3) the menu
-     title in the popove. There is also the site name/logo, though
+     title in the popover. There is also the site name/logo, though
      that is actually an image which will have its sized tied to the
      menu button font size.
 
-     I am thinking of making the menu content the baselie. e.g.
+     I am thinking of making the menu content the baseline. e.g.
          menu content -> menu title -> menu button
 
      So I will need 3 steps. I don't think the nav needs very large
@@ -58,16 +58,6 @@
                  "BlinkMacSystemFont", "avenir next", "avenir", "segoe ui", "helvetica neue", "Adwaita Sans",
                  "Cantarell", "Ubuntu", "roboto", "noto", "helvetica", "arial", sans-serif;
 
-  --serif-family: "URW Bookman", "FreeSerif",
-                  "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif,
-                  "Noto Color Emoji", "Noto Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-                  "Unifont";
-
-  --code-family: "IosevkaTerm Nerd Font Mono", "FreeMono",
-                 "Menlo", "Consolas", "Monaco", "Adwaita Mono", "Liberation Mono", "Lucida Console", monospace;
-
-  --ff-headings: var(--sans-family);
-  --ff-content: var(--serif-family);
   --f-menu-content: normal normal 300 var(--header-fs-1)/1 var(--sans-family);
   --f-menu-title: normal normal 300 var(--header-fs-2)/1 var(--sans-family);
   --f-menu-buttons: normal normal 300 var(--header-fs-3)/1 var(--sans-family);
@@ -85,6 +75,8 @@
   font-weight: normal;
   font-style: normal;
 }
+/* TODO: where is this used? */
+.check { font-family: "tcesymbols", Helvetica, Arial, sans-serif; }
 
 .site-icon-logo {
   border: 1px solid red;
@@ -257,8 +249,3 @@ li.selected a:link,
 li.selected a:visited {
   color: #d62d34 !important;
 }
-
-.check {
-  font-family: "tcesymbols", Helvetica, Arial, sans-serif;
-}
-
