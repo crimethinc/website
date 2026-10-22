@@ -18,10 +18,7 @@
   }
 
   /* clear the nav bar */
-  padding-top: 3rem;
-  @media (min-width: 75.0625rem) {
-    padding-top: 5rem;
-  }
+  padding-block-start: calc(var(--cwc-icon-size) + 3rem);
 
   /* the title */
   h1 {
