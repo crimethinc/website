@@ -253,8 +253,21 @@ header {
 #language {
   --c-popover-scroll-fg: var(--tce-red);
   --hover-color: var(--tce-red);
+
+  /* some of the languages in this list link to an article rather than a
+     dedicated TCE page. Adding some sort of indication might be nice,
+     though I don't know what...maybe an svg pdf icon? */
+  a[href*="in-11-more-languages"], a[href*="in-ten-more-languages"] {
+    &:after {
+      content: "🗎" / "";
+      font: inherit;
+      color: var(--hover-color);
+      padding-inline-start: 1ch;
+    }
+  }
 }
- 
+
+/* TODO: why !important ? */
 li.selected a:link,
 li.selected a:visited {
   color: #d62d34 !important;
