@@ -1,9 +1,7 @@
 .deutsch {
   @import "common/font_styling";
 
-  /*--- Highlight language in mobile language menu ---*/
-  #lang1 li > a[href="/tce/deutsch"],
-  #lang2 li > a[href="/tce/deutsch"] { color: #d62d34 !important; }
+  #language li:has(> a[href="/tce/deutsch"]) { --active: true; }
   .check-deutsch:before { content: ''; }
 
   #intro, #outro {

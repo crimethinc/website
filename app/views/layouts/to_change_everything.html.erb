@@ -7,13 +7,6 @@
   <title><%= t('.head.title').html_safe %></title>
   <meta charset="utf-8">
   <%= stylesheet_link_tag "to_change_everything", media: "screen" %>
-
-  <script>
-    function toggleDiv(div) {
-      document.querySelector("#"+div).style.display = document.querySelector("#"+div).style.display === "none" ? "flex" : "none"
-    }
-  </script>
-
   <meta name="viewport" content="initial-scale=1">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@crimethinc">
@@ -30,100 +23,49 @@
 </head>
 
 <body class="<%= @locale.to_s %>">
-  <div class="grandwrapper">
-    <nav>
-      <div id="navwrapper">
-        <div id="cwc">
-          <a href="http://crimethinc.com"><div id="cwclogo"></div><div id="cwclabel"></div></a>
-        </div>
+  <header>
+    <div class="site-icon-logo">
+      <%= link_to([:root], class: "header-logo icon-logo") { tag.span(class: 'visually-hidden') { t("site_name") } } %>
+      <%= link_to([:root], class: "header-logo") { tag.span(class: 'visually-hidden') { t("site_name") } } %>
+    </div>
 
-        <div id="menus">
-          <ul>
-            <li>
-              <span class="menuItem green">
-                <a href="javascript:toggleDiv('tocdiv');">
-                  <%= image_tag('to-change-everything/icons/list-green.svg', class: 'icon') %>
-                  <span class="label"> <%= t('.menu.toc').html_safe %></span>
-                </a>
-              </span>
+    <nav class="button-group">
+      <button class="button menuItem green" popovertarget="toc">
+        <%= image_tag('to-change-everything/icons/list-green.svg', class: 'icon') %>
+        <span class="label"><%= t('.menu.toc').html_safe %></span>
+      </button>
 
-              <ul id="toc">
-                <% tce_table_of_contents_sections.each do |section| %>
-                  <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
-                <% end %>
-              </ul>
-            </li>
+      <ul id="toc" popover>
+        <% tce_table_of_contents_sections.each do |section| %>
+        <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
+        <% end %>
+      </ul>
 
-            <li>
-              <span class="menuItem pink">
-                <a href="javascript:toggleDiv('languagediv');">
-                  <%= image_tag('to-change-everything/icons/globe-pink.svg', class: 'icon') %>
-                  <span class="label"> <%= t('.menu.language').html_safe %></span>
-                </a>
-              </span>
+      <button class="button menuItem pink"  popovertarget="language">
+        <%= image_tag('to-change-everything/icons/globe-pink.svg', class: 'icon') %>
+        <span class="label"><%= t('.menu.language').html_safe %></span>
+      </button>
 
-              <ul id="language">
-                <% tce_language_links.each do |label, path| %>
-                  <li><%= link_to label.html_safe, path %></li>
-                <% end %>
-              </ul>
-            </li>
+      <ul id="language" popover>
+        <% tce_language_links.each do |label, path| %>
+        <li><%= link_to label.html_safe, path %></li>
+        <% end %>
+      </ul>
 
-            <li>
-              <span class="menuItem blue">
-                <a href="javascript:toggleDiv('sharediv');">
-                  <%= image_tag('to-change-everything/icons/share-blue.svg', class: 'icon') %>
-                  <span class="label"> <%= t('.menu.share').html_safe %></span>
-                </a>
-              </span>
+      <button class="button menuItem blue" popovertarget="share">
+        <%= image_tag('to-change-everything/icons/share-blue.svg', class: 'icon') %>
+        <span class="label"><%= t('.menu.share').html_safe %></span>
+      </button>
 
-              <ul id="share">
-                <%= render 'to_change_everything/share_links', locale: @locale %>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="sharediv">
+      <ul id="share" popover>
         <%= render 'to_change_everything/share_links', locale: @locale %>
-      </div>
-
-      <div id="languagediv">
-        <div id="lang1">
-          <% tce_language_links_first.each do |label, path| %>
-            <li><%= link_to label.html_safe, path %></li>
-          <% end %>
-        </div>
-
-        <div id="lang2">
-          <% tce_language_links_last.each do |label, path| %>
-            <li><%= link_to label.html_safe, path %></li>
-          <% end %>
-        </div>
-      </div>
-
-      <div id="tocdiv">
-        <h1><%= t('.menu.toc').html_safe %></h1>
-
-        <div id="toc1">
-          <% tce_body_sections_first.each do |section| %>
-            <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
-          <% end %>
-        </div>
-
-        <div id="toc2">
-          <% tce_body_sections_last.each do |section| %>
-            <li><a href="#<%= section %>"><%= t(".toc.#{section}").html_safe %></a></li>
-          <% end %>
-        </div>
-      </div>
+      </ul>
     </nav>
+  </header>
 
+  <div class="grandwrapper">
     <%= yield %>
-
-    <footer></footer>
-  </div><!-- .grandwrapper -->
-
+  </div>
 </body>
 <% end %>
+<%= javascript_include_tag "to_change_everything" %>
