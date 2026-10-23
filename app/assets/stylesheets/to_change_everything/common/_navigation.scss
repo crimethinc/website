@@ -54,14 +54,18 @@
   --lang-color: var(--tce-red);
   --share-color: var(--tce-blue);
 
+  --c-popover-bg: oklab(from var(--tce-black) calc(l - .05) a b/1);
+  --c-popover-scroll-fg: contrast-color(var(--c-popover-bg));
+  --c-popover-scroll-bg: lch(from contrast-color(var(--c-popover-bg)) l c h / .5);
+
   --sans-family: "Vitesse SSm A", "Vitesse SSm B",
                  "BlinkMacSystemFont", "avenir next", "avenir", "segoe ui", "helvetica neue", "Adwaita Sans",
                  "Cantarell", "Ubuntu", "roboto", "noto", "helvetica", "arial", sans-serif;
 
-  --f-menu-content: normal normal 300 var(--header-fs-1)/1 var(--sans-family);
-  --f-menu-title: normal normal 300 var(--header-fs-2)/1 var(--sans-family);
-  --f-menu-buttons: normal normal 300 var(--header-fs-3)/1 var(--sans-family);
-  --cwc-icon-size: var(--header-fs-4);
+  --f-menu-content: normal normal 300 var(--header-fs-2)/1 var(--sans-family);
+  --f-menu-title: normal normal 300 var(--header-fs-3)/1 var(--sans-family);
+  --f-menu-buttons: normal normal 300 var(--header-fs-1)/1 var(--sans-family);
+  --cwc-icon-size: calc(var(--header-fs-3) * 1.5);
 }
 
 @font-face {
@@ -78,8 +82,10 @@
 /* TODO: where is this used? */
 .check { font-family: "tcesymbols", Helvetica, Arial, sans-serif; }
 
+* { box-sizing: border-box; }
+body { container-type: inline-size; }
+
 .site-icon-logo {
-  border: 1px solid red;
   display: grid;
   gap: 0;
   grid-template-columns: 1fr 1fr;
@@ -88,14 +94,16 @@
   > .header-logo {
     aspect-ratio: 300 / 44;
     align-self: center;
-    height: var(--cwc-icon-size);
+    /* Not great: The icon sets the box size, and using 50% keeps the icon
+       slightly bigger than the label. It would be nice to get the icon
+       and label in one svg */
+    height: 50%;
     background: var(--crimethinc-icon-svg);
   }
 
   > .icon-logo {
     aspect-ratio: 1;
-    height: 100%;
-    padding-block: 1lh;
+    height: var(--cwc-icon-size);
     background:
       url("https://cdn.crimethinc.com/tce/images/cwclogo130.png")  
       center center / contain no-repeat scroll border-box padding-box transparent;
@@ -103,9 +111,10 @@
 }
 
 .button-group {
-  border: 1px solid red;
+  --visual-button-gap: 1rem;
+
   display: grid;
-  gap: 1rem;
+  gap: calc(var(--visual-button-gap) / 2);
   grid-auto-flow: column;
 
   .button {
@@ -117,7 +126,8 @@
     display: inline flex;
     align-items: center;
     gap: 0.45em;
-    padding: 0.5em 1em;
+    padding: 0.25em calc(var(--visual-button-gap) / 2);
+    
     cursor: pointer;
 
     > .icon {
@@ -144,12 +154,7 @@
   }
 }
 
-body { container-type: inline-size; }
-* { box-sizing: border-box; }
-
 header {
-  --_inline_padding: .5rem;
-
   display: flex;
   flex-flow: row nowrap;
   gap: 1ch;
@@ -158,20 +163,25 @@ header {
   inset-inline: 0;
   background-color: var(--tce-black, red);
   justify-content: space-between;
-  padding-inline: var(--_inline_padding, --page-inline-padding);
-  padding-block-start: calc(var(--_inline_padding) / 2);
+  padding-inline: var(--_inline_padding, .5rem);
+  padding-block-start: var(--_block_padding, .25rem);
 
   align-items: start;
 
   font: var(--f-menu-buttons);
 
   @container(inline-size >= 75ch) {
+    --_inline_padding: calc(33cqi / 2);
+
     align-items: center;
     justify-content: space-around;
  }
 }
 
 [popover] {
+  --_c-popover-scroll-bg: color-mix(in hsl, var(--c-popover-scroll-bg) 20%,
+                                    var(--c-popover-scroll-fg) 80%);
+
   &:popover-open { display: block; }
 
   margin-inline: auto;
@@ -182,8 +192,8 @@ header {
   overflow: scroll;
   overscroll-behavior: contain;
   overscroll-behavior-block: contain;
-  scrollbar-color: var(--_popover-scroll-color);
-  
+  scrollbar-color: var(--c-popover-scroll-fg)
+                   lch(from var(--_c-popover-scroll-bg) l c h / .75);  
   gap: 1lh;
   padding: 0;
   background-color: oklab(from var(--tce-black) calc(l - .05) a b/1);
@@ -231,17 +241,17 @@ header {
 }
 
 #toc {
-  --_popover-scroll-color: var(--tce-green) red;
+  --c-popover-scroll-fg: var(--tce-green);
   --hover-color: var(--tce-green);
 }
 #share {
-  --_popover-scroll-color: var(--tce-blue) red;
+  --c-popover-scroll-fg: var(--tce-blue);
   --large-screen-cols: 1;
   --hover-color: var(--tce-blue);
 }
 
 #language {
-  --_popover-scroll-color: var(--tce-red) red;
+  --c-popover-scroll-fg: var(--tce-red);
   --hover-color: var(--tce-red);
 }
  
