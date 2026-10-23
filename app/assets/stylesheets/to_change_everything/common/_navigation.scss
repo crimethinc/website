@@ -7,12 +7,17 @@
      that is actually an image which will have its sized tied to the
      menu button font size.
 
-     I am thinking of making the menu content the baseline. e.g.
+     I was thinking of making the menu content the baseline. e.g.
          menu content -> menu title -> menu button
 
-     So I will need 3 steps. I don't think the nav needs very large
-     steps, so I am going with a 1.067 at the lower viewport bound
-     and 1.125 at the larger bound. */
+     However looking at the current setup the menu buttons and menu
+     content are very close in size, so I went with the button
+     text being the baseline for now. e.g.
+         menu button -> menu content -> menu title
+
+     So I will need at least 3 steps. I don't think the nav needs
+     very large steps, so I am going with a 1.067 at the lower
+     viewport bound and 1.125 at the larger bound. */
   --type-scale-small: 1.067;
   --type-scale-large: 1.125;
 
@@ -195,7 +200,7 @@ header {
   scrollbar-color: var(--c-popover-scroll-fg)
                    lch(from var(--_c-popover-scroll-bg) l c h / .75);  
   gap: 1lh;
-  padding: 0;
+  padding: 1ch;
   background-color: oklab(from var(--tce-black) calc(l - .05) a b/1);
   border-radius: 15px;
 
@@ -244,10 +249,18 @@ header {
   --c-popover-scroll-fg: var(--tce-green);
   --hover-color: var(--tce-green);
 }
+
+/* TODO: make spacing responsive */
 #share {
   --c-popover-scroll-fg: var(--tce-blue);
   --large-screen-cols: 1;
   --hover-color: var(--tce-blue);
+  &:popover-open { display: grid; }
+  gap: 0.5lh;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  min-inline-size: calc(1 * min(100%, 10rem));
 }
 
 #language {
