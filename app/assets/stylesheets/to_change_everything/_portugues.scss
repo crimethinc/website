@@ -1,7 +1,7 @@
 .portugues {
   @import "common/font_styling";
-  /*--- Highlight language in mobile language menu ---*/
-  #lang1 li > a[href="/tce/portugues"] { color: #d62d34 !important; }
+
+  #language li:has(> a[href="/tce/portugues"]) { --active: true; }
   .check-portugues:before { content: ""; }
 
   #intro, #outro {
