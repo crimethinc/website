@@ -57,7 +57,7 @@ gem 'ruby-vips'
 
 # TEMP: pin connection_pool and sidekiq until this is resolved:
 #      https://github.com/crimethinc/website/pull/4994
-gem 'connection_pool', '< 3'
+gem 'connection_pool', '< 4'
 
 # TEMP: pin until connection_pool can be updated to 3
 # job queue using Active Job
