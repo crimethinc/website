@@ -1,3 +1,78 @@
+:root {
+  /*                          Font Settings                         */
+  /*╭──────────────────────────────────────────────────────────────╮*/
+  /* There are 3 main font sizes in the nav bar. 1) Then menu button
+     text and icons, 2) the menu content in the popovers, 3) the menu
+     title in the popover. There is also the site name/logo, though
+     that is actually an image which will have its sized tied to the
+     menu button font size.
+
+     I was thinking of making the menu content the baseline. e.g.
+         menu content -> menu title -> menu button
+
+     However looking at the current setup the menu buttons and menu
+     content are very close in size, so I went with the button
+     text being the baseline for now. e.g.
+         menu button -> menu content -> menu title
+
+     So I will need at least 3 steps. I don't think the nav needs
+     very large steps, so I am going with a 1.067 at the lower
+     viewport bound and 1.125 at the larger bound. */
+  --type-scale-small: 1.067;
+  --type-scale-large: 1.125;
+
+  /* I am setting the fluid bounds at 360px and 1600 px. This means that
+     below 360 px the font size will be fixed, and above 1600px it will
+     be fixed (base-min and base-max) */
+  --fluid-vmin: 320px;
+  --fluid-vmax: 1600px;
+  --base-min: 0.9375rem; /* 15px at a 16px base */
+  --base-max: 1.1250rem; /* 18px at a 16px base */
+  /*╰──────────────────────────────────────────────────────────────╯*/
+
+  /*                          Calculations                          */
+  /*╭──────────────────────────────────────────────────────────────╮*/
+  /* Should not need to be touched. Adjust the setting above that
+     are used as inputs to these calcs to tweak the font sizing.     */
+
+  /* TODO: replace by progress once support is a bit better (current 85.73%):
+   *        https://caniuse.com/wf-progress-function
+
+  --fluid: progress(100vw, var(--fluid-vmin), var(--fluid-vmax)); */
+  --fluid: clamp(0, tan(atan2(100vw - var(--fluid-vmin), var(--fluid-vmax) - var(--fluid-vmin))), 1);
+  --base: calc(var(--base-min) + var(--fluid) * (var(--base-max) - var(--base-min)));
+  --type-scale: calc(var(--type-scale-small) + var(--fluid) * (var(--type-scale-large) - var(--type-scale-small)));
+  --header-fs-1: var(--base);
+  --header-fs-2: calc(var(--base) * var(--type-scale));
+  --header-fs-3: calc(var(--base) * pow(var(--type-scale), 2));
+  --header-fs-4: calc(var(--base) * pow(var(--type-scale), 3));
+
+  /*╰──────────────────────────────────────────────────────────────╯*/
+
+  --tce-green: #9ac149;
+  --tce-red: #d62d34;
+  --tce-blue: #3cbce9;
+  --tce-black: rgba(0, 0, 0, 0.79);
+  --tce-black: rgb(52 52 52 / 0.79);
+
+  --toc-color: var(--tce-green);
+  --lang-color: var(--tce-red);
+  --share-color: var(--tce-blue);
+
+  --c-popover-bg: oklab(from var(--tce-black) calc(l - .05) a b/1);
+  --c-popover-scroll-fg: contrast-color(var(--c-popover-bg));
+  --c-popover-scroll-bg: lch(from contrast-color(var(--c-popover-bg)) l c h / .5);
+
+  --sans-family: "Vitesse SSm A", "Vitesse SSm B",
+                 "BlinkMacSystemFont", "avenir next", "avenir", "segoe ui", "helvetica neue", "Adwaita Sans",
+                 "Cantarell", "Ubuntu", "roboto", "noto", "helvetica", "arial", sans-serif;
+
+  --f-menu-content: normal normal 300 var(--header-fs-2)/1 var(--sans-family);
+  --f-menu-title: normal normal 300 var(--header-fs-3)/1 var(--sans-family);
+  --f-menu-buttons: normal normal 300 var(--header-fs-1)/1 var(--sans-family);
+  --cwc-icon-size: calc(var(--header-fs-3) * 1.5);
+}
+
 @font-face {
   font-family: "tcesymbols";
   src: url("/tce/css/tcefont/tcesymbols.eot?77890001");
@@ -9,581 +84,204 @@
   font-weight: normal;
   font-style: normal;
 }
+/* TODO: where is this used? */
+.check { font-family: "tcesymbols", Helvetica, Arial, sans-serif; }
 
-nav {
-  width: 100%;
-  padding-top: 10%;
-  margin-bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.79);
-  z-index: 10;
-  position: relative;
-}
-.label {
-  display: none;
+* { box-sizing: border-box; }
+body { container-type: inline-size; }
+
+.site-icon-logo {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr 1fr;
+  inline-size: min-content;
+
+  > .header-logo {
+    aspect-ratio: 300 / 44;
+    align-self: center;
+    /* Not great: The icon sets the box size, and using 50% keeps the icon
+       slightly bigger than the label. It would be nice to get the icon
+       and label in one svg */
+    height: 50%;
+    background: var(--crimethinc-icon-svg);
+  }
+
+  > .icon-logo {
+    aspect-ratio: 1;
+    height: var(--cwc-icon-size);
+    background:
+      url("https://cdn.crimethinc.com/tce/images/cwclogo130.png")  
+      center center / contain no-repeat scroll border-box padding-box transparent;
+  }
 }
 
-#navwrapper {
-  margin: -10% 0 0 0;
-  position: relative;
-  width: 97%;
-  overflow: visible;
-  padding-bottom: 0px;
-  z-index: 10;
+.button-group {
+  --visual-button-gap: 1rem;
+
+  display: grid;
+  gap: calc(var(--visual-button-gap) / 2);
+  grid-auto-flow: column;
+
+  .button {
+    font: inherit;
+    border: 0;
+    min-inline-size: fit-content;
+    max-inline-size: fit-content;
+    background: transparent;
+    display: inline flex;
+    align-items: center;
+    gap: 0.45em;
+    padding: 0.25em calc(var(--visual-button-gap) / 2);
+    
+    cursor: pointer;
+
+    > .icon {
+      height: var(--cwc-icon-size);
+      width: var(--cwc-icon-size);
+    }
+
+    /* when the entire header is less than 65 characters wide we display
+       only icons and visually hide the labels */
+    @container(inline-size <= 65ch) {
+      padding: 0;
+
+      .label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+    }
+  }
 }
 
-#cwc {
-  float: left;
-  margin-left: 0;
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1ch;
+  overflow: clip;
   position: absolute;
-  width: 100%;
+  inset-inline: 0;
+  background-color: var(--tce-black, red);
+  justify-content: space-between;
+  padding-inline: var(--_inline_padding, .5rem);
+  padding-block-start: var(--_block_padding, .25rem);
+
+  align-items: start;
+
+  font: var(--f-menu-buttons);
+
+  @container(inline-size >= 75ch) {
+    --_inline_padding: calc(33cqi / 2);
+
+    align-items: center;
+    justify-content: space-around;
+ }
 }
 
-#cwclogo {
-  background-image: url("https://cdn.crimethinc.com/tce/images/cwclogo130.png");
-  background-size: 100%;
-  width: 9%;
-  background-position: center top;
-  float: left;
-  background-repeat: no-repeat;
-  margin: 1% 1% 0 2%;
-  padding-top: 9%;
-  position: relative;
-}
+[popover] {
+  --_c-popover-scroll-bg: color-mix(in hsl, var(--c-popover-scroll-bg) 20%,
+                                    var(--c-popover-scroll-fg) 80%);
 
-#cwclabel {
-  background-image: url("https://cdn.crimethinc.com/tce/images/cwcword50.png");
-  background-size: 100%;
-  width: 30%;
-  background-position: center top;
-  float: left;
-  background-repeat: no-repeat;
-  margin: 3.25% 0 0 0%;
-  padding-top: 7%;
-  position: relative;
-}
+  &:popover-open { display: block; }
 
-#menus {
-  float: right;
-  margin-top: 2.1%;
-}
+  margin-inline: auto;
+  margin-block-start: 10vh;
+  margin-block-start: 10svh;
+  max-block-size: var(--_popover-max-block, 75vh);
+  max-block-size: var(--_popover-max-block, 75svh);
+  overflow: scroll;
+  overscroll-behavior: contain;
+  overscroll-behavior-block: contain;
+  scrollbar-color: var(--c-popover-scroll-fg)
+                   lch(from var(--_c-popover-scroll-bg) l c h / .75);  
+  gap: 1lh;
+  padding: 1ch;
+  background-color: oklab(from var(--tce-black) calc(l - .05) a b/1);
+  border-radius: 15px;
 
-nav ul {
-  list-style: none;
-  position: relative;
-  float: left;
-  margin: 0;
-  padding: 0;
+  font: var(--header-fs-1);
+
+  @container(inline-size > 45ch) {
+    columns: var(--large-screen-cols, 2);
+  }
 
   a {
-    color: white;
-    text-decoration: none;
+    display: block;
+    font: inherit;
     font-weight: 300;
-    font-family: "Vitesse SSm A", "Vitesse SSm B", Helvetica, Arial, sans-serif;
-  }
-
-  li {
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-#toc a,
-#language a,
-#share a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 32px;
-  padding: 4px 15px 0px 35px;
-  font-family: "Vitesse SSm A", "Vitesse SSm B", Helvetica, Arial, sans-serif;
-  width: 465px;
-}
-#language a {
-  width: 220px;
-}
-
-#toc a:hover {
-  color: #9ac149;
-  text-decoration: none;
-}
-
-#language a:hover {
-  color: #d62d34;
-  text-decoration: none;
-}
-
-#share a:hover {
-  color: #3cbce9;
-  text-decoration: none;
-}
-
-ul#toc,
-ul#language,
-ul#share {
-  padding-top: 20px;
-  padding-bottom: 22px;
-  border-radius: 0px 0px 15px 15px;
-  -moz-border-radius: 0px 0px 15px 15px;
-  -webkit-border-radius: 0px 0px 15px 15px;
-  border: 0px solid #000000;
-  background-color: rgba(23, 22, 22, 0.98);
-}
-
-ul#toc {
-  width: 515px;
-}
-ul#language {
-  width: 270px;
-}
-ul#share {
-  width: 250px;
-}
-
-nav ul li.current-menu-item {
-  background: #ddd;
-}
-
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(23, 22, 22, 0.98);
-  padding: 0;
-
-  li {
-    float: none;
-    width: 200px;
-  }
-
-  a {
-    line-height: 120%;
+    text-decoration: none;
     padding: 10px 15px;
-  }
-  ul {
-    top: 0;
-    left: 100%;
-  }
-}
-
-.menuItem > a {
-  display: inline-block;
-}
-
-.icon {
-  width: 5vw;
-  height: auto;
-  padding-left: 5px;
-}
-
-#tocdiv {
-  display: none;
-  list-style: none;
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 4vw;
-  line-height: 4vw;
-  padding: 3% 5% 7% 5%;
-  font-family: "Vitesse SSm A", "Vitesse SSm B", Helvetica, Arial, sans-serif;
-  width: 90%;
-  overflow: hidden;
-  margin-bottom: -10%;
-  text-indent: -5vw;
-}
-
-#languagediv {
-  display: none;
-  list-style: none;
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 6vw;
-  line-height: 6vw;
-  padding: 3% 5% 10% 12%;
-  font-family: "Vitesse SSm A", "Vitesse SSm B", Helvetica, Arial, sans-serif;
-  width: 83%;
-  overflow: hidden;
-  margin-bottom: -10%;
-  text-indent: -5vw;
-}
-
-#sharediv {
-  display: none;
-  list-style: none;
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 6vw;
-  line-height: 6vw;
-  padding: 7% 5% 10% 30%;
-  font-family: "Vitesse SSm A", "Vitesse SSm B", Helvetica, Arial, sans-serif;
-  width: 65%;
-  overflow: hidden;
-  margin-bottom: -10%;
-
-  .icon {
-    color: #3cbce9;
-  }
-
-  a {
     color: white;
-    text-decoration: none;
+
+    &:hover {
+      color: var(--hover-color, red);
+      text-decoration: none;
+    }
+
+    @container(inline-size < 10ch) {
+      hypens: auto;
+    }
   }
 
-  h1 {
-    color: #3cbce9;
-    text-decoration: none;
-    font-weight: 300;
+  @container style(--active: true) {
+    a { color: var(--tce-red); }
   }
 
-  li {
-    padding-top: 5%;
+
+  > * {
+    font: inherit;
+    text-box-trim: trim-both;
+    text-wrap: balance;
+  }
+
+  &::backdrop {
+    background-color: oklab(from var(--tce-black) l a b/.8);
+    backdrop-filter: blur(1px);
   }
 }
 
-#tocdiv h1 {
-  color: #9ac149;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 5vw;
-  line-height: 12vw;
-  font-family: "Vitesse SSm A", "Vitesse SSm B", Helvetica, Arial, sans-serif;
-  text-align: center;
+#toc {
+  --c-popover-scroll-fg: var(--tce-green);
+  --hover-color: var(--tce-green);
 }
 
-#tocdiv a {
-  color: white;
-  text-decoration: none;
+/* TODO: make spacing responsive */
+#share {
+  --c-popover-scroll-fg: var(--tce-blue);
+  --large-screen-cols: 1;
+  --hover-color: var(--tce-blue);
+  &:popover-open { display: grid; }
+  gap: 0.5lh;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  min-inline-size: calc(1 * min(100%, 10rem));
 }
 
-#tocdiv a:hover,
-#tocdiv a:active {
-  color: #9ac149;
-  text-decoration: none;
+#language {
+  --c-popover-scroll-fg: var(--tce-red);
+  --hover-color: var(--tce-red);
+
+  /* some of the languages in this list link to an article rather than a
+     dedicated TCE page. Adding some sort of indication might be nice,
+     though I don't know what...maybe an svg pdf icon? */
+  a[href*="in-11-more-languages"], a[href*="in-ten-more-languages"] {
+    &:after {
+      content: "🗎" / "";
+      font: inherit;
+      color: var(--hover-color);
+      padding-inline-start: 1ch;
+    }
+  }
 }
 
+/* TODO: why !important ? */
 li.selected a:link,
 li.selected a:visited {
   color: #d62d34 !important;
-}
-
-#languagediv a {
-  color: white;
-  text-decoration: none;
-}
-
-#languagediv a:hover,
-#languagediv a:active {
-  color: #d62d34;
-  text-decoration: none;
-}
-
-.check {
-  font-family: "tcesymbols", Helvetica, Arial, sans-serif;
-}
-
-#lang1,
-#lang2 {
-  width: 43%;
-  margin: 0 0 0 7%;
-  float: left;
-  position: relative;
-
-  li {
-    padding-top: 7%;
-  }
-}
-
-#tocdiv {
-  font-size: 1rem;
-  line-height: 1.2;
-  text-indent: 0;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  h1 {
-    line-height: 1;
-    width: 100%;
-  }
-
-  #toc1, #toc2 {
-    position: relative;
-    width: 47.5%;
-    margin: 0;
-    text-align: start;
-    text-indent: 10px hanging;
-  }
-
-  li {
-    padding-top: 5%;
-    a { font-size: 0.7rem; }
-  }
-}
-
-@media (min-width: 601px) and (max-width: 1023px) {
-  nav {
-    padding-top: 5%;
-  }
-
-  .icon {
-    width: 2vw;
-  }
-
-  .label {
-    display: inline;
-    font-size: 3vw;
-    line-height: 3vw;
-  }
-
-  #cwclogo {
-    width: 4.5%;
-    margin: 5.5% 0.5% 0 1%;
-    padding-top: 10%;
-  }
-
-  #cwclabel {
-    width: 17%;
-    margin: 6.3% 0 0 0%;
-  }
-
-  #menus {
-    margin-top: 6%;
-    width: 72%;
-  }
-
-  nav ul {
-    width: 100%;
-
-    li {
-      padding-left: 5%;
-    }
-  }
-
-  #languagediv {
-    font-size: 4vw;
-    line-height: 4vw;
-    overflow: hidden;
-  }
-
-  #sharediv {
-    font-size: 4vw;
-    line-height: 4vw;
-  }
-}
-
-/*-------------TABLET LANDSCAPE------------------*/
-@media (min-width: 1024px) and (max-width: 1200px) {
-  nav {
-    padding-top: 3.2%;
-  }
-
-  .icon {
-    width: 1.2vw;
-  }
-
-  .label {
-    display: inline;
-    font-size: 2vw;
-    line-height: 2vw;
-  }
-
-  #cwclogo {
-    width: 2.75%;
-    margin: 7.3% 0.5% 0 1%;
-    padding-top: 3%;
-  }
-
-  #cwclabel {
-    width: 13%;
-    margin: 7.4% 0 0 0%;
-    padding-top: 2%;
-  }
-
-  #menus {
-    margin-top: 7.5%;
-    width: 60%;
-  }
-
-  nav ul {
-    width: 100%;
-    li {
-      padding-left: 10%;
-    }
-  }
-
-  #tocdiv {
-    font-size: 2vw;
-    line-height: 2vw;
-    padding: 9% 2% 5% 7%;
-    width: 50%;
-    overflow: unset;
-    float: left;
-    position: absolute;
-    top: 4.15%;
-    background-color: #353535;
-  }
-
-  #languagediv {
-    font-size: 2vw;
-    line-height: 2vw;
-    padding: 9% 5% 7.75% 6%;
-    width: 30%;
-    float: right;
-    position: absolute;
-    left: 59%;
-    top: 4.15%;
-    background-color: #353535;
-  }
-
-  #sharediv {
-    font-size: 2vw;
-    line-height: 2vw;
-    padding: 8% 0% 2% 10%;
-    width: 90%;
-    overflow: hidden;
-    margin-bottom: unset;
-    z-index: 9;
-    position: absolute;
-    background-color: #353535;
-
-    li {
-      float: left;
-      padding-right: 5.7%;
-    }
-  }
-
-  #tocdiv h1 {
-    display: none;
-  }
-
-  #toc1 {
-    width: 37%;
-    margin: 0 10% 0 15%;
-  }
-  #toc2 li {
-    padding-top: 7%;
-  }
-
-  #lang1 {
-    width: 59%;
-  }
-  #lang2 {
-    width: 27%;
-    li {
-      padding-top: 15%;
-    }
-  }
-}
-
-/*-------------ALL DESKTOPS CSS------------------*/
-@media (min-width: 1201px) {
-  nav {
-    background-color: rgba(52, 52, 52, 0.79);
-    margin: 0;
-    padding: 0;
-    position: absolute;
-  }
-
-  .icon {
-    padding-right: 5px;
-    width: 1vw;
-  }
-
-  .label {
-    display: inline;
-  }
-
-  #navwrapper {
-    margin: 0 auto;
-    width: 700px;
-  }
-
-  #cwc {
-    position: unset;
-    width: auto;
-  }
-
-  #cwclogo {
-    height: 30px;
-    width: 30px;
-    padding: 0;
-    margin: 0;
-    margin-top: 5px;
-    margin-right: 4px;
-  }
-  #cwclabel {
-    height: 25px;
-    width: 140px;
-    padding: unset;
-    margin-top: 7px;
-    margin-right: 15px;
-  }
-
-  #menus {
-    margin-top: 0;
-  }
-
-  nav ul {
-    a {
-      display: block;
-      font-size: 18px;
-      line-height: 32px;
-      padding: 4px 15px 0;
-    }
-  }
-
-  nav ul li:hover > ul {
-    display: block;
-    z-index: 10;
-  }
-
-  #tocdiv {
-    display: none;
-    position: fixed;
-    top: -10000px;
-    left: -10000px;
-  }
-  #languagediv {
-    display: none;
-    position: fixed;
-    top: -10000px;
-    left: -10000px;
-  }
-  #sharediv {
-    display: none;
-    position: fixed;
-    top: -10000px;
-    left: -10000px;
-  }
-}
-/*-------------DESKTOP SMALL CSS------------------*/
-@media (min-width: 1201px) and (max-width: 1670px) {
-  #toc a,
-  #language a,
-  #share a {
-    font-size: 18px;
-    line-height: 26px;
-  }
-
-  #toc a {
-    width: 345px;
-  }
-  #language a {
-    width: 180px;
-  }
-
-  ul#toc {
-    width: 395px;
-  }
-  ul#language {
-    width: 230px;
-  }
-  ul#share {
-    width: 210px;
-  }
 }

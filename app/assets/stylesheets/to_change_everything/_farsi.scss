@@ -2,8 +2,7 @@
 .فارسی {
   @import "farsi/font_overrides";
 
-  /*--- Highlight language in mobile language menu ---*/
-  #lang1 li > a[href="/tce/farsi"] { color: #d62d34 !important; }
+  #language li:has(> a[href="/tce/فارسی"]) { --active: true; }
   .check-farsi:before { content: ""; }
 
   /* TODO: A lot of this can be removed if we use logical units in the

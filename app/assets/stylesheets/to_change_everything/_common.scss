@@ -2,6 +2,12 @@
 @import "common/navigation";
 @import "common/title_section";
 
+:root {
+  --crimethinc-icon-svg: url("crimethinc-logo-type-white.svg")
+                         center center / contain no-repeat
+                         scroll border-box padding-box transparent;
+}
+
 /*-----------------------------------------------------------------*/
 /*-------------APPLY TO ALL VERSIONS-------------------------------*/
 /*-----------------------------------------------------------------*/
