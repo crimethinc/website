@@ -394,9 +394,9 @@ GEM
       prism (>= 1.6.0)
       rbs (>= 4.0.0)
       tsort
-    redis (6.0.0)
-      redis-client (= 0.30.1)
-    redis-client (0.30.1)
+    redis (6.1.0)
+      redis-client (= 0.31.0)
+    redis-client (0.31.0)
       connection_pool
     redis-store (1.12.0)
       redis (>= 4, < 7)
@@ -771,8 +771,8 @@ CHECKSUMS
   rb-inotify (0.11.1) sha256=a0a700441239b0ff18eb65e3866236cd78613d6b9f78fea1f9ac47a85e47be6e
   rbs (4.2.0) sha256=51f7b886dcc05bc09e10b901daa6a81829f6adc03101d6ca9ea4aac6103e0674
   rdoc (8.1.0) sha256=befc37880a5cfd36dcb176c748b5fd5ee39dd3536a75e81824e4972ce230f60a
-  redis (6.0.0) sha256=de71c10edd106986b759ec7ecdd08b63b9c0ee7414a0d0c1da73d31ba2bccda6
-  redis-client (0.30.1) sha256=5151bc5c7bbfe48623732cdae3b900d8a22dc691cc7cdfacfb351ac55116522d
+  redis (6.1.0) sha256=ad610b85950bac0669cd98473515f9adf5137813443359e0342864b65a28b2c1
+  redis-client (0.31.0) sha256=6820cb2a21e6795a823141f50fd25e655de2b8dc8ff833b43509a27b0263fd75
   redis-store (1.12.0) sha256=bea7ed3f9a602d991934761bd56a3bdc78de068a1497d4ccf5e071d39e11d3da
   referral (0.0.6) sha256=83a6cdbb7ecbcc7bf7ecba8ab6d788b86358d745652408c8c04f1aa198df1997
   regexp_parser (2.13.4) sha256=1d0547814f57e6f00946957bd0ca201bc42f42cfb08eee89df60998aedcd8a3b
