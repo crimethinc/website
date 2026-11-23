@@ -171,7 +171,7 @@ GEM
     fast_stack (0.2.0)
     fasterer (0.11.0)
       ruby_parser (>= 3.19.1)
-    ferrum (0.20.1)
+    ferrum (0.20.2)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
@@ -679,7 +679,7 @@ CHECKSUMS
   factory_bot_rails (6.5.1) sha256=d3cc4851eae4dea8a665ec4a4516895045e710554d2b5ac9e68b94d351bc6d68
   fast_stack (0.2.0) sha256=a5f4a6f16904ca72e74b6257dc11517bfea82b651643f1c6d2895b41255d2b71
   fasterer (0.11.0) sha256=9c38b77583584f3339a729eb077fd8f2856a317abe747528f6563d7c23e9dda8
-  ferrum (0.20.1) sha256=3a33d27f3e48ec66a36f7eaffa29180a9f1f4ff32694e8f2bc43d249f47612dc
+  ferrum (0.20.2) sha256=0bfa34ca95cf81800092c7dafaf8f6fdf75cd24e973300c653ac0669a1c42068
   ffi (1.17.4) sha256=bcd1642e06f0d16fc9e09ac6d49c3a7298b9789bcb58127302f934e437d60acf
   ffi (1.17.4-arm64-darwin) sha256=19071aaf1419251b0a46852abf960e77330a3b334d13a4ab51d58b31a937001b
   ffi (1.17.4-x86_64-linux-gnu) sha256=9d3db14c2eae074b382fa9c083fe95aec6e0a1451da249eab096c34002bc752d
