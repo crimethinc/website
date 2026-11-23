@@ -199,7 +199,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    hashdiff (1.2.2)
+    hashdiff (1.3.0)
     http (6.0.4)
       http-cookie (~> 1.0)
       llhttp (~> 0.6.1)
@@ -530,7 +530,7 @@ GEM
       actionview (>= 8.0.0)
       bindex (>= 0.4.0)
       railties (>= 8.0.0)
-    webmock (3.34.0)
+    webmock (3.35.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -689,7 +689,7 @@ CHECKSUMS
   guard (2.21.0) sha256=60d815d294753d16a07fd70e57eb21f884a4aada51ddde05dbce9c2b71d246cd
   guard-compat (1.2.1) sha256=3ad21ab0070107f92edfd82610b5cdc2fb8e368851e72362ada9703443d646fe
   guard-rspec (4.7.3) sha256=a47ba03cbd1e3c71e6ae8645cea97e203098a248aede507461a43e906e2f75ca
-  hashdiff (1.2.2) sha256=e2e287452b42f18d2a8d82dd48c435e214a81dbadccf49344b956842a3b9127f
+  hashdiff (1.3.0) sha256=0b6724b8f3fef3961acc09489b175698ce0b7fd22c9cc5aa559d280cc6b65649
   http (6.0.4) sha256=3768f902489ea8309424f1881c668af8d3ca73675648a755dfe2cb0030d42d26
   http-cookie (1.1.6) sha256=ba4b82be64de61dc281243dac70e3c382c45142f20268ed9276a3670c93feaa9
   i18n (1.15.2) sha256=00f9eb62412fe593b2a65a97daa75300d37abb8f7202ec748e94b6d46a9dd1b5
@@ -825,7 +825,7 @@ CHECKSUMS
   uri (1.1.2) sha256=89292e98eabbef6248b0a0ed5e7e398e152f83f17560023a6d94a7f492b169fb
   useragent (0.16.11) sha256=700e6413ad4bb954bb63547fa098dddf7b0ebe75b40cc6f93b8d54255b173844
   web-console (4.3.0) sha256=e13b71301cdfc2093f155b5aa3a622db80b4672d1f2f713119cc7ec7ac6a6da4
-  webmock (3.34.0) sha256=72eed29dc8c00148d592acaedaaa6b869e2e397de57dfc8602b84aa834f46b33
+  webmock (3.35.0) sha256=cb9f61718a0004f5d0c65f8dc36764b714213902599fbd3ae63a7a08f22a78b3
   websocket-driver (0.9.0) sha256=4dfcc6ac0ea1b6771daf5fb54cbbca131e4d5922ea0a65ba2da980370dadbe9f
   websocket-extensions (0.2.0) sha256=6fb0d0f687aa8adc8eafa5ce68db36dfd6a8ebf232515040ce27c33c1291e589
   xpath (3.2.0) sha256=6dfda79d91bb3b949b947ecc5919f042ef2f399b904013eb3ef6d20dd3a4082e
